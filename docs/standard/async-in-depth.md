@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
 ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: 6536a608a4ee1bb10f41907a28114193a300a52c
+ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
 
 ---
 
@@ -148,6 +148,6 @@ public async Task<int> CalculateResult(InputData data)
 `async` и `await` рекомендуется использовать для действий, связанных с ЦП, когда необходима быстрая скорость реагирования. Существуют разные модели использования асинхронного кода для работы, связанной с ЦП. Важно отметить, что использование асинхронного кода приводит к небольшим затратам и не рекомендуется для непрерывных циклов.  Решать, как использовать эту новую возможность в своем коде, предстоит вам.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

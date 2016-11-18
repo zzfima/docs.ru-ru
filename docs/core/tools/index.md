@@ -13,7 +13,7 @@ ms.devlang: dotnet
 ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 3a3326f96cf69d0ac466e52107597d80c2790b62
+ms.openlocfilehash: 96b7c02493d94b3c1d5fd112ca84ed25c35c4f90
 
 ---
 
@@ -99,6 +99,6 @@ CLI обеспечивает переносимость приложений д�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
