@@ -12,13 +12,13 @@ ms.devlang: dotnet
 ms.assetid: dab9e2f9-9088-4089-b990-fbc3d8dcd611
 translationtype: Human Translation
 ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 62c70ffdd25af909f110b3173231d436060ba383
+ms.openlocfilehash: 85768f2b6d95c5b30c8667928d45eee8b1524a93
 
 ---
 
-# <a name="-writing-net-core-console-apps-using-the-cli-tools-an-advanced-stepbystep-guide"></a>Написание консольных приложений .NET Core с помощью средств CLI: подробное пошаговое руководство
+# <a name="-writing-net-core-console-apps-using-the-cli-tools-an-advanced-step-by-step-guide"></a>🔧 Написание консольных приложений .NET Core с помощью средств CLI. Подробное пошаговое руководство
 
-> **Примечание.**
+> **Примечание**
 > 
 > Этот раздел еще не написан! 
 >
@@ -31,6 +31,6 @@ ms.openlocfilehash: 62c70ffdd25af909f110b3173231d436060ba383
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

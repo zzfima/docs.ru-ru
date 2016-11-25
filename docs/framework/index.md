@@ -11,12 +11,12 @@ ms.technology: dotnet-bcl
 ms.devlang: dotnet
 ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
 translationtype: Human Translation
-ms.sourcegitcommit: 6b9ae37f4053d292c21b02f9e7f93ccd32a78976
-ms.openlocfilehash: 9228135d6d4f60ef005375712b1c549423b72803
+ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
+ms.openlocfilehash: cd7442b304ff28b02826a84684b594dfdd0d9873
 
 ---
 
-# <a name="net-framework"></a>.NET Framework
+# <a name="net-framework-on-docker-guide"></a>Руководство по Docker в .NET Framework
 
 .NET Framework — это платформа разработки для создания приложений для Windows, Windows Phone, Windows Server и Microsoft Azure. Она состоит из среды CLR и библиотеки классов .NET Framework, которая содержит классы, интерфейсы и типы значений, поддерживающие широкий диапазон технологий. Платформа .NET Framework предоставляет среду управляемого выполнения, возможности упрощения разработки и развертывания, а также возможности интеграции с различными языками программирования, включая Visual Basic, Visual C# и F#.
 
@@ -25,6 +25,6 @@ ms.openlocfilehash: 9228135d6d4f60ef005375712b1c549423b72803
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

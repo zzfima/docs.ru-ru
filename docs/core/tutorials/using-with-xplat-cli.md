@@ -11,24 +11,24 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: aafa0c110dc3a2820f7e050d70b9450af1db35d8
+ms.sourcegitcommit: 37e14d5cdf1593f6a8b1ecee9d9828647b023548
+ms.openlocfilehash: 5493ccb77e62d20d5101728ef8ab1744ea697fb8
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
 
-В этом руководстве показано, как использовать средства CLI платформы .NET Core для создания межплатформенных консольных приложений.  Мы начнем с самого простого консольного приложения, а затем охватим несколько проектов, включая тестирование. Возможности будут добавляться поэтапно на основе того, что вы уже узнали и создали.
+В этом руководстве показано, как с помощью средств командной строки в .NET Core создавать базовые кроссплатформенные консольные приложения.
 
 Если вы не знакомы с набором средств CLI .NET Core, прочитайте [обзор пакета SDK для .NET Core](../sdk.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Перед тем как приступать, убедитесь в том, что у вас имеется [последняя версия средств CLI для .NET Core](https://www.microsoft.com/net/core).  Вам также потребуется текстовый редактор.
+Перед тем как приступать, убедитесь в том, что у вас имеется [последняя версия средств CLI для .NET Core](https://www.microsoft.com/net/core). Вам также потребуется текстовый редактор.
 
 ## <a name="hello-console-app"></a>Первое консольное приложение
 
-Сначала перейдите к существующей папке или создайте папку с любым именем на свое усмотрение.  Для образца кода, который можно найти [здесь](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello), выбрано имя Hello.
+Перейдите к существующей папке или создайте папку с любым именем. Для образца кода, который можно найти [здесь](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello), выбрано имя Hello.
 
 Откройте окно командной строки и введите следующее:
 
@@ -97,7 +97,7 @@ Hello, World!
 
 Вы также можете выполнить [`dotnet build`](../tools/dotnet-build.md), чтобы скомпилировать код, не запуская консольные приложения сборки.
 
-### <a name="building-a-selfcontained-application"></a>Сборка автономного приложения
+### <a name="building-a-self-contained-application"></a>Сборка автономного приложения
 
 Давайте попробуем скомпилировать автономное, а не переносимое приложение. Вы можете прочитать статью о [типах переносимости в .NET Core](../deploying/index.md), чтобы ознакомиться с различными типами приложений и способами их развертывания.
 
@@ -647,6 +647,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
