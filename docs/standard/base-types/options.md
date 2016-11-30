@@ -13,7 +13,7 @@ ms.devlang: dotnet
 ms.assetid: 2db2c3e6-953e-4913-8168-d707c437f2df
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 21672e28d0e76b98f6dac698096fccb2ce4edd03
+ms.openlocfilehash: a2a9fe356a0b2e9cf9415714bc01b77ea86229fc
 
 ---
 
@@ -27,7 +27,7 @@ ms.openlocfilehash: 21672e28d0e76b98f6dac698096fccb2ce4edd03
 [IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) | **i** | Использовать соответствие без учета регистра. Дополнительные сведения см. в статье [Сопоставление без учета регистра](#case-insensitive-matching).
 [Multiline](xref:System.Text.RegularExpressions.RegexOptions.Multiline) | **m** | Использовать многострочный режим, где **^** и **$** соответствуют началу и концу строки текста (а не началу и концу входной строки). Дополнительные сведения см. в статье [Многострочный режим](#multiline-mode).
 [Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) | **s** | Использовать однострочный режим, где точка (**.**) соответствует любому символу (а не каждому символу, кроме **\n**). Дополнительные сведения см. в статье [Однострочный режим](#single-line-mode).
-[ExplicitCapture](xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture) | **n** | Не захватывать неименованные группы. Единственные допустимые захваты — это явно именованные или нумерованные группы в формате **(?<**_name_**>** _subexpression_**)**. Дополнительные сведения см. в статье [Только явные захваты](#explicit-captures-only).
+[ExplicitCapture](xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture) | **n** | Не захватывать неименованные группы. Единственные допустимые захваты — это явно именованные или нумерованные группы в формате **(?<**_name_**>** _subexpression_**)**. Дополнительные сведения см. в статье [Только явные захваты](#explicit-captures-only).
 [Compiled](xref:System.Text.RegularExpressions.RegexOptions.Compiled) | Недоступно | Скомпилировать регулярное выражение в сборку. Дополнительные сведения см. в статье [Скомпилированные регулярные выражения](#compiled-regular-expressions).
 [IgnorePatternWhitespace](xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace) | **x** | Исключить неэкранированные пробелы из шаблона и включить комментарии после символа решетки (**#**). Дополнительные сведения см. в статье [Пропуск пробелов](#ignore-white-space).
 [RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) | Недоступно | Изменить направление поиска. Поиск идет справа налево, а не слева направо. Дополнительные сведения см. в статье [Режим "справа налево"](#right-to-left-mode).
@@ -38,7 +38,7 @@ ms.openlocfilehash: 21672e28d0e76b98f6dac698096fccb2ce4edd03
 
 Параметры регулярных выражений можно указать одним из трех способов:
 
-* В параметре *options* конструктора класса [System.Text.RegularExpressions.Regex](xref:System.Text.RegularExpressions.Regex), такого как [Regex.Regex(String, RegexOptions)](xref:System.Text.RegularExpressions.Regex.%23ctor(System.String,System.Text.RegularExpressions.RegexOptions)), или статического метода сопоставления шаблона (Shared в Visual Basic), такого как [Regex.Match(String, String, RegexOptions)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions)). Параметр *options* — побитовое сочетание OR значений перечисления [System.Text.RegularExpressions.RegexOptions](xref:System.Text.RegularExpressions.RegexOptions). 
+* В параметре *options* конструктора класса [System.Text.RegularExpressions.Regex](xref:System.Text.RegularExpressions.Regex), такого как [Regex.Regex(String, RegexOptions)](xref:System.Text.RegularExpressions.Regex.%23ctor(System.String,System.Text.RegularExpressions.RegexOptions)), или статического метода сопоставления шаблона (Shared в Visual Basic), такого как [Regex.Match(String, String, RegexOptions)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.String,System.Text.RegularExpressions.RegexOptions)). Параметр *options* — побитовое сочетание OR значений перечисления [System.Text.RegularExpressions.RegexOptions](xref:System.Text.RegularExpressions.RegexOptions). 
 
   Когда параметры передаются экземпляру [Regex](xref:System.Text.RegularExpressions.Regex) с помощью параметра *options* конструктора класса, они присваиваются свойству [System.Text.RegularExpressions.RegexOptions](xref:System.Text.RegularExpressions.RegexOptions). Однако свойство [System.Text.RegularExpressions.RegexOptions](xref:System.Text.RegularExpressions.RegexOptions) не отражает встроенные параметры в самом шаблоне регулярного выражения. 
 
@@ -215,7 +215,7 @@ End If
  
 Так как параметр [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) представляет поведение механизма регулярных выражений по умолчанию, он редко явно указывается в вызове метода. Вместо этого вызывается конструктор или статичный метод сопоставления шаблона без параметра options.
 
-## <a name="caseinsensitive-matching"></a>Сопоставление без учета регистра
+## <a name="case-insensitive-matching"></a>Сопоставление без учета регистра
 
 Параметр [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) или встроенный параметр **i** обеспечивает сопоставление без учета регистра. По умолчанию используются соглашения о регистре текущих региональных параметров.
 
@@ -543,7 +543,7 @@ End Class
 '    Joe: 164
 ```
 
-## <a name="singleline-mode"></a>Однострочный режим
+## <a name="single-line-mode"></a>Однострочный режим
 
 Параметр [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) или встроенный параметр s позволяет механизму регулярных выражений обрабатывать входную строку так, будто она состоит из одной строки. Для этого поведение языкового элемента **.** меняется так, чтобы он сопоставлял каждый символ, а не каждый символ кроме символа новой строки **\n** или \u000A.
 
@@ -1233,9 +1233,9 @@ End Module
 '       Instead, it is a nonsensical paragraph.
 ```
 
-## <a name="righttoleft-mode"></a>Режим "справа налево"
+## <a name="right-to-left-mode"></a>Режим "справа налево"
 
-По умолчанию механизм регулярных выражений выполняет поиска слева направо. Направление поиска можно изменить с помощью параметра [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft). Поиск автоматически будет начинаться с последнего символа строки. Для методов сопоставления шаблона с параметром начальной позиции, таких как [Regex.Match(String, Int32)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32)), начальная позиция — это индекс самого правого символа, с которого начинается поиск. 
+По умолчанию механизм регулярных выражений выполняет поиска слева направо. Направление поиска можно изменить с помощью параметра [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft). Поиск автоматически будет начинаться с последнего символа строки. Для методов сопоставления шаблона с параметром начальной позиции, таких как [Regex.Match(String, Int32)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32)), начальная позиция — это индекс самого правого символа, с которого начинается поиск. 
 
 > [!NOTE]
 > Чтобы включить режим "справа налево", необходимо передать значение [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) параметру options конструктора класса [Regex](xref:System.Text.RegularExpressions.Regex) или статичного метода сопоставления шаблона. Этот параметр не может быть указан как встроенный. 
@@ -1351,7 +1351,7 @@ End Module
 
 * Синтаксис класса символов. Так как канонические регулярные выражения поддерживают Юникод, а ECMAScript — нет, синтаксис классов символов в ECMAScript более ограничен, а некоторые языковые элементы класса символов обладают другим значением. Например, ECMAScript не поддерживает такие языковые элементы, как категория Юникода или элементы блока *\p* и **\P**. Аналогичным образом элемент **\w**, который сопоставляет словообразующее слово, эквивалентен классу символов **[a–zA–Z_0–9]** при использовании ECMAScript и **[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]** при использовании канонического поведения. Дополнительные сведения см. в статье [Классы символов в регулярных выражениях](classes.md).
 
-  Следующий пример иллюстрирует разницу между каноническим сопоставлением шаблона и ECMAScript. В нем определяется регулярное выражение, `\b(\w+\s*)+`, сопоставляющее слова, за которыми следуют пробелы. Входные данные состоят из двух строк, одна из которых использует латиницу, а другая — кириллицу. Как видно из результата, при вызове метода [Regex.IsMatch(String, String, RegexOptions)](xref:System.Text.RegularExpressions.Regex.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)), использующего сопоставление ECMAScript, не удается сопоставить слова на кириллице, а при вызове метода, использующего каноническое сопоставление — удается. 
+  Следующий пример иллюстрирует разницу между каноническим сопоставлением шаблона и ECMAScript. В нем определяется регулярное выражение, `\b(\w+\s*)+`, сопоставляющее слова, за которыми следуют пробелы. Входные данные состоят из двух строк, одна из которых использует латиницу, а другая — кириллицу. Как видно из результата, при вызове метода [Regex.IsMatch(String, String, RegexOptions)](xref:System.Text.RegularExpressions.Regex.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)), использующего сопоставление ECMAScript, не удается сопоставить слова на кириллице, а при вызове метода, использующего каноническое сопоставление — удается. 
 
   ```csharp
   using System;
@@ -1662,11 +1662,11 @@ Thread.CurrentThread.CurrentCulture = defaultCulture
 
 ## <a name="see-also"></a>См. также
 
-[Элементы языка регулярных выражений — краткий справочник](quick-ref.md)
+[Элементы языка регулярных выражений — краткий справочник](quick-ref.md)
 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
