@@ -3,11 +3,11 @@ title: "Практическое руководство. Обеспечение 
 description: "Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 15690f18-1bb9-4bb8-bc11-0b737e2f0859
 translationtype: Human Translation
@@ -16,11 +16,11 @@ ms.openlocfilehash: b4bf747faff171e4a90a897e5f7ef442012e7699
 
 ---
 
-# <a name="how-to-roundtrip-date-and-time-values"></a>Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени
+# <a name="how-to-round-trip-date-and-time-values"></a>Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени
 
 Во многих приложениях значение даты и времени предназначено для однозначного определения одного момента времени. В этом разделе показано, как сохранять и восстанавливать значения [DateTime](xref:System.DateTime) и [DateTimeOffset](xref:System.DateTimeOffset), чтобы восстановленное значение определяло то же самое время, что и сохраненное значение.
 
-## <a name="to-roundtrip-a-datetime-value"></a>Выполнение цикла обработки значения DateTime
+## <a name="to-round-trip-a-datetime-value"></a>Выполнение цикла обработки значения DateTime
 
 1. Преобразуйте значение [DateTime](xref:System.DateTime) в строковое представление посредством вызова метода [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)) с описателем формата "o".
 
@@ -97,7 +97,7 @@ Console.WriteLine("Read {0} ({2}) from {1}.", restoredDate.ToString(), _
 
 Во время цикла обработки значения [DateTime](xref:System.DateTime) этот метод успешно сохраняет время для всех значений локального и универсального времени. Например, если локальное значение [DateTime](xref:System.DateTime) сохранено в системе в тихоокеанском стандартном часовом поясе США и восстановлено в системе в центральном стандартном часовом поясе США, восстановленные дата и время будут на два часа больше исходного времени, что отражает разницу во времени между двумя часовыми поясами. Однако этот способ не всегда точен для неуказанного времени. Любое значение [DateTime](xref:System.DateTime), свойством [Kind](xref:System.DateTime.Kind) которого является [Unspecified](xref:System.DateTimeKind.Unspecified), рассматривается как локальное время. Если это не так, [DateTime](xref:System.DateTime) не будет успешно определять корректный момент времени. Чтобы устранить это ограничение, нужно тесно связать значение даты и времени с его часовым поясом для операций сохранения и восстановления.
 
-## <a name="to-roundtrip-a-datetimeoffset-value"></a>Выполнение цикла обработки значения DateTimeOffset
+## <a name="to-round-trip-a-datetimeoffset-value"></a>Выполнение цикла обработки значения DateTimeOffset
 
 Преобразуйте значение [DateTimeOffset](xref:System.DateTimeOffset) в строковое представление посредством вызова метода [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) с описателем формата "o".
 

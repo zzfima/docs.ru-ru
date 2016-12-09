@@ -3,11 +3,10 @@ title: "Перенос кода в .NET Core — анализ зависимо�
 description: "Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
 translationtype: Human Translation
@@ -16,7 +15,7 @@ ms.openlocfilehash: 7e4e96183484d102d102eeab97191f8be9b9be8a
 
 ---
 
-# <a name="porting-to-net-core-analyzing-your-thirdparty-party-dependencies"></a>Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков
 
 Первый этап процесса переноса — анализ зависимостей сторонних разработчиков.  Необходимо выяснить, есть ли среди них такие, которые не выполняются в .NET Core, и разработать для них план на непредвиденные случаи.
 

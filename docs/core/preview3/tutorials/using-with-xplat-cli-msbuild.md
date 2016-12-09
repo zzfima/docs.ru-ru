@@ -3,11 +3,11 @@ title: "Getting started with .NET Core on Windows/Linux/macOS using the command 
 description: "Начало работы с .NET Core в Windows, Linux или Mac OS с помощью интерфейса командной строки (CLI) .NET Core"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation

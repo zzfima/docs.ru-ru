@@ -3,11 +3,10 @@ title: "Building a complete .NET Core solution on Windows, using Visual Studio�
 description: "Building a complete .NET Core solution on Windows, using Visual Studio 2017 (Создание полного решения .NET Core в Windows с помощью Visual Studio 2017)"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
@@ -26,9 +25,9 @@ Visual Studio 2017 предоставляет полнофункциональ�
 
 Чтобы обновить среду, выполните инструкции на [странице с описанием предварительных требований](../windows-prerequisites.md).
 
-# <a name="a-solution-using-only-net-core-projects"></a>Решение на основе только проектов .NET Core
+## <a name="a-solution-using-only-net-core-projects"></a>Решение на основе только проектов .NET Core
 
-## <a name="writing-the-library"></a>Написание библиотеки
+### <a name="writing-the-library"></a>Написание библиотеки
 
 1. В Visual Studio последовательно щелкните **Файл**, **Создать**, **Проект**. В диалоговом окне **Новый проект** разверните узел **Visual C#**, выберите узел **.NET Core**, а затем выберите шаблон **Библиотека классов (.NET Standard)**. 
 

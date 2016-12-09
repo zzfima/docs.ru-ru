@@ -3,11 +3,11 @@ title: "Разработка библиотек с помощью кросспл
 description: "Разработка библиотек с помощью кроссплатформенных средств"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 translationtype: Human Translation
@@ -485,7 +485,7 @@ let result =
 * **AwesomeLibrary.CSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке C;#
 * **AwesomeLibrary.FSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке F.#
 
-### <a name="projecttoproject-referencing"></a>Ссылки проектов на проекты
+### <a name="project-to-project-referencing"></a>Ссылки проектов на проекты
 
 Для ссылки на проект лучше всего использовать указанный ниже способ:
 

@@ -3,12 +3,11 @@ title: "Начало работы с .NET"
 description: "Здесь представлен список различных статей по началу работы с .NET как с точки зрения языка, так и с точки зрения платформы."
 keywords: ".NET, начало работы, C#, F#, Visual Basic"
 author: cartermp
-manager: wpickett
-ms.author: phcart
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-core-technologies
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
 translationtype: Human Translation
@@ -19,7 +18,7 @@ ms.openlocfilehash: a08b0a0f95d43eb995f015f7e408f77fe4ab9d63
 
 # <a name="getting-started"></a>Начало работы
 
-К работе с .NET можно приступить разными способами.  Так как .NET — довольно большая платформа, в этой документации содержится много статей, показывающих начало работы с ней с различных точек зрения.
+К работе с .NET можно приступить разными способами.  Так как .NET — довольно большая платформа, в этой документации содержится много статей, показывающих начало работы с ней с различных точек зрения.
 
 ## <a name="getting-started-using-net-languages"></a>Приступая к работе с помощью языков .NET
 

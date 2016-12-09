@@ -3,12 +3,11 @@ title: "Архитектурные компоненты .NET"
 description: "Описание ключевых компонентов архитектуры .NET, таких как библиотека .NET Standard, среды выполнения .NET и инструменты."
 keywords: ".NET, библиотека .NET Standard, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F #, VB и компиляторы"
 author: cartermp
-manager: wpickett
-ms.author: cartermp
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-core-technologies
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation

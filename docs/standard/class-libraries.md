@@ -3,11 +3,11 @@ title: "Библиотеки классов .NET"
 description: "Библиотеки классов .NET"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 translationtype: Human Translation
@@ -26,7 +26,7 @@ ms.openlocfilehash: eee8fcaff41db5821e4b6aa61875d6a4bcd80b10
 *   **Переносимые** библиотеки классов имеют доступ к подмножеству API и могут использоваться приложениями и библиотеками, предназначенными для нескольких платформ.
 *   Библиотеки классов **.NET Core** являются объединением специфических для платформы и переносимых библиотек и сочетают лучшие характеристики обоих типов.
 
-## <a name="platformspecific-class-libraries"></a>Специфические для платформы библиотеки классов
+## <a name="platform-specific-class-libraries"></a>Специфические для платформы библиотеки классов
 
 Специфические для платформы библиотеки привязаны к одной платформе .NET (например, .NET Framework в Windows) и поэтому могут иметь множество зависимостей в конкретной среде выполнения. Такая среда предоставляет известный набор API (API-интерфейсы .NET и ОС), а также поддерживает и предоставляет данные о состоянии (например, реестр Windows).
 

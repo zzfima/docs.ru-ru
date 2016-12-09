@@ -2,12 +2,10 @@
 title: "Написание консольных приложений .NET Core с помощью средств CLI: подробное пошаговое руководство"
 description: "Написание консольных приложений .NET Core с помощью средств CLI: подробное пошаговое руководство"
 keywords: .NET, .NET Core
-author: dotnet-bot
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: dab9e2f9-9088-4089-b990-fbc3d8dcd611
 translationtype: Human Translation

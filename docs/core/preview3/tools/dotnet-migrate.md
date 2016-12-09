@@ -2,12 +2,12 @@
 title: "Команда dotnet-migrate | Пакет SDK для .NET"
 description: "Команда dotnet-migrate переносит проект и все его зависимости."
 keywords: "dotnet-migrate, интерфейс командной строки, команда CLI .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 11/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation

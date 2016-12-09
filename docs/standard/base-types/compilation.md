@@ -3,11 +3,11 @@ title: "Компиляция и многократное использован�
 description: "Компиляция и многократное использование в регулярных выражениях"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3adea434-e2ed-4023-b4f5-b0608b4cf53f
 translationtype: Human Translation
