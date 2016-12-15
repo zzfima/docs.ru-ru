@@ -1,0 +1,6 @@
+# [Фрагменты кода IntelliSense в Visual Basic](intellisense-code-snippets.md)
+# [Практическое руководство. Компиляция и выполнение проекта в Visual Basic](how-to-compile-and-run-a-project.md)
+# [Справка для обработчиков событий в коде Visual Basic](help-for-event-handlers.md)
+# [Параметры Visual Basic](settings.md)
+# [Использование среды разработки Visual Basic](using-the-visual-basic-development-environment.md)
+# [Рефакторинг и диалоговое окно "Переименовать" (Visual Basic)](refactoring-and-rename-dialog-box.md)

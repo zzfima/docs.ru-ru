@@ -1,0 +1,6 @@
+# [Устранение неполадок, связанных с массивами (Visual Basic)](troubleshooting-arrays.md)
+# [Массивы в Visual Basic](index.md)
+# [Практическое руководство. Инициализация переменной массива в Visual Basic](how-to-initialize-an-array-variable.md)
+# [Практическое руководство. Сортировка массива в Visual Basic](how-to-sort-an-array.md)
+# [Размерность массивов в Visual Basic](array-dimensions.md)
+# [Практическое руководство. Присвоение одного массива другому (Visual Basic)](how-to-assign-one-array-to-another-array.md)

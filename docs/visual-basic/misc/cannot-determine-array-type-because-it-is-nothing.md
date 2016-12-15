@@ -1,0 +1,30 @@
+---
+title: "Невозможно определить тип массива, так как он равен Nothing | Microsoft Docs"
+ms.custom: ""
+ms.date: "11/17/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "vbrArgument_ArrayNotInitialized"
+ms.assetid: de70697d-e2aa-4661-bfbb-f7ba34539516
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# Невозможно определить тип массива, так как он равен Nothing
+Невозможно определить тип массива, так как он был установлен в значение `Nothing`.  
+  
+### Исправление ошибки  
+  
+1.  Укажите для массива значение, отличное от `Nothing`.  
+  
+## См. также  
+ [Массивы](../../visual-basic/programming-guide/language-features/arrays/index.md)   
+ [Nothing](../../visual-basic/language-reference/nothing.md)

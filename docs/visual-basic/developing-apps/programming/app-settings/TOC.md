@@ -1,0 +1,5 @@
+# [Практическое руководство. Чтение параметров приложения в Visual Basic](how-to-read-application-settings.md)
+# [Доступ к параметрам приложения (Visual Basic)](accessing-application-settings.md)
+# [Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic](how-to-create-property-grids-for-user-settings.md)
+# [Практическое руководство. Изменение пользовательских параметров в Visual Basic](how-to-change-user-settings.md)
+# [Практическое руководство. Сохранение пользовательских параметров в Visual Basic](how-to-persist-user-settings.md)

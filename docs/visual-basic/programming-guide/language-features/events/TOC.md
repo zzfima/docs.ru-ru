@@ -1,0 +1,6 @@
+# [Пошаговое руководство. Обработка событий (Visual Basic)](walkthrough-handling-events.md)
+# [Устранение неполадок, связанных с унаследованными обработчиками событий, в Visual Basic](troubleshooting-inherited-event-handlers.md)
+# [Практическое руководство. Объявление пользовательских событий для предотвращения блокировки (Visual Basic)](how-to-declare-custom-events-to-avoid-blocking.md)
+# [Пошаговое руководство. Объявление и создание событий (Visual Basic)](walkthrough-declaring-and-raising-events.md)
+# [События (Visual Basic)](events.md)
+# [Практическое руководство. Объявление пользовательских событий для экономии памяти (Visual Basic)](how-to-declare-custom-events-to-conserve-memory.md)

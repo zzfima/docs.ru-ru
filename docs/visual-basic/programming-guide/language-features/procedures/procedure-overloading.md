@@ -1,0 +1,107 @@
+---
+title: "Перегрузка процедур (Visual Basic) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+helpviewer_keywords: 
+  - "скрытие подписью"
+  - "Overloads - ключевое слово"
+  - "списки параметров"
+  - "параметры, списки"
+  - "перегрузка процедур"
+  - "процедуры, несколько версий"
+  - "процедуры, перегрузка"
+  - "процедуры, списки параметров"
+  - "процедуры, подписи для"
+  - "Shadows - ключевое слово"
+  - "подписи"
+  - "подписи, процедура"
+  - "код Visual Basic, списки параметров"
+  - "код Visual Basic, процедуры"
+ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
+caps.latest.revision: 24
+caps.handback.revision: 24
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# Перегрузка процедур (Visual Basic)
+[!INCLUDE[vs2017banner](../../../../csharp/includes/vs2017banner.md)]
+
+*Перегрузка* процедуры означает определение ее в нескольких версиях с использованием одного имени и разных списков аргументов.  Цель перегрузки заключается в том, чтобы определить несколько взаимосвязанных версий процедуры, не различая их по именам.  Для этого достаточно менять список параметров.  
+  
+## Правила перегрузки  
+ При перегрузке процедуры действуют следующие правила:  
+  
+-   **Совпадающее имя**.  Каждая перегруженная версия должна использовать одно и то же имя процедуры.  
+  
+-   **Различные сигнатуры**.  Каждая перегруженная версия должна отличаться от всех остальных перегруженных версий хотя бы по одному из следующих параметров:  
+  
+    -   Число параметров  
+  
+    -   Порядок параметров  
+  
+    -   Типы данных параметров  
+  
+    -   Число параметров типа \(для универсальной процедуры\)  
+  
+    -   Возвращает тип \(только для оператора преобразования\)  
+  
+     Вместе с именем процедуры предыдущие элементы называются *сигнатурой* процедуры.  При вызове перегруженной процедуры компилятор использует сигнатуру для проверки вызова на соответствие определению.  
+  
+-   **Элементы не являются частью сигнатуры**.  Нельзя перегрузить процедуру без изменения сигнатуры.  В частности, нельзя перегрузить процедуру, варьируя лишь следующие элементы:  
+  
+    -   Ключевые слова модификаторов процедур, например `Public`, `Shared` и `Static`  
+  
+    -   Имена параметров или параметров типа  
+  
+    -   Ограничения параметров типа \(для универсальной процедуры\)  
+  
+    -   Ключевые слова модификаторов процедур, например `ByRef` и `Optional`  
+  
+    -   Возвращает ли он значение  
+  
+    -   Тип данных возвращаемого значения \(за исключением оператора преобразования\)  
+  
+     Элементы приведенного списка не являются частью сигнатуры.  Их нельзя использовать для различения перегруженных версий, но можно комбинировать для перегруженных версий, которые правильно различаются по сигнатуре.  
+  
+-   **Аргументы с поздним связыванием**.  Если в перегруженную процедуру требуется передать переменную объекта с поздней привязкой, необходимо объявить соответствующий аргумент как <xref:System.Object>.  
+  
+## Различные версии процедуры  
+ Предположим, что необходимо написать процедуру `Sub` для проводки транзакции по балансу клиента, предусмотрев возможность идентификации клиента как по имени, так и по номеру его счета.  Для этого можно определить две разные процедуры `Sub`, как показано в следующем примере:  
+  
+ [!code-vb[VbVbcnProcedures#73](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/VisualBasic/procedure-overloading_1.vb)]  
+  
+### Перегруженные версии  
+ Альтернативным вариантом является перегрузка отдельного имени процедуры.  С помощью ключевого слова [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) можно определить версии процедуры для каждого списка аргументов:  
+  
+ [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/VisualBasic/procedure-overloading_2.vb)]  
+  
+#### Дополнительные перегрузки  
+ Если необходимо также принимать в процедуре сумму транзакции в формате `Decimal` или `Single`, можно определить дополнительные перегруженные версии процедуры `post` для этих вариантов.  Если сделать это для каждой перегрузки, показанной в предыдущем примере, получится четыре процедуры `Sub` с одним именем, но с четырьмя разными сигнатурами.  
+  
+## Преимущества перегрузки  
+ Преимущество перегрузки процедуры заключается в гибкости вызова.  Чтобы использовать процедуру `post`, объявленную в предыдущем примере, вызывающий код должен получить идентификатор клиента типа `String` или `Integer`, а затем вызвать в каждом случае одну и ту же процедуру.  Это показано в приведенном ниже примере.  
+  
+ [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/VisualBasic/procedure-overloading_3.vb)]  
+  
+ [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/VisualBasic/procedure-overloading_4.vb)]  
+  
+## См. также  
+ [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
+ [Практическое руководство. Определение различных версий процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)   
+ [Практическое руководство. Вызов перегруженной процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-overloaded-procedure.md)   
+ [Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-optional-parameters.md)   
+ [Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
+ [Вопросы, связанные с перегрузкой процедур](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)   
+ [Разрешение перегрузки](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)   
+ [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)   
+ [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

@@ -1,0 +1,7 @@
+# [Строковые функции (Visual Basic)](string-functions.md)
+# [Функция CType (Visual Basic)](ctype-function.md)
+# [Функции преобразования типов (Visual Basic)](type-conversion-functions.md)
+# [Функции (Visual Basic)](index.md)
+# [Функции преобразования (Visual Basic)](conversion-functions.md)
+# [Математические функции (Visual Basic)](math-functions.md)
+# [Возвращаемые значения функции CStr (Visual Basic)](return-values-for-the-cstr-function.md)

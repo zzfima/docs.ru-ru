@@ -1,0 +1,7 @@
+# [Циклические структуры (Visual Basic)](loop-structures.md)
+# [Вложенные структуры управления (Visual Basic)](nested-control-structures.md)
+# [Пошаговое руководство. Реализация IEnumerable(Of T) в Visual Basic](walkthrough-implementing-ienumerable-of-t.md)
+# [Практическое руководство. Удаление системного ресурса (Visual Basic)](how-to-dispose-of-a-system-resource.md)
+# [Управление ходом выполнения в Visual Basic](index.md)
+# [Структуры решений (Visual Basic)](decision-structures.md)
+# [Другие структуры управления (Visual Basic)](other-control-structures.md)
