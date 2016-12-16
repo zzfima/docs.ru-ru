@@ -1,0 +1,6 @@
+# [Разработка с использованием My (Visual Basic)](index.md)
+## [Выполнение задач с My.Application, My.Computer и My.User (Visual Basic)](performing-tasks-with-my-application-my-computer-and-my-user.md)
+## [Экземпляры объектов, которые My.Forms и My.WebServices предоставляют по умолчанию (Visual Basic)](default-object-instances-provided-by-my-forms-and-my-webservices.md)
+## [Быстрая разработка приложений с использованием My.Resources и My.Settings (Visual Basic)](rapid-application-development-with-my-resources-and-my-settings.md)
+## [Обзор модели приложения в Visual Basic](overview-of-the-visual-basic-application-model.md)
+## [Зависимость My от типа проекта (Visual Basic)](how-my-depends-on-project-type.md)

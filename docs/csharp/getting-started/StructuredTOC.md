@@ -1,0 +1,5 @@
+# [Приступая к работе с Visual C#](getting-started-with-csharp.md)
+## [Новые возможности Visual C#](whats-new.md)
+## [Введение в язык C# и .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+## [Дополнительные ресурсы для программистов Visual C#](additional-resources.md)
+## [Критические изменения Visual C# в Visual Studio 2013](breaking-changes-in-visual-studio-2013.md)
