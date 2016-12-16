@@ -1,0 +1,8 @@
+# [Печать и отчеты (Visual Basic)](printing-and-reporting.md)
+## [PrintForm Component (Visual Basic)](printform-component.md)
+## [Практическое руководство. Печать прокручиваемой формы (Visual Basic)](how-to-print-a-scrollable-form.md)
+## [Практическое руководство. Печать клиентской и неклиентской области формы (Visual Basic)](how-to-print-client-and-non-client-areas-of-a-form.md)
+## [Практическое руководство. Печать клиентской области формы (Visual Basic)](how-to-print-the-client-area-of-a-form.md)
+## [Практическое руководство. Печать формы с помощью компонента PrintForm (Visual Basic)](how-to-print-a-form-by-using-the-printform-component.md)
+## [Deploying Applications That Reference the PrintForm Component (Visual Basic)](deploying-applications-that-reference-the-printform-component.md)
+## [Добавление печатаемых отчетов в приложения Visual Studio](adding-printable-reports-to-visual-studio-applications.md)

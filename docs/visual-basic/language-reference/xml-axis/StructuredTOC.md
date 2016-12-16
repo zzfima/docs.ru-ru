@@ -1,0 +1,6 @@
+# [Свойства оси XML (Visual Basic)](xml-axis-properties.md)
+## [Свойство оси атрибута XML (Visual Basic)](xml-attribute-axis-property.md)
+## [Свойство дочерней оси XML (Visual Basic)](xml-child-axis-property.md)
+## [Свойство дочерней оси XML (Visual Basic)](xml-descendant-axis-property.md)
+## [Свойство-индексатор расширения (Visual Basic)](extension-indexer-property.md)
+## [Свойство значения XML (Visual Basic)](xml-value-property.md)
