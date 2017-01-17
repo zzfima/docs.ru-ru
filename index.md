@@ -178,7 +178,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 <h3><a href="/dotnet/articles/csharp">Руководство по языку C#</a></h3>
                                                 <p><a href="/dotnet/articles/csharp/getting-started">Приступая к работе</a></p>
                                                 <p><a href="/dotnet/articles/csharp/tour-of-csharp">Обзор языка C#</a></p>
-                                                <p><a href="/dotnet/articles/csharp/language-reference">Справочник по языку C++</a></p>
+                                                <p><a href="/dotnet/articles/csharp/language-reference">Справочник по языку C#</a></p>
                                             </div>
                                         </div>
                                     </div>
