@@ -4,23 +4,22 @@ description: "Сведения о скриптах dotnet-install, которы�
 keywords: "dotnet-install, скрипты dotnet-install, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 30e969c55d08b3ac276c6e7786fa96985dbb0a6b
+ms.sourcegitcommit: ae23d83d5ca03d1a9a248e375bc092e0d9d0cde0
+ms.openlocfilehash: d6a420fa29107952020ddfa58ce0256fd8829890
 
 ---
 
-#<a name="dotnetinstall-scripts-reference"></a>Справка по скриптам dotnet-install
+#<a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
 ## <a name="name"></a>Имя
-dotnet-install.ps1 | dotnet-install.sh — скрипт, используемый для установки средств интерфейса командной строки (CLI) и общей среды выполнения
+`dotnet-install.ps1` | `dotnet-install.sh` — скрипт, используемый для установки средств интерфейса командной строки (CLI) и общей среды выполнения.
 
 ## <a name="synopsis"></a>Краткий обзор
 Windows:
@@ -64,7 +63,7 @@ Mac OS и Linux:
 
 `-InstallDir [DIR]`
 
-Путь установки. Если такого пути нет, создается каталог. Значение по умолчанию — *%LocalAppData%\.dotnet*.
+Путь установки. Если такого пути нет, создается каталог. Значение по умолчанию — *%LocalAppData%\Microsoft\dotnet*.
 
 `-Debug`
 
@@ -127,6 +126,6 @@ Mac OS и Linux:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 
