@@ -13,6 +13,7 @@ translationtype: Human Translation
 ms.sourcegitcommit: 8ada0e4c57febd4068be69330e7f9633517ce7ff
 ms.openlocfilehash: 66d9060cd92cfe5718c55eb54e721c1239e6f2f1
 
+
 ---
 
 # <a name="net-core"></a>.NET Core
@@ -155,5 +156,4 @@ ms.openlocfilehash: 66d9060cd92cfe5718c55eb54e721c1239e6f2f1
 
 
 <!--HONumber=Nov16_HO3-->
-
 
