@@ -18,6 +18,7 @@
     }
   ],
   "notification_subscribers": [],
+
   "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.ru-ru",
   "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
@@ -41,7 +42,9 @@
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/dotnet/docs",
+
       "branch": "live"
+
     }
   ],
   "need_generate_pdf_url_template": false,
@@ -51,3 +54,4 @@
     }
   }
 }
+

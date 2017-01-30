@@ -3,16 +3,15 @@ title: "Каталог идентификаторов сред выполнен�
 description: "Каталог идентификаторов сред выполнения (RID) в .NET Core"
 keywords: .NET, .NET Core
 author: blackdwarf
-manager: wpickett
+ms.author: mairaw
 ms.date: 08/22/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
 translationtype: Human Translation
 ms.sourcegitcommit: 682b27c575e63c3a9efeba8fe14bad6288d02664
-ms.openlocfilehash: be3ada8eb885d341c03a004d16fb523281f12870
+ms.openlocfilehash: 3aac9688235cf272d978d540a93f6553efc6eb89
 
 ---
 
@@ -87,6 +86,7 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 ## <a name="linux-rids"></a>Идентификаторы RID для Linux
 
 * Red Hat Enterprise Linux
+    * `rhel.7-x64`
     * `rhel.7.0-x64`
     * `rhel.7.1-x64`
     * `rhel.7.2-x64`
@@ -127,6 +127,6 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

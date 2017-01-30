@@ -1,22 +1,22 @@
 ---
-title: "Инфраструктуры"
-description: "Инфраструктуры"
+title: "Платформы и целевые объекты"
+description: "Описание основных понятий целевых объектов платформы при написании кода .NET."
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 09/19/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 translationtype: Human Translation
-ms.sourcegitcommit: 246d381246e78a27b7097d6b8126f421b52014de
-ms.openlocfilehash: 5b87ddfcfc66ebc05e2e559517180f93813a0806
+ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
+ms.openlocfilehash: 82ba6f4abe200dc48158eac1ad3e3609feeda2c9
 
 ---
 
-# <a name="frameworks"></a>Инфраструктуры
+# <a name="frameworks-and-targets"></a>Платформы и целевые объекты
 
 Экосистема .NET основана на концепции платформ. Платформы определяют API, который можно использовать для ориентации на конкретную платформу. Одна из таких платформ — .NET Framework 4.6. Платформы используются в Visual Studio и других интегрированных средах разработки и редакторах для предоставления правильного набора API. Они также используются NuGet для создания и применения пакетов NuGet. Это позволяет обеспечить создание и использование подходящих пакетов (и базовых ресурсов) для целевой платформы. Платформы являются одним из ключевых элементов в экосистеме .NET. Эта концепция позволяет обеспечить правильность работы, предотвращая появление исключения @System.MissingMethodException и аналогичных исключений во время выполнения.
 
@@ -61,6 +61,6 @@ ms.openlocfilehash: 5b87ddfcfc66ebc05e2e559517180f93813a0806
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -3,16 +3,15 @@ title: "Использование системы MSBuild для сборки п
 description: "Использование системы MSBuild для сборки проектов .NET Core"
 keywords: .NET, .NET Core
 author: dsplaisted
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 13c66464-4f14-4db6-aa8b-06f25e7ba894
 translationtype: Human Translation
-ms.sourcegitcommit: a04755da6417bb28bad5f28a18ead9feeba2d957
-ms.openlocfilehash: 5d37e78be88828d6c82777f96b6334903aecbe53
+ms.sourcegitcommit: 098cb31bb79e47ebb2ad2e8c2f56d2d5d6da4079
+ms.openlocfilehash: 6a992d985948a22da58db8317bc04d2f1828fc05
 
 ---
 
@@ -21,13 +20,16 @@ ms.openlocfilehash: 5d37e78be88828d6c82777f96b6334903aecbe53
 Средства .NET Core будут [переводиться с использования файлов project.json на проекты на основе MSBuild](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/).
 Мы планируем, что первая версия средств .NET Core, использующих систему MSBuild, будет входить в состав следующей версии Visual Studio.  Однако использовать систему MSBuild для проектов .NET Core можно уже сейчас, как описывается в этом разделе.
 
-Мы рекомендуем большинству разработчиков, которые создают *новые* проекты, предназначенные для .NET Core, использовать файлы project.json (способ по умолчанию) по указанным ниже причинам:
+В новых проектах, предназначенных для .NET Core, с файлом *project.json* рекомендуется использовать средства по умолчанию по следующим причинам:
 
-- Система MSBuild пока не поддерживает многие преимущества файлов project.json.
+- Система MSBuild пока не поддерживает многие возможности файлов *project.json*.
 - Многие средства на основе ASP.NET в настоящее время не работают с проектами MSBuild.
-- Когда мы выпустим средства .NET Core, использующие MSBuild, проекты на основе project.json можно будет автоматически преобразовать в проекты MSBuild. 
+- После выпуска инструментария .NET Core на основе MSBuild он автоматически преобразует файл *project.json* в файл на основе MSBuild.
 
-Систему MSBuild можно применять для нацеливания на .NET Core уже существующих проектов, которые уже используют MSBuild и которые нужно перенести в .NET Core, или если вы используете расширяемость MSBuild при сборке для сценариев, которые плохо поддерживаются проектами на основе файлов project.json.
+Систему MSBuild рекомендуется использовать в следующих случаях:
+
+ - Существующие проекты, использующие MSBuild, переносятся в .NET Core.
+ - Проекты, использующие расширяемость MSBuild, недостаточно хорошо поддерживаются файлом *project.json*.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -130,6 +132,6 @@ ms.openlocfilehash: 5d37e78be88828d6c82777f96b6334903aecbe53
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

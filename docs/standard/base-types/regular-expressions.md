@@ -3,16 +3,16 @@ title: "Регулярные выражения в .NET"
 description: "Регулярные выражения в .NET"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d1a640cf-09ca-48f7-800c-a627a6d549c9
 translationtype: Human Translation
 ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: e9ae9cb47955fb926507be32afb875efd3260ce3
+ms.openlocfilehash: 1fc1edd64c330fe579f389750432665ed982976e
 
 ---
 
@@ -150,7 +150,7 @@ End Module
 
 Обратите внимание, что входная строка содержит подстроку "this? This". Но из-за знака пунктуации она не считается повторением.
 
-### <a name="example-3-dynamically-building-a-culturesensitive-regular-expression"></a>Пример 3. Динамическое создание регулярного выражения с учетом языка и региональных параметров
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Пример 3. Динамическое создание регулярного выражения с учетом языка и региональных параметров
 
 Следующий пример демонстрирует преимущества использования регулярных выражений с гибкими возможностями глобализации .NET. В примере объект [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) применяется для определения формата денежных значений в текущем языке и региональных параметрах системы. Затем эти данные используются для динамического создания регулярного выражения, которое извлекает денежные значения из текста. Для каждого совпадения извлекается подгруппа, содержащая только числовые строки, которая преобразуется в значение [Decimal](xref:System.Decimal), после чего рассчитывается промежуточный итог. 
 
@@ -313,6 +313,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

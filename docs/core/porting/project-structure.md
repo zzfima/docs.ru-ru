@@ -3,16 +3,15 @@ title: "Организация проекта для поддержки .NET Fra
 description: "Организация проекта для поддержки .NET Framework и .NET Core"
 keywords: .NET, .NET Core
 author: conniey
-manager: wpickett
+ms.author: mairaw
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
 
 ---
 
@@ -33,13 +32,13 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
   * Не позволяет совместно использовать библиотеку .NET Core в разных типах проектов в одном файле решения. Для поддержки такого сценария лучше [создать переносимую библиотеку классов](#support-pcl).
   * Не позволяет использовать модификации сборки или загрузки проекта, которые поддерживаются целями и задачами MSBuild. Для поддержки такого сценария лучше [создать переносимую библиотеку классов](#support-pcl).
 
-* [**Разделяйте существующие проекты и новые проекты .NET Core**][option-xproj-folder]
+* <a name="support-vs"></a>[**Разделение существующих и новых проектов .NET Core**][option-xproj-folder]
   
   *Преимущества*
   * Продолжение работы над существующими проектами, причем разработчикам и участникам, у которых нет Visual Studio 2015, не нужно производить обновление.
   * Снижение вероятности появления новых ошибок в существующих проектах, так как в них не требуется обработка кода.
 
-* [**Сохранение текущих проектов и создание переносимых библиотек классов (PCL), предназначенных для .NET Core**][option-pcl]
+* <a name="support-pcl"></a>[**Сохранение существующих проектов и создание переносимых библиотек классов (PCL), предназначенных для .NET Core**][option-pcl]
 
   *Преимущества*
   * Ссылки на библиотеки .NET Core в классических и веб-проектах, предназначенных для полной версии .NET Framework, в рамках одного решения.
@@ -58,7 +57,7 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
 
 В зависимости от ограничений и сложности существующих проектов добавить поддержку .NET Core для этого репозитория можно несколькими разными способами, описанными ниже.
 
-## <a name="replace-existing-projects-with-a-multitargeted-net-core-project-xproj"></a>Замена существующих проектов проектом .NET Core (XPROJ), предназначенным для различных платформ
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project-xproj"></a>Замена существующих проектов проектом .NET Core (XPROJ), предназначенным для различных платформ
 
 Репозиторий можно реорганизовать так, что все существующие файлы `*.csproj` будут удалены и будет создан единственный файл `*.xproj`, предназначенный для нескольких платформ.  Это удобно по той причине, что один проект можно компилировать для разных платформ.  Это также позволяет управлять различными параметрами компиляции, зависимостями и т. д. для каждой целевой платформы.
 
@@ -103,15 +102,15 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
 Дополнительные указания по переходу на использование файлов project.json и XPROJ см. в [документации по переносу в .NET Core][porting-doc].
 
 [porting-doc]: index.md
-[example-initial-project]: media/project-structure/project.png " Существующий проект"
+[example-initial-project]: media/project-structure/project.png "Существующий проект"
 [example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
 
-[example-xproj]: media/project-structure/project.xproj.png " Создание файла XPROJ, предназначенного для различных платформ"
+[example-xproj]: media/project-structure/project.xproj.png "Создание файла XPROJ, предназначенного для различных платформ"
 [example-xproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/
 [example-xproj-projectjson]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/src/Car/project.json
 [example-xproj-projectjson-test]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/tests/Car.Tests/project.json
 
-[example-xproj-different-folder]: media/project-structure/project.xproj.different.png " Проект .NET Core с существующей библиотекой PCL в другой папке"
+[example-xproj-different-folder]: media/project-structure/project.xproj.different.png "Проект .NET Core с существующей библиотекой PCL в другой папке"
 [example-xproj-different-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj-keep-csproj/
 
 [example-pcl]: media/project-structure/project.pcl.png " Библиотека PCL, предназначенная для .NET Core"
@@ -125,6 +124,6 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

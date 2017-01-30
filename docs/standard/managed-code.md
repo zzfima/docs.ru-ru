@@ -3,17 +3,9 @@ title: "Что такое &quot;управляемый код&quot;?"
 description: "Что такое &quot;управляемый код&quot;?"
 keywords: .NET, .NET Core
 author: blackdwarf
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
-ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-translationtype: Human Translation
-ms.sourcegitcommit: 0013cf5604bfd1e8a16e5ca15577ac81fce49612
-ms.openlocfilehash: f05bd2e2344b4dd61d038278ad02e9c8f357b3a8
-
+ms.topic
 ---
 
 # <a name="what-is-managed-code"></a>Что такое "управляемый код"?

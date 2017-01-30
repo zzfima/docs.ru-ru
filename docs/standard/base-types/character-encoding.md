@@ -4,16 +4,15 @@ description: "Кодировка символов в .NET"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bce54e41-e9dc-493a-8988-1cbadc340fe8
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6080f5fa12a2391dd138828e0afc2219f1e3a11b
+ms.openlocfilehash: e72540726bdd1b3624064c7388e58d80320c5831
 
 ---
 
@@ -592,7 +591,7 @@ End Module
 > [!IMPORTANT]
 > При операциях кодирования наиболее часто проблемы возникают, когда символ Юникода не удается сопоставить с определенной кодировкой кодовой страницы. При операциях декодирования наиболее часто проблемы возникают, когда недопустимую последовательность байтов не удается преобразовать в допустимые символы Юникода. Поэтому необходимо знать, какую резервную стратегию использует определенный объект кодировки. По возможности при создании экземпляра объекта следует указывать резервную стратегию, используемую объектом кодировки.
  
-### <a name="bestfit-fallback"></a>стратегия наилучшего соответствия;
+### <a name="best-fit-fallback"></a>стратегия наилучшего соответствия;
 
 Если символ не имеет точного соответствия в целевой кодировке, кодировщик может попытаться сопоставить его с похожим символом. (Стратегия наилучшего соответствия связана с проблемами, возникающими скорее при кодировании, чем при декодировании. Существует лишь небольшое число кодовых страниц, символы которых нельзя сопоставить с Юникодом.) Стратегия наилучшего соответствия является стратегией по умолчанию для кодовых страниц и двухбайтовых кодировок, извлекаемых перегрузками [Encoding.GetEncoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) и [Encoding.GetEncoding(String)](xref:System.Text.Encoding.GetEncoding(System.String)).
 
@@ -1506,6 +1505,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

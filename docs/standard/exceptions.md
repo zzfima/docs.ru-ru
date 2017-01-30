@@ -3,16 +3,16 @@ title: "Обработка и создание исключений в .NET"
 description: "Общие сведения об использовании исключений в .NET"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf116df6-0042-46bf-be13-b69864816210
 translationtype: Human Translation
 ms.sourcegitcommit: 9584699ad7e745ae3cb059b1bb8327301c9a3286
-ms.openlocfilehash: 0c73fb0a12092877ff5b54221f4a80693d1d1152
+ms.openlocfilehash: 5271b63a47aa2fcc81cd9c8b1ffd22e618829412
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 0c73fb0a12092877ff5b54221f4a80693d1d1152
 
 В .NET исключение — это объект, наследуемый от класса [System.Exception](xref:System.Exception). Исключение создается из области кода, где произошла проблема. Исключение передается вверх по стеку до тех пор, пока его не обработает приложение либо программа не завершится.
 
-## <a name="exceptions-vs-traditional-errorhandling-methods"></a>Сравнение исключений и традиционных методов обработки ошибок
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Сравнение исключений и традиционных методов обработки ошибок
 
 Традиционно модели обработки ошибок разных языков программирования основываются либо на уникальном для языка способе обнаружения ошибок и отыскании для них обработчиков, либо на механизме обработки ошибок, предоставляемом операционной системой. Способ обработки исключений, реализуемый в .NET, обладает следующими преимуществами:
 
@@ -247,7 +247,7 @@ public class ProcessFile
 }
 ```
 
-## <a name="how-to-create-userdefined-exceptions"></a>Создание пользовательских исключений
+## <a name="how-to-create-user-defined-exceptions"></a>Создание пользовательских исключений
 
 Платформа .NET предоставляет иерархию классов исключений, производных от базового класса @System.Exception. Тем не менее, если ни одно из стандартных исключений не подходит, можно создать собственные классы исключений путем наследования от класса @System.Exception.
 
@@ -509,6 +509,6 @@ catch (Exception ex)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

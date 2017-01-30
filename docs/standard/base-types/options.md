@@ -4,16 +4,15 @@ description: "Параметры регулярных выражений"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2db2c3e6-953e-4913-8168-d707c437f2df
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 21672e28d0e76b98f6dac698096fccb2ce4edd03
+ms.openlocfilehash: a2a9fe356a0b2e9cf9415714bc01b77ea86229fc
 
 ---
 
@@ -215,7 +214,7 @@ End If
  
 Так как параметр [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) представляет поведение механизма регулярных выражений по умолчанию, он редко явно указывается в вызове метода. Вместо этого вызывается конструктор или статичный метод сопоставления шаблона без параметра options.
 
-## <a name="caseinsensitive-matching"></a>Сопоставление без учета регистра
+## <a name="case-insensitive-matching"></a>Сопоставление без учета регистра
 
 Параметр [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) или встроенный параметр **i** обеспечивает сопоставление без учета регистра. По умолчанию используются соглашения о регистре текущих региональных параметров.
 
@@ -543,7 +542,7 @@ End Class
 '    Joe: 164
 ```
 
-## <a name="singleline-mode"></a>Однострочный режим
+## <a name="single-line-mode"></a>Однострочный режим
 
 Параметр [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) или встроенный параметр s позволяет механизму регулярных выражений обрабатывать входную строку так, будто она состоит из одной строки. Для этого поведение языкового элемента **.** меняется так, чтобы он сопоставлял каждый символ, а не каждый символ кроме символа новой строки **\n** или \u000A.
 
@@ -1233,7 +1232,7 @@ End Module
 '       Instead, it is a nonsensical paragraph.
 ```
 
-## <a name="righttoleft-mode"></a>Режим "справа налево"
+## <a name="right-to-left-mode"></a>Режим "справа налево"
 
 По умолчанию механизм регулярных выражений выполняет поиска слева направо. Направление поиска можно изменить с помощью параметра [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft). Поиск автоматически будет начинаться с последнего символа строки. Для методов сопоставления шаблона с параметром начальной позиции, таких как [Regex.Match(String, Int32)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32)), начальная позиция — это индекс самого правого символа, с которого начинается поиск. 
 
@@ -1667,6 +1666,6 @@ Thread.CurrentThread.CurrentCulture = defaultCulture
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -4,16 +4,15 @@ description: "Привязки в регулярных выражениях"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 96dff1be-3005-4ba5-af1b-323182a26085
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: b2162a90d5cb6f3472a9d323a3e46e137c9edf82
+ms.openlocfilehash: ef2a63115f1efbe2418c348a3379fe7dd2face86
 
 ---
 
@@ -835,7 +834,7 @@ End Module
 `\w*` | Совпадение с нулем или большим числом буквенных символов.
 `\b` | Совпадение должно заканчиваться на границе слова.
  
-## <a name="nonword-boundary-b"></a>Не на границе слова: \B
+## <a name="non-word-boundary-b"></a>Не на границе слова: \B
 
 Привязка **\B** указывает, что соответствие не должно находиться на границе слова. Это противоположность привязки **\b**.
 
@@ -898,6 +897,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

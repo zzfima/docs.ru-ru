@@ -3,16 +3,16 @@ title: "Перенос приложений ASP.NET MVC в контейнеры 
 description: "Узнайте, как запустить существующее приложение ASP.NET MVC в контейнере Windows Docker"
 keywords: "Контейнеры Windows, Docker, ASP.NET MVC"
 author: BillWagner
-manager: wpickett
+ms.author: wiwagn
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: dotnet-mvc
 ms.devlang: dotnet
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: bde267042883d2f25848747047845a16b181e549
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c81e9783499ede9a612969f16a7e85d77fa921c4
 
 ---
 
@@ -42,7 +42,7 @@ ms.openlocfilehash: bde267042883d2f25848747047845a16b181e549
 Прежде чем начать, необходимо установить [Docker для Windows](https://docs.docker.com/docker-for-windows/) 1.12 Beta 26 или более поздней версии. В настоящее время поддержка контейнеров Windows доступна только в виде бета-версии.
 
 > [!IMPORTANT]
-> При использовании Windows Server 2016 перед запуском контейнеров Docker необходимо выполнить инструкции по [развертыванию узла контейнеров в Windows Server](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment).
+> При использовании Windows Server 2016 перед запуском контейнеров Docker необходимо выполнить инструкции по [развертыванию узла контейнеров в Windows Server](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment).
 
 После установки и запуска Docker нужно щелкнуть правой кнопкой мыши значок на панели задач и выбрать **Переключиться на контейнеры Windows** для запуска образов Docker на базе Windows. На выполнение этой команды требуется несколько секунд:
 
@@ -175,12 +175,12 @@ docker rm randomanswers
 
 В этом разделе вы научились переводить существующее приложение ASP.NET MVC в контейнер Windows Server и запускать его. Для запуска существующего приложения в него не требуется вносить какие-либо изменения. Для публикации приложения нужно запустить задачи, создать образ Docker и запустить этот образ в новом контейнере. Использование контейнеров Windows Server — это простейший способ переноса существующих приложений в эту среду.
 
-[windows-container]: media/aspnetmvc/SwitchContainer.png "Переход на контейнер Windows"
+[windows-container]: media/aspnetmvc/SwitchContainer.png "Переключение на контейнер Windows"
 [publish-connection]: media/aspnetmvc/PublishConnection.png "Публикация в файловой системе"
-[publish-settings]: media/aspnetmvc/PublishSettings.png "Параметры публикации"
+[publish-settings]: media/aspnetmvc/PublishSettings.png "Публикация: параметры"
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

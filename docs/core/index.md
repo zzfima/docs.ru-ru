@@ -3,16 +3,16 @@ title: .NET Core
 description: .NET Core
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
 ms.sourcegitcommit: 8ada0e4c57febd4068be69330e7f9633517ce7ff
-ms.openlocfilehash: 8b6b38aa7f59002dcfbb229ce6522df67b611028
+ms.openlocfilehash: 66d9060cd92cfe5718c55eb54e721c1239e6f2f1
+
 
 ---
 
@@ -35,7 +35,7 @@ ms.openlocfilehash: 8b6b38aa7f59002dcfbb229ce6522df67b611028
 
 .NET Core состоит из перечисленных ниже компонентов.
 
-- [Среда выполнения .NET](https://github.com/dotnet/coreclr) предоставляет систему типов, функцию загрузки сборок, сборщик мусора, взаимодействие с машинным кодом и другие основные службы. 
+- [Среда выполнения .NET](https://github.com/dotnet/coreclr) предоставляет систему типов, функцию загрузки сборок, сборщик мусора, взаимодействие с машинным кордом и другие основные службы. 
 - Набор [библиотек платформы](https://github.com/dotnet/corefx) предоставляет примитивные типы данных, типы компоновки приложений и базовые служебные программы. 
 - Набор [средств SDK](https://github.com/dotnet/cli) и [компиляторы языков](https://github.com/dotnet/roslyn) обеспечивают базовые возможности разработки, доступные в [пакете SDK для .NET Core](sdk.md).
 - Хост приложений dotnet служит для запуска приложений .NET Core. Он выбирает среду выполнения, размещает ее, предоставляет политику загрузки сборок и запускает приложение. Этот же хост используется для запуска средств SDK очень похожим образом.
@@ -155,6 +155,5 @@ ms.openlocfilehash: 8b6b38aa7f59002dcfbb229ce6522df67b611028
 
 
 
-<!--HONumber=Nov16_HO1-->
-
+<!--HONumber=Nov16_HO3-->
 

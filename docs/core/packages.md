@@ -4,16 +4,14 @@ description: "Пакеты, метапакеты и платформы"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
 ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: af6c83755068cc311b59c1a337898c177cc6d537
+ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
 
 ---
 
@@ -126,7 +124,7 @@ ms.openlocfilehash: af6c83755068cc311b59c1a337898c177cc6d537
 
 Платформа `.NETStandard,Version=1.3` — это платформа на основе пакетов. Она использует пакеты, предназначенные для платформы, с целью определения и предоставления интерфейсов API в контексте платформы.
 
-## <a name="packagebased-frameworks"></a>Платформы на основе пакетов
+## <a name="package-based-frameworks"></a>Платформы на основе пакетов
 
 Между платформами и пакетами существует двусторонняя связь. Платформы определяют интерфейсы API, доступные для конкретной платформы, например `netstandard1.3`. Пакеты, предназначенные для `netstandard1.3` (или совместимых платформ, например `netstandard1.0`), определяют интерфейсы API, доступные для `netstandard1.3`. Такое определение может казаться циклически замкнутым, но это не так. Интерфейсы API для платформы основаны на пакетах, то есть определяются в них. Сама платформа не определяет интерфейсы API.
 
@@ -188,6 +186,6 @@ ms.openlocfilehash: af6c83755068cc311b59c1a337898c177cc6d537
 Большинство дополнительных библиотек, предоставляемых `Microsoft.NETCore.App`, также предназначены для `netstandard`, при условии что их зависимости обеспечиваются другими библиотеками `netstandard`. Это означает, что библиотеки `netstandard` также могут ссылаться на эти пакеты в качестве зависимостей. 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

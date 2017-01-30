@@ -3,16 +3,16 @@ title: "Библиотеки платформы"
 description: "Библиотеки платформы"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 translationtype: Human Translation
-ms.sourcegitcommit: 093b852fe1ed2307ebce914381fe47388b435c95
-ms.openlocfilehash: 7283ed099cefa4b0e137869724f8e87dda0d451a
+ms.sourcegitcommit: 9df468c7225dbf1e3317ea34bd8b2285361a69f4
+ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
 
 ---
 
@@ -30,15 +30,15 @@ ms.openlocfilehash: 7283ed099cefa4b0e137869724f8e87dda0d451a
 
 .NET включает набор типов-примитивов, которые (в разной степени) используются во всех приложениях. Эти типы содержат данные, например числа, строки, байты и произвольные объекты. Язык C# содержит ключевые слова для таких типов. Ниже приведен некоторый набор этих типов с соответствующими ключевыми словами C#.
 
-*   [System.Object](https://msdn.microsoft.com/library/system.object.aspx) ([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx))  — исходный базовый класс в системе типов CLR. Это корень иерархии типов.
-*   [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx) ([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)) — 16-разрядный целочисленный тип со знаком. Также имеется и [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx) без знака.
-*   [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx) ([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx) без знака.
-*   [System.Single](https://msdn.microsoft.com/library/system.single.aspx) ([float](https://msdn.microsoft.com/library/b1e65aza.aspx)) — 32-разрядный тип с плавающей запятой.
-*   [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx) ([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)) — 128-разрядный десятичный тип.
-*   [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx) ([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)) — 8-разрядный целочисленный тип без знака, который представляет байт памяти.
-*   [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx) ([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)) — логический тип, который представляет значение "true" или "false".
-*   [System.Char](https://msdn.microsoft.com/library/system.char.aspx) ([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
-*   [System.String](https://msdn.microsoft.com/library/system.string.aspx) ([string](https://msdn.microsoft.com/library/362314fe.aspx)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.
+* [System.Object](https://msdn.microsoft.com/library/system.object.aspx) ([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx))  — исходный базовый класс в системе типов CLR. Это корень иерархии типов.
+* [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx) ([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)) — 16-разрядный целочисленный тип со знаком. Также имеется и [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx) без знака.
+* [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx) ([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx) без знака.
+* [System.Single](https://msdn.microsoft.com/library/system.single.aspx) ([float](https://msdn.microsoft.com/library/b1e65aza.aspx)) — 32-разрядный тип с плавающей запятой.
+* [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx) ([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)) — 128-разрядный десятичный тип.
+* [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx) ([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)) — 8-разрядное целое число без знака, которое представляет байт памяти.
+* [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx) ([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)) — логический тип, который представляет значение "true" или "false".
+* [System.Char](https://msdn.microsoft.com/library/system.char.aspx) ([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
+* [System.String](https://msdn.microsoft.com/library/system.string.aspx) ([string](https://msdn.microsoft.com/library/362314fe.aspx)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.
 
 ## <a name="data-structures"></a>Структуры данных
 
@@ -58,7 +58,7 @@ ms.openlocfilehash: 7283ed099cefa4b0e137869724f8e87dda0d451a
 *   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) — API для загрузки и запроса XML-документов с помощью LINQ.
 *   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx) — API для чтения файлов ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx)), который может использоваться и для их записи.
 
-## <a name="appmodel-apis"></a>API моделей приложений
+## <a name="app-model-apis"></a>API моделей приложений
 
 Существует множество моделей приложений от разных компаний, которые можно использовать с платформой .NET.
 
@@ -66,6 +66,6 @@ ms.openlocfilehash: 7283ed099cefa4b0e137869724f8e87dda0d451a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

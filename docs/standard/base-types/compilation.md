@@ -3,16 +3,16 @@ title: "Компиляция и многократное использован�
 description: "Компиляция и многократное использование в регулярных выражениях"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3adea434-e2ed-4023-b4f5-b0608b4cf53f
 translationtype: Human Translation
 ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 1832403174276e48dc1857be8ff11fba2b9a250c
+ms.openlocfilehash: e14e386a04c64726e4eacb63dc8855a356a18ba0
 
 ---
 
@@ -52,6 +52,6 @@ ms.openlocfilehash: 1832403174276e48dc1857be8ff11fba2b9a250c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
