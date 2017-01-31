@@ -1,22 +1,24 @@
 ---
-title: "Разработка приложений .NET Core"
+title: "Развертывание приложений на .NET Core | Microsoft Docs"
 description: "Разработка приложений .NET Core"
 keywords: ".NET, .NET Core, разработка .NET Core"
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 11/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 
 ---
 
-# <a name="net-core-application-deployment"></a>Разработка приложений .NET Core #
+# <a name="net-core-application-deployment-net-core-tools-preview-4"></a>Развертывание приложений на .NET Core (инструменты .NET Core — предварительная версия 4)
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Документацию по инструментам .NET Core (предварительная версия 2) см. в статье [Развертывание приложений на .NET Core](../../deploying/index.md).
 
 Для приложений .NET Core можно создавать два типа развертываний. 
 
@@ -122,7 +124,7 @@ ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
       </ItemGroup>
     ```
 
-Обратите внимание, что в приведенном выше примере зависимость от пакета SDK остается. Это сделано преднамеренно, так как эта зависимость требуется для восстановления всех необходимых целевых объектов, чтобы обеспечить функционирование средств командной строки.  
+ Обратите внимание, что в приведенном выше примере зависимость от пакета SDK остается. Это сделано преднамеренно, так как эта зависимость требуется для восстановления всех необходимых целевых объектов, чтобы обеспечить функционирование программ командной строки.  
 
 2. Скачайте пакет NuGet, содержащий зависимость стороннего разработчика, если вы этого еще не сделали. Чтобы скачать пакет, выполните команду `dotnet restore` после добавления зависимости. Так как зависимость разрешается из локального кэша NuGet во время публикации, она должна быть доступна в системе.
 
@@ -190,7 +192,7 @@ ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
     }
     ```
 
-3. В разделе `<PropertyGroup>` файла `csproj` создайте тег `<RuntimeIdentifiers>`, определяющий платформы, для которых предназначено приложение, и укажите идентификатор среды выполнения для каждой целевой платформы. Список идентификаторов сред выполнения см. в [каталоге идентификаторов сред выполнения](../../rid-catalog.md). Например, приведенный ниже раздел `runtimes` указывает, что приложение выполняется в 64-разрядной операционной системе Windows 10 и в 64-разрядной операционной системе OS X 10.11.
+3. В разделе `<PropertyGroup>` файла `csproj` создайте тег `<RuntimeIdentifiers>`, определяющий платформы, для которых предназначено приложение, и укажите идентификатор среды выполнения для каждой целевой платформы. Список идентификаторов сред выполнения см. в [каталоге идентификаторов сред выполнения](../../rid-catalog.md). Например, приведенный ниже пример указывает, что приложение выполняется в 64-разрядной операционной системе Windows 10 и в 64-разрядной операционной системе OS X 10.11.
 
     ```xml
         <PropertyGroup>
@@ -320,16 +322,14 @@ ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
 
 Чтобы создать автономное развертывание меньшего размера, сначала выполните первые два шага для создания автономного развертывания. Запустив команду `dotnet new` и добавив исходный код на языке C# в приложение, выполните указанные ниже действия.
 
-1. Откройте файл `csproj` и замените раздел `frameworks` на следующий код:
+1. Откройте файл `csproj` и замените элемент `<TargetFramework>` на следующий код:
 
     ```xml
-    <PropertyGroup>
       <TargetFramework>netstandard1.6</TargetFramework>
-  </PropertyGroup>
   ```
 Эта операция указывает на то, что вместо использования всей платформы `netcoreapp1.0`, включающей среду CLR .NET Core, библиотеку .NET Core и ряд других системных компонентов, наше приложение использует только библиотеку .NET Standard.
 
-2. Замените раздел `dependencies` на следующий код:
+2. Замените `<ItemGroup>`, содержащий ссылки на пакет, следующим кодом:
 
     ```xml
     <ItemGroup>
@@ -360,7 +360,7 @@ ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
     ```
     
 
-Полный образец файла `csproj` будет приведен далее в этом разделе.
+ Полный образец файла `csproj` будет приведен далее в этом разделе.
 
 4. Выполните команду `dotnet restore`, чтобы восстановить зависимости, указанные в проекте.
 
@@ -390,7 +390,7 @@ ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netstandard1.6</TargetFramework>
     <VersionPrefix>1.0.0</VersionPrefix>
     <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
@@ -422,6 +422,6 @@ ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

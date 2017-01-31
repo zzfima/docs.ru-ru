@@ -1,6 +1,6 @@
 ---
-title: "Руководства по средствам .NET Core (предварительная версия 3)"
-description: "Руководства по средствам .NET Core (предварительная версия 3)"
+title: "Руководства по .NET Core (предварительная версия 4) | Microsoft Docs"
+description: "Руководства по .NET Core (предварительная версия 4)"
 keywords: .NET, .NET Core
 author: bleroy
 ms.author: mairaw
@@ -11,24 +11,27 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 71eab6216e116b99927dfeaa8ce3cf70bcc08a5e
-ms.openlocfilehash: e318f7ca1a9091dad7480f270d62f78b82c12fbb
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 58881fb6e6d89ebd8c58874f2e1cdfcb80b9dac8
 
 ---
 
-# <a name="net-core-tutorials-tooling-preview-3"></a>Руководства по средствам .NET Core (предварительная версия 3)
+# <a name="net-core-tutorials-tooling-preview-4"></a>Руководства по .NET Core (предварительная версия 4)
 
-Ниже приведен список доступных руководств по использованию средств .NET Core (предварительная версия 3).
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Руководства по .NET Core](../../tutorials/index.md).
 
-- [Getting started with .NET Core on Windows/Linux/macOS using the command line (SDK Preview 3)](using-with-xplat-cli-msbuild.md) (Приступая к работе с .NET Core в Windows, Linux или macOS с помощью командной строки (пакет SDK — предварительная версия 3))
-- [Организация и тестирование проектов с использованием командной строки .NET Core (пакет SDK — предварительная версия 3)](using-with-xplat-cli-msbuild-folders.md)
+Ниже приведен список доступных руководств по использованию инструментов .NET Core (предварительная версия 4).
+
+- [Начало работы с .NET Core в Windows, Linux или Mac OS из командной строки (пакет SDK — предварительная версия 4)](using-with-xplat-cli-msbuild.md)
+- [Organizing and testing projects with the .NET Core command line (SDK Preview 4)](using-with-xplat-cli-msbuild-folders.md) (Организация и тестирование проектов с использованием командной строки .NET Core (пакет SDK — предварительная версия 4))
 - [Getting started with .NET Core on Windows, using Visual Studio 2017](using-on-windows-vs-2017.md) (Приступая к работе с .NET Core в Windows с помощью Visual Studio 2017)
 - [Building a complete .NET Core solution on Windows, using Visual Studio 2017](using-on-windows-vs-2017-full-solution.md) (Создание полного решения .NET Core в Windows с помощью Visual Studio 2017)
 
-Чтобы получить доступ к учебникам по разработке веб-приложений ASP.NET Core, рекомендуем обратиться к [документации по ASP.NET Core](https://docs.asp.net).
+Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

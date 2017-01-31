@@ -1,5 +1,5 @@
 ---
-title: "Команда dotnet-nuget-push | Пакет SDK для .NET Core"
+title: "Команда dotnet-nuget-push | Microsoft Docs"
 description: "Команда dotnet-nuget-push отправляет пакет на сервер и публикует его."
 keywords: "dotnet-nuget-push, CLI, команда CLI, .NET Core"
 author: karann-msft
@@ -11,8 +11,8 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: dcc89fd24e23e624c4bcf90a8200b4e655af6dd6
 
 ---
 
@@ -31,7 +31,7 @@ ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
 
 ## <a name="description"></a>Описание
 
-Команда `dotnet nuget push` отправляет пакет на сервер и публикует его. Команда push использует сервер и учетные данные, указанные в системном файле конфигурации NuGet или цепочке файлов конфигурации. См. дополнительные сведения о файлах конфигурации в статье о [настройке поведения NuGet](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior). Конфигурацию NuGet по умолчанию можно получить, загрузив файл *%AppData%\NuGet\NuGet.config* (Windows) или *$HOME/.local/share* (Linux и macOS). Затем нужно загрузить все файлы *nuget.config* или *.nuget\nuget.config*, начиная с корневого каталога диска и заканчивая текущим каталогом.
+Команда `dotnet nuget push` отправляет пакет на сервер и публикует его. Команда push использует сервер и учетные данные, указанные в системном файле конфигурации NuGet или цепочке файлов конфигурации. См. дополнительные сведения о файлах конфигурации в статье о [настройке поведения NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior). Конфигурацию NuGet по умолчанию можно получить, загрузив файл *%AppData%\NuGet\NuGet.config* (Windows) или *$HOME/.local/share* (Linux и macOS). Затем нужно загрузить все файлы *nuget.config* или *.nuget\nuget.config*, начиная с корневого каталога диска и заканчивая текущим каталогом.
 
 ## <a name="options"></a>Параметры
 
@@ -74,7 +74,7 @@ ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
 `--config-file <FILE>`
 
 Файл конфигурации NuGet используется специально для этой команды, заменяя другие файлы конфигурации, обнаруженные стандартным процессом поиска и построения цепочки. Путь может быть как абсолютным, так и относительным.
-См. дополнительные сведения о файлах конфигурации в статье о [настройке поведения NuGet](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior). 
+См. дополнительные сведения о файлах конфигурации в статье о [настройке поведения NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior). 
 
 `--verbosity <LEVEL>`
 
@@ -116,6 +116,6 @@ ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
