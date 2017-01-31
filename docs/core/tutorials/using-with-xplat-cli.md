@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: 37e14d5cdf1593f6a8b1ecee9d9828647b023548
-ms.openlocfilehash: 5493ccb77e62d20d5101728ef8ab1744ea697fb8
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a5a5039c5043f46772110d6750d04f14a3f43c86
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) см. в статье [Начало работы с .NET Core в Windows, Linux или Mac OS из командной строки (предварительная версия 4 инструментов)](../preview3/tutorials/using-with-xplat-cli-msbuild.md).
 
 В этом руководстве показано, как с помощью средств командной строки в .NET Core создавать базовые кроссплатформенные консольные приложения.
 
@@ -647,6 +650,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

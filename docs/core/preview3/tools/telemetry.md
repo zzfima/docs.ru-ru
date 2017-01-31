@@ -1,22 +1,25 @@
 ---
-title: "Средства телеметрии .NET Core"
+title: "Сбор телеметрии по инструментам .NET Core | Microsoft Docs"
 description: .NET Core
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
-ms.date: 07/06/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: f2b312bb-f80b-4b0d-9101-93908f06a6fa
+ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 127c3f175754f91170d130ca98c17ef3cb68fd14
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 6d3750b0b8b452281c1733455e0f4ee4fd130386
 
 ---
 
-# <a name="net-core-tools-telemetry"></a>Средства телеметрии .NET Core
+# <a name="net-core-tools-telemetry-tooling-preview-4"></a>Сбор телеметрии по инструментам .NET Core (предварительная версия 4)
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Сбор телеметрии по инструментам .NET Core](../../tools/telemetry.md).
 
 Средства .NET Core включают в себя [функцию телеметрии](https://github.com/dotnet/cli/pull/2145), которая собирает сведения об использовании. Команде разработчиков .NET важно знать, как используются эти средства, чтобы иметь возможность улучшить их.
 
@@ -105,6 +108,6 @@ a minute to complete and will only happen once.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

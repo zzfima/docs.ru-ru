@@ -1,25 +1,27 @@
 ---
-title: "Команда dotnet-msbuild | Пакет SDK для .NET Core"
-description: "Команда dotnet-msmsbuild предоставляет доступ к командной строке MSmsbuild"
+title: "Команда dotnet-msbuild | Microsoft Docs"
+description: "Команда dotnet-msbuild обеспечивает доступ к командной строке MSBuild."
 keywords: "dotnet-msbuild, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: ffdc40ba-ef33-463e-aa35-b0af1fe615a2
 translationtype: Human Translation
-ms.sourcegitcommit: cde9d9577246a9025d646ce2a6d574a18512146e
-ms.openlocfilehash: 51a3afdcf591b8147790d78471c6fee63ceb7f2d
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 06d4210e5dff97d3e96efff8ae8e84efc27fb7d2
 
 ---
 
 #<a name="dotnet-msbuild"></a>dotnet-msbuild
 
+[!INCLUDE[preview-warning](../../../includes/warning.md)]
+
 ## <a name="name"></a>Имя 
-dotnet-msbuild — выполняет сборку проекта и всех его зависимостей. 
+dotnet-msbuild — собирает проект и все его зависимости.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -28,7 +30,7 @@ dotnet-msbuild — выполняет сборку проекта и всех �
 ## <a name="description"></a>Описание
 Команда `dotnet msbuild` предоставляет доступ к полнофункциональной командной строке MSBuild. 
 
-Команда имеет точно такие же возможности, как существующий клиент командной строки MSBuild. Все параметры одинаковы. Справочник по командам см. в [доступной документации](https://msdn.microsoft.com/en-us/library/ms164311.aspx). 
+Команда имеет точно такие же возможности, как и существующий клиент с интерфейсом командной строки MSBuild. Все параметры одинаковы. Ознакомиться с параметрами можно в статье [Справочник по командной строке MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference). 
 
 ## <a name="examples"></a>Примеры
 
@@ -46,6 +48,6 @@ dotnet-msbuild — выполняет сборку проекта и всех �
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

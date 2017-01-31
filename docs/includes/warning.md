@@ -1,7 +1,7 @@
 > [!WARNING]
-> Этот раздел относится к версии-кандидату Visual Studio 2017 — средства .NET Core (предварительная версия 3). Документацию по Visual Studio 2015 — средства .NET Core (предварительная версия 2) см. [здесь](/dotnet/articles/core/tools/index).
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Документацию по Visual Studio 2015 — средства .NET Core (предварительная версия 2) см. [здесь](/dotnet/articles/core/tools/index).
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

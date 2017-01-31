@@ -1,6 +1,6 @@
 ---
-title: "Команда dotnet-test | Пакет SDK для .NET Core"
-description: "Команда dotnet test служит для выполнения модульных тестов в проекте."
+title: "Команда dotnet-test | Microsoft Docs"
+description: "Команда `dotnet test` служит для выполнения модульных тестов в проекте."
 keywords: "dotnet-test, CLI, команда CLI, .NET Core"
 author: blackdwarf
 ms.author: mairaw
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
+ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 
 ---
 
-#<a name="dotnet-test"></a>dotnet-test
+#<a name="dotnet-test-tooling-preview-4"></a>dotnet-test (предварительная версия 4 инструментов)
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-test](../../tools/dotnet-test.md).
 
 ## <a name="name"></a>Имя
 
@@ -28,7 +31,7 @@ ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
     [--settings] [--listTests] [--testCaseFilter] 
     [--testAdapterPath] [--logger] 
     [--configuration] [--output] [--framework] [--diag]
-    [--noBuild]`  
+    [--no-build]`  
 
 ## <a name="description"></a>Описание
 
@@ -119,7 +122,7 @@ ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
 
 Поиск тестовых двоичных файлов для указанной среды выполнения.
 
-`--noBuild` 
+`--no-build` 
 
 Не выполняет сборку тестового проекта перед его запуском. 
 
@@ -145,6 +148,6 @@ ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

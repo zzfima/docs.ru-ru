@@ -1,25 +1,28 @@
 ---
-title: "Команда dotnet-new | .NET Core"
+title: "Команда dotnet-new | Microsoft Docs"
 description: "Команда dotnet-new создает проекты .NET Core в текущем каталоге."
 keywords: "dotnet-new, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 29ccc12ff893d316c816d22da862f90bfc9334ff
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
 
 ---
 
-#<a name="dotnetnew"></a>dotnet-new
+#<a name="dotnet-new"></a>dotnet-new
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-new (предварительная версия 4 инструментов)](../preview3/tools/dotnet-new.md).
 
 ## <a name="name"></a>Имя
-dotnet-new — создает проект .NET Core в текущем каталоге
+`dotnet-new` — создает проект .NET Core в текущем каталоге.
 
 ## <a name="synopsis"></a>Краткий обзор
 `dotnet new [--help] [--type] [--lang]`
@@ -63,6 +66,6 @@ dotnet-new — создает проект .NET Core в текущем ката
 `dotnet new -t web`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

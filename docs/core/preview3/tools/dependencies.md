@@ -1,54 +1,55 @@
 ---
-title: "Средства управления зависимостями в предварительной версии 3 платформы .NET Core"
-description: "В предварительной версии 3 изменены механизмы управления зависимостями."
+title: "Управление зависимостями в предварительной версии 4 инструментов .NET Core | Microsoft Docs"
+description: "В предварительной версии 4 изменены механизмы управления зависимостями."
 keywords: "CLI, расширяемость, пользовательские команды, .NET Core"
 author: blackdwarf
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: e04d5f3b08c7f6885ed9914a91fc308234e6ce3b
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
 
 ---
 
-<a name="managing-dependencies-in-net-core-preview-3-tooling"></a>Средства управления зависимостями в предварительной версии 3 платформы .NET Core
-----------------------------------------------------
+# <a name="managing-dependencies-in-net-core-preview-4-tooling"></a>Управление зависимостями в предварительной версии 4 инструментов .NET Core
 
-# <a name="overview"></a>Обзор
-Помимо переноса проектов .NET Core из файла project.json в файл csproj и на платформу MSBuild произошло еще одно значительное изменение, которое привело к унификации файла проекта и ресурсов, позволяющих отслеживать зависимости. Для проектов .NET Core это аналогично тому, что раньше выполнял файл project.json. Не существует отдельного файла JSON или XML для отслеживания зависимостей NuGet. Вместе с этим изменением в синтаксис csproj также добавлен другой тип *ссылки* — `<PackageReference>`. 
+[!INCLUDE[preview-warning](../../../includes/warning.md)]
+
+Помимо переноса проектов .NET Core из файла project.json в CSPROJ-файл и на платформу MSBuild произошло еще одно значительное изменение, которое привело к унификации файла проекта и ресурсов, обеспечивающих отслеживание зависимостей. Для проектов .NET Core это аналогично тому, что раньше выполнял файл project.json. Не существует отдельного файла JSON или XML для отслеживания зависимостей NuGet. Вместе с этим изменением в синтаксис csproj также добавлен другой тип *ссылки* — `<PackageReference>`. 
 
 В этом документе описывается новый тип ссылки. Кроме того, в нем показано, как добавлять в проекты зависимость пакетов, используя этот новый тип ссылки. 
 
-# <a name="the-new-packagereference-element"></a>Новый элемент <PackageReference>
+## <a name="the-new-packagereference-element"></a>Новый элемент <PackageReference>
 Элемент `<PackageReference>` имеет следующую базовую структуру:
 
 ```xml
-<PackageReference Include="<Package_ID>">
+<PackageReference Include="PACKAGE_ID">
     <Version>PACKAGE_VERSION</Version>
 </PackageReference>
 ```
 
-Если вы знакомы с платформой MSBuild, она покажется вам похожей на другие, уже существующие [типы ссылок](). Ключевым является оператор `Include`, указывающий идентификатор пакета, который нужно добавить в проект. Дочерний элемент `<Version>` указывает версию, которую необходимо получить. Версии указываются в соответствии с [правилами версий NuGet](https://docs.nuget.org/ndocs/create-packages/dependency-versions#version-ranges).  
+Если вы знакомы с платформой MSBuild, она покажется вам похожей на другие, уже существующие ссылочные типы. Ключевым является оператор `Include`, указывающий идентификатор пакета, который нужно добавить в проект. Дочерний элемент `<Version>` указывает версию, которую необходимо получить. Версии указываются в соответствии с [правилами версий NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions#version-ranges).
 
-> **Примечание.** Если вы не знакомы с общими понятиями синтаксиса `csproj`, используйте для ознакомления [справочную документацию по проекту MSBuild]().  
+> [!NOTE]
+> Если вы не знакомы с общими понятиями синтаксиса `csproj`, используйте [справочную документацию по проекту MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference) для ознакомления с ними.  
 
-Добавление зависимости, которая доступна только в конкретном целевом объекте, выполняется с использованием следующих условий:
+Добавление зависимости, которая доступна только в конкретном целевом объекте, выполняется с использованием условий, аналогичных в приведенном далее примере.
 
 ```xml
-<PackageReference Include="<Package_ID>" Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
+<PackageReference Include="PACKAGE_ID" Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
     <Version>PACKAGE_VERSION</Version>
 </PackageReference>
 ```
 
 Указанное выше означает, что зависимость будет действительной только в том случае, если для затронутого целевого объекта выполняется сборка. Элемент `$(TargetFramework)` в этом условии представляет собой заданное в проекте свойство MSBuild. Для наиболее распространенных приложений .NET Core это не требуется. 
 
-# <a name="adding-a-dependency-to-your-project"></a>Добавление зависимости в проект
-Добавить зависимость в проект очень просто. Ниже показано, как добавить в проект `JSON.net` версии `9.0.1`. Это применимо и к любой другой зависимости NuGet. 
+## <a name="adding-a-dependency-to-your-project"></a>Добавление зависимости в проект
+Добавить зависимость в проект очень просто. Ниже показано, как добавить в проект Json.NET версии `9.0.1`. Это применимо и к любой другой зависимости NuGet. 
 
 При открытии файла проекта вы увидите не менее двух узлов `<ItemGroup>`. Можно заметить, что на одном из узлов уже есть элементы `<PackageReference>`. Вы можете добавить новую зависимость на этот узел или создать новый — поступайте по своему усмотрению, так как результат от этого не изменится. 
 
@@ -94,13 +95,10 @@ ms.openlocfilehash: e04d5f3b08c7f6885ed9914a91fc308234e6ce3b
 </Project>
 ```
 
-# <a name="removing-a-dependency-from-the-project"></a>Удаление зависимости из проекта
-Чтобы удалить зависимость из файла проекта, достаточно просто удалить `<PackageReference>` из файла проекта. 
+## <a name="removing-a-dependency-from-the-project"></a>Удаление зависимости из проекта
+Чтобы удалить зависимость из файла проекта, достаточно просто удалить `<PackageReference>` из файла проекта.
 
 
-
-
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

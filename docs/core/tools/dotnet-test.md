@@ -1,26 +1,29 @@
 ---
-title: "Команда dotnet-test | Пакет SDK для .NET Core"
-description: "Команда dotnet test служит для выполнения модульных тестов в проекте."
+title: "Команда dotnet-test | Microsoft Docs"
+description: "Команда `dotnet test` служит для выполнения модульных тестов в проекте."
 keywords: "dotnet-test, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: b12861f0ce3c40bf4db51994ea5d4a92b8ef0162
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a53cedb48e57dce7672a5bba2c0ea908cbeb70f4
 
 ---
 
-#<a name="dotnettest"></a>dotnet-test
+#<a name="dotnet-test"></a>dotnet-test
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-new (предварительная версия 4 инструментов)](../preview3/tools/dotnet-test.md).
 
-`dotnet-test` — выполняет модульные тесты с помощью настроенного средства запуска тестов
+## <a name="name"></a>Имя
+
+`dotnet-test` — выполняет модульные тесты при помощи настроенного средства запуска тестов.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -132,6 +135,6 @@ ms.openlocfilehash: b12861f0ce3c40bf4db51994ea5d4a92b8ef0162
 [Каталог идентификаторов сред выполнения (RID)](../rid-catalog.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 
