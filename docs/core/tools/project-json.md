@@ -1,5 +1,5 @@
 ---
-title: "Справочник по файлу project.json"
+title: "Справочник по файлу project.json | Microsoft Docs"
 description: "Справочник по файлу project.json"
 keywords: .NET, .NET Core, project.json
 author: aL3891
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: 4023c5ec72055fee78863a43b60989e1eb34fb22
-ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a1a27c6653d61ab612b76a4522dffdf82afecafc
 
 ---
 
 # <a name="projectjson-reference"></a>Справочник по файлу project.json
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Документацию по инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [Программы с интерфейсом командной строки .NET Core (предварительная версия 4 инструментов)](../preview3/tools/index.md).
 
 Файл project.json используется в проектах .NET Core для определения метаданных проекта, сведений о компиляции и зависимостей. В этом справочном разделе приводится список всех свойств, которые можно определить в файле project.json.
 
@@ -322,7 +325,7 @@ ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
 Тип данных: Object
 
 Объект, который определяет зависимости пакетов в проекте. Каждый ключ этого объекта представляет имя пакета, а каждое значение содержит сведения об управлении версиями.
-Дополнительные сведения см. в статье [Разрешение зависимостей](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3-x) на сайте документации по NuGet.
+Дополнительные сведения см. в статье [Разрешение зависимостей](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3x) на сайте документации по NuGet.
 
 Пример:
 
@@ -344,7 +347,7 @@ ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
 ### <a name="version"></a>version
 Тип данных: String
 
-Указывает версию или диапазон версий зависимости. Чтобы указать [нефиксированную версию зависимости](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#floating-versions), используйте подстановочный знак \*.
+Указывает версию или диапазон версий зависимости. Чтобы указать [нефиксированную версию зависимости](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#floating-versions), используйте подстановочный знак \*.
 
 Пример:
 
@@ -1643,7 +1646,7 @@ URL-адрес репозитория, в котором хранится про
 ## <a name="usersecretsid"></a>userSecretsId
 Тип данных: String
 
-Указывает секретный идентификатор пользователя, который следует использовать во время разработки. Дополнительные сведения см. в разделе [Безопасное хранение секретов приложений во время разработки](https://docs.asp.net/en/latest/security/app-secrets.html).
+Указывает секретный идентификатор пользователя, который следует использовать во время разработки. Дополнительные сведения см. в разделе [Безопасное хранение секретов приложений во время разработки](https://docs.microsoft.com/aspnet/core/security/app-secrets).
 
 Пример:
 

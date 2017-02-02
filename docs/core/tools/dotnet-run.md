@@ -1,26 +1,29 @@
 ---
-title: "Команда dotnet-run | Пакет SDK для .NET Core"
+title: "Команда dotnet-run | Microsoft Docs"
 description: "Команда dotnet-run — это удобное средство для запуска приложения из исходного кода."
 keywords: "dotnet-run, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 18731d9fcc190371d908779a69a81114e0685aba
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: fed8b914a06d75a48c10997a21db217ba8a13e38
 
 ---
 
-#<a name="dotnetrun"></a>dotnet-run
+#<a name="dotnet-run"></a>dotnet-run
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-run (предварительная версия 4 инструментов)](../preview3/tools/dotnet-run.md).
 
 ## <a name="name"></a>Имя 
 
-dotnet-run — выполняет исходный код "на месте" без дополнительных явных команд компиляции или запуска
+`dotnet-run` — выполняет исходный код "на месте" без дополнительных явных команд компиляции или запуска.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -77,6 +80,6 @@ dotnet-run — выполняет исходный код "на месте" б�
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

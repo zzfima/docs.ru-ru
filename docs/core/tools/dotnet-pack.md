@@ -1,26 +1,29 @@
 ---
-title: "Команда dotnet-pack | Пакет SDK для .NET Core"
+title: "Команда dotnet-pack | Microsoft Docs"
 description: "Команда dotnet-pack создает пакеты NuGet для проекта .NET Core."
 keywords: "dotnet-pack, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: e83c8ad302590bcd77129c3ff325e498da751e69
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 227bdaabc88bddbf2014788d72ef87e75f956795
 
 ---
 
-#<a name="dotnetpack"></a>dotnet-pack
+#<a name="dotnet-pack"></a>dotnet-pack
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-pack (предварительная версия 4 инструментов)](../preview3/tools/dotnet-pack.md).
 
-`dotnet-pack` — упаковывает код в пакет NuGet
+## <a name="name"></a>Имя
+
+`dotnet-pack` — упаковывает код в пакет NuGet.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -90,6 +93,6 @@ ms.openlocfilehash: e83c8ad302590bcd77129c3ff325e498da751e69
 `dotnet pack --version-suffix "ci-1234"`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

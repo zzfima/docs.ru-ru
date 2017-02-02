@@ -1,5 +1,5 @@
 ---
-title: "Команда dotnet-publish | Пакет SDK для .NET Core"
+title: "Команда dotnet-publish | Microsoft Docs"
 description: "Команда dotnet-publish публикует проект .NET Core в каталоге."
 keywords: "dotnet-publish, CLI, команда CLI, .NET Core"
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
+ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: e480c32faa22859de74e06f3a199fba1c0720c46
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 83a706dd9fb2ee00b21426543e58621f9737a14d
 
 ---
 
-#<a name="dotnet-publish"></a>dotnet-publish
+#<a name="dotnet-publish-tooling-preview-4"></a>dotnet-publish (предварительная версия 4 инструментов)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-publish](../../tools/dotnet-publish.md).
 
-`dotnet-publish` упаковывает приложение и все его зависимости в папку, подготавливая их к публикации.
+## <a name="name"></a>Имя
+
+`dotnet-publish` — упаковывает приложение и все его зависимости в папку, подготавливая их к публикации.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -94,6 +97,6 @@ ms.openlocfilehash: e480c32faa22859de74e06f3a199fba1c0720c46
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

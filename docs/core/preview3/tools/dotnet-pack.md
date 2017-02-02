@@ -1,5 +1,5 @@
 ---
-title: "Команда dotnet-pack | Пакет SDK для .NET Core"
+title: "Команда dotnet-pack | Microsoft Docs"
 description: "Команда dotnet-pack создает пакеты NuGet для проекта .NET Core."
 keywords: "dotnet-pack, CLI, команда CLI, .NET Core"
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
+ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 03fab8ad488f4001929524298e52cafeffc45e7f
 
 ---
 
-#<a name="dotnet-pack"></a>dotnet-pack
+#<a name="dotnet-pack-tooling-preview-4"></a>dotnet-pack (предварительная версия 4 инструментов)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-pack](../../tools/dotnet-pack.md).
 
-`dotnet-pack` — упаковывает код в пакет NuGet
+## <a name="name"></a>Имя
+
+`dotnet-pack` — упаковывает код в пакет NuGet.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -32,9 +35,9 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 ## <a name="description"></a>Описание
 
-Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет nuget. При наличии параметра `--include-symbols` будет создан другой пакет, содержащий символы отладки. 
+Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet. При наличии параметра `--include-symbols` будет создан другой пакет, содержащий символы отладки. 
 
-Зависимости NuGet упаковываемого проекта добавляются в файл nuspec, чтобы их можно было разрешить при установке пакета. Межпроектные ссылки не упаковываются в проекте. В настоящее время при наличии межпроектных зависимостей требуется один пакет на каждый проект.
+Зависимости NuGet упаковываемого проекта добавляются в файл `nuspec`, чтобы их можно было разрешить при установке пакета. Межпроектные ссылки не упаковываются в проекте. В настоящее время при наличии межпроектных зависимостей требуется один пакет на каждый проект.
 
 `dotnet pack` по умолчанию сначала выполняет сборку проекта. Чтобы избежать этого, передайте параметр `--no-build`. Это может быть полезно, например, в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был только что собран. 
 
@@ -58,7 +61,7 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 `--include-source`
 
-Включает исходные файлы в пакет nuget. Исходные файлы включены в папку `src` пакета nupkg. 
+Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`. 
 
 `--include-symbols`
 
@@ -95,7 +98,6 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 `dotnet pack --version-suffix "ci-1234"`
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

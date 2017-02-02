@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 title: "Документация по .NET"
 translationtype: Human Translation
-ms.sourcegitcommit: c8b9e166a49c86dcabfa89887db1dce3a8e45f4f
-ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 44b21665593717023aef7a85fe88a60d07519327
 
 ---
 <div id="main" class="v2">
@@ -85,8 +85,8 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/welcome">Что такое .NET?</a></h3>
-                                                <p><a href="https://www.microsoft.com/net">Приступая к работе</a></p>
+                                                <h3><a href="/dotnet/articles/welcome">Что представляет собой .NET?</a></h3>
+                                                <p><a href="/dotnet/articles/standard/getting-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/articles/standard/tour">Обзор .NET</a></p>
                                                 <p><a href="/dotnet/articles/standard/components">Основные понятия архитектуры .NET</a></p>
                                             </div>
@@ -105,10 +105,10 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/core">Руководство по .NET Core</a></h3>
-                                                <p><a href="/dotnet/articles/core/getting-started">Приступая к работе</a></p>
+                                                <p><a href="/dotnet/articles/core/getting-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/articles/core/tutorials">Учебники</a></p>
                                                 <p><a href="/dotnet/articles/core/porting">Перенос из .NET Framework</a></p>
-                                                <p><a href="https://docs.asp.net/en/latest/getting-started.html">ASP.NET Core</a></p>
+                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx">Руководство по .NET Framework</a></h3>
-                                                <p><a href="https://msdn.microsoft.com/library/hh425099(v=vs.110).aspx">Приступая к работе</a></p>
+                                                <p><a href="https://msdn.microsoft.com/library/hh425099(v=vs.110).aspx">Начало работы</a></p>
                                                 <p><a href="https://msdn.microsoft.com/library/hh156542(v=vs.110).aspx">Учебники</a></p>
                                                 <p><a href="https://msdn.microsoft.com/library/54xbah2z(v=vs.110).aspx">Разработка клиентов</a></p>
                                                 <p><a href="https://msdn.microsoft.com/library/bb400852(v=vs.110).aspx">ASP.NET</a></p>
@@ -145,7 +145,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Xamarin</a></h3>
-                                                <p><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Приступая к работе</a></p>
+                                                <p><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Начало работы</a></p>
                                                 <p><a href="https://developer.xamarin.com/guides/ios">Руководство по Xamarin.iOS</a></p>
                                                 <p><a href="https://developer.xamarin.com/guides/android/getting_started">Руководство по Xamarin.Android</a></p>
                                                 <p><a href="https://developer.xamarin.com/guides/xamarin-forms">Руководство по Xamarin.Forms</a></p>
@@ -164,8 +164,8 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/csharp">Руководство по языку C#</a></h3>
-                                                <p><a href="/dotnet/articles/csharp/getting-started">Приступая к работе</a></p>
+                                                <h3><a href="/dotnet/articles/csharp">Руководство по языку C#</a></h3>
+                                                <p><a href="/dotnet/articles/csharp/getting-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/articles/csharp/tour-of-csharp">Обзор языка C#</a></p>
                                                 <p><a href="/dotnet/articles/csharp/language-reference">Справочник по языку C#</a></p>
                                             </div>
@@ -183,10 +183,10 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/fsharp">Руководство по языку F#</a></h3>
-                                                <p><a href="/dotnet/articles/fsharp/tutorials/getting-started">Приступая к работе</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/tour">Обзор языка F#</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/language-reference">Справочник по языку F#</a></p>
+                                                <h3><a href="/dotnet/articles/fsharp">Руководство по языку F#</a></h3>
+                                                <p><a href="/dotnet/articles/fsharp/tutorials/getting-started">Начало работы</a></p>
+                                                <p><a href="/dotnet/articles/fsharp/tour">Обзор языка F#</a></p>
+                                                <p><a href="/dotnet/articles/fsharp/language-reference">Справочник по языку F#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -203,7 +203,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/visual-basic">Руководство по Visual Basic</a></h3>
-                                                <p><a href="/dotnet/articles/visual-basic/getting-started">Приступая к работе</a></p>
+                                                <p><a href="/dotnet/articles/visual-basic/getting-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/articles/visual-basic/walkthroughs">Обзор Visual Basic</a></p>
                                                 <p><a href="/dotnet/articles/visual-basic/language-reference">Справочник по языку Visual Basic</a></p>
                                             </div>

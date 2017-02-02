@@ -1,26 +1,29 @@
 ---
-title: "Команда dotnet-restore | Пакет SDK для .NET Core"
-description: "Узнайте, как восстановить зависимости и связанные с проектом средства с помощью команды dotnet restore."
+title: "Команда dotnet-restore | Microsoft Docs"
+description: "Вы узнаете, как восстановить зависимости и связанные с проектом средства при помощи команды dotnet restore."
 keywords: "dotnet-restore, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
+ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 6fb08a8765ad720b51e796aa0991087413d02e44
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: b2dbd39583b58c5d977d88edfc4770f6d9855ec1
 
 ---
 
-#<a name="dotnet-restore"></a>dotnet-restore
+#<a name="dotnet-restore-tooling-preview-4"></a>dotnet-restore (предварительная версия 4 инструментов)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-restore](../../tools/dotnet-restore.md).
 
-`dotnet-restore` — восстанавливает зависимости и средства проекта
+## <a name="name"></a>Имя
+
+`dotnet-restore` — восстанавливает зависимости и средства проекта.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -84,7 +87,7 @@ ms.openlocfilehash: 6fb08a8765ad720b51e796aa0991087413d02e44
 
 Восстановление зависимостей и средств для проекта `app1` по указанному пути:
 
-`dotnet restore ~/projects/app1/app1.csproj``
+`dotnet restore ~/projects/app1/app1.csproj`
     
 Восстановление зависимостей и средств для проекта в текущем каталоге с использованием пути к файлу, заданного в качестве резервного источника:
 
@@ -100,6 +103,6 @@ ms.openlocfilehash: 6fb08a8765ad720b51e796aa0991087413d02e44
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

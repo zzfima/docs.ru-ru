@@ -1,5 +1,5 @@
 ---
-title: "Команда dotnet-nuget-delete | Пакет SDK для .NET Core"
+title: "Команда dotnet-nuget-delete | Microsoft Docs"
 description: "Команда dotnet-nuget-delete удаляет пакет с сервера или из списка."
 keywords: "dotnet-nuget-delete, CLI, команда CLI, .NET Core"
 author: karann-msft
@@ -11,8 +11,8 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 787b1427b1064943570cbc361042ab2f20d11088
 
 ---
 
@@ -62,7 +62,7 @@ ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
 `--config-file <FILE>`
 
 Файл конфигурации NuGet используется специально для этой команды, заменяя другие файлы конфигурации, обнаруженные стандартным процессом поиска и построения цепочки. Путь может быть как абсолютным, так и относительным.
-См. дополнительные сведения о файлах конфигурации в статье о [настройке поведения NuGet](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior). 
+См. дополнительные сведения о файлах конфигурации в статье о [настройке поведения NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 
 ## <a name="examples"></a>Примеры
 
@@ -84,6 +84,6 @@ ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

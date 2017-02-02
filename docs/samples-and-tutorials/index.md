@@ -3,16 +3,15 @@ title: "Примеры и учебники"
 description: "Примеры и учебники"
 keywords: .NET
 author: BillWagner
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/25/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-technologies
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 8c3a58f97c9cb70e168a055cd874ee10ebb08c54
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
 
 ---
 
@@ -22,7 +21,7 @@ ms.openlocfilehash: 8c3a58f97c9cb70e168a055cd874ee10ebb08c54
 
 Отличные ресурсы по изучению языка программирования F# можно найти на [сайте F# Foundation](http://fsharp.org/learn.html). 
 
-Отличные ресурсы по изучению ASP.NET Core можно найти на [сайте ASP.NET](https://docs.asp.net/en/latest/tutorials/index.html).
+Отличные ресурсы по изучению ASP.NET Core можно найти на [сайте ASP.NET](https://docs.microsoft.com/aspnet/core/tutorials/).
 
 Кроме того, если вам интересно изучать C# в интерактивном режиме, обратитесь к следующим [интерактивным учебникам](http://go.microsoft.com/fwlink/?LinkId=817234).
 
@@ -99,6 +98,6 @@ ms.openlocfilehash: 8c3a58f97c9cb70e168a055cd874ee10ebb08c54
 В этом учебнике демонстрируется, как развернуть существующее консольное приложение в контейнере Docker. Готовая версия созданного кода находится [в репозитории core-docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

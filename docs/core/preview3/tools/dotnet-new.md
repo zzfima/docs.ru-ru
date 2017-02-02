@@ -1,25 +1,28 @@
 ---
-title: "Команда dotnet-new | .NET Core"
+title: "Команда dotnet-new | Microsoft Docs"
 description: "Команда dotnet-new создает проекты .NET Core в текущем каталоге."
 keywords: "dotnet-new, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
+ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 49f0a5e9b385c09a31cc463a77a74894b4304792
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: d4ca76f3de38b5d05868292d5c4bb8e3b0c7fdf2
 
 ---
 
-#<a name="dotnet-new"></a>dotnet-new
+#<a name="dotnet-new-tooling-preview-4"></a>dotnet-new (предварительная версия 4 инструментов)
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-new](../../tools/dotnet-new.md).
 
 ## <a name="name"></a>Имя
-dotnet-new — создает проект .NET Core в текущем каталоге
+dotnet-new — создает проект на .NET Core в текущем каталоге.
 
 ## <a name="synopsis"></a>Краткий обзор
 `dotnet new [--help] [--type] [--lang]`
@@ -40,9 +43,9 @@ dotnet-new — создает проект .NET Core в текущем ката
 
 Выводит краткую справку по команде.  
 
-`-l|--lang <C#|F#>`
+`-l|--lang C#`
 
-Язык проекта. По умолчанию — `C#`. Другие допустимые значения: `csharp`, `fsharp`, `cs` и `fs`.
+Язык проекта. По умолчанию — `C#`. Другие допустимые значения: `csharp` и `cs`.
 
 `-t|--type`
 
@@ -54,15 +57,11 @@ dotnet-new — создает проект .NET Core в текущем ката
 
 `dotnet new` или `dotnet new --lang c#` 
    
-Создание проекта консольного приложения F# в текущем каталоге:
-
-`dotnet new --lang f#`
-  
 Создание проекта приложения ASP.NET Core C# в текущем каталоге:
 
 `dotnet new -t web`
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

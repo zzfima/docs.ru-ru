@@ -9,20 +9,20 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
+ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
 ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 4ef9e076e3afb4cf5c96c627dc102da1ff2c8ce0
+ms.openlocfilehash: 9f241774dd8977bbb26b5143d9f5d094af1ce05d
 
 ---
 
-#<a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
+#<a name="dotnet-install-scripts-reference-tooling-preview-4"></a>Справка по скриптам dotnet-install (предварительная версия 4 инструментов)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [Справка по скриптам dotnet-install (предварительная версия 4 инструментов)](../preview3/tools/dotnet-install-script.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Справка по скриптам dotnet-install](../../tools/dotnet-install-script.md).
 
 ## <a name="name"></a>Имя
-`dotnet-install.ps1` | `dotnet-install.sh` — скрипт, используемый для установки средств интерфейса командной строки (CLI) и общей среды выполнения.
+dotnet-install.ps1 | dotnet-install.sh — скрипт, используемый для установки средств интерфейса командной строки (CLI) и общей среды выполнения
 
 ## <a name="synopsis"></a>Краткий обзор
 Windows:
@@ -66,7 +66,7 @@ Mac OS и Linux:
 
 `-InstallDir [DIR]`
 
-Путь установки. Если такого пути нет, создается каталог. Значение по умолчанию — *%LocalAppData%\Microsoft\dotnet*.
+Путь установки. Если такого пути нет, создается каталог. Значение по умолчанию — *%LocalAppData%\.dotnet*.
 
 `-Debug`
 

@@ -1,25 +1,28 @@
 ---
-title: "Команда dotnet-build | Пакет SDK для .NET Core"
+title: "Команда dotnet-build | Microsoft Docs"
 description: "Команда dotnet-build выполняет сборку проекта и всех его зависимостей."
 keywords: "dotnet-build, CLI, команда CLI, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 344f8154c63bbb3c5ce6840bc7c7b1659950c223
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
 
 ---
 
-#<a name="dotnetbuild"></a>dotnet-build
+#<a name="dotnet-build"></a>dotnet-build
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-build (предварительная версия 4 инструментов)](../preview3/tools/dotnet-build.md).
 
 ## <a name="name"></a>Имя 
-dotnet-build — выполняет сборку проекта и всех его зависимостей. 
+`dotnet-build` — собирает проект и все его зависимости. 
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -76,11 +79,11 @@ dotnet-build — выполняет сборку проекта и всех е�
 
 Определяет конфигурацию для сборки.  Если значение не указано, по умолчанию используется значение `Debug`.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
 Целевая среда выполнения для сборки. Список идентификаторов сред выполнения (RID), которые можно использовать, см. в [каталоге RID](../rid-catalog.md). 
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
 Определяет, чем следует заменить звездочку (`*`) в поле версии в файле [project.json](project-json.md#version). Формат соответствует рекомендациям в отношении версий NuGet. 
 
@@ -111,6 +114,6 @@ dotnet-build — выполняет сборку проекта и всех е�
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

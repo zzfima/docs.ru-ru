@@ -1,5 +1,5 @@
 ---
-title: "Справочник global.json | .NET Core"
+title: "Справочник по файлу global.json | Microsoft Docs"
 description: "Справочник global.json"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
+ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 281f1b717a0e220e533078e973711977617a1401
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 97a9ee85025c15e21d4a7cbdce31d35d3894e7d6
 
 ---
 
-# <a name="globaljson-reference"></a>Справочник global.json
+# <a name="globaljson-reference-tooling-preview-4"></a>Справочник по файлу global.json (предварительная версия 4 инструментов)
 
-Файл global.json по-прежнему присутствует в командной строке .NET Core (предварительная версия 3). При этом он используется не для определения метаданных решения, как в предыдущих выпусках, а для разрешения выбора используемой версии CLI с помощью свойства `sdk`. 
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Справочник по файлу global.json](../../tools/global-json.md).
+
+Файл global.json по-прежнему присутствует в командной строке .NET Core (предварительная версия 4). При этом он используется не для определения метаданных решения, как в предыдущих выпусках, а для разрешения выбора используемой версии CLI с помощью свойства `sdk`. 
 
 В справочнике это учитывается. 
 
@@ -43,7 +46,6 @@ ms.openlocfilehash: 281f1b717a0e220e533078e973711977617a1401
 ```
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

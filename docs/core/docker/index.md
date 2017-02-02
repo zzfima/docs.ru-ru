@@ -11,8 +11,8 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: cae32148-aef4-4e64-a7f0-88072bad4400
 translationtype: Human Translation
-ms.sourcegitcommit: 8eee2127f80736f6f2adb0924a4668f81c4285ad
-ms.openlocfilehash: bcfbe57cf366c599b7f1f8165c2a5169ecc2bd7b
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 7146e08095260361af1263cf79072476664eee23
 
 ---
 
@@ -23,9 +23,9 @@ ms.openlocfilehash: bcfbe57cf366c599b7f1f8165c2a5169ecc2bd7b
 - [Создание образов Docker для приложений .NET Core](building-net-docker-images.md)
 - [Инструменты Visual Studio для Docker](visual-studio-tools-for-docker.md)
 
-Чтобы получить доступ к учебникам по разработке веб-приложений ASP.NET Core, рекомендуем обратиться к [документации по ASP.NET Core](https://docs.asp.net).
+Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)"
+title: "Использование пакета SDK и инструментов .NET Core при непрерывной интеграции (CI) | Microsoft Docs"
 description: "Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5fb15297-a276-417f-8c4f-267281357769
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 0fda867f1d29caaca716ad27baf6e43146cb99df
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: dc68271dcca6a64bbcbeb487050e809fae40c8aa
 
 ---
 
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
+
+> [!WARNING]
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [Использование пакета SDK и инструментов .NET Core при непрерывной интеграции (CI) (предварительная версия 4)](../preview3/tools/using-ci-with-cli.md).
 
 ## <a name="overview"></a>Обзор
 В этой статье описывается использование пакета SDK для .NET Core и входящих в него средств на сервере сборки. Как правило, на сервере сборки CI требуется автоматизировать установку каким-либо образом. В идеале для автоматизации, если она возможна, не должны требоваться права администратора. 
@@ -90,6 +93,6 @@ install:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
