@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a1a27c6653d61ab612b76a4522dffdf82afecafc
+ms.sourcegitcommit: 8fba5c76375763abf90e2e17d3bcc9d0039089f0
+ms.openlocfilehash: 2cdb43a9095217498c12c97548e4aa632b13a59c
 
 ---
 
 # <a name="projectjson-reference"></a>Справочник по файлу project.json
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Документацию по инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [Программы с интерфейсом командной строки .NET Core (предварительная версия 4 инструментов)](../preview3/tools/index.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Документацию по версии-кандидату 4 средств .NET Core см. в разделе [Средства интерфейса командной строки .NET Core (версия-кандидат 4 средств .NET Core)](../preview3/tools/index.md).
 
 Файл project.json используется в проектах .NET Core для определения метаданных проекта, сведений о компиляции и зависимостей. В этом справочном разделе приводится список всех свойств, которые можно определить в файле project.json.
 
@@ -1658,6 +1658,6 @@ URL-адрес репозитория, в котором хранится про
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

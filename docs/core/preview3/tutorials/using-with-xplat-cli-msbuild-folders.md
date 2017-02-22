@@ -1,6 +1,6 @@
 ---
-title: "Организация и тестирование проектов с использованием командной строки .NET Core (пакет SDK — предварительная версия 4) | Microsoft Docs"
-description: "Организация и тестирование проектов с использованием командной строки .NET Core (пакет SDK — предварительная версия 4)"
+title: "Организация и тестирование проектов с помощью командной строки .NET Core (версия-кандидат 4 средств .NET Core) | Документы Майкрософт"
+description: "Организация и тестирование проектов с помощью командной строки .NET Core (версия-кандидат 4 средств .NET Core)"
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -11,17 +11,17 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f3d5ebbac45726e320e5b886dbb6b81259bea36c
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bcb5ce9772ca2f3e35ebd7ec948d011ec04296e0
 
 ---
 
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line-sdk-preview-4"></a>Организация и тестирование проектов с использованием командной строки .NET Core (пакет SDK — предварительная версия 4)
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line-net-core-tools-rc4"></a>Организация и тестирование проектов с помощью командной строки .NET Core (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Начало работы с .NET Core в Windows, Linux и Mac OS из командной строки](../../tutorials/using-with-xplat-cli.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Начало работы с .NET Core в Windows, Linux и Mac OS из командной строки](../../tutorials/using-with-xplat-cli.md).
 
-В этом руководстве раскрывается тема, начатая в статье [Начало работы с .NET Core в Windows, Linux или Mac OS из командной строки (пакет SDK — предварительная версия 4)](./using-with-xplat-cli-msbuild.md). Здесь показано, как можно перейти от создания простых "hello world" к разработке более сложных и хорошо организованных приложений.
+В этом учебнике раскрывается тема, начатая в статье [Начало работы с .NET Core в Windows, Linux или Mac OS с помощью командной строки (версия-кандидат 4 средств .NET Core)](./using-with-xplat-cli-msbuild.md). Здесь показано, как можно перейти от создания простых сценариев "hello world" к разработке более сложных и хорошо организованных приложений.
 
 ## <a name="using-folders-to-organize-code"></a>Упорядочение кода с помощью папок
 
@@ -325,6 +325,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

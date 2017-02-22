@@ -4,21 +4,21 @@ description: "Разработка приложений .NET Core"
 keywords: ".NET, .NET Core, разработка .NET Core"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 11/13/2016
+ms.date: 07/02/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8917a7639f042cb25a469ee9ba7fb7cd582c3821
 
 ---
 
-# <a name="net-core-application-deployment-net-core-tools-preview-4"></a>Развертывание приложений на .NET Core (инструменты .NET Core — предварительная версия 4)
+# <a name="net-core-application-deployment-net-core-tools-rc4"></a>Развертывание приложений .NET Core (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Документацию по инструментам .NET Core (предварительная версия 2) см. в статье [Развертывание приложений на .NET Core](../../deploying/index.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Документацию по инструментам .NET Core (предварительная версия 2) см. в статье [Развертывание приложений на .NET Core](../../deploying/index.md).
 
 Для приложений .NET Core можно создавать два типа развертываний. 
 
@@ -111,16 +111,7 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 
     ```xml
       <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Newtonsoft.Json">
-          <Version>9.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161102-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
       </ItemGroup>
     ```
 
@@ -203,15 +194,7 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 
 4. Выполните команду `dotnet restore`, чтобы восстановить зависимости, указанные в проекте.
 
-5. Создайте отладочные сборки приложения для каждой из целевых платформ с помощью команды `dotnet build`. Если не указать идентификатор среды выполнения, для которой нужно выполнить сборку, команда `dotnet build` создаст сборку только для идентификатора среды выполнения текущей системы. Чтобы выполнить сборку приложения для обеих целевых платформ, используйте следующие команды:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.11-x64
-    ```
-Отладочные сборки приложения для каждой платформы будут находиться в подкаталоге `.\bin\Debug\netcoreapp1.0\<runtime_identifier>` проекта.
-
-6. Отладив и протестировав программу, вы можете создать файлы, которые будут развертываться вместе с приложением для каждой целевой платформы с помощью команды `dotnet publish` следующим образом:
+5. Отладив и протестировав программу, вы можете создать файлы, которые будут развертываться вместе с приложением для каждой целевой платформы с помощью команды `dotnet publish` следующим образом:
 
    ```console
    dotnet publish -c release -r win10-x64
@@ -219,15 +202,14 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
    ```
 При этом будет создана версия выпуска приложения (а не отладочная версия) для каждой целевой платформы. Итоговые файлы помещаются в подкаталог с именем `publish`, который находится в подкаталоге каталога `.\bin\release\netcoreapp1.0\<runtime_identifier>` проекта. Обратите внимание на то, что каждый подкаталог содержит полный набор файлов (как файлов приложения, так и всех файлов .NET Core), необходимых для запуска приложения.
 
-7. Помимо файлов приложения, процесс публикации создает файл базы данных программы (PDB), который содержит отладочную информацию о приложении. Он служит в первую очередь для отладки исключений. Вы можете не упаковывать его вместе с файлами приложения.
+6. Помимо файлов приложения, процесс публикации создает файл базы данных программы (PDB), который содержит отладочную информацию о приложении. Он служит в первую очередь для отладки исключений. Вы можете не упаковывать его вместе с файлами приложения.
 
 Опубликованные файлы можно развернуть любым способом, который вам нравится. Например, их можно упаковать в ZIP-файл, использовать простую команду `copy` или развернуть их с помощью любого установочного пакета на ваш выбор. 
 
 Ниже приведено полное содержимое файла `csproj` для этого проекта.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
@@ -235,24 +217,6 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
     <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -265,16 +229,7 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 
     ```xml
       <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161102-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
-        <PackageReference Include="Newtonsoft.Json">
-          <Version>9.0.1</Version>
-        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
       </ItemGroup>
     ```
 2. Скачайте пакет NuGet, содержащий зависимость стороннего разработчика, в систему, если вы этого еще не сделали. Чтобы сделать зависимость доступной для приложения, после ее добавления выполните команду `dotnet restore`. Так как зависимость разрешается из локального кэша NuGet во время публикации, она должна быть доступна в системе.
@@ -282,8 +237,7 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 Ниже приведено полное содержимое CSPROJ-файла для этого проекта.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
@@ -292,23 +246,8 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -331,23 +270,12 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 
 2. Замените `<ItemGroup>`, содержащий ссылки на пакет, следующим кодом:
 
-    ```xml
-    <ItemGroup>
-      <PackageReference Include="NETSTandard.Library">
-        <Version>1.6.0</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
-        <Version>1.0.2</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
-        <Version>1.0.1</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NET.Sdk">
-        <Version>1.0.0-alpha-20161102-2</Version>
-        <PrivateAssets>All</PrivateAssets>
-      </PackageReference>
-    </ItemGroup>
-  ```
+  ```xml
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+```
 
    Он определяет компоненты системы, используемые приложением. К компонентам системы, упаковываемым вместе с приложением, относятся библиотека .NET Standard, среда выполнения .NET Core и узел .NET Core. В результате получается автономное развертывание меньшего размера.
 
@@ -364,14 +292,7 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 
 4. Выполните команду `dotnet restore`, чтобы восстановить зависимости, указанные в проекте.
 
-5. Создайте отладочные сборки приложения для каждой из целевых платформ с помощью команды `dotnet build`. Если не указать идентификатор среды выполнения, для которой нужно выполнить сборку, команда `dotnet build` создаст сборку только для идентификатора среды выполнения текущей системы. Чтобы выполнить сборку приложения для обеих целевых платформ, используйте следующие команды:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.11-x64
-    ```
-
-6. Отладив и протестировав программу, вы можете создать файлы, которые будут развертываться вместе с приложением для каждой целевой платформы с помощью команды `dotnet publish` следующим образом:
+5. Отладив и протестировав программу, вы можете создать файлы, которые будут развертываться вместе с приложением для каждой целевой платформы с помощью команды `dotnet publish` следующим образом:
 
    ```console
    dotnet publish -c release -r win10-x64
@@ -379,15 +300,14 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
    ```
 При этом будет создана версия выпуска приложения (а не отладочная версия) для каждой целевой платформы. Итоговые файлы помещаются в подкаталог с именем `publish`, который находится в подкаталоге каталога `.\bin\release\netstandard1.6\<runtime_identifier>` проекта. Обратите внимание на то, что каждый подкаталог содержит полный набор файлов (как файлов приложения, так и всех файлов .NET Core), необходимых для запуска приложения.
 
-7. Помимо файлов приложения, процесс публикации создает файл базы данных программы (PDB), который содержит отладочную информацию о приложении. Он служит в первую очередь для отладки исключений. Вы можете не упаковывать его вместе с файлами приложения.
+6. Помимо файлов приложения, процесс публикации создает файл базы данных программы (PDB), который содержит отладочную информацию о приложении. Он служит в первую очередь для отладки исключений. Вы можете не упаковывать его вместе с файлами приложения.
 
 Опубликованные файлы можно развернуть любым способом, который вам нравится. Например, их можно упаковать в ZIP-файл, использовать простую команду `copy` или развернуть их с помощью любого установочного пакета на ваш выбор. 
 
 Ниже приведено полное содержимое файла `csproj` для этого проекта.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netstandard1.6</TargetFramework>
@@ -396,32 +316,15 @@ ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NETSTandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
-      <Version>1.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

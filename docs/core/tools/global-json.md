@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: e8c8123f2c46e506990375172d1be642653d4996
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a6b0ad546a8a121ad5ea4642c11842a8dccf7055
 
 ---
 
 # <a name="globaljson-reference"></a>Справочник global.json
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [Справочник по файлу global.json (предварительная версия 4 инструментов)](../preview3/tools/global-json.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версии-кандидата 4 средств .NET Core см. в разделе [Справочник по global.json (версия-кандидат 4 средств .NET Core)](../preview3/tools/global-json.md).
 
 Файл global.json используется в проектах .NET Core для определения метаданных решения. Этот файл используется при вызове команды [dotnet-restore](dotnet-restore.md) для восстановления зависимостей проекта .NET Core.
 В этом справочном разделе приводится список свойств, которые можно определить в файле global.json.
@@ -71,6 +71,6 @@ ms.openlocfilehash: e8c8123f2c46e506990375172d1be642653d4996
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

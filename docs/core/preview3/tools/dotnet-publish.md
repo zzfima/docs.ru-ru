@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 83a706dd9fb2ee00b21426543e58621f9737a14d
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0d222382640fc239760f8f51c69f1f306674d7ca
 
 ---
 
-#<a name="dotnet-publish-tooling-preview-4"></a>dotnet-publish (предварительная версия 4 инструментов)
+#<a name="dotnet-publish-net-core-tools-rc4"></a>dotnet-publish (версия-кандидат 4 средств .NETCore)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-publish](../../tools/dotnet-publish.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-publish](../../tools/dotnet-publish.md).
 
 ## <a name="name"></a>Имя
 
@@ -97,6 +97,6 @@ ms.openlocfilehash: 83a706dd9fb2ee00b21426543e58621f9737a14d
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

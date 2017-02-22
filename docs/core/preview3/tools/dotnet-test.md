@@ -4,22 +4,22 @@ description: "Команда `dotnet test` служит для выполнен�
 keywords: "dotnet-test, CLI, команда CLI, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
+ms.sourcegitcommit: 02f39bc959a56ab0fc2cfa57ce13f300a8a46107
+ms.openlocfilehash: 204ebdb5a945dcd0c9277f1d95c113e829303b32
 
 ---
 
-#<a name="dotnet-test-tooling-preview-4"></a>dotnet-test (предварительная версия 4 инструментов)
+#<a name="dotnet-test-net-core-tools-rc4"></a>dotnet-test (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-test](../../tools/dotnet-test.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-test](../../tools/dotnet-test.md).
 
 ## <a name="name"></a>Имя
 
@@ -28,10 +28,10 @@ ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 ## <a name="synopsis"></a>Краткий обзор
 
 `dotnet test [project] [--help] 
-    [--settings] [--listTests] [--testCaseFilter] 
-    [--testAdapterPath] [--logger] 
-    [--configuration] [--output] [--framework] [--diag]
-    [--no-build]`  
+    [--settings] [--list-tests] [--filter] 
+    [--test-adapter-path] [--logger] 
+    [--configuration] [--framework] [--output] [--diag]
+    [--no-build] [--verbosity]`
 
 ## <a name="description"></a>Описание
 
@@ -39,42 +39,7 @@ ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 
 Для тестирования проектов также нужно указать средство выполнения тестов. Для этого используется обычный элемент `<PackageReference>`, как показано в следующем образце файла проекта:
 
-```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk">
-      <Version>15.0.0-preview-20161024-02</Version>
-    </PackageReference>
-    <PackageReference Include="xunit">
-      <Version>2.2.0-beta3-build3402</Version>
-    </PackageReference>
-    <PackageReference Include="xunit.runner.visualstudio">
-      <Version>2.2.0-beta4-build1188</Version>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
-```
+[!code-xml[Базовый шаблон XUnit](../../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>Параметры
 
@@ -86,49 +51,49 @@ ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 
 Выводит краткую справку по команде.
 
-`-s | --settings <SETTINGS_FILE>`
+`-s|--settings <SETTINGS_FILE>`
 
 Параметры, используемые при выполнении тестов. 
 
-`-lt | --listTests`
+`-t|--list-tests`
 
 Отображение списка всех обнаруженных тестов в текущем проекте. 
 
-`-tcf | --testCaseFilter <EXPRESSION>`
+`--filter <EXPRESSION>`
 
-Фильтрация тестов в текущем проекте с помощью заданного выражения. 
+Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения о поддержке фильтрации см. в разделе [Запуск выборочных модульных тестов в Visual Studio с помощью TestCaseFilter](https://aka.ms/vstest-filtering).
 
-`-tap | --testAdapterPath <TEST_ADAPTER_PATH>`
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Использование адаптеров пользовательского теста из указанного пути в ходе этого теста. 
+Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске. 
 
-`--logger <LOGGER>`
+`-l|--logger <LoggerUri/FriendlyName>`
 
-Укажите средство ведения журнала результатов тестирования. 
+Указывает средство ведения журнала для результатов тестирования. 
 
 `-c|--configuration <Debug|Release>`
 
-Конфигурация для сборки. Значение по умолчанию — `Release`. 
+Конфигурация для сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить параметр SDK по умолчанию.
 
-`-o|--output [OUTPUT_DIRECTORY]`
-
-Каталог, в котором выполняется поиск двоичных файлов для выполнения.
-
-`-f|--framework [FRAMEWORK]`
+`-f|--framework <FRAMEWORK>`
 
 Поиск тестовых двоичных файлов для определенной платформы.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-Поиск тестовых двоичных файлов для указанной среды выполнения.
+Каталог, в котором выполняется поиск двоичных файлов для выполнения.
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл. 
 
 `--no-build` 
 
-Не выполняет сборку тестового проекта перед его запуском. 
+Не выполняет сборку тестового проекта перед его запуском.
 
-`-d | --diag <DIAGNOSTICS_FILE>`
+`-v|--verbosity [quiet|minimal|normal|diagnostic]`
 
-Включение режима диагностики для платформы тестирования и запись диагностических сообщений в указанный файл. 
+Задайте уровень детализации команды. Можно указать следующие уровни детализации: q[uiet], m[inimal], n[ormal], d[etailed] и diag[nostic]. 
 
 ## <a name="examples"></a>Примеры
 
@@ -148,6 +113,6 @@ ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 03fab8ad488f4001929524298e52cafeffc45e7f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8e266f9b34923b0ab69140d78a20afeca00e0b7c
 
 ---
 
-#<a name="dotnet-pack-tooling-preview-4"></a>dotnet-pack (предварительная версия 4 инструментов)
+#<a name="dotnet-pack-net-core-tools-rc4"></a>dotnet-pack (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-pack](../../tools/dotnet-pack.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [dotnet-pack](../../tools/dotnet-pack.md).
 
 ## <a name="name"></a>Имя
 
@@ -98,6 +98,6 @@ ms.openlocfilehash: 03fab8ad488f4001929524298e52cafeffc45e7f
 `dotnet pack --version-suffix "ci-1234"`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

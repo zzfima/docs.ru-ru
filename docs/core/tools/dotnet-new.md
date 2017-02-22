@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a49fe94ca8f678c614fb7f58767693c73e34c737
 
 ---
 
 #<a name="dotnet-new"></a>dotnet-new
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-new (предварительная версия 4 инструментов)](../preview3/tools/dotnet-new.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версии-кандидата 4 средств .NET Core см. в разделе [dotnet-new (версия-кандидат 4 средств .NET Core)](../preview3/tools/dotnet-new.md).
 
 ## <a name="name"></a>Имя
 `dotnet-new` — создает проект .NET Core в текущем каталоге.
@@ -66,6 +66,6 @@ ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
 `dotnet new -t web`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

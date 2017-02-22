@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bb64da75a2e7bc2d379bc1685b4187493792db78
 
 ---
 
 #<a name="dotnet-build"></a>dotnet-build
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-build (предварительная версия 4 инструментов)](../preview3/tools/dotnet-build.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версии-кандидата 4 средств .NET Core см. в разделе [dotnet-build (версия-кандидат 4 средств .NET Core)](../preview3/tools/dotnet-build.md).
 
 ## <a name="name"></a>Имя 
 `dotnet-build` — собирает проект и все его зависимости. 
@@ -114,6 +114,6 @@ ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
