@@ -4,16 +4,16 @@ description: "Объектная модель регулярных выраже�
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a1e611ec-c6a2-48c6-9c52-0ed845787621
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: e4a5237fcb439999efe4454512b06444f129e7b4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4e8744c6c7a42c3803bf9716a3ae271b7284be3d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -114,7 +114,7 @@ End Module
 `-` | Выделение дефиса.
 `\d{2}` | Совпадение с двумя десятичными цифрами.
 `-` | Выделение дефиса.
-`\d{4}` | Выделяются 4 десятичные цифры.
+`\d{4}` | Выделяются&4; десятичные цифры.
 `$` | Соответствует концу входной строки.
  
 ### <a name="extracting-a-single-match-or-the-first-match"></a>Извлечение одного соответствия или первого соответствия
@@ -337,7 +337,7 @@ End Module
 
 ### <a name="the-match-collection"></a>Коллекция Match
 
-Метод [Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(System.String)) возвращает объект [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection), содержащий объекты [Match](xref:System.Text.RegularExpressions.Match), которые представляют все сопоставления, найденные механизмом регулярных выражений, в том порядке, в котором они присутствуют во входной строке. Если соответствий нет, метод возвращает объект [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection), содержащий объект [Match](xref:System.Text.RegularExpressions.Match) без членов. Свойство [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` позволяет получить доступ к отдельным членам коллекции по индексу (от нуля до значения свойства [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) минус 1). Item — это индексатор коллекции (для C#) и свойство по умолчанию (для Visual Basic).
+Метод [Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(System.String)) возвращает объект [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection), содержащий объекты [Match](xref:System.Text.RegularExpressions.Match), которые представляют все сопоставления, найденные механизмом регулярных выражений, в том порядке, в котором они присутствуют во входной строке. Если соответствий нет, метод возвращает объект [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection), содержащий объект [Match](xref:System.Text.RegularExpressions.Match) без членов. Свойство [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` позволяет получить доступ к отдельным членам коллекции по индексу (от нуля до значения свойства [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) минус&1;). Item — это индексатор коллекции (для C#) и свойство по умолчанию (для Visual Basic).
 
 По умолчанию вызов метода [Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(System.String)) использует отложенные вычисления для заполнения объекта [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection). Доступ к свойствам, которым требуется полностью заполненная коллекция, например свойства [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) и `Item`, может быть связан с дополнительными затратами. Поэтому мы рекомендуем обращаться к коллекции, используя объект [IEnumerator](xref:System.Collections.IEnumerator), возвращаемый методом [MatchCollection.GetEnumerator](xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator). Отдельные языки предоставляют конструкции, такие как `foreach` в C# и For Each в Visual Basic, которые создают оболочку для интерфейса IEnumerator](xref:System.Collections.IEnumerator) коллекции.
 
@@ -416,7 +416,7 @@ End Module
 
 Класс [Match](xref:System.Text.RegularExpressions.Match) представляет результат одного сопоставления регулярного выражения. Доступ к объектам [Match](xref:System.Text.RegularExpressions.Match) можно получить двумя указанными далее способами.
 
-* Извлекая их из объекта [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection), который возвращается методом Matches. Для извлечения отдельных объектов [Match](xref:System.Text.RegularExpressions.Match) выполните итерацию коллекции, воспользовавшись конструкцией `foreach` (в C#) или `For Each...Next` (в Visual Basic), либо используйте свойство [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` для извлечения конкретного объекта [Match](xref:System.Text.RegularExpressions.Match) по индексу или по имени. Вы также можете получить отдельные объекты [Match](xref:System.Text.RegularExpressions.Match) из коллекции, циклически проходя по коллекции по индексу (от нуля до числа объектов в коллекции минус 1). Однако этот метод не использует отложенные вычисления, так как он обращается к свойству [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count). 
+* Извлекая их из объекта [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection), который возвращается методом Matches. Для извлечения отдельных объектов [Match](xref:System.Text.RegularExpressions.Match) выполните итерацию коллекции, воспользовавшись конструкцией `foreach` (в C#) или `For Each...Next` (в Visual Basic), либо используйте свойство [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` для извлечения конкретного объекта [Match](xref:System.Text.RegularExpressions.Match) по индексу или по имени. Вы также можете получить отдельные объекты [Match](xref:System.Text.RegularExpressions.Match) из коллекции, циклически проходя по коллекции по индексу (от нуля до числа объектов в коллекции минус&1;). Однако этот метод не использует отложенные вычисления, так как он обращается к свойству [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count). 
 
   Следующий пример извлекает отдельные объекты [Match](xref:System.Text.RegularExpressions.Match) из объекта [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection), циклически перебирая коллекцию с помощью конструкции `foreach`. Регулярное выражение просто сопоставляет строку "abc" во входной строке.
 
@@ -655,7 +655,7 @@ End Module
 `(\d{1,2})` | Совпадение с одной или двумя десятичными цифрами. Это вторая группа записи.
 `,` | Сопоставление запятой.
 `\s` | Соответствует пробелу.
-`(\d{4})` | Выделяются 4 десятичные цифры. Это третья группа записи.
+`(\d{4})` | Выделяются&4; десятичные цифры. Это третья группа записи.
 `\b` | Сопоставление заканчивается на границе слова.
  
 ## <a name="the-captured-group"></a>Захватываемая группа
@@ -1117,10 +1117,5 @@ End Module
 [Регулярные выражения .NET](regular-expressions.md)
 
 [Элементы языка регулярных выражений — краткий справочник](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

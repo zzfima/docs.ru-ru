@@ -3,16 +3,17 @@ title: "Числовые значения в .NET Core"
 description: "Числовые значения в .NET Core"
 keywords: .NET, .NET Core
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
-ms.sourcegitcommit: d5c7a18af16b4f3416e84b6cf86f0f78f28948da
-ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 8e2aad830bdaccad6e8184fa462dd0d3157fd6c9
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -39,7 +40,7 @@ ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
      
 Имейте в виду, что целочисленные типы без знака не совместимы с CLS. Дополнительные сведения см. в разделе [Система общих типов .NET и спецификация CLS](common-type-system.md).
 
-## <a name="floatingpoint-types"></a>Типы с плавающей запятой
+## <a name="floating-point-types"></a>Типы с плавающей запятой
 
 Платформа .NET Core включает в себя три типа-примитива с плавающей запятой, которые перечислены в таблице ниже. 
 
@@ -61,7 +62,7 @@ ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
 
 Тип [System.Numerics.Complex](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Complex) представляет комплексное число, то есть число, имеющее вещественную и мнимую части. Он поддерживает стандартный набор арифметических операторов, операторов сравнения, равенства, явного и неявного преобразования, а также математические, алгебраические и тригонометрические методы. 
 
-## <a name="simdenabled-vector-types"></a>Векторные типы с поддержкой SIMD
+## <a name="simd-enabled-vector-types"></a>Векторные типы с поддержкой SIMD
 
 Пространство имен `System.Numerics` содержит набор векторных типов с поддержкой SIMD для платформы .NET Core. Технология SIMD обеспечивает параллельное выполнение некоторых операций на аппаратном уровне, значительно повышая производительность математических, научных и графических приложений, которые производят вычисления с векторами. 
 
@@ -74,9 +75,4 @@ ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
 * Два матричных типа: [System.Numerics.Matrix3x2](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix3x2), представляющий собой матрицу 3x2, и [System.Numerics.Matrix4x4](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix4x4), представляющий собой матрицу 4x4. 
 
 * Тип [System.Numerics.Plane](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Plane), который представляет трехмерную плоскость, и тип [System.Numerics.Quaternion](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Quaternion), который представляет вектор, используемый для кодирования трехмерных физических поворотов.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

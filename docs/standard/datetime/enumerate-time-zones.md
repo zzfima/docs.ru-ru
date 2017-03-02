@@ -3,16 +3,17 @@ title: "Практическое руководство. Перечислени�
 description: "Практическое руководство. Перечисление присутствующих на компьютере часовых поясов"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c5ae4a6c-1790-4355-b5b1-879aaf956129
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 417a421f443f90e5f4ccd48bcabb3735dc5bc981
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: f30ba2a483ff7e5867417969946c2774175d5e3d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -51,10 +52,5 @@ ms.openlocfilehash: 417a421f443f90e5f4ccd48bcabb3735dc5bc981
 [Даты, время и часовые пояса](index.md)
 
 [Поиск часового пояса, заданного в локальной системе](finding-the-time-zones-on-local-system.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

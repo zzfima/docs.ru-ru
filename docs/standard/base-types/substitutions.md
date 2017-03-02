@@ -4,16 +4,16 @@ description: "Подстановки в регулярных выражения�
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0fded615-1021-4468-a644-b491814305c6
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 3e02d18d6566c67c7fff7003671f340f97b0dfce
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c8e82c2399916e5c17d1b54dd78a11ecfbc90bbf
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -157,7 +157,7 @@ End Module
 `\d*` | Соответствует нулю или нескольким десятичным числам.
 `(?<amount>\s?\d[.,]?\d*)` | Совпадение с пробелом, за которым следует одна или несколько десятичных цифр, после которых идет ноль или одна точка либо запятая, а за ними — ноль или более десятичных цифр. Это захватываемая группа с именем amount. Так как шаблон замены имеет вид `${amount}`, вызов метода [Regex.Replace](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)) заменяет всю совпадающую подстроку данной захватываемой группой. 
  
-## <a name="substituting-a-character"></a>Подстановка символа "$"
+## <a name="substituting-a--character"></a>Подстановка символа "$"
 
 Подстановка **$$** вставляет символ литерала "$"в строку замены. 
 
@@ -560,10 +560,5 @@ End Module
 ## <a name="see-also"></a>См. также
 
 [Элементы языка регулярных выражений — краткий справочник](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

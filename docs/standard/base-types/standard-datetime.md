@@ -4,16 +4,16 @@ description: "Строки стандартных форматов даты и �
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: be239871-10cc-4949-b548-200bb260630a
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 1196459d74038edb1268c619dac3da69f38e7860
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: f9247bae0d290db570b8cd8885e654524ea2f36b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -376,7 +376,7 @@ Console.WriteLine(date1.ToString("m", _
 ' Displays 10 April
 ```
 
-## <a name="the-roundtrip-o-o-format-specifier"></a>Описатель формата обратного преобразования ("O", "o")
+## <a name="the-round-trip-o-o-format-specifier"></a>Описатель формата обратного преобразования ("O", "o")
 
 Описатель формата обратного преобразования ("O", "o") представляет строку настраиваемого формата даты и времени, используя шаблон, который сохраняет данные о часовом поясе и возвращает строковое значение, соответствующее стандарту ISO 8601. Для значений [DateTime](xref:System.DateTime) этот спецификатор формата предназначен для сохранения значений даты и времени вместе со свойством [DateTime.Kind](xref:System.DateTime.Kind) в тексте. Форматированная строка может быть преобразована обратно с помощью метода [DateTime.Parse(String, IFormatProvider, DateTimeStyles)](xref:System.DateTime.Parse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)) или [DateTime.ParseExact](xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)), если для параметра styles задано значение [DateTimeStyles.RoundtripKind](xref:System.Globalization.DateTimeStyles.RoundtripKind). 
 
@@ -748,10 +748,5 @@ Console.WriteLine(date1.ToString("y", CultureInfo.CreateSpecificCulture("af-ZA")
 [Типы форматирования](formatting-types.md)
 
 [Строки настраиваемых форматов даты и времени](custom-datetime.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

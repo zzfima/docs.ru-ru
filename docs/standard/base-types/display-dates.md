@@ -3,20 +3,21 @@ title: "Практическое руководство. Отображение 
 description: "Практическое руководство. Отображение дат в календарях, отличных от григорианского"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 93f06e1d-544b-4ccc-a0b2-95cd674852cb
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 783b51f3145d8b11e79b99cfdc4baefe127306e3
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 69a33b3e162c07a1d8a065a150c6db96f04334f6
+ms.lasthandoff: 03/02/2017
 
 ---
 
-# <a name="how-to-display-dates-in-nongregorian-calendars"></a>Практическое руководство. Отображение дат в календарях, отличных от григорианского
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Практическое руководство. Отображение дат в календарях, отличных от григорианского
 
 Типы [DateTime](xref:System.DateTime) и [DateTimeOffset](xref:System.DateTimeOffset) используют григорианский календарь в качестве календаря по умолчанию. Это означает, что вызов метода `ToString` для значения даты и времени выведет строковое представление даты и времени по григорианскому календарю даже в том случае, если значение даты и времени создавалось с помощью другого календаря. Это показано в следующем примере, в котором используется два различных способа создания значения даты и времени с персидским календарем. Однако при вызове метода [ToString](xref:System.DateTime.ToString) значения даты и времени в нем по-прежнему отображаются в григорианском календаре. В этом примере представлены два часто используемых неверных способа отображения даты в заданном календаре.
 
@@ -331,9 +332,4 @@ End Class
 ## <a name="see-also"></a>См. также
 
 [Выполнение операций форматирования](performing-formatting-operations.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

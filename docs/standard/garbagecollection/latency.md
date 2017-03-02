@@ -3,16 +3,17 @@ title: "Режимы задержки"
 description: "Режимы задержки"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/18/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 810bd8be-5a48-42c6-b080-3afdb31fc61b
 translationtype: Human Translation
-ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: e063482aaa1fad01f8e0cd9e8552c87a0b247571
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 1d99ac95527cae80b74c96f5a2e6be81b94176c5
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -20,7 +21,7 @@ ms.openlocfilehash: e063482aaa1fad01f8e0cd9e8552c87a0b247571
 
 Чтобы освободить объекты, сборщик мусора должен остановить все выполняющиеся потоки приложения. В некоторых ситуациях, например, когда приложение получает данные или отображает содержимое, полная сборка мусора может произойти в критическое время и снизить производительность. Степень вмешательства сборщика мусора можно настроить, присвоив свойству [GCSettings.LatencyMode](xref:System.Runtime.GCSettings.LatencyMode) одно из значений [System.Runtime.GCLatencyMode](xref:System.Runtime.GCLatencyMode). 
 
-Периоды ожидания указывает время, когда сборщик мусора может активизироваться в приложении. В периоды небольшого времени ожидания сборщик мусора более осторожен и меньше вмешивается в освобождение объектов. Перечисление [System.Runtime.GCLatencyMode](xref:System.Runtime.GCLatencyMode) предоставляет 2 параметра малого времени ожидания:
+Периоды ожидания указывает время, когда сборщик мусора может активизироваться в приложении. В периоды небольшого времени ожидания сборщик мусора более осторожен и меньше вмешивается в освобождение объектов. Перечисление [System.Runtime.GCLatencyMode](xref:System.Runtime.GCLatencyMode) предоставляет&2; параметра малого времени ожидания:
 
 * [LowLatency](xref:System.Runtime.GCLatencyMode.LowLatency) отключает сборку мусора для объектов поколения 2 и выполняет только сборку мусора для объектов поколений 0 и 1. Его можно использовать только в течение коротких периодов времени. Если в системе за продолжительный период возникнет нехватка памяти, сборщик мусора начнет сборку, что приведет к кратковременной остановке приложения и прервет срочную задачу. Этот параметр доступен только для сборки мусора на рабочей станции. 
 
@@ -62,9 +63,4 @@ ms.openlocfilehash: e063482aaa1fad01f8e0cd9e8552c87a0b247571
 [Индуцированные коллекции](induced.md)
 
 [Сборка мусора в .NET](index.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
