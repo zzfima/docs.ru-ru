@@ -4,16 +4,16 @@ description: "Классы символов в регулярных выраже
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c7a9305f-7144-4fe8-80e8-a727bf7d223f
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: f8ebb1db670669e2e8666cd5ef90f72237c105e4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ae677af2590636fd144d8978a3500c37f9d33615
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.openlocfilehash: f8ebb1db670669e2e8666cd5ef90f72237c105e4
 
 Платформа .NET поддерживает выражения вычитания в классах знаков, которые позволяют в результате исключения одного класса знаков из другого класса знаков определить набор знаков. Дополнительные сведения см. в разделе [Вычитание класса знаков](#character-class-subtraction).
 
-## <a name="positive-character-group-"></a>Положительная группа символов: [ ]
+## <a name="positive-character-group--"></a>Положительная группа символов: [ ]
 
 Положительная группа символов задает список символов, один из которых должен присутствовать во входной строке для успешного сопоставления. Символы можно задать по отдельности или в виде диапазона. 
 
@@ -261,35 +261,35 @@ End Module
 
   В следующем примере показано различное поведение класса символов "." по умолчанию и с параметром [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline). Регулярное выражение `^.+` начинается с начала строки и соответствует любому знаку. По умолчанию соответствие заканчивается в конце первой строки; шаблон регулярного выражения соответствует символу возврата каретки **\r** или **\u000D**, но не соответствует **\n**. Поскольку параметр [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) интерпретирует всю входную строку как единую строку, он сопоставляет каждый символ в строке ввода, включая **\n**.
 
-  ```csharp
-  using System;
-  using System.Text.RegularExpressions;
+```csharp
+using System;
+using System.Text.RegularExpressions;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        string pattern = "^.+";
-        string input = "This is one line and" + Environment.NewLine + "this is the second.";
-        foreach (Match match in Regex.Matches(input, pattern))
-           Console.WriteLine(Regex.Escape(match.Value));
+public class Example
+{
+   public static void Main()
+   {
+      string pattern = "^.+";
+      string input = "This is one line and" + Environment.NewLine + "this is the second.";
+      foreach (Match match in Regex.Matches(input, pattern))
+         Console.WriteLine(Regex.Escape(match.Value));
 
-        Console.WriteLine();
-        foreach (Match match in Regex.Matches(input, pattern, RegexOptions.Singleline))
-           Console.WriteLine(Regex.Escape(match.Value));
-     }
-  }
-  // The example displays the following output:
-  //       This\ is\ one\ line\ and\r
-  //       
-  //       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
-  ```
+      Console.WriteLine();
+      foreach (Match match in Regex.Matches(input, pattern, RegexOptions.Singleline))
+         Console.WriteLine(Regex.Escape(match.Value));
+   }
+}
+// The example displays the following output:
+//       This\ is\ one\ line\ and\r
+//       
+//       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
+```
 
-  ```vb
-  Imports System.Text.RegularExpressions
+```vb
+Imports System.Text.RegularExpressions
 
-  Module Example
-     Public Sub Main()
+Module Example
+    Public Sub Main()
         Dim pattern As String = "^.+"
         Dim input As String = "This is one line and" + vbCrLf + "this is the second."
         For Each match As Match In Regex.Matches(input, pattern)
@@ -305,46 +305,46 @@ End Module
   '       This\ is\ one\ line\ and\r
   '       
   '       This\ is\ one\ line\ and\r\nthis\ is\ the\ second\.
-  ```
+```
 
   > [!NOTE]
   > Так как класс символов "." соответствует любому символу, кроме **\n**, он также соответствует **\r** (символ возврата каретки **\u000D**).
  
 * Точка в положительной или отрицательной группе символов рассматривается как литеральный символ точки, а не как класс символов. Дополнительные сведения см. в разделах [Положительная группа символов](#positive-character-group--) и [Отрицательная группа символов](#negative-character-group-) ранее в этой статье. В следующем примере представлено определение регулярного выражения, содержащее символ точки (**.**) как класс символов и как член положительной группы символов. Регулярное выражение `\b.*[.?!;:](\s|\z)` начинается на границе слова, выделяет все символы, пока не встретится один из четырех знаков препинания (включая точку), после чего выделяет символ пробела или конца строки.
 
-  ```csharp
-  using System;
-  using System.Text.RegularExpressions;
+```csharp
+using System;
+using System.Text.RegularExpressions;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        string pattern = @"\b.*[.?!;:](\s|\z)";
-        string input = "this. what: is? go, thing.";
-        foreach (Match match in Regex.Matches(input, pattern))
-           Console.WriteLine(match.Value);
-     }
-  }
-  // The example displays the following output:
-  //       this. what: is? go, thing.
-  ```
+public class Example
+{
+   public static void Main()
+   {
+      string pattern = @"\b.*[.?!;:](\s|\z)";
+      string input = "this. what: is? go, thing.";
+      foreach (Match match in Regex.Matches(input, pattern))
+         Console.WriteLine(match.Value);
+   }
+}
+// The example displays the following output:
+//       this. what: is? go, thing.
+```
 
-  ```vb
-  Imports System.Text.RegularExpressions
+```vb
+Imports System.Text.RegularExpressions
 
-  Module Example
-     Public Sub Main()
-        Dim pattern As STring = "\b.*[.?!;:](\s|\z)"
-        Dim input As String = "this. what: is? go, thing."
-        For Each match As Match In Regex.Matches(input, pattern)
-           Console.WriteLine(match.Value)
-        Next   
-     End Sub
-  End Module
-  ' The example displays the following output:
-  '       this. what: is? go, thing.
-  ```
+Module Example
+   Public Sub Main()
+      Dim pattern As STring = "\b.*[.?!;:](\s|\z)"
+      Dim input As String = "this. what: is? go, thing."
+      For Each match As Match In Regex.Matches(input, pattern)
+         Console.WriteLine(match.Value)
+      Next   
+   End Sub
+End Module
+' The example displays the following output:
+'       this. what: is? go, thing.
+```
 
   > [!NOTE]
   > Так как элемент языка "." соответствует любому символу, он часто используется с отложенным квантификатором, если шаблон регулярного выражения пытается несколько раз найти соответствие любому символу. Дополнительные сведения см. в статье [Квантификаторы в регулярных выражениях](quantifiers.md). 
@@ -550,7 +550,7 @@ End Module
 '       'nn' found in 'stunned' at position 3.
 ```
 
-## <a name="nonword-character-w"></a>Несловообразующий символ: \W
+## <a name="non-word-character-w"></a>Несловообразующий символ: \W
 
 **\W** соответствует любому несловообразующему символу. Элемент языка **\W** эквивалентен следующему классу символов:
 
@@ -679,7 +679,7 @@ End Module
 
 Поскольку объект `Group` для второй группы записи содержит только один захваченный несловообразующий символ, в примере извлекаются все захваченные несловообразующие символы из объекта `CaptureCollection`, который возвращается свойством `Group.Captures`.
 
-## <a name="whitespace-character-s"></a>Символ пробела: \s
+## <a name="white-space-character-s"></a>Символ пробела: \s
 
 **\s** соответствует любому символу пробела. Это эквивалентно управляющим последовательностям и категориям Юникода, перечисленным в следующей таблице. 
 
@@ -746,7 +746,7 @@ End Module
 '       leaves
 ```
 
-## <a name="nonwhitespace-character-s"></a>Символ, не являющийся пробелом: \S
+## <a name="non-white-space-character-s"></a>Символ, не являющийся пробелом: \S
 
 **\S** соответствует любому символу, не являющемуся пробелом. Он эквивалентен шаблону регулярного выражения `[^\f\n\r\t\v\x85\p{Z}]` или противоположному шаблону, эквивалентному **\s**, выделяющему символы пробела. Дополнительные сведения см. в подразделе "Символ пробела: \s".
 
@@ -922,7 +922,7 @@ End Module
 '       01 999-9999: match failed
 ```
 
-## <a name="nondigit-character-d"></a>Символ, не являющийся цифрой: \D
+## <a name="non-digit-character-d"></a>Символ, не являющийся цифрой: \D
 
 **\D** соответствует любому символу, не являющемуся цифрой. Он эквивалентен шаблону регулярного выражения `\P{Nd}`.
 
@@ -1142,7 +1142,7 @@ FF00 - FFEF | **IsHalfwidthandFullwidthForms**
 FFF0 - FFFF | **IsSpecials**
  
 <a name="character-class-subtraction"></a>
-## <a name="character-class-subtraction-basegroup-excludedgroup"></a>Вычитание класса символов: [базовая_группа - [исключенная_группа]]
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Вычитание класса символов: [базовая_группа - [исключенная_группа]]
 
 Класс знаков определяет набор знаков. Результатом вычитания класса знаков является набор знаков, полученный в результате исключения одного класса знаков из другого класса знаков. 
 
@@ -1214,8 +1214,3 @@ End Module
 ## <a name="see-also"></a>См. также
 
 [Параметры регулярных выражений](options.md)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

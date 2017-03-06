@@ -1,6 +1,6 @@
 ---
-title: "Управление зависимостями в предварительной версии 4 инструментов .NET Core | Microsoft Docs"
-description: "В предварительной версии 4 изменены механизмы управления зависимостями."
+title: "Управление зависимостями в средствах .NET Core | Документы Майкрософт"
+description: "Сведения об управлении зависимостями с помощью средств .NET Core."
 keywords: "CLI, расширяемость, пользовательские команды, .NET Core"
 author: blackdwarf
 ms.author: mairaw
@@ -11,12 +11,12 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: cef45d986eb9c4a84a03ee942c29a327c23cabf3
 
 ---
 
-# <a name="managing-dependencies-in-net-core-preview-4-tooling"></a>Управление зависимостями в предварительной версии 4 инструментов .NET Core
+# <a name="managing-dependencies-in-net-core-rc4-tooling"></a>Управление зависимостями в средствах версии-кандидата 4 .NETCore
 
 [!INCLUDE[preview-warning](../../../includes/warning.md)]
 
@@ -28,9 +28,7 @@ ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
 Элемент `<PackageReference>` имеет следующую базовую структуру:
 
 ```xml
-<PackageReference Include="PACKAGE_ID">
-    <Version>PACKAGE_VERSION</Version>
-</PackageReference>
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
 Если вы знакомы с платформой MSBuild, она покажется вам похожей на другие, уже существующие ссылочные типы. Ключевым является оператор `Include`, указывающий идентификатор пакета, который нужно добавить в проект. Дочерний элемент `<Version>` указывает версию, которую необходимо получить. Версии указываются в соответствии с [правилами версий NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions#version-ranges).
@@ -41,9 +39,7 @@ ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
 Добавление зависимости, которая доступна только в конкретном целевом объекте, выполняется с использованием условий, аналогичных в приведенном далее примере.
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
-    <Version>PACKAGE_VERSION</Version>
-</PackageReference>
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
 ```
 
 Указанное выше означает, что зависимость будет действительной только в том случае, если для затронутого целевого объекта выполняется сборка. Элемент `$(TargetFramework)` в этом условии представляет собой заданное в проекте свойство MSBuild. Для наиболее распространенных приложений .NET Core это не требуется. 
@@ -56,42 +52,22 @@ ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
 В этом примере мы будем использовать шаблон по умолчанию, добавленный `dotnet new`. Это простое консольное приложение. При открытии проекта мы сначала видим узел `<ItemGroup>` и существующий на нем элемент `<PackageReference>`. Затем мы добавляем к нему следующее:
 
 ```xml
-<PackageReference Include="Newtonsoft.Json">
-    <Version>9.0.1</Version>
-</PackageReference>
+<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 После этого мы сохраняем проект и выполняем команду `dotnet restore` для установки зависимости. 
 
 Весь проект выглядит следующим образом:
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-  
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-        <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -99,6 +75,6 @@ ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
 Чтобы удалить зависимость из файла проекта, достаточно просто удалить `<PackageReference>` из файла проекта.
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

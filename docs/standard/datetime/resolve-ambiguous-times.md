@@ -3,16 +3,17 @@ title: "Практическое руководство. Разрешение п
 description: "Практическое руководство. Разрешение проблемы неоднозначности времени"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e86050c6-d16d-405e-8bba-7205945c9a81
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: e4e62607fd1bd3b4cee3e23a5863e1ba9e25ab03
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: f4ab3b4bf3487e70be7e885e9b8a2281927eb30e
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -81,10 +82,5 @@ End Function
 [Даты, время и часовые пояса](index.md)
 
 [Практическое руководство. Предоставление пользователям возможности разрешения неоднозначности времени](let-users-resolve-ambiguous-times.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

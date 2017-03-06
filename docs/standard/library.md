@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: f9ffbb2e300df2080276096095a7269736260ba1
-ms.openlocfilehash: d56ddc264d861081f0b808711cccd489a374c0b8
+ms.sourcegitcommit: eb98c703946d8be0757288ae9e00aab87b32e407
+ms.openlocfilehash: 939c6dd0621e3b1121aca52915b04bf51af1d1ef
 
 ---
 
@@ -35,7 +35,7 @@ ms.openlocfilehash: d56ddc264d861081f0b808711cccd489a374c0b8
 | Имя платформы | Alias |  |  |  |  |  | | | |
 | :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
 |.NET Standard | netstandard | 1,0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 | 2.0 |
-|.NET Core|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1,0|vNext|
+|.NET Core|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1,0|2.0|
 |.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|vNext|4.6.1|
 |Платформы Mono и Xamarin||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|vNext|
 |Универсальная платформа Windows |uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|&rarr;|&rarr;|vNext|
@@ -85,7 +85,7 @@ ms.openlocfilehash: d56ddc264d861081f0b808711cccd489a374c0b8
 
 Пакеты NuGet нацелены на одну или несколько [платформ](frameworks.md). Пакеты библиотеки .NET Standard нацелены на платформу ".NET Standard". Ориентироваться на платформу .NET Standard можно с помощью [компактного моникера целевой платформы](frameworks.md) `netstandard` (например, `netstandard1.4`). Библиотеки, предназначенные для запуска в различных средах выполнения, должны быть нацелены на эту платформу. 
 
-Метапакет `NETStandard.Library` ссылается на полный набор пакетов NuGet, определяющих библиотеку .NET Standard.  Наиболее распространенным способом нацеливания на `netstandard` является ссылка на этот метапакет. Он описывает и предоставляет доступ примерно к 40 библиотекам .NET и связанным интерфейсам API, которые определяют библиотеку .NET Standard. Вы можете ссылаться на другие пакеты, предназначенные для `netstandard`, чтобы получить доступ к дополнительным интерфейсам API. 
+Метапакет `NETStandard.Library` ссылается на полный набор пакетов NuGet, определяющих библиотеку .NET Standard.  Наиболее распространенным способом нацеливания на `netstandard` является ссылка на этот метапакет. Он описывает и предоставляет доступ примерно к&40; библиотекам .NET и связанным интерфейсам API, которые определяют библиотеку .NET Standard. Вы можете ссылаться на другие пакеты, предназначенные для `netstandard`, чтобы получить доступ к дополнительным интерфейсам API. 
 
 ### <a name="versioning"></a>Управление версиями
 
@@ -134,6 +134,6 @@ API, добавляемые в любую из сред выполнения (н
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

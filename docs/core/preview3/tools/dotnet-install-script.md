@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 9f241774dd8977bbb26b5143d9f5d094af1ce05d
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0063ac1220a1f01eef6e7300b0907518863ee01e
 
 ---
 
-#<a name="dotnet-install-scripts-reference-tooling-preview-4"></a>Справка по скриптам dotnet-install (предварительная версия 4 инструментов)
+#<a name="dotnet-install-scripts-reference-net-core-tools-rc4"></a>Справочник по скриптам dotnet-install (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Справка по скриптам dotnet-install](../../tools/dotnet-install-script.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Справка по скриптам dotnet-install](../../tools/dotnet-install-script.md).
 
 ## <a name="name"></a>Имя
 dotnet-install.ps1 | dotnet-install.sh — скрипт, используемый для установки средств интерфейса командной строки (CLI) и общей среды выполнения
@@ -129,6 +129,6 @@ Mac OS и Linux:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

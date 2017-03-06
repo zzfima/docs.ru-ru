@@ -4,16 +4,16 @@ description: "Практическое руководство. Извлечен�
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 88a8f8b9-f5c9-4503-b968-84468b52bb8e
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: f7ae17ac6dbc23e18d18561d5e5ae7efc037c63e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 1b9d1d497524e62e5758c9be7be7b586a421a258
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -65,65 +65,65 @@ End Module
 
     1. Чтобы извлечь сокращенное название дня недели для текущих языка и региональных параметров, вызовите метод [DateTime.ToString(String)](xref:System.DateTimeSystem.DateTime.ToString(System.String) значения даты и времени или метод экземпляра [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) и передайте строку "ddd" в параметре *format*. В следующем примере показано использование метода `ToString(String)`.
     
-    ```csharp
-    using System;
+```csharp
+using System;
 
-    public class Example
-    {
-       public static void Main()
-       {
-          DateTime dateValue = new DateTime(2008, 6, 11);
-          Console.WriteLine(dateValue.ToString("ddd"));   
-       }
-    }
-    // The example displays the following output:
-    //       Wed
-    ```
+public class Example
+{
+   public static void Main()
+   {
+  DateTime dateValue = new DateTime(2008, 6, 11);
+  Console.WriteLine(dateValue.ToString("ddd"));   
+   }
+}
+// The example displays the following output:
+//       Wed
+```
 
-    ```vb
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("ddd"))    
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       Wed
-    ```
+```vb
+Module Example
+   Public Sub Main()
+  Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("ddd"))    
+   End Sub
+End Module
+' The example displays the following output:
+'       Wed
+```
+
+    b. To extract the abbreviated weekday name for a specific culture, call the date and time value’s [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) or [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) instance method. Pass the string "ddd" as the *format* parameter. Pass either a [CultureInfo](xref:System.Globalization.CultureInfo) or a [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) object that represents the culture whose weekday name you want to retrieve as the *provider* parameter. The following code illustrates a call to the [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) method using a [CultureInfo](xref:System.Globalization.CultureInfo) object that represents the fr-FR culture.
     
-    2. Чтобы извлечь сокращенное название дня недели для заданных языка и региональных параметров, вызовите метод [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) значения даты и времени или метод экземпляра [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)). Передайте строку "ddd" в параметре *format*. Передайте объект [CultureInfo](xref:System.Globalization.CultureInfo) или [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo), представляющий язык и региональные параметры, для которых требуется получить название дня недели, в параметре *provider*. В следующем коде показан вызов метода [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) с использованием объекта [CultureInfo](xref:System.Globalization.CultureInfo), представляющего язык и региональные параметры fr-FR.
-    
-    ```csharp
-    using System;
-    using System.Globalization;
+```csharp
+using System;
+using System.Globalization;
 
-    public class Example
-    {
+public class Example
+{
     public static void Main()
     {
         DateTime dateValue = new DateTime(2008, 6, 11);
         Console.WriteLine(dateValue.ToString("ddd", 
                             new CultureInfo("fr-FR")));    
     }
-    }
-    // The example displays the following output:
-    //       mer. 
-    ```
+}
+// The example displays the following output:
+//       mer. 
+```
 
-    ```vb
-    Imports System.Globalization
+```vb
+Imports System.Globalization
 
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("ddd", 
-                            New CultureInfo("fr-FR")))    
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       mer.
-    ```
-    
+Module Example
+   Public Sub Main()
+      Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("ddd", 
+                        New CultureInfo("fr-FR")))
+   End Sub
+End Module
+' The example displays the following output:
+'       mer.
+```
+
 ## <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>Извлечение полного названия дня недели из определенной даты
 
 1. Если вы работаете со строковым представлением даты, преобразуйте ее в значение типа [DateTime](xref:System.DateTime) или [DateTimeOffset](xref:System.DateTimeOffset), используя статичный метод [DateTime.Parse](xref:System.DateTime.Parse(System.String)) или [DateTimeOffset.Parse](xref:System.DateTimeOffset.Parse(System.String)).
@@ -131,66 +131,66 @@ End Module
 2. Вы можете извлечь сокращенное название дня недели для текущих или заданных региональных параметров:
 
     1. Чтобы извлечь сокращенное название дня недели для текущего языка и региональных параметров, вызовите метод [DateTime.ToString(String)](xref:System.DateTimeSystem.DateTime.ToString(System.String) значения даты и времени или метод экземпляра [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) и передайте строку "dddd" в параметре *format*. В следующем примере показано использование метода `ToString(String)`.
-    
-    ```csharp
-    using System;
 
-    public class Example
-    {
+```csharp
+using System;
+
+public class Example
+{
     public static void Main()
     {
         DateTime dateValue = new DateTime(2008, 6, 11);
         Console.WriteLine(dateValue.ToString("dddd"));    
     }
-    }
-    // The example displays the following output:
-    //       Wednesday
-    ```
+}
+// The example displays the following output:
+//       Wednesday
+```
 
-    ```vb
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("dddd"))
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       Wednesday
-    ```
-    
-    2. Чтобы извлечь название дня недели для заданных языка и региональных параметров, вызовите метод [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) значения даты и времени или метод экземпляра [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)). Передайте строку "dddd" в параметре *format*. Передайте объект [CultureInfo](xref:System.Globalization.CultureInfo) или [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo), представляющий язык и региональные параметры, для которых требуется получить название дня недели, в параметре *provider*. В следующем коде показан вызов метода [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) с использованием объекта [CultureInfo](xref:System.Globalization.CultureInfo), представляющего язык и региональные параметры es-ES.
-    
-    ```csharp
-    using System;
-    using System.Globalization;
+```vb
+Module Example
+   Public Sub Main()
+      Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("dddd"))
+   End Sub
+End Module
+' The example displays the following output:
+'       Wednesday
+```
 
-    public class Example
-    {
+    b. To extract the weekday name for a specific culture, call the date and time value’s [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) or [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) instance method. Pass the string "dddd" as the *format* parameter. Pass either a [CultureInfo](xref:System.Globalization.CultureInfo) or a [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) object that represents the culture whose weekday name you want to retrieve as the *provider* parameter. The following code illustrates a call to the [ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) method using a [CultureInfo](xref:System.Globalization.CultureInfo) object that represents the es-ES  culture.
+
+```csharp
+using System;
+using System.Globalization;
+
+public class Example
+{
     public static void Main()
     {
         DateTime dateValue = new DateTime(2008, 6, 11);
         Console.WriteLine(dateValue.ToString("dddd", 
                             new CultureInfo("es-ES")));    
     }
-    }
-    // The example displays the following output:
-    //       miércoles.
-    ```
+}
+// The example displays the following output:
+//       miércoles.
+```
 
-    ```vb
-    Imports System.Globalization
+```vb
+Imports System.Globalization
 
-    Module Example
-       Public Sub Main()
-          Dim dateValue As Date = #6/11/2008#
-          Console.WriteLine(dateValue.ToString("dddd", _
-                            New CultureInfo("es-ES")))     
-       End Sub
-    End Module
-    ' The example displays the following output:
-    '       miércoles.
-    ```
-    
+Module Example
+   Public Sub Main()
+      Dim dateValue As Date = #6/11/2008#
+      Console.WriteLine(dateValue.ToString("dddd", _
+                        New CultureInfo("es-ES"))) 
+   End Sub
+End Module
+' The example displays the following output:
+'       miércoles.
+```
+
 ## <a name="example"></a>Пример
 
 В этом примере показаны вызовы свойств [Datetime.DayOfWeek](xref:System.DateTime.DayOfWeek) и [DateTimeOffset.DayOfWeek](xref:System.DateTimeOffset.DayOfWeek), а также методов [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String) и [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) для получения числа, представляющего день недели, сокращенное и полное название дня недели для определенной даты. 
@@ -340,7 +340,7 @@ End Module
 
 Отдельные языки могут предоставлять возможности, дублирующие или дополняющие функции .NET. Например, Visual Basic предоставляет две такие функции:
 
-* `Weekday`, которая возвращает число, обозначающее день недели для определенной даты. Функция считает порядковое значение первого дня недели равным 1, а свойство [Datetime.DayOfWeek](xref:System.DateTime.DayOfWeek) — равным 0.
+* `Weekday`, которая возвращает число, обозначающее день недели для определенной даты. Функция считает порядковое значение первого дня недели равным&1;, а свойство [Datetime.DayOfWeek](xref:System.DateTime.DayOfWeek) — равным&0;.
 
 * `WeekdayName`, которая возвращает название дня недели для текущих региональных параметров, которое соответствует определенному номеру дня недели.
 
@@ -476,9 +476,4 @@ End Module
 
 [Строки настраиваемых форматов даты и времени](custom-datetime.md)
     
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

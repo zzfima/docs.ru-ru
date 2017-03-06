@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0a60fca7-e082-48d4-9dda-30b0d3e67ec7
 translationtype: Human Translation
-ms.sourcegitcommit: cfe65fcba1b3fdc09ffcac704a760d8ce29ea60b
-ms.openlocfilehash: 38f5a970738103bd96c9570f4d6e8ee540af6ee1
+ms.sourcegitcommit: 763433b00ae7d01cfa0c7fa250f51d23a95f6f15
+ms.openlocfilehash: d174d0cb910035340fb317521f3ad930d16853c2
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -70,7 +71,7 @@ ms.openlocfilehash: 38f5a970738103bd96c9570f4d6e8ee540af6ee1
     
 ## <a name="linq-to-objects"></a>LINQ to Objects
 
-Функция LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) или [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1). Запросы LINQ запросы предоставляют общий шаблон для доступа к данным, являются более четкими и удобочитаемыми, чем стандартные циклы foreach, а также предоставляют возможности фильтрации, сортировки и группировки. Дополнительные сведения см. в разделе [Синтаксис LINQ](../../csharp/linq.md).
+Функция LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) или [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1). Запросы LINQ запросы предоставляют общий шаблон для доступа к данным, являются более четкими и удобочитаемыми, чем стандартные циклы foreach, а также предоставляют возможности фильтрации, сортировки и группировки. Дополнительные сведения см. в разделе [Синтаксис LINQ](../../csharp/linq/index.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -81,9 +82,4 @@ ms.openlocfilehash: 38f5a970738103bd96c9570f4d6e8ee540af6ee1
 [System.Collections.Generic](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic)
 
 [Потокобезопасные коллекции](threadsafe/index.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

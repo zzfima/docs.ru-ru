@@ -3,16 +3,17 @@ title: "Создание образов Docker для .NET Core"
 description: "Общие сведения об образах Docker и .NET Core"
 keywords: .NET, .NET Core, Docker
 author: spboyer
-manager: wpickett
+ms.author: shboyer
 ms.date: 08/29/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 translationtype: Human Translation
-ms.sourcegitcommit: 1cb9e19ec9c9c0764244aeec5f62b812cbd91aef
-ms.openlocfilehash: be658d2c660aff736eceffe23757c13154e78582
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
+ms.lasthandoff: 03/02/2017
 
 ---
  
@@ -219,10 +220,5 @@ api                 latest               ef17184c8de6        1 hour ago        2
 
 Использование генератора Docker для добавления необходимых файлов в приложение веб-интерфейса API упростило создание версий образов для разработки и рабочей среды.  Кроссплатформенность средств также достигается с помощью скрипта PowerShell, который позволяет получить те же результаты в Windows, а интеграция с Visual Studio Code дает возможность пошаговой отладки приложения в контейнере. Понимая назначение вариантов образов и целевые сценарии, вы можете оптимизировать внутренний цикл разработки и получить более эффективные образы для рабочих развертываний.  
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
 
 

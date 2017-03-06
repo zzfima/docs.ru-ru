@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f9fb64a90bdbd2096d4752279b1670fad8e8703f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1cf1611ab83874ad44855521d21040d102206338
 
 ---
 
 #<a name="dotnet-publish"></a>dotnet-publish
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-publish (предварительная версия 4 инструментов)](../preview3/tools/dotnet-publish.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версии-кандидата 4 средств .NET Core см. в разделе [dotnet-publish (версия-кандидат 4 средств .NET Core)](../preview3/tools/dotnet-publish.md).
 
 ## <a name="name"></a>Имя
 
@@ -105,6 +105,6 @@ ms.openlocfilehash: f9fb64a90bdbd2096d4752279b1670fad8e8703f
 * [Каталог идентификаторов сред выполнения (RID)](../rid-catalog.md)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

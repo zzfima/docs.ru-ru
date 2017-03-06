@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 48f06f0af3768f7129e0a2b3a89bbdc7795959dc
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0a136e69e103994a69084b09f481489880d5df42
 
 ---
 
 # <a name="net-core-cli-extensibility-model"></a>Модель расширяемости CLI .NET Core 
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [Модель расширяемости CLI в .NET Core (предварительная версия 4 инструментов)](../preview3/tools/extensibility.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версии-кандидата 4 средств .NET Core см. в разделе [Модель расширяемости CLI в .NET Core (версия-кандидат 4 средств .NET Core)](../preview3/tools/extensibility.md).
 
 ## <a name="overview"></a>Обзор
 В этом документе рассматриваются основные способы расширения средств интерфейса командной строки (CLI) и приводятся сценарии, в которых используется каждое из этих средств. В ней вкратце описывается использование средств, а также приводятся замечания по созданию средств обоих типов. 
@@ -135,6 +135,6 @@ echo "Cleaning complete..."
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

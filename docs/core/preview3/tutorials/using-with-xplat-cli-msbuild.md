@@ -1,5 +1,5 @@
 ---
-title: "Начало работы с .NET Core в Windows, Linux или Mac OS из командной строки (пакет SDK — предварительная версия 4) | Microsoft Docs"
+title: "Начало работы с .NET Core в Windows, Linux или Mac OS с помощью командной строки (версия-кандидат 4 средств .NET Core) | Документы Майкрософт"
 description: "Начало работы с .NET Core в Windows, Linux или Mac OS с помощью интерфейса командной строки (CLI) .NET Core"
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: e84012937be6ede9170dde7ff88575d2f4fa1052
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 4c17da61f492e17edf4d69d79be430ead3dd0cc6
 
 ---
 
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-tooling-preview-4"></a>Начало работы с .NET Core в Windows, Linux или Mac OS из командной строки (предварительная версия 4 инструментов)
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-net-core-tools-rc4"></a>Начало работы с .NET Core в Windows, Linux или Mac OS с помощью командной строки (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Начало работы с .NET Core в Windows, Linux и Mac OS из командной строки](../../tutorials/using-with-xplat-cli.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Начало работы с .NET Core в Windows, Linux и Mac OS из командной строки](../../tutorials/using-with-xplat-cli.md).
 
 В этом руководстве показано, как с помощью средств командной строки в .NET Core создавать кроссплатформенные консольные приложения.  Мы начнем с самого простого консольного приложения, а затем охватим несколько проектов, включая тестирование. Возможности будут добавляться поэтапно на основе того, что вы уже узнали и создали.
 
@@ -27,7 +27,7 @@ ms.openlocfilehash: e84012937be6ede9170dde7ff88575d2f4fa1052
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Прежде чем начинать работу, убедитесь, что у вас есть [предварительная версия 4 или более поздняя версия инструментов CLI .NET Core](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md).  Вам также потребуется текстовый редактор.
+Прежде чем начинать работу, убедитесь, что у вас есть [версия-кандидат 4 или более поздняя версия средств CLI .NET Core](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md).  Вам также потребуется текстовый редактор.
 
 ## <a name="hello-console-app"></a>Первое консольное приложение
 
@@ -317,10 +317,10 @@ $ dotnet run
  
 Надеемся, это руководство помогло вам понять, как создавать консольные приложения .NET разного уровня сложности: от самых простых до многопроектных систем с модульными тестами.  Ваш следующий шаг — создание собственного консольного приложения.
  
-Если вас интересует более сложный пример консольного приложения, просмотрите руководство [Организация и тестирование проектов с использованием командной строки .NET Core (пакет SDK — предварительная версия 4)](using-with-xplat-cli-msbuild-folders.md).
+Если вас интересует более сложный пример консольного приложения, просмотрите руководство [Организация и тестирование проектов с помощью командной строки .NET Core (версия-кандидат 4 средств .NET Core)](using-with-xplat-cli-msbuild-folders.md).
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

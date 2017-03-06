@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a53cedb48e57dce7672a5bba2c0ea908cbeb70f4
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 871a6f736272309f6fae74b06f437c7271df2321
 
 ---
 
 #<a name="dotnet-test"></a>dotnet-test
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-new (предварительная версия 4 инструментов)](../preview3/tools/dotnet-test.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версию-кандидата 4 средств .NET Core см. в разделе [dotnet-test (версия-кандидат 4 средств .NET Core)](../preview3/tools/dotnet-test.md).
 
 ## <a name="name"></a>Имя
 
@@ -135,6 +135,6 @@ ms.openlocfilehash: a53cedb48e57dce7672a5bba2c0ea908cbeb70f4
 [Каталог идентификаторов сред выполнения (RID)](../rid-catalog.md)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

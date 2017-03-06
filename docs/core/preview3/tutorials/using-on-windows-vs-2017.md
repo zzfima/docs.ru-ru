@@ -10,15 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 613c65d0-f773-41b8-ba0e-83f6a82a0b30
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: e40ee8ff1d1aa26689d0c2730a417162e5a9b447
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: cc2c2853bc31e161d1fe0de4edc71d15281c6d24
 
 ---
 
-# <a name="getting-started-with-net-core-on-windows-using-visual-studio-2017-tooling-preview-4"></a>Приступая к работе с .NET Core в Windows при помощи Visual Studio 2017 (предварительная версия 4 инструментов)
+# <a name="getting-started-with-net-core-on-windows-using-visual-studio-2017-net-core-tools-rc4"></a>Начало работы с .NET Core в Windows с помощью Visual Studio 2017 (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Информацию об инструментах .NET Core (предварительная версия 2) для Visual Studio 2015 см. в статье [Начало работы с .NET Core в Windows с помощью Visual Studio 2015](../../tutorials/using-on-windows.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Информацию об инструментах .NET Core (предварительная версия 2) для Visual Studio 2015 см. в статье [Начало работы с .NET Core в Windows с помощью Visual Studio 2015](../../tutorials/using-on-windows.md).
 
 Visual Studio 2017 предоставляет полнофункциональную среду для разработки приложений .NET Core. В этом документе описаны шаги по созданию очень простого консольного приложения с помощью Visual Studio и .NET Core.
 
@@ -50,6 +50,6 @@ Visual Studio 2017 предоставляет полнофункциональ�
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 46349d28388c1a04c0cb4b5222ed0d0a868e2762
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: df8174aa3252568d7112305af07e6399d96ca32f
 
 ---
 
 #<a name="dotnet-restore"></a>dotnet-restore
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-restore (предварительная версия 4 инструментов)](../preview3/tools/dotnet-restore.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версии-кандидата 4 средств .NET Core см. в разделе [dotnet-restore (версия-кандидат 4 средств .NET Core)](../preview3/tools/dotnet-restore.md).
 
 ## <a name="name"></a>Имя
 
@@ -114,6 +114,6 @@ ms.openlocfilehash: 46349d28388c1a04c0cb4b5222ed0d0a868e2762
 `dotnet restore --verbosity Error`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

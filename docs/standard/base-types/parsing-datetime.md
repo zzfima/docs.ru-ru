@@ -3,16 +3,17 @@ title: "Анализ строк даты и времени в .NET"
 description: "Анализ строк даты и времени в .NET"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e61514cd-5329-4eb8-b122-482fffb54ab7
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: ad1976f44d8c4ec3a22c6156b4f6ad58f867908b
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: f0131baa0874880b6697458426da5ae9ce1705b7
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -188,10 +189,5 @@ End Module
 [Типы форматирования в .NET](formatting-types.md)
 
 [Преобразование типов в .NET](type-conversion.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

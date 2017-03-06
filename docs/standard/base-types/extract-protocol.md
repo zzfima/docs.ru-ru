@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d2462fb4-6d61-44ab-8466-73f1f06c3058
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 72e0c9401406dcac4eb693b056b88a531f2a0748
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 578b70412e876001f4462e2409739acf3609097b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -72,7 +73,7 @@ End Module
 `(?<proto>\w+)` | Совпадение с одним или несколькими символами слова. Имя этой группы — proto.
 `://` | Совпадение с двоеточием, за которым следуют две косые черты.
 `[^/]+?` | Совпадение с одним или несколькими вхождениями (но как можно меньшему числу) любого символа, отличного от косой черты.
-`(?<port>:\d+)?` | Совпадение с вхождениями в количестве 0 или 1 двоеточия, за которым следует одна или несколько цифр. Имя этой группы — port.
+`(?<port>:\d+)?` | Совпадение с вхождениями в количестве&0; или&1; двоеточия, за которым следует одна или несколько цифр. Имя этой группы — port.
 `/` | Совпадение с косой чертой.
  
 Метод [Match.Result](xref:System.Text.RegularExpressions.Match.Result(System.String)) разворачивает последовательность замены `${proto}${port}`, которая объединяет захваченное значение двух именованных групп в шаблон регулярного выражения. Это удобная альтернатива явному объединению строк, извлеченных из объекта коллекции, который был возвращен свойством [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups).
@@ -92,9 +93,4 @@ Console.WriteLine(m.Groups("proto").Value + m.Groups("port").Value)
 [Регулярные выражения .NET](regular-expressions.md)
 
 [Примеры регулярных выражений](regex-examples.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

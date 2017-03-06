@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: fed8b914a06d75a48c10997a21db217ba8a13e38
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
 
 ---
 
 #<a name="dotnet-run"></a>dotnet-run
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 2). Информацию об инструментах .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017 см. в статье [dotnet-run (предварительная версия 4 инструментов)](../preview3/tools/dotnet-run.md).
+> Эта статья применима к инструментам .NET Core (предварительная версия 2). Сведения для версии-кандидата 4 средств .NET Core см. в разделе [dotnet-run (версия-кандидат 4 средств .NET Core)](../preview3/tools/dotnet-run.md).
 
 ## <a name="name"></a>Имя 
 
@@ -80,6 +80,6 @@ ms.openlocfilehash: fed8b914a06d75a48c10997a21db217ba8a13e38
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

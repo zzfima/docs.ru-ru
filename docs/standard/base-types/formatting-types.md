@@ -4,16 +4,16 @@ description: "Типы форматирования"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6c6ddfdbe288fe012adf31fd4d45af1b697d1132
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: dc0693c2e2c034c4c71b4270ef2812be4af72e72
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -617,7 +617,7 @@ Console.WriteLine(date1.ToString(customFormat))
 '       August 28, 2009 (Friday) 
 ```
 
-В следующем примере определяется строка настраиваемого формата, которая отображает значение [Int64](xref:System.Int64) как стандартный 7-значный американский номер телефона вместе с кодом города. 
+В следующем примере определяется строка настраиваемого формата, которая отображает значение [Int64](xref:System.Int64) как стандартный&7;-значный американский номер телефона вместе с кодом города. 
 
 ```csharp
 using System;
@@ -666,7 +666,7 @@ End Module
 [Строки форматов перечисления](enumeration-format.md) | Описание строк стандартного формата, используемых для создания строковых представлений значений перечислений.
 [Guid.ToString(String)](xref:System.Guid.ToString(System.String)) | Описание строк стандартного формата для значений [Guid](xref:System.Guid).
 
-## <a name="culturesensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Форматирование с учетом языка и региональных параметров с помощью поставщиков формата и интерфейса IFormatProvider
+## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Форматирование с учетом языка и региональных параметров с помощью поставщиков формата и интерфейса IFormatProvider
 
 Хотя описатели формата позволяют настраивать форматирование объектов, для формирования осмысленного строкового представления объектов зачастую требуется дополнительная информация, связанная с форматированием. Например, при форматировании числового значения в формате валюты с помощью строки стандартного формата "C" или строки настраиваемого формата "$ #,#.00" для включения в отформатированную строку должен быть известен нужный символ валюты, разделитель групп, а также разделитель целой и дробной частей. В платформе .NET подобные дополнительные сведения предоставляются с помощью интерфейса [IFormatProvider](xref:System.IFormatProvider), передаваемого в качестве параметра одной или нескольких перегрузок метода `ToString` для числовых типов и типов даты и времени. Реализации [IFormatProvider](xref:System.IFormatProvider) используются в .NET для поддержки форматирования с учетом языка и региональных параметров. В следующем примере показано, как меняется строковое представление объекта при его форматировании с использованием трех разных объектов [IFormatProvider](xref:System.IFormatProvider), представляющих разные язык и региональные параметры.
 
@@ -730,7 +730,7 @@ End Module
 
 Также можно реализовать пользовательский поставщик форматирования, позволяющий заменить любой из этих классов. При этом пользовательская реализация метода `GetFormat`, рассчитанная на предоставление сведений о форматировании для метода `ToString`, должна возвращать объект одного из типов, перечисленных в приведенной выше таблице.
 
-### <a name="culturesensitive-formatting-of-numeric-values"></a>Форматирование числовых значений, зависящее от языка и региональных параметров
+### <a name="culture-sensitive-formatting-of-numeric-values"></a>Форматирование числовых значений, зависящее от языка и региональных параметров
 
 По умолчанию форматирование числовых значений зависит от языка и региональных параметров. Если не указать язык и региональные параметры при вызове метода форматирования, используются соглашения о форматировании текущего языка и региональных параметров. Это продемонстрировано в следующем примере, который изменяет текущие язык и региональные параметры четыре раза, а затем вызывает метод [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String)). В каждом случае результирующая строка отражает соглашения о форматировании текущих языка и региональных параметров. Это происходит потому, что методы `ToString` и `ToString(String)` создают оболочки для вызовов метода `ToString(String, IFormatProvider)` каждого числового типа. 
 
@@ -856,7 +856,7 @@ End Module
 '       fr:    1 043,630
 ```
 
-### <a name="culturesensitive-formatting-of-date-and-time-values"></a>Форматирование значений даты и времени, зависящее от языка и региональных параметров
+### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Форматирование значений даты и времени, зависящее от языка и региональных параметров
 
 По умолчанию форматирование значений даты и времени зависит от языка и региональных параметров. Если не указать язык и региональные параметры при вызове метода форматирования, используются соглашения о форматировании текущего языка и региональных параметров. Это продемонстрировано в следующем примере, который изменяет текущие язык и региональные параметры четыре раза, а затем вызывает метод [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)). В каждом случае результирующая строка отражает соглашения о форматировании текущих языка и региональных параметров. Это происходит потому, что методы [DateTime.ToString()](xref:System.DateTime.ToString), [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)), [DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) и [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) создают оболочки для вызовов методов [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) и [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)).
 
@@ -1401,9 +1401,4 @@ End Module
 [System.IFormatProvider](xref:System.IFormatProvider)
 
 [System.ICustomFormatter](xref:System.ICustomFormatter)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

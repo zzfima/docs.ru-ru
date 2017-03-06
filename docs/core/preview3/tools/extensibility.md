@@ -4,28 +4,28 @@ description: "Модель расширяемости CLI .NET Core"
 keywords: "CLI, расширяемость, пользовательские команды, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 11/13/2016
+ms.date: 02/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 7df8b8bd4ae96a344b279a2673906962beaf29a4
+ms.sourcegitcommit: 5a1ba8984d93795e4628a7b911307d513e8de8d1
+ms.openlocfilehash: 1b6bc46639fda60e4a23c1ea66d0d0ca8b58acb7
 
 ---
 
-# <a name="net-core-cli-extensibility-model-tooling-preview-4"></a>Модель расширяемости CLI в .NET Core (предварительная версия 4 инструментов)
+# <a name="net-core-cli-extensibility-model-net-core-tools-rc4"></a>Модель расширяемости CLI в .NET Core (версия-кандидат 4 средств .NET Core)
 
 > [!WARNING]
-> Эта статья применима к инструментам .NET Core (предварительная версия 4) для версии-кандидата Visual Studio 2017. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Модель расширяемости CLI в .NET Core](../../tools/dotnet-test.md).
+> Эта статья применима к версии-кандидату 4 средств .NET Core. Версия этой статьи об инструментах .NET Core (предварительная версия 2): [Модель расширяемости CLI в .NET Core](../../tools/dotnet-test.md).
 
 ## <a name="overview"></a>Обзор
 В этом документе рассматриваются основные способы расширения средств интерфейса командной строки (CLI) и приводятся сценарии, в которых используется каждое из этих средств. В ней вкратце описывается использование средств, а также приводятся замечания по созданию средств обоих типов. 
 
 ## <a name="how-to-extend-cli-tools"></a>Расширение средств CLI
-Предварительную версию 4 инструментов CLI можно расширять тремя основными способами:
+Версию-кандидат 4 средств CLI можно расширять тремя основными способами:
 
 1. посредством пакетов NuGet для каждого отдельного проекта;
 2. Посредством пакетов NuGet с использованием пользовательских целевых объектов.  
@@ -43,41 +43,22 @@ ms.openlocfilehash: 7df8b8bd4ae96a344b279a2673906962beaf29a4
 ### <a name="consuming-per-project-tools"></a>Использование средств для отдельных проектов
 Для каждого средства, которое нужно использовать, в файле проекта необходимо добавить элемент `<DotNetCliToolReference>`. Внутри элемента `<DotNetCliToolReference>` нужно сослаться на пакет, в котором находится средство, и указать необходимую версию. После выполнения команды `dotnet restore` средство и его зависимости восстанавливаются. 
 
-Для средств, выполнение которых требует загрузки выходных данных сборки проекта, обычно имеется еще одна зависимость, которая указывается в списке стандартных зависимостей в файле проекта. Так как в предварительной версии 4 программ с интерфейсом командной строки (CLI) в качестве обработчика сборки используется MSBuild, рекомендуется написать эти части инструмента в виде пользовательских целевых объектов и задач MSBuild, поскольку таким образом они смогут участвовать в общем процессе сборки. Кроме того, они легко могут получить часть или все данные, полученные посредством сборки, например расположение выходных файлов, текущую создаваемую конфигурацию и т. д. В предварительной версии 4 все эти данные принимают вид набора свойств MSBuild, которые могут быть считаны из любого целевого объекта. Далее в этом документе вы узнаете, как добавить пользовательский целевой объект с помощью NuGet. 
+Для средств, выполнение которых требует загрузки выходных данных сборки проекта, обычно имеется еще одна зависимость, которая указывается в списке стандартных зависимостей в файле проекта. Так как в версии-кандидате 4 интерфейса командной строки в качестве подсистемы сборки используется MSBuild, рекомендуется записать эти части средства в виде пользовательских целевых объектов и задач MSBuild: так они смогут участвовать в общем процессе сборки. Кроме того, они легко могут получить часть или все данные, полученные посредством сборки, например расположение выходных файлов, текущую создаваемую конфигурацию и т. д. В версии-кандидате 4 все эти данные принимают вид набора свойств MSBuild, которые могут быть считаны из любого целевого объекта. Далее в этом документе вы узнаете, как добавить пользовательский целевой объект с помощью NuGet. 
 
 Рассмотрим пример добавления простого средства на основе узла tools в простой проект. Предположим, что есть команда `dotnet-api-search`, которая позволяет искать указанный интерфейс API в пакетах NuGet. Вот файл проекта консольного приложения, которое использует это средство:
 
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1/TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.1.0</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
 
   <!-- The tools reference -->
   <ItemGroup>
-    <DotNetCliToolReference Include="dotnet-api-search">
-      <Version></Version>
-    </DotNetCliToolReference>
+    <DotNetCliToolReference Include="dotnet-api-search" Version="1.0.0" />
   </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -86,23 +67,8 @@ ms.openlocfilehash: 7df8b8bd4ae96a344b279a2673906962beaf29a4
 ### <a name="building-tools"></a>Создание средств
 Как было сказано ранее, средства — это просто переносимые консольные приложения. Они создаются так же, как любые другие консольные приложения. После сборки используйте команду [`dotnet pack`](dotnet-pack.md), чтобы создать пакет NuGet (nupkg), содержащий код, сведения о зависимостях и т. д. Имя пакета может быть любым, но содержащееся в нем приложение, то есть двоичный файл средства, должно соответствовать соглашению `dotnet-<command>`, чтобы среда `dotnet` могла вызывать его. 
 
-В двоичных файлах в предварительной версии 4 команда `dotnet pack` не будет упаковывать файл `runtimeconfig.json`, необходимый для запуска инструмента. Есть два способа упаковки этого файла.
-
-1. Чтобы добавить этот файл, можно создать файл `nuspec` и использовать новую команду `dotnet nuget pack`, доступную в предварительной версии 4 инструментов CLI.
-2. Можно также использовать новый элемент `<Content>` в `<ItemGroup>` в файле проекта, чтобы добавить файл вручную.
-
-Работа с NUSPEC-файлами выходит за рамки данной статьи. Однако вы можете найти много полезных сведений в [официальной документации по NuGet](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file). Ниже приведен пример файла `csproj`, применяемого во втором способе, и его конфигурация.
-
-```xml
-  <ItemGroup>
-    <Content Include="$(OutputPath)\*.runtimeconfig.json">
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)</PackagePath>
-    </Content>
-  </ItemGroup>
-```
-
-Этот элемент `<ItemGroup>` дает команде `dotnet pack` указание упаковать все файлы `runtimeconfig.json` в выходном каталоге сборки (заданные переменной `$(OutputPath)`) и разместить его в папку `lib` целевой платформы сборки. Целевая платформа сборки задается подобно выходному пути с помощью свойства MSBuild. После того как она будет задана, полученный NUPKG-файл средства будет содержать все, что требуется для запуска средства.
+> [!NOTE]
+> В версиях-кандидатах до&3; средств командной строки .NET Core при работе команды `dotnet pack` возникала ошибка, из-за которой файл `runtime.config.json` не упаковывался вместе со средством. Из-за отсутствия файла происходили ошибки в среде выполнения. При возникновении такой ситуации установите последнюю версию средства и повторите `dotnet pack`. 
 
 Так как средства — это переносимые приложения, то для его запуска у пользователя должна быть та версия библиотек .NET Core, для которой выполнялась сборка средства. Зависимости, которые использует средство и которые не содержатся в библиотеках .NET Core, восстанавливаются и помещаются в кэш NuGet. Таким образом, средство в целом выполняется с помощью сборок из библиотек .NET Core, а также сборок из кэша NuGet. 
 
@@ -116,8 +82,7 @@ ms.openlocfilehash: 7df8b8bd4ae96a344b279a2673906962beaf29a4
 Ниже приведен пример проектного файла целевого объекта для справки. В нем показано, как использовать новый синтаксис `csproj` для указания команде `dotnet pack`, что следует упаковать, чтобы поместить файлы целевых объектов вместе со сборками в папку `build` внутри пакета. Обратите внимание на элемент `<ItemGroup>` ниже, для свойства `Label` которого задано значение "dotnet pack instructions". 
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Description>Sample Packer</Description>
     <VersionPrefix>0.1.0-preview</VersionPrefix>
@@ -126,50 +91,31 @@ ms.openlocfilehash: 7df8b8bd4ae96a344b279a2673906962beaf29a4
     <AssemblyName>SampleTargets.PackerTarget</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
-    <EmbeddedResource Include="**\*.resx" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
     <EmbeddedResource Include="Resources\Pkg\dist-template.xml;compiler\resources\**\*" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="build\SampleTargets.PackerTarget.targets" />
   </ItemGroup>
-  <ItemGroup Label="dotent pack instructions">
+  <ItemGroup Label="dotnet pack instructions">
     <Content Include="build\*.targets;$(OutputPath)\*.dll;$(OutputPath)\*.json">
       <Pack>true</Pack>
       <PackagePath>build\</PackagePath>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161029-1</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.DependencyModel">
-      <Version>1.0.1-beta-000933</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Build.Framework">
-      <Version>0.1.0-preview-00028-160627</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.Build.Utilities.Core">
-      <Version>0.1.0-preview-00028-160627</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-    <PackageReference Include="NETStandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.0.1-beta-000933"/>
+    <PackageReference Include="Microsoft.Build.Framework" Version="0.1.0-preview-00028-160627" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="0.1.0-preview-00028-160627" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
   <ItemGroup />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>463c66f0-921d-4d34-8bde-7c9d0bffaf7b</ProjectGuid>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
     <DefineConstants>$(DefineConstants);NETSTANDARD1_3</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
   </PropertyGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -211,6 +157,6 @@ echo "Cleaning complete..."
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

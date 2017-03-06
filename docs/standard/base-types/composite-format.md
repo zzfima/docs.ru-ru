@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a01efc8f-c242-4535-bd32-acd0032d9590
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
+ms.sourcegitcommit: 90ade65e167770bdbcbbf79707fe48e6fbc030c0
+ms.openlocfilehash: 5b61b4736880d57f02070150d8613d860505b268
 
 ---
 
@@ -24,7 +24,7 @@ ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
 
 * Метод [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)), который возвращает отформатированную результирующую строку. 
 
-* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider, System.String, System.Object), который добавляет отформатированную результирующую строку в объект [StringBuilder](xref:System.Text.StringBuilder).
+* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider,System.String,System.Object)), который добавляет отформатированную строку результата в объект [StringBuilder](xref:System.Text.StringBuilder).
 
 * Некоторые перегруженные версии метода [Console](xref:System.Console) `WriteLine`, которые отображают отформатированную результирующую строку в консоли.  
 
@@ -40,7 +40,7 @@ ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
 
 Строка составного формата и список объектов используются в качестве аргументов методов, поддерживающих составное форматирование. Строка составного формата состоит из блоков фиксированного текста числом от нуля и больше, перемежаемых одним или несколькими элементами форматирования. Фиксированным текстом может являться произвольная строка, а каждый элемент форматирования должен соответствовать объекту или упакованной структуре из списка. В ходе составного форматирования создается новая результирующая строка, в которой все элементы форматирования заменены на строковое представление соответствующих объектов из списка.
 
-Рассмотрим следующий фрагмент кода [Format](xref:System.String.Format(System.String.Format(System.IFormatProvider,System.String,System.Object)).
+Рассмотрим следующий фрагмент кода [форматирования](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)).
 
 ```csharp
 string name = "Fred";
@@ -64,7 +64,7 @@ __{__*index*[,*alignment*][:*formatString*]__}__
  
 ### <a name="index-component"></a>Индекс
 
-Обязательный компонент *index*, также называемый описателем параметра, — это число, определяющее соответствующий объект из списка; индексация элементов ведется от нуля. Иными словами, элемент форматирования с индексом 0 отвечает за формат первого объекта в списке, элемент форматирования с индексом 1 служит для форматирования второго объекта в списке и т. д. В пример ниже входят четыре описателя параметров (от нуля до трех) для представления простых чисел меньше 10. 
+Обязательный компонент *index*, также называемый описателем параметра, — это число, определяющее соответствующий объект из списка; индексация элементов ведется от нуля. Иными словами, элемент форматирования с индексом 0 отвечает за формат первого объекта в списке, элемент форматирования с индексом 1 служит для форматирования второго объекта в списке и т. д. В пример ниже входят четыре описателя параметров (от нуля до трех) для представления простых чисел меньше&10;. 
 
 ```csharp
 string primes;
@@ -229,9 +229,9 @@ Console.WriteLine(output)
 
 3. Если значение реализует интерфейс [IFormattable](xref:System.IFormattable), вызывается метод [ToString(String, IFormatProvider)](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) этого интерфейса. Методу передается значение *formatString* (при его наличии в элементе форматирования) или значение `null` (в случае его отсутствия). Аргумент [IFormatProvider](xref:System.IFormatProvider) определяется следующим образом:
 
-    *   Для числового значения, если вызывается метод составного форматирования с аргументом [IFormatProvider](xref:System.IFormatProvider), не равным NULL, то среда выполнения запрашивает объект [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) из метода [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)). Если не удалось предоставить объект, если аргумент имеет значение `null` или метод составного форматирования не имеет параметра [IFormatProvider](xref:System.IFormatProvider), то используется объект [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo для языка и региональных параметров текущего потока. 
+    *   Для числового значения, если вызывается метод составного форматирования с аргументом [IFormatProvider](xref:System.IFormatProvider), не равным NULL, то среда выполнения запрашивает объект [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) из метода [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)). Если не удалось предоставить объект, если аргумент имеет значение `null` или если метод составного форматирования не имеет параметра [IFormatProvider](xref:System.IFormatProvider), то используется объект [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) для языка и региональных параметров текущего потока. 
     
-    * Для даты и времени, если вызывается метод составного форматирования с аргументом [IFormatProvider](xref:System.IFormatProvider), не равным NULL, среда выполнения запрашивает объект [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) из метода [IFormatProvider.GetFormat](xref:System.IFormatProvider._GetFormat(System.Type). Если не удалось предоставить объект, если аргумент имеет значение `null` или метод составного форматирования не имеет параметра [IFormatProvider](xref:System.IFormatProvider), то используется объект [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) для языка и региональных параметров текущего потока. 
+    * Для значения даты и времени, если вызывается метод составного форматирования с аргументом [IFormatProvider](xref:System.IFormatProvider), не равным NULL, то среда выполнения запрашивает объект [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) из метода [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)). Если не удалось предоставить объект, если аргумент имеет значение `null` или метод составного форматирования не имеет параметра [IFormatProvider](xref:System.IFormatProvider), то используется объект [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) для языка и региональных параметров текущего потока. 
     
     * Для объектов других типов, если метод составного форматирования вызывается с аргументом [IFormatProvider](xref:System.IFormatProvider), его значение (в том числе и `null`, если объект [IFormatProvider](xref:System.IFormatProvider) не задан) передается непосредственно в реализацию [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)). В противном случае объект [CultureInfo](xref:System.Globalization.CultureInfo), который представляет язык и региональные параметры текущего потока, передается в реализацию [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)). 
     
@@ -376,6 +376,6 @@ Console.WriteLine(FormatPrice)
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 
