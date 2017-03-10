@@ -1,0 +1,8 @@
+# [Практическое руководство. Перехват несовместимого с CLS исключения](how-to-catch-a-non-cls-exception.md)
+# [Практическое руководство. Обработка исключений с помощью блока try-catch](how-to-handle-an-exception-using-try-catch.md)
+# [Обработка исключений](exception-handling.md)
+# [Использование исключений](using-exceptions.md)
+# [Создание и генерация исключений](creating-and-throwing-exceptions.md)
+# [Исключения, создаваемые компилятором](compiler-generated-exceptions.md)
+# [Практическое руководство. Выполнение кода очистки с использованием блока finally](how-to-execute-cleanup-code-using-finally.md)
+# [Исключения и обработка исключений](exceptions-and-exception-handling.md)

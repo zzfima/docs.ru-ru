@@ -1,0 +1,7 @@
+# [Практическое руководство. Реализация пользовательских методов доступа к событиям](how-to-implement-custom-event-accessors.md)
+# [События](index.md)
+# [Практическое руководство. Использование словаря для хранения экземпляров событий](how-to-use-a-dictionary-to-store-event-instances.md)
+# [Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework](how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+# [Практическое руководство. Реализация событий интерфейса](how-to-implement-interface-events.md)
+# [Практическое руководство. Подписка и отмена подписки на события](how-to-subscribe-to-and-unsubscribe-from-events.md)
+# [Практическое руководство. Создание событий базового класса в производных классах](how-to-raise-base-class-events-in-derived-classes.md)

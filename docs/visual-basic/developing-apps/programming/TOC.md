@@ -1,0 +1,5 @@
+# [Практическое руководство. Асинхронный вызов веб-службы](how-to-call-a-web-service-asynchronously.md)
+# [Программирование в Visual Basic](index.md)
+# [Доступ к формам приложения](accessing-application-forms.md)
+# [Доступ к веб-службам приложения](accessing-application-web-services.md)
+# [Доступ к данным пользователя](accessing-user-data.md)
