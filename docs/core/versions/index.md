@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 636c86fed9952542a256c075eb9e388b70cff174
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -129,33 +129,28 @@ ms.lasthandoff: 03/02/2017
 
 После выпуска стабильной версии .NET Core 1.0.0 в библиотеки .NET Core добавляются новые интерфейсы API для поддержки новых сценариев. Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core. Версии метапакетов изменяются на уровне дополнительного номера (x.y) в соответствии со старшим номером версии платформы. Различные платформы обновляются для описания новых интерфейсов API. Выпускается новый распространяемый пакет .NET Core, номер версии которого соответствует версии метапакета `Microsoft.NETCore.App`.
 
-Выпуск дополнительных версий демонстрируется в приведенных ниже примерах файла project.json.
+Вы можете увидеть небольшие изменения в следующем файле проекта:
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.1.0"
-  },
-  "frameworks": {
-    "netcoreapp1.1": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
 ### <a name="shipping-a-major-release"></a>Выпуск основной версии
 
 После выпуска стабильной версии .NET Core 1.y.z в библиотеки .NET Core добавляются новые интерфейсы API для поддержки новых базовых сценариев. Может быть отменена поддержка платформы. Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core. Версии метапакета `Microsoft.NETCore.App` и платформы `netcore` изменяются на уровне основного номера (x.). Версии метапакета `NETStandard.Library`, вероятно, будут изменяться на уровне дополнительного номера (x.y), так как он связан с несколькими реализациями .NET. Будет выпущен новый распространяемый пакет .NET Core, номер версии которого соответствует версии метапакета `Microsoft.NETCore.App`.
 
-Выпуск основных версий демонстрируется в приведенном ниже примере ссылки на метапакет в файле project.json.
+Вы можете увидеть значительные изменения в следующем файле проекта. (Обратите внимание, что `netcoreapp2.0` не был выпущен.)
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "2.0.0"
-  },
-  "frameworks": {
-    "netcoreapp2.0": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+
 ```
 
