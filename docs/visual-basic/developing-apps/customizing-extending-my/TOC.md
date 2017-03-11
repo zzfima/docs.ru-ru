@@ -1,0 +1,5 @@
+# [Упаковка и развертывание пользовательских расширений пространства имен My](packaging-and-deploying-custom-my-extensions.md)
+# [Расширение модели приложения Visual Basic](extending-the-visual-basic-application-model.md)
+# [Расширение пространства имен My в Visual Basic](extending-the-my-namespace.md)
+# [Настройка доступа к объектам через My](customizing-which-objects-are-available-in-my.md)
+# [Настройка проектов и расширение объекта My](customizing-projects-and-extending-my.md)

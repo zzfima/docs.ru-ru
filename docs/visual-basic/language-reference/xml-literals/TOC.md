@@ -1,0 +1,6 @@
+# [XML-литерал документа](xml-document-literal.md)
+# [Литерал инструкции обработки XML](xml-processing-instruction-literal.md)
+# [Литеральное представление XML-раздела CDATA](xml-cdata-literal.md)
+# [Литеральное представление XML-элемента](xml-element-literal.md)
+# [XML-литерал комментария](xml-comment-literal.md)
+# [XML-литералы](index.md)

@@ -1,0 +1,60 @@
+---
+title: "Оператор fixed (Справочник по C#) | Microsoft Docs"
+ms.date: "2015-07-20"
+ms.prod: ".net"
+ms.technology: 
+  - "devlang-csharp"
+ms.topic: "article"
+f1_keywords: 
+  - "fixed_CSharpKeyword"
+  - "fixed"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "fixed - ключевое слово [C#]"
+ms.assetid: 7ea6db08-ad49-4a7a-b934-d8c4acad1c3a
+caps.latest.revision: 24
+author: "BillWagner"
+ms.author: "wiwagn"
+caps.handback.revision: 24
+---
+# Оператор fixed (Справочник по C#)
+Оператор `fixed` не позволяет сборщику мусора переносить перемещаемую переменную.  Оператор `fixed` допускается только в [небезопасном](../../../csharp/language-reference/keywords/unsafe.md) контексте.  `Fixed` также можно использовать для создания [буферов фиксированного размера](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).  
+  
+ Оператор `fixed` задает указатель на управляемую переменную и "закрепляет" эту переменную во время выполнения оператора.  Без `fixed`, указатели на перемещаемые управляемые переменные были бы мало полезны, так как при сборке мусора переменные переносились бы непредсказуемым образом.  Компилятор C\# позволяет назначить указатель только управляемой переменной в операторе `fixed`.  
+  
+ [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#1)]  
+  
+ Можно инициализировать указатель, используя массив, строку, буфер фиксированного размера или адрес переменной.  В следующем примере демонстрируется использование переменных адресов, массивов и строк.  Дополнительные сведения о буферах фиксированного размера см. в разделе [Буферы фиксированного размера](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).  
+  
+ [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#2)]  
+  
+ Можно инициализировать несколько указателей одного типа.  
+  
+```  
+fixed (byte* ps = srcarray, pd = dstarray) {...}  
+```  
+  
+ Чтобы инициализировать указатели разных типов, просто разместите операторы `fixed`, как показано в следующем примере.  
+  
+ [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#3)]  
+  
+ После выполнения кода в операторе закрепление любых закрепленных переменных снимается и они могут пройти сборку мусора.  Таким образом, не следует указывать на эти переменные за пределами оператора `fixed`.  
+  
+> [!NOTE]
+>  Переменные, инициализированные в фиксированных операторах изменять не допускается.  
+  
+ В небезопасном режиме память выделяется стеку, где сборка мусора не производится и, соответственно, закрепление не требуется.  Дополнительные сведения см. в разделе [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md).  
+  
+## Пример  
+ [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#4)]  
+  
+## Спецификация языка C\#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+  
+## См. также  
+ [Справочник по C\#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
+ [небезопасное](../../../csharp/language-reference/keywords/unsafe.md)   
+ [Буферы фиксированного размера](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
