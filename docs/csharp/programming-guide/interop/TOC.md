@@ -1,7 +1,0 @@
-# [Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла](how-to-use-platform-invoke-to-play-a-wave-file.md)
-# [Общие сведения о взаимодействии](interoperability-overview.md)
-# [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия](how-to-use-indexed-properties-in-com-interop-rogramming.md)
-# [Пример COM-класса](example-com-class.md)
-# [Пошаговое руководство. Программирование приложений Office](walkthrough-office-programming.md)
-# [Взаимодействие](interoperability.md)
-# [Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка Visual C#](how-to-access-office-onterop-objects.md)

@@ -1,7 +1,0 @@
-# [Строковые функции](string-functions.md)
-# [Функция CType](ctype-function.md)
-# [Функции преобразования типов](type-conversion-functions.md)
-# [Функции](index.md)
-# [Функции преобразования](conversion-functions.md)
-# [Математические функции](math-functions.md)
-# [Возвращаемые значения функции CStr](return-values-for-the-cstr-function.md)
