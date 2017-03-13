@@ -38,7 +38,7 @@ caps.handback.revision: 21
  Описывает использование `DeleteSubKey` метод   `My.Computer.Registry.CurrentUser` свойство для удаления раздела реестра.  
   
  [Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Описывает использование `Registry` и  `RegistryKey` классы   [!INCLUDE[.net framework]()] получить доступ к реестру.  
+ Описывает использование `Registry` и  `RegistryKey` классы получить доступ к реестру.  
   
  [Безопасность и реестр](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  Обсуждение вопросов безопасности, связанных с реестром.  
