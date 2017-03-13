@@ -37,7 +37,7 @@ caps.handback.revision: 38
   
  В следующем рисунке показано, как выражаются в C\# отношения между классами, продемонстрированные в предыдущем примере.  В следующем примере также показано, как `WorkItem` переопределяет виртуальный метод <xref:System.Object.ToString%2A?displayProperty=fullName>, и как класс `ChangeRequest` наследует реализацию `WorkItem` метода.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/inheritance_1.cs)]  
+ [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## Абстрактные и виртуальные методы  
  Когда базовый класс объявляет метод как [виртуальный](../../../csharp/language-reference/keywords/virtual.md), производный класс может [переопределить](../../../csharp/language-reference/keywords/override.md) метод с помощью своей собственной реализации.  Если базовый класс объявляет член как [абстрактный](../../../csharp/language-reference/keywords/abstract.md), то этот метод должен быть переопределен в любом неабстрактном классе, который прямо наследует от этого класса.  Если производный класс сам является абстрактным, то он наследует абстрактные члены, не реализуя их.  Абстрактные и виртуальные члены являются основой для полиморфизма, который является второй основной характеристикой объектно\-ориентированного программирования.  Дополнительные сведения см. в разделе [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

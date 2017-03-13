@@ -44,7 +44,7 @@ caps.handback.revision: 39
   
 6.  Заменяет содержимое файла Program.cs на следующий код.  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#21)]  
+     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  Нажмите клавишу F5, чтобы запустить проект.  Появляется окно командной строки, содержащее строку `Hello World!`  
   
@@ -53,11 +53,11 @@ caps.handback.revision: 39
 ## Комментарии  
  Первая строка содержит комментарий.  Символы `//` преобразуют остальную часть строки в комментарий.  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#32)]  
+ [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  Можно также сделать комментарием блок текста, окружив его символами `/*` и `*/`.  Это показано в следующем примере.  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#33)]  
+ [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## Метод Main  
  Консольное приложение C\# должно содержать метод `Main`, в котором начинается и заканчивается управление.  В методе `Main` создаются объекты и выполняются другие методы.  
@@ -66,19 +66,19 @@ caps.handback.revision: 39
   
 -   Он возвращает значение `void`.  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_4.cs)]  
+     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   Также может возвращаться целое значение.  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_5.cs)]  
+     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   С обоими возвращаемыми типами он может принимать следующие аргументы.  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_6.cs)]  
+     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      \-или\-  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_7.cs)]  
+     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  Параметр метода `Main` `args` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы.  В отличие от C\+\+, массив не содержит имени исполняемого \(EXE\) файла.  
   
@@ -89,9 +89,9 @@ caps.handback.revision: 39
 ## Ввод и вывод  
  Программы на C\#, как правило, используют службы ввода\/вывода, предоставляемые библиотекой времени выполнения в .NET Framework.  Оператор `System.Console.WriteLine("Hello World!");` использует метод <xref:System.Console.WriteLine%2A>.  Это один из методов вывода класса <xref:System.Console> в библиотеке времени выполнения.  Он выводит свои строковые параметры в стандартном потоке вывода, за которым следует новая строка.  Другие методы <xref:System.Console> используются для разных операций ввода и вывода.  Если в начало программы поместить директиву `using System;`, классы <xref:System> и методы можно будет использовать напрямую без указания их полного имени.  Например, можно вызвать `Console.WriteLine` вместо `System.Console.WriteLine`:  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#23)]  
+ [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  Дополнительные сведения о методах ввода\/вывода см. в разделе <xref:System.IO>.  
   

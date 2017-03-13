@@ -21,11 +21,11 @@ caps.handback.revision: 24
   
  Следующие примеры показывают операторы `try-catch`, `try-finally` и `try-catch-finally`.  
   
- [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_1.cs)]  
+ [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
   
- [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_2.cs)]  
+ [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
   
- [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_3.cs)]  
+ [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
   
  Блок `try` без блока `catch` или блока `finally` вызовет ошибку компилятора.  
   
@@ -40,11 +40,11 @@ caps.handback.revision: 24
   
 -   Возможность создания и вызова нового, более конкретного исключения.  
   
-     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_4.cs)]  
+     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
   
 -   Требуется частично обработать исключение перед передачей его на дополнительную обработку.  В следующем примере блок `catch` используется для добавления записи в журнал ошибок перед повторным вызовом исключения.  
   
-     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_5.cs)]  
+     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
   
 ## Блоки finally  
  Блок `finally` позволяет удалить действия, выполненные в блоке `try`.  При наличии блока `finally` он выполняется последним, после блока `try` и всех выполняемых блоков `catch`.  Блок `finally` выполняется всегда, вне зависимости от возникновения исключения или обнаружения блока `catch`, соответствующего типу исключения.  
@@ -53,7 +53,7 @@ caps.handback.revision: 24
   
  В следующем примере с помощью блока `finally` закрывается файл, открытый в блоке `try`.  Обратите внимание, что состояние дескриптора файла проверяется до закрытия файла.  Если блок `try` не может открыть этот файл, дескриптор файла по\-прежнему имеет значение `null` и блок `finally` не пытается закрыть его.  Кроме того, если файл успешно открыт в блоке `try`, блок `finally` закрывает открытый файл.  
   
- [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_6.cs)]  
+ [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

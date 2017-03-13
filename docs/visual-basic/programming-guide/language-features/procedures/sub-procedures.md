@@ -75,11 +75,11 @@ caps.handback.revision: 21
 ### Пример объявления и вызова  
  Приведенная ниже процедура `Sub` показывает оператору компьютера, какое задание приложение собирается выполнить, а также отображает отметку времени.  Вместо дублирования этого кода в начале каждой задачи приложение вызывает  `tellOperator`  из различных расположений.  При каждом вызов строка передается аргументу  `task` , идентифицирующему запущенную задачу.  
   
- [!code-vb[VbVbcnProcedures#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
  В следующем примере показан типичный вызов  `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
 ## См. также  
  [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

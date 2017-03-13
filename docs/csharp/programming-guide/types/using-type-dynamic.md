@@ -21,19 +21,19 @@ caps.handback.revision: 30
   
  Например, если у метода `exampleMethod1` экземпляра в следующем коде имеется только один параметр, компилятор определяет, что первый вызов метода \(`ec.exampleMethod1(10, 4)`\) является недопустимым, поскольку он содержит два аргумента.  Такой вызов приводит к ошибке компилятора.  Второй вызов метода `dynamic_ec.exampleMethod1(10, 4)` не проверяется компилятором, поскольку тип `dynamic_ec` является типом `dynamic`.  Поэтому ошибка компилятора не возникает.  Однако ошибка не остается незамеченной и не приводит к неопределенному результату.  Она перехватывается во время выполнения и вызывает исключение времени выполнения.  
   
- [!code-cs[CsProgGuideTypes#50](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_1.cs)]  
+ [!code-cs[CsProgGuideTypes#50](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_1.cs)]  
   
- [!code-cs[CsProgGuideTypes#56](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_2.cs)]  
+ [!code-cs[CsProgGuideTypes#56](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_2.cs)]  
   
  Роль компилятора в этом примере состоит в том, чтобы объединить информацию о предполагаемых действиях каждой инструкции над объектом или выражением, которые имеют тип `dynamic`.  Во время выполнения хранимая информация проверяется, и все инструкции, которые не являются допустимыми, вызывают исключение времени выполнения.  
   
  Результат большинства динамических операций сам по себе имеет тип `dynamic`.  Например, если в следующем примере кода навести указатель мыши на вызов `testSum`, IntelliSense отобразит тип **\(локальная переменная\) dynamic testSum**.  
   
- [!code-cs[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_3.cs)]  
+ [!code-cs[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
  К операциям, результат которых не имеет тип `dynamic`, относятся преобразования из `dynamic` в другой тип и вызовы конструкторов, включающих аргументы типа `dynamic`.  Например, в следующем примере типом `testInstance` будет `ExampleClass`, а не `dynamic`.  
   
- [!code-cs[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_4.cs)]  
+ [!code-cs[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   
  Примеры преобразований представлены далее в разделе "Преобразования".  
   
@@ -42,16 +42,16 @@ caps.handback.revision: 30
   
  Любой объект можно преобразовать в динамический неявным образом, как показано в следующих примерах.  
   
- [!code-cs[CsProgGuideTypes#53](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_5.cs)]  
+ [!code-cs[CsProgGuideTypes#53](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_5.cs)]  
   
  Аналогично неявное преобразование можно динамически применить к выражению типа `dynamic`.  
   
- [!code-cs[CsProgGuideTypes#54](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_6.cs)]  
+ [!code-cs[CsProgGuideTypes#54](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_6.cs)]  
   
 ## Разрешение перегрузки с аргументами типа dynamic  
  Разрешение перегрузки происходит во время выполнения, а не во время компиляции, если один или более аргументов в вызове метода относятся к типу `dynamic`, или если получатель вызова метода имеет тип `dynamic`.  Если в следующем примере единственный доступный метод `exampleMethod2` должен принимать строковый аргумент, передача в качестве аргумента значения `d1` не приведет к ошибке компилятора, но вызовет исключение времени выполнения.  Разрешение перегрузки во время выполнения приводит к исключению, поскольку во время выполнения `d1` имеет тип `int`, а метод `exampleMethod2` принимает строковый аргумент.  
   
- [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-type-dynamic_7.cs)]  
+ [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
   
 ## Среда DLR  
  Среда DLR — это новый интерфейс API в [!INCLUDE[net_v40_short](../../../csharp/programming-guide/types/includes/net-v40-short-md.md)].  Она обеспечивает инфраструктуру, поддерживающую тип `dynamic` в C\#, а также реализацию языков динамического программирования, таких как IronPython и IronRuby.  Дополнительные сведения о среде DLR см. в разделе [Dynamic Language Runtime Overview](../Topic/Dynamic%20Language%20Runtime%20Overview.md).  
@@ -61,9 +61,9 @@ caps.handback.revision: 30
   
  Многие методы COM допускают изменение типов аргументов и возвращаемых типов за счет определение типов в виде `object`.  Ранее это требовало явного приведения значений в соответствии со строго типизированными переменными в C\#.  При компиляции с использованием параметра [\/link \(Link to COM Assembly\)](../../../csharp/language-reference/compiler-options/link-compiler-option.md) появление типа `dynamic` позволяет обрабатывать вхождения `object` в сигнатурах COM, как если бы они имели тип `dynamic`, и, следовательно, избегать большей части операций приведения.  Например, следующие инструкции показывают различия в обращении к ячейке в таблице Microsoft Office Excel с использованием типа `dynamic` и без использования типа `dynamic`.  
   
- [!code-cs[csOfficeWalkthrough#12](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#12)]  
+ [!code-cs[csOfficeWalkthrough#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_8.cs)]  
   
- [!code-cs[csOfficeWalkthrough#13](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#13)]  
+ [!code-cs[csOfficeWalkthrough#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/using-type-dynamic_9.cs)]  
   
 ## Связанные разделы  
   

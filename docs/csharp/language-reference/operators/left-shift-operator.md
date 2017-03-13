@@ -31,7 +31,7 @@ caps.handback.revision: 18
  Определенные пользователем типы могут вызвать перегрузку оператора `<<` \(см.[оператор](../../../csharp/language-reference/keywords/operator.md)\); тип первого операнда должен быть определен пользователем, а тип второго должен быть `int`.  Если бинарный оператор перегружен, соответствующий оператор присваивания \(если таковой имеется\), также будет явно перегружен.  
   
 ## Пример  
- [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#14)]  
+ [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
   
 ## Комментарии  
  Обратите внимание, что `i<<1` и `i<<33`  дают одинаковый результат, поскольку 1 и 33 имеют те же пять младших разрядов.  

@@ -42,11 +42,11 @@ caps.handback.revision: 20
 ## <a name="reading-a-value-from-the-registry"></a>Чтение значения из реестра  
  В следующем коде показано, как считать строку из раздела HKEY_CURRENT_USER.  
   
- [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/reading-from-and-writing_1.vb)]  
+ [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_1.vb)]  
   
  Следующий код считывает, увеличивает, а затем записывает строку в раздел HKEY_CURRENT_USER.  
   
- [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/reading-from-and-writing_2.vb)]  
+ [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.SystemException>   

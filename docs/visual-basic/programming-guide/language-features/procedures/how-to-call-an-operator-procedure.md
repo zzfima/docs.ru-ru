@@ -53,7 +53,7 @@ caps.handback.revision: 16
 ## Пример  
  В приведенном ниже примере создаются две структуры <xref:System.TimeSpan>, складываются друг с другом и результат сохраняется в третьей структуре <xref:System.TimeSpan>.  В структуре <xref:System.TimeSpan> определяются процедуры оператора для перегрузки нескольких стандартных операторов.  
   
- [!code-vb[VbVbcnProcedures#29](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-operator-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
  Поскольку <xref:System.TimeSpan> перегружает стандартный оператор `+`, в предыдущем примере вызывается процедура оператора при вычислении значения `combinedSpan`.  
   

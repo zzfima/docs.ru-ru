@@ -27,7 +27,7 @@ caps.handback.revision: 12
 ## Язык Visual Basic и .NET Framework  
  Методы [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] используются как встроенные функции языка.  Они могут применяться без уточнения в коде.  В следующем примере показано использование обычной команды управления строкой в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]:  
   
- [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_1.vb)]  
+ [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   
  В этом примере функция `Mid` выполняет прямую операцию над `aString` и назначает значение для `bString`.  
   
@@ -39,14 +39,14 @@ caps.handback.revision: 12
 #### Общие методы  
  Общий метод реализован непосредственно в классе `String`, и для его работы не требуется существования экземпляра данного класса.  Эти методы определяются именем класса \(`String`\), а не экземпляра класса `String`.  Примеры.  
   
- [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_2.vb)]  
+ [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_2.vb)]  
   
  В предыдущем примере метод <xref:System.String.Copy%2A?displayProperty=fullName> является статическим. Он обрабатывает заданное выражение и присваивает итоговое значение строке `bString`.  
   
 #### Методы экземпляра  
  Напротив, методы экземпляра основываются на отдельном экземпляре `String` и должны уточняться именем экземпляра.  Примеры.  
   
- [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_3.vb)]  
+ [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_3.vb)]  
   
  В этом примере метод <xref:System.String.Substring%2A?displayProperty=fullName> является методом экземпляра `String` \(то есть `aString`\).  Он выполняет операцию над `aString` и присваивает это значение `bString`.  
   

@@ -26,7 +26,7 @@ caps.handback.revision: 24
   
  Свойства объявляются в блоке класса с помощью последовательного указания уровня доступа для поля, типа свойства, имени свойства и блока кода, в котором объявляется метод доступа `get` и\/или `set`.  Примеры.  
   
- [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
  В данном примере `Month` объявляется как свойство, поэтому метод доступа `set` может обеспечить задание для свойства `Month` значения от 1 до 12.  Свойство `Month` использует частное поле для отслеживания фактического значения.  Фактическое местоположение данных свойства часто называется "резервным хранилищем" этого свойства. Обычно в качестве резервного хранилища свойств используются частные поля.  Поле помечается как частное для того, чтобы предотвратить изменение других полей при вызове данного свойства.  Дополнительные сведения об ограничениях общего и закрытого доступа см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -35,32 +35,32 @@ caps.handback.revision: 24
 ## Метод доступа get  
  Основная часть метода доступа `get` похожа на основную часть метода.  Она должна возвращать значение типа свойства.  Выполнение метода доступа `get` эквивалентно считыванию значения поля.  Например, когда возвращается частная переменная из метода доступа `get` и разрешена оптимизация, вызов метода доступа `get` встраивается компилятором, что позволяет избежать ненужных затрат на вызов метода.  Однако виртуальный метод доступа `get` не может быть встроен, поскольку во время компиляции у компилятора нет данных о том, какой метод может быть вызван во время выполнения.  Ниже приведен метод доступа `get`, который возвращает значение частного поля `name`:  
   
- [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
  При создании ссылки на свойство, кроме случая присвоения ему значения, для чтения значения свойства вызывается метод доступа `get`.  Примеры.  
   
- [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_3.cs)]  
+ [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
  Метод доступа `get` должен заканчиваться оператором [return](../../../csharp/language-reference/keywords/return.md) или [throw](../../../csharp/language-reference/keywords/throw.md), а элемент управления не должен выходить за основную часть метода доступа.  
   
  Изменение состояния объекта с помощью метода доступа `get` указывает на низкую квалификацию программиста.  Например, следующий метод доступа имеет побочный эффект, заключающийся в изменении состояния объекта при каждой операции доступа к полю `number`.  
   
- [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_4.cs)]  
+ [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
  Метод доступа `get` можно использовать для возвращения значения поля или для вычисления и возвращения этого значения.  Примеры.  
   
- [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_5.cs)]  
+ [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
  Если в предыдущем фрагменте кода свойству `Name` не назначается какое\-либо значение, это свойство возвращает значение "NA".  
   
 ## Метод доступа set  
  Метод доступа `set` похож на метод, имеющий тип возвращаемого значения [void](../../../csharp/language-reference/keywords/void.md).  В нем используется неявный параметр `value`, тип которого соответствует типу свойства.  В следующем примере метод доступа `set` добавляется в свойство `Name`:  
   
- [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_6.cs)]  
+ [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
  Когда свойству присваивается значение, выполняется вызов метода доступа `set` с помощью аргумента, предоставляющего новое значение.  Примеры.  
   
- [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_7.cs)]  
+ [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
  Использование имени неявного параметра `value` для объявления локальной переменной в методе доступа `set` является ошибкой.  
   
@@ -79,29 +79,29 @@ caps.handback.revision: 24
 ## Пример  
  В данном примере демонстрируются свойства экземпляра, статические свойства и свойства, доступные только для чтения.  Данный код принимает имя сотрудника, введенное с клавиатуры, увеличивает на 1 значение `NumberOfEmployees` и отображает имя и номер сотрудника.  
   
- [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_8.cs)]  
+ [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
 ## Пример  
  В данном примере демонстрируется доступ к свойству в базовом классе, которое скрыто другим свойством, имеющим такое же имя в производном классе.  
   
- [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_9.cs)]  
+ [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
   
  Далее перечислены важные замечания по предыдущему примеру:  
   
 -   Свойство `Name` в производном классе скрыто свойством `Name` в базовом классе.  В этом случае модификатор `new` используется в объявлении свойства в производном классе:  
   
-     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_10.cs)]  
+     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
   
 -   Приведение `(Employee)` используется для доступа к скрытому свойству в базовом классе:  
   
-     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_11.cs)]  
+     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
   
      Дополнительные сведения о скрытии членов см. в разделе [Модификатор new](../../../csharp/language-reference/keywords/new-modifier.md).  
   
 ## Пример  
  В данном примере два класса `Cube` и `Square` реализуют абстрактный класс `Shape` и переопределяют его абстрактное свойство `Area`.  Обратите внимание на использование для свойств модификатора [override](../../../csharp/language-reference/keywords/override.md).  Программа принимает размер стороны в качестве входных данных и вычисляет площади квадрата и куба.  Она также принимает площадь в качестве входных данных и вычисляет значение стороны квадрата и куба.  
   
- [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_12.cs)]  
+ [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

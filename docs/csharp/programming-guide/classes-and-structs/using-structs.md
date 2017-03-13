@@ -18,7 +18,7 @@ caps.handback.revision: 28
 # Использование структур (Руководство по программированию на C#)
 Тип `struct` подходит для представления простых объектов, таких как `Point`, `Rectangle` и `Color`. Хотя point удобно представить в виде [класса](../../../csharp/language-reference/keywords/class.md) с [автоматически реализуемыми свойствами](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), в некоторых сценариях [структура](../../../csharp/language-reference/keywords/struct.md) может оказаться более эффективной. Например, при объявлении массива из 1000 объектов `Point` потребуется выделить дополнительную память для ссылки на каждый объект. В этом случае использование структуры будет более экономичным вариантом. Поскольку [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] содержит объект с именем <xref:System.Drawing.Point>, структура в этом примере называется CoOrds.  
   
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
  Определение конструктора по умолчанию \(без параметров\) для структуры является ошибочным. Кроме того, ошибкой будет и инициализация поля экземпляра в основной части структуры. Члены структуры можно инициализировать только с помощью параметризованного конструктора или путем доступа к членам по отдельности после объявления структуры. Любые закрытые или иным образом недоступные члены можно инициализировать только в конструкторе.  
   
@@ -38,9 +38,9 @@ caps.handback.revision: 28
  В этом примере показана инициализация `struct` с использованием конструктора по умолчанию и параметризованного конструктора.  
   
 ### Код  
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- [!code-cs[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_2.cs)]  
+ [!code-cs[csProgGuideObjects#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_2.cs)]  
   
 ## Пример 2  
   
@@ -48,9 +48,9 @@ caps.handback.revision: 28
  В этом примере демонстрируется уникальная возможность структур. Здесь создается объект CoOrds без использования оператора `new`. Если заменить слово `struct` на слово `class`, программа не будет скомпилирована.  
   
 ### Код  
- [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
- [!code-cs[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-structs_3.cs)]  
+ [!code-cs[csProgGuideObjects#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_3.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

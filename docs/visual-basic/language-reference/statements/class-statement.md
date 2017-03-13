@@ -114,7 +114,7 @@ End Class
 ## Пример  
  В следующем примере оператор `Class` используется для определения класса и нескольких членов.  
   
- [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/class-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
 ## См. также  
  [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   

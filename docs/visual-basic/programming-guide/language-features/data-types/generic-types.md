@@ -64,7 +64,7 @@ caps.handback.revision: 45
   
  Допустим, вам нужно создать и использовать класс очереди, который работает с определенным типом данных, например `String`. Можно объявить такой класс из <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>, как показано в следующем примере.  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
  Теперь можно использовать `stringQ` для работы исключительно со значениями `String`. Так как `stringQ` предназначен конкретно для `String`, а не является универсальным для значений `Object`, вам не потребуется позднее связывание или преобразование типа. Это экономит время выполнения и сокращает число ошибок во время выполнения.  
   
@@ -73,15 +73,15 @@ caps.handback.revision: 45
 ## Пример универсального класса  
  В следующем примере показано определение каркаса универсального класса.  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
   
  В предыдущем каркасе `t` — это *параметр типа*, то есть заполнитель для типа данных, указанного при объявлении класса. В другом месте в коде можно объявлять различные версии `classHolder`, указав различные типы данных для `t`. Два таких объявления показаны в следующем примере.  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
   
  Предыдущие инструкции объявляют *сконструированные классы*, в которых указанный тип заменяет параметр типа. Эта замена распространяется по всему коду сконструированного класса. В следующем примере показано, как процедура `processNewItem` выглядит в `integerClass`.  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
  Более полный пример содержится в разделе [Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
@@ -119,7 +119,7 @@ caps.handback.revision: 45
 ### Пример ограничения  
  В следующем примере показано каркасное определение класса с ограничением, которое требует аргумент типа для реализации <xref:System.IComparable>.  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
   
  Если последующий код попытается создать класс из `itemManager`, используя тип, который не реализует <xref:System.IComparable>, компилятор сообщит об ошибке.  
   
@@ -141,7 +141,7 @@ caps.handback.revision: 45
 ### Пример множественных ограничений  
  В следующем примере показано каркасное определение универсального класса со списком ограничений в параметре типа. В коде, который создает экземпляр этого класса, аргумент типа должен реализовывать интерфейсы <xref:System.IComparable> и <xref:System.IDisposable>, быть ссылочным типом и предоставлять доступ к конструктору без параметров.  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
   
 ## Важные термины  
  Универсальные типы вводят и используют следующие термины.  

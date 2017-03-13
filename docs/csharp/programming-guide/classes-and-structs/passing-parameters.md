@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  В следующем примере показано различие между значением и ссылочными параметрами.  
   
- [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-parameters_1.cs)]  
+ [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]  
   
  Дополнительные сведения см. в следующих разделах.  
   

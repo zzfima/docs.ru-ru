@@ -23,9 +23,9 @@ caps.handback.revision: 21
  В данном примере применяется ключевое слово [unsafe](../../../csharp/language-reference/keywords/unsafe.md), которое позволяет использовать указатели в методе `Copy`.  Оператор [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) используется для объявления указателей исходного и конечного массива.  Это *закрепляет* расположение исходного и конечного массива в памяти, чтобы они не перемещались при сборке мусора.  Закрепление блоков памяти для массивов отменяется, когда завершается обработка блока `fixed`.  Поскольку метод `Copy` в данном примере использует ключевое слово `unsafe`, он должен быть скомпилирован с параметром компилятора **\/unsafe**.  Чтобы задать параметр в Visual Studio, щелкните правой кнопкой мыши имя проекта, затем щелкните **Свойства**.  На вкладке **Построение** выберите команду **Разрешить небезопасный код**.  
   
 ## Пример  
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_1.cs)]  
   
- [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#18)]  
+ [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_2.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

@@ -27,7 +27,7 @@ caps.handback.revision: 14
 В этом примере определяется и вызывается функция `MessageBox` в библиотеке user32.dll, после чего ей передается строка.  
   
 ## Пример  
- [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#1)]  
+ [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
 ## Компиляция кода  
  Для этого примера необходимо следующее.  

@@ -65,8 +65,8 @@ caps.handback.revision: 46
   
 2.  В верхнюю часть файла с кодом добавьте следующие операторы `Imports` \(Visual Basic\) или директивы `using`, если это еще не сделано.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#1)]
-     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#1)]  
+     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
   
 ### Создание списка банковских счетов  
   
@@ -74,20 +74,20 @@ caps.handback.revision: 46
   
 2.  Замените определение класса `Account` следующим кодом.  В определении класса используются *автоматически реализуемые свойства*. Это новая возможность Visual Basic в Visual Studio 2010.  Для получения дополнительной информации см. [Автоматически реализуемые свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/account.cs#2)]
-     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/account.vb#2)]  
+     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  Чтобы создать список `bankAccounts`, содержащий два счета, добавьте в метод `ThisAddIn_Startup` в файле ThisAddIn.cs или ThisAddIn.vb следующий код.  В объявлениях списков используются *инициализаторы коллекции*. Это новая возможность Visual Basic в Visual Studio 2010.  Для получения дополнительной информации см. [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#3)]
-     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#3)]  
+     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
 ### Экспорт данных в Excel  
   
 1.  В том же самом файле добавьте в класс `ThisAddIn` следующий метод.  Этот метод служит для настройки книги Excel и экспорта данных в нее.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#4)]
-     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#4)]  
+     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
      В этом методе используются две новые возможности C\#.  Оба эти функции уже существуют в Visual Basic.  
   
@@ -97,11 +97,11 @@ caps.handback.revision: 46
   
     -   Свойства `Range` и `Offset` объекта [Range](http://go.microsoft.com/fwlink/?LinkId=210911) используют функцию *индексированных свойств*.  Она позволяет использовать свойства типов COM с помощью стандартного синтаксиса C\#.  Кроме того, индексированные свойства позволяют использовать свойство `Value` объекта `Range`, устраняя необходимость в использовании свойства `Value2`.  Свойство `Value` является индексированным, но индекс — необязательным.  Совместная работа необязательных аргументов и индексированных свойств показана в следующем примере.  
   
-         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#5)]  
+         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
          В более ранних версиях этого языка приходилось использовать особый синтаксис.  
   
-         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#6)]  
+         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
   
          Разработчики не могут создавать собственные индексированные свойства.  Эта функция поддерживает только использование имеющихся индексированных свойств.  
   
@@ -109,14 +109,14 @@ caps.handback.revision: 46
   
 2.  Добавьте в конец метода `DisplayInExcel` следующий код, чтобы ширина столбца изменялась в соответствии с содержимым.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#7)]
-     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#7)]  
+     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
      Эти дополнения демонстрируют еще одну новую возможность C\# 2010: значения `Object`, возвращаемые главными приложениями COM, например приложениями Office, обрабатываются так, как если бы они имели тип [dynamic](../../../csharp/language-reference/keywords/dynamic.md).  Это происходит автоматически, если параметр **Внедрить типы взаимодействия** имеет значение по умолчанию \(`True`\), или, что эквивалентно, если ссылка на сборку задается с помощью параметра компилятора [\/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md).  Тип `dynamic` делает возможным позднее связывание, уже доступное в Visual Basic, и не допускает явного приведения, которое требовалось бы в Visual C\# 2008 и более ранних версиях языка.  
   
      Например, `excelApp.Columns[1]` возвращает `Object`, а `AutoFit` является методом Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911).  Без типа `dynamic` необходимо выполнять приведение объекта, возвращаемого `excelApp.Columns[1]`, к экземпляру `Range` перед вызовом метода `AutoFit`.  
   
-     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#8)]  
+     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
      Дополнительные сведения о внедрении типов взаимодействия см. в подразделах "Поиск ссылки PIA" и "Восстановление зависимости PIA" далее в этом разделе.  Дополнительные сведения о `dynamic` см. в разделе [dynamic](../../../csharp/language-reference/keywords/dynamic.md) или[Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -124,8 +124,8 @@ caps.handback.revision: 46
   
 1.  Добавьте следующий код в конец метода `ThisAddIn_StartUp`.  Вызов метода `DisplayInExcel` содержит два аргумента.  Первый аргумент представляет собой имя списка счетов, которые требуется обработать.  Второй аргумент — это состоящее из нескольких строк лямбда\-выражение, которое определяет, каким образом следует обрабатывать данные.  Значения `ID` и `balance` для каждого из счетов отображаются в соседних ячейках, а если баланс имеет отрицательное значение, строка отображается красным.  Лямбда\-выражения из нескольких строк являются новой возможностью Visual Basic 2010.  Для получения дополнительной информации см. [Лямбда\-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#9)]
-     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#9)]  
+     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
 2.  Чтобы запустить программу, нажмите клавишу F5.  Появится книга Excel, содержащая данные о счетах.  
   
@@ -133,12 +133,12 @@ caps.handback.revision: 46
   
 1.  Добавьте в конец метода `ThisAddIn_StartUp` следующий код, чтобы создать документ Word, содержащий ссылку на книгу Excel.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#10)]
-     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#10)]  
+     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
      В этом коде демонстрируются некоторые новые функции C\#: возможность опускать ключевое слово `ref` при программировании в модели COM, именованные аргументы и необязательные аргументы.  Эти функции уже существовали в Visual Basic.  Метод [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) имеет семь параметров, которые определены как необязательные ссылочные параметры.  До появления Visual C\# 2010 необходимо было определять объектные переменные, используемые в качестве аргументов для этих семи параметров, даже если с их помощью не требовалось передавать содержательные значения.  Именованные и необязательные аргументы позволяют определять параметры, к которым требуется обращаться по имени, и передавать аргументы только для этих параметров.  В этом примере аргументы передаются, чтобы показать, что необходимо создать ссылку на книгу в буфере \(параметр `Link`\) и что эта ссылка должна отображаться в документе Word в виде значка \(параметр `DisplayAsIcon`\).  Кроме того, Visual C\# 2010 позволяет опускать ключевое слово `ref` для таких аргументов.  Сравните следующий фрагмент кода Visual C\# 2008 с одной строкой в Visual C\# 2010:  
   
-     [!code-cs[csOfficeWalkthrough#11](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#11)]  
+     [!code-cs[csOfficeWalkthrough#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_11.cs)]  
   
 ### Запуск приложения  
   

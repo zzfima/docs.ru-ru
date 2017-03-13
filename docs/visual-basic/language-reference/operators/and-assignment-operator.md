@@ -51,7 +51,7 @@ variableorproperty &= expression
 ## Пример  
  В приведенном ниже примере оператор `&=` выполняет сцепление двух переменных типа `String` и присваивает результат первой переменной.  
   
- [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор &](../../../visual-basic/language-reference/operators/concatenation-operator.md)   

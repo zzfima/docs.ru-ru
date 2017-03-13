@@ -42,7 +42,7 @@ caps.handback.revision: 8
   
      В следующем примере проверяется состоит ли строка `myString` только из символов `H`.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
 ### Сравнение символа в строковом выражении с подстановочным символом  
   
@@ -50,7 +50,7 @@ caps.handback.revision: 8
   
      В следующем примере проверяется, состоит ли строка `myString` только из символов `W`, перед которыми стоят ровно два произвольных символа.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
 ### Сравнение символа в строковом выражении на соответствие со списком символов  
   
@@ -58,7 +58,7 @@ caps.handback.revision: 8
   
      Следующий пример проверяет, начинается ли строка `myString`, состоящая из произвольных символов, с одного из следующих символов: `A`, `C` или `E`.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
      Обратите внимание, что при сравнении учитывается регистр.  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 8
   
      В следующем примере проверяется, состоит ли строка `myString` из символов `num`, следующих за одним из этих символов: `i`, `j`, `k`, `l`, `m` или `n`.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
      Обратите внимание, что при сравнении учитывается регистр.  
   
@@ -85,7 +85,7 @@ caps.handback.revision: 8
   
      В следующем примере проверяется семь цифр телефонного номера `phoneNum`, записанного в следующем формате: сначала идут три символа, затем пробел, дефис \(`–`\), точка \(`.`\) или вообще отсутствует какой\-либо знак, после чего идут остальные 4 цифры номера телефона.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
 ## См. также  
  [Операторы сравнения](../../../../visual-basic/language-reference/operators/comparison-operators.md)   

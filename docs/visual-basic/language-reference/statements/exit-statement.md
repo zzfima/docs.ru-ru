@@ -75,17 +75,17 @@ Exit { Do | For | Function | Property | Select | Sub | Try | Whil
 ## Пример  
  В следующем примере условие цикла останавливает цикл, когда переменная `index` больше 100.  Оператор `If` в цикле, однако, вызывает инструкцию `Exit Do` , чтобы остановить цикл, когда переменная index больше 10.  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_1.vb)]  
   
 ## Пример  
  В следующем примере возвращаемое значение присваивается имени функции `myFunction` и затем используется оператор `Exit Function` для возврата из функции.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_2.vb)]  
   
 ## Пример  
  В следующем примере используется [Оператор Return](../../../visual-basic/language-reference/statements/return-statement.md), чтобы назначить возвращаемое значение и выйти из функции.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_3.vb)]  
   
 ## См. также  
  [Оператор Continue](../../../visual-basic/language-reference/statements/continue-statement.md)   

@@ -27,7 +27,7 @@ caps.handback.revision: 18
 ## Пример  
  В следующем примере метод `A()` возвращает переменную `Area` в виде значения [double](../../../csharp/language-reference/keywords/double.md).  
   
- [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/csharp/return_1.cs)]  
+ [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

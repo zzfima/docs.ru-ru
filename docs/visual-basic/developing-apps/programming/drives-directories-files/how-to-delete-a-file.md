@@ -30,19 +30,19 @@ caps.handback.revision: 24
   
 -   Для удаления файла используйте метод `DeleteFile`.  В следующем коде показано, как удалить файл `test.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
   
 ### Удаление текстового файла с запросом подтверждения удаления файла  
   
 -   Для удаления файла используйте метод `DeleteFile`, присваивая параметру `showUI` значение `AllDialogs`.  В следующем коде демонстрируется удаление файла `test.txt` с запросом у пользователя подтверждения удаления файла.  
   
-     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_2.vb)]  
+     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
   
 ### Удаление текстового файла и отправка его в корзину  
   
 -   Для удаления файла используйте метод `DeleteFile`, присваивая параметру `recycle` значение `SendToRecycleBin`.  В следующем коде демонстрируется удаление файла `test.txt` и отправка его в **корзину**.  
   
-     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_3.vb)]  
+     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
   
 ## Отказоустойчивость  
  При следующих условиях возможно возникновение исключения.  

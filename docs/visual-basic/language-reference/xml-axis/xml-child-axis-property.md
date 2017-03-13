@@ -59,7 +59,7 @@ object.<child>
 ## Пример  
  В следующем примере показано, как получить доступ к дочерним узлам `phone` из объекта `contact`.  
   
- [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_1.vb)]  
   
  Этот пример кода отображает следующий текст:  
   
@@ -68,7 +68,7 @@ object.<child>
 ## Пример  
  В следующем примере показано, как получить доступ к дочерним узлам с именем `phone` из коллекции, возвращенной свойством дочерней оси `contact` объекта `contacts`.  
   
- [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_2.vb)]  
   
  Этот пример кода отображает следующий текст:  
   
@@ -77,7 +77,7 @@ object.<child>
 ## Пример  
  В следующем примере `ns` объявляется как префикс пространства имен XML.  Затем префикс пространства имен используется для создания литерала XML и доступа к первому дочернему узлу с полным именем `ns:name`.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_3.vb)]  
   
  Этот пример кода отображает следующий текст:  
   

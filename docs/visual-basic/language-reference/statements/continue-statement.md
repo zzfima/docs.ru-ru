@@ -45,7 +45,7 @@ Continue { Do | For | While }
 ## Пример  
  В следующем примере используется инструкция `Continue While`, чтобы перейти к следующему столбцу массива, если делитель равен нулю.  `Continue While` находится внутри цикла `For`.  Он передает управление инструкции `While col < lastcol`, которая является следующей итерацией внутреннего цикла `While`, который содержит цикл `For`.  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
 ## См. также  
  [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

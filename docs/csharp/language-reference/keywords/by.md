@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## Пример  
  В следующем примере показано использование контекстно\-зависимого ключевого слова `by` в предложении `group`, чтобы указать, что студенты должны быть сгруппированы по первой букве фамилии каждого студента.  
   
- [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/csharp/by_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
   
 ## См. также  
  [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

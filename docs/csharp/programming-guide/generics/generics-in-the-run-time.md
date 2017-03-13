@@ -22,11 +22,11 @@ caps.handback.revision: 18
   
  Например, предположим, что в коде программы объявлен стек, построенный из целых чисел:  
   
- [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_1.cs)]  
+ [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
  В этой точке среда выполнения генерирует специализированную версию класса <xref:System.Collections.Generic.Stack%601>, в котором целое число соответствующим образом замещается на его параметр.  Затем каждый раз, когда в коде программы используется стек целых чисел, среда выполнения снова использует сгенерированный специализированный класс <xref:System.Collections.Generic.Stack%601>.  В следующем примере создаются два экземпляра стека целых чисел, которые совместно используют один экземпляр кода `Stack<int>`.  
   
- [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_2.cs)]  
+ [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
  Однако допустим, что в другой точке кода создается другой класс <xref:System.Collections.Generic.Stack%601> с другим типом значения, например `long`, или с определенной пользователем структурой в качестве параметра.  В результате среда выполнения генерирует другую версию универсального типа и замещает тип `long` в соответствующих местах кода MSIL.  Дальнейшие преобразования не требуются, потому что каждый специализированный универсальный тип содержит встроенный тип значения.  
   
@@ -34,17 +34,17 @@ caps.handback.revision: 18
   
  Например, допустим, что существует два ссылочных типа, класс `Customer` и класс `Order`, а также допустим, что создан стек типов `Customer`.  
   
- [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_3.cs)]  
+ [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
- [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_4.cs)]  
+ [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
  В этой точке среда выполнения генерирует специализированную версию класса <xref:System.Collections.Generic.Stack%601>, в котором сохраняются ссылки на объекты, которые будут заполнены позже, а не данные.  Допустим, что в следующей строке кода создается стек другого ссылочного типа с именем `Order`.  
   
- [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_5.cs)]  
+ [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
  В отличие о типов значений, другая специализированная версия класса <xref:System.Collections.Generic.Stack%601> для типа `Order` не создается.  Вместо этого создается экземпляр специализированной версии класса <xref:System.Collections.Generic.Stack%601>, а также задается переменная `orders` для ссылки на этот класс.  Допустим, что затем встречается строка кода, в которой создается стек типа `Customer`:  
   
- [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-in-the-run-time_6.cs)]  
+ [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
  Как и в предыдущем случае использования класса <xref:System.Collections.Generic.Stack%601>, созданного с помощью типа `Order`, создается новый экземпляр специализированного класса <xref:System.Collections.Generic.Stack%601>.  Содержащиеся в нем указатели ссылаются на область памяти, имеющую размер типа `Customer`.  Так как количество ссылочных типов в разных программах может существенно отличаться, реализация универсальных типов в языке C\# значительно сокращает объем кода путем сокращения количества специализированных классов, создаваемых компилятором для универсальных классов ссылочного типа, до одного.  
   

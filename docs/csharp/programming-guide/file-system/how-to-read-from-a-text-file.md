@@ -29,7 +29,7 @@ caps.handback.revision: 17
 >  Файлы, которые используются в этом примере созданы в разделе [Практическое руководство. Запись в текстовый файл](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
   
 ## Пример  
- [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#4)]  
+ [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
   
 ## Компиляция кода  
  Скопируйте код и вставьте его в консольное приложение C\#.  

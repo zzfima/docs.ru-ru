@@ -53,7 +53,7 @@ caps.handback.revision: 20
   
  Для преобразования даты в строку, специфичную для определенных языковых и региональных параметров, передайте объект <xref:System.Globalization.CultureInfo> методу объекта данных <xref:System.DateTime.ToString%28System.IFormatProvider%29>.  Например, следующий код отображает "07\/04\/2005 00:00:00" независимо от установок приложения для языковых и региональных параметров.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/how-culture-affects-stri_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
   
 > [!NOTE]
 >  Буквы даты всегда преобразуются в соответствии с английскими языковыми и региональными параметрами.  
@@ -69,11 +69,11 @@ caps.handback.revision: 20
   
  Функция `StrComp` возвращает целочисленное значение, отражающее связь между двумя сравниваемыми строками на основе порядка сортировки.  Положительное значение означает, что первая строка "больше" второй.  Отрицательный результат возвращается в случае, если первая строка "меньше" второй, а нулевое значение отражает равенство между строками.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
  Можно также использовать подобный функции `StrComp` метод <xref:System.String.Compare%2A?displayProperty=fullName> [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)].  Это статический перегруженный метод базового строкового класса.  Следующий пример иллюстрирует использование этого метода:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   
  Для более совершенного управления способом выполнения сравнений можно использовать дополнительные перегрузки метода <xref:System.String.Compare%2A>.  С методом <xref:System.String.Compare%2A?displayProperty=fullName> можно использовать аргумент `comparisonType` для указания используемого типа сравнения.  
   

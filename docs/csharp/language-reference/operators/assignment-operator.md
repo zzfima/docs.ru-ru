@@ -24,7 +24,7 @@ caps.handback.revision: 14
  Оператор назначения перегрузить нельзя.  Однако можно определить неявные операторы преобразования для типа, которые позволят использовать оператор назначения с этими типами.  Дополнительные сведения см. в разделе [Использование операторов преобразования](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
   
 ## Пример  
- [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#49)]  
+ [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

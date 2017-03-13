@@ -33,14 +33,14 @@ caps.handback.revision: 29
 ## Внутреннее соединение  
  В следующем примере показано простое уравнивающее соединение.  Этот запрос создает плоскую последовательность пары "название продукта\/категория".  Та же строка категории будет присутствовать в нескольких элементах.  Если элемент из `categories` не имеет соответствующих `products`, эта категория не будет включена в результаты.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#24)]  
+ [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение внутренних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
 ## Group Join  
  Предложение `join` с выражением `into` называется групповым соединением.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#25)]  
+ [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  Групповое соединение создает иерархическую последовательность результатов, которая связывает элементы в левой последовательности источников с одним или несколькими совпадающими элементами в правой последовательности источников.  Групповое соединение не имеет эквивалента в плане отношений; по сути, это последовательность массивов объектов.  
   
@@ -50,14 +50,14 @@ caps.handback.revision: 29
   
  Безусловно, результаты группового соединения можно также использовать в качестве генератора другого вложенного запроса:  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#26)]  
+ [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение групповых соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## Левое внешнее соединение  
  В левом внешнем соединении возвращаются все элементы в левой последовательности источников, даже если в правой последовательности совпадающих элементов нет.  Для выполнения левого внешнего соединения в [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] необходимо в сочетании с групповым соединением использовать метод `DefaultIfEmpty` для указания правого элемента по умолчанию, который будет создан, если совпадающего элемента в левой части найдено не будет.  Значение `null` можно использовать в качестве значения по умолчанию для любого ссылочного типа, или можно указать определяемый пользователем тип по умолчанию.  В следующем примере показан определяемый пользователем тип по умолчанию.  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#27)]  
+ [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение левых внешних соединений](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
@@ -78,7 +78,7 @@ caps.handback.revision: 29
 ## Пример  
  В следующем примере сравниваются результаты внутреннего соединения, группового соединения и левого внешнего соединения в одних и тех же источниках данных при помощи тех же совпадающих ключей.  В эти примеры добавлен дополнительный код, поясняющий результаты в окне консоли.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#23)]  
+ [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## Заметки  
  Предложение `join`, за которым не следует `into`, переводится в вызов метода <xref:System.Linq.Enumerable.Join%2A>.  Предложение `join`, за которым следует `into`, переводится в вызов метода <xref:System.Linq.Enumerable.GroupJoin%2A>.  

@@ -35,29 +35,29 @@ caps.handback.revision: 20
 ## Арифметические операции  
  Можно сложить два значения в выражении с помощью оператора [Оператор \+](../../../../visual-basic/language-reference/operators/addition-operator.md) или вычесть одно из другого с помощью оператора [Оператор "\-"](../../../../visual-basic/language-reference/operators/subtraction-operator.md), как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
   
  Отрицание также использует оператор [Оператор "\-"](../../../../visual-basic/language-reference/operators/subtraction-operator.md), но только с одним операндом, как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
   
  Умножение и деление используют, соответственно, операторы [Оператор \*](../../../../visual-basic/language-reference/operators/multiplication-operator.md) и [Оператор \/](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
   
  Для возведения в степень используется оператор [Оператор ^](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
   
  Целочисленное деление выполняется с помощью оператора [Оператор \\](../Topic/-%20Operator%20\(Visual%20Basic\)2.md).  Целочисленное деление возвращает частное, т.е. целое число, представляющее — сколько раз делимое делится на делитель без остатка.  Делитель и делимое должны быть целыми типами \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` и `ULong`\) для использования данного оператора.  Все другие типы сначала необходимо преобразовать к целому типу.  Ниже представлен пример целочисленного деления.  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
   
  Арифметическая операция деления с остатком выполняется с помощью [Оператор Mod](../../../../visual-basic/language-reference/operators/mod-operator.md).  Этот оператор возвращает остаток от деления делимого на делитель целое количество раз.  Если делитель и делимое являются целыми типами, возвращенное значение является целым.  Если делитель и делимое являются типами с плавающей запятой, возвращенное значение также является переменной с плавающей запятой.  Следующий пример иллюстрирует такое поведение.  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
   
 ### Попытка деления на ноль  
  Деление на ноль приводит к разным результатам, в зависимости от типов данных.  При целочисленном делении \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`\), [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] формирует исключение <xref:System.DivideByZeroException>.  При операциях деления с типом данных `Decimal` или `Single` [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] также формирует исключение <xref:System.DivideByZeroException>.  
@@ -90,7 +90,7 @@ caps.handback.revision: 20
   
  В следующем примере значение `Integer` сдвигается и влево и вправо.  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
   
  В результате арифметического сдвига никогда не создаются исключения переполнения.  
   

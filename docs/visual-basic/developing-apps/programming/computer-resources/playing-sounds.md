@@ -35,20 +35,20 @@ caps.handback.revision: 21
   
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук.  Если `AudioPlayMode.WaitToComplete` определен, `My.Computer.Audio.Play` ожидает полного завершения воспроизведения звука, прежде чем выполнение вызывающего кода продолжится.  При использовании этого примера необходимо убедиться, что имя файла звуковому wav, который относится к файлу на локальном компьютере  
   
- [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#15)]  
+ [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
   
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук.  При использовании этого примера необходимо убедиться, что ресурсы приложения включают звуковой wav\-файл с именем Водопадом.  
   
- [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#16)]  
+ [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
   
 ## Циклическое воспроизведение звуков  
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме при `PlayMode.BackgroundLoop` указано.  При использовании этого примера необходимо убедиться, что имя файла звуковому wav, который относится к файлу на локальном компьютере.  
   
- [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#11)]  
+ [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
   
  В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме при `PlayMode.BackgroundLoop` указано.  При использовании этого примера необходимо убедиться, что ресурсы приложения включают звуковой wav\-файл с именем Водопадом.  
   
- [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#12)]  
+ [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
  В предыдущем примере кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он расположен в разделе **Приложения Windows Forms \> Звук**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
   
@@ -61,7 +61,7 @@ caps.handback.revision: 21
   
  В следующем примере останавливается, который воспроизводит звук в фоновом режиме.  
   
- [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#18)]  
+ [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
  В предыдущем примере кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он расположен в разделе **Приложения Windows Forms \> Звук**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
   
@@ -72,7 +72,7 @@ caps.handback.revision: 21
   
  В следующем примере используется метод `My.Computer.Audio.PlaySystemSound` для воспроизведения системного звука.  
   
- [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#17)]  
+ [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Devices.Audio>   

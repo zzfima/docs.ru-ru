@@ -32,14 +32,14 @@ caps.handback.revision: 16
 ## Переменные IEnumerable\<T\> в запросах LINQ  
  Переменные запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] определены как <xref:System.Collections.Generic.IEnumerable%601> или как производный тип, например <xref:System.Linq.IQueryable%601>.  Если переменная запроса имеет тип `IEnumerable<Customer>`, это означает, что запрос при выполнении выведет последовательность из нуля или более объектов `Customer`.  
   
- [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#34)]  
+ [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
  Дополнительные сведения см. в разделе [Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## Использование компилятора для обработки объявлений универсальных типов  
  При желании обычного синтаксиса универсальных шаблонов можно избежать с помощью ключевого слова [var](../../../../csharp/language-reference/keywords/var.md).  Ключевое слово `var` сообщает компилятору о необходимости определения типа переменной запроса с помощью просмотра источника данных, указанного в предложении `from`.  В следующем примере создается тот же самый скомпилированный код, что и в предыдущем примере.  
   
- [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#35)]  
+ [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
   
  Ключевое слово `var` удобно, когда тип переменной является очевидным, или когда не требуется явно указывать вложенные универсальные типы, например создаваемые запросами group.  В целом, если используется `var`, важно осознавать, что код может быть более сложным для чтения.  Дополнительные сведения см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

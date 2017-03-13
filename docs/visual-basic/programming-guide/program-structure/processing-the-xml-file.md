@@ -49,7 +49,7 @@ caps.handback.revision: 16
 ## Пример  
  В следующем коде показано как создаются строки идентификаторы для класса и его членов.  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
 ## См. также  
  [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)   

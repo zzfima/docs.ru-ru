@@ -56,7 +56,7 @@ variableorproperty \= expression
 ## Пример  
  В следующем примере оператор `\=` используется для деления значения одной переменной типа `Integer` на значение другой переменной и присваивания целочисленного результата первой переменной.  
   
- [!code-vb[VbVbalrOperators#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/subtraction-assignment-o_2_1.vb)]  
+ [!code-vb[VbVbalrOperators#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор \\](../Topic/-%20Operator%20\(Visual%20Basic\)2.md)   

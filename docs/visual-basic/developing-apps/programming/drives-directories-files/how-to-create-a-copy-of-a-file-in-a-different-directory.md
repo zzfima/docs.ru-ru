@@ -30,7 +30,7 @@ caps.handback.revision: 17
   
 -   Используйте для копирования файла метод `CopyFile`, указав файл\-источник и целевой каталог.  Параметр`overwrite` позволяет указать, следует ли перезаписывать существующие файлы.  В следующем примере кода демонстрируется использование метода `CopyFile`.  
   
-     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_1_1.vb)]  
+     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-a-different-directory_1.vb)]  
   
 ## Отказоустойчивость  
  Исключение может возникнуть в следующих случаях.  

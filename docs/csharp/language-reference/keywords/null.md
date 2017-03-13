@@ -23,7 +23,7 @@ caps.handback.revision: 17
   
  В следующем примере показано возможное поведение свойства ключевого слова NULL.  
   
- [!code-cs[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/csharp/null_1.cs)]  
+ [!code-cs[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/null_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

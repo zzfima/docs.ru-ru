@@ -28,11 +28,11 @@ caps.handback.revision: 17
   
 1.  Создайте объявление, включающее уровень доступа к коду, ключевое слово `Enum` и допустимое имя.  В данном примере создается перечисление типа `Private` — `temperatureValues`.  
   
-     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#21)]  
+     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_1.vb)]  
   
 2.  Определите константы в перечислении.  В данном примере создается перечисление типа `Public` — `temperatureValues`, и ему присваиваются значения.  
   
-     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#1)]  
+     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_2.vb)]  
   
 ## См. также  
  [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

@@ -89,13 +89,13 @@ End SyncLock
  Если класс `simpleMessageList` содержит общий список сообщений для всех экземпляров, то переменные `messagesList` и `messagesLast` должны быть объявлены как `Shared`.  В этом случае переменную `messagesLock` следует объявить как `Shared`, что позволяет использовать общий объект блокировки каждым экземпляром.  
   
 ### Код  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
 ### Описание  
  В следующем примере используются потоки и ключевое слово `SyncLock`.  Так как присутствует оператор `SyncLock`, блокировка оператора является важным разделом, а `balance` никогда не будет отрицательным числом.  Можно закомментировать операторы `SyncLock` и `End SyncLock`? чтобы увидеть последствия пропуска ключевого слова `SyncLock`.  
   
 ### Код  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
 ### Комментарии  
   

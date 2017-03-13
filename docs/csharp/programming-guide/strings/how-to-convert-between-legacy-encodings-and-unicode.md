@@ -22,7 +22,7 @@ caps.handback.revision: 11
 ## Пример  
  В следующем примере показано, как преобразовать текстовый файл, который был закодирован в 8\-битном коде ASCII, интерпретируя исходный текст в соответствии с кодовой страницей Windows 737.  
   
- [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#34)]  
+ [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-between-legacy-encodings-and-unicode_1.cs)]  
   
 ## См. также  
  [Строки](../../../csharp/programming-guide/strings/index.md)

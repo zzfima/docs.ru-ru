@@ -76,12 +76,12 @@ caps.handback.revision: 24
 ## Различные версии процедуры  
  Предположим, что необходимо написать процедуру `Sub` для проводки транзакции по балансу клиента, предусмотрев возможность идентификации клиента как по имени, так и по номеру его счета.  Для этого можно определить две разные процедуры `Sub`, как показано в следующем примере:  
   
- [!code-vb[VbVbcnProcedures#73](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
 ### Перегруженные версии  
  Альтернативным вариантом является перегрузка отдельного имени процедуры.  С помощью ключевого слова [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) можно определить версии процедуры для каждого списка аргументов:  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
 #### Дополнительные перегрузки  
  Если необходимо также принимать в процедуре сумму транзакции в формате `Decimal` или `Single`, можно определить дополнительные перегруженные версии процедуры `post` для этих вариантов.  Если сделать это для каждой перегрузки, показанной в предыдущем примере, получится четыре процедуры `Sub` с одним именем, но с четырьмя разными сигнатурами.  
@@ -89,9 +89,9 @@ caps.handback.revision: 24
 ## Преимущества перегрузки  
  Преимущество перегрузки процедуры заключается в гибкости вызова.  Чтобы использовать процедуру `post`, объявленную в предыдущем примере, вызывающий код должен получить идентификатор клиента типа `String` или `Integer`, а затем вызвать в каждом случае одну и ту же процедуру.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
- [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
 ## См. также  
  [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

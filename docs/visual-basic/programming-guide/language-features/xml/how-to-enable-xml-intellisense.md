@@ -84,11 +84,11 @@ XML\-технология IntelliSense в Visual Basic предоставляе�
   
 2.  В начале файла кода добавьте оператор `Imports` для конечного пространства имен XML, как показано в следующем примере.  
   
-     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_1.vb)]  
+     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_1.vb)]  
   
      Чтобы импортировать пространство имен XML как пространство имен по умолчанию \(т.е. пространство имен, которое применяется к элементам XML и атрибутам, у которых нет префикса пространства имен\), добавьте оператор `Imports` для конечного пространства имен XML по умолчанию.  Не указывайте префикс пространства имен.  Ниже приведен пример оператора `Imports`.  
   
-     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_2.vb)]  
+     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_2.vb)]  
   
 #### Чтобы импортировать пространство имен XML для всех файлов в проекте  
   

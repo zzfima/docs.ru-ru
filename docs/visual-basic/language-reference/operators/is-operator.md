@@ -55,7 +55,7 @@ result = object1 Is object2
 ## Пример  
  В следующем примере оператор `Is` используется для сравнения пар объектных ссылок.  Результаты присваиваются значению `Boolean`, показывающему, являются ли два объекта идентичными.  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
   
  Как показано в предыдущем примере, можно использовать оператор `Is` для проверки объектов раннего и позднего связывания.  
   

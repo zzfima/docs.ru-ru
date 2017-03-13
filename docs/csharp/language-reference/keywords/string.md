@@ -103,7 +103,7 @@ Console.WriteLine(a);
  Дополнительные сведения о строках в C\# см. в разделе [Строки](../../../csharp/programming-guide/strings/index.md).  
   
 ## Пример  
- [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/csharp/string_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -101,11 +101,11 @@ End Function
 ### Пример объявления и вызова  
  Приведенная ниже процедура `Function` вычисляет длину самой длинной стороны прямоугольного треугольника \(гипотенузы\) по значениям двух других сторон.  
   
- [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/function-procedures_1.vb)]  
   
  В следующем примере показан типичный вызов `hypotenuse`.  
   
- [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
   
 ## См. также  
  [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

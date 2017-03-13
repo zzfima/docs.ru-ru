@@ -29,7 +29,7 @@ caps.handback.revision: 9
 ## Пример  
  В этом примере используется метод <xref:System.Text.Encoding.GetString%2A> из класса кодирования <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> для преобразования всех байтов из массива байтов в строку.  
   
- [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-an-array-_1.vb)]  
+ [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-an-array-of-bytes-into-a-string_1.vb)]  
   
  Можно выбрать из нескольких параметров кодирования для преобразования в массива байтов в строку:  
   

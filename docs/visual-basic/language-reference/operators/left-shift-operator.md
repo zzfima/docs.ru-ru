@@ -65,7 +65,7 @@ result = pattern << amount
 ## Пример  
  В данном примере оператор `<<` используется для выполнения арифметических левых сдвигов целых значений.  Результат всегда имеет тот же тип данных, что и выражение, для которого выполнен сдвиг.  
   
- [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
   
  Ниже приведены результаты предыдущего примера:  
   

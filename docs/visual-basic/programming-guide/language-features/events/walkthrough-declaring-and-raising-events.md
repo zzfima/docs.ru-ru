@@ -55,7 +55,7 @@ caps.handback.revision: 16
   
 -   Используйте ключевое слово `Event` для объявления события в классе `Widget`.  Обратите внимание, что событие может иметь аргументы `ByVal` и `ByRef`, как событие `Widget` `PercentDone` показывает:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#1)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
   
  Когда вызывающий объект получает событие `PercentDone`, аргумент `Percent` содержит процент выполнения задачи.  Аргументу `Cancel` может быть присвоено значение `True`, чтобы отменить вызвавший событие метод.  
   
@@ -68,11 +68,11 @@ caps.handback.revision: 16
   
 1.  Чтобы упростить доступ к используемому этим классом свойству `Timer`, добавьте оператор `Imports` в верхней части раздела объявлений модуля класса над оператором `Class Widget`.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#2)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
   
 2.  Добавьте в класс `Widget` следующий код:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#3)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
   
  Когда приложение вызывает метод `LongTask`, класс `Widget` вызывает событие `PercentDone` каждые `MinimumInterval` секунд.  При возвращении события `LongTask`, проверяется, задано ли аргументу `Cancel` значение `True`.  
   

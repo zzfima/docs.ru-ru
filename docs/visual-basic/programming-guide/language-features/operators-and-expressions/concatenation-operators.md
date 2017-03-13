@@ -32,7 +32,7 @@ caps.handback.revision: 17
   
  Эти операторы также могут объединять переменные `String`, как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
   
 ## Различия между двумя операторами объединения  
  Основное назначение оператора [Оператор \+](../../../../visual-basic/language-reference/operators/addition-operator.md) заключается в добавлении двух чисел.  Однако он также может объединять числовые операнды со строковыми.  Оператор `+` имеет сложный набор правил, определяющий, следует ли выполнять добавление, объединение, сигнализировать об ошибке компилятора или выдавать исключение времени выполнения <xref:System.InvalidCastException>.  

@@ -38,8 +38,8 @@ Visual Basic предоставляет предложения запроса `J
   
 2.  Образцы в этом разделе используют типы `Person` и `Pet` и данные из следующего примера кода.  Скопируйте этот код в модуль `Module1`, созданный Visual Basic по умолчанию.  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#1)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#2)]  
+     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
+    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
   
 ## Выполнение внутреннего соединения с помощью предложения Join  
  Внутреннее соединение объединяет данные из двух коллекций.  Включены элементы, для которых указанные ключевые значения совпадают.  Все элементы из любой из двух коллекций, у которых нет соответствующего элемента в другой коллекции, исключаются.  
@@ -54,7 +54,7 @@ Visual Basic предоставляет предложения запроса `J
   
 1.  Добавьте следующий код в модуль `Module1` проекта, чтобы просмотреть примеры о неявных и явных способах внутреннего соединения.  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#4)]  
+     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
   
 ## Выполнение левого внешнего соединения с помощью предложения Group Join  
  Левое внешнее соединение включает все элементы из левосторонней коллекции соединения и только совпадающие значения из правосторонней коллекции соединения.  Все элементы из правосторонней коллекции соединения, у которых нет соответствующего элемента в левосторонней коллекции, исключаются из результатов запроса.  
@@ -67,7 +67,7 @@ Visual Basic предоставляет предложения запроса `J
   
 1.  Добавьте следующий код в модуль `Module1` проекта, чтобы просмотреть примеры сгруппированного левого внешнего соединения и несгруппированного левого внешнего соединения.  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#3)]  
+     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
   
 ## Выполнение соединения с помощью составного ключа  
  Можно использовать ключевое слово `And` в предложении `Join` или `Group Join` для идентификации нескольких ключевых полей для использования при определении соответствия значений из соединяемых коллекций.  Ключевое слово `And` определяет, что все указанные ключевые поля должны соответствовать элементам, которые будут присоединены.  
@@ -76,7 +76,7 @@ Visual Basic предоставляет предложения запроса `J
   
 1.  Добавьте следующий код в модуль `Module1` проекта, чтобы просмотреть примеры соединения, в которых используется составной ключ.  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#5)]  
+     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
   
 ## Запустите код  
   
@@ -84,7 +84,7 @@ Visual Basic предоставляет предложения запроса `J
   
 1.  Чтобы выполнить примеры в этом разделе, замените `Sub Main` в модуле `Module1` в проекте на следующий код.  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#6)]  
+     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
   
 2.  Нажмите клавишу F5 для запуска примеров.  
   

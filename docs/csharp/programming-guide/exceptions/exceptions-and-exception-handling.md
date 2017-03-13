@@ -9,7 +9,7 @@ caps.handback.revision: 33
   
  В этом примере метод тестирует деление на ноль и выполняет перехват соответствующей ошибки.  Без обработки исключений эта программа была бы завершена с ошибкой **DivideByZeroException was unhandled** \(не обработано исключение "деление на ноль"\).  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exceptions-and-exception_1.cs)]  
+ [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## Общие сведения об исключениях  
  Исключения имеют следующие свойства.  

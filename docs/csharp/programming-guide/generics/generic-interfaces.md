@@ -21,29 +21,29 @@ caps.handback.revision: 28
   
  Если интерфейс указан в качестве ограничения параметра типа, могут использоваться лишь типы, реализующие интерфейс.  В следующем примере кода показан класс `SortedList<T>`, который является производным от класса `GenericList<T>`.  Дополнительные сведения см. в разделе [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md).  `SortedList<T>` добавляет ограничение `where T : IComparable<T>`.  Это позволяет методу `BubbleSort` в `SortedList<T>` использовать универсальный метод <xref:System.IComparable%601.CompareTo%2A> в элементах списка.  В следующем примере элементы списка являются простым классом, `Person`, реализующим `IComparable<Person>`.  
   
- [!code-cs[csProgGuideGenerics#29](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-interfaces_1.cs)]  
+ [!code-cs[csProgGuideGenerics#29](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_1.cs)]  
   
  В качестве ограничений для одного типа можно указать несколько интерфейсов. Это выполняется следующим образом.  
   
- [!code-cs[csProgGuideGenerics#30](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-interfaces_2.cs)]  
+ [!code-cs[csProgGuideGenerics#30](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_2.cs)]  
   
  Интерфейс может определить несколько параметров типа, как показано далее.  
   
- [!code-cs[csProgGuideGenerics#31](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-interfaces_3.cs)]  
+ [!code-cs[csProgGuideGenerics#31](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_3.cs)]  
   
  Правила наследования, которые применяются для классов, применимы и к интерфейсам.  
   
- [!code-cs[csProgGuideGenerics#32](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-interfaces_4.cs)]  
+ [!code-cs[csProgGuideGenerics#32](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_4.cs)]  
   
  Универсальные интерфейсы могут наследовать от неуниверсальных, если первый тип интерфейсов является контравариантным, что означает использование его параметра типа в качестве возвращаемого значения.  В библиотеке классов .NET Framework <xref:System.Collections.Generic.IEnumerable%601> наследует от <xref:System.Collections.IEnumerable>, поскольку <xref:System.Collections.Generic.IEnumerable%601> использует только `T` в возвращаемом значении <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> и в методе считывания <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
   
  Конкретные классы могут реализовать закрытые конструируемые интерфейсы следующим образом.  
   
- [!code-cs[csProgGuideGenerics#33](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-interfaces_5.cs)]  
+ [!code-cs[csProgGuideGenerics#33](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_5.cs)]  
   
  Универсальные классы могут реализовать универсальные интерфейсы или закрытые конструируемые интерфейсы, если список параметров класса предоставляет все необходимые для интерфейса аргументы. Это выполняется следующим образом.  
   
- [!code-cs[csProgGuideGenerics#34](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-interfaces_6.cs)]  
+ [!code-cs[csProgGuideGenerics#34](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_6.cs)]  
   
  Правила, управляющие перегрузкой методов, совпадают с правилами для методов в универсальных классах, структурах или интерфейсах.  Дополнительные сведения см. в разделе [Универсальные методы](../../../csharp/programming-guide/generics/generic-methods.md).  
   

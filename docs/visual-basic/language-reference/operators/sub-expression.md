@@ -63,7 +63,7 @@ End Sub
 ## Пример  
  Ниже приведен пример лямбда\-выражения, записывающего значение на консоль.  В примере показан синтаксис однострокового и многострокового лямбда\-выражения для подпрограммы.  Дополнительные примеры см. в разделе [Лямбда\-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
 ## См. также  
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   

@@ -29,7 +29,7 @@ caps.handback.revision: 35
   
 -   Чтобы разделить определение класса, используйте модификатор ключевого слова [partial](../../../csharp/language-reference/keywords/partial-type.md), как показано ниже:  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_1.cs)]  
+ [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  Ключевое слово `partial` указывает на то, что другие части класса, структуры или интерфейса могут быть определены в пространстве имен.  Все части должны использовать ключевое слово `partial`.  Для формирования окончательного типа все части должны быть доступны во время компиляции.  Все части должны иметь одинаковые специальные возможности, например `public`, `private` и т.д.  
   
@@ -42,15 +42,15 @@ caps.handback.revision: 35
   
  В следующем примере показано, что вложенные типы могут быть разделяемыми, даже если тип, в который они вложены, не является разделяемым.  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_2.cs)]  
+ [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  При компиляции атрибуты определений разделяемого типа объединяются.  В качестве примера рассмотрим следующие объявления:  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_3.cs)]  
+ [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  Они эквивалентны следующим объявлениям:  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_4.cs)]  
+ [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  Следующие элементы объединяются изо всех определений разделяемого типа:  
   
@@ -66,24 +66,24 @@ caps.handback.revision: 35
   
  В качестве примера рассмотрим следующие объявления:  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_5.cs)]  
+ [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  Они эквивалентны следующим объявлениям:  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_6.cs)]  
+ [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### Ограничения  
  Имеется несколько правил, которые необходимо выполнять при работе с определениями разделяемого класса:  
   
 -   Все определения разделяемого типа, являющиеся частями одного и того же типа, должны изменяться с использованием модификатора `partial`.  Например, следующие объявления класса приведут к появлению ошибки:  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_7.cs)]  
+     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   Модификатор `partial` должен находиться непосредственно перед ключевыми словами `class`, `struct` или `interface`.  
   
 -   В определениях разделяемого типа могут присутствовать вложенные разделяемые типы, что показано в следующем примере:  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_8.cs)]  
+     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   Все определения разделяемого типа, являющиеся частями одного и того же типа, должны быть определены в одной сборке и в одном модуле \(EXE\-файл или DLL\-файл\).  Разделяемые определения не могут находиться в разных модулях.  
   
@@ -117,7 +117,7 @@ caps.handback.revision: 35
  В следующем примере поля и конструктор класса `CoOrds` объявлены в одном определении разделяемого класса, а член `PrintCoOrds` — в другом определении разделяемого класса.  
   
 ### Код  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_9.cs)]  
+ [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## Пример 2  
   
@@ -125,7 +125,7 @@ caps.handback.revision: 35
  В следующем примере показано, что можно также разработать разделяемые структуры и интерфейсы.  
   
 ### Код  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_10.cs)]  
+ [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## Разделяемые методы  
  Разделяемый класс или структура могут содержать разделяемый метод.  Одна часть класса содержит сигнатуру метода.  В той же или в другой части можно определить дополнительную реализацию.  Если реализация не предоставлена, то метод и все вызовы метода удаляются во время компиляции.  

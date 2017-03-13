@@ -60,7 +60,7 @@ object.Value
 ## Пример  
  В следующем примере показано использование свойства <xref:System.Xml.Linq.XElement.Value%2A> для доступа к первому узлу в коллекции объектов <xref:System.Xml.Linq.XElement>.  В примере используется свойство дочерней оси для получения коллекции всех дочерних узлов с именами `phone`, находящихся в объекте `contact`.  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
  В этом коде отображается следующий текст:  
   
@@ -69,7 +69,7 @@ object.Value
 ## Пример  
  В следующем примере показано получение значения XML\-атрибута из коллекции объектов <xref:System.Xml.Linq.XAttribute>.  В примере свойство атрибута оси применяется для отображения значения атрибута `type` для всех элементов `phone`.  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
  В этом коде отображается следующий текст:  
   

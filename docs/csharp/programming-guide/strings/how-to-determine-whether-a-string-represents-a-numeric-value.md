@@ -34,7 +34,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## Пример  
  В следующем примере показано использование `TryParse` со строковыми представлениями значений `long`, `byte` и `decimal`.  
   
- [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#14)]  
+ [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
 ## Отказоустойчивость  
  Простые числовые типы также реализуют статический метод `Parse`, который вызывает исключение, если строка не является допустимым числом.  В общем оператор `TryParse` более эффективен, поскольку если число не является допустимым, он просто возвращает значение false.  

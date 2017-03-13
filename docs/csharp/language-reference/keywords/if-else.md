@@ -24,7 +24,7 @@ caps.handback.revision: 32
 # if-else (Справочник по C#)
 Оператор `if` определяет, какой оператор будет выполняться при выполнения условия, заданного выражением `Boolean`. В приведенном ниже примере переменной `result` типа `Boolean` присваивается значение `true`, а затем она проверяется оператором `if`. В результате получается `The condition is true`.  
   
- [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
   
  Примеры в этом разделе можно выполнить, разместив их в методе `Main` консольного приложения.  
   
@@ -43,28 +43,28 @@ caps.handback.revision: 32
   
  Оператор или операторы в `then-statement` и `else-statement` могут быть любого типа, включая другой оператор `if`, вложенный в исходный оператор `if`. Во вложенных операторах `if` каждое предложение `else` относится к последнему оператору `if`, у которого нет соответствующего объекта `else`. В приведенном ниже примере `Result1` получается, если оба выражения `m > 10` и `n > 20` имеют значение true. Если `m > 10` имеет значение true, но `n > 20` — значение false, то получается `Result2`.  
   
- [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
   
  Если вместо этого нужно, чтобы `Result2` получался, когда значение `(m > 10)` равно false, можно указать такую связь с помощью фигурных скобок для задания начала и конца вложенного оператора `if`, как показано в приведенном ниже примере.  
   
- [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
  `Result2` получается, если условие `(m > 10)` имеет значение false.  
   
 ## Пример  
  В приведенном ниже примере вы вводите символ с помощью клавиатуры, а программа использует вложенный оператор `if` для определения того, является ли введенный символ буквой. Если введенный символ является буквой, программа определяет его регистр. Для каждого случая предусмотрено отдельное сообщение.  
   
- [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_4.cs)]  
+ [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
   
 ## Пример  
  Также можно поместить оператор `if` в блок else, как показано в части кода, приведенной ниже. В примере операторы `if` помещаются в два блока else и один блок then. Комментарии определяют какие условия выполняются в каждом из блоков.  
   
- [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_5.cs)]  
+ [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
   
 ## Пример  
  В приведенном ниже примере определяется, является ли введенный символ строчной буквой, прописной буквой или цифрой. Если все три условия имеют значение false, то символ не является алфавитно\-цифровым. Для каждого случая выводится сообщение.  
   
- [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_6.cs)]  
+ [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
  Точно так же как оператор в блоке else или блоке then может быть любым допустимым оператором, в качестве условия можно использовать любое допустимое логическое выражение. Вы можете использовать логические операторы, такие как [&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) и [\!](../../../csharp/language-reference/operators/logical-negation-operator.md), для формирования составных условий. В коде ниже приведены примеры.  
   

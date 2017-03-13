@@ -32,7 +32,7 @@ caps.handback.revision: 43
 
 Компилятор Visual Basic использует *определение типа* для определения типов данных локальных переменных, объявляемых без предложения `As`.  Компилятор выводит тип переменной из типа инициализированного выражения.  Это позволяет объявлять переменные без явного формулирования типа, как показано в следующем примере. В результате объявлений переменные `num1` и `num2` строго типизированы как целые числа.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
   
 > [!NOTE]
 >  Если вы не хотите, чтобы `num2` в предыдущем примере была введена как `Integer`, можно указать другой тип с помощью такого объявления, как `Dim num3 As Object = 3` или `Dim num4 As Double = 3`.  
@@ -47,23 +47,23 @@ caps.handback.revision: 43
 ## Примеры  
  Вывод типа происходит, когда локальная переменная объявлена без предложения `As` и инициализирована.  Компилятор использует тип присвоенного начального значения в качестве типа переменной.  Например, все следующие строки кода объявляют переменную типа `String`.  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
   
  Следующий код демонстрирует два эквивалентных способа создания массива целых чисел.  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
   
  Вывод типа удобно использовать для определения типа переменной управления циклом.  В следующем коде компилятор выводит, что `number` относится к типу `Integer`, поскольку `someNumbers2` из предыдущего примера является массивом целых чисел.  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
   
  Выведение локального типа можно использовать в инструкциях `Using`, чтобы установить тип имени ресурса, как показано в следующем примере.  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
   
  Тип переменной также может быть выведен из возвращаемых значений функции, как показано в следующем примере.  И `pList1`, и `pList2` являются массивами процессов, потому что `Process.GetProcesses` возвращает массив процессов.  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## Option Infer  
  `Option Infer` позволяет определить, разрешено ли вывод локального типа в заданном файле.  Чтобы включить или заблокировать параметр, введите одну из следующих инструкций в начале файла.  

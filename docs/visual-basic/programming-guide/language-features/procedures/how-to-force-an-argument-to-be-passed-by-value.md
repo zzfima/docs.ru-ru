@@ -44,9 +44,9 @@ caps.handback.revision: 16
 ## Пример  
  В следующем примере переопределяется объявление параметра `ByRef`.  В вызове, требующем `ByVal`, обратите внимание на два уровня скобок.  
   
- [!code-vb[VbVbcnProcedures#39](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#40](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
  При `str`, заключенном в дополнительные скобки в списке аргументов, процедуре `setNewString` не удается изменить его значение в коде вызова, и отображается `MsgBox` "Cannot be replaced if passed ByVal".  При `str`, не заключенном в дополнительные скобки, процедура может его изменить и `MsgBox` отображает "This is a new value for the inString argument".  
   

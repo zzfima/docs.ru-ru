@@ -24,17 +24,17 @@ caps.handback.revision: 30
   
  Ключевое `out` инициирует передачу аргументов по ссылке.  Оно схоже с ключевым словом [ref](../../../csharp/language-reference/keywords/ref.md) за исключением того, что при использовании `ref` перед передачей переменную необходимо инициализировать.  Для применения параметра `out` определение метода и метод вызова должны явно использовать ключевое слово `out`.  Например:  
   
- [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/csharp/out_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_1.cs)]  
   
  Несмотря на то, что переменные, передаваемые как аргументы `out`, не нужно инициализировать перед передачей, для назначения значения требуется вызываемый метод.  
   
  Несмотря на то, что ключевые слова `ref` и `out` вызвать другое поведение среды выполнения, они не считаются частью подписи метода во время компиляции.  Таким образом, методы не могут быть перегружены, если единственное различие состоит в том, что один метод принимает аргумент `ref`, а другой — аргумент `out`.  Следующий код, например, компилироваться не будет.  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/csharp/out_2.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_2.cs)]  
   
  Перегрузка возможна, если один метод принимает аргумент `ref` или `out`, а другой не использует ни одного из них, как показано далее.  
   
- [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_3.cs)]  
   
  Свойства не являются переменными и поэтому не могут быть переданы как параметры `out`.  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 30
 ## Пример  
  Объявление метода `out` полезно в случае, если требуется, чтобы метод возвращал несколько значений.  В следующем примере используется `out` для возвращения трех переменных с помощью вызова одного метода.  Обратите внимание, что третьему аргумент присвоено значение null.  Это позволяет методам возвращать значения по желанию.  
   
- [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out_4.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_4.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)

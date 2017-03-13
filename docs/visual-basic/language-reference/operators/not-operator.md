@@ -73,14 +73,14 @@ result = Not expression
 ## Пример  
  Следующий пример использует оператор `Not` для логического отрицания выражения `Boolean`.  Результатом является значение `Boolean`, представляющее обратное значение выражения.  
   
- [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/not-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
   
  В предыдущем примере формируются результаты `False` и `True` соответственно.  
   
 ## Пример  
  В следующем примере оператор `Not` используется для выполнения логического отрицания отдельных битов числового значения.  Бит в результирующем шаблоне имеет значение, противоположное значению соответствующего бита в шаблоне операнда, включая бит знака.  
   
- [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/not-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
   
  В предыдущем примере получаются результаты –11, –9, и –7 соответственно.  
   

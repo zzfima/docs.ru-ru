@@ -33,12 +33,12 @@ caps.handback.revision: 19
 
 *Логическое выражение* — это выражение, результатом вычисления которого является значение [логического типа данных](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` или `False`.  Выражения `Boolean` могут принимать различные формы.  Самой простой является прямое сравнение значения переменной `Boolean` с литералом `Boolean`, например:  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
 ## Два значения оператора \=  
  Необходимо отметить, что инструкция присваивания `newCustomer = True` выглядит так же, как выражение из предыдущего примера, но она выполняет другую функцию и используется по\-другому.  В предыдущем примере выражение `newCustomer = True` представляет значение Boolean, а знак `=` интерпретируется как оператор сравнения.  В автономной инструкции символ `=` интерпретируется как оператор присваивания и присваивает вычисленное значение переменной слева.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
   
  Дополнительные сведения см. в разделе [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) и [Операторы](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -59,7 +59,7 @@ caps.handback.revision: 19
 ## Операторы, допускающие сокращенные вычисления  
  Логические операторы `AndAlso` и `OrElse` представляют обработку, называемую *сокращенной*.  Эти операторы сначала вычисляют выражение, расположенное слева.  Если левый операнд определяет значение всего выражения, то выполнение программы продолжается без вычисления правого выражения.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
   
  В предыдущем примере оператор вычисляет левое выражение `45 < 12`.  Так как левое выражение `False`, всё логическое выражение должно возвращать `False`.  Таким образом, выполнение программы пропускает выполнение кода в блоке `If` без вычисления правого выражения `testFunction(3)`.  В этом примере `testFunction()` не вызывается, поскольку левое выражение опровергает всё выражение.  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 19
 ### Сравнение с обычными операторами  
  И наоборот, обе части логического оператора вычисляются, если используются логические операторы `And` и `Or`.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
   
  В предыдущем примере вызывается `testFunction()`, даже если левое выражение становится равным `False`.  
   

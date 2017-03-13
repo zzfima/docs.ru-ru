@@ -27,7 +27,7 @@ caps.handback.revision: 22
   
  В следующем примере из класса `GenericList<T>` демонстрируется использование ключевого слова `default`.  Дополнительные сведения содержатся в разделе [Общие сведения об универсальных шаблонах](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
   
- [!code-cs[csProgGuideGenerics#41](../../../csharp/programming-guide/generics/codesnippet/csharp/default-keyword-in-gener_1.cs)]  
+ [!code-cs[csProgGuideGenerics#41](../../../csharp/programming-guide/generics/codesnippet/CSharp/default-keyword-in-generic-code_1.cs)]  
   
 ## См. также  
  <xref:System.Collections.Generic>   

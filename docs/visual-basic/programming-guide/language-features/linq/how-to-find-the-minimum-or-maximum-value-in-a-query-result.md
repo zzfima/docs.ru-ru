@@ -81,7 +81,7 @@ caps.handback.revision: 6
   
      Добавьте следующий код в событие `Load`.  Этот код запрашивает таблицы, которые предоставляются как свойства в контексте данных, и определяет минимальные и максимальные значения для результатов.  Пример использует предложение `Aggregate` для запроса одного результата и предложение `Group By` для отображения среднего значения для сгруппированных результатов.  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form7.vb#14)]  
+     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   

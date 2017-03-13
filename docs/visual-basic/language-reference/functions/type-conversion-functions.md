@@ -178,73 +178,73 @@ CUShort(expression)
 ## Пример использования функции CBool  
  В следующем примере для преобразования к `Boolean` используется функция `CBool`.  Если результатом вычисления выражения является ненулевое значение, то `CBool` возвращает `True`; в противном случае она возвращает `False`.  
   
- [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_1.vb)]  
+ [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
 ## Пример использования функции CByte  
  В следующем примере для преобразования к `Byte` используется функция `CByte`.  
   
- [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_2.vb)]  
+ [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
 ## Пример использования функции CChar  
  В следующем примере для преобразования первого символа выражения `String` к типу `Char` используется функция `CChar`.  
   
- [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_3.vb)]  
+ [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
  Входным аргументом `CChar` должен быть тип данных `Char` или `String`.  Невозможно использовать функцию `CChar` для преобразования числа в символ, поскольку функция `CChar` не может принимать данные числовых типов.  В этом примере получается число, представляющее кодовую позицию \(код символа\), которое преобразуется в соответствующий символ.  Использует функцию <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> для получения строки цифр, `CInt` для преобразования строки к типу `Integer`, а `ChrW` для преобразования строки к типу `Char`.  
   
- [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_4.vb)]  
+ [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## Пример использования функции CDate  
  В следующем примере для преобразования строк к `Date` используется функция `CDate`.  Как правило, не рекомендуется жестко кодировать дату и время в виде строк \(как показано в этом примере\).  Вместо этого используйте литералы даты и времени, например \#Feb 12, 1969\# и \#4:45:23 PM\#.  
   
- [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_5.vb)]  
+ [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
 ## Пример использования алгоритма CDbl  
- [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_6.vb)]  
+ [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
 ## Пример использования функции CDec  
  В следующем примере для преобразования числа к `Decimal` используется функция `CDec`.  
   
- [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_7.vb)]  
+ [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
 ## Пример использования функции CInt  
  В следующем примере для преобразования значения к `Integer` используется функция `CInt`.  
   
- [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_8.vb)]  
+ [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
   
 ## Пример использования алгоритма CLng  
  В следующем примере для преобразования значения к `Long` используется функция `CLng`.  
   
- [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_9.vb)]  
+ [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
 ## Пример использования функции CObj  
  В следующем примере для преобразования числа к `Object` используется функция `CObj`.  Переменная `Object` содержит только 4\-байтовый указатель, указывающий на значение типа `Double`.  
   
- [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_10.vb)]  
+ [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
 ## Пример использования функции CSByte  
  В следующем примере для преобразования числа к `SByte` используется функция `CSByte`.  
   
- [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_11.vb)]  
+ [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
 ## Пример использования функции CShort  
  В следующем примере для преобразования числа к `Short` используется функция `CShort`.  
   
- [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_12.vb)]  
+ [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
 ## Пример использования алгоритма CSng  
  В следующем примере для преобразования значения к `Single` используется функция `CSng`.  
   
- [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_13.vb)]  
+ [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
 ## Пример использования алгоритма CStr  
  В следующем примере для преобразования числа к `String` используется функция `CStr`.  
   
- [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_14.vb)]  
+ [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
  В следующем примере для преобразования `Date` к `String` используется функция `CStr`.  
   
- [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_15.vb)]  
+ [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
  Функция `CStr` всегда предоставляет значение с типом `Date` в стандартном кратком формате для текущих региональных параметров, например 6\/15\/2003 4:35:47 PM.  Однако `CStr` подавляет *нейтральные значения* 1\/1\/0001 для даты и 00:00:00 для времени.  
   
@@ -253,17 +253,17 @@ CUShort(expression)
 ## Пример использования функции CUInt  
  В следующем примере для преобразования числа к `UInteger` используется функция `CUInt`.  
   
- [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_16.vb)]  
+ [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
 ## Пример использования функции CULng  
  В следующем примере для преобразования числа к `ULong` используется функция `CULng`.  
   
- [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_17.vb)]  
+ [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
 ## Пример использования функции CShort  
  В следующем примере для преобразования числа к `UShort` используется функция `CUShort`.  
   
- [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_18.vb)]  
+ [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>   

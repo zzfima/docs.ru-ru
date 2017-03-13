@@ -201,11 +201,11 @@ End Function
   
   `Return` Инструкция одновременно назначает возвращаемое значение и выходит из функции, как показано в следующем примере.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
   
  В следующем примере возвращаемое значение присваивается имени функции `myFunction` а затем использует `Exit Function` инструкции.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
   
   `Exit Function` И `Return` инструкции вызывают Немедленный выход из `Function` процедуры. Любое количество `Exit Function` и `Return` операторы могут использоваться в любом месте в процедуре, и можно смешивать `Exit Function` и `Return` инструкции.  
   
@@ -248,19 +248,19 @@ End Function
 ## <a name="example"></a>Пример  
  В следующем примере используется `Function` инструкции для объявления имени, параметров и кода, образующих текст `Function` процедуры.  `ParamArray` Модификатор разрешает функции принимать переменное число аргументов.  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере вызывается функция, объявленная в предыдущем примере.  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере `DelayAsync` — `Async``Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return`, которая возвращает целое число. Поэтому объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип является `Task(Of Integer)`, вычисление `Await` выражения в `DoSomethingAsync` возвращает целое число. Это показано в этом операторе: `Dim result As Integer = Await delayTask`.  
   
   `startButton_Click` Процедура является примером `Async Sub` процедуры. Поскольку `DoSomethingAsync` является `Async` функции, задача для вызова `DoSomethingAsync` должен ожидать, как показано в следующей инструкции: `Await DoSomethingAsync()`.  `startButton_Click``Sub` Процедура должна быть определена с `Async` модификатор из-за `Await` выражение.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/visualbasic/asyncfunctionvb/mainwindow.xaml.vb#1)]  
+ [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
 ## <a name="see-also"></a>См. также раздел  
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   

@@ -23,12 +23,12 @@ caps.handback.revision: 21
   
  В примере следующий сегмент кода использует класс `Tokens` для разделения предложения "Это предложение\-образец." на токены с помощью разделителей " " и "\-".  Затем код отображает эти токены с помощью оператора `foreach`.  
   
- [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_1.cs)]  
+ [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## Пример  
  По сути, класс `Tokens` использует массив для хранения токенов.  Поскольку массивы реализуют типы <xref:System.Collections.IEnumerator> и <xref:System.Collections.IEnumerable>, пример кода может использовать методы перечисления массивов \(<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.Current%2A>\) вместо определения их в классе `Tokens`.  Определения методов содержатся в примере для уточнения способа их определения и предназначения каждого из них.  
   
- [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_2.cs)]  
+ [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
  В языке C\# классу коллекции необязательно реализовывать <xref:System.Collections.IEnumerable> и <xref:System.Collections.IEnumerator> для совместимости с `foreach`.  Если в классе содержатся обязательные члены <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.Current%2A>, он будет работать с оператором `foreach`.  Пропуск интерфейсов имеет преимущество, поскольку позволяет определить тип возврата для `Current`, который более специфичен, чем тип <xref:System.Object>.  Это повышает типобезопасность.  
   

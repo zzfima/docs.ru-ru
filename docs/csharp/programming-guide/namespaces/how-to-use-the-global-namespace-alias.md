@@ -22,28 +22,28 @@ caps.handback.revision: 23
   
  Например, в следующем коде `Console` разрешается в тип `TestApp.Console` вместо типа `Console` в пространстве имен <xref:System>.  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-use-the-global-namespace-alias_1.cs)]  
   
- [!code-cs[csProgGuideNamespaces#1](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#1)]  
+ [!code-cs[csProgGuideNamespaces#1](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_2.cs)]  
   
  При использовании `System.Console` все равно возникает ошибка, так как пространство имен `System` скрыто классом `TestApp.System`:  
   
- [!code-cs[csProgGuideNamespaces#2](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#2)]  
+ [!code-cs[csProgGuideNamespaces#2](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_3.cs)]  
   
  Однако данную ошибку можно устранить следующим образом, используя `global::System.Console`:  
   
- [!code-cs[csProgGuideNamespaces#3](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#3)]  
+ [!code-cs[csProgGuideNamespaces#3](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_4.cs)]  
   
  Когда левый идентификатор имеет значение `global`, поиск правого идентификатора начинается в глобальном пространстве имен.  Например, следующее объявление ссылается на `TestApp` как на член глобального пространства.  
   
- [!code-cs[csProgGuideNamespaces#4](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#4)]  
+ [!code-cs[csProgGuideNamespaces#4](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_5.cs)]  
   
  Очевидно, что необходимость в создании пространства имен `System` отсутствует, а вероятность повстречать код, где это сделано, очень мала.  Однако в более крупных проектах существует большая вероятность встретить ту или иную форму дублирования пространства имен.  В такой ситуации квалификатор глобального пространства имен является гарантирует возможность задания корневого пространства имен.  
   
 ## Пример  
  В данном примере пространство имен `System` используется для включения класса `TestClass`, поэтому для создания ссылки на класс `System.Console`, скрытый пространством имен `System`, необходимо использовать `global::System.Console`.  Кроме того, псевдоним `colAlias` используется для создания ссылки на пространство имен `System.Collections`; таким образом при создании экземпляра <xref:System.Collections.Hashtable?displayProperty=fullName> вместо пространства имен использовался этот псевдоним.  
   
- [!code-cs[csProgGuideNamespaces#5](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#5)]  
+ [!code-cs[csProgGuideNamespaces#5](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_6.cs)]  
   
   **А 1**  
 **В 2**  

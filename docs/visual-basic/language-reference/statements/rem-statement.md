@@ -53,7 +53,7 @@ REM comment
 ## Пример  
  В данном примере показано использование оператора `REM` для вставки в программу пояснительных примечаний.  Также демонстрируется использование вместо `REM` символа одиночной кавычки \(`'`\).  
   
- [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/rem-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
   
 ## См. также  
  [Комментарии в коде](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)   

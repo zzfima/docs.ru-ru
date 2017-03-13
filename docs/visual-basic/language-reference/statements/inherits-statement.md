@@ -63,12 +63,12 @@ Inherits basetypenames
 ## Пример  
  В следующем примере используется оператор `Inherits` для отображения наследования классом с именем `thisClass` всех членов базового класса с именем `anotherClass`.  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
 ## Пример  
  В следующем примере показано наследование от нескольких интерфейсов.  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
  Интерфейс с именем `thisInterface` теперь включает все определения в интерфейсах <xref:System.IComparable>, <xref:System.IDisposable> и <xref:System.IFormattable>. Наследуемые члены обеспечиваются соответственно для сравнения определенного типа двух объектов, освобождая выделенные ресурсы и задавая значение объекта `String`.  Класс, реализующий `thisInterface`, должен реализовать каждый член каждого базового интерфейса.  
   

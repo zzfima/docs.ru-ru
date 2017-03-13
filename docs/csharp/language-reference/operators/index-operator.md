@@ -26,11 +26,11 @@ caps.handback.revision: 20
 ## Заметки  
  Тип массива указывается перед оператором `[]`:  
   
- [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#43)]  
+ [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
  Для доступа к элементу массива его индекс необходимо заключить в скобки:  
   
- [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#44)]  
+ [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
  Если индекс массива выходит за границы диапазона, происходит вызов исключения.  
   
@@ -38,15 +38,15 @@ caps.handback.revision: 20
   
  Например, в платформе .NET Framework определен тип `Hashtable`, связывающий ключи и значения произвольного типа.  
   
- [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#45)]  
+ [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
  Также квадратные скобки используются для определения [Атрибуты](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md):  
   
- [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#46)]  
+ [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
  Квадратные скобки можно использовать для создания индекса из указателя.  
   
- [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#47)]  
+ [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  Проверка границ не выполняется.  
   

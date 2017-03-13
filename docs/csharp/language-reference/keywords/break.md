@@ -24,17 +24,17 @@ caps.handback.revision: 21
 ## Пример  
  В этом примере условный оператор содержит счетчик, который должен считать от 1 до 100; однако оператор `break` завершает цикл после четырех.  
   
- [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/csharp/break_1.cs)]  
+ [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_1.cs)]  
   
 ## Пример  
  В этом примере для разрыва внутреннего вложенного цикла и возвращения управления во внешний цикл используется оператор `break`.  
   
- [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/csharp/break_2.cs)]  
+ [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_2.cs)]  
   
 ## Пример  
  В этом примере показано использование `break` в операторе [switch](../../../csharp/language-reference/keywords/switch.md).  
   
- [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/csharp/break_3.cs)]  
+ [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_3.cs)]  
   
  При вводе `4` будет следующий результат.  
   

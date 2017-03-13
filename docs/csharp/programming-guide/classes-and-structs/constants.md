@@ -25,7 +25,7 @@ caps.handback.revision: 24
   
  Константы должны инициализировать сразу после объявления.  Примеры.  
   
- [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
   
  В этом примере константа `months` всегда имеет значение 12, и ее значение не может быть изменено даже самим классом.  Когда компилятор встречает идентификатор константы в исходном коде C\# \(например, `months`\), он подставляет литеральное значение непосредственно в его создающий код IL.  Поскольку адрес переменной, связанный с константой во время выполнения, отсутствует, поля `const` не могут быть переданы по ссылке и отображены как значение l\-value в выражении.  
   
@@ -34,17 +34,17 @@ caps.handback.revision: 24
   
  Несколько констант одного типа можно объявить одновременно, например:  
   
- [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_2.cs)]  
+ [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_2.cs)]  
   
  Используемое для инициализации константы выражение может ссылаться на другую константу, если при этом не создается циклическая ссылка.  Примеры.  
   
- [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_3.cs)]  
+ [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
  Константы могут быть отмечены модификаторами [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или `protected` `internal`.  Эти модификаторы доступа определяют порядок доступа к константе для пользователей класса.  Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Доступ к константам осуществляется так, как если бы они были [статическими](../../../csharp/language-reference/keywords/static.md) полями, поскольку значение константы одинаково для всех экземпляров типа.  Для их объявления не нужно использовать ключевое слово `static`.  В выражениях, которые не входят в класс, в котором определена константа, для доступа к ней необходимо использовать имя класса, точку и имя этой константы.  Примеры.  
   
- [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/constants_4.cs)]  
+ [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

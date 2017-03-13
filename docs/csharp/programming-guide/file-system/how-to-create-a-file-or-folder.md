@@ -22,7 +22,7 @@ caps.handback.revision: 22
 Можно программно создать папку на компьютере, создать вложенную папку, создать файл во вложенной папке и записать данные в этот файл.  
   
 ## Пример  
- [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#10)]  
+ [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
  Если папка уже существует, метод <xref:System.IO.Directory.CreateDirectory%2A> ничего не делает и исключение не возникает.  Однако <xref:System.IO.File.Create%2A?displayProperty=fullName> заменяет существующий файл новым файлом.  В этом примере используется оператор `if`\-`else` для предотвращения замены существующего файла.  
   

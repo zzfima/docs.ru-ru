@@ -50,7 +50,7 @@ caps.handback.revision: 17
 ## Пример  
  В следующем примере кода определяется контур структуры, содержащей определения для операторов `IsFalse` и `IsTrue`.  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/istrue-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   
 ## См. также  
  [Оператор IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)   

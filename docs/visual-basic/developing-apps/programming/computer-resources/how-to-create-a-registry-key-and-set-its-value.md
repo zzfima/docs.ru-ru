@@ -36,22 +36,22 @@ caps.handback.revision: 30
   
 -   Используйте метод `CreateSubKey`, задав куст, в который нужно поместить раздел, а также имя раздела.  Параметр `Subkey` нечувствителен к регистру.  В этом примере создается раздел реестра `MyTestKey` в HKEY\_CURRENT\_USER.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 #### Создание раздела реестра и установка его значения  
   
 1.  Используйте метод `CreateSubkey`, задав куст, в который нужно поместить раздел, а также имя раздела.  В этом примере создается раздел реестра `MyTestKey` в HKEY\_CURRENT\_USER.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 2.  Установка значения с помощью метода `SetValue`.  В этом примере строке "  MyTestKeyValue" присваивается значение "Это тестовое значение".  
   
-     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_2.vb)]  
+     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
   
 ## Пример  
  В этом примере создается раздел реестра `MyTestKey`в HKEY\_CURRENT\_USER, а затем строке `MyTestKeyValue` присваивается значение `This is a test value`.  
   
- [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_3.vb)]  
+ [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
   
 ## Отказоустойчивость  
  Исследуйте структуру реестра и найдите подходящее место для создания раздела.  Например, можно открыть раздел HKEY\_CURRENT\_USER\\Software для текущего пользователя и создать в нем подраздел с названием компании,  а затем добавить значения для этого подраздела.  

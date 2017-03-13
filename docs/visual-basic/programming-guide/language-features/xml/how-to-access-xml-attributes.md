@@ -28,7 +28,7 @@ caps.handback.revision: 18
 В этом примере показано использование свойства оси атрибута для доступа к атрибутам XML в XML\-элементе по имени.  В частности, используется свойство оси атрибута `type` для получения доступа к атрибуту с именем `type` объекта `phone`.  
   
 ## Пример  
- [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-attrib_1.vb)]  
+ [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-attributes_1.vb)]  
   
 ## См. также  
  <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>   

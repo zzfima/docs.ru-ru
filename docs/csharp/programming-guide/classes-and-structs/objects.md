@@ -27,11 +27,11 @@ caps.handback.revision: 26
   
  Экземпляры классов создаются с помощью [оператора new](../../../csharp/language-reference/keywords/new-operator.md).  В следующем примере `Person` является типом, а `person1` и `person 2` — являются экземплярами или объектами этого типа.  
   
- [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_1.cs)]  
+ [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
  Поскольку структуры являются типами значений, в переменной объекта структуры хранится копия всего объекта.  Экземпляры структур также можно создать с помощью оператора `new`, однако он не является обязательным, как показано в следующем примере.  
   
- [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_2.cs)]  
+ [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
  Память для `p1` и `p2` выделена в стеке потока.  Эта память освобождена наряду с типом или методом, в котором она объявляется.  Эта одна причина того, почему структуры копируются при присваивании.  Напротив, при выходе всех ссылок на объект из области действия среда CLR выполняет автоматическое освобождение памяти \(сборку мусора\), выделенной для экземпляра класса.  Возможность детерминированного уничтожения объекта класса, имеющаяся в C\+\+, в данном случае отсутствует.  Дополнительные сведения о сборке мусора в [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] см. в разделе [Garbage Collection](../Topic/Garbage%20Collection.md).  
   
@@ -45,7 +45,7 @@ caps.handback.revision: 26
   
 -   Чтобы определить, имеют ли поля экземпляра в двух экземплярах структур одинаковые значения, воспользуйтесь методом <xref:System.ValueType.Equals%2A?displayProperty=fullName>.  Поскольку все структуры неявно наследуют от <xref:System.ValueType?displayProperty=fullName>, метод может быть вызван непосредственно в объекте, как показано в следующем примере.  
   
- [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_3.cs)]  
+ [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
  Реализация <xref:System.ValueType?displayProperty=fullName> `Equals` использует отображение, поскольку необходимо определить поля, находящиеся в любой структуре.  При создании собственных структур переопределите метод `Equals` для предоставления эффективного алгоритма равенства, соответствующего вашему типу.  
   

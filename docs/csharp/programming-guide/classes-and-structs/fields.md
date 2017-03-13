@@ -26,15 +26,15 @@ caps.handback.revision: 29
   
  Поля объявляются в блоке класса путем указания уровня доступа поля, за которым следует тип поля и имя поля.  Примеры.  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_1.cs)]  
+ [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  Для доступа к члену объекта нужно добавить точку после имени объекта и указать имя поля: `objectname.fieldname`.  Примеры.  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_2.cs)]  
+ [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  Полю можно назначить первоначальное значение, используя оператор присвоения при объявлении поля.  Например, чтобы автоматически присвоить полю `day` значение `"Monday"`, можно объявить поле `day` как указано в следующем примере:  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_3.cs)]  
+ [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  Поля инициализируются непосредственно перед вызовом конструктора для экземпляра объекта.  Если конструктор присваивает полю значение, оно заменит значения, присвоенные при объявлении поля.  Дополнительные сведения см. в разделе [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

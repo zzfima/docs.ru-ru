@@ -21,7 +21,7 @@ caps.handback.revision: 10
 ## Пример  
  В следующем примере <xref:System.Collections.Generic.Dictionary%602> инициализируется экземплярами типа `StudentName`.  
   
- [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#34)]  
+ [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
  Обратите внимание на две пары фигурных скобок в каждом элементе коллекции.  Внутренняя пара фигурных скобок заключает инициализатор объекта `StudentName`, а внешняя пара фигурных скобок — инициализатор пары "ключ\-значение", которая будет добавлена в коллекцию `students` <xref:System.Collections.Generic.Dictionary%602>.  И наконец, весь инициализатор коллекции для словаря заключается в фигурные скобки.  
   

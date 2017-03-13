@@ -53,7 +53,7 @@ variableorproperty *= expression
 ## Пример  
  В следующем примере оператор `*=` используется для умножения значения одной переменной типа `Integer` на значение другой переменной и присваивания результата первой переменной.  
   
- [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/multiplication-assignmen_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор \*](../../../visual-basic/language-reference/operators/multiplication-operator.md)   

@@ -70,17 +70,17 @@ caps.handback.revision: 13
 ## Сравнение объектов  
  В [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] сравниваются две ссылочные переменные объекта с использованием [Оператор Is](../../../../visual-basic/language-reference/operators/is-operator.md) и [Оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md).  Можно использовать любой из этих операторов, чтобы определить, ссылаются ли две ссылочные переменные на один и тот же экземпляр объекта.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  В предыдущем примере `x Is y` возвращает значение `True`, поскольку обе переменные ссылаются на один и тот же экземпляр.  В следующем примере получается противоположный результат:  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
   
  В предыдущем примере `x Is y` возвращает значение `False`, поскольку, хотя переменные и ссылаются на объекты одного типа, ссылки адресованы разным экземплярам этого типа.  
   
  Если требуется проверить, не указывают ли два объекта на один и тот же экземпляр, оператор `IsNot` позволяет избежать грамматических ляпов в сочетании операторов `Not` и `Is`.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
   
  В предыдущем примере конструкция `If a IsNot b` эквивалентна `If Not a Is b`.  
   
@@ -91,7 +91,7 @@ caps.handback.revision: 13
   
  Если `typename` указывает тип интерфейса, то выражение `TypeOf`...`Is` возвращает значение `True`, если объект реализует тип интерфейса.  Если `typename` является типом класса, выражение возвращает значение `True`, если объект является экземпляром указанного класса или класса, производного от указанного класса.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
   
  В предыдущем примере выражение `TypeOf x Is Control` возвращает значение `True`, поскольку `x` имеет тип `Button`, который наследуется от `Control`.  
   

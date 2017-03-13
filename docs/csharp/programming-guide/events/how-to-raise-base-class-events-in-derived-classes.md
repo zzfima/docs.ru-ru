@@ -24,7 +24,7 @@ caps.handback.revision: 24
 >  Не следует объявлять виртуальные события в базовом классе и переопределять их в производном классе.  Компилятор c\#, не обрабатывает эти непрогнозируем правильно, и он будет ли подписка подписчика на событие фактически производного события базового класса.  
   
 ## Пример  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-raise-base-class-_1.cs)]  
+ [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

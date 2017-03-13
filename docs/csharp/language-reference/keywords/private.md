@@ -38,7 +38,7 @@ class Employee
 ## Пример  
  В этом примере класс `Employee` содержит два закрытых элемента данных – `name` и `salary`.  Как к закрытым членам, к ним нельзя получить доступ кроме как через методы членов.  Для получения управляемого доступа к закрытым членам можно использовать методы с именем `GetName` и `Salary`.  Доступ к методу `name` можно получить через открытый метод, а к методу `salary` – через открытое свойство только для чтения.  \(Дополнительные сведения см. в разделе [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md).\)  
   
- [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#10)]  
+ [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

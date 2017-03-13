@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## Пример  
  В следующем примере показано применение ключевого слова `ascending` в [предложении orderby](../../../csharp/language-reference/keywords/orderby-clause.md).  
   
- [!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/csharp/ascending_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

@@ -38,7 +38,7 @@ caps.handback.revision: 18
 > [!NOTE]
 >  Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
   
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_1.cs)]  
+ [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## Пример  
  В этом примере метод <xref:System.BitConverter.GetBytes%28System.Int32%29> класса <xref:System.BitConverter> вызывается для преобразования значения типа `int` в массив байтов.  
@@ -46,7 +46,7 @@ caps.handback.revision: 18
 > [!NOTE]
 >  Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_2.cs)]  
+ [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
 ## См. также  
  <xref:System.BitConverter>   

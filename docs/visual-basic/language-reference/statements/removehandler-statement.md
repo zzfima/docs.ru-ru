@@ -48,7 +48,7 @@ RemoveHandler event, AddressOf eventhandler
 >  Для пользовательских событий оператор `RemoveHandler` вызывает метод доступа события `RemoveHandler`.  Дополнительные сведения о пользовательских событиях см. в разделе [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## Пример  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#17)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
   
 ## См. также  
  [Оператор AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)   

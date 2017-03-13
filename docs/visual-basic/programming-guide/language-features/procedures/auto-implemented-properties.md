@@ -30,15 +30,15 @@ caps.handback.revision: 20
   
  С помощью автоматически реализуемых свойств вы сможете объявлять свойства, включая значение по умолчанию, в одной строке.  В следующем примере показано три объявления свойства.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
   
  Автоматически реализуемые свойства эквивалентны свойствам, значения которых хранятся в закрытом поле.  В следующем примере кода показано автоматически реализуемое свойство.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
   
  В следующем примере кода показан эквивалентный код для предыдущего примера автоматически реализуемого свойства.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
   
  В следующем примере кода показана реализация свойств только для чтения:  
   
@@ -73,7 +73,7 @@ End Class
 ## Инициализация автоматически реализуемого свойства  
  Любое выражение, которое может использоваться для инициализации поля, можно применять для инициализации автоматически реализуемого свойства.  При инициализации автоматически реализуемого свойства выражение анализируется и передается процедуре `Set` для свойства.  В следующих примерах кода показаны некоторые автоматически реализуемые свойства с начальными значениями.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
   
  Невозможно инициализировать автоматически реализуемое свойство, которое является элементом `Interface` или помечено как `MustOverride`.  
   
@@ -81,7 +81,7 @@ End Class
   
  При объявлении автоматически реализуемого свойства как массива невозможно указать явные границы массива.  Однако можно задать значение с помощью инициализатора массива, как показано в следующих примерах.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## Определения свойств, для которых требуется стандартный синтаксис  
  Автоматически реализуемые свойства удобны и поддерживают множество сценариев программирования.  Однако существуют ситуации, в которых их нельзя использовать, и приходится применять стандартный \(*развернутый*\) синтаксис свойств.  

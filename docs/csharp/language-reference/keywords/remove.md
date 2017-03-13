@@ -23,7 +23,7 @@ caps.handback.revision: 8
 ## Пример  
  В следующем примере показано событие с пользовательскими методами доступа [add](../../../csharp/language-reference/keywords/add.md) и `remove`.  Полный пример см. в разделе [Практическое руководство. Реализация событий интерфейса](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
   
- [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/csharp/remove_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]  
   
  Обычно не требуется предоставлять свои собственные пользовательские методы доступа к событиям.  Для большинства сценариев достаточны методы доступа, которые автоматически создаются компилятором при объявлении события.  
   

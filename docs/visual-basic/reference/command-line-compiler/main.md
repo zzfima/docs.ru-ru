@@ -41,7 +41,7 @@ caps.handback.revision: 19
   
  Когда `location` представляет собой класс, наследуемый от <xref:System.Windows.Forms.Form>, компилятор предоставляет процедуру по умолчанию `Main`, которая запускает приложение, если класс не имеет процедуры `Main`.  Это позволяет компилировать код, который был создан в среде разработки, в командной строке.  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
 ### Чтобы установить параметр \/main в интегрированной среде разработки Visual Studio  
   

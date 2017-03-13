@@ -36,7 +36,7 @@ caps.handback.revision: 28
   
 -   Для удаления раздела реестра используйте метод `DeleteSubKey`.  В этом примере удаляется раздел SOFTWARE\/TestApp в кусте CurrentUser.  Можно изменить его в коде на подходящую строку или запросить значение для этого раздела у пользователя.  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-delete-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
   
 ## Отказоустойчивость  
  Если пара раздел\/значение не существует, метод `DeleteSubKey` возвратит пустую строку.  

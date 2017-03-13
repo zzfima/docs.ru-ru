@@ -20,7 +20,7 @@ caps.handback.revision: 14
 # value (Справочник по C#)
 Контекстно\-зависимое ключевое слово `value` используется для задания метода доступа в обычных объявлениях свойств.  Оно аналогично входному параметру метода.  Ключевое слово `value` ссылается на значение, которое клиентский код пытается присвоить свойству.  В следующем примере класс `MyDerivedClass` содержит свойство с именем `Name`, в котором используется параметр `value` для назначения новой строки резервному полю `name`.  С точки зрения клиентского кода данная операция выглядит как простое присвоение.  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#26)]  
+ [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/value_1.cs)]  
   
  Дополнительные сведения об использовании ключевого слова `value` см. в разделе [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md).  
   

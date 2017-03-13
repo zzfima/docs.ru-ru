@@ -9,7 +9,7 @@ caps.handback.revision: 21
   
  В следующем примере показана выполненная операция запроса.  Для выполнения операции запроса требуется создать источник данных, определить выражение запроса и выполнить запрос в операторе `foreach`.  
   
- [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#11)]  
+ [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
  Дополнительные сведения об основах [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] в C\# см. в разделе [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md).  
   

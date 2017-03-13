@@ -54,7 +54,7 @@ caps.handback.revision: 20
   
 4.  Добавьте следующую функцию `Declare` либо в класс, либо в модуль, в котором требуется использование DLL:  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#9)]  
+     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
   
 ### Составляющие оператора Declare  
  Оператор `Declare` включает следующие элементы:  
@@ -88,7 +88,7 @@ caps.handback.revision: 20
   
 3.  Добавьте соответствующие инструкции `Const` в ваш класс или модуль, чтобы сделать эти константы доступными для приложения.  Примеры.  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#11)]  
+     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
   
 ###### Вызов процедуры DLL  
   
@@ -96,7 +96,7 @@ caps.handback.revision: 20
   
 2.  Вставьте в обработчик событий `Click` новой кнопки следующий код, чтобы вызвать процедуру, и предоставьте соответствующие аргументы:  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#12)]  
+     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
   
 3.  Запустите проект, нажав клавишу F5.  Появится окно сообщений с кнопками **Да** и **Нет**.  Нажмите одну из них.  
   
@@ -109,11 +109,11 @@ caps.handback.revision: 20
   
 2.  Чтобы упростить доступ к атрибуту `MarshalAs`, в начале кода класса или модуля вставьте оператор `Imports`, как показано в следующем примере:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 3.  Добавьте прототип функции для импортированной функции в класс или модуль, который вы используете, и примените атрибут `MarshalAs` к параметрам или возвращаемому значению.  В следующем примере демонстрируется вызов API, предполагающий маршалинг типа `void*` как `AsAny`:  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#14)]  
+     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## Вызов интерфейса API с помощью атрибута DllImport  
  Атрибут `DllImport` реализует второй способ вызова функций в DLL без библиотек типов.  `DllImport` в общих чертах похож на инструкцию `Declare`, но обеспечивает больший контроль над процессом вызова функций.  
@@ -132,23 +132,23 @@ caps.handback.revision: 20
   
 5.  Чтобы упростить доступ к атрибуту `DllImport`, в начале кода класса начальной формы вставьте оператор `Imports`:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 6.  Перед оператором формы `End Class` объявите пустую функцию и озаглавьте ее `MoveFile`.  
   
 7.  Примените к объявлению функции модификаторы `Public` и `Shared` и установите для `MoveFile` параметры на основе аргументов, используемых функцией Windows API:  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#16)]  
+     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
   
      Функция может иметь любое допустимое имя процедуры; атрибут `DllImport` задает это имя в библиотеке DLL.  Кроме того, он управляет маршалингом взаимодействия для параметров и возвращаемых значений, поэтому есть возможность выбрать типы данных Visual Studio, аналогичные типам данных, используемым в API.  
   
 8.  Примените к пустой функции атрибут `DllImport`.  Первый параметр — имя и расположение библиотеки DLL, в котором хранится вызываемая функция.  Для файлов, расположенных в системных каталогах Windows, указывать путь не требуется.  Второй параметр — именованный аргумент, который задает имя функции в Windows API.  В этом примере атрибут `DllImport` принудительно перенаправляет вызовы `MoveFile` к `MoveFileW` в Kernel32.dll.  Метод `MoveFileW` копирует файл из пути `src` в путь `dst`.  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#17)]  
+     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
   
 9. Для вызова функции добавьте в обработчик событий `Button2_Click` следующий код:  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#18)]  
+     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
   
 10. Создайте файл с именем Test.txt и поместите его на жесткий диск в каталог C:\\Tmp.  При необходимости создайте каталог Tmp.  
   

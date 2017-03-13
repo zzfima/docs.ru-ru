@@ -24,13 +24,13 @@ caps.handback.revision: 35
   
  В следующем примере показано, как вызывать метод стандартного оператора запроса `OrderBy` для массива целых чисел.  Выражение в скобках называется лямбда\-выражением.  Многие стандартные операторы запроса принимают лямбда\-выражения в качестве параметров, но это необязательно для методов расширения.  Дополнительные сведения см. в разделе [Лямбда\-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
  Методы расширения определяются как статические методы, но вызываются с помощью синтаксиса обращения к методу экземпляра.  Их первый параметр определяет, с каким типом оперирует метод, и параметру предшествует модификатор [this](../../../csharp/language-reference/keywords/this.md).  Методы расширения находятся в области действия, только если пространство имен было явно импортировано в исходный код с помощью директивы `using`.  
   
  В приведенном ниже примере показан метод расширения, определенный для класса <xref:System.String?displayProperty=fullName>.  Обратите внимание, что этот метод определяется внутри невложенного, неуниверсального статического класса.  
   
- [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_2.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
  Метод расширения `WordCount` можно ввести в область действия с помощью следующей директивы `using`:  
   
@@ -70,7 +70,7 @@ using System.Linq;
   
  Если компилятор не может найти метод экземпляра с совпадающей сигнатурой, он выполняет привязку к совпадающему методу расширения, если такой существует.  
   
- [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_3.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
   
 ## Общие рекомендации  
  В общем, методы расширения рекомендуется реализовывать в ограниченном количестве и только при необходимости.  Когда это возможно, клиентский код, служащий для расширения существующего типа, должен осуществлять расширение путем создания нового типа, производного от существующего.  Дополнительные сведения см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  

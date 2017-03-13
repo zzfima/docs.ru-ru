@@ -26,32 +26,32 @@ caps.handback.revision: 26
   
  Например, включив строку:  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
   
  в начале программы, программист может использовать код:  
   
- [!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#31)]  
+ [!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
   
  вместо кода:  
   
- [!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#30)]  
+ [!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
   
 ## Псевдонимы пространств имен  
  [Директива using](../../../csharp/language-reference/keywords/using-directive.md) также может использоваться для создания псевдонима [пространства имен](../../../csharp/language-reference/keywords/namespace.md).  Например, в случае использования написанного прежде пространства имен, содержащего вложенные пространства имен, можно объявить псевдоним для обеспечения быстрого способа обращения к одному из них, как показано в следующем примере:  
   
- [!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#7)]  
+ [!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
   
 ## Использование пространств имен для управления областью действия  
  Ключевое слово `namespace` используется для объявления области действия.  Возможность создавать области действия в рамках проекта помогает организовывать код и позволяет создавать глобально уникальные типы.  В следующем примере в двух пространствах имен, одно из которых вложено в другое, определяется класс, названный `SampleClass`.  Для того, чтобы различать, какой метод вызывается, используется [Оператор .](../../../csharp/language-reference/operators/member-access-operator.md).  
   
- [!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#8)]  
+ [!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
   
 ## Полные имена  
  Пространства имен и типы имеют уникальные названия, описываемые полными именами, показывающими логическую иерархию.  Например, инструкция `A.B` подразумевает, что `A` — это имя пространства имен или типа, а `B` — это вложенный в него тип.  
   
  В следующем примере показаны вложенные классы и пространства имен.  Полное имя указано в качестве примечания после каждой сущности.  
   
- [!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#9)]  
+ [!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
   
  В предыдущем фрагменте кода:  
   
@@ -65,27 +65,27 @@ caps.handback.revision: 26
   
  Используя предыдущий фрагмента кода, можно добавить новый член: класс `C3`, в пространство имен `N1.N2`, как показано ниже:  
   
- [!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#10)]  
+ [!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
   
  В общем, используйте ключевое слово `::` для обращения к псевдониму пространства имен или ключевое слово `global::` для обращения к глобальному пространству имен и ключевое слово `.` для уточнения типов или членов.  
   
  Ошибкой является использование ключевого слова `::` с псевдонимом, ссылающимся на тип, а не на пространство имен.  Примеры.  
   
- [!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#11)]  
+ [!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
- [!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#12)]  
+ [!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
   
  Обратите внимание, что ключевое слово `global` не является предопределенным псевдонимом. Следовательно, имя `global.X` не имеет какого\-либо специального значения.  Оно приобретает специальное значение только при использовании с ключевым словом `::`.  
   
  В случае определения псевдонима global создается предупреждение компилятора CS0440, поскольку ключевое слово `global::` всегда ссылается на глобальное пространство имен, а не на псевдоним.  Например, следующая строка приведет к генерированию предупреждения:  
   
- [!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#13)]  
+ [!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
   
  Использование ключевого слова `::` с псевдонимами является правильной методикой, защищающей от неожиданного введения дополнительных типов.  Рассмотрим, например, следующий фрагмент кода:  
   
- [!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#14)]  
+ [!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
   
- [!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#15)]  
+ [!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
   
  Этот код работает, но если в последующем будет введен тип `Alias`, то конструкция `Alias.` станет связана с этим типом.  Использование конструкции `Alias::Exception` гарантирует, что имя `Alias` будет обрабатываться как псевдоним пространства имен и не будет ошибочно принято за тип.  
   

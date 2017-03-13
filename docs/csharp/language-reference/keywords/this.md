@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
 -   Для квалификации элементов, скрытых одинаковыми именами, например:  
   
- [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/csharp/this_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
 -   Для передачи другим методам объекта в качестве параметра, например:  
   
@@ -40,14 +40,14 @@ caps.handback.revision: 19
   
 -   Для объявления индексаторов, например:  
   
- [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/csharp/this_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
  У статических функций\-членов нет указателя `this`, так как они существуют только на уровне класса и не являются частями объектов.  Использование ссылки на `this` в статическом методе является недопустимым.  
   
 ## Пример  
  В этом примере `this` используется для квалификации членов класса `Employee`, `name` и `alias`, которые скрыты одинаковыми именами.  Также это ключевое слово используется для передачи объекта в метод `CalcTax`, который принадлежит к другому классу.  
   
- [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/csharp/this_3.cs)]  
+ [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -47,7 +47,7 @@ caps.handback.revision: 19
 ## Пример  
  В данном примере используется несколько файлов.  Первый файл, использующий тег \<include\>, указан ниже.  
   
- [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/include_1.cs)]  
+ [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
   
  Второй файл — xml\_include\_tag.doc — содержит следующие комментарии к документации.  
   

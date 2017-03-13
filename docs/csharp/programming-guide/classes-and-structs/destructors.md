@@ -34,7 +34,7 @@ caps.handback.revision: 24
   
  Например, следующая инструкция является объявлением деструктора класса `Car`:  
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
   
  Деструктор неявным образом вызывает метод <xref:System.Object.Finalize%2A> для базового класса объекта.  Следовательно, предыдущий код деструктора неявным образом преобразуется в следующий код:  
   
@@ -78,7 +78,7 @@ protected override void Finalize()
 ## Пример  
  В следующем примере создаются три класса, образующих цепочку наследования.  Класс `First` является базовым, класс `Second` является производным от класса `First`, а класс `Third` является производным от класса `Second`.  Все три класса имеют деструкторы.  В методе `Main()` создается экземпляр самого дальнего в цепочке наследования класса.  При выполнении программы обратите внимание, что происходит автоматический вызов деструкторов всех трех классов по порядку от самого дальнего до первого в цепочке наследования.  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

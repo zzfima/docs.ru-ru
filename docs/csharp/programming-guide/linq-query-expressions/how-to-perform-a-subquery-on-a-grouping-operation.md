@@ -10,7 +10,7 @@ caps.handback.revision: 15
  Дополнительные сведения о продолжениях см. в разделе [into](../../../csharp/language-reference/keywords/into.md).  В следующем примере в качестве источника данных используется структура данных в памяти, но те же принципы действуют для любого типа источника данных [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  
   
 ## Пример  
- [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#23)]  
+ [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
   
 ## Компиляция кода  
  В этом примере содержатся ссылки на объекты, определенные в примере приложения в разделе [Практическое руководство. Запрос коллекции объектов](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md).  Чтобы скомпилировать и запустить этот метод, вставьте его в класс `StudentClass` в этом приложении и добавьте его вызов из метода `Main`.  

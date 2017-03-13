@@ -15,7 +15,7 @@ caps.handback.revision: 23
 > [!NOTE]
 >  Значение по умолчанию для типа `null`; поэтому пример проверяет пустой ссылки перед доступ к каждому элементу каждой коллекции `Pet`.  
   
- [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#7)]  
+ [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-left-outer-joins_1.cs)]  
   
 ## Компиляция кода  
   

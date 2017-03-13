@@ -32,7 +32,7 @@ caps.handback.revision: 11
   
 -   Используйте [Оператор Is](../../../../visual-basic/language-reference/operators/is-operator.md) или [Оператор IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) с двумя переменными в качестве операндов.  
   
-     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-test-whether-two-_1.vb)]  
+     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-test-whether-two-objects-are-the-same_1.vb)]  
   
  Пользователю может потребоваться выполнить определенные действия в зависимости от того, ссылаются ли два объекта на один и тот же экземпляр или нет.  Предыдущий пример сравнивает элемент управления `c` с активным элементом управления на форме `f`.  Если активный элемент управления отсутствует, или он присутствует, но не является тем же экземпляром `c`, тогда инструкция `If` завершается ошибкой, и осуществляется выход из процедуры без дальнейшей обработки.  
   

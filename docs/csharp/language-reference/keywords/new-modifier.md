@@ -20,7 +20,7 @@ caps.handback.revision: 28
   
  Чтобы скрыть унаследованный член, объявите его в производном классе с использованием такого же имени члена и измените с помощью ключевого слова `new`.  Пример:  
   
- [!code-cs[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#8)]  
+ [!code-cs[csrefKeywordsOperator#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_1.cs)]  
   
  В этом примере `BaseC.Invoke` скрывается с помощью `DerivedC.Invoke`.  Поле `x` не затрагивается, поскольку оно не скрыто таким же именем.  
   
@@ -39,12 +39,12 @@ caps.handback.revision: 28
 ## Пример  
  В этом примере базовый класс `BaseC` и производный класс `DerivedC` используют одно и то же имя поля `x`, которое скрывает значение унаследованного поля.  В примере показано использование модификатора `new`.  Здесь также показано обращение к скрытым членам базового класса с помощью их полных имен.  
   
- [!code-cs[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#9)]  
+ [!code-cs[csrefKeywordsOperator#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_2.cs)]  
   
 ## Пример  
  В этом примере вложенный класс скрывает класс, имеющий такое же имя в базовом классе.  Здесь показано использование модификатора `new` для исключения предупреждений, а также обращение к членам скрытого класса с помощью их полных имен.  
   
- [!code-cs[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#10)]  
+ [!code-cs[csrefKeywordsOperator#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-modifier_3.cs)]  
   
  В случае удаления модификатора `new` программа продолжит компиляцию и выполнение, однако появится следующее предупреждение.  
   

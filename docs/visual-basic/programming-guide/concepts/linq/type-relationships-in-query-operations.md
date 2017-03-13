@@ -38,7 +38,7 @@ caps.handback.revision: 32
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] делает строгую типизацию удобной за счет реализации локального определения типа, также называемого *неявной типизацией*.  Эта возможность используется в предыдущем примере, и применяется примерах и документации по [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  В Visual Basic локальное определение типа осуществляется при помощи оператора `Dim` без предложения `As`.  В следующем примере `city` строго типизирован в качестве строки.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
 >  Локальное определение типа работает только тогда, когда `Option Infer` имеет значение `On`.  Дополнительные сведения см. в разделе [Option Infer \- оператор](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -47,16 +47,16 @@ caps.handback.revision: 32
   
  Возможно, потребуется указать явный тип переменной диапазона, который не соответствует типу, возвращенному из источника данных.  Тип переменной диапазона можно указать с помощью ключевого слова `As`.  Однако это приведет к ошибке, если преобразование является [сужающим](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md), а параметр `Option Strict` имеет значение `On`.  Поэтому рекомендуется применять преобразование к значениям, получаемым из источника данных.  Значения из источника данных можно преобразовать к явно заданному типу переменной диапазона с помощью метода <xref:System.Linq.Enumerable.Cast%2A>.  Кроме того, можно приводить значения, выбранные в предложении `Select`, к явному типу, отличающемуся от типа переменной диапазона.  Эти варианты демонстрируются в следующем коде.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
 ## Запросы, которые возвращают целые элементы из источника данных  
  В следующем примере показана операция запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)], возвращающая последовательность элементов, выбранных из источника данных.  Источник `names` содержит массив строк, а результат запроса представляет собой последовательность, содержащую строки, которые начинаются с буквы М.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
  Это аналогично следующему коду, но намного короче и проще в написании.  Использование локального определения типов в запросах является предпочтительным для Visual Basic.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
   
  Следующие отношения существуют в обоих предыдущих примерах кода независимо от способа определения типа — явного или неявного.  
   

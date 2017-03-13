@@ -45,28 +45,28 @@ caps.handback.revision: 13
   
  Например, приведенная ниже процедура `Sub` принимает три аргумента:  
   
- [!code-vb[VbVbcnProcedures#41](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_1.vb)]  
+ [!code-vb[VbVbcnProcedures#41](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_1.vb)]  
   
  При вызове этой процедуры аргументы можно задавать по позиции, по имени или обоими способами.  
   
 ## Передача аргументов по позиции  
  Процедуру `studentInfo` можно вызвать с передачей аргументов по позиции, разделяя их запятыми, как показано в следующем примере:  
   
- [!code-vb[VbVbcnProcedures#42](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_2.vb)]  
+ [!code-vb[VbVbcnProcedures#42](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_2.vb)]  
   
  Если какой\-либо необязательный аргумент в позиционном списке будет опущен, необходимо отметить его место запятой.  В следующем примере вызывается `studentInfo` без аргумента `age` :  
   
- [!code-vb[VbVbcnProcedures#43](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_3.vb)]  
+ [!code-vb[VbVbcnProcedures#43](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_3.vb)]  
   
 ## Передача аргументов по имени  
  С другой стороны, можно вызвать процедуру `studentInfo` с аргументами, переданными по имени и также разделенными запятыми, как показано в следующем примере:  
   
- [!code-vb[VbVbcnProcedures#44](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_4.vb)]  
+ [!code-vb[VbVbcnProcedures#44](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_4.vb)]  
   
 ## Смешанная передача аргументов по позиции и по имени  
  В одном вызове процедуры можно передавать аргументы и по позиции, и по имени, как показано в следующем примере:  
   
- [!code-vb[VbVbcnProcedures#45](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_5.vb)]  
+ [!code-vb[VbVbcnProcedures#45](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_5.vb)]  
   
  В этом примере дополнительная запятая, отмечающая пропущенный аргумент `age` , не требуется, поскольку аргумент `birth` передается по имени.  
   

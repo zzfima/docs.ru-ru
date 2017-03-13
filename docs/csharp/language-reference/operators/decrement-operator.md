@@ -27,7 +27,7 @@ caps.handback.revision: 17
  Типы, определенные пользователем, могут вызвать перегрузку оператора `--` \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  Операции над целыми типами обычно разрешены в перечислениях.  
   
 ## Пример  
- [!code-cs[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#8)]  
+ [!code-cs[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

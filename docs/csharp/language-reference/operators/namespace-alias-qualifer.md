@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # Оператор :: (Справочник по C#)
 Квалификатор псевдонима пространства имен \(`::`\) служит для поиска идентификаторов.  Он всегда размещается между двумя идентификаторами, как показано в следующем примере.  
   
- [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#27)]  
+ [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
 ## Заметки  
  Квалификатор псевдонима пространства имен может быть `global`.  Это вызывает поиск в глобальном пространстве имен, а не в пространстве имен с псевдонимами.  

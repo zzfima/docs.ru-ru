@@ -78,17 +78,17 @@ End While
 ## Пример  
  В следующем примере инструкции в цикле выполняются до тех пор, пока значение переменной `index` остается больше 10.  
   
- [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/while-end-while-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
   
 ## Пример  
  В следующем примере показано использование оператора `Continue While` и `Exit While`.  
   
- [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/while-end-while-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
   
 ## Пример  
  В следующем примере выполняется чтение всех строк текстового файла.  Метод <xref:System.IO.File.OpenText%2A> открывает файл и возвращает <xref:System.IO.StreamReader>, который считывает символы.  В условии `While`, метод <xref:System.IO.StreamReader.Peek%2A>`StreamReader` определяет, содержит ли файл дополнительные символы.  
   
- [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/while-end-while-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
 ## См. также  
  [Циклические структуры](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   

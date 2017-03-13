@@ -82,12 +82,12 @@ Console.WriteLine((double)dec + dub);
   
  В следующем примере в одном выражении используются переменные типов `decimal` и [int](../../../csharp/language-reference/keywords/int.md).  В результате возвращается тип `decimal`.  
   
- [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/csharp/decimal_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
   
 ## Пример  
  В следующем примере для форматирования выходных данных используется строка формата денежных единиц.  Обратите внимание на округление переменной `x`, поскольку десятичные разряды превышают 0,99 долл. США.  Переменная `y`, представляющая максимально точные цифры, отображается в правильном формате.  
   
- [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/csharp/decimal_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

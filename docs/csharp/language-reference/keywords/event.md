@@ -26,7 +26,7 @@ caps.handback.revision: 28
 ## Пример  
  В следующем примере показано как объявить и инициировать событие, использующее <xref:System.EventHandler> в качестве базового типа делегата.  Полный пример кода, демонстрирующий использование универсального типа делегата <xref:System.EventHandler%601>, а также подписку на событие и создание метода обработчика событий см. в разделе [Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
- [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#7)]  
+ [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  События это особый тип многоадресных делегатов, которые можно вызвать только из класса или структуры, в которой они объявлены \(класс издателя\).  Если на событие подписаны другие классы или структуры, их методы обработчиков событий будут вызваны когда класс издателя инициирует событие.  Дополнительные сведения и примеры кода см. в разделах [События](../../../csharp/programming-guide/events/index.md) и [Делегаты](../../../csharp/programming-guide/delegates/index.md).  
   

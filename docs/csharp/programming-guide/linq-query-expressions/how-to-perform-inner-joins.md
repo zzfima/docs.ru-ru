@@ -20,7 +20,7 @@ caps.handback.revision: 25
 ## Пример соединения с использованием простого ключа  
  В следующем примере создаются две коллекции, содержащие объекты двух определяемых пользователем типов `Person` и `Pet`.  В C\# при запросе используется предложение `join` для сопоставления объектов `Person` с объектами `Pet`, для которых `Owner` является `Person`.  Предложение `select` в языке C\# определяет то, как будут выглядеть результирующие объекты.  В этом примере результирующие объекты — анонимные типы, состоящие из имени владельца и клички питомца.  
   
- [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#1)]  
+ [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_1.cs)]  
   
  Обратите внимание, что объект `Person`,свойство которого `LastName` имеет значение "Huff", не отображается среди результатов, так как не существует объекта `Pet`, свойство `Pet.Owner` которого было бы равно свойству `Person`.  
   
@@ -31,7 +31,7 @@ caps.handback.revision: 25
   
  В следующем примере списки объектов `Employee` и `Student` используются для определения того, какие работники являются также студентами.  Оба этих типа обладают свойствами `FirstName` и `LastName` типа <xref:System.String>.  Функция, создающая ключи соединения из элементов каждого списка, возвращает анонимный тип, состоящий из свойств `FirstName` и `LastName` каждого элемента.  Операция соединения сравнивает данные составные ключи на признак равенства и возвращает пары объектов из обоих списков, у которых совпадают имя и фамилия.  
   
- [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#2)]  
+ [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_2.cs)]  
   
 ## Пример  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 25
   
  Второе предложение `join` в C\# сопоставляет анонимные типы, возвращенные первым соединением, с объектами `Dog` в предоставленном списке собак на основании составного ключа, состоящего из свойства `Owner` типа `Person`, и первой буквы клички животного.  Возвращается последовательность анонимных типов, содержащая свойства `Cat.Name` и `Dog.Name` каждой совпадающей пары.  Так как это внутреннее соединение, возвращаются только объекты из первого источника данных, для которых найдено соответствии во втором источнике данных.  
   
- [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#3)]  
+ [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_3.cs)]  
   
 ## Пример  
   
@@ -57,7 +57,7 @@ caps.handback.revision: 25
   
  Результат `query1` аналогичен результирующему набору, полученному при использовании предложения `join` для выполнения внутреннего соединения без предложения `into`.  Переменная `query2` демонстрирует этот эквивалентный запрос.  
   
- [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#4)]  
+ [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_4.cs)]  
   
 ## Компиляция кода  
   

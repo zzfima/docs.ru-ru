@@ -27,7 +27,7 @@ caps.handback.revision: 6
 ## Извлечение ресурсов  
  С помощью объекта `My.Resources` можно извлекать ряд ресурсов, таких как звуковые файлы, значки, изображения и строки.  Например, можно получить доступ к файлам ресурсов приложения, относящихся к определенному языку и региональным параметрам.  В следующем примере значку формы присваивается значок `Form1Icon`, хранящийся в файле ресурсов приложения.  
   
- [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/rapid-application-develo_1.vb)]  
+ [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
  Объект `My.Resources` предоставляет только глобальные ресурсы.  Он не обеспечивает доступа к файлам ресурсов, связанных с формами.  К ресурсам формы необходимо получать доступ из формы.  Дополнительные сведения см. в разделе [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
   

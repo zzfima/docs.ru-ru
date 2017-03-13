@@ -31,7 +31,7 @@ caps.handback.revision: 23
   
  Каждый тип Nullable создается из общей структуры <xref:System.Nullable%601>.  Рассмотрим базу данных, которая отслеживает связанные с работой действия.  В следующем примере создается тип Nullable `Boolean` и объявляется переменная этого типа.  Можно написать объявление тремя способами:  
   
- [!code-vb[VbVbalrNullableValue#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_1.vb)]  
+ [!code-vb[VbVbalrNullableValue#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_1.vb)]  
   
  Переменная `ridesBusToWork` может содержать значение `True`, значение `False` или не содержать значения вообще.  Его начальное значение по умолчанию не является значением вообще, и в данном случае это может означать, что данные не были еще получены для этого пользователя.  Напротив, значение `False` может означать, что данные были получены.  
   
@@ -45,18 +45,18 @@ caps.handback.revision: 23
 ### Значения по умолчанию  
  При объявлении переменной с типом Nullable, свойство <xref:System.Nullable%601.HasValue%2A> имеет значение `False` по умолчанию.  Это означает, что по умолчанию переменная не имеет заданного значения вместо значения по умолчанию его базового типа значения.  В следующем примере переменная `numberOfChildren` изначально не имеет заданного значения, даже если значение по умолчанию типа `Integer` равно 0.  
   
- [!code-vb[VbVbalrNullableValue#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_2.vb)]  
+ [!code-vb[VbVbalrNullableValue#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_2.vb)]  
   
  Значение NULL полезно для обнаружения неопределенного или неизвестного значения.  Если бы `numberOfChildren` была объявлена как `Integer`, но тогда не существовало бы значения, которое могло бы указать, что сведения не являются доступными в данный момент.  
   
 ### Хранимые значения  
  Сохраните значение в переменной или свойстве типа Nullable обычным способом.  В следующем примере присваивается значение переменной `numberOfChildren`, объявленной в предыдущем примере.  
   
- [!code-vb[VbVbalrNullableValue#3](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_3.vb)]  
+ [!code-vb[VbVbalrNullableValue#3](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_3.vb)]  
   
  Если переменная или свойство типа Nullable содержит заданное значение, можно принудительно вернуть ее к исходному состоянию отсутствия заданного значения.  Это можно сделать, задав переменную или свойство в `Nothing`, как показано в следующем примере.  
   
- [!code-vb[VbVbalrNullableValue#4](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_4.vb)]  
+ [!code-vb[VbVbalrNullableValue#4](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_4.vb)]  
   
 > [!NOTE]
 >  Хотя можно присвоить значение `Nothing` для переменной nullable типа, но нельзя проверить ее на содержание значения `Nothing` с помощью знака равенства.  Сравнение, использующее знак равенства, `someVar = Nothing`, всегда равно `Nothing`.  Можно проверить свойства переменных <xref:System.Nullable%601.HasValue%2A> на `False`, или проверить с помощью `Is` или оператора `IsNot`.  
@@ -64,7 +64,7 @@ caps.handback.revision: 23
 ### Извлечение значений  
  Для извлечения значения переменной nullable типа, следует сначала проверить его свойство <xref:System.Nullable%601.HasValue%2A>, чтобы подтвердить, что оно имеет значение.  При попытке считать значение, когда <xref:System.Nullable%601.HasValue%2A> имеет значение `False`,[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] выдает исключение <xref:System.InvalidOperationException>.  В следующем примере показан рекомендуемый способ чтения переменной `numberOfChildren` из предыдущего примера.  
   
- [!code-vb[VbVbalrNullableValue#5](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_5.vb)]  
+ [!code-vb[VbVbalrNullableValue#5](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_5.vb)]  
   
 ## Сравнение типов Nullable  
  При использовании Nullable переменных `Boolean` в логических выражениях, результатами могут быть значения `True`, `False` или `Nothing`.  Ниже приведена таблица истинности для `And` или `Or`.  Поскольку `b1` и `b2` теперь имеют три возможных значения, получается девять комбинаций для оценки.  
@@ -83,7 +83,7 @@ caps.handback.revision: 23
   
  Если значение логической переменной или выражения равно `Nothing`, это ни `true` , ни `false`.  Рассмотрим следующий пример.  
   
- [!code-vb[VbVbalrNullableValue#6](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_6.vb)]  
+ [!code-vb[VbVbalrNullableValue#6](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_6.vb)]  
   
  В этом примере `b1 And b2` равно `Nothing`.  В результате условие `Else` выполняется в каждой инструкции `If`, и результаты выполнения выглядят следующим образом:  
   
@@ -97,11 +97,11 @@ caps.handback.revision: 23
 ## Передача  
  Если один или оба операнда арифметики, сравнения, сдвига или тип операции относятся к типу nullable, результатом операции также является значение nullable.  Если оба операнда имеют значения, которые не являются `Nothing`, операция выполняется на основных значениях операндов, как если бы ни одно из них не относилось к типу Nullable.  В следующем примере переменные `compare1` и `sum1` заданы неявным образом.  Если навести на них указатель мыши, видно, что компилятор выводит для них обоих типы Nullable.  
   
- [!code-vb[VbVbalrNullableValue#7](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_7.vb)]  
+ [!code-vb[VbVbalrNullableValue#7](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_7.vb)]  
   
  Если один или оба операнда имеют значение `Nothing`, результатом будет `Nothing`.  
   
- [!code-vb[VbVbalrNullableValue#8](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_8.vb)]  
+ [!code-vb[VbVbalrNullableValue#8](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_8.vb)]  
   
 ## Использование типов Nullable с данными  
  База данных является одной из наиболее важных сред, где используются типы Nullable.  Не все объекты базы данных в настоящее время поддерживают типы Nullable, но их поддерживают адаптеры таблицы, созданные в конструкторе.  См. раздел "Поддержка адаптером таблицы типов Nullable" в [Общие сведения об адаптере таблиц](/visual-studio/data-tools/tableadapter-overview).  

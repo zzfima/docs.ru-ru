@@ -66,7 +66,7 @@ caps.handback.revision: 19
 ## Пример  
  В следующем примере создается инструкция обработки, определяющая таблицу стилей для XML\-документа.  
   
- [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-processing-instructi_1.vb)]  
+ [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-processing-instruction-literal_1.vb)]  
   
 ## См. также  
  <xref:System.Xml.Linq.XProcessingInstruction>   

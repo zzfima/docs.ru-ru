@@ -31,7 +31,7 @@ int i = 10; //explicitly typed
 ## Пример  
  В следующем примере показано два выражения запроса.  В первом выражении использование типа `var` допустимо, но не обязательно, потому что тип результата запроса может быть задан явно как `IEnumerable<string>`.  Однако во втором выражении использование типа `var` обязательно, потому что результатом является коллекция анонимных типов и имя этого типа является доступным только для компилятора.  Обратите внимание, что в примере №2 `foreach` переменная итерации `item` должна также иметь неявный тип.  
   
- [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/csharp/var_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/var_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

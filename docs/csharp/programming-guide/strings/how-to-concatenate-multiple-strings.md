@@ -23,12 +23,12 @@ caps.handback.revision: 21
 ## Пример  
  В следующем примере показано разделение длинного строкового литерала на маленькие строки для повышения удобочитаемости в исходном коде.  Во время компиляции эти части будут объединены в одну строку.  Производительность не снижается, независимо от количества используемых строк.  
   
- [!code-cs[csProgGuideStrings#30](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#30)]  
+ [!code-cs[csProgGuideStrings#30](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-concatenate-multiple-strings_1.cs)]  
   
 ## Пример  
  Для объединения строковых переменных можно использовать операторы `+` или `+=` или методы <xref:System.String.Concat%2A?displayProperty=fullName>, <xref:System.String.Format%2A?displayProperty=fullName> или <xref:System.Text.StringBuilder.Append%2A?displayProperty=fullName>.  Оператор `+` прост в использовании и позволяет сформировать наглядный код.  Даже при одновременном использовании нескольких операторов "\+" содержимое строки копируется только один раз.  Однако если повторить такую операцию несколько раз \(например, в цикле\), могут возникнуть проблемы с производительностью.  Например, рассмотрим следующий код:  
   
- [!code-cs[csProgGuideStrings#23](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#23)]  
+ [!code-cs[csProgGuideStrings#23](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-concatenate-multiple-strings_2.cs)]  
   
 > [!NOTE]
 >  В операциях объединения строк компилятор С\# обрабатывает нулевую строку так же, как пустую строку, но не преобразовывает значение исходной нулевой строки.  
@@ -37,7 +37,7 @@ caps.handback.revision: 21
   
  Однако, если самым важным является производительность, то для объединения строк всегда следует использовать класс <xref:System.Text.StringBuilder>.  В следующем коде используется метод <xref:System.Text.StringBuilder.Append%2A> класса <xref:System.Text.StringBuilder> для объединения строк без "эффекта цепочки" оператора `+`.  
   
- [!code-cs[csProgGuideStrings#22](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#22)]  
+ [!code-cs[csProgGuideStrings#22](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-concatenate-multiple-strings_3.cs)]  
   
 ## См. также  
  <xref:System.String>   

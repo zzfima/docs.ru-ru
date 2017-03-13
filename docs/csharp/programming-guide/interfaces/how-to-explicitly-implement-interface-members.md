@@ -19,17 +19,17 @@ caps.handback.revision: 16
 В этом примере выполняется объявление [интерфейса](../../../csharp/language-reference/keywords/interface.md), `IDimensions`, и класса, `Box`, который явно реализует члены интерфейса `getLength` и `getWidth`.  Доступ к этим членам осуществляется через экземпляр интерфейса `dimensions`.  
   
 ## Пример  
- [!code-cs[csProgGuideInheritance#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_1_1.cs)]  
+ [!code-cs[csProgGuideInheritance#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-interface-members_1.cs)]  
   
 ## Отказоустойчивость  
   
 -   Обратите внимание, что следующие строки в методе `Main` убраны в комментарий, так как иначе они вызвали бы ошибки компилятора.  Член интерфейса, реализованный явным образом, недоступен из экземпляра [класса](../../../csharp/language-reference/keywords/class.md).  
   
-     [!code-cs[csProgGuideInheritance#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_1_2.cs)]  
+     [!code-cs[csProgGuideInheritance#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-interface-members_2.cs)]  
   
 -   Обратите также внимание, что следующие строки в методе `Main` успешно печатают размеры поля, поскольку эти методы вызываются из экземпляра интерфейса.  
   
-     [!code-cs[csProgGuideInheritance#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_1_3.cs)]  
+     [!code-cs[csProgGuideInheritance#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-interface-members_3.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

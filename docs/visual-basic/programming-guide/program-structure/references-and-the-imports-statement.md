@@ -45,15 +45,15 @@ caps.handback.revision: 12
 ## Использование псевдонимов при помощи оператора Imports  
  Оператор `Imports` облегчает доступ к методам классов, устраняя необходимость явно вводить полные проверенные имена ссылок.  Псевдонимы позволяют присваивать более понятные имена только одной части пространства имен.  Например, последовательность возврат каретки \/ перевод строки, в результате которой один фрагмент текста отображается в нескольких строках, является частью модуля <xref:Microsoft.VisualBasic.ControlChars> пространства имен <xref:Microsoft.VisualBasic?displayProperty=fullName>.  Использование этой константы в программе без псевдонима потребовало бы написания следующего кода:  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
  Операторы `Imports` должны всегда располагаться в первых строках модуля сразу же после операторов `Option`.   В следующем фрагменте кода показано, как импортировать и присваивать псевдоним модулю <xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName>:  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
  Дальнейшие ссылки на это пространство имен могут быть значительно более краткими:  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
  Если в оператор `Imports` псевдоним не включен, то элементы, определенные в импортированном пространстве имен, могут использоваться в модуле без указания полного имени.  Если псевдоним назначен, он должен использоваться в качестве квалификатора имен, содержащихся в данном пространстве имен.  
   

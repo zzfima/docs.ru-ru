@@ -65,18 +65,18 @@ caps.handback.revision: 13
 ### Универсальные интерфейсы  
  Универсальные интерфейсы, внедренные из сборки взаимодействия, использовать невозможно.  Это показано в следующем примере.  
   
- [!code-cs[VbLinkCompilerCS#1](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/program.cs#1)]  
+ [!code-cs[VbLinkCompilerCS#1](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_1.cs)]  
   
 ### Типы с универсальными параметрами  
  Типы с универсальным параметром, тип которого внедрен из сборки взаимодействия, использовать невозможно, если это тип из внешней сборки.  Это ограничение не распространяется на интерфейсы.  Например, рассмотрим интерфейс <xref:Microsoft.Office.Interop.Excel.Range>, определенный в сборке <xref:Microsoft.Office.Interop.Excel>.  Если библиотека содержит внедренные типы из <xref:Microsoft.Office.Interop.Excel> и предоставляет метод, возвращающий универсальный тип с параметром, тип которого — интерфейс <xref:Microsoft.Office.Interop.Excel.Range>, то этот метод должен возвращать универсальный интерфейс, как показано в следующем примере кода.  
   
- [!code-cs[VbLinkCompilerCS#2](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/utility.cs#2)]  
-[!code-cs[VbLinkCompilerCS#3](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/utility.cs#3)]  
-[!code-cs[VbLinkCompilerCS#4](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/utility.cs#4)]  
+ [!code-cs[VbLinkCompilerCS#2](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_2.cs)]  
+[!code-cs[VbLinkCompilerCS#3](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_3.cs)]  
+[!code-cs[VbLinkCompilerCS#4](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_4.cs)]  
   
  В следующем примере клиентский код может вызывать метод, возвращающий универсальный интерфейс <xref:System.Collections.IList>, без ошибок.  
   
- [!code-cs[VbLinkCompilerCS#5](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/program.cs#5)]  
+ [!code-cs[VbLinkCompilerCS#5](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_5.cs)]  
   
 ## Пример  
  Следующий код компилирует исходный файл `OfficeApp.cs` и ссылается на сборки из `COMData1.dll` и `COMData2.dll` для получения `OfficeApp.exe`.  

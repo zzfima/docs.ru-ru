@@ -24,14 +24,14 @@ caps.handback.revision: 19
   
  В следующем примере демонстрируется простое предложение `select` в выражении запроса.  
   
- [!code-cs[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Select.cs#8)]  
+ [!code-cs[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_1.cs)]  
   
  Тип последовательности, созданной предложением `select`, определяет тип переменной запроса `queryHighScores`.  В простейшем случае предложение `select` просто задает переменную диапазона.  В результате возвращенная последовательность содержит элементы с тем же типом, что и у элементов в источнике данных.  Дополнительные сведения см. в разделе [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  Тем не менее, предложение `select` также предоставляет мощный механизм для преобразования \(или *выполнения проекции*\) исходных данных в новые типы.  Дополнительные сведения см. в разделе [Преобразования данных с помощью LINQ \(C\#\)](../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md).  
   
 ## Пример  
  В следующем примере программы показаны все различные формы, которые может иметь предложение `select`.  Обратите внимание на отношение в каждом запросе между предложением `select` и типом *переменной запроса* \(`studentQuery1`, `studentQuery2` и т. д.\).  
   
- [!code-cs[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Select.cs#9)]  
+ [!code-cs[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_2.cs)]  
   
  Как показано на вышеприведенном примере `studentQuery8`, иногда требуется, чтобы элементы возвращенной последовательности содержали только подмножество свойств исходных элементов.  Обеспечивая как можно меньший размер возвращенной последовательности, можно уменьшить требования к памяти и увеличить скорость выполнения запроса.  Для этого можно создать в предложении `select` анонимный тип и с помощью инициализатора объекта инициализировать этот тип с требуемыми свойствами исходного элемента.  Пример того, как это сделать содержится в разделе [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   

@@ -42,13 +42,13 @@ System.Convert.ToInt32("35")
 ## Литералы и простые имена  
  Двумя наиболее простыми типами выражений являются литералы и простые имена.  Литерал представляет собой постоянное значение, у которого нет имени.  Например, в следующем примере `5` и `"Hello World"` являются литералами.  
   
- [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_1.cs)]  
+ [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
  Дополнительные сведения о литералах см. в разделе [Типы](../../../csharp/language-reference/keywords/types.md).  
   
  В предыдущем примере `i` и `s` являются простыми именами, которые определяют локальные переменные.  При использовании таких переменных в выражениях результатом вычисления имени переменной является значение, которое в данное время хранится в расположении переменой в памяти.  Это показано в следующем примере:  
   
- [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_2.cs)]  
+ [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
   
 ## Выражения вызова  
  В следующем примере кода вызов метода `DoWork` является выражением вызова.  

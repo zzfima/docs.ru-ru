@@ -30,7 +30,7 @@ caps.handback.revision: 22
   
  Например, можно создать XML\-литерал, объединяющий встроенные выражения с содержимым текста.  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_1.vb)]  
+ [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
   
  Если `isbnNumber` содержит целое число 12345, а `modifiedDate` содержит дату "05.03.2006", то при выполнении этого кода значение `book` будет:  
   
@@ -55,27 +55,27 @@ caps.handback.revision: 22
   
 -   Пример встроенного выражения в имени XML\-элемента:  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_2.vb)]  
+     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
   
 -   Пример встроенного выражения в содержимом XML\-элемента:  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_3.vb)]  
+     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
   
 -   Пример встроенного выражения в имени атрибута XML\-элемента:  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_4.vb)]  
+     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
   
 -   Пример встроенного выражения в значении атрибута XML\-элемента:  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_5.vb)]  
+     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
   
 -   Пример встроенного выражения в атрибуте XML\-элемента:  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_6.vb)]  
+     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
   
 -   Пример встроенного выражения в корневом элементе XML\-документа:  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_7.vb)]  
+     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
   
  Если разрешено использование ключевого слова `Option Strict`, то компилятор проверяет, можно ли расширить тип каждого встроенного выражения до требуемого типа.  Единственным исключением является корневой элемент XML\-документа, который проверяется при выполнении кода.  Если выполнить компиляцию без ключевого слова `Option Strict`, то можно внедрить выражения типа `Object`, и их тип будет проверяться во время выполнения.  
   

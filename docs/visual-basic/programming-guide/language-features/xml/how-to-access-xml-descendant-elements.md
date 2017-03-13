@@ -28,7 +28,7 @@ caps.handback.revision: 19
 Этот пример демонстрирует использование свойства оси\-потомка для доступа ко всем элементам XML, которые имеют указанное имя и расположены под указанным элементом XML.  В частности, в нем используется свойство `Value` для получения значения первого элемента в коллекции, которое возвращает свойство дочерней оси `name`.  Свойство дочерней оси `name` возвращает все элементы с именем `name`, которые содержатся в объекте `contacts`.  В примере также используется свойство дочерней оси `phone` для доступа ко всем потомкам с именем `phone`, содержащимся в объекте `contacts`.  
   
 ## Пример  
- [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-descen_1.vb)]  
+ [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-descendant-elements_1.vb)]  
   
 ## Компиляция кода  
  Для этого примера необходимо следующее.  

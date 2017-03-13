@@ -29,7 +29,7 @@ caps.handback.revision: 20
   
 -   Объявите массив и преобразуйте перечисление к нему с помощью метода <xref:System.Enum.GetValues%2A> перед передачей массива так же, как и любую другую переменную.  В следующем примере по мере просмотра элементов перечисления <xref:Microsoft.VisualBasic.FirstDayOfWeek> отображается каждый его элемент.  
   
-     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#7)]  
+     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
 ## См. также  
  [Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   

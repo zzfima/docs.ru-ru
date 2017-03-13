@@ -56,7 +56,7 @@ variableorproperty <<= amount
 ## Пример  
  Следующий пример демонстрирует использование оператора `<<=` для сдвига битовой структуры переменной типа `Integer` влево с присвоением результирующего значения переменной.  
   
- [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-assignment-op_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор \<\<](../../../visual-basic/language-reference/operators/left-shift-operator.md)   

@@ -46,7 +46,7 @@ caps.handback.revision: 37
 ## Получение источника данных  
  В первую очередь в запросе [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] нужно указать источник данных.  В C\#, как и в большинстве языков программирования, переменная должна быть объявлена до ее использования.  В запросе [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] первым идет предложение `from` для указания источника данных \(`customers`\) и *переменная диапазона* \(`cust`\).  
   
- [!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#23)]  
+ [!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
   
  Переменная диапазона схожа с переменной итерации в цикле `foreach` за исключением того, что в выражении запроса не происходит фактической итерации.  При выполнении запроса переменная диапазона будет использоваться как ссылка на каждый последующий элемент в `customers`.  Поскольку компилятор может определить тип `cust`, нет необходимости указывать его в явном виде.  Дополнительные переменные диапазона могут быть введены предложением `let`.  Дополнительные сведения см. в разделе [Предложение let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -56,22 +56,22 @@ caps.handback.revision: 37
 ## Фильтрация  
  Возможно, наиболее распространенной операцией запроса является применение фильтра в виде логического выражения.  Фильтр приводит к возвращению запросом только тех элементов, для которых выражение является истинным.  Результат создается с помощью предложения `where`.  Фильтр фактически указывает элементы для исключения из исходной последовательности.  В следующем примере возвращаются только `customers`, находящиеся в Лондоне.  
   
- [!code-cs[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#24)]  
+ [!code-cs[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]  
   
  Для применения нужного числа выражений фильтра в предложении `where` можно использовать знакомые логические операторы C\# `AND` и `OR`.  Например, для получения только заказчиков из Лондона `AND` с именем Devon следует написать следующий код.  
   
- [!code-cs[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#25)]  
+ [!code-cs[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]  
   
  Для получения заказчиков из Лондона или Парижа следует написать следующий код.  
   
- [!code-cs[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#26)]  
+ [!code-cs[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]  
   
  Дополнительные сведения см. в разделе [Предложение where](../../../../csharp/language-reference/keywords/where-clause.md).  
   
 ## Порядок  
  Часто целесообразно отсортировать возвращенные данные.  Предложение `orderby` сортирует элементы возвращаемой последовательности в зависимости от компаратора по умолчанию для сортируемого типа.  Например, следующий запрос может быть расширен для сортировки результатов на основе свойства `Name`.  Поскольку `Name` является строкой, сравнение по умолчанию выполняется в алфавитном порядке от А до Я.  
   
- [!code-cs[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#27)]  
+ [!code-cs[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]  
   
  Для упорядочения результатов в обратном порядке от Я до А используется предложение `orderby…descending`.  
   
@@ -80,20 +80,20 @@ caps.handback.revision: 37
 ## Группировка  
  Предложение `group` позволяет группировать результаты на основе указанного ключа.  Например, можно указать, что результаты должны быть сгруппированы по `City` так, чтобы все заказчики из Лондона или Парижа оказались в отдельных группах.  В этом случае ключом является `cust.City`.  
   
- [!code-cs[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#28)]  
+ [!code-cs[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]  
   
  Когда запрос завершается предложением `group`, результаты представляются в виде списка из списков.  Каждый элемент в списке является объектом, имеющим член `Key` и список элементов, сгруппированных по этому ключу.  При итерации запроса, создающего последовательность групп, необходимо использовать вложенный цикл `foreach`.  Внешний цикл выполняет итерацию каждой группы, а внутренний цикл — итерацию членов каждой группы.  
   
  Если необходимо ссылаться на результаты операции группировки, можно использовать ключевое слово `into` для создания идентификатора, который можно будет запрашивать.  Следующий запрос возвращает только те группы, которые содержат более двух заказчиков.  
   
- [!code-cs[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#29)]  
+ [!code-cs[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]  
   
  Дополнительные сведения см. в разделе [Предложение group](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## Соединение  
  Операции соединения создают связи между последовательностями, неявно смоделированными в источниках данных.  Например, можно выполнить соединение для поиска всех клиентов и распространителей, которые находятся в одном месте.  В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] предложение `join` всегда работает с коллекциями объектов, а не непосредственно с таблицами базы данных.  
   
- [!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#36)]  
+ [!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
   
  В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] нет необходимости использовать `join` так часто, как в SQL, поскольку внешние ключи в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] представлены в объектной модели свойствами, содержащими коллекцию элементов.  Например, объект `Customer` содержит коллекцию объектов `Order`.  Вместо выполнения соединения, доступ к заказам можно получить с помощью точечной нотации.  
   

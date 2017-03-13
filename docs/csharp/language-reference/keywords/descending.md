@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## Пример  
  В следующем примере показано применение ключевого слова `descending` в [предложении orderby](../../../csharp/language-reference/keywords/orderby-clause.md).  
   
- [!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/csharp/descending_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/descending_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

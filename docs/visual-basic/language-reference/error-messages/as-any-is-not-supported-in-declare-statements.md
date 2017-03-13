@@ -30,11 +30,11 @@ caps.handback.revision: 11
   
 1.  В объявлениях параметров укажите конкретный используемый тип, например:  
   
-     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_1.vb)]  
+     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
   
 2.  Используйте атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> для указания `As Any`, когда вызываемой процедурой ожидается `Void*`.  
   
-     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_2.vb)]  
+     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
   
 ## См. также  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   

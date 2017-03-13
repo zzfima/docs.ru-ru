@@ -60,7 +60,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере определяется свойство с модификатором `ReadOnly`, возвращающее дату приема сотрудника на работу.  Класс хранит значение свойства в переменной с модификатором `Private`, и только код внутри класса можно изменить ее значение.  Тем не менее, свойство имеет модификатор `Public`, и любой код, имеющий доступ к классу, можно получить его значение.  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/visualbasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
   
  Модификатор `ReadOnly` можно использовать в следующих контекстах:  
   

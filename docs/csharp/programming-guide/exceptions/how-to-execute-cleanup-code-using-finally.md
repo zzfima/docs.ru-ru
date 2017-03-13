@@ -20,12 +20,12 @@ caps.handback.revision: 21
 # Практическое руководство. Выполнение кода очистки с использованием блока finally (Руководство по программированию на C#)
 Инструкция `finally` предназначена для обеспечения немедленного выполнения необходимой очистки объектов, обычно занимающих внешние ресурсы, даже в случае, когда генерируется исключение.  Примером подобной очистки является вызов метода <xref:System.IO.Stream.Close%2A> для объекта класса <xref:System.IO.FileStream> сразу после его использования, не дожидаясь, когда этот объект будет уничтожен сборщиком мусора среды CLR, как показано ниже:  
   
- [!code-cs[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-execute-cleanup-c_1.cs)]  
+ [!code-cs[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_1.cs)]  
   
 ## Пример  
  Чтобы превратить предыдущий код в инструкцию `try-catch-finally`, код очистки отделяется от рабочего кода, как показано ниже.  
   
- [!code-cs[csProgGuideExceptions#17](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-execute-cleanup-c_2.cs)]  
+ [!code-cs[csProgGuideExceptions#17](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_2.cs)]  
   
  Так как исключение может произойти в любой момент внутри блока `try` до вызова метода `OpenWrite()` или ошибкой может завершится выполнение самого метода `OpenWrite()`, при выполнении попытки закрыть файл нет гарантии, что он открыт.  Блок `finally` добавляет проверку, чтобы убедиться, что объект класса <xref:System.IO.FileStream> не имеет значения `null`, прежде чем вызывать метод <xref:System.IO.Stream.Close%2A>.  При отсутствии проверки значения `null` блок `finally` может сам генерировать исключение <xref:System.NullReferenceException>, но генерирования исключений в блоках `finally` по возможности следует избегать.  
   

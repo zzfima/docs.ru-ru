@@ -35,21 +35,21 @@ caps.handback.revision: 17
 ## Создание XML  
  Создать XML\-деревья в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] можно двумя способами.  Можно объявить XML\-литерал непосредственно в коде или использовать API [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] для создания дерева.  Оба процесса позволяют отразить в коде заключительную структуру XML\-дерева.  Например, с помощью приведенного ниже кода создается XML\-элемент:  
   
- [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_1.vb)]  
+ [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_1.vb)]  
   
  Дополнительные сведения см. в разделе [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
 ## Доступ и переходы в XML  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] предоставляет свойства осей XML для доступа к структурам XML и перемещения по ним.  С помощью этих свойств можно получить доступ к XML\-элементам и атрибутам, указывая имена дочерних XML\-элементов.  Можно также явно вызывать методы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] для выполнения переходов и поиска элементов и атрибутов.  Например, в приведенном ниже коде свойства осей XML используются для ссылки на атрибуты и дочерние элементы XML\-элемента.  В примере кода используется запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] для извлечения дочерних элементов и вывода их в виде XML\-элементов, эффективно выполняя преобразование.  
   
- [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_2.vb)]  
+ [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_2.vb)]  
   
  Дополнительные сведения см. в разделе [Доступ к XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
 ## Пространства имен XML  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] позволяет указать псевдоним для глобального пространства имен XML, используя оператор `Imports`.  В следующем примере показано, как использовать оператор `Imports` для импорта пространства имен XML:  
   
- [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_3.vb)]  
+ [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_3.vb)]  
   
  Можно использовать псевдоним пространства имен XML при доступе к свойствам осей XML и объявить XML\-литералы для документов и элементов XML.  
   
@@ -60,16 +60,16 @@ caps.handback.revision: 17
 ### Использование пространств имен XML в XML\-литералах  
  В следующем примере показано, как создать объект <xref:System.Xml.Linq.XElement>, в котором используется глобальное пространство имен `ns`:  
   
- [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_4.vb)]  
+ [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_4.vb)]  
   
  Компилятор [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] переводит XML\-литералы, содержащие псевдонимы пространства имен XML, в эквивалентный код, содержащий XML\-представление для использования пространств имен XML, с атрибутом `xmlns`.  При компиляции код примера из предыдущего раздела формирует по существу тот же самый исполняемый код, как и в следующем примере:  
   
- [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_5.vb)]  
+ [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_5.vb)]  
   
 ### Использование пространств имен XML в свойствах осей XML  
  Пространства имен, объявленные в XML\-литералах, недоступны для использования в свойствах осей XML.  Однако глобальные пространства имен могут использоваться со свойствами осей XML.  Используйте двоеточие для отделения префикса пространства имен XML от имени локального элемента.  Например:  
   
- [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_6.vb)]  
+ [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
   
 ## См. также  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   

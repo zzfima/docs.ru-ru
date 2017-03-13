@@ -30,7 +30,7 @@ caps.handback.revision: 17
  Результат выполнения оператора ?? не считается константой, даже если оба его аргумента являются константами.  
   
 ## Пример  
- [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#53)]  
+ [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

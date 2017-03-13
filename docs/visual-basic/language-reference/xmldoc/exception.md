@@ -45,7 +45,7 @@ caps.handback.revision: 9
 ## Пример  
  В этом примере используется тег `<exception>` для описания исключения, которое может создавать функция `IntDivide`.  
   
- [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/exception_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## См. также  
  [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

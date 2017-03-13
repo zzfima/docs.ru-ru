@@ -52,7 +52,7 @@ Return expression
 ## Пример  
  В следующем примере оператор `Return` используется несколько раз для возвращения из процедуры, если дальнейшие вычисления не нужны.  
   
- [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/return-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
 ## См. также  
  [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   

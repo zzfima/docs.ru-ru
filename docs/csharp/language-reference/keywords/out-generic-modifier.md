@@ -30,7 +30,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере показано, как объявить, расширить и реализовать ковариантный универсальный интерфейс.  В нем также показано, как используется неявное преобразование для классов, которые реализуют ковариантный интерфейс.  
   
- [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
   
  В универсальном интерфейсе параметр типа может быть объявлен ковариантным, если он удовлетворяет следующим условиям:  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере показано, как объявить ковариантный универсальный делегат, создать его экземпляр и вызвать его.  В нем показано также, как неявно преобразовывать типы делегатов.  
   
- [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
   
  В универсальном методе\-делегате тип может быть объявлен ковариантным, если он используется только как тип значения, возвращаемого методом, и не используется для аргументов метода.  
   

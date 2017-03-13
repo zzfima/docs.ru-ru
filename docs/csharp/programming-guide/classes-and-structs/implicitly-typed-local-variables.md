@@ -21,7 +21,7 @@ caps.handback.revision: 23
   
  В следующем примере показаны разные способы объявления локальных переменных с `var`.  
   
- [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#43)]  
+ [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]  
   
  Важно понять, что ключевое слово `var` не означает "вариант" и не указывает на свободную типизацию или позднюю привязку переменной.  Оно просто значит, что компилятор определяет и назначает наиболее подходящий тип.  
   
@@ -54,7 +54,7 @@ caps.handback.revision: 23
   
  С точки зрения исходного кода анонимный тип не имеет имени.  Поэтому, если переменная запроса инициализирована с `var`, то единственный способ получить доступ к свойствам в возвращенной последовательности объектов заключается в использовании `var` в качестве типа переменной итерации в операторе `foreach`.  
   
- [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#44)]  
+ [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]  
   
 ## Заметки  
  К объявлениям неявно типизированных переменных применимы следующие ограничения.  
@@ -73,7 +73,7 @@ caps.handback.revision: 23
   
  Ключевое слово `var` удобно, когда определенный тип переменной сложно вводить с клавиатуры, либо он является очевидным, либо не повышает удобочитаемость кода.  Примером подобного применения ключевого слова `var` служит ситуация со вложенными универсальными типами, которые используются операциях по группировке.  В следующем запросе используется переменная запроса с типом `IEnumerable<IGrouping<string, Student>>`.  При условии, что пользователи, работающие с кодом, понимают данные принципы, не возникнет никаких проблем с использованием неявной типизации для удобства и краткости.  
   
- [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#13)]  
+ [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]  
   
  Однако использование ключевого слова `var` может сделать код более трудным для понимания другими разработчиками.  По этой причине в документации по C\# ключевое слово `var` обычно используется только при необходимости.  
   

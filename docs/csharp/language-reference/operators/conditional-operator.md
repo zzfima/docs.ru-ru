@@ -55,7 +55,7 @@ classify = (input > 0) ? "positive" : "negative";
  Условный оператор не может быть перегружен.  
   
 ## Пример  
- [!code-cs[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#41)]  
+ [!code-cs[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

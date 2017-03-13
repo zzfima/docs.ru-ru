@@ -80,12 +80,12 @@ number1 Mod number2
 ## Пример  
  В следующем примере оператор `Mod` используется для деление одного числа на другое и возврата только остатка.  Если оба числа являются числами с плавающей запятой, результат является числом с плавающей запятой, представляющим остаток.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## Пример  
  В следующем примере показана возможная неточность операндов с плавающей запятой.  В первом операторе операнды относятся к типу `Double`, и 0,2 является периодической бесконечной двоичной дробью, которая хранится в виде значения 0,20000000000000001.  Во втором операторе символ типа литерала `D` указывает, что оба операнда относятся к типу `Decimal`, и 0,2 имеет точное представление.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>   

@@ -19,11 +19,11 @@ caps.handback.revision: 14
 # Использование оператора foreach с массивами (Руководство по программированию на C#)
 В C\# также предусмотрен оператор [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  Этот оператор обеспечивает простой и понятный способ итерации по элементам массива или любой перечислимой коллекции.  Оператор `foreach` обрабатывает элементы в порядке, возвращенном массивом или перечислителем типа коллекции, обычно от нулевого до последнего элемента.  Например, следующий код создает массив `numbers` и осуществляет итерацию по нему с помощью оператора `foreach`.  
   
- [!code-cs[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/csharp/using-foreach-with-arrays_1.cs)]  
+ [!code-cs[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
   
  Этот же метод можно использовать для итерации по элементам в многомерных массивах, например:  
   
- [!code-cs[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/csharp/using-foreach-with-arrays_2.cs)]  
+ [!code-cs[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
   
  Однако для лучшего управления элементами в многомерных массивах можно использовать вложенный цикл [for](../../../csharp/language-reference/keywords/for.md).  
   

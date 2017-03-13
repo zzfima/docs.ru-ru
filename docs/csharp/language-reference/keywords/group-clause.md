@@ -24,18 +24,18 @@ caps.handback.revision: 24
   
  Завершить выражение запроса с предложением `group` можно следующим образом.  
   
- [!code-cs[cscsrefQueryKeywords#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#10)]  
+ [!code-cs[cscsrefQueryKeywords#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_1.cs)]  
   
  Чтобы выполнить дополнительные запросы для каждой из групп, можно указать временный идентификатор, воспользовавшись для этого контекстным ключевым словом [into](../../../csharp/language-reference/keywords/into.md).  При использовании ключевого слова `into` необходимо продолжить запрос и завершить его инструкцией `select` или другим предложением `group`, как показано в следующем фрагменте.  
   
- [!code-cs[cscsrefQueryKeywords#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#11)]  
+ [!code-cs[cscsrefQueryKeywords#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_2.cs)]  
   
  Более подробные примеры использования предложения `group` с ключевым словом `into` и без него см. в разделе "Пример".  
   
 ## Перечисление результатов запроса group  
  Поскольку возвращаемые запросом `group` объекты <xref:System.Linq.IGrouping%602> представляют собой список списков, для доступа к каждому из элементов этих групп необходимо использовать вложенный цикл [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  Во внешнем цикле итерация будет выполняться по ключам групп, а во внутреннем цикле — по элементам самих групп.  У группы может быть ключ, но не быть элементов.  Ниже приведен пример цикла `foreach`, выполняющего запрос, показанный в предыдущем примере.  
   
- [!code-cs[cscsrefQueryKeywords#12](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#12)]  
+ [!code-cs[cscsrefQueryKeywords#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_3.cs)]  
   
 ## Типы ключей  
  Ключи групп могут быть любого типа, например строкового, встроенного числового, пользовательского именованного или анонимного типа.  
@@ -43,17 +43,17 @@ caps.handback.revision: 24
 ### Группировка по строке  
  В предыдущем примере использовался ключ типа `char`.  Вместо него можно было указать строку, например фамилию:  
   
- [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#13)]  
+ [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_4.cs)]  
   
 ### Группировка по логическому значению  
  В следующем примере показано разбиение результатов на две группы в зависимости от значения логического ключа.  Обратите внимание, что это значение вычисляется с помощью входящего в состав предложения `group` выражения.  
   
- [!code-cs[cscsrefQueryKeywords#14](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#14)]  
+ [!code-cs[cscsrefQueryKeywords#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_5.cs)]  
   
 ### Группировка по числовому диапазону  
  В следующем примере с помощью выражения создаются числовые ключи групп, обозначающие диапазоны значений в выборке.  Обратите внимание на удобное использование [let](../../../csharp/language-reference/keywords/let-clause.md) для хранения результатов вызова метода, чтобы в предложении `group` не приходилось вызывать метод дважды.  Также обратите внимание, что в предложении `group` выполняется проверка того, что средний бал студента не равен нулю, чтобы не возникала ситуация деления на ноль.  Дополнительные сведения о безопасном использовании методов в выражениях запросов см. в разделе [Практическое руководство. Обработка исключений в выражениях запросов](../../../csharp/programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).  
   
- [!code-cs[cscsrefQueryKeywords#15](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#15)]  
+ [!code-cs[cscsrefQueryKeywords#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_6.cs)]  
   
 ### Группировка по составному ключу  
  Составные ключи используются в тех случаях, когда необходимо сгруппировать элементы по более чем одному ключу.  Составной ключ создается с помощью анонимного типа или именованного типа для хранения элементов ключа.  В следующем примере предполагается, что для класса `Person` были объявлены члены `surname` и `city`.  Предложение `group` позволяет создать отдельную группу для каждого набора людей, имеющих одинаковые фамилии и города.  
@@ -66,12 +66,12 @@ caps.handback.revision: 24
   
  Результатом выполнения предложения `group` является последовательность из последовательностей.  Поэтому для доступа к отдельным элементам каждой из полученных групп необходимо использовать вложенный цикл `foreach`, в котором итерация выполняется по ключам групп, как показано в следующем примере.  
   
- [!code-cs[cscsrefQueryKeywords#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#16)]  
+ [!code-cs[cscsrefQueryKeywords#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_7.cs)]  
   
 ## Пример  
  В этом примере показано выполнение дополнительных операций над группами после их создания. Для этого используются ключевые слова *continuation* и `into`.  Дополнительные сведения см. в разделе [into](../../../csharp/language-reference/keywords/into.md).  В следующем примере создается запрос, выбирающий только те группы, элементы которых начинаются на гласную.  
   
- [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#17)]  
+ [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
 ## Заметки  
  Во время компиляции предложения `group` преобразуются в вызовы метода <xref:System.Linq.Enumerable.GroupBy%2A>.  

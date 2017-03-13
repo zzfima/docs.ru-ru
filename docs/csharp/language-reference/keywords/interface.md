@@ -23,7 +23,7 @@ caps.handback.revision: 29
  Дополнительные сведения и примеры см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## Пример  
- [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]  
   
  Интерфейс может быть членом пространства имен или класса и содержать подписи следующих членов:  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 29
 ## Пример  
  В следующем примере демонстрируется реализация интерфейса.  В этом примере интерфейс содержит объявление свойства, а класс содержит реализацию.  Любой экземпляр класса, реализующего `IPoint`, имеет целочисленные свойства `x` и `y`.  
   
- [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

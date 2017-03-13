@@ -27,13 +27,13 @@ caps.handback.revision: 20
   
 -   Используйте метод `MoveFile`, чтобы переместить файл, указав имя и расположение исходного и целевого файлов. В данном примере перемещается файл с именем `test.txt` из `TestDir1` в `TestDir2`. Обратите внимание, что имя целевого файла указывается даже несмотря на то, что оно совпадает с именем исходного файла.  
   
-     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-move-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
   
 ### Перемещение и переименование файла  
   
 -   Используйте метод `MoveFile`, чтобы переместить файл, указав имя и расположение исходного файла, целевое расположение и новое имя в целевом расположении. В данном примере файл с именем `test.txt` перемещается из `TestDir1` в `TestDir2` и переименовывается в `nexttest.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-move-a-file_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
   
 ## Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  

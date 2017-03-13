@@ -84,14 +84,14 @@ result = expression1 And expression2
 ## Пример  
  В данном примере оператор `And` используется для выполнения логического умножения двух выражений.  Результатом является значение типа `Boolean`, которое указывает, имеют ли оба выражения значение `True`.  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
   
  В предыдущем примере формируются результаты `True` и `False` соответственно.  
   
 ## Пример  
  В следующем примере оператор `And` используется для выполнения логического умножения отдельных битов двух числовых выражений.  В результирующем шаблоне устанавливается бит, если в обоих операндах установлены соответствующие биты.  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
   
  В предыдущем примере получаются результаты 8, 2 и 0 соответственно.  
   

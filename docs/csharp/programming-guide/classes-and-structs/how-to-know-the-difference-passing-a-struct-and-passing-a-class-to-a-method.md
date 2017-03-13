@@ -27,7 +27,7 @@ caps.handback.revision: 25
  Вывод следующем примере проиллюстрированы различия.  Значение поля `willIChange` экземпляра класса изменен вызовом метода `ClassTaker` поскольку метод использует адрес в параметре, чтобы найти указанное поле экземпляра класса.  Поле `willIChange` структуры в вызывающем методе не изменяется при вызове метода `StructTaker` поскольку значение аргумента копия структуры, а не саму копии своего адреса.  `StructTaker` изменяет копии и копии будут потеряны, если вызов завершается `StructTaker`.  
   
 ## Пример  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-know-the-differen_1.cs)]  
+ [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

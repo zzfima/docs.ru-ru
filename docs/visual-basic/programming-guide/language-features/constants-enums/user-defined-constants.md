@@ -33,15 +33,15 @@ caps.handback.revision: 19
 ## Использование оператора Const  
  Оператор `Const` представляет числовые и временные показатели:  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#10)]  
+ [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
   
  С его помощью также определяют константы типа `String`:  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#13)]  
+ [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
   
  Правая сторона тождества \(`=`\) зачастую является числом или буквенной строкой, но она может быть и выражением, которое дает в итоге строку или число \(хотя это выражение не может содержать вызов функции\).  Константы можно определять, даже с помощью уже определенных констант.  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#15)]  
+ [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
   
 ## Область действия определяемых пользователем констант  
  Область действия оператора `Const` соответствует области действия переменной, объявленной в том же расположении.  Можно задать область действия одним из следующих способов:  
@@ -59,8 +59,8 @@ caps.handback.revision: 19
 ### Профилактика циклических ссылок  
  Поскольку константы могут определяться другими константами, существует опасность случайного создания *цикла* или циклической ссылки между двумя или несколькими константами.  Цикл возникает в том случае, если две или несколько открытых констант определены друг через друга, как показано в следующем примере:  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#16)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#17)]  
+ [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
+[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
  При возникновении цикла [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] выдает ошибку компилятора.  
   

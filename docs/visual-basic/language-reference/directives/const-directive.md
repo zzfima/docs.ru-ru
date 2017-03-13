@@ -53,7 +53,7 @@ caps.handback.revision: 17
 ## Пример  
  В следующем примере используется директива `#Const`.  
   
- [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/const-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
 ## См. также  
  [\/define](../../../visual-basic/reference/command-line-compiler/define.md)   

@@ -45,7 +45,7 @@ caps.handback.revision: 22
 ## Пример  
  Следующий пример демонстрирует использование `Static`.  
   
- [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/visualbasic/static_1.vb)]  
+ [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
  Переменная `Static` `totalSales` инициализируется с помощью значения 0 только один раз.  Каждый раз, когда вводится `updateSales`, переменная `totalSales` по\-прежнему хранит самое последнее вычисленное для нее значение.  
   

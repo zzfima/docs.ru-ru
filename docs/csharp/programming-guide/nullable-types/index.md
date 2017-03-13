@@ -20,7 +20,7 @@ caps.handback.revision: 44
 # Типы, допускающие значения NULL (Руководство по программированию на C#)
 Тип, допускающие значения NULL, являются экземплярами структуры <xref:System.Nullable%601?displayProperty=fullName>.  Тип, допускающий значения NULL, может представлять правильный диапазон значений для своего базового типа значений и дополнительное пустое значение `null`.  Например, для `Nullable<Int32>`, называемого "тип Int32, допускающий значения NULL", можно назначить любое значение от \-2 147 483 648 до 2 147 483 647 или значение `null`.  Для `Nullable<bool>` можно назначить значения [true](../../../csharp/language-reference/keywords/true.md) [false](../../../csharp/language-reference/keywords/false.md) или [null](../../../csharp/language-reference/keywords/null.md).  Возможность назначения значения `null` для числовых и логических типов особенно полезна при работе с базами данных и другими типами данных, содержащих элементы, которым может быть не назначено значение.  Например, логическое поле в базе данных может хранить значения `true` или `false` или может быть не задано.  
   
- [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
  Выходные данные показаны в примере:  
   

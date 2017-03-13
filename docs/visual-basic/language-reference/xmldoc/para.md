@@ -42,7 +42,7 @@ caps.handback.revision: 9
 ## Пример  
  В этом примере тег `<para>` используется для разбиения области примечаний для метода `UpdateRecord` на два абзаца.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/para_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
 ## См. также  
  [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

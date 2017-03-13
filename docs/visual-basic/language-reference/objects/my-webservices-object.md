@@ -49,7 +49,7 @@ caps.handback.revision: 17
 ## Пример  
  Этот пример вызывает метод `FahrenheitToCelsius` веб\-службы XML `TemperatureConverter`, а затем возвращает результат.  
   
- [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/VbVbalrMyWebService/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
   
  Для работы этого примера проект должен ссылаться на веб\-службу с именем `Converter`, а эта веб\-служба должна предоставлять метод `ConvertTemperature`.  Дополнительные сведения см. в разделе [Доступ к веб\-службам приложения](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   

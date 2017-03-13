@@ -25,7 +25,7 @@ caps.handback.revision: 15
 В этом примере создается пустой текстовый файл по указанному пути с помощью метода <xref:System.IO.File.Create%2A> класса <xref:System.IO.File>.  
   
 ## Пример  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-file_1.vb)]  
+ [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
   
 ## Компиляция кода  
  Для записи в файл используется переменная `file`.  

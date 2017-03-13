@@ -46,13 +46,13 @@ caps.handback.revision: 18
 ## Пример  
  В следующем примере показана процедура, определенная с параметром [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md), и эквивалентные перегруженные процедуры.  
   
- [!code-vb[VbVbcnProcedures#69](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
  Нельзя перегрузить процедуру со списком параметров, который принимает одномерный массив для массива параметров.  Однако можно использовать описания других неявных перегрузок.  Это показано в следующих объявлениях:  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
  В кодах перегруженных версий не требуется проверка, указывает ли вызывающий код одно или несколько значений параметра `ParamArray`, и если указывает, то сколько.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] передает управление в ту версию, которая соответствует списку аргументов вызова.  
   

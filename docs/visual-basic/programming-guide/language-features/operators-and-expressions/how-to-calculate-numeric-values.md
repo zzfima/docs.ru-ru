@@ -52,7 +52,7 @@ caps.handback.revision: 13
   
 -   Можно использовать оператор назначения для назначения числового выражения переменной, как показано в следующем примере.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
      В предыдущем примере значение выражения в правой части оператора равно \(`=`\) присваивается переменной `j` слева от оператора, поэтому `j` вычисляется как 276.  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 13
   
 -   Используйте скобки для заключения в них операций, которые должны выполняться в первую очередь.  В следующем примере показано два разных результата с теми же операндами и операторами.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
      В предыдущем примере при вычислении `j` сперва выполняется дополнительный оператор\(`+`\), так как скобки `(67 + i)` переопределяют стандартный порядок действий. Переменной `j` присваивается значение 276 \(4 х 69\).  При вычислении `k` операторы выполняются в обычном порядке \(`*` перед `+`\). Переменной `k` присваивается значение 270 \(268 \+ 2\).  
   

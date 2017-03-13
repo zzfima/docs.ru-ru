@@ -21,7 +21,7 @@ caps.handback.revision: 10
 ## Пример  
  В следующем примере показаны атрибуты `cref`, которые используется в тегах [\<see\>](../../../csharp/programming-guide/xmldoc/see.md).  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/cref-attribute_1.cs)]  
+ [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
   
  В результате компиляции программа создает следующий XML\-файл.  Обратите внимание, что атрибут `cref` метода `GetZero`, в частности, был преобразован компилятором в `"M:TestNamespace.TestClass.GetZero"`.  Префикс "M:" означает "метод" и является условным обозначением, распознаваемым средствами документации, такими как Sandcastle.  Полный список префиксов см. в разделе [Обработка XML\-файла](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   

@@ -66,7 +66,7 @@ caps.handback.revision: 47
 ##  <a name="BKMK_ArrayElements"></a> Элементы простого массива  
  В приведенном ниже примере объявляется переменная массива для хранения числа учеников в каждом классе школы.  
   
- [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
   
  Массив `students` в предыдущем примере содержит 7 элементов. Индексы элементов находятся в диапазоне от 0 до 6. Использовать массив проще, чем объявлять семь отдельных переменных.  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 47
   
  В приведенном ниже примере показано обращение к первому, второму и последнему элементам массива `students`.  
   
- [!code-vb[VbVbalrArrays#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_2.vb)]  
+ [!code-vb[VbVbalrArrays#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
   
  Можно ссылаться на массив в целом, используя только имя переменной массива без индексов.  
   
@@ -90,55 +90,55 @@ caps.handback.revision: 47
 ##  <a name="BKMK_CreatingAnArray"></a> Создание массива  
  Размер массива можно задать несколькими способами. Можно указать размер при объявлении массива, как показано в примере ниже.  
   
- [!code-vb[VbVbalrArrays#12](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_3.vb)]  
+ [!code-vb[VbVbalrArrays#12](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
   
  Кроме того, можно указать размер массива при его создании с помощью предложения `New`, как показано в примере ниже.  
   
- [!code-vb[VbVbalrArrays#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_4.vb)]  
+ [!code-vb[VbVbalrArrays#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
   
  Если массив уже существует, его размер можно переопределить с помощью оператора `Redim`. Можно указать, что оператор `Redim` должен сохранить значения, уже имеющиеся в массиве, или создать пустой массив. В приведенном ниже примере показаны различные варианты использования оператора `Redim` для изменения размера существующего массива.  
   
- [!code-vb[VbVbalrArrays#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_5.vb)]  
+ [!code-vb[VbVbalrArrays#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
   
  Для получения дополнительной информации см. [Оператор ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md).  
   
 ##  <a name="BKMK_StoringValues"></a> Сохранение значений в массиве  
  К любой позиции в массиве можно получить доступ, используя индекс типа `Integer`. Вы можете сохранять и извлекать значения массива, ссылаясь на позицию в нем с помощью индекса, заключенного в скобки. Индексы многомерных массивов разделяются запятыми \(,\). Для каждого измерения массива требуется один индекс. В приведенном ниже примере показаны некоторые операторы, которые сохраняют значения в массивах.  
   
- [!code-vb[VbVbalrArrays#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_6.vb)]  
+ [!code-vb[VbVbalrArrays#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
   
  В приведенном ниже примере показаны некоторые операторы, которые получают значения из массивов.  
   
- [!code-vb[VbVbalrArrays#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_7.vb)]  
+ [!code-vb[VbVbalrArrays#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
   
 ##  <a name="BKMK_Populating"></a> Заполнение массива начальными значениями  
  С помощью литерала массива можно создать массив, содержащий начальный набор значений. Литерал массива состоит из списка разделенных запятыми значений, заключенных в фигурные скобки \(`{}`\).  
   
  При создании массива с помощью литерала массива можно либо указать тип массива, либо использовать определение типа для задания типа массива. В приведенном ниже коде показаны обе возможности.  
   
- [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_8.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
   
  При использовании определения типа тип массива определяется главным типом в списке значений, предоставленным для литерала массива. Главный тип — это уникальный тип, до которого могут быть расширены все другие типы литерала массива. Если такой уникальный тип нельзя определить, то главным будет тип, до которого можно сузить все другие типы массива. Если ни один из указанных уникальных типов нельзя определить, главным типом будет `Object`. Например, если список значений для литерала массива содержит значения типов `Integer`, `Long` и `Double`, результирующий массив будет иметь тип `Double`. Типы `Integer` и `Long` расширяются только до типа `Double`. Поэтому `Double` является главным типом. Для получения дополнительной информации см. [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Эти правила определения применимы для вывода типов массивов, которые являются локальными переменными, определенными в члене класса. Несмотря на то что вы можете использовать литералы массива при создании переменных уровня класса, использовать определение типа на уровне класса нельзя. В результате литералы массива, заданные на уровне класса, определяют тип значений, указанных для литерала массива, как `Object`.  
   
  Можно явно задать тип элементов в массиве, созданном с помощью литерала массива. В таком случае значения литерала массива должны расширяться до типа элементов массива. В приведенном ниже примере кода создается массив типа `Double` из списка целых чисел.  
   
- [!code-vb[VbVbalrCollectionInitializers#4](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_9.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#4](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_9.vb)]  
   
 ###  <a name="BKMK_NestedArrayLiterals"></a> Вложенные литералы массива  
  Многомерный массив можно создать с помощью вложенных литералов массива. Вложенные литералы массива должны иметь измерение и число измерений, называемое рангом, соответствующее результирующему массиву. В приведенном ниже примере кода создается двухмерный массив целых чисел с помощью литерала массива.  
   
- [!code-vb[VbVbalrCollectionInitializers#7](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_10.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#7](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_10.vb)]  
   
  В предыдущем примере возникла бы ошибка, если бы число элементов во вложенных литералах массива не совпадало. Ошибка также возникла бы, если бы переменная массива была объявлена явно не двухмерной.  
   
 > [!NOTE]
 >  Избежать ошибки при указании вложенных литералов массива с различными измерениями можно, заключив внутренние литералы массива в круглые скобки. Скобки требуют принудительного вычисления выражения литерала массива, а полученные значения используются со внешним литералом массива, как показано в приведенном ниже коде.  
   
- [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_11.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_11.vb)]  
   
  При создании многомерного массива с помощью вложенных литералов массива можно использовать определение типа. При использовании определения типа определяемый тип является главным для всех значений всех литералов массива какого\-либо уровня вложенности. В приведенном ниже примере кода создается двухмерный массив типа `Double` из значений типа `Integer` и `Double`.  
   
- [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_12.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_12.vb)]  
   
  Дополнительные примеры см. в разделе [Практическое руководство. Инициализация переменной массива в Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md).  
   
@@ -147,19 +147,19 @@ caps.handback.revision: 47
   
  В приведенном ниже примере выполняется перебор одномерного массива с помощью оператора [Оператор For...Next](../../../../visual-basic/language-reference/statements/for-next-statement.md). Метод <xref:System.Array.GetUpperBound%2A> возвращает максимально допустимое значение индекса. Наименьшее значение индекса всегда равно 0.  
   
- [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_13.vb)]  
+ [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
   
  В приведенном ниже примере выполняется перебор многомерного массива с помощью оператора `For...Next`. Метод <xref:System.Array.GetUpperBound%2A> имеет параметр, который определяет измерение.`GetUpperBound(0)` возвращает максимальное значение индекса для первого измерения, а `GetUpperBound(1)` возвращает максимальное значение индекса для второго измерения.  
   
- [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_14.vb)]  
+ [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
   
  В приведенном ниже примере выполняется перебор одномерного массива с помощью оператора [Оператор For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- [!code-vb[VbVbalrArrays#43](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_15.vb)]  
+ [!code-vb[VbVbalrArrays#43](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_15.vb)]  
   
  В приведенном ниже примере выполняется перебор многомерного массива с помощью оператора `For Each...Next`. Однако возможности управления элементами многомерного массива будут шире при использовании вложенного оператора `For…Next`, как в предыдущем примере, вместо оператора `For Each…Next`.  
   
- [!code-vb[VbVbalrArrays#44](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_16.vb)]  
+ [!code-vb[VbVbalrArrays#44](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_16.vb)]  
   
 ##  <a name="BKMK_ReturnValues"></a> Массивы как возвращаемые значения и параметры  
  Чтобы вернуть массив из процедуры `Function`, укажите тип данных массива и число измерений в качестве возвращаемого типа [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md). Внутри функции объявите локальную переменную массива с тем же числом измерений и типом данных. В [Оператор Return](../../../../visual-basic/language-reference/statements/return-statement.md) включите локальную переменную массива без скобок.  
@@ -168,23 +168,23 @@ caps.handback.revision: 47
   
  В приведенном ниже примере функция `GetNumbers` возвращает `Integer()`. Этот тип массива — одномерный массив типа `Integer`. Процедура `ShowNumbers` принимает аргумент `Integer()`.  
   
- [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_17.vb)]  
+ [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_17.vb)]  
   
  В приведенном ниже примере функция `GetNumbersMultiDim` возвращает `Integer(,)`. Этот тип массива — двухмерный массив типа `Integer`.  Процедура `ShowNumbersMultiDim` принимает аргумент `Integer(,)`.  
   
- [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_18.vb)]  
+ [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_18.vb)]  
   
 ##  <a name="BKMK_JaggedArrays"></a> Массивы массивов  
  Массив, который содержит другие массивы как элементы, называется массивом массивов. Массив массивов и каждый элемент в нем могут иметь одно или несколько измерений. Иногда структура данных в приложении является двухмерной, но не прямоугольной.  
   
  В приведенном ниже примере имеется массив месяцев, каждый элемент которого представляет собой массив дней. Так как число дней в разных месяцах различно, элементы не образуют прямоугольный двухмерный массив. Поэтому вместо многомерного массива используется массив массивов.  
   
- [!code-vb[VbVbalrArrays#21](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_19.vb)]  
+ [!code-vb[VbVbalrArrays#21](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_19.vb)]  
   
 ##  <a name="BKMK_ZeroLength"></a> Массивы нулевой длины  
  Массив без элементов также называется массивом нулевой длины. Переменная, содержащая массив нулевой длины, не имеет значения `Nothing`. Чтобы создать массив без элементов, объявите одно из измерений массива равным –1, как показано в примере ниже.  
   
- [!code-vb[VbVbalrArrays#14](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_20.vb)]  
+ [!code-vb[VbVbalrArrays#14](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_20.vb)]  
   
  Массив нулевой длины может потребоваться создать в указанных ниже случаях.  
   
@@ -233,7 +233,7 @@ Dim prices(3, 4, 5) As Long
   
  В приведенном ниже примере вызывается функция `TypeName` для определения типа массива и типа элементов в массиве. Массив имеет тип `Integer(,)`, а элементы массива относятся к типу `Integer`.  
   
- [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_21.vb)]  
+ [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_21.vb)]  
   
 ##  <a name="BKMK_Collections"></a> Коллекции как альтернатива массивам  
  Массивы удобнее всего использовать для создания фиксированного числа строго типизированных объектов и работы с ними. Коллекции предоставляют более гибкий способ работы с группами объектов. В отличие от массивов, коллекция, с которой вы работаете, может расти или уменьшаться динамически при необходимости.  
@@ -249,7 +249,7 @@ Dim prices(3, 4, 5) As Long
 ### Пример  
  В приведенном ниже примере используется универсальный класс <xref:System.Collections.Generic.List%601?displayProperty=fullName> платформы [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] для создания коллекции\-списка объектов `Customer`.  
   
- [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_22.vb)]  
+ [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
   
  В объявлении коллекции `CustomerFile` указано, что она может содержать только элементы типа `Customer`. Она также имеет исходную емкость 200 элементов. Процедура `AddNewCustomer` проверяет новый элемент на допустимость и затем добавляет его к коллекции. Процедура `PrintCustomers` использует цикл `For Each` для перебора коллекции и отображения ее элементов.  
   

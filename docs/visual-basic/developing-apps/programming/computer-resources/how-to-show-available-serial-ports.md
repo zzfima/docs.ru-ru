@@ -33,7 +33,7 @@ caps.handback.revision: 20
   
  Как правило, пользователь выбирает, какой последовательный порт приложение должно использовать из списка доступных портов.  В этом примере имена последовательных портов хранятся в элементе управления <xref:System.Windows.Forms.ListBox>.  Дополнительные сведения см. в разделе [Элемент управления ListBox](../Topic/ListBox%20Control%20\(Windows%20Forms\).md).  
   
- [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#45)]  
+ [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
  Данный пример кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он находится в разделе **Связь и сеть**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
   

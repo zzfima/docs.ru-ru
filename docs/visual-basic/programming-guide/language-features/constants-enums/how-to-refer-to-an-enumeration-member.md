@@ -32,7 +32,7 @@ caps.handback.revision: 13
   
 -   Квалифицируйте имя члена с перечислением.  Например, в следующем примере член `Saturday` перечисления `FirstDayOfWeek` назначается переменной `DayValue`.  
   
-     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#19)]  
+     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-refer-to-an-enumeration-member_1.vb)]  
   
 ## См. также  
  [Практическое руководство. Объявление перечисления](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   

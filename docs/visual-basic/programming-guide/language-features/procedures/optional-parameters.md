@@ -57,12 +57,12 @@ sub name(argument 1, , , argument 4)
   
  При первом вызове `MsgBox` указываются все три аргумента в том порядке, в котором они определены в `MsgBox`.  При втором вызове указывается только обязательный аргумент.  При третьем и четвертом вызове указываются первый и третий аргументы.  Третий вызов указывает аргумент по позиции, а четвертый — по имени.  
   
- [!code-vb[VbVbcnProcedures#47](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## Определение наличия необязательного аргумента  
  Процедура во время выполнения не может отличить пропущенный аргумент от аргумента, для которого в вызывающем коде явным образом задано значение по умолчанию.  Если такое различение существенно, можно задать в качестве значения по умолчанию значение, которое вряд ли будет использоваться.  В следующей процедуре определяется необязательный параметр `office` и проверяется его значение по умолчанию `QJZ`, чтобы увидеть опущен ли он в вызове.  
   
- [!code-vb[VbVbcnProcedures#46](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
  Если необязательный параметр имеет ссылочный тип, например, `String`, то можно использовать `Nothing` в качестве значения по умолчанию, при условии, что это не является ожидаемым значением аргумента.  
   

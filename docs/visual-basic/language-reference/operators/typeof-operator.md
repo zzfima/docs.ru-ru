@@ -68,7 +68,7 @@ result = TypeOf objectexpression IsNot typename
 ## Пример  
  В следующем примере выражение `TypeOf`...`Is` используется для проверки на совместимость типов двух переменных ссылок на объекты с различными типами данных.  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
   
  Переменная `refInteger` имеет тип времени выполнения `Integer`.  Она совместима с `Integer`, но не с `Double`.  Переменная `refForm` имеет тип времени выполнения <xref:System.Windows.Forms.Form>.  Она совместима с <xref:System.Windows.Forms.Form>, так как это ее тип, с <xref:System.Windows.Forms.Control>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.Windows.Forms.Control>, и с <xref:System.ComponentModel.IComponent>, так как <xref:System.Windows.Forms.Form> наследует от <xref:System.ComponentModel.Component>, который реализует <xref:System.ComponentModel.IComponent>.  Однако `refForm` несовместима с <xref:System.Windows.Forms.Label>.  
   

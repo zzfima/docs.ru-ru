@@ -109,7 +109,7 @@ result = string Like pattern
 ## Пример  
  В этом примере оператор `Like` используется для сравнения строк с различными шаблонами.  Результаты переходят в переменную `Boolean`, указывающую, насколько каждая строка удовлетворяет шаблону.  
   
- [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/like-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>   

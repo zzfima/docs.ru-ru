@@ -37,11 +37,11 @@ caps.handback.revision: 17
   
  Комментарии могут располагаться в конце той же строки, где содержится оператор, или занимать отдельную строку.  Оба способа представлены в следующем коде:  
   
- [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/comments-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_1.vb)]  
   
  Если комментарий занимает более одной строки, каждая строка должна начинаться с символа начала комментария, как показано в следующем примере.  
   
- [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/comments-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## Правила комментирования  
  В следующей таблице приведены общие рекомендации по тому, какие типы комментариев могут предшествовать разделу кода.  Данная информация носит рекомендательный характер; в [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] нет жестких норм, касающихся добавления комментариев.  В комментарий по желанию автора кода может быть включена любая информация.  

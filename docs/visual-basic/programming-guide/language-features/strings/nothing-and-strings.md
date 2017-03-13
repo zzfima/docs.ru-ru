@@ -26,7 +26,7 @@ caps.handback.revision: 8
 ## Среда выполнения Visual Basic и .NET Framework  
  Рассмотрим следующий пример:  
   
- [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/nothing-and-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
  Среда выполнения [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] обычно расценивает `Nothing` как пустую строку \(""\).  Однако в [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] создается исключение при попытке выполнить операцию строки с `Nothing`.  
   

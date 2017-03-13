@@ -36,11 +36,11 @@ caps.handback.revision: 27
 ## Простые литералы  
  Можно создать объект [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] в коде [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], введя или вставив корректный XML.  Литерал XML\-элемента возвращает объект <xref:System.Xml.Linq.XElement>.  Дополнительные сведения см. в разделах [Литеральное представление XML\-элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) и [XML\-литералы и спецификация XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  В следующем примере создается XML\-элемент, который имеет несколько дочерних элементов.  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
   
  Можно создать XML\-документ, запустив литерал XML с `<?xml version="1.0"?>`, как показано в следующем примере.  Литерал XML\-документа возвращает объект <xref:System.Xml.Linq.XDocument>.  Дополнительные сведения см. в разделе [XML\-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 > [!NOTE]
 >  Синтаксис XML\-литерала в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] не идентичен синтаксису спецификации XML 1.0.  Дополнительные сведения см. в разделе [XML\-литералы и спецификация XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
@@ -57,12 +57,12 @@ caps.handback.revision: 27
   
  Например, следующий код использует внедренный запрос для создания XML\-элементов из членов массива `phoneNumbers2` и добавления их затем как дочерних узлов `contact2`.  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
   
 ## Создание компилятором объектов из XML\-литералов  
  Компилятор [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] преобразует литералы XML в вызовы эквивалентных конструкторов [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] для создания объекта [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  Например, компилятор [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] преобразует следующий пример кода в вызов конструктора <xref:System.Xml.Linq.XProcessingInstruction> для инструкции XML\-версии, вызовы конструктора <xref:System.Xml.Linq.XElement> для элементов `<contact>`, `<name>` и `<phone>`, и вызовы конструктора <xref:System.Xml.Linq.XAttribute> для атрибута `type`.  В частности, при атрибутах из следующего примера компилятор [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] вызовет конструктор <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> дважды.  Первому передаст значение `type` в качестве параметра `name` и значение `home` в качестве параметра `value`.  Второму также передаст значение `type` в качестве параметра `name`, но в качестве параметра `value` будет значение `work`.  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 ## См. также  
  <xref:System.Xml.Linq.XElement>   

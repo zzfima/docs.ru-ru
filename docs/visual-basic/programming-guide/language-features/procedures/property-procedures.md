@@ -108,11 +108,11 @@ End Property
 ### Пример объявления и вызова  
  Следующее свойство сохраняет полное имя как два составных имени, то есть имя и фамилию.  Когда вызывающий код считывает `fullName`, процедура `Get` объединяет два составных имени и возвращает полное имя.  Когда вызывающий код присваивает новое полное имя, процедура `Set` пытается разделить его на два составных имени.  Если не удается найти пробел, то она сохраняет все полное имя как имя.  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
   
  В следующем примере показаны вызовы процедур свойств из `fullName`.  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
 ## См. также  
  [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

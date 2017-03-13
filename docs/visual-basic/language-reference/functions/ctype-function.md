@@ -64,7 +64,7 @@ CType(expression, typename)
 ## Пример  
  В этом примере функция `CType` используется для приведения выражения к типу данных `Single`.  
   
- [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/ctype-function_1.vb)]  
+ [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
  Дополнительные примеры см. в разделе [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   

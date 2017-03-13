@@ -23,11 +23,11 @@ caps.handback.revision: 24
   
  В File1.cs:  
   
- [!code-cs[csrefKeywordsContextual#3](../../../csharp/language-reference/keywords/codesnippet/csharp/partial-type_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_1.cs)]  
   
  В File2.cs объявление:  
   
- [!code-cs[csrefKeywordsContextual#4](../../../csharp/language-reference/keywords/codesnippet/csharp/partial-type_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_2.cs)]  
   
 ## Заметки  
  Разделение типа класса, структуры или интерфейса на несколько файлов может пригодиться при работе с крупными проектами или с автоматически созданным кодом, например с кодом [Windows Forms Designer](http://msdn.microsoft.com/ru-ru/3c3d61f8-f36c-4d41-b9c3-398376fabb15).  Разделяемый тип может содержать [разделяемый метод](../../../csharp/language-reference/keywords/partial-method.md).  Дополнительные сведения см. в разделе [Разделяемые классы и методы](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  

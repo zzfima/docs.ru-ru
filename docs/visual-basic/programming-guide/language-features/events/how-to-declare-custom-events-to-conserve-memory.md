@@ -34,7 +34,7 @@ caps.handback.revision: 11
   
  Все события класса используют поле `Events` для наблюдения за тем, какие методы являются обработчиками каждого события.  
   
- [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#22)]  
+ [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-conserve-memory_1.vb)]  
   
 ## См. также  
  <xref:System.ComponentModel.EventHandlerList>   

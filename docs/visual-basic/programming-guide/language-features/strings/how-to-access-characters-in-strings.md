@@ -27,7 +27,7 @@ caps.handback.revision: 8
 ## Пример  
  Иногда полезно располагать сведениями о содержащихся в строке символах и положениях этих символов.  Строку можно представить в виде массива символов \(экземпляров класса `Char`\); таким образом, можно извлечь из строки конкретный символ, обратившись к нему через индекс символа с помощью свойства <xref:System.String.Chars%2A>.  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-access-characters_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
   
  Индексация параметра `index` свойства <xref:System.String.Chars%2A> ведется от нуля.  
   

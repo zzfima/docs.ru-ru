@@ -52,7 +52,7 @@ caps.handback.revision: 20
   
 -   Следует написать объявление, которое включает спецификатор доступа, ключевое слово `Const` и выражение, как показано в следующих примерах:  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#8)]  
+     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
   
      Если параметру [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) присвоено значение `Off`, а параметру [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) — значение `On`, необходимо явным образом объявить константу, задав тип данных \(`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single` или `String`\).  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 20
   
 -   Создайте объявление с ключевым словом `As` и явным типом данных, как в следующих примерах.  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#9)]  
+     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
   
      В одной строке можно объявить несколько констант, хотя лучше читается тот код, в котором в одной строке объявлена только одна константа.  Если в одной строке объявляется несколько констант, все они должны иметь один и тот же уровень доступа \(`Public`, `Private` `Friend`, `Protected` или `Protected Friend`\).  
   

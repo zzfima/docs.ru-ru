@@ -25,15 +25,15 @@ caps.handback.revision: 34
   
  В следующем примере выполнена операция *упаковки* целочисленной переменой `i`, которая присвоена объекту `o`.  
   
- [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_1.cs)]  
+ [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
   
  Затем можно выполнить операцию распаковки объекта `o` и присвоить его целочисленной переменной `i`:  
   
- [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_2.cs)]  
+ [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
   
  Следующий пример иллюстрирует использование упаковки в C\#.  
   
- [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_3.cs)]  
+ [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## Производительность  
  По сравнению с простыми операциями присваивания операции упаковки и распаковки являются весьма затратными процессами с точки зрения вычислений.  При выполнении упаковки типа значения необходимо создать и разместить новый объект.  Объем вычислений при выполнении операции распаковки, хотя и в меньшей степени, но тоже весьма значителен.  Дополнительные сведения см. в разделе [Производительность](../Topic/.NET%20Performance%20Tips.md).  
@@ -43,11 +43,11 @@ caps.handback.revision: 34
   
  Рассмотрим следующее объявление переменной типа значения.  
   
- [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_4.cs)]  
+ [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
   
  Следующий оператор неявно применяет операцию упаковки к переменной `i`.  
   
- [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_5.cs)]  
+ [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
   
  Результат этого оператора создает ссылку на объект `o` в стеке, которая ссылается на значение типа `int` в куче.  Это значение является копией значения типа значения, присвоенного переменной `i`.  Разница между двумя этими переменными, `i` и `o`, продемонстрирована на рисунке ниже.  
   
@@ -56,13 +56,13 @@ caps.handback.revision: 34
   
  Можно также выполнять упаковку явным образом, как в следующем примере, однако явная упаковка не является обязательной.  
   
- [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_6.cs)]  
+ [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
 ## Описание  
  В этом примере целочисленная переменная `i` преобразуется в объект `o` при помощи упаковки.  Затем значение, хранимое переменной `i`, меняется с `123` на `456`.  В примере показано, что исходный тип значения и упакованный объект используют отдельные ячейки памяти, а значит могут хранить разные значения.  
   
 ## Пример  
- [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_7.cs)]  
+ [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
   
 ## Распаковка  
  Распаковка является явным преобразованием из типа `object` в [тип значения](../../../csharp/language-reference/keywords/value-types.md) или из типа интерфейса в тип значения, реализующего этот интерфейс.  Операция распаковки состоит из следующих действий:  
@@ -73,7 +73,7 @@ caps.handback.revision: 34
   
  В следующем коде показаны операции по упаковке и распаковке.  
   
- [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_8.cs)]  
+ [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
   
  На следующем рисунке представлен результат выполнения этого кода.  
   
@@ -85,7 +85,7 @@ caps.handback.revision: 34
 ## Пример  
  В следующем примере показан случай недопустимой распаковки, в результате чего создается исключение `InvalidCastException`.  В случае использования `try` и `catch` при возникновении ошибки выводится сообщение.  
   
- [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_9.cs)]  
+ [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
   
  При выполнении этой программы выводится следующий результат:  
   

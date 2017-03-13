@@ -22,7 +22,7 @@ caps.handback.revision: 8
 ## Пример  
  В следующем примере используются методы <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>, <xref:System.String.StartsWith%2A> и <xref:System.String.EndsWith%2A> для поиска строк.  
   
- [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#21)]  
+ [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-string-methods_1.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

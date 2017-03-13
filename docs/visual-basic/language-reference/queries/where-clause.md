@@ -46,12 +46,12 @@ Where condition
 ## Пример  
  Следующее выражение запроса использует предложение `From` для объявления диапазона переменной `cust` для каждого объекта `Customer` в коллекции `customers`.  Предложение `Where` использует переменную диапазона для ограничения вывода для заказчиков из указанной области.  В результате запроса цикл `For Each` отображает имя компании для каждого заказчика.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
 ## Пример  
  Следующий пример использует `And` и  `Or` логические операторы  `Where` предложение.  
   
- [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#31)]  
+ [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
 ## См. также  
  [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

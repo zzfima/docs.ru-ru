@@ -50,7 +50,7 @@ AddHandler event, AddressOf eventhandler
 >  Для пользовательских событий оператор `AddHandler` вызывает метод доступа события `AddHandler`.  Дополнительные сведения о пользовательских событиях см. в разделе [Оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## Пример  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#17)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
   
 ## См. также  
  [Оператор RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)   

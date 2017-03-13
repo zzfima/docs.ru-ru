@@ -24,7 +24,7 @@ caps.handback.revision: 24
 ## Пример  
  В этом примере класс `Square` должен предоставить реализацию `Area`, поскольку он является производным `ShapesClass`.  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
  Далее представлены возможности абстрактных классов.  
   
@@ -66,12 +66,12 @@ caps.handback.revision: 24
   
  Абстрактный класс, реализующий интерфейс, может отображать методы интерфейса в абстрактных методах.  Примеры.  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#2)]  
+ [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
 ## Пример  
  В этом примере класс `DerivedClass` является производным от абстрактного класса `BaseClass`.  Абстрактный класс содержит абстрактный метод `AbstractMethod` и два абстрактных свойства — `X` и `Y`.  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#3)]  
+ [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
  В предыдущем примере при попытке создать абстрактный класс с помощью следующего оператора  
   

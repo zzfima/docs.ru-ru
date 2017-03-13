@@ -27,19 +27,19 @@ caps.handback.revision: 28
   
      Например, если значение параметры метода является недопустимым:  
   
-     [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_1.cs)]  
+     [!code-cs[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
   
 -   На основе состояния объекта выполнен неправильный вызов объекта.  
   
      В качестве примера можно привести попытку записи в файл, доступный только для чтения.  В случаях, когда состояние объекта не допускает выполнения операции, генерируется экземпляр <xref:System.InvalidOperationException> или объекта на основе наследования этого класса.  Далее показан пример метода, генерирующий объект <xref:System.InvalidOperationException>:  
   
-     [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_2.cs)]  
+     [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
 -   Когда исключение вызывает аргумент метода.  
   
      В этом случае, должно быть перехвачено исходное исключение и создан экземпляр <xref:System.ArgumentException>.  Исходное исключение должно быть передано конструктору <xref:System.ArgumentException> в качестве параметра <xref:System.Exception.InnerException%2A>:  
   
-     [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_3.cs)]  
+     [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
  Исключения содержат свойство с именем <xref:System.Exception.StackTrace%2A>.  Строка содержит имя методов в текущем стеке вызовов вместе с именем файла и номером строки, в которой было сгенерировано исключение для каждого метода.  Объект <xref:System.Exception.StackTrace%2A> создается автоматически средой CLR из точки оператора `throw`, так что исключения должны генерироваться из той точки, где должна начинаться трассировка стека.  
   
@@ -61,7 +61,7 @@ caps.handback.revision: 28
 ## Определение классов исключений  
  Программы могут генерировать предопределенный класс исключений в пространстве имен <xref:System> \(если специально не обозначено иное\), или создавать собственные классы исключений путем наследования от <xref:System.Exception>.  Производные классы должны определять, по меньшей мере, четыре конструктора: один конструктор по умолчанию, один конструктор, задающий свойство сообщения, и еще один, задающий свойства <xref:System.Exception.Message%2A> и <xref:System.Exception.InnerException%2A>.  Четвертый конструктор служит для сериализации исключения.  Новые классы исключений должны быть сериализуемыми.  Примеры.  
   
- [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/csharp/creating-and-throwing-ex_4.cs)]  
+ [!code-cs[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
   
  Новые свойства следует добавлять к классу исключений только в том случае, если данные в них могут помочь в разрешении исключения.  При добавлении новых свойств в производный класс исключений, `ToString()` должно быть перезаписано для возврата добавленных сведений.  
   

@@ -45,7 +45,7 @@ caps.handback.revision: 15
   
      В следующем примере определяется структура процедуры `Sub` с тремя параметрами.  Первые два параметра являются обязательными, а третий — необязательным.  Объявления параметров в списке параметров разделяются запятыми.  
   
-     [!code-vb[VbVbcnProcedures#33](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-paramete_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
      Первый параметр принимает объект  `customer` , `updateCustomer` может непосредственно обновлять переменную, передаваемую в `c`, так как аргумент передается [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  Процедура не может изменить значения последних двух аргументов, поскольку они передаются [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   

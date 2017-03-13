@@ -31,11 +31,11 @@ private fixed char name[30];
   
  Например, до C\# 2.0 следующая `struct` имела бы размер 8 байт.  Массив `pathName` является ссылкой на выделенный в куче массив:  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#19)]  
+ [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  Начиная с версии 2.0 языка C\# `struct` может содержать встроенный массив.  В следующем примере массив `fixedBuffer` имеет фиксированный размер.  Для доступа к элементам такого массива используется оператор `fixed`, устанавливающий указатель на первый элемент.  Оператор `fixed` закрепляет экземпляр `fixedBuffer` в определенном месте в памяти.  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#20)]  
+ [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  Размер массива из 128 элементов `char` составляет 256 байт.  В буферах фиксированного размера [char](../../../csharp/language-reference/keywords/char.md) на один символ всегда приходится два байта, независимо от кодировки.  Это справедливо даже в том случае, когда буферы char маршалируются в методы API или структуры с `CharSet = CharSet.Auto` или `CharSet = CharSet.Ansi`.  Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.CharSet>.  
   

@@ -22,15 +22,15 @@ caps.handback.revision: 31
   
  Создание анонимных методов является, по существу, способом передачи блока кода в качестве параметра делегата.  Два примера:  
   
- [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#6)]  
+ [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#5)]  
+ [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
  Использование анонимных методов позволяет сократить издержки на кодирование при создании делегатов, поскольку не требуется создавать отдельный метод.  
   
  Например, указание блока кода вместо делегата может быть целесообразно в ситуации, когда создание метода может показаться ненужным действием.  Хорошим примером является запуск нового потока.  Этот класс создает поток и содержит код, выполняемый потоком без создания дополнительного метода для его делегата.  
   
- [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#7)]  
+ [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
 ## Заметки  
  Областью действия параметров анонимного метода является *блок анонимного метода*.  
@@ -39,7 +39,7 @@ caps.handback.revision: 31
   
  Локальные переменные и параметры, область действия которых содержит объявление анонимного метода, называются *внешними* переменными анонимного метода.  Например, в следующем сегменте кода `n` является внешней переменной.  
   
- [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#8)]  
+ [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
  Ссылка на внешнюю переменную `n` считается  *захваченного* при создании делегата.  В отличие от локальных переменных жизни перехваченной переменной расширяет пока делегаты, ссылающиеся на анонимные методы мусор.  
   
@@ -58,7 +58,7 @@ caps.handback.revision: 31
   
  В каждом случае при вызове делегата отображается сообщение.  
   
- [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#4)]  
+ [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

@@ -35,9 +35,9 @@ caps.handback.revision: 21
 ## Пример  
  В следующем примере осуществляется доступ к SQL структуре <xref:System.Data.SqlTypes.SqlString>, в которой определены операторы преобразования \([Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)\) в обоих направлениях между строкой SQL и строкой [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  Используйте `CType(`*SQL string expression*, `String)` для преобразования строки SQL к строке [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] и `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` для преобразования в обоих направлениях.  
   
- [!code-vb[VbVbcnProcedures#30](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#31](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
  Структура <xref:System.Data.SqlTypes.SqlString> определяет оператор преобразования \([Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)\) из `String` в <xref:System.Data.SqlTypes.SqlString> и из <xref:System.Data.SqlTypes.SqlString> в `String`.  Оператор, который присваивает значение `title` объекту `jobTitle`, использует первый оператор, а вызов функции <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> использует второй.  
   

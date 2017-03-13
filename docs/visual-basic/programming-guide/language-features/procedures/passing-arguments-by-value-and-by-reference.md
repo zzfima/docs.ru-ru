@@ -75,7 +75,7 @@ caps.handback.revision: 23
  Следующий пример показывает, когда следует передавать аргументы по значению, а когда передавать их по ссылке.  Процедура `Calculate` имеет два параметра: `ByVal` и `ByRef`.  Если дана процентная ставка `rate` и сумма средств `debt`, задачей процедуры является вычисление нового значения `debt`, которое будет результатом применения процентной ставки к исходному значению `debt`.  Поскольку `debt` является параметром `ByRef`, новая сумма отражается в значении аргумента в вызывающем коде, соответствующем `debt`.  Параметр `rate` является параметром `ByVal`, так как процедура `Calculate` не должна менять его значение.  
   
 ### Код  
- [!code-vb[VbVbcnProcedures#74](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-val_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
   
 ## См. также  
  [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

@@ -8,7 +8,7 @@ caps.handback.revision: 6
 ## Пример  
  Этот запрос создает группу соединения, а затем сортирует группы на основе элемента категории, который все еще находится в области действия.  Внутри анонимного инициализатора элементов вложенный запрос упорядочивает все соответствующие элементы из последовательности продуктов.  
   
- [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#81)]  
+ [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-order-the-results-of-a-join-clause_1.cs)]  
   
 ## Компиляция кода  
   

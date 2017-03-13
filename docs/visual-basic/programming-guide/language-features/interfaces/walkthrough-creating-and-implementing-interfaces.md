@@ -45,7 +45,7 @@ caps.handback.revision: 22
   
 5.  Определите для интерфейса свойство, метод и событие, расположив между операторами `Interface` и `End Interface` следующий код:  
   
-     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#98)]  
+     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_1.vb)]  
   
 ## Реализация  
  Можно заметить, что синтаксис, используемый для объявления членов интерфейса, отличается от синтаксиса объявления членов класса.  Это отличие отражает тот факт, что интерфейсы не содержат кода реализации.  
@@ -54,13 +54,13 @@ caps.handback.revision: 22
   
 1.  Добавьте класс с именем `ImplementationClass`, добавив следующую инструкцию в `Module1` после инструкции `End Interface`, но до инструкции `End Module` и нажмите клавишу ENTER:  
   
-     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#99)]  
+     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_2.vb)]  
   
      В интегрированной среде разработки при нажатии клавиши ENTER **Редактор кода** подставит соответствующий оператор `End Class`.  
   
 2.  Добавьте в класс `ImplementationClass` следующий оператор `Implements`, который определяет реализуемый классом интерфейс:  
   
-     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#100)]  
+     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_3.vb)]  
   
      Указанный отдельно от других элементов в начале класса или структуры оператор `Implements` показывает, что класс или структура реализуют интерфейс.  
   
@@ -68,25 +68,25 @@ caps.handback.revision: 22
   
 3.  Если вы работаете не в интегрированной среде разработки, то необходимо реализовать все члены интерфейса `MyInterface`.  В процедуру события `ImplementationClass` добавьте следующий код для реализации `Event1`, `Method1` и `Prop1`:  
   
-     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#101)]  
+     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_4.vb)]  
   
      Инструкция `Implements` указывает имена интерфейсов и членов реализуемых интерфейсов.  
   
 4.  Завершите определение `Prop1` путем добавления закрытых полей класса, в которых хранится значение свойства:  
   
-     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#102)]  
+     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_5.vb)]  
   
      Возвратите значение `pval` из метода Get доступа к свойства.  
   
-     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#103)]  
+     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_6.vb)]  
   
      Установите значение `pval` в методе Set свойства.  
   
-     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#104)]  
+     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_7.vb)]  
   
 5.  Завершите определение `Method1`, добавив следующий код.  
   
-     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#105)]  
+     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_8.vb)]  
   
 #### Чтобы проверить реализацию интерфейса  
   
@@ -94,23 +94,23 @@ caps.handback.revision: 22
   
 2.  Добавьте следующее поле `testInstance` в класс `Form1`:  
   
-     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#120)]  
+     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_9.vb)]  
   
      При объявлении `testInstance` как `WithEvents`, класс `Form1` может обрабатывать его события.  
   
 3.  Добавьте следующий обработчик событий к классу `Form1` для обработки событий, созданных `testInstance`:  
   
-     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#106)]  
+     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_10.vb)]  
   
 4.  Добавьте в класс `Form1` подпрограмму с именем `Test`, чтобы протестировать класс реализации:  
   
-     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#107)]  
+     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_11.vb)]  
   
      Процедура `Test` создает экземпляр класса, который реализует `MyInterface`, и присваивает этот экземпляр полю `testInstance`, задает свойство и запускает метод через интерфейс.  
   
 5.  Добавьте код для вызова процедуры `Test` из процедуры `Form1 Load` при запуске формы:  
   
-     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#108)]  
+     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_12.vb)]  
   
 6.  Нажав клавишу F5, запустите процедуру `Test`.  Появится сообщение "Prop1 was set to 9" \(значение свойства Prop1 установлено равным 9\).  После нажатия кнопки появится сообщение "The X parameter for Method1 is 5" \(параметр Х метода Method1 равен 5\).  Нажмите OK и появится сообщение "The event handler caught the event" \(событие перехвачено обработчиком\).  
   

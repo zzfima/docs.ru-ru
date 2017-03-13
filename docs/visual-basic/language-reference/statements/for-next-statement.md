@@ -75,11 +75,11 @@ Next [ counter ]
   
  В следующем примере запускается приложение переменной `index` со значением 1 и инкрементированы с каждой итерацией цикла, конечный после значение `index` достигает 5.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
  В следующем примере запускается приложение переменной `number` уменьшается на 2 и 0,25 для каждой итерации цикла, конечный после значение `number` достигает 0.  Аргумент `Step``-.25` уменьшает значение 0,25 для каждой итерации цикла.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
 >  [Оператор While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) или [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md) хорошо работают при неизвестен заранее раз щелкните выписки в цикле.  Однако, если предполагается повторить цикл определенное число раз, то лучше использовать цикл `For`...`Next`.  Число итераций определяется при первом входе в цикл.  
@@ -87,7 +87,7 @@ Next [ counter ]
 ## Вложенные циклы.  
  Циклы `For` могут вкладываться друг в друга.  В следующем примере демонстрируются вложенные структуры `For`...`Next` с разными значениями шага.  Внешний цикл создает строку для каждой итерации цикла.  Внутренний цикл уменьшает переменную счетчика цикла с каждой итерацией цикла.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
  Если циклы вложения, каждый цикл должны иметь уникальный переменную `counter`.  
   
@@ -100,7 +100,7 @@ Next [ counter ]
   
  В следующем примере показано использование оператора `Continue For` и `Exit For`.  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
  Любое число операторов `Exit For` можно разместить в цикле `For`…`Next`.  При использовании вложенных циклов `For`…`Next` конструкция `Exit For` закрывает самый внутренний цикл и передает управление следующему уровню вложения.  
   
@@ -168,17 +168,17 @@ Next [ counter ]
 ## Пример  
  В следующем примере показано удаление всех элементов из универсального списка.  Вместо [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md), пример показывает оператора `For`…`Next`, выполняются в порядке убывания.  В примере этот метод используется, поскольку метод `removeAt` приводит к созданию элементов после удаленного элемента имеет меньшее значение индекса.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
 ## Пример  
  Следующий пример выполняет цикл по перечисление, объявлено с помощью [Оператор Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
 ## Пример  
  В следующем примере параметры оператора используют класс, имеющий перегрузки оператора для `+` `-`, `>=`и `<=` операторов.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
 ## См. также  
  <xref:System.Collections.Generic.List%601>   

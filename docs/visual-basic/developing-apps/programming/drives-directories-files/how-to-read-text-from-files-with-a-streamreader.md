@@ -30,7 +30,7 @@ caps.handback.revision: 18
   
 -   Используйте метод `OpenTextFileReader` для открытия <xref:System.IO.TextReader>, указав файл.  В этом примере открывается файл `testfile.txt`, считывается строка из него и отображается в окне сообщения.  
   
-     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-text-from-fi_1.vb)]  
+     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-text-from-files-with-a-streamreader_1.vb)]  
   
 ## Отказоустойчивость  
  Этот файл должен быть текстовым файлом.  

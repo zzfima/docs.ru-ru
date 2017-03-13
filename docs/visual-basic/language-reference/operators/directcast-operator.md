@@ -46,7 +46,7 @@ caps.handback.revision: 23
 ## Пример  
  Далее показано два примера использования типа `DirectCast`. В первом примере во время его выполнения создается ошибка, а во втором он завершается успешно.  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/visualbasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
   
  В предыдущем примере типом времени выполнения `q` является `Double`.  `CType` выполняется успешно, поскольку `Double` можно преобразовать в `Integer`.  Однако первый `DirectCast` во время выполнения создает ошибку, так как тип времени выполнения `Double` не имеет отношения наследования с `Integer`, даже если существует преобразование.  Второй `DirectCast` завершается успешно, так как он преобразует из типа <xref:System.Windows.Forms.Form> в тип <xref:System.Windows.Forms.Control>, от которого наследуется <xref:System.Windows.Forms.Form>.  
   

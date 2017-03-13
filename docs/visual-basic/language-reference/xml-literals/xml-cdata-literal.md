@@ -62,7 +62,7 @@ caps.handback.revision: 16
 ## Пример  
  В следующем примере создается раздел CDATA, содержащий текст "может содержать теги \<XML\> литерала".  
   
- [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-cdata-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-cdata-literal_1.vb)]  
   
 ## См. также  
  <xref:System.Xml.Linq.XCData>   

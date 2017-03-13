@@ -60,9 +60,9 @@ variableorproperty += expression
 ## Пример  
  В следующем примере оператор `+=` используется для объединения значения одной переменной с другой.  Первая часть использует `+=` с числовыми переменными для добавления одного значения к другому.  Вторая часть использует `+=` с `String` переменными для добавления одной строки к другой.  В обоих случаях результат присваивается первой переменной.  
   
- [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
   
- [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_2.vb)]  
+ [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
   
  Значение `num1` становится 13, а значение `str1` становится "103".  
   

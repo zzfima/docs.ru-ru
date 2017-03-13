@@ -59,7 +59,7 @@ object(index)
 ## Пример  
  В следующем примере показано использование индексатора расширения для доступа ко второму дочернему узлу в коллекции объектов <xref:System.Xml.Linq.XElement>.  Доступ к коллекции осуществляется с помощью свойства дочерней оси, которое возвращает все дочерние элементы с именем `phone` в объекте `contact`.  
   
- [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/extension-indexer-property_1.vb)]  
+ [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
  В этом коде отображается следующий текст:  
   

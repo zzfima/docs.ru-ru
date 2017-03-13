@@ -19,7 +19,7 @@ caps.handback.revision: 31
 # Структуры (Руководство по программированию на C#)
 Структуры определяются с помощью ключевого слова [struct](../../../csharp/language-reference/keywords/struct.md), например:  
   
- [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/structs_1.cs)]  
   
  Структуры используют большую часть того же синтаксиса, что и классы, однако они более ограничены по сравнению с ними.  
   

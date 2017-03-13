@@ -31,7 +31,7 @@ caps.handback.revision: 17
 ## Пример  
   
 ### Код  
- [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/walkthrough-validating-t_1.vb)]  
+ [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/walkthrough-validating-that-passwords-are-complex_1.vb)]  
   
 ## Компиляция кода  
  Вызовите этот метод путем передачи строки, содержащей этот пароль.  

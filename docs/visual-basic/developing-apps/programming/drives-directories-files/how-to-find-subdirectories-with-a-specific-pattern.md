@@ -30,7 +30,7 @@ caps.handback.revision: 16
   
 -   Используйте метод `GetDirectories`, указав имя и путь к каталогу для поиска.  В следующем примере возвращаются и отображаются в элементе управления `ListBox1` все каталоги в структуре каталогов, имена которых содержат слово "Logs".  
   
-     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-subdirectori_1.vb)]  
+     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-subdirectories-with-a-specific-pattern_1.vb)]  
   
 ## Отказоустойчивость  
  При следующих условиях возможно возникновение исключения.  

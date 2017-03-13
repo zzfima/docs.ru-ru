@@ -23,7 +23,7 @@ caps.handback.revision: 29
   
  В следующем примере определен и предоставлен универсальный класс с простыми методами доступа [get](../../../csharp/language-reference/keywords/get.md) и [set](../../../csharp/language-reference/keywords/set.md), служащими для назначения и извлечения значений.  Класс `Program` создает экземпляр этого класса для хранения строк.  
   
- [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  Дополнительные примеры см. в разделе [Связанные разделы](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  

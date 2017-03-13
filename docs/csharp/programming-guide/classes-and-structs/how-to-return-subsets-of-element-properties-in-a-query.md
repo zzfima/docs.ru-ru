@@ -31,7 +31,7 @@ select student.ID;
 ## Пример  
  В следующем примере показывается, как использовать анонимный тип для возврата только поднабора свойств каждого из исходных элементов, соответствующих указанному условию.  
   
- [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#31)]  
+ [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-subsets-of-element-properties-in-a-query_1.cs)]  
   
  Обратите внимание, что анонимный тип использует имена исходного элемента для его свойств, если имена не заданы.  Чтобы назначить свойствам в анонимном типе новые имена, укажите следующий оператор `select`:  
   

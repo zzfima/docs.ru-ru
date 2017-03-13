@@ -22,25 +22,25 @@ caps.handback.revision: 17
 ## Передача типов значений по значению  
  В следующем примере демонстрируется передача параметров типа значения с помощью значения.  Переменная `n` передается с помощью значения в метод `SquareIt`.  Любые изменения, выполняемые внутри метода, не влияют на значение переменной.  
   
- [!code-cs[csProgGuideParameters#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-value-type-param_1.cs)]  
+ [!code-cs[csProgGuideParameters#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_1.cs)]  
   
  Переменная `n` тип значения.  Он содержит данные, значение `5`.  При вызове метода `SquareIt` содержимое переменной `n` копируется в параметр `x`, который возводится в квадрат внутри метода.  IN `Main`, однако значение  `n` это же после вызова  `SquareIt` метод как он был ранее.  Изменение, выполняется внутри метода влияет только на локальную переменную `x`.  
   
 ## Передача типов значений по ссылке  
  Следующий пример такой же, как и предыдущий, за исключением того, что аргумент передается в качестве a `ref` параметр.  Значение базового аргумента, `n`, если изменяется  `x` изменения в методе.  
   
- [!code-cs[csProgGuideParameters#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-value-type-param_2.cs)]  
+ [!code-cs[csProgGuideParameters#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_2.cs)]  
   
  В этом примере передается не значение переменной `n` а ссылка на переменную `n`.  Параметр `x` не является типом [int](../../../csharp/language-reference/keywords/int.md); он является ссылкой на тип `int`, в данном случае ссылкой на переменную `n`.  Следовательно, если `x` придает в квадрат внутри метода, что в квадрат, что фактически придано  `x` ссылается на  `n`.  
   
 ## Перестановка типов значений  
  Распространенным примером изменить значения аргументов метода обмена, где следует передать значение 2 переменной методу, а метод передает их содержимое.  Необходимо передать аргументы для метода обмена по ссылке.  В противном случае перейдите локальные копии параметров в методе, а отсутствие изменения не происходит в вызывающем методе.  Следующий пример меняет целочисленные значения.  
   
- [!code-cs[csProgGuideParameters#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-value-type-param_3.cs)]  
+ [!code-cs[csProgGuideParameters#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_3.cs)]  
   
  При вызове `SwapByRef` метод, использующий  `ref` ключевое слово в вызов, как показано в следующем примере.  
   
- [!code-cs[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-value-type-param_4.cs)]  
+ [!code-cs[csProgGuideParameters#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-value-type-parameters_4.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

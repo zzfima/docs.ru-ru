@@ -55,12 +55,12 @@ caps.handback.revision: 14
 ## Пример  
  В следующем примере показано, как объявить, расширить и реализовать ковариантный универсальный интерфейс.  В нем также показано, как используется неявное преобразование для классов, которые реализуют ковариантный интерфейс.  
   
- [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/out-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## Пример  
  В следующем примере показано, как объявить ковариантный универсальный делегат, создать его экземпляр и вызвать его.  В нем также показано, как применять неявное преобразование к типам делегатов.  
   
- [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/out-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
 ## См. также  
  [Вариативность в универсальных интерфейсах](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   

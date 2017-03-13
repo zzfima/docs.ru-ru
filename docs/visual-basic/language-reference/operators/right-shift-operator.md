@@ -69,7 +69,7 @@ result = pattern >> amount
 ## Пример  
  В приведенном ниже примере оператор `>>` используется для выполнения арифметических сдвигов целых значений вправо.  Результат всегда имеет тот же тип данных, что и выражение, для которого выполнен сдвиг.  
   
- [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
   
  В предыдущем примере получаются следующие результаты:  
   
@@ -87,7 +87,7 @@ result = pattern >> amount
   
  В приведенном ниже примере показаны арифметические сдвиги отрицательных значений.  
   
- [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
   
  В предыдущем примере получаются следующие результаты:  
   

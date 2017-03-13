@@ -31,7 +31,7 @@ caps.handback.revision: 15
  Определенные пользователем типы могут вызвать перегрузку оператора `>>`; тип первого операнда должен быть определен пользователем, а тип второго должен быть [int](../../../csharp/language-reference/keywords/int.md).  Дополнительные сведения см. [оператор](../../../csharp/language-reference/keywords/operator.md).  Если бинарный оператор перегружен, соответствующий оператор присваивания \(если таковой имеется\), также будет явно перегружен.  
   
 ## Пример  
- [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#26)]  
+ [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

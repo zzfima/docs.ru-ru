@@ -73,7 +73,7 @@ caps.handback.revision: 14
 ## Пример  
  В данном примере конструкция `#If...Then...#Else` используется для определения необходимости компиляции определенных частей кода.  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
 ## См. также  
  [Директива \#Const](../../../visual-basic/language-reference/directives/const-directive.md)   

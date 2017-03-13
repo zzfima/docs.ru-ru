@@ -63,7 +63,7 @@ Resume [ Next | line ]
 ## Пример  
  В этом примере инструкция `Resume` используется для окончания обработки ошибки в процедуре и возобновления выполнения, начиная с вызвавшего ошибку оператора.  Ошибка номер 55 генерируется, чтобы проиллюстрировать использование оператора `Resume`.  
   
- [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/resume-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## Требования  
  **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

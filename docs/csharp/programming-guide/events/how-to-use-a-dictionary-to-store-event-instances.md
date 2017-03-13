@@ -19,7 +19,7 @@ caps.handback.revision: 16
 Одно из применений `accessor-declarations` заключается в предоставлении доступа к большому числу событий без выделения поля для каждого события, но с использованием словаря для хранения экземпляров событий.  Это полезно только в том случае, когда имеется много событий, но ожидается, что большинство из них не будут реализованы.  
   
 ## Пример  
- [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-use-a-dictionary-_1.cs)]  
+ [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-use-a-dictionary-to-store-event-instances_1.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

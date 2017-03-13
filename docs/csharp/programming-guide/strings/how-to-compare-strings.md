@@ -29,17 +29,17 @@ caps.handback.revision: 23
 ## Пример  
  В следующем примере показано, как правильно сравнивать строки, значения которых не изменятся на основе языкового стандарта компьютера пользователя.  Кроме того, здесь показано свойство C\# *изоляция строк*.  При объявлении программой двух или более идентичных переменных строк компилятор сохраняет их в одном расположении.  Вызвав метод <xref:System.Object.ReferenceEquals%2A>, можно увидеть, что две строки фактически ссылаются на один и тот же объект в памяти.  Используйте метод <xref:System.String.Copy%2A?displayProperty=fullName>, чтобы избежать изоляции, как показано в следующем примере.  
   
- [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#11)]  
+ [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_1.cs)]  
   
 ## Пример  
  В следующем примере показано, как предпочтительно сравнивать строки с помощью методов <xref:System.String?displayProperty=fullName>, принимающих перечисление <xref:System.StringComparison>.  Обратите внимание, что методы экземпляра <xref:System.String.CompareTo%2A?displayProperty=fullName> здесь не используются, поскольку ни одна из перегрузок не принимает <xref:System.StringComparison>.  
   
- [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#31)]  
+ [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_2.cs)]  
   
 ## Пример  
  В следующем примере показано, как сортировать и производить поиск строк в массиве с учетом языка и региональных параметров с помощью статических методов <xref:System.Array>, принимающих параметр <xref:System.StringComparer?displayProperty=fullName>.  
   
- [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#32)]  
+ [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_3.cs)]  
   
  Классы коллекций, например <xref:System.Collections.Hashtable?displayProperty=fullName>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> и <xref:System.Collections.Generic.List%601?displayProperty=fullName>, имеют конструкторы, принимающие параметр <xref:System.StringComparer?displayProperty=fullName>, когда типом элементов или ключей является `string`.  В целом, по возможности следует использовать эти конструкторы и задавать либо `Ordinal`, либо `OrdinalIgnoreCase`.  
   

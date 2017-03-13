@@ -24,7 +24,7 @@ caps.handback.revision: 39
 ## Пример  
  В следующем примере значение `i` записывано на консоль и увеличивается на 1 при каждой итерации цикла.  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/csharp/for_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  Оператор `for` в предыдущем примере выполняет следующие действия.  
   
@@ -101,11 +101,11 @@ for (initializer; condition; iterator)
   
  Следующий пример иллюстрирует несколько менее общих вариантов: присвоение значения внешней переменной цикла в разделе инициализатора, то вызов метода `Console.WriteLine` как в инициализаторе, так и в разделах итератора, и изменить значения переменных в разделе 2 итератора.  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/csharp/for_2.cs)]  
+ [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  Все выражения, определяющие выписку `for` являются необязательными.  Например, следующий оператор создается бесконечный цикл.  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/csharp/for_3.cs)]  
+ [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

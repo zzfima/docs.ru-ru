@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
 -   Используйте перегрузки одного из методов <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName>, указывая имя и путь к каталогу для поиска в параметре `directory`.  В следующем примере возвращаются и добавляются в список  `ListBox1` все файлы, находящиеся в каталоге.  
   
-     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-get-the-collectio_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
   
 ## Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  

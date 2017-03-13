@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
  В следующем примере ключевое слово `Alias` используется для указания имени функции в advapi32.dll \(`GetUserNameA`\) на месте которой в этом примере используется `getUserName`.  Функция `getUserName` называется вместо этого `getUser` и отображает имя текущего пользователя.  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/alias-clause_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
   
 ## См. также  
  [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)

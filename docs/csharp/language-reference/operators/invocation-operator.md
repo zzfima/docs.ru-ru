@@ -24,11 +24,11 @@ caps.handback.revision: 22
   
 1.  Определение операций приведения или преобразования типов.  
   
-     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#1)]  
+     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
   
 2.  Вызов методов или делегатов.  
   
-     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#2)]  
+     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
   
 ## Заметки  
  Операция приведения явно вызывает оператор преобразования одного типа в другой. Если такой оператор преобразования не определен, операция приведения возвращает ошибку.  Информацию об определении оператора преобразования см. в разделах, посвященных [явным](../../../csharp/language-reference/keywords/explicit.md) и [неявным](../../../csharp/language-reference/keywords/implicit.md) операциям.  

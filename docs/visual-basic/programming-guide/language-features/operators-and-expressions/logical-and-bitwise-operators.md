@@ -43,7 +43,7 @@ caps.handback.revision: 22
 ## Унарный логический оператор  
  [Оператор Not](../../../../visual-basic/language-reference/operators/not-operator.md) выполняет логическое *отрицание* выражения `Boolean`.  Он возвращает логическую противоположность своего операнда.  Если выражение `True`, то `Not` возвращает `False`; если выражение `False`, то `Not` возвращает `True`.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
   
 ## Бинарные логические операторы  
  [Оператор And](../../../../visual-basic/language-reference/operators/and-operator.md) выполняет логическое *умножение* двух `Boolean` выражений.  Если оба выражения `True`, то `And` возвращает `True`.  Если хотя бы одно из выражений `False`, то `And` возвращает `False`.  
@@ -54,7 +54,7 @@ caps.handback.revision: 22
   
  В следующем примере показано использование операторов `And`, `Or` и `Xor`.  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
   
 ## Логические операторы сокращенного вычисления  
  [Оператор AndAlso](../../../../visual-basic/language-reference/operators/andalso-operator.md) похож на оператор `And` в том, что он также выполняет логическое умножение двух `Boolean` выражений.  Ключевое различие между ними состоит в том, что `AndAlso` выполняет *сокращенную* обработку.  Если первое выражение `AndAlso` равно `False`, то второе выражение не вычисляется, поскольку оно не повлияет на конечный результат, и `AndAlso` возвращает `False`.  
@@ -66,18 +66,18 @@ caps.handback.revision: 22
   
  Следующий пример иллюстрирует разницу между `And`, `Or` и их сокращенными аналогами.  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
   
  В предыдущем примере следует отметить, что некоторые важные коды внутри `checkIfValid()` не выполняются при сокращенном вызове.  Первая инструкция `If` вызывает `checkIfValid()`, хотя `12 > 45` принимает значение `False`, так как используется не сокращенный оператор `And`.  Вторая инструкция `If` не вызывает `checkIfValid()`, так как `12 > 45` принимает значение `False`, и `AndAlso` игнорирует второе выражение.  Третья инструкция `If` вызывает `checkIfValid()`, хотя `12 < 45` принимает значение `True`, так как используется не сокращенный оператор `Or`.  Четвертая инструкция `If` не вызывает `checkIfValid()`, так как `12 < 45` возвращает значение `True`, и `OrElse` игнорирует второе выражение.  
   
 ## Поразрядные операции  
  При поразрядных операциях используются два целых значения в двоичной форме \(по основанию 2\).  Они вычисляются по битам в соответствующих позициях, и значение базируется на сравнении.  В следующем примере демонстрируется оператор `And`.  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/logical-and-bitwise-oper_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
   
  В предыдущем примере для свойства `x` задается значение 1.  Это связано со следующими причинами:  
   

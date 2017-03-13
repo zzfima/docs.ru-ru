@@ -71,7 +71,7 @@ caps.handback.revision: 27
 ## Пример  
  Следующий пример использует оператор `Delegate`, чтобы объявить делегат для работы с двумя числами, и возвращает число.  Метод `DelegateTest` принимает экземпляр делегата этого типа и использует его для работы с парой чисел.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
 ## См. также  
  [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)   

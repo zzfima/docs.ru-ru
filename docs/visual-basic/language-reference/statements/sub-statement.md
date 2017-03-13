@@ -225,14 +225,14 @@ End Sub
 ## <a name="example"></a>Пример  
  В следующем примере используется `Sub` инструкции для определения имени, параметров и кода, образующих текст `Sub` процедуры.  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере `DelayAsync` — `Async``Function` с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `Return`, которая возвращает целое число. Таким образом, объявление функции `DelayAsync` должен иметь тип возвращаемого значения `Task(Of Integer)`. Так как возвращаемый тип является `Task(Of Integer)`, вычисление `Await` выражения в `DoSomethingAsync` возвращает целое число, как показано в следующей инструкции: `Dim result As Integer = Await delayTask`.  
   
   `startButton_Click` Процедура является примером `Async Sub` процедуры. Поскольку `DoSomethingAsync` является `Async` функции, задача для вызова `DoSomethingAsync` должен ожидать, как показано в следующей инструкции: `Await DoSomethingAsync()`.  `startButton_Click``Sub` Процедура должна быть определена с `Async` модификатор из-за `Await` выражение.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/visualbasic/asyncfunctionvb/mainwindow.xaml.vb#1)]  
+ [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
 ## <a name="see-also"></a>См. также  
  [Оператор Implements](../../../visual-basic/language-reference/statements/implements-statement.md)   

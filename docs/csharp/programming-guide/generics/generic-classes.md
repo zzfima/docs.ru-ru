@@ -43,27 +43,27 @@ caps.handback.revision: 30
   
  В правилах, действующих для параметров типов и ограничений, действует несколько неявных принципов поведения универсальных классов, особенно в отношении наследования и доступа к членам.  Перед тем, как продолжить, следует уяснить некоторые моменты.  Для универсального класса `Node<T>,` клиентский код может ссылаться на класс путем указания аргумента типа, чтобы создать закрытый тип \(`Node<int>`\).  Также можно не указывать параметр типа, чтобы создать открытый тип \(`Node<T>`\).  Универсальные классы могут быть унаследованы от конкретных закрытых или открытых базовых классов.  
   
- [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_1.cs)]  
+ [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
   
  Классы, не являющиеся универсальными, то есть конкретные классы, могут быть унаследованы от закрытых базовых классов, но не от открытых базовых классов и от параметров типов, поскольку во время выполнения клиентский код не может предоставить аргумент типа, необходимый для создания экземпляра базового класса.  
   
- [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_2.cs)]  
+ [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
   
  Универсальные классы, унаследованные от открытых базовых классов, должны предоставлять аргументы типа для всех параметров типа базового класса, к которым нет доступа у наследующего класса, как показано в следующем примере кода.  
   
- [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_3.cs)]  
+ [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
   
  Универсальные классы, унаследованные от открытых базовых классов, должны указывать ограничения, которые соответствуют ограничениям базового типа или являются более строгими.  
   
- [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_4.cs)]  
+ [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
   
  Универсальные типы могут использовать несколько параметров типа и ограничений.  
   
- [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_5.cs)]  
+ [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
   
  Открытые и закрытые типы можно использовать в качестве параметров методов.  
   
- [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_6.cs)]  
+ [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
   
  Если универсальных класс реализует интерфейс, все экземпляры этого класса могут быть приведены к этому интерфейсу.  
   

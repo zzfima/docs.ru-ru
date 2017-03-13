@@ -25,26 +25,26 @@ caps.handback.revision: 19
  В этом примере показан простой класс `Person`, имеющий два свойства: `Name`\(string\) и `Age` \(int\).  Оба свойства предоставляют методы доступа `get` и `set`, поэтому они считаются свойствами чтения и записи.  
   
 ## Пример  
- [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_1.cs)]  
+ [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_1.cs)]  
   
 ## Отказоустойчивость  
  В предыдущем примере свойства `Name` и `Age` являются [открытыми](../../../csharp/language-reference/keywords/public.md) и содержат методы доступа `get` и `set`.  При этом любой объект может выполнять чтение и запись данных свойств.  Однако иногда рекомендуется исключить один из методов доступа.  Если, например, будет опущен метод доступа `set`, средство станет доступным только для чтения.  
   
- [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_2.cs)]  
+ [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_2.cs)]  
   
  Можно также сделать один метод доступа открытым, а другой — закрытым или защищенным.  Дополнительные сведения см. в разделе [Простота использования асимметричных методов доступа\)](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
  Объявленные свойства могут использоваться в качестве полей класса.  Это приводит к более естественному синтаксису, где выполняется получение и установка значения свойства, как в следующих операторах.  
   
- [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_3.cs)]  
+ [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_3.cs)]  
   
  Обратите внимание, что в свойстве метода `set` доступна особая переменная `value`.  Эта переменная содержит значение, заданное пользователем, например:  
   
- [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_4.cs)]  
+ [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_4.cs)]  
   
  Обратите внимание на чистый синтаксис для увеличения значения свойства `Age` объекта `Person`.  
   
- [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_5.cs)]  
+ [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_5.cs)]  
   
  Если для моделирования свойств использовались отдельные методы `set` и `get`, эквивалентный код может выглядеть следующим образом.  
   
@@ -54,7 +54,7 @@ person.SetAge(person.GetAge() + 1);
   
  В этом примере метод `ToString` переопределен.  
   
- [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_6.cs)]  
+ [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_6.cs)]  
   
  Обратите внимание, что `ToString` не используется явно в программе.  Он вызывается по умолчанию вызовами `WriteLine`.  
   

@@ -35,21 +35,21 @@ caps.handback.revision: 24
   
 1.  Напишите объявление, включающее в себя уровень кода доступа, ключевое слово `Enum` и допустимое имя, как в следующих примерах, каждый из которых объявляет различные `Enum`.  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#3)]  
+     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
   
 2.  Определите константы в перечислении.  По умолчанию первая константа перечисления инициализируется `0`, а каждая последующая константа инициализируется значением, на единицу большим, чем значение предыдущей константы.  Например, следующее перечисление `Days` содержит константу с именем `Sunday` со значением `0`, константу с именем `Monday` со значением `1`, константу с именем `Tuesday` со значением `2` и так далее:  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#4)]  
+     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
   
 3.  Следует использовать оператор присваивания, чтобы явным образом присвоить значения константам перечисления.  Можно присваивать целочисленные значения, включая отрицательные.  Например, константы с отрицательными значениями могут означать ту или иную ошибку.  В следующем примере константе `Invalid` явным образом присваивается значение `–1`, а константе `Sunday` — значение `0`.  Поскольку константа `Saturday` идет в перечислении первой, она также инициализируется `0`.  Значением `Monday` является `1` \(на единицу больше, чем значение `Sunday`\); значением `Tuesday` является `2` и т. д.  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#5)]  
+     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
   
 ### Объявление перечисления в виде явного типа  
   
 -   Определите тип перечисления с помощью выражения `As`, как показано в следующем примере.  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#6)]  
+     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
 ## См. также  
  [Перечисления и уточнение имен](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

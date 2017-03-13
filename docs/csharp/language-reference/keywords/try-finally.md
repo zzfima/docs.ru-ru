@@ -29,11 +29,11 @@ caps.handback.revision: 25
 ## Пример  
  В следующем примере недопустимая инструкция преобразования вызывает исключение `System.InvalidCastException`.  Исключение является необработанным.  
   
- [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_1.cs)]  
   
  В следующем примере исключения из метода `TryCast` перехватывается в методе далее вверх по стеку вызовов.  
   
- [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_2.cs)]  
+ [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_2.cs)]  
   
  Дополнительные сведения о `finally` см. в разделе [try\-catch\-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   

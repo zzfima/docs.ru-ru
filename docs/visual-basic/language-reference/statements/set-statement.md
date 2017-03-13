@@ -93,7 +93,7 @@ End Set
 ## Пример  
  В следующем примере используется инструкция `Set` для задания значения свойства.  
   
- [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/set-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
 ## См. также  
  [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)   

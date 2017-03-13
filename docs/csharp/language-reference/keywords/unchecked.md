@@ -23,7 +23,7 @@ caps.handback.revision: 23
   
  Если в непроверяемом контексте результатом выполнения выражения является значение, выходящее за допустимые пределы значений конечного типа, то переполнение не помечается.  Вычисление в приведенном ниже примере выполняется в блоке или выражении `unchecked`, поэтому факт превышения результатом максимального значения целого числа игнорируется и переменной `int1` присваивается значение \-2 147 483 639.  
   
- [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_1.cs)]  
+ [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
   
  Если среда `unchecked` удалена, возникает ошибка компиляции.  Все члены данного выражения являются константами, поэтому переполнение можно обнаружить во время компиляции.  
   
@@ -34,7 +34,7 @@ caps.handback.revision: 23
 ## Пример  
  В этом примере показано, как использовать ключевое слово `unchecked`.  
   
- [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_2.cs)]  
+ [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

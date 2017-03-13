@@ -71,7 +71,7 @@ End Function
 ## Пример  
  В следующем примере показано, как вызывать процедуру с аргументами, переданными по позиции и с аргументами, переданными по имени.  Процедура имеет 2 необязательных параметра.  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/visualbasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## См. также  
  [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)   

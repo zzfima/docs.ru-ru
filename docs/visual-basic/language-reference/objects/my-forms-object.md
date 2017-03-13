@@ -53,7 +53,7 @@ caps.handback.revision: 22
 ## Пример  
  В данном примере изменяется название исходной формы `SidebarMenu`.  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
  Чтобы этот пример работал, проект должен иметь форму с именем `SidebarMenu`.  Дополнительные сведения см. в разделе [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/ru-ru/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   

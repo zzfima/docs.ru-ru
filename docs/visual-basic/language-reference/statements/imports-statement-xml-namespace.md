@@ -56,7 +56,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## Пример  
  В следующем примере производится импорт пространства имен XML по умолчанию и пространства имен XML, определенного с префиксом `ns`.  Затем создаются XML\-литералы, использующие оба пространства имен.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_1.vb)]  
+ [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
   
  В этом коде отображается следующий текст:  
   
@@ -72,7 +72,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## Пример  
  В следующем примере импортируется префикс пространства имен XML `ns`.  Затем создается XML\-литерал, который использует префикс пространства имен, и отображается конечная форма элемента.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_2.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
   
  В этом коде отображается следующий текст:  
   
@@ -90,7 +90,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## Пример  
  В следующем примере импортируется префикс пространства имен XML `ns`.  Затем используется префикс пространства имен для создания XML\-литерала и доступа к первому дочернему узлу, имеющему полное имя `ns:name`.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
   
  В этом коде отображается следующий текст:  
   

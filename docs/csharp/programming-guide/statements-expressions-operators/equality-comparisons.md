@@ -21,7 +21,7 @@ caps.handback.revision: 14
 ## Равенство ссылок  
  Равенство ссылок означает, что два объекта ссылаются на один и тот же объект.  Это может произойти при простом присваивании, как показано в следующем примере.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/equality-comparisons_1.cs)]  
+ [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  В этом фрагменте кода создается два объекта, но после инструкции присваивания они оба ссылаются на один и тот же объект.  Поэтому между ними устанавливается равенство ссылок.  Метод <xref:System.Object.ReferenceEquals%2A> позволяет определить, относятся ли две ссылки к одному и тому же объекту.  
   

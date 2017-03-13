@@ -34,8 +34,8 @@ caps.handback.revision: 11
   
 5.  Дважды щелкните элемент управления <xref:System.Windows.Forms.Button>, чтобы открыть редактор кода, и введите следующий код в обработчик событий `SearchButton_Click`:  
   
-     [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterSearch/DataRepeaterSearch.vb#1)]
-     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterSearchCS/DataRepeaterSearch.cs#1)]  
+     [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-search-data-in-a-datarepeater-control-visual-studio_1.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-search-data-in-a-datarepeater-control-visual-studio_1.cs)]  
   
      Замените *ProductsBindingSource* именем <xref:System.Windows.Forms.BindingSource> для <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> и замените *ProductID* именем поля, которое нужно найти.  
   

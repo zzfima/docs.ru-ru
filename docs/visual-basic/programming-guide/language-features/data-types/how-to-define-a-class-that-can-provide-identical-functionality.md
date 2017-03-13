@@ -73,7 +73,7 @@ caps.handback.revision: 29
   
      В следующем примере определяется класс, управляющий простым списком. Он хранит список во внутреннем массиве `items`, и использующий код может объявить тип данных элементов списка. Параметризованный конструктор позволяет использующему коду задать значение верхней границы `items`, и конструктор по умолчанию устанавливает это значение равным 9 \(для всех 10 элементов\).  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
   
      Можно объявить один класс из `simpleList` для хранения списка значений `Integer`, другой класс — для хранения списка значений `String` и еще один — для хранения значений `Date`. Кроме типа данных элементов списка, объекты, созданные из всех этих классов, ведут себя одинаково.  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 29
   
      Можно протестировать класс `simpleList` с помощью следующего кода.  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
 ## См. также  
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   

@@ -19,7 +19,7 @@ caps.handback.revision: 19
 # Закрытые конструкторы (Руководство по программированию на C#)
 Закрытый конструктор — это особый конструктор экземпляров.  Обычно он используется в классах, содержащих только статические элементы.  Если в классе один или несколько закрытых конструкторов и ни одного открытого конструктора, то прочие классы \(за исключением вложенных классов\) не смогут создавать экземпляры этого класса.  Примеры.  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_1.cs)]  
   
  Объявление пустого конструктора запрещает автоматическое создание конструктора по умолчанию.  Обратите внимание, что если не использовать с конструктором модификатор доступа, то по умолчанию он все равно будет закрытым.  Однако обычно используется модификатор [private](../../../csharp/language-reference/keywords/private.md), чтобы ясно обозначить невозможность создания экземпляров данного класса.  
   
@@ -28,11 +28,11 @@ caps.handback.revision: 19
 ## Пример  
  Ниже приведен пример класса с закрытым конструктором.  
   
- [!code-cs[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_2.cs)]  
   
  Обратите внимание, что если снять комментарий со следующего оператора в примере, возникнет ошибка, поскольку конструктор недоступен из\-за уровня защиты:  
   
- [!code-cs[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_3.cs)]  
+ [!code-cs[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

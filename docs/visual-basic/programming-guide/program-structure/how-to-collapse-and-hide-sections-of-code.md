@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
 -   Поместите раздел кода между инструкциями `#Region` и `#End Region`, как показано в следующем примере.  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/how-to-collapse-and-hide_1.vb)]  
+     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
      Блок `#Region` может использоваться несколько раз в файле кода; таким образом пользователи могут определять свои собственные блоки процедур и классов, которые, в свою очередь, можно свернуть.  Блоки `#Region` также могут быть вложены в другие блоки `#Region`.  
   

@@ -22,29 +22,29 @@ caps.handback.revision: 20
   
  В более ранних версиях C\# методы доступны как свойства только при условии, что у метода `get` нет параметров, а у метода `set` есть только один параметр значения.  Однако не все свойства COM удовлетворяют этим ограничениям.  Например, свойство [Range](http://go.microsoft.com/fwlink/?LinkId=166053) Excel имеет метод доступа `get`, которому требуется параметр для имени диапазона.  Раньше из\-за отсутствия возможности прямого обращения к свойству `Range` приходилось использовать вместо этого метод `get_Range`, как показано в следующем примере.  
   
- [!code-cs[csProgGuideIndexedProperties#1](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#1)]  
+ [!code-cs[csProgGuideIndexedProperties#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_1.cs)]  
   
  Индексированные свойства позволяют вместо этого использовать следующий код:  
   
- [!code-cs[csProgGuideIndexedProperties#2](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#2)]  
+ [!code-cs[csProgGuideIndexedProperties#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_2.cs)]  
   
 > [!NOTE]
 >  В предыдущем примере также используются [необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md), представленные в Visual C\# 2010, которые позволяют опустить `Type.Missing`.  
   
  Подобным образом для задания значения свойства `Value` объекта [Range](http://go.microsoft.com/fwlink/?LinkId=179211) в Visual C\# 2008 и более ранних версий требуется два аргумента.  Один предоставляет аргумент для необязательного параметра, указывающего тип значения диапазона.  Другой предоставляет значение для свойства `Value`.  До появления Visual C\# 2010 язык C\# допускал использование всего одного аргумента.  Поэтому вместо использования обычного метода "set" необходимо использовать метод `set_Value` или другое свойство — [Value2](http://go.microsoft.com/fwlink/?LinkId=166050).  В следующих примерах демонстрируются эти методы.  В примерах ячейке A1 задается значение `Name`.  
   
- [!code-cs[csProgGuideIndexedProperties#3](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#3)]  
+ [!code-cs[csProgGuideIndexedProperties#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_3.cs)]  
   
  Индексированные свойства позволяют вместо этого использовать следующий код.  
   
- [!code-cs[csProgGuideIndexedProperties#4](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#4)]  
+ [!code-cs[csProgGuideIndexedProperties#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_4.cs)]  
   
  Разработчики не могут создавать собственные индексированные свойства.  Эта функция поддерживает только использование имеющихся индексированных свойств.  
   
 ## Пример  
  Ниже приведен полный пример кода.  Подробные сведения о создании проекта, обращающегося к Office API, см. в разделе [Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка Visual C\#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   
- [!code-cs[csProgGuideIndexedProperties#5](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#5)]  
+ [!code-cs[csProgGuideIndexedProperties#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_5.cs)]  
   
 ## См. также  
  [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   

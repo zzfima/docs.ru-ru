@@ -27,14 +27,14 @@ caps.handback.revision: 18
   
  Ниже приведен пример метода доступа индексатора интерфейса:  
   
- [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_1.cs)]  
+ [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
  Сигнатура индексатора должна отличаться от сигнатур всех других индексаторов, объявленных в том же интерфейсе.  
   
 ## Пример  
  В следующем примере показана реализация индексаторов интерфейса.  
   
- [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_2.cs)]  
+ [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
  В предыдущем пример можно использовать явную реализацию члена интерфейса с помощью полного имени члена интерфейса.  Примеры.  
   

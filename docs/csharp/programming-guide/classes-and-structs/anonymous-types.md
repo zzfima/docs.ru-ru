@@ -41,7 +41,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Если имена членов в анонимном типе не указаны, компилятор присваивает членам анонимного типа одно и то же имя, поскольку для их инициализации используется свойство.  Необходимо указать имя для свойства, инициализируемого с помощью выражения, как показано в предыдущем примере.  В следующем примере используются имена свойств анонимного типа `Color` и `Price`.  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/anonymous-types_1.cs)]  
+ [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  Обычно если для инициализации переменной, используется анонимный тип, необходимо обозначить ее как неявно типизированную переменную с помощью функции [var](../../../csharp/language-reference/keywords/var.md).  Имя типа не может быть указано в объявлении переменной, так как доступ к базовому имени анонимного типа имеет только компилятор.  Дополнительные сведения о `var` см. в разделе [Неявно типизированные локальные переменные](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

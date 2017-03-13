@@ -35,7 +35,7 @@ caps.handback.revision: 16
   
 -   Ниже приведен пример того, как вставить текст, содержащийся в переменной `contactName` между открывающими и закрывающими элементами имени.  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_1.vb)]  
+     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
      В этом примере получается следующий результат:  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 16
   
 -   Ниже приведен пример того, как вставить текст, содержащийся в переменной `phoneType` в качестве значения атрибута `type`.  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_2.vb)]  
+     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
      В этом примере получается следующий результат:  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 16
   
      При создании элементов с помощью этого приема, необходимо завершить их с помощью тега \<\/\>.  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_3.vb)]  
+     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   
      В этом примере получается следующий результат:  
   

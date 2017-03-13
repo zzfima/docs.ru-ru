@@ -58,7 +58,7 @@ End
 ## Пример  
  В приведенном ниже примере оператор `End` используется для завершения выполнения кода по требованию пользователя.  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVersHelp60Controls/Form1.vb#64)]  
+ [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
   
 ## Примечания для разработчиков приложений смарт\-устройств  
  Этот оператор не поддерживается.  

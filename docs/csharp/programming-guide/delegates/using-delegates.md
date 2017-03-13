@@ -18,23 +18,23 @@ caps.handback.revision: 18
 # Использование делегатов (Руководство по программированию на C#)
 [Делегат](../../../csharp/language-reference/keywords/delegate.md) — это тип, который безопасно инкапсулирует метод, схожий с указателем функции в C и C\+\+.  В отличие от указателей функций в C делегаты объектно\-ориентированы, типобезопасны и безопасны.  Тип делегата задается его именем.  В следующем примере объявляется делегат с именем `Del`, который может инкапсулировать метод, использующий в качестве аргумента значение [string](../../../csharp/language-reference/keywords/string.md) и возвращающий значение [void](../../../csharp/language-reference/keywords/void.md).  
   
- [!code-cs[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#21)]  
+ [!code-cs[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
   
  Объект делегата обычно создается указанием имени метода, для которого делегат будет служить оболочкой, или с помощью [анонимного метода](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  После создания экземпляра делегата вызов метода, выполненный в делегате передается делегатом в этот метод.  Параметры, передаваемые делегату вызывающим объектом, передаются в метод, а возвращаемое методом значение \(при его наличии\) возвращается делегатом в вызывающий объект.  Эта процедура называется вызовом делегата.  Делегат, для которого создан экземпляр, можно вызвать, как если бы это был метод, для которого создается оболочка.  Например:  
   
- [!code-cs[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#22)]  
+ [!code-cs[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
   
- [!code-cs[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#23)]  
+ [!code-cs[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_3.cs)]  
   
  Типы делегатов являются производными от класса <xref:System.Delegate> в платформа.NET Framework.  Типы делегатов являются [запечатанными](../../../csharp/language-reference/keywords/sealed.md) — от них нельзя наследовать, а от <xref:System.Delegate> нельзя создавать производные пользовательские классы.  Поскольку созданный экземпляр делегата является объектом, его можно передавать как параметр или назначать свойству.  Это позволяет методу принимать делегат в качестве параметра и вызывать делегат в дальнейшем.  Эта процедура называется асинхронным обратным вызовом и обычно используется для уведомления вызывающего объекта о завершении длительной операции.  Когда делегат используется таким образом, коду, использующему делегат, не требуются сведения о реализации используемого метода.  Данные функциональные возможности аналогичны возможностям, предоставляемым интерфейсами инкапсуляции.  
   
  Обратный вызов также часто используется для задания настраиваемого метода сравнения и передачи этого делегата в метод сортировки.  Это позволяет сделать коду вызывающего объекта частью алгоритма сортировки.  В следующем примере метод использует тип `Del` тип в качестве параметра.  
   
- [!code-cs[csProgGuideDelegates#24](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#24)]  
+ [!code-cs[csProgGuideDelegates#24](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_4.cs)]  
   
  Затем в данный метод можно передать созданный ранее делегат:  
   
- [!code-cs[csProgGuideDelegates#25](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#25)]  
+ [!code-cs[csProgGuideDelegates#25](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_5.cs)]  
   
  и получить следующие выходные данные в окне консоли:  
   
@@ -44,21 +44,21 @@ caps.handback.revision: 18
   
  Если делегат создан в качестве оболочки для метода экземпляра, этот делегат ссылается и на экземпляр, и на метод.  Делегат не имеет сведений о типе экземпляра, кроме полученных из метода, для которого он является оболочкой, поэтому делегат может ссылаться на любой тип объекта, если для этого объекта есть метод, соответствующий сигнатуре делегата.  Если делегат создан в качестве оболочки для статического метода, он ссылается только на метод.  Рассмотрим следующее объявление:  
   
- [!code-cs[csProgGuideDelegates#26](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#26)]  
+ [!code-cs[csProgGuideDelegates#26](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_6.cs)]  
   
  Вместе с рассмотренным ранее статическим методом `DelegateMethod` есть три метода, для которых можно создать оболочку с помощью экземпляра `Del`.  
   
  При вызове делегат может вызывать сразу несколько методов.  Это называется многоадресностью.  Чтобы добавить в список методов делегата \(список вызова\) дополнительный метод, необходимо просто добавить два делегата с помощью оператора сложения или назначения сложения \("\+" или "\+\="\).  Например:  
   
- [!code-cs[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#27)]  
+ [!code-cs[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
   
  На данном этапе список вызова делегата `allMethodsDelegate` содержит три метода — `Method1`, `Method2` и `DelegateMethod`.  Три исходных делегата `d1`, `d2` и `d3` остаются без изменений.  При вызове `allMethodsDelegate` все три метода вызываются по порядку.  Если делегат использует параметры, передаваемые по ссылке, эта ссылка передается после каждого из трех методов, а все изменения одного из методов становятся видны в следующем методе.  Если любой из методов вызывает неперехваченное исключение, это исключение передается в вызывающий делегат объект, а последующие методы в списке вызова не вызываются.  Если делегат имеет возвращаемое значение и \(или\) выходные параметры, он возвращает возвращаемое значение и параметры последнего вызванного метода.  Чтобы удалить метод из списка вызова, используйте оператор decrement или назначения decrement \("\-" или «\-\=»\).  Например:  
   
- [!code-cs[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#28)]  
+ [!code-cs[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
   
  Поскольку типы делегата являются производными от `System.Delegate`, в делегате можно вызывать методы и свойства, определенные этим классом.  Например, чтобы определить число методов в списке вызова делегата, можно использовать код:  
   
- [!code-cs[csProgGuideDelegates#29](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#29)]  
+ [!code-cs[csProgGuideDelegates#29](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_9.cs)]  
   
  Делегаты, в списке вызова которых находятся несколько методов, является производным от <xref:System.MulticastDelegate>, являющегося подклассом класса `System.Delegate`.  Приведенный выше код работает в любом из случаев, так как оба класса поддерживают `GetInvocationList`.  
   
@@ -66,7 +66,7 @@ caps.handback.revision: 18
   
  Назначение сравнения делегатов двух различных типов во время компиляции вызовет ошибку компиляции.  Если экземпляры делегата статически относятся к типу `System.Delegate`, сравнение допустимо, но во время выполнения будет возвращено значение false.  Например:  
   
- [!code-cs[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#30)]  
+ [!code-cs[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

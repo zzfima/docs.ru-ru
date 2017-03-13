@@ -47,7 +47,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 ## Пример  
  В следующем примере импортируется `ns` как префикс пространства имен XML.  Затем используется префикс пространства имен для создания литерала XML и доступа к первому дочернему узлу, имеющему полное имя `ns:phone`.  Он затем передает этот дочерний узел в подпрограмму `ShowName`, которая создает полное имя с помощью оператора `GetXmlNamespace`.  Подпрограмма `ShowName` затем передает полное имя в метод <xref:System.Xml.Linq.XNode.Ancestors%2A>, чтобы получить родительский узел `ns:contact`.  
   
- [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/getxmlnamespace-operator_1.vb)]  
+ [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
   
  При вызове `TestGetXmlNamespace.RunSample()` отображается окно сообщения, содержащее следующий текст:  
   

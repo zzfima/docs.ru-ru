@@ -54,7 +54,7 @@ result = object1 IsNot object2
 ## Пример  
  Следующий код примера использует оба оператора: `Is` и `IsNot` для выполнения того же сравнения.  
   
- [!code-vb[VbVbalrOperators#29](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/isnot-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#29](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isnot-operator_1.vb)]  
   
 ## См. также  
  [Оператор Is](../../../visual-basic/language-reference/operators/is-operator.md)   

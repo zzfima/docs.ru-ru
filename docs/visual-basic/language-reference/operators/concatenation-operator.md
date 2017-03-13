@@ -59,7 +59,7 @@ result = expression1 & expression2
 ## Пример  
  В данном примере оператор `&` используется для принудительного объединения строк.  Результатом является строковое значение, представляющее объединение двух строковых операндов.  
   
- [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
 ## См. также  
  [Оператор &\=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)   

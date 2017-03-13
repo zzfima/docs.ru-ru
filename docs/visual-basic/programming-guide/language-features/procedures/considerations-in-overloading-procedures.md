@@ -94,11 +94,11 @@ caps.handback.revision: 26
 ## Неявные перегрузки для дополнительных параметров  
  Процедура с параметром [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) эквивалентна двум перегруженным процедурам, у одной из которых имеется дополнительный параметр, а у другой — нет.  Невозможно перегрузить такую процедуру с помощью списка параметров, соответствующего любой из них.  Это показано в следующих объявлениях:  
   
- [!code-vb[VbVbcnProcedures#58](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
  Для процедуры с несколькими необязательными параметрами существует набор неявных перегрузок, получающихся по той же схеме, которая приведена в предыдущем примере.  
   
@@ -113,13 +113,13 @@ caps.handback.revision: 26
   
  Эти неявные перегрузки иллюстрируются в следующем примере:  
   
- [!code-vb[VbVbcnProcedures#68](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
  Нельзя перегрузить процедуру со списком параметров, который принимает одномерный массив для массива параметров.  Однако можно использовать описания других неявных перегрузок.  Это показано в следующих объявлениях:  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
 ## Программирование без типов как альтернатива перегрузке  
  Если нужно разрешить вызывающему коду передавать различным типам данных на параметр, то альтернативный подход программирование без типов.  Можно отключить проверку типов, установив значение `Off`, используя параметр компилятора [Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) или [\/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md).  В этом случае нет необходимости объявлять тип данных параметра.  Однако у такого подхода есть ряд недостатков по сравнению с перегрузкой:  

@@ -37,7 +37,7 @@ These characters are from the extended ASCII character set (Windows code page 12
   
 ```  
   
- [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#33)]  
+ [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-rtf-to-plain-text_1.cs)]  
   
  Символы RTF кодируются восемью битами.  Тем не менее, пользователь может указать символы юникода в дополнение к дополнительным символам ASCII из заданных кодовых страниц.  Поскольку свойство <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> имеет тип [string](../../../csharp/language-reference/keywords/string.md), символы кодируются как Юникод UTF\-16.  Дополнительные символы ASCII и символы Юникода из исходного RTF\-документа правильно кодируются в выводимый текст.  
   

@@ -44,7 +44,7 @@ caps.handback.revision: 14
 ## Примеры  
  В следующем примере содержатся два элемента XML, внешний и внутренний.  Оба этих элемента содержат пробелы в текстовом содержимом.  Пробелы во внешнем элементе незначащие, поскольку он содержит только пробелы и XML\-элемент.  Пробелы во внутреннем элементе являются значащими, поскольку в нем содержатся и пробелы, и текст.  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/white-space-in-xml-liter_1.vb)]  
+ [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
   
  При запуске этот код отображает следующий текст.  
   

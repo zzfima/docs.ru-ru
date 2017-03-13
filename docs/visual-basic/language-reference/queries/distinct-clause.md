@@ -38,7 +38,7 @@ Distinct
 ## Пример  
  Следующее выражение запроса соединяет список клиентов и заказы клиентов.  Предложение `Distinct` включается для возврата списка уникальных имен клиентов и дат заказов.  
   
- [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#20)]  
+ [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
 ## См. также  
  [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

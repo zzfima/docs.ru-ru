@@ -19,7 +19,7 @@ caps.handback.revision: 21
 # Практическое руководство. Переопределение метода ToString (Руководство по программированию на C#)
 Каждый класс или структура в C\# неявно наследует классу <xref:System.Object>.  Поэтому каждый объект в языке C\# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта.  Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать содержимое этой переменной в виде строки:  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_1.cs)]  
+ [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
   
  При создании пользовательского класса или структуры необходимо переопределить метод <xref:System.Object.ToString%2A>, чтобы передать информацию о типе клиентскому коду.  
   
@@ -40,11 +40,11 @@ caps.handback.revision: 21
   
      В приведенном ниже примере возвращается не только имя класса, но и специфические данные для конкретного экземпляра класса.  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_2.cs)]  
+     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
      Метод `ToString` можно проверить с помощью показанного ниже кода.  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_3.cs)]  
+     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## См. также  
  <xref:System.IFormattable>   

@@ -36,11 +36,11 @@ caps.handback.revision: 31
   
  Если переменная типа значения, не допускает значения null, присвоить `Nothing` на него задается значение по умолчанию для своего объявленного типа.  Если тип содержит элементы переменных, для них задаются соответствующие значения по умолчанию.  Следующий пример иллюстрирует это для скалярных типов.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
  Если переменная ссылочного типа, то присвоить `Nothing` к переменным наборам его к a  `null` ссылка на тип переменной.  Переменная, которой присваивается a `null` ссылка не связана с любым объектом.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
  Проверяющий, является ли переменная ссылки или типа значения \(null\) `null`не используйте  `= Nothing` OR  `<> Nothing`.  Всегда пользуйтесь `Is Nothing` OR  `IsNot Nothing`.  
   
@@ -48,7 +48,7 @@ caps.handback.revision: 31
   
  В следующем примере показаны сравнения с использованием операторов `Is` и `IsNot`.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
  Если объявить переменную без использования предложения `As` и задать ей значение `Nothing`, переменная имеет тип `Object`.  Примером этого является `Dim something = Nothing`.  Ошибка времени компиляции в этом случае при возникновении `Option Strict` и  `Option Infer` .  
   

@@ -70,9 +70,9 @@ Option Explicit { On | Off }
 ## Пример  
  В этом примере показано применение оператора `Option Explicit` для включения обязательного объявления всех переменных.  Попытка использования необъявленных переменных приводит к появлению ошибки времени компиляции.  
   
- [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-explicit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  
   
- [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-explicit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
   
 ## См. также  
  [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)   

@@ -27,17 +27,17 @@ caps.handback.revision: 10
   
  Кроме ограничений интерфейса, предложение `where` может включать ограничение базового класса, указывающее, что тип должен обладать указанным классом в качестве базового \(или являться этим классом\), чтобы его можно было использовать как аргумент типа для этого универсального типа.  Если такое ограничение используется, оно должно располагаться перед любыми другими ограничениями данного параметра типа.  
   
- [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
  Предложение `where` также может включать ограничение конструктора.  Можно создать экземпляр параметра типа с помощью нового оператора, однако для этого оператор типа должен быть ограничен ограничением конструктора `new()`.  Ограничение [new\(\)](../../../csharp/language-reference/keywords/new-constraint.md) указывает компилятору, что у любого типа предоставленных аргументов должен быть доступный конструктор без параметров или по умолчанию.  Примеры.  
   
- [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
  Ограничение `new()` располагается последним в предложении `where`.  
   
  При работе с несколькими параметрами типа используйте по одному предложению `where` для каждого параметра типа, например:  
   
- [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_3.cs)]  
+ [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
  Также можно прикреплять ограничения к параметрам типа универсальных методов, например:  
   

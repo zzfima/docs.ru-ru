@@ -98,22 +98,22 @@ Loop { While | Until } condition
 ## Пример  
  В следующем примере инструкции в цикле выполняются до тех пор, пока значение переменной `index` остается больше 10.  Предложение`Until` завершает цикл.  
   
- [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_1.vb)]  
   
 ## Пример  
  В следующем примере используется оператор `While`  вместо `Until` , и `condition` проверяется в начале цикла, а не в конце.  
   
- [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_2.vb)]  
   
 ## Пример  
  В следующем примере условие `condition` останавливает цикл, когда переменная `index`  больше 100.  Оператор `If` в цикле, однако, вызывает инструкцию `Exit Do` , чтобы остановить цикл, когда переменная index больше 10.  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_3.vb)]  
   
 ## Пример  
  В следующем примере выполняется чтение всех строк текстового файла.  Метод <xref:System.IO.File.OpenText%2A> открывает файл и возвращает <xref:System.IO.StreamReader>, который считывает символы.  В условии `Do...Loop` метод <xref:System.IO.StreamReader.Peek%2A> `StreamReader` определяет, есть ли какие\-либо дополнительные символы.  
   
- [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
   
 ## См. также  
  [Циклические структуры](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   

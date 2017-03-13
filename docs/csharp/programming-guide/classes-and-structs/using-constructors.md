@@ -20,7 +20,7 @@ caps.handback.revision: 26
   
  В следующем примере класс `Taxi` определяется с помощью простого конструктора.  После этого с помощью оператора [new](../../../csharp/language-reference/keywords/new.md) создается экземпляр класса.  Конструктор `Taxi` вызывается оператором `new` сразу после выделения памяти для нового объекта.  
   
- [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
  Конструктор без параметров называется *конструктором по умолчанию*.  Конструкторы по умолчанию вызываются при создании экземпляров объекта с помощью оператора `new`, при этом для оператора `new` не указываются аргументы.  Для получения дополнительной информации см. [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
@@ -28,7 +28,7 @@ caps.handback.revision: 26
   
  Чтобы не допустить создание экземпляров класса, можно сделать конструктор закрытым:  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
   
  Для получения дополнительной информации см. [Закрытые конструкторы](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
@@ -59,33 +59,33 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Классы и `structs` могут определять конструкторы, использующие параметры.  Конструкторы, использующие параметры, нужно вызывать с помощью операторов `new` или [base](../../../csharp/language-reference/keywords/base.md).  Классы и `structs` также могут определять несколько конструкторов; они не требуются для определения конструктора по умолчанию.  Например:  
   
- [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_3.cs)]  
+ [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
  Этот класс можно создать с помощью любого из следующих операторов:  
   
- [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_4.cs)]  
+ [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
  Конструктор может использовать ключевое слово `base` для вызова конструктора базового класса.  Например:  
   
- [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_5.cs)]  
+ [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
  В этом примере конструктор базового класса вызывается перед выполнением блока конструктора.  Ключевое слово `base` можно использовать как с параметрами, так и без них.  Любые параметры конструктора можно указывать для оператора `base` или в составе выражения.  Для получения дополнительной информации см. [базовые](../../../csharp/language-reference/keywords/base.md).  
   
  Если конструктор базового класса не вызывается явным образом в производном классе при помощи ключевого слова `base`, то вызывается конструктор по умолчанию, если он существует.  Это означает, что следующие объявления конструкторов действуют одинаково:  
   
- [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_6.cs)]  
+ [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
   
- [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_7.cs)]  
+ [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
   
  Если в базовом классе нет конструктора по умолчанию, производный класс должен сделать явный вызов базового конструктора при помощи ключевого слова `base`.  
   
  Конструктор может вызывать в том же самом объекте другой конструктор с помощью ключевого слова [this](../../../csharp/language-reference/keywords/this.md).  Как и `base`, ключевое слово `this` можно использовать с параметрами или без параметрами, а все параметры конструктора доступны в качестве параметров `this` или в составе выражения.  Например, второй конструктор в предыдущем примере можно переписать с помощью `this`:  
   
- [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_8.cs)]  
+ [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
   
  Использование ключевого слова `this` в предыдущем примере приводит к вызову этого конструктора:  
   
- [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_9.cs)]  
+ [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
  Конструкторы могут быть отмечены модификаторами [public](../../../csharp/language-reference/keywords/public.md) \(открытый\), [private](../../../csharp/language-reference/keywords/private.md) \(закрытый\), [protected](../../../csharp/language-reference/keywords/protected.md) \(защищенный\), [internal](../../../csharp/language-reference/keywords/internal.md) \(внутренний\) или `protected` `internal` \(защищенный внутренний\).  Эти модификаторы доступа определяют порядок доступа пользователей класса к конструкторам класса.  Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   

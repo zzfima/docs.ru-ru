@@ -26,7 +26,7 @@ caps.handback.revision: 11
 В этом примере демонстрируется импорт префикса `ns` пространства имен XML и его использование в XML\-литералах и свойствах XML axis.  
   
 ## Пример  
- [!code-vb[VbXMLSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-declare-and-use-x_1.vb)]  
+ [!code-vb[VbXMLSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-declare-and-use-xml-namespace-prefixes_1.vb)]  
   
 ## Компиляция кода  
  Для этого примера необходимо следующее.  

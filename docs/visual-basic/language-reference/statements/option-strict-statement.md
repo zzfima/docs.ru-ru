@@ -147,19 +147,19 @@ Option Strict { On | Off }
 ## Пример  
  В следующих примерах покаханы ошибки времени компиляции, вызванные неявными преобразования типов, которые являются сужающими преобразованиями.  Эта категория ошибок соответствует состоянию **неявного преобразования** на странице **Компиляция**.  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
   
 ## Пример  
  В следующем примере демонстрируется ошибка во время компиляции, вызванная поздним связывание.  Эта категория ошибок соответствует состоянию **Позднее связывание; возможный сбой вызова во время выполнения** на странице **Компиляция**.  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
   
 ## Пример  
  В следующих примерах показаны ошибки, вызванные переменными, объявленные с неявным типом `Object`.  Эта категория ошибок соответствует состоянию **Неявный тип; предполагается объект** на странице **Компиляция**.  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
 ## См. также  
  [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   

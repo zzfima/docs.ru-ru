@@ -32,7 +32,7 @@ caps.handback.revision: 11
   
      В следующем примере кода обновляется значение всех элементов \<Price\> в XML\-документе.  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#4)]  
+     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
   
      В следующем примере показан образец XML\-источника и изменение XML из кода этого примера.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 11
   
 1.  Чтобы добавить атрибут к XML\-литералу, сначала получите ссылку на XML\-литерал.  После этого можно добавить атрибут, добавив новое свойство оси атрибута XML.  К XML\-литералу можно также добавить новый объект <xref:System.Xml.Linq.XAttribute>, воспользовавшись методом <xref:System.Xml.Linq.XContainer.Add%2A>.  В следующем примере показаны обе возможности.  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#5)]  
+     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
   
      В следующем примере показан образец XML\-источника и изменение XML из кода этого примера.  
   
@@ -121,7 +121,7 @@ caps.handback.revision: 11
   
      В следующем примере показаны примеры использования каждого из этих методов.  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#6)]  
+     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
   
      В следующем примере показан образец XML\-источника и изменение XML из кода этого примера.  
   
@@ -165,7 +165,7 @@ caps.handback.revision: 11
   
 1.  Чтобы удалить элемент или атрибут из XML\-литерала, получите ссылку на элемент или атрибут и вызовите метод `Remove`, как показано в следующем примере.  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#7)]  
+     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
   
      В следующем примере показан образец XML\-источника и изменение XML из кода этого примера.  
   
@@ -213,7 +213,7 @@ caps.handback.revision: 11
   
      В следующем примере все элементы \<Description\> заменяются элементами \<Abstract\>.  Содержимое элемента \<Description\> сохраняется в новом элементе \<Abstract\> с помощью свойства <xref:System.Xml.Linq.XContainer.Nodes%2A> объекта <xref:System.Xml.Linq.XElement>.  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#8)]  
+     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
   
      В следующем примере показан образец XML\-источника и изменение XML из кода этого примера.  
   

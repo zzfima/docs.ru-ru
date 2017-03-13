@@ -39,7 +39,7 @@ x = x | y
  Оператор `|=` нельзя перегрузить непосредственно, однако пользовательские типы могут перегрузить [оператор &#124;](../../../csharp/language-reference/operators/or-operator.md) \(см. [оператор](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Пример  
- [!code-cs[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#10)]  
+ [!code-cs[csRefOperators#10](../../../csharp/language-reference/operators/codesnippet/CSharp/or-assignment-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

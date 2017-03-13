@@ -39,11 +39,11 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере определяется оператор `+` для структуры с именем `height`.  Структура использует высоту в футах и дюймах.  Один *дюйм* составляет 2,54 сантиметра, а один *фут* \- 12 дюймов.  Чтобы обеспечить нормализованные значения \(дюйм \<12.0\), конструктор выполняет арифметическое сложение *по модулю* 12.  Оператор `+` использует конструктор для создания нормализованных значений.  
   
- [!code-vb[VbVbcnProcedures#25](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
   
  Можно проверить структуру  `height`  с помощью следующего кода.  
   
- [!code-vb[VbVbcnProcedures#26](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
  Дополнительные сведения и примеры содержатся в [Перегрузка операторов в Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

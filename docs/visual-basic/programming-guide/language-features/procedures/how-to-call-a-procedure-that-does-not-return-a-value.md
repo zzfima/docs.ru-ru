@@ -35,7 +35,7 @@ caps.handback.revision: 17
   
      В следующем примере вызывается функция [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> для активации окна приложения.  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> принимает заголовок окна в качестве единственного аргумента.  Процедура не возвращает значения в вызывающий код.  Если программа "Блокнот" не запущена, в примере будет создано исключение <xref:System.ArgumentException>.  При выполнении процедуры `Shell` предполагается, что указанные пути соответствуют фактическим путям к приложениям.  
   
-     [!code-vb[VbVbalrCatRef#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_1_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   

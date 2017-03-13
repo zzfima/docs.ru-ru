@@ -86,17 +86,17 @@ End Namespace
 ## Пример  
  В следующем примере объявляются два пространства имен, причем одно из них вложено в другое.  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
 ## Пример  
  В следующем примере в одной строке объявляется несколько вложенных пространств имен. По смыслу этот пример эквивалентен предыдущему.  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
 ## Пример  
  В следующем примере выполняется обращение к классу, определенному в предыдущих примерах.  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
 ## Пример  
  В следующем примере определяется схема нового универсального списка класса и она добавляется к пространству имен <xref:System.Collections.Generic?displayProperty=fullName>.  

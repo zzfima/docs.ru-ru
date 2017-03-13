@@ -44,20 +44,20 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  Предложение `Select` может ссылаться на переменные в текущей области.  Это включает диапазон переменных, определенных в предложении `From` \(или в предложениях `From`\).  Также включаются любые новые переменные, созданные с псевдонимом с помощью предложений `Aggregate`, `Let`, `Group By` или `Group Join`, и переменные из предыдущего предложения `Select` в выражении запроса.  Предложение `Select` может также включать статические значения.  Например, ниже приведен пример выражения запроса, в котором предложение `Select` определяет результат запроса как новый анонимный тип с четырьмя элементами: `ProductName`, `Price`, `Discount` и `DiscountedPrice`.  Значения членов `ProductName` и `Price` берутся из переменной диапазона продукта, которая определяется в условии `From`.  Значение члена `DiscountedPrice` вычисляется в предложении `Let`.  Член `Discount` представляет собой статическое значение.  
   
- [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#27)]  
+ [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
   
  Предложение `Select` представляет новый набор переменных диапазонов для последующих запросов предложения, а также предыдущие переменные диапазонов, которые больше не принадлежат области.  Последнее предложение `Select` в выражении запроса определяет возвращаемое значение запроса.  Например, следующий запрос возвращает имя компании и идентификатор каждого заказчика для которого итоговая сумма превышает 500.  Первое предложение `Select` определяет переменные диапазона для предложения `Where` и второго предложения `Select`.  Второе предложение `Select` определяет значения, возвращаемые запросом в виде нового анонимного типа.  
   
- [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#28)]  
+ [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
   
  Если предложение `Select` определяет один элемент для возврата, выражение запроса возвращает коллекцию типа одного элемента.  Если в предложении `Select` определяется несколько возвращаемых элементов, выражение запроса возвращает коллекцию нового анонимного типа на основе выбранных элементов.  Например, следующие два запроса возвращают коллекции двух различных типов на основе предложения `Select`.  В первом запросе возвращается коллекция названий компаний в виде строк.  Второй запрос возвращает коллекцию объектов `Customer`, заполненную названиями компаний и сведениями об адресах.  
   
- [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#29)]  
+ [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
   
 ## Пример  
  Следующее выражение запроса использует предложение `From` для объявления переменной диапазона `cust` для коллекции `customers`.  Предложение `Select` выбирает имя и идентификатор клиента, после чего заполняет столбцы `CompanyName` и `CustomerID` новой переменной диапазона.  Оператор `For Each` просматривает каждый возвращаемый объект и отображает столбцы `CompanyName` и `CustomerID` для каждой записи.  
   
- [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#30)]  
+ [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
   
 ## См. также  
  [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

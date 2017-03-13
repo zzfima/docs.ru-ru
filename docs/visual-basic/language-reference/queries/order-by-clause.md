@@ -46,17 +46,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## Пример  
  Следующее выражение запроса использует предложение `From` для объявления диапазона переменной `book` для коллекции `books`.  Предложение `Order By` сортирует результаты запроса по цене в возрастающем порядке \(по умолчанию\).  Книги с одной и той же ценой сортируются по названию в возрастающем порядке.  Предложение `Select` выбирает свойства `Title` и `Price` в качестве значений, возвращаемых по запросу.  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#24)]  
+ [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
 ## Пример  
  Следующее выражение запроса использует предложение `Order By` для сортировки результатов запроса по цене в убывающем порядке.  Книги с одной и той же ценой сортируются по названию в возрастающем порядке.  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#25)]  
+ [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
 ## Пример  
  Следующее выражение запроса использует предложение `Select` для выбора названия книги, цены, даты издания и автора.  Затем заполняются поля `Title`, `Price`, `PublishDate` и `Author` переменной диапазона для новой области.   Предложение `Order By` упорядочивает новую переменную диапазона по имени автора, названию книги и затем по цене.  Каждый столбец сортируется в порядке по умолчанию \(по возрастанию\).  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#26)]  
+ [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
 ## См. также  
  [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

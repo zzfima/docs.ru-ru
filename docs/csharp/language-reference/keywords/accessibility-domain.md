@@ -23,7 +23,7 @@ caps.handback.revision: 17
 ## Пример  
  Этот пример содержит тип верхнего уровня `T1` и два вложенных класса: `M1` и `M2`.  Классы содержат поля, имеющие различную объявленную доступность.  В методе `Main` после каждого оператора следует комментарий, указывающий домен доступности для каждого члена.  Обратите внимание, что операторы, ссылающиеся на недоступные члены, закомментированы.  Если необходимо просмотреть сообщения об ошибках, выдаваемые компилятором при попытке ссылки на недоступный член, удаляйте комментарии по одному.  
   
- [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#4)]  
+ [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

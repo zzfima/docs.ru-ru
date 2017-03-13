@@ -30,7 +30,7 @@ caps.handback.revision: 15
   
      [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] создаст пустой метод обработчика событий и добавит его в код.  Код можно также добавить вручную в представлении **Код**.  Например, следующие строки кода объявляют метод обработчика событий, который будет выполнен при инициировании классом `Form` события `Load`.  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-subscribe-to-and-_1.cs)]  
+     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      Строка кода, требуемая для подписки на событие, также создается автоматически в методе `InitializeComponent` в файле Form1.Designer.cs проекта.  Она имеет следующий вид.  
   

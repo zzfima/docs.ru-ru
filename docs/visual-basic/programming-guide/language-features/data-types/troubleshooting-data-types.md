@@ -50,7 +50,7 @@ caps.handback.revision: 28
   
  В следующем примере показано неправильное и правильное сравнение двух значений `Double`.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
  Предыдущий пример использует метод <xref:System.Double.ToString%2A> структуры <xref:System.Double> таким образом, чтобы он мог указать точность лучше, чем ключевое слово `CStr`.  По умолчанию это 15 цифр, но формат "G17" расширяет его до 17 цифр.  
   
@@ -66,7 +66,7 @@ caps.handback.revision: 28
   
  В следующем примере показана возможная неточность операндов с плавающей запятой.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
  Предыдущий пример использует метод <xref:System.Double.ToString%2A> структуры <xref:System.Double> таким образом, чтобы он мог указать точность лучше, чем ключевое слово `CStr`.  По умолчанию это 15 цифр, но формат "G17" расширяет его до 17 цифр.  
   
@@ -103,7 +103,7 @@ caps.handback.revision: 28
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
  Всегда существует угроза при использовании сужающего преобразования, так как возможны сбои во время выполнения.  Например, преобразование из `String` в `Char` может пройти неудачно, если значение `String` содержит более одного знака.  Поэтому в программировании лучше использовать знак типа `C`.  
   

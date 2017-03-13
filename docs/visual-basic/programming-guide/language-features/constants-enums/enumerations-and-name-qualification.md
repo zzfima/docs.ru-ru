@@ -36,26 +36,26 @@ caps.handback.revision: 20
 
 Обычно при ссылке на член перечисления необходимо уточнить имя члена с помощью имени перечисления.  Например, при ссылке на член `Sunday` перечисления `Days` следует использовать следующий синтаксис:  
   
- [!code-vb[VbEnumsTask#18](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#18)]  
+ [!code-vb[VbEnumsTask#18](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_1.vb)]  
   
 ## Использование оператора Imports  
  Чтобы не использовать полные имена, можно добавить в раздел объявлений пространства имен в коде оператор `Imports`, как показано в следующем примере:  
   
- [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#22)]  
+ [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
  Оператор `Imports` импортирует имена пространств имен из проектов и сборок, указанных в ссылке, а также из того же проекта, в котором находится модуль с этим оператором.  После добавления этого оператора можно указывать в ссылках члены перечисления без дополнительного уточнения, как показано в следующем примере:  
   
- [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#24)]  
+ [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_3.vb)]  
   
  Организуя наборы связанных констант в перечисления, можно использовать одни и те же имена констант в различных контекстах.  Например, можно использовать одни и те же имена для констант дней недели в перечислениях `Days` и `WorkDays`.  Если с перечислениями используется оператор `Imports`, следует быть аккуратным, чтобы избежать неоднозначных ссылок.  Рассмотрим следующий пример:  
   
- [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#22)]  
+ [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
- [!code-vb[VbEnumsTask#25](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#25)]  
+ [!code-vb[VbEnumsTask#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_4.vb)]  
   
  Если `Monday` является членом как перечисления `Days`, так и `Workdays`, этот код вызовет ошибку компиляции.  Чтобы избежать неоднозначности при ссылке на отдельную константу, уточните имя константы с помощью имени перечисления.  В приведенном ниже коде содержится ссылка на константы `Saturday` в перечислениях `Days` и `WorkDays`.  
   
- [!code-vb[VbEnumsTask#32](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#32)]  
+ [!code-vb[VbEnumsTask#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_5.vb)]  
   
 ## См. также  
  [Константы и перечисления](../../../../visual-basic/language-reference/constants-and-enumerations.md)   

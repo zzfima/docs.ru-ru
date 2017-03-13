@@ -49,7 +49,7 @@ caps.handback.revision: 21
   
      В следующем примере оператор разбивается на четыре строки, каждую из которых \(кроме последней\) завершают символы продолжения строки:  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
      Использование этой последовательности облегчает чтение кода как с экрана, так и в распечатанном виде.  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 21
   
 -   Разделите инструкции двоеточием \(`:`\), как показано в следующем примере:  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
 ## См. также  
  [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   

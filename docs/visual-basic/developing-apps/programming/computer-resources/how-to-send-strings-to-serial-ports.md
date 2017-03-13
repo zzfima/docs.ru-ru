@@ -35,7 +35,7 @@ caps.handback.revision: 13
   
  Метод <xref:System.IO.Ports.SerialPort.WriteLine%2A> позволяет отправить данные в последовательный порт.  
   
- [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#33)]  
+ [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]  
   
 ## Компиляция кода  
   

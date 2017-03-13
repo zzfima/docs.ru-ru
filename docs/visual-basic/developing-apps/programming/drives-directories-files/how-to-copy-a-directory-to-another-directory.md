@@ -32,7 +32,7 @@ caps.handback.revision: 19
   
 -   Используйте метод `CopyDirectory`, указав имена исходного каталога и каталога назначения.  В следующем примере каталог `TestDirectory1` копируется в каталог `TestDirectory2`, при этом происходит перезапись существующих файлов.  
   
-     [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-copy-a-directory-_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
      Данный пример кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он находится в разделе **Файловая система — Обработка дисков, папок и файлов**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
   

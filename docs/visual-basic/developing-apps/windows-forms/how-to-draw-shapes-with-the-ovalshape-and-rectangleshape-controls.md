@@ -55,8 +55,8 @@ caps.handback.revision: 15
   
 4.  Добавьте следующий код в процедуру `Event`:  
   
-     [!code-cs[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerpacksShapeCS/VbPowerpacksShape.cs#1)]
-     [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerpacksShape/VbPowerpacksShape.vb#1)]  
+     [!code-cs[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.cs)]
+     [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.vb)]  
   
 ## Настройка фигур  
  При использовании параметров по умолчанию элементы управления <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> и <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> отображаются со сплошной черной рамкой шириной в один пиксель и с прозрачным фоном.  С помощью свойств можно изменить ширину, стиль и цвет рамки.  Дополнительные свойства позволяют изменить фон фигуры на заливку сплошным цветом, узор, градиентную заливку или рисунок.  

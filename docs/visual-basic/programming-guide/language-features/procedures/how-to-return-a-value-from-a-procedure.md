@@ -35,11 +35,11 @@ caps.handback.revision: 12
   
      В следующей процедуре `Function` рассчитывается самая длинная сторона \(гипотенуза\) прямоугольного треугольника и возвращается ее значение в вызывающий код.  
   
-     [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
      В следующем примере показан типичный вызов `hypotenuse`, который сохраняет возвращаемое значение.  
   
-     [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
 ### Возвращение значения с помощью Exit Function или End Function  
   

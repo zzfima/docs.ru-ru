@@ -91,7 +91,7 @@ End Event
 ## Заметки  
  После объявления события используйте оператор `RaiseEvent` для создания события.  Типичные события можно объявлять и создавать, как показано в следующих фрагментах кода.  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#13)]  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
 >  Аргументы событий можно объявлять так же, как аргументы процедур, за следующими исключениями: события не могут иметь именованные аргументы, аргументы `ParamArray` и аргументы `Optional`.  События не имеют возвращаемых значений.  
@@ -115,11 +115,11 @@ End Event
   
  Добавьте переменную `WithEvents` в раздел объявлений класса `Form1`:  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#14)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
   
  Добавьте следующий код в код для `Form1`.  Замените все повторяющиеся процедуры, которые могут существовать, такие как `Form_Load` или `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#15)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
   
  Нажмите клавишу F5 для запуска примера и нажмите кнопку **Start**.  Первое текстовое поле начинает обратный отсчет.  По истечении всего времени \(10 секунд\) в первом текстовом поле отображается надпись Done.  
   

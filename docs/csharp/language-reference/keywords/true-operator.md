@@ -22,7 +22,7 @@ caps.handback.revision: 19
   
  С нулевыми логическими значениями выражение `a != b` не обязательно равно `!(a == b)`, поскольку одно или оба значения могут быть нулевыми.  Необходимо отдельно перегрузить операторы `true` и `false`, чтобы правильно определить нулевые значения в выражении.  В следующем примере показана перегрузка и применение операторов `true` и `false`.  
   
- [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#16)]  
+ [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-operator_1.cs)]  
   
  Тип, перегружающий операторы `true` и `false`, может использоваться для выражения управления в операторах [if](../../../csharp/language-reference/keywords/if-else.md), [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md) и [for](../../../csharp/language-reference/keywords/for.md) и в [условных выражениях](../../../csharp/language-reference/operators/conditional-operator.md).  
   

@@ -49,7 +49,7 @@ caps.handback.revision: 13
 ## Пример  
  Следующий код демонстрирует 2 примерам ключевого слова where `Call` необходимости для вызова процедуры.  В обоих примерах, выражение не начинается с идентификатором.  
   
- [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/call-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
 ## См. также  
  [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   

@@ -21,7 +21,7 @@ caps.handback.revision: 31
 ## Пример  
  В следующем примере показано, как использовать оператор using.  
   
- [!code-cs[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
   
 ## Заметки  
  <xref:System.IO.File> и <xref:System.Drawing.Font> являются примерами управляемых типов, имеющих доступ к неуправляемым ресурсам \(в этом случае файл обрабатывает контексты устройств\).  Существует много других видов неуправляемых ресурсов и типов библиотек классов, которые их инкапсулируют.  Все эти типы должны реализовать интерфейс <xref:System.IDisposable>.  
@@ -30,15 +30,15 @@ caps.handback.revision: 31
   
  Оператор `using` гарантирует вызов метода <xref:System.IDisposable.Dispose%2A>, даже если при вызове методов в объекте происходит исключение.  Такого же результата можно достичь при размещении объекта в блоке try и последующем вызове метода <xref:System.IDisposable.Dispose%2A> в блоке finally; фактически, это способ преобразования оператора `using` компилятором.  Приведенный ранее пример кода во время компиляции расширяется до следующего кода \(при создании ограниченной области действия для объекта обратите внимание на дополнительные фигурные скобки\).  
   
- [!code-cs[csrefKeywordsNamespace#5](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_2.cs)]  
   
  Несколько экземпляров типа могут быть объявлены в операторе `using`, как показано в следующем примере.  
   
- [!code-cs[csrefKeywordsNamespace#6](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_3.cs)]  
+ [!code-cs[csrefKeywordsNamespace#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_3.cs)]  
   
  Можно создать объект ресурсов, а затем передать переменную в оператор `using`, однако этот способ не является рекомендованным.  В этом случае после того, как элемент управления выводится из блока `using`, объект остается в области действия, даже если он больше не сможет обращаться к неуправляемым ресурсам.  Другими словами, он больше не будет полностью инициализирован.  При попытке использовать объект вне блока `using` возникает риск вызова исключения.  По этой причине предпочтительно создать объект в операторе `using` и ограничить область его действия блоком `using`.  
   
- [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_4.cs)]  
+ [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -15,7 +15,7 @@ caps.handback.revision: 22
   
 4.  Замените класс `Program` на следующий код.  
   
-     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#26)]  
+     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  Добавьте в метод `Main` в классе `DynamicPredicates` под объявлением `ids` следующую строку.  
   
@@ -56,7 +56,7 @@ caps.handback.revision: 22
   
 2.  Скопируйте следующий метод и вставьте его в класс `DynamicPredicates`.  
   
-     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#27)]  
+     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  В окне **Аргументы командной строки** замените идентификационные номера из предыдущей процедуры на целочисленное значение между 1 и 4.  
   

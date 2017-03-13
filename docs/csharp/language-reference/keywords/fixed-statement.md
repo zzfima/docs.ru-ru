@@ -23,11 +23,11 @@ caps.handback.revision: 24
   
  Оператор `fixed` задает указатель на управляемую переменную и "закрепляет" эту переменную во время выполнения оператора.  Без `fixed`, указатели на перемещаемые управляемые переменные были бы мало полезны, так как при сборке мусора переменные переносились бы непредсказуемым образом.  Компилятор C\# позволяет назначить указатель только управляемой переменной в операторе `fixed`.  
   
- [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#1)]  
+ [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_1.cs)]  
   
  Можно инициализировать указатель, используя массив, строку, буфер фиксированного размера или адрес переменной.  В следующем примере демонстрируется использование переменных адресов, массивов и строк.  Дополнительные сведения о буферах фиксированного размера см. в разделе [Буферы фиксированного размера](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).  
   
- [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#2)]  
+ [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_2.cs)]  
   
  Можно инициализировать несколько указателей одного типа.  
   
@@ -37,7 +37,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
   
  Чтобы инициализировать указатели разных типов, просто разместите операторы `fixed`, как показано в следующем примере.  
   
- [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#3)]  
+ [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_3.cs)]  
   
  После выполнения кода в операторе закрепление любых закрепленных переменных снимается и они могут пройти сборку мусора.  Таким образом, не следует указывать на эти переменные за пределами оператора `fixed`.  
   
@@ -47,7 +47,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
  В небезопасном режиме память выделяется стеку, где сборка мусора не производится и, соответственно, закрепление не требуется.  Дополнительные сведения см. в разделе [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md).  
   
 ## Пример  
- [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#4)]  
+ [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

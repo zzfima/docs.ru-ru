@@ -23,12 +23,12 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере показан общий сценарий, в котором необходимо ключевое слово `var`: выражение запроса, создающее последовательность анонимных типов.  В данном сценарии требуется, чтобы переменная запроса и переменная итерации в операторе `foreach` были неявно типизированы с помощью `var`, поскольку доступ к имени типа для анонимного типа закрыт.  Дополнительные сведения об анонимных типах см. в разделе [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
- [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#32)]  
+ [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
   
 ## Пример  
  В следующем примере описана сходная ситуация использования ключевого слова `var`, но при этом использование `var` необязательно.  Поскольку `student.LastName` является строкой, выполнение запроса возвращает последовательность строк.  В связи с этим тип `queryID` может быть объявлен как `System.Collections.Generic.IEnumerable<string>` вместо `var`.  Ключевое слово `var` используется для удобства.  В данном примере переменная итерации в операторе `foreach` явно типизирована как строка, но она может быть также объявлена при помощи ключевого слова `var`.  Поскольку тип переменной итерации не является анонимным типом, использование `var` необязательно.  Важно помнить, что само ключевое слово `var` является не типом, а инструкцией компилятору для определения и назначения типа.  
   
- [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#33)]  
+ [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

@@ -123,7 +123,7 @@ End Try
   
  Не всегда требуется оператор `Try…Catch`  для проверки возможного условия.  В следующем примере проверяется, существует ли файл перед попыткой открыть его.  Это уменьшает потребность перехвата исключения, созданного методом <xref:System.IO.File.OpenText%2A>.  
   
- [!code-vb[VbVbalrStatements#94](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_1.vb)]  
+ [!code-vb[VbVbalrStatements#94](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_1.vb)]  
   
  Убедитесь, что код в блоках `Catch` может надлежащим образом сообщить исключения для пользователей, через журналирование, безопасное с точки зрения потоков, или соответствующие сообщения.  В противном случае исключения могут остаться незамеченными.  
   
@@ -148,31 +148,31 @@ End Try
 ## Ситуации с частичным доверием  
  В случаях частичного доверия, например, в приложении, размещенном в сетевом ресурсе, `Try...Catch...Finally` не перехватит исключения системы безопасности, возникающие перед обращением к методу, содержащему вызов.  В следующем примере, если поместить его на общем ресурсе сервера и запустить оттуда, то возникнет ошибка « System.Security.SecurityException: Request Failed." Дополнительные сведения о ошибках безопасности см. в описании класса <xref:System.Security.SecurityException>.  
   
- [!code-vb[VbVbalrStatements#85](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_2.vb)]  
+ [!code-vb[VbVbalrStatements#85](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_2.vb)]  
   
  В таких случаях частичного доверия необходимо поместить инструкцию `Process.Start` в отдельную `Sub`.  Начальный вызов `Sub` не удастся.  Это позволяет `Try...Catch` перехватить вызов перед началом выполнения `Sub`, которая содержит `Process.Start`, и создаст исключение безопасности.  
   
 ## Пример  
  В следующем примере показано структура оператора `Try...Catch...Finally`.  
   
- [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_3.vb)]  
+ [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_3.vb)]  
   
 ## Пример  
  В следующем примере метод `CreateException` вызывает `NullReferenceException`.  Код, создающий исключение, не входит в блок `Try`.  Поэтому метод `CreateException` не обрабатывает исключение.  Метод `RunSample`  обрабатывает исключение, поскольку вызов метода `CreateException`  находится в блоке `Try`.  
   
  Пример включает операторы `Catch`  для нескольких типов исключений, отсортированные от наиболее конкретных к наиболее общим.  
   
- [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_4.vb)]  
+ [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_4.vb)]  
   
 ## Пример  
  Следующий пример показывает, как использовать оператор `Catch When` для фильтрации в условном выражении.  Если при вычислении условного выражения получено значение `True`, выполняется код в блоке `Catch` .  
   
- [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_5.vb)]  
+ [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_5.vb)]  
   
 ## Пример  
  В следующем примере есть оператор `Try…Catch` , который содержится в блоке `Try` .  Внутренний блок `Catch` выдает исключение, у которого для свойства `InnerException` задано исходное исключение.  Внешний блок `Catch` сообщает свои собственные исключения и внутреннее исключение.  
   
- [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_6.vb)]  
+ [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_6.vb)]  
   
 ## Пример  
  Следующий пример иллюстрирует обработку ошибок для асинхронных методов.  Для перехвата исключения, которое применяется к задаче async выражение `Await` в блоке `Try` вызывающей стороны, и исключение перехватывается в блоке `Catch`.  
@@ -181,14 +181,14 @@ End Try
   
  Раскомментируйте линия `Throw New OperationCancelledException` для демонстрации того, что происходит при отмене асинхронный процесс.  Исключение перехватывается в блоке `Catch`, а свойство `IsCanceled` задачи устанавливается в `True`.  Однако при определенных условиях, которые не применяются к данному примеру `IsFaulted` установлено в `True` и `IsCanceled` установлено в `False`.  
   
- [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/visualbasic/try-catch-finally-statem_7.vb)]  
+ [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_7.vb)]  
   
 ## Пример  
  Следующий пример иллюстрирует обработку исключений, где несколько задач могут привести к появлению нескольких исключении.  Блок `Try` содержит выражение `Await` для задачи, которую <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> возвращен.  Задача завершена, когда 3 задачи, к которой применяется <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
   
  Каждая из задач 3 причин исключения.  Блок `Catch` перебирает исключения, которые находятся в свойстве `Exception.InnerExceptions` задачи, которую `Task.WhenAll` возвращен.  
   
- [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/visualbasic/try-catch-finally-statem_8.vb)]  
+ [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Information.Err%2A>   

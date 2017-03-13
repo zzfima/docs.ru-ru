@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
 -   Используйте метод `GetFiles`, указывая имя и путь каталога, в котором требуется выполнить поиск, и шаблон.  Следующий пример возвращает все файлы с расширением `.dll`, имеющиеся в каталоге, и добавляет их в список `ListBox1`.  
   
-     [!code-vb[VbFileIOMisc#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-files-with-a_1.vb)]  
+     [!code-vb[VbFileIOMisc#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-files-with-a-specific-pattern_1.vb)]  
   
 ## Безопасность платформы .NET Framework  
  При следующих условиях возможно возникновение исключения.  

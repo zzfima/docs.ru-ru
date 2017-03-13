@@ -67,7 +67,7 @@ caps.handback.revision: 18
   
  Несколько операторов могут выполнять действия в одном выражении или инструкции, как показано в следующем примере.  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
  В предыдущем примере [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] выполняет операции в выражении в правой части оператора присваивания \(`=`\) и присваивает полученное значение переменной `x` слева.  Нет практического ограничения количества операторов, которые могут быть объединены в одно выражение, но, чтобы получить ожидаемые результаты, необходимо понимание [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   

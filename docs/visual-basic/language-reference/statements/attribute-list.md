@@ -62,7 +62,7 @@ caps.handback.revision: 18
 ## Пример  
  В следующем примере атрибут <xref:System.Runtime.InteropServices.DllImportAttribute> применяется к определению процедуры `Function`.  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/attribute-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> указывает, что процедура, для которой указан атрибут, представляет точку входа в неуправляемую динамически подключаемую библиотеку \(DLL\).  Атрибут предоставляет имя DLL как позиционный аргумент, а другие сведения — как инициализаторы переменных.  
   

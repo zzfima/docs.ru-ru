@@ -65,7 +65,7 @@ number ^ exponent
 ## Пример  
  В данном примере оператор `^` используется для возведения числа в степень экспоненты.  Результатом является первый операнд, возведенный в степень, обозначенную вторым.  
   
- [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/exponentiation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
  В итоге получены следующие результаты.  
   

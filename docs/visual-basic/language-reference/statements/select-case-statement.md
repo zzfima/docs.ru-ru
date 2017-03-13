@@ -89,7 +89,7 @@ End Select
 ## Пример  
  В следующем примере используется оператор `Select Case` для записи строки, соответствующей значению переменной `number`.  Второй оператор `Case` содержит значение, соответствующее текущему значению `number`, поэтому выполняется оператор, выводящий строку "Between 6 and 8, inclusive".  
   
- [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/select-case-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   

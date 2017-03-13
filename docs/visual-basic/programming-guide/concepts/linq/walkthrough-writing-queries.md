@@ -66,11 +66,11 @@ caps.handback.revision: 68
   
 1.  Найдите в методе `Main` проекта место, которое помечено следующим образом.  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
      Скопируйте следующий код и вставьте его.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
 2.  Наведите указатель мыши на `studentQuery` в коде, чтобы проверить, что компилятор назначил тип `IEnumerable(Of Student)`.  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 68
   
 1.  Добавьте следующий цикл `For Each` под запросом в проекте.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
 2.  Наведите указатель мыши на переменную цикла `studentRecord` для просмотра ее типа данных.  Тип `studentRecord` определен как `Student`, поскольку `studentQuery` возвращает коллекцию экземпляров `Student`.  
   
@@ -112,7 +112,7 @@ caps.handback.revision: 68
   
 1.  Чтобы ввести локальный идентификатор в выражение запроса, добавьте код в данном разделе.  Локальный идентификатор будет содержать промежуточные результаты.  В следующем примере `name` является идентификатором, который содержит сочетание имени и фамилии студента.  Локальный идентификатор может использоваться для удобства либо он может повысить производительность, сохраняя результаты выражения, которые в противном случае пришлось бы вычислять несколько раз.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
 2.  Постройте и запустите приложение, нажав сочетание клавиш CTRL \+ F5.  Обратите внимание на результаты в окне консоли.  
   
@@ -120,7 +120,7 @@ caps.handback.revision: 68
   
 1.  Добавьте запрос и цикл `For Each` из этого раздела, чтобы создать запрос, выводящий последовательность, элементы которой отличаются от элементов источника.  В следующем примере источником является коллекция объектов `Student`, однако возвращается только один член каждого объекта: имена студентов, фамилия которых Орехов.  Поскольку `currentStudent.First` является строкой, типом данных последовательности, возвращаемой `studentQuery3`, является последовательность строк `IEnumerable(Of String)`.  Как и в предыдущих примерах, назначение типа данных для `studentQuery3` предоставлено компилятору, который будет использовать локальное определение типа.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
 2.  Наведите указатель мыши на `studentQuery3` в коде, чтобы проверить, что компилятор назначил тип `IEnumerable(Of String)`.  
   
@@ -132,14 +132,14 @@ caps.handback.revision: 68
   
      В следующем примере создается запрос, возвращающий имя и успеваемость старшекурсников, чья успеваемость находится между 1 и 10 в порядке успеваемости.  В этом примере необходимо определить тип `studentQuery4`, поскольку предложение `Select` возвращает экземпляр анонимного типа, а анонимный тип не имеет имени.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
 2.  Постройте и запустите приложение, нажав сочетание клавиш CTRL \+ F5.  Обратите внимание на результаты в окне консоли.  
   
 ## Дополнительные примеры  
  Теперь, обладая основными знаниями, можно просмотреть приведенный ниже список дополнительных примеров, который иллюстрирует гибкость и мощь запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  Каждый пример содержит краткое описание выполняемых действий.  Создать через переменную результата запроса для каждого запроса, чтобы просмотреть определенный тип. Используйте цикл `For Each`, чтобы получить.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
 ## Дополнительные сведения  
  После ознакомления с основными принципами работы с запросами, можно приступить к чтению документации и просмотру примеров для конкретного типа интересующего вас поставщика [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  

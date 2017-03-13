@@ -36,7 +36,7 @@ throw new MyException();
 ## Пример  
  В этом примере демонстрируется вызов исключения с помощью оператора `throw`.  
   
- [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/csharp/throw_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/throw_1.cs)]  
   
 ## Пример кода  
  См. примеры в разделах [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) и [Практическое руководство. Явное создание исключения](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md).  

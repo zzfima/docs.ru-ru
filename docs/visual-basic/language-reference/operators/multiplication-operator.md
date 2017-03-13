@@ -68,7 +68,7 @@ number1 * number2
 ## Пример  
  В данном примере оператор `*` используется для перемножения двух чисел.  Результатом является произведение двух операндов.  
   
- [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/multiplication-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
 ## См. также  
  [Оператор \*\=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)   

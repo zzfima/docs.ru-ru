@@ -34,11 +34,11 @@ caps.handback.revision: 23
   
  Зарезервированное слово `New` можно использовать в операторе объявления или присваивания.  При выполнении оператора вызывается соответствующий конструктор указанного класса и ему передаются заданные аргументы.  Следующий пример иллюстрирует это созданием класса `Customer` с двумя конструкторами, один из которых не принимает параметры, а другой принимает строковый параметр.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
  Поскольку массивы являются классами, оператор `New` может создать новый экземпляр массива, как показано в следующих примерах.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
  Если для создания нового экземпляра не хватает памяти, то в среде CLR возникнет ошибка <xref:System.OutOfMemoryException>.  
   

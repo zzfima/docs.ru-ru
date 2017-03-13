@@ -27,7 +27,7 @@ caps.handback.revision: 7
 Этот пример возвращает значение `Boolean`, определяющее, представляет ли строка имя файла или путь.  Проверка имения на содержание знаков, не допустимых в файловой системе.  
   
 ## Пример  
- [!code-vb[VbVbcnRegEx#4](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/how-to-validate-file-nam_1.vb)]  
+ [!code-vb[VbVbcnRegEx#4](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-file-names-and-paths_1.vb)]  
   
  В этом примере не выполняется проверка неправильно указанных двоеточий в имени, каталогов без имени, или длины имени, превышающей максимальную длину, определяемую системой.  Он также не проверяет, имеет ли приложение разрешение на доступ к ресурсу файловой системы с указанным именем.  
   

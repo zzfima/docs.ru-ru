@@ -38,33 +38,33 @@ caps.handback.revision: 18
   
 1.  Создайте класс `Simple3Des` для инкапсуляции методов шифрования и расшифровки.  
   
-     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_1.vb)]  
+     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
   
 2.  Добавьте импорт пространства имен шифрования к началу файла, который содержит класс `Simple3Des`.  
   
-     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_2.vb)]  
+     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
   
 3.  В классе `Simple3Des` добавьте закрытое поле для хранения поставщика служб шифрования 3DES.  
   
-     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_3.vb)]  
+     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
   
 4.  Добавьте закрытый метод, который создает массив байтов указанной длины из хэша указанного ключа.  
   
-     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_4.vb)]  
+     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
   
 5.  Добавьте конструктор для инициализации поставщика служб шифрования 3DES.  
   
      Параметр `key` управляет методами `EncryptData` и `DecryptData`.  
   
-     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_5.vb)]  
+     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
   
 6.  Добавьте открытый метод, который шифрует строку.  
   
-     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_6.vb)]  
+     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
   
 7.  Добавьте открытый метод, который расшифровывает строку.  
   
-     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_7.vb)]  
+     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
   
      Класс\-оболочку теперь можно использовать для защиты ресурсов пользователей.  В данном примере он используется для безопасного хранения частных данных пользователя в общедоступном текстовом файле.  
   
@@ -72,11 +72,11 @@ caps.handback.revision: 18
   
 1.  В отдельном классе добавьте метод, использующий метод `EncryptData` оболочки, чтобы зашифровать строку и записать ее в папку "Мои документы" пользователя.  
   
-     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_8.vb)]  
+     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
   
 2.  Добавьте метод, который считывает зашифрованную строку из папки "Мои документы" пользователя и расшифровывает строку с помощью метода оболочки `DecryptData`.  
   
-     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_9.vb)]  
+     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
   
 3.  Добавьте код пользовательского интерфейса для вызова методов `TestEncoding` и `TestDecoding`.  
   

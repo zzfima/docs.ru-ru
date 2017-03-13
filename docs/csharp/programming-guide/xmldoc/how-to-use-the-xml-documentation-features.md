@@ -20,7 +20,7 @@ caps.handback.revision: 19
 Следующий пример предоставляет общие типа, были задокументированы.  
   
 ## <a name="example"></a>Пример  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/how-to-use-the-xml-docum_1.cs)]  
+ [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **Этот XML-файл был создан в предыдущем образце кода.**  
 **\<? xml версии = «1.0»?>**  

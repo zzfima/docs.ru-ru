@@ -10,14 +10,14 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере показано, как перенести код обработки исключений вне выражения запроса.  Это возможно только в том случае, когда метод не зависит от переменных, являющихся локальными для запроса.  
   
- [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#10)]  
+ [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_1.cs)]  
   
 ## Пример  
  В некоторых случаях наилучшим решением при возникновении исключения в запросе является немедленная остановка выполнения запроса.  В следующем примере показано, как обрабатывать исключения, которые могут возникнуть внутри тела запроса.  Предположим, что `SomeMethodThatMightThrow` может вызвать исключение, для которого потребуется остановить выполнение запроса.  
   
  Обратите внимание, что блок `try` заключает в себя цикл `foreach`, а не сам запрос.  Причина заключается в том, что цикл `foreach` — это точка, в которой запрос фактически выполняется.  Дополнительные сведения см. в разделе [Introduction to LINQ Queries \(C\#\)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
- [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#12)]  
+ [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_2.cs)]  
   
 ## Компиляция кода  
   

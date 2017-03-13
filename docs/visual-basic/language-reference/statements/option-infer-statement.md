@@ -96,12 +96,12 @@ IntelliSense при отключенном параметре Option Infer
 ## Пример  
  В следующих примерах показано, как оператор `Option Infer` включает локальное определение типов.  
   
- [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/option-infer-statement_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
   
 ## Пример  
  В следующем примере показано, что тип времени выполнения может различаться, когда переменная указана как `Object`.  
   
- [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/option-infer-statement_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
 ## См. также  
  [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)   

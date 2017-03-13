@@ -63,11 +63,11 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере создается свойство чтения\/записи, которое сохраняет полное имя как два составных имени — имя и фамилия.  Когда вызывающий код считывает процедуры `fullName`, процедура `Get` объединяет два составных имени и возвращает полное имя.  Когда вызывающий код присваивает новое полное имя, процедура `Set` пытается разделить его на два составных имени.  Если не удается найти пробел, то она сохраняет все полное имя как имя.  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
   
  В следующем примере показаны вызовы процедур свойств из `fullName`.  Первый вызов задает значение свойства, а второй вызов извлекает его.  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
   
 ## См. также  
  [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

@@ -33,7 +33,7 @@ caps.handback.revision: 31
 ## Примеры допускающих значение NULL типов  
  Любой тип значения может использоваться в качестве основы допускающего значение NULL типа.  Примеры.  
   
- [!code-cs[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_1.cs)]  
+ [!code-cs[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
   
 ## Члены допускающих значение NULL типов  
  Каждый экземпляр допускающего значение NULL типа имеет два общих предназначенных только для чтения свойства:  
@@ -48,47 +48,47 @@ caps.handback.revision: 31
   
  В этом примере член `HasValue` используется для выполнения проверки, содержит ли переменная какое\-либо значение, прежде чем пытаться его показать.  
   
- [!code-cs[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_2.cs)]  
+ [!code-cs[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
   
  Проверка переменной может быть также выполнена способом, показанным в следующем примере:  
   
- [!code-cs[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_3.cs)]  
+ [!code-cs[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
   
 ## Явные преобразования  
  Допускающий значение NULL тип может быть приведен к обычному типу либо явным образом с помощью приведения, либо с помощью свойства `Value`.  Примеры.  
   
- [!code-cs[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_4.cs)]  
+ [!code-cs[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
   
  Если определенное пользователем преобразование определено между двумя типами данных, то это же преобразование может быть также использовано с допускающими значение NULL версиями этих типов данных.  
   
 ## Неявные преобразования  
  Переменной допускающего значение NULL типа может быть присвоено значение NULL с помощью ключевого слова `null`, как показано в следующем примере:  
   
- [!code-cs[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_5.cs)]  
+ [!code-cs[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
   
  Преобразование из обычного типа в допускающий значение NULL тип является неявным.  
   
- [!code-cs[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_6.cs)]  
+ [!code-cs[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
   
 ## Операторы  
  Существующие для типов значений предварительно определенные унарные и бинарные операторы, а также определенные пользователем операторы могут также использоваться допускающими значение NULL типами.  Эти операторы создают значение NULL, если операнды имеют значение NULL; иначе оператор использует для вычисления результата содержащееся значение.  Примеры.  
   
- [!code-cs[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_7.cs)]  
+ [!code-cs[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
   
  Если при выполнении сравнения с допускающими значение NULL типами значение одного из таких типов равно NULL, а второй тип содержит другое значение, то результатом сравнения всегда является `false`, за исключением использования оператора `!=` \(не равно\).  Очень важно не предполагать, что если одна операция сравнения возвращает значение `false`, то обратная операция возвратит значение `true`.  В следующем примере число 10 не больше и не меньше значения NULL, а также не равно ему.  Значение `true` возвращается только в случае использования оператора `num1 != num2`.  
   
- [!code-cs[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_8.cs)]  
+ [!code-cs[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
   
  Сравнение на равенство двух допускающих значение NULL типов, оба из которых содержат NULL, возвратит значение `true`.  
   
 ## ??Оператор  
  Оператор `??` определяет значение по умолчанию, возвращаемое при присвоении допускающего значение NULL типа не допускающему значение NULL типу.  
   
- [!code-cs[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_9.cs)]  
+ [!code-cs[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
   
  Этот оператор может также использоваться с несколькими допускающими значение NULL типами.  Примеры.  
   
- [!code-cs[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/using-nullable-types_10.cs)]  
+ [!code-cs[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
   
 ## Типtype  
  Допускающий значение NULL тип `bool?` может содержать три значения: [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) и [null](../../../csharp/language-reference/keywords/null.md).  Сведения о том, как выполняется приведение из bool?  в bool, см. в разделе [Практическое руководство. Безопасное приведение bool? к bool](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).  

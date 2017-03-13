@@ -32,7 +32,7 @@ caps.handback.revision: 19
   
 -   Используйте метод `WriteAllText` для записи текста в файл, указывая файл и текст, который требуется записать.  В этом примере строка `"This is new text."` записывается в файл `test.txt`, при этом текст добавляется к тексту, имеющемуся в файле.  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
 #### Запись набора строк в файл  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 19
   
      В этом примере имена файлов в каталоге `Documents and Settings` записываются в файл `FileList.txt`, при этом между каждой записью вставляется символ перевода строки для удобства чтения.  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_2.vb)]  
+     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
 ## Отказоустойчивость  
  При следующих условиях возможно возникновение исключения.  

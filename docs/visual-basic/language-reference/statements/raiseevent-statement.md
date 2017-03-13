@@ -46,7 +46,7 @@ RaiseEvent eventname[( argumentlist )]
   
  Если событие не описано в том модуле, в котором оно создается, возникает ошибка.  В следующем фрагменте кода демонстрируется объявление события и процедура, в которой осуществляется вызов этого события.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#37)]  
+ [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
   
  Не допускается применение оператора `RaiseEvent` для создания событий, которые не объявлены в модуле явным образом.  Например, все формы наследуют событие <xref:System.Windows.Forms.Control.Click> из <xref:System.Windows.Forms.Form?displayProperty=fullName>, которое невозможно вызвать с помощью `RaiseEvent` в производной форме.  Если событие `Click` объявить в модуле формы, оно скроет собственное событие <xref:System.Windows.Forms.Control.Click>, принадлежащее форме.  Событие формы <xref:System.Windows.Forms.Control.Click> по\-прежнему можно вызвать путем вызова метода <xref:System.Windows.Forms.Control.OnClick%2A>.  
   
@@ -71,12 +71,12 @@ RaiseEvent eventname[( argumentlist )]
   
  Добавьте переменную `WithEvents` в раздел объявления класса `Form1`.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#14)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
   
 ## Пример  
  Добавьте следующий код в код для `Form1`.  Замените все возможные дубликаты процедур, например `Form_Load` или `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#15)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
   
  Нажмите клавишу F5 для запуска примера и нажмите кнопку с надписью **Пуск**.  Первое текстовое поле начинает отсчет секунд.  По истечении всего времени \(10 секунд\), первое текстовом поле отображает "Готово".  
   

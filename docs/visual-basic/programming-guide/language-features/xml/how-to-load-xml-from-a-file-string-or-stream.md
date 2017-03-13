@@ -33,7 +33,7 @@ caps.handback.revision: 13
   
      В следующем примере показано использование метода <xref:System.Xml.Linq.XDocument.Load%28System.String%29> для заполнения объекта <xref:System.Xml.Linq.XDocument> XML\-кодом из текстового файла.  
   
-     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_1.vb)]  
+     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_1.vb)]  
   
 ### Загрузка XML\-кода из строки  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 13
   
      В следующем примере показано использование метода <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=fullName> для заполнения объекта <xref:System.Xml.Linq.XDocument> XML\-кодом из строки.  
   
-     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_2.vb)]  
+     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_2.vb)]  
   
 ### Загрузка XML\-кода из потока  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 13
   
  В следующем примере показано использование метода <xref:System.Xml.Linq.XNode.ReadFrom%2A> для заполнения объекта <xref:System.Xml.Linq.XDocument> XML\-кодом из потока.  
   
- [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_3.vb)]  
+ [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
   
 ## См. также  
  <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>   

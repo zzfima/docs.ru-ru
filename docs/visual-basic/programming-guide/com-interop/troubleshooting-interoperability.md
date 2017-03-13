@@ -66,11 +66,11 @@ caps.handback.revision: 21
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> Создание экземпляров класса .NET Framework  
  Как правило, экземпляр класса [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] создается при помощи инструкции `New` с именем класса.  Наличие класса COM, представленного сборкой взаимодействия, — это тот случай, когда можно использовать оператор `New` с интерфейсом.  Пока не используется COM\-класс с инструкцией `Inherits`, интерфейс можно использовать так же, как и класс.  В следующем коде показано, как создать объект `Command` в проекте, который имеет ссылку на объект COM библиотеки Microsoft ActiveX Data Objects 2.8:  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#20)]  
+ [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
   
  Тем не менее, если класс COM используется как основа для производного класса, следует использовать класс взаимодействия, представляющий класс COM, например:  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#21)]  
+ [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
   
 > [!NOTE]
 >  Сборки взаимодействия неявно реализуют интерфейсы, представляющие классы COM.  Не следует использовать оператор `Implements` для реализации этих интерфейсов: результатом такой попытки будет ошибка.  
@@ -90,19 +90,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] требует, чтобы экземпляры объектов COM всегда создавались до использования их методов.  Чтобы использовать эти методы в [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)], объявите переменную нужного класса и с помощью ключевого слова "new" присвойте объект для переменной объекта.  Ключевое слово `Shared` можно использовать, когда нужно убедиться, что создан только один экземпляр класса.  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#23)]  
+ [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> Необработанные ошибки в обработчиках событий  
  Одна из общих проблем взаимодействия касается ошибок в обработчиках событий, которые обрабатывают события объектов COM.  Такие ошибки игнорируются, пока Вы специально не проверите на наличие ошибок с помощью инструкций `On Error` или `Try...Catch...Finally`.  Например, следующий пример взят из проекта [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)], в котором присутствует ссылка на объект COM библиотеки Microsoft ActiveX Data Objects 2.8.  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#24)]  
+ [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
   
  Этот пример, как и предполагалось, вызывает исключение.  Однако, при использовании того же примера без блока `Try...Catch...Finally`, ошибка не обрабатывается, как если бы использовалась инструкция `OnError Resume Next`.  Без обработки ошибок деление на ноль вызовет неявную ошибку.  Поскольку такие ошибки никогда не вызывают ошибку необработанного исключения, крайне важно использовать ту или иную форму обработки исключений в обработчиках событий для объектов COM.  
   
 ### Общие сведения об ошибках взаимодействия COM  
  Без обработки ошибок вызовы взаимодействия часто создают ошибки, несущие в себе мало полезной информации.  По возможности следует использовать структурированную обработку ошибок, чтобы получать более подробные сведения об их характере.  Это может быть особенно полезным при отладке приложений.  Примеры.  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#25)]  
+ [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
  Проверка содержимого объекта исключения дает такие сведения, как описание ошибки, HRESULT и источник ошибок COM.  
   
@@ -122,11 +122,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  При наличии доступа к вызываемой процедуре можно предотвратить эту ошибку, объявив с ключевого слова `ByVal` параметры, которые поддерживают свойства `ReadOnly`.  Примеры.  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#26)]  
+ [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
  Если исходный код для вызываемой процедуры недоступен, можно принудительно передать свойство по значению, заключив вызываемую процедуру в дополнительную пару квадратных скобок.  Например, в проекте, в котором есть ссылка на объект COM библиотеки Microsoft ActiveX Data Objects 2.8, можно использовать:  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#27)]  
+ [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Развертывание сборок, предоставляющих взаимодействие  
  С развертыванием сборок, которые предоставляют интерфейсы COM, связаны особые проблемы.  Например, проблема может возникнуть тогда, когда различные приложения ссылаются на одну и ту же сборку COM.  Эта ситуация обычна, когда установлена новая версия сборки, а другое приложение все еще использует прежнюю версию.  Следствием удаление любой сборки, содержащей совместно используемую библиотеку DLL, может оказаться недоступность этой библиотеки.  

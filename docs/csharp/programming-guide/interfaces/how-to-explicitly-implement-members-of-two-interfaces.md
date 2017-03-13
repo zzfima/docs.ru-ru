@@ -20,16 +20,16 @@ caps.handback.revision: 15
 Явная реализация [интерфейса](../../../csharp/language-reference/keywords/interface.md) позволяет программисту реализовать два интерфейса, имеющие одинаковые имена членов, и осуществить отдельную реализацию для каждого члена интерфейса.  В данном примере отображаются размеры окна как в метрических, так и в британских единицах измерения.  [Класс](../../../csharp/language-reference/keywords/class.md) "Box" реализует два интерфейса: IEnglishDimensions и IMetricDimensions, которые соответствуют различным системам измерения.  Оба интерфейса имеют одинаковые имена членов: "Length" и "Width".  
   
 ## Пример  
- [!code-cs[csProgGuideInheritance#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_0_1.cs)]  
+ [!code-cs[csProgGuideInheritance#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-members-of-two-interfaces_1.cs)]  
   
 ## Отказоустойчивость  
  Если необходимо произвести измерения по умолчанию в британских единицах, реализуйте методы "Length" и "Width" в обычном режиме и явно реализуйте методы "Length" и "Width" из интерфейса IMetricDimensions:  
   
- [!code-cs[csProgGuideInheritance#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_0_2.cs)]  
+ [!code-cs[csProgGuideInheritance#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-members-of-two-interfaces_2.cs)]  
   
  В этом случае можно получить доступ к британским единицам из экземпляра класса, а к метрическим единицам — из экземпляра интерфейса:  
   
- [!code-cs[csProgGuideInheritance#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-explicitly-implem_0_3.cs)]  
+ [!code-cs[csProgGuideInheritance#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-explicitly-implement-members-of-two-interfaces_3.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

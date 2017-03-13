@@ -72,7 +72,7 @@ caps.handback.revision: 14
 ## Пример  
  В следующем примере оператор `–` вычисляет и возвращает разность двух чисел, а затем меняет знак числа.  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
   
  После выполнения этих инструкций параметр `binaryResult` содержит значение 124,45, а параметр `unaryResult` содержит значение –334,90.  
   

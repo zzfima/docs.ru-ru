@@ -46,8 +46,8 @@ dataRepeater1.Top = productsBindingNavigator.Height;
   
  Такие проблемы как эта можно устранить, восстановив потерянные свойства в событии <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>, которое возникает после того, как клонирование по умолчанию завершено.  В следующем примере показано восстановление коллекции <xref:System.Windows.Forms.ListBox.Items%2A> элемента управления <xref:System.Windows.Forms.ListBox> в обработчике событий <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>.  
   
- [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterItemClonedCS/ItemCloned.cs#1)]
- [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterItemCloned/ItemCloned.vb#1)]  
+ [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
+ [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/troubleshooting-the-datarepeater-control-visual-studio_1.vb)]  
   
 ## Потерян символ выделения заголовка элемента  
  При изменении свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> заголовка элемента в элементе управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, выбор некоторых цветов может вызвать исчезновение символа выделения.  Изменение свойства <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> также может вызвать потерю символа выделения.  

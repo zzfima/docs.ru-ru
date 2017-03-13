@@ -26,7 +26,7 @@ caps.handback.revision: 21
 ## Код, создаваемый компилятором  
  Для следующего определения `product` компилятор создает новое определение класса, содержащее свойства `Name`, `Price` и `OnHand`.  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
   
  Определение класса содержит определения свойств следующего вида.  Обратите внимание, что для ключевых свойств нет метода `Set`.  Значения ключевых свойств доступны только для чтения.  
   
@@ -75,13 +75,13 @@ End Class
   
      Например, в следующих примерах `Equals` возвращает `True` только для `employee01` и `employee08`.  Комментарий перед каждой строкой определяет причину, по которой новый экземпляр не соответствует `employee01`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
 -   `GetHashcode` предоставляет соответствующим образом уникальный алгоритм GetHashCode.  Алгоритм использует для вычисления хэш\-кода только ключевые свойства.  
   
 -   `ToString` возвращает строку, в которой объединены значения свойств, как показано в следующем примере.  Включены ключевые и неключевые свойства.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
  Явно именованные свойства анонимного типа не могут конфликтовать с этими созданными методами.  А именно, нельзя использовать `.Equals`, `.GetHashCode` или `.ToString` для имени свойства.  
   

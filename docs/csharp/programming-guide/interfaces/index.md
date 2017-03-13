@@ -23,7 +23,7 @@ caps.handback.revision: 45
   
  Интерфейс определяется с помощью ключевого слова [interface](../../../csharp/language-reference/keywords/interface.md), как показано в следующем примере.  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
  Любой объект \(класс или структура\), реализующий интерфейс <xref:System.IEquatable%601>, должен содержать определение для метода <xref:System.IEquatable%601.Equals%2A>, соответствующее сигнатуре, которую задает интерфейс.  В результате вы можете быть уверены, что класс, реализующий `IEquatable<T>`, содержит метод `Equals`, с помощью которого экземпляр этого класса может определить, равен ли он другому экземпляру того же класса.  
   
@@ -39,7 +39,7 @@ caps.handback.revision: 45
   
  В следующем примере показана реализация интерфейса IEquatable\<T\>.  Реализующий класс `Car` должен предоставлять реализацию метода <xref:System.IEquatable%601.Equals%2A>.  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_2.cs)]  
+ [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_2.cs)]  
   
  Свойства и индексаторы класса могут определять дополнительные методы доступа для свойства или индексатора, определенного в интерфейсе.  Например, интерфейс может объявлять свойство, имеющее метод доступа [get](../../../csharp/language-reference/keywords/get.md).  Класс, реализующий интерфейс, может объявлять это же свойство с методами доступа `get` и [set](../../../csharp/language-reference/keywords/set.md).  Однако если свойство или индексатор использует явную реализацию, методы доступа должны совпадать.  Дополнительные сведения о явной реализации см. в разделах [Явная реализация интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) и [Свойства интерфейса](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
   

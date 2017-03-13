@@ -37,9 +37,9 @@ p--;
 ## Пример  
  В этом примере выполняется перемещение по массиву путем увеличения значения переменной указателя на размер типа `int`.  После выполнения каждого шага отображается адрес и содержимое элемента массива.  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_1.cs)]  
   
- [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#13)]  
+ [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_2.cs)]  
   
   **Значение: 0 @ Адрес: 12860272**  
 **Значение: 1 @ Адрес: 12860276**  

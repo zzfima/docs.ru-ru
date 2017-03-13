@@ -45,7 +45,7 @@ caps.handback.revision: 19
   
      В следующем примере определяется событие и переменная `WithEvents`, которая ссылается на класс, который вызывает событие.  Процедура обработки события `Sub` использует предложение `Handles` для указания класса и события, которые он обрабатывает.  
   
-     [!code-vb[VbVbcnProcedures#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
   
 ### Вызов обработчика событий с помощью AddHandler  
   
@@ -57,7 +57,7 @@ caps.handback.revision: 19
   
      В следующем примере определяется процедура `Sub` для обработки события формы <xref:System.Windows.Forms.Form.Closing>.  Затем используется [Оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md), чтобы связать процедуру `catchClose` в качестве обработчика событий для <xref:System.Windows.Forms.Form.Closing>.  
   
-     [!code-vb[VbVbcnProcedures#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
   
      Можно отменить привязку обработчика к событию, выполнив [Оператор RemoveHandler](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   

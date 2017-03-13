@@ -22,7 +22,7 @@ caps.handback.revision: 17
  Оператор `-` можно использовать для удаления делегатов\-компонентов из множественного делегата.  
   
 ## Пример  
- [!code-cs[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#11)]  
+ [!code-cs[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-combine-delegates-multicast-delegates_1.cs)]  
   
 ## См. также  
  <xref:System.MulticastDelegate>   

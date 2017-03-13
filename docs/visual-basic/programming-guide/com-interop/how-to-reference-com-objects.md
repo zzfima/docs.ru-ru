@@ -39,7 +39,7 @@ caps.handback.revision: 13
   
 3.  Для упрощения доступа к сборке взаимодействия добавьте инструкцию `Imports` в начале класса или модуля, в котором будет использоваться объект COM.  В следующем примере кода импортируется пространство имен `INKEDLib` для объектов, указанных в библиотеке `Microsoft InkEdit Control 1.0`.  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#40)]  
+     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
   
 ### Создание сборки взаимодействия при помощи программы Tlbimp  
   

@@ -42,7 +42,7 @@ x | y
 ## Пример  
  В следующих примерах `||` оценивает выражение, которое использует только первый операнд.  Выражение, использующее `|`вычисляет оба операнда.  Во втором примере исключение во время выполнения возникает, если выполняются оба операнда.  
   
- [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#52)]  
+ [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

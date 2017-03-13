@@ -30,7 +30,7 @@ caps.handback.revision: 19
 ## Пример  
  В этом примере показаны аргументы командной строки, переданные в приложение командной строки.  Далее представлен результат для первой записи в расположенной выше таблице.  
   
- [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/how-to-display-command-l_1.cs)]  
+ [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-display-command-line-arguments_1.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

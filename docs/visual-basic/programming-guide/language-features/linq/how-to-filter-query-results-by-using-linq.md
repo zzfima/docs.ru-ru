@@ -78,13 +78,13 @@ caps.handback.revision: 6
   
      Добавьте следующий код к событию `Load` для запроса к таблицам, которые отображаются как свойства контекста данных.  Запрос фильтрует результаты и возвращает только клиентов, которые находятся в городе `London`.  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#11)]  
+     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
 5.  Ниже приведены другие фильтры, которые можно попробовать.  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#12)]  
+     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
 ## См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

@@ -29,12 +29,12 @@ caps.handback.revision: 20
 ## Пример  
  В этом примере используется оператор явного преобразования.  Этот оператор преобразует тип значения <xref:System.Byte> в тип значения `Digit`.  Поскольку в тип Digit могут быть преобразованы не все значения типа byte, преобразование выполняется явным образом, что означает использование операции приведения, как показано в методе `Main`.  
   
- [!code-cs[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-conversion-operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_1.cs)]  
   
 ## Пример  
  В этом примере демонстрируется неявное преобразование, в котором определяется оператор преобразования, выполняющий операцию, обратную описанной в предыдущем примере: преобразование значения типа `Digit` к целочисленному типу <xref:System.Byte>.  Поскольку к типу <xref:System.Byte> можно преобразовать любое значение типа Digit, нет нужды делать преобразование явным для пользователя.  
   
- [!code-cs[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-conversion-operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_2.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

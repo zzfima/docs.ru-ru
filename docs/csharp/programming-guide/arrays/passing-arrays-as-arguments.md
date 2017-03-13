@@ -21,15 +21,15 @@ caps.handback.revision: 21
 ## Передача одномерных массивов в качестве аргументов  
  Инициализированный одномерный массив можно передать в метод.  Например, следующая инструкция передает массив в метод печати.  
   
- [!code-cs[csProgGuideArrays#34](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_1.cs)]  
+ [!code-cs[csProgGuideArrays#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_1.cs)]  
   
  В следующем примере кода показана частичная реализация метода печати.  
   
- [!code-cs[csProgGuideArrays#33](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_2.cs)]  
+ [!code-cs[csProgGuideArrays#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_2.cs)]  
   
  Инициализацию и передачу нового массива можно выполнить в рамках одного шага, как показано в следующем примере.  
   
- [!code-cs[CsProgGuideArrays#35](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_3.cs)]  
+ [!code-cs[CsProgGuideArrays#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_3.cs)]  
   
 ## Пример  
   
@@ -37,20 +37,20 @@ caps.handback.revision: 21
  В следующем примере массив строк инициализируется и передается в качестве аргумента метода `PrintArray`.  Затем метод отображает элементы этого массива.  Затем вызываются методы `ChangeArray` и `ChangeArrayElement` для демонстрации того, что отправка аргумента массива по значению не запрещает вносить изменения в элементы массива.  
   
 ### Код  
- [!code-cs[csProgGuideArrays#30](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_4.cs)]  
+ [!code-cs[csProgGuideArrays#30](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_4.cs)]  
   
 ## Передача многомерных массивов в качестве аргументов  
  Инициализированный многомерный массив передается методу так же, как и одномерный массив.  
   
- [!code-cs[csProgGuideArrays#41](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_5.cs)]  
+ [!code-cs[csProgGuideArrays#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_5.cs)]  
   
  В следующем примере кода показано частичное объявление метода печати, который принимает в качестве аргумента двумерный массив.  
   
- [!code-cs[csProgGuideArrays#36](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_6.cs)]  
+ [!code-cs[csProgGuideArrays#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_6.cs)]  
   
  Инициализацию и передачу нового массива можно выполнить в рамках одного шага, как показано в следующем примере.  
   
- [!code-cs[csProgGuideArrays#32](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_7.cs)]  
+ [!code-cs[csProgGuideArrays#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_7.cs)]  
   
 ## Пример  
   
@@ -58,7 +58,7 @@ caps.handback.revision: 21
  В следующем примере двумерный массив целых чисел инициализируется и передается в метод `Print2DArray`.  Затем метод отображает элементы этого массива.  
   
 ### Код  
- [!code-cs[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_8.cs)]  
+ [!code-cs[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_8.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

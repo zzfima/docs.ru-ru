@@ -62,7 +62,7 @@ caps.handback.revision: 19
 ## Пример  
  В следующем примере создается XML\-комментарий, содержащий текст "This is a comment".  
   
- [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-comment-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-comment-literal_1.vb)]  
   
 ## См. также  
  <xref:System.Xml.Linq.XComment>   

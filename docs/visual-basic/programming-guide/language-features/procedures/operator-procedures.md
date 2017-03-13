@@ -82,11 +82,11 @@ caps.handback.revision: 17
 ### Пример объявления и вызова  
  Следующая структура сохраняет значение 128\-разрядного целочисленного значения со знаком, как составные части младшего и старшего порядка.  Она определяет оператор `+` для добавления двух значений `veryLong`  и создания результирующего значения `veryLong` .  
   
- [!code-vb[VbVbcnProcedures#23](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
   
  В следующем примере показан типичный вызов оператора `+`, определенного для `veryLong`.  
   
- [!code-vb[VbVbcnProcedures#24](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
  Дополнительные сведения и примеры содержатся в [Перегрузка операторов в Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   

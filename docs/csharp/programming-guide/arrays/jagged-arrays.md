@@ -21,50 +21,50 @@ caps.handback.revision: 24
   
  Ниже показано объявление одномерного массива, включающего три элемента, каждый из которых является одномерным массивом целых чисел.  
   
- [!code-cs[csProgGuideArrays#19](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_1.cs)]  
+ [!code-cs[csProgGuideArrays#19](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_1.cs)]  
   
  Перед использованием `jaggedArray` его элементы нужно инициализировать.  Сделать это можно следующим образом.  
   
- [!code-cs[csProgGuideArrays#20](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_2.cs)]  
+ [!code-cs[csProgGuideArrays#20](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_2.cs)]  
   
  Каждый элемент представляет собой одномерный массив целых чисел.  Первый элемент массива состоит из пяти целях чисел, второй — из четырех и третий — из двух.  
   
  Для заполнения элементов массива значениями можно также использовать инициализаторы, при этом размер массива знать не требуется.  Примеры.  
   
- [!code-cs[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_3.cs)]  
+ [!code-cs[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_3.cs)]  
   
  Также массив можно инициализировать путем объявления.  
   
- [!code-cs[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_4.cs)]  
+ [!code-cs[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_4.cs)]  
   
  Также можно использовать сокращенную форму.  Обратите внимание, что при инициализации элементов оператор `new` опускать нельзя, так как инициализации по умолчанию для этих элементов не существует.  
   
- [!code-cs[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_5.cs)]  
+ [!code-cs[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_5.cs)]  
   
  Невыровненный массив является массивом массивов и поэтому его элементы являются ссылочными типами и инициализируются значением `null`.  
   
  Доступ к отдельным элементам массива выполняется следующим образом.  
   
- [!code-cs[csProgGuideArrays#24](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_6.cs)]  
+ [!code-cs[csProgGuideArrays#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_6.cs)]  
   
  Массивы массивов можно смешивать с многомерными массивами.  Ниже показано объявление и инициализация одномерного массива массивов, состоящего из трех двумерных элементов различного размера.  Дополнительные сведения о двумерных массивах см. в разделе [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).  
   
- [!code-cs[csProgGuideArrays#25](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_7.cs)]  
+ [!code-cs[csProgGuideArrays#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_7.cs)]  
   
  Доступ к отдельным элементам выполняется как показано в примере ниже, где отображено значение элемента `[1,0]` первого массива \(значение `5`\).  
   
- [!code-cs[csProgGuideArrays#26](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_8.cs)]  
+ [!code-cs[csProgGuideArrays#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_8.cs)]  
   
  Метод `Length` возвращает число массивов, содержащихся в массиве массивов.  Например, если объявить предыдущий массив, мы получим следующее.  
   
- [!code-cs[csProgGuideArrays#27](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_9.cs)]  
+ [!code-cs[csProgGuideArrays#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_9.cs)]  
   
  возвращает значение 3.  
   
 ## Пример  
  В этом примере выполняется создание массива, элементы которого сами являются массивами.  Каждый элемент массива имеет собственный размер.  
   
- [!code-cs[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/csharp/jagged-arrays_10.cs)]  
+ [!code-cs[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
 ## См. также  
  <xref:System.Array>   

@@ -18,18 +18,18 @@ caps.handback.revision: 20
 # Значения, возвращаемые методом Main() (Руководство по программированию на C#)
 Метод `Main` может возвращать значение `void`:  
   
- [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_1.cs)]  
+ [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]  
   
  Он также может возвращать значение типа `int`:  
   
- [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_2.cs)]  
+ [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]  
   
  Если значение, возвращаемое методом `Main`, не используется, то указание в качестве возвращаемого типа `void` несколько упрощает код.  Однако возврат целого значения позволяет программе передавать информацию о своем состоянии другим программам и скриптам, которые вызывают исполняемый файл.  В следующем примере показано, как получить доступ к значению, возвращаемому методом `Main`.  
   
 ## Пример  
  В этом примере с помощью пакетного файла запускается программа, после чего проверяется значение, возвращаемое функцией `Main`.  При запуске программы в Windows значение, возвращаемое функцией `Main`, сохраняется в переменной среды, которая называется `ERRORLEVEL`.  Пакетный файл может определить результат выполнения посредством проверки значения переменной `ERRORLEVEL`.  В большинстве случаев на успешное выполнение указывает нулевое значение.  В следующем примере показана простая программа, в которой функция `Main` возвращает ноль.  Нулевое значение указывает на успешное выполнение программы.  Сохраните программу в файле MainReturnValTest.cs.  
   
- [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_3.cs)]  
+ [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]  
   
 ## Пример  
  Поскольку в этом примере используется пакетный файл, рекомендуется выполнять компиляцию кода из помощью командной строки.  Выполните инструкции из раздела [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) для включения построений из командной строки или воспользуйтесь командной строкой Visual Studio, которую можно открыть с помощью пункта **Средства Visual Studio** в меню **Пуск**.  В командной строке перейдите в папку, в которой сохранена программа.  С помощью показанной ниже команды выполняется компиляция файла MainReturnValTest.cs и создается исполняемый файл MainReturnValTest.exe.  

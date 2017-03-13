@@ -41,7 +41,7 @@ caps.handback.revision: 18
   
      Например, следующие строки кода помечаются `Jump` и `120`, соответственно:  
   
-     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/how-to-label-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
   
 ## См. также  
  [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)   

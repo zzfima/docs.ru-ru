@@ -111,7 +111,7 @@ End Structure
 ## Пример  
  В следующем примере оператор `Structure` применяется для определения набора связанных данных о сотруднике.  Демонстрируется использование компонентов `Public`, `Friend`, и `Private`, позволяющих управлять доступом к элементам данных.  Также показаны компоненты процедуры, свойств и событий.  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
 ## См. также  
  [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)   

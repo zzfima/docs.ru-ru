@@ -24,7 +24,7 @@ caps.handback.revision: 40
 ## Объявление классов  
  Классы объявляются с помощью ключевого слова [class](../../../csharp/language-reference/keywords/class.md), как показано в следующем примере.  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_1.cs)]  
+ [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
  Ключевому слову `class` предшествует уровень доступа.  Поскольку в данном случае используется [public](../../../csharp/language-reference/keywords/public.md), любой может создавать объекты из этого класса.  Имя класса указывается после ключевого слова `class`.  Оставшаяся часть определения является телом класса, в котором задаются данные и поведение.  Поля, свойства, методы и события в классе обозначаются термином *члены класса*.  
   
@@ -33,22 +33,22 @@ caps.handback.revision: 40
   
  Объекты можно создавать с помощью ключевого слова [new](../../../csharp/language-reference/keywords/new.md), за которым следует имя класса, на котором будет основан объект:  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_2.cs)]  
+ [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
  При создании экземпляра класса ссылка на этот объект передается программисту.  В предыдущем примере `object1` является ссылкой на объект, основанный на `Customer`.  Эта ссылка указывает на новый объект, но не содержит данные этого объекта.  Фактически, можно создать ссылку на объект без создания самого объекта:  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_3.cs)]  
+ [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
  Создание таких ссылок, которые не указывают на объект, не рекомендуется, так как попытка доступа к объекту по такой ссылке приведет к сбою во время выполнения.  Однако такую ссылку можно сделать указывающей на объект, создав новый объект или назначив ее существующему объекту:  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_4.cs)]  
+ [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
  В данном коде создаются две ссылки на объекты, которые указывают на один объект.  Поэтому любые изменения объекта, выполненные посредством `object3`, будут видны при последующем использовании `object4`.  Поскольку на объекты, основанные на классах, указывают ссылки, классы называют ссылочными типами.  
   
 ## Наследование классов  
  Наследование выполняется с помощью *образования производных*, то есть класс объявляется с помощью *базового класса*, от которого он наследует данные и поведение.  Базовый класс задается добавлением после имени производного класса двоеточия и имени базового класса:  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_5.cs)]  
+ [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
  Когда класс объявляет базовый тип, он наследует все члены базового класса, за исключением конструкторов.  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 40
  В следующем примере определяется открытый класс, содержащий одно поле, метод и специальный метод, вызывающий конструктор.  Для получения дополнительной информации см. [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md).  После этого с помощью ключевого слова `new` создается экземпляр класса.  
   
 ## Пример  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_6.cs)]  
+ [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

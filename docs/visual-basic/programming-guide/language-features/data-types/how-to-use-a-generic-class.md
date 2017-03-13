@@ -52,7 +52,7 @@ caps.handback.revision: 24
   
      В приведенном ниже примере с помощью класса <xref:System.Collections.Generic.Queue%601?displayProperty=fullName> создаются два объекта очереди, содержащие элементы разных типов данных. Он добавляет элементы в конец каждой очереди и затем удаляет и отображает элементы из начала каждой очереди.  
   
-     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-use-a-generic-class_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   

@@ -52,14 +52,14 @@ caps.handback.revision: 21
 ## Круглые скобки  
  Используйте круглые скобки при определении процедуры, например, `Sub` или `Function`.  В круглые скобки следует заключать все аргументы процедуры.  Также стоит использовать круглые скобки для разделения переменных или аргументов на логические группы, особенно в случае необходимости переопределения по умолчанию в сложном выражении порядка приоритетов операторов.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_1.vb)]  
   
  После выполнения предыдущего кода значение `d` равняется 8,225, а значение `e` — 3.  При вычислении для `d` используется приоритет `/` над `+` по умолчанию, и результат равняется `d = b + (c / a)`.  Круглые скобки в вычислении `e` переопределяют приоритеты по умолчанию.  
   
 ## Разделители  
  Разделители выполняют как раз ту функцию, которую предполагает их название: они разделяют сегменты кода.  В [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] знак разделителя — это двоеточие \(`:`\).  Разделители используются, если требуется использовать несколько операторов в одной строке.  Это экономит место и повышает удобочитаемость кода.  В следующем примере показаны три оператора, разделенных двоеточием.  
   
- [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 21
 ## Сцепление  
  Оператор `&` используется для *сцепления* \(объединения строк вместе\).  Не следует путать его с оператором `+`, который применяется для сложения числовых значений.  Если для сцепления при работе с числовыми значениями используется оператор `+`, то можно получить неверные результаты.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_3.vb)]  
+ [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_3.vb)]  
   
  После выполнения этого кода `resultA` имеет значение 21.01, а `resultB` —  "10.0111".  
   
@@ -78,12 +78,12 @@ caps.handback.revision: 21
 ### Точка \(.\) Оператор  
  Оператор `.` используется для доступа к члену класса, структуры, интерфейса или перечисления.  Членом может быть поле, свойство, событие или метод.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_4.vb)]  
+ [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_4.vb)]  
   
 ### Восклицательный знак \(\!\) Оператор  
  Оператор `!` используется только в классах и интерфейсах как оператор словарного доступа.  При этом класс или интерфейс должны иметь свойство по умолчанию, которое принимает единственный аргумент типа `String` \(строковый\).  Идентификатор, следующий сразу за оператором `!`, становится значением аргумента, передаваемого свойству по умолчанию в виде строки.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_5.vb)]  
+ [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_5.vb)]  
   
  Три строки вывода в `MsgBox` покажут значение `32856`.  В первой строке используется традиционный доступ к свойству `index`, вторая использует тот факт, что `index` — это свойство по умолчанию класса `hasDefault`, а третья использует словарный доступ к классу.  
   

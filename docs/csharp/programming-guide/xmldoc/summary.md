@@ -38,7 +38,7 @@ caps.handback.revision: 15
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).  Для создания конечной документации на основе созданного компилятором файла можно создать пользовательское средство или использовать такое средство, как [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061).  
   
 ## Пример  
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_1.cs)]  
+ [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
  В предыдущем примере получаются следующие XML\-файл.  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере показано, как создать ссылку `cref` на универсальный тип.  
   
- [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_2.cs)]  
+ [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
   
  В предыдущем примере получаются следующие XML\-файл.  
   

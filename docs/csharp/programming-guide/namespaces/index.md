@@ -19,19 +19,19 @@ caps.handback.revision: 27
 # Пространства имен (Руководство по программированию в C#)
 В программировании на C\# пространства имен используются с полной нагрузкой по двум направлениям.  Во\-первых, платформа .NET Framework использует пространства имен для организации большинства классов. Это выполняется следующим образом.  
   
- [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#22)]  
+ [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
  `System` — это пространство имен, а `Console` — класс в нем.  Использование ключевого слова `using` может отменить необходимость полного имени, как показано в следующем примере.  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
- [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#25)]  
+ [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
  Дополнительные сведения см. в разделе [Директива using](../../../csharp/language-reference/keywords/using-directive.md).  
   
  Во\-вторых, объявление собственного пространства имен поможет в управлении областью действия имен классов и методов в крупных программных проектах.  Для объявления пространства имен воспользуйтесь ключевым словом [namespace](../../../csharp/language-reference/keywords/namespace.md), как показано в следующем примере.  
   
- [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#6)]  
+ [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
 ## Общие сведения о пространствах имен  
  Пространства имен имеют следующие свойства.  

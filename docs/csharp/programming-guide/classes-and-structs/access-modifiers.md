@@ -36,7 +36,7 @@ caps.handback.revision: 32
   
  В следующих примерах демонстрируется указание модификаторов доступа для типа или члена.  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_1.cs)]  
+ [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
  Не все модификаторы доступа могут использоваться всеми типами или членами во всех контекстах, а в некоторых случаях доступность члена типа ограничивается доступностью его содержащего типа.  Следующие подразделы содержат дополнительные сведения о доступности.  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 32
   
  Чтобы задать уровень доступа для класса или элемента структуры, воспользуйтесь соответствующим ключевым словом в объявлении элемента, как показано в следующем примере.  
   
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_2.cs)]  
+ [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
 >  Защищенный внутренний уровень доступности означает "защищенный OR внутренний", а не "защищенный AND внутренний".  Другими словами, доступ к защищенному внутреннему члену может осуществляться из любого класса в одной сборке, в том числе из производных классов.  Чтобы ограничить доступность только производными классами в одной и той же сборке, сам класс необходимо объявить внутренним, а его члены – защищенными.  

@@ -46,7 +46,7 @@ caps.handback.revision: 11
   
  Например, в следующем примере кода определяется интерфейс с одной функцией, одним свойством и одним событием.  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#17)]  
+ [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## Реализация интерфейсов  
  Зарезервированное слово [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] `Implements` используется двумя способами.  Оператор `Implements` означает, что класс или структура реализуют интерфейс.  Ключевое слово `Implements` указывает, что элемент класса или структуры реализует определенный элемент интерфейса.  
@@ -59,7 +59,7 @@ caps.handback.revision: 11
   
  Например, в следующем примере кода показано, как объявить подпрограмму с именем `Sub1`, в которой реализуется метод интерфейса:  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#69)]  
+ [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
   
  Типы параметров и возвращаемые типы элемента реализации должны соответствовать объявлению свойства или элемента в интерфейсе.  Наиболее распространенный способ реализации элемента интерфейса — использование элемента с таким же, как у интерфейса, именем, как показано в предыдущем примере.  
   
@@ -67,7 +67,7 @@ caps.handback.revision: 11
   
  С помощью `Implements` можно также написать один метод, который реализует несколько методов, определенных в интерфейсе, как показано в следующем примере:  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#70)]  
+ [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
   
  Закрытый элемент можно использовать для реализации члена интерфейса.  Если закрытый член реализует член интерфейса, этот элемент становится доступен через интерфейс, хотя он недоступен напрямую через переменные класса.  
   
@@ -76,15 +76,15 @@ caps.handback.revision: 11
   
  В примере ниже определены два интерфейса.  Второй интерфейс, `Interface2`, наследует `Interface1` и определяет дополнительное свойство и метод.  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#39)]  
+ [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
   
  В следующем примере реализуется `Interface1`, интерфейс, определенный в предыдущем примере:  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#40)]  
+ [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
   
  В последнем примере реализуется `Interface2`, включающий метод, унаследованный от `Interface1`:  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#41)]  
+ [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
   
  Можно реализовать свойство только для чтения со свойством, доступным для чтения и записи \(т. е. не нужно объявлять его свойством только для чтения в классе реализации\).  В реализации интерфейса должны быть по крайней мере реализованы элементы, которые объявляются интерфейсом, но можно обеспечить дополнительные возможности, например разрешить запись свойства.  
   

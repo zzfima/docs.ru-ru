@@ -70,12 +70,12 @@ caps.handback.revision: 46
   
  Возвращаемый тип метода итератора — <xref:System.Collections.IEnumerable> \(тип интерфейса итератора\).  При вызове метода итератора возвращается перечисляемый объект, содержащий степени числа.  
   
- [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/csharp/yield_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
   
 ## Пример  
  В следующем примере демонстрируется метод доступа `get`, представляющий собой итератор.  В этом примере каждый оператор `yield return` возвращает экземпляр пользовательского класса.  
   
- [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/csharp/yield_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

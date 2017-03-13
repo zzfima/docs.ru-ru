@@ -58,27 +58,27 @@ caps.handback.revision: 8
 ## Пример  
  В данном примере функция `UCase` используется для возврата строки в верхнем регистре.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
 ## Пример  
  В данном примере функция `LTrim` используется, чтобы убрать пробелы в начале, а функция `RTrim` — чтобы убрать пробелы в конце строковой переменной.  Функция `Trim` в примере используется для удаления обоих типов пробелов.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
 ## Пример  
  В данном примере функция `Mid` используется для возврата указанного числа знаков строки.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
 ## Пример  
  В данном примере `Len` используется для возврата числа знаков в строке.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
 ## Пример  
  В данном примере функция `InStr` используется для возврата позиции первого вхождения одной строки в другую.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
 ## Пример  
  В данном примере показаны различные способы использования функции `Format` для форматирования значений с применением как форматов `String`, так и определенных пользователем форматов.  Фактическое отображение системой разделителя даты \(`/`\), разделителя времени \(`:` и индикаторов AM\/PM \(`t` и `tt`\) зависит от региональных параметров, применяемых кодом.  При отображении времени и даты в среде разработки используется короткий формат времени и даты региональных установок кода.  
@@ -86,7 +86,7 @@ caps.handback.revision: 8
 > [!NOTE]
 >  Для языков, использующих 24\-часовой формат, индикаторы AM\/PM \(`t` и `tt`\) не отображаются.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
 ## См. также  
  [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)   

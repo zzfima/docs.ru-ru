@@ -21,7 +21,7 @@ caps.handback.revision: 17
   
  В следующем примере кода показано, как отдельный универсальный метод, принимающий входной параметр <xref:System.Collections.Generic.IList%601>, может выполнять итерацию списка и массива – в данном случае массива целых чисел.  
   
- [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-arrays_1.cs)]  
+ [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-arrays_1.cs)]  
   
 ## См. также  
  <xref:System.Collections.Generic>   

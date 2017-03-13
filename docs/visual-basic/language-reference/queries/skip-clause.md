@@ -48,7 +48,7 @@ Skip count
 ## Пример  
  В следующем примере кода для возвращения данных из запроса на страницах предложение `Skip` используется вместе с предложением `Take`.  Функция `GetCustomers` использует предложение `Skip` для пропуска в списке всех клиентов до предоставленного начального значения индекса и предложение `Take` для возвращения страницы клиентов, начиная с этого значения индекса.  
   
- [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#1)]  
+ [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
 ## См. также  
  [Знакомство с LINQ в Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

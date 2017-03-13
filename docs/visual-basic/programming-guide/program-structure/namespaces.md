@@ -37,14 +37,14 @@ caps.handback.revision: 27
   
  Например, [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] определяет класс <xref:System.Windows.Forms.ListBox> в пространстве имен <xref:System.Windows.Forms?displayProperty=fullName>. В следующем фрагменте кода показано, как объявить переменную, используя полное имя для этого класса:  
   
- [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_1.vb)]  
+ [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
 ## Предотвращение конфликтов имен  
  Пространства имен [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] помогают решить проблему, которую иногда называют *загрязнением пространства имен*, при которой у разработчика библиотеки классов возникают трудности, связанные с использованием аналогичных имен в другой библиотеке. Такие конфликты с существующими компонентами иногда называют *конфликтами имен*.  
   
  Например, если вы создаете новый класс `ListBox`, то можете использовать его внутри проекта без уточнения. Однако если вы захотите использовать в том же проекте класс <xref:System.Windows.Forms.ListBox> [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)], потребуется использовать полную ссылку, чтобы сделать ссылку уникальной. Если эта ссылка не является уникальной, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] выдает сообщение об ошибке, уведомляющее о неоднозначности имени. В примере кода ниже показано, как объявить эти объекты:  
   
- [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_2.vb)]  
+ [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
  На следующем рисунке показаны две иерархии пространств имен, в каждой из которых присутствует объект `ListBox`.  
   
@@ -57,17 +57,17 @@ caps.handback.revision: 27
 ## Полные имена  
  Полные имена — это ссылки на объекты, имеющие префикс в виде имени пространства имен, в котором определен объект. Вы можете использовать объекты, определенные в других проектах, если создадите ссылку на класс \(выбрав **Добавить ссылку** в меню **Проект**\) и затем используете полное имя объекта в коде. В следующем фрагменте кода показано, как использовать полное имя объекта из пространства имен другого проекта:  
   
- [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_3.vb)]  
+ [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_3.vb)]  
   
  Полные имена предотвращают возникновение конфликтов имен, так как позволяют компилятору определить, какой именно объект используется. Однако сами эти имена могут получиться длинными и громоздкими. Чтобы обойти эту проблему, можно использовать оператор `Imports` для определения *псевдонима* — сокращенного имени, которое можно применить вместо полного имени. Например, в следующем примере кода создаются псевдонимы для двух полных имен, которые затем используются для определения двух объектов.  
   
- [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_4.vb)]  
+ [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_4.vb)]  
   
- [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_5.vb)]  
+ [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_5.vb)]  
   
  Если вы применяете оператор `Imports` без псевдонима, можно использовать все имена в данном пространстве имен без уточнения при условии, что они являются уникальными в данном проекте. Если проект содержит операторы `Imports` для пространств имен, где есть элементы с одинаковым именем, необходимо полностью уточнять это имя. Предположим, что проект содержал два следующих оператора `Imports`:  
   
- [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_6.vb)]  
+ [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
  При попытке использовать `Class1` без полного уточнения [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] выдает сообщение об ошибке, указывающее, что имя `Class1` является неоднозначным.  
   
@@ -114,7 +114,7 @@ End Namespace
   
  В следующих примерах используется ключевое слово `Global` для объявления пространства имен из корневого пространства имен для проекта.  
   
- [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_7.vb)]  
+ [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_7.vb)]  
   
  В объявлении пространства имен `Global` не может быть вложенным в другое пространство имен.  
   
@@ -126,7 +126,7 @@ End Namespace
   
  Если ключевое слово `Global` отсутствует в объявлении пространства имен, к <xref:System.Text.StringBuilder> нельзя обратиться без указания `Global.System.Text.StringBuilder`. Если ключевое слово `Global` не использовалось, для проекта с именем `ConsoleApplication1` ссылки на `System.Text` обращаются к `ConsoleApplication1.System.Text`.  
   
- [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_8.vb)]  
+ [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
   
 ## См. также  
  <xref:System.Windows.Forms.ListBox>   

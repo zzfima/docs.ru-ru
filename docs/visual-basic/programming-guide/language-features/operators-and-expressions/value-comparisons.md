@@ -43,15 +43,15 @@ caps.handback.revision: 9
   
  Выражения, сравнивающие значения, часто используются в операторах `If...Then`, например:  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
   
  Знак `=` является оператором сравнения, а также оператором назначения.  При использовании в качестве оператора сравнения он вычисляет, равно ли значение слева значению справа, например:  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
   
  Можно также использовать выражения сравнения везде, где необходимо использовать значение `Boolean`, например в операторе `If`, `While`, `Loop` или `ElseIf`, либо при назначении или передаче значения переменной `Boolean`.  В следующем примере значение, возвращенное выражением сравнения, назначается переменной `Boolean`.  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
   
 ## См. также  
  [Логические выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   

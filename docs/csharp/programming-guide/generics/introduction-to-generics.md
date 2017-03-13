@@ -28,11 +28,11 @@ caps.handback.revision: 32
   
  Обратите внимание, что T доступен для вложенного класса `Node`.  Когда будет создан `GenericList<T>` с конкретным типом, например как `GenericList<int>`, каждое вхождение `T` будет заменено `int`.  
   
- [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_1.cs)]  
+ [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_1.cs)]  
   
  Следующий пример кода показывает, как клиентский код использует класс `GenericList<T>` для создания списка целых чисел.  Благодаря простому изменению аргумента\-типа, следующий код можно легко преобразовать для создания списка строк или любого другого пользовательского типа.  
   
- [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_2.cs)]  
+ [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
 ## См. также  
  <xref:System.Collections.Generic>   

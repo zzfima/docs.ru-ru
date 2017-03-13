@@ -25,7 +25,7 @@ caps.handback.revision: 19
  Типы, определенные пользователем, могут вызвать перегрузку оператора `^` \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  Операции над целыми типами обычно разрешены в перечислениях.  
   
 ## Пример  
- [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#30)]  
+ [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]  
   
  При вычислении выражения `0xf8 ^ 0x3f` в предыдущем примере выполняется операция побитового исключающего ИЛИ с двумя двоичными значениями, которые соответствуют шестнадцатеричным значениям F8 и 3F:  
   

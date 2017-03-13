@@ -18,16 +18,16 @@ caps.handback.revision: 27
 # Аргументы командной строки (Руководство по программированию на C#)
 Можно отправлять аргументы методу `Main`, указав метод одним из следующих способов:  
   
- [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_1.cs)]  
+ [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
- [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_2.cs)]  
+ [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
 >  Для включения аргументов командной строки в методе `Main` приложения Windows Forms, необходимо вручную изменить сигнатуру метода `Main` в program.cs.  Код, созданный конструктором Windows Forms, создает метод `Main` без входного параметра.  Для доступа к аргументам командной строки из любой точки на консоли или в приложении Windows можно использовать <xref:System.Environment.CommandLine%2A?displayProperty=fullName> or <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName>.  
   
  Параметр метода `Main` является массивом значений типа <xref:System.String>, представляющим аргументы командной строки.  Обычно наличие аргументов определяется проверкой свойства `Length`, например:  
   
- [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_3.cs)]  
+ [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
  Кроме того, строковые аргументы можно преобразовать в числовые типы с помощью класса <xref:System.Convert> или метода `Parse`.  Например, следующая инструкция преобразует `string` в число типа `long` с помощью метода <xref:System.Int64.Parse%2A>:  
   
@@ -56,7 +56,7 @@ long num = Convert.ToInt64(s);
   
 1.  Вставьте следующий код в любой текстовый редактор и сохраните его как текстовый файл с именем `Factorial.cs`.  
   
-     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_4.cs)]  
+     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
 2.  На экране **Пуск** или в меню **Пуск** откройте окно **Командная строка разработчика** Visual Studio, а затем перейдите в папку, содержащую созданный файл.  
   

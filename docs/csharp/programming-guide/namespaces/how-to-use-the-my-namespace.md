@@ -31,16 +31,16 @@ caps.handback.revision: 12
   
      Возможно, вы также захотите включить в раздел `using` в начале программы следующую строку.  
   
-     [!code-cs[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces3.cs#18)]  
+     [!code-cs[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
   
 ## Пример  
  В этом примере вызываются различные статические методы, содержащиеся в пространстве имен `MyServices`.  Чтобы компиляция этого кода была возможной, в проект необходимо добавить ссылку на Microsoft.VisualBasic.DLL.  
   
- [!code-cs[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces3.cs#19)]  
+ [!code-cs[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_2.cs)]  
   
  Из приложения C\# можно вызывать не все классы в пространстве имен `MyServices`: например, класс <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> является несовместимым.  В таком случае вместо этого можно использовать статические методы, являющиеся частью <xref:Microsoft.VisualBasic.FileIO.FileSystem>, которые также содержатся в VisualBasic.dll.  Например, далее описано использование одного из таких методов для дублирования каталога:  
   
- [!code-cs[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces3.cs#20)]  
+ [!code-cs[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

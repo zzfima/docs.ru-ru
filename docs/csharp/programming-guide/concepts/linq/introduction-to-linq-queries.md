@@ -35,7 +35,7 @@ caps.handback.revision: 45
   
  В следующем примере показано выражение этих трех частей операции запроса в исходном коде.  В примере в качестве источника данных для удобства используется массив целых чисел; тем не менее, те же принципы применимы и к другим источникам данных.  Оставшаяся часть раздела ссылается на этот пример.  
   
- [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#1)]  
+ [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
  На следующем рисунке показана завершенная операция запроса.  В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] выполнение запроса отличается от самого запроса; другими словами, создание переменной запроса само по себе не связано с получением данных.  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 45
   
  Для запрашиваемого типа, выступающего в качестве источника данных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)], не требуются изменения или специальная обработка.  Если источник данных еще не находится в памяти в виде запрашиваемого типа, поставщик [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] должен представить его как таковой.  Например, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] загружает XML\-документ в запрашиваемый тип <xref:System.Xml.Linq.XElement>.  
   
- [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#2)]  
+ [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
  Используя [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], сначала создайте объектно\-реляционное сопоставление в режиме разработки вручную либо с помощью [Реляционный конструктор объектов](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2).  Напишите запросы к объектам, а во время выполнения [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] будет осуществлять взаимодействие с базой данных.  В следующем примере `Customers` представляет определенную таблицу в базе данных, а тип результата запроса <xref:System.Linq.IQueryable%601> наследуется от <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -79,7 +79,7 @@ IQueryable<Customer> custQuery =
 ### Отложенное выполнение  
  Как уже говорилось ранее, сама переменная запроса только хранит команды запроса.  Фактическое выполнение запроса откладывается до выполнения итерации переменной запроса в операторе `foreach`.  Эту концепцию называют *отложенным выполнением*, она показана в следующем примере.  
   
- [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#4)]  
+ [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
   
  Оператор `foreach` является также местом, где извлекаются результаты запроса.  Например, в предыдущем запросе переменная итерации `num` содержит каждое \(по очереди\) значение в возвращаемой последовательности.  
   
@@ -88,11 +88,11 @@ IQueryable<Customer> custQuery =
 ### Принудительное немедленное выполнение  
  Запросы, выполняющие статистические функции над диапазоном исходных элементов, должны сначала выполнить итерацию этих элементов.  Примерами таких запросов являются `Count`, `Max`, `Average` и `First`.  Они выполняются без явного оператора `foreach`, поскольку сам запрос должен использовать `foreach` для возвращения результата.  Обратите внимание, что такой тип запросов возвращает одиночное значение, а не коллекцию `IEnumerable`.  Следующий запрос возвращает количество четных чисел в исходном массиве.  
   
- [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#5)]  
+ [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
  Чтобы принудительно вызвать немедленное выполнение любого запроса и кэшировать его результаты, можно вызвать метод <xref:System.Linq.Enumerable.ToList%2A> или <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#6)]  
+ [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
  Можно также принудительно выполнить запрос, поместив цикл `foreach` сразу после выражения запроса.  Однако вызов `ToList` или `ToArray` также кэширует все данные в одной коллекции объектов.  
   

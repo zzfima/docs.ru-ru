@@ -29,7 +29,7 @@ caps.handback.revision: 23
   
  Инициализатор набора определяется по ключевому слову `From`, за которым следуют фигурные скобки \(`{}`\).  Это напоминает синтаксис литерала массива, описанный в разделе [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  Следующие примеры демонстрируют различные способы применения инициализаторов наборов для создания коллекций.  
   
- [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  C\# также предоставляет инициализаторы наборов.  Инициализаторы наборов в C\# обеспечивают те же функциональные возможности, что и в Visual Basic.  Дополнительные сведения об инициализаторах наборов в C\# см. в разделе [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
@@ -37,11 +37,11 @@ caps.handback.revision: 23
 ## Синтаксис  
  Инициализатор набора состоит из списка разделенных запятыми и заключенных в фигурные скобки \(`{}`\) значений, которым предшествует ключевое слово `From`, как показано в следующем образце кода.  
   
- [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_2.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
   
  При создании коллекции, например <xref:System.Collections.Generic.List%601> или <xref:System.Collections.Generic.Dictionary%602>, перед инициализатором набора необходимо указать тип коллекции, как показано в следующем образце кода.  
   
- [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_3.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
   
 > [!NOTE]
 >  Для инициализации одного и того же объекта набора инициализатор набора и инициализатор объекта объединять нельзя.  Для инициализации объектов в инициализаторе набора можно использовать инициализаторы объектов.  
@@ -57,11 +57,11 @@ caps.handback.revision: 23
   
  В следующем примере кода показано, как создать коллекцию `List(Of Customer)` с помощью инициализатора набора.  При выполнении кода каждый объект `Customer` передается методу `Add(Customer)` универсального списка.  
   
- [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_4.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
   
  В следующем примере кода показан эквивалентный код, в котором инициализатор набора не используется.  
   
- [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_5.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
   
  Если метод `Add` коллекции имеет параметры, сопоставимые с конструктором объекта `Customer`, то значения параметров для метода `Add` можно вложить в инициализаторы наборов, как описывается в следующем разделе.  Если у коллекции такого метода `Add` не имеется, его можно создать как метод расширения.  Пример создания метода `Add` как метода расширения для коллекции см. в разделе [Практическое руководство. Создание метода расширения Add, используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md).  Пример создания пользовательской коллекции, которая могла бы использоваться совместно с инициализатором набора, см. в разделе [Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
@@ -70,11 +70,11 @@ caps.handback.revision: 23
   
  При создании коллекции с помощью вложенных значений каждый элемент списка вложенных значений передается в качестве аргумента методу `Add`, соответствующему типу элемента.  В следующем примере кода создается коллекция <xref:System.Collections.Generic.Dictionary%602>, в которой ключи относятся к типу `Integer`, а значения — к типу `String`.  Каждый из списков вложенных значений сопоставляется с методом <xref:System.Collections.Generic.Dictionary%602.Add%2A> для `Dictionary`.  
   
- [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_6.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
   
  Предыдущий пример кода эквивалентен следующему коду.  
   
- [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_7.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
   
  Методу `Add` типа коллекции передаются только списки вложенных значений первого уровня вложения.  Более глубокие уровни вложения обрабатываются как литералы массива, а списки вложенных значений не сопоставляются с методом `Add` ни в одной из коллекций.  
   

@@ -74,17 +74,17 @@ int x = (int)Days.Sun;
 ## Пример  
  В следующем примере объявлено перечисление `Days`. Два перечислителя явно преобразуются в целое число и назначаются для целочисленных переменных.  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## Пример  
  В следующем примере используется параметр базового типа для объявления `enum`, члены которого имеют тип `long`. Обратите внимание, что, даже если базовый тип перечисления является `long`, члены перечисления по\-прежнему должны быть явно преобразованы в тип `long` с помощью приведения.  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## Пример  
  В следующем примере кода показано использование и влияние атрибута <xref:System.FlagsAttribute?displayProperty=fullName> на объявление `enum`.  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_3.cs)]  
+ [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## Комментарии  
  Если удалить `Flags`, в примере будут показаны следующие значения.  

@@ -27,7 +27,7 @@ caps.handback.revision: 28
 ## Методы расширения стандартных операторов запросов  
  В следующем примере показано простое *выражение запроса* и семантически эквивалентный ему запрос, написанный как *запрос на основе метода*.  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#22)]  
+ [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  Два примера имеют идентичные результаты.  Тип переменной запроса одинаковый в обеих формах: <xref:System.Collections.Generic.IEnumerable%601>.  
   

@@ -10,7 +10,7 @@ caps.handback.revision: 8
 ## Пример  
  Следующий запрос возвращает список учащихся, получивших на первом экзамене балл 90 или выше.  
   
- [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#15)]  
+ [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-query-a-collection-of-objects_1.cs)]  
   
  Этот запрос специально сделан простым, чтобы позволить поэкспериментировать с ним.  Например, можно попробовать дополнительные предикаты в предложении `where` воспользоваться предложением `orderby` для сортировки результатов.  
   

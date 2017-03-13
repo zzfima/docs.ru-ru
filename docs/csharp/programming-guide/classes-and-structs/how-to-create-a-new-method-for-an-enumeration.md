@@ -23,7 +23,7 @@ caps.handback.revision: 7
 ## Пример  
  В следующем примере перечисление `Grades` представляет возможные буквенные оценки, которые учащийся может получить в классе.  Метод расширения `Passing` добавлен к типу `Grades`, чтобы каждый экземпляр этого типа теперь "знал", представляет ли он проходную оценку или нет.  
   
- [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-create-a-new-meth_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-create-a-new-method-for-an-enumeration_1.cs)]  
   
  Обратите внимание, что класс `Extensions` также содержит статическую переменную, которая обновляется динамически, и что возвращаемое значение метода расширения отражает текущее значение этой переменной.  Это показывает, что система напрямую вызывает методы расширения в статическом классе, в котором они определяются.  
   

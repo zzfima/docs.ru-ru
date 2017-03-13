@@ -39,7 +39,7 @@ x = x * y
  Оператор `*=` нельзя перегрузить непосредственно, однако пользовательские типы могут перегрузить [оператор \*](../../../csharp/language-reference/operators/multiplication-operator.md) \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Пример  
- [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#13)]  
+ [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-assignment-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

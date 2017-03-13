@@ -72,7 +72,7 @@ caps.handback.revision: 8
   
 3.  После оператора `End Class` класса Form1 добавьте следующий код для создания типа `CustomerInfo`, чтобы сохранить результаты запроса для этого примера.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#16)]  
+     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
   
 4.  При добавлении таблиц в реляционный конструктор объектов конструктор добавил объект <xref:System.Data.Linq.DataContext> в проект.  Этот объект содержит код, необходимый для доступа к этим таблицам и доступа к отдельным объектам и коллекциям для каждой таблицы.  Объекту <xref:System.Data.Linq.DataContext> для проекта присвоено имя на основе имени файла .dbml.  Для данного проекта объект <xref:System.Data.Linq.DataContext> называется `northwindDataContext`.  
   
@@ -80,7 +80,7 @@ caps.handback.revision: 8
   
      В событии `Load` класса Form1 добавьте следующий код для запроса к таблицам, которые отображаются как свойства контекста данных.  Предложение `Select` запроса создает новый тип `CustomerInfo` вместо анонимного типа для каждого элемента результата запроса.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#15)]  
+     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
   
 5.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   

@@ -74,18 +74,18 @@ caps.handback.revision: 27
 ### Универсальные интерфейсы  
  Универсальные интерфейсы, внедренные из сборки взаимодействия, использовать невозможно.  Это показано в следующем примере.  
   
- [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#1)]  
+ [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
   
 ### Типы с универсальными параметрами  
  Типы с универсальным параметром, тип которого внедрен из сборки взаимодействия, использовать невозможно, если это тип из внешней сборки.  Это ограничение не распространяется на интерфейсы.  Например, рассмотрим интерфейс <xref:Microsoft.Office.Interop.Excel.Range>, определенный в сборке <xref:Microsoft.Office.Interop.Excel>.  Если библиотека содержит внедренные типы из <xref:Microsoft.Office.Interop.Excel> и предоставляет метод, возвращающий универсальный тип с параметром, тип которого — интерфейс <xref:Microsoft.Office.Interop.Excel.Range>, то этот метод должен возвращать универсальный интерфейс, как показано в следующем примере кода.  
   
- [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#2)]  
-[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#3)]  
-[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#4)]  
+ [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
+[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
+[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
   
  В следующем примере клиентский код может вызывать метод, возвращающий универсальный интерфейс <xref:System.Collections.IList>, без ошибок.  
   
- [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#5)]  
+ [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## Пример  
  Следующий код компилирует исходный файл `OfficeApp.vb`, а также ссылается на сборки из `COMData1.dll` и `COMData2.dll` для создания программы `OfficeApp.exe`.  

@@ -19,9 +19,9 @@ caps.handback.revision: 27
 # Инициализаторы объектов и коллекций (Руководство по программированию в C#)
 Инициализаторы объектов позволяют присваивать значения всем доступным полям и свойствам объекта во время создания без вызова конструктора, за которым следуют строки операторов присваивания.  Синтаксис инициализатора объекта позволяет задавать аргументы конструктора или опускать их \(и синтаксис в скобках\).  В следующем примере показаны использование инициализатора объекта с именованным типом `Cat` и вызов конструктора по умолчанию.  Обратите внимание на использование в классе `Cat` автоматически внедренных свойств.  Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
- [!code-cs[csProgGuideLINQ#39](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#39)]  
+ [!code-cs[csProgGuideLINQ#39](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_1.cs)]  
   
- [!code-cs[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#45)]  
+ [!code-cs[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)]  
   
 ## Инициализаторы объектов с анонимными типами  
  Хотя инициализаторы объектов можно использовать в любом контексте, они особенно полезны в выражениях запросов [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  В выражениях запросов часто используются [анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), которые можно инициализировать только с помощью инициализаторов объектов, как показано в следующем объявлении.  
@@ -32,7 +32,7 @@ var pet = new { Age = 10, Name = "Fluffy" };
   
  Анонимные типы позволяют предложению `select` в выражении запроса [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] преобразовывать объекты исходной последовательности в объекты, значение и форма которых могут отличаться от исходных.  Это бывает полезно, если требуется сохранить лишь часть информации от каждого объекта последовательности.  В приведенном ниже примере предполагается, что у объекта продукта \(`p`\) имеется множество полей и методов, и требуется создать последовательность объектов, содержащую только имя продукта и его цену.  
   
- [!code-cs[csProgGuideLINQ#40](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#40)]  
+ [!code-cs[csProgGuideLINQ#40](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_3.cs)]  
   
  При выполнении этого запроса переменная `productInfos` будет содержать последовательность объектов, доступных в операторе `foreach`, как показано в следующем примере.  
   
@@ -61,11 +61,11 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
  В следующем инициализаторе коллекции используются инициализаторы объектов класса `Cat`, определенного в предыдущем примере.  Обратите внимание, что инициализаторы отдельных объектов заключены в скобки и разделены запятыми.  
   
- [!code-cs[csProgGuideLINQ#41](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#41)]  
+ [!code-cs[csProgGuideLINQ#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_4.cs)]  
   
  В качестве элемента инициализатора коллекции можно указать значение [null](../../../csharp/language-reference/keywords/null.md), если метод `Add` коллекции допускает это.  
   
- [!code-cs[csProgGuideLINQ#42](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#42)]  
+ [!code-cs[csProgGuideLINQ#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_5.cs)]  
   
  Можно указать индексированные элементы, если коллекция поддерживает индексирование.  
   
@@ -79,7 +79,7 @@ var numbers = new Dictionary<int, string> {
 ```  
   
 ## Пример  
- [!code-cs[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#46)]  
+ [!code-cs[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

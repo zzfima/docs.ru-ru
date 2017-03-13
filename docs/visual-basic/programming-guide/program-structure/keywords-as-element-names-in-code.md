@@ -26,7 +26,7 @@ caps.handback.revision: 11
 
 Любой элемент программы, например переменная, класс или член, может иметь имя, совпадающее со служебным словом.  Например, можно создать переменную с именем `Loop`.  Однако для ссылки на переменную, имеющую такое же имя, как и служебное слово `Loop`, необходимо либо добавить перед ее именем полное имя пространства имен, либо заключить ее в квадратные скобки \(`[ ]`\), как показано в следующем примере.  
   
- [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/keywords-as-element-name_1.vb)]  
+ [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
  Если этого не сделать, то Visual Basic предполагает использование встроенного служебного слова `Loop` и выдает ошибку, как в следующем примере:  
   

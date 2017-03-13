@@ -47,7 +47,7 @@ Stop
 ## Пример  
  В данном примере оператор `Stop` используется для приостановки выполнения на каждом шаге цикла `For...Next`.  
   
- [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/stop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
 ## См. также  
  [Оператор End](../../../visual-basic/language-reference/statements/end-statement.md)

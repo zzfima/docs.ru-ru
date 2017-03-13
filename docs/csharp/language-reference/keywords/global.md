@@ -24,7 +24,7 @@ caps.handback.revision: 7
 ## Пример  
  В следующем примере показано использование контекстно\-зависимого ключевого слова `global` для указания того, что класс `TestApp` определен в глобальном пространстве имен:  
   
- [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/csharp/global_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
   
 ## См. также  
  [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)

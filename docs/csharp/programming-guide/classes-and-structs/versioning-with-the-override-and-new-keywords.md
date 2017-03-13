@@ -37,15 +37,15 @@ caps.handback.revision: 25
   
  Чтобы продемонстрировать это на практике, предположим, что компания А создала класс с именем `GraphicsClass`, используемый вашей программой.  Это класс `GraphicsClass`:  
   
- [!code-cs[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_1.cs)]  
+ [!code-cs[csProgGuideInheritance#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_1.cs)]  
   
  Ваша компания использует этот класс, и вы применили его для создания собственного производного класса, добавив новый метод:  
   
- [!code-cs[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_2.cs)]  
+ [!code-cs[csProgGuideInheritance#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_2.cs)]  
   
  Ваше приложение работало без проблем до тех пор, пока компания А не выпустила новую версию класса `GraphicsClass` со следующим кодом:  
   
- [!code-cs[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_3.cs)]  
+ [!code-cs[csProgGuideInheritance#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_3.cs)]  
   
  Новая версия класса `GraphicsClass` теперь имеет метод с именем `DrawRectangle`.  Сначала ничего особенного не произошло.  Новая версия совместима со старой на уровне машинных кодов.  Все развернутое программное обеспечение будет продолжать работать, даже если в компьютерных системах будет установлен новый класс.  Все существующие вызовы метода `DrawRectangle` будут продолжать ссылаться на вашу версию в созданном вами производном классе.  
   
@@ -53,32 +53,32 @@ caps.handback.revision: 25
   
  Если ваш метод должен переопределить новый метод базового класса, используйте ключевое слово `override`:  
   
- [!code-cs[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_4.cs)]  
+ [!code-cs[csProgGuideInheritance#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_4.cs)]  
   
  Ключевое слово `override` заставляет все объекты, являющиеся производными от `YourDerivedGraphicsClass`, использовать версию `DrawRectangle` производного класса.  Объекты, являющиеся производными от класса `YourDerivedGraphicsClass`, могут продолжать использовать версию метода `DrawRectangle` базового класса, используя ключевое слово "base":  
   
- [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_5.cs)]  
+ [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
  Если ваш метод не должен переопределять новый метод базового класса, следуйте приведенным ниже рекомендациям.  Чтобы избежать путаницы между двумя методами, вы можете переименовать свой метод.  Это отнимает много времени и может привести к возникновению ошибок, поэтому не всегда удобно.  Однако, если ваш проект невелик, можно использовать функции оптимизации кода Visual Studio для переименования метода.  Дополнительные сведения см. в разделе [Refactoring Classes and Types \(Class Designer\)](/visual-studio/ide/refactoring-classes-and-types-class-designer).  
   
  Чтобы избежать появления предупреждения, можно также использовать ключевое слово `new` в определении производного класса:  
   
- [!code-cs[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_6.cs)]  
+ [!code-cs[csProgGuideInheritance#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_6.cs)]  
   
  Использование ключевого слова `new` сообщает компилятору, что ваше определение скрывает определение, содержащееся в базовом классе.  Это поведение установлено по умолчанию.  
   
 ## Переопределение и выбор метода  
  При вызове метода класса компилятор C\# выбирает наилучший из методов, совместимых с вызовом \(например, если имеются два метода с одинаковыми именами\), и параметров, которые совместимы с переданным параметром.  Следующие методы будут совместимы:  
   
- [!code-cs[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_7.cs)]  
+ [!code-cs[csProgGuideInheritance#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_7.cs)]  
   
  Если выполняется вызов `DoWork` из экземпляра `Derived`, компилятор C\# сначала попытается обеспечить совместимость вызова с версиями `DoWork`, первоначально объявленными в `Derived`.  Переназначенные методы не рассматриваются как объявленные в классе. Они являются новыми реализациями метода, объявленного в базовом классе.  Только в том случае, если компилятор C\# не смог сопоставить вызов метода с исходным методом в классе `Derived`, он попытается сопоставить вызов с переназначенным методом с тем же именем и совместимыми параметрами.  Примеры.  
   
- [!code-cs[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_8.cs)]  
+ [!code-cs[csProgGuideInheritance#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_8.cs)]  
   
  Поскольку переменную `val` можно неявно преобразовать в тип "double", компилятор C\# вызовет `DoWork(double)` вместо `DoWork(int)`.  Чтобы избежать этого, существует два способа.  Во\-первых, избегайте объявления новых методов с одинаковыми именами в качестве виртуальных.  Во\-вторых, можно сделать так, чтобы компилятор C\# вызвал виртуальный метод, заставив его выполнить поиск в списке методов базового класса за счет приведения экземпляра `Derived` к `Base`.  Поскольку метод является виртуальным, будет вызвана реализация `DoWork(int)` в классе `Derived`.  Примеры.  
   
- [!code-cs[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/versioning-with-the-over_9.cs)]  
+ [!code-cs[csProgGuideInheritance#34](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_9.cs)]  
   
  Дополнительные примеры см. в разделе [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)`new` и `override`.  
   

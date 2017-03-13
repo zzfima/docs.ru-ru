@@ -29,7 +29,7 @@ caps.handback.revision: 12
   
 -   Используйте метод <xref:System.Enum.GetNames%2A> для получения строк, связанных с членами перечисления.  В этом примере объявляется перечисление, `flavorEnum`, затем используется метод <xref:System.Enum.GetNames%2A> для отображения строк, связанных с каждым членом.  
   
-     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#2)]  
+     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]  
   
 ## См. также  
  <xref:System.Enum.GetValues%2A>   

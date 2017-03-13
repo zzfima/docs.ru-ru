@@ -51,7 +51,7 @@ caps.handback.revision: 11
 ## Пример  
  Этот пример использует тег `<include>` для импорта комментариев документации элемента из файла с именем `commentFile.xml`.  
   
- [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/include_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
  Формат `commentFile.xml` представлен ниже.  
   

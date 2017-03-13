@@ -40,11 +40,11 @@ caps.handback.revision: 15
 ## Соединение нескольких входных последовательностей в одну выходную  
  Запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] можно использовать для создания выходной последовательности, содержащей элементы из нескольких входных последовательностей.  В следующем примере показано объединение двух находящихся в памяти структур данных, но те же принципы могут применяться для соединения данных из источников XML, SQL или DataSet.  Предположим, что существуют два следующих типа классов.  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#7)]  
+ [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  В следующем примере показан запрос.  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#8)]  
+ [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  Дополнительные сведения см. в разделах [Предложение join](../../../../csharp/language-reference/keywords/join-clause.md) и [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 15
 ## Преобразование находящихся в памяти объектов в XML  
  Запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] упрощают преобразования данных между структурами данных в памяти, базами данных SQL, наборами данных [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)] и потоками или документами XML.  В следующем примере объекты в находящейся в памяти структуре данных преобразуются в XML\-элементы.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#9)]  
+ [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  Код формирует следующие выходные XML\-данные.  
   
@@ -102,7 +102,7 @@ caps.handback.revision: 15
 > [!NOTE]
 >  Вызов методов в выражениях запроса не поддерживается, если запрос будет перенесен в какой\-либо другой домен.  Например, невозможно вызвать обычный C\# метод в [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], так как в SQL Server для него отсутствует контекст.  Тем не менее, хранимые процедуры можно сопоставить методам и вызывать последние.  Дополнительные сведения см. в разделе [Хранимые процедуры](../Topic/Stored%20Procedures.md).  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#10)]  
+ [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## См. также  
  [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   

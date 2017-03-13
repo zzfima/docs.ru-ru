@@ -37,14 +37,14 @@ caps.handback.revision: 14
 ## Пример  
  В приведенном примере метод `Getinfo` присутствует как в базовом классе `Person`, так и в производном классе `Employee`.  За счет использования ключевого слова `base` можно вызвать метод `Getinfo` базового класса из производного класса.  
   
- [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/csharp/base_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]  
   
  Дополнительные примеры см. в разделах [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) и [override](../../../csharp/language-reference/keywords/override.md).  
   
 ## Пример  
  В этом примере показано, как задать конструктор базового класса, вызываемый при создании экземпляров производного класса.  
   
- [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/csharp/base_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

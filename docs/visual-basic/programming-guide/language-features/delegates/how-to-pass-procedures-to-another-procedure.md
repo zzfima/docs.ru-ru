@@ -32,25 +32,25 @@ caps.handback.revision: 9
   
 1.  Создайте делегата с именем `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_1.vb)]  
+     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
   
 2.  Создайте процедуру с именем `AddNumbers` с параметрами и возвращаемым значением, которые совпадают с `MathOperator`, то есть сигнатуры совпадают.  
   
-     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_2.vb)]  
+     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
   
 3.  Создайте процедуру с именем `SubtractNumbers` с сигнатурой, которая соответствует `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_3.vb)]  
+     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
   
 4.  Создайте процедуру с именем `DelegateTest`, которая принимает делегат в качестве параметра.  
   
      Эта процедура может принимать ссылку на `AddNumbers` или `SubtractNumbers`, так как их сигнатуре соответствуют сигнатура `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_4.vb)]  
+     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
   
 5.  Создайте процедуру с именем `Test`, которая сначала вызывает `DelegateTest` с делегатом для `AddNumbers` в качестве параметра и затем снова с делегатом для `SubtractNumbers` в качестве параметра.  
   
-     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_5.vb)]  
+     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
   
      Когда вызывается `Test`, то сначала он отображает результат действия `AddNumbers` на значения `5` и `3`, и этот результат равен 8.  Затем отображается результат действия `SubtractNumbers` на `9` и `3`, который равен 6.  
   

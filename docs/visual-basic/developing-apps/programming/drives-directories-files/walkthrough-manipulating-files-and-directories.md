@@ -66,13 +66,13 @@ caps.handback.revision: 49
   
 2.  В обработчик событий `Click` добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
      Вызов `FolderBrowserDialog1.ShowDialog` открывает диалоговое окно **Выбрать папку**.  Когда пользователь нажимает кнопку **ОК**, свойство <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> передается как аргумент методу `ListFiles`, который добавляется на следующем шаге.  
   
 3.  Добавьте следующий метод `ListFiles`.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
   
      Этот код сперва очищает элемент **ListBox**.  
   
@@ -92,7 +92,7 @@ caps.handback.revision: 49
   
 2.  В обработчик событий `Click` добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
      Этот код проверяет, что элемент выбран в элементе `ListBox`.  Затем он получает запись пути к файлу из элемента `ListBox`.  Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> используется для проверки, что файл по прежнему существует.  
   
@@ -100,7 +100,7 @@ caps.handback.revision: 49
   
 3.  Добавьте следующий метод `GetTextForOutput`.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
      Код использует метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> для получения параметров файла.  Параметры файла добавляются в <xref:System.Text.StringBuilder>.  
   
@@ -116,7 +116,7 @@ caps.handback.revision: 49
   
 1.  В конец обработчика событий `examineButton_Click` добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
   
      Код задает путь к файлу журнала, чтобы файл журнала помещался в тот же каталог, где находится выбранный файл.  Настроено, что запись в журнал должна содержать текущую дату и время, а далее информацию о файле.  
   
@@ -132,7 +132,7 @@ caps.handback.revision: 49
   
 2.  Добавьте в обработчик событий следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
   
      Следующий код задает текущий каталог в качестве каталога по умолчанию для обозревателя папок.  
   
@@ -144,7 +144,7 @@ caps.handback.revision: 49
   
 1.  Добавьте следующий метод `SetEnabled`.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
   
      Метод `SetEnabled` включает и отключает элементы управления в зависимости от того, выбран ли элемент в элементе `ListBox`.  
   
@@ -161,12 +161,12 @@ caps.handback.revision: 49
 ## Полный пример с использованием My.Computer.FileSystem  
  Далее приведен полный пример.  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
 ## Полный пример с использованием System.IO  
  В следующем эквивалентном примере используются классы из пространства имен <xref:System.IO> вместо объектов `My.Computer.FileSystem`.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
 ## См. также  
  <xref:System.IO>   

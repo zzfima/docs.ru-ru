@@ -45,15 +45,15 @@ caps.handback.revision: 18
   
 -   Зарезервированное слово [Оператор End \<ключевое\_слово\>](../../../visual-basic/language-reference/statements/end-keyword-statement.md), которое прекращает выполнение программы, отключено.  Следующая программа компилируется и выполняется без параметра `/netcf`, но происходит сбой во время компиляции с параметром `/netcf`.  
   
-     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_1.vb)]  
+     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
 -   Позднее связывание во всех формах отключено.  При обнаружении сценариев с поздним связыванием создаются ошибки времени компиляции.  Следующая программа компилируется и выполняется без параметра `/netcf`, но происходит сбой во время компиляции с параметром `/netcf`.  
   
-     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_2.vb)]  
+     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
 -   Модификаторы [Auto](../../../visual-basic/language-reference/modifiers/auto.md) [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) и [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md) отключены.  Синтаксис инструкции [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md) также изменен на `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.  Следующий пример кода демонстрирует влияние параметра `/netcf` на процесс компиляции.  
   
-     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_3.vb)]  
+     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
 -   Использование ключевых слов Visual Basic 6.0, которые были удалены из [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], создает различные ошибки при использовании `/netcf`.  Это приводит к сообщениям об ошибках при использовании следующих зарезервированных слов.  
   

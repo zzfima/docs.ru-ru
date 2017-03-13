@@ -30,7 +30,7 @@ caps.handback.revision: 8
 ## Пример  
  В этом примере метод <xref:System.Text.Encoding.GetBytes%2A> из класса кодировки <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> используется для преобразования строки в массив байтов.  
   
- [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-strings-i_1.vb)]  
+ [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-strings-into-an-array-of-bytes_1.vb)]  
   
  Для преобразования строки в массив байтов можно выбрать один из нескольких параметров кодировки:  
   

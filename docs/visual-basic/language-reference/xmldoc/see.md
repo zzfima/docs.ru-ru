@@ -42,7 +42,7 @@ caps.handback.revision: 10
 ## Пример  
  Этот пример использует тег `<see>` в разделе примечаний `UpdateRecord` для ссылки на метод `DoesRecordExist`.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/see_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
 ## См. также  
  [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

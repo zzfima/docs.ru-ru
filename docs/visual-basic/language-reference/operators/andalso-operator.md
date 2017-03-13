@@ -66,14 +66,14 @@ result = expression1 AndAlso expression2
 ## Пример  
  В данном примере оператор `AndAlso` используется для выполнения логического умножения двух выражений.  Результат представляет собой значение `Boolean`, которое показывает, что объединенное выражение истинно.  Если первое выражение является `False`, второе выражение не оценивается.  
   
- [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/andalso-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
   
  В предыдущем примере получаются результаты `True`, `False` и `False`, соответственно.  При вычислении `secondCheck` второе выражение не вычисляется, поскольку первое значение уже равно `False`.  Тем не менее, второе выражение определяется при вычислении `thirdCheck`.  
   
 ## Пример  
  В следующем примере процедура `Function` выполняет поиск заданного значения среди элементов массива.  Если массив пуст или превышена длина массива, оператор `While` не проверяет элементы массива на значение поиска.  
   
- [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/andalso-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
   
 ## См. также  
  [Логические \(побитовые\) операторы](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   

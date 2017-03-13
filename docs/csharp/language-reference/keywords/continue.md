@@ -24,7 +24,7 @@ caps.handback.revision: 20
 ## Пример  
  В этом примере инициализируется счетчик для счета от 1 до 10.  С помощью выписки `continue` в сочетании с выражением `(i < 9)`, пропущены выписки между концом блоков `continue` и `for`.  
   
- [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/csharp/continue_1.cs)]  
+ [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

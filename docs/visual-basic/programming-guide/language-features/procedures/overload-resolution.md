@@ -50,9 +50,9 @@ caps.handback.revision: 21
   
  В следующем прмере приведен процесс разрешения перегружаемых версий.  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
   
  В первом вызове компилятор устраняет первую перегрузку, так как тип первого аргумента \(`Short`\) сужается к типу соответствующего параметра \(`Byte`\).  Затем исключаются третья перегрузка, так как каждый тип аргумента во второй перегрузке \(`Short` и `Single`\) может быть расширен до соответствующего типа в третьей перегрузке \(`Integer` и `Single`\).  Вторая перегруженная версия требует меньшего расширения, поэтому компилятор использует ее для вызова.  
   

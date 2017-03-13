@@ -97,7 +97,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) 
 ## Пример  
  Следующий пример разделяет определение класса `sampleClass` на два объявления, в каждом из которых определяется отдельная процедура `Sub`.  
   
- [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/visualbasic/partial_1.vb)]  
+ [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
   
  Два частичных определения в предыдущем примере могут находиться в одном или двух исходных файлах.  
   

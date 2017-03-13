@@ -26,7 +26,7 @@ caps.handback.revision: 13
  Типы определенные пользователем могут вызвать перегрузку оператора `!` \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Пример  
- [!code-cs[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#7)]  
+ [!code-cs[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/CSharp/logical-negation-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

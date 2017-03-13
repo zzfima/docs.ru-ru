@@ -67,32 +67,32 @@ caps.handback.revision: 18
   
 2.  Поскольку приложение ссылается на пространство имен <xref:System.IO>, необходимо добавить следующие операторы в самом начале кода, перед объявлением класса формы, которое начинается с `Public Class Form1`.  
   
-     [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_1.vb)]  
   
      Перед записью в файл необходимо создать экземпляр класса <xref:System.IO.StreamWriter>.  
   
 3.  В меню **Вид** выберите **Конструктор** чтобы вернуться в окно **Конструктор Windows Forms**.  Чтобы создать обработчик событий <xref:System.Windows.Forms.Control.Click>, необходимо дважды щелкнуть кнопку `Submit` и затем добавить следующий код:  
   
-     [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_2.vb)]  
   
 > [!NOTE]
 >  Произойдет возврат в редактор кода Visual Studio, а курсор будет помещен внутрь обработчика события, в который и следует добавить код.  
   
 1.  Для записи в файл используйте метод <xref:System.IO.StreamWriter.Write%2A> класса <xref:System.IO.StreamWriter>.  Добавьте следующий код сразу после `Dim fw As StreamWriter`.  Не стоит беспокоиться о том, что возникнет исключение, если файла не существует, т. к. в этом случае он будет создан автоматически.  
   
-     [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_3.vb)]  
   
 2.  Чтобы убедиться, что пользователь не сможет отправить пустую запись, можно добавить следующий код сразу после `Dim ReadString As String`.  
   
-     [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_4.vb)]  
   
 3.  Поскольку речь идет о дневнике, пользователь захочет добавить к каждой записи дату.  Вставьте следующий код после `fw = New StreamWriter("C:\MyDiary.txt", True)`, чтобы присвоить переменной `Today` значение текущей даты.  
   
-     [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_5.vb)]  
   
 4.  В заключение добавьте код, очищающий элемент управления <xref:System.Windows.Forms.TextBox>.  Добавьте следующий код к событию <xref:System.Windows.Forms.Control.Click> кнопки `Clear`.  
   
-     [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_6.vb)]  
   
 ## Добавление средств отображения в дневник  
  В этом разделе добавляется средство для отображения последней записи в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>.  Можно также добавить элемент управления <xref:System.Windows.Forms.ComboBox>, в котором будут отображаться различные записи и из которого пользователь сможет выбрать запись для отображения в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>.  Экземпляр класса <xref:System.IO.StreamReader> производит чтение из файла `MyDiary.txt`.  Как и <xref:System.IO.StreamWriter>, класс <xref:System.IO.StreamReader> предназначен для работы с текстовыми файлами.  
@@ -110,7 +110,7 @@ caps.handback.revision: 18
   
 1.  В элементе управления `PickEntries` <xref:System.Windows.Forms.ComboBox> отображается дата создания каждой из записей, чтобы пользователь мог выбрать запись за определенную дату.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> кнопки `GetEntries` и добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_7.vb)]  
   
 2.  Чтобы удостовериться в работоспособности кода, нажмите клавишу F5 для компиляции приложения, а затем кнопку **Показать записи**.  Щелкните стрелку элемента управления <xref:System.Windows.Forms.ComboBox>, чтобы просмотреть даты создания всех записей.  
   
@@ -118,7 +118,7 @@ caps.handback.revision: 18
   
 1.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> на кнопку `Display` и добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_8.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_8.vb)]  
   
 2.  Чтобы удостовериться в работоспособности кода, нажмите клавишу F5 для компиляции приложения и введите запись.  Нажмите кнопку **Показать записи**, выберите запись в элементе управления <xref:System.Windows.Forms.ComboBox>, а затем нажмите кнопку **Просмотреть**.  Содержимое выбранной записи будет отображено в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>.  
   
@@ -137,23 +137,23 @@ caps.handback.revision: 18
   
 1.  Добавьте следующий код к событию <xref:System.Windows.Forms.Control.Click> кнопки `Display` после `DisplayEntry.Text = ReadString`.  
   
-     [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_9.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_9.vb)]  
   
 2.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> кнопки `DeleteEntry` и добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_10.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_10.vb)]  
   
 3.  Когда пользователь отображает запись, кнопка `EditEntry` становится доступной.  Добавьте следующий код к событию <xref:System.Windows.Forms.Control.Click> кнопки `Display` после `DisplayEntry.Text = ReadString`.  
   
-     [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_11.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_11.vb)]  
   
 4.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> кнопки `EditEntry` и добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_12.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_12.vb)]  
   
 5.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> кнопки `SubmitEdit` и добавьте следующий код.  
   
-     [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_13.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_13.vb)]  
   
  Чтобы удостовериться в работоспособности кода, нажмите клавишу F5 для компиляции приложения.  Нажмите кнопку **Показать записи**, выберите запись и нажмите кнопку **Просмотреть**.  Запись будет отображена в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>.  Нажмите кнопку **Изменить запись**.  Запись будет отображена в элементе управления `Entry` <xref:System.Windows.Forms.TextBox>.  Отредактируйте запись в элементе управления `Entry` <xref:System.Windows.Forms.TextBox> и нажмите кнопку **Сохранить изменения**.  Откройте файл `MyDiary.txt`, чтобы убедиться в том, что исправления внесены.  Теперь выберите запись и нажмите кнопку **Удалить запись**.  Когда появится окно сообщения <xref:System.Windows.Forms.MessageBox> с запросом подтверждения, нажмите кнопку **ОК**.  Закройте приложение и откройте файл `MyDiary.txt`, чтобы убедиться, что запись была удалена.  
   

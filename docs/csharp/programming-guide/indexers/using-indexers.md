@@ -56,7 +56,7 @@ public int this [int index]   // Indexer declaration
  Обратите внимание, что при вычислении доступа индексатора, например, в инструкции `Console.Write` вызывается метод доступа [get](../../../csharp/language-reference/keywords/get.md).  Таким образом, если не существует метода доступа `get`, происходит ошибка времени компиляции.  
   
 ### Код  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_1.cs)]  
+ [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
 ## Индексирование с использованием других значений  
  C\# не ограничивает тип индексатора типом "integer".  Например, может оказаться полезным использовании в индексаторе строки.  Такой индексатор можно реализовать, выполнив поиск строки в коллекции и возвратив соответствующее значением.  Методы доступа можно перегружать, версии типа "string" и "integer" могут сосуществовать.  
@@ -67,7 +67,7 @@ public int this [int index]   // Indexer declaration
  В этом примере объявляется класс, в котором хранятся дни недели.  Объявляется метод доступа `get`, который принимает строку \(название дня недели\) и возвращает соответствующее целое число.  Например, воскресенье возвращает 0, понедельник возвращает 1 и т. д.  
   
 ### Код  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_2.cs)]  
+ [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
 ## Надежное программирование  
  Существуют два основных способа повышения надежности и безопасности индексаторов.  

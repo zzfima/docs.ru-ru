@@ -64,7 +64,7 @@ caps.handback.revision: 16
 ## <a name="example"></a>Пример  
  В этом примере отображается значение `Nickname` параметр.  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#14)]  
+ [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
   
  Для работы этого примера приложение должно иметь `Nickname` параметр типа `String`.  
   

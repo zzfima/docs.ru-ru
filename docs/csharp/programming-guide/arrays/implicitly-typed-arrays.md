@@ -24,14 +24,14 @@ caps.handback.revision: 13
   
  В следующих примерах показано, как создать неявно типизированный массив:  
   
- [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#37)]  
+ [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
   
  В предыдущем примере обратите внимание на то, что для неявно типизированных массивов квадратные скобки в левой части оператора инициализации не используются.  Кроме того, следует обратить внимание на то, что инициализация массивов массивов, как и одномерных массивов, выполняется с помощью `new []`.  
   
 ## Неявно типизированные массивы в инициализаторах объектов  
  При создании анонимного типа, содержащего массив, этот массив неявно типизируется в инициализаторе объекта типа.  В следующем примере `contacts` является неявно типизированным массивом анонимных типов, каждый из которых содержит массив с именем `PhoneNumbers`.  Обратите внимание на то, что ключевое слово `var` внутри инициализаторов объектов не используется.  
   
- [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#38)]  
+ [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

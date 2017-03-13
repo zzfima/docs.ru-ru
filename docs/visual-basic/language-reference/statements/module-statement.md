@@ -102,7 +102,7 @@ End Module
 -   **Квалификация.** В проекте может быть несколько модулей; можно объявлять элементы с одним и тем же именем в двух или нескольких модулях.  Однако если ссылка на элемент модуля находится за пределами модуля, то в ней необходимо указывать соответствующее имя модуля.  Дополнительные сведения см. в разделе [Ссылки на объявленные элементы](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## Пример  
- [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/module-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
 ## См. также  
  [Оператор Class](../../../visual-basic/language-reference/statements/class-statement.md)   

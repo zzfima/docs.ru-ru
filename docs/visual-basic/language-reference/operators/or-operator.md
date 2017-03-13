@@ -86,14 +86,14 @@ result = expression1 Or expression2
 ## <a name="example"></a>Пример  
  В следующем примере используется `Or` оператора для выполнения логической дизъюнкции двух выражений. В результате `Boolean` значение, представляющее ли два выражения являются `True`.  
   
- [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/or-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
   
  В предыдущем примере получаются результаты `True`, `True`, и `False`, соответственно.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Or` оператора для выполнения логической дизъюнкции над отдельными битами двух числовых выражений. Бит в результирующем шаблоне устанавливается в том случае, если любой из соответствующих битов в операндах равен 1.  
   
- [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/or-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
   
  В предыдущем примере получаются результаты 10, 14 и 14 соответственно.  
   

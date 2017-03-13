@@ -31,7 +31,7 @@ caps.handback.revision: 19
  Пользовательские типы могут вызвать перегрузку унарного оператора `-` и бинарного `-` операторов.  Дополнительные сведения см. в разделе [оператор](../../../csharp/language-reference/keywords/operator.md).  
   
 ## Пример  
- [!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#40)]  
+ [!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

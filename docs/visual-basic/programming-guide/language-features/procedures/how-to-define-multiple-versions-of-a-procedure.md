@@ -42,7 +42,7 @@ caps.handback.revision: 14
 ## Пример  
  В следующем примере определяется процедура `Sub` для учета транзакции по отношению к балансу клиента.  Используется ключевое слово `Overloads` для определения двух версий процедуры: первая процедура принимает клиента по имени, а другая — по номеру счета.  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-multiple-v_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
   
  Вызывающий код может получить идентификатор клиента как в качестве типа `String`, так и в качестве типа `Integer`, а затем использовать тот же вызывающий оператор в обоих случаях.  
   

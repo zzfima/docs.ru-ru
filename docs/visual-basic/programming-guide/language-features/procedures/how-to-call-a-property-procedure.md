@@ -39,7 +39,7 @@ caps.handback.revision: 16
   
      В следующем примере считывается значение свойства <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, при этом происходит неявный вызов процедуры `Get`.  
   
-     [!code-vb[VbVbalrDateProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/VbVbalrDateProperties/Module1.vb#4)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-call-a-property-procedure_1.vb)]  
   
 2.  Если свойство принимает аргументы, за именем свойства должен в скобках указываться список аргументов.  Если не указано никаких аргументов, скобки можно опустить.  
   
@@ -53,7 +53,7 @@ caps.handback.revision: 16
   
      В следующем примере задается значение свойства <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, при этом происходит неявный вызов процедуры `Set`.  
   
-     [!code-vb[VbVbcnProcedures#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-property-p_2.vb)]  
+     [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-call-a-property-procedure_2.vb)]  
   
 2.  Если свойство принимает аргументы, за именем свойства должен в скобках указываться список аргументов.  Если не указано никаких аргументов, скобки можно опустить.  
   

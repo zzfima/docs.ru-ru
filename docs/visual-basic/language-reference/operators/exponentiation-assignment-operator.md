@@ -56,7 +56,7 @@ variableorproperty ^= expression
 ## Пример  
  В следующем примере оператор `^=` используется для возведения переменной типа `Integer` в степень, равную второй переменной, и для присвоения значения первой переменной.  
   
- [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/exponentiation-assignmen_1.vb)]  
+ [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор ^](../../../visual-basic/language-reference/operators/exponentiation-operator.md)   

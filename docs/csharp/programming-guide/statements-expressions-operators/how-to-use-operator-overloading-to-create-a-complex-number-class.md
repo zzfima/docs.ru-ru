@@ -23,7 +23,7 @@ caps.handback.revision: 15
 В следующем примере показано, как использовать перегрузку операторов при определении класса комплексных чисел `Complex`, в котором реализовано комплексное сложение.  Для отображения действительной и мнимой частей чисел и результатов сложения в программе используется переопределенная версия метода `ToString`.  
   
 ## Пример  
- [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-use-operator-over_1.cs)]  
+ [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-operator-overloading-to-create-a-complex-number-class_1.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

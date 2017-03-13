@@ -28,7 +28,7 @@ caps.handback.revision: 26
   
  В приведенном ниже примере показан разделяемый метод, определенный в двух частях разделяемого класса.  
   
- [!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/csharp/partial-method_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-method_1.cs)]  
   
  Для получения дополнительной информации см. [Разделяемые классы и методы](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   

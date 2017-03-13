@@ -53,7 +53,7 @@ caps.handback.revision: 21
 ## Тип данных параметра  
  Тип данных для параметра определяется с помощью предложения `As` при его объявлении.  Например, приведенная ниже функция принимает строковый и целочисленный аргументы.  
   
- [!code-vb[VbVbcnProcedures#32](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-parameters-and_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
  Если переключатель проверки типа \([Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) установлен в `Off,` предложение `As` необязательно, кроме тех случаев, когда оно используется хотя бы одним параметром: в этом случае его должны использовать все параметры.  Если проверка типа установлена в `On`, `As` предложение является обязательным для всех параметров процедуры.  
   

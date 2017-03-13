@@ -31,7 +31,7 @@ caps.handback.revision: 13
   
      В это примере в файл с именем `Testfile.txt` записывается строка `"This is a test string."`.  
   
-     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-append-to-text-fi_1.vb)]  
+     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
   
 ## Отказоустойчивость  
  При следующих условиях возможно возникновение исключения.  

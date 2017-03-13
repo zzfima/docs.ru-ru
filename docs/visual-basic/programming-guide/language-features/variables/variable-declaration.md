@@ -76,7 +76,7 @@ Dim l, m As Long, x, y As Single
 ## Вывод локального типа  
  *Определение типа* используется для определения типов данных локальных переменных, объявленных без предложения `As`.  Компилятор выводит тип переменной из типа инициализированного выражения.  Показано, как объявлять переменные без явного указания типа.  В следующем примере и `num1`, и `num2` имеют тип целых чисел.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   
  Для использования вычисления локального типа `Option Infer` должно быть установлено в `On`.  Дополнительные сведения см. в разделах [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) и [Option Infer \- оператор](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   

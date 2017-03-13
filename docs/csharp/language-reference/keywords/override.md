@@ -24,7 +24,7 @@ caps.handback.revision: 26
 ## Пример  
  В этом примере класс `Square` должен предоставить переопределенную реализацию `Area`, поскольку `Area` является унаследованным от абстрактного класса `ShapesClass`.  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
  Метод `override` предоставляет новую реализацию члена, унаследованного от базового класса.  Метод, переопределенный объявлением `override`, называется переопределенным базовым методом.  Переопределенный базовый метод должен иметь ту же сигнатуру, что и метод `override`.  Дополнительные сведения о наследовании см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 26
 ## Пример  
  В этом примере определяется базовый класс с именем `Employee` и производный класс с именем `SalesEmployee`.  Класс `SalesEmployee` включает дополнительное свойство `salesbonus`, для использования которого переопределяется метод `CalculatePay`.  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#9)]  
+ [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

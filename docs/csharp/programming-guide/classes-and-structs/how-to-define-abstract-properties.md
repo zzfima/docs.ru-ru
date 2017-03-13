@@ -36,7 +36,7 @@ caps.handback.revision: 13
 ## Пример  
  Этот файл объявляет класс `Shape`, содержащий свойство `Area` типа `double`.  
   
- [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_1.cs)]  
+ [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
 -   Модификаторы свойства помещаются в самом объявлении свойства.  Примеры.  
   
@@ -49,12 +49,12 @@ caps.handback.revision: 13
 ## Пример  
  В следующем коде показано три вложенных класса `Shape` и переопределение или свойства `Area` для предоставления собственной реализации.  
   
- [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_2.cs)]  
+ [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
 ## Пример  
  В следующем коде показана тестовая программа, создающая ряд производных от `Shape` объектов и печатающая их области.  
   
- [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_3.cs)]  
+ [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

@@ -25,12 +25,12 @@ caps.handback.revision: 17
 ## Пример  
  В следующем примере первый запрос сортирует слова в алфавитном порядке по возрастанию \(начиная с буквы А\), а второй запрос сортирует эти же слова по убыванию.  \(Ключевое слово `ascending` является значением сортировки по умолчанию, поэтому его использовать не обязательно.\)  
   
- [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#20)]  
+ [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_1.cs)]  
   
 ## Пример  
  В следующем примере первая сортировка выполняется по фамилиям учащихся, а вторая — по их именам.  
   
- [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#22)]  
+ [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_2.cs)]  
   
 ## Заметки  
  Во время компиляции предложение `orderby` преобразуются в вызов метода <xref:System.Linq.Enumerable.OrderBy%2A>.  Ключи в предложении `orderby` преобразуются в вызовы метода <xref:System.Linq.Enumerable.ThenBy%2A>.  

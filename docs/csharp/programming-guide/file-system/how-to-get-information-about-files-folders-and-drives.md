@@ -41,7 +41,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## Пример  
  В следующем примере показаны различные способы доступа к сведениям о файлах и папках.  
   
- [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#6)]  
+ [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
   
 ## Отказоустойчивость  
  При обработке заданных пользователем строк, определяющих пути, необходимо также обрабатывать исключения для следующих условий:  

@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # as (Справочник по C#)
 Можно выполнить с помощью оператора `as` в некоторых случаях совместимость между ссылочными типами или [тип, допускающий значение NULL](../../../csharp/programming-guide/nullable-types/index.md).  В следующем коде приведен пример.  
   
- [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#1)]  
+ [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_1.cs)]  
   
 ## Заметки  
  Оператор `as` подобен оператору приведения.  Однако если преобразование невозможно, то `as` возвращает `null` вместо вызова исключения.  Рассмотрим следующий пример:  
@@ -40,7 +40,7 @@ expression is type ? (type)expression : (type)null
  Обратите внимание, что оператор `as` выполняет только преобразования ссылок, подобные преобразования и преобразования упаковка\-преобразования.  Оператор `as` не может выполнять другие преобразования, например определенное пользователем преобразование, вместо этого следует выполнять с помощью результатов выражения.  
   
 ## Пример  
- [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#2)]  
+ [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

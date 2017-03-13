@@ -51,7 +51,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере вызывается [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.Environ%2A> для получения значения переменной среды операционной системы.  Первая строка вызывает `Environ` в выражении, а вторая строка вызывает его в операторе присваивания.  `Environ` принимает имя переменной в качестве единственного аргумента.  Значение переменной возвращается в вызывающий код.  
   
- [!code-vb[VbVbcnProcedures#7](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
 ## См. также  
  [Процедуры Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   

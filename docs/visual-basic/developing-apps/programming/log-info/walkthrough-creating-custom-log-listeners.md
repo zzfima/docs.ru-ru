@@ -31,7 +31,7 @@ caps.handback.revision: 19
   
 -   В приложении создайте класс `SimpleListener`, наследуемый от класса <xref:System.Diagnostics.TraceListener>.  
   
-     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#16)]  
+     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
      Методы <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A>, требуемые базовым классом, вызывают функцию `MsgBox` для отображения входных данных.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 19
   
 -   В следующем коде показано, как определить строгое имя типа для `SimpleListener`.  
   
-     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#17)]  
+     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
   
      Строгое имя типа зависит от проекта.  
   

@@ -28,7 +28,7 @@ caps.handback.revision: 47
   
  Оператор `switch` включает один или несколько разделов switch.  Каждый раздел switch содержит одну или несколько *меток case*, за которыми следует один или несколько операторов.  В следующем примере показан простой оператор `switch` с тремя разделами switch.  Каждый раздел switch содержит одну метку case, например `case 1`, и два оператора.  
   
- [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_1.cs)]  
   
 ## Заметки  
  В каждой метке case указывается постоянное значение.  Оператор switch передает управление тому разделу, метка case которого совпадает со значением *выражение switch* \(`caseSwitch` в этом примере\).  Если метка case не содержит соответствующего значения, управление передается в раздел `default`, если таковой имеется.  Если раздела `default` нет, никакие действия не выполняются и управление передается за пределы оператора `switch`.  В предыдущем примере, выполняются операторы в первом разделе switch, поскольку `case 1` совпадает со значением `caseSwitch`.  
@@ -63,12 +63,12 @@ case 4:
 ## Пример  
  В следующем примере показаны требования и возможности оператора `switch`.  
   
- [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_2.cs)]  
   
 ## Пример  
  В последнем случае поток выполнения контролируется строковой переменной `str` и строковыми метками case.  
   
- [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_3.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

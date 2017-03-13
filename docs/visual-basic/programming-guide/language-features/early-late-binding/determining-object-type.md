@@ -31,15 +31,15 @@ caps.handback.revision: 13
 ## TypeOf…Is и TypeName  
  Функция `TypeName` возвращает строку. Эта функция наиболее удобна при необходимости сохранить или отобразить имя класса объекта, как показано в следующем фрагменте кода:  
   
- [!code-vb[VbVbalrOOP#92](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#92)]  
+ [!code-vb[VbVbalrOOP#92](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_1.vb)]  
   
  Оператор `TypeOf...Is` наиболее удобен при проверке типа объекта, поскольку он работает намного быстрее, чем эквивалентная операция сравнения строк с помощью `TypeName`.  В следующем фрагменте кода используется `TypeOf...Is` внутри инструкции `If...Then...Else`:  
   
- [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#93)]  
+ [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
  А теперь несколько слов предостережения.  Оператор `TypeOf...Is` возвращает `True`, если объект имеет конкретный тип или является производным от конкретного типа.  Почти все в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] выполняется с помощью объектов, содержащих некоторые элементы, которые не считаются обычно объектами, например строки и целые числа.  Эти объекты являются производными и наследуют методы от <xref:System.Object>.  При передаче `Integer` и вычислении с `Object` оператор `TypeOf...Is` возвращает `True`.  В следующем примере сообщается, что параметр `InParam` является и `Object`, и `Integer`:  
   
- [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#94)]  
+ [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   
  В следующем примере используются и `TypeOf...Is`, и `TypeName` для определения типа объекта, переданного в аргументе `Ctrl`.  Процедура `TestObject` вызывает `ShowType` с тремя разными типами элементов управления.  
   
@@ -51,7 +51,7 @@ caps.handback.revision: 13
   
 3.  Добавьте следующий код в форму:  
   
-     [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#95)]  
+     [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Information.TypeName%2A>   

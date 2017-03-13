@@ -27,7 +27,7 @@ caps.handback.revision: 13
   
 -   Используйте метод `ReadAllText` для считывания текста из каждого файла в заданном каталоге.  Следующий код задает каталог и файл, а затем использует метод `ReadAllText` для чтения их в строку с именем `patients`.  
   
-     [!code-vb[VbVbcnMyFileSystem#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-retrieve-the-cont_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-retrieve-the-contents-of-the-my-documents-directory_1.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>   

@@ -24,17 +24,17 @@ caps.handback.revision: 16
 ## Пример  
  В следующем примере предложение `where` фильтрует все числа за исключением тех, которые меньше пяти.  Если предложение `where` удалить, из источника данных будут возвращены все числа.  Выражение `num < 5` является предикатом, применяемым к каждому элементу.  
   
- [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#5)]  
+ [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
 ## Пример  
  В одном предложении `where`  можно указать столько предикатов, сколько потребуется. Для этого необходимо использовать операторы [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) и [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md).  В следующем примере в запросе указано два предиката по порядку для выбора только четных чисел, которые меньше пяти.  
   
- [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#6)]  
+ [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
 ## Пример  
  В предложении `where` может содержаться один или несколько методов, возвращающих логические значения.  В следующем примере предложение `where` использует метод, позволяющий определить, является ли текущее значение переменной диапазона четным или нет.  
   
- [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#7)]  
+ [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
 ## Заметки  
  Предложение `where` представляет собой механизм фильтрации.  Это предложение можно поместить в любом месте выражения запроса, но только оно не может быть первым или последним.  Предложение `where` может размещаться до или после предложения [group](../../../csharp/language-reference/keywords/group-clause.md), в зависимости от того, когда требуется фильтрация исходных элементов – до или после группирования.  

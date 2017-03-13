@@ -34,15 +34,15 @@ caps.handback.revision: 12
 ## Использование перегрузки  
  Перегрузка особенно полезна, когда в объектной модели нужно использовать одинаковые имена процедур, работающих с различными типами данных.  Например класс, в котором отображаются несколько различных типов данных, может иметь процедуры `Display`, которые выглядят следующим образом:  
   
- [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#64)]  
+ [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
   
  Без использования перегрузки возникает необходимость создания процедур с разными именами, даже если они выполняют одни и те же действия. См. следующий пример.  
   
- [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#65)]  
+ [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
   
  Перегрузка облегчает использование свойств или методов, поскольку позволяет выбирать типы используемых данных.  Например перегруженный метод `Display`, описанный ранее может быть вызван любой из следующих строк кода:  
   
- [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#66)]  
+ [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
   
  Во время выполнения [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] вызывает нужную процедуру на основании заданных пользователем параметров типов данных.  
   
@@ -72,11 +72,11 @@ caps.handback.revision: 12
   
 2.  Добавьте в класс `TaxClass` следующий код.  
   
-     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#67)]  
+     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
   
 3.  Добавьте в форму следующую процедуру.  
   
-     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#68)]  
+     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
   
 4.  Добавьте кнопку на форму и вызовите процедуру `ShowTax` из события `Button1_Click` кнопки.  
   

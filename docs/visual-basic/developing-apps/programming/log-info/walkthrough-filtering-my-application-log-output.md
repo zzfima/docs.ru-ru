@@ -36,7 +36,7 @@ caps.handback.revision: 22
   
 3.  В <xref:System.Windows.Forms.Control.Click> обработчик событий для кнопки Button1, добавьте следующий код:  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbcnMyApplicationLogFiltering/Form1.vb#1)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
 4.  Запустите приложение в отладчике.  
   

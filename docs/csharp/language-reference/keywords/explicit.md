@@ -21,11 +21,11 @@ caps.handback.revision: 21
 # explicit (Справочник по C#)
 Ключевое слово `explicit` служит для объявления оператора преобразования пользовательского типа, который следует вызывать во время приведения.  Например, следующий оператор выполняет преобразование из класса Fahrenheit в класс Celsius.  
   
- [!code-cs[csrefKeywordsConversion#2](../../../csharp/language-reference/keywords/codesnippet/csharp/explicit_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/explicit_1.cs)]  
   
  Такой оператор можно вызвать следующим образом.  
   
- [!code-cs[csrefKeywordsConversion#3](../../../csharp/language-reference/keywords/codesnippet/csharp/explicit_2.cs)]  
+ [!code-cs[csrefKeywordsConversion#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/explicit_2.cs)]  
   
  Оператор преобразования выполняет преобразование из исходного типа в тип назначения.  Оператор преобразования предоставляется исходным типом.  В отличие от неявного преобразования операторы явного преобразования вызываются с помощью приведения.  Если операция преобразования может вызвать исключения или потерю информации, необходимо пометить ее ключевым словом `explicit`.  Это позволит избежать скрытого вызова компилятором операции преобразования, которая может привести к непредсказуемым последствиям.  
   
@@ -36,12 +36,12 @@ caps.handback.revision: 21
 ## Пример  
  В следующем примере показаны классы `Fahrenheit` и `Celsius`, в каждом из которых определен оператор явного преобразования в другой класс.  
   
- [!code-cs[csrefKeywordsConversion#1](../../../csharp/language-reference/keywords/codesnippet/csharp/explicit_3.cs)]  
+ [!code-cs[csrefKeywordsConversion#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/explicit_3.cs)]  
   
 ## Пример  
  В следующем примере определена структура `Digit`, представляющая один разряд.  Для преобразования типа `byte` в тип `Digit` определен оператор, но поскольку не все значения типа byte можно преобразовать в `Digit`, преобразование выполняется явным образом.  
   
- [!code-cs[csrefKeywordsConversion#4](../../../csharp/language-reference/keywords/codesnippet/csharp/explicit_4.cs)]  
+ [!code-cs[csrefKeywordsConversion#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/explicit_4.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

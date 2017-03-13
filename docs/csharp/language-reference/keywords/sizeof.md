@@ -58,7 +58,7 @@ int intSize = sizeof(int);
  Для всех остальных типов, в том числе для структур, оператор `sizeof` можно использовать только в блоках небезопасного кода.  Можно также использовать метод <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>, однако значение, возвращаемое этим методом, не всегда совпадает со значением метода `sizeof`.  Метод <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> возвращает размер после маршалинга типа, тогда как оператор `sizeof` возвращает размер сразу после выделения памяти средой CLR, включая заполнения.  
   
 ## Пример  
- [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#11)]  
+ [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

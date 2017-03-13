@@ -43,7 +43,7 @@ Erase arraylist
 ## Пример  
  В этом примере показано использование оператора `Erase` для удаления двух массивов и высвобождения использовавшейся ими памяти \(1000 и 100 элементов, соответственно\).  Затем с помощью оператора `ReDim` трехмерному массиву присваивается новый экземпляр массива.  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
 ## См. также  
  [Nothing](../../../visual-basic/language-reference/nothing.md)   

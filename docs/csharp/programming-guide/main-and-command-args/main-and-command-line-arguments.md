@@ -7,7 +7,7 @@ caps.handback.revision: 30
   
  В программе C\# возможна только одна точка входа.  Если в наличие имеется больше одного класса, который имеет метод `Main`, то необходимо скомпилировать программу с параметром компилятора **\/main**, чтобы указать, какой метод `Main` нужно использовать в качестве точки входа.  Дополнительные сведения см. в разделе [\/main \(Specify Location of Main Method\)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
   
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-and-command-line-ar_1.cs)]  
+ [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
 ## Общие сведения  
   

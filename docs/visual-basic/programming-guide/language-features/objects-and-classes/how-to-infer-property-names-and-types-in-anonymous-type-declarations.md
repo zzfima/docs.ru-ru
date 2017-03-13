@@ -25,7 +25,7 @@ caps.handback.revision: 19
 
 Анонимные типы не предоставляют механизм для прямого указания типов данных для свойств. Типы всех свойств определяются посредством вывода. В следующем примере типы `Name` и `Price` выводятся напрямую из значений, которые используются для их инициализации.  
   
- [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
   
  Анонимные типы также могут выводить имена и типы свойств из других источников. В последующих разделах представлен список ситуаций, где вывод возможен, и примеры обратных ситуаций.  
   
@@ -35,19 +35,19 @@ caps.handback.revision: 19
   
 -   Из имен переменных. Анонимный тип `anonProduct` будет иметь два свойства: `productName` и `productPrice`. Их типами данных будут типы исходных переменных, `String` и `Double` соответственно.  
   
-     [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_2.vb)]  
   
 -   Из имен свойств или полей других объектов. Например, рассмотрим объект `car` типа `CarClass`, включающий свойства `Name` и `ID`. Чтобы создать новый экземпляр анонимного типа `car1` со свойствами `Name` и `ID`, которые инициализируются значениями из объекта `car`, можно написать следующее.  
   
-     [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_3.vb)]  
   
      Предыдущее объявление эквивалентно большей строке кода, определяющей анонимный тип `car2`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#35](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_4.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#35](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_4.vb)]  
   
 -   Из имен элементов XML  
   
-     [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_5.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_5.vb)]  
   
      Результирующий тип для `anon` будет иметь одно свойство `Book` c типом <xref:System.Collections.IEnumerable> \(XElement\).  
   
@@ -59,7 +59,7 @@ caps.handback.revision: 19
   
      Переменная `anon2` в следующем коде является анонимным типом, который имеет одно свойство: знак с именем `First`. Этот код будет отображать букву E — букву, которая возвращена функцией <xref:System.Linq.Enumerable.First%2A>.  
   
-     [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_6.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_6.vb)]  
   
 ## Неудачный вывод  
   
@@ -87,7 +87,7 @@ caps.handback.revision: 19
   
      Ошибку можно устранить, назначив результат выражения для имени свойства.  
   
-     [!code-vb[VbVbalrAnonymousTypes#14](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_7.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#14](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_7.vb)]  
   
 -   Вывод нескольких свойств создает два или более свойств с одинаковым именем. Возвращаясь к объявлениям в предыдущих примерах, невозможно указывать `product.Name` и `car1.Name` в качестве свойств для одного анонимного типа. Это связано с тем, что выводимый идентификатор для каждого из них будет `Name`.  
   
@@ -97,7 +97,7 @@ caps.handback.revision: 19
   
      Проблему можно решить, назначив значения уникальным именам свойств.  
   
-     [!code-vb[VbVbalrAnonymousTypes#36](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_8.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#36](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_8.vb)]  
   
      Обратите внимание, что изменение регистра \(изменение прописных букв на строчные и наоборот\) не делает имя уникальным.  
   
@@ -115,7 +115,7 @@ caps.handback.revision: 19
   
      В этом примере проблему можно устранить, изменив порядок, в котором объявлены свойства, на обратный.  
   
-     [!code-vb[VbVbalrAnonymousTypes#15](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_9.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#15](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_9.vb)]  
   
 -   Имя свойства анонимного типа совпадает с именем элемента <xref:System.Object>. Например, следующее объявление завершится сбоем, так как `Equals` — это метод <xref:System.Object>.  
   
@@ -127,7 +127,7 @@ caps.handback.revision: 19
   
      Проблему можно устранить, изменив имя свойства:  
   
-     [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/how-to-infer-property-na_10.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
   
 ## См. также  
  [Инициализаторы объектов: именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   

@@ -37,7 +37,7 @@ caps.handback.revision: 31
   
 -   Для чтения значения из раздела реестра используйте метод `GetValue`, указав путь и имя.  В этом примере считывается значение `Name` из раздела `HKEY_CURRENT_USER\Software\MyApp`, после чего оно отображается в окне сообщения.  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_1.vb)]  
+     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
  Данный пример доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он расположен в разделе **Операционная система Windows \> Реестр**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
   
@@ -45,7 +45,7 @@ caps.handback.revision: 31
   
 -   Для извлечения значения используйте метод `GetValue`.  Следующие проверки кода, существует ли значение, и возвращает сообщение, если это не так.  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_2.vb)]  
+     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
   
 ## Отказоустойчивость  
  Реестр содержит разделы верхнего уровня, или корневые разделы, которые используются для хранения данных.  Например, корневой раздел HKEY\_LOCAL\_MACHINE используется для хранения на параметров уровне компьютера, используемых всеми пользователями, в то время как HKEY\_CURRENT\_USER используется для хранения данных для отдельного пользователя.  

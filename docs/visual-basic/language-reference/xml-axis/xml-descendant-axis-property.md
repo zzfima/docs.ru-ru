@@ -67,7 +67,7 @@ object...<descendant>
 ## Пример  
  В следующем примере показано, как получить доступ к значению первого потомка узла с именем `name` и значения всех узлов, являющихся потомками с именем `phone` из объекта `contacts`.  
   
- [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_1.vb)]  
+ [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
   
  В этом коде отображается следующий текст:  
   
@@ -78,7 +78,7 @@ object...<descendant>
 ## Пример  
  В следующем примере `ns` объявляется как префикс пространства имен XML.  Затем используется префикс пространства имен для создания литерала XML и доступа к значению первого дочернего узла, имеющего полное имя `ns:name`.  
   
- [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_2.vb)]  
+ [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
  В этом коде отображается следующий текст:  
   

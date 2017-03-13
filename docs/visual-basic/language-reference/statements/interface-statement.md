@@ -104,7 +104,7 @@ End Interface
   
      Если присвоить экземпляр класса переменной, уровень доступа к его членам может зависеть от того, является ли тип данных переменной вложенным интерфейсом или реализацией класса.  Это показано в приведенном ниже примере.  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
   
      Если вы получаете доступ к членам класса с помощью `varAsInterface`, все они имеют общий доступ.  Однако если доступ к членам получается с помощью `varAsClass`, процедура `Sub` `doSomething` имеет защищенный доступ.  
   
@@ -117,7 +117,7 @@ End Interface
 ## Пример  
  В следующем примере используется оператор `Interface`для определения интерфейса с именем `thisInterface`, который должен быть реализован с помощью оператора `Property` и оператора `Function`.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
   
  Обратите внимание, что операторы `Property` и `Function` не вводят блоков, заканчивающихся на `End Property` и `End Function` в интерфейсе.  Интерфейс определяет только сигнатуры своих членов.  Полные блоки `Property` и `Function` появляются в классе, который реализует `thisInterface`.  
   

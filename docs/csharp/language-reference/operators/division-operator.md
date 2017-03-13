@@ -27,7 +27,7 @@ caps.handback.revision: 21
  При делении двух целых чисел результат всегда является целочисленным.  Например результат выражения 7 \/ 3 равняется 2.  Чтобы определить остаток 7 \/ 3, используйте оператор остатка \([%](../../../csharp/language-reference/operators/modulus-operator.md)\).  Чтобы получить частное в виде рационального числа или дроби, присвойте делителю или делимому тип `float` или `double`.  Можно присвоить тип неявно express делимое или делитель в десятичном виде, помещая цифры справа от десятичной запятой, как показано в следующем примере.  
   
 ## Пример  
- [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#42)]  
+ [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

@@ -82,7 +82,7 @@ caps.handback.revision: 9
   
      Добавьте следующий код к событию `Load` для запроса таблиц, которые отображаются как свойства <xref:System.Data.Linq.DataContext>, результаты подсчитываются, суммируются, вычисляется среднее.  Пример использует предложение `Aggregate` для запроса одного результата и предложение `Group By` для отображения среднего значения сгруппированных результатов.  
   
-     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form6.vb#13)]  
+     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-count-sum-or-average-data-by-using-linq_1.vb)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   

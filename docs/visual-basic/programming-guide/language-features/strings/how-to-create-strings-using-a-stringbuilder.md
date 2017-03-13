@@ -27,7 +27,7 @@ caps.handback.revision: 9
 ## Пример  
  В следующем примере создается экземпляр класса <xref:System.Text.StringBuilder>, прибавляется 1 000 строк к этому экземпляру и возвращается его строковое представление.  
   
- [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-strings-us_1.vb)]  
+ [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
   
 ## См. также  
  [Использование класса StringBuilder](../Topic/Using%20the%20StringBuilder%20Class%20in%20the%20.NET%20Framework.md)   

@@ -34,7 +34,7 @@ caps.handback.revision: 12
   
  Когда код вызывает событие `Click`, метод доступа `RaiseEvent` вызывает все делегаты обработчика события, асинхронно используя метод <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>.  Этот метод вызывает каждый обработчик на рабочем потоке и немедленно возвращает, чтобы обработчики не могли блокировать друг с друга.  
   
- [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#27)]  
+ [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-avoid-blocking_1.vb)]  
   
 ## См. также  
  <xref:System.Collections.ArrayList>   

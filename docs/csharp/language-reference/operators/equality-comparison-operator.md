@@ -25,7 +25,7 @@ caps.handback.revision: 14
  Типы значений, определенные пользователем, могут вызвать перегрузку оператора `==` \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  Ее могут вызвать и пользовательские ссылочные типы, хотя по умолчанию оператор `==` работает в соответствии с приведенным выше описанием как для предопределенных, так и пользовательских ссылочных типов.  Если оператор `==` перегружен, то оператор [\!\=](../../../csharp/language-reference/operators/not-equal-operator.md) тоже должен быть перегружен.  Операции над целыми типами обычно разрешены в перечислениях.  
   
 ## Пример  
- [!code-cs[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#36)]  
+ [!code-cs[csRefOperators#36](../../../csharp/language-reference/operators/codesnippet/CSharp/equality-comparison-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

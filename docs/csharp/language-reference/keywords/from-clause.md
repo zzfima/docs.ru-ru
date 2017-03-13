@@ -30,7 +30,7 @@ caps.handback.revision: 27
   
  В следующем примере источником данных является переменная `numbers`, а `num` является переменной диапазона.  Обратите внимание, что обе переменные являются строго типизированными, хотя и используется ключевое слово [var](../../../csharp/language-reference/keywords/var.md).  
   
- [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#1)]  
+ [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
 ## Переменная диапазона  
  Компилятор выводит тип переменной диапазона, если источник данных реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  Например, если источник данных имеет тип `IEnumerable<Customer>`, то предполагается, что типом переменной диапазона является `Customer`.  Единственным случаем, когда тип необходимо указывать явным образом, является ситуация, когда источник имеет не универсальный тип `IEnumerable`, а, например, тип <xref:System.Collections.ArrayList>.  Дополнительные сведения см. в разделе [How to: Query an ArrayList with LINQ](../Topic/How%20to:%20Query%20an%20ArrayList%20with%20LINQ.md).  
@@ -42,14 +42,14 @@ caps.handback.revision: 27
 ## Составные предложения from  
  В некоторых случаях каждый элемент исходной последовательности может также являться последовательностью или содержать последовательность.  Например, типом источника данных может быть `IEnumerable<Student>`, в котором каждый объект student последовательности содержит список полученных за выполнение тестов баллов.  Для доступа к внутреннему списку, находящемуся в каждом элементе `Student`, можно воспользоваться составными предложениями `from`.  Эта методика аналогична методике использования вложенных инструкций [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  Существует возможность в каждое предложение `from` добавить предложения [where](../../../csharp/language-reference/keywords/partial-method.md) или [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) для фильтрации результатов.  В следующем примере показана последовательность объектов типа `Student`, каждый из которых содержит внутренний список `List` целочисленных значений, представляющих полученные при выполнении тестов баллы.  Для доступа к внутреннему списку можно воспользоваться составным предложением `from`.  При необходимости существует возможность вставлять предложения между двумя предложениями `from`.  
   
- [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#2)]  
+ [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
 ## Использование нескольких предложений from для выполнения объединения  
  Составное предложение `from` используется для доступа к внутренним коллекциям в едином источнике данных.  Однако запрос может также содержать несколько предложений `from`, генерирующих вспомогательные запросы данных из независимых источников.  Эта методика позволяет выполнять операции соединения определенных типов, выполнение которых невозможно при использовании [предложения join](../../../csharp/language-reference/keywords/join-clause.md).  
   
  В следующем примере показано, каким образом можно использовать для предложения `from` для формирования полного перекрестного соединения двух источников данных.  
   
- [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#3)]  
+ [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
  Дополнительные сведения об операциях соединения, в которых используется несколько предложений `from`, см. раздел [Практическое руководство. Выполнение пользовательских операций соединения](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 20
 ## Пример  
  Член базового класса с модификатором protected доступен в производном классе только в том случае, если доступ осуществляется через тип производного класса.  В качестве примера рассмотрим следующий фрагмент кода:  
   
- [!code-cs[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#11)]  
+ [!code-cs[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_1.cs)]  
   
  Оператор `a.x = 10` генерирует ошибку, поскольку он произведен внутри статического метода Main, а не внутри экземпляра класса B.  
   
@@ -33,7 +33,7 @@ caps.handback.revision: 20
 ## Пример  
  В этом примере класс `DerivedPoint` является производным от класса `Point`.  Следовательно, доступ к членам базового класса с модификатором protected можно осуществлять непосредственно из производного класса.  
   
- [!code-cs[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#12)]  
+ [!code-cs[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_2.cs)]  
   
  Если изменить уровень доступа к переменным `x` и `y` на [private](../../../csharp/language-reference/keywords/private.md), то компилятор выдаст следующие сообщения об ошибке:  
   

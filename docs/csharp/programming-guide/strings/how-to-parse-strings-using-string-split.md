@@ -24,7 +24,7 @@ caps.handback.revision: 17
  В этом примере в качестве символов\-разделителей используются пробелы, запятые, точки, двоеточия и символы табуляции, которые передаются в метод <xref:System.String.Split%2A> в виде массива.  Каждое слово в целевой строке отображается отдельно от полученного в результате массива строк.  
   
 ## Пример  
- [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#16)]  
+ [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-parse-strings-using-string-split_1.cs)]  
   
 ## Пример  
  По умолчанию метод String.Split возвращает пустые строки, если в целевой строке два символа\-разделителя следуют друг за другом.  Чтобы исключить из выходных данных все пустые строки, можно передать необязательный параметр StringSplitOptions.RemoveEmptyEntries.  

@@ -17,14 +17,14 @@ caps.handback.revision: 23
 ### Пример группового соединения  
  В следующем примере выполняется групповое соединение объектов типа `Person` и `Pet` на основе сравнения `Person` свойства `Pet.Owner`.  В отличие от негруппового соединения, в котором создается пара элементов для каждого точного совпадения, групповое соединение создает результирующий объект для каждого элемента первой коллекции, то есть объекта `Person` в данном примере.  Соответствующие элементы из второй коллекции \(в данном примере — объекты `Pet`\) группируются в коллекцию.  Результирующая функция селектора создает для каждого совпадения анонимный тип, состоящий из `Person.FirstName` и коллекции объектов `Pet`.  
   
- [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#5)]  
+ [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_1.cs)]  
   
 ## Пример  
   
 ### Применение группового соединения для создания примера XML  
  Групповое соединение позволяет создавать XML с помощью [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  Следующий пример аналогичен предыдущему примеру за исключением того, что вместо создания анонимных типов результирующая функция селектора создает элементы XML, представляющие соединенные объекты.  Дополнительные сведения о [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] см. в разделе [LINQ to XML](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
- [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#6)]  
+ [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_2.cs)]  
   
 ## Компиляция кода  
   

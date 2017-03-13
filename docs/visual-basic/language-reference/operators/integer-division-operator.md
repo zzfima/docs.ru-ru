@@ -73,7 +73,7 @@ expression1 \ expression2
 ## Пример  
  В следующем примере оператор `\` используется для выполнения целочисленного деления.  Результатом является целое число, представляющее целочисленное частное двух операндов, с отброшенным остатком.  
   
- [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/integer-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
  Выражения в предыдущем примере возвращают значения 2, 3, 33 и \-22 соответственно.  
   

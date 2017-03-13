@@ -41,7 +41,7 @@ caps.handback.revision: 14
 ## Пример  
  В следующем примере иллюстрируется использование механизма передачи параметров `ByVal` с аргументом ссылочного типа.  В этом примере аргумент `c1` является экземпляром класса `Class1`.  `ByVal` не позволяет коду в процедурах изменить основное значение ссылочного аргумента `c1`, но не защищает доступные поля и свойства `c1`.  
   
- [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/visualbasic/byval_1.vb)]  
+ [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
   
 ## См. также  
  [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)   

@@ -20,13 +20,13 @@ caps.handback.revision: 23
   
  Ограничения, возникающие при использовании неуниверсальных классов коллекции, можно продемонстрировать на примере написания короткой программы, использующей класс коллекции <xref:System.Collections.ArrayList> из библиотеки классов платформы .NET Framework.  <xref:System.Collections.ArrayList> — это очень удобный класс коллекции, который можно использовать без изменений для любых ссылочных типов или типов значений.  
   
- [!code-cs[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/csharp/benefits-of-generics_1.cs)]  
+ [!code-cs[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_1.cs)]  
   
  Однако за удобство приходится платить.  Любые ссылки или типы значения, добавляемые к классу коллекции <xref:System.Collections.ArrayList>, неявно приводятся к <xref:System.Object>.  Если в качестве элементов выступают типы значений, то для них необходимо выполнить упаковку\-преобразование при добавлении к списку и распаковку\-преобразование при извлечении из списка.  Операции приведения, упаковки\-преобразования и распаковки\-преобразования снижают производительность. Влияние операций упаковки\-преобразования и распаковки\-преобразования в сценариях обработки больших коллекций может быть весьма значительным.  
   
  Еще одно ограничение состоит в отсутствии проверки типа во время компиляции. Поскольку класс коллекции <xref:System.Collections.ArrayList> приводит все к типу <xref:System.Object>, невозможно предотвратить выполнение клиентским кодом во время компиляции действий, подобных следующим:  
   
- [!code-cs[csProgGuideGenerics#5](../../../csharp/programming-guide/generics/codesnippet/csharp/benefits-of-generics_2.cs)]  
+ [!code-cs[csProgGuideGenerics#5](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_2.cs)]  
   
  Несмотря на то, что комбинирование строк и `ints` в единый класс коллекции <xref:System.Collections.ArrayList> вполне допустимо, а иногда и специально выполняется \(при создании разнородной коллекции\), во многих случаях это может привести к ошибке программы, которую можно будет обнаружить только при выполнении.  
   
@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
  Что действительно необходимо для класса коллекции <xref:System.Collections.ArrayList> и других подобных классов — это возможность указать для каждого отдельного экземпляра в клиентском коде определенный тип данных, который они должны использовать.  Это устранит необходимость приведения к типу `T:System.Object` и даст компилятору возможность проверить тип.  Другими словами, классу коллекции <xref:System.Collections.ArrayList> необходим параметр типа.  Это как раз то, что имеется в универсальном шаблоне.  В универсальном шаблоне коллекции <xref:System.Collections.Generic.List%601> в пространстве имен `N:System.Collections.Generic` та же операция добавления элементов в коллекцию выглядит следующим образом:  
   
- [!code-cs[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/csharp/benefits-of-generics_3.cs)]  
+ [!code-cs[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_3.cs)]  
   
  Единственным различием в клиентском коде между <xref:System.Collections.Generic.List%601> и <xref:System.Collections.ArrayList> является аргумент типа в разделе объявления и создания экземпляра.  Благодаря этому небольшому усложнению кода можно создать список, который будет не только безопаснее, чем <xref:System.Collections.ArrayList>, но и существенно быстрее, особенно если элементами списка являются типы значений.  
   

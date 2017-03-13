@@ -41,7 +41,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 ## Неявные преобразования  
  ля встроенных числовых типов неявное преобразование можно выполнить, сохраняемое значение может уместиться в переменной без обрезания или округления до ближайшего.  Например, переменная типа [long](../../../csharp/language-reference/keywords/long.md) \(8\-байтное целое\) может хранить любое значение, которое может хранить [int](../../../csharp/language-reference/keywords/int.md) \(4 байта в 32\-разрядном компьютере\).  В следующем примере компилятор неявно преобразует значение справа в тип `long` перед присвоением его типу `bigNum`.  
   
- [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_1.cs)]  
+ [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
  Полный список всех неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -55,7 +55,7 @@ Base b = d; // Always OK.
 ## Явные преобразования  
  Однако если преобразование не может быть выполнено без риска потери данных, для компилятора требуется, чтобы пользователь выполнил явное преобразование, которое называется *приведением*.  Приведение является способом явно указать компилятору, что нужно сделать преобразование, и что известно, что может быть потеря данных.  Для выполнения приведения заключите тип, в который производится приведение, в скобки перед преобразуемым значением или переменной.  Следующая программа выполняет приведение типа [double](../../../csharp/language-reference/keywords/double.md) к типу [int](../../../csharp/language-reference/keywords/int.md).  Без приведения эта программа скомпилирована не будет.  
   
- [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_2.cs)]  
+ [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
  Список разрешенных явных числовых преобразований, см. в разделе [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   
@@ -80,7 +80,7 @@ Giraffe g2 = (Giraffe) a;
 ## Исключения преобразования типов во время выполнения  
  В некоторых преобразованиях ссылочного типа компилятор не может определить, допустимо ли приведение.  Для операции приведения возможна корректная ошибка компилятора во время выполнения.  Как показано в следующем примере, приведение типов, которое заканчивается с ошибкой во время выполнения, вызывает <xref:System.InvalidCastException>.  
   
- [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_3.cs)]  
+ [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C\# предоставляет операторы [is](../../../csharp/language-reference/keywords/is.md) и [as](../../../csharp/language-reference/keywords/as.md), чтобы можно было проверить совместимость перед действительным выполнением приведения.  Дополнительные сведения см. в разделе [Практическое руководство. Безопасное приведение с помощью операторов as и is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 18
 ## Пример  
  В приведенном ниже примере показано использование ключевого слова `into` для разрешения временного идентификатора `fruitGroup`, имеющего выведенный тип `IGrouping`.  Используя этот идентификатор, можно вызвать метод <xref:System.Linq.Enumerable.Count%2A> для каждой группы и выбрать только те группы, которые содержат два и более слова.  
   
- [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Into.cs#18)]  
+ [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/into_1.cs)]  
   
  Использование ключевого слова `into` в предложении `group` необходимо только в том случае, если нужно выполнить дополнительные операции запроса для каждой группы.  Дополнительные сведения см. в разделе [Предложение group](../../../csharp/language-reference/keywords/group-clause.md).  
   

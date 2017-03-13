@@ -44,7 +44,7 @@ caps.handback.revision: 18
 ## Пример  
  В следующем примере `b` является переменной типа `Byte`.  Инструкции показывают диапазон значений переменной и приложение к ней операторов поразрядного сдвига.  
   
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
   
 ## См. также  
  <xref:System.Byte?displayProperty=fullName>   

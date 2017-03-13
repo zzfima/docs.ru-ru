@@ -57,13 +57,13 @@ caps.handback.revision: 26
 ## Пример  
  В следующем примере определяется и вызывается функция `calcSum`.  Модификатор `ParamArray` для параметра `args` позволяет функции принять переменное число аргументов.  
   
- [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-arrays_1.vb)]  
+ [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-arrays_1.vb)]  
   
  Следующий пример определяет процедуру с массивом параметров и выводит значения всех элементов массива, переданных массиву параметров.  
   
- [!code-vb[VbVbcnProcedures#48](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_2.vb)]  
+ [!code-vb[VbVbcnProcedures#48](./codesnippet/VisualBasic/parameter-arrays_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#49](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_3.vb)]  
+ [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>   

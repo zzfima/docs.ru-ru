@@ -42,12 +42,12 @@ caps.handback.revision: 29
 ## Пример  
  В следующем примере показано как объявить открытую переменную поля в качестве `volatile`.  
   
- [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#24)]  
+ [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## Пример  
  В следующем примере демонстрируется создание вспомогательного или рабочего потока и использование его для выполнения обработки параллельно с основным потоком.  Дополнительные сведения о многопоточности см. в разделах [Threading](../Topic/Managed%20Threading.md) и [Потоки](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md).  
   
- [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/csharp/volatile_2.cs)]  
+ [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -39,7 +39,7 @@ caps.handback.revision: 16
   
 3.  Не указывайте уровень доступа для другой процедуры свойства.  Предполагается, что уровень доступа объявлен в операторе `Property`.  Можно ограничить доступ только одной процедуре свойства.  
   
-     [!code-vb[VbVbcnProcedures#10](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-a-propert_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
   
      В предыдущем примере процедура `Get` имеет такой же уровень доступа `Protected`, как и само свойство, в то время как процедура `Set` имеет уровень доступа `Private`.  Класс, производный от `employee`, может получить значение `salary`, но только класс `employee` может установить его.  
   

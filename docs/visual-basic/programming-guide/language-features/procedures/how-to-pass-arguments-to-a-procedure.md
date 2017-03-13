@@ -48,7 +48,7 @@ caps.handback.revision: 14
   
      Следующий пример вызывает функцию <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
   
-     [!code-vb[VbVbcnProcedures#34](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-pass-arguments-to_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
      В предыдущем примере передается обязательный первый аргумент, который является строкой сообщения для отображения.  Затем пропускается необязательный второй параметр, который указывает кнопки, отображаемые в окне сообщения.  Поскольку в вызове не передается значение, `MsgBox` использует значение по умолчанию `MsgBoxStyle.OKOnly`, в котором отображается только кнопка **ОК**.  
   

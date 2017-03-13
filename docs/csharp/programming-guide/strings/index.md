@@ -25,7 +25,7 @@ caps.handback.revision: 41
 ## Объявление и инициализация строк  
  Объявление и инициализацию строк можно выполнять различными способами, как показано в следующем примере:  
   
- [!code-cs[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#1)]  
+ [!code-cs[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
   
  Обратите внимание, что для создания строкового объекта оператор [new](../../../csharp/language-reference/keywords/new-operator.md) не используется, за исключением, за исключением случаев инициализации строки массивом символов.  
   
@@ -34,22 +34,22 @@ caps.handback.revision: 41
 ## Неизменность строковых объектов  
  Строковые объекты являются *неизменяемыми*: после создания их нельзя изменить.  Все методы <xref:System.String> и операторы C\#, которые, как можно было бы представить, изменяют строку, в действительности возвращают результаты в новый строковый объект.  В следующем примере, когда содержимое строк `s1` и `s2` объединяется в одну строку, две исходные строки не изменяются.  Оператор `+=` создает новую строку с объединенным содержимым.  Этот новый объект присваивается переменной `s1`, а исходный объект, который был присвоен строке `s1`, освобождается для сборки мусора, поскольку ни одна переменная не содержит ссылку на него.  
   
- [!code-cs[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#2)]  
+ [!code-cs[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
   
  Поскольку "изменением" строки в действительности является созданием новой строки, необходима предосторожность при создании ссылок на строки.  Если создать ссылку на строку, а затем "изменить" исходную строку, то ссылка будет по\-прежнему указывать на исходный объект, а не на новый объект, который был создан при изменении строки.  Это поведение демонстрируется в следующем коде.  
   
- [!code-cs[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#25)]  
+ [!code-cs[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
   
  Дополнительные сведения о том, как создавать новые строки, основанные на таких изменениях как операции поиска и замены исходной строки, см. в разделе [Практическое руководство. Изменение содержимого строки](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
 ## Правильные и буквальные строковые литералы  
  Правильные строковые литералы используются, если нужно внедрить escape\-символы, предоставляемые языком C\#, как показано в следующем примере.  
   
- [!code-cs[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#3)]  
+ [!code-cs[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
   
  Буквальные строковые литералы используются для удобства и удобства чтения, если текст строки содержит символы обратной косой черты, например в путях к файлу.  Поскольку в буквальных строках сохраняются символы новой строки как часть текста строки, они могут использоваться для инициализации многострочных строк.  Для встраивания кавычек в буквальную строку используются двойные кавычки.  В следующем примере показаны примеры наиболее типичного использования буквальных строк.  
   
- [!code-cs[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#4)]  
+ [!code-cs[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
   
 ## Escape\-последовательности строк  
   
@@ -76,23 +76,23 @@ caps.handback.revision: 41
 ## Строки форматов  
  Строкой формата является строка, содержимое которой можно определить динамически во время выполнения.  Строка формата создается при помощи статического метода <xref:System.String.Format%2A> и внедренных местозаполнителей в скобках, которые во время выполнения будут заменены другими значениями.  В следующем примере используется строка формата для вывода результатов каждой итерации цикла.  
   
- [!code-cs[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#26)]  
+ [!code-cs[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
   
  Одна перегрузка метода <xref:System.Console.WriteLine%2A> в качестве параметра принимает строку формата.  Поэтому можно просто внедрить строковый литерал формата без явного вызова метода.  Но если используется метод <xref:System.Diagnostics.Trace.WriteLine%2A> для отображения вывода отладочных данных в окно **Вывод** среды Visual Studio, необходимо явно вызвать метод <xref:System.String.Format%2A>, поскольку <xref:System.Diagnostics.Trace.WriteLine%2A> принимает только строку, а не строку формата.  Дополнительные сведения о строках форматах см. в разделе [Типы форматирования](../Topic/Formatting%20Types%20in%20the%20.NET%20Framework.md).  
   
 ## Подстроки  
  Подстрокой является последовательность символов, содержащихся в строке.  Метод <xref:System.String.Substring%2A> используется для создания новой строки на основании части исходной строки.  Одно или несколько вхождений подстроки можно найти с использованием метода <xref:System.String.IndexOf%2A>.  Метод <xref:System.String.Replace%2A> используется для замены всех вхождений заданной подстроки новой строкой.  Так же, как и метод <xref:System.String.Substring%2A>, метод <xref:System.String.Replace%2A> фактически возвращает новую строку и не изменяет исходную строку.  Дополнительные сведения см. в разделах [Практическое руководство. Поиск строк с помощью строковых методов](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) и [Практическое руководство. Изменение содержимого строки](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
- [!code-cs[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#7)]  
+ [!code-cs[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
 ## Доступ к отдельным знакам  
  Нотацию массива можно использовать со значением индекса, чтобы получить доступ только для чтения к отдельным символам, как в следующем примере:  
   
- [!code-cs[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#9)]  
+ [!code-cs[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
   
  Если методы <xref:System.String> не предоставляют функциональных возможностей, которые необходимы для изменения отдельных символов в строке, можно использовать объект <xref:System.Text.StringBuilder>, чтобы изменить отдельные символы "на месте", а затем создать новую строку для сохранения результатов с использованием методов <xref:System.Text.StringBuilder>.  В следующем примере предположим, что необходимо изменить исходную строку определенным образом, а затем сохранить результаты для дальнейшего использования.  
   
- [!code-cs[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#8)]  
+ [!code-cs[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
   
 ## Строки с нулевыми значениями и пустые строки  
  Пустая строка — это экземпляр объекта <xref:System.String?displayProperty=fullName>, содержащий 0 знаков.  Пустые строки часто используются в различных сценариях программирования, представляя пустое текстовое поле.  Для пустых строк можно вызывать методы, потому что такие строки являются допустимыми объектами <xref:System.String?displayProperty=fullName>.  Пустые строки инициализируются следующим образом:  
@@ -103,16 +103,16 @@ string s = String.Empty;
   
  Строки со значениями null \(с нулевыми значениями\), напротив, не ссылаются на экземпляр объекта <xref:System.String?displayProperty=fullName>, любая попытка вызвать метод на строка со значением null приведет к ошибке <xref:System.NullReferenceException>.  Однако такие строки можно использовать в операциях объединения и сравнения с другими строками.  В следующих примерах показаны некоторые случаи, в которых ссылка на строку со значением null вызывает либо не вызывает исключение:  
   
- [!code-cs[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#27)]  
+ [!code-cs[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
   
 ## Использование StringBuilder для быстрого создания строк  
  Операции со строками в .NET в высокой степени оптимизированы и в большинстве случаев значительно не снижают производительность.  Однако в некоторых случаях, например, в непрерывных циклах, выполняющихся сотни и тысячи раз, операции со строками могут влиять на производительность.  Класс <xref:System.Text.StringBuilder> создает строковый буфер, который позволяет повысить производительность, если в программе обрабатывается много строк.  Класс <xref:System.Text.StringBuilder> также позволяет заново присваивать отдельные знаки, что не поддерживается встроенным строковым типом данных.  Например, данный код заменяет содержимое строки без создания новой строки:  
   
- [!code-cs[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#20)]  
+ [!code-cs[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
   
  В этом примере объект <xref:System.Text.StringBuilder> используется для создания строки из набора числовых типов:  
   
- [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#15)]  
+ [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
 ## Строки, методы расширения и LINQ  
  Поскольку тип <xref:System.String> реализует <xref:System.Collections.Generic.IEnumerable%601>, можно использовать методы расширения, определенные в классе <xref:System.Linq.Enumerable> на строках.  Чтобы избежать загромождения рабочего пространства, эти методы исключены из IntelliSense для типа <xref:System.String>, но тем не менее, они доступны.  Можно также использовать выражения запросов [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] на строках.  Дополнительные сведения см. в разделе [LINQ and Strings](../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md).  

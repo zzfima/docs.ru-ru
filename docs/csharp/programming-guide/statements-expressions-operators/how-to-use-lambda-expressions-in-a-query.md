@@ -21,14 +21,14 @@ caps.handback.revision: 16
 ## Пример  
  В следующем примере показано использование лямбда\-выражения в запросе на основе метода с помощью стандартного оператора запроса <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>.  Обратите внимание, что в этом примере метод <xref:System.Linq.Enumerable.Where%2A> имеет входной параметр делегата типа <xref:System.Func%601>, а этот делегат получает на вход целое число и возвращает логическое значение.  Лямбда\-выражение может быть преобразовано в тип этого делегата.  Если бы это был запрос [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)] с использованием метода <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>, то следовало бы использовать параметр `Expression<Func\<int,bool>>`, но лямбда\-выражение было бы точно таким же.  Дополнительные сведения о типах выражений см. в разделе <xref:System.Linq.Expressions.Expression?displayProperty=fullName>.  
   
- [!code-cs[csProgGuideLINQ#1](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#1)]  
+ [!code-cs[csProgGuideLINQ#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_1.cs)]  
   
 ## Пример  
  В следующем примере показано использование лямбда\-выражения в вызове метода в выражении запроса.  Лямбда\-выражение здесь необходимо использовать, поскольку стандартный оператор запроса <xref:System.Linq.Enumerable.Sum%2A> нельзя вызвать с помощью синтаксиса запроса.  
   
  Запрос сначала группирует учащихся их уровню согласно перечислению `GradeLevel`.  Затем для каждой группы добавляются итоговые оценки для каждого учащегося.  Для этого требуются две операции `Sum`.  Внутренняя операция `Sum` вычисляет итоговую оценку каждого студента, а внешняя операция `Sum` вычисляет общую оценку для всех учащихся в группе.  
   
- [!code-cs[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#2)]  
+ [!code-cs[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
 ## Компиляция кода  
  Чтобы запустить этот код, вставьте метод его в класс `StudentClass` в [Практическое руководство. Запрос коллекции объектов](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) и вызовите его из метода `Main`.  

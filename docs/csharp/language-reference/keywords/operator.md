@@ -24,7 +24,7 @@ caps.handback.revision: 19
 ## Пример  
  Ниже приведен сильно упрощенный класс для дробных чисел.  Он перегружает операторы \+ и \* для выполнения сложения и умножения, а также предоставляет оператор преобразования, который преобразует тип Fraction в тип double.  
   
- [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/csharp/operator_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

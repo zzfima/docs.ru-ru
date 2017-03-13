@@ -30,7 +30,7 @@ caps.handback.revision: 18
  Определенные пользователем типы могут перегружать оператор `~` .  Дополнительные сведения см. [оператор](../../../csharp/language-reference/keywords/operator.md).  Операции над целыми типами обычно разрешены в перечислениях.  
   
 ## Пример  
- [!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#25)]  
+ [!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

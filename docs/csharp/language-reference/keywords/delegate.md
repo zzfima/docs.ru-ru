@@ -38,7 +38,7 @@ public delegate int TestDelegate(MyType m, long num);
  Делегат должен быть создан при помощи метода или лямбда\-выражения, имеющего совместимые возвращаемый тип и входные параметры.  Дополнительные сведения о допустимой степени вариации сигнатур методов см. в разделе [Вариативность в делегатах](../Topic/Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md).  Для использования с анонимными методами делегат и код, который должен быть связан с ним, должны быть объявлены вместе.  В этом разделе рассматриваются оба способа создания экземпляров делегатов.  
   
 ## Пример  
- [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/csharp/delegate_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -26,7 +26,7 @@ caps.handback.revision: 16
 В этом примере вызывается метод <xref:System.String.IndexOf%2A> объекта <xref:System.String> для отображения индекса первого вхождения подстроки.  
   
 ## Пример  
- [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-search-within-a-s_1.vb)]  
+ [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-search-within-a-string_1.vb)]  
   
 ## Компиляция кода  
  Для этого примера необходимо следующее.  

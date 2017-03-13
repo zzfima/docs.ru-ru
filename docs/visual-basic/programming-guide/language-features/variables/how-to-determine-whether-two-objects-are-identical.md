@@ -52,7 +52,7 @@ caps.handback.revision: 19
 ## Пример  
  Следующий пример проверяет пары переменных `Object`, чтобы увидеть, указывают ли они на один экземпляр класса.  
   
- [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/visualbasic/how-to-determine-whether_1_1.vb)]  
+ [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
   
  В предыдущем примере отображаются следующие выходные данные.  
   

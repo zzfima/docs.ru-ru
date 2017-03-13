@@ -46,7 +46,7 @@ caps.handback.revision: 25
 ## Пример  
  Следующий класс использует модификатор `Friend`, позволяющие другими элементами программирования в одной сборке получить доступ к определенным элементам.  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
 ## Использование  
  Модификатор `Friend` можно использовать в таких контекстах:  

@@ -23,27 +23,27 @@ caps.handback.revision: 13
   
  В следующем примере используется этот настраиваемый атрибут:  
   
- [!code-cs[csProgGuideGenerics#48](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_1.cs)]  
+ [!code-cs[csProgGuideGenerics#48](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_1.cs)]  
   
  Атрибут может ссылаться на открытый универсальный тип:  
   
- [!code-cs[csProgGuideGenerics#49](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_2.cs)]  
+ [!code-cs[csProgGuideGenerics#49](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_2.cs)]  
   
  Укажите несколько параметров типа, используя соответствующее количество запятых.  В данном примере у `GenericClass2` имеется два параметра:  
   
- [!code-cs[csProgGuideGenerics#50](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_3.cs)]  
+ [!code-cs[csProgGuideGenerics#50](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_3.cs)]  
   
  Атрибут может ссылаться на закрытый сконструированный универсальный тип:  
   
- [!code-cs[csProgGuideGenerics#51](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_4.cs)]  
+ [!code-cs[csProgGuideGenerics#51](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_4.cs)]  
   
  Атрибут, ссылающийся на параметр универсального типа, приведет к ошибке времени компиляции:  
   
- [!code-cs[csProgGuideGenerics#52](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_5.cs)]  
+ [!code-cs[csProgGuideGenerics#52](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_5.cs)]  
   
  Универсальный тип не может наследовать от <xref:System.Attribute>:  
   
- [!code-cs[csProgGuideGenerics#53](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_6.cs)]  
+ [!code-cs[csProgGuideGenerics#53](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_6.cs)]  
   
  Для получения информации об универсальном типе или параметре типа во время выполнения можно использовать методы <xref:System.Reflection>.  Дополнительные сведения см. в разделе [Универсальные типы и отражение](../../../csharp/programming-guide/generics/generics-and-reflection.md).  
   

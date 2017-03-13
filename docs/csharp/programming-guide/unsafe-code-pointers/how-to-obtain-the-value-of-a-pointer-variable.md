@@ -32,9 +32,9 @@ caps.handback.revision: 17
 ## Пример  
  В следующем примере к переменной типа `char` получают доступы указатели различных типов.  Обратите внимание, что адрес `theChar` будет изменяться в каждом случае, поскольку физический адрес переменной может изменяться.  
   
- [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#5)]  
+ [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
   
- [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#6)]  
+ [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
   **Значение theChar \= Z**   
 **Адрес theChar \= 12F718**  

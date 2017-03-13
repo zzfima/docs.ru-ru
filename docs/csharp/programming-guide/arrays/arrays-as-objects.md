@@ -18,14 +18,14 @@ caps.handback.revision: 17
 # Массивы как объекты (Руководство по программированию на C#)
 В C\# массивы фактически являются объектами, а не только адресуемыми областями непрерывной памяти, как в C и C\+\+.  <xref:System.Array> является абстрактным базовым типом всех типов массивов.  Можно использовать свойства и другие члены класса, которые имеет <xref:System.Array>.  В примере используется свойство <xref:System.Array.Length%2A> для получения длины массива.  В следующем коде длина массива `numbers`, равная `5`, присваивается переменной `lengthOfNumbers`:  
   
- [!code-cs[csProgGuideArrays#3](../../../csharp/programming-guide/arrays/codesnippet/csharp/arrays-as-objects_1.cs)]  
+ [!code-cs[csProgGuideArrays#3](../../../csharp/programming-guide/arrays/codesnippet/CSharp/arrays-as-objects_1.cs)]  
   
  Класс <xref:System.Array> позволяет использовать много других полезных методов и свойств для выполнения сортировки, поиска и копирования массивов.  
   
 ## Пример  
  В этом примере свойство <xref:System.Array.Rank%2A> используется для отображения числа измерений массива.  
   
- [!code-cs[csProgGuideArrays#2](../../../csharp/programming-guide/arrays/codesnippet/csharp/arrays-as-objects_2.cs)]  
+ [!code-cs[csProgGuideArrays#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/arrays-as-objects_2.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

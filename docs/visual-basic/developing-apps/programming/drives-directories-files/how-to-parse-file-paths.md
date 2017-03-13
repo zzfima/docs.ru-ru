@@ -36,13 +36,13 @@ caps.handback.revision: 18
   
 -   Используйте свойства <xref:System.IO.FileInfo.DirectoryName%2A> и <xref:System.IO.FileInfo.Name%2A> объекта <xref:System.IO.FileInfo>, чтобы определить для файла имя и путь. В этом примере определяются и отображаются имя и путь.  
   
-     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-parse-file-paths_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
   
 ### Объединение имени и каталога файла для создания полного пути  
   
 -   Используйте метод `CombinePath`, указав каталог и имя. В этом примере объединяются строки `folderPath` и `fileName`, созданные в предыдущем примере, и отображается результат.  
   
-     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-parse-file-paths_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   

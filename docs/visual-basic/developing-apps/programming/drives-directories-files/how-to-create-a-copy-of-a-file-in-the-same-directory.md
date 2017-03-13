@@ -32,13 +32,13 @@ caps.handback.revision: 21
   
 -   Используйте метод `CopyFile`, задав конечный файл и расположение.  В следующем примере создается копия файла `test.txt` с именем `test2.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
   
 ### Создание копии файла в том же каталоге с перезаписью существующих файлов  
   
 -   Используйте метод `CopyFile`, задав конечный файл и расположение и установив для параметра `overwrite` значение `True`.  В следующем примере создается копия файла `test.txt` с именем `test2.txt` и перезаписываются существующие файлы с таким именем.  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
   
 ## Отказоустойчивость  
  Исключение может возникнуть в следующих случаях.  

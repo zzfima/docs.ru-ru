@@ -30,7 +30,7 @@ caps.handback.revision: 20
   
  В приведенной ниже процедуре показано, как создать экземпляр класса `Student` тремя различными способами.  Класс имеет среди прочих свойства "имя", "фамилия" и "номер курса".  В каждом из трех объявлений создается новый экземпляр класса `Student`, где для свойства `First` задается значение "Michael", для свойства `Last` — значение "Tucker", а для всех других членов — значения по умолчанию.  Результат каждого объявления в процедуре аналогичен следующему примеру, в котором не используется инициализатор объектов.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
   
  Сведения о реализации класса `Student` см. в разделе [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  Можно скопировать код из этого раздела, чтобы настроить класс и создать список объектов `Student` для работы с ними.  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 20
   
 3.  В списке инициализации укажите каждое свойство, которое требуется инициализировать, и присвойте ему начальное значение.  Имени свойства предшествует точка.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
   
      Можно инициализировать один или несколько членов класса.  
   
@@ -60,11 +60,11 @@ caps.handback.revision: 20
   
 6.  Введите `With`, а затем инициализатор объектов для инициализации одного или нескольких членов нового экземпляра.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
   
 7.  Чтобы упростить определение в предыдущем действии, не указывайте `As Student`.  В этом случае компилятор определяет с помощью определения локального типа, что `student3` является экземпляром класса `Student`.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
   
      Дополнительные сведения см. в разделе [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   

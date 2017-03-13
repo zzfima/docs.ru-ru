@@ -21,7 +21,7 @@ caps.handback.revision: 25
 ## Синтаксис запроса  
  Лучше всего для создания запросов использовать *синтаксис запроса*, создавая *выражения запросов*.  В следующем примере показано три выражения запроса.  В первом выражении демонстрируется фильтрация или ограничение результатов путем применения условий в предложении `where`.  Оно возвращает все элементы в исходной последовательности со значениями больше 7 и меньше 3.  Второе выражение демонстрирует сортировку возвращаемых результатов.  Третий запрос демонстрирует группировку результатов.  Он возвращает две группы на основе первой буквы слова.  
   
- [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#5)]  
+ [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_1.cs)]  
   
  Обратите внимание, что тип запросов — <xref:System.Collections.Generic.IEnumerable%601>.  Все эти запросы можно написать с помощью `var`, как показано в примере ниже.  
   
@@ -34,25 +34,25 @@ caps.handback.revision: 25
 ## Синтаксис метода  
  Некоторые операции запросов должны быть выражены в виде вызова метода.  Чаще всего используются методы, возвращающие одноэлементные числовые значения, например <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> и т.д.  Эти методы всегда должны быть вызваны последними в запросе, поскольку они представляют только одно значение и не могут служить источником дополнительных действий запроса.  В следующем примере демонстрируется вызов метода в выражении запроса.  
   
- [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#6)]  
+ [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_2.cs)]  
   
 ## Пример  
  Если у метода есть параметры, они представлены в виде [лямбда](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)\-выражения, как показано в следующем примере.  
   
- [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#7)]  
+ [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_3.cs)]  
   
  В предыдущих запросах только запрос №4 выполнялся немедленно.  Причина заключается в том, что он возвращает одиночное значение, а не универсальную коллекцию <xref:System.Collections.Generic.IEnumerable%601>.  Сам метод должен использовать `foreach` для вычисления значения.  
   
  Любой их перечисленных ранее запросов можно написать с использованием неявной типизации с помощью [var](../../../csharp/language-reference/keywords/var.md), как показано в следующем примере.  
   
- [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#8)]  
+ [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_4.cs)]  
   
 ## Пример  
   
 ## Смешанный синтаксис запроса и метода  
  В этом примере демонстрируется использование синтаксиса метода для результатов предложения запроса.  Нужно всего лишь заключить выражение запроса в скобки, а затем применить оператор точки и вызвать метод.  В следующем примере запрос \#7 возвращает количество чисел, значение которых лежит в диапазоне от 3 до 7.  Однако в общем случае лучше использовать вторую переменную для хранения результатов вызова метода.  Таким образом, будет меньше вероятность перепутать запрос с результатами запроса.  
   
- [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#9)]  
+ [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_5.cs)]  
   
  Запрос №7 возвращает одиночное значение, а не коллекцию, поэтому он выполняется мгновенно.  
   

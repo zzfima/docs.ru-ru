@@ -62,7 +62,7 @@ caps.handback.revision: 21
   
  При помощи собственных методов доступа можно определить, будут ли два события представлены одним событием в классе или разными событиями.  Например, если события должны инициироваться в разное время в зависимости от требований интерфейса, то каждое событие можно связать с отдельной реализацией в классе.  В следующем примере подписчики определяют, какое событие `OnDraw` они получат путем приведения ссылки на форму к `IShape` или `IDrawingObject`.  
   
- [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-implement-interfa_1.cs)]  
+ [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

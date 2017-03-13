@@ -49,11 +49,11 @@ From element [ As type ] In collection [ _ ]
   
  Можно указать несколько предложений `From` в запросе для идентификации нескольких коллекций для объединения.  При указании нескольких коллекций, они воспринимаются, как независимые друг от друга, или можно объединить их, если они связаны.  Можно объединить коллекции неявно, с помощью предложения `Select` или явно используя предложения `Join` или `Group Join`.  В качестве альтернативы можно указать несколько переменных диапазонов и коллекций в одном предложении `From` с каждой связанной переменной диапазона и коллекции, разделенных между собой запятыми.  В следующем примере показаны оба параметра синтаксиса для предложения `From`.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#21)]  
+ [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
  Предложение `From` определяет область запроса, которая аналогична области цикла `For`.  Таким образом, каждая переменная диапазона `element` в области запроса должна иметь уникальное имя.  Поскольку можно указать несколько предложений `From` для запроса, последующие предложения `From` могут обратиться к переменным диапазона в предложении `From` или они могут ссылаться на переменную диапазона в предыдущем предложении `From`.  Например, в следующем примере показано вложенное предложение `From`, где коллекция во втором предложении основана на свойстве переменной диапазона в первом предложении.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#22)]  
+ [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
  После каждого предложения `From` может следовать любая комбинация предложений дополнительных запросов для уточнения запроса.  Можно уточнить запрос следующими способами:  
   
@@ -76,7 +76,7 @@ From element [ As type ] In collection [ _ ]
 ## Пример  
  Следующее выражение запроса использует предложение `From` для объявления диапазона переменной `cust` для каждого объекта `Customer` в коллекции `customers`.  Предложение `Where` использует переменную диапазона для ограничения вывода для заказчиков из указанной области.  В результате запроса цикл `For Each` отображает имя компании для каждого заказчика.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
 ## См. также  
  [Запросы](../../../visual-basic/language-reference/queries/queries.md)   

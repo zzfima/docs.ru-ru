@@ -30,7 +30,7 @@ caps.handback.revision: 27
 ## Литералы  
  Константы типа `char` могут быть записаны в виде символьных литералов, шестнадцатеричной escape\-последовательности или представления Юникода.  Кроме того, можно привести коды целых символов.  В следующем примере показана инициализация четырех переменных `char` с одним и тем же символом `X`:  
   
- [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/csharp/char_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/char_1.cs)]  
   
 ## Преобразования  
  `char` можно неявно преобразовать в тип [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) или [decimal](../../../csharp/language-reference/keywords/decimal.md).  Однако неявные преобразования из других типов в тип `char` не существуют.  

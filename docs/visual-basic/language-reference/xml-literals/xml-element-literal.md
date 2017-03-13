@@ -128,7 +128,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>Пример  
  В следующем примере демонстрируется создание простой XML-элемент, который имеет два вложенных пустых элемента.  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
   
  В примере отображается следующий текст. Обратите внимание, что литерал сохраняет структуру пустых элементов.  
   
@@ -142,7 +142,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>Пример  
  В следующем примере показано, как использовать внедренные выражения для имени элементу и создания атрибутов.  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
   
  Этот пример кода отображает следующий текст:  
   
@@ -153,7 +153,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>Пример  
  В следующем примере `ns` объявляется как префикс пространства имен XML. Затем используется префикс пространства имен для создания литерала XML и отображается конечная форма элемента.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
   
  Этот пример кода отображает следующий текст:  
   

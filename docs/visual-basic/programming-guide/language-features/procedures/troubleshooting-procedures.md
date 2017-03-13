@@ -50,7 +50,7 @@ caps.handback.revision: 17
   
  **Правильный подход** Чтобы иметь возможность изменять элементы массива для его возвращения, определите внутренний массив в качестве локальной переменной.  Следующий пример компилируется без ошибок.  
   
- [!code-vb[VbVbcnProcedures#66](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
 ## Аргумент не изменен вызовом процедуры  
  Если предполагается позволить процедуре изменять программный элемент базового аргумента в вызывающем коде, необходимо передать его по ссылке.  Но процедура может получить доступ к элементам аргумента ссылочного типа даже в том случае, если передать его по значению.  
@@ -61,13 +61,13 @@ caps.handback.revision: 17
   
  В следующем примере определяются две процедуры, которые принимают переменную массива по значению и производят действия над его элементами.  Процедура `increase` просто добавляет единицу к каждому элементу.  Процедура `replace` присваивает новый массив параметру `a()` и добавляет единицу к каждому элементу.  Однако переназначение не влияет на базовую переменную массива в коде вызова, так как `a()` объявлен `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
   
  В следующем примере происходят вызовы `increase` и `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
   
  Первый вызов `MsgBox` выводит следующее: "After increase\(n\): 11, 21, 31, 41".  Так как `n` является ссылочным типом, `increase` может изменить его элементы, несмотря на передачу `ByVal`.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 17
   
  **Правильный подход** Чтобы иметь возможность изменения базовой переменной элемента, передайте ее по ссылке.  В следующем примере отображаются изменения в объявлении `replace`, позволяющее заменить один массив на другой в коде вызова.  
   
- [!code-vb[VbVbcnProcedures#64](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
 ## Не удалось определить перегрузку  
  Если требуется определить перегруженную версию процедуры, необходимо использовать то же имя, но другую сигнатуру.  Если компилятор не может отличить объявление от перегруженного варианта с той же сигнатурой, он выдает ошибку.  
@@ -117,9 +117,9 @@ caps.handback.revision: 17
   
  Процесс разрешения перегрузки показан в следующем примере.  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
   
  В первом вызове компилятор устраняет первую перегрузку, так как тип первого аргумента \(`Short`\) сужается к типу соответствующего параметра \(`Byte`\).  Затем исключаются третья перегрузка, так как каждый тип аргумента во второй перегрузке \(`Short` и `Single`\) может быть расширен до соответствующего типа в третьей перегрузке \(`Integer` и `Single`\).  Вторая перегруженная версия требует меньшего расширения, поэтому компилятор использует ее для вызова.  
   
@@ -127,7 +127,7 @@ caps.handback.revision: 17
   
  **Правильный подход** Чтобы вызвать перегруженную процедуру без неоднозначности, используйте [Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для соответствия типов данных аргументов типам параметров.  В следующем примере показан вызов `z`, требующий разрешения второй перегрузки.  
   
- [!code-vb[VbVbcnProcedures#65](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   
 ### Разрешение перегрузки с помощью аргументов Optional и ParamArray  
  Если две перегрузки процедуры имеют идентичные сигнатуры за исключением того, что последний параметр в одной из них объявляется как [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) и как [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) в другой, компилятор разрешает вызов процедуры, выбирая наиболее близкий вариант.  Дополнительные сведения см. в разделе [Разрешение перегрузки](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md).  

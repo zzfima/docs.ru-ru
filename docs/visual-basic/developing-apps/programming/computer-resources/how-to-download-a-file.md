@@ -46,19 +46,19 @@ caps.handback.revision: 22
   
 -   Для загрузки файла используйте метод `DownloadFile`, указав расположение конечного файла в виде строки или URI и задав место, в котором будет сохранен файл.  В этом примере производится загрузка файла `WineList.txt` с веб\-узла `http://www.cohowinery.com/downloads` и сохранение его в каталоге `C:\Documents and Settings\All Users\Documents`:  
   
-     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
   
 ### Загрузка файла с указанием времени ожидания  
   
 -   Для загрузки файла используйте метод `DownloadFile`, задав расположение конечного файла в виде строки или URI, а также задав расположение хранения файла и продолжительность времени ожидания в миллисекундах \(по умолчанию 1 000 миллисекунд\).  В этом примере выполняется загрузка файла `WineList.txt` с веб\-сайта `http://www.cohowinery.com/downloads` с последующим сохранением в `C:\Documents and Settings\All Users\Documents`, при этом задается продолжительность времени ожидания 500 миллисекунд.  
   
-     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
   
 ### Загрузка файла с указанием имени пользователя и пароля  
   
 -   Для загрузки файла используйте метод `DownLoadFile`, указав расположение конечного файла в виде строки или URI, место, в котором будет сохранен файл, имя пользователя и пароль.  В данном примере производится загрузка файла `WineList.txt` с веб\-узла `http://www.cohowinery.com/downloads` и сохранение его в каталоге `C:\Documents and Settings\All Users\Documents`. Указывается имя пользователя `anonymous` и пустой пароль.  
   
-     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
   
     > [!IMPORTANT]
     >  Протокол FTP, используемый в методе `DownLoadFile`, отправляет данные, включая пароли, в формате обычного текста и не должен использоваться для передачи важных сведений.  

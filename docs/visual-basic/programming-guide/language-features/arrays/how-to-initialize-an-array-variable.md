@@ -30,7 +30,7 @@ caps.handback.revision: 42
   
 -   Либо в предложении `New`, либо при задании значения массива укажите в фигурных скобках \(`{}`\) значения элементов.  В следующем примере показано несколько способов объявить, создать и инициализировать переменную, которая должна содержать массив элементов типа `Char`.  
   
-     [!code-vb[VbVbalrArrays#16](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/how-to-initialize-an-arr_1.vb)]  
+     [!code-vb[VbVbalrArrays#16](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_1.vb)]  
   
      После выполнения каждого из операторов созданный массив имеет длину 3, и элементы с индексом от 0 до 2 содержат начальные значения.  Если указать верхнюю границу и значения, необходимо включить значение для каждого элемента с индексами от 0 до верхней границы.  
   
@@ -40,27 +40,27 @@ caps.handback.revision: 42
   
 -   Поместите значения в фигурные скобки \(`{}`\).  Убедитесь, что вложенные литералы массива все подразумевают массивы одного типа и длины.  Далее приведен код с несколькими примерами инициализации многомерного массива.  
   
-     [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/how-to-initialize-an-arr_2.vb)]  
+     [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
 -   Можно явно задать границы массива или не задавать их, тогда компилятор выведет границы массива на основе значений в литерале массива.  Если указать и верхние границы и значения, необходимо включить значение для каждого элемента от индекса 0 до верхней границы каждого измерения.  В следующем примере показано несколько способов объявить, создать и инициализировать переменную, которая должна содержать двухмерный массив элементов типа `Short`.  
   
-     [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/how-to-initialize-an-arr_3.vb)]  
+     [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   
      После выполнения каждого из операторов созданный массив содержит шесть инициализированных элементов с индексами `(0,0)`, `(0,1)`, `(0,2)`, `(1,0)`, `(1,1)` и `(1,2)`.  Каждое место массива содержит значение `10`.  
   
 -   Следующий пример выполняет перебор многомерного массива.  В консольном приложении Windows, написанном на Visual Basic, вставьте код в методе `Sub Main()`.  Последние комментарии показывают результат.  
   
-     [!code-vb[VbVbalrArrays#31](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/how-to-initialize-an-arr_4.vb)]  
+     [!code-vb[VbVbalrArrays#31](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_4.vb)]  
   
 ### Инициализация переменной массива массивов с помощью литералов массива  
   
 -   Поместите значения объектов в фигурные скобки \(`{}`\).  Хотя можно также вложить литералы массива, задающие массивы разной длины, в случае массива массивов следует убедиться, что вложенные литералы массива заключены в скобки \(`()`\).  Скобки задают принудительное вычисление вложенных литералов массива, результирующие массивы используются как начальные значения массива массивов.  Далее приведен код с двумя примерами инициализации массива массивов.  
   
-     [!code-vb[VbVbalrArrays#19](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/how-to-initialize-an-arr_5.vb)]  
+     [!code-vb[VbVbalrArrays#19](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_5.vb)]  
   
 -   Следующий пример выполняет перебор массив массивов.  В консольном приложении Windows, написанном на Visual Basic, вставьте код в методе `Sub Main()`.  Последние комментарии в коде показывают результат.  
   
-     [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/how-to-initialize-an-arr_6.vb)]  
+     [!code-vb[VbVbalrArrays#32](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_6.vb)]  
   
 ## См. также  
  [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   

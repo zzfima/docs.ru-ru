@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # Статические конструкторы (Руководство по программированию в C#)
 Статический конструктор используется для инициализации любых [статических](../../../csharp/language-reference/keywords/static.md) данных или для выполнения определенного действия, которое требуется выполнить только один раз.  Он вызывается автоматически перед созданием первого экземпляра или ссылкой на какие\-либо статические члены.  
   
- [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
  Статические конструкторы обладают следующими свойствами.  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 23
 ## Пример  
  В данном примере класс `Bus` содержит статический конструктор.  При создании первого экземпляра класса `Bus` \(`bus1`\) для инициализации класса вызывается статический конструктор.  В выходных данных данного примера кода можно увидеть, что статический конструктор выполняется только один раз, несмотря на то что создается два экземпляра класса `Bus`. Кроме того, этот конструктор вызывается до выполнения конструктора экземпляра.  
   
- [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

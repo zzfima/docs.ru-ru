@@ -19,7 +19,7 @@ caps.handback.revision: 13
 # Свойства интерфейса (Руководство по программированию на C#)
 Свойства можно объявлять в [интерфейс](../../../csharp/language-reference/keywords/interface.md).  Ниже приведен пример метода доступа индексатора интерфейса:  
   
- [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
  Метод доступа свойства интерфейса не имеет тела.  Поэтому методы доступа предназначены для того, чтобы указывать, доступно ли свойство для чтения и записи, только для чтения или только для записи.  
   
@@ -28,19 +28,19 @@ caps.handback.revision: 13
   
  Можно использовать полное имя свойства, которое ссылается на интерфейс, в котором объявлен член.  Примеры.  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  Это называется [Явная реализация интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).  Например, если класс `Employee` реализует два интерфейса `ICitizen` и `IEmployee`, и оба интерфейса имеют свойство `Name`, то обязательна явная реализация члена интерфейса.  То есть, следующее объявление свойства.  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  реализует свойство `Name` для интерфейса `IEmployee`, а следующее объявление:  
   
- [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_3.cs)]  
+ [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   
  реализует свойство `Name` в интерфейсе `ICitizen`.  
   
- [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/interface-properties_4.cs)]  
+ [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
   
   **`210 Hazem Abolrous`**    
 ## Пример результатов выполнения  

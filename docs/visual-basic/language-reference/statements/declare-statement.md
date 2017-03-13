@@ -141,14 +141,14 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## Пример  
  В следующем примере объявляется внешняя ссылка на `Function`, которая возвращает имя текущего пользователя.  Затем вызывается внешняя процедура `GetUserNameA` как часть процедуры `getUser`.  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
   
 ## Пример  
  <xref:System.Runtime.InteropServices.DllImportAttribute> предоставляет альтернативный способ использования функций в неуправляемом коде.  В следующем примере импортируемая функция объявляется без применения оператора `Declare`.  
   
- [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   

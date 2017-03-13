@@ -18,21 +18,21 @@ caps.handback.revision: 21
 # Практическое руководство. Объявление, создание экземпляра и использование делегата (Руководство по программированию в C#)
 В C\# версии 1.0 и более поздней версии делегаты можно объявлять, как показано в следующем примере.  
   
- [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#13)]  
+ [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#14)]  
+ [!code-cs[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_2.cs)]  
   
  C\# версии 2.0 предоставляет упрощенный способ записи предыдущего объявления, как показано в следующем примере.  
   
- [!code-cs[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#32)]  
+ [!code-cs[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_3.cs)]  
   
  В C\# версии 2.0 и более поздней версии также можно использовать анонимный метод для объявления и инициализации [делегата](../../../csharp/language-reference/keywords/delegate.md), как показано в следующем примере.  
   
- [!code-cs[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#15)]  
+ [!code-cs[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_4.cs)]  
   
  В C\# версии 3.0 и более поздней версии делегаты можно также объявлять и создавать их экземпляры при помощи лямбда\-выражения, как показано в следующем примере.  
   
- [!code-cs[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#31)]  
+ [!code-cs[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_5.cs)]  
   
  Дополнительные сведения см. в разделе [Лямбда\-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 21
  Использование делегата способствует правильному разделению функций между базой данных книжного магазина и клиентским кодом.  Клиентскому коду неизвестен порядок хранения книг и то, как код книжного магазина выполняет поиск книг в мягкой обложке.  Коду книжного магазина неизвестно о выполняемой обработке книг с мягкой обложкой после их нахождения.  
   
 ## Пример  
- [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#12)]  
+ [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
   
 ## Отказоустойчивость  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 21
   
      Следующий оператор объявляет новый типа делегата.  
   
-     [!code-cs[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#16)]  
+     [!code-cs[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_7.cs)]  
   
      Каждый тип делегата описывает число и типы аргументов, а также тип возвращаемого значения методов, которые могут быть им инкапсулированы.  Каждый раз, когда требуется новый набор типов аргументов или тип возвращаемого значения, необходимо объявить новый тип делегата.  
   
@@ -57,11 +57,11 @@ caps.handback.revision: 21
   
      После объявления типа делегата необходимо создать объект делегата и связать его с определенным методом.  В предыдущем примере это выполняется путем передачи метода `PrintTitle` в метод `ProcessPaperbackBooks`, как показано в следующем примере:  
   
-     [!code-cs[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#17)]  
+     [!code-cs[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_8.cs)]  
   
      Это создает новый объект делегата, связанный со [статическим](../../../csharp/language-reference/keywords/static.md) методом `Test.PrintTitle`.  Подобным образом передается не статический метод `AddBookToTotal` объекта `totaller`, как показано в следующем примере:  
   
-     [!code-cs[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#18)]  
+     [!code-cs[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_9.cs)]  
   
      В обоих случаях новый объект делегата передается в метод `ProcessPaperbackBooks`.  
   
@@ -71,7 +71,7 @@ caps.handback.revision: 21
   
      После создания объекта делегата, он как правило передается в другой код, который вызовет делегат.  Объект делегата вызывается при помощи имени объекта делегата, после которого следуют параметризованные аргументы, передаваемые в делегат.  Ниже приведен пример вызова делегата.  
   
-     [!code-cs[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#19)]  
+     [!code-cs[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_10.cs)]  
   
      Делегат может быть вызван синхронно \(как в этом примере\), или асинхронно при помощи методов `BeginInvoke` и `EndInvoke`.  
   

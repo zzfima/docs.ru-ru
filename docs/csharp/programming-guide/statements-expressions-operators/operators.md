@@ -22,11 +22,11 @@ caps.handback.revision: 42
   
  Следующая строка кода C\# содержит один унарный оператор и еще один операнд. Оператор инкремента `++` изменяет значение операнда `y`.  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  Следующая строка кода C\# содержит два бинарных оператора с двумя операндами в каждом. Оператор присваивания `=` содержит в качестве операндов целочисленную переменную `y` и выражение `2 + 3`. Выражение `2 + 3` состоит из оператора сложения и двух операндов — `2` и `3`.  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## Операторы, вычисление выражений и приоритет операторов  
  Операнд может быть допустимым выражением, представляющим собой код любой длины, а также может содержать любое число вложенных выражений. В выражении, содержащем несколько операторов, порядок применения операторов определяется *приоритетом операторов*, *ассоциативностью* и скобками.  

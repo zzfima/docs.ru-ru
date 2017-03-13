@@ -48,28 +48,28 @@ caps.handback.revision: 21
   
 5.  Назовите новый класс `UserNameInfo.vb` и нажмите кнопку **Добавить**, чтобы отобразить код для нового класса.  
   
-     [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#5)]  
+     [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_1.vb)]  
   
     > [!NOTE]
     >  Можно использовать [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] **Редактор кода**, чтобы добавить класс в форму запуска; для этого введите ключевое слово `Class`, следом за которым укажите имя нового класса.  **Редактор кода** предоставляет соответствующий оператор `End Class`.  
   
 6.  Определите закрытое поле для класса, добавив следующий код между операторами `Class` и `End Class`:  
   
-     [!code-vb[VbVbalrOOP#7](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#7)]  
+     [!code-vb[VbVbalrOOP#7](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_2.vb)]  
   
      Объявление полей как `Private` означает, что они могут использоваться только внутри класса.  Можно сделать поля доступными извне класса с помощью модификаторов доступа, например `Public`, которые обеспечивают дополнительный доступ.  Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 7.  Определите свойство для класса, добавив следующий код:  
   
-     [!code-vb[VbVbalrOOP#8](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#8)]  
+     [!code-vb[VbVbalrOOP#8](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_3.vb)]  
   
 8.  Определите метод для класса, добавив следующий код:  
   
-     [!code-vb[VbVbalrOOP#9](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#9)]  
+     [!code-vb[VbVbalrOOP#9](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_4.vb)]  
   
 9. Определите параметризованный конструктор для нового класса, добавив процедуру `Sub New`:  
   
-     [!code-vb[VbVbalrOOP#10](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#10)]  
+     [!code-vb[VbVbalrOOP#10](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_5.vb)]  
   
      Конструктор `Sub New` вызывается автоматически при создании объекта на основе данного класса.  Этот конструктор задает значение поля, в котором содержится имя пользователя.  
   
@@ -79,7 +79,7 @@ caps.handback.revision: 21
   
 2.  Добавьте в главную форму кнопку и дважды щелкните ее, чтобы отобразить код обработчика событий `Button1_Click`.  Добавьте следующий код, чтобы вызвать процедуру тестирования:  
   
-     [!code-vb[VbVbalrOOP#12](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#12)]  
+     [!code-vb[VbVbalrOOP#12](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_6.vb)]  
   
 ### Запуск приложения  
   

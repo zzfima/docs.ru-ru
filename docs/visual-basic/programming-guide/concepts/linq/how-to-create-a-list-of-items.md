@@ -28,7 +28,7 @@ caps.handback.revision: 27
 ## Пример  
  При работе с пошаговым руководством вы можете использовать этот код для файла Module1.vb проекта, который там создается.  Просто замените строки, помеченные \*\*\*, в методе `Main` на запросы и выполнения запросов, указанные в этом пошаговом руководстве.  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/how-to-create-a-list-of-_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
   
 ## См. также  
  [Практическое видеоруководство. Написание запросов в Visual Basic](http://msdn.microsoft.com/library/bb820884.aspx)   

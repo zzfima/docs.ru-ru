@@ -61,29 +61,29 @@ caps.handback.revision: 22
 ## Пример  
  Этот пример задает заголовок формы к ресурсу строк называется `Form1Title` в файле ресурсов приложения.  Пример работал, приложение должно иметь строки `Form1Title` в файле ресурсов.  Дополнительные сведения см. в разделе [How to: Add or Remove Resources](http://msdn.microsoft.com/ru-ru/7b77bc06-3952-4799-b029-def3f8f7f88d).  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
 ## Пример  
  В следующем примере значок формы меняется на значок с именем `Form1Icon`, хранящийся в файле ресурсов приложения.  Пример работал, приложение должно иметь именованный значок `Form1Icon` в файле ресурсов.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#2)]  
+ [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
   
 ## Пример  
  Этот пример устанавливает образом фоновое изображение формы к ресурсу образа называется `Form1Background`, который в файле ресурсов приложения.  Для работы этого примера необходимо, чтобы приложение должно иметь именованный ресурс образа `Form1Background` в файле ресурсов.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#3)]  
+ [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
   
 ## Пример  
  В этом примере воспроизводится звук, который хранится в виде звукового именованный ресурс `Form1Greeting` в файле ресурсов приложения.  Пример работал, приложение должно иметь звукового именованный ресурс `Form1Greeting` в файле ресурсов.  Метод `My.Computer.Audio.Play` доступен только для приложений Windows Forms.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#4)]  
+ [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
   
 ## Пример  
  В этом примере извлекается версия Французск\-языка и региональных параметров строкового ресурса приложения.  Ресурс называется `Message`.  Изменить язык и региональные параметры, `My.Resources` объект использует пример использует  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  Для работы этого примера необходимо, чтобы приложение должно иметь строки `Message` в файле ресурсов и приложении иметь версию Французск\-языка и региональные параметры этого файла ресурсов, Resources.fr\-FR.resx.  Дополнительные сведения см. в разделе [How to: Add or Remove Resources](http://msdn.microsoft.com/ru-ru/7b77bc06-3952-4799-b029-def3f8f7f88d).  Если приложение не имеет версии Французск\-языка и региональные параметры файла ресурсов, `My.Resource` объект получает ресурс из файла ресурсов по умолчанию\-языка и региональных параметров.  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#10)]  
+ [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
 ## См. также  
  [How to: Add or Remove Resources](http://msdn.microsoft.com/ru-ru/7b77bc06-3952-4799-b029-def3f8f7f88d)   

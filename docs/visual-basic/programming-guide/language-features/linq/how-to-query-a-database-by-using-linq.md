@@ -76,14 +76,14 @@ caps.handback.revision: 12
   
      Добавьте следующий код к событию `Load` для запроса к таблицам, которые отображаются как свойства контекста данных.  
   
-     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#3)]  
+     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_1.vb)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
 5.  Ниже приведены некоторые дополнительные запросы, которые можно попытаться выполнить.  
   
-     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#4)]  
-    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#5)]  
+     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
+    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
 ## См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

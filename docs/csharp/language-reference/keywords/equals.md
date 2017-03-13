@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## Пример  
  В следующем примере показано использование ключевого слова `equals` в предложении `join`.  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/csharp/equals_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]  
   
 ## См. также  
  [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

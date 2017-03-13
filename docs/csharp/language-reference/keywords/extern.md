@@ -36,7 +36,7 @@ private static extern void AVIFileInit();
 ## Пример  
  **Пример 1.** В этом примере программа получает от пользователя строку и отображает ее в окне сообщения.  В этой программе используется метод `MessageBox`, импортированный из библиотеки User32.dll.  
   
- [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#8)]  
+ [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
   
 ## Пример  
  **Пример 2.** В этом примере показана программа C\#, в которой вызывается библиотека C \(собственная библиотека DLL\).  

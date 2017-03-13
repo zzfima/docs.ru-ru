@@ -32,12 +32,12 @@ caps.handback.revision: 17
 ## Пример  
  В следующем примере показано, как объявить, расширить и реализовать контравариантный универсальный интерфейс.  В нем также показано, как используется неявное преобразование для классов, которые реализуют этот интерфейс.  
   
- [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/csharp/in-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
   
 ## Пример  
  В следующем примере показано, как объявить контравариантный универсальный метод\-делегат, создать его экземпляр и вызвать его.  В нем также показано, как неявно преобразовать тип делегата.  
   
- [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/csharp/in-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

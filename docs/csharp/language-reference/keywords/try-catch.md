@@ -136,7 +136,7 @@ static void Main()
 ## <a name="example"></a>Пример  
  В следующем примере блок `try` содержит вызов метода `ProcessString`, который может вызвать исключение. Предложение `catch` содержит обработчик исключений, который просто отображает сообщение на экране. Когда оператор `throw` вызывается из `MyMethod`, система осуществляет поиск оператора `catch` и отображает сообщение `Exception caught`.  
   
- [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере используются два блока catch и перехватывается наиболее конкретное исключение, поступившее первым.  
@@ -145,7 +145,7 @@ static void Main()
   
  Если в этом примере первым поместить блок catch для перехвата наименее конкретного исключения, то появится следующее сообщение об ошибке: `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
   
- [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_2.cs)]  
+ [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере демонстрируется обработка исключений для асинхронных методов. Для перехвата исключения, вызванного асинхронной задачей, поместите выражение `await` в блок `try` и перехватывайте это исключение в блоке `catch`.  
@@ -154,14 +154,14 @@ static void Main()
   
  Раскомментируйте строку `throw new OperationCancelledException` для демонстрации того, что происходит, когда вы отменяете асинхронный процесс. Для свойства `IsCanceled` задачи устанавливается значение `true`, и исключение перехватывается в блоке `catch`. В некоторых условиях, которые неприменимы в данном примере, для свойства `IsFaulted` задачи устанавливается значение `true`, а для `IsCanceled` устанавливается значение `false`.  
   
- [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_3.cs)]  
+ [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере демонстрируется обработка исключений, когда несколько задач могут привести к нескольким исключениям. `try` Блок ожидает задачу, которая возвращается путем вызова <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Эта задача завершается после завершения трех задач, к которым применяется WhenAll.  
   
  Каждая из трех задач вызывает исключение. `catch` Блок перебор исключений, которые находятся в `Exception.InnerExceptions` свойства задачи, который был возвращен методом <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
   
- [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch_4.cs)]  
+ [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -46,7 +46,7 @@ caps.handback.revision: 54
 > [!NOTE]
 >  На [Страница "Компиляция" в конструкторе проектов \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic), убедитесь, что **Option infer** имеет значение **На**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  Результат  
   
@@ -59,7 +59,7 @@ caps.handback.revision: 54
   
  Если источник данных еще не реализует <xref:System.Collections.Generic.IEnumerable%601>, необходим поставщик [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] для реализации функциональности *стандартных операторов запросов* для источника данных.  Например, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] выполняет работу по загрузке XML\-документа в запрашиваемый тип <xref:System.Xml.Linq.XElement>, как показано в следующем примере.  Дополнительные сведения о стандартных операторах запроса см в разделе [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
   
  Используя [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], сначала создайте объектно\-реляционное сопоставление в режиме разработки вручную либо с помощью [Реляционный конструктор объектов](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2).  Напишите запросы к объектам, а во время выполнения [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] будет осуществлять взаимодействие с базой данных.  В следующем примере `customers` представляет определенную таблицу в базе данных, а <xref:System.Data.Linq.Table%601> поддерживает универсальный <xref:System.Linq.IQueryable%601>.  
   
@@ -74,7 +74,7 @@ caps.handback.revision: 54
   
  В следующем примере запрос возвращает все четные числа из массива целых чисел `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  Выражение запроса содержит три предложения: `From`, `Where` и `Select`.  Конкретная функциональность и назначение каждого предложения выражения запроса рассматривается в разделе [Основные операции запроса \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  Дополнительные сведения см. в разделе [Запросы](../../../../visual-basic/language-reference/queries/queries.md).  Обратите внимание, что в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] определение запроса часто хранится в переменной и выполняется позднее.  Переменная запроса, например `evensQuery` в предыдущем примере, должна быть запрашиваемым типом. Тип `evensQuery``IEnumerable(Of Integer)`, присвоенного компилятором, используя вывод локального типа.  
   
@@ -86,13 +86,13 @@ caps.handback.revision: 54
 ### Отложенное выполнение  
  Обычный запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] напоминает запрос в предыдущем примере, в котором определен `evensQuery`.  Запрос создается, но выполняется не сразу.  Определение запроса хранится в переменной запроса `evensQuery`.  Запрос выполняется позже, обычно с помощью цикла `For Each`, который возвращает последовательность значений, или при помощи стандартного оператора запроса, такого как `Count` или `Max`.  Такой процесс называется *отложенным выполнением*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
   
  Доступ к извлеченной последовательности значений осуществляется с помощью переменной итерации в цикле `For Each` \(`number` в предыдущем примере\).  Поскольку переменная запроса `evensQuery` содержит определение, а не результаты запроса, запрос можно выполнять так часто, как требуется.  Например, приложение может работать с базой данных, которая непрерывно обновляется отдельным приложением.  После создания запроса, извлекающего данные из базы данных, можно использовать цикл `For Each`, чтобы выполнить запрос повторно, извлекая каждый раз последние данные.  
   
  В следующем примере демонстрируется отложенное выполнение.  После того, как `evensQuery2` определен и выполнен с помощью цикла `For Each`, как в предыдущих примерах, некоторые элементы в источнике данных `numbers` изменяются.  Затем второй цикл `For Each` еще раз выполняет `evensQuery2`.  Результаты, извлеченные во второй раз, отличаются от изначальных, поскольку цикл `For Each` снова выполняет запрос, используя новые значения в `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
   
  Результат  
   
@@ -109,15 +109,15 @@ caps.handback.revision: 54
   
  Следующий запрос возвращает количество четных чисел в массиве целых чисел.  Определение запроса не сохраняется, а `numEvens` является простым `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
   
  Того же результата можно добиться с помощью метода `Aggregate`.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
   
  Можно также принудительно выполнить запрос путем вызова метода `ToList` или `ToArray` в запросе \(немедленный\) или переменной запроса \(отложенный\), как показано в следующем коде.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
   
  В предыдущих примерах `evensQuery3` является переменной запроса, `evensList` является списком, а `evensArray` является массивом.  
   

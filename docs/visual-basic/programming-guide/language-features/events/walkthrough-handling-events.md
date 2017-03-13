@@ -34,7 +34,7 @@ caps.handback.revision: 18
   
 1.  Поместите следующий код в `Form1`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#4)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
   
      Ключевое слово `WithEvents` указывает на то, что переменная `mWidget` используется для обработки событий объекта.  Тип объекта определяется указанием имени класса, из которого объект будет создан.  
   
@@ -56,13 +56,13 @@ caps.handback.revision: 18
   
 3.  В обработчик событий `mWidget_PercentDone` добавьте следующий код:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#5)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
      После вызова события `PercentDone` процедура события отображает процент выполнения в элементе управления `Label`.  Метод `DoEvents` позволяет обновить надпись, а также предоставляет пользователю возможность воспользоваться кнопкой **Отмена**.  
   
 4.  В обработчик события `Button2_Click` добавьте следующий код:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#6)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
   
  Если пользователь нажимает кнопку **Отмена** во время работы `LongTask`, то событие `Button2_Click` выполняется, как только инструкция `DoEvents` позволит обработку возникшего события.  Переменной уровня класса `mblnCancel` присваивается значение `True`, а событие `mWidget_PercentDone` затем проверяет ее и устанавливает аргумент `ByRef Cancel` в значение `True`.  
   
@@ -79,7 +79,7 @@ caps.handback.revision: 18
   
 3.  Добавьте следующий код к процедуре события `Form1_Load` для создания `Widget`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#7)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
  При выполнении этого кода [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] создает объект `Widget` и подключает его события к процедурам события, связанным с `mWidget`.  С этого момента при каждом появлении в `Widget` события `PercentDone` будет выполняться процедура события `mWidget_PercentDone`.  
   
@@ -87,7 +87,7 @@ caps.handback.revision: 18
   
 -   В обработчик событий `Button1_Click` добавьте следующий код:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#8)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
  Перед вызовом метода `LongTask` надпись, в которой выводится процент выполненной работы, должна быть инициализирована, а флаг отмены метода на уровне модуля типа `Boolean` должен иметь значение `False`.  
   
@@ -116,7 +116,7 @@ caps.handback.revision: 18
   
 -   Добавьте следующую строку кода в процедуру `Button1_Click` непосредственно перед строкой, считывающей `mWidget.LongTask(12.2, 0.33)`:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#9)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
   
  Приведенный выше код создает новый объект `Widget` при каждом нажатии этой кнопки.  Как только метод `LongTask` завершается, ссылка на объект `Widget` отменяется и объект `Widget` уничтожается.  
   

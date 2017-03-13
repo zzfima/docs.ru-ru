@@ -62,7 +62,7 @@ caps.handback.revision: 30
   
 -   Добавьте класс `Student` и инициализированный список учащихся к классу `Program` в проекте.  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#11)]  
+     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
 #### Добавление нового учащегося в список учащихся  
   
@@ -76,7 +76,7 @@ caps.handback.revision: 30
   
      Обратите внимание, что переменная диапазона запроса `student` служит ссылкой на каждый объект `Student` в источнике, предоставляя доступ к членам для каждого объекта.  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#12)]  
+ [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
 ## Выполнение запроса  
   
@@ -90,7 +90,7 @@ caps.handback.revision: 30
   
 2.  После добавления этого кода выполните построение и запустите приложение, нажав сочетание клавиш Ctrl \+ F5 для просмотра результатов в окне **Консоль**.  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#13)]  
+ [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
 #### Добавление дополнительного условия фильтра  
   
@@ -130,11 +130,11 @@ caps.handback.revision: 30
   
 1.  Группировка является мощной возможностью выражений запроса.  Запрос с предложением group создает последовательность групп, где каждая группа содержит `Key` и последовательность, состоящую из всех членов этой группы.  Следующий новый запрос группирует учащихся по первой букве их фамилии в качестве ключа.  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#14)]  
+     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
 2.  Обратите внимание, что тип запроса изменился.  Теперь он создает последовательность из групп, имеющих тип `char` в качестве ключа, и последовательность объектов `Student`.  Поскольку тип запроса изменился, следующий код изменяет также и цикл `foreach`.  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#15)]  
+     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
 3.  Нажмите сочетание клавиш Ctrl \+ F5 для выполнения приложения и просмотра результатов в окне **Консоль**.  
   
@@ -144,7 +144,7 @@ caps.handback.revision: 30
   
 1.  Явное кодирование `IEnumerables` из `IGroupings` может быстро стать трудоемким.  С помощью `var` можно более просто написать тот же запрос и цикл `foreach`.  Ключевое слово `var` не приводит к изменению типов объектов; оно просто сообщает компилятору о необходимости определения типов.  Измените тип `studentQuery` и переменная итерации `group` к `var` и повторно выполните запрос.  Обратите внимание, что во внутреннем цикле `foreach` переменная итерации по\-прежнему типизирована как `Student` и запрос работает так же, как и раньше.  Измените переменную итерации `s` на `var` и повторно выполните запрос.  Результаты остались неизменными.  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#16)]  
+     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
      Более подробную информацию о [var](../../../../csharp/language-reference/keywords/var.md) см. в разделе [Неявно типизированные локальные переменные](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -152,7 +152,7 @@ caps.handback.revision: 30
   
 1.  При выполнении предыдущего запроса группы были расположены не в алфавитном порядке.  Для упорядочения необходимо указать предложение `orderby` после предложения `group`.  Но, чтобы использовать предложение `orderby`, нужен идентификатор, служащий в качестве ссылки на группы, создаваемые предложением `group`.  Предоставить идентификатор можно с помощью ключевого слова `into` следующим образом.  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#17)]  
+     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
      При выполнении этого запроса группы будут отсортированы в алфавитном порядке.  
   
@@ -160,7 +160,7 @@ caps.handback.revision: 30
   
 1.  Ключевое слово `let` можно использовать для представления идентификатора для любого результата выражения в выражении запроса.  Этот идентификатор может применяться для удобства, как в следующем примере, или он может повысить производительность, сохраняя результаты выражения так, чтобы оно не вычислялось повторно.  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#18)]  
+     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
      Дополнительные сведения см. в разделе [Предложение let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -168,17 +168,17 @@ caps.handback.revision: 30
   
 1.  Как отмечалось в [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), некоторые операции запроса могут быть выражены только с помощью синтаксиса методов.  В следующем коде вычисляется общий результат для каждого `Student` в исходной последовательности, а затем вызывается метод `Average()`, использующий результаты запроса для вычисления среднего балла класса.  Обратите внимание на круглые скобки вокруг выражения запроса.  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#19)]  
+     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
 #### Преобразование или проецирование в предложении select  
   
 1.  Очень часто в запросах создаются последовательности, элементы которых отличаются от элементов в исходных последовательностях.  Удалите или закомментируйте предыдущий запрос и цикл и замените его следующим кодом.  Обратите внимание, что запрос возвращает последовательность строк \(не `Students`\), и этот факт отражается в цикле `foreach`.  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#20)]  
+     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
 2.  Приведенный ранее в этом пошаговом руководстве код показывает, что средний результат для всего класса составляет примерно 334.  Для создания последовательности `Students`, суммарный результат баллов которых больше среднего, вместе с их `Student ID`, можно использовать анонимный тип в инструкции `select`.  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#21)]  
+     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## Следующие действия  
  После ознакомления с основными аспектами работы с запросами в C\# можно приступить к чтению документации и просмотру примеров для конкретного типа поставщика [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]:  

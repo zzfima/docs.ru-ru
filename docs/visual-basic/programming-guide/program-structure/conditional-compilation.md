@@ -28,7 +28,7 @@ caps.handback.revision: 15
   
  Блоки кода для условной компиляции обозначаются директивой `#If...Then...#Else`.  Например, для создания версий одного и того же приложения на французском и немецком языках из одного исходного кода, необходимо внедрить зависимые от платформы сегменты кода в инструкции `#If...Then` с помощью определенных ранее констант `FrenchVersion` и `GermanVersion`.  Как это сделать, показано в следующем примере:  
   
- [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/conditional-compilation_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
  Если для константы условной компиляции `FrenchVersion` задается значение `True` во время компиляции, компилируется условный код для французской версии.  Если установить для константы `GermanVersion` значение `True`, компилятор использует немецкую версию.  Если ни одна константа не имеет значения `True`, выполняется код в последнем блоке `Else`.  
   

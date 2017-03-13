@@ -19,36 +19,36 @@ caps.handback.revision: 16
 # Многомерные массивы (Руководство по программированию на C#)
 Массивы могут иметь несколько измерений.  Например, следующее объявление создает двумерный массив из четырех строк и двух столбцов.  
   
- [!code-cs[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_1.cs)]  
+ [!code-cs[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_1.cs)]  
   
  Следующее объявление создает трехмерный массив с количеством элементов 4, 2 и 3.  
   
- [!code-cs[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_2.cs)]  
+ [!code-cs[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_2.cs)]  
   
 ## Инициализация массива  
  Массив можно инициализировать при объявлении, как показано в следующем примере.  
   
- [!code-cs[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_3.cs)]  
+ [!code-cs[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_3.cs)]  
   
  Можно также инициализировать массив, не указывая его размерность.  
   
- [!code-cs[csProgGuideArrays#14](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_4.cs)]  
+ [!code-cs[csProgGuideArrays#14](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_4.cs)]  
   
  Если нужно создать переменную массива без инициализации, то необходимо использовать оператор `new`, чтобы присвоить массив переменной.  В следующем примере показано использование `new`.  
   
- [!code-cs[csProgGuideArrays#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_5.cs)]  
+ [!code-cs[csProgGuideArrays#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_5.cs)]  
   
  Следующий пример присваивает значение конкретному элементу массива.  
   
- [!code-cs[csProgGuideArrays#16](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_6.cs)]  
+ [!code-cs[csProgGuideArrays#16](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_6.cs)]  
   
  Аналогичным образом, в следующем примере получено значение конкретного элемента массива и оно назначено  переменной `elementValue`.  
   
- [!code-cs[csProgGuideArrays#42](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_7.cs)]  
+ [!code-cs[csProgGuideArrays#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_7.cs)]  
   
  В следующем примере кода элементы массивов инициализируются значениями по умолчанию \(за исключением массивов массивов\).  
   
- [!code-cs[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/csharp/multidimensional-arrays_8.cs)]  
+ [!code-cs[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_8.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

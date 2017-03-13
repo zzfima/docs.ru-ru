@@ -39,7 +39,7 @@ x = x << y
  Оператор `<<=` нельзя перегрузить непосредственно, однако пользовательские типы могут перегрузить [оператор \<\<](../../../csharp/language-reference/operators/left-shift-operator.md) \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Пример  
- [!code-cs[csRefOperators#12](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#12)]  
+ [!code-cs[csRefOperators#12](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-assignment-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

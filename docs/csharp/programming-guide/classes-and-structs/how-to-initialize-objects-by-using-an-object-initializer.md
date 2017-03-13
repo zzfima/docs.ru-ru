@@ -26,12 +26,12 @@ caps.handback.revision: 20
 ## Пример  
  В следующем примере показано, как инициализировать новый тип `StudentName` с помощью инициализаторов объектов.  
   
- [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#35)]  
+ [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
   
 ## Пример  
  В следующем примере показано, как инициализировать коллекцию типов `StudentName` с помощью инициализатора коллекции.  Обратите внимание, что инициализаторе коллекции представляет собой ряд инициализаторов объектов, перечисленных через запятую.  
   
- [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#36)]  
+ [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## Компиляция кода  
  Для выполнения этого кода скопируйте класс в проект консольного приложения на языке Visual C\#, которое было создано в среде разработки [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)].  Дополнительные сведения см. в разделе [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  

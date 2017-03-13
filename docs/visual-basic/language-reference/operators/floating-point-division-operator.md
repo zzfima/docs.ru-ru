@@ -85,7 +85,7 @@ expression1 / expression2
 ## Пример  
  В данном примере оператор `/` используется для выполнения операции деления с плавающей запятой.  Результатом является частное двух операндов.  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/floating-point-division-_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
   
  Выражения в предыдущем примере возвращают значения 2,5 и 3,333333.  Следует отметить, что результат всегда имеет тип числа с плавающей запятой \(`Double`\), даже если оба операнда являются целочисленными константами.  
   

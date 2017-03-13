@@ -66,11 +66,11 @@ caps.handback.revision: 16
 ## Пример  
  В следующем примере показаны две процедуры, которые принимают переменную массива и производят действия над его элементами.  Процедура `increase` добавляет единицу к каждому элементу.  Процедура `replace` присваивает новый массив параметру `a()` и добавляет единицу к каждому элементу.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#36](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
   
  Первый вызов `MsgBox` выводит следующее: "After increase\(n\): 11, 21, 31, 41".  Так как массив `n` является ссылочным типом, `replace` может изменить его элементы, несмотря на механизм передачи `ByVal`.  
   

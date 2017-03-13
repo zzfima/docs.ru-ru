@@ -53,7 +53,7 @@ variableorproperty -= expression
 ## Пример  
  В следующем примере оператор `-=` используется для вычитания значения переменной типа `Integer` из значения другой переменной и присваивания результата первой переменной.  
   
- [!code-vb[VbVbalrOperators#11](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/integer-division-assignm_1.vb)]  
+ [!code-vb[VbVbalrOperators#11](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор "\-"](../../../visual-basic/language-reference/operators/subtraction-operator.md)   

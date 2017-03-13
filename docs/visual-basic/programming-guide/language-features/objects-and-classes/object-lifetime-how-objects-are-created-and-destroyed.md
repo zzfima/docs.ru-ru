@@ -51,11 +51,11 @@ caps.handback.revision: 22
   
  Чтобы создать конструктор класса, создайте процедуру с именем `Sub New` в любом месте определения класса.  Чтобы создать конструктор с параметрами, укажите имена и типы данных аргументов в `Sub New` точно так же, как для любой процедуры. См. следующий код:  
   
- [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/WhidbeyStuff.vb#42)]  
+ [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_1.vb)]  
   
  Конструкторы часто перегружены, как в следующем коде:  
   
- [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/WhidbeyStuff.vb#116)]  
+ [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
  При вызове класса, производного от другого класса, первая строка конструктора должна представлять собой вызов конструктора базового класса \(кроме случаев, когда в базовом классе есть доступный конструктор, не принимающий параметры\).  Вызов базового класса, содержащего указанный выше конструктор, может быть, к примеру, таким `MyBase.New(s)`.  В противном случае `MyBase.New` не является обязательным, а среда выполнения [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] вызывает его явным образом.  
   

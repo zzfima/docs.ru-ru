@@ -45,7 +45,7 @@ caps.handback.revision: 9
 ## Пример  
  В данном примере используется тег `<permission>`, указывающий, что требуется <xref:System.Security.Permissions.FileIOPermission> для метода `ReadFile`.  
   
- [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/permission_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
 ## См. также  
  [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

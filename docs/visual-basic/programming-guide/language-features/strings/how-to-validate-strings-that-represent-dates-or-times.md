@@ -25,7 +25,7 @@ caps.handback.revision: 11
 В следующем примере кода задается значение `Boolean`, показывающее, представляет ли строка допустимую дату или время.  
   
 ## Пример  
- [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/how-to-validate-strings-_1.vb)]  
+ [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-strings-that-represent-dates-or-times_1.vb)]  
   
 ## Компиляция кода  
  Замените `("01/01/03")` и `"9:30 PM"` датой и временем, которые нужно проверить.  Можно заменить строку другой жестко\-запрограммированной строкой, с помощью переменной `String` или метода, возвращающего строку, например `InputBox`.  

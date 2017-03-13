@@ -6,7 +6,7 @@ caps.handback.revision: 12
 В следующем примере показано, как создавать вложенные группы в выражении запроса [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  Каждая группа, созданная в соответствии с годом или уровнем обучения, затем подразделяется на группы на основе имен учащихся.  
   
 ## Пример  
- [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#24)]  
+ [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-create-a-nested-group_1.cs)]  
   
  Обратите внимание на то, что для выполнения итерации по внутренним элементам вложенной группы необходимы три вложенных цикла `foreach`.  
   

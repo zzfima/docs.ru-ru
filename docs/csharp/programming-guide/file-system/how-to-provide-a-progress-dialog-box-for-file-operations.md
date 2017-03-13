@@ -33,7 +33,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем коде каталог, указанный параметром `sourcePath`, копируется в каталог, указанный параметром `destinationPath`.  Этот код также предоставляет стандартное диалоговое окно, в котором показывается оценочное время, оставшееся до окончания операции.  
   
- [!code-cs[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#11)]  
+ [!code-cs[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
   
 ## См. также  
  [Файловая система и реестр](../../../csharp/programming-guide/file-system/file-system-and-the-registry.md)

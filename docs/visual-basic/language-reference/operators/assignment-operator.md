@@ -52,7 +52,7 @@ variableorproperty = value
 ## Пример  
  В следующем примере демонстрируется оператор присваивания.  Значение в правой части присваивается переменной слева.  
   
- [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор &\=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)   

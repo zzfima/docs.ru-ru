@@ -74,7 +74,7 @@ object.@<attribute>
 ## Пример  
  В следующем примере показано получение значений из XML\-атрибутов с именем `type` из коллекции XML\-элементов, которая называется `phone`.  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_1.vb)]  
+ [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
   
  В этом коде отображается следующий текст:  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ## Пример  
  Пример, как создать атрибуты для XML\-элемента декларативно, как часть XML, и динамически, путем добавления атрибута экземпляру объекта <xref:System.Xml.Linq.XElement>.  Атрибут `type` создается декларативно и атрибут `owne` создается динамически.  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_2.vb)]  
+ [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
   
  В этом коде отображается следующий текст:  
   
@@ -100,7 +100,7 @@ object.@<attribute>
 ## Пример  
  В следующем примере используется синтаксис угловых скобок, чтобы получить значение атрибута XML с именем `number-type`, который не является допустимым идентификатором в [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_3.vb)]  
+ [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   
  В этом коде отображается следующий текст:  
   
@@ -109,7 +109,7 @@ object.@<attribute>
 ## Пример  
  В следующем примере `ns` объявляется как префикс пространства имен XML.  Затем используется префикс пространства имен для создания литерала XML и доступа к первому дочернему узлу, имеющему полное имя "`ns:name`".  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_4.vb)]  
+ [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
   
  В этом коде отображается следующий текст:  
   

@@ -55,7 +55,7 @@ caps.handback.revision: 43
 ## Пример  
  В следующем коде реализовано несколько примеров данного раздела.  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/program.cs#1)]  
+ [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
 ## Необязательные аргументы  
  В определении метода, конструктора, индексатора или делегата можно указать, что параметры являются обязательными или необязательными.  При каждом вызове необходимо указывать аргументы для всех обязательных параметров, но можно опустить аргументы для необязательных параметров.  
@@ -70,7 +70,7 @@ caps.handback.revision: 43
   
  Необязательные параметры определяются в конце списка параметров после всех обязательных параметров.  Если вызывающий объект задает аргумент для какого\-либо из последующих необязательных параметров, он должен задать аргументы для всех предшествующих необязательных параметров.  Разделенные запятыми пустые позиции в списке аргументов не поддерживаются.  Например, в следующем коде метод экземпляра `ExampleMethod` определен одним или двумя необязательными параметрами.  
   
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#15)]  
+ [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
  Следующий вызов `ExampleMethod` вызывает ошибку компилятора, поскольку аргумент предоставлен для третьего параметра, а не для второго.  
   
@@ -91,7 +91,7 @@ caps.handback.revision: 43
 ## Пример  
  В следующем примере у конструктора класса `ExampleClass` имеется один параметр, который является необязательным.  У метода экземпляра `ExampleMethod` имеется один обязательный параметр `required` и два необязательных параметра `optionalstr` и `optionalint`.  В коде в методе `Main` показаны различные способы вызова конструктора и метода.  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#2)]  
+ [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
 ## Интерфейсы COM  
  Именованные и необязательные аргументы, а также поддержка динамических объектов и другие усовершенствования значительно улучшаю взаимодействие с интерфейсами API COM, например с API автоматизации Office.  
@@ -103,11 +103,11 @@ caps.handback.revision: 43
   
  В C\# 3.0 и предыдущих версиях для каждого параметра требуется аргумент, как показано в следующем примере.  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#3)]  
+ [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
  Однако можно значительно упростить вызов `AutoFormat`, воспользовавшись необязательными и именованными аргументами, представленными в C\# 4.0.  Именованные и необязательные аргументы позволяют опустить аргумент необязательного параметра, если изменять значение параметра по умолчанию не требуется.  В следующем вызове задается значение только для одного из семи параметров.  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#13)]  
+ [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
  Дополнительные сведения и примеры см. в разделах [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) и [Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка Visual C\#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   

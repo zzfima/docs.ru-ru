@@ -39,7 +39,7 @@ x = x / y
  Оператор `/=` нельзя перегрузить непосредственно, однако пользовательские типы могут перегрузить [оператор \/](../../../csharp/language-reference/operators/division-operator.md) \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  Для всех составных операторов присваивания перегрузка двоичного оператора неявно перегружает эквивалентное составное назначение.  
   
 ## Пример  
- [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#5)]  
+ [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

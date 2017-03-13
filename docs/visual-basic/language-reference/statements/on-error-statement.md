@@ -85,7 +85,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## Оператор Throw  
  Ошибка, вызываемая с помощью метода `Err.Raise`, устанавливает свойство `Exception` в только что созданный экземпляр класса <xref:System.Exception>.  Для обеспечения вызова исключений производных типов в языке поддерживается оператор `Throw`.  У него есть единственный параметр, являющийся экземпляром создаваемого исключения.  В следующем примере показано, как эти возможности могут быть использованы в существующей системе обработки исключений.  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
  Следует отметить, что оператор `On Error GoTo` перехватывает все ошибки вне зависимости от класса исключения.  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Чтобы предотвратить выполнение кода обработки ошибок при отсутствии ошибок, следует разместить непосредственно перед подпрограммой обработки ошибок операторы `Exit Sub`,`Exit Function` или `Exit Property`, как показано в следующем фрагменте:  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
  Здесь код обработки ошибки находится между операторами `Exit Sub` и `End Sub`, что позволяет отделить его от основной части процедуры.  Код обработки ошибки можно расположить в любом месте процедуры.  
   
@@ -112,7 +112,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Если создается объект, который обращается к другим объектам, можно попытаться обработать любые необработанные ошибки, возвращаемые этими объектами.  Если это невозможно, сопоставьте коды ошибок в `Err.Number` с одной из ошибок своего приложения, а затем верните их вызывающему объекту.  Необходимо определить свою ошибку, добавив ее код в константу `VbObjectError`.  Например, если Идентификатор ошибки 1052, присвойте ее следующим образом.  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
 >  Системные ошибки во время вызовов динамических библиотек Windows \(DLL\) не вызывают исключений и не могут быть обработаны средствами Visual Basic.  При вызове функций библиотек DLL необходимо проверять каждое возвращаемое значение, чтобы определить, был ли вызов удачен, и в случае сбоя \(в соответствии со спецификациями API\) проверять значение свойства `LastDLLError` объекта `Err`.  
@@ -120,7 +120,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## Пример  
  В этом примере сначала используется оператор `On Error GoTo`, указывающий месторасположение подпрограммы обработки ошибки в процедуре.  В этом примере попытка деления на ноль создает ошибку с номером 6.  Ошибка обрабатывается в подпрограмме обработки ошибок, и затем управление возвращается оператору, вызвавшему ошибку.  Оператор `On Error GoTo 0` отключает перехват ошибок.  Затем используется оператор `On Error Resume Next` для задержки перехвата ошибки. Это позволяет точно определить контекст ошибки, созданной следующим оператором.  Следует помнить, что `Err.Clear` используется для очистки свойств объекта `Err` после завершения обработки ошибки.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
 ## Требования  
  **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

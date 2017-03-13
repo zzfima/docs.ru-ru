@@ -31,7 +31,7 @@ caps.handback.revision: 16
   
 -   Используйте метод `WriteAllBytes`, указывая путь к файлу и имя файла и байты, которые требуется записать.  Этот пример добавляет массив данных `CustomerData` в файл `CollectedData.dat`.  
   
-     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-to-binary-f_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-to-binary-files_1.vb)]  
   
 ## Отказоустойчивость  
  Исключение может возникнуть при следующих условиях.  

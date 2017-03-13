@@ -46,12 +46,12 @@ caps.handback.revision: 19
 ## Пример  
  В следующем примере показано, как объявить, расширить и реализовать контравариантный универсальный интерфейс.  В нем также показано, как используется неявное преобразование для классов, которые реализуют этот интерфейс.  
   
- [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/in-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
   
 ## Пример  
  В следующем примере показано, как объявить контравариантный универсальный метод\-делегат, создать его экземпляр и вызвать его.  В нем также показано, как неявно преобразовать тип делегата.  
   
- [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/in-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
 ## См. также  
  [Вариативность в универсальных интерфейсах](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   

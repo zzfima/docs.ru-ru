@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
  Если параметру [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) присвоено значение `Off`, а параметру [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) — значение `On`, необходимо явно объявить все константы с использованием типа данных.  В следующем примере тип данных константы `MyByte` явным образом объявлен как `Byte`:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
  Если параметру `Option Infer` присвоено значение `On` или параметру `Option Strict` — значение `Off`, можно объявить константу, не задавая тип данных с предложением `As`.  Компилятор определяет тип константы по типу выражения.  Целочисленный литерал по умолчанию приводится к типу данных `Integer`.  По умолчанию для чисел с плавающей запятой используется тип данных `Double`, а ключевые слова `True` и `False` определяют константу типа `Boolean`.  
   
@@ -48,11 +48,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  Чтобы предыдущий пример работал, добавьте к литералу символ типа `D`, чтобы он был представлен как `Decimal`:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
  В следующем примере показано правильное использование символов типа и окружающих символов:  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
  В приведенной ниже таблице показаны окружающие символы и символы типов, доступные в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
   

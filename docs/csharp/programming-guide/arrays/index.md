@@ -23,7 +23,7 @@ caps.handback.revision: 33
   
  В следующем примере показано создание одномерных, многомерных массивов и массивов массивов.  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
 ## Общие сведения о массивах  
  Массив имеет следующие свойства.  

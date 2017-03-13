@@ -91,12 +91,12 @@ Next
   
  Тип возвращаемого значения метода итератора <xref:System.Collections.Generic.IEnumerable%601> тип интерфейса итератора.  Если метод вызывается итератора, он возвращает перечислимый объект, содержащий степени числа.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
   
 ## Пример  
  В следующем примере демонстрируется доступа `Get`, итератор.  Объявление свойства включает модификатор `Iterator`.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
  Дополнительные примеры см. в разделе [Итераторы](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
   

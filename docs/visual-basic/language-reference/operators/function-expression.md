@@ -67,19 +67,19 @@ End Function
 ## Пример  
  В следующем примере показано два способа создания простых лямбда\-выражений.  Первый использует `Dim` для предоставления имени функции.  Чтобы вызвать функцию, передайте ее значение в качестве параметра.  
   
- [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+ [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
- [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+ [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
 ## Пример  
  Кроме того, можно и объявить и запустить функцию одновременно.  
   
- [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
 ## Пример  
  В следующем примере лямбда\-выражение увеличивает значение своего аргумента и возвращает его.  В примере показан синтаксис однострокового и многострокового лямбда\-выражения для функции.  Дополнительные примеры см. в разделе [Лямбда\-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## Пример  
  Лямбда\-выражения лежат в основе многих операторов запроса [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)], и могут быть явно использованы в запросах на основе методов.  В следующем примере показан типичный запрос [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)], с приведением результата запроса в формат метода.  

@@ -28,7 +28,7 @@ caps.handback.revision: 21
   
 -   Для переименования файла используйте метод `My.Computer.FileSystem.RenameFile`.  В этом примере выполняется переименование файла с именем `Test.txt` на `SecondTest.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
  Данный пример кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода фрагмент находится в разделе **Файловая система — Обработка дисков, папок и файлов**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
   

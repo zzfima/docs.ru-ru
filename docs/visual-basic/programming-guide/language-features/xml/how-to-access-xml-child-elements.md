@@ -28,7 +28,7 @@ caps.handback.revision: 18
 Этот пример демонстрирует использование свойства дочерней оси для доступа ко всем дочерним XML\-элементам, имеющим указанное имя в XML\-элементе.  В частности, в нем используется свойство <xref:System.Xml.Linq.XElement.Value%2A>, чтобы получить значение первого элемента в коллекции, которое возвращает свойство дочерней оси `name`.  Свойство дочерней оси `name` получает все дочерние элементы с именем `phone` в объекте `contact`.  Кроме того, в этом примере используется свойство дочерней оси `phone` для доступа ко всем дочерним элементам с именем `phone`, которые содержатся в объекте `contact`.  
   
 ## Пример  
- [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-child-_1.vb)]  
+ [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-child-elements_1.vb)]  
   
 ## Компиляция кода  
  Для этого примера необходимо следующее.  

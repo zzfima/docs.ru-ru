@@ -45,7 +45,7 @@ caps.handback.revision: 30
   
  В следующем примере показаны три объявления.  
   
- [!code-vb[VbVbalrStatements#80](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_1.vb)]  
+ [!code-vb[VbVbalrStatements#80](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_1.vb)]  
   
  Первое объявление — это оператор `Sub`.  Он совместно с соответствующим ему оператором `End Sub` объявляет процедуру с именем `applyFormat`.  Он также указывает, что `applyFormat` является `Public`, что означает, что любой код, который к нему обращается, может его вызвать.  
   
@@ -58,11 +58,11 @@ caps.handback.revision: 30
   
  Присвоение переменной начального значения может быть частью ее объявления, как показано в следующем примере.  
   
- [!code-vb[VbVbalrStatements#81](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_2.vb)]  
+ [!code-vb[VbVbalrStatements#81](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_2.vb)]  
   
  Если переменная является объектной переменной, можно явно создать экземпляр ее класса при ее объявлении с помощью ключевого слова [Оператор New](../../../visual-basic/language-reference/operators/new-operator.md), например:  
   
- [!code-vb[VbVbalrStatements#82](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_3.vb)]  
+ [!code-vb[VbVbalrStatements#82](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_3.vb)]  
   
  Обратите внимание, что начальное значение в операторе объявления не присваивается переменной до тех пор, пока выполнение не достигнет его оператора объявления.  До этого времени переменная содержит значение по умолчанию для своего типа данных.  
   
@@ -71,7 +71,7 @@ caps.handback.revision: 30
   
  В следующем примере используется управляющая структура `If...Then...Else` для выполнения различных блоков кода на основе значения переменной.  В каждом блоке кода цикл `For...Next` выполняется заданное число раз.  
   
- [!code-vb[VbVbalrStatements#83](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_4.vb)]  
+ [!code-vb[VbVbalrStatements#83](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_4.vb)]  
   
  Инструкция `If` в предыдущем примере проверяет значение параметра `clockwise`.  Если значение равно `True`, то вызывается метод `spinClockwise` из `aWidget`.  Если значение равно `False`, то вызывается метод `spinCounterClockwise` из `aWidget`.  Управляющая структура `If...Then...Else` завершается `End If`.  
   
@@ -80,7 +80,7 @@ caps.handback.revision: 30
 ## Операторы присваивания  
  Операторы присваивания выполняют присваивание, сводящееся к вычислению значения справа от оператора присваивания \(`=`\) и его записи в элемент слева, как в следующем примере.  
   
- [!code-vb[VbVbalrStatements#73](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_5.vb)]  
+ [!code-vb[VbVbalrStatements#73](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_5.vb)]  
   
  В этом примере оператор присваивания сохраняет значение литерала 42 в переменной `v`.  
   
@@ -89,35 +89,35 @@ caps.handback.revision: 30
   
  Значение в правой части оператора присваивания формируется с помощью выражения, которое может содержать любую комбинацию литералов, констант, переменных, свойств, элементов массива и другие выражения или вызовы функций.  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrStatements#74](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_6.vb)]  
+ [!code-vb[VbVbalrStatements#74](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_6.vb)]  
   
  В этом примере осуществляется сложение значения переменной `y` со значением переменной `z`, а затем сложение со значением, возвращаемым функцией `findResult`.  Общее значение этого выражения затем сохраняется в переменной `x`.  
   
 ### Типы данных в операторах присваивания  
  В дополнение к числовым значениям оператор присваивания также может присваивать значения типа `String`, как показано в следующем примере.  
   
- [!code-vb[VbVbalrStatements#75](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_7.vb)]  
+ [!code-vb[VbVbalrStatements#75](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_7.vb)]  
   
  Можно также присваивать значения `Boolean` с помощью литерала `Boolean` или выражения `Boolean`, как показано в следующем примере.  
   
- [!code-vb[VbVbalrStatements#76](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_8.vb)]  
+ [!code-vb[VbVbalrStatements#76](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_8.vb)]  
   
  Аналогично, можно присваивать соответствующие значения элементам программирования типов `Char`, `Date` и `Object`.  Можно также присвоить экземпляр объекта элементу класса, из которого этот экземпляр был создан.  
   
 ### Составные операторы присваивания  
  *Составные операторы присваивания* сначала выполняют операцию над выражением перед присваиванием его значения программному элементу.  В следующем примере показан один из этих операторов, `+=`, который прибавляет значение переменной в левой части оператора к значению выражения справа:  
   
- [!code-vb[VbVbalrStatements#77](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_9.vb)]  
+ [!code-vb[VbVbalrStatements#77](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_9.vb)]  
   
  В предыдущем примере к значению `n` прибавляется 1, а затем новое значение записывается в `n`.  Это краткий эквивалент следующего оператора:  
   
- [!code-vb[VbVbalrStatements#78](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_10.vb)]  
+ [!code-vb[VbVbalrStatements#78](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_10.vb)]  
   
  Многие составные операции присваивания выполняются с помощью операторов этого типа.  Список этих операторов и дополнительные сведения о них см. в разделе [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md).  
   
  Оператор объединения и присваивания \(`&=`\) удобен при добавлении строки в конец уже существующих строк, например:  
   
- [!code-vb[VbVbalrStatements#79](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_11.vb)]  
+ [!code-vb[VbVbalrStatements#79](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_11.vb)]  
   
 ### Преобразование типов в операторах присваивания  
  Значение, присваиваемое переменной, свойству или элементу массива, должно иметь тип данных конечного элемента.  В общем случае следует стремиться создавать значение того же типа данных, что и у конечного элемента.  Тем не менее, во время присваивания некоторые типы могут быть преобразованы в другие.  
@@ -129,14 +129,14 @@ caps.handback.revision: 30
 ## Размещение нескольких операторов на одной строке  
  На одной строке возможно размещение нескольких операторов, разделенных символом двоеточия \(`:`\).  Это показано в приведенном ниже примере.  
   
- [!code-vb[VbVbalrStatements#70](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_12.vb)]  
+ [!code-vb[VbVbalrStatements#70](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_12.vb)]  
   
  Хотя это иногда и удобно, эта форма синтаксиса осложняет чтение и сопровождение кода.  Поэтому рекомендуется писать по одному оператору на строке.  
   
 ## Продолжение оператора на нескольких строках  
  Оператор обычно занимает одну строку, но длинный оператор можно продолжить на следующих строках с помощью символа продолжения строки, состоящего из символа подчеркивания \(`_`\), за которым следует перевод строки.  В следующем примере выполняемый оператор `MsgBox` располагается на двух строках.  
   
- [!code-vb[VbVbalrStatements#71](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_13.vb)]  
+ [!code-vb[VbVbalrStatements#71](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_13.vb)]  
   
 ### Неявное продолжение строки  
  Во многих случаях инструкцию можно продолжить на следующей строке, не используя знак подчеркивания \(\_\).  В следующей таблице приведен список элементов синтаксиса, которые неявно продолжают инструкцию на следующей строке кода.  
@@ -144,27 +144,27 @@ caps.handback.revision: 30
 |||  
 |-|-|  
 |Элемент синтаксиса|Пример|  
-|После запятой \(`,`\).|[!code-vb[VbVbalrLineContinuation#1](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_14.vb)]|  
-|После открывающей скобки \(`(`\) или перед закрывающей скобкой \(`)`\).|[!code-vb[VbVbalrLineContinuation#2](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_15.vb)]|  
-|После открывающей фигурной скобки \(`{`\) или перед закрывающей фигурной скобкой \(`}`\).|[!code-vb[VbVbalrLineContinuation#3](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_16.vb)]<br /><br /> Дополнительные сведения см. в разделе [Инициализаторы объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) или [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
-|После открытого встроенного выражения \(`<%=`\) или перед закрытием встроенного выражения \(`%>`\) в рамках XML\-литерала.|[!code-vb[VbVbalrLineContinuation#4](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_17.vb)]<br /><br /> Дополнительные сведения см. в разделе [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
-|После оператора объединения \(`&`\).|[!code-vb[VbVbcnConventions#9](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_18.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
-|После операторов назначения \(`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`\).|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_19.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
-|После двоичных операторов \(`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`\) в рамках выражения.|[!code-vb[VbVbalrLineContinuation#7](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_20.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
-|После операторов `Is` и `IsNot`.|[!code-vb[VbVbalrLineContinuation#8](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_21.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
-|После символа квалификатора элемента \(`.`\) перед именем элемента.  Однако необходимо использовать знак продолжения строки \(\_\) после знака квалификатора элемента при использовании оператора `With` или указании значений в списке инициализации для типа.  При использовании оператора `With` или списков инициализации объектов попробуйте разорвать строку после оператора назначения \(например, `=`\).|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_19.vb)]<br />[!code-vb[VbVbalrLineContinuation#14](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_22.vb)]<br /><br /> Дополнительные сведения см. в разделе [Оператор With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md) или [Инициализаторы объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).|  
-|После квалификатора свойства XML\-оси \(`.` или `.@` или `...`\).  Однако необходимо использовать знак продолжения строки \(\_\) при указании квалификатора элемента с использованием ключевого слова `With`.|[!code-vb[VbVbalrLineContinuation#9](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_23.vb)]<br /><br /> Дополнительные сведения см. в разделе [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).|  
-|После знака "меньше" \(\<\) или перед знаком "больше" \(`>`\) при задании атрибута.  Также после знака "больше" \(`>`\) при задании атрибута.  Однако необходимо использовать знак продолжения строки \(\_\) при задании атрибутов уровня сборки или уровня модуля.|[!code-vb[VbVbalrLineContinuation#10](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_24.vb)]<br /><br /> Дополнительные сведения см. в разделе [Атрибуты](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md).|  
-|До и после операторов запроса \(`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending` и `Descending`\).  Нельзя разрывать строку между ключевыми словами операторов запросов, состоящих из нескольких ключевых слов \(`Order By`, `Group Join`, `Take While` и `Skip While`\).|[!code-vb[VbVbalrLineContinuation#11](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_25.vb)]<br /><br /> Дополнительные сведения см. в разделе [Запросы](../../../visual-basic/language-reference/queries/queries.md).|  
-|После ключевого слова `In` в операторе `For Each`.|[!code-vb[VbVbalrLineContinuation#12](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_26.vb)]<br /><br /> Дополнительные сведения см. в разделе [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md).|  
-|После ключевого слова `From` в инициализаторе коллекции.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/statements_27.vb)]<br /><br /> Дополнительные сведения см. в разделе [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
+|После запятой \(`,`\).|[!code-vb[VbVbalrLineContinuation#1](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_14.vb)]|  
+|После открывающей скобки \(`(`\) или перед закрывающей скобкой \(`)`\).|[!code-vb[VbVbalrLineContinuation#2](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_15.vb)]|  
+|После открывающей фигурной скобки \(`{`\) или перед закрывающей фигурной скобкой \(`}`\).|[!code-vb[VbVbalrLineContinuation#3](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_16.vb)]<br /><br /> Дополнительные сведения см. в разделе [Инициализаторы объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) или [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
+|После открытого встроенного выражения \(`<%=`\) или перед закрытием встроенного выражения \(`%>`\) в рамках XML\-литерала.|[!code-vb[VbVbalrLineContinuation#4](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_17.vb)]<br /><br /> Дополнительные сведения см. в разделе [Встроенные выражения в XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|После оператора объединения \(`&`\).|[!code-vb[VbVbcnConventions#9](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_18.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
+|После операторов назначения \(`=`, `&=`, `:=`, `+=`, `-=`, `*=`, `/=`, `\=`, `^=`, `<<=`, `>>=`\).|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
+|После двоичных операторов \(`+`, `-`, `/`, `*`, `Mod`, `<>`, `<`, `>`, `<=`, `>=`, `^`, `>>`, `<<`, `And`, `AndAlso`, `Or`, `OrElse`, `Like`, `Xor`\) в рамках выражения.|[!code-vb[VbVbalrLineContinuation#7](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_20.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
+|После операторов `Is` и `IsNot`.|[!code-vb[VbVbalrLineContinuation#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_21.vb)]<br /><br /> Дополнительные сведения см. в разделе [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md).|  
+|После символа квалификатора элемента \(`.`\) перед именем элемента.  Однако необходимо использовать знак продолжения строки \(\_\) после знака квалификатора элемента при использовании оператора `With` или указании значений в списке инициализации для типа.  При использовании оператора `With` или списков инициализации объектов попробуйте разорвать строку после оператора назначения \(например, `=`\).|[!code-vb[VbVbalrLineContinuation#5](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_19.vb)]<br />[!code-vb[VbVbalrLineContinuation#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_22.vb)]<br /><br /> Дополнительные сведения см. в разделе [Оператор With...End With](../../../visual-basic/language-reference/statements/with-end-with-statement.md) или [Инициализаторы объектов: именованные и анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).|  
+|После квалификатора свойства XML\-оси \(`.` или `.@` или `...`\).  Однако необходимо использовать знак продолжения строки \(\_\) при указании квалификатора элемента с использованием ключевого слова `With`.|[!code-vb[VbVbalrLineContinuation#9](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_23.vb)]<br /><br /> Дополнительные сведения см. в разделе [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).|  
+|После знака "меньше" \(\<\) или перед знаком "больше" \(`>`\) при задании атрибута.  Также после знака "больше" \(`>`\) при задании атрибута.  Однако необходимо использовать знак продолжения строки \(\_\) при задании атрибутов уровня сборки или уровня модуля.|[!code-vb[VbVbalrLineContinuation#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_24.vb)]<br /><br /> Дополнительные сведения см. в разделе [Атрибуты](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md).|  
+|До и после операторов запроса \(`Aggregate`, `Distinct`, `From`, `Group By`, `Group Join`, `Join`, `Let`, `Order By`, `Select`, `Skip`, `Skip While`, `Take`, `Take While`, `Where`, `In`, `Into`, `On`, `Ascending` и `Descending`\).  Нельзя разрывать строку между ключевыми словами операторов запросов, состоящих из нескольких ключевых слов \(`Order By`, `Group Join`, `Take While` и `Skip While`\).|[!code-vb[VbVbalrLineContinuation#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_25.vb)]<br /><br /> Дополнительные сведения см. в разделе [Запросы](../../../visual-basic/language-reference/queries/queries.md).|  
+|После ключевого слова `In` в операторе `For Each`.|[!code-vb[VbVbalrLineContinuation#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_26.vb)]<br /><br /> Дополнительные сведения см. в разделе [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md).|  
+|После ключевого слова `From` в инициализаторе коллекции.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Дополнительные сведения см. в разделе [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## Добавление комментариев  
  Исходный код не всегда понятен без пояснений даже для написавшего его программиста.  Поэтому для документирования своих кодов большинство программистов использует комментарии.  С помощью комментариев в коде можно описать процедуру или определенную инструкцию для тех, кто будет в дальнейшем просматривать этот код или работать с ним.  При компиляции в [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] комментарии игнорируются, и они не влияют на скомпилированный код.  
   
  Строки комментариев начинаются с апострофа \(`'`\) или `REM`, за которым следует пробел.  Они могут быть добавлены в любое место кода, за исключением места внутри строковых типов данных.  Для добавления комментария в инструкцию вставьте апостроф или `REM` после оператора, за которым следует комментарий.  Комментарии также могут размещаться на отдельной строке.  В следующем примере показаны эти возможности.  
   
- [!code-vb[VbVbalrStatements#72](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/statements_28.vb)]  
+ [!code-vb[VbVbalrStatements#72](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/statements_28.vb)]  
   
 ## Проверка ошибок компиляции  
  Если после набора строки кода строка отображается с подчеркнутой волнистой голубой линией \(также может быть выведено и сообщение об ошибке\), это означает, что в операторе допущена синтаксическая ошибка.  Необходимо узнать, в чем заключается ошибка инструкции \(для этого просмотрите список задач или поместите указатель мыши на ошибку и прочтите ее описание\) и исправить ее.  До тех пор, пока все синтаксические ошибки не будут исправлены, программа будет давать сбой при компиляции.  

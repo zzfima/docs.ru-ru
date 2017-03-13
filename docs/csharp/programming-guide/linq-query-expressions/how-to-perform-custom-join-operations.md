@@ -23,12 +23,12 @@ caps.handback.revision: 13
   
  Результатом второго метода является последовательность всех продуктов, идентификатор категории которых находится в списке категорий с правой стороны.  Учтите необходимость использование предложения `let` и метода `Contains` для создания временного массива.  Также можно создать массив перед запросом и удалить первое предложение `from`.  
   
- [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#64)]  
+ [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_1.cs)]  
   
 ## Пример  
  В следующем примере запрос должен соединять две последовательности на основе сопоставления ключей, который в случае с внутренней \(правосторонней\) последовательностью не может быть получен до предложения соединения.  Если соединение было выполнено с предложением `join`, для каждого элемента требуется вызвать метод `Split`.  Использование нескольких предложений `from` позволяет запросу избежать издержек, связанных с повторным вызовом метода.  Однако поскольку `join` оптимизировано, в данном случае его использование может быть эффективнее нескольких предложений `from`.  Результаты будут зависеть в основном от затрат на вызов метода.  
   
- [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#13)]  
+ [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_2.cs)]  
   
 ## Компиляция кода  
   

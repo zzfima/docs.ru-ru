@@ -23,7 +23,7 @@ caps.handback.revision: 14
 ## Пример  
  В этом примере <xref:System.IndexOutOfRangeException> не является наиболее подходящим исключением. Для данного метода больше подходит исключение <xref:System.ArgumentOutOfRangeException>, поскольку ошибка вызвана переданным методу параметром `index`.  
   
- [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-handle-an-excepti_1.cs)]  
+ [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  
   
 ## Комментарии  
  Код, вызывающий исключение, находится в блоке `try`.  Инструкция `catch` помещается сразу после него, чтобы обрабатывать исключение `IndexOutOfRangeException`, если оно происходит.  В блоке `catch` исключение `IndexOutOfRangeException` обрабатывается, и вместо него создается более подходящее исключение `ArgumentOutOfRangeException`.  Чтобы вызывающий объект получил максимально подробную информацию, рекомендуется указать исходное исключение в качестве значения <xref:System.Exception.InnerException%2A> нового исключения.  Поскольку свойство <xref:System.Exception.InnerException%2A> [доступно только для чтения](../../../csharp/language-reference/keywords/readonly.md), его значение необходимо присваивать только в конструкторе нового исключения.  

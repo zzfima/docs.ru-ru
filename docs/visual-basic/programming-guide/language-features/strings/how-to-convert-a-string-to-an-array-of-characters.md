@@ -30,12 +30,12 @@ caps.handback.revision: 7
 ## Пример  
  В этом примере показано, как разбить строку в массив `Char` и как разбить строку в массив `String` знаков Юникода.  Причина различия в том, что знак Юникода может состоять из двух или более знаков `Char` \(например пары символов\-заместителей или последовательности несамостоятельных знаков\).  Дополнительные сведения см. в разделе <xref:System.Globalization.TextElementEnumerator> и на веб\-узле стандарта Юникод \(http:\/\/www.unicode.org\).  
   
- [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_1.vb)]  
+ [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_1.vb)]  
   
 ## Пример  
  Разбить строку на знаки Юникод труднее, но это необходимо для получения сведений о визуальном представлении строки.  В этом примере используется метод <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> для получения сведений о символах, составляющих строку Юникод.  
   
- [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_2.vb)]  
+ [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
 ## См. также  
  <xref:System.String.Chars%2A>   

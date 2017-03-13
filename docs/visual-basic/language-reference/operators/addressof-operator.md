@@ -45,12 +45,12 @@ AddressOf procedurename
 ## Пример  
  В данном примере оператор `AddressOf` применяется, чтобы назначить делегат для обработки события `Click` кнопки.  
   
- [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addressof-operator_1.vb)]  
+ [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_1.vb)]  
   
 ## Пример  
  В следующем примере оператор `AddressOf` используется, чтобы назначить функцию запуска для потока.  
   
- [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addressof-operator_2.vb)]  
+ [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_2.vb)]  
   
 ## См. также  
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)   

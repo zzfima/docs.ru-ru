@@ -67,7 +67,7 @@ caps.handback.revision: 14
  В приведенном ниже примере объявляется переменная с использованием ключевого слова [Static](../../../../visual-basic/language-reference/modifiers/static.md).  \(Обратите внимание, что ключевое слово `Dim` не требуется, если в [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) используется модификатор, например `Static`.\)  
   
 ### Код  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/visualbasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
 ### Комментарии  
  В предыдущем примере переменная `applesSold` продолжает существовать после того, как процедура `runningTotal` осуществляет возврат в вызывающий код.  При следующем вызове `runningTotal` переменная `applesSold` сохраняет ранее вычисленное значение.  

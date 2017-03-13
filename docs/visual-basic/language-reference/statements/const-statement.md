@@ -98,12 +98,12 @@ Const constantlist
 ## Пример  
  В следующем примере оператор `Const` используется для объявления констант, заменяющих литералы.  
   
- [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/const-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
   
 ## Пример  
  При определении константы с типом данных `Object` компилятор Visual Basic предоставляет ей тип `initializer` вместо `Object`.  В следующем примере константа `naturalLogBase` имеет тип времени выполнения `Decimal`.  
   
- [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/const-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
   
  Вышеприведенный пример использует метод <xref:System.Type.ToString%2A> в объекте <xref:System.Type>, возвращенном оператором [Оператор GetType](../../../visual-basic/language-reference/operators/gettype-operator.md), поскольку <xref:System.Type> не может быть преобразован к `String` с помощью `CStr`.  
   

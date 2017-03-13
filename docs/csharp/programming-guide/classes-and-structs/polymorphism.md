@@ -31,7 +31,7 @@ caps.handback.revision: 31
   
  Для начала создайте базовый класс с именем `Shape` и производные классы, например `Rectangle`, `Circle` и `Triangle`.  Присвойте классу `Shape` виртуальный метод с именем `Draw` и переопределите его в каждом производном классе для рисования конкретной фигуры, которую этот класс представляет.  Создайте объект `List<Shape>` и добавьте в него круг, треугольник и прямоугольник.  Для обновления поверхности рисования используйте цикл [foreach](../../../csharp/language-reference/keywords/foreach-in.md), чтобы выполнить итерацию списка и вызвать метод `Draw` на каждом объекте `Shape` в списке.  Несмотря на то, что каждый объект в списке имеет объявленный тип `Shape`, вызывать будет тип во время выполнения \(переопределенная версия метода в каждом производном классе\).  
   
- [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_1.cs)]  
+ [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
  В C\# каждый тип является полиморфным, так как все типы, включая пользовательские, наследуют <xref:System.Object>.  
   
@@ -48,42 +48,42 @@ caps.handback.revision: 31
   
  Производный класс может переопределить член базового класса, только если последний будет объявлен [виртуальным](../../../csharp/language-reference/keywords/virtual.md) или [абстрактным](../../../csharp/language-reference/keywords/abstract.md).  Производный член должен использовать ключевое слово [переопределить](../../../csharp/language-reference/keywords/override.md), указывающее, что метод предназначен для участия в виртуальном вызове.  Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_2.cs)]  
+ [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
  Поля не могут быть виртуальными. Виртуальными могут быть только методы, свойства, события и индексаторы.  Когда производный класс переопределяет виртуальный член, он вызывается даже в то случае, если доступ к экземпляру этого класса осуществляется в качестве экземпляра базового класса.  Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_3.cs)]  
+ [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
  Виртуальные методы и свойства позволяют производным классам расширять базовый класс без необходимости использовать реализацию базового класса метода.  Для получения дополнительной информации см. [Управление версиями с помощью ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md).  Еще одну возможность определения метода или набора методов, реализация которых оставлена производным классам, дает интерфейс.  Для получения дополнительной информации см. [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### Сокрытие членов базового класса новыми членами  
  Если вам нужно, чтобы производный член имел такое же имя, как и член в базовом классе, но вы не хотите, чтобы он участвовал в виртуальном вызове, используйте [новое](../../../csharp/language-reference/keywords/new.md) ключевое слово.  Ключевое слово `new` вставляется перед типом возвращаемого значения замещаемого члена класса.  Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_4.cs)]  
+ [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
  Доступ к скрытым членам базового класса можно по\-прежнему осуществлять из клиентского кода приведением экземпляра производного класса к экземпляру базового класса.  Например:  
   
- [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_5.cs)]  
+ [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
 ### Защита виртуальных членов от переопределения производными классами  
  Виртуальные члены остаются виртуальными на неограниченный срок независимо от количества классов, объявленных между виртуальным членом и классом, который объявил его изначально.  Если класс А объявляет виртуальный член, класс В производится из класса А, а класс С — из класса В, то класс С наследует виртуальный член и получает возможность переопределить его независимо от того, объявляет ли класс В переопределение этого члена.  Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_6.cs)]  
+ [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
   
  Производный класс может остановить виртуальное наследование, объявив переопределение как [запечатанное](../../../csharp/language-reference/keywords/sealed.md).  Для этого в объявление члена класса необходимо вставить ключевое слово `sealed` перед ключевым словом `override`.  Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_7.cs)]  
+ [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
   
  В предыдущем примере метод `DoWork` более не является виртуальным ни для одного класса, произведенного из класса С.  Он по\-прежнему виртуален для экземпляров класса С, даже если они приводятся к типу В или типу А.  Запечатанные методы можно заменить производными классами с помощью ключевого слова `new`, как показано в следующем примере.  
   
- [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_8.cs)]  
+ [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
  В этом случае, если `DoWork` вызывается на D с помощью переменной типа D, вызывается новый `DoWork`.  Если переменная типа C, B или A используется для доступа к экземпляру D, вызов `DoWork` будет выполняться по правилам виртуального наследования и направлять эти вызовы на реализацию `DoWork` на классе C.  
   
 ### Доступ к виртуальным членам базового класса из производных классов  
  Производный класс, который заменил или переопределил метод или свойство, может получить доступ к методу или свойству на базовом классе с помощью базового ключевого слова.  Примером является следующий код:  
   
- [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_9.cs)]  
+ [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   
  Для получения дополнительной информации см. [базу](../../../csharp/language-reference/keywords/base.md).  
   

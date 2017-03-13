@@ -27,7 +27,7 @@ caps.handback.revision: 7
  Чтобы определить неинтегральные константы, можно сгруппировать их в один статический класс `Constants`.  При этом будет необходимо указывать во всех ссылках на константы имя класса, как показано в следующем примере.  
   
 ## Пример  
- [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
   
  Использование имени класса помогает упростить написание кода: все разработчики, использующие константу, понимают, что она является таковой и не может быть изменена.  
   

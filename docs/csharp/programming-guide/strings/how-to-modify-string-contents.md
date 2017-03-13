@@ -21,17 +21,17 @@ caps.handback.revision: 16
 ## Пример  
  В следующем примере показаны различные способы замены или удаления подстрок в указанной строке.  
   
- [!code-cs[csProgGuideStrings#28](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#28)]  
+ [!code-cs[csProgGuideStrings#28](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_1.cs)]  
   
 ## Пример  
  Для доступа к отдельным символам в строке с помощью нотаций массива можно использовать объект <xref:System.Text.StringBuilder>, перегружающий оператор `[]` для предоставления доступа к его внутреннему буферу символов.  Также можно преобразовать строку в массив символов с помощью метода <xref:System.String.ToCharArray%2A>.  В следующем примере используется `ToCharArray` для создания массива.  Затем некоторые элементы массива изменяются.  Конструктор строк, принимающий массив символов в качестве входного параметра, затем вызывается для создания новой строки.  
   
- [!code-cs[csProgGuideStrings#24](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#24)]  
+ [!code-cs[csProgGuideStrings#24](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_2.cs)]  
   
 ## Пример  
  Следующий пример предоставлен для тех редких случаев, в которых может понадобиться изменить строку на месте с помощью небезопасного кода аналогично массивам символов стиля C.  В примере показан доступ к отдельным символам "на месте" с помощью фиксированного ключевого слова.  Также в нем показано одно возможное побочное действие небезопасных операций со строками, которое является результатом внутреннего хранения \(интернирования\) компилятором C\# строк.  В общем, использовать этот метод следует только в тех случаях, когда это совершенно необходимо.  
   
- [!code-cs[csProgGuideStrings#29](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#29)]  
+ [!code-cs[csProgGuideStrings#29](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_3.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

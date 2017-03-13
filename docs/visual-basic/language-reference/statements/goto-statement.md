@@ -68,7 +68,7 @@ GoTo line
 ## Пример  
  В следующем примере используется оператор `GoTo` для передачи управления на метки в процедуре.  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
 ## См. также  
  [Оператор Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

@@ -33,7 +33,7 @@ caps.handback.revision: 11
   
 -   Наследуемый обработчик события не должен содержать условие [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md).  Метод базового класса уже связан с событием и будет запускаться соответствующим образом.  Необходимо удалить из унаследованного метода условие `Handles`.  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#32)]  
+     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
   
 -   Если наследуемый метод не содержит ключевого слова `Handles`, то следует убедиться, что код не содержит лишних [Оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) или каких\-либо дополнительных методов, обрабатывающих одно и то же событие.  
   

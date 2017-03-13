@@ -29,7 +29,7 @@ caps.handback.revision: 15
   
 2.  Для обеспечения возможности запросу вызывать метод `ToLower` для переменной диапазона `word` только один раз.  Без ключевого слова `let` метод `ToLower` пришлось бы вызвать в каждом предикате предложения `where`.  
   
- [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Let.cs#28)]  
+ [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

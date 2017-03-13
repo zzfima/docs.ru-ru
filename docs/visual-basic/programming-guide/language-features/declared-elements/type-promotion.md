@@ -31,21 +31,21 @@ caps.handback.revision: 17
   
  В приведенном ниже примере показано определение схемы модуля и двух членов этого модуля.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
  В пределах `projModule` элементы программирования, объявленные на уровне модуля, продвигаются до уровня `projNamespace`.  В предыдущем примере `basicEnum` и `innerClass` продвигаются, а `numberSub` — нет, поскольку он не объявлен на уровне модуля.  
   
 ## Эффект повышения типа  
  Эффект повышения типа заключается в том, что в квалификационную строку не нужно включать имя модуля.  В приведенном ниже примере выполняется два вызова процедуры из предыдущего примера.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
   
  В предыдущем примере для первого вызова используются полные квалификационные строки.  Однако это не обязательно, поскольку применяется повышение типа.  Во втором вызове также присутствует обращение к членам модуля, но без включения `projModule` в строки квалификации.  
   
 ## Отмена повышения типа  
  Если в пространстве имен уже имеется член, имя которого совпадает с именем члена модуля, повышение типа для члена модуля отменяется.  В приведенном ниже примере показано определение схемы перечисления и модуль в рамках одного пространства имен.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
  В предыдущем примере [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] не удается повысить уровень класса `abc` до уровня `thisNameSpace`, поскольку уже существует перечисление с тем же именем на уровне пространства имен.  Чтобы получить доступ к `abcSub`, необходимо использовать полную квалификационную строку `thisNamespace.thisModule.abc.abcSub`.  Однако для класса `xyz` повышение уровня выполняется, и можно получить доступ к `xyzSub` с использованием укороченной квалификационной строки `thisNamespace.xyz.xyzSub`.  
   
@@ -54,7 +54,7 @@ caps.handback.revision: 17
   
  **Последствия.** Отмена повышения типа для частично выполненного определения может привести к непредсказуемым результатам и даже ошибкам компилятора.  В приведенном ниже примере показана схема частично выполненных определений класса, одно из которых находится внутри модуля.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
  В предыдущем примере разработчик может ожидать, что компилятор выполнит слияние двух частично выполненных определений `sampleClass`.  Однако компилятор не примет во внимание повышение типа для частично выполненного определения внутри `sampleModule`.  В результате он попытается скомпилировать два отдельных и различных класса, имеющих одинаковое имя `sampleClass`, но с разными квалификационными путями.  
   

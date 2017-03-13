@@ -63,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## Пример  
  Ниже приведен пример статического класса, содержащего два метода, преобразующих температуру по Цельсию в температуру по Фаренгейту и наоборот.  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_1.cs)]  
+ [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## Статические члены  
  Нестатический класс может содержать статические методы, поля, свойства или события.  Статический член вызывается для класса даже в том случае, если не создано экземпляра класса.  Доступ к статическому члены всегда выполняется по имени класса, а не экземпляра.  Существует только одна копия статического члена, независимо от того, сколько создано экземпляров класса.  Статические методы и свойства не могут обращаться к нестатическим полям и событиям в их содержащем типе, и они не могут обращаться к переменной экземпляра объекта, если он не передается явно в параметре метода.  
@@ -78,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Для объявления статических методов класса используется ключевое слово `static` перед возвращаемым типом члена, как показано в следующем примере:  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_2.cs)]  
+ [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  Статические члены инициализируются перед первым доступом к статическому члену и перед вызовом статического конструктора, если он имеется.  Для доступа к члену статического класса следует использовать имя класса, а не имя переменной, указывая расположение члена, как показано в следующем примере:  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_3.cs)]  
+ [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  Если класс содержит статические поля, должен быть предоставлен статический конструктор, который инициализирует эти поля при загрузке класса.  
   

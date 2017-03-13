@@ -19,23 +19,23 @@ caps.handback.revision: 16
 # Универсальные делегаты. (Руководство по программированию на C#)
 [Делегат](../../../csharp/language-reference/keywords/delegate.md) может определять собственные параметры\-типы.  Код, ссылающийся на универсальный делегат, может указать аргумент типа для создания закрытого конструируемого типа так же, как и при создании универсального класса или вызове универсального метода, как показано в следующем примере.  
   
- [!code-cs[csProgGuideGenerics#36](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-delegates_1.cs)]  
+ [!code-cs[csProgGuideGenerics#36](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_1.cs)]  
   
  В C\# версии 2.0 представлена новая функция, которая называется преобразованием группы методов. Она применяется как к конкретным, так и к универсальным типам делегатов и позволяет записывать предыдущую строку с помощью следующего упрощенного синтаксиса.  
   
- [!code-cs[csProgGuideGenerics#37](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-delegates_2.cs)]  
+ [!code-cs[csProgGuideGenerics#37](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_2.cs)]  
   
  Делегаты, определенные в универсальном классе, могут использовать параметры типа универсального класса так же, как и методы класса.  
   
- [!code-cs[csProgGuideGenerics#38](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-delegates_3.cs)]  
+ [!code-cs[csProgGuideGenerics#38](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_3.cs)]  
   
  Код, ссылающийся на делегат, должен указать аргумент типа содержащего класса следующим образом.  
   
- [!code-cs[csProgGuideGenerics#39](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-delegates_4.cs)]  
+ [!code-cs[csProgGuideGenerics#39](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_4.cs)]  
   
  Универсальные делегаты особенно полезны при определении событий на основе типичного шаблона разработки, поскольку аргумент отправителя может быть строго типизированным и его больше нельзя привести к типу <xref:System.Object> и из него  
   
- [!code-cs[csProgGuideGenerics#40](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-delegates_5.cs)]  
+ [!code-cs[csProgGuideGenerics#40](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_5.cs)]  
   
 ## См. также  
  <xref:System.Collections.Generic>   

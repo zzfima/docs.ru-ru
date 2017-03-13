@@ -47,11 +47,11 @@ caps.handback.revision: 17
   
      В следующем примере процедура определена с необязательным параметром, эквивалент набору из двух перегруженных процедур и в конце примеры допустимых и недопустимых перегруженных версий процедуры.  
   
-     [!code-vb[VbVbcnProcedures#59](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
   
-     [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
   
 ## Несколько опциональных параметров  
  Обычно необходимо более двух перегруженных версий процедуры, если она имеет более одного опционального параметра.  Например, если существуют два опциональных параметра и код вызова может использовать или опустить каждый из них независимо друг от друга, необходимо четыре перегруженных версии, по одной для каждой возможной комбинации предоставленных аргументов.  

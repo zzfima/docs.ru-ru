@@ -24,13 +24,13 @@ caps.handback.revision: 26
 ## Пример  
  Следующий класс объявляется как `static` и содержит только `static` методы.  
   
- [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#18)]  
+ [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
   
  Объявление константы или типа неявно является статическим членом.  
   
  На статический член нельзя ссылаться через экземпляр.  а можно только через имя типа.  Например, рассмотрим следующий класс.  
   
- [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#19)]  
+ [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
   
  Чтобы создать ссылку на статический член `x`, воспользуйтесь полным именем — `MyBaseC.MyStruct.x` \(если только член не доступен из той же области действия\):  
   
@@ -54,12 +54,12 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 ## Пример  
  В этом примере выполняется чтение имени и идентификатора нового сотрудника, увеличение счетчика сотрудников на единицу, а также отображение сведений о новом сотруднике и нового числа сотрудников.  Для простоты эта программа считывает текущее число сотрудников с клавиатуры.  В реальном приложении эта информация должна считываться из файла.  
   
- [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#20)]  
+ [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
   
 ## Пример  
  Этот пример показывает, что несмотря на то что вы можете инициализировать статическое поле посредством другого, еще не объявленного статического поля, результаты не будут определены до тех пор, пока статическому полю не будет явно присвоено значение.  
   
- [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#21)]  
+ [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

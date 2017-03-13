@@ -25,7 +25,7 @@ caps.handback.revision: 21
  Дополнительные сведения и примеры по повторному возникновению исключения см. в разделах [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) и [Создание исключений](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md).  Дополнительные сведения о блоке `finally` см. в разделе [попытка\-окончательн](../../../csharp/language-reference/keywords/try-finally.md).  
   
 ## Пример  
- [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

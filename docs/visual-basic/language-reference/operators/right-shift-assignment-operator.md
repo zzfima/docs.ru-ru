@@ -55,7 +55,7 @@ variableorproperty >>= amount
 ## Пример  
  Следующий пример демонстрирует использование оператора `>>=` для сдвига битовой структуры переменной типа `Integer` вправо с присвоением результирующего значения переменной.  
   
- [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-assignment-o_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-assignment-operator_1.vb)]  
   
 ## См. также  
  [Оператор \>\>](../../../visual-basic/language-reference/operators/right-shift-operator.md)   

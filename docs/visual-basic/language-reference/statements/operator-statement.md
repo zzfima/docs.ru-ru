@@ -176,7 +176,7 @@ End Operator
 ## Пример  
  В следующем примере кода с помощью оператора `Operator` определяется контур структуры, содержащей процедуры для операторов `And`, `Or`, `IsFalse` и `IsTrue`.  Операторы `And` и `Or` принимают по два операнда типа `abc` и возвращают значения типа `abc`.  Операторы `IsFalse` и `IsTrue` принимают по одному операнду типа `abc` и возвращают значения типа `Boolean`.  Эти определения позволяют вызывающему коду использовать `And` `AndAlso`, `Or` и `OrElse` с операндами типа `abc`.  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
 ## См. также  
  [Оператор IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)   

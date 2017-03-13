@@ -24,7 +24,7 @@ caps.handback.revision: 16
 ## Пример  
  Например, значение поля `year` нельзя изменить в методе `ChangeYear` несмотря на то, что в конструкторе класса ему присваивается значение:  
   
- [!code-cs[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#14)]  
+ [!code-cs[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
   
  Можно присвоить значение полю `readonly` только в следующих контекстах:  
   
@@ -44,7 +44,7 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 ```  
   
 ## Пример  
- [!code-cs[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#15)]  
+ [!code-cs[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
   
  В предыдущем примере при использовании такого оператора:  
   

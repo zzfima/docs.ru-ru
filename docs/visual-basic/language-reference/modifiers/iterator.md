@@ -48,12 +48,12 @@ caps.handback.revision: 11
 ## Пример  
  Следующий пример демонстрирует функцию итератора.  Функция итератора имеет выписку `Yield`, которая находится внутри цикла [For… next](../../../visual-basic/language-reference/statements/for-next-statement.md).  Каждая итерация тела выписки [Оператор For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) в `Main` создает вызов функции итератора `Power`.  Каждый вызов функции итератора переход к следующему выполнению выписки `Yield`, которая происходит во время следующей итерации цикла `For…Next`.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
 ## Пример  
  В следующем примере показан метод доступа `Get`, итератор.  Модификатор `Iterator` в объявлении свойства.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
  Дополнительные примеры см. в разделе [Итераторы](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
   

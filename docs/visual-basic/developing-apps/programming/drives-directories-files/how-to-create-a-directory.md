@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
 -   Используйте метод `CreateDirectory`, указав полный путь расположения создаваемого каталога.  В этом примере создается каталог `NewDirectory` в каталоге `C:\Documents and Settings\All Users\Documents`.  
   
-     [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-directory_1.vb)]  
   
 ## Отказоустойчивость  
  При следующих условиях возможно возникновение исключения.  

@@ -34,9 +34,9 @@ int* p = &number; //address-of operator &
 ## Пример  
  В данном примере указатель на `int`, `p` объявляется и ему присваивается адрес целочисленной переменной `number`.  Переменная `number` инициализируется в результате присвоения \*p.  Если в тексте кода закомментировать присвоение, то инициализация переменной `number` будет удалена, однако при компиляции не возникнет сообщений об ошибках.  Обратите внимание на применение оператора [доступа члена](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md) `->` для получения и отображения адреса, хранящегося в указателе.  
   
- [!code-cs[csProgGuidePointers#7](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#7)]  
+ [!code-cs[csProgGuidePointers#7](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-address-of-a-variable_1.cs)]  
   
- [!code-cs[csProgGuidePointers#8](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#8)]  
+ [!code-cs[csProgGuidePointers#8](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-address-of-a-variable_2.cs)]  
   
 ## См. также  
  [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   

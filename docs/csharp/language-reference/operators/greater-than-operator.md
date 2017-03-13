@@ -25,7 +25,7 @@ caps.handback.revision: 16
  Типы, определенные пользователем, могут вызвать перегрузку оператора `>` \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  Если оператор `>` перегружен, то оператор [\<](../../../csharp/language-reference/operators/less-than-operator.md) тоже должен быть перегружен.  Если бинарный оператор перегружен, соответствующий оператор присваивания \(если таковой имеется\), также будет явно перегружен.  
   
 ## Пример  
- [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#29)]  
+ [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

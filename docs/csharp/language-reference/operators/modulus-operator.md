@@ -25,7 +25,7 @@ caps.handback.revision: 15
  Типы, определенные пользователем, могут вызвать перегрузку оператора `%` \(см. раздел [оператор](../../../csharp/language-reference/keywords/operator.md)\).  Если бинарный оператор перегружен, соответствующий оператор присваивания \(если таковой имеется\), также будет явно перегружен.  
   
 ## Пример  
- [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#9)]  
+ [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]  
   
 ## Комментарии  
  Обратите внимание на ошибки округления, связанные с двойным типом.  

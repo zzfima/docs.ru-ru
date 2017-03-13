@@ -92,7 +92,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## Пример  
  В следующем примере показана процедура `Function`, определяющая два параметра.  
   
- [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
   
 ## См. также  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   

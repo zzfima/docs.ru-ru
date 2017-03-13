@@ -54,14 +54,14 @@ Implements interfacename.interfacemember [, ...]
 ## Пример  
  В следующем примере показано использование оператора `Implements` для реализации членов интерфейса.  Этот оператор определяет интерфейс `ICustomerInfo` с событием, свойством и процедурой.  Класс `customerInfo` реализует все члены, определенные в интерфейсе.  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
   
  Обратите внимание, что класс `customerInfo` использует оператор `Implements` в отдельной строке исходного кода, чтобы указать, что класс реализует все члены интерфейса `ICustomerInfo`.  Затем, чтобы указать, что он реализует член интерфейса, каждый член класса использует ключевое слово `Implements` как часть объявления этого члена.  
   
 ## Пример  
  Следующие две процедуры показывают, как можно использовать интерфейс, реализованный в предыдущем примере.  Для поверки реализации интерфейса добавьте эти процедуры в проект и вызовите процедуру `testImplements`.  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
 ## См. также  
  [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)   

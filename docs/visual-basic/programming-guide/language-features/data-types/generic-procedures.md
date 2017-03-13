@@ -38,7 +38,7 @@ caps.handback.revision: 11
 ## Вывод типа  
  Можно вызвать универсальную процедуру, не указывая аргументов типа вообще.  При ее вызове таким образом компилятор пытается определить соответствующий тип данных, чтобы перейти к аргументам типа процедуры.  Это называется *выводом типа*.  В следующем коде показан вызов, в котором компилятор выводит, что ему следует передать тип `String` параметру типа `t`.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
  Если компилятор не может вывести аргументы типа из контекста вызова, то он сообщает об ошибке.  Одной из возможных причин такой ошибки является несоответствие ранга массива.  Например, предположим, вы определили обычные параметры в виде массива параметра типа.  При вызове универсальной процедуры с использованием массива другого ранга \(число измерений\), несоответствие вызывает сбой вывода типа.  В следующем коде показан вызов, в котором двумерный массив передается в процедуру, ожидающую одномерный массив.  
   
@@ -64,14 +64,14 @@ caps.handback.revision: 11
  В следующем примере определяется общая процедура `Function` для поиска конкретного элемента в массиве.  Он определяет один параметр типа и использует его для создания двух параметров в списке параметров.  
   
 ### Код  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### Комментарии  
  В предыдущем примере требуется возможность сравнения `searchValue` с каждым элементом `searchArray`.  Чтобы обеспечить эту возможность, параметр типа `T` ограничен для реализации интерфейса <xref:System.IComparable%601>.  Код использует метод <xref:System.IComparable%601.CompareTo%2A> вместо оператора `=`, поскольку нет гарантии того, что аргумент типа, предоставленный для `T`, поддерживает оператор `=`.  
   
  Можно проверить процедуру `findElement` с помощью следующего кода.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
  Предыдущие вызовы `MsgBox` отображают "0", "1" и "\-1"соответственно.  
   

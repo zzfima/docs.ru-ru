@@ -23,7 +23,7 @@ caps.handback.revision: 10
 ## Пример  
  В следующем примере показано использование операторов `is` и `as` для выполнения приведения от одного ссылочного типа к другому, не вызывая исключение.  Также в примере показано использование оператора `as` с нулевыми типами значений.  
   
- [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-safely-cast-by-us_1.cs)]  
+ [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   
 ## См. также  
  [Типы](../../../csharp/programming-guide/types/index.md)   

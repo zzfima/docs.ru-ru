@@ -35,19 +35,19 @@ caps.handback.revision: 52
   
  В следующем примере лямбда\-выражение увеличивает значение своего аргумента и возвращает его.  В примере показан синтаксис однострокового и многострокового лямбда\-выражения для функции.  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
   
  Ниже приведен пример лямбда\-выражения, записывающего значение на консоль.  В примере показан синтаксис однострокового и многострокового лямбда\-выражения для подпрограммы.  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
   
  Обратите внимание, что в предыдущих примерах лямбда\-выражения присваиваются имени переменной.  При каждом обращении к переменной вызывается лямбда\-выражение.  Можно также объявить и вызвать лямбда\-выражение одновременно, как показано в следующем примере.  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
   
  Лямбда\-выражения могут возвращаться как значение вызванной функции \(как показано в примере подраздела [Контекст](#context) ниже в этом разделе\) или могут передаваться в качестве аргумента в параметр, который принимает тип делегата, как показано в следующем примере.  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class2.vb#8)]  
+ [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
   
 ## Синтаксис лямбда\-выражений  
  Синтаксис лямбда\-выражения похож на синтаксис стандартной функции или подпрограммы.  Различия заключаются в следующем:  
@@ -125,7 +125,7 @@ End Class
   
  Доступ к локальным переменным и параметрам в содержащей области можно продлить сверх времени существования этой области.  До тех пор, пока делегат, ссылающийся на делегат лямбда\-выражения, недоступен сборщику мусора, доступ к переменным среды исходного кода сохраняется.  В следующем примере переменная `target` является локальной для метода `makeTheGame`, в котором определено лямбда\-выражение `playTheGame`.  Обратите внимание, что возвращаемое лямбда\-выражение, присваивается `takeAGuess` в `Main`, который по\-прежнему сохраняет доступ к локальной переменной `target`.  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class6.vb#12)]  
+ [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
   
  В следующем примере показан широкий спектр прав доступа вложенных лямбда\-выражений.  При выполнении возвращаемого лямбда\-выражения из `Main` как `aDel`, он обращается к следующим элементам:  
   
@@ -139,16 +139,16 @@ End Class
   
 -   Параметр лямбда\-выражения, в котором он является вложенным: `level2`.  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class3.vb#9)]  
+ [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
 ## Преобразование к типу делегата  
  Лямбда\-выражения могут быть неявно преобразованы к совместимому типу делегата.  Сведения об общих требованиях для совместимости см. в разделе [Неявное преобразование делегата](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  Например, следующий пример кода показывает лямбда\-выражение, которое неявно преобразуется к типу `Func(Of Integer, Boolean)` или соответствующей сигнатуре делегата.  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#16)]  
+ [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
   
  В следующем примере кода показано лямбда\-выражение, которое неявно преобразуется к типу `Sub(Of Double, String, Double)` или соответствующей сигнатуре делегата.  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/class7.vb#23)]  
+ [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
   
  При присваивании лямбда\-выражений делегатам или передаче их в качестве аргументов процедурам можно указать имена параметров, но опустить их типы, позволяя принимать типы из делегата.  
   
@@ -156,11 +156,11 @@ End Class
   
 -   В следующем примере определяется лямбда\-выражение, которое возвращает `True`, если аргументу типа nullable было присвоено значение, и `False`, если аргумент имеет значение `Nothing`.  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#4)]  
+     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
   
 -   В следующем примере определяется лямбда\-выражение, возвращающее индекс последнего элемента в массиве.  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#5)]  
+     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
 ## См. также  
  [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

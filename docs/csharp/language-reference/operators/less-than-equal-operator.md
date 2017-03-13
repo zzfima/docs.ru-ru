@@ -25,7 +25,7 @@ caps.handback.revision: 16
  Типы определенные пользователем могут вызвать перегрузку оператора `<=`.  Дополнительные сведения см. [оператор](../../../csharp/language-reference/keywords/operator.md).  Если `<=` перегружен, [\>\=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) тоже должен быть перегружен.  Операции над целыми типами обычно разрешены в перечислениях.  
   
 ## Пример  
- [!code-cs[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#32)]  
+ [!code-cs[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

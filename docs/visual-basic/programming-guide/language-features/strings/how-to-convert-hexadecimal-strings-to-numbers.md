@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
      Первый аргумент метода <xref:System.Convert.ToInt32%2A> — это преобразуемая строка.  Второй аргумент описывает, в каком исчислении представлено число.  
   
-     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-hexadecim_1.vb)]  
+     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   

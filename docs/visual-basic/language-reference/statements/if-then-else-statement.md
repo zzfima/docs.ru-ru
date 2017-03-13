@@ -101,17 +101,17 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
 ## Пример  
  В следующем примере показано использование многострочного синтаксиса оператора `If`...`Then`...`Else`.  
   
- [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/if-then-else-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#101](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_1.vb)]  
   
 ## Пример  
  В следующем примере содержатся вложенные операторы `If`...`Then`...`Else`.  
   
- [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/if-then-else-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#102](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_2.vb)]  
   
 ## Пример  
  В следующем примере показано использование однострочного синтаксиса.  
   
- [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/if-then-else-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#103](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/if-then-else-statement_3.vb)]  
   
 ## См. также  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   

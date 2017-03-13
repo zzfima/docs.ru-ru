@@ -54,7 +54,7 @@ int i = 0;
 ## Пример  
  В следующем примере создается объект `struct` и класс объекта, которые инициализируются с помощью оператора `new`, после чего им присваиваются значения.  Отображаются заданные по умолчанию и присвоенные значения.  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#7)]  
+ [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  Обратите внимание, что в примере строка имеет значение по умолчанию `null`.  Поэтому она не отображается.  
   

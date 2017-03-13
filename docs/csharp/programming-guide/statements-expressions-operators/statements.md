@@ -21,15 +21,15 @@ caps.handback.revision: 28
   
  Оператор может состоять из одной строки кода, которая заканчивается точкой с запятой, или из ряда однострочных операторов в блоке.  Блок оператора заключен в скобки \({}\) и может содержать вложенные блоки.  В следующем коде показаны два примера однострочных операторов и блок многострочного оператора:  
   
- [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_1.cs)]  
+ [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
   
 ## Типы операторов  
  В приведенной ниже таблице перечислены различные типы операторов в C\# и связанные с ними ключевые слова со ссылками на разделы, в которых содержится больше сведений:  
   
 |Категория|Ключевые слова \/ примечания C\#|  
 |---------------|--------------------------------------|  
-|Операторы объявления|Оператор объявления представляет новую переменную или константу.  Объявление переменной может при необходимости присвоить значение переменной.  В объявлении константы необходимо назначение.<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_2.cs)]|  
-|Операторы выражений|Операторы выражений, вычисляющие значение, должны сохранить его в переменной.<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_3.cs)]|  
+|Операторы объявления|Оператор объявления представляет новую переменную или константу.  Объявление переменной может при необходимости присвоить значение переменной.  В объявлении константы необходимо назначение.<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
+|Операторы выражений|Операторы выражений, вычисляющие значение, должны сохранить его в переменной.<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
 |[Операторы выбора](../../../csharp/language-reference/keywords/selection-statements.md)|Операторы выбора позволяют ветвление на разные разделы кода, в зависимости от одного или нескольких заданных условий.  Дополнительные сведения см. в следующих разделах:<br /><br /> [if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
 |[Операторы итерации](../../../csharp/language-reference/keywords/iteration-statements.md)|Операторы итерации позволяют просмотр коллекций как массивов или многократное выполнение того же набора операторов до выполнения заданного условия.  Дополнительные сведения см. в следующих разделах:<br /><br /> [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  
 |[Операторы перехода](../../../csharp/language-reference/keywords/jump-statements.md)|Операторы перехода осуществляют передачу управления другому разделу кода.  Дополнительные сведения см. в следующих разделах:<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
@@ -40,30 +40,30 @@ caps.handback.revision: 28
 |Оператор `fixed`.|Оператор fixed не позволяет сборщику мусора переносить перемещаемую переменную.  Дополнительные сведения см. в разделе [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |Оператор `lock`.|Оператор lock позволяет ограничить одновременный доступ к блокам кода только до одного потока.  Дополнительные сведения см. в разделе [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Помеченные операторы|Оператор можно пометить и затем использовать ключевое слово [goto](../../../csharp/language-reference/keywords/goto.md) для перехода к помеченному оператору.  \(См. пример в следующей строке.\)|  
-|Пустой оператор|Пустой оператор состоит из точки с запятой.  Он не выполняет никаких действий и его можно использовать в местах, в которых оператор необходим, но нет необходимости в выполнении каких\-либо действий.  В следующем примере показаны два способа использования пустого оператора:<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_4.cs)]|  
+|Пустой оператор|Пустой оператор состоит из точки с запятой.  Он не выполняет никаких действий и его можно использовать в местах, в которых оператор необходим, но нет необходимости в выполнении каких\-либо действий.  В следующем примере показаны два способа использования пустого оператора:<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## Внедренные операторы  
  В некоторых операторах, включая [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) и [foreach](../../../csharp/language-reference/keywords/foreach-in.md), всегда есть внедренный оператор, следующий за ними.  Этот внедренный оператор может быть либо одним оператором, либо несколькими операторами, заключенными в скобки \({}\) в блоке оператора.  Даже однострочные внедренные операторы могут быть заключены в скобки \({}\), как показано в следующем примере:  
   
- [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_5.cs)]  
+ [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   
  Внедренный оператор, не заключенный в скобки \({}\), не может быть оператором объявления или помеченным оператором.  Это показано в следующем примере:  
   
- [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_6.cs)]  
+ [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
   
  Чтобы устранить ошибку, поместите внедренный оператор в блок:  
   
- [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_7.cs)]  
+ [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
   
 ## Вложенные блоки операторов  
  Блоки операторов могут быть вложенными, как показано в следующем коде:  
   
- [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_8.cs)]  
+ [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
   
 ## Недостижимые операторы  
  Если компилятор определяет, что поток управления ни при каких обстоятельствах не сможет достичь определенного оператора, то он выдаст предупреждение CS0162, как показано в следующем примере:  
   
- [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_9.cs)]  
+ [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
   
 ## Связанные разделы  
   

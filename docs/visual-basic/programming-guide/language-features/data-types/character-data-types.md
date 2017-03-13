@@ -32,7 +32,7 @@ caps.handback.revision: 23
 ## Тип Char  
  Тип данных `Char` является одиночным двухбайтовым \(16\-битным\) знаком Юникода.  Если переменная всегда хранит ровно один знак, объявите ее в качестве `Char`.  Примеры.  
   
- [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/character-data-types_1.vb)]  
+ [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
   
  Каждое возможное значение в `Char` или `String` является *кодовой точкой* или кодом символа в кодировке Юникод.  Символы Юникода включают базовую кодировку ASCII, различные другие буквы алфавита, знаки ударения, символы денежных единиц, дроби, диакритические знаки, математические и технические символы.  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 23
 ## Тип String  
  Тип данных `String` — это последовательность, содержащая ни одного или любое число двухбайтовых \(16\-битных\) знаков Юникода.  Если переменная может содержать неограниченное число знаков, объявите ее в качестве `String`.  Примеры.  
   
- [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/character-data-types_2.vb)]  
+ [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
   
  Дополнительные сведения см. в разделе [Тип данных String](../../../../visual-basic/language-reference/data-types/string-data-type.md).  
   

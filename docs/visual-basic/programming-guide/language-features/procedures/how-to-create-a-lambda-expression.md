@@ -36,15 +36,15 @@ caps.handback.revision: 27
   
 3.  Вслед за списком параметров введите одно выражение как тело функции.  Значение, которое выражение вычисляет, — это значение, возвращаемое функцией.  Не используйте предложение `As` для указания возвращаемого типа.  
   
-     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
   
      Лямбда\-выражение вызывается путем передачи ему целочисленного аргумента.  
   
-     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_2.vb)]  
   
 4.  Кроме того, тот же результат достигается в следующем примере:  
   
-     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
   
 ### Создание одностроковой подпрограммы\-лямбда\-выражения  
   
@@ -58,11 +58,11 @@ caps.handback.revision: 27
   
 3.  Вслед за списком параметров введите один оператор как тело подпрограммы.  
   
-     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#17)]  
+     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
   
      Лямбда\-выражение вызывается путем передачи строкового аргумента.  
   
-     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#18)]  
+     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
   
 ### Создание многостроковой функции\-лямбда\-выражения  
   
@@ -78,11 +78,11 @@ caps.handback.revision: 27
   
 4.  В тело функции добавьте следующий код, чтобы создать выражение и вернуть значение.  Не используйте предложение `As` для указания возвращаемого типа.  
   
-     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#19)]  
+     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
   
      Лямбда\-выражение вызывается путем передачи ему целочисленного аргумента.  
   
-     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#20)]  
+     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_7.vb)]  
   
 ### Создание многостроковой подпрограммы\-лямбда\-выражения  
   
@@ -98,20 +98,20 @@ caps.handback.revision: 27
   
 4.  В тело функции добавьте следующий код для выполнения при вызове подпрограммы.  
   
-     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#21)]  
+     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
   
      Лямбда\-выражение вызывается путем передачи строкового аргумента.  
   
-     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#22)]  
+     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
   
 ## Пример  
  Обычно лямбда\-выражения используются для определения функции, которая может быть передана в качестве аргумента для параметра типа `Delegate`.  В следующем примере метод <xref:System.Diagnostics.Process.GetProcesses%2A> возвращает массив процессов, выполняющихся на локальном компьютере.  Метод <xref:System.Linq.Enumerable.Where%2A> класса <xref:System.Linq.Enumerable> требует делегат типа `Boolean` в качестве аргумента.  Для этой цели в примере используется лямбда\-выражение.  Оно возвращает `True` для каждого процесса, у которого есть только один поток. Такие процессы выбираются в `filteredList`.  
   
- [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class4.vb#10)]  
+ [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
  Приведенный пример эквивалентен следующему коду, написанному в синтаксисе [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)]:  
   
- [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class5.vb#11)]  
+ [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
 ## См. также  
  <xref:System.Linq.Enumerable>   

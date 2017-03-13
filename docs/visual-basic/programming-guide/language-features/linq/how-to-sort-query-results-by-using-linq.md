@@ -78,7 +78,7 @@ caps.handback.revision: 5
   
      Добавьте приведенный ниже код к событию `Load`, чтобы выполнить запрос к таблицам, которые представлены в виде свойств контекста данных, и отсортировать результаты.  В запросе результаты сортируются по числу заказов клиентов в порядке убывания.  Клиенты, имеющие одинаковое количество заказов, упорядочены по названию компании в возрастающем порядке \(по умолчанию\).  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form4.vb#10)]  
+     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   

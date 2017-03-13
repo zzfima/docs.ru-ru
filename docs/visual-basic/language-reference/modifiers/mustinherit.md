@@ -43,7 +43,7 @@ caps.handback.revision: 15
 ## Пример  
  Приведенный ниже пример иллюстрирует принудительное наследование и переопределение.  Базовый класс `shape` определяет переменную `acrossLine`.  Классы `circle` и `square` являются производными от `shape`.  Они наследуют определение `acrossLine`, но должны определять функцию `area`, так как этот расчет отличается для каждого вида фигуры.  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/visualbasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
  Можно объявить `shape1` и `shape2` с типом `shape`.  Однако, невозможно создать объект из `shape`, так как он не имеет возможностей функции `area` и помечен `MustInherit`.  
   

@@ -71,28 +71,28 @@ caps.handback.revision: 30
   
 3.  Добавьте следующие константы в `ComClass1`.  Они будут хранить константы идентификаторов GUID, которые требуются для COM объектов.  
   
-     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#2)]  
+     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_1.vb)]  
   
 4.  В меню **Сервис** выберите команду **Создать Guid**.  В диалоговом окне **Создать GUID** выберите пункт **Формат реестра** и щелкните **Копировать**.  Нажмите кнопку **Выход**.  
   
 5.  Замените пустую строку для `ClassId` на GUID, удалите начальные и конечные фигурные скобки.  Например, если идентификатор GUID, предоставляемый Guidgen является `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"`, то код должен выглядеть следующим образом.  
   
-     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#3)]  
+     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_2.vb)]  
   
 6.  Повторите предыдущие шаги для констант `InterfaceId` и `EventsId`, как в следующем примере.  
   
-     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#4)]  
+     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_3.vb)]  
   
     > [!NOTE]
     >  Убедитесь, что GUID являются новыми и уникальными; в противном случае компонент COM может конфликтовать с другими компонентами COM.  
   
 7.  Добавьте атрибут `ComClass` к `ComClass1`, задав GUID для Class ID, Interface ID и Events ID, как показано в следующем примере:  
   
-     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#5)]  
+     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_4.vb)]  
   
 8.  Классы COM должны иметь конструктор без параметров `Public Sub New()`, иначе класс не будет регистрироваться правильно.  Добавьте в класс конструктор без параметров:  
   
-     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#6)]  
+     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
 9. Добавьте в класс свойства, методы и события и поместите в конце оператор `End Class`.  В меню **Построение** выберите  **Построить решение**.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] выполнит построение сборки и зарегистрирует объект COM в операционной системе.  
   

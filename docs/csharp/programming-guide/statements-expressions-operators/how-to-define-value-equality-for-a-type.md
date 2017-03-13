@@ -51,7 +51,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере показана реализация равенства значений в классе \(ссылочный тип\).  
   
- [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_1.cs)]  
+ [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
   
  В классах \(ссылочных типах\) реализация по умолчанию обоих методов <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> выполняет проверку равенства ссылок, а не значений.  Когда разработчик переопределяет виртуальный метод, его задача заключается в том, чтобы реализовать семантику равенства значений.  
   
@@ -60,7 +60,7 @@ caps.handback.revision: 15
 ## Пример  
  В следующем примере показана реализация равенства значений в структуре \(тип значения\).  
   
- [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_2.cs)]  
+ [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
  В структурах реализация по умолчанию метода <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> \(переопределенная версия <xref:System.ValueType?displayProperty=fullName>\) проверяет равенство всех полей типа за счет отражения.  Когда разработчик переопределяет виртуальный метод `Equals` в структуре, его задача состоит в том, чтобы найти более эффективный способ проверки равенства значений и, если это возможно, реализовать сравнение только на основании части полей или свойств структуры.  
   

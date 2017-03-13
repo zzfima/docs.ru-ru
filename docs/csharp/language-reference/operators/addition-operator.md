@@ -32,7 +32,7 @@ caps.handback.revision: 19
  Пользовательские типы могут вызвать перегрузку унарного оператора `+` и бинарного `+` операторов.  Операции над целыми типами обычно разрешены в перечислениях.  Дополнительные сведения см. в разделе [оператор](../../../csharp/language-reference/keywords/operator.md).  
   
 ## Пример  
- [!code-cs[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#28)]  
+ [!code-cs[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -155,7 +155,7 @@ result = string Like pattern
 ## Пример  
  В следующем примере показано различное применение операторов сравнения, которые используются для сравнения выражений.  Операторы сравнения возвращают результат `Boolean`, показывающий, является ли результат вычисления выражения `True`.  Если операторы `>` и `<` применяются для строк, выполняется сравнение с использованием обычной алфавитной сортировки строк.  Этот порядок может зависеть от настроек языкового стандарта.  Зависит ли сортировка от регистра, определяет параметр [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  В предыдущем примере первое сравнение возвращает `False`, а оставшиеся сравнения возвращают `True`.  
   

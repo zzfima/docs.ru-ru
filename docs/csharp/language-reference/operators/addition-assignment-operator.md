@@ -41,7 +41,7 @@ x = x + y
  Оператор `+=` также используется для указания метода, который вызывается в ответ на событие; такие методы называются обработчиками событий.  Использование оператора `+=` в этом контексте называется *подпиской на событие*.  Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  и [Делегаты](../../../csharp/programming-guide/delegates/index.md).  
   
 ## Пример  
- [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#35)]  
+ [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
 ## См. также  
  [Справочник по C\#](../../../csharp/language-reference/index.md)   

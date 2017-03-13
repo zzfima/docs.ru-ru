@@ -77,7 +77,7 @@ class Program
  В следующем примере показано, как задать и использовать псевдоним `using` для пространства имен.  
   
 ### Код  
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
 ### Примечания  
  Псевдоним using не может иметь открытый универсальный тип с правой стороны.  Например, нельзя создать псевдоним using для List\<T\>, но можно создать его для List\<int\>.  
@@ -88,7 +88,7 @@ class Program
  В следующем примере показано, как задать директиву `using` и псевдоним `using` для класса.  
   
 ### Код  
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

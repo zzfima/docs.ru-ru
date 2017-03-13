@@ -10,7 +10,7 @@ caps.handback.revision: 11
 ## Пример  
  В следующем примере первый метод возвращает запрос в качестве возвращаемого значения, второй метод возвращает запрос в качестве параметра `out`.  Обратите внимание, что в обоих случаях возвращается запрос, а не его результаты.  
   
- [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#80)]  
+ [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-a-query-from-a-method_1.cs)]  
   
 ## Компиляция кода  
   

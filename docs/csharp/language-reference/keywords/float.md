@@ -58,7 +58,7 @@ float x = 3.5F;
 ## Пример  
  В следующем примере типы [int](../../../csharp/language-reference/keywords/int.md), [short](../../../csharp/language-reference/keywords/short.md) и `float` включены в математическое выражение, результатом вычисления которого является тип `float`.  \(Следует помнить, что ключевое слово `float` является псевдонимом типа <xref:System.Single?displayProperty=fullName>\). Обратите внимание, что тип [double](../../../csharp/language-reference/keywords/double.md) в этом выражении отсутствует.  
   
- [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/csharp/float_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

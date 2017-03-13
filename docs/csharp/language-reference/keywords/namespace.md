@@ -22,7 +22,7 @@ caps.handback.revision: 28
 # namespace (Справочник по C#)
 Ключевое слово `namespace` используется для объявления область, которая содержит набор связанных объектов.  Можно использовать пространство имен для организации элементов кода, а затем создать глобальную уникальность типы.  
   
- [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## Заметки  
  В пространстве имен можно объявить один или несколько из следующих типов:  
@@ -45,12 +45,12 @@ caps.handback.revision: 28
   
  Пространство имен можно определить в двух или нескольких объявлениях.  В следующем примере два класса определяются в качестве части пространства имен `MyCompany`:  
   
- [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## Пример  
  В следующем примере показано, как можно вызвать статический метод вложенного пространства имен.  
   
- [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_3.cs)]  
+ [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
 ## Дополнительные сведения  
  Дополнительные сведения об использовании пространств имен см. в следующих разделах:  

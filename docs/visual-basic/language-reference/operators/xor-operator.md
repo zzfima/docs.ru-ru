@@ -87,14 +87,14 @@ result = expression1 Xor expression2
 ## Пример  
  В приведенном ниже примере используется оператор `Xor` для выполнения логического исключения \(исключающая логическая дизъюнкция\) для двух выражений.  Результатом является значение типа `Boolean`, которое указывает, в точности ли одно из выражений имеет значение `True`.  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
   
  В предыдущем примере получаются результаты `False`, `True` и `False` соответственно.  
   
 ## Пример  
  В следующем примере оператор `Xor` используется для выполнения логического исключения \(исключающая логическая дизъюнкция\) для отдельных битов двух числовых выражений.  Бит в результирующем шаблоне задается, если только один из соответствующих битов в операндах равен 1.  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
   
  В предыдущем примере получаются результаты 2, 12 и 14 соответственно.  
   

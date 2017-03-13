@@ -22,7 +22,7 @@ caps.handback.revision: 23
 ## Пример  
  В следующем примере показан простой класс, имеющий несколько автоматически реализуемых свойств.  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#28)]  
+ [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  В C\# 6 и более поздних версиях можно инициализировать автоматически реализуемые свойства аналогично полям.  
   

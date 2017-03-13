@@ -90,17 +90,17 @@ caps.handback.revision: 33
 ## Пример  
  Пример показывает каркас определения класса универсального словаря, включая каркас функции для добавления новой записи в словарь.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
   
 ## Пример  
  Поскольку `dictionary` является универсальным, код, использующий его, может создать различные объекты, каждый из которых будет иметь те же функциональные возможности, но выполняется для другого типа данных.  В следующем примере показана строка кода, которая создает объект `dictionary` с входными данными `String` и ключами `Integer`.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
   
 ## Пример  
  В следующем примере рассматривается каркас определения, созданный в предыдущем примере.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
 ## См. также  
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)   

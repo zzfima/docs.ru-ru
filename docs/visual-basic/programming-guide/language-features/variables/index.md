@@ -33,7 +33,7 @@ caps.handback.revision: 27
 ## Назначение значений  
  Операторы присваивания используются для выполнения вычислений и для присвоения результата переменной, как показано в следующем примере.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  Знак равенства \(`=`\) в этом примере является оператором присвоения, а не оператором равенства.  Значение присваивается переменной `applesSold`.  

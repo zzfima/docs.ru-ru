@@ -38,11 +38,11 @@ caps.handback.revision: 14
 ## Пример  
  В следующем примере показаны две процедуры, которые принимают переменную массива и производят действия над его элементами.  Процедура `increase` добавляет единицу к каждому элементу.  Процедура `replace` присваивает новый массив параметру `a()` и добавляет единицу к каждому элементу.  Однако это переопределение не влияет на базовую переменную массива в вызывающем коде.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_2.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
  Первый вызов `MsgBox` выводит следующее: "After increase\(n\): 11, 21, 31, 41".  Так как массив `n` является ссылочным типом, `replace` может изменить его элементы, несмотря на механизм передачи `ByVal`.  
   

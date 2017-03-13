@@ -27,23 +27,23 @@ caps.handback.revision: 30
 ## Литералы  
  Переменной `bool` можно присвоить логическое значение.  Выражение, вычисляемое как `bool`, также может быть присвоено переменной `bool`.  
   
- [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_1.cs)]  
   
  Значение по умолчанию переменной `bool` — `false`.  Значение по умолчанию переменной `bool?` — `null`.  
   
 ## Преобразования  
  В C\+\+ значение типа `bool` может быть преобразовано в значение типа `int`; другими словами, значение `false` эквивалентно нулю, а значение `true` — ненулевым значениям.  В C\# не существует преобразования между типом `bool` и другими типами.  Например, следующий оператор `if` недопустим в C\#:  
   
- [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_2.cs)]  
   
  Чтобы проверить переменную типа `int`, нужно явно сравнить ее со значением, например нулем.  
   
- [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_3.cs)]  
+ [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_3.cs)]  
   
 ## Пример  
  В данном примере вводится символ с клавиатуры, а программа проверяет, является ли введенный символ буквой.  Если да, проверяется, является ли буква прописной или строчной.  Эти проверки выполняются с помощью свойств <xref:System.Char.IsLetter%2A>, и <xref:System.Char.IsLower%2A>, каждое из которых возвращает тип `bool`.  
   
- [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_4.cs)]  
+ [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_4.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -32,7 +32,7 @@ caps.handback.revision: 9
 ## Пример  
  Следующий пример получает коллекцию заголовков из объекта `My.Request` и использует `My.Response` для записи ее на страницу ASP.NET.  
   
- [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-request-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-request-object_1.aspx)]  
   
 ## См. также  
  <xref:System.Web.HttpRequest>   

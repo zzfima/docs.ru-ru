@@ -24,7 +24,7 @@ caps.handback.revision: 13
  В примере также показано, почему <xref:System.Object.ReferenceEquals%2A?displayProperty=fullName> всегда возвращает значение `false` для типов значений и поэтому не нужно использовать <xref:System.Object.ReferenceEquals%2A>, чтобы определить равенство строки.  
   
 ## Пример  
- [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-test-for-referenc_1.cs)]  
+ [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-test-for-reference-equality-identity_1.cs)]  
   
  Реализация метода `Equals` в универсальном базовом классе <xref:System.Object?displayProperty=fullName> также проверяет равенство ссылок, но ее лучше не использовать, поскольку, если этот метод был переопределен в производном классе, результат может оказаться непредсказуемым.  Это также относится к операторам `==` и `!=`.  При работе со ссылочными типами операторы \=\= и `!=` по умолчанию проверяют равенство ссылок.  Однако в производных классах эти операторы можно переопределить, чтобы использовать их для проверки равенства значений.  Чтобы свести к минимуму возможности для возникновения ошибок, метод <xref:System.Object.ReferenceEquals%2A> лучше использовать в тех случаях, когда требуется проверить равенство ссылок двух объектов.  
   

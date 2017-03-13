@@ -24,7 +24,7 @@ caps.handback.revision: 16
 ## Пример  
  В следующем примере показывается, как переменные типа `object` могут принимать значения любого типа данных, а также как переменные типа `object` могут использовать методы для <xref:System.Object> из платформы .NET Framework.  
   
- [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/csharp/object_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]  
   
 ## Спецификация языка C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
