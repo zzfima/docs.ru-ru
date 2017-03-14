@@ -1,0 +1,5 @@
+# [Доступ к параметрам приложения](accessing-application-settings.md)
+## [Практическое руководство. Создание таблицы свойств для пользовательских параметров](how-to-create-property-grids-for-user-settings.md)
+## [Практическое руководство. Сохранение пользовательских параметров](how-to-persist-user-settings.md)
+## [Практическое руководство. Изменение пользовательских параметров](how-to-change-user-settings.md)
+## [Практическое руководство. Чтение параметров приложения](how-to-read-application-settings.md)
