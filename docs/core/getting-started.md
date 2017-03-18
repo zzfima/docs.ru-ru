@@ -4,14 +4,15 @@ description: "Ресурсы, посвященные созданию прило
 keywords: .NET, .NET Core
 author: mairaw
 ms.author: mairaw
-ms.date: 10/20/2016
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 translationtype: Human Translation
-ms.sourcegitcommit: 13ce9816570d47600556392b945578c487a1f03b
-ms.openlocfilehash: a3833d8a6605fa51633d17d026ada7825889b70b
+ms.sourcegitcommit: e374b924bf78d62227cb9607641130dfd9128186
+ms.openlocfilehash: 2a1884a3aa12fc32f757e5ec9e75fce3ba796755
+ms.lasthandoff: 03/06/2017
 
 ---
 
@@ -25,13 +26,10 @@ ms.openlocfilehash: a3833d8a6605fa51633d17d026ada7825889b70b
 
 Чтобы приступить к разработке приложений .NET Core, воспользуйтесь следующими пошаговыми учебниками.
 
-* [Создание приложения Hello World на C# с помощью .NET Core в версии-кандидате Visual Studio 2017](../csharp/getting-started/with-visual-studio-2017.md) — сведения о сборке, отладке и публикации простого консольного приложения .NET Core с помощью версии-кандидата Visual Studio 2017.
-* [Создание библиотеки классов с помощью C# и .NET Core в версии-кандидате Visual Studio 2017](../csharp/getting-started/library-with-visual-studio-2017.md) — сведения о сборке библиотеки классов, написанной на C# с помощью версии-кандидата Visual Studio 2017
-* [Начало работы с .NET Core в Windows с помощью Visual Studio 2015](tutorials/using-on-windows.md). Узнайте, как использовать [Visual Studio](https://www.visualstudio.com/), полнофункциональную интегрированную среду разработки (IDE) для Windows, в различных сценариях .NET Core.  
-* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core). В этом видеоролике на канале Channel9 показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core.
-* [Начало работы с .NET Core в Mac OS с помощью Visual Studio Code](tutorials/using-on-macos.md). Этот учебник предназначен в первую очередь для Mac OS, но с его помощью можно получить обзор действий и рабочего процесса по созданию решения .NET Core с помощью VS Code в Windows.
+* [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017](../csharp/getting-started/with-visual-studio-2017.md) — сведения о сборке, отладке и публикации простого консольного приложения .NET Core с помощью Visual Studio 2017.
+* [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](../csharp/getting-started/library-with-visual-studio-2017.md) — сведения о сборке библиотеки классов, написанной на C# с помощью Visual Studio 2017
+* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core.
 * [Начало работы с .NET Core с помощью командной строки](tutorials/using-with-xplat-cli.md). Используйте любой редактор кода для работы с [кроссплатформенным интерфейсом командной строки (CLI) .NET Core](tools/index.md).
-
 
 Список поддерживаемых версий Windows см. в разделе [Предварительные требования для разработки в Windows](windows-prerequisites.md). 
 
@@ -49,8 +47,7 @@ ms.openlocfilehash: a3833d8a6605fa51633d17d026ada7825889b70b
 Чтобы приступить к разработке приложений .NET Core, воспользуйтесь следующими пошаговыми учебниками.
 
 * [Начало работы с .NET Core с помощью командной строки](tutorials/using-with-xplat-cli.md). Используйте любой редактор кода для работы с [кроссплатформенным интерфейсом командной строки (CLI) .NET Core](tools/index.md).
-* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). В этом видеоролике на канале Channel9 показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения .NET Core в Ubuntu 14.04.
-* [Начало работы с .NET Core в Mac OS с помощью Visual Studio Code](tutorials/using-on-macos.md). Этот учебник предназначен в первую очередь для Mac OS, но с его помощью можно получить обзор действий и рабочего процесса по созданию решения .NET Core с помощью VS Code в Linux. 
+* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения .NET Core в Ubuntu 14.04.
 
 Платформа .NET Core поддерживается дистрибутивами и версиями Linux, которые указаны в приведенном выше списке ссылок для установки.
 
@@ -60,12 +57,7 @@ ms.openlocfilehash: a3833d8a6605fa51633d17d026ada7825889b70b
 
 Чтобы приступить к разработке приложений .NET Core, воспользуйтесь следующими пошаговыми учебниками.
 
-* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Mac OS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS). В этом видеоролике на канале Channel9 показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core. 
+* [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Mac OS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://www.visualstudio.com/products/code-vs), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core. 
 * [Начало работы с .NET Core в Mac OS с помощью Visual Studio Code](tutorials/using-on-macos.md). Обзор действий и рабочего процесса по созданию решения .NET Core с помощью VS Code, включающий модульные тесты, библиотеки сторонних разработчиков и описание работы со средствами отладки.
 * [Начало работы с .NET Core с помощью командной строки](tutorials/using-with-xplat-cli.md). Используйте любой редактор кода для работы с [кроссплатформенным интерфейсом командной строки (CLI) .NET Core](tools/index.md).
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
