@@ -1,77 +1,92 @@
 ---
-title: "/bugreport | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/bugreport - параметр компилятора [Visual Basic]"
-  - "bugreport - параметр компилятора [Visual Basic]"
-  - "-bugreport - параметр компилятора [Visual Basic]"
+title: "/ bugreport | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- -bugreport compiler option [Visual Basic]
+- bugreport compiler option [Visual Basic]
+- /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# /bugreport
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9c64ec49d7e6842edbc0fed7407a34132a8f5a88
+ms.lasthandoff: 03/13/2017
 
-Создает файл, который можно использовать для отправки отчета об ошибках.  
+---
+# <a name="bugreport"></a>/bugreport
+Создает файл, который можно использовать, если файл отчета об ошибке.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /bugreport:file  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`file`|Обязательный.  Имя файла, содержащего отчет об ошибке.  Заключите имя файла в кавычки \(" "\), если оно содержит пробел.|  
+|---|---|  
+|`file`|Обязательный. Имя файла, который будет содержать отчет об ошибке. Заключите имя файла в кавычки (» «), если имя содержит пробелы.|  
   
-## Заметки  
- К `file` добавляются следующие сведения:  
+## <a name="remarks"></a>Примечания  
+ Добавляется следующее `file`:  
   
--   Копия всех исходных файлов, участвующих в компиляции.  
+-   Копия всех файлов исходного кода при компиляции.  
   
 -   Список использованных при компиляции параметров компилятора.  
   
--   Сведения о версии компилятора, среде CLR и операционной системе.  
+-   Сведения о версии о компилятора, среды CLR и операционной системы.  
   
--   Скомпилированный код \(при его наличии\).  
+-   Выходные данные компилятора в, если таковые имеются.  
   
--   Описание проблемы, которое запрашивается у пользователя.  
+-   Описание проблемы, для которого будет предложено.  
   
--   Описание предполагаемого способа разрешения проблемы, которое запрашивается у пользователя.  
+-   Описание предполагаемого способа разрешения проблемы должна быть устранена, для которого будет предложено.  
   
- Поскольку все исходные файлы кода копируются в файл `file`, можно попытаться воспроизвести предполагаемую ошибку в максимально короткой программе.  
+ Поскольку копию всех файлов исходного кода в `file`, может потребоваться воспроизвести предполагаемую ошибку в максимально короткой программе.  
   
 > [!IMPORTANT]
->  Параметр `/bugreport` создает файл, содержащий потенциально важные данные.  К ним относится текущее время, версия компилятора, версия [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)], версия операционной системы, имя пользователя, аргументы командной строки, с которой компилятор был запущен, весь исходный код и двоичная форма всех используемых сборок.  Данный параметр доступен с помощью параметров командной строки файла Web.config при серверной компиляции приложения [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)].  Чтобы избежать этого, следует запретить пользователям компиляцию на сервере, отредактировав файл Machine.config.  
+>  `/bugreport` Параметр создает файл, который содержит конфиденциальные сведения. Это включает в себя текущее время, версия компилятора [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] версии, версия операционной системы, имя пользователя, аргументы командной строки, с помощью которых компилятор был запущен, весь исходный код и двоичная форма какой-либо связанной сборки. Этот параметр может осуществляться с помощью параметров командной строки в файле Web.config для компиляции серверных [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] приложения. Чтобы избежать этого, измените файл Machine.config следует запретить пользователям компиляцию на сервере.  
   
- Если этот параметр используется с параметром `/errorreport:prompt`, `/errorreport:queue` или `/errorreport:send`, и в приложении возникает внутренняя ошибка компилятора, то сведения в `file` отправляются в корпорацию Майкрософт.  Эти сведения помогут инженерам Майкрософт определить причину ошибки и помогут улучшить следующий выпуск [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  По умолчанию данные не отправляются в корпорацию Майкрософт.  Тем не менее, при компиляции приложения с помощью параметра `/errorreport:queue`, который включен по умолчанию, приложение собирает отчеты об ошибках.  Затем, когда администратор входит в систему, система отчета об ошибках отображает всплывающее окно, которое позволяет администратору переслать в корпорацию Майкрософт отчеты о любых ошибках, произошедших с момента входа в систему.  
+ Если этот параметр используется с `/errorreport:prompt`, `/errorreport:queue`, или `/errorreport:send`, и в приложении происходит внутренняя ошибка компилятора, сведения в `file` отправляется корпорации Майкрософт. Эти сведения помогут инженерам Майкрософт определить причину ошибки и помогут улучшить следующий выпуск [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. По умолчанию никакая информация отправляется в корпорацию Майкрософт. Тем не менее, при компиляции приложения с помощью `/errorreport:queue`, который включен по умолчанию, приложение собирает отчеты об ошибках. Затем при входе в систему администратора системы отчетов об ошибках Отображает всплывающее окно, которое позволяет администратору переслать в корпорацию Майкрософт отчеты о любых ошибках, произошедших с момента входа в систему.  
   
 > [!NOTE]
->  Параметр `/bugreport` недоступен из среды разработки Visual Studio; он доступен только при компиляции из командной строки.  
+>  `/bugreport` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
   
-## Пример  
- В следующем примере компилируется `T2.vb` и вся информация об ошибках помещается в файл `Problem.txt`.  
+## <a name="example"></a>Пример  
+ В следующем примере компилируется `T2.vb` и помещает все сведения отчетность об ошибках в файле `Problem.txt`.  
   
 ```  
 vbc /bugreport:problem.txt t2.vb  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/debug](../../../visual-basic/reference/command-line-compiler/debug.md)   
- [\/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [/ Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)   
+ [/ ERRORREPORT](../../../visual-basic/reference/command-line-compiler/errorreport.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Элемент trustLevel для элемента securityPolicy \(схема параметров ASP.NET\)](http://msdn.microsoft.com/ru-ru/729ab04c-03da-4ee5-86b1-be9d08a09369)
+ [Элемент trustLevel для securityPolicy (схема параметров ASP.NET)](http://msdn.microsoft.com/en-us/729ab04c-03da-4ee5-86b1-be9d08a09369)

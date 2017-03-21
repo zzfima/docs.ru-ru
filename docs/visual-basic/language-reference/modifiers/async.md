@@ -1,33 +1,49 @@
 ---
-title: "Async (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Async"
-helpviewer_keywords: 
-  - "Async [Visual Basic]"
-  - "Async -ключевое слово [Visual Basic]"
+title: "Async (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Async
+helpviewer_keywords:
+- Async [Visual Basic]
+- Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
 caps.latest.revision: 37
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 37
----
-# Async (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: fa15daee8f3b6ddcc137356896a20cf82e0cc1d0
+ms.lasthandoff: 03/13/2017
 
-Модификатор `Async` указывает, что метод [лямбда\-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md), или изменяет асинхронными.  Эти методы называются *Методы async*.  
+---
+# <a name="async-visual-basic"></a>Async (Visual Basic)
+`Async` Модификатор указывает, что метод или [лямбда-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) она изменяет является асинхронным. Такие методы называются *асинхронные методы*.  
   
- Асинхронный метод предоставляет удобный способ для выполнения работы, потенциально способной занять длительное время, без блокировки потока вызывающего объекта.  Вызывающая сторона метода токена может возобновить свою работу, не дожидаясь метод токена для выполнения.  
+ Асинхронный метод представляет собой удобный способ для выполнения работы, которая может занять длительное время, без блокировки потока вызывающего объекта. Вызывающий объект асинхронного метода может возобновить свою работу, не дожидаясь завершения асинхронного метода.  
   
 > [!NOTE]
->  Ключевые слова `Async` и `Await` были введены в Visual Studio 2012.  Введение в асинхронное программирование см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../Topic/Asynchronous%20Programming%20with%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md).  
+>  Ключевые слова `Async` и `Await` появились в Visual Studio 2012. Введение в асинхронном программировании см. в разделе [асинхронное программирование с использованием Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
- В следующем примере показана структура метода токена.  В соответствии с соглашением имена методов токена заканчиваются словом «Async».  
+ В следующем примере показана структура асинхронного метода. По соглашению имена асинхронных методов заканчиваются «Async».  
   
 ```vb  
   
@@ -48,21 +64,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Обычно метод измененный ключевым словом `Async` содержит по крайней мере одно выражение или оператора [Рекомендуется](../../../visual-basic/language-reference/modifiers/async.md).  Метод выполняется одновременно до тех пор, пока не будет достигнут первое значение `Await`, в котором он точка приостанавливается до тех пор, пока ожидается задача не будет завершено.  В то же время, элемент управления возвращается вызывающему объекту метода.  Если метод не содержит выражение или оператора `Await`, не приостановлен и не выполняет метод как синхронного метода.  Компилятор выводит предупреждения обо всех асинхронных методах, не содержащих ключевого слова `Await`, поскольку такая ситуация может указывать на ошибку.  Дополнительные сведения см. в разделе [ошибка компилятора](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ Как правило, метод изменено `Async` ключевое слово содержит по крайней мере один [Await](../../../visual-basic/language-reference/modifiers/async.md) выражения или оператора. Метод выполняется синхронно, пока не будет достигнут первый `Await`, после чего он приостанавливает до завершения выполнения ожидаемой задачи. В то же время управление возвращается объекту, вызвавшему метод. Если метод не содержит `Await` выражения или оператора, метод не приостановлена и выполняется аналогично синхронный метод. Предупреждение компилятора оповещает о всех асинхронных методах, которые не содержат `Await` , поскольку такая ситуация может указывать на ошибку. Дополнительные сведения см. в разделе [ошибку компилятора](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
   
- Ключевое слово `Async` безоговорочное ключевое слово.  Ключевое слово, когда изменяется метод или лямбда\-выражение.  Во всех других контекстах, оно интерпретируется как идентификатор.  
+ `Async` Ключевое слово — Незарезервированная ключевое слово. Это ключевое слово, когда оно изменяет метод или лямбда-выражение. В других контекстах он интерпретируется как идентификатор.  
   
-## Типы возвращаемых значений  
- Метод токена или процедуры [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md), или процедуры [Функция](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md), имеет возвращаемый тип <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>.  Метод не может объявить все параметры [ByRef](../../../visual-basic/language-reference/modifiers/byref.md).  
+## <a name="return-types"></a>Типы возвращаемых значений  
+ Асинхронный метод является либо [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) процедура, или [функция](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) процедуру, которая имеет тип возвращаемого значения <xref:System.Threading.Tasks.Task>или <xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Метод не может объявить все [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) параметров.  
   
- Указать `Task(Of TResult)` для возвращаемого типа метода токена, если выписка [Return](../../../visual-basic/language-reference/statements/return-statement.md) метода имеет операнд типа TResult.  Класс `Task` используется при отсутствии информативное значение не возвращается, когда метод завершения.  То есть вызов метода `Task` возвращает `Task`, но при завершении любая выписка `Await` ожидает, `Task` не предоставляет значение.  
+ Указать `Task(Of TResult)` для возвращаемого типа асинхронного метода при [возвращают](../../../visual-basic/language-reference/statements/return-statement.md) инструкция метода содержит операнд типа TResult. Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении. То есть вызов метода возвращает `Task`, но при `Task` завершена, любой `Await` инструкцию, которая ожидает `Task` не возвращающих результирующее значение.  
   
- Подпрограммы Async используются в основном для определения обработчики событий, процедура `Sub` не требуется.  Вызывающий объект подпрограммы токена не может ожидать его и не может перехватывать исключения, метод создает исключение.  
+ Подпрограммы Async используются главным образом для определения обработчика событий где `Sub` процедура является обязательным. Код, вызывающий подпрограмму async не может ожидать его и не могут перехватывать исключения, создаваемые методом исключения.  
   
- Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../Topic/Async%20Return%20Types%20\(C%23%20and%20Visual%20Basic\).md).  
+ Дополнительные сведения и примеры см. в разделе [Async возвращают типы](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
-## Пример  
- В следующих примерах демонстрируется обработчик событий токена, лямбда\-выражение токена и метод токена.  Полный пример использования этих элементов см. в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../Topic/Walkthrough:%20Accessing%20the%20Web%20by%20Using%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md).  Можно загрузить код пошагового руководства из [Примеры кода разработчика](http://go.microsoft.com/fwlink/?LinkId=255191).  
+## <a name="example"></a>Пример  
+ В следующих примерах асинхронный обработчик событий, асинхронные лямбда-выражение и асинхронного метода. Полный пример, в котором используются эти элементы, в разделе [Пошаговое руководство: доступ к Интернету с помощью Async и Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Можно загрузить код пошагового руководства из [образцы кода разработчика](http://go.microsoft.com/fwlink/?LinkId=255191).  
   
 ```vb  
   
@@ -111,8 +127,8 @@ End Function
   
 ```  
   
-## См. также  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [Оператор Await](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Асинхронное программирование с использованием ключевых слов Async и Await](../Topic/Asynchronous%20Programming%20with%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)   
- [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../Topic/Walkthrough:%20Accessing%20the%20Web%20by%20Using%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute></xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
+ [Оператор await](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Асинхронное программирование с использованием Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md)   
+ [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

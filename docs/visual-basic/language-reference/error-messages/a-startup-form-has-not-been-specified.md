@@ -1,38 +1,54 @@
 ---
-title: "Начальная форма не указана | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrAppModel_NoStartupForm"
-dev_langs: 
-  - "VB"
+title: "Начальная форма не указана | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbrAppModel_NoStartupForm
+dev_langs:
+- VB
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
----
-# Начальная форма не указана
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 598bbdb7e2269f568a0dcf120cb2e8c5c8bc6812
+ms.lasthandoff: 03/13/2017
 
-Приложение использует класс <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>, но не указывает начальную форму.  
+---
+# <a name="a-startup-form-has-not-been-specified"></a>Начальная форма не указана
+Приложение использует <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>классов, но не указывает начальную форму.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
   
- Это может произойти, если установить флажок **Включить исполняющую среду** в конструкторе проекта, но **Начальная форма** не указана.  Дополнительные сведения см. в разделе [Страница «Приложение» в конструкторе проектов \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic).  
+ Это может произойти, если **Включить исполняющую среду** флажок в конструкторе проектов, но **формы запуска** не указан. Дополнительные сведения см. в разделе [страница "приложение" в конструкторе проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 1.  Укажите автоматически запускаемый объект для приложения.  
   
-     Дополнительные сведения см. в разделе [Страница «Приложение» в конструкторе проектов \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic).  
+     Дополнительные сведения см. в разделе [страница "приложение" в конструкторе проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
-2.  Переопределите метод <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>, чтобы установить свойство <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> начальной формы.  
+2.  Переопределение <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>метод, чтобы задать <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>Свойства форму запуска.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> </xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>  
   
-## См. также  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>   
  [Обзор модели приложения в Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
