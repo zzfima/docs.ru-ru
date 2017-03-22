@@ -39,11 +39,11 @@ ms.lasthandoff: 03/07/2017
 - `dotnet restore`
 - `dotnet run`
 
-##<a name="behavior"></a>Поведение
+## <a name="behavior"></a>Поведение
 
 Функция телеметрии средств .NET Core по умолчанию включена. Вы можете отказаться от ее использования, присвоив переменной среды DOTNET_CLI_TELEMETRY_OPTOUT (например, `export` в Mac OS и Linux или `set` в Windows) значение true (или 1).
 
-##<a name="data-points"></a>Точки данных
+## <a name="data-points"></a>Точки данных
 
 Средство собирает следующие данные:
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/07/2017
 
 Функция не собирает личные данные, например имена пользователей и их адреса электронной почты. Она не проверяет код и не извлекает данные уровня проекта, которые могут считаться конфиденциальными, например имена или репозиторий (если они заданы в файле project.json). Мы хотим узнать, как используются средства, а не что вы создаете с их помощью. Если вы обнаружили, что собираются конфиденциальные данные, это следствие ошибки. [Сообщите о проблеме](https://github.com/dotnet/cli/issues), и она будет исправлена.
 
-##<a name="license"></a>Лицензия
+## <a name="license"></a>Лицензия
 
 Платформа .NET Core распространяется корпорацией Майкрософт на условиях [ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ НА ИСПОЛЬЗОВАНИЕ БИБЛИОТЕКИ MICROSOFT .NET](https://aka.ms/dotnet-core-eula). Использование телеметрии оговорено в его разделе ДАННЫЕ, который приводится ниже.
 
@@ -97,3 +97,4 @@ A command is running to initially populate your local package cache, to
 improve restore speed and enable offline access. This command will take up to 
 a minute to complete and will only happen once. 
 ```
+
