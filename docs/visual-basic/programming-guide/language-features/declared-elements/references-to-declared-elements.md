@@ -1,33 +1,49 @@
 ---
-title: "Ссылки на объявленные элементы (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "объявленные элементы"
-  - "ссылки на объявленные элементы"
-  - "полные имена"
+title: "Ссылки на объявленные элементы (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declared elements
+- references, declared elements
+- qualified names
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Ссылки на объявленные элементы (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 48a04f81075accc073b0d1f5b7a61006bef807ae
+ms.lasthandoff: 03/13/2017
 
-Когда код ссылается на объявленный элемент [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] компилятора соответствует имени в ссылке соответствующему объявлению этого имени. Если более чем один элемент объявлен с тем же именем, можно выбрать, какие из этих элементов должен ссылаться на *соответствующая* его имя.  
+---
+# <a name="references-to-declared-elements-visual-basic"></a>Ссылки на объявленные элементы (Visual Basic)
+Когда код ссылается на объявленный элемент [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятора соответствует имени в ссылке соответствующему объявлению этого имени. Если более чем один элемент объявлен с тем же именем, можно выбрать, какие из этих элементов должен ссылаться на *соответствующая* его имя.  
   
  Компилятор пытается сопоставить ссылку имени с объявлением с *узкой области*. Это означает, что он начинается с кода, делая ссылку и работая через последовательные уровни содержащих элементов.  
   
- В следующем примере показаны ссылки на две переменные с тем же именем. В примере объявляются две переменные, каждая с именем `totalCount`, на различных уровнях области в модуле `container`. Если процедура `showCount` отображает `totalCount` без квалификации, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] компилятор разрешает ссылку на объявление с самой узкой областью, а именно, локальное объявление внутри `showCount`. При уточнении `totalCount` с содержащим модулем `container`, компилятор разрешает ссылку на объявление с более широкой областью.  
+ В следующем примере показаны ссылки на две переменные с тем же именем. В примере объявляются две переменные, каждая с именем `totalCount`, на различных уровнях области в модуле `container`. Если процедура `showCount` отображает `totalCount` без квалификации, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятор разрешает ссылку на объявление с самой узкой областью, а именно, локальное объявление внутри `showCount`. При уточнении `totalCount` с содержащим модулем `container`, компилятор разрешает ссылку на объявление с более широкой областью.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -104,7 +120,7 @@ End Module
   
 6.  Компилятор использует уточняющую строку, чтобы найти точное, однозначное объявление, к которому может сопоставить ссылку на целевой элемент.  
   
- Может также потребоваться уточнять ссылки на имена, если приложение имеет доступ к более чем один элемент программирования, который имеет то же имя. Например <xref:System.Windows.Forms> и <xref:System.Web.UI.WebControls> пространства имен содержат `Label` класса (<xref:System.Windows.Forms.Label?displayProperty=fullName> и <xref:System.Web.UI.WebControls.Label?displayProperty=fullName>). Если приложение использует оба или определяет собственный `Label` класса, необходимо различать разные `Label` объектов. Включите пространство имен или псевдоним в объявлении переменной. В следующем примере псевдоним импорта.  
+ Может также потребоваться уточнять ссылки на имена, если приложение имеет доступ к более чем один элемент программирования, который имеет то же имя. Например <xref:System.Windows.Forms>и <xref:System.Web.UI.WebControls>пространства имен содержат `Label` класса (<xref:System.Windows.Forms.Label?displayProperty=fullName> и <xref:System.Web.UI.WebControls.Label?displayProperty=fullName>).</xref:System.Web.UI.WebControls.Label?displayProperty=fullName> </xref:System.Windows.Forms.Label?displayProperty=fullName> </xref:System.Web.UI.WebControls> </xref:System.Windows.Forms> Если приложение использует оба или определяет собственный `Label` класса, необходимо различать разные `Label` объектов. Включите пространство имен или псевдоним в объявлении переменной. В следующем примере псевдоним импорта.  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -159,9 +175,9 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Ссылки на проекты  
- Для использования [открытый](../../../../visual-basic/language-reference/modifiers/public.md) элементов, определенных в другом проекте, необходимо сначала установить *ссылки* для этого проекта сборку или библиотеку типов. Чтобы установить ссылку, нажмите кнопку **Добавить ссылку** на **проекта** меню или используйте [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) параметр командной строки компилятора.  
+ Для использования [открытый](../../../../visual-basic/language-reference/modifiers/public.md) элементов, определенных в другом проекте, необходимо сначала установить *ссылки* для этого проекта сборку или библиотеку типов. Чтобы установить ссылку, нажмите кнопку **добавить ссылку** на **проекта** меню или используйте [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) параметр командной строки компилятора.  
   
- Например, можно использовать объектную модель XML из [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]. Если задать ссылку на <xref:System.Xml> пространства имен, можно объявить и использовать любой из его классы, такие как <xref:System.Xml.XmlDocument>. В следующем примере используется <xref:System.Xml.XmlDocument>.  
+ Например, можно использовать объектную модель XML из [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Если задать ссылку на <xref:System.Xml>пространства имен, можно объявить и использовать все его классы, такие как <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument> </xref:System.Xml> В следующем примере используется <xref:System.Xml.XmlDocument>.</xref:System.Xml.XmlDocument>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -170,7 +186,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>Импорт содержащих элементов  
- Можно использовать [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для *Импорт* пространства имен, содержащих модули или классы, которые вы хотите использовать. Это позволяет ссылаться на элементы, определенные в импортированном пространстве имен без полных имен. Следующий пример перезаписывает предыдущий пример для импорта <xref:System.Xml> пространства имен.  
+ Можно использовать [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для *импорта* пространства имен, содержащих модули или классы, которые вы хотите использовать. Это позволяет ссылаться на элементы, определенные в импортированном пространстве имен без полных имен. Следующий пример перезаписывает предыдущий пример для импорта <xref:System.Xml>имен.</xref:System.Xml>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -180,7 +196,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- Кроме того `Imports` можно определить оператор *псевдоним импорта* для каждого импортируемого пространства имен. Это может сделать исходный код короче и удобнее для чтения. Следующий пример перезаписывает предыдущий пример для использования `xD` в качестве псевдонима для <xref:System.Xml> пространства имен.  
+ Кроме того `Imports` можно определить оператор *псевдоним импорта* для каждого импортируемого пространства имен. Это может сделать исходный код короче и удобнее для чтения. Следующий пример перезаписывает предыдущий пример для использования `xD` в качестве псевдонима для <xref:System.Xml>имен.</xref:System.Xml>  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -190,7 +206,7 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
-  `Imports` Инструкция не делает элементы из других проектов доступными для приложения. То есть он не замещать ссылку. Импорт пространства имен просто освобождает от необходимости уточнения имен, определенных в этом пространстве имен.  
+ `Imports` Инструкция не делает элементы из других проектов доступными для приложения. То есть он не замещать ссылку. Импорт пространства имен просто освобождает от необходимости уточнения имен, определенных в этом пространстве имен.  
   
  Можно также использовать `Imports` для импорта модулей, классов, структур и перечислений. Затем можно использовать члены импортированных элементов без уточнения. Тем не менее всегда необходимо предварять собственным членам классов и структур с помощью переменной или выражение, результатом которого является экземпляром класса или структуры.  
   
@@ -200,12 +216,12 @@ Dim xDoc As xD.XmlDocument
  Неоднозначность имен можно избежать, присвоив уникальные имена всех элементов. Затем можно сделать ссылку на любой элемент без уточнения его имени пространства имен, модуля или класса. Можно также снизить вероятность случайной ссылки на неправильный элемент.  
   
 ## <a name="shadowing"></a>Затенение  
- Если два программных элемента имеют общее имя, один из них может скрыть, или *тени*, другой. Затененный элемент недоступен для обращения. Вместо этого в том случае, если ваш код использует затененного имени элемента, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] компилятор разрешает его переопределяющий элемент. Более подробное описание с примерами см. в разделе [сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Если два программных элемента имеют общее имя, один из них может скрыть, или *тени*, другой. Затененный элемент недоступен для обращения. Вместо этого в том случае, если ваш код использует затененного имени элемента, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятор разрешает его переопределяющий элемент. Более подробное описание с примерами см. в разделе [сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
  [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [NIB Практическое руководство: изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [NIB Практическое руководство: изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
  [Переменные](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
  [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
  [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)   

@@ -1,60 +1,76 @@
 ---
-title: "Рекурсивные процедуры (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "функции [Visual Basic], рекурсивный вызов"
-  - "процедуры, вызов"
-  - "процедуры, рекурсивные"
-  - "процедуры, которые вызывают сами"
-  - "рекурсия"
-  - "рекурсивные процедуры"
-  - "код Visual Basic, процедуры"
+title: "Рекурсивные процедуры (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- procedures, that call themselves
+- procedures, recursive
+- procedures, calling
+- recursive procedures
+- functions [Visual Basic], calling recursively
+- recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Рекурсивные процедуры (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9fc95cd5f7cfd5637f6282c6ef571eb81bac1816
+ms.lasthandoff: 03/13/2017
 
-*Рекурсивная процедура* — это процедура, которая вызывает сама себя.  Как правило, это не самый эффективный способ написания кода [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+---
+# <a name="recursive-procedures-visual-basic"></a>Рекурсивные процедуры (Visual Basic)
+Объект *рекурсивного* — процедура, которая вызывает сама себя. Как правило, это не самый эффективный способ написания [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] кода.  
   
- Приведенная ниже процедура использует рекурсию для вычисления факториала исходного аргумента:  
+ Следующая процедура использует рекурсию для вычисления факториала исходного аргумента.  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#51;](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
-## Рассмотрение рекурсивных процедур  
- **Ограничивающие условия**.  Необходимо разработать рекурсивную процедуру для проверки по крайней мере одного условия, которое может прервать рекурсию, а также необходимо рассмотреть случаи, когда такое условие не выполняется в течение разумного числа рекурсивных вызовов.  Без, по крайней мере, одного условия, которое может быть выполнено без ошибок, возникает большой риск выполнения в бесконечном цикле.  
+## <a name="considerations-with-recursive-procedures"></a>Вопросы, связанные с рекурсивные процедуры  
+ **Ограничивающие условия**. Необходимо разработать рекурсивную процедуру для проверки по крайней мере одного условия, которое может прервать рекурсию, и вы также должны обрабатывать случаи, когда такое условие не выполняется в течение разумного числа рекурсивных вызовов. Без хотя бы одного условия, которое может быть выполнено без ошибок процедура выполняется высокий риск выполнения в бесконечном цикле.  
   
- **Использование памяти**.  Приложение имеет ограниченный объем пространства для локальных переменных.  Каждый раз, когда процедура вызывает саму себя, она использует больше этого пространства для дополнительных копий ее локальных переменных.  Если этот процесс будет продолжаться неопределенно долго, он в конечном счете вызовет ошибку <xref:System.StackOverflowException>.  
+ **Использование памяти**. Приложение имеет ограниченный объем пространства для локальных переменных. Каждый раз, когда процедура вызывает саму себя, используется больше этого пространства для дополнительных копий ее локальных переменных. Если этот процесс будет продолжаться неопределенно долго, он в конечном итоге вызовет <xref:System.StackOverflowException>ошибка.</xref:System.StackOverflowException>  
   
- **Эффективность**.  Почти всегда можно заменить цикл для рекурсии.  Цикл не имеет дополнительных издержек аргументов передачи, инициализации дополнительного хранилища и возврат значений.  Производительность может быть гораздо выше без рекурсивного вызова.  
+ **Эффективность**. Почти всегда можно заменить цикл для рекурсии. Цикл не имеет дополнительных издержек аргументов передачи, инициализации дополнительного хранилища и возврат значений. Производительность может быть гораздо выше без рекурсивного вызова.  
   
- **Взаимная рекурсия**.  Можно наблюдать очень низкую производительность или даже бесконечный цикл, если две процедуры вызывают друг друга.  Такой макет представляет те же проблемы, что и одна рекурсивная процедура, но это может быть сложнее обнаружить и отладить.  
+ **Взаимная рекурсия**. Можно наблюдать очень низкую производительность или даже бесконечный цикл, если две процедуры вызывают друг друга. Такой макет представляет те же проблемы, как одна Рекурсивная процедура, но может быть сложнее обнаружить и отладить.  
   
- **Вызов со скобками**.  Когда процедура `Function` рекурсивно вызывает саму себя, после имени процедуры следует ставить скобки, даже если отсутствует список аргументов.  В противном случае имя функции воспринимается как ее возвращаемое значение.  
+ **Вызов со скобками**. Когда `Function` процедура вызывает себя рекурсивно, необходимо выполнить процедуру имя со скобками, даже если отсутствует список аргументов. В противном случае — берется имя функции, представляющего возвращаемое значение функции.  
   
- **Тестирование**.  Если Вы пишете рекурсивную процедуру, необходимо проверить ее очень внимательно, чтобы убедиться в в том, что она всегда удовлетворяет некоторому граничному условию.  Следует также убедиться в том, что в результате слишком большого количества рекурсивных вызовов вы не израсходуете всю доступную память.  
+ **Тестирование**. Если вы пишете рекурсивную процедуру, следует проверить ее очень внимательно, чтобы убедиться, что он всегда условие некоторые ограничения. Следует также убедиться, что не может работать не хватает памяти из-за слишком большим количеством рекурсивных вызовов.  
   
-## См. также  
- <xref:System.StackOverflowException>   
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Подпрограммы](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Процедуры Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Процедуры свойств](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Процедуры операторов](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Перегрузка процедур](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Устранение неполадок в процедурах](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.StackOverflowException></xref:System.StackOverflowException>   
+ [Процедуры](./index.md)   
+ [Sub-процедуры](./sub-procedures.md)   
+ [Процедуры функций](./function-procedures.md)   
+ [Процедуры свойств](./property-procedures.md)   
+ [Процедуры операторов](./operator-procedures.md)   
+ [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)   
+ [Перегрузка процедур](./procedure-overloading.md)   
+ [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)   
  [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Разрешение вопросов, связанных с исключениями: System.StackOverflowException](../Topic/Troubleshooting%20Exceptions:%20System.StackOverflowException.md)
+ [Разрешение вопросов, связанных с исключениями: System.StackOverflowException](http://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

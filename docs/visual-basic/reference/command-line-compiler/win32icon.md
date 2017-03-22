@@ -1,59 +1,73 @@
 ---
-title: "/win32icon | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/win32icon - параметр компилятора [Visual Basic]"
-  - "win32icon - параметр компилятора [Visual Basic]"
-  - "-win32icon - параметр компилятора [Visual Basic]"
+title: "/ win32icon | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- win32icon compiler option [Visual Basic]
+- -win32icon compiler option [Visual Basic]
+- /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# /win32icon
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 110a3861d6628dc2c3fb251aaa31762fb94f04c9
+ms.lasthandoff: 03/13/2017
 
-Добавляет файл ICO к выходному файлу.  Этот файл ico представляет выходной файл, в **\*\*\* В обозревателе файла \*\*\***.  
+---
+# <a name="win32icon"></a>/win32icon
+Внедряет ICO-файл в выходной файл. Файл ICO представляет выходной файл в **проводнике**.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /win32icon:filename  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`filename`|Имя файла ICO, который добавляется к выходному файлу.  Если имя файла содержит пробел, следует заключить его в кавычки \(" "\).|  
+|---|---|  
+|`filename`|Добавить в выходной файл ICO-файл. Заключите имя файла в кавычки («»), если он содержит пробел.|  
   
-## Заметки  
- Файл ICO можно создать с помощью компилятора ресурсов Microsoft Windows.  Компилятор ресурсов вызывается при компиляции программы, написанной с помощью Visual C\+\+; файл ICO создается из файла с расширением RC.  Параметры `/win32icon` и `/win32resource` являются взаимоисключающими.  
+## <a name="remarks"></a>Примечания  
+ ICO-файл можно создать с помощью компилятора ресурсов Microsoft Windows (RC). Компилятор ресурсов вызывается при компиляции программы Visual C++; ICO-файл создается из RC-файла. `/win32icon` И `/win32resource` являются взаимоисключающими.  
   
- Сведения о создании ссылки на файл ресурсов [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] см. в разделе [\/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md), а сведения о присоединении файла ресурсов [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] — в разделе [\/resource](../../../visual-basic/reference/command-line-compiler/resource.md).  Сведения об импорте файла RES см. в разделе [\/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md).  
+ В разделе [/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) ссылка [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] файл ресурсов или [/Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) присоединить [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] файла ресурсов. В разделе [/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) Импорт RES-файл.  
   
-||  
-|-|  
-|Чтобы установить параметр \/ win32icon в интегрированной среде разработки Visual Studio|  
-|1.  Выберите проект в **обозревателе решений**.  В меню **Проект** выберите пункт **Свойства**.  Дополнительные сведения см. в разделе [Introduction to the Project Designer](http://msdn.microsoft.com/ru-ru/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Перейдите на вкладку **Приложение**.<br />3.  Измените значение в поле **Значок**.|  
+|Установка/win32icon в Интегрированной среде разработки Visual Studio|  
+|---|  
+|1.  Выберите проект в **Обозревателе решений**. На **проекта** меню, щелкните **свойства**. Дополнительные сведения см. в разделе [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Перейдите на вкладку **Приложение** .<br />3.  Измените значение в **значок** поле.|  
   
-## Пример  
- В следующем коде выполняется компиляция `In.vb` и присоединяется файл ICO \(`Rf.ico`\).  
+## <a name="example"></a>Пример  
+ Следующий код компилирует `In.vb` и присоединяется файл ICO `Rf.ico`.  
   
 ```  
 vbc /win32icon:rf.ico in.vb  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

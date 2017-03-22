@@ -1,63 +1,79 @@
 ---
-title: "Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "данные [Visual Basic], обновление"
-  - "удаление данных"
-  - "удаление строк [LINQ to SQL]"
-  - "вставка данных [Visual Basic]"
-  - "вставка строк [LINQ to SQL]"
-  - "запросы [LINQ в Visual Basic], изменение данных в базе данных"
-  - "запросы [LINQ в Visual Basic], разделы практического руководства"
-  - "обновление данных [LINQ]"
-  - "обновление строк [LINQ to SQL]"
+title: "Практическое руководство: изменение данных в базе данных с помощью LINQ (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- inserting rows [LINQ to SQL]
+- deleting rows [LINQ to SQL]
+- updating rows [LINQ to SQL]
+- inserting data [Visual Basic]
+- deleting data
+- data [Visual Basic], updating
+- updating data [LINQ]
+- queries [LINQ in Visual Basic], data changes in database
+- queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 44ca3e44d8411a6329d176eb778677bfab2b365c
+ms.lasthandoff: 03/13/2017
 
-Запросы языка интегрированных запросов \(LINQ\) упрощают доступ к сведениям базы данных и изменение значений в базе данных.  
+---
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
+Запросы Language Integrated Query (LINQ) упрощают для доступа к базе данных, а также изменять значения в базе данных.  
   
  В следующем примере показано создание нового приложения, которое получает и обновляет сведения в базе данных SQL Server.  
   
- В примерах этого раздела используется учебная база данных "Борей".  При отсутствии учебной базы данных "Борей" на компьютере разработчика ее можно загрузить с веб\-узла [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088).  Подробные инструкции см. в разделе [Загрузка образцов баз данных](../Topic/Downloading%20Sample%20Databases.md).  
+ Примеры в этом разделе используется образец базы данных Northwind. Если у вас образца базы данных "Борей" на компьютере разработчика, можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](https://msdn.microsoft.com/library/bb399411).  
   
-### Создание подключения к базе данных  
+### <a name="to-create-a-connection-to-a-database"></a>Создание подключения к базе данных  
   
-1.  В Visual Studio откройте **Обозреватель серверов**\/**Обозреватель базы данных**, щелкнув **Обозреватель серверов**\/**Обозреватель базы данных** в меню **Вид**.  
+1.  В Visual Studio откройте **обозревателя**/**обозреватель баз данных** , щелкнув **представление** меню, а затем выберите **обозреватель серверов**/**обозревателя базы данных**.  
   
-2.  Щелкните правой кнопкой мыши **Подключения данных** в **Обозреватель серверов**\/**Обозреватель базы данных** и затем щелкните **Добавить подключение**.  
+2.  Щелкните правой кнопкой мыши **подключения к данным** в **обозревателя**/**обозревателя базы данных**и нажмите кнопку **Добавление подключения**.  
   
-3.  Укажите допустимое подключение к учебной базе данных "Northwind".  
+3.  Укажите допустимое подключение к учебной базе данных "Борей".  
   
-### Чтобы добавить проект, с LINQ для SQL  
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>Добавление проекта с LINQ to SQL-файл  
   
-1.  В меню **Файл** окна Visual Studio выберите команду **Создать** и щелкните **Проект**.  Выберите **Приложение Windows Forms** в качестве типа проекта Visual Basic.  
+1.  В Visual Studio на **файл** наведите указатель мыши на **New** и нажмите кнопку **проекта**. Выберите Visual Basic **приложение Windows Forms** в качестве типа проекта.  
   
-2.  В меню **Проект** выберите команду **Добавить новый элемент**.  Выберите шаблон элемента **Классы LINQ\-SQL**.  
+2.  В меню **Проект** выберите пункт **Добавить новый элемент**. Выберите **классы LINQ to SQL** шаблона элемента.  
   
-3.  Назовите файл `northwind.dbml`.  Нажмите кнопку **Добавить**.  Реляционный конструктор объектов \(O\/R\-конструктор\) открыт для файла `northwind.dbml`.  
+3.  Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. Открывается реляционный конструктор объектов (конструктор O/R) для `northwind.dbml` файла.  
   
-### Чтобы добавить таблицы к запросу и изменить в конструкторе  
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>Добавление таблицы к запросу и изменить в конструкторе  
   
-1.  В представлении **Обозреватель серверов** или **Обозреватель баз данных** разверните подключение к базе данных "Northwind".  Разверните папку **Таблицы**.  
+1.  В **обозревателя**/**обозревателя базы данных**, разверните подключение к базе данных Northwind. Разверните **таблиц** папки.  
   
-     Если O\/R\-конструктор закрыт, его можно открыть, дважды щелкнув файл `northwind.dbml`, добавленный ранее.  
+     Если реляционный конструктор объектов закрыт, его можно открыть, дважды щелкнув `northwind.dbml` файл, который был добавлен ранее.  
   
-2.  Щелкните таблицу "Клиенты" и перетащите ее в левую область конструктора.  
+2.  Щелкните таблицу Customers и перетащите его в левую область конструктора.  
   
      Конструктор создает новый объект Customer для проекта.  
   
@@ -65,17 +81,17 @@ caps.handback.revision: 15
   
 4.  Сохраните проект.  
   
-### Чтобы добавить код изменения базы данных и отображения результатов  
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>Добавление кода для изменения базы данных и отображения результатов  
   
-1.  С **панели элементов** перетащите элемент управления <xref:System.Windows.Forms.DataGridView> в заданную по умолчанию форму Windows Forms для проекта \(Form1\).  
+1.  От **элементов**, перетащите <xref:System.Windows.Forms.DataGridView>элемента управления на форме Windows Forms по умолчанию для проекта, Form1.</xref:System.Windows.Forms.DataGridView>  
   
-2.  При добавлении таблиц в реляционный конструктор объектов конструктор добавил объект <xref:System.Data.Linq.DataContext> в проект.  Этот объект содержит код, который можно использовать для доступа к таблице Customers.  Он также содержит код, который определяет локальный объект Customer и коллекцию Customers для таблицы.  Объекту <xref:System.Data.Linq.DataContext> для проекта присвоено имя на основе имени файла .dbml.  Для данного проекта объект <xref:System.Data.Linq.DataContext> называется `northwindDataContext`.  
+2.  При добавлении таблиц в реляционный конструктор объектов конструктор добавил <xref:System.Data.Linq.DataContext>объект в проект.</xref:System.Data.Linq.DataContext> Этот объект содержит код, который можно использовать для доступа к таблице Customers. Он также содержит код, который определяет локальный объект Customer и коллекцию Customers для таблицы. <xref:System.Data.Linq.DataContext>Объект для проекта имя на основе имени файла .dbml.</xref:System.Data.Linq.DataContext> Для этого проекта <xref:System.Data.Linq.DataContext>объект называется `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
   
-     Можно создать экземпляр объекта <xref:System.Data.Linq.DataContext> в коде и запросе и изменить коллекцию Customers, определенную в конструкторе O\/R.  Изменения, внесенные в коллекцию Customers, не отражаются в базе данных до тех пор, пока их отправить туда вызовом метода <xref:System.Data.Linq.DataContext.SubmitChanges%2A> объекта <xref:System.Data.Linq.DataContext>.  
+     Можно создать экземпляр <xref:System.Data.Linq.DataContext>объекта в коде и запросе и изменить коллекцию Customers, определенную в реляционный конструктор объектов.</xref:System.Data.Linq.DataContext> Изменения, внесенные в коллекцию Customers, не отражаются в базе данных до их отправки путем вызова <xref:System.Data.Linq.DataContext.SubmitChanges%2A>метод <xref:System.Data.Linq.DataContext>объекта.</xref:System.Data.Linq.DataContext> </xref:System.Data.Linq.DataContext.SubmitChanges%2A>  
   
-     Дважды щелкните форму Windows Form1, чтобы добавить код в событие <xref:System.Windows.Forms.Form.Load> для запроса к таблице Customers, который предоставляется как свойство элемента<xref:System.Data.Linq.DataContext>.  Добавьте следующий код:  
+     Дважды щелкните Windows форму Form1, чтобы добавить код в <xref:System.Windows.Forms.Form.Load>событие для запроса таблицы Customers, который предоставляется как свойство <xref:System.Data.Linq.DataContext>.</xref:System.Data.Linq.DataContext> </xref:System.Windows.Forms.Form.Load> Добавьте следующий код:  
   
-    ```vb#  
+    ```vb  
     Private db As northwindDataContext  
   
     Private Sub Form1_Load(ByVal sender As System.Object,   
@@ -95,11 +111,11 @@ caps.handback.revision: 15
     End Sub  
     ```  
   
-3.  Из **панели элементов** перетащите на форму 3 элемента управления <xref:System.Windows.Forms.Button>.  Выберите первый элемент управления `Button`.  В окне **Свойства** задайте свойству `Name` элемента управления `Button` значение `AddButton` и свойству `Text` значение `Add`.  Выберите вторую кнопку и задайте свойству `Name` значение `UpdateButton` и свойству `Text` значение `Update`.  Выберите третью кнопку и задайте свойству `Name` значение `DeleteButton` и свойству `Text` значение `Delete`.  
+3.  От **элементов**, перетащите три <xref:System.Windows.Forms.Button>элементов управления в форму.</xref:System.Windows.Forms.Button> Выберите первый `Button` элемента управления. В **свойства** установите `Name` из `Button` управления `AddButton` и `Text` в `Add`. Выберите вторую кнопку и задайте `Name` свойства `UpdateButton` и `Text` свойства `Update`. Выберите третью кнопку и задайте `Name` свойства `DeleteButton` и `Text` свойства `Delete`.  
   
-4.  Дважды щелкните кнопку **Add** для добавления кода к событию `Click` этой кнопки.  Добавьте следующий код:  
+4.  Дважды щелкните **добавить** кнопку, чтобы добавить код для его `Click` события. Добавьте следующий код:  
   
-    ```vb#  
+    ```vb  
     Private Sub AddButton_Click(ByVal sender As System.Object,   
                                 ByVal e As System.EventArgs  
                                ) Handles AddButton.Click  
@@ -122,9 +138,9 @@ caps.handback.revision: 15
     End Sub  
     ```  
   
-5.  Дважды щелкните кнопку **Update** для добавления кода к событию `Click` этой кнопки.  Добавьте следующий код:  
+5.  Дважды щелкните **обновление** кнопку, чтобы добавить код для его `Click` события. Добавьте следующий код:  
   
-    ```vb#  
+    ```vb  
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _  
                                    ByVal e As System.EventArgs  
                                   ) Handles UpdateButton.Click  
@@ -143,9 +159,9 @@ caps.handback.revision: 15
     End Sub  
     ```  
   
-6.  Дважды щелкните кнопку **Delete** для добавления кода к событию `Click` этой кнопки.  Добавьте следующий код:  
+6.  Дважды щелкните **удаление** кнопку, чтобы добавить код для его `Click` события. Добавьте следующий код:  
   
-    ```vb#  
+    ```vb  
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _  
                                    ByVal e As System.EventArgs  
                                   ) Handles DeleteButton.Click  
@@ -164,12 +180,11 @@ caps.handback.revision: 15
     End Sub  
     ```  
   
-7.  Нажмите клавишу F5 для запуска проекта.  Нажмите кнопку **Add** для добавления новой записи.  Нажмите кнопку **Update** для изменения новой записи.  Нажмите кнопку **Delete** для удаления новой записи.  
+7.  Нажмите клавишу F5 для запуска проекта. Щелкните **добавить** для добавления новой записи. Щелкните **обновление** для изменения новой записи. Щелкните **удаление** для удаления новой записи.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
  [Запросы](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [Методы DataContext \(реляционный конструктор объектов\)](/visual-studio/data-tools/datacontext-methods-o-r-designer)   
- [Как назначить хранимые процедуры для выполнения обновлений, вставок и удалений \(реляционный конструктор объектов\)](../Topic/How%20to:%20Assign%20stored%20procedures%20to%20perform%20updates,%20inserts,%20and%20deletes%20\(O-R%20Designer\).md)   
- [Пошаговое руководство. Создание классов LINQ to SQL \(реляционный конструктор объектов\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [Методы DataContext (реляционный конструктор)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)   
+ [Практическое руководство: назначение хранимых процедур для выполнения обновлений, вставок и удалений (реляционный конструктор)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

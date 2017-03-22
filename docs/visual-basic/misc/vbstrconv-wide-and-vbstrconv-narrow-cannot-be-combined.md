@@ -1,26 +1,45 @@
 ---
-title: "VbStrConv.Wide и VbStrConv.Narrow не могут использоваться вместе | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrArgument_IllegalWideNarrow"
+title: "Нельзя объединять VbStrConv.Wide и VbStrConv.Narrow | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbrArgument_IllegalWideNarrow
 ms.assetid: a53b4e6a-36b1-4e36-b2c5-8196313ec599
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8d184fab3a63bc69caa67f315a9cb0f32514e2c1
+ms.lasthandoff: 03/13/2017
+
 ---
-# VbStrConv.Wide и VbStrConv.Narrow не могут использоваться вместе
-Приложение пытается объединить взаимоисключающие элементы `Wide` и `Narrow` перечисления `VbStrConv`.  
+# <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a>VbStrConv.Wide и VbStrConv.Narrow не могут использоваться вместе
+Приложение пытается объединить взаимоисключающие элементы `VbStrConv` и `Wide` перечисления `Narrow`.  
   
-### Исправление ошибки  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 1.  Удалите `VbStrConv.Wide` или `VbStrConv.Narrow`.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Globalization>   
- [НЕ В СБОРКЕ. Перечисление VbStrConv](http://msdn.microsoft.com/ru-ru/59f83dd9-6361-47df-a836-02ba9d4cb936)   
- [Знакомство с международными приложениями на платформе .NET Framework](/visual-studio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+ [Перечисления VbStrConv NOTINBUILD](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)   
+ [Знакомство с международными приложениями на платформе .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

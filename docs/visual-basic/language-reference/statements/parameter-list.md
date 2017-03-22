@@ -1,105 +1,121 @@
 ---
-title: "Список параметров (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "аргументы [Visual Basic], Visual Basic"
-  - "списки параметров"
-  - "параметры, списки"
-  - "параметры, Visual Basic"
-  - "процедуры, списки параметров"
-  - "код Visual Basic, списки параметров"
-  - "код Visual Basic, процедуры"
+title: "Список параметров (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- parameters, Visual Basic
+- parameters, lists
+- parameter lists
+- Visual Basic code, parameter lists
+- arguments [Visual Basic], Visual Basic
+- procedures, parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Список параметров (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: abadaa8e035bfa4c92acc30ab633d6a7e958676c
+ms.lasthandoff: 03/13/2017
 
-Задает параметры, ожидаемые процедурой при вызове.  Несколько параметров разделяются запятыми.  Ниже представлен синтаксис для одного параметра.  
+---
+# <a name="parameter-list-visual-basic"></a>Список параметров (Visual Basic)
+Задает параметры, ожидаемые процедурой при вызове. Несколько параметров разделяются запятыми. Ниже приведен синтаксис для одного параметра.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
-parametername[( )] [ As parametertype ] [ = defaultvalue ]  
+[ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
+parametername[( )] [ As parametertype ] [ = defaultvalue ]  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `attributelist`  
- Необязательный.  Список атрибутов, которые применяются к данному параметру.  Необходимо заключить [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки \("`<`" и "`>`"\).  
+ Необязательный. Список атрибутов, которые применяются к данному параметру. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).  
   
  `Optional`  
- Необязательный.  Указывает, что этот параметр не требуется при вызове процедуры.  
+ Необязательный. Указывает, что этот параметр не требуется при вызове процедуры.  
   
  `ByVal`  
- Необязательный.  Указывает, что процедура не может заменить или переназначить основной элемент переменной соответствующего аргумента в коде вызова.  
+ Необязательный. Указывает, что процедура не может заменить или переназначить основной соответствующего аргумента в вызывающем коде элемент переменной.  
   
  `ByRef`  
- Необязательный.  Указывает на то, что процедура может изменять основной элемент переменной в вызывающем коде так же, как он изменяется самим вызывающим кодом.  
+ Необязательный. Указывает, что процедура может изменять основной элемент переменной в вызывающем коде так же, как самим вызывающим кодом.  
   
  `ParamArray`  
- Необязательный.  Указывает, что последний параметр в списке параметров является дополнительным массивом элементов заданного типа данных.  Это позволяет передавать произвольное число аргументов в процедуру.  
+ Необязательный. Указывает, что последний параметр в списке параметров необязательный массив элементов заданного типа данных. Это позволяет передавать произвольное число аргументов в процедуру.  
   
  `parametername`  
- Обязательный.  Имя локальной переменной, представляющей параметр.  
+ Обязательный. Имя локальной переменной, представляющей параметр.  
   
  `parametertype`  
- Требуется, если для `Option Strict` установлено значение `On`.  Тип данных локальной переменной, представляющей параметр.  
+ Обязателен, если `Option Strict` — `On`. Тип данных локальной переменной, представляющей параметр.  
   
  `defaultvalue`  
- Обязателен для `Optional` параметров.  Любая константа или константное выражение, вычисляемое значение которого имеет тип данных параметра.  Если тип — `Object`, класс, интерфейс, массив или структура, его значением по умолчанию может быть только `Nothing`.  
+ Требуется для `Optional` параметров. Любая константа или константное выражение, результатом которого является тип данных параметра. Если тип является `Object`, или класс, интерфейс, массив или структура, значение по умолчанию может быть только `Nothing`.  
   
-## Заметки  
- Параметры заключаются в круглые скобки и разделяются запятыми.  Параметр может быть объявлен с любым типом данных.  Если не указан `parametertype`, то по умолчанию он имеет значение `Object`.  
+## <a name="remarks"></a>Примечания  
+ Параметры заключаются в круглые скобки и разделенные запятыми. Параметр может быть объявлен с любой тип данных. Если вы не укажете `parametertype`, по умолчанию используется `Object`.  
   
- Когда код вызова вызывает процедуру, он передает *аргумент* для каждого обязательного параметра.  Дополнительные сведения см. в разделе [Различия между параметрами и аргументами](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
+ Если вызывающий код вызывает процедуру, он передает *аргумент* для каждого обязательного параметра. Дополнительные сведения см. в разделе [различия между параметрами и аргументами](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
   
- Аргумент, передаваемый кодом вызова для каждого параметра, является указателем на базовый элемент в коде вызова.  Если этот элемент является *неизменяемым* \(константа, литерал, перечисление или выражение\), то никакой код не сможет его изменить.  Если это элемент *изменяемый* \(объявленная переменная, поле, свойство, элемент массива или элемент структуры\), вызывающий код может изменить его.  Дополнительные сведения см. в разделе [Различия между аргументами Modifiable и Nonmodifiable](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).  
+ Аргумент, вызывающий код передает в каждый параметр является указателем на базовый элемент в вызывающем коде. Если этот элемент является *неизменяемым* (константа, литерал, перечисление или выражение), любой код изменить его невозможно. Если это *переменной* элемента (объявленная переменная, поле, свойство, элемент массива или элемент структуры), вызывающий код может изменить его. Дополнительные сведения см. в разделе [различия между изменяемые и неизменяемые аргументы](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).  
   
- Если элемент переменной передается `ByRef`, в процедуре также можно его изменить.  Дополнительные сведения см. в разделе [Различия между передачей аргумента по значению и по ссылке](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).  
+ Если элемент переменной передается `ByRef`, процедура может изменять его тоже. Дополнительные сведения см. в разделе [различия между передачей аргумента по значению и по ссылке](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-## Правила  
+## <a name="rules"></a>Правила  
   
--   **Круглые скобки.** Если задан список параметров, необходимо заключить его в круглые скобки.  Если нет параметров, можно по\-прежнему использовать скобки, ограничивающие пустой список.  Это повышает удобочитаемость кода, указывая, что элемент является процедурой.  
+-   **Круглые скобки.** Если указан список параметров, необходимо заключить его в круглые скобки. Если параметры не указаны, по-прежнему можно использовать скобки, ограничивающие пустой список. Это повышает удобочитаемость кода, указывая, что элемент является процедурой.  
   
--   **Необязательные параметры.** Если используется модификатор `Optional` для параметра, все последующие параметры в списке должны также быть дополнительными и быть объявлены с помощью модификатора `Optional`.  
+-   **Необязательные параметры.** Если вы используете `Optional` модификатора параметра, все последующие параметры в списке также должен быть необязательным и объявляться с помощью `Optional` модификатор.  
   
-     Каждое объявление дополнительного параметра необходимо указать в предложении `defaultvalue`.  
+     Каждое объявление дополнительного параметра необходимо указать `defaultvalue` предложения.  
   
-     Дополнительные сведения см. в разделе [Необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
+     Дополнительные сведения см. в разделе [необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
   
--   **Массивы параметров.** Необходимо указать `ByVal` для параметра `ParamArray`.  
+-   **Массивы параметров.** Необходимо указать `ByVal` для `ParamArray` параметр.  
   
-     Нельзя использовать одновременно и `Optional`, и `ParamArray` в одном списке параметров.  
+     Нельзя одновременно указать `Optional` и `ParamArray` в такой же список параметров.  
   
-     Дополнительные сведения см. в разделе [Массивы параметров](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+     Дополнительные сведения см. в разделе [массивы параметров](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
--   **Способ передачи.** Способом по умолчанию для каждого аргумента является `ByVal`, что означает, что процедура не может изменять базовый элемент переменной.  Однако если элемент является ссылочным типом, процедура может изменять содержимое или члены базового объекта, даже если она не может заменить или переназначить сам объект.  
+-   **Механизм передачи.** Механизм по умолчанию для каждого аргумента является `ByVal`, означающее процедуру нельзя изменить элемент базовой переменной. Тем не менее если элемент является ссылочным типом, процедура может изменить содержимое или члены базового объекта, даже если она не может заменить или переназначить сам объект.  
   
--   **Имена параметра** Если тип данных параметра является массивом, нужно `parametername` ограничить круглыми скобками.  Дополнительные сведения об именах параметра см. в разделе [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+-   **Имена параметров.** Если тип данных параметра является массивом, выполните `parametername` немедленно круглые скобки. Дополнительные сведения об именах параметра см. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-## Пример  
- В следующем примере показана процедура `Function`, определяющая два параметра.  
+## <a name="example"></a>Пример  
+ В следующем примере показан `Function` процедуры, определяющей два параметра.  
   
- [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
+ [!code-vb[VbVbalrStatements&#2;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
   
-## См. также  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.InteropServices.DllImportAttribute></xref:System.Runtime.InteropServices.DllImportAttribute>   
  [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)   
  [Оператор Structure](../../../visual-basic/language-reference/statements/structure-statement.md)   
  [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Атрибуты](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)   
+ [Общие сведения об атрибутах](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
  [Практическое руководство. Разбиение и объединение инструкций в коде](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

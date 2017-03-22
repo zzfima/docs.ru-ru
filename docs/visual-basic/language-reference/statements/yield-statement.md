@@ -1,77 +1,93 @@
 ---
-title: "Оператор Yield (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Yield"
-helpviewer_keywords: 
-  - "итераторы, оператор Yield [Visual Basic]"
-  - "итераторы [Visual Basic]"
-  - "Yield - оператор [Visual Basic]"
+title: "Оператор yield (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Yield
+helpviewer_keywords:
+- iterators, Yield statement [Visual Basic]
+- iterators [Visual Basic]
+- Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Оператор Yield (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 393a9f4de3e801aed5932aef0e2b13d76b003965
+ms.lasthandoff: 03/13/2017
 
-Отправляет следующий элемент коллекции в инструкцию `For Each...Next`.  
+---
+# <a name="yield-statement-visual-basic"></a>Оператор Yield (Visual Basic)
+Отправляет следующий элемент коллекции для `For Each...Next` инструкции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Yield expression  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`expression`|Обязательное.  Выражение, которое неявно преобразовать в значение типа функции итератора или доступа `Get`, который содержит оператора `Yield`.|  
+|---|---|  
+|`expression`|Обязательный. Выражение, которое может быть неявно преобразован в тип функции итератора или `Get` метод доступа, который содержит `Yield` инструкции.|  
   
-## Заметки  
- Выписка `Yield` возвращает один элемент коллекции одновременно.  Выписка `Yield` включена в функции итератора или доступе `Get`, которая выполняет пользовательские итерации по коллекции.  
+## <a name="remarks"></a>Примечания  
+ `Yield` Инструкция возвращает один элемент коллекции одновременно. `Yield` Инструкция включена в функции итератора или `Get` доступа, который будет выполнять пользовательские итерации по коллекции.  
   
- Используется функция итератора с помощью [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) или запроса LINQ.  Все итерации цикла `For Each` вызывает функцию итератора.  При достижении выписка `Yield` в функции итератора, возвращается значение `expression` и текущего расположения в коде сохраняются.  Среда выполнения будет перезапуске из этого расположения при следующем вызове функции итератора данной функции.  
+ Использование функции итератора с помощью [For Each... Следующий оператор](../../../visual-basic/language-reference/statements/for-each-next-statement.md) или запрос LINQ. Каждая итерация `For Each` цикл вызывает функции итератора. Когда `Yield` достижении оператора в функции итератора `expression` возвращается и сохраняется текущее расположение в коде. При следующем вызове функции итератора выполнение возобновляется с этого места.  
   
- Неявное преобразование должно существовать из типа `expression` в инструкцию `Yield` к возвращаемому типу итератора.  
+ Должно существовать неявное преобразование из типа `expression` в `Yield` инструкции в возвращаемый тип итератора.  
   
- Можно использовать выписка `Exit Function` или `Return` для выполнения итерации.  
+ Можно использовать `Exit Function` или `Return` инструкции для завершения итерации.  
   
- "Выход" нет зарезервированого ключевые слова и имеет специальное значение, только если он используется в доступе функции `Iterator` или `Get`.  
+ «Доход» не является зарезервированным словом и имеет специальное значение только в том случае, если он используется в `Iterator` функции или `Get` доступа.  
   
- Дополнительные сведения о функциях итератора доступах и `Get` см. в разделе [Итераторы](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
+ Дополнительные сведения о функции итератора и `Get` методы доступа, в разделе [итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
-## Функции итератора и получают доступ  
- Объявление функции итератора или доступа `Get` должно отвечать следующим требованиям.  
+## <a name="iterator-functions-and-get-accessors"></a>Функции итератора и методы доступа Get  
+ Объявление функции итератора или `Get` доступа должен соответствовать следующим требованиям:  
   
--   Он должен включать модификатор [Итератор](../../../visual-basic/language-reference/modifiers/iterator.md).  
+-   Он должен содержать [итератор](../../../visual-basic/language-reference/modifiers/iterator.md) модификатор.  
   
--   Возвращаемый тип должен быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.  
+-   Возвращаемый тип должен быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, или <xref:System.Collections.Generic.IEnumerator%601>.</xref:System.Collections.Generic.IEnumerator%601> </xref:System.Collections.IEnumerator> </xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.IEnumerable>  
   
--   Он не может содержать параметры `ByRef`.  
+-   Он не может содержать `ByRef` параметров.  
   
- Функция итератора, не может содержаться в событии, конструкторе экземпляра, статическим конструктором, или статическом деструкторе.  
+ Функция итератор не может содержаться событие, конструктор экземпляра, статический конструктор или деструктор статический.  
   
- Функция итератора может быть анонимной функции.  Для получения дополнительной информации см. [Итераторы](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
+ Функции итератора может быть анонимной функции. Дополнительные сведения см. в разделе [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
-## Обработка исключений  
- Выписка `Yield` может быть внутри блока `Try`[Оператор Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  Блок `Try`, имеющий оператор `Yield`, может содержать блоки `Catch` и блок `Finally`.  
+## <a name="exception-handling"></a>Обработка исключений  
+ Объект `Yield` инструкция может находиться внутри `Try` блока [Try... CATCH... Оператор Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Объект `Try` блок, который имеет `Yield` инструкция может иметь `Catch` блокируется и может иметь `Finally` блок.  
   
- Оператор `Yield` не может быть внутри блока `Catch` или блока `Finally`.  
+ Объект `Yield` оператор не может находиться внутри `Catch` блока или `Finally` блока.  
   
- Если тело `For Each` \(вне функции итератора\) создает исключение, оно не выполняется блок `Catch` в функции итератора, но выполняется блок `Finally` в функции итератора.  Блок `Catch` внутри функции итератора перехватывает только исключения, происходящие внутри функции итератора.  
+ Если `For Each` текст (за пределами функции итератора) вызывает исключение, `Catch` блок в функции итератора не выполняется, но `Finally` выполняется блок в функции итератора. A `Catch` блок внутри функции итератора перехватывает только исключения, которые возникают внутри функции итератора.  
   
-## Техническая реализация  
- Следующий код возвращает `IEnumerable (Of String)` из функции итератора и затем перебираются элементы `IEnumerable (Of String)`.  
+## <a name="technical-implementation"></a>Техническая реализация  
+ Следующий код возвращает `IEnumerable (Of String)` из функции итератора и перебирает элементы `IEnumerable (Of String)`.  
   
 ```vb  
 Dim elements As IEnumerable(Of String) = MyIteratorFunction()  
@@ -80,29 +96,29 @@ For Each element As String In elements
 Next  
 ```  
   
- Вызов `MyIteratorFunction` не выполняет тело функции.  Вместо этого вызов возвращается в переменную `IEnumerable(Of String)``elements`.  
+ Вызов `MyIteratorFunction` тело функции не выполняется. Вместо этого вызов возвращает `IEnumerable(Of String)` в переменную `elements`.  
   
- В итерации цикла `For Each`, метод <xref:System.Collections.IEnumerator.MoveNext%2A> вызывается для `elements`.  Этот вызов выполняется тело `MyIteratorFunction` до тех пор, пока не будет достигнут следующую выписка `Yield`.  Выписка `Yield` возвращает не только выражение, задающее значение переменной `element` для использования циклом, но и свойства элементов <xref:System.Collections.Generic.IEnumerator%601.Current%2A>, `IEnumerable (Of String)`.  
+ В итерации `For Each` цикл, <xref:System.Collections.IEnumerator.MoveNext%2A>метод вызывается для `elements`.</xref:System.Collections.IEnumerator.MoveNext%2A> Этот вызов выполняет тело `MyIteratorFunction` до достижения следующего оператора `Yield`. `Yield` Инструкция возвращает выражение, определяющее значение не только `element` переменной для использования телом цикла, но также <xref:System.Collections.Generic.IEnumerator%601.Current%2A>Свойства элементов, который является `IEnumerable (Of String)`.</xref:System.Collections.Generic.IEnumerator%601.Current%2A>  
   
- В каждой последующей итерации цикла `For Each`, среда выполнения продолжает из тела итератора, где он вышло, снова остановка при достижении оператора `Yield`.  Цикл `For Each` завершается при достижении конца функции итератора или выписки `Return` или `Exit Function`.  
+ В каждой последующей итерации цикла `For Each` выполнение тела итератора продолжается с места остановки и при достижении оператора `Yield` оно снова останавливается. `For Each` Цикл завершается, когда конец функции итератора или `Return` или `Exit Function` к оператору.  
   
-## Пример  
- В следующем примере два оператора `Yield`, внутри цикла [For… Next](../../../visual-basic/language-reference/statements/for-next-statement.md).  Каждая итерация тела выписки [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) в `Main` создает вызов функции `Power` итератора.  Каждый вызов функции итератора переходит к следующему выполнения выписки `Yield`, которая происходит во время следующей итерации цикла `For…Next`.  
+## <a name="example"></a>Пример  
+ В следующем примере `Yield` оператор, находящийся внутри [для... Далее](../../../visual-basic/language-reference/statements/for-next-statement.md) цикла. Каждая итерация [для каждого](../../../visual-basic/language-reference/statements/for-each-next-statement.md) тела оператора в `Main` создает вызов `Power` функции итератора. При каждом вызове функции итератора происходит переход к следующему выполнению оператора `Yield`, которое осуществляется во время следующей итерации цикла `For…Next`.  
   
- Тип возвращаемого значения метода итератора <xref:System.Collections.Generic.IEnumerable%601> тип интерфейса итератора.  Если метод вызывается итератора, он возвращает перечислимый объект, содержащий степени числа.  
+ Возвращаемый тип метода итератора — <xref:System.Collections.Generic.IEnumerable%601>, тип интерфейса итератора.</xref:System.Collections.Generic.IEnumerable%601> При вызове метода итератора возвращается перечисляемый объект, содержащий степени числа.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements&#98;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
   
-## Пример  
- В следующем примере демонстрируется доступа `Get`, итератор.  Объявление свойства включает модификатор `Iterator`.  
+## <a name="example"></a>Пример  
+ В следующем примере демонстрируется метод доступа `Get`, представляющий собой итератор. Объявление включает в себя `Iterator` модификатор.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements&#99;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- Дополнительные примеры см. в разделе [Итераторы](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
+ Дополнительные примеры см. в разделе [итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
-## Требования  
- [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs-dev11-long-md.md)]  
+## <a name="requirements"></a>Требования  
+ [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)]  
   
-## См. также  
- [Итераторы](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>См. также  
+ [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)   
  [Операторы](../../../visual-basic/language-reference/statements/index.md)

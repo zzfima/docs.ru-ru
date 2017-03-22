@@ -1,93 +1,109 @@
 ---
-title: "Практическое руководство. Поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Aggregate - предложение"
-  - "aggregate - оператор [LINQ в Visual Basic]"
-  - "статистические запросы"
-  - "max - оператор [LINQ в Visual Basic]"
-  - "Max - свойство"
-  - "максимальные значения [LINQ в Visual Basic]"
-  - "min - оператор [LINQ в Visual Basic]"
-  - "минимальные значения [LINQ в Visual Basic]"
-  - "запросы [LINQ в Visual Basic], статистические запросы"
-  - "запросы [LINQ в Visual Basic], разделы практического руководства"
-  - "запросы [LINQ в Visual Basic], минимальные и максимальные значения"
+title: "Практическое руководство: поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- max operator [LINQ in Visual Basic]
+- aggregate operator [LINQ in Visual Basic]
+- aggregate queries
+- minimum values [LINQ in Visual Basic]
+- min operator [LINQ in Visual Basic]
+- queries [LINQ in Visual Basic], minimum and maximum values
+- Max property
+- maximum values [LINQ in Visual Basic]
+- Aggregate clause
+- queries [LINQ in Visual Basic], aggregate queries
+- queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
 caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
----
-# Практическое руководство. Поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6dc2eecf4cef9a219b7a06cfcc0fdf773e4e1333
+ms.lasthandoff: 03/13/2017
 
-Запросы, интегрированные в язык программирования \(Language\-Integrated Query, LINQ\), упрощают доступ к содержимому базы данных и обеспечивают выполнение запросов.  
+---
+# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Практическое руководство. Поиск минимального или максимального значения в результатах запроса с помощью LINQ (Visual Basic)
+Language Integrated Query (LINQ) упрощает для доступа к базе данных и выполнения запросов.  
   
- В следующем примере демонстрируется создание нового приложения, выполняющего запросы к базе данных SQL Server.  В примере определяются минимальное и максимальное значения для результатов с помощью предложений `Aggregate` и `Group By`.  Дополнительные сведения см. в разделах [Предложение Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) и [Предложение Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
+ Следующий пример демонстрирует создание нового приложения, выполняющего запросы к базе данных SQL Server. В примере определяются минимальное и максимальное значения для результатов с помощью `Aggregate` и `Group By` предложения. Дополнительные сведения см. в разделе [предложения Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md) и [предложение Group](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
- В примерах этого раздела используется учебная база данных "Борей".  При отсутствии учебной базы данных "Борей" на компьютере разработчика ее можно загрузить с веб\-узла [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088).  Подробные инструкции см. в разделе [Загрузка образцов баз данных](../Topic/Downloading%20Sample%20Databases.md).  
+ Примеры в этом разделе используется образец базы данных Northwind. Если у вас образца базы данных "Борей" на компьютере разработчика, можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](https://msdn.microsoft.com/library/bb399411).  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### Создание подключения к базе данных  
+### <a name="to-create-a-connection-to-a-database"></a>Создание подключения к базе данных  
   
-1.  В Visual Studio откройте **обозреватель серверов** или **обозреватель баз данных**. Для этого в меню **Вид** выберите пункт **Обозреватель серверов** или **Обозреватель баз данных**.  
+1.  В Visual Studio откройте **обозреватель серверов**/**обозревателя базы данных** , щелкнув **обозревателя**/**обозреватель баз данных** на **представление** меню.  
   
-2.  В **обозревателе серверов** или **обозревателе баз данных** щелкните правой кнопкой мыши **Подключения данных**, а затем выберите команду **Добавить подключение**.  
+2.  Щелкните правой кнопкой мыши **подключения к данным** в **обозревателя**/**обозревателя базы данных** и нажмите кнопку **Добавление подключения**.  
   
-3.  Укажите допустимое подключение к учебной базе данных "Northwind".  
+3.  Укажите допустимое подключение к учебной базе данных "Борей".  
   
-### Добавление проекта, содержащего файл LINQ\-SQL  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Добавление проекта, содержащего файл LINQ to SQL  
   
-1.  В меню **Файл** окна Visual Studio выберите команду **Создать** и щелкните **Проект**.  Выберите **Приложение Windows Forms** в качестве типа проекта Visual Basic.  
+1.  В Visual Studio на **файл** наведите указатель мыши на **New** и нажмите кнопку **проекта**. Выберите Visual Basic **приложение Windows Forms** в качестве типа проекта.  
   
-2.  В меню **Проект** выберите команду **Добавить новый элемент**.  Выберите шаблон элемента **Классы LINQ\-SQL**.  
+2.  В меню **Проект** выберите пункт **Добавить новый элемент**. Выберите **классы LINQ to SQL** шаблона элемента.  
   
-3.  Назовите файл `northwind.dbml`.  Нажмите кнопку **Добавить**.  Откроется реляционный конструктор объектов для файла northwind.dbml.  
+3.  Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. Реляционный конструктор объектов (конструктор O/R) открыт для файла northwind.dbml.  
   
-### Добавление таблицы к запросу в объектно\-реляционном конструкторе  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>Добавление таблицы к запросу реляционный конструктор объектов  
   
-1.  В представлении **Обозреватель серверов** или **Обозреватель баз данных** разверните подключение к базе данных "Northwind".  Разверните папку **Таблицы**.  
+1.  В **обозревателя**/**обозревателя базы данных**, разверните подключение к базе данных Northwind. Разверните **таблиц** папки.  
   
-     Если реляционный конструктор объектов закрыт, откройте его снова, дважды щелкнув файл northwind.dbml, который был добавлен ранее.  
+     Если реляционный конструктор объектов закрыт, его можно открыть, дважды щелкнув файл northwind.dbml, который был добавлен ранее.  
   
-2.  Щелкните таблицу "Клиенты" и перетащите ее в левую область конструктора.  Щелкните таблицу "Заказы" и перетащите ее в левую область конструктора.  
+2.  Щелкните таблицу Customers и перетащите его в левую область конструктора. Щелкните в таблице Orders и перетащите его в левую область конструктора.  
   
-     Для проекта в конструкторе создаются новые объекты `Customer` и `Order`.  Обратите внимание, что конструктор автоматически обнаруживает связи между таблицами и создает дочерние свойства для связанных объектов.  Например, функция IntelliSense покажет, что в объекте `Customer` имеется свойство `Orders` для всех заказов, связанных с клиентом.  
+     Конструктор создает новый `Customer` и `Order` объекты для проекта. Обратите внимание, что конструктор автоматически обнаруживает связи между таблицами и создает дочерние свойства для связанных объектов. Например, IntelliSense покажет, что `Customer` объект имеет `Orders` свойства для всех заказов, связанных с клиентом.  
   
 3.  Сохраните изменения и закройте конструктор.  
   
 4.  Сохраните проект.  
   
-### Добавление кода в запрос к базе данных и отображение результатов  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Чтобы добавить код для запроса к базе данных и отображения результатов  
   
-1.  С **панели элементов** перетащите элемент управления <xref:System.Windows.Forms.DataGridView> в заданную по умолчанию форму Windows Forms для проекта \(Form1\).  
+1.  От **элементов**, перетащите <xref:System.Windows.Forms.DataGridView>элемента управления на форме Windows Forms по умолчанию для проекта, Form1.</xref:System.Windows.Forms.DataGridView>  
   
-2.  Дважды щелкните Form1, чтобы добавить код в событие формы `Load`.  
+2.  Дважды щелкните Form1, чтобы добавить код для `Load` события формы.  
   
-3.  При добавлении таблиц объектно\-реляционный конструктор добавляет в проект объект <xref:System.Data.Linq.DataContext>.  Этот объект содержит код, необходимый для обращения к этим таблицам, в дополнение к отдельным объектам и коллекциям для каждой таблицы.  Объекту <xref:System.Data.Linq.DataContext> для проекта присвоено имя на основе имени файла .dbml.  Для данного проекта объект <xref:System.Data.Linq.DataContext> называется `northwindDataContext`.  
+3.  При добавлении таблиц в реляционный конструктор объектов конструктор добавил <xref:System.Data.Linq.DataContext>объект для проекта.</xref:System.Data.Linq.DataContext> Этот объект содержит код, который должен иметь доступ к этим таблицам, в дополнение к отдельным объектам и коллекциям для каждой таблицы. <xref:System.Data.Linq.DataContext>Объект для проекта имя на основе имени файла .dbml.</xref:System.Data.Linq.DataContext> Для этого проекта <xref:System.Data.Linq.DataContext>объект называется `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
   
-     Можно создать экземпляр <xref:System.Data.Linq.DataContext> в коде и запросить таблицы, указанные реляционным конструктором объектов.  
+     Можно создать экземпляр <xref:System.Data.Linq.DataContext>в коде и запросить таблицы, указанные в реляционный конструктор объектов.</xref:System.Data.Linq.DataContext>  
   
-     Добавьте следующий код в событие `Load`.  Этот код запрашивает таблицы, которые предоставляются как свойства в контексте данных, и определяет минимальные и максимальные значения для результатов.  Пример использует предложение `Aggregate` для запроса одного результата и предложение `Group By` для отображения среднего значения для сгруппированных результатов.  
+     Добавьте следующий код в `Load` событий. Этот код запрашивает таблицы, которые представляются как свойства в контексте данных и определяет минимальное и максимальное значения для результатов. Пример использует `Aggregate` предложение для запроса одного результата и `Group By` предложения для отображения среднего значения для сгруппированных результатов.  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos&#14;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
  [Запросы](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [Методы DataContext \(реляционный конструктор объектов\)](/visual-studio/data-tools/datacontext-methods-o-r-designer)   
- [Пошаговое руководство. Создание классов LINQ to SQL \(реляционный конструктор объектов\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [Методы DataContext (реляционный конструктор)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)
+

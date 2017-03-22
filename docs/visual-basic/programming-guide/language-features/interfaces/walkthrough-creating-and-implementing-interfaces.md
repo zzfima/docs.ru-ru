@@ -1,121 +1,138 @@
 ---
-title: "Пошаговое руководство. Создание и реализация интерфейсов (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "реализация интерфейсов, пошаговое руководство"
-  - "интерфейсы, создание"
-  - "интерфейсы, проверка"
-  - "интерфейсы, пошаговые руководства"
+title: "Создание и реализация интерфейсов (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- interfaces, walkthroughs
+- interfaces, testing
+- interface implementation, walkthrough
+- interfaces, creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Пошаговое руководство. Создание и реализация интерфейсов (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 076bc8d33e97286c31f27a2016e39a25e9cec22c
+ms.lasthandoff: 03/13/2017
 
-Интерфейсы описывают характеристики свойств, методов и событий, но содержат сведения о реализации до структур и классов.  
+---
+# <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Пошаговое руководство. Создание и реализация интерфейсов (Visual Basic)
+Интерфейсы описывают характеристики свойств, методов и событий, но оставить детали реализации до структур или классов.  
   
- Это пошаговое руководство демонстрирует процедуры объявления и реализации интерфейса.  
+ В этом пошаговом руководстве показано, как объявления и реализации интерфейса.  
   
 > [!NOTE]
 >  В этом пошаговом руководстве не предоставляет сведения о том, как создать пользовательский интерфейс.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### Определение интерфейса  
+### <a name="to-define-an-interface"></a>Определение интерфейса  
   
-1.  Откройте новый проект приложения Windows в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+1.  Откройте новую [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] проекта приложения Windows.  
   
-2.  Добавьте в проект новый модуль, выбрав команду **Добавить модуль** в меню **Проект**.  
+2.  Добавьте новый модуль в проект, нажав кнопку **добавить модуль** на **проекта** меню.  
   
-3.  Назовите новый модуль `Module1.vb` и нажмите кнопку **Добавить**.  Отобразится код нового модуля.  
+3.  Назовите новый модуль `Module1.vb` и нажмите кнопку **добавить**. Отображается код нового модуля.  
   
-4.  Определите интерфейс с именем `TestInterface` внутри `Module1` путем ввода `Interface TestInterface` между инструкциями `Module` и `End Module` и нажмите клавишу ENTER.  **Редактор кода** определит зарезервированное слово `Interface` и добавит инструкцию `End Interface` для формирования блока кода.  
+4.  Определите интерфейс с именем `TestInterface` в `Module1` , введя `Interface TestInterface` между `Module` и `End Module` инструкций и нажмите клавишу ВВОД. **Редактор кода** отступы `Interface` ключевое слово и добавляет `End Interface` инструкции для формирования блока кода.  
   
-5.  Определите для интерфейса свойство, метод и событие, расположив между операторами `Interface` и `End Interface` следующий код:  
+5.  Определение свойств, методов и событий интерфейса, размещая следующий код между `Interface` и `End Interface` инструкции:  
   
-     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_1.vb)]  
+     [!code-vb[VbVbalrOOP&#98;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_1.vb)]  
   
-## Реализация  
- Можно заметить, что синтаксис, используемый для объявления членов интерфейса, отличается от синтаксиса объявления членов класса.  Это отличие отражает тот факт, что интерфейсы не содержат кода реализации.  
+## <a name="implementation"></a>Реализация  
+ Вы можете заметить, что синтаксис, используемый для объявления членов интерфейса отличается от синтаксиса, используемого для объявления членов класса. Это отличие отражает тот факт, что интерфейсы не содержат кода реализации.  
   
-#### Чтобы реализовать интерфейс  
+#### <a name="to-implement-the-interface"></a>Реализация интерфейса  
   
-1.  Добавьте класс с именем `ImplementationClass`, добавив следующую инструкцию в `Module1` после инструкции `End Interface`, но до инструкции `End Module` и нажмите клавишу ENTER:  
+1.  Добавьте класс с именем `ImplementationClass` , добавив следующую инструкцию, чтобы `Module1`после того, как `End Interface` инструкции до `End Module` инструкции и нажмите клавишу ВВОД:  
   
-     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_2.vb)]  
+     [!code-vb[VbVbalrOOP&#99;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_2.vb)]  
   
-     В интегрированной среде разработки при нажатии клавиши ENTER **Редактор кода** подставит соответствующий оператор `End Class`.  
+     Если вы работаете в интегрированной среде разработки, **редактор кода** подставит соответствующий `End Class` инструкция, при нажатии клавиши ВВОД.  
   
-2.  Добавьте в класс `ImplementationClass` следующий оператор `Implements`, который определяет реализуемый классом интерфейс:  
+2.  Добавьте следующие `Implements` инструкции `ImplementationClass`, который определяет реализуемый класс реализует:  
   
-     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_3.vb)]  
+     [!code-vb[VbVbalrOOP&#100;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_3.vb)]  
   
-     Указанный отдельно от других элементов в начале класса или структуры оператор `Implements` показывает, что класс или структура реализуют интерфейс.  
+     Указанный отдельно от других элементов в верхней части класса или структуры, `Implements` оператор указывает, что класс или структура реализуют интерфейс.  
   
-     При работе в среде разработки **Редактор кода** реализует члены класса, необходимые `TestInterface`, при нажатии клавиши ENTER; можно пропустить следующий шаг.  
+     Если вы работаете в интегрированной среде разработки, **редактор кода** реализует члены класса, необходимые `TestInterface` при нажатии клавиши ВВОД, и следующий шаг можно пропустить.  
   
-3.  Если вы работаете не в интегрированной среде разработки, то необходимо реализовать все члены интерфейса `MyInterface`.  В процедуру события `ImplementationClass` добавьте следующий код для реализации `Event1`, `Method1` и `Prop1`:  
+3.  Если вы работаете не в интегрированной среде разработки, необходимо реализовать все члены интерфейса `MyInterface`. Добавьте следующий код в `ImplementationClass` реализовать `Event1`, `Method1`, и `Prop1`:  
   
-     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_4.vb)]  
+     [!code-vb[VbVbalrOOP&#101;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_4.vb)]  
   
-     Инструкция `Implements` указывает имена интерфейсов и членов реализуемых интерфейсов.  
+     `Implements` Инструкция имена интерфейсов и членов реализуемых интерфейсов.  
   
-4.  Завершите определение `Prop1` путем добавления закрытых полей класса, в которых хранится значение свойства:  
+4.  Завершите определение `Prop1` путем добавления закрытое поле для класса, который хранится значение свойства:  
   
-     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_5.vb)]  
+     [!code-vb[VbVbalrOOP&#102;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_5.vb)]  
   
-     Возвратите значение `pval` из метода Get доступа к свойства.  
+     Возвращает значение `pval` из свойства метод доступа get.  
   
-     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_6.vb)]  
+     [!code-vb[VbVbalrOOP&#103;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_6.vb)]  
   
-     Установите значение `pval` в методе Set свойства.  
+     Задайте значение `pval` метода доступа set свойства.  
   
-     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_7.vb)]  
+     [!code-vb[VbVbalrOOP&#104;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_7.vb)]  
   
-5.  Завершите определение `Method1`, добавив следующий код.  
+5.  Завершите определение `Method1` , добавив следующий код.  
   
-     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_8.vb)]  
+     [!code-vb[VbVbalrOOP&#105;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_8.vb)]  
   
-#### Чтобы проверить реализацию интерфейса  
+#### <a name="to-test-the-implementation-of-the-interface"></a>Чтобы проверить реализацию интерфейса  
   
-1.  Щелкните правой клавишей мыши форму запуска проекта в **обозревателе решений** и выберите команду **Показать код**.  Редактор покажет класс формы запуска.  По умолчанию форма запуска называется `Form1`.  
+1.  Щелкните правой кнопкой мыши форму запуска проекта в **обозревателе решений**и нажмите кнопку **Просмотр кода**. Редактор покажет класс формы запуска. По умолчанию форма запуска называется `Form1`.  
   
-2.  Добавьте следующее поле `testInstance` в класс `Form1`:  
+2.  Добавьте следующие `testInstance` на `Form1` класса:  
   
-     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_9.vb)]  
+     [!code-vb[VbVbalrOOP&#120;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_9.vb)]  
   
-     При объявлении `testInstance` как `WithEvents`, класс `Form1` может обрабатывать его события.  
+     Объявив `testInstance` как `WithEvents`, `Form1` класс может обрабатывать его события.  
   
-3.  Добавьте следующий обработчик событий к классу `Form1` для обработки событий, созданных `testInstance`:  
+3.  Добавьте следующий обработчик событий к `Form1` класс для обработки событий, вызванных `testInstance`:  
   
-     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_10.vb)]  
+     [!code-vb[VbVbalrOOP&#106;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_10.vb)]  
   
-4.  Добавьте в класс `Form1` подпрограмму с именем `Test`, чтобы протестировать класс реализации:  
+4.  Добавить подпрограмму с именем `Test` для `Form1` класса, чтобы протестировать класс реализации:  
   
-     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_11.vb)]  
+     [!code-vb[VbVbalrOOP&#107;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_11.vb)]  
   
-     Процедура `Test` создает экземпляр класса, который реализует `MyInterface`, и присваивает этот экземпляр полю `testInstance`, задает свойство и запускает метод через интерфейс.  
+     `Test` Процедура создает экземпляр класса, который реализует `MyInterface`, присваивает этот экземпляр `testInstance` поля, задает свойство и запускает метод через интерфейс.  
   
-5.  Добавьте код для вызова процедуры `Test` из процедуры `Form1 Load` при запуске формы:  
+5.  Добавьте код для вызова `Test` процедуру `Form1 Load` процедуры при запуске формы:  
   
-     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_12.vb)]  
+     [!code-vb[VbVbalrOOP&#108;](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_12.vb)]  
   
-6.  Нажав клавишу F5, запустите процедуру `Test`.  Появится сообщение "Prop1 was set to 9" \(значение свойства Prop1 установлено равным 9\).  После нажатия кнопки появится сообщение "The X parameter for Method1 is 5" \(параметр Х метода Method1 равен 5\).  Нажмите OK и появится сообщение "The event handler caught the event" \(событие перехвачено обработчиком\).  
+6.  Запустите `Test` процедура, нажав клавишу F5. Отображается сообщение «Prop1 было установлено значение 9». После нажатия кнопки ОК, сообщение «X параметра для метода Method1 равно 5» отображается. Нажмите кнопку ОК, и появится сообщение «обработчик события обнаружено событие».  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Оператор Implements](../../../../visual-basic/language-reference/statements/implements-statement.md)   
  [Интерфейсы](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)   
  [Оператор Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)   
  [Оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md)
+

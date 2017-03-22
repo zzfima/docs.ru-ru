@@ -1,33 +1,50 @@
 ---
-title: "Тип для переменной &lt;variablename&gt; не будет определен, так как она привязана к полю во включающей области | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc42110"
-  - "bc42110"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42110"
+title: "Тип переменной &quot;&lt;variablename&gt;&quot; не будет определен, так как она привязана к полю во включающей области | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc42110
+- bc42110
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 caps.latest.revision: 33
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 33
----
-# Тип для переменной &lt;variablename&gt; не будет определен, так как она привязана к полю во включающей области
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ab7d69c34a58dc898553868258c4fdf6b81db343
+ms.lasthandoff: 03/13/2017
 
-Тип для переменной '\<variablename\>' не будет выведен, поскольку он привязан к полю во внешней области.Либо измените имя variablename '\<\>', или используйте полное имя \(например, «Me.variablename» или «MyBase.variablename "\).  
+---
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Тип переменной "&lt;variablename&gt;" не будет определен, так как она привязана к полю во включающей области
+Тип переменной "\<variablename настроек" не будет определен, так как она привязана к полю во включающей области. Либо измените имя "\<variablename настроек", или использовать полное доменное имя (например, «Me.variablename» или «MyBase.variablename»).  
   
- Имя переменной цикла совпадает с именем поля класса или другой заключающей ее области видимости.  Поскольку управляющая переменная используется без предложения `As`, она присоединена к полю во включающей области, и компилятор не создает новую переменную и не выводит ее тип.  
+ Переменная управления циклом в коде имеет то же имя, как поле класса или других внешней области видимости. Поскольку управляющая переменная используется без `As` предложения, он привязан к полю во включающей области, и компилятор не создает новую переменную и не вывести его тип.  
   
- В следующем примере управляющая переменная `Index` в операторе `For` связана с полем `Index` в классе `Customer`.  Компилятор не создает новую переменную для управляющей переменной `Index` и не выводит ее тип.  
+ В следующем примере `Index`, управляющая переменная в `For` инструкции, привязан к `Index` в `Customer` класса. Компилятор не создает новую переменную для переменной `Index` или вывести его тип.  
   
 ```  
 Class Customer  
@@ -47,32 +64,32 @@ End Class
   
 ```  
   
- По умолчанию это сообщение является предупреждающим.  Сведения о том, как скрыть предупреждения или как рассматривать предупреждения как ошибки, см. в разделе [Настройка предупреждений в Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ По умолчанию данное сообщение является предупреждением. Сведения о том, как скрыть предупреждения или как рассматривать предупреждения как ошибки в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Идентификатор ошибки**: BC42110  
+ **Идентификатор ошибки:** BC42110  
   
-### Чтобы устранить это предупреждение, выполните следующие действия:  
+### <a name="to-address-this-warning"></a>Устранение предупреждения  
   
--   Сделайте переменную цикла локальной, изменив ее имя на уникальный идентификатор.  
+-   Сделайте локальной переменной цикла, изменив ее имя на идентификатор, который не является также именем поля класса.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Поясните с помощью префикса `Me.` у имени переменной цикла, что она привязывается к полю класса.  
+-   Уточняется, что переменная управления циклом привязывается к полю класса с помощью префикса `Me.` на имя переменной.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Вместо того, чтобы полагаться на вывод локального типа, используйте предложение `As` для задания типа переменной цикла.  
+-   Вместо того чтобы использовать вывод локального типа, используйте `As` предложение, чтобы указать тип для переменной цикла.  
   
     ```  
     For Index As Integer = 1 To 10  
     ```  
   
-## Пример  
- В следующем коде показан исправленный первым способом предыдущий пример.  
+## <a name="example"></a>Пример  
+ В следующем коде показано ранее примере с первого исправления на месте.  
   
 ```  
 Class Customer  
@@ -90,10 +107,10 @@ Class Customer
 End Class  
 ```  
   
-## См. также  
- [Option Infer \- оператор](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [Оператор For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Оператор For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Практическое руководство. Ссылка на текущий экземпляр объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
+## <a name="see-also"></a>См. также  
+ [Оператор Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
+ [Для каждого... Следующий оператор](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
+ [Для... Следующий оператор](../../../visual-basic/language-reference/statements/for-next-statement.md)   
+ [Практическое руководство: ссылки на текущий экземпляр объекта](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
  [Вывод локального типа](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Me, My, MyBase и MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

@@ -1,76 +1,92 @@
 ---
-title: "Повышение типа (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "объявленные элементы, область действия"
-  - "объявленные элементы, видимость"
-  - "Partial - ключевое слово, неожиданные результаты с повышением типа"
-  - "область действия, объявленные элементы"
-  - "область действия, Visual Basic"
-  - "повышение типа"
-  - "видимость, объявленные элементы"
+title: "Введите повышение (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declared elements, scope
+- visibility, declared elements
+- Partial keyword, unexpected results with type promotion
+- scope, declared elements
+- scope, Visual Basic
+- type promotion
+- declared elements, visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# Повышение типа (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d732e765fc28eaedc0deab477dbf9955a40e97c9
+ms.lasthandoff: 03/13/2017
 
-Когда в модуле объявляется элемент программирования, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] повышает уровень его области до пространства имен, содержащего модуль.  Это называется *повышение типа*.  
+---
+# <a name="type-promotion-visual-basic"></a>Повышение типа (Visual Basic)
+При объявлении элемента программирования в модуле, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] повышает уровень его области до пространства имен, содержащего модуль. Это называется *введите повышения*.  
   
- В приведенном ниже примере показано определение схемы модуля и двух членов этого модуля.  
+ В следующем примере показано определение схемы модуля и двух членов этого модуля.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements&#1;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
- В пределах `projModule` элементы программирования, объявленные на уровне модуля, продвигаются до уровня `projNamespace`.  В предыдущем примере `basicEnum` и `innerClass` продвигаются, а `numberSub` — нет, поскольку он не объявлен на уровне модуля.  
+ В `projModule`, программирования элементы, объявленные на уровне модуля, продвигаются в `projNamespace`. В предыдущем примере `basicEnum` и `innerClass` повышаются, но `numberSub` — нет, поскольку он не объявлен на уровне модуля.  
   
-## Эффект повышения типа  
- Эффект повышения типа заключается в том, что в квалификационную строку не нужно включать имя модуля.  В приведенном ниже примере выполняется два вызова процедуры из предыдущего примера.  
+## <a name="effect-of-type-promotion"></a>Эффект повышения типа  
+ Эффект повышения типа является то, что уточняющую строку не нужно включать имя модуля. Следующий пример вызывает две процедуры в предыдущем примере.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements&#2;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
   
- В предыдущем примере для первого вызова используются полные квалификационные строки.  Однако это не обязательно, поскольку применяется повышение типа.  Во втором вызове также присутствует обращение к членам модуля, но без включения `projModule` в строки квалификации.  
+ В предыдущем примере для первого вызова используются полные квалификационные строки. Однако это не требуется из-за повышения типов. Во втором вызове также доступ к членам модуля без включения `projModule` в строки квалификации.  
   
-## Отмена повышения типа  
- Если в пространстве имен уже имеется член, имя которого совпадает с именем члена модуля, повышение типа для члена модуля отменяется.  В приведенном ниже примере показано определение схемы перечисления и модуль в рамках одного пространства имен.  
+## <a name="defeat-of-type-promotion"></a>Отмена повышения типа  
+ Если пространство имен уже содержит член с тем же именем члена модуля, повышение типа для члена модуля отменяется. Следующий пример показывает определение схемы перечисления и модуль в том же пространстве имен.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements&#3;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- В предыдущем примере [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] не удается повысить уровень класса `abc` до уровня `thisNameSpace`, поскольку уже существует перечисление с тем же именем на уровне пространства имен.  Чтобы получить доступ к `abcSub`, необходимо использовать полную квалификационную строку `thisNamespace.thisModule.abc.abcSub`.  Однако для класса `xyz` повышение уровня выполняется, и можно получить доступ к `xyzSub` с использованием укороченной квалификационной строки `thisNamespace.xyz.xyzSub`.  
+ В предыдущем примере [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] не удается повысить уровень класса `abc` для `thisNameSpace` , поскольку уже существует перечисление с тем же именем на уровне пространства имен. Чтобы получить доступ к `abcSub`, необходимо использовать полное имя пространства имен строка `thisNamespace.thisModule.abc.abcSub`. Тем не менее, класс `xyz` по-прежнему повышается, и можно получить доступ к `xyzSub` с короткой строки квалификации `thisNamespace.xyz.xyzSub`.  
   
-### Отмена повышения типа для разделяемых типов  
- Если для класса или структуры внутри модуля используется ключевое слово [Partial](../../../../visual-basic/language-reference/modifiers/partial.md), повышение типа для этого класса или структуры автоматически отменяется независимо от того, имеется ли в пространстве имен член с тем же именем.  Для других элементов в модуле повышение типа по\-прежнему возможно.  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>Отмена повышения типа для разделяемых типов  
+ Если класс или структуру в модуле использует [частичного](../../../../visual-basic/language-reference/modifiers/partial.md) ключевое слово, повышение типа является невозможным для этого класса или структуры, ли пространство имен содержит член с тем же именем. Других элементов в модуле повышение типа по-прежнему возможно.  
   
- **Последствия.** Отмена повышения типа для частично выполненного определения может привести к непредсказуемым результатам и даже ошибкам компилятора.  В приведенном ниже примере показана схема частично выполненных определений класса, одно из которых находится внутри модуля.  
+ **Последствия.** Отмена повышения типа частичного определения может привести к непредсказуемым результатам и даже ошибкам компилятора. Следующий пример показывает каркас определения разделяемого класса, один из которых находится внутри модуля.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements&#4;](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
- В предыдущем примере разработчик может ожидать, что компилятор выполнит слияние двух частично выполненных определений `sampleClass`.  Однако компилятор не примет во внимание повышение типа для частично выполненного определения внутри `sampleModule`.  В результате он попытается скомпилировать два отдельных и различных класса, имеющих одинаковое имя `sampleClass`, но с разными квалификационными путями.  
+ В предыдущем примере разработчик может ожидать, что компилятор слияние двух частично выполненных определений `sampleClass`. Тем не менее, компилятор не учитывает частичное определение внутри акции `sampleModule`. В результате он попытается скомпилировать два отдельных и различных класса, обе с именем `sampleClass` , но с разными квалификационными путями.  
   
- Компилятор выполняет слияние частично выполненных определений только в том случае, если их полные пути одинаковы.  
+ Компилятор объединяет частичные определения, только если их полные пути идентичны.  
   
-## Рекомендации  
- Приведенные далее рекомендации даны на основании практического опыта программирования.  
+## <a name="recommendations"></a>Рекомендации  
+ Следующие рекомендации представляют рекомендаций программирования.  
   
--   **Уникальные имена.** Если имеется полный контроль над именованием элементов программирования, рекомендуется везде и всегда использовать уникальные имена.  Одинаковые имена требуют дополнительного уточнения и могут сделать код трудным для чтения.  Они также могут привести к непредсказуемым результатам и незаметным на первый взгляд ошибкам.  
+-   **Уникальные имена.** Если у вас есть полный контроль над именованием элементов программирования, рекомендуется всегда использовать уникальные имена везде. Одинаковые имена требуют дополнительного уточнения и могут сделать код трудным для чтения. Они также может привести к непредсказуемым результатам и опасным ошибкам.  
   
--   **Полная квалификация.** При работе с модулями и другими элементами в одном пространстве имен безопаснее использовать полное определение для всех элементов программирования.  Если для члена модуля отменено повышение типа, и отсутствует полная квалификация этого члена, возможно случайное обращение к другому элементу программирования.  
+-   **Полное имя пространства имен.** При работе с модулями и другими элементами в одном пространстве имен безопаснее использовать полное определение для всех элементов программирования. Если повышение типа для члена модуля отменяется, а не полностью соответствуют этому элементу, может случайно доступ к другому элементу программирования.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)   
  [Оператор Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
+ [Частичное](../../../../visual-basic/language-reference/modifiers/partial.md)   
  [Область видимости в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Практическое руководство. Управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
+ [Практическое руководство: управление областью действия переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
  [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -1,103 +1,119 @@
 ---
-title: "Процедуры операторов (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "перегрузка операторов"
-  - "процедуры операторов"
-  - "операторы [Visual Basic], перегрузка"
-  - "перегруженные операторы"
-  - "процедуры, оператор"
-  - "синтаксис, Процедуры операторов"
-  - "код Visual Basic, операторы"
-  - "код Visual Basic, процедуры"
+title: "Процедуры операторов (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- procedures, operator
+- Visual Basic code, operators
+- syntax, Operator procedures
+- operators [Visual Basic], overloading
+- overloaded operators
+- operator overloading
+- operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# Процедуры операторов (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a9e86c9c466ba236cc33153f2f341af35c622de6
+ms.lasthandoff: 03/13/2017
 
-Процедура оператора — это последовательность операторов [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], определяющих поведение стандартного оператора \(такого как `*`, `<>` или `And`\) в классе или структуре, определенных вами.  Это также называется *перегрузкой оператора*.  
+---
+# <a name="operator-procedures-visual-basic"></a>Процедуры операторов (Visual Basic)
+Процедура оператора — это последовательность [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] инструкции, определяющие поведение стандартного оператора (такие как `*`, `<>`, или `And`) в классе или структуре, определенных вами. Это также называется *перегрузка операторов*.  
   
-## Когда определять процедуры оператора:  
- После определения класса или структуры, можно объявлять переменные типа этого класса или структуры.  Иногда такая переменная должна участвовать в операции как часть выражения.  Чтобы сделать это, она должна быть операндом оператора.  
+## <a name="when-to-define-operator-procedures"></a>Когда определять процедуры оператора  
+ После определения класса или структуры, можно объявлять переменные типа этого класса или структуры. Иногда такая переменная должна участвовать в операции как часть выражения. Чтобы сделать это, ее необходимо операнд оператора.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] определяет операторы только на его основных типах данных.  Можно определить поведение оператора, если один или оба операнда имеют тип класса или структуры.  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Определяет операторы только на его основных типах данных. Можно определить поведение оператора, если один или оба операнда имеют тип класса или структуры.  
   
- Дополнительные сведения см. в разделе [Оператор Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Дополнительные сведения см. в разделе [оператор](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
-## Типы процедур оператора  
+## <a name="types-of-operator-procedure"></a>Типы процедур оператора  
  Процедура оператора может быть одним из следующих типов:  
   
 -   Определение унарного оператора, где аргумент имеет тип класса или структуры.  
   
--   Определение бинарного оператора, в котором по крайней мере один из аргументов имеет тип класса или структуры.  
+-   Определение бинарного оператора, где по крайней мере один из аргументов имеет тип класса или структуры.  
   
 -   Определение оператора преобразования, где аргумент имеет тип класса или структуры.  
   
 -   Определение оператора преобразования, который возвращает тип класса или структуры.  
   
- Операторы преобразования всегда унарные, поэтому всегда используйте `CType` как оператор, который вы определяете.  
+ Операторы преобразования всегда унарные, поэтому всегда использовать `CType` как оператор, который вы определяете.  
   
-## Синтаксис объявления  
- Для объявления процедуры оператора используется следующий синтаксис:  
+## <a name="declaration-syntax"></a>Синтаксис объявления  
+ Синтаксис объявления процедуры оператора выглядит следующим образом:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`   ``  *символ\_оператора*  `(` *операнд\_1*  `[,`  *операнд\_2* `]) As`  *тип\_данных*  
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol*  `(` *operand1*  `[,`  *operand2* `]) As`  *datatype*  
   
  `' Statements of the operator procedure.`  
   
  `End Operator`  
   
- Используйте `Widening` или ключевое слово `Narrowing` только в операторе преобразования типа.  Символ оператора является всегда [Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для оператора преобразования типа.  
+ Использовать `Widening` или `Narrowing` ключевое слово только в операторе преобразования типа. Символ оператора является всегда [функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md) для оператора преобразования типа.  
   
- Объявите два операнда, чтобы определить бинарный оператор, и объявите один операнд, чтобы определить унарный оператор, включая оператор преобразования типа.  Все операнды должны быть объявлены `ByVal`.  
+ Объявите два операнда, чтобы определить бинарный оператор, и объявите один операнд, чтобы определить унарный оператор, включая оператор преобразования типа. Все операнды должны быть объявлены `ByVal`.  
   
- Объявите каждый операнд таким же образом, как вы объявили параметры для [Подпрограммы](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md).  
+ Объявите каждый операнд так же, как вы объявили параметры для [Sub-процедуры](./sub-procedures.md).  
   
-### Тип данных  
- Поскольку определяется оператор на классе или структуре, определенных вами, по крайней мере один из операндов должен иметь тип данных класса или структуры.  Для оператора преобразования типа операнд или возвращаемый тип должен иметь тип данных класса или структуры.  
+### <a name="data-type"></a>Тип данных  
+ Поскольку вы определяете оператора для класса или структуры, которые были определены, по крайней мере один из операндов должны иметь тип данных класса или структуры. Для оператора преобразования типа операнд или возвращаемый тип должен быть типа данных класса или структуры.  
   
- Дополнительные сведения см. в разделе [Оператор Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+ Дополнительные сведения см. в разделе [оператор](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
-## Синтаксис вызова  
- Вызовите процедуру оператора неявно с помощью символа оператора в выражении.  Укажите операнды таким же образом, как и для предварительно определенных операторов.  
+## <a name="calling-syntax"></a>Синтаксис вызова  
+ Вызовите процедуру оператора неявно с помощью символа оператора в выражении. Укажите операнды так же, как для стандартных операторов.  
   
- При неявном вызове процедуры оператора используется следующий синтаксис:  
+ Неявный вызов процедуры оператора синтаксис выглядит следующим образом:  
   
- `Dim testStruct As`  *structurename*  
+ `Dim testStruct As`  *Имя структуры*  
   
- `Dim testNewStruct As`  *имя\_структуры*  `= testStruct`  *символ\_оператора*  `10`  
+ `Dim testNewStruct As`  *Имя структуры*`= testStruct`*operatorsymbol    *  `10`  
   
-### Пример объявления и вызова  
- Следующая структура сохраняет значение 128\-разрядного целочисленного значения со знаком, как составные части младшего и старшего порядка.  Она определяет оператор `+` для добавления двух значений `veryLong`  и создания результирующего значения `veryLong` .  
+### <a name="illustration-of-declaration-and-call"></a>Пример объявления и вызова  
+ Следующая структура сохраняет значение 128-разрядное целое число со знаком, как составные части старший и младший. Он определяет `+` оператор для добавления двух `veryLong` значения и сформировать сканером `veryLong` значение.  
   
- [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#23;](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
   
- В следующем примере показан типичный вызов оператора `+`, определенного для `veryLong`.  
+ В следующем примере показано типичный вызов `+` оператора, определенного в `veryLong`.  
   
- [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures&#24;](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Дополнительные сведения и примеры содержатся в [Перегрузка операторов в Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
+ Дополнительные сведения и примеры см. в разделе [перегрузки операторов в Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   
-## См. также  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Подпрограммы](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Процедуры Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Процедуры свойств](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
+## <a name="see-also"></a>См. также  
+ [Процедуры](./index.md)   
+ [Sub-процедуры](./sub-procedures.md)   
+ [Процедуры функций](./function-procedures.md)   
+ [Процедуры свойств](./property-procedures.md)   
+ [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)   
  [Оператор Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Практическое руководство. Определение оператора](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Практическое руководство. Определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [Практическое руководство. Вызов процедуры оператора](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)   
- [Практическое руководство. Использование класса, в котором определяются операторы](../../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+ [Практическое руководство: определение оператора](./how-to-define-an-operator.md)   
+ [Практическое руководство: определение оператора преобразования](./how-to-define-a-conversion-operator.md)   
+ [Практическое руководство: вызов процедуры оператора](./how-to-call-an-operator-procedure.md)   
+ [Практическое руководство. Использование класса, в котором определяются операторы](./how-to-use-a-class-that-defines-operators.md)

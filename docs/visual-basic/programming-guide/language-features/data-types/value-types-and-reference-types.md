@@ -1,36 +1,52 @@
 ---
-title: "Типы значений и ссылочные типы | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "типы данных [Visual Basic], ссылочные типы"
-  - "типы данных [Visual Basic], типы значений"
-  - "ссылочные типы данных"
-  - "ссылочные типы"
-  - "типы [Visual Basic]"
-  - "типы данных значений"
-  - "типы значений"
+title: "Типы значений и ссылочные типы | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- reference data types
+- reference types
+- value types
+- value data types
+- types [Visual Basic]
+- data types [Visual Basic], value types
+- data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# Типы значений и ссылочные типы
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: de8016b4b2a5550b32373a41c89a484fa996c596
+ms.lasthandoff: 03/13/2017
 
-В Visual Basic, типы данных реализованы на основе их классификации.  Типы данных [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] могут классифицироваться в соответствии с тем, хранят ли переменные таких типов собственные данные или указатель на них.  Если переменная хранит собственные данные, она имеет *тип значения*. Если переменная содержит указатель на данные в другом месте в памяти, она имеет *ссылочный тип*.  
+---
+# <a name="value-types-and-reference-types"></a>Value Types and Reference Types
+В Visual Basic типы данных реализуются на основе их классификации. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Типы данных могут классифицироваться в соответствии с переменной определенного типа, хранит ли собственные данные или указатель на данные. Если переменная хранит собственные данные — *тип значения*; если он содержит указатель на данные в другом месте в памяти, это *ссылочный тип*.  
   
-## Типы значений  
- Тип данных является *типом значений*, если он содержит данные в пределах своей собственной области памяти.  К типам значения относятся:  
+## <a name="value-types"></a>Типы значений  
+ Тип данных является *тип значения* , если он содержит данные в пределах своей собственной памяти. Следующие типы значений:  
   
 -   Все числовые типы данных  
   
@@ -38,33 +54,33 @@ caps.handback.revision: 14
   
 -   Все структуры, даже если их члены являются ссылочными типами  
   
--   Перечисления, поскольку их базовый тип всегда является `SByte`, `Short`, `Integer` `Long`, `Byte`, `UShort`, `UInteger` или `ULong`  
+-   Перечисления, поскольку их базовый тип всегда является `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, или`ULong`  
   
- Каждая структура является типом значения, даже если она содержит члены ссылочного типа.  По этой причине типы значений как `Char` и  `Integer` реализуйте структурами платформы .NET Framework.  
+ Каждая структура является типом значения, даже если он содержит члены ссылочного типа. По этой причине типы значения, такие как `Char` и `Integer` , реализуются посредством структуры .NET Framework.  
   
- Можно объявить тип значения с помощью зарезервированного ключевого слова, например, `Decimal`.  Ключевое слово `New` также может быть использовано для инициализации типа значений.  Это особенно полезно, если тип имеет конструктор, принимающий параметры.  Примером этого является конструктор <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>, который строит новое значение `Decimal` от предоставленных частей.  
+ Можно объявить тип значения с помощью зарезервированного ключевого слова, `Decimal`. Можно также использовать `New` ключевое слово для инициализации типа значений. Это особенно полезно, если тип имеет конструктор, принимающий параметры. Примером этого является <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>конструктор, который создает новый `Decimal` значение из предоставленных частей.</xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>  
   
-## Ссылочные типы  
- *Ссылочный тип* содержит указатель на другую область памяти, содержащую данные.  К ссылочным типам относятся:  
+## <a name="reference-types"></a>Ссылочные типы  
+ Объект *ссылочный тип* содержит указатель на другую область памяти, содержащую данные. Ссылочные типы включают следующие:  
   
 -   `String`  
   
--   Все массивы, даже если их члены являются типами значений  
+-   Все массивы, даже если их элементы являются типами значений  
   
--   Типы классов, например <xref:System.Windows.Forms.Form>  
+-   Типы классов, таких как<xref:System.Windows.Forms.Form></xref:System.Windows.Forms.Form>  
   
 -   Делегаты  
   
- Класс является *ссылочным типом*.  По этой причине ссылочные типы, например `Object` и `String`, поддерживаются классами [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)].  Обратите внимание, что любой массив является ссылочным типом, даже если он содержит элементы типа значения.  
+ Класс *ссылочный тип*. По этой причине ссылочные типы, такие как `Object` и `String` поддерживаемых [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] классы. Обратите внимание, что каждый массив является ссылочным типом, даже если его члены являются типами значений.  
   
- Поскольку каждый ссылочный тип, представляющий базовый класс платформы .NET Framework, необходимо использовать [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md) ключевое слово при инициализации.  Следующий оператор инициализирует массив:  
+ Поскольку каждый ссылочный тип представляет собой соответствующий класс .NET Framework, следует использовать [оператор New](../../../../visual-basic/language-reference/operators/new-operator.md) ключевое слово для его инициализации. Следующий оператор инициализирует массив.  
   
 ```  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
-## Элементы, которые не являются типами  
- Следующие элементы программирования не квалифицируются как типы, так как нельзя указывать ни один из них в качестве типа данных для объявленного элемента:  
+## <a name="elements-that-are-not-types"></a>Элементы, которые не являются типами  
+ Следующие элементы программирования не квалифицируются как типы, так как нельзя указывать ни один из них как тип данных для объявленного элемента:  
   
 -   Пространства имен  
   
@@ -76,14 +92,14 @@ Dim totals() As Single = New Single(8) {}
   
 -   Переменные, константы и поля  
   
-## Работа с типом данных объекта  
- Переменной типа данных `Object` можно присвоить либо тип значения, либо ссылочный тип.  Переменная `Object` всегда содержит указатель на данные, но никогда не содержит самих данных.  Однако, если присвоить тип значений переменной `Object`, то она ведет себя так, как если бы она содержала свои собственные данные.  Дополнительные сведения см. в разделе [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+## <a name="working-with-the-object-data-type"></a>Работа с типом данных объекта  
+ Можно назначить переменной ссылочного типа или типа значения `Object` тип данных. `Object` Переменная всегда содержит указатель на данные, а не сами данные. Однако если присвоить тип значений для `Object` переменной, он ведет себя так, как если бы она содержала свои собственные данные. Дополнительные сведения см. в разделе [тип данных объекта](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Можно выяснить, является ли `Object` переменная действует как ссылочный тип или тип значения, передавая его на  <xref:Microsoft.VisualBasic.Information.IsReference%2A> метод  <xref:Microsoft.VisualBasic.Information> класс   <xref:Microsoft.VisualBasic?displayProperty=fullName> пространство имен.  Метод <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=fullName> возвращает `True`, если содержимое переменной `Object` представляет ссылочный тип.  
+ Вы можете выяснить, был ли `Object` переменная используется в качестве ссылочного типа или типа значения, передайте ее в <xref:Microsoft.VisualBasic.Information.IsReference%2A>метод <xref:Microsoft.VisualBasic.Information>класса <xref:Microsoft.VisualBasic?displayProperty=fullName>имен.</xref:Microsoft.VisualBasic?displayProperty=fullName> </xref:Microsoft.VisualBasic.Information> </xref:Microsoft.VisualBasic.Information.IsReference%2A> <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=fullName>Возвращает `True` Если содержимое `Object` переменная представляет ссылочный тип.</xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=fullName>  
   
-## См. также  
- [Типы значения, допускающие Null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+## <a name="see-also"></a>См. также  
+ [Обнуляемые типы значений](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)   
+ [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
  [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)   
  [Эффективное использование типов данных](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
  [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)   

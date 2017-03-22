@@ -1,61 +1,77 @@
 ---
-title: "Практическое руководство. Использование класса, в котором определяются операторы (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "примеры [Visual Basic], CType"
-  - "перегрузка операторов"
-  - "процедуры операторов, вызов"
-  - "операторы [Visual Basic], перегрузка"
-  - "процедуры, вызов"
-  - "процедуры, оператор"
-  - "возвращаемые значения, Процедуры операторов"
-  - "синтаксис, Процедуры операторов"
+title: "Практическое руководство: использование класс, который определяет операторы (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- operator procedures, calling
+- procedures, operator
+- procedures, calling
+- examples [Visual Basic], CType
+- syntax, Operator procedures
+- operators [Visual Basic], overloading
+- return values, Operator procedures
+- operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Практическое руководство. Использование класса, в котором определяются операторы (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b1db7c0b2a6fd8160baa48892b5f2214df24674e
+ms.lasthandoff: 03/13/2017
 
-При использовании класса или структуры, определяющей свои собственные операторы, можно получить доступ к этим операторам из [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+---
+# <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Практическое руководство. Использование класса, в котором определяются операторы (Visual Basic)
+При использовании класса или структуры, определяющей свои собственные операторы, можно получить доступ к этим операторам из [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
- Определение оператора в классе или структуре называется также *перегрузкой* оператора.  
+ Определение оператора в классе или структуре также называется *перегрузка* оператора.  
   
-## Пример  
- В следующем примере осуществляется доступ к SQL структуре <xref:System.Data.SqlTypes.SqlString>, в которой определены операторы преобразования \([Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)\) в обоих направлениях между строкой SQL и строкой [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  Используйте `CType(`*SQL string expression*, `String)` для преобразования строки SQL к строке [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] и `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)` для преобразования в обоих направлениях.  
+## <a name="example"></a>Пример  
+ Следующий пример обращается к структуре SQL <xref:System.Data.SqlTypes.SqlString>, который определяет операторы преобразования ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) в обоих направлениях между строкой SQL и [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] строки.</xref:System.Data.SqlTypes.SqlString> Используйте `CType(` *строковое выражение SQL*, `String)` для преобразования строки SQL для [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] строку, и `CType(` *строковое выражение Visual Basic*, <xref:System.Data.SqlTypes.SqlString> `)` для преобразования в другом направлении.</xref:System.Data.SqlTypes.SqlString>  
   
- [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#30;](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures&#31;](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
- Структура <xref:System.Data.SqlTypes.SqlString> определяет оператор преобразования \([Функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)\) из `String` в <xref:System.Data.SqlTypes.SqlString> и из <xref:System.Data.SqlTypes.SqlString> в `String`.  Оператор, который присваивает значение `title` объекту `jobTitle`, использует первый оператор, а вызов функции <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> использует второй.  
+ <xref:System.Data.SqlTypes.SqlString>Структура определяет оператор преобразования ([функция CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) из `String` для <xref:System.Data.SqlTypes.SqlString>и <xref:System.Data.SqlTypes.SqlString>для `String`.</xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> </xref:System.Data.SqlTypes.SqlString> Оператор, который присваивает `title` для `jobTitle` использует первый оператор и <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>вызова функции используется второй.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
   
-## Компиляция кода  
- Убедитесь, что используемый класс или структура определяет оператор, который нужно использовать.  Не следует предполагать, что класс или структура определяет каждый оператор как доступный для перегрузки.  Список доступных операторов содержится в разделе [Оператор Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Убедитесь, что класс или структура, которую вы используете определяет оператор, который вы хотите использовать. Не следует предполагать, что класс или структура определяет каждый оператор, доступный для перегрузки. Список доступных операторов см. в разделе [оператор](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
- Включите соответствующий оператор `Imports` для строки SQL в начале исходного файла \(в этом случае <xref:System.Data.SqlTypes>\).  
+ Включить соответствующую `Imports` инструкции для строки SQL в начале файла исходного кода (в данном случае <xref:System.Data.SqlTypes>).</xref:System.Data.SqlTypes>  
   
- Проект должен ссылаться на System.Data и System.XML.  
+ Проект должен иметь ссылки на System.Data и System.XML.  
   
-## См. также  
- [Процедуры операторов](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Практическое руководство. Определение оператора](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Практическое руководство. Определение оператора преобразования](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [Практическое руководство. Вызов процедуры оператора](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)   
- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)   
+## <a name="see-also"></a>См. также  
+ [Процедуры операторов](./operator-procedures.md)   
+ [Практическое руководство: определение оператора](./how-to-define-an-operator.md)   
+ [Практическое руководство: определение оператора преобразования](./how-to-define-a-conversion-operator.md)   
+ [Практическое руководство: вызов процедуры оператора](./how-to-call-an-operator-procedure.md)   
+ [Расширяющие](../../../../visual-basic/language-reference/modifiers/widening.md)   
+ [Сужающие](../../../../visual-basic/language-reference/modifiers/narrowing.md)   
  [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
+ [Практическое руководство: объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
  [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
  [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

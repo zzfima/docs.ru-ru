@@ -1,67 +1,83 @@
 ---
-title: "Практическое руководство. Передача аргументов в процедуру (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "передача аргументов, процедуры"
-  - "аргументы [Visual Basic], передача процедурам"
-  - "аргументы процедур"
-  - "параметры процедуры"
-  - "процедуры, аргументы"
-  - "процедуры, вызов"
-  - "процедуры, параметры"
-  - "код Visual Basic, процедуры"
+title: "Практическое руководство: передача аргументов в процедуру (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- arguments [Visual Basic], passing to procedures
+- procedures, arguments
+- procedures, parameters
+- procedure arguments
+- Visual Basic code, procedures
+- procedure parameters
+- procedures, calling
+- argument passing, procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# Практическое руководство. Передача аргументов в процедуру (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ddccd476b2347368d0435f637edf3882db306f45
+ms.lasthandoff: 03/13/2017
 
-При вызове процедуры вы указываете имя процедуры со списком аргументов в круглых скобках.  Необходимо указать аргумент, соответствующий каждому обязательному параметру, определяемому процедурой, и можно также указать дополнительные аргументы для параметров `Optional`.  Если в вызове не указывается параметр `Optional`, необходимо включить запятую, чтобы отметить его место в списке аргументов, если указываются какие\-либо последующие аргументы.  
+---
+# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Практическое руководство. Передача аргументов в процедуру (Visual Basic)
+При вызове процедуры, то после имени процедуры со списком аргументов в скобках. Указать аргумент, соответствующий каждому обязательному параметру процедура определяет, и можно также указать дополнительные аргументы для `Optional` параметров. Если не указать `Optional` параметр в вызове, необходимо включить запятую, чтобы отметить его место в списке аргументов, если указываются все последующие аргументы.  
   
- Если планируется передача аргумента типа данных, отличающегося от соответствующего параметра, например `Byte` в `String`, можно задать для ключа проверки типов \([Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) значение `Off`.  Если `Option Strict` имеет значение `On`, необходимо использовать ключевые слова либо расширяющих преобразований, либо явных преобразований.  Дополнительные сведения см. в разделах [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Если требуется передать аргумент типа данных отличается от соответствующего параметра, такие как `Byte` для `String`, можно задать для ключа проверки типов ([оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) для `Off`. Если `Option Strict` — `On`, необходимо использовать либо расширяющих преобразований, либо явное преобразование ключевых слов. Дополнительные сведения см. в разделе [расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- Дополнительные сведения см. в разделе [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md).  
+ Дополнительные сведения см. в разделе [параметры и аргументы процедуры](./procedure-parameters-and-arguments.md).  
   
-### Передача одного или нескольких аргументов в процедуру  
+### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Для передачи одного или нескольких аргументов в процедуру  
   
-1.  В операторе вызова укажите скобки после имени процедуры.  
+1.  В операторе вызова после имени процедуры со скобками.  
   
-2.  Внутрь скобок поместите список аргументов.  Укажите через запятую аргументы для каждого обязательного параметра, определяемого процедурой.  
+2.  Внутри скобок поместите список аргументов. Включать аргумент для каждого обязательного параметра, определяемого процедурой и аргументов необходимо разделять запятыми.  
   
-3.  Убедитесь, что каждый аргумент имеет допустимое выражение, результат которого преобразуется в тип, определяемый процедурой для соответствующего параметра.  
+3.  Убедитесь, что каждый аргумент имеет допустимое выражение, результатом вычисления которого преобразуется в тип процедуры определяет для соответствующего параметра.  
   
-4.  Если параметр определен как [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), можно включить его в список аргументов или пропустить.  Если параметр пропускается, в процедуре используется значение по умолчанию, определенное для этого параметра.  
+4.  Если параметр определен как [необязательно](../../../../visual-basic/language-reference/modifiers/optional.md), можно либо включить его в список аргументов или пропустить. Если он опущен, процедура использует значение по умолчанию, определенное для этого параметра.  
   
-5.  Если пропускается аргумент для параметра `Optional`, и в списке параметров после него имеется еще один параметр, то можно отметить место пропущенного аргумента, поставив вместо него запятую в списке аргументов.  
+5.  Если не указан аргумент для `Optional` параметр и в списке параметров после него имеется еще один параметр, можно отметить место пропущенного аргумента по лишнюю запятую в списке аргументов.  
   
-     Следующий пример вызывает функцию <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+     В следующем примере вызывается [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>функция.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures&#34;](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
-     В предыдущем примере передается обязательный первый аргумент, который является строкой сообщения для отображения.  Затем пропускается необязательный второй параметр, который указывает кнопки, отображаемые в окне сообщения.  Поскольку в вызове не передается значение, `MsgBox` использует значение по умолчанию `MsgBoxStyle.OKOnly`, в котором отображается только кнопка **ОК**.  
+     В предыдущем примере передается обязательный первый аргумент, который является строкой сообщения для отображения. Он пропускается необязательный второй параметр, который указывает кнопки, отображаемые в окне сообщения. Поскольку в вызове не передается значение, `MsgBox` использует значение по умолчанию `MsgBoxStyle.OKOnly`, которая отображает только **ОК** кнопки.  
   
-     Вторая запятая в списке аргументов отмечает место пропущенного второго параметра, а последняя строка передается в третий необязательный параметр `MsgBox` и содержит текст, отображаемый в заголовке сообщения.  
+     Вторая запятая в списке аргументов отмечает место пропущенного второго параметра, а последняя строка передается в третий необязательный параметр `MsgBox`, который является текст, отображаемый в строке заголовка.  
   
-## См. также  
- [Подпрограммы](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Процедуры Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Процедуры свойств](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Процедуры операторов](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Практическое руководство. Определение параметра для процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-parameter-for-a-procedure.md)   
- [Передача аргументов по значению и по ссылке](../../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Рекурсивные процедуры](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Перегрузка процедур](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
+## <a name="see-also"></a>См. также  
+ [Sub-процедуры](./sub-procedures.md)   
+ [Процедуры функций](./function-procedures.md)   
+ [Процедуры свойств](./property-procedures.md)   
+ [Процедуры операторов](./operator-procedures.md)   
+ [Практическое руководство: определение параметра для процедуры](./how-to-define-a-parameter-for-a-procedure.md)   
+ [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)   
+ [Рекурсивные процедуры](./recursive-procedures.md)   
+ [Перегрузка процедур](./procedure-overloading.md)   
  [Объекты и классы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Объектно\-ориентированное программирование](../Topic/Object-Oriented%20Programming%20\(C%23%20and%20Visual%20Basic\).md)
+ [Объектно-ориентированное программирование](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)

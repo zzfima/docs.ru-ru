@@ -1,59 +1,75 @@
 ---
-title: "/sdkpath | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "sdkpath"
-  - "/sdkpath"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/sdkpath - параметр компилятора [Visual Basic]"
-  - "sdkpath - параметр компилятора [Visual Basic]"
-  - "-sdkpath - параметр компилятора [Visual Basic]"
+title: "/ sdkpath | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- sdkpath
+- /sdkpath
+dev_langs:
+- VB
+helpviewer_keywords:
+- -sdkpath compiler option [Visual Basic]
+- /sdkpath compiler option [Visual Basic]
+- sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# /sdkpath
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 3584daa49bca699f022a1afd34e3d450b8442060
+ms.lasthandoff: 03/13/2017
 
-Указывает расположение библиотек Mscorlib.dll и Microsoft.VisualBasic.dll.  
+---
+# <a name="sdkpath"></a>/sdkpath
+Задает расположение библиотек mscorlib.dll и microsoft.visualbasic.dll.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /sdkpath:path  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `path`  
- Папка, содержащая версии файлов mscorlib.dll и microsoft.visualbasic.dll, используемых для компиляции.  Этот путь не проверяется до загрузки.  Заключите имя каталога в кавычки \(" "\), если он содержит пробел.  
+ Каталог, содержащий версии Mscorlib.dll и Microsoft.VisualBasic.dll, используемые при компиляции. Этот путь не проверяется до загрузки. Заключите имя каталога в кавычки (» «), если он содержит пробел.  
   
-## Заметки  
- Параметр указывает компилятору [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] загружать файлы mscorlib.dll и microsoft.visualbasic.dll из местоположения, не используемого по умолчанию.  Параметр `/sdkpath` используется вместе с [\/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md).  В [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] применяются различные версии поддерживаемых библиотек, чтобы предотвратить использование неподдерживаемых устройствами типов и возможностей языков.  
+## <a name="remarks"></a>Примечания  
+ Этот параметр указывает [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] компилятору загрузить файлы Mscorlib.dll и Microsoft.VisualBasic.dll из расположения, не по умолчанию. `/sdkpath` Параметр был разработан для использования с [/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] Применяются различные версии поддерживаемых библиотек, чтобы избежать использования типов и функций языка не найден на устройствах.  
   
 > [!NOTE]
->  Параметр `/sdkpath` недоступен из среды разработки Visual Studio; он доступен только при компиляции из командной строки.  Параметр `/sdkpath` устанавливается при загрузке проекта устройства [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+>  `/sdkpath` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки. `/sdkpath` Параметр задается при [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] загрузке проекта устройства.  
   
- Пользователь может настроить программу таким образом, чтобы компилятор выполнял компиляцию без ссылки на библиотеку времени выполнения Visual Basic с помощью параметра компилятора `/vbruntime`.  Дополнительные сведения см. в разделе [\/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
+ Можно указать, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic с помощью `/vbruntime` параметр компилятора. Дополнительные сведения см. в разделе [/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   
-## Пример  
- В следующем примере кода компиляция файла `Myfile.vb` с [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] выполняется с помощью библиотек mscorlib.dll и microsoft.visualbasic.dll, обнаруженных в стандартной папке установки [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)] на диске С.  Как правило следует использовать самую последнюю версию [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact-md.md)].  
+## <a name="example"></a>Пример  
+ Следующий код компилирует `Myfile.vb` с [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)], с помощью версии Mscorlib.dll и Microsoft.VisualBasic.dll найти в каталоге установки по умолчанию [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)] на диске C:. Как правило, используется последней версии [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].  
   
 ```  
 vbc /netcf /sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [\/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)   
- [\/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)
+ [/ netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)   
+ [/vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)

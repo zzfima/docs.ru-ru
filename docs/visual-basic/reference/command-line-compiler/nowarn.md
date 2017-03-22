@@ -1,69 +1,83 @@
 ---
-title: "/nowarn | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/nowarn - параметр компилятора [Visual Basic]"
-  - "nowarn - параметр компилятора [Visual Basic]"
-  - "-nowarn - параметр компилятора [Visual Basic]"
+title: "/ nowarn | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- nowarn compiler option [Visual Basic]
+- /nowarn compiler option [Visual Basic]
+- -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# /nowarn
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 61b145a9eb95f5357c7aa2983a96c31e8f2cef6a
+ms.lasthandoff: 03/13/2017
 
-Отключает предупреждения компилятора.  
+---
+# <a name="nowarn"></a>/nowarn
+Отключает возможность компилятора создавать предупреждения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /nowarn[:numberList]  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`numberList`|Необязательный.  Список отделенных друг от друга запятыми идентификационных номеров предупреждений, которые компилятор не должен отображать.  Если идентификаторы предупреждений не указаны, то подавляются все предупреждения.|  
+|---|---|  
+|`numberList`|Необязательный. Список с разделителями запятыми Идентификационных номеров предупреждений, которые компилятор не должен отображать. Если идентификаторы предупреждений не указаны, то подавляются все предупреждения.|  
   
-## Заметки  
- Параметр `/nowarn` указывает компилятору не генерировать предупреждения.  Для подавления отдельных предупреждений, укажите идентификатор предупреждения для параметра `/nowarn` после двоеточия.  Отделите предупреждения друг от друга запятыми.  
+## <a name="remarks"></a>Примечания  
+ `/nowarn` Параметр указывает компилятору не генерировать предупреждения. Для подавления отдельных предупреждений, укажите идентификатор предупреждения для `/nowarn` после двоеточия. Отделите предупреждения друг от друга запятыми.  
   
- Необходимо указать только числовую часть идентификатора предупреждения.  Например, если требуется подавить BC42024, предупреждение для неиспользуемых локальных переменных, укажите `/nowarn:42024`.  
+ Необходимо указать только числовую часть идентификатора предупреждения. Например, если требуется подавить BC42024, предупреждение для неиспользуемых локальных переменных, укажите `/nowarn:42024`.  
   
- Дополнительные сведения об идентификаторах предупреждений содержатся в разделе [Настройка предупреждений в Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ Дополнительные сведения об Идентификационных номеров предупреждений см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-||  
-|-|  
-|Чтобы установить параметр \/nowarn в среде разработки Visual Studio|  
-|1.  Выберите проект в **обозревателе решений**.  В меню **Проект** выберите пункт **Свойства**.  Дополнительные сведения см. в разделе [Introduction to the Project Designer](http://msdn.microsoft.com/ru-ru/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Перейдите на вкладку **Compile**.<br />3.  Выберите флажок **Отключить все предупреждения**, чтобы отключить все предупреждения.<br />     \- или \-<br />     Чтобы отключить определенное предупреждение, установите переключатель в положение **Нет** в раскрывающемся списке рядом с предупреждением.|  
+|Установка/nowarn в Visual Studio интегрированная среда разработки|  
+|---|  
+|1.  Выберите проект в **Обозревателе решений**. На **проекта** меню, щелкните **свойства**. Дополнительные сведения см. в разделе [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Откройте вкладку **Компиляция**.<br />3.  Выберите **отключить все предупреждения** флажок, чтобы отключить все предупреждения.<br />     -или-<br />     Чтобы отключить определенное предупреждение, щелкните **нет** из раскрывающегося списка рядом с предупреждением.|  
   
-## Пример  
- Следующий код компилирует `T2.vb`, не отображая предупреждений.  
+## <a name="example"></a>Пример  
+ Следующий код компилирует `T2.vb` и не отображает все предупреждения.  
   
 ```  
 vbc /nowarn t2.vb  
 ```  
   
-## Пример  
- Следующий код компилирует `T2.vb` и не отображает предупреждения для неиспользуемых локальных переменных \(42024\).  
+## <a name="example"></a>Пример  
+ Следующий код компилирует `T2.vb` и не отображает предупреждения для неиспользуемых локальных переменных (42024).  
   
 ```  
 vbc /nowarn:42024 t2.vb  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Настройка предупреждений в Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic)
+ [Настройка предупреждений в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)

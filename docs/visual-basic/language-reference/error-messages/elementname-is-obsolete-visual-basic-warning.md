@@ -1,39 +1,56 @@
 ---
-title: "&lt;имяЭлемента&gt; является устаревшим (Предупреждение Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc40008"
-  - "bc40008"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40008"
+title: "&quot;&lt;elementname&gt;&quot; является устаревшим (предупреждение Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc40008
+- bc40008
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# &lt;имяЭлемента&gt; является устаревшим (Предупреждение Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ccec3b2659502c84dd4db9c9c4d796362958030b
+ms.lasthandoff: 03/13/2017
 
-Оператор пытается получить доступ к элементу программирования, который был помечен с помощью атрибута <xref:System.ObsoleteAttribute>, это вызывает предупреждение.  
+---
+# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>"&lt;elementname&gt;" является устаревшим (предупреждение Visual Basic)
+Оператор пытается получить доступ к элементу программирования, который был помечен с <xref:System.ObsoleteAttribute>атрибут и следует рассматривать ее как предупреждение.</xref:System.ObsoleteAttribute>  
   
- С помощью атрибута <xref:System.ObsoleteAttribute> можно пометить любой элемент программирования как более не используемый.  После этого можно задать для свойства <xref:System.ObsoleteAttribute.IsError%2A> атрибута значение `True` или `False`.  Если задано значение `True`, компилятор рассматривает попытку использования элемента как ошибку.  Если задать значение `False` или оставить используемое по умолчанию значение `False`, то при попытке использовать элемент компилятор выдает предупреждение.  
+ Можно пометить любой элемент программирования как более не используется путем применения <xref:System.ObsoleteAttribute>к его.</xref:System.ObsoleteAttribute> После этого можно задать атрибут <xref:System.ObsoleteAttribute.IsError%2A>значение `True` или `False`.</xref:System.ObsoleteAttribute.IsError%2A> Если задать значение `True`, компилятор будет рассматривать попытку использовать элемент как ошибку. Если задать значение `False`или оставить значение по умолчанию `False`, то при попытке использовать элемент компилятор выдаст предупреждение.  
   
- По умолчанию это сообщение является предупреждением, поскольку для свойства <xref:System.ObsoleteAttribute.IsError%2A> атрибута <xref:System.ObsoleteAttribute> задается значение `False`.  Дополнительные сведения о скрытии предупреждений или их обработке как ошибок см. в разделе [Настройка предупреждений в Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ По умолчанию это сообщение является предупреждением, поскольку <xref:System.ObsoleteAttribute.IsError%2A>свойство <xref:System.ObsoleteAttribute>— `False`.</xref:System.ObsoleteAttribute> </xref:System.ObsoleteAttribute.IsError%2A> Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Идентификатор ошибки**: BC40008  
+ **Идентификатор ошибки:** BC40008  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Убедитесь, что исходный код ссылается на допустимое имя элемента.  
+-   Убедитесь, что в ссылке исходного кода имя элемента указано правильно.  
   
-## См. также  
- [Атрибуты](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>См. также  
+ [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+

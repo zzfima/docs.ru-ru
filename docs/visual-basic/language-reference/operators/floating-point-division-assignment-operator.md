@@ -1,67 +1,84 @@
 ---
-title: "Оператор /= (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb./="
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/= - оператор [Visual Basic]"
-  - "операторы назначения, составное"
-  - "составные операторы присваивания"
-  - "/= - оператор"
-  - "операторы [Visual Basic], составное присвоение"
+title: "/ =-Оператор (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb./=
+dev_langs:
+- VB
+helpviewer_keywords:
+- assignment statements, compound
+- statements [Visual Basic], compound assignment
+- /= operator [Visual Basic]
+- operator /=
+- compound assignment statements
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
 caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 23
----
-# Оператор /= (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ab0a007f039d3dbda989bb605cb80fcf5fc7460a
+ms.lasthandoff: 03/13/2017
 
-Делит значение переменной или свойства на значение выражения и присваивает результат с плавающей точкой переменной или свойству.  
+---
+# <a name="-operator-visual-basic"></a>Оператор /= (Visual Basic)
+Делит значение переменной или свойства на значение выражения и присваивает результат с плавающей запятой к переменной или свойству.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 variableorproperty /= expression  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `variableorproperty`  
- Обязательный.  Любая числовая переменная или свойство.  
+ Обязательный. Любой числовой переменной или свойству.  
   
  `expression`  
- Обязательный.  Произвольное числовое выражение.  
+ Обязательный. Произвольное числовое выражение.  
   
-## Заметки  
- Элемент с левой стороны оператора `/=` может быть простой скалярной переменной, свойством или элементом массива.  Переменная или свойство не могут быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+## <a name="remarks"></a>Примечания  
+ Элемент слева от `/=` оператор может быть простой скалярной переменной, свойства или элемента массива. Переменная или свойство не может быть [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Оператор `/=` сначала делит значения переменной или свойства \(в левой части оператора \(\) значение выражения в правой части оператора\).  Оператор затем присвоить результат этой операции с плавающей запятой в переменную или свойству.  
+ `/=` Оператор сначала делит значение переменной или свойства (в левой части оператора) значение выражения (в правой части оператора). Затем оператор присваивает результат этой операции с плавающей запятой к переменной или свойству.  
   
- Этот оператор будет присвоено значение `Double` переменной или свойство слева.  Если `Option Strict` принимает значение `On`, то `variableorproperty` должен быть `Double`.  Если `Option Strict` установлен в `Off`, Visual Basic произведет неявное преобразование и присвоит результирующее значение `variableorproperty`, с возможной ошибкой во время выполнения.  Дополнительные сведения см. в разделах [Расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [Оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+ Эта инструкция присваивает `Double` значение переменной или свойству в левой части окна. If `Option Strict` is `On`, `variableorproperty` must be a `Double`. Если `Option Strict` — `Off`, Visual Basic выполняет неявное преобразование и присваивает полученное значение для `variableorproperty`, возможные ошибки во время выполнения. Дополнительные сведения см. в разделе [расширяющие и сужающие преобразования](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и [оператор Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
-## Перегрузка  
- [Оператор \/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) может быть *перегружен*; это означает, что класс или структура может переопределить его действие, если операнд имеет определенный тип класса или структуры.  Перегрузка оператора `/` влияет на тип выполнения оператора `/=`.  Если в коде используется оператор `/=` для класса или структуры, перегружающей `/`, убедитесь, что его переопределенное выполнение вам понятно.  Дополнительные сведения см. в разделе [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a>Перегрузка  
+ [-Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) может быть *перегруженные*, это означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Перегрузка `/` оператор влияет на поведение `/=` оператор. Если ваш код использует `/=` для класса или структуры, перегружающей `/`, убедитесь, что вы понимаете его переопределенное поведение. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Пример  
- В следующем примере оператор `/=` используется для деления значения одной переменной типа `Integer` на значение другой переменной и присваивания результата первой переменной.  
+## <a name="example"></a>Пример  
+ В следующем примере используется `/=` оператор деления для деления одного `Integer` переменных в секунду и назначить частное первой переменной.  
   
- [!code-vb[VbVbalrOperators#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators&17;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-assignment-operator_1.vb)]  
   
-## См. также  
- [Оператор \/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)   
- [Оператор \\\=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)   
+## <a name="see-also"></a>См. также  
+ [/ Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)   
+ [\\= Оператор](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)   
  [Операторы присваивания](../../../visual-basic/language-reference/operators/assignment-operators.md)   
  [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
+ [Приоритет операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
  [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)
+

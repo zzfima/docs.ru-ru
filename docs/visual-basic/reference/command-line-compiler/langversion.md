@@ -1,54 +1,70 @@
 ---
-title: "/langversion (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/langversion - параметр компилятора [Visual Basic]"
-  - "langversion - параметр компилятора [Visual Basic]"
-  - "-langversion - параметр компилятора [Visual Basic]"
+title: "/ langversion (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- /langversion compiler option [Visual Basic]
+- langversion compiler option [Visual Basic]
+- -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# /langversion (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9970df0c9babc368210169fae0490b423d77f40d
+ms.lasthandoff: 03/13/2017
 
-Указывает компилятору принимать только синтаксис, входящий в заданную версию языка Visual Basic.  
+---
+# <a name="langversion-visual-basic"></a>/langversion (Visual Basic)
+Компилятор принимает только синтаксис, включенный в указанной версии языка Visual Basic.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /langversion:version  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `version`  
- Обязательный.  Версия языка, которая должна использоваться в процессе компиляции.  Допустимыми являются значения: `9`, `9.0`, `10` и `10.0`.  
+ Обязательный. Языковая версия для использования во время компиляции. Принимаются значения `9`, `9.0`, `10`, и `10.0`.  
   
-## Заметки  
- Параметр `/langversion` служит для указания того, какой синтаксис принимает компилятор.  Например, если указать версию языка 9.0, компилятор будет создавать сообщения об ошибках для синтаксиса, применимого только в версии 10.0 или более поздней.  
+## <a name="remarks"></a>Примечания  
+ `/langversion` Указывает, какой синтаксис принимает компилятор. Например если указать, что языковая версия является 9.0, компилятор создает ошибки для синтаксиса, применимого только в версии 10.0 и более поздней версии.  
   
- Этот параметр может применяться при разработке приложений, ориентированных на различные версии платформы .NET Framework.  Например, если создается приложение для платформы .NET Framework 3.5, этот параметр позволит гарантировать, что не будет использоваться синтаксис из версии языка 10.0.  
+ Этот параметр можно использовать при разработке приложений, нацеленных на различные версии платформы .NET Framework. Например если вы используете .NET Framework 3.5, может использовать этот параметр, необходимо обеспечить использование синтаксиса языка версии 10.0.  
   
- Напрямую задать значение `/langversion` можно только с помощью командной строки.  Дополнительные сведения см. в разделе [Настройка конкретной версии платформы .NET Framework](/visual-studio/ide/targeting-a-specific-dotnet-framework-version).  
+ Можно задать `/langversion` непосредственно только с помощью командной строки. Дополнительные сведения см. в разделе [Указание конкретной версии или профиля .NET Framework](https://docs.microsoft.com/visualstudio/ide/targeting-a-specific-dotnet-framework-version).  
   
-## Пример  
- Нижеприведенный код `sample.vb` компилируется для Visual Basic 9.0.  
+## <a name="example"></a>Пример  
+ Следующий код компилирует `sample.vb` для Visual Basic 9.0.  
   
 ```  
 vbc /langversion:9.0 sample.vb  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Настройка конкретной версии платформы .NET Framework](/visual-studio/ide/targeting-a-specific-dotnet-framework-version)
+ [Настройка конкретной версии платформы .NET Framework](https://docs.microsoft.com/visualstudio/ide/targeting-a-specific-dotnet-framework-version)

@@ -1,92 +1,108 @@
 ---
-title: "Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "анонимные типы [Visual Basic]"
-  - "проекция [LINQ в Visual Basic]"
-  - "запросы [LINQ в Visual Basic], разделы практического руководства"
-  - "запросы [LINQ в Visual Basic], возврат указанного типа"
-  - "примеры запросов [Visual Basic]"
-  - "запрос баз данных [LINQ]"
+title: "Практическое руководство: возвращение результата запроса LINQ в виде определенного типа (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- queries [LINQ in Visual Basic], specific type returned
+- projection [LINQ in Visual Basic]
+- anonymous types [Visual Basic]
+- querying databases [LINQ]
+- queries [LINQ in Visual Basic], how-to topics
+- query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2031e24ca0fe5aa86ca6c0bcd0e0e4f27238c8ae
+ms.lasthandoff: 03/13/2017
 
-Запросы, интегрированные в язык программирования \(Language\-Integrated Query, LINQ\), упрощают доступ к содержимому базы данных и обеспечивают выполнение запросов.  По умолчанию LINQ\-запросы возвращают список объектов как анонимный тип.  Можно также указать, чтобы запрос возвращал список определенного типа с помощью предложения `Select`.  
+---
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Практическое руководство. Возвращение результата запроса LINQ в виде определенного типа (Visual Basic)
+Language Integrated Query (LINQ) упрощает для доступа к базе данных и выполнения запросов. По умолчанию запросы LINQ возвращают список объектов как анонимный тип. Можно также указать, чтобы запрос возвращал список определенного типа с помощью `Select` предложения.  
   
- Пример способа создания нового приложения, которое выполняет запросы в базе данных SQL Server и формирует результаты, как конкретный именованный тип.  Дополнительные сведения см. в разделах [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) и [Предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
+ Следующий пример демонстрирует создание нового приложения, которое выполняет запросы к базе данных SQL Server и формирует результаты, как конкретный именованный тип. Дополнительные сведения см. в разделе [анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) и [предложение Select](../../../../visual-basic/language-reference/queries/select-clause.md).  
   
- В примерах этого раздела используется учебная база данных "Борей".  При отсутствии учебной базы данных "Борей" на компьютере разработчика ее можно загрузить с веб\-узла [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088).  Подробные инструкции см. в разделе [Загрузка образцов баз данных](../Topic/Downloading%20Sample%20Databases.md).  
+ Примеры в этом разделе используется образец базы данных Northwind. Если у вас образца базы данных "Борей" на компьютере разработчика, можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](https://msdn.microsoft.com/library/bb399411).  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### Создание подключения к базе данных  
+### <a name="to-create-a-connection-to-a-database"></a>Создание подключения к базе данных  
   
-1.  В Visual Studio откройте **обозреватель серверов** или **обозреватель баз данных**. Для этого в меню **Вид** выберите пункт **Обозреватель серверов** или **Обозреватель баз данных**.  
+1.  В Visual Studio откройте **обозреватель серверов**/**обозревателя базы данных** , щелкнув **обозревателя**/**обозреватель баз данных** на **представление** меню.  
   
-2.  В **обозревателе серверов** или **обозревателе баз данных** щелкните правой кнопкой мыши **Подключения данных**, а затем выберите команду **Добавить подключение**.  
+2.  Щелкните правой кнопкой мыши **подключения к данным** в **обозревателя**/**обозревателя базы данных** и нажмите кнопку **Добавление подключения**.  
   
-3.  Укажите допустимое подключение к учебной базе данных "Northwind".  
+3.  Укажите допустимое подключение к учебной базе данных "Борей".  
   
-### Добавление проекта, содержащего файл LINQ\-SQL  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Добавление проекта, содержащего файл LINQ to SQL  
   
-1.  В меню **Файл** окна Visual Studio выберите команду **Создать** и щелкните **Проект**.  Выберите **Приложение Windows Forms** в качестве типа проекта Visual Basic.  
+1.  В Visual Studio на **файл** наведите указатель мыши на **New** и нажмите кнопку **проекта**. Выберите Visual Basic **приложение Windows Forms** в качестве типа проекта.  
   
-2.  В меню **Проект** выберите команду **Добавить новый элемент**.  Выберите шаблон элемента **Классы LINQ\-SQL**.  
+2.  В меню **Проект** выберите пункт **Добавить новый элемент**. Выберите **классы LINQ to SQL** шаблона элемента.  
   
-3.  Назовите файл `northwind.dbml`.  Нажмите кнопку **Добавить**.  Откроется реляционный конструктор объектов для файла northwind.dbml.  
+3.  Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. Реляционный конструктор объектов (конструктор O/R) открыт для файла northwind.dbml.  
   
-### Добавление таблицы к запросу в объектно\-реляционном конструкторе  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>Добавление таблицы к запросу реляционный конструктор объектов  
   
-1.  В представлении **Обозреватель серверов** или **Обозреватель баз данных** разверните подключение к базе данных "Northwind".  Разверните папку **Таблицы**.  
+1.  В **обозревателя**/**обозревателя базы данных**, разверните подключение к базе данных Northwind. Разверните **таблиц** папки.  
   
-     Если реляционный конструктор объектов закрыт, откройте его снова, дважды щелкнув файл northwind.dbml, который был добавлен ранее.  
+     Если реляционный конструктор объектов закрыт, его можно открыть, дважды щелкнув файл northwind.dbml, который был добавлен ранее.  
   
-2.  Щелкните таблицу "Клиенты" и перетащите ее в левую область конструктора.  
+2.  Щелкните таблицу Customers и перетащите его в левую область конструктора.  
   
-     Конструктор создает новый объект `Customer` для проекта.  Можно указать результат запроса как тип `Customer` или тип, созданный пользователем.  В этом примере будет создан новый тип в процедуре более поздней версии и сформирован результат запроса как тип.  
+     Конструктор создает новый `Customer` объект для проекта. Можно проецировать результат запроса как `Customer` тип или тип, который можно создать. В этом примере будет создать новый тип в процедуре более поздней версии и сформирован результат запроса как тип.  
   
 3.  Сохраните изменения и закройте конструктор.  
   
 4.  Сохраните проект.  
   
-### Добавление кода в запрос к базе данных и отображение результатов  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Чтобы добавить код для запроса к базе данных и отображения результатов  
   
-1.  С **панели элементов** перетащите элемент управления <xref:System.Windows.Forms.DataGridView> в заданную по умолчанию форму Windows Forms для проекта \(Form1\).  
+1.  От **элементов**, перетащите <xref:System.Windows.Forms.DataGridView>элемента управления на форме Windows Forms по умолчанию для проекта, Form1.</xref:System.Windows.Forms.DataGridView>  
   
-2.  Дважды щелкните на форме Form1, чтобы изменить класс Form1.  
+2.  Дважды щелкните форму Form1, чтобы изменить класс Form1.  
   
-3.  После оператора `End Class` класса Form1 добавьте следующий код для создания типа `CustomerInfo`, чтобы сохранить результаты запроса для этого примера.  
+3.  После `End Class` инструкции класса Form1 добавьте следующий код для создания `CustomerInfo` типа для хранения результатов запроса для данного образца.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos №&16;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
   
-4.  При добавлении таблиц в реляционный конструктор объектов конструктор добавил объект <xref:System.Data.Linq.DataContext> в проект.  Этот объект содержит код, необходимый для доступа к этим таблицам и доступа к отдельным объектам и коллекциям для каждой таблицы.  Объекту <xref:System.Data.Linq.DataContext> для проекта присвоено имя на основе имени файла .dbml.  Для данного проекта объект <xref:System.Data.Linq.DataContext> называется `northwindDataContext`.  
+4.  При добавлении таблиц в реляционный конструктор объектов конструктор добавил <xref:System.Data.Linq.DataContext>объект в проект.</xref:System.Data.Linq.DataContext> Этот объект содержит код, необходимый для доступа к этим таблицам и доступа к отдельным объектам и коллекциям для каждой таблицы. <xref:System.Data.Linq.DataContext>Объект для проекта имя на основе имени файла .dbml.</xref:System.Data.Linq.DataContext> Для этого проекта <xref:System.Data.Linq.DataContext>объект называется `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
   
-     Можно создать экземпляр <xref:System.Data.Linq.DataContext> в коде и запросить таблицы, указанные реляционным конструктором объектов.  
+     Можно создать экземпляр <xref:System.Data.Linq.DataContext>в коде и запросить таблицы, указанные в реляционный конструктор объектов.</xref:System.Data.Linq.DataContext>  
   
-     В событии `Load` класса Form1 добавьте следующий код для запроса к таблицам, которые отображаются как свойства контекста данных.  Предложение `Select` запроса создает новый тип `CustomerInfo` вместо анонимного типа для каждого элемента результата запроса.  
+     В `Load` класса Form1 добавьте следующий код для запроса к таблицам, которые отображаются как свойства контекста данных. `Select` Выражение запроса будет создан новый `CustomerInfo` типа вместо анонимного типа для каждого элемента результата запроса.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos&#15;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
   
 5.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
  [Запросы](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [Методы DataContext \(реляционный конструктор объектов\)](/visual-studio/data-tools/datacontext-methods-o-r-designer)   
- [Пошаговое руководство. Создание классов LINQ to SQL \(реляционный конструктор объектов\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [Методы DataContext (реляционный конструктор)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)
+

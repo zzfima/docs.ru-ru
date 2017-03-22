@@ -1,33 +1,49 @@
 ---
-title: "/reference (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/r - параметр компилятора [Visual Basic]"
-  - "/reference - параметр компилятора [Visual Basic]"
-  - "r - параметр компилятора [Visual Basic]"
-  - "-r - параметр компилятора [Visual Basic]"
-  - "reference - параметр компилятора [Visual Basic]"
-  - "-reference - параметр компилятора [Visual Basic]"
+title: "/ Reference (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- /reference compiler option [Visual Basic]
+- r compiler option [Visual Basic]
+- -reference compiler option [Visual Basic]
+- /r compiler option [Visual Basic]
+- reference compiler option [Visual Basic]
+- -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# /reference (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 12344dba82131d6be2c32127de287a6e9e3efa39
+ms.lasthandoff: 03/13/2017
 
-Указывает компилятору сделать доступными для текущего компилируемого проекта сведения о типе, находящиеся в указанных сборках.  
+---
+# <a name="reference-visual-basic"></a>/reference (Visual Basic)
+Указывает компилятору сделать доступными для проекта, компилируемого в данный момент сведения о типе в указанных сборках.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /reference:fileList  
@@ -35,40 +51,39 @@ caps.handback.revision: 16
 /r:fileList  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`fileList`|Обязательный.  Список имен файлов сборки с элементами отделенными между собой запятыми.  Заключите имя файла в кавычки \(""\), если оно содержит пробел.|  
+|---|---|  
+|`fileList`|Обязательный. Разделенный запятыми список имен файлов сборки. Если имя файла содержит пробел, заключите имя в кавычки.|  
   
-## Заметки  
- Импортируемые файлы должны содержать метаданные сборки.  Вне сборки видны только открытые типы.  Параметр [\/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) импортирует метаданные из модуля.  
+## <a name="remarks"></a>Примечания  
+ Импортируемые файлы должны содержать метаданные сборки. Только открытые типы видимы за пределами сборки. [/Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) параметр импортирует метаданные из модуля.  
   
- При ссылке на сборку А, которая, в свою очередь, ссылается на сборку Б, необходимо ссылаться на сборку Б в следующих случаях:  
+ При ссылке на сборки (сборка A), которая сама ссылается на другую сборку (сборку Б), необходимо ссылаться на сборку Б, если:  
   
--   Используемый из сборки A тип наследуется от типа или реализует интерфейс из сборки Б.  
+-   Из сборки A тип наследуется от типа или реализует интерфейс из сборки б.  
   
--   Вызывается поле, свойство, событие или метод, который возвращает из сборки Б тип или параметр типа.  
+-   Вызывается поле, свойство, событие или метод, который имеет возвращаемый тип или параметр типа из сборки Б.  
   
- Для указания каталога, в котором находятся сборки, на которые производятся ссылки, служит параметр [\/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md).  
+ Используйте [/LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) указать каталог, в котором находится один или несколько ссылки на сборки.  
   
- Для распознавания компилятором типа в сборке \(не в модуле\), он должен иметь возможность для уточнения типа.  Одним из примеров того, как это можно сделать является определение экземпляра типа.  Для уточнения имен типов в сборке существуют также другие способы.  Например, если имя типа наследуется из типа сборки, то оно становится известно компилятору.  
+ Компилятор мог распознавать тип в сборке (не в модуле) он должен иметь возможность разрешать типы. Одним из примеров того, как это можно сделать является определение экземпляра типа. Другие способы доступны для разрешения имен типов в сборке для компилятора. Например при наследовании от типа в сборке, имя типа затем становится известно компилятору.  
   
- Файл ответов Vbc.rsp, который содержит ссылки на часто используемые сборки [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)], используется по умолчанию.  Если не требуется, чтобы компилятор использовал файл Vbc.rsp, применяйте `/noconfig`.  
+ Файл ответов Vbc.rsp, который ссылается на часто используемые [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] сборок, используемых по умолчанию. Используйте `/noconfig` , если не нужно, чтобы компилятор использовал файл Vbc.rsp.  
   
- `/r` является короткой формой `/reference` .  
+ Краткая форма `/reference` — `/r`.  
   
-## Пример  
- Следующий код компилирует исходный файл I`nput.vb` и ссылается на сборки из M`etad1.dll` и M`etad2.dll` для получения O`ut.exe`.  
+## <a name="example"></a>Пример  
+ Следующий код компилирует источник файла я`nput.vb` и ссылаться на сборки из M`etad1.dll` и M`etad2.dll` производить O`ut.exe`.  
   
 ```  
 vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [\/target](../../../visual-basic/reference/command-line-compiler/target.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [/ noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
+ [/ Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
  [Public](../../../visual-basic/language-reference/modifiers/public.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

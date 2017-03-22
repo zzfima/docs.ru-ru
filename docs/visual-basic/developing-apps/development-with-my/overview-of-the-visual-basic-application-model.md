@@ -1,72 +1,88 @@
 ---
-title: "Обзор модели приложения в Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Application - объект, Visual Basic - модель приложения"
-  - "Visual Basic - модель приложения"
+title: "Обзор модели приложения Visual Basic | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My.Application object, Visual Basic application model
+- Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
----
-# Обзор модели приложения в Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0925bb102c148480d82128b91cbf1762de24e7ec
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] предоставляет четко определенную модель управления поведением приложений Windows Forms: модель приложения [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  Эта модель включает события для управления запуском и завершением работы приложения, а также события для перехвата необработанных исключений.  Она также поддерживает разработку приложений, допускающих одновременное выполнение только одного своего экземпляра.  Модель приложения является расширяемой, поэтому разработчики могут настраивать переопределяемые методы модели.  
+---
+# <a name="overview-of-the-visual-basic-application-model"></a>Обзор модели приложения в Visual Basic
+[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет четко определенную модель для управления поведением приложений Windows Forms: [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] модели приложения. Эта модель включает события для обработки приложения запуска и завершения работы, а также события для перехвата необработанных исключений. Он также обеспечивает поддержку для разработки приложений с одним экземпляром. Модель приложения является расширяемой, поэтому разработчики, которые необходим больший контроль могут настраивать переопределяемые методы.  
   
-## Использование модели приложений  
- Типичное приложение выполняет некоторые действия при запуске и завершении работы.  Например, при запуске приложение может отображать экран\-заставку, подключаться к базе данных, загружать сохраненные сведения о состоянии и т.д.  При завершении работы приложение может закрывать подключения к базе данных, сохранять текущее состояние и т.д.  Кроме того, приложение может выполнить определенный код при непредвиденном завершении работы, например в случае возникновения необработанного исключения.  
+## <a name="uses-for-the-application-model"></a>Использование модели приложения  
+ Типичный приложению для выполнения задач при запуске и завершении работы. Например при запуске, приложение может отображать экран-заставку, подключаться к базе данных, загружает сохраненное состояние и т.д. При завершении работы приложения, его закрытия подключений к базе данных, сохранять текущее состояние и т.д. Кроме того, приложение может выполнить определенный код при завершении приложения вниз непредвиденно, например во время необработанное исключение.  
   
- Модель приложения [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] упрощает создание *приложения, допускающего одновременное выполнение только одной копии*.  Такие приложения отличаются от обычных приложений тем, что только один экземпляр приложения может выполняться в один момент времени.  При попытке запуска другого экземпляра такого приложения первоначальный экземпляр уведомляется об этом посредством события `StartupNextInstance`.  Уведомление содержит аргументы командной строки последующего экземпляра.  Последующий экземпляр приложения затем закрывается, прежде чем будут выполнены любые действия по инициализации.  
+ [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Модель приложения позволяет легко создавать *экземпляра* приложения. Приложения с одним экземпляром отличается от обычных приложений тем, что только один экземпляр приложения может выполняться одновременно. Попытка запуска другого экземпляра такого приложения приводит к первоначальный экземпляр уведомляется — с помощью параметра `StartupNextInstance` событий — что была выполнена следующая попытка запуска. Уведомление содержит аргументы командной строки последующего экземпляра. Последующий экземпляр приложения затем закрывается до любой инициализации.  
   
- При запуске приложение, допускающее одновременное выполнение только одной копии, проверяет, является ли оно первым или последующим экземпляром приложения.  
+ Приложения с одним экземпляром запускается и проверяет, является ли первый экземпляр или последующим экземпляром приложения:  
   
 -   Если это первый экземпляр, оно запускается обычным образом.  
   
--   Если выполняется первый экземпляр приложения, то при попытке запуска последующих экземпляров приложение будет вести себя по\-другому.  При последующих попытках запуска первый экземпляр уведомляется об аргументах командной строки, следующий экземпляр сразу же завершает работу.  Первый экземпляр обрабатывает событие `StartupNextInstance`, чтобы определить аргументы командной строки последующих экземпляров, а затем продолжает работу.  
+-   Каждая следующая попытка запустить приложение, пока первый экземпляр, приведет к очень по-разному. Последующие попытки уведомляет об аргументах командной строки первого экземпляра и немедленно завершает работу. Первый экземпляр обрабатывает `StartupNextInstance` событие, чтобы определить аргументы командной строки последующих экземпляров, а затем продолжает работать.  
   
-     На рисунке ниже показано, как последующий экземпляр уведомляет первый экземпляр.  
+     На этой диаграмме показано, как последующий экземпляр уведомляет первый экземпляр.  
   
-     ![Изображение приложения одного экземпляра](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Единый образ экземпляра приложения](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
   
- Обработка события `StartupNextInstance` позволяет управлять поведением приложения, допускающего одновременное выполнение только одной копии.  Например, приложение Microsoft Outlook обычно запускается в виде приложения, допускающего одновременное выполнение только одной копии. Если приложение Outlook уже выполняется, то при попытке запуска другого экземпляра фокус переходит в исходный экземпляр, а другой экземпляр не открывается.  
+ При обработке `StartupNextInstance` события, можно управлять поведением приложения одного экземпляра. Например Microsoft Outlook обычно запускается как приложение одного экземпляра; Когда Outlook работает и при попытке запустить Outlook снова, фокус перемещается к первому экземпляру, но другой экземпляр не открывается.  
   
-## События в модели приложения  
- В модели приложения предусмотрены следующие события.  
+## <a name="events-in-the-application-model"></a>События в модели приложения  
+ В модели приложения предусмотрены следующие события:  
   
--   **Запуск приложения**.  При запуске приложение создает событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>.  При обработке этого события можно добавить код, который инициализирует приложение до загрузки главной формы.  Событие `Startup` также предоставляет возможность при необходимости отменить выполнение приложения на этом этапе процесса загрузки.  
+-   **Запуск приложения**. Приложение создает событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>при запуске.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> При обработке этого события, можно добавить код, который инициализирует приложение до загрузки главной формы. `Startup` Событий также предоставляет возможность отменить выполнение приложения во время этого этапа процесса загрузки, при необходимости.  
   
-     Можно настроить приложение для отображения заставки при выполнении кода запуска приложения.  По умолчанию модель приложения отключает заставку при использовании аргумента командной строки `/nosplash` или `-nosplash`.  
+     Можно настроить приложение для отображения заставки при выполнении кода запуска приложения. По умолчанию модель приложения отключает заставку экрана, когда либо `/nosplash` или `-nosplash` используется аргумент командной строки.  
   
--   **Приложения, допускающие одновременное выполнение только одной своей копии**.  При запуске последующего экземпляра приложения, допускающего одновременное выполнение только одного своего экземпляра, создается событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>.  Событие передает аргументы командной строки последующего экземпляра.  
+-   **Приложения с одним процессом**. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>Событие возникает при запуске последующего экземпляра приложения с одним экземпляром.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Событие передает аргументы командной строки последующего экземпляра.  
   
--   **Необработанные исключения**.  При обнаружении необработанного исключения приложение создает событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  Обработчик этого события может проверить исключение и определить, следует ли продолжить выполнение.  
+-   **Необработанные исключения**. Если в приложении возникает необработанное исключение, он выдает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>событий.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> Обработчик этого события может проверить исключение и определить, следует ли продолжить выполнение.  
   
-     Событие `UnhandledException` не возникает в некоторых случаях.  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.  
+     `UnhandledException` Событие не вызывается в некоторых случаях. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
   
--   **Изменения сетевого подключения**.  При изменении доступности сети компьютера приложение создает событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+-   **Изменения сетевого подключения**. При изменении доступности сети компьютера приложение вызывает <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>событий.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
   
-     В некоторых случаях событие `NetworkAvailabilityChanged` не создается.  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.  
+     `NetworkAvailabilityChanged` Событие не вызывается в некоторых случаях. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
   
--   **Завершение работы приложения**.  Приложение создает событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> для оповещения о том, что оно собирается завершить работу.  В этом обработчике событий можно убедиться в выполнении необходимых операций приложения, таких как закрытие и сохранение.  Можно настроить приложение на завершение работы при закрытии главной формы или при закрытии всех форм.  
+-   **Завершить работу приложения**. Приложение предоставляет <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>событие для оповещения при закрытии.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> В этом случае обработчик, можно гарантировать, что операции в приложении необходимо выполнить, закрытие и сохранение, например — завершены. Можно настроить приложение на завершение работы при закрытии главной формы или завершать работу только закрытие всех форм.  
   
-## Доступность  
- По умолчанию модель приложения [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] доступна в проектах Windows Forms.  Если приложение настроено на использование другого автоматически запускаемого объекта или запуск кода приложения с пользовательской процедурой `Sub Main`, то может потребоваться предоставить объекту или классу реализацию класса <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> для использования модели приложения.  Сведения об изменении автоматически запускаемого объекта см. в разделе [Страница «Приложение» в конструкторе проектов \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic).  
+## <a name="availability"></a>Доступность  
+ По умолчанию [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] модель приложения доступно для проектов Windows Forms. Если настроить приложение на использование другого автоматически запускаемого объекта или запуск кода приложения с пользовательским `Sub Main`, затем, объекта или класса может понадобиться предоставить реализацию <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>класс для использования в модели приложения.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Сведения об изменении автоматически запускаемого объекта см. в разделе [страница "приложение" в конструкторе проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
-## См. также  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>   
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>   
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>   
  [Расширение модели приложения Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)

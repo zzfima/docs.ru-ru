@@ -1,52 +1,68 @@
 ---
-title: "Тип данных String (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.String"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "" String - литералы"
-  - "$ - знак типа идентификатора"
-  - "типы данных [Visual Basic], назначение"
-  - "строки фиксированной длины"
-  - "строки фиксированной длины, string - тип данных"
-  - "символы типа идентификатора, $"
-  - "литералы, строка"
-  - "String - тип данных"
-  - "string - ключевое слово [Visual Basic]"
-  - "строковые литералы"
-  - "строки [Visual Basic], знак"
-  - "строки [Visual Basic], фиксированная длина"
-  - "текст [Visual Basic], String - тип данных"
+title: "Строковый тип данных (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.String
+dev_langs:
+- VB
+helpviewer_keywords:
+- strings [Visual Basic], character
+- strings [Visual Basic], fixed-length
+- string keyword [Visual Basic]
+- fixed-length strings, string data type
+- literals, string
+- text [Visual Basic], String data type
+- $ identifier type character
+- String data type
+- fixed-length strings
+- string literals
+- data types [Visual Basic], assigning
+- String literals
+- identifier type characters, $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Тип данных String (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9221a89a1fb46609b4b8550968e3a2bbe874772c
+ms.lasthandoff: 03/13/2017
 
-Содержит последовательности 16\-битовых \(2\-байтовых\) кодовых точек без знака со значениями в диапазоне от 0 до 65535.  Каждая *кодовая точка*, или код знака, представляет один символ Юникода.  Строка может содержать от нуля до приблизительно двух миллиардов \(2^31\) знаков Юникода.  
+---
+# <a name="string-data-type-visual-basic"></a>Тип данных String (Visual Basic)
+Содержит этот диапазон последовательности без знака 16-разрядные (2-байтовые) кодовые точки в диапазоне от 0 до 65535. Каждый *кодовой*, или код знака, представляет один знак Юникода. Строка может содержать от нуля до двух миллиардов (2 ^ 31) знаков Юникода.  
   
-## Заметки  
- Используйте тип данных `String` для хранения нескольких символов без предоставления в виде массива `Char()` элементов `Char`.  
+## <a name="remarks"></a>Примечания  
+ Используйте `String` тип данных для хранения нескольких символов без использования управления массива `Char()`, массив `Char` элементы.  
   
- Значением `String` по умолчанию является `Nothing` \(пустая ссылка\).  Обратите внимание, что это не то же самое, что пустая строка \(значение `""`\).  
+ Значение по умолчанию `String` — `Nothing` (пустая ссылка). Обратите внимание, что это не совпадает с пустой строкой (значение `""`).  
   
-## Знаки Юникода  
- Первые 128 кодовых точек \(от 0 до 127\) Юникода соответствуют буквам и символам стандартной американской  клавиатуры.  Эти первые 128 кодовых точек те же, что и в наборе знаков ASCII.  Следующие 128 кодовых точек \(от 128 до 255\) представляют специальные символы, например буквы, основанные на латинском алфавите, знаки ударения, символы валют и дроби.  Юникод использует остальные кодовые точки \(от 256 до 65535\) для расширенного набора символов.  Сюда входят символы алфавитов мира, диакритические знаки, математические и технические символы.  
+## <a name="unicode-characters"></a>Символы Юникода  
+ Первые 128 кодовых точек (от 0 до 127) Юникода соответствуют буквам и символам стандартной американской клавиатуры. Эти первые 128 кодовых точек являются такими же, как определяет набор символов ASCII. 128 кодовых точек (128-255) представляют специальные символы, такие как буквы латинского алфавита, знаки ударения, символы валют и дроби. Юникод использует остальные кодовые точки (от&256; до&65535;) для широкого набора символов. Это включает в себя международные текстовые знаки, математические и технические символы и диакритические знаки.  
   
- Можно применять такие методы, как <xref:System.Char.IsDigit%2A> и <xref:System.Char.IsPunctuation%2A> к отдельным знакам в переменной типа `String` для определения ее классификации Юникода.  
+ Можно использовать методы, такие как <xref:System.Char.IsDigit%2A>и <xref:System.Char.IsPunctuation%2A>на отдельный символ в `String` переменную для определения ее классификации Юникода.</xref:System.Char.IsPunctuation%2A> </xref:System.Char.IsDigit%2A>  
   
-## Требования формата  
- Необходимо заключить литерал `String` в кавычки \(`" "`\).  Если необходимо, чтобы такая строка содержала кавычки, используются два последовательных знака кавычек \(`""`\).  Это показано в приведенном ниже примере.  
+## <a name="format-requirements"></a>Требования к формату  
+ Необходимо заключить `String` литерал в кавычках (`" "`). Если необходимо включить кавычки как один из символов в строке, используется два смежных кавычки (`""`). Это показано в следующем примере.  
   
 ```  
 Dim j As String = "Joe said ""Hello"" to me."  
@@ -58,12 +74,12 @@ MsgBox("Joe said " & """" & h & """" & " to me.")
 MsgBox("Joe said """ & h & """ to me.")  
 ```  
   
- Следует отметить, что парные кавычки, которые представляют кавычки в строке, могут выставляться как в середине строки `String`, так и в ее начале или конце.  
+ Обратите внимание, что парные кавычки, которые представляют кавычки в строке не зависят от кавычки, которые начинают и завершают `String` литерала.  
   
-## Работа со строками  
- После присвоения строки переменной типа `String` эта строка остается *неизменной*, то есть нельзя изменить её длину или содержимое.  При изменении строки каким\-либо образом Visual Basic создает новую строку и закрывает предыдущую.  После этого переменная `String` указывает на новую строку.  
+## <a name="string-manipulations"></a>Операции со строками  
+ После того как строка, `String` переменной, что строка является *неизменяемый*, означает, что нельзя изменить её длину или содержимое. При изменении строки каким-либо образом Visual Basic создает новую строку и закрывает предыдущую. `String` Переменная затем указывает на новую строку.  
   
- Содержимым переменной типа `String` можно управлять с помощью различных строковых функций.  В следующем примере иллюстрируется функция <xref:Microsoft.VisualBasic.Strings.Left%2A>.  
+ Можно управлять содержимым `String` переменной с помощью различных строковых функций. В следующем примере <xref:Microsoft.VisualBasic.Strings.Left%2A>функция</xref:Microsoft.VisualBasic.Strings.Left%2A>  
   
 ```  
 Dim S As String = "Database"  
@@ -71,25 +87,26 @@ Dim S As String = "Database"
 S = Microsoft.VisualBasic.Left(S, 4)  
 ```  
   
- Строка, созданная другим компонентом, может содержать начальные или конечные пробелы.  При получении такой строки можно использовать функции <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A> и <xref:Microsoft.VisualBasic.Strings.RTrim%2A> для удаления этих пробелов.  
+ Строка, созданная другим компонентом может быть заполняется начальные или конечные пробелы. Если вы получаете такие строки, можно использовать <xref:Microsoft.VisualBasic.Strings.Trim%2A>, <xref:Microsoft.VisualBasic.Strings.LTrim%2A>, и <xref:Microsoft.VisualBasic.Strings.RTrim%2A>функции для удаления этих пробелов.</xref:Microsoft.VisualBasic.Strings.RTrim%2A> </xref:Microsoft.VisualBasic.Strings.LTrim%2A> </xref:Microsoft.VisualBasic.Strings.Trim%2A>  
   
- Дополнительные сведения о работе со строками см. в разделе [Строки](../../../visual-basic/programming-guide/language-features/strings/index.md).  
+ Дополнительные сведения об операции со строками см. в разделе [строки](../../../visual-basic/programming-guide/language-features/strings/index.md).  
   
-## Советы по программированию  
+## <a name="programming-tips"></a>Советы по программированию  
   
--   **Отрицательные числа**. Обратите внимание, что коды символов, содержащихся в переменной типа `String`, являются беззнаковыми и не могут представлять отрицательные значения.  В любом случае не следует использовать переменные типа `String` для хранения числовых значений.  
+-   **Отрицательные числа.** Помните, что символы удерживаемые `String` без знака и не может представлять отрицательные значения. В любом случае не следует использовать `String` для хранения числовых значений.  
   
--   **Вопросы взаимодействия**. При взаимодействии с компонентами, написанными не для .NET Framework, например с компонентами автоматизации и COM\-объектами, следует помнить, что в других средах символьные типы имеют другой размер \(8 бит\).  Если в такой компонент передается строковый аргумент 8\-разрядных символов, объявите его в качестве `Byte()`, массива элементов типа `Byte`, вместо `String` в коде Visual Basic.  
+-   **Вопросы взаимодействия.** При взаимодействии с компонентами, написанными не для платформы .NET Framework, например автоматизации или COM-объектов, помните, что символы строки имеют другой размер (8 бит) в других средах. Если такому компоненту передается строковый аргумент 8-разрядных символов, объявите ее в качестве `Byte()`, массив `Byte` элементов, а не `String` в новом коде Visual Basic.  
   
--   **Символы типов**. При добавлении знака типа идентификатора `$` к какому\-либо идентификатору происходит приведение идентификатора к типу данных `String`.  `String` не имеет символа типа литерала.  Однако компилятор обрабатывает литералы, заключенные в кавычки \(`" "`\), как строковые \(`String`\).  
+-   **Символы типов.** Добавление знак типа идентификатора `$` к любому идентификатору приводит к принудительному `String` тип данных. `String`не имеет буквенного символа. Однако компилятор обрабатывает литералы, заключенные в кавычки (`" "`) как `String`.  
   
--   **Тип Framework.**. В .NET Framework соответствующим типом является класс <xref:System.String?displayProperty=fullName>.  
+-   **Тип Framework.** Соответствующий тип в .NET Framework является <xref:System.String?displayProperty=fullName>класс.</xref:System.String?displayProperty=fullName>  
   
-## См. также  
- <xref:System.String?displayProperty=fullName>   
+## <a name="see-also"></a>См. также  
+ <xref:System.String?displayProperty=fullName></xref:System.String?displayProperty=fullName>   
  [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Тип данных Char](../../../visual-basic/language-reference/data-types/char-data-type.md)   
+ [Тип данных char](../../../visual-basic/language-reference/data-types/char-data-type.md)   
  [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
  [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
+ [Практическое руководство: вызов функции Windows, принимающей значение беззнакового типа](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
  [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+

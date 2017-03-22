@@ -1,70 +1,86 @@
 ---
-title: "/main | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/main - параметр компилятора [Visual Basic]"
-  - "main - параметр компилятора [Visual Basic]"
-  - "-main - параметр компилятора [Visual Basic]"
+title: "/ main | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- main compiler option [Visual Basic]
+- /main compiler option [Visual Basic]
+- -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# /main
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: dded7621845141896f353d69ab757010c825b975
+ms.lasthandoff: 03/13/2017
 
-Указывает класс или модуль, содержащий процедуру `Sub Main`.  
+---
+# <a name="main"></a>/main
+Указывает класс или модуль, содержащий `Sub Main` процедуры.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /main:location  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `location`  
- Обязательный.  Полное имя класса или модуля, содержащего процедуру `Sub Main`, вызываемую при запуске программы.  Это может быть в формате **\/main:module** или **\/main:namespace.module**.  
+ Обязательный. Полное имя пространства имен для класса или модуля, содержащего `Sub Main` процедуры, который должен вызываться при запуске программы. Это может быть в форме **/main:module** или **/main:namespace.module**.  
   
-## Заметки  
- Следует использовать данный параметр для создания исполняемого файла или программы для Windows.  Если параметр **\/main** опущен, компилятор ищет подходящее общее значение `Sub Main` во всех открытых классах и модулях.  
+## <a name="remarks"></a>Примечания  
+ Используйте этот параметр при создании исполняемого файла или программы для Windows. Если **/main** параметр указан, компилятор выполняет поиск допустимый общий `Sub Main` во всех открытых классов и модулей.  
   
- См. [Процедура Main в Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) для обзора различных форм процедуры `Main`.  
+ В разделе [процедура Main в Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) обсуждение различных видов `Main` процедуры.  
   
- Когда `location` представляет собой класс, наследуемый от <xref:System.Windows.Forms.Form>, компилятор предоставляет процедуру по умолчанию `Main`, которая запускает приложение, если класс не имеет процедуры `Main`.  Это позволяет компилировать код, который был создан в среде разработки, в командной строке.  
+ Когда `location` — это класс, который наследует от <xref:System.Windows.Forms.Form>, компилятор предоставляет значение по умолчанию `Main` процедуру, которая запускает приложение, если класс не имеет `Main` процедуры.</xref:System.Windows.Forms.Form> Это позволяет скомпилировать код из командной строки, который был создан в среде разработки.  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler №&16;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
-### Чтобы установить параметр \/main в интегрированной среде разработки Visual Studio  
+### <a name="to-set-main-in-the-visual-studio-integrated-development-environment"></a>Чтобы установить параметр/Main в Visual Studio интегрированная среда разработки  
   
-1.  Выберите проект в **обозревателе решений**.  В меню **Проект** выберите пункт **Свойства**.  
+1.  Выберите проект в **Обозревателе решений**. На **проекта** меню, щелкните **свойства**.  
   
-     Дополнительные сведения см. в разделе [Introduction to the Project Designer](http://msdn.microsoft.com/ru-ru/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+     Дополнительные сведения см. в разделе [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
   
-2.  Перейдите на вкладку **Приложение**.  
+2.  Перейдите на вкладку **Приложение** .  
   
-3.  Убедитесь, что флажок **включить приложение Framework** не установлен.  
+3.  Убедитесь, что **Включить исполняющую среду** не установлен флажок.  
   
-4.  Измените значение в поле **Объект запуска**.  
+4.  Измените значение в **автоматически запускаемый объект** поле.  
   
-## Пример  
- Следующий код компилирует `T2.vb` и `T3.vb`, указав, что процедура `Sub Main` будет найдена в классе `Test2`.  
+## <a name="example"></a>Пример  
+ Следующий код компилирует `T2.vb` и `T3.vb`, указав, `Sub Main` процедуры будут находиться в `Test2` класса.  
   
 ```  
 vbc t2.vb t3.vb /main:Test2  
 ```  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/target](../../../visual-basic/reference/command-line-compiler/target.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [/ Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [NIB: Visual Basic Version of Hello, World](http://msdn.microsoft.com/ru-ru/9d030b60-e148-4366-a462-69532f02294c)   
+ [NIB: версия Visual Basic Hello World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)   
  [Процедура Main в Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

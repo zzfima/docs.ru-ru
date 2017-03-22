@@ -1,32 +1,48 @@
 ---
-title: "Property Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PropertySet"
-  - "vb.Property"
-  - "vb.PropertyGet"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Property - оператор"
-  - "модификатор по умолчанию"
-  - "процедуры свойств, Property-операторы"
-  - "Property - ключевое слово"
+title: "Оператор Property | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PropertySet
+- vb.Property
+- vb.PropertyGet
+dev_langs:
+- VB
+helpviewer_keywords:
+- Property statement
+- default modifier
+- property procedures, Property statements
+- Property keyword
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
 caps.latest.revision: 41
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 41
----
-# Property Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 87cb32c12ab3238508a6a4bb114306909e409dda
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="property-statement"></a>Property Statement
 Объявляет имя свойства и процедуры свойства, используемые для хранения и извлечения значения свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -65,15 +81,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
-     См. раздел [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `propertymodifiers`  
   
@@ -95,7 +111,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     Необязательный. В разделе [общих](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Необязательный. В разделе [общего](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
@@ -115,7 +131,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `name`  
   
-     Обязательный. Имя свойства. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Обязательный. Имя свойства. В разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
@@ -123,7 +139,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `returntype`  
   
-     Обязателен, если `Option``Strict` является `On`. Тип данных значения, возвращаемого этим свойством.  
+     Обязателен, если `Option``Strict` — `On`. Тип данных значения, возвращаемого этим свойством.  
   
 -   `Implements`  
   
@@ -139,9 +155,8 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
      `interface.definedname`  
   
-    |||  
-    |-|-|  
     |Отделение|Описание|  
+    |---|---|  
     |`interface`|Обязательный. Имя интерфейса, реализуемого этим свойством, содержащей класс или структуру.|  
     |`definedname`|Обязательный. Имя, в котором определено свойство `interface`.|  
   
@@ -170,50 +185,50 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
      Завершает определение данного свойства.  
   
 ## <a name="remarks"></a>Примечания  
-  `Property` Инструкция содержит объявление свойства. Свойство может иметь `Get` (только для чтения), процедура `Set` процедура (только запись), или обе (чтение и запись). Можно опустить `Get` и `Set` процедуры при использовании автоматически реализуемого свойства. Дополнительные сведения см. в разделе [Auto-Implemented свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
+ `Property` Инструкция содержит объявление свойства. Свойство может иметь `Get` (только для чтения), процедура `Set` процедура (только запись), или обе (чтение и запись). Можно опустить `Get` и `Set` процедуры при использовании автоматически реализуемого свойства. Дополнительные сведения см. в разделе [Auto-Implemented свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
  Можно использовать `Property` только на уровне класса. Это означает *контекст объявления* свойства должен быть класс, структура, модуль или интерфейс и не может быть исходным файлом, пространство имен, процедуры или блока. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  По умолчанию свойства используют общий доступ. Можно настроить уровень доступа свойства с модификатором доступа на `Property` инструкции и можно при необходимости настроить одну из его процедур на более строгий уровень доступа.  
   
- Visual Basic передает параметр `Set` процедуры во время назначения свойств. Если не указать параметр `Set`, интегрированную среду разработки (IDE) использует неявный параметр с именем `value`. Этот параметр содержит значение, присваиваемое свойству. Обычно хранить данное значение в закрытой локальной переменной и возвращается при каждом `Get` при вызове процедуры.  
+ Visual Basic передает параметр `Set` процедуры во время назначения свойств. Если не указать параметр для `Set`, интегрированную среду разработки (IDE) использует неявный параметр с именем `value`. Этот параметр содержит значение, присваиваемое свойству. Обычно хранить данное значение в закрытой локальной переменной и возвращается при каждом `Get` при вызове процедуры.  
   
 ## <a name="rules"></a>Правила  
   
 -   **Смешанные уровни доступа.** При определении свойства чтения и записи, при необходимости можно указать другой уровень доступа для любого `Get` или `Set` процедуры, но не оба. После этого уровень доступа процедуры должен быть более ограничивающим, чем уровень доступа свойства. Например, если свойство объявлено `Friend`, можно объявить `Set` процедура `Private`, но не `Public`.  
   
-     При определении `ReadOnly` или `WriteOnly` свойство, одна процедура (`Get` или `Set`, соответственно) представляет все свойства. Нельзя объявлять другой уровень доступа для такой процедуры, так как это установит два уровня доступа для свойства.  
+     При определении `ReadOnly` или `WriteOnly` свойство, одна процедура (`Get` или `Set`соответственно) представляет все свойства. Нельзя объявлять другой уровень доступа для такой процедуры, так как это установит два уровня доступа для свойства.  
   
--   **Возвращаемый тип.**  `Property` Оператора можно объявлять тип данных, возвращаемых значений. Можно указать любой тип данных или имя перечисления, структуры, класса или интерфейса.  
+-   **Возвращаемый тип.** `Property` Оператора можно объявлять тип данных, возвращаемых значений. Можно указать любой тип данных или имя перечисления, структуры, класса или интерфейса.  
   
      Если вы не укажете `returntype`, это свойство возвращает `Object`.  
   
--   **Реализация.** Если это свойство использует `Implements` должен иметь ключевое слово, содержащего класса или структуры `Implements` инструкции сразу после его `Class` или `Structure` инструкции.  `Implements` Инструкция должна включать интерфейсов, указанных в `implementslist`. Тем не менее имя, по которому определяется интерфейс `Property` (в `definedname`) не обязательно совпадает с именем данного свойства (в `name`).  
+-   **Реализация.** Если это свойство использует `Implements` должен иметь ключевое слово, содержащего класса или структуры `Implements` инструкции сразу после его `Class` или `Structure` инструкции. `Implements` Инструкция должна включать интерфейсов, указанных в `implementslist`. Тем не менее имя, по которому определяется интерфейс `Property` (в `definedname`) не обязательно совпадает с именем данного свойства (в `name`).  
   
 ## <a name="behavior"></a>Поведение  
   
--   **Возвращение из процедуры свойства.** При `Get` или `Set` процедура возвращает вызывающему коду, выполнение продолжается с оператора, следующего инструкцию, которая его вызвала.  
+-   **Возвращение из процедуры свойства.** Когда `Get` или `Set` процедура возвращает вызывающему коду, выполнение продолжается с оператора, следующего инструкцию, которая его вызвала.  
   
-      `Exit Property` И `Return` инструкции вызывают Немедленный выход из процедуры свойства. Любое количество `Exit Property` и `Return` операторы могут использоваться в любом месте в процедуре, и можно смешивать `Exit Property` и `Return` инструкции.  
+     `Exit Property` И `Return` инструкции вызывают Немедленный выход из процедуры свойства. Любое число `Exit Property` и `Return` операторы могут использоваться в любом месте в процедуре, и можно смешивать `Exit Property` и `Return` инструкции.  
   
--   **Возвращаемое значение.** Для возврата значения из `Get` процедуры, можно присвоить значение имени свойства или включить ее в `Return` инструкции. В следующем примере возвращаемое значение присваивается имени свойства `quoteForTheDay` а затем использует `Exit Property` инструкции.  
+-   **Возвращаемое значение.** Для возврата значения из `Get` процедуры, можно присвоить значение имени свойства или включить ее в `Return` инструкции. В следующем примере возвращаемое значение присваивается имени свойства `quoteForTheDay` , а затем использует `Exit Property` инструкции.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements&#27;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements&#28;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
   
-     Если вы используете `Exit Property` без присвоения значения `name`,  `Get` процедура возвращает значение по умолчанию для типа данных свойства.  
+     Если вы используете `Exit Property` без присвоения значения `name`, `Get` процедура возвращает значение по умолчанию для типа данных свойства.  
   
-      `Return` Оператор, в то же время назначает `Get` процедура возвращает значение и завершает процедуру. Это показано в следующем примере.  
+     `Return` Оператор, в то же время назначает `Get` процедура возвращает значение и завершает процедуру. Это показано в следующем примере.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements&#27;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements&#29;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере объявляется свойство в классе.  
   
- [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements&#51;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
 ## <a name="see-also"></a>См. также  
  [Автоматически реализуемые свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   

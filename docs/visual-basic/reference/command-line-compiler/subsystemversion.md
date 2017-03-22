@@ -1,25 +1,41 @@
 ---
-title: "-subsystemversion (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/subsystemversion - параметр компилятора [Visual Basic]"
-  - "-subsystemversion - параметр компилятора [Visual Basic]"
-  - "subsystemversion - параметр компилятора [Visual Basic]"
+title: "/ subsystemversion (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- /subsystemversion compiler option [Visual Basic]
+- -subsystemversion compiler option [Visual Basic]
+- subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
----
-# /subsystemversion (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: bc9ea6a844fae7f98315e5d3557fdf306f467dd5
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="subsystemversion-visual-basic"></a>/subsystemversion (Visual Basic)
 Указывает минимальную версию подсистемы, в которой может выполняться созданный исполняемый файл, то есть определяет версии Windows, в которых может работать исполняемый файл. Чаще всего этот параметр предоставляет исполняемому файлу возможность использовать определенные возможности безопасности, недоступные в прежних версиях Windows.  
   
 > [!NOTE]
@@ -48,7 +64,7 @@ caps.handback.revision: 9
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8-md.md)]|6.02|  
+|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
   
 ## <a name="default-values"></a>Значения по умолчанию  
  Значение по умолчанию **/subsystemversion** параметр компилятора зависит от условий в следующем списке:  
@@ -61,15 +77,17 @@ caps.handback.revision: 9
   
     -   [/platform:ARM](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
--   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net-v45-md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
+-   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
   
 -   Если ни одно из предыдущих условий не верно, значение по умолчанию — 4.00.  
   
 ## <a name="setting-this-option"></a>Задание этого параметра  
- Чтобы задать **/subsystemversion** параметра компилятора в Visual Studio, необходимо открыть VBPROJ-файл и указать значение для `SubsystemVersion` Свойства в MSBuild XML. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. в разделе «Значения по умолчанию» ранее в этом разделе или [Общие свойства проектов MSBuild](/visual-studio/msbuild/common-msbuild-project-properties).  
+ Чтобы задать **/subsystemversion** параметра компилятора в Visual Studio, необходимо открыть VBPROJ-файл и указать значение для `SubsystemVersion` свойства в MSBuild XML. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. в разделе «Значения по умолчанию» ранее в этом разделе или [общие свойства проектов MSBuild](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties).  
   
 
   
-## <a name="see-also"></a>См. также раздел  
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
- [свойства MSBuild](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/ee3538c5-0d7d-4c18-a1d7-edf460cd1c8a/locales/en-US)
+## <a name="see-also"></a>См. также  
+[Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+
+[Свойства MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties)
+

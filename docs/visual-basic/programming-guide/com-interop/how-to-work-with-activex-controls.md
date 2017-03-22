@@ -1,47 +1,63 @@
 ---
-title: "Практическое руководство. Работа с элементами ActiveX (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "элементы управления ActiveX, добавление в панель элементов"
-  - "панель элементов, добавление элементов управления"
+title: "Практическое руководство: работа с элементами ActiveX (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Toolbox, adding controls
+- ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# Практическое руководство. Работа с элементами ActiveX (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 12780fc2e95e219befdfd7283a2f958f21e447f7
+ms.lasthandoff: 03/13/2017
 
-Элементы управления ActiveX являются компонентами COM или объектами, которые можно вставить в веб\-страницу или другое приложение для использования упакованных функциональных возможностей, запрограммированных кем\-либо другим.  Элементы управления ActiveX, разработанные для Visual Basic версии 6.0 и более ранних версий, можно использовать для добавления элементов на **Панель элементов** в [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)].  
+---
+# <a name="how-to-work-with-activex-controls-visual-basic"></a>Практическое руководство. Работа с элементами ActiveX (Visual Basic)
+Элементы управления ActiveX являются компонентами COM или объекты, которые можно вставить в веб-страницу или другое приложение для использования упакованных функциональных возможностей, запрограммированных другим пользователем. Элементы управления ActiveX, разработанные для Visual Basic 6.0 и более ранних версий можно использовать для добавления возможностей в **элементов** из [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
   
-### Чтобы добавить элементы управления ActiveX на панель элементов, выполните следующие действия:  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>Чтобы добавить элементы управления ActiveX на панель инструментов  
   
-1.  В меню **Сервис** выберите команду **Выбор элементов панели элементов**.  
+1.  На **средства** меню, щелкните **Выбор элементов панели элементов**.  
   
-     Откроется диалоговое окно **Выбор элементов панели элементов**.  
+     **Выбор элементов панели элементов** откроется диалоговое окно.  
   
-2.  Перейдите на вкладку **COM\-компоненты**.  
+2.  Щелкните **COM-компонентов** вкладки.  
   
-3.  Установите флажок рядом с элементом управления ActiveX, который необходимо использовать, и нажмите **OK**.  
+3.  Установите флажок рядом с элементом управления ActiveX, вы хотите использовать и нажмите кнопку **ОК**.  
   
-     Рядом с другими инструментами на **панели элементов** появится новый элемент управления.  
+     Появится новый элемент управления с помощью средств в **элементов**.  
   
     > [!NOTE]
-    >  С помощью программы Aximp можно создать сборку взаимодействия для элементов управления ActiveX вручную.  Дополнительные сведения см. в разделе [Aximp.exe \(Windows Forms ActiveX Control Importer\)](../Topic/Aximp.exe%20\(Windows%20Forms%20ActiveX%20Control%20Importer\).md).  
+    >  Программа Aximp вручную создать сборку взаимодействия для элементов управления ActiveX. Дополнительные сведения см. в разделе [Aximp.exe (импортера элементов управления ActiveX Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
   
-## См. также  
- [COM\-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)   
- [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms.](../Topic/How%20to:%20Add%20ActiveX%20Controls%20to%20Windows%20Forms.md)   
- [Aximp.exe \(Windows Forms ActiveX Control Importer\)](../Topic/Aximp.exe%20\(Windows%20Forms%20ActiveX%20Control%20Importer\).md)   
- [Вопросы размещения элемента управления ActiveX в форме Windows Forms](../Topic/Considerations%20When%20Hosting%20an%20ActiveX%20Control%20on%20a%20Windows%20Form.md)   
+## <a name="see-also"></a>См. также  
+ [Взаимодействие COM](../../../visual-basic/programming-guide/com-interop/index.md)   
+ [Практическое руководство: Добавление элементов управления ActiveX в Windows Forms](http://msdn.microsoft.com/library/54a61e5b-555e-4887-b41e-6244fed271eb)   
+ [AxImp.exe (программа импорта элементов управления ActiveX форм Windows)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)   
+ [Вопросы размещения элемента управления ActiveX в Windows Forms](http://msdn.microsoft.com/library/2509302d-a74e-484f-9890-2acdbfa67a68)   
  [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

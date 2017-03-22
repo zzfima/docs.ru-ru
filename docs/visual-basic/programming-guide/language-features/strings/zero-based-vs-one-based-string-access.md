@@ -1,38 +1,54 @@
 ---
-title: "Что лучше: отсчет индексации с нуля или с единицы? (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "строки [Visual Basic], индексация"
+title: "Отсчитываемый от нуля vs. Доступ на основе одной строки в Visual Basic | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
----
-# Что лучше: отсчет индексации с нуля или с единицы? (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6cd2cab888bf336151ed26968119431f4ffc75f4
+ms.lasthandoff: 03/13/2017
 
-В этом разделе проводится сравнение того, как [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] и [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] предоставляют доступ к символам в строке.  [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] символы в строке считает с нуля, тогда как [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] введет индексацию либо с нуля, либо с единицы, в зависимости от функции.  
+---
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Отсчитываемый от нуля vs. Доступ на основе одной строки в Visual Basic
+В этом разделе сравнивается как [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] предоставляют доступ к символам в строке. [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] Всегда обеспечивает (с нуля) доступ к символам в строке, в то время как [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] предоставляет доступ, отсчитываемый от нуля и от единицы, в зависимости от функции.  
   
-## Индексация с единицы  
- Примером функции [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], ведущей отсчет с единицы, является функция `Mid`.  Она принимает аргумент, указывающий положение символа, с которого будет начинаться подстрока, начиная с позиции 1.  Метод [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] <xref:System.String.Substring%2A?displayProperty=fullName> принимает индекс символа в строке, с которого начинается подстрока, начиная с позиции 0.  Следовательно, если имеется строка "ABCDE", то отдельные символы нумеруются как 1,2,3,4,5 для использования в функции `Mid`, но как 0,1,2,3,4 для использования в методе <xref:System.String.Substring%2A?displayProperty=fullName>.  
+## <a name="one-based"></a>Единицы  
+ Пример с единицы [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] функция, рассмотрите возможность `Mid` функции. Он принимает аргумент, указывающий положение символа, с которой начинается подстрока, начиная с позиции 1. [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.String.Substring%2A?displayProperty=fullName>Принимает индекс символа в строке является подстрока для запуска, начиная с позиции 0.</xref:System.String.Substring%2A?displayProperty=fullName> Таким образом, если имеется строка «ABCDE» отдельные символы нумеруются как 1,2,3,4,5 для использования с `Mid` функции, но как 0,1,2,3,4 для использования с <xref:System.String.Substring%2A?displayProperty=fullName>метод.</xref:System.String.Substring%2A?displayProperty=fullName>  
   
-## Индексация с нуля  
- Примером функции [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], ведущей отсчет с нуля, является функция `Split`.  Она разбивает строку и возвращает массив, содержащий подстроки.  В методе [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=fullName> также разбивается строка и возвращает массив, содержащий подстроки.  Поскольку функция `Split` и метод <xref:System.String.Split%2A> возвращают массивы [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)], индексация у них должна вестись от нуля.  
+## <a name="zero-based"></a>Отсчитываемый от нуля  
+ Пример (с нуля) [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] функция, рассмотрите возможность `Split` функции. Он разбивает строку и возвращает массив, содержащий подстроки. [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.String.Split%2A?displayProperty=fullName>Также метод разбивает строку и возвращает массив, содержащий подстроки.</xref:System.String.Split%2A?displayProperty=fullName> Поскольку `Split` функции и <xref:System.String.Split%2A>возвращении метода [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] массивы, они должны быть от нуля.</xref:System.String.Split%2A>  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>   
- <xref:Microsoft.VisualBasic.Strings.Split%2A>   
- <xref:System.String.Substring%2A>   
- <xref:System.String.Split%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A>   
+ <xref:Microsoft.VisualBasic.Strings.Split%2A></xref:Microsoft.VisualBasic.Strings.Split%2A>   
+ <xref:System.String.Substring%2A></xref:System.String.Substring%2A>   
+ <xref:System.String.Split%2A></xref:System.String.Split%2A>   
  [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

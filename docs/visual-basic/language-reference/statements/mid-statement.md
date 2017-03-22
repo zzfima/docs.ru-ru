@@ -1,34 +1,51 @@
 ---
-title: "Оператор Mid | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.MidB"
-  - "vb.Mid"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Mid - оператор"
-  - "строки [Visual Basic], замена"
-  - "строки [Visual Basic], подстроки"
-  - "подстроки, Mid - оператор"
+title: "Оператор Mid | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.MidB
+- vb.Mid
+dev_langs:
+- VB
+helpviewer_keywords:
+- substrings, Mid statement
+- strings [Visual Basic], substrings
+- Mid statement
+- strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Оператор Mid
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e385d6838daa16d45903c6b270fc47ad88797845
+ms.lasthandoff: 03/13/2017
 
-Заменяет указанное число знаков в переменной типа `String` знаками из другой строки.  
+---
+# <a name="mid-statement"></a>Оператор Mid
+Заменяет указанное число знаков в `String` переменной на знаки из другой строки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Mid( _  
@@ -38,46 +55,46 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `Target`  
- Обязательный.  Имя переменной типа `String` для изменения.  
+ Обязательный. Имя `String` переменной для изменения.  
   
  `Start`  
- Обязательный.  Выражение типа `Integer`.  Положение символа в `Target`, где начинается замена текста.  `Start` нижняя граница индекса равна единице.  
+ Обязательный. `Integer`выражение. Позиция знака в `Target` начинается замена текста. `Start`использует индекс от единицы.  
   
  `Length`  
- Необязательный.  Выражение типа `Integer`.  Число заменяемых знаков.  Если параметр опущен, используется вся строка `String`.  
+ Необязательный. `Integer`выражение. Число знаков для замены. Если не указано, все `String` используется.  
   
  `StringExpression`  
- Обязательный.  Выражение `String`, заменяющее часть строки `Target`.  
+ Обязательный. `String`выражение, которое заменяет часть `Target`.  
   
-## Исключения  
+## <a name="exceptions"></a>Исключения  
   
-|Тип исключения|Атрибут Condition|  
-|--------------------|-----------------------|  
-|<xref:System.ArgumentException>|Значение параметра `Start` \<\= 0 или `Length` \< 0.|  
+|Тип исключения|Условие|  
+|--------------------|---------------|  
+|<xref:System.ArgumentException></xref:System.ArgumentException>|`Start`<= 0="" or=""></=>`Length`< 0.></ 0.>|  
   
-## Заметки  
- Число заменяемых знаков всегда меньше или равно числу знаков в `Target`.  
+## <a name="remarks"></a>Примечания  
+ Число заменяемых знаков всегда будет меньше или равно числу символов в `Target`.  
   
- Visual Basic имеет функцию <xref:Microsoft.VisualBasic.Strings.Mid%2A> и оператор `Mid`.  Оба этих элемента влияют на указанное число знаков в строке, но функция `Mid` возвращает знаки, в то время как оператор `Mid` заменяет символы.  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic имеет <xref:Microsoft.VisualBasic.Strings.Mid%2A>функции и `Mid` инструкции.</xref:Microsoft.VisualBasic.Strings.Mid%2A> Эти элементы, как работают на указанное число знаков в строке, но `Mid` функция возвращает символы при `Mid` инструкция заменяет символы. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</xref:Microsoft.VisualBasic.Strings.Mid%2A>  
   
 > [!NOTE]
->  В предыдущих версиях Visual Basic оператор `MidB` заменяет подстроку в байтах, а не в знаках.  В основном она применяется для преобразования строк в приложениях с двухбайтовым набором знаков \(DBCS\).  Все строки Visual Basic .NET кодируются в Юникоде. `MidB` не поддерживается.  
+>  `MidB` Инструкции более ранних версиях Visual Basic заменяет подстроку в байтах, а не символы. Он используется главным образом для преобразования строк в приложениях с двухбайтовой кодировки (DBCS). Все строки Visual Basic кодируются в Юникоде, и `MidB` больше не поддерживается.  
   
-## Пример  
- В данном примере оператор `Mid` используется для замены указанного числа знаков строковой переменной на знаки из другой строки.  
+## <a name="example"></a>Пример  
+ В этом примере используется `Mid` инструкции для замены указанное число символов в строковой переменной на знаки из другой строки.  
   
- [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings&#5;](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Модуль:** `Strings`  
+ **Модуль:**`Strings`  
   
- **Сборка:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Сборка:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A>   
  [Строки](../../../visual-basic/programming-guide/language-features/strings/index.md)   
  [Знакомство со строками в Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

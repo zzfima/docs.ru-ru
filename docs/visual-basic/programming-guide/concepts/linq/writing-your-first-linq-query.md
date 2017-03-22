@@ -1,141 +1,149 @@
 ---
-title: "Написание первого запроса LINQ (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "запросы [LINQ в Visual Basic], написание"
-  - "запросы LINQ [Visual Basic]"
-  - "LINQ [Visual Basic], написание запросов"
+title: "Написание первого запроса LINQ (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- queries [LINQ in Visual Basic], writing
+- LINQ queries [Visual Basic]
+- LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 caps.latest.revision: 56
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 54
----
-# Написание первого запроса LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 48f1c5e15654580b6e4d060860a0d7001af5e2ef
+ms.lasthandoff: 03/13/2017
 
-*Запрос* представляет собой выражение, извлекающее данные из источника данных.  Запросы выражаются на выделенном языке запросов.  Со временем были разработаны различные языки для различных типов источников данных, например SQL для реляционных баз данных и XQuery для XML.  Поэтому разработчики приложений должны изучать новый язык запросов для каждого поддерживаемого типа источника данных или формата данных.  
+---
+# <a name="writing-your-first-linq-query-visual-basic"></a>Написание первого запроса LINQ (Visual Basic)
+Объект *запроса* выражение, которое извлекает данные из источника данных. Запросы выражаются на выделенном языке запросов. Со временем различных языков были разработаны для различных типов источников данных, например SQL для реляционных баз данных и XQuery для XML. Это обуславливает разработчики приложений должны изучать новый язык запросов для каждого типа источника данных или формата данных, который поддерживается.  
   
- [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] упрощает ситуацию, предлагая согласованную модель для работы с данными в различных видах источников и форматов данных.  В запросе [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] работа всегда осуществляется с объектами.  Для запросов и преобразования данных в XML\-документах, базах данных SQL, наборах данных и сущностях ADO.NET, коллекциях .NET Framework и любых других источников или форматов, для которых доступен поставщик [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)], используются одинаковые базовые шаблоны кодирования.  В этом документе описываются три фазы создания и использования основных запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+ [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]упрощает ситуацию, предлагая согласованную модель для работы с данными в различных видах источников и форматов данных. В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запрос, вы всегда работают с объектами. Использовать одинаковые базовые шаблоны кодирования для запроса и преобразования данных в XML-документах, баз данных SQL, наборы данных ADO.NET и сущностей, коллекций .NET Framework и любые другие источника или формата, для которого [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] доступен поставщик. В этом документе описываются три фазы создания и использования основных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запросов.  
   
- ![ссылка на видео](../../../../csharp/programming-guide/concepts/linq/media/playvideo.png "PlayVideo") Для просмотра связанных демонстрационных видеороликов перейдите по ссылке [Инструкции. Введение в LINQ](http://go.microsoft.com/fwlink/?LinkId=133021).  
-  
-## Три этапа операции запроса  
- Операции запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] состоят из трех действий.  
+## <a name="three-stages-of-a-query-operation"></a>Три этапа операции запроса  
+ [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]операции запроса состоят из трех действий:  
   
 1.  Получение источника или источников данных.  
   
-2.  Создание запроса.  
+2.  Создайте запрос.  
   
 3.  Выполнение запроса.  
   
- В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] выполнение запроса отличается от создания запроса.  Простое создание запроса не связано с возвращением данных.  Эта особенность обсуждается более подробно далее в этом разделе.  
+ В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], выполнение запроса отличается от создания запроса. Не получить данные, просто создав запрос. Эта точка является более подробно далее в этом разделе.  
   
- В следующем примере показаны три части операции запроса.  В примере используется массив целых чисел в качестве удобного источника данных для демонстрационных целей.  Однако те же принципы применимы и к другим источникам данных.  
+ В следующем примере показано три части операции запроса. В примере используется массив целых чисел в качестве удобного источника данных для демонстрационных целей. Тем не менее те же принципы применимы и к другим источникам данных.  
   
 > [!NOTE]
->  На [Страница "Компиляция" в конструкторе проектов \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic), убедитесь, что **Option infer** имеет значение **На**.  
+>  На [компиляция, конструктор проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), убедитесь, что **Option infer** равен **на**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  Результат  
   
  `0 2 4 6`  
   
-## Источник данных  
- В предыдущем примере источником данных является массив, поэтому он неявно поддерживает универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>.  Именно этот факт позволяет использовать массив в качестве источника данных для запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  Типы, которые поддерживают <xref:System.Collections.Generic.IEnumerable%601> или производный интерфейс как универсальный шаблон <xref:System.Linq.IQueryable%601> вызываются *запрашиваемыми типами*.  
+## <a name="the-data-source"></a>Источник данных  
+ Так как источник данных в предыдущем примере является массивом, он неявно поддерживает универсальный <xref:System.Collections.Generic.IEnumerable%601>интерфейса.</xref:System.Collections.Generic.IEnumerable%601> Это этот факт, что позволяет использовать массив в качестве источника данных для [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запроса. Типы, которые поддерживают <xref:System.Collections.Generic.IEnumerable%601>или производный интерфейс, например универсальные <xref:System.Linq.IQueryable%601>называются *запрашиваемые типы*.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601>  
   
- Являясь неявно запрашиваемым типом, массив не требует изменений или специальной обработки, чтобы служить источником данных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  То же самое верно для любого типа коллекции, поддерживает <xref:System.Collections.Generic.IEnumerable%601>, включая универсальные <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> и других классов в библиотеке классов .NET Framework.  
+ Являясь неявно запрашиваемым типом, массив не требует изменений или специальной обработки, чтобы служить [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] источника данных. То же справедливо и для любого типа коллекции, который поддерживает <xref:System.Collections.Generic.IEnumerable%601>, включая универсальные <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>и другие классы в библиотеке классов .NET Framework.</xref:System.Collections.Generic.Dictionary%602> </xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.IEnumerable%601>  
   
- Если источник данных еще не реализует <xref:System.Collections.Generic.IEnumerable%601>, необходим поставщик [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] для реализации функциональности *стандартных операторов запросов* для источника данных.  Например, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] выполняет работу по загрузке XML\-документа в запрашиваемый тип <xref:System.Xml.Linq.XElement>, как показано в следующем примере.  Дополнительные сведения о стандартных операторах запроса см в разделе [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Если источник данных еще не реализует <xref:System.Collections.Generic.IEnumerable%601>, [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] поставщика, необходимые для реализации функциональности *стандартные операторы запросов* для этого источника данных.</xref:System.Collections.Generic.IEnumerable%601> Например [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] выполняет работу по загрузке XML-документа в запрашиваемый <xref:System.Xml.Linq.XElement>тип, как показано в следующем примере.</xref:System.Xml.Linq.XElement> Дополнительные сведения о стандартных операторах запросов см. в разделе [Обзор операторов стандартных запросов (Visual Basic)](standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery&#2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
   
- Используя [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], сначала создайте объектно\-реляционное сопоставление в режиме разработки вручную либо с помощью [Реляционный конструктор объектов](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2).  Напишите запросы к объектам, а во время выполнения [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] будет осуществлять взаимодействие с базой данных.  В следующем примере `customers` представляет определенную таблицу в базе данных, а <xref:System.Data.Linq.Table%601> поддерживает универсальный <xref:System.Linq.IQueryable%601>.  
+ С [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)], сначала создайте объектно реляционного сопоставления во время разработки либо вручную, либо с помощью [средства LINQ to SQL в Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) в Visual Studio. Напишите запросы к объектам, а во время выполнения [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] обрабатывает взаимодействие с базой данных. В следующем примере `customers` представляет определенную таблицу в базе данных и <xref:System.Data.Linq.Table%601>поддерживает универсальный <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Data.Linq.Table%601>  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Для получения дополнительных сведений о способах создания определенных типов источников данных см. документацию по различным поставщикам [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  \(Список этих поставщиков содержится в разделе [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md).\) Основное правило является простым: источник данных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] — это любой объект, поддерживающий универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> или интерфейс, наследуемый от него.  
+ Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] поставщиков. (Список этих поставщиков см. в разделе [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Базовое правило заключается в простой: [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] источником данных является любой объект, который поддерживает универсальный <xref:System.Collections.Generic.IEnumerable%601>интерфейс, или интерфейс, наследуемый от его.</xref:System.Collections.Generic.IEnumerable%601>  
   
 > [!NOTE]
->  Такие типы, как <xref:System.Collections.ArrayList>, поддерживающие неуниверсальный интерфейс <xref:System.Collections.IEnumerable>, также могут использоваться в качестве источников данных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  Пример, использующий <xref:System.Collections.ArrayList> см. в разделе [How to: Query an ArrayList with LINQ](../Topic/How%20to:%20Query%20an%20ArrayList%20with%20LINQ.md).  
+>  Типы, такие как <xref:System.Collections.ArrayList>, поддерживающие неуниверсальный <xref:System.Collections.IEnumerable>интерфейс может также использоваться как [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] источников данных.</xref:System.Collections.IEnumerable> </xref:System.Collections.ArrayList> Пример, использующий <xref:System.Collections.ArrayList>, в разделе [как: запроса к ArrayList с помощью LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).</xref:System.Collections.ArrayList>  
   
-## Запрос  
- В запросе указывается, какие сведения требуется извлечь из источника или источников данных.  Также можно указать способ сортировки, группировки или структурирования сведений до их возвращения.  Для создания запросов в язык Visual Basic включен новый синтаксис запроса.  
+## <a name="the-query"></a>Запрос  
+ В запросе указывается, какие сведения, которые требуется извлечь из источника или источников данных. Также имеется возможность указать, как эти данные отсортированы, группирования или структурированные перед возвратом. Для создания запросов, Visual Basic включен новый синтаксис запроса в язык.  
   
- В следующем примере запрос возвращает все четные числа из массива целых чисел `numbers`.  
+ При выполнении запроса в следующем примере возвращает все четные числа из массива целых чисел `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
- Выражение запроса содержит три предложения: `From`, `Where` и `Select`.  Конкретная функциональность и назначение каждого предложения выражения запроса рассматривается в разделе [Основные операции запроса \(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  Дополнительные сведения см. в разделе [Запросы](../../../../visual-basic/language-reference/queries/queries.md).  Обратите внимание, что в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] определение запроса часто хранится в переменной и выполняется позднее.  Переменная запроса, например `evensQuery` в предыдущем примере, должна быть запрашиваемым типом. Тип `evensQuery``IEnumerable(Of Integer)`, присвоенного компилятором, используя вывод локального типа.  
+ Выражение запроса содержит три предложения: `From`, `Where`, и `Select`. Конкретная функциональность и назначение каждого предложения выражения запроса рассматривается в [основные операции запроса (Visual Basic)](basic-query-operations.md). Дополнительные сведения см. в разделе [запросов](../../../../visual-basic/language-reference/queries/queries.md). Обратите внимание, что в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], определение запроса часто хранится в переменной и выполняется позднее. Запрос переменной, например `evensQuery` в предыдущем примере, должна иметь запрашиваемый тип. Тип `evensQuery` — `IEnumerable(Of Integer)`, назначенный компилятором с помощью вывода локального типа.  
   
- Важно помнить, что сама переменная запроса не выполняет действий и не возвращает никаких данных.  Она только хранит определение запроса.  В предыдущем примере запрос выполняется циклом `For Each`.  
+ Важно помнить, что сама переменная запроса не выполняет никаких действий и не возвращает никаких данных. Она только хранит определение запроса. В предыдущем примере это `For Each` цикл, который выполняет запрос.  
   
-## Выполнение запроса  
- Выполнение запроса не зависит от его создания.  Создание запроса определяет запрос, но выполнение инициируется другим механизмом.  Запрос может выполняться по мере его определения \(*немедленное выполнение*\), или его определение может быть сохранено и запрос может быть выполнен позднее \(*отложенное выполнение*\).  
+## <a name="query-execution"></a>Выполнение запроса  
+ Выполнение запроса отличается от создания запроса. Создание запроса определяет запрос, но выполнение инициируется другим механизмом. Запрос может выполняться сразу после того, как она определена (*немедленное выполнение*), или определение может быть сохранено и запрос может быть выполнен позднее (*отложенного выполнения*).  
   
-### Отложенное выполнение  
- Обычный запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] напоминает запрос в предыдущем примере, в котором определен `evensQuery`.  Запрос создается, но выполняется не сразу.  Определение запроса хранится в переменной запроса `evensQuery`.  Запрос выполняется позже, обычно с помощью цикла `For Each`, который возвращает последовательность значений, или при помощи стандартного оператора запроса, такого как `Count` или `Max`.  Такой процесс называется *отложенным выполнением*.  
+### <a name="deferred-execution"></a>Отложенное выполнение  
+ Типичный [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] напоминает запрос в предыдущем примере, в котором `evensQuery` определен. Запрос создается, но выполняется не сразу. Вместо этого определение запроса хранится в переменной запроса `evensQuery`. Запрос выполняется позже, обычно с помощью `For Each` цикл, который возвращает последовательность значений, или путем применения стандартного оператора запроса, таких как `Count` или `Max`. Этот процесс называется *отложенного выполнения*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery&#7;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
   
- Доступ к извлеченной последовательности значений осуществляется с помощью переменной итерации в цикле `For Each` \(`number` в предыдущем примере\).  Поскольку переменная запроса `evensQuery` содержит определение, а не результаты запроса, запрос можно выполнять так часто, как требуется.  Например, приложение может работать с базой данных, которая непрерывно обновляется отдельным приложением.  После создания запроса, извлекающего данные из базы данных, можно использовать цикл `For Each`, чтобы выполнить запрос повторно, извлекая каждый раз последние данные.  
+ Для последовательности значений, полученных данных доступа с помощью переменной итерации в `For Each` цикла (`number` в предыдущем примере). Поскольку переменная запроса `evensQuery`, содержит определение запроса, а не результаты запроса, запрос можно выполнять так часто, как с помощью переменной запроса более одного раза. Например может потребоваться базы данных в приложении, которое постоянно обновляемая отдельным приложением. После создания запроса, который получает данные из базы данных, можно использовать `For Each` цикл, чтобы выполнить запрос повторно, извлекая каждый раз последние данные.  
   
- В следующем примере демонстрируется отложенное выполнение.  После того, как `evensQuery2` определен и выполнен с помощью цикла `For Each`, как в предыдущих примерах, некоторые элементы в источнике данных `numbers` изменяются.  Затем второй цикл `For Each` еще раз выполняет `evensQuery2`.  Результаты, извлеченные во второй раз, отличаются от изначальных, поскольку цикл `For Each` снова выполняет запрос, используя новые значения в `numbers`.  
+ В следующем примере показано влияние отложенного выполнения работы. После `evensQuery2` определен и выполнен с `For Each` цикл, как показано в предыдущих примерах, некоторые элементы в источнике данных `numbers` изменяются. Затем второй `For Each` цикла `evensQuery2` еще раз. Результаты отличаются, второй раз, поскольку `For Each` цикл снова выполняет запрос, используя новые значения в `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery&#3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
   
  Результат  
   
  `Evens in original array:`  
   
- `0 2 4 6`  
+ `0  2  4  6`  
   
  `Evens in changed array:`  
   
- `0 10 2 22 8`  
+ `0  10  2  22  8`  
   
-### Немедленное выполнение  
- При отложенном выполнении запросов определение запроса хранится в переменной запроса для последующего выполнения.  При немедленном выполнении запрос выполняется во время своего определения.  Выполнение инициируется при применении метода, которому необходим доступ к отдельным элементам результата запроса.  Немедленное выполнение часто производится принудительно с помощью одного из стандартных операторов запроса, возвращающего одно значение.  Примерами являются `Count`, `Max`, `Average` и `First`.  Эти стандартные операторы запроса выполняют запрос при осуществлении вычислений и возвращают единственное значение.  Дополнительные сведения о стандартных операторах запроса, возвращающих одно значение, содержатся в разделах [Aggregation Operations](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md), [Element Operations](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md) и [Quantifier Operations](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md).  
+### <a name="immediate-execution"></a>Немедленное выполнение  
+ При отложенном выполнении запросов определение запроса хранится в переменной запроса для последующего выполнения. При немедленном выполнении запрос выполняется во время его определения. Выполнение инициируется при применении метода, которому требуется доступ к отдельным элементам результата запроса. Немедленное выполнение часто производится принудительно с помощью одного из стандартных операторов запросов, возвращающих одиночное значение. Examples are `Count`, `Max`, `Average`, and `First`. Эти стандартные операторы запросов выполните запрос, как только они применяются для вычисления и возвращают единственное значение. Дополнительные сведения о стандартных операторах запросов, возвращающих отдельные значения в разделе [операции статистической обработки](aggregation-operations.md), [операции с элементами](element-operations.md), и [операции, использующие кванторы](quantifier-operations.md).  
   
- Следующий запрос возвращает количество четных чисел в массиве целых чисел.  Определение запроса не сохраняется, а `numEvens` является простым `Integer`.  
+ Следующий запрос возвращает количество четных чисел в массив целых чисел. Определение запроса не сохраняется, и `numEvens` – это просто `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery&#4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
   
- Того же результата можно добиться с помощью метода `Aggregate`.  
+ Того же результата можно добиться с помощью `Aggregate` метод.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery&#5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
   
- Можно также принудительно выполнить запрос путем вызова метода `ToList` или `ToArray` в запросе \(немедленный\) или переменной запроса \(отложенный\), как показано в следующем коде.  
+ Можно также принудительно выполнить запрос путем вызова `ToList` или `ToArray` метод в запросе (немедленный) или переменной запроса (отложенный), как показано в следующем коде.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery №&6;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
   
- В предыдущих примерах `evensQuery3` является переменной запроса, `evensList` является списком, а `evensArray` является массивом.  
+ В предыдущих примерах `evensQuery3` — запрос переменной, но `evensList` приведен список и `evensArray` является массивом.  
   
- Использование `ToList` или `ToArray` для принудительного немедленного выполнения полезно в тех сценариях, в которых требуется выполнить запрос немедленно и кэшировать результаты в одном объекте коллекции.  Дополнительные сведения об этих методах см. в разделе [Converting Data Types](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md).  
+ С помощью `ToList` или `ToArray` для принудительного немедленного выполнения полезно в сценариях, в которых требуется выполнить запрос немедленно и кэшировать результаты в одном объекте коллекции. Дополнительные сведения об этих методах см. в разделе [преобразование типов данных](converting-data-types.md).  
   
- Выполнение запроса можно вызвать с помощью метода `IEnumerable`, например <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>.  
+ Можно также заставить запрос для выполнения с помощью `IEnumerable` метода, такого как <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>метод.</xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>  
   
-## Связанные демонстрационные видеоролики  
- [How Do I: Get Started with LINQ?](http://go.microsoft.com/fwlink/?LinkId=133021)  
-  
- [Video How to: Writing Queries in Visual Basic](http://go.microsoft.com/fwlink/?LinkID=100356)  
-  
-## См. также  
- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Примеры LINQ](../Topic/LINQ%20Samples.md)   
- [Общие сведения о реляционном конструкторе объектов](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio1.md)   
+## <a name="see-also"></a>См. также  
+ [Приступая к работе с LINQ в Visual Basic](getting-started-with-linq.md)   
  [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Знакомство с LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+ [Общие сведения о стандартных операторах (Visual Basic)](standard-query-operators-overview.md)   
+ [Введение в LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
  [Запросы](../../../../visual-basic/language-reference/queries/queries.md)

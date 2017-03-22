@@ -1,75 +1,91 @@
 ---
-title: "Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "перегрузка процедур, неопределенное число параметров"
-  - "параметры процедуры"
-  - "процедуры, определение"
-  - "процедуры, несколько версий"
-  - "процедуры, перегрузка"
-  - "процедуры, параметры"
-  - "код Visual Basic, процедуры"
+title: "Практическое руководство: перегрузка процедуры, принимающей неопределенное число параметров (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- procedures, parameters
+- procedure overloading, indefinite number of parameters
+- procedures, defining
+- Visual Basic code, procedures
+- procedure parameters
+- procedures, overloading
+- procedures, multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c7e09bd482e35c7ce7f28a6cc7de0379b7cc89f6
+ms.lasthandoff: 03/13/2017
 
-Если процедура имеет параметр [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md), то нельзя определить перегруженную версию, принимающую одномерный массив для массива параметров.  Дополнительные сведения содержатся в разделе "Неявные перегрузки для параметра ParamArray" в [Вопросы, связанные с перегрузкой процедур](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
+---
+# <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров (Visual Basic)
+Если процедура имеет [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметра, нельзя определить перегруженную версию, принимающую одномерный массив для массива параметров. Дополнительные сведения см. в разделе «Неявные перегрузки для параметра ParamArray» в [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).  
   
-### Чтобы перегрузить процедуру, принимающую переменное число параметров  
+### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Чтобы перегрузить процедуру, которая принимает переменное число параметров  
   
-1.  Убедитесь, что использование перегруженных версий более уместно, чем использование параметра `ParamArray`.  См. раздел "Перегрузка и массив параметров" в [Вопросы, связанные с перегрузкой процедур](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
+1.  Выяснить, что процедуры и вызов уместно перегруженных версий более чем из `ParamArray` параметр. В разделе «Перегрузки и массивы параметров» [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).  
   
-2.  Определите, какое число предоставленных значений должна принимать процедура в переменной части списка параметров.  Это может включать случай отсутствия значений и может включать случай одномерного массива.  
+2.  Определите, какое число предоставленных значений должна принимать процедура в переменной части списка параметров. Это может включать случай отсутствия значений и может включать случай одномерного массива.  
   
-3.  Для каждого допустимого числа предоставленных значений напишите `Sub` или `Function` инструкцию объявления, определяющую соответствующий список параметров.  Не стоит использовать ни ключевое слово `Optional`, ни `ParamArray` в данной перегруженной версии.  
+3.  Для каждого допустимого числа предоставленных значений напишите `Sub` или `Function` инструкцию объявления, определяющую соответствующий список параметров. Не используйте в `Optional` или `ParamArray` ключевое слово в данной перегруженной версии.  
   
-4.  В каждом объявлении ключевому слову `Sub` или `Function` должно предшествовать ключевое слово [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md).  
+4.  В каждом объявлении перед `Sub` или `Function` ключевого слова with [перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md) ключевое слово.  
   
-5.  После каждого объявления напишите код процедуры, который должен выполняться, когда вызывающий код предоставит значения, соответствующие элементам списка параметров в объявлении.  
+5.  После каждого объявления напишите код процедуры, который должен выполняться, когда вызывающий код предоставляет значения, соответствующие элементам списка параметров в объявлении.  
   
-6.  Завершите выполнение каждой процедуры оператором `End Sub` или `End Function` .  
+6.  Завершите выполнение каждой процедуры с `End Sub` или `End Function` инструкцию соответствующим образом.  
   
-## Пример  
- В следующем примере показана процедура, определенная с параметром [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md), и эквивалентные перегруженные процедуры.  
+## <a name="example"></a>Пример  
+ В следующем примере показано процедура, определенная с [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) параметр и эквивалентный набор перегруженных процедур.  
   
- [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#69;](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures&#70;](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
- Нельзя перегрузить процедуру со списком параметров, который принимает одномерный массив для массива параметров.  Однако можно использовать описания других неявных перегрузок.  Это показано в следующих объявлениях:  
+ Нельзя перегрузить процедуру со списком параметров, который принимает одномерный массив для массива параметров. Тем не менее можно использовать подписи неявных перегрузок. Показано в следующих объявлениях.  
   
- [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
+ [!code-vb[VbVbcnProcedures&#71;](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- В кодах перегруженных версий не требуется проверка, указывает ли вызывающий код одно или несколько значений параметра `ParamArray`, и если указывает, то сколько.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] передает управление в ту версию, которая соответствует списку аргументов вызова.  
+ Код перегруженных версий не имеет для проверки в вызывающем коде задано одно или несколько значений для `ParamArray` параметра, и если да, сколько. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]передает управление версию, которая соответствует списку аргументов вызова.  
   
-## Компиляция кода  
- Поскольку процедура с параметром `ParamArray` эквивалентна набору перегруженных версий, нельзя перегрузить такую процедуру со списком параметров, соответствующим любому списку параметров из этих неявных перегрузок.  Дополнительные сведения см. в разделе [Вопросы, связанные с перегрузкой процедур](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md).  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Поскольку процедура с `ParamArray` эквивалентна набору перегруженных версий, нельзя перегрузить такую процедуру со списком параметров, соответствующим любому из этих неявных перегрузок. Дополнительные сведения см. в разделе [вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md).  
   
-## Безопасность платформы .NET Framework  
- При работе с неограниченно большим массивом есть риск переполнения некоторой внутренней емкости приложения.  Если принимается массив параметров, то следует проверить его длину и предпринять соответствующие действия в случае, если она слишком велика для приложения.  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+ При работе с которой неограниченно большим массивом есть риск переполнения некоторой внутренней емкости приложения. Принимается массив параметров, следует проверить его длину массива, вызывающий код передается и предпринять соответствующие действия, если она слишком велика для приложения.  
   
-## См. также  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Необязательные параметры](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Массивы параметров](../../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)   
- [Перегрузка процедур](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Устранение неполадок в процедурах](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
- [Практическое руководство. Определение различных версий процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)   
- [Практическое руководство. Вызов перегруженной процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-overloaded-procedure.md)   
- [Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [Разрешение перегрузки](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+## <a name="see-also"></a>См. также  
+ [Процедуры](./index.md)   
+ [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)   
+ [Необязательные параметры](./optional-parameters.md)   
+ [Массивы параметров](./parameter-arrays.md)   
+ [Перегрузка процедур](./procedure-overloading.md)   
+ [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)   
+ [Практическое руководство: определение различных версий процедуры](./how-to-define-multiple-versions-of-a-procedure.md)   
+ [Практическое руководство: вызов перегруженной процедуры](./how-to-call-an-overloaded-procedure.md)   
+ [Практическое руководство: перегрузка процедуры, которая принимает необязательные параметры](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
+ [Разрешение перегрузки](./overload-resolution.md)

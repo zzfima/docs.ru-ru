@@ -1,32 +1,49 @@
 ---
-title: "Оператор Enum (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Enum"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "перечисляемые константы"
-  - "Enum - оператор"
-  - "Зарезервированное слово Private, Enum-операторы"
-  - "Ключевое слово Public в Enum-оператор"
-  - "переменные [Visual Basic] перечисления"
-  - "константы, перечисления"
+title: "Оператор Enum (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Enum
+dev_langs:
+- VB
+helpviewer_keywords:
+- enumerated constants
+- Enum statement
+- Private keyword, Enum statements
+- Public keyword, in Enum statement
+- variables [Visual Basic], enumeration
+- constants, enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
 caps.latest.revision: 44
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 44
----
-# Оператор Enum (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f9d3377300d30fd045c041367a528766fa9a8ed9
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="enum-statement-visual-basic"></a>Оператор Enum (Visual Basic)
 Объявляет перечисление и определяет значения его членов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -44,7 +61,7 @@ End Enum
   
      Необязательный. Список атрибутов, применяемых для данного перечисления. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки («`<`«и»`>`»).  
   
-      <xref:System.FlagsAttribute> атрибут указывает, что значение экземпляра перечисления может содержать несколько членов перечисления, и что каждый элемент представляет собой битовое поле, в значение перечисления.  
+     <xref:System.FlagsAttribute>Атрибут указывает, что значение экземпляра перечисления может содержать несколько членов перечисления, и что каждый элемент представляет собой битовое поле, в значение перечисления.</xref:System.FlagsAttribute>  
   
 -   `accessmodifier`  
   
@@ -52,11 +69,11 @@ End Enum
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
   
      Можно указать `Protected``Friend` для доступа из кода внутри класса перечисления, производного класса или той же сборки.  
   
@@ -76,11 +93,10 @@ End Enum
   
      Обязательный. Список констант элементов, объявляемых в этом операторе. Несколько элементов отображаются на отдельных строках исходного кода.  
   
-     Каждый `member` имеет следующий синтаксис и компоненты: `[<attribute list>] member name [ = initializer ]`  
+     Каждый `member` имеет следующий синтаксис и компоненты:`[<attribute list>] member name [ = initializer ]`  
   
-    |||  
-    |-|-|  
     |Отделение|Описание|  
+    |---|---|  
     |`membername`|Обязательный. Имя данного элемента.|  
     |`initializer`|Необязательный. Выражение, которое вычисляется во время компиляции и присваивается этому элементу.|  
   
@@ -105,21 +121,21 @@ End Enum
   
  Перечисление, объявленное на уровне интерфейса, вне любой процедуры, модуля, класса или структуры является *член перечисления*. Она является членом класса, структуры, модуля или интерфейса, объявляющего его.  
   
- Член перечисления из может осуществляться в любом месте в пределах их класса, структуры, модуля или интерфейса. Код вне класса, структуры или модуля необходимо определять имя перечисления элементов с именем этого класса, структуры или модуля. Можно избежать необходимости использовать полные имена, добавив [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) инструкции к файлу исходного кода.  
+ Член перечисления из может осуществляться в любом месте в пределах их класса, структуры, модуля или интерфейса. Код вне класса, структуры или модуля необходимо определять имя перечисления элементов с именем этого класса, структуры или модуля. Можно избежать необходимости использовать полные имена, добавив [импорта](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) инструкции к файлу исходного кода.  
   
  Перечисление, объявленное на уровне пространства имен, вне класса, структуры, модуля или интерфейса, является членом пространства имен, в котором он находится.  
   
-  *Контекст объявления* для перечисления должен быть исходный файл, пространство имен, класс, структура, модуль или интерфейс и не может быть процедурой. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ *Контекст объявления* для перечисления должен быть исходный файл, пространство имен, класс, структура, модуль или интерфейс и не может быть процедурой. Дополнительные сведения см. в разделе [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Можно применять атрибуты к перечислению в целом, но не к его члены по отдельности. Атрибут вносит сведения для метаданных сборки.  
   
 ## <a name="data-type"></a>Тип данных  
-  `Enum` Оператора можно объявлять тип данных перечисления. Каждый элемент принимает тип данных перечисления. Можно указать `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, или `UShort`.  
+ `Enum` Оператора можно объявлять тип данных перечисления. Каждый элемент принимает тип данных перечисления. You can specify `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort`.  
   
- Если вы не укажете `datatype` для перечисления, каждый элемент имеет тип данных его `initializer`. Если указываются оба `datatype` и `initializer`, тип данных `initializer` должен быть преобразуемым к `datatype`. Если ни одна из `datatype` ни `initializer` присутствует, по умолчанию для типа данных `Integer`.  
+ Если вы не укажете `datatype` для перечисления, каждый элемент имеет тип данных его `initializer`. Если указываются оба `datatype` и `initializer`, тип данных `initializer` должен быть преобразуемым к `datatype`. Если ни одна из `datatype` , ни `initializer` присутствует, по умолчанию для типа данных `Integer`.  
   
 ## <a name="initializing-members"></a>Инициализация элементов  
-  `Enum` Оператор может инициализировать содержимое выбранных элементов в `memberlist`. Использовать `initializer` позволяет указать выражение для назначения члена.  
+ `Enum` Оператор может инициализировать содержимое выбранных элементов в `memberlist`. Использовать `initializer` позволяет указать выражение для назначения члена.  
   
  Если не указать `initializer` для члена, Visual Basic инициализирует его, либо ноль (если он является первым `member` в `memberlist`), или в значение на единицу, чем непосредственно перед `member`.  
   
@@ -127,7 +143,7 @@ End Enum
   
  Нельзя использовать переменные или функции в `initializer`. Однако можно использовать ключевые слова преобразования, такие как `CByte` и `CShort`. Можно также использовать `AscW` при вызове с константой `String` или `Char` аргумент, поскольку, может быть вычислено во время компиляции.  
   
- Перечисления не могут иметь значений с плавающей запятой. Если член присваивается значение с плавающей запятой и `Option Strict` имеет значение on, возникает ошибка компилятора. Если `Option Strict` имеет значение off, значение автоматически преобразуется в `Enum` типа.  
+ Перечисления не могут иметь значений с плавающей запятой. Если член присваивается значение с плавающей запятой и `Option Strict` имеет значение on, возникает ошибка компилятора. Если `Option Strict` выключен, то значение автоматически преобразуется в `Enum` типа.  
   
  Если значение члена превосходит верхнюю границу для базового типа данных или инициализации любого члена к допустимому значению базового типа данных, компилятор сообщает об ошибке.  
   
@@ -139,48 +155,48 @@ End Enum
  По умолчанию все перечисления являются типами и их поля являются константами. Поэтому `Shared`, `Static`, и `ReadOnly` ключевые слова нельзя использовать при объявлении перечисления или его элементов.  
   
 ## <a name="assigning-multiple-values"></a>Назначение нескольких значений  
- Перечисления обычно представляют собой взаимоисключающие значения. Включив <xref:System.FlagsAttribute> атрибут `Enum` объявление, можно вместо этого назначить несколько значений экземпляра перечисления.  <xref:System.FlagsAttribute> атрибут указывает, что перечисление рассматриваться как битовое поле, то есть набор флагов. Они называются *Побитовое* перечисления.  
+ Перечисления обычно представляют собой взаимоисключающие значения. Включив <xref:System.FlagsAttribute>атрибут `Enum` объявление, можно вместо этого назначить несколько значений экземпляра перечисления.</xref:System.FlagsAttribute> <xref:System.FlagsAttribute>Атрибут указывает, что перечисление рассматриваться как битовое поле, то есть набор флагов.</xref:System.FlagsAttribute> Это называется *побитовое* перечисления.  
   
- При объявлении перечисления с помощью <xref:System.FlagsAttribute> атрибут, рекомендуется использовать степени числа 2, который является, 1, 2, 4, 8, 16 и так далее, для значения. Также рекомендуется «None» имя элемента, значение которого равно 0. Дополнительные рекомендации см. в разделе <xref:System.FlagsAttribute> и <xref:System.Enum>.  
+ При объявлении перечисления с помощью <xref:System.FlagsAttribute>атрибут, рекомендуется использовать степени числа 2, который является, 1, 2, 4, 8, 16 и так далее, для значения.</xref:System.FlagsAttribute> Также рекомендуется «None» имя элемента, значение которого равно 0. Дополнительные рекомендации см. в разделе <xref:System.FlagsAttribute>и <xref:System.Enum>.</xref:System.Enum> </xref:System.FlagsAttribute>  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как использовать `Enum` инструкции. Обратите внимание, что элемент называется `EggSizeEnum.Medium`, а не как `Medium`.  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
+ [!code-vb[VbEnumsTask&#41;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере метод находится за пределами `Egg` класса. Таким образом `EggSizeEnum` полное как `Egg.EggSizeEnum`.  
+ В следующем примере метод находится за пределами `Egg` класса. Таким образом `EggSizeEnum` которого полностью определено как `Egg.EggSizeEnum`.  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
+ [!code-vb[VbEnumsTask&#42;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Enum` инструкции для определения связанного набора именованных констант. В этом случае значения цветов, которые можно выбрать для создаваемых форм ввода данных для базы данных.  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
+ [!code-vb[VbEnumsTask&#30;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано значений, которые включают положительные и отрицательные числа.  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
+ [!code-vb[VbEnumsTask&#31;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
   
 ## <a name="example"></a>Пример  
  В следующем примере `As` предложение используется для указания `datatype` перечисления.  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
+ [!code-vb[VbEnumsTask №&6;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
   
 ## <a name="example"></a>Пример  
- Следующий пример показывает использование побитового перечисления. Несколько значений может быть присвоено экземпляру побитового перечисления.  `Enum` Объявление включает в себя <xref:System.FlagsAttribute> атрибут, который указывает, что перечисление может обрабатываться как набор флагов.  
+ Следующий пример показывает использование побитового перечисления. Несколько значений может быть присвоено экземпляру побитового перечисления. `Enum` Объявление включает в себя <xref:System.FlagsAttribute>атрибут, который указывает, что перечисление может обрабатываться как набор флагов.</xref:System.FlagsAttribute>  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
+ [!code-vb[VbEnumsTask&#61;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере выполняется итерация по перечисления. Он использует <xref:System.Enum.GetNames%2A> метод для получения массива имен членов из перечисления, и <xref:System.Enum.GetValues%2A> для извлечения массива значений элементов.  
+ В следующем примере выполняется итерация по перечисления. Он использует <xref:System.Enum.GetNames%2A>метод для получения массива имен членов из перечисления, и <xref:System.Enum.GetValues%2A>для извлечения массива значений членов.</xref:System.Enum.GetValues%2A> </xref:System.Enum.GetNames%2A>  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
+ [!code-vb[VbEnumsTask&#51;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
   
-## <a name="see-also"></a>См. также раздел  
- <xref:System.Enum>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Enum></xref:System.Enum>   
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A>   
  [Оператор Const](../../../visual-basic/language-reference/statements/const-statement.md)   
  [Оператор Dim](../../../visual-basic/language-reference/statements/dim-statement.md)   
  [Явные и неявные преобразования](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   

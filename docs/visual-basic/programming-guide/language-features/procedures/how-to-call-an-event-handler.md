@@ -1,70 +1,86 @@
 ---
-title: "Практическое руководство. Вызов обработчика событий в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "обработчики событий"
-  - "обработчики событий, вызов"
-  - "процедуры, вызов"
-  - "процедуры, обработчики событий"
-  - "код Visual Basic, процедуры"
+title: "Практическое руководство: вызов обработчика событий в Visual Basic | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- event handlers, calling
+- event handlers
+- procedures, event handlers
+- procedures, calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Практическое руководство. Вызов обработчика событий в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c5b300feca3415d1283d24179795a4ae92c61e52
+ms.lasthandoff: 03/13/2017
 
-*Событие* — это действие или условие \(например, щелчок мыши или превышение кредита\), которое распознается некоторым компонентом программы и для обработки которого можно написать код.  *Обработчик событий* — это код, предназначенный для обработки события.  
+---
+# <a name="how-to-call-an-event-handler-in-visual-basic"></a>Практическое руководство. Вызов обработчика событий в Visual Basic
+*Событий* — это действие или условие — например мышью, щелчок или кредитный лимит превышение, которое распознается некоторым компонентом программы и для которого можно написать код для ответа. *Обработчик событий* является код, предназначенный для обработки события.  
   
- Обработчик событий в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] — это процедура `Sub`.  Однако ее нельзя вызвать так же, как другие процедуры `Sub`.  Вместо этого необходимо определить процедуру в качестве обработчика для события.  Можно сделать это с помощью предложения [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) и переменной [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) или [Оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md).  Предложение `Handles` является способом объявления обработчика событий в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] по умолчанию.  В этом способе обработчики событий пишутся разработчиками в интегрированной среде разработки.  Оператор `AddHandler` подходит для динамического создания событий во время выполнения.  
+ Обработчик событий в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] — `Sub` процедура. Тем не менее, не вызывается обычно он же так, как другие `Sub` процедур. Вместо этого необходимо определить процедуру в качестве обработчика для события. Это можно сделать с помощью [обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) предложения и [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) переменной, или с [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md). С помощью `Handles` предложение — по умолчанию способ объявления обработчика событий в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Этот способ записи обработчиков событий в конструкторах при программировании в интегрированную среду разработки (IDE). `AddHandler` Инструкция подходит для динамического создания событий во время выполнения.  
   
- При возникновении события [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] автоматически вызывает процедуру обработчика событий.  Любой код, имеющий доступ к событию, может вызвать его выполнение с помощью [Оператор RaiseEvent](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
+ При возникновении события, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] автоматически вызывает процедуру обработчика событий. Любой код, который имеет доступ к событию может привести к его выполнения, выполнив [оператор RaiseEvent](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
   
- Можно связать несколько обработчиков событий с одним событием.  В некоторых случаях можно отменить привязку обработчика к событию.  Дополнительные сведения см. в разделе [События](../../../../visual-basic/programming-guide/language-features/events/events.md).  
+ Можно связать несколько обработчиков событий с одним событием. В некоторых случаях можно отменить привязку обработчика события. Дополнительные сведения см. в разделе [события](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
-### Вызов обработчика событий с помощью Handles и WithEvents  
+### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>Для вызова обработчика событий с помощью WithEvents и метки  
   
-1.  Убедитесь, что событие объявляется с помощью [Оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md).  
+1.  Убедитесь, что событие объявляется с [оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md).  
   
-2.  Объявите переменную объекта на уровне модуля или класса с помощью ключевого слова [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md).  С помощью предложения `As` для этой переменной нужно указать класс, который вызывает событие.  
+2.  Объявите переменную объекта на уровне модуля или класса, уровня, с помощью [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) ключевое слово. `As` Предложение для этой переменной необходимо указать класс, который вызывает событие.  
   
-3.  В объявлении процедуры обработки события `Sub` добавьте предложение [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md), которое задает значение переменной `WithEvents` и имя события.  
+3.  В объявлении обработки событий `Sub` процедуры добавления [обрабатывает](../../../../visual-basic/language-reference/statements/handles-clause.md) предложение, определяющее `WithEvents` переменной и имя события.  
   
-4.  При возникновении события [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] автоматически вызывает процедуру `Sub`.  Код может использовать оператор `RaiseEvent`, чтобы создавать событие.  
+4.  При возникновении события, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] автоматически вызывает `Sub` процедуры. В коде можно использовать `RaiseEvent` инструкцию, чтобы создавать событие.  
   
-     В следующем примере определяется событие и переменная `WithEvents`, которая ссылается на класс, который вызывает событие.  Процедура обработки события `Sub` использует предложение `Handles` для указания класса и события, которые он обрабатывает.  
+     В следующем примере определяется событие и `WithEvents` переменную, которая ссылается на класс, который вызывает событие. Обработка событий `Sub` процедуры используется `Handles` предложение для указания класса и события, которые он обрабатывает.  
   
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures&#4;](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
   
-### Вызов обработчика событий с помощью AddHandler  
+### <a name="to-call-an-event-handler-using-addhandler"></a>Для вызова обработчика событий с помощью AddHandler  
   
-1.  Убедитесь, что событие объявлено с помощью оператора `Event`.  
+1.  Убедитесь, что событие объявляется с `Event` инструкции.  
   
-2.  Выполните [Оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) для того, чтобы динамически связать процедуру обработки события `Sub` с событием.  
+2.  Выполнение [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) для динамического связывания обработки события `Sub` процедуры с событием.  
   
-3.  При возникновении события [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] автоматически вызывает процедуру `Sub`.  Код может использовать оператор `RaiseEvent`, чтобы создавать событие.  
+3.  При возникновении события, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] автоматически вызывает `Sub` процедуры. В коде можно использовать `RaiseEvent` инструкцию, чтобы создавать событие.  
   
-     В следующем примере определяется процедура `Sub` для обработки события формы <xref:System.Windows.Forms.Form.Closing>.  Затем используется [Оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md), чтобы связать процедуру `catchClose` в качестве обработчика событий для <xref:System.Windows.Forms.Form.Closing>.  
+     В следующем примере определяется `Sub` процедура для обработки <xref:System.Windows.Forms.Form.Closing>события формы.</xref:System.Windows.Forms.Form.Closing> Затем он использует [оператор AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) для связывания `catchClose` процедуру как обработчик событий <xref:System.Windows.Forms.Form.Closing>.</xref:System.Windows.Forms.Form.Closing>  
   
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures&#5;](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
   
-     Можно отменить привязку обработчика к событию, выполнив [Оператор RemoveHandler](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
+     Обработчик событий из события можно отменить привязку, выполнив [оператор RemoveHandler](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   
-## См. также  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Подпрограммы](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
+## <a name="see-also"></a>См. также  
+ [Процедуры](./index.md)   
+ [Sub-процедуры](./sub-procedures.md)   
  [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)   
  [Оператор AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Практическое руководство. Создание процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure.md)   
- [Практическое руководство. Вызов процедуры, которая не возвращает значение](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-procedure-that-does-not-return-a-value.md)
+ [Практическое руководство: создание процедуры](./how-to-create-a-procedure.md)   
+ [Практическое руководство. Вызов процедуры, которая не возвращает значение](./how-to-call-a-procedure-that-does-not-return-a-value.md)

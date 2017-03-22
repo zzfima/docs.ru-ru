@@ -1,38 +1,54 @@
 ---
-title: "Практическое руководство. Создание XML-литералов (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "XML-литералы [Visual Basic], создание"
+title: "Практическое руководство: Создание XML-литералов (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# Практическое руководство. Создание XML-литералов (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 72d96f36fc17f32ac3ee3ea97175f112fcd21681
+ms.lasthandoff: 03/13/2017
 
-XML\-документ, фрагмент или элемент можно создать непосредственно в коде с помощью XML\-литералов.  В этом разделе в примерах демонстрируются способы создания XML\-элемента, который имеет три дочерних элемента, а также рассматривается создание XML\-документа.  
+---
+# <a name="how-to-create-xml-literals-visual-basic"></a>Практическое руководство. Создание XML-литералов (Visual Basic)
+XML документ, фрагмент или элемент можно создать непосредственно в коде с помощью XML-литерал. Примеры в этом разделе показано, как создать XML-элемент, который имеет три дочерних элементов и создание XML-документа.  
   
- Для создания объектов [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] можно также использовать интерфейс API [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
+ Можно также использовать [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] API для создания [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] объектов. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>  
   
-### Создание XML\-элемента  
+### <a name="to-create-an-xml-element"></a>Чтобы создать XML-элемент  
   
--   Создайте встроенный XML с помощью синтаксиса XML\-литералов, который совпадает с фактическим синтаксисом XML.  
+-   Создайте встроенный XML, используя синтаксис XML, который совпадает с фактическим синтаксисом XML.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples&#5;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
-     Запустите код.  Результаты выполнения данного кода следующие.  
+     Выполните код. Результат выполнения этого кода является:  
   
      `<contact>`  
   
@@ -44,17 +60,17 @@ XML\-документ, фрагмент или элемент можно соз�
   
      `</contact>`  
   
-### Создание XML\-документа  
+### <a name="to-create-an-xml-document"></a>Для создания XML-документа  
   
--   Создайте встроенный XML\-документ.  В следующем коде создается XML\-документ, который имеет синтаксис литералов, содержит XML\-объявление, инструкцию по обработке, комментарий и элемент, содержащий другой элемент.  
+-   Создайте встроенный XML-документ. Следующий код создает XML-документ, который имеет синтаксис литералов, XML-декларация, инструкции по обработке, комментарий и элемент, содержащий другой элемент.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples&#30;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
-     Запустите код.  Результаты выполнения данного кода следующие.  
+     Выполните код. Результат выполнения этого кода является:  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
-     `<!-- Tests that the application works.  -->`  
+     `<!-- Tests that the application works. -->`  
   
      `<books>`  
   
@@ -62,8 +78,8 @@ XML\-документ, фрагмент или элемент можно соз�
   
      `</books>`  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
  [Создание XML в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Литеральное представление XML\-элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
- [XML\-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+ [Литеральное представление XML элемента](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
+ [XML-литерал документа](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

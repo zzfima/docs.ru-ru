@@ -1,66 +1,82 @@
 ---
-title: "/keyfile | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/keyfile - параметр компилятора [Visual Basic]"
-  - "keyfile - параметр компилятора [Visual Basic]"
-  - "-keyfile - параметр компилятора [Visual Basic]"
+title: "/ keyfile | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- /keyfile compiler option [Visual Basic]
+- keyfile compiler option [Visual Basic]
+- -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# /keyfile
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c36eac96ac6302db0b567e8249af726c807c2c6c
+ms.lasthandoff: 03/13/2017
 
-Указывает файл, содержащий ключ или пару ключей для создания строгого имени сборки.  
+---
+# <a name="keyfile"></a>/keyfile
+Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /keyfile:file  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `file`  
- Обязательный.  Имя файла, содержащего ключ.  Заключите имя файла в кавычки \(" "\), если оно содержит пробел.  
+ Обязательный. Файл, содержащий ключ. Если имя файла содержит пробел, заключите имя в кавычки (» «).  
   
-## Заметки  
- Компилятор вставляет открытый ключ в манифест сборки и затем подписывает финальную сборку закрытым ключом.  Чтобы создать файл ключа, введите `sn -k file` из командной строки.  Дополнительные сведения см. в разделе [Sn.exe \(Strong Name Tool\)](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md).  
+## <a name="remarks"></a>Примечания  
+ Компилятор вставляет открытый ключ в манифест сборки и затем подписывает окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите `sn -k file` в командной строке. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).  
   
- При компиляции с параметром `/target:module` имя файла ключей сохраняется в модуле и включается в сборку при компиляции с параметром [\/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ Если компиляция выполняется с `/target:module`, имя файла ключа сохраняется в модуле и включается в сборку, созданный при компиляции с параметром [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
- Также можно передать сведения о шифровании компилятору с помощью [\/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  Используйте [\/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md), если необходимо использовать частично подписанную сборку.  
+ Сведения о шифровании можно также передать компилятору с [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md). Используйте [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) Если частично подписанной сборки.  
   
- Этот параметр также допускается указывать в качестве пользовательского атрибута \(<xref:System.Reflection.AssemblyKeyFileAttribute>\) в исходном коде любого модуля промежуточного языка корпорации Майкрософт.  
+ Можно также указать этот параметр в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyKeyFileAttribute>) в исходном коде любого модуля промежуточного языка корпорации Майкрософт.</xref:System.Reflection.AssemblyKeyFileAttribute>  
   
- Если параметры `/keyfile` и [\/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) заданы одновременно для одной и той же процедуры компиляции \(в командной строке или с помощью пользовательских атрибутов\), сначала будет предпринята попытка использования контейнера ключей.  В случае успеха сборка подписывается данными контейнера ключей.  Если контейнер ключей не обнаружен, будет предпринята попытка использовать файл, заданный параметром `/keyfile`.  В случае успеха сборка подписывается данными из файла ключей, а сведения о ключах будут помещены в контейнер ключей \(аналогично команде `sn -i`\). Таким образом, при следующей компиляции контейнер ключей будет действительным.  
+ В случае оба `/keyfile` и [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) указаны (в командной строке или с помощью настраиваемого атрибута) в одной компиляции, компилятор сначала пытается использовать контейнер ключей. В случае успеха сборка подписывается данными контейнера ключей. Если компилятору не удается найти контейнер ключей, клиент пытается использовать файл, заданный параметром `/keyfile`. Если это завершается успешно, сборка подписывается данными из файла ключа и данные ключа устанавливается в контейнер ключей (аналогично `sn -i`) таким образом, при следующей компиляции контейнер ключей будет допустимым.  
   
  Обратите внимание, что файл ключей может содержать только открытый ключ.  
   
- См. раздел [Создание и использование сборок со строгими именами](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md) для получения дополнительных сведений о подписи сборки.  
+ В разделе [Создание и использование сборок](https://msdn.microsoft.com/library/xwb8f617) Дополнительные сведения о подписи сборки.  
   
 > [!NOTE]
->  Параметр `/keyfile` недоступен из среды разработки [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]; он доступен только при компиляции из командной строки.  
+>  `/keyfile` Параметр не доступен в [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] среде разработки; он доступен только при компиляции из командной строки.  
   
-## Пример  
- В примере компилируется исходный файл `Input.vb` с указанием файла ключей.  
+## <a name="example"></a>Пример  
+ Следующий код компилирует исходный файл `Input.vb` и задает файл ключа.  
   
 ```  
 vbc /keyfile:myfile.sn input.vb  
 ```  
   
-## См. также  
- [Сборки и глобальный кэш сборок](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md)   
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/reference](../../../visual-basic/reference/command-line-compiler/reference.md)   
+## <a name="see-also"></a>См. также  
+ [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

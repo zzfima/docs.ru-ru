@@ -1,53 +1,69 @@
 ---
-title: "Функция &lt;имяФункции&gt; возвращает значение не для всех путей выполнения | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42105"
-  - "vbc42105"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42105"
+title: "Функция &quot;&lt;procedurename&gt;&quot; возвращает значение не для всех путей кода | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42105
+- vbc42105
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Функция &lt;имяФункции&gt; возвращает значение не для всех путей выполнения
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 288fdf7c4845b20283681d9eb3504ac314f1ddd2
+ms.lasthandoff: 03/13/2017
 
-Функция '\<имя\_функции\>' не возвращает значения для всех путей кода.У вас нет оператора возврата?  
+---
+# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Функция "&lt;procedurename&gt;" возвращает значение не для всех путей кода
+Функция "\<procedurename настроек" возвращает значение не для всех ветвей кода. Отсутствует оператор «Return»?  
   
- Процедура `Function` имеет, по крайней мере, один возможный путь во всем коде, который не возвращает значения.  
+ A `Function` процедура имеет хотя бы один возможный путь во всем коде, который не возвращает значение.  
   
- Значение можно получить из процедуры `Function` любым из следующих способов:  
+ Может возвращать значение из `Function` процедура в любой из следующих способов:  
   
--   Включите значение в оператор [Оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+-   Включите значение в [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
--   Присвойте значение имени процедуры `Function` и выполните оператор `Exit Function`.  
+-   Присвойте значение `Function` процедуры имя, а затем выполнить `Exit Function` инструкции.  
   
--   Присвойте значение имени процедуры`Function` и выполните оператор `End Function`.  
+-   Присвойте значение `Function` процедуры имя, а затем выполнить `End Function` инструкции.  
   
- Если элемент управление передается в `Exit Function` или `End Function` и вы не присвоили никаких значений имени процедуры, то процедура вернет значение, установленное по умолчанию для типа данных.  Дополнительные сведения см. в разделе "Поведение" раздела [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md).  
+ Если управление передается `Exit Function` или `End Function` и не были назначены любое значение имени процедуры, процедура возвращает значение по умолчанию типа возвращаемых данных. Дополнительные сведения см. в разделе «Поведение» в [инструкции Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
- По умолчанию это сообщение является предупреждающим.  Дополнительные сведения о скрытии предупреждений и их обработке как ошибок см. в разделе [Настройка предупреждений в Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Идентификатор ошибки**: BC42105  
+ **Идентификатор ошибки:** BC42105  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Проверьте логику потока управления и убедитесь, что значение присваивается перед каждым оператором, вызывающим возврат.  
+-   Проверьте логику потока управления и убедитесь, что можно присвоить значение перед каждым оператором, вызывающим возврат.  
   
-     Если всегда используется оператор `Return`, то проще обеспечить возврат значения при каждом возврате из процедуры.  В этом случае последним оператором перед `End Function` должен быть оператор `Return`.  
+     Проще гарантировать, что каждое возвращение из процедуры возвращает значение, если всегда использовать `Return` инструкции. После этого, последним оператором перед `End Function` должно быть `Return` инструкции.  
   
-## См. также  
- [Процедуры Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
+## <a name="see-also"></a>См. также  
+ [Процедуры функций](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
  [Оператор Function](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Страница "Компиляция" в конструкторе проектов \(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic)
+ [Страница "Компиляция" в конструкторе проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

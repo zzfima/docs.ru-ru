@@ -1,93 +1,109 @@
 ---
-title: "Практическое руководство. Выполнение запросов к базе данных с помощью LINQ (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "запрос базы данных [LINQ]"
-  - "запросы [LINQ в Visual Basic], запрос базы данных"
-  - "запросы [LINQ в Visual Basic], разделы практического руководства"
-  - "примеры запросов [LINQ]"
-  - "примеры запросов [Visual Basic]"
-  - "запрос баз данных [LINQ]"
+title: "Практическое руководство: запросов к базе данных с помощью LINQ (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- query samples [LINQ]
+- database querying [LINQ]
+- queries [LINQ in Visual Basic], database querying
+- querying databases [LINQ]
+- queries [LINQ in Visual Basic], how-to topics
+- query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Практическое руководство. Выполнение запросов к базе данных с помощью LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a88a7172f48012d12bf0bb3089bffb510e786c3b
+ms.lasthandoff: 03/13/2017
 
-Запросы, интегрированные в язык программирования \(Language\-Integrated Query, LINQ\), упрощают доступ к содержимому базы данных и обеспечивают выполнение запросов.  
+---
+# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Практическое руководство. Выполнение запросов к базе данных с помощью LINQ (Visual Basic)
+Language Integrated Query (LINQ) упрощает для доступа к базе данных и выполнения запросов.  
   
- В следующем примере демонстрируется создание нового приложения, выполняющего запросы к базе данных SQL Server.  
+ Следующий пример демонстрирует создание нового приложения, выполняющего запросы к базе данных SQL Server.  
   
- В примерах этого раздела используется учебная база данных "Борей".  При отсутствии учебной базы данных "Борей" на компьютере разработчика ее можно загрузить с веб\-узла [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088).  Подробные инструкции см. в разделе [Загрузка образцов баз данных](../Topic/Downloading%20Sample%20Databases.md).  
+ Примеры в этом разделе используется образец базы данных Northwind. Если у вас образца базы данных "Борей" на компьютере разработчика, можно загрузить из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=98088) веб-сайта. Инструкции см. в разделе [Загрузка примеров баз данных](https://msdn.microsoft.com/library/bb399411).  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### Создание подключения к базе данных  
+## <a name="to-create-a-connection-to-a-database"></a>Создание подключения к базе данных  
   
-1.  В Visual Studio откройте **обозреватель серверов** или **обозреватель баз данных**. Для этого в меню **Вид** выберите пункт **Обозреватель серверов** или **Обозреватель баз данных**.  
+1.  В Visual Studio откройте **обозреватель серверов**/**обозревателя базы данных** , щелкнув **обозревателя**/**обозреватель баз данных** на **представление** меню.  
   
-2.  В **обозревателе серверов** или **обозревателе баз данных** щелкните правой кнопкой мыши **Подключения данных**, а затем выберите команду **Добавить подключение**.  
+2.  Щелкните правой кнопкой мыши **подключения к данным** в **обозревателя**/**обозревателя базы данных** и нажмите кнопку **Добавление подключения**.  
   
-3.  Укажите допустимое подключение к учебной базе данных "Northwind".  
+3.  Укажите допустимое подключение к учебной базе данных "Борей".  
   
-### Добавление проекта, содержащего файл LINQ\-SQL  
+## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Добавление проекта, содержащего файл LINQ to SQL  
   
-1.  В меню **Файл** окна Visual Studio выберите команду **Создать** и щелкните **Проект**.  Выберите **Приложение Windows Forms** в качестве типа проекта Visual Basic.  
+1.  В Visual Studio на **файл** наведите указатель мыши на **New** и нажмите кнопку **проекта**. Выберите Visual Basic **приложение Windows Forms** в качестве типа проекта.  
   
-2.  В меню **Проект** выберите команду **Добавить новый элемент**.  Выберите шаблон элемента **Классы LINQ\-SQL**.  
+2.  В меню **Проект** выберите пункт **Добавить новый элемент**. Выберите **классы LINQ to SQL** шаблона элемента.  
   
-3.  Назовите файл `northwind.dbml`.  Нажмите кнопку **Добавить**.  Откроется реляционный конструктор объектов для файла northwind.dbml.  
+3.  Назовите файл `northwind.dbml`. Нажмите кнопку **Добавить**. Реляционный конструктор объектов (конструктор O/R) открыт для файла northwind.dbml.  
   
-### Добавление таблицы к запросу в объектно\-реляционном конструкторе  
+## <a name="to-add-tables-to-query-to-the-or-designer"></a>Добавление таблицы к запросу реляционный конструктор объектов  
   
-1.  В представлении **Обозреватель серверов** или **Обозреватель баз данных** разверните подключение к базе данных "Northwind".  Разверните папку **Таблицы**.  
+1.  В **обозревателя**/**обозревателя базы данных**, разверните подключение к базе данных Northwind. Разверните **таблиц** папки.  
   
-     Если реляционный конструктор объектов закрыт, откройте его снова, дважды щелкнув файл northwind.dbml, который был добавлен ранее.  
+     Если реляционный конструктор объектов закрыт, его можно открыть, дважды щелкнув файл northwind.dbml, который был добавлен ранее.  
   
-2.  Щелкните таблицу "Клиенты" и перетащите ее в левую область конструктора.  Щелкните таблицу "Заказы" и перетащите ее в левую область конструктора.  
+2.  Щелкните таблицу Customers и перетащите его в левую область конструктора. Щелкните в таблице Orders и перетащите его в левую область конструктора.  
   
-     Для проекта в конструкторе создаются новые объекты `Customer` и `Order`.  Обратите внимание, что конструктор автоматически обнаруживает связи между таблицами и создает дочерние свойства для связанных объектов.  Например, функция IntelliSense покажет, что в объекте `Customer` имеется свойство `Orders` для всех заказов, связанных с клиентом.  
+     Конструктор создает новый `Customer` и `Order` объекты для проекта. Обратите внимание, что конструктор автоматически обнаруживает связи между таблицами и создает дочерние свойства для связанных объектов. Например, IntelliSense покажет, что `Customer` объект имеет `Orders` свойства для всех заказов, связанных с клиентом.  
   
 3.  Сохраните изменения и закройте конструктор.  
   
 4.  Сохраните проект.  
   
-### Добавление кода в запрос к базе данных и отображение результатов  
+## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Чтобы добавить код для запроса к базе данных и отображения результатов  
   
-1.  С **панели элементов** перетащите элемент управления <xref:System.Windows.Forms.DataGridView> в заданную по умолчанию форму Windows Forms для проекта \(Form1\).  
+1.  От **элементов**, перетащите <xref:System.Windows.Forms.DataGridView>элемента управления на форме Windows Forms по умолчанию для проекта, Form1.</xref:System.Windows.Forms.DataGridView>  
   
-2.  Дважды щелкните Form1, чтобы добавить код в событие формы `Load`.  
+2.  Дважды щелкните Form1, чтобы добавить код для `Load` события формы.  
   
-3.  При добавлении таблиц объектно\-реляционный конструктор добавляет в проект объект <xref:System.Data.Linq.DataContext>.  Этот объект содержит код, необходимый для обращения к этим таблицам, в дополнение к отдельным объектам и коллекциям для каждой таблицы.  Объекту <xref:System.Data.Linq.DataContext> для проекта присвоено имя на основе имени файла .dbml.  Для данного проекта объект <xref:System.Data.Linq.DataContext> называется `northwindDataContext`.  
+3.  При добавлении таблиц в реляционный конструктор объектов конструктор добавил <xref:System.Data.Linq.DataContext>объект для проекта.</xref:System.Data.Linq.DataContext> Этот объект содержит код, который должен иметь доступ к этим таблицам, в дополнение к отдельным объектам и коллекциям для каждой таблицы. <xref:System.Data.Linq.DataContext>Объект для проекта имя на основе имени файла .dbml.</xref:System.Data.Linq.DataContext> Для этого проекта <xref:System.Data.Linq.DataContext>объект называется `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
   
-     Можно создать экземпляр <xref:System.Data.Linq.DataContext> в коде и запросить таблицы, указанные реляционным конструктором объектов.  
+     Можно создать экземпляр <xref:System.Data.Linq.DataContext>в коде и запросить таблицы, указанные в реляционный конструктор объектов.</xref:System.Data.Linq.DataContext>  
   
-     Добавьте следующий код к событию `Load` для запроса к таблицам, которые отображаются как свойства контекста данных.  
+     Добавьте следующий код в `Load` событий для запроса к таблицам, которые отображаются как свойства контекста данных.  
   
-     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos&#3;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_1.vb)]  
   
 4.  Нажмите клавишу F5, чтобы запустить проект и просмотреть результаты.  
   
-5.  Ниже приведены некоторые дополнительные запросы, которые можно попытаться выполнить.  
+5.  Ниже приведены некоторые дополнительные запросы, которые могут помочь.  
   
-     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
-    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
+     [!code-vb[VbLINQToSQLHowTos&#4;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
+    [!code-vb[VbLINQToSQLHowTos&#5;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
  [Запросы](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [Методы DataContext \(реляционный конструктор объектов\)](/visual-studio/data-tools/datacontext-methods-o-r-designer)   
- [Пошаговое руководство. Создание классов LINQ to SQL \(реляционный конструктор объектов\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [Методы DataContext (реляционный конструктор)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)
+

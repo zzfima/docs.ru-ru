@@ -1,38 +1,54 @@
 ---
-title: "Вложенные структуры управления (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "условные операторы, вложенные"
-  - "поток управления, вложенные управляющие операторы"
-  - "управляющие структуры, вложенные"
-  - "вложенные управляющие операторы"
-  - "операторы [Visual Basic], поток управления"
-  - "структуры, элемент управления вложенного приложения"
-  - "код Visual Basic, поток управления"
+title: "Вложенные структуры управления (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, control flow
+- control structures, nested
+- conditional statements, nested
+- statements [Visual Basic], control flow
+- control flow, nested control statements
+- structures, nested control
+- nested control statements
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Вложенные структуры управления (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4afc0afc2ad63d03f2c4251640d3682b2b184504
+ms.lasthandoff: 03/13/2017
 
-Можно разместить операторы управления внутри других операторов управления, например блок `If...Then...Else` в цикле `For...Next`.  Операторы управления, размешенные внутри другого оператора управления, называются *вложенными*.  
+---
+# <a name="nested-control-structures-visual-basic"></a>Вложенные структуры управления (Visual Basic)
+Можно разместить операторы управления внутри других операторов управления, например `If...Then...Else` блок `For...Next` цикла. Операторы управления помещен внутрь другого оператора управления называется *вложенных*.  
   
-## Уровень вложенности  
- Структуры элементов управления в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] могут иметь столько уровней вложенности, сколько требуется.  В тексте сообщения для удобства чтения принято выделять вложенные структуры различными отступами для каждого из них.  Редактор среды разработки \(IDE\) автоматически делает это.  
+## <a name="nesting-levels"></a>Число уровней вложения  
+ Структуры элементов управления в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] могут быть вложены на всех уровнях. Это часто становится более удобочитаемой вложенные структуры с помощью соответствующих отступов текст каждого из них. Редактор Интегрированная среда разработки автоматически выполняет это действие.  
   
- В следующем примере процедура `sumRows` складывает положительные элементы каждой строки матрицы:  
+ В следующем примере процедура `sumRows` складывает положительные элементы каждой строки матрицы.  
   
 ```  
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -48,15 +64,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- В предыдущем примере первая инструкция `Next` закрывает внутренний цикл `For`, а последняя инструкция `Next` закрывает внешний цикл `For`.  
+ В предыдущем примере первый `Next` инструкции закрывает внутренний `For` цикла, а последний `Next` инструкции закрывает внешний `For` цикла.  
   
- Аналогично, если используются вложенные операторы `If`, то операторы `End If` автоматически сопоставляются с ближайшим перед ними оператором `If`.  Вложенные циклы `Do` работают аналогичным образом: самый внутренний оператор `Loop` соответствует самому внутреннему оператору `Do`.  
+ Аналогичным образом, во вложенных `If` инструкций, `End If` с ближайшим перед ними автоматически применяются инструкции `If` инструкции. Вложенные `Do` циклы работают таким же образом, с самого внутреннего `Loop` инструкции соответствует самому внутреннему `Do` инструкции.  
   
 > [!NOTE]
->  Для многих структур управления действует правило, что при нажатии мышью на ключевое слово все ключевые слова в структуре выделяются.  Например, при щелчке `If` в конструкции `If...Then...Else` выделяются все экземпляры `If`, `Then`, `ElseIf`, `Else` и `End If`.  Для перемещения к следующему или предыдущему выделенному ключевому слову нажмите сочетание клавиш CTRL\+SHIFT\+СТРЕЛКА ВНИЗ или CTRL\+SHIFT\+СТРЕЛКА ВВЕРХ.  
+>  Для многих структур управления что при щелчке ключевого слова, все ключевые слова в структуре выделяются. Например, при нажатии кнопки `If` в `If...Then...Else` конструкции, все экземпляры `If`, `Then`, `ElseIf`, `Else`, и `End If` при построении выделяются. Чтобы переместить выделенные следующего или предыдущего ключевое слово, нажмите клавиши CTRL + SHIFT + СТРЕЛКА ВНИЗ или CTRL + SHIFT + Стрелка вверх.  
   
-## Вложение различных типов структур управления  
- Можно вложить один тип структуры управления внутрь другого.  В следующем примере используется блок `With` внутри цикла `For Each` и вложенные блоки `If` внутри блока `With`.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Вложение различных типов структур управления  
+ Можно вложить один тип структуры управления внутрь другого типа. В следующем примере используется `With` внутри блока `For Each` цикл и вложенные `If` блокирует внутри `With` блок.  
   
 ```  
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -73,16 +89,16 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## Перекрывающиеся структуры управления  
- Нельзя допускать перекрытия структур управления.  Это означает, что любая вложенная структура должна полностью содержаться внутри следующей внутренней структуры.  Например, следующее расположение является недопустимым, так как цикл `For` завершается раньше внутреннего блока `With`.  
+## <a name="overlapping-control-structures"></a>Перекрывающиеся структуры управления  
+ Управляющие структуры не могут перекрываться. Это означает, что любая вложенная структура должна полностью содержаться внутри следующей внутренней структуры. Например, следующее расположение является недопустимым из-за `For` цикл завершается раньше внутреннего `With` блока.  
   
- ![Схема графика недопустимого вложения](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.png "NestExampleInvalid")  
+ ![Схема графика недопустимого вложения](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Недопустимое вложение структур For и With  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] компилятор обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке при компиляции.  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Компилятор обнаруживает такие перекрывающиеся структуры управления и сигнализирует об ошибке при компиляции.  
   
-## См. также  
- [Управление ходом выполнения](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
+## <a name="see-also"></a>См. также  
+ [Поток управления](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
+ [Структуры критериев](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
  [Циклические структуры](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
  [Другие структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

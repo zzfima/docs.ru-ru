@@ -1,40 +1,56 @@
 ---
-title: "Практическое руководство. Вычисление числовых значений (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "вычисления, числовые выражения"
-  - "выражения [Visual Basic], числовой"
-  - "числовые выражения"
-  - "приоритет операторов"
-  - "операторы [Visual Basic]"
-  - "приоритет, операторов"
-  - "код Visual Basic, выражения"
-  - "код Visual Basic, операторы"
+title: "Практическое руководство: вычисление числовых значений (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- operator precedence
+- operators [Visual Basic]
+- expressions [Visual Basic], numeric
+- calculations, numeric expressions
+- precedence, of operators
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Практическое руководство. Вычисление числовых значений (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d844e2af3892d897125e21d3fd7047a8b295d10a
+ms.lasthandoff: 03/13/2017
 
-Числовые значения можно вычислить с помощью числовых выражений.  *Числовое выражение* — это выражение, которое содержит литералы, константы и переменные, представляющие числовые значения, а также операторы, действующие на эти значения.  
+---
+# <a name="how-to-calculate-numeric-values-visual-basic"></a>Практическое руководство. Вычисление числовых значений (Visual Basic)
+Можно вычислить числовых значений с помощью числовых выражений. Объект *числовое выражение* является выражение, которое содержит литералы, константы и переменные, представляющие числовые значения, а также операторы, действующие на эти значения.  
   
-## Вычисление числовых значений  
+## <a name="calculating-numeric-values"></a>Вычисление числовых значений  
   
-#### Для вычисления числового значения  
+#### <a name="to-calculate-a-numeric-value"></a>Для вычисления числового значения  
   
--   Объедините один или несколько числовых литералов, констант и переменных в числовое выражение.  В следующем примере показаны некоторые допустимые числовые выражения.  
+-   Объединение числовых литералов, констант и переменных в числовое выражение. В следующем примере показано некоторые допустимые числовые выражения.  
   
      `93.217`  
   
@@ -44,37 +60,37 @@ caps.handback.revision: 13
   
      `4 * (67 + i)`  
   
-     В первых трех строках отображается литерал, константа и переменная.  Каждый сам по себе является формой допустимого числового выражения  Последняя строка показывает комбинацию переменной с двумя литералами.  
+     Первые три строки показывают литерал, константа и переменная. Каждая из форм допустимое числовое выражение само по себе. Последняя строка показывает комбинацию переменной с двумя литералами.  
   
-     Обратите внимание, что числовое выражение само по себе не образует завершенной инструкции [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  Необходимо использовать выражение как часть завершенной инструкции.  
+     Обратите внимание, что числовое выражение не образуют полный [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] инструкции сама по себе. Необходимо использовать выражение как часть полной инструкции.  
   
-#### Для хранения числовых значений  
+#### <a name="to-store-a-numeric-value"></a>Для хранения числовых значений  
   
--   Можно использовать оператор назначения для назначения числового выражения переменной, как показано в следующем примере.  
+-   Оператор присваивания можно использовать для назначения значения, представленного числового выражения переменной, как показано в следующем примере.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators&#82;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
-     В предыдущем примере значение выражения в правой части оператора равно \(`=`\) присваивается переменной `j` слева от оператора, поэтому `j` вычисляется как 276.  
+     В предыдущем примере значение выражения в правой части оператора равно (`=`) назначается переменной `j` слева от оператора, поэтому `j` вычисляется как 276.  
   
-     Дополнительные сведения см. в разделе [Операторы](../../../../visual-basic/language-reference/statements/index.md).  
+     Дополнительные сведения см. в разделе [инструкции](../../../../visual-basic/language-reference/statements/index.md).  
   
-## Несколько операторов  
- Если числовое выражение содержит более одного оператора, порядок их вычисления определяется правилами приоритета операторов.  Для переопределения правил приоритета операторов выражения заключаются в круглые скобки, как в предыдущем примере. Такие выражения вычисляются в первую очередь.  
+## <a name="multiple-operators"></a>Несколько операторов  
+ Если числовое выражение содержит несколько операторов, порядок, в котором они вычисляются определяется правилами приоритета операторов. Для переопределения правил приоритета операторов выражения заключаются в круглые скобки, как показано в предыдущем примере. такие выражения вычисляются первыми.  
   
-#### Чтобы переопределить приоритет обычного оператора  
+#### <a name="to-override-normal-operator-precedence"></a>Чтобы переопределить обычный приоритет операторов  
   
--   Используйте скобки для заключения в них операций, которые должны выполняться в первую очередь.  В следующем примере показано два разных результата с теми же операндами и операторами.  
+-   Использование скобок для заключения операции, которые вы хотите сначала необходимо выполнить. В следующем примере показано два разных результата с теми же операндов и операторов.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators&#83;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
-     В предыдущем примере при вычислении `j` сперва выполняется дополнительный оператор\(`+`\), так как скобки `(67 + i)` переопределяют стандартный порядок действий. Переменной `j` присваивается значение 276 \(4 х 69\).  При вычислении `k` операторы выполняются в обычном порядке \(`*` перед `+`\). Переменной `k` присваивается значение 270 \(268 \+ 2\).  
+     В предыдущем примере, то вычисление для `j` выполняет оператор сложения (`+`) первого из-за скобки вокруг `(67 + i)` переопределить обычный приоритет и значение, присваиваемое `j` равно 276 (4 раза по 69). Расчет `k` операторы выполняются в обычном порядке (`*` перед `+`) и значение, присваиваемое `k` равно 270 (268 плюс 2).  
   
-     Дополнительные сведения см. в разделе [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+     Дополнительные сведения см. в разделе [операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Операторы и выражения](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Сравнения значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
- [Операторы](../../../../visual-basic/language-reference/statements/index.md)   
- [Порядок применения операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)   
+ [Сравнение значений](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
+ [Инструкции](../../../../visual-basic/language-reference/statements/index.md)   
+ [Приоритет операторов в Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Арифметические операторы](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
  [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

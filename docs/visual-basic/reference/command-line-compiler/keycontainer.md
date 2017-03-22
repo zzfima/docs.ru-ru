@@ -1,65 +1,80 @@
 ---
-title: "/keycontainer | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/keycontainer - параметр компилятора [Visual Basic]"
-  - "keycontainer - параметр компилятора [Visual Basic]"
-  - "-keycontainer - параметр компилятора [Visual Basic]"
+title: "/ keycontainer | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- -keycontainer compiler option [Visual Basic]
+- keycontainer compiler option [Visual Basic]
+- /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# /keycontainer
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 68fa09edce5c0c9af143197f9379d5a46afab52e
+ms.lasthandoff: 03/13/2017
 
-Указывает имя контейнера для пары ключей, чтобы дать сборке строгое имя.  
+---
+# <a name="keycontainer"></a>/keycontainer
+Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /keycontainer:container  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`container`|Обязательный.  Файл контейнера, содержащий ключ.  Заключите имя файла в кавычки \(""\), если оно содержит пробел.|  
+|---|---|  
+|`container`|Обязательный. Файл контейнера, содержащий ключ. Заключите имя файла в кавычки ("»), если имя содержит пробелы.|  
   
-## Заметки  
- Компилятор создает совместно используемый компонент, вставляя в манифест сборки открытый ключ и подписывая окончательную сборку закрытым ключом.  Чтобы создать файл ключа, введите `sn -k` `file` из командной строки.  Параметр `-i` устанавливает пару ключей в контейнере.  Дополнительные сведения см. в разделе [Sn.exe \(Strong Name Tool\)](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md).  
+## <a name="remarks"></a>Примечания  
+ Компилятор создает совместно используемый компонент, вставляя в манифест сборки открытый ключ и подписывая окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите `sn -k``file` в командной строке. `-i` Параметр устанавливает пару ключей в контейнер. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).  
   
- При компиляции с параметром `/target:module` имя файла ключей сохраняется в модуле и включается в сборку при компиляции с параметром [\/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ Если компиляция выполняется с `/target:module`, имя файла ключа сохраняется в модуле и включается в сборку, созданный при компиляции с параметром [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
- Этот параметр также можно задать в качестве настраиваемого атрибута \(<xref:System.Reflection.AssemblyKeyNameAttribute>\) в исходном коде любого модуля языка MSIL.  
+ Можно также указать этот параметр в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyKeyNameAttribute>) в исходном коде любого модуля промежуточного языка (MSIL) Microsoft.</xref:System.Reflection.AssemblyKeyNameAttribute>  
   
- Также можно передать сведения о шифровании компилятору с помощью [\/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md).  Используйте [\/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md), если необходимо использовать частично подписанную сборку.  
+ Сведения о шифровании можно также передать компилятору с [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md). Используйте [/delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) Если частично подписанной сборки.  
   
- См. раздел [Создание и использование сборок со строгими именами](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md) для получения дополнительных сведений о подписи сборки.  
+ В разделе [Создание и использование сборок](https://msdn.microsoft.com/library/xwb8f617) Дополнительные сведения о подписи сборки.  
   
 > [!NOTE]
->  Параметр `/keycontainer` недоступен из среды разработки Visual Studio. Он доступен только при выполнении компиляции из командной строки.  
+>  `/keycontainer` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
   
-## Пример  
- В примере компилируется исходный файл `Input.vb` с указанием контейнера ключей.  
+## <a name="example"></a>Пример  
+ Следующий код компилирует исходный файл `Input.vb` и указывает контейнер ключей.  
   
 ```  
 vbc /keycontainer:key1 input.vb  
 ```  
   
-## См. также  
- [Сборки и глобальный кэш сборок](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md)   
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)   
+## <a name="see-also"></a>См. также  
+ [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
+ [/ keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

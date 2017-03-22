@@ -1,33 +1,49 @@
 ---
-title: "Лямбда-выражение не будет удалено из этого обработчика событий | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42326"
-  - "vbc42326"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42326"
+title: "Лямбда-выражение не будет удалено из этого обработчика событий | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42326
+- vbc42326
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# Лямбда-выражение не будет удалено из этого обработчика событий
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: bdf7ad8f8a116c818e72d67150d72d0c96a4dc3b
+ms.lasthandoff: 03/13/2017
 
-Лямбда\-выражение не удаляется из этого обработчика событий.Назначьте лямбда\-выражение переменной и используйте ее для добавления и удаления события.  
+---
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Лямбда-выражение не будет удалено из этого обработчика событий
+Лямбда-выражение не будет удалено из этого обработчика событий. Назначьте лямбда-выражение переменной и использовать переменную для добавления и удаления события.  
   
- Если лямбда\-выражение используется вместе с обработчиками событий, ожидаемое поведение может не наблюдаться.  Для каждого определения лямбда\-выражения компилятор создает новый метод, даже если они идентичны.  Поэтому следующий код отображает `False`.  
+ При использовании лямбда-выражения с обработчиками событий, ожидаемое поведение может отсутствовать. Компилятор создает новый метод для каждого определения лямбда-выражения, даже если они идентичны. Таким образом, следующий код отображает `False`.  
   
-```vb#  
+```vb  
 Module Module1  
   
     Sub Main()  
@@ -41,9 +57,9 @@ Module Module1
 End Module  
 ```  
   
- Использование лямбда\-выражений вместе с обработчиками событий может привести к непредвиденным результатам.  В приведенном ниже примере лямбда\-выражение, добавленное с помощью `AddHandler` не удаляется оператором `RemoveHandler`.  
+ При использовании лямбда-выражения с обработчиками событий, это может привести к непредвиденным результатам. В следующем примере лямбда-выражение добавленные `AddHandler` не удаляется с `RemoveHandler` инструкции.  
   
-```vb#  
+```vb  
 Module Module1  
   
     Event ProcessInteger(ByVal x As Integer)  
@@ -62,37 +78,37 @@ Module Module1
 End Module  
 ```  
   
- По умолчанию это сообщение является предупреждающим.  Сведения о том, как скрыть предупреждения или как рассматривать предупреждения как ошибки, см. в разделе [Настройка предупреждений в Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ По умолчанию данное сообщение является предупреждением. Дополнительные сведения о том, как скрыть предупреждения или как рассматривать предупреждения как ошибки в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Идентификатор ошибки**: BC42326  
+ **Идентификатор ошибки:** BC42326  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Чтобы избежать появления предупреждающего сообщения и удалить лямбда\-выражение, назначьте его переменной и используйте последнюю в операторах `AddHandler` и `RemoveHandler`, как показано в примере ниже.  
+-   Чтобы избежать предупреждения и удалить лямбда-выражение, назначьте лямбда-выражение переменной и использовать переменную в обоих `AddHandler` и `RemoveHandler` инструкции, как показано в следующем примере.  
   
-    ```vb#  
-    Module Module1  
+```vb  
+Module Module1  
   
-        Event ProcessInteger(ByVal x As Integer)  
+    Event ProcessInteger(ByVal x As Integer)  
   
-        Dim PrintHandler As ProcessIntegerEventHandler  
+    Dim PrintHandler As ProcessIntegerEventHandler  
   
-        Sub Main()  
+    Sub Main()  
   
-            ' Assign the lambda expression to a variable.  
-            PrintHandler = Function(m As Integer) m  
+        ' Assign the lambda expression to a variable.  
+        PrintHandler = Function(m As Integer) m  
   
-            ' Use the variable to add the listener.  
-            AddHandler ProcessInteger, PrintHandler  
+        ' Use the variable to add the listener.  
+        AddHandler ProcessInteger, PrintHandler  
   
-            ' Use the variable again when you want to remove the listener.  
-            RemoveHandler ProcessInteger, PrintHandler  
+        ' Use the variable again when you want to remove the listener.  
+        RemoveHandler ProcessInteger, PrintHandler  
   
-        End Sub  
-    End Module  
-    ```  
+    End Sub  
+End Module  
+```  
   
-## См. также  
- [Лямбда\-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
+## <a name="see-also"></a>См. также  
+ [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
  [Неявное преобразование делегата](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [События](../../../visual-basic/programming-guide/language-features/events/events.md)
+ [События](../../../visual-basic/programming-guide/language-features/events/index.md)

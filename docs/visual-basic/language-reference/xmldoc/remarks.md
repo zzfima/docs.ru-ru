@@ -1,50 +1,66 @@
 ---
-title: "&lt;remarks&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<remarks> - XML-тег"
-  - "remarks - XML-тег"
+title: "&lt;Примечания&gt; (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- <remarks> XML tag
+- remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# &lt;remarks&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 89f8d321505b528d07fd04780cec06fb65b0e05e
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="ltremarksgt-visual-basic"></a>&lt;Примечания&gt; (Visual Basic)
 Задает раздел примечаний для члена.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 <remarks>description</remarks>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `description`  
- Описание члена.  
+ Описание элемента.  
   
-## Заметки  
- Используйте тег `<remarks>`, чтобы добавить сведения о типе, дополняя сведения, указанные в [\<summary\>](../../../visual-basic/language-reference/xmldoc/summary.md) .  
+## <a name="remarks"></a>Примечания  
+ Используйте `<remarks>` тег для добавления сведений о типе, дополняющих сведения, указанные с [ \<Сводка настроек](../../../visual-basic/language-reference/xmldoc/summary.md).  
   
- Эта информация отображается в обозревателе объектов.  Дополнительные сведения об обозревателе объектов см. в разделе [Просмотр структуры кода](/visual-studio/ide/viewing-the-structure-of-code).  
+ Эта информация отображается в обозревателе объектов. Сведения об обозревателе объектов см. в разделе [Просмотр структуры кода](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code).  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Скомпилируйте с [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) чтобы обработать комментарии документации в файл.  
   
-## Пример  
- В этом примере используется тег `<remarks>`, чтобы объяснить, что делает метод `UpdateRecord`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<remarks>` тег, чтобы объяснить, что `UpdateRecord` метода.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments №&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

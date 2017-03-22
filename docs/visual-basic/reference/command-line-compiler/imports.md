@@ -1,58 +1,72 @@
 ---
-title: "/imports (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/imports - параметр компилятора [Visual Basic]"
-  - "imports - параметр компилятора [Visual Basic]"
-  - "-imports - параметр компилятора [Visual Basic]"
+title: "/ imports (Visual Basic) | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- /imports compiler option [Visual Basic]
+- imports compiler option [Visual Basic]
+- -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# /imports (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1dcbba442413dba63aef31fd40a511bad5e8217b
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="imports-visual-basic"></a>/imports (Visual Basic)
 Импортирует пространство имен из указанной сборки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /imports:namespaceList  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|`namespaceList`|Обязательный.  Список с разделенными запятыми пространствами имен для импорта.|  
+|---|---|  
+|`namespaceList`|Обязательный. Разделенный запятыми список пространств имен для импорта.|  
   
-## Заметки  
- Параметр `/imports` импортирует любое пространство имен, определенное в текущем наборе исходных файлов или в сборках, на которые имеются ссылки.  
+## <a name="remarks"></a>Примечания  
+ `/imports` Параметр импортирует любое пространство имен, определенное в текущем наборе исходных файлов или из любой сборки, на которую указывает ссылка.  
   
- Члены пространства имен, указанные в параметре `/imports`, доступны для всех файлов компилируемых исходных кодов.  Используйте [Оператор Imports \(пространство имен .NET и тип\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для использования пространства имен в одном файле исходного кода.  
+ Члены пространства имен, указанные с `/imports` доступны для всех файлов исходного кода при компиляции. Используйте [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) для использования пространства имен в файле одного исходного кода.  
   
-||  
-|-|  
-|Установка\/импорт в интегрированной среде разработки Visual Studio|  
-|1.  Выберите проект в **обозревателе решений**.  В меню **Проект** выберите пункт **Свойства**.  Дополнительные сведения см. в разделе [Introduction to the Project Designer](http://msdn.microsoft.com/ru-ru/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Перейдите на вкладку **Ссылки**.<br />3.  Введите имя пространства имен в поле рядом с кнопкой **Добавить пользовательский импорт**.<br />4.  Нажмите кнопку  **Добавить пользовательский импорт** .|  
+|Чтобы задать и импортирует в среде разработки Visual Studio|  
+|---|  
+|1.  Выберите проект в **Обозревателе решений**. На **проекта** меню, щелкните **свойства**. Дополнительные сведения см. в разделе [Знакомство с конструктором проектов](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Щелкните **ссылки** вкладки.<br />3.  Введите имя пространства имен в поле рядом с **добавить пользовательский импорт** кнопки.<br />4.  Щелкните **добавить пользовательский импорт** кнопки.|  
   
-## Пример  
- Следующий код компилируется при указании `/imports:system`.  
+## <a name="example"></a>Пример  
+ Следующий код компилируется при `/imports:system` указано.  
   
- [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/imports_1.vb)]  
+ [!code-vb[VbVbalrCompiler&#21;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/imports_1.vb)]  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)   
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Ссылки и оператор Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)   
  [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

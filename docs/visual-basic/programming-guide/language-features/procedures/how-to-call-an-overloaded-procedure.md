@@ -1,54 +1,70 @@
 ---
-title: "Практическое руководство. Вызов перегруженной процедуры (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "вызовы процедур, перегруженные"
-  - "процедуры, вызов"
-  - "процедуры, несколько версий"
-  - "процедуры, перегрузка"
-  - "код Visual Basic, процедуры"
+title: "Практическое руководство: вызов перегруженной процедуры (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- procedures, overloading
+- procedures, calling
+- procedures, multiple versions
+- procedure calls, overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Практическое руководство. Вызов перегруженной процедуры (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0da83aa63bf013d841f2a01a535726f3b03497a1
+ms.lasthandoff: 03/13/2017
 
-Преимущество перегрузки процедуры заключается в гибкости вызова.  Код вызова может получать информацию, которую ему необходимо передать в процедуру, а затем вызвать одну процедуры по имени, независимо от того, какие аргументы она передает.  
+---
+# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Практическое руководство. Вызов перегруженной процедуры (Visual Basic)
+Преимущество перегрузки процедуры заключается в гибкости вызова. Вызывающий код может получить сведения, необходимые для передачи в процедуру и затем вызвать одну процедуры по имени, независимо от того, какие аргументы она передает.  
   
-### Вызов процедуры, для которой определено более одной версии  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Для вызова процедуры, которая имеет определенные более одной версии  
   
-1.  В коде вызова определите, какие данные необходимо передать в процедуру.  
+1.  В вызывающем коде определите, какие данные необходимо передать в процедуру.  
   
-2.  Напишите вызов процедуры обычным способом, представляя данные в списке аргументов.  Убедитесь, что аргументы соответствуют списку параметров в одной из определенных версий процедуры.  
+2.  Создайте вызов процедуры обычным способом, представляя данные в списке аргументов. Убедитесь, что аргументы соответствуют списку параметров в одной из версий, определенные для процедуры.  
   
-3.  Нет необходимости определять, какую версию процедуры следует вызвать.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] передает управление той версии, которая соответствует списку аргументов.  
+3.  Необходимо определить, какую версию процедуры необходимо вызвать. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]передает управление версию, которая соответствует списку аргументов.  
   
-     В следующем примере вызывается процедура `post`, объявленная в [Практическое руководство. Определение различных версий процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md).  Она получает идентификатор клиента, определяет, является он `String` или `Integer`, а затем в любом случае вызывает ту же процедуру.  
+     В следующем примере вызывается `post` объявление процедуры в [как: определить несколько версий процедуры](./how-to-define-multiple-versions-of-a-procedure.md). Она получает идентификатор клиента, определяет, является ли он `String` или `Integer`, а затем в любом случае вызывает ту же процедуру.  
   
-     [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures&#56;](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures&#57;](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
   
-## См. также  
- [Процедуры](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Параметры и аргументы процедуры](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Перегрузка процедур](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Устранение неполадок в процедурах](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
- [Практическое руководство. Определение различных версий процедуры](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)   
- [Практическое руководство. Перегрузка процедуры, которая принимает один необязательный параметр](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-optional-parameters.md)   
- [Практическое руководство. Перегрузка процедуры, принимающей неопределенное число параметров](../../../../visual-basic/programming-guide/language-features/procedures/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
- [Вопросы, связанные с перегрузкой процедур](../../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)   
- [Разрешение перегрузки](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)   
- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a>См. также  
+ [Процедуры](./index.md)   
+ [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)   
+ [Перегрузка процедур](./procedure-overloading.md)   
+ [Рекомендации по устранению неполадок](./troubleshooting-procedures.md)   
+ [Практическое руководство: определение различных версий процедуры](./how-to-define-multiple-versions-of-a-procedure.md)   
+ [Практическое руководство: перегрузка процедуры, которая принимает необязательные параметры](./how-to-overload-a-procedure-that-takes-optional-parameters.md)   
+ [Практическое руководство: перегрузка процедуры, принимающей неопределенное число параметров](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)   
+ [Вопросы, связанные с перегрузкой процедур](./considerations-in-overloading-procedures.md)   
+ [Разрешение перегрузки](./overload-resolution.md)   
+ [Перегрузки](../../../../visual-basic/language-reference/modifiers/overloads.md)

@@ -1,72 +1,89 @@
 ---
-title: "Практическое руководство. Разбиение и объединение инструкций в коде (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb._"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "двоеточие (:)"
-  - "продолжение строки"
-  - "_ - знак продолжения строки"
-  - ": - знак разделителя строки"
-  - "код Visual Basic, разрывы строк в"
-  - "код Visual Basic, разрывы строк"
-  - "код Visual Basic, продолжение строки"
-  - "длинные строки кода"
-  - "конец строки"
-  - "последовательность продолжения строки"
-  - "символы подчеркивания, в коде"
-  - "операторы [Visual Basic], продолжение строки в"
-  - "разрывы строк, в коде"
-  - "знак продолжения строки"
-  - "код Visual Basic, продолжение строки в"
-  - "операторы [Visual Basic], разрывы строк в"
+title: "Практическое руководство: разбиение и объединение инструкций в коде (Visual Basic) | Документы Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb._
+dev_langs:
+- VB
+helpviewer_keywords:
+- colons (:)
+- line continuation
+- _ line-continuation character
+- ': line separator character'
+- Visual Basic code, line breaks in
+- Visual Basic code, line breaks
+- Visual Basic code, line continuation
+- long lines of code
+- line terminator
+- line-continuation sequence
+- underscores, in code
+- statements [Visual Basic], line continuation in
+- line breaks, in code
+- line-continuation character
+- Visual Basic code, line continuation in
+- statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Практическое руководство. Разбиение и объединение инструкций в коде (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 840036a91f430f72e0258b8be466770f2855a58f
+ms.lasthandoff: 03/13/2017
 
-Во время написания кода может быть создан длинный оператор, требующий горизонтальной прокрутки в окне Редактора кода.  Хотя это не влияет на способ выполнении кода, он усложняет использование автоматически или любого другого элемента для просмотра кода, как он отображается на экране.  В таких случаях один длинный оператор можно разбить на несколько строк.  
+---
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Практическое руководство. Разбиение и объединение инструкций в коде (Visual Basic)
+Во время написания кода может быть создан длинный оператор, требующий горизонтальной прокрутки в окне редактора кода. Несмотря на то, что это не влияет на способ выполняется код, он создает сложности вы или кто-то еще чтение кода, как он отображается на экране монитора. В таких случаях следует обдумать разбиение один длинный оператор на несколько строк.  
   
-### Чтобы разбить один оператор на несколько строк  
+### <a name="to-break-a-single-statement-into-multiple-lines"></a>Чтобы разбить один оператор на несколько строк  
   
--   Воспользуйтесь знаками продолжения строки, то есть знаком подчеркивания \(`_`\), в местах необходимого разбиения строки.  Символ подчеркивания следует непосредственно предшествовать пробела и следовать терминатором линии \(возврат каретки\).  
+-   Использовать знак продолжения строки — символ подчеркивания (`_`), в том месте, в котором разбиения строки. Непосредственно перед знаком подчеркивания должен стоять пробел, а сразу за ним должен быть признак конца строки (возврат каретки).  
   
     > [!NOTE]
-    >  В некоторых случаях, если какой\-либо символ линия\- продолжения, компилятор Visual Basic неявно будет продолжать оператора в следующей строке кода.  Список элементов синтаксиса, для которых можно опустить символ линия\- продолжения см. в разделе "неявное продолжение линии" раздела [Операторы](../../../visual-basic/programming-guide/language-features/statements.md).  
+    >  В некоторых случаях если опустить знак продолжения строки, компилятор Visual Basic неявно продолжит инструкцию на следующей строке кода. Список элементов синтаксиса, для которых можно опустить знак продолжения строки, в разделе «Неявное продолжение строки» в [инструкции](../../../visual-basic/programming-guide/language-features/statements.md).  
   
-     В следующем примере оператор разбивается на четыре строки, каждую из которых \(кроме последней\) завершают символы продолжения строки:  
+     В следующем примере оператор разбивается на четыре строки завершает все символы продолжения строки, но последняя строка.  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
+     [!code-vb[VbVbcnConventions&20;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
-     Использование этой последовательности облегчает чтение кода как с экрана, так и в распечатанном виде.  
+     Использование этой последовательности делает код более удобными для чтения, так и при печати.  
   
-     Символ линия\- продолжения должен быть последним символом линии.  Невозможно выполнить ее на что\-нибудь еще на той же линии.  
+     Знак продолжения строки должен быть последним символом в строке. Вы не может следовать с другими объектами в той же строке.  
   
-     Существуют некоторые ограничения доступной, где можно использовать символ линия\- продолжения; например, его нельзя использовать в процессе имени аргумента.  Символ продолжения строки может разбивать список аргументов, но имена отдельных аргументов должны оставаться целыми.  
+     Существуют некоторые ограничения, о том, где можно использовать символ продолжения строки; например его нельзя использовать в середине имени аргумента. Можно разбить список аргументов знак продолжения строки, но имена отдельных аргументов должны оставаться неизменными.  
   
-     Невозможно продолжить комментарий с помощью символа линия\- продолжения.  Компилятор встречает символы в комментарии для специального значения.  Если комментарий состоит из нескольких строк, то каждую из них следует начинать с символа начала комментария \(`'`\).  
+     Не удается продолжить комментарий с помощью символа продолжения строки. Компилятор не Проверьте символы комментария для особое значение. Для многострочных комментариев, символа начала комментария (`'`) в каждой строке.  
   
- Хотя применение оператора в каждой отдельной линии рекомендуемый метод, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] также позволяет выполнять выпискам нескольких мест в одной линии.  
+ Несмотря на то, что размещать каждый оператор в отдельной строке является рекомендуемым методом [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] также позволяет объединять несколько операторов в одной строке.  
   
-### Чтобы разместить несколько операторов в одной строке  
+### <a name="to-place-multiple-statements-on-the-same-line"></a>Чтобы разместить несколько операторов в одной строке  
   
--   Разделите инструкции двоеточием \(`:`\), как показано в следующем примере:  
+-   Операторы разделяются точкой с запятой (`:`), как показано в следующем примере.  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
+     [!code-vb[VbVbcnConventions&#10;](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
-## См. также  
- [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   
+## <a name="see-also"></a>См. также  
+ [Структура программы и соглашения о коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   
  [Операторы](../../../visual-basic/programming-guide/language-features/statements.md)

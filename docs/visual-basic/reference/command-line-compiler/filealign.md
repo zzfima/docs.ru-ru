@@ -1,51 +1,67 @@
 ---
-title: "/filealign | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/filealign - параметр компилятора [Visual Basic]"
-  - "alignment - параметр компилятора [Visual Basic]"
-  - "filealign - параметр компилятора [Visual Basic]"
-  - "-filealign - параметр компилятора [Visual Basic]"
-  - "выравнивание разделов"
-  - "sections - параметр компилятора [Visual Basic]"
+title: "/ filealign | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- sections compiler option [Visual Basic]
+- alignment compiler option [Visual Basic]
+- -filealign compiler option [Visual Basic]
+- section alignment
+- /filealign compiler option [Visual Basic]
+- filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# /filealign
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 18d5c3e327e2e41f4786eda6c3e981125f87389d
+ms.lasthandoff: 03/13/2017
 
-Определяет, где выравнивать разделы выходного файла.  
+---
+# <a name="filealign"></a>/filealign
+Задает выравнивание размеров выходного файла.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /filealign:number  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `number`  
- Обязательный.  Значение, в котором указано выравнивание разделов выходного файла.  Допустимыми значениями являются 512, 1024, 2048, 4096 и 8192.  Эти значения задаются в байтах.  
+ Обязательный. Значение, задающее выравнивание разделов в выходном файле. Допустимые значения: 512, 1024, 2048, 4096 и 8192. Эти значения задаются в байтах.  
   
-## Заметки  
- Чтобы задать выравнивание разделов в выходном файле можно использовать параметр `/filealign`.  Разделы являются блоками непрерывной памяти в переносимом исполняемом файле \(PE\), который содержит код или данные.  Параметр `/filealign` позволяет скомпилировать приложение с нестандартным выравниванием; большинству разработчиков не требуется использовать этот параметр.  
+## <a name="remarks"></a>Примечания  
+ Можно использовать `/filealign` возможность задать выравнивание разделов в выходном файле. Разделы являются блоками непрерывной памяти в переносимых исполняемых (PE) файле, который содержит код или данные. `/filealign` Позволяет скомпилировать приложение с нестандартным выравниванием; большинство разработчиков не требуется использовать этот параметр.  
   
- Каждый раздел выравнивается по границе, кратной значению `/filealign`.  Фиксированного значения по умолчанию нет.  Если `/filealign` не указан, компилятор выбирает значение по умолчанию во время компиляции.  
+ Каждый раздел выравнивается по границе, кратной `/filealign` значение. Фиксированный по умолчанию отсутствует. Если `/filealign` не указан, компилятор выбирает значение по умолчанию во время компиляции.  
   
- Указав размер раздела, можно изменить размер выходного файла.  Изменение размера раздела может применяться для программ, выполняющихся на небольших устройствах.  
+ Указав размер раздела, можно изменить размер выходного файла. Изменение размера раздела может применяться для программ, выполняющихся на небольших устройствах.  
   
 > [!NOTE]
->  Параметр `/filealign` недоступен из среды разработки Visual Studio; он доступен только при выполнении компиляции из командной строки.  
+>  `/filealign` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
   
-## См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>См. также  
+ [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
