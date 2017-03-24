@@ -29,7 +29,7 @@ ms.lasthandoff: 03/02/2017
 
 Здесь приведена небольшая программа, иллюстрирующая пользу от сведений о типе структуры данных во время выполнения:
 
-```cs
+```csharp
   using System;
   using System.Collections;
   using System.Collections.Generic;

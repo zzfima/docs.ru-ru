@@ -31,7 +31,7 @@ ms.lasthandoff: 03/02/2017
 
 В следующем примере для создания и освобождения объекта [System.IO.StreamReader](xref:System.IO.StreamReader) используется оператор `using`.
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -77,7 +77,7 @@ End Module
 
 Обратите внимание, что хотя класс [StreamReader](xref:System.IO.StreamReader) реализует интерфейс [IDisposable](xref:System.IDisposable), который указывает, что используется неуправляемый ресурс, пример явно не вызывает метод [StreamReader.Dispose](xref:System.IO.StreamReader.Dispose(System.Boolean)). Когда компилятор C# или Visual Basic встречает оператор `using`, он создает промежуточный язык, эквивалентный следующему коду, который явно содержит блок `try/finally`. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -134,7 +134,7 @@ End Module
 
 Оператор `using` в C# позволяет присоединять несколько ресурсов в одном операторе, что эквивалентно использованию вложенных инструкций using. В следующем примере создается два объекта [StreamReader](xref:System.IO.StreamReader) для чтения содержимого двух разных файлов. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -171,7 +171,7 @@ public class Example
 
 Следующий пример похож на предыдущий с тем отличием, что в нем используется блок `try/catch/finally` для создания экземпляра, использования и удаления объекта [StreamReader](xref:System.IO.StreamReader), а также для обработки исключений, вызываемых конструктором [StreamReader](xref:System.IO.StreamReader) и его методом [ReadToEnd](xref:System.IO.StreamReader.ReadToEnd). Обратите внимание, что перед вызовом метода [Dispose](xref:System.IDisposable.Dispose) код в блоке `finally` проверяет, имеет ли объект, реализующий интерфейс [IDisposable](xref:System.IDisposable), значение `null`. Если этого сделать не удастся, это может привести к исключению [NullReferenceException](xref:System.NullReferenceException) во время выполнения. 
 
-```cs
+```csharp
 using System;
 using System.Globalization;
 using System.IO;
