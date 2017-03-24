@@ -56,7 +56,7 @@ ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
 
 Типы обычно выходят за пределы области действия по завершении метода, после чего они могут быть собраны. Однако с помощью оператора `using` сборщику мусора можно указать, что определенный объект выходит из области действия, еще до завершения метода.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L6-L9)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 После завершения блока `using` сборщик мусора будет знать, что объект `stream` в предыдущем примере можно собрать для освобождения памяти.
 
@@ -68,7 +68,7 @@ ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
 
 Следующий пример вызывает исключение в результате безопасности памяти.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L11-L12)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="type-safety"></a>Безопасность типа
 
