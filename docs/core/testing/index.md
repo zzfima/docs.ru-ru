@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
+ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
+ms.lasthandoff: 03/06/2017
 
 ---
 
@@ -34,7 +34,9 @@ ms.lasthandoff: 03/02/2017
 
 Дополнительные сведения о модульном тестировании в проектах .NET Core:
 
-Воспользуйтесь этим [пошаговым руководством по созданию модульных тестов с помощью xUnit и CLI .NET](unit-testing-with-dotnet-test.md).
+Воспользуйтесь этим [пошаговым руководством по созданию модульных тестов с помощью xUnit и интерфейса командной строки .NET](unit-testing-with-dotnet-test.md). 
 
-Команда разработчиков XUnit написала учебник, в котором показано ,как [использовать xUnit с помощью .NET Core и Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+Команда разработчиков XUnit разработала учебник, в котором показано, как [использовать xUnit с .NET Core и Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+
+Если вы предпочитаете MSTest, обратитесь к [пошаговому руководству по созданию модульных тестов с помощью MSTest и интерфейса командной строки .NET](unit-testing-with-mstest.md).
 

@@ -1,0 +1,93 @@
+---
+title: "Выражение рекурсивно вызывает содержащее свойство &quot;&lt;propertyname&gt;&quot; | Документы Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc42026
+- BC42026
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42026
+ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
+caps.latest.revision: 10
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ca20bf1a539f2727a80f8e781c1e9ebc5a4a253d
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Выражение рекурсивно вызывает содержащее свойство "&lt;propertyname&gt;"
+Оператор в `Set` процедура определения свойства сохраняет значение в имени свойства.  
+  
+ Рекомендуемый подход для хранения значения свойства является определение `Private` переменных в контейнере свойства и использование его в `Get` и `Set` процедуры. `Set` Процедура затем будет хранить входящее значение в этой `Private` переменной.  
+  
+ `Get` Процедура действует как `Function` процедуру, чтобы назначить значение имени свойства и вернуть управление путем добавления `End Get` инструкции. Однако рекомендуется включать `Private` в качестве значения переменной [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+  
+ `Set` Процедура действует как `Sub` процедуры, которая не возвращает значение. Поэтому имя процедуры или свойства не имеет особого смысла в `Set` процедура и в ней нельзя хранить значения.  
+  
+ В следующем примере показано подход, который может вызвать эту ошибку, следуют рекомендуемый подход.  
+  
+```  
+Public Class illustrateProperties  
+' The code in the following property causes this error.  
+    Public Property badProp() As Char  
+        Get  
+            Dim charValue As Char  
+            ' Insert code to update charValue.  
+            badProp = charValue  
+        End Get  
+        Set(ByVal Value As Char)  
+            ' The following statement causes this error.  
+            badProp = Value  
+            ' The value stored in the local variable badProp  
+            ' is not used by the Get procedure in this property.  
+        End Set  
+    End Property  
+' The following code uses the recommended approach.  
+    Private propValue As Char  
+    Public Property goodProp() As Char  
+        Get  
+            ' Insert code to update propValue.  
+            Return propValue  
+        End Get  
+        Set(ByVal Value As Char)  
+            propValue = Value  
+        End Set  
+    End Property  
+End Class  
+```  
+  
+ По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+  
+ **Идентификатор ошибки:** BC42026  
+  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
+  
+-   Перепишите определение свойства использовать рекомендуемый подход, как показано в предыдущем примере.  
+  
+## <a name="see-also"></a>См. также  
+ [Процедуры свойств](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
+ [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)   
+ [Оператор Set](../../../visual-basic/language-reference/statements/set-statement.md)

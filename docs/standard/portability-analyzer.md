@@ -4,22 +4,22 @@ description: "Информация об оценке переносимости 
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
-ms.date: 07/05/2016
+ms.date: 01/23/2017
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 translationtype: Human Translation
-ms.sourcegitcommit: 8599be1eadcd6f005ef344bf173e8c06fce80725
-ms.openlocfilehash: 479b141159de95c6a7e466220f935f9371b353db
+ms.sourcegitcommit: 2dcfc9e725a9776e810f23a505e2c6fb157161c4
+ms.openlocfilehash: dd14dc23b14e45569f0fdb9a37954b34c4e654d1
+ms.lasthandoff: 02/21/2017
 
 ---
 
 # <a name="the-net-portability-analyzer"></a>Анализатор переносимости .NET
 
-Хотите, чтобы ваши библиотеки работали на нескольких платформах? Хотите узнать, какой объем работ требуется проделать, чтобы сделать приложение совместимым с другими платформами .NET? [Анализатор переносимости .NET](http://go.microsoft.com/fwlink/?LinkID=507467) — это средство формирования подробного отчета об уровне гибкости программы в рамках платформ .NET на основе данных анализа сборок. Анализатор переносимости предлагается в виде расширения Visual Studio и консольного приложения.
+Хотите, чтобы ваши библиотеки работали на нескольких платформах? Хотите узнать, какой объем работ требуется проделать, чтобы сделать приложение совместимым с другими платформами .NET? [Анализатор переносимости .NET](http://go.microsoft.com/fwlink/?LinkID=507467) — это средство формирования подробного отчета об уровне гибкости программы в рамках платформ .NET на основе данных анализа сборок. Анализатор переносимости предлагается в виде расширения Visual Studio 2015 и консольного приложения.
 
 ## <a name="new-targets"></a>Новые цели
 
@@ -29,11 +29,11 @@ ms.openlocfilehash: 479b141159de95c6a7e466220f935f9371b353db
 
 ## <a name="how-to-use-portability-analyzer"></a>Как использовать анализатор переносимости
 
-Чтобы начать пользоваться анализатором переносимости .NET, скачайте и установите расширение из [коллекции Visual Studio](http://go.microsoft.com/fwlink/?LinkID=507467). Его можно настроить в Visual Studio, выбрав **Сервис** > **Параметры** > **.NET Portability Analyzer** (Анализатор переносимости .NET) и указав целевые платформы. На данный момент ASP.NET Core можно использовать как прокси для всех платформ на базе .NET Core (например, [приложения универсальной платформы Windows 10 .NET](http://blogs.windows.com/buildingapps/2015/03/02/a-first-look-at-the-windows-10-universal-app-platform/)).
+Чтобы начать пользоваться анализатором переносимости .NET, скачайте и установите расширение из [коллекции Visual Studio](http://go.microsoft.com/fwlink/?LinkID=507467). Его можно настроить в Visual Studio, выбрав **Анализировать** > **Portability Analyzer Settings** (Параметры анализатора переносимости) и указав целевые платформы.
 
 ![Снимок экрана анализатора переносимости](./media/portability-analyzer/portability-screenshot.png)
 
-Чтобы проанализировать весь проект, щелкните его правой кнопкой мыши в **обозревателе решений** и выберите **Analyze** (Анализ) > **Analyze Assembly Portability** (Анализировать переносимость сборки). Или в меню **Анализ** выберите **Анализировать переносимость сборки**. После этого выберите исполняемый файл или DLL-файл проекта.
+Чтобы проанализировать весь проект, щелкните его правой кнопкой мыши в **обозревателе решений** и выберите пункт **Analyze Assembly Portability** (Анализировать переносимость сборки). Или в меню **Анализ** выберите **Анализировать переносимость сборки**. После этого выберите исполняемый файл или DLL-файл проекта.
 
 ![Обозреватель решений переносимости](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -43,15 +43,9 @@ ms.openlocfilehash: 479b141159de95c6a7e466220f935f9371b353db
 
 Не хотите использовать Visual Studio? Вы также можете запустить анализатор переносимости из командной строки. Просто скачайте [API анализатора переносимости](http://www.microsoft.com/download/details.aspx?id=42678).
 
-*   Для анализа текущего каталога выполните следующую команду: `\...\ApiPort.exe .`.
-*   Для анализа заданного списка DLL-файлов выполните следующую команду: `\...\ApiPort.exe first.dll second.dll third.dll`.
+*   Для анализа текущего каталога выполните следующую команду: `\...\ApiPort.exe analyze -f .`.
+*   Для анализа заданного списка DLL-файлов выполните следующую команду: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`.
 
 Отчет о переносимости .NET будет сохранен в файле Excel (*.xlsx*) в текущем каталоге. Дополнительные сведения указаны на вкладке **Details** (Подробности) в файле Excel.
 
-Дополнительные сведения об анализаторе переносимости .NET см. в публикации [Leveraging existing code across .NET platforms](https://blogs.msdn.microsoft.com/dotnet/2014/08/06/leveraging-existing-code-across-net-platforms/) (Использование существующего кода на платформах .NET) в блоге .NET.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+Дополнительные сведения об анализаторе переносимости .NET см. в [документации GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) и видеоролике с [кратким обзором анализатора переносимости .NET](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) на Channel 9.

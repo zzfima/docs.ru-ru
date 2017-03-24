@@ -1,0 +1,5 @@
+# [Делегаты](index.md)
+## [Использование делегатов](using-delegates.md)
+## [Делегаты с именованными методами и делегаты с анонимными методами](delegates-with-named-vs-anonymous-methods.md)
+## [Практическое руководство. Объединение делегатов (многоадресные делегаты) (Руководство по программированию на C#)](how-to-combine-delegates-multicast-delegates.md)
+## [Практическое руководство. Объявление, создание и использование делегата](how-to-declare-instantiate-and-use-a-delegate.md)

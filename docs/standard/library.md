@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: eb98c703946d8be0757288ae9e00aab87b32e407
-ms.openlocfilehash: 939c6dd0621e3b1121aca52915b04bf51af1d1ef
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -110,7 +111,7 @@ API, добавляемые в любую из сред выполнения (н
 
 Совместимость основанных на профилях PCL обеспечивается за счет пакета NuGet [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility). Такая зависимость требуется при ссылке на пакеты NuGet, содержащие основанные на профилях PCL.
 
-Основанные на профилях PCL, которые упакованы в виде `netstandard`, удобнее использовать, чем обычно упакованные PCL на основе профилей в project.json. Упаковка `netstandard` совместима с существующими пользователями.
+Основанные на профилях PCL, которые упакованы в виде `netstandard`, удобнее использовать, чем обычно упакованные PCL на основе профилей. Упаковка `netstandard` совместима с существующими пользователями.
 
 Можно просмотреть набор профилей PCL, совместимых с .NET Standard: 
 
@@ -131,9 +132,4 @@ API, добавляемые в любую из сред выполнения (н
 ## <a name="targeting-net-standard-library"></a>Нацеливание на библиотеку .NET Standard
 
 Вы можете [создавать библиотеки .NET Standard](../core/tutorials/libraries.md) с помощью сочетания платформы `netstandard` и метапакета NETStandard.Library. Вы можете ознакомиться с примерами [ориентации на библиотеку .NET Standard с помощью средств .NET Core](../core/packages.md).
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

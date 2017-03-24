@@ -1,0 +1,5 @@
+# [Типы, допускающие значения NULL](index.md)
+## [Использование допускающих значение NULL типов](using-nullable-types.md)
+## [Упаковка-преобразование типов, допускающих значение NULL](boxing-nullable-types.md)
+## [Практическое руководство. Идентификация типа, допускающего значение NULL](how-to-identify-a-nullable-type.md)
+## [Практическое руководство. Безопасное приведение bool? к bool](how-to-safely-cast-from-bool-to-bool.md)
