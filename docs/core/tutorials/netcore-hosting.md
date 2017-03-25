@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 translationtype: Human Translation
-ms.sourcegitcommit: 0a9d42f59e48a790e83a5a46b1559b613340136a
-ms.openlocfilehash: 01b3b0e7a0e2d2a330b10b2f3482ddd1ed3d51bf
-ms.lasthandoff: 03/03/2017
+ms.sourcegitcommit: 9d770d008ff1223499de36b2b7b731d8ff6f0f2b
+ms.openlocfilehash: 7618af5bed33d2e1801b1a9c1351a1d09d49b86e
+ms.lasthandoff: 03/08/2017
 
 ---
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/03/2017
 
 Так как основные приложения являются собственными, в этом учебнике рассматривается создание приложения C++ для размещения .NET Core. Вам потребуется среда разработки C++ (например, предоставляемая в [Visual Studio](https://www.visualstudio.com/downloads/)).
 
-Потребуется также и простое приложение .NET Core для проверки основного приложения, поэтому следует установить пакет [.NET Core SDK](https://www.microsoft.com/net/core) и [создать небольшое тестовое приложение .NET Core](https://github.com/dotnet/docs/blob/master/docs/csharp/getting-started/with-visual-studio.md) (например, приложение "Hello World"). Достаточно приложения "Hello World", созданного с помощью нового шаблона для консольного проекта .NET Core.
+Потребуется также и простое приложение .NET Core для проверки основного приложения, поэтому следует установить пакет [.NET Core SDK](https://www.microsoft.com/net/core) и [создать небольшое тестовое приложение .NET Core](../../csharp/getting-started/with-visual-studio.md) (например, приложение "Hello World"). Достаточно приложения "Hello World", созданного с помощью нового шаблона для консольного проекта .NET Core.
 
 В этом учебнике и [связанном с ним примере](https://github.com/dotnet/docs/tree/master/samples/core/hosting) создается основное приложение Windows, но сведения по размещению в Unix см. в разделе примечаний в конце этой статьи.
 
