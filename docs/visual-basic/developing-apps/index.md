@@ -1,57 +1,68 @@
 ---
-title: "Разработка приложений в Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic, разработка приложений"
-  - "приложения [Visual Basic]"
+title: "Разработка приложений в Visual Basic | Документация Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic, developing applications
+- applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
 caps.latest.revision: 26
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 26
----
-# Разработка приложений в Visual Basic
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 2baf921be083da58911c474bf2506f08360f17b7
+ms.lasthandoff: 03/22/2017
 
-В этом разделе рассматривается основная документация по языку Visual Basic.  
+---
+# <a name="developing-applications-with-visual-basic"></a>Разработка приложений в Visual Basic
+В этом разделе приведена основная документация по языку Visual Basic.  
   
-## В этом подразделе  
- [Использование среды разработки Visual Basic](../../visual-basic/developing-apps/using-ide/using-the-visual-basic-development-environment.md)  
- Содержит справочную информацию о возможностях редактора Visual Basic, таких как **фрагменты кода IntelliSense**, **свойства проекта** и создание XML\-документации для Visual Basic.  
-  
+## <a name="in-this-section"></a>Содержание  
  [Программирование в Visual Basic](../../visual-basic/developing-apps/programming/index.md)  
  Общие сведения о различных вопросах программирования.  
   
  [Разработка с использованием My](../../visual-basic/developing-apps/development-with-my/index.md)  
- Описание нового объекта `My`, который предоставляет доступ к сведениям и к экземплярам объектов по умолчанию, которые относятся к приложению и его среде выполнения.  
+ Описана новая функция под названием `My`, которая дает доступ к сведениям и экземплярам объектов по умолчанию, связанным с приложением и его окружением времени выполнения.  
   
- [Доступ к данным в приложениях Visual Basic](../../visual-basic/developing-apps/accessing-data.md)  
- Содержит справочную информацию о доступе к данным в Visual Basic.  
-  
- [Отладка приложения в Visual Basic](../../visual-basic/developing-apps/debugging.md)  
- Содержит ссылки на документацию по встроенным средствам отладки Visual Studio.  
+ [Доступ к данным в приложениях на Visual Basic](../../visual-basic/developing-apps/accessing-data.md)  
+ Справка по доступу к данным в приложениях на Visual Basic.   
   
  [Создание и использование компонентов в Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
- Определяет термин *компонент* и содержит сведения о том, как и когда следует создавать компоненты.  
+ Здесь определяется термин *компонент* и описывается, как и когда следует создавать компоненты.  
   
  [Печать и отчеты](../../visual-basic/developing-apps/printing/printing-and-reporting.md)  
  Содержит обзоры и ссылки на документацию, относящуюся к печати и созданию отчетов.  
   
  [Основы разработки приложений Windows Forms](../../visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)  
- Содержит сведения о создании приложения Windows Forms с помощью Visual Studio.  
+ Сведения о разработке приложений с помощью Windows Forms в Visual Studio.  
   
  [Настройка проектов и расширение объекта My](../../visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)  
- Описывает способы настройки шаблонов проектов для добавления дополнительных объектов `My`.  
+ Описывает, как можно настроить шаблоны проектов для предоставления дополнительных объектов `My`.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)  
- Общие сведения об основных элементах программирования на языке Visual Basic.  
+ Рассматриваются основные элементы программирования на Visual Basic.  
   
  [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
  Содержит справочную документацию по языку Visual Basic.
