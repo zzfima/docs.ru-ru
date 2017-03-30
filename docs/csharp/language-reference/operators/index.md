@@ -1,220 +1,242 @@
 ---
-title: "Операторы C# | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "cs.operators"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "операторы адреса [C#]"
-  - "арифметические операторы [C#]"
-  - "операторы назначения [C#]"
-  - "побитовые операторы [C#]"
-  - "логические операторы [C#]"
-  - "выражения [C#], операторы"
-  - "операторы косвенного обращения [C#]"
-  - "ключевые слова [C#], операторы"
-  - "логические операторы [C#]"
-  - "операторы [C#]"
-  - "реляционные операторы [C#]"
-  - "операторы сдвига [C#]"
-  - "Visual C#, операторы"
+title: "Операторы в C# | Документация Майкрософт"
+ms.date: 2017-03-09
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- cs.operators
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- boolean operators [C#]
+- expressions [C#], operators
+- logical operators [C#]
+- operators [C#]
+- Visual C#, operators
+- indirection operators [C#]
+- assignment operators [C#]
+- shift operators [C#]
+- relational operators [C#]
+- bitwise operators [C#]
+- address operators [C#]
+- keywords [C#], operators
+- arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 38
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: fd70919f68c7c48894e7c944aeb1a74c73513e8e
+ms.lasthandoff: 03/13/2017
+
 ---
-# Операторы C# #
-C\# предоставляет множество операторов, которые являются символами, указывающими, какие операции \(математические операции, индексирование, вызов функции и т. д.\) следует выполнять в выражении.  Вы можете [перегрузить](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) многие операторы, чтобы изменить их значение при применении к определяемому пользователем типу.  
+# <a name="c-operators"></a>Операторы C#
+C# предоставляет множество операторов, которые являются символами, указывающими, какие операции (математические операции, индексирование, вызов функции и т. д.) следует выполнять в выражении.  Вы можете [перегрузить](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) многие операторы, то есть изменить их значение при применении к некоторому пользовательскому типу.  
   
- Операции с целыми типами \(такие как `==`, `!=`, `<`, `>`, `&`,                   `|` \) обычно разрешены для типов перечисления \(`enum`\).  
+ Обычно для перечислений (`enum`) разрешены все операции, применимые к целочисленным типам (например, `==`, `!=`, `<`, `>`, `&` и `|`).  
   
- В данных разделах перечислены операторы C\# в порядке убывания приоритета.  Операторы в каждом разделе совместно используют один и тот же уровень приоритета.  
+ В данных разделах перечислены операторы C# в порядке убывания приоритета.  Операторы в каждом разделе совместно используют один и тот же уровень приоритета.  
   
-## Основные операторы  
+## <a name="primary-operators"></a>Основные операторы  
  Это операторы с наивысшим приоритетом.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [x.y](../../../csharp/language-reference/operators/member-access-operator.md) — доступ к членам.  
+ [x.y](../../../csharp/language-reference/operators/member-access-operator.md) — доступ к членам.  
   
- [x?.y](../../../csharp/language-reference/operators/null-conditional-operators.md) — доступ к членам, определяемый условием NULL.  Возвращает значение NULL, если левый операнд имеет значение NULL.  
+ [x?.y](../../../csharp/language-reference/operators/null-conditional-operators.md) — доступ к членам с проверкой NULL.  Возвращает значение `null`, если левый операнд имеет значение `null`.  
+ 
+ [x?.[y]](../../../csharp/language-reference/operators/null-conditional-operators.md) — доступ к индексам, определяемый условием NULL. Возвращает значение `null`, если левый операнд имеет значение `null`.
+ 
+ [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) — вызов функции.  
   
- [f\(x\)](../../../csharp/language-reference/operators/invocation-operator.md) — вызов функции.  
+ [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md) — индексирование агрегатного объекта.  
   
- [&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md) — индексирование агрегатного объекта.  
+ [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md) — индексирование, определяемое условием NULL.  Возвращает значение `null`, если левый операнд имеет значение `null`.  
   
- [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md) — индексирование, определяемое условием NULL.  Возвращает значение NULL, если левый операнд имеет значение NULL.  
+ [x++](../../../csharp/language-reference/operators/increment-operator.md) — постфиксный инкремент.  Возвращает значение x и затем обновляет расположение хранения значением x, которое увеличено на единицу (обычно добавляется целочисленное значение 1).  
   
- [x\+\+](../../../csharp/language-reference/operators/increment-operator.md) — постфиксный инкремент.  Возвращает значение x и затем обновляет расположение хранения значением x, которое увеличено на единицу \(обычно добавляется целочисленное значение 1\).  
+ [x--](../../../csharp/language-reference/operators/decrement-operator.md) — постфиксный декремент.  Возвращает значение x и затем обновляет расположение хранения значением x, которое уменьшено на единицу (обычно вычитается целочисленное значение 1).  
   
- [x\-\-](../../../csharp/language-reference/operators/decrement-operator.md) — постфиксный декремент.  Возвращает значение x и затем обновляет расположение хранения значением x, которое уменьшено на единицу \(обычно вычитается целочисленное значение 1\).  
+ [new](../../../csharp/language-reference/keywords/new-operator.md) – создание экземпляра типа.  
   
- [New](../../../csharp/language-reference/keywords/new-operator.md) — тип создания экземпляра.  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md) — возвращает объект System.Type, представляющий операнд.  
   
- [Typeof](../../../csharp/language-reference/keywords/typeof.md) — возвращает объект System.Type, представляющий операнд.  
+ [checked](../../../csharp/language-reference/keywords/checked.md) — включает проверку на переполнение при выполнении операций с целыми числами.  
   
- [Checked](../../../csharp/language-reference/keywords/checked.md) — позволяет проверять переполнение при выполнении операций с целыми числами.  
+ [unchecked](../../../csharp/language-reference/keywords/unchecked.md) — отключает проверку на переполнение при выполнении операций с целыми числами.  Это поведение установлено для компилятора по умолчанию.  
   
- [Unchecked](../../../csharp/language-reference/keywords/unchecked.md) — запрещает проверять переполнение при выполнении операций с целыми числами.  Это поведение установлено для компилятора по умолчанию.  
+ [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) — возвращает инициализированное значение по умолчанию типа T, значение `null` для ссылочных типов, нуль для числовых типов и члены, или заполняет нулями/значениями `null` члены типа структуры.  
   
- [default\(T\)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) — возвращает инициализированное значение по умолчанию типа T, значение NULL для ссылочных типов, ноль для числовых типов и члены, заполненные нулями\/значениями NULL, для типов структуры.  
+ [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) — объявляет и возвращает экземпляр делегата.  
   
- [Delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) — объявляет и возвращает экземпляр делегата.  
+ [sizeof](../../../csharp/language-reference/keywords/sizeof.md) — возвращает размер в байтах для типа операнда.  
   
- [Sizeof](../../../csharp/language-reference/keywords/sizeof.md) — возвращает размер в байтах операнда тип.  
+ [->](../../../csharp/language-reference/operators/dereference-operator.md) — разыменование указателя в сочетании с доступом к члену.  
   
- [\-\>](../../../csharp/language-reference/operators/dereference-operator.md) — разыменование указателя в сочетании с доступом к члену.  
-  
-## Унарные операторы  
+## <a name="unary-operators"></a>Унарные операторы  
  Эти операторы имеют более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [\+x](../../../csharp/language-reference/operators/addition-operator.md) — возвращает значение x.  
+ [+x](../../../csharp/language-reference/operators/addition-operator.md) — возвращает значение x.  
   
- [\-x](../../../csharp/language-reference/operators/subtraction-operator.md) — числовое отрицание.  
+ [-x](../../../csharp/language-reference/operators/subtraction-operator.md) — числовое отрицание.  
   
- [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) — логическое отрицание.  
+ [!x](../../../csharp/language-reference/operators/logical-negation-operator.md) — логическое отрицание.  
   
- [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) — поразрядное дополнение.  
+ [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) — поразрядное дополнение.  
   
- [\+\+x](../../../csharp/language-reference/operators/increment-operator.md) — префиксный инкремент.  Возвращает значение x после обновления расположения хранения значением x, которое увеличено на единицу \(обычно добавляется целочисленное значение 1\).  
+ [++x](../../../csharp/language-reference/operators/increment-operator.md) — префиксный инкремент.  Возвращает значение x после обновления расположения хранения значением x, которое увеличено на единицу (обычно добавляется целочисленное значение 1).  
   
- [\-\-x](../../../csharp/language-reference/operators/decrement-operator.md) — префиксный декремент.  Возвращает значение x после обновления расположения хранения значением x, которое уменьшено на единицу \(обычно вычитается целочисленное значение 1\).  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) — префиксный декремент.  Возвращает значение x после обновления расположения хранения значением x, которое уменьшено на единицу (обычно вычитается целочисленное значение 1).  
   
- [\(T\)x](../../../csharp/language-reference/operators/invocation-operator.md) — приведение типов.  
+ [(T)x](../../../csharp/language-reference/operators/invocation-operator.md) — приведение типов.  
   
- [Await](../../../csharp/language-reference/keywords/await.md) — ожидает `Task`.  
+ [await`Task` — ожидание выполнения ](../../../csharp/language-reference/keywords/await.md).  
   
- [&x](../../../csharp/language-reference/operators/and-operator.md) — адрес.  
+ [&x](../../../csharp/language-reference/operators/and-operator.md) — получение адреса.  
   
- [\*x](../../../csharp/language-reference/operators/multiplication-operator.md) — разыменование.  
+ [*x](../../../csharp/language-reference/operators/multiplication-operator.md) — разыменование.  
   
-## Мультипликативные операторы  
+## <a name="multiplicative-operators"></a>Мультипликативные операторы  
  Эти операторы имеют более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [x \* y](../../../csharp/language-reference/operators/multiplication-operator.md) — умножение.  
+ [x * y](../../../csharp/language-reference/operators/multiplication-operator.md) — умножение.  
   
- [x \/ y](../../../csharp/language-reference/operators/division-operator.md) — деление.  Если операнды имеют целые числа, результатом является целочисленное значение, усеченное в сторону нуля \(например, `-7 / 2 is -3`\).  
+ [x / y](../../../csharp/language-reference/operators/division-operator.md) — деление.  Если операнды имеют целые числа, результатом является целочисленное значение, усеченное в сторону нуля (например, `-7 / 2 is -3`).  
   
- [x % y](../../../csharp/language-reference/operators/modulus-operator.md) — получение модуля.  Если операнды имеют целые числа, это возвращает остаток от деления x на y.  Если `q = x / y` и `r = x % y`, то `x = q * y + r`.  
+ [x % y](../../../csharp/language-reference/operators/modulus-operator.md) — остаток от деления.  Если операнды имеют целые числа, это возвращает остаток от деления x на y.  Если `q = x / y` и `r = x % y`, то `x = q * y + r`.  
   
-## Операторы сложения  
+## <a name="additive-operators"></a>Аддитивные операторы  
  Эти операторы имеют более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [x \+ y](../../../csharp/language-reference/operators/addition-operator.md) — сложение.  
+ [x + y](../../../csharp/language-reference/operators/addition-operator.md) — сложение.  
   
- [x – y](../../../csharp/language-reference/operators/subtraction-operator.md) — вычитание.  
+ [x – y](../../../csharp/language-reference/operators/subtraction-operator.md) — вычитание.  
   
-## Операторы сдвига  
+## <a name="shift-operators"></a>Операторы сдвига  
  Эти операторы имеют более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [x \<\<  y](../../../csharp/language-reference/operators/left-shift-operator.md) — сдвиг битов влево и заполнение правой части нулем.  
+ [x <\< y](../../../csharp/language-reference/operators/left-shift-operator.md) — сдвиг битов влево и заполнение правого бита нулем.  
   
- [x \>\> y](../../../csharp/language-reference/operators/right-shift-operator.md) — сдвиг битов вправо .  Если левым операндом является `int` или `long`, затем левые биты заполняются битом знака.  Если левым операндом является `uint` или `ulong`, затем левые биты заполняются нулем.  
+ [x >> y](../../../csharp/language-reference/operators/right-shift-operator.md) — сдвиг битов вправо.  Если левым операндом является `int` или `long`, затем левые биты заполняются битом знака.  Если левым операндом является `uint` или `ulong`, затем левые биты заполняются нулем.  
   
-## Относительные операторы и операторы тестирования типа  
+## <a name="relational-and-type-testing-operators"></a>Относительные операторы и операторы тестирования типа  
  Эти операторы имеют более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [x \< y](../../../csharp/language-reference/operators/less-than-operator.md) — меньше чем \(значение true, если x меньше y\).  
+ [x \< y](../../../csharp/language-reference/operators/less-than-operator.md) — меньше чем (возвращает true, если x меньше y).  
   
- [x \> y](../../../csharp/language-reference/operators/greater-than-operator.md) — больше чем \(значение true, если x больше y\).  
+ [x > ](../../../csharp/language-reference/operators/greater-than-operator.md) — больше чем (возвращает true, если x больше y).  
   
- [x \<\= y](../../../csharp/language-reference/operators/less-than-equal-operator.md) — меньше или равно.  
+ [x \<= y](../../../csharp/language-reference/operators/less-than-equal-operator.md) – меньше или равно  
   
- [x \>\= y](../../../csharp/language-reference/operators/greater-than-equal-operator.md) — больше или равно.  
+ [x >= y](../../../csharp/language-reference/operators/greater-than-equal-operator.md) – больше или равно.  
   
- [Is](../../../csharp/language-reference/keywords/is.md) — совместимость типов.  Возвращает значение true, если вычисленный левый операнд может быть приведен к типу, указанному в правом операнде \(статический тип\).  
+ [is](../../../csharp/language-reference/keywords/is.md) — совместимость типов.  Возвращает значение true, если вычисленный левый операнд может быть приведен к типу, указанному в правом операнде (статический тип).  
   
- [As](../../../csharp/language-reference/keywords/as.md) — преобразование типов.  Возвращает левый операнд, приведенный к типу, заданному правым операндом \(статический тип\), но `as` возвращает `null`, где `(T)x` вызывает исключение.  
+ [as](../../../csharp/language-reference/keywords/as.md) — преобразование типов.  Возвращает левый операнд, приведенный к типу, заданному правым операндом (статический тип), но `as` возвращает `null`, где `(T)x` вызывает исключение.  
   
-## Операторы равенства  
+## <a name="equality-operators"></a>Операторы равенства  
  Эти операторы имеют более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [x \=\= y](../../../csharp/language-reference/operators/equality-comparison-operator.md) — равенство.  По умолчанию для ссылочных типов, отличных от `string`, этот оператор возвращает равенство ссылок \(проверка удостоверения\).  Однако типы могут перегрузить `==`, поэтому если планируется проверять удостоверения, лучше использовать метод `ReferenceEquals` для `object`.  
+ [x == y](../../../csharp/language-reference/operators/equality-comparison-operator.md) — тождество.  По умолчанию для ссылочных типов, отличных от `string`, этот оператор возвращает равенство ссылок (проверка удостоверения).  Однако типы могут перегрузить `==`, поэтому если планируется проверять удостоверения, лучше использовать метод `ReferenceEquals` для `object`.  
   
- [x \!\= y](../../../csharp/language-reference/operators/not-equal-operator.md) — неравенство.  См. примечание для `==`.  Если тип перегружает `==`, то его необходимо перегрузить `!=`.  
+ [x != y](../../../csharp/language-reference/operators/not-equal-operator.md) — неравенство.  См. примечание для `==`.  Если тип перегружает `==`, то его необходимо перегрузить `!=`.  
   
-## Оператор логического И  
+## <a name="logical-and-operator"></a>Оператор логического И  
  Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть оператор для перехода на страницу с подробным описанием и примерами.  
   
- [x & y](../../../csharp/language-reference/operators/and-operator.md) — логические или битовые операторы И.  В общем случае разрешено использовать с целочисленными типами и типами `enum`.  
+ [x & y](../../../csharp/language-reference/operators/and-operator.md) — логическая или битовая операция И.  В общем случае разрешено использовать с целочисленными типами и типами `enum`.  
   
-## Оператор логического исключающего ИЛИ  
+## <a name="logical-xor-operator"></a>Оператор логического исключающего ИЛИ  
  Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть оператор для перехода на страницу с подробным описанием и примерами.  
   
- [x ^ y](../../../csharp/language-reference/operators/xor-operator.md) — логические или битовые операторы исключающего ИЛИ.  Обычно их можно использовать с целочисленными типами и типами `enum`.  
+ [x ^ y](../../../csharp/language-reference/operators/xor-operator.md) — логическая или битовая операция исключающего ИЛИ.  Обычно их можно использовать с целочисленными типами и типами `enum`.  
   
-## Оператор логического ИЛИ  
+## <a name="logical-or-operator"></a>Оператор логического ИЛИ  
  Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть оператор для перехода на страницу с подробным описанием и примерами.  
   
- [x &#124; y](../../../csharp/language-reference/operators/or-operator.md) — логические или битовые операторы ИЛИ.  В общем случае разрешено использовать с целочисленными типами и типами `enum`.  
+ [x &#124; y](../../../csharp/language-reference/operators/or-operator.md) – логическая или битовая операция ИЛИ.  В общем случае разрешено использовать с целочисленными типами и типами `enum`.  
   
-## Условный оператор И  
+## <a name="conditional-and-operator"></a>Условный оператор И  
  Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть оператор для перехода на страницу с подробным описанием и примерами.  
   
- [x && y](../../../csharp/language-reference/operators/conditional-and-operator.md) — логическое И.  Если первый операнд имеет значение false, то C\# не вычисляет второй операнд.  
+ [x && y](../../../csharp/language-reference/operators/conditional-and-operator.md) — логическое И.  Если первый операнд имеет значение false, то C# не вычисляет второй операнд.  
   
-## Условный оператор ИЛИ  
+## <a name="conditional-or-operator"></a>Условный оператор ИЛИ  
  Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть оператор для перехода на страницу с подробным описанием и примерами.  
   
- [x &#124;&#124; y](../../../csharp/language-reference/operators/conditional-or-operator.md) — логическое ИЛИ.  Если первый операнд имеет значение true, то C\# не вычисляет второй операнд.  
+ [x &#124;&#124; y](../../../csharp/language-reference/operators/conditional-or-operator.md) — логическое ИЛИ.  Если первый операнд имеет значение true, то C# не вычисляет второй операнд.  
   
-## Оператор объединения с NULL  
+## <a name="null-coalescing-operator"></a>Оператор объединения с NULL  
  Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть оператор для перехода на страницу с подробным описанием и примерами.  
   
- [x?? y](../../../csharp/language-reference/operators/null-conditional-operator.md) — возвращает `x`, если значение отличается от `null`; в противном случае возвращает `y`.  
+ [x?? y](../../../csharp/language-reference/operators/null-conditional-operator.md) — возвращает `x`, если значение отличается от `null`; в противном случае возвращает `y`.  
   
-## Условный оператор  
+## <a name="conditional-operator"></a>Условный оператор  
  Этот оператор имеет более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть оператор для перехода на страницу с подробным описанием и примерами.  
   
- [t ? x : y](../../../csharp/language-reference/operators/conditional-operator.md) — если тест `t` имеет значение true, вычисляет и возвращает `x`, в противном случае вычисляет и возвращает `y`.  
+ [t ? x : y](../../../csharp/language-reference/operators/conditional-operator.md) — если тест `t` имеет значение true, вычисляет и возвращает `x`, в противном случае вычисляет и возвращает `y`.  
   
-## Назначение и лямбда\-операторы  
+## <a name="assignment-and-lambda-operators"></a>Назначение и лямбда-операторы  
  Эти операторы имеют более высокий приоритет по сравнению со следующим разделом и более низкий приоритет по сравнению с предыдущим.  Обратите внимание, что можно щелкнуть операторы для перехода на страницы с подробным описанием и примерами.  
   
- [x \= y](../../../csharp/language-reference/operators/assignment-operator.md) — назначение.  
+ [x = y](../../../csharp/language-reference/operators/assignment-operator.md) — назначение.  
   
- [x \+\= y](../../../csharp/language-reference/operators/addition-assignment-operator.md) — инкремент.  Добавьте значение `y` к значению `x`, сохраните результат в `x` и возвратите новое значение.  Если `x` назначает `event`, то `y` должен быть соответствующей функцией, которую C\# добавляет в качестве обработчика событий.  
+ [x += y](../../../csharp/language-reference/operators/addition-assignment-operator.md) — инкремент.  Добавьте значение `y` к значению `x`, сохраните результат в `x` и возвратите новое значение.  Если `x` назначает `event`, то `y` должен быть соответствующей функцией, которую C# добавляет в качестве обработчика событий.  
   
- [x \-\= y](../../../csharp/language-reference/operators/subtraction-assignment-operator-1.md) — декремент.  Вычтите значение `y` из значения `x`, сохраните результат в `x` и возвратите новое значение.  Если `x` назначает `event`, то `y` должен быть соответствующей функцией, которую C\# удаляет в качестве обработчика событий.  
+ [x -= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) — декремент.  Вычтите значение `y` из значения `x`, сохраните результат в `x` и возвратите новое значение.  Если `x` назначает `event`, то `y` должен быть соответствующей функцией, которую C# удаляет в качестве обработчика событий.  
   
- [x \*\= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) — назначение умножения.  Умножьте значение `y` на значение `x`, сохраните результат в `x` и возвратите новое значение.  
+ [x *= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) — назначение с умножением.  Умножьте значение `y` на значение `x`, сохраните результат в `x` и возвратите новое значение.  
   
- [x \/\= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) — назначение деления.  Разделите значение `x` на значение `y`, сохраните результат в `x` и возвратите новое значение.  
+ [x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) — назначение с делением.  Разделите значение `x` на значение `y`, сохраните результат в `x` и возвратите новое значение.  
   
- [x %\= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md) — назначение модуля.  Разделите значение `x` на значение `y`, сохраните остаток в `x` и возвратите новое значение.  
+ [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md) — назначение остатка от деления.  Разделите значение `x` на значение `y`, сохраните остаток в `x` и возвратите новое значение.  
   
- [x &\= y](../../../csharp/language-reference/operators/and-assignment-operator.md) — назначение И.  Выполните операцию И для значения `y` и значения `x`, сохраните результат в `x` и возвратите новое значение.  
+ [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md) — назначение с операцией И.  Выполните операцию И для значения `y` и значения `x`, сохраните результат в `x` и возвратите новое значение.  
   
- [x &#124;\= y](../../../csharp/language-reference/operators/or-assignment-operator.md) — назначение ИЛИ.  Выполните операцию ИЛИ для значения `y` и значения `x`, сохраните результат в `x` и возвратите новое значение.  
+ [x &#124;= y](../../../csharp/language-reference/operators/or-assignment-operator.md) — назначение с операцией ИЛИ.  Выполните операцию ИЛИ для значения `y` и значения `x`, сохраните результат в `x` и возвратите новое значение.  
   
- [x ^\= y](../../../csharp/language-reference/operators/xor-assignment-operator.md) — назначение исключающего ИЛИ.  Выполните операцию исключающего ИЛИ для значения `y` и значения `x`, сохраните результат в `x` и возвратите новое значение.  
+ [x ^= y](../../../csharp/language-reference/operators/xor-assignment-operator.md) — назначение с операцией исключающего ИЛИ.  Выполните операцию исключающего ИЛИ для значения `y` и значения `x`, сохраните результат в `x` и возвратите новое значение.  
   
- [x \<\<\= y](../../../csharp/language-reference/operators/left-shift-assignment-operator.md) — назначение сдвига влево.  Сдвиньте значение `x` влево на `y` позиций, сохраните результат в `x` и возвратите новое значение.  
+ [x <<= ](../../../csharp/language-reference/operators/left-shift-assignment-operator.md) — назначение со сдвигом влево.  Сдвиньте значение `x` влево на `y` позиций, сохраните результат в `x` и возвратите новое значение.  
   
- [x \>\>\= y](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) — назначение сдвига вправо.  Сдвиньте значение `x` вправо на `y` позиций, сохраните результат в `x` и возвратите новое значение.  
+ [x >>= y](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) — назначение со сдвигом вправо.  Сдвиньте значение `x` вправо на `y` позиций, сохраните результат в `x` и возвратите новое значение.  
   
- [\=\>](../../../csharp/language-reference/operators/lambda-operator.md) — объявление лямбда\-выражения.  
+ [=>](../../../csharp/language-reference/operators/lambda-operator.md) — объявление лямбда-выражения.  
   
-## Переполнение при арифметической операции  
- Арифметические операторы \([\+](../../../csharp/language-reference/operators/addition-operator.md), [\-](../../../csharp/language-reference/operators/subtraction-operator.md), [\*](../../../csharp/language-reference/operators/multiplication-operator.md), [\/](../../../csharp/language-reference/operators/division-operator.md)\) могут давать результаты, которые находятся за пределами диапазона возможных значений для используемого числового типа.  Подробнее см. в разделе, посвященном конкретному оператору, однако в общем случае применяются следующие правила.  
+## <a name="arithmetic-overflow"></a>Переполнение при арифметической операции  
+ Арифметические операторы ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) могут возвращать результаты, выходящие за пределы диапазона возможных значений для используемого числового типа. Подробнее см. в разделе, посвященном конкретному оператору, однако в общем случае применяются следующие правила.  
   
--   Переполнение при целочисленных арифметических операциях либо вызывает исключение <xref:System.OverflowException> или отбрасывает старшие биты результата.  Деление целого числа на ноль всегда вызывает исключение `DivideByZeroException`.  
+- Переполнение при целочисленных арифметических операциях вызывает исключение <xref:System.OverflowException> или приводит к отбрасыванию старших битов результата. Деление целого числа на ноль всегда вызывает исключение @System.DivideByZeroException.  
+
+   Что именно произойдет при возникновении переполнения для целочисленного значения, зависит от контекста выполнения, который может быть [проверяемым или непроверяемым](../../../csharp/language-reference/keywords/checked-and-unchecked.md). В проверяемом контексте создается исключение <xref:System.OverflowException>. В непроверяемом контексте старшие биты результата отбрасываются и выполнение продолжается. Таким образом, C# позволяет сделать выбор между обработкой и игнорированием переполнения. По умолчанию арифметические операции выполняются в *непроверяемом* контексте. 
+
+   Кроме арифметических операторов, переполнение могут вызвать приведения целочисленного типа к другому целочисленному типу, например приведение [long](../../../csharp/language-reference/keywords/long.md) к [int](../../../csharp/language-reference/keywords/int.md). Для таких ситуаций также применяются проверяемый и непроверяемый контексты. Однако битовые операторы и операторы сдвига никогда не вызывают переполнение.  
+   
+-   Переполнение или деление на ноль при арифметических операциях с плавающей запятой никогда не вызывает исключение, так как типы с плавающей запятой — а поэтому и правила для представления бесконечности и значения NaN (не число) — основаны на стандарте IEEE 754.  
   
--   Переполнение или деление на ноль при арифметических операциях с плавающей запятой никогда не вызывает исключение, так как типы с плавающей запятой — а поэтому и правила для представления бесконечности и значения NaN \(не число\) — основаны на стандарте IEEE 754.  
+-   Арифметическое переполнение [десятичного числа](../../../csharp/language-reference/keywords/decimal.md) всегда создает исключение <xref:System.OverflowException>. Деление десятичного числа на ноль всегда создает исключение <xref:System.DivideByZeroException>.  
   
--   Переполнение при [десятичной](../../../csharp/language-reference/keywords/decimal.md) арифметической операции всегда вызывает исключение <xref:System.OverflowException>.  Деление десятичного числа на ноль всегда вызывает исключение <xref:System.DivideByZeroException>.  
   
- Что именно произойдет при возникновении переполнения для целочисленного значения, зависит от контекста выполнения, который может быть [проверяемым и непроверяемым](../../../csharp/language-reference/keywords/checked-and-unchecked.md).  В проверяемом контексте возникает исключение <xref:System.OverflowException>.  В непроверяемом контексте старшие биты результата отбрасываются и выполнение продолжается.  Таким образом, C\# позволяет сделать выбор между обработкой и игнорированием переполнения.  
-  
- Кроме арифметических операторов, переполнение могут вызвать приведения целочисленного типа к целочисленному типу, например приведение [long](../../../csharp/language-reference/keywords/long.md) к [int](../../../csharp/language-reference/keywords/int.md), для которых возможно проверяемое и непроверяемое выполнение.  Однако битовые операторы и операторы сдвига никогда не вызывают переполнение.  
-  
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [C\#](../../../csharp/csharp.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [C#](../../../csharp/csharp.md)   
  [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
+
