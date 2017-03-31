@@ -61,7 +61,7 @@ string contents = await contentsTask;
  Ключевое слово `async` — это контекстно-зависимо ключевое слово, которое является ключевым словом, когда оно изменяет метод, лямбда-выражение или анонимный метод. Во всех других контекстах он интерпретируется как идентификатор.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана структура и поток управления между обработчиком асинхронных событий `StartButton_Click` и асинхронным методом `ExampleMethodAsync`. Результатом выполнения асинхронного метода является длина загруженного веб-сайта. Код подходит для приложения Windows Presentation Foundation (WPF) или приложения для Магазина Windows Presentation Foundation (WPF), которые создается в [!INCLUDE[vs_dev12](../../../csharp/getting-started/includes/vs_dev12_md.md)]; см. комментарии к коду для настройки приложения.  
+ В следующем примере показана структура и поток управления между обработчиком асинхронных событий `StartButton_Click` и асинхронным методом `ExampleMethodAsync`. Результатом выполнения асинхронного метода является длина загруженного веб-сайта. Код подходит для приложения Windows Presentation Foundation (WPF) или приложения для Магазина Windows Presentation Foundation (WPF), которые создается в Visual Studio; см. комментарии к коду для настройки приложения.  
   
 ```csharp  
 // You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  
