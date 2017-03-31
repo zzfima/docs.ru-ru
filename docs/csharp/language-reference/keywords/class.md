@@ -1,25 +1,44 @@
 ---
-title: "класс (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "class_CSharpKeyword"
-  - "class"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "class - ключевое слово [C#]"
+title: "class (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- class_CSharpKeyword
+- class
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
 caps.latest.revision: 30
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 30
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 92750040466914389abc3e8bf1de84c44bb0987c
+ms.lasthandoff: 03/13/2017
+
 ---
-# класс (Справочник по C#)
-Классы объявляются с помощью ключевого слова `class`, как показано в следующем примере.  
+# <a name="class-c-reference"></a>класс (Справочник по C#)
+Классы объявляются с помощью ключевого слова `class`, как показано в следующем примере:  
   
 ```  
   
@@ -30,25 +49,25 @@ caps.handback.revision: 30
 }  
 ```  
   
-## Заметки  
- Только разрешено единичное наследование в C\-\#.  Другими словами, класс может наследовать реализацию только от одного базового класса.  Однако класс может реализовать несколько интерфейсов.  В приведенной ниже таблице приведены примеры наследования класса и реализации интерфейса.  
+## <a name="remarks"></a>Примечания  
+ В C# допускается только одиночное наследование. Другими словами, класс может наследовать реализацию только от одного базового класса. Однако класс может реализовывать несколько интерфейсов. В таблице ниже приведены примеры наследования класса и реализации интерфейса.  
   
 |Наследование|Пример|  
-|------------------|------------|  
-|None|`class ClassA { }`|  
+|-----------------|-------------|  
+|Нет|`class ClassA { }`|  
 |Single|`class DerivedClass: BaseClass { }`|  
 |Отсутствует, реализует два интерфейса|`class ImplClass: IFace1, IFace2 { }`|  
 |Одиночное, реализует один интерфейс|`class ImplDerivedClass: BaseClass, IFace1 { }`|  
   
- Классы, объявляемому непосредственно в пространстве имен, не вложенные в другие классы, могут быть [открытый](../../../csharp/language-reference/keywords/public.md) или [внутренний](../../../csharp/language-reference/keywords/internal.md).  Класс `internal` по умолчанию.  
+ Классы, объявленные непосредственно в пространстве имен и не вложенные в другие классы, могут быть [открытыми](../../../csharp/language-reference/keywords/public.md) или [внутренними](../../../csharp/language-reference/keywords/internal.md). По умолчанию классы являются `internal`.  
   
- Члены класса, включая вложенные классы, могут быть `protected internal`, [открытый](../../../csharp/language-reference/keywords/public.md), [защищенный](../../../csharp/language-reference/keywords/protected.md), [внутренний](../../../csharp/language-reference/keywords/internal.md) или [закрытый](../../../csharp/language-reference/keywords/private.md).  Элементы [закрытый](../../../csharp/language-reference/keywords/private.md) по умолчанию.  
+ Члены класса, включая вложенные классы, могут иметь следующие модификаторы доступа: [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или [private](../../../csharp/language-reference/keywords/private.md). По умолчанию члены являются [закрытыми](../../../csharp/language-reference/keywords/private.md).  
   
- Для получения дополнительной информации см. [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Можно объявить универсальные классы, имеющие параметры типа.  Дополнительные сведения см. в разделе [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md).  
+ Можно объявить универсальные классы, имеющие параметры типа. Дополнительные сведения см. в разделе [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md).  
   
- Класс может содержать объявления следующих членов.  
+ Класс может содержать объявления следующих членов:  
   
 -   [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
@@ -62,7 +81,7 @@ caps.handback.revision: 30
   
 -   [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Indexers](../../../csharp/programming-guide/indexers/index.md)  
+-   [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
   
 -   [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
@@ -76,29 +95,29 @@ caps.handback.revision: 30
   
 -   [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
-## Пример  
- В следующем примере показано объявление полей, конструкторов и методов классов.  В нем также демонстрируется создание объекта и печать данных экземпляра.  В этом примере объявляются два класса — класс `Child`, который содержит два закрытых поля \(`name` и `age`\) и два открытых метода.  Второй класс, `StringTest`, используется для хранения `Main`.  
+## <a name="example"></a>Пример  
+ В приведенном ниже примере показано объявление полей, конструкторов и методов класса. В нем также демонстрируется создание экземпляра объекта и печать данных экземпляра. В этом примере объявляются два класса — класс `Child`, который содержит два закрытых поля (`name` и `age`) и два открытых метода. Второй класс, `StringTest`, используется для хранения `Main`.  
   
  [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]  
   
-## Комментарии  
- Обратите внимание, что в предыдущем примере доступ к закрытым полям \(`name` и `age`\) возможен только с помощью открытых методов класса `Child`.  Например, имя ребенка нельзя напечатать из метода `Main` с помощью следующего оператора.  
+## <a name="comments"></a>Комментарии  
+ Обратите внимание, что в предыдущем примере доступ к закрытым полям (`name` и `age`) возможен только с помощью открытых методов класса `Child`. Например, имя ребенка нельзя напечатать из метода `Main` с помощью следующего оператора:  
   
 ```  
 Console.Write(child1.name);   // Error  
 ```  
   
- Получить доступ к закрытым членам класса `Child`из метода `Main` можно было бы лишь тогда, если бы `Main` был членом класса.  
+ Получить доступ к закрытым членам класса `Child` из метода `Main` можно было бы лишь в том случае, если бы `Main` был членом класса.  
   
- Типы, объявленные внутри класса без модификатора доступа не имеют по умолчанию значение `private`, поэтому элементы данных в этом примере по\-прежнему будет `private`, если ключевое слово было удалено.  
+ Типы, объявленные в классе без модификатора доступа, по умолчанию являются `private`, поэтому члены данных в этом примере останутся `private`, если ключевые слова будут удалены.  
   
- И наконец, обратите внимание, что созданное для объекта с помощью конструктора по умолчанию \(`child3`\) поле "Возраст" по умолчанию было инициализировано с помощью нулевого значения.  
+ Наконец, обратите внимание, что для объекта, созданного с помощью конструктора по умолчанию (`child3`), поле age по умолчанию было инициализировано с нулевым значением.  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)

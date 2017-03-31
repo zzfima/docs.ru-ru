@@ -1,52 +1,70 @@
 ---
-title: "Предложение where (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "whereclause_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "where - предложение [C#]"
-  - "where - ключевое слово [C#]"
+title: "Предложение where (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- whereclause_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- where keyword [C#]
+- where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
+ms.lasthandoff: 03/13/2017
+
 ---
-# Предложение where (Справочник по C#)
-Предложение `where` используется в выражении запроса для указания элементов, возвращаемых из источника данных, в выражении запроса.  Это предложение применяет логическое условие \(*предикат*\) к каждому исходному элементу \(со ссылкой переменной диапазона\) и возвращает элементы, для которых заданное условие является истинным.  В одном выражении запроса может присутствовать несколько предложений `where`, а в одном предложении – несколько частей выражения предиката.  
+# <a name="where-clause-c-reference"></a>Предложение where (Справочник по C#)
+Предложение `where` используется в выражении запроса для того, чтобы указать, какие элементы из источника данных будут возвращаться в выражении запроса. Оно применяет логическое условие (*предикат*) к каждому исходному элементу (на который ссылается переменная диапазона) и возвращает те из них, для которых указанное условие имеет значение true. Одно выражение запроса может содержать сразу несколько предложений `where`, а одно предложение — несколько частей выражения предиката.  
   
-## Пример  
- В следующем примере предложение `where` фильтрует все числа за исключением тех, которые меньше пяти.  Если предложение `where` удалить, из источника данных будут возвращены все числа.  Выражение `num < 5` является предикатом, применяемым к каждому элементу.  
+## <a name="example"></a>Пример  
+ В следующем примере предложение `where` отфильтровывает все номера, кроме тех, которые меньше пяти. Если удалить предложение `where`, возвращаются все номера из источника данных. Выражение `num < 5` является предикатом, который применяется к каждому элементу.  
   
  [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
-## Пример  
- В одном предложении `where`  можно указать столько предикатов, сколько потребуется. Для этого необходимо использовать операторы [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) и [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md).  В следующем примере в запросе указано два предиката по порядку для выбора только четных чисел, которые меньше пяти.  
+## <a name="example"></a>Пример  
+ В одном предложении `where` можно указать необходимое число предикатов, используя операторы [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) и [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md). В следующем примере запрос определяет два предиката, позволяющие отобрать только четные номера меньше пяти.  
   
  [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
-## Пример  
- В предложении `where` может содержаться один или несколько методов, возвращающих логические значения.  В следующем примере предложение `where` использует метод, позволяющий определить, является ли текущее значение переменной диапазона четным или нет.  
+## <a name="example"></a>Пример  
+ Предложение `where` может содержать один или несколько методов, возвращающих логические значения. В следующем примере предложение `where` использует метод для того, чтобы определить, является ли текущее значение диапазона четным или нечетным.  
   
  [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
-## Заметки  
- Предложение `where` представляет собой механизм фильтрации.  Это предложение можно поместить в любом месте выражения запроса, но только оно не может быть первым или последним.  Предложение `where` может размещаться до или после предложения [group](../../../csharp/language-reference/keywords/group-clause.md), в зависимости от того, когда требуется фильтрация исходных элементов – до или после группирования.  
+## <a name="remarks"></a>Примечания  
+ Предложение `where` представляет собой механизм фильтрации. Он может располагаться практически в любом месте выражения запроса, но не может быть первым или последним предложением. Предложение `where` может отображаться до или после предложения [group](../../../csharp/language-reference/keywords/group-clause.md) в зависимости от того, необходимо ли отфильтровать исходные элементы до или после их объединения в группы.  
   
- Если указанный предикат недопустим для элементов в источнике данных, возникнет ошибка времени выполнения.  Это одно преимущество строго\-типизированной проверки, обеспечиваемое [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  
+ Если указанный предикат недопустим для элементов в источнике данных, это вызовет ошибку компиляции. Это одно из преимуществ надежной проверки типов, предоставляемой [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)].  
   
- Во время выполнения ключевое слово `where` преобразуется в вызов метода стандартного оператора запроса <xref:System.Linq.Enumerable.Where%2A>.  
+ Во время компиляции ключевое слово `where` преобразуется в вызов метода стандартного оператора запроса <xref:System.Linq.Enumerable.Where%2A>.  
   
-## См. также  
- [Ключевые слова запроса \(LINQ\)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [Предложение from](../../../csharp/language-reference/keywords/from-clause.md)   
- [Предложение select](../../../csharp/language-reference/keywords/select-clause.md)   
- [Filtering Data](../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)   
+## <a name="see-also"></a>См. также  
+ [Ключевые слова запроса (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [Предложение From](../../../csharp/language-reference/keywords/from-clause.md)   
+ [Предложение Select](../../../csharp/language-reference/keywords/select-clause.md)   
+ [Фильтрация данных](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+ [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

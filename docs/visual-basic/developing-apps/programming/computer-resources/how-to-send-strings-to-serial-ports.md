@@ -1,52 +1,68 @@
 ---
-title: "Практическое руководство. Отправка строк в последовательный порт в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.Ports - объект"
-  - "порты, отправка строк в"
-  - "последовательные порты, отправка строк в"
-  - "строки [Visual Basic], отправка в последовательные порты"
+title: "Практическое руководство. Отправка строк в последовательный порт в Visual Basic | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- ports, sending strings to
+- strings [Visual Basic], sending to serial ports
+- My.Computer.Ports object
+- serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Практическое руководство. Отправка строк в последовательный порт в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f0a66d19e2677ee67672c0e26945fd555fed07d2
+ms.lasthandoff: 03/13/2017
 
-В этом разделе описывается способ использования объекта `My.Computer.Ports` в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] для отправки строки в последовательный порт компьютера.  
+---
+# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Практическое руководство. Отправка строк в последовательный порт в Visual Basic
+В этом разделе описывается, как использовать `My.Computer.Ports` для отправки строк в последовательные порты компьютера в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
-## Пример  
- В этом примере выполнятся отправка строки в последовательный порт COM1.  Возможно, потребуется использовать другой последовательный порт на компьютере.  
+## <a name="example"></a>Пример  
+ Этот пример кода отправляет строку в последовательный порт COM1. Возможно, на вашем компьютере потребуется использовать другой последовательный порт.  
   
- Используйте метод `My.Computer.Ports.OpenSerialPort` для получения ссылки на порт.  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ Воспользуйтесь методом `My.Computer.Ports.OpenSerialPort`, чтобы получить ссылку на порт. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
- Блок `Using` позволяет приложению закрыть последовательный порт даже в случае возникновения исключения.  Весь код для управления последовательным портом должен находиться внутри этого блока или внутри блока `Try...Catch...Finally`.  
+ Блок `Using` позволяет приложению закрыть последовательный порт даже в том случае, если он создает исключение. В блоке `Try...Catch...Finally` должен отображаться весь код, управляющий последовательным портом.  
   
- Метод <xref:System.IO.Ports.SerialPort.WriteLine%2A> позволяет отправить данные в последовательный порт.  
+ Метод <xref:System.IO.Ports.SerialPort.WriteLine%2A> отправляет данные в последовательный порт.  
   
  [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a>Компиляция кода  
   
--   В этом примере предполагается, что на компьютере используется порт `COM1`.  
+-   В этом примере предполагается, что компьютер использует `COM1`.  
   
-## Отказоустойчивость  
- В этом примере предполагается, что на компьютере используется порт `COM1`. В целях обеспечения большей гибкости код должен позволять пользователю выбирать нужный последовательный порт в списке доступных портов.  Дополнительные сведения см. в разделе [Практическое руководство. Отображение доступных последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ В этом примере предполагается, что компьютер использует `COM1`. Для большей гибкости код должен позволять пользователю выбирать нужный последовательный порт из списка доступных портов. Дополнительные сведения см. в разделе [Практическое руководство. Отображение доступных последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
- В этом примере используется блок `Using`, чтобы обеспечить закрытие порта приложением даже в случае возникновения исключения.  Дополнительные сведения см. в разделе [Оператор Using](../../../../visual-basic/language-reference/statements/using-statement.md).  
+ В этом примере блок `Using` позволяет сделать так, чтобы приложение закрыло порт, даже если он создает исключение. Дополнительные сведения см. в разделе [Оператор using](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Devices.Ports>   
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
  [Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   

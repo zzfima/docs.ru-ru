@@ -1,64 +1,82 @@
 ---
-title: "/filealign (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/filealign"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/alignment compiler option [C#]"
-  - "filealign compiler option [C#]"
-  - "-filealign compiler option [C#]"
-  - "/sections compiler option [C#]"
-  - "alignment compiler option [C#]"
-  - "sections compiler option [C#]"
-  - "-sections compiler option [C#]"
-  - "/filealign compiler option [C#]"
-  - "file sharing [C#]"
-  - "-alignment compiler option [C#]"
-  - "section alignment [C#]"
+title: "-filealign (параметры компилятора C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /filealign
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /alignment compiler option [C#]
+- filealign compiler option [C#]
+- -filealign compiler option [C#]
+- /sections compiler option [C#]
+- alignment compiler option [C#]
+- sections compiler option [C#]
+- -sections compiler option [C#]
+- /filealign compiler option [C#]
+- file sharing [C#]
+- -alignment compiler option [C#]
+- section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 caps.latest.revision: 14
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 83569fa264ba3ed6e271281885940a70a5354840
+ms.lasthandoff: 03/13/2017
+
 ---
-# /filealign (C# Compiler Options)
-Параметр **\/filealign** позволяет задать размер разделов выходного файла.  
+# <a name="filealign-c-compiler-options"></a>/filealign (параметры компилятора C#)
+Параметр **/filealign** позволяет указать размер разделов в выходном файле.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /filealign:number  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `number`  
- Значение, определяющее размер разделов выходного файла.  Допустимые значения: 512, 1024, 2048, 4096 и 8192.  Эти значения задаются в байтах.  
+ Значение, которое задает размер разделов в выходном файле. Допустимые значения: 512, 1024, 2048, 4096 и 8192. Эти значения указаны в байтах.  
   
-## Заметки  
- Каждый раздел выравнивается по границе, кратной значению **\/filealign**.  Фиксированного значения по умолчанию нет.  Если параметр **\/filealign** не указан, среда CLR выбирает значение по умолчанию во время компиляции.  
+## <a name="remarks"></a>Примечания  
+ Каждый раздел выравнивается по границе, кратной значению **/filealign**. Фиксированный размер по умолчанию не предусмотрен. Если значение **/filealign** не указано, среда CLR выбирает значение по умолчанию во время компиляции.  
   
- Путем определения размера раздела можно повлиять на размер выходного файла.  Изменение размера раздела может применяться для программ, выполняющихся на небольших устройствах.  
+ Указанный размер раздела влияет на размер выходного файла. Изменение размера раздела может применяться для программ, выполняющихся на небольших устройствах.  
   
- Для просмотра информации о разделах выходного файла воспользуйтесь служебной программой [DUMPBIN](/visual-cpp/build/reference/dumpbin-options).  
+ Используйте [DUMPBIN](https://docs.microsoft.com/cpp/build/reference/dumpbin-options) для просмотра информации о разделах выходного файла.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
 1.  Откройте страницу **Свойства** проекта.  
   
-2.  Выберите страницу свойств **Построение**.  
+2.  Щелкните страницу свойств **Сборка**.  
   
-3.  Нажмите кнопку **Дополнительно**.  
+3.  Нажмите кнопку **Дополнительно** .  
   
-4.  Измените свойство **Выравнивание файлов**.  
+4.  Измените свойство **Выравнивание файла**.  
   
- Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
+ Сведения об установке этого параметра компилятора программным способом см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>См. также  
+ [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

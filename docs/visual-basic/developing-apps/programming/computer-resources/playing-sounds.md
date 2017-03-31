@@ -1,80 +1,96 @@
 ---
-title: "Воспроизведение звуков (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.Audio - объект, задачи"
-  - "воспроизведение звуков"
-  - "воспроизведение звуков, Visual Basic"
-  - "звуковые циклы"
-  - "звуки, фон"
-  - "звуки, воспроизведение"
-  - "системные звуки"
-  - "системные звуки, воспроизведение"
+title: "Воспроизведение звуков (Visual Basic) | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- system sounds, playing
+- system sounds
+- playing sounds, Visual Basic
+- sound loops
+- My.Computer.Audio object, tasks
+- sounds, playing
+- sounds, background
+- playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# Воспроизведение звуков (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ed4ee0a09067900a6bead04abec02f141936ba42
+ms.lasthandoff: 03/13/2017
 
-Объект `My.Computer.Audio` предоставляет методы воспроизведения звука.  
+---
+# <a name="playing-sounds-visual-basic"></a>Воспроизведение звуков (Visual Basic)
+Объект `My.Computer.Audio` предоставляет методы для воспроизведения звуков.  
   
-## Воспроизведение звуков  
- Воспроизведение в фоновом режиме позволяет приложению выполнять другой код во время воспроизведения звука.  Метод `My.Computer.Audio.Play` позволяет воспроизводить в приложении только один фоновый звук в каждый момент времени. При воспроизведении нового звука в фоновом режиме в приложении воспроизведение предыдущего звука прекращается.  Можно также воспроизвести звуковой сигнал и дождаться его завершения, см. раздел.  
+## <a name="playing-sounds"></a>Воспроизведение звуков  
+ Воспроизведение в фоновом режиме позволяет приложению выполнять другой код во время воспроизведения звуков. Метод `My.Computer.Audio.Play` позволяет приложению воспроизводить только один фоновый звук за раз; когда приложение воспроизводит новый фоновый звук, оно останавливает воспроизведение предыдущего фонового звука. Вы также можете воспроизвести звук и дождаться его окончания.  
   
- В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук.  Если `AudioPlayMode.WaitToComplete` определен, `My.Computer.Audio.Play` ожидает полного завершения воспроизведения звука, прежде чем выполнение вызывающего кода продолжится.  При использовании этого примера необходимо убедиться, что имя файла звуковому wav, который относится к файлу на локальном компьютере  
+ В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук. Если `AudioPlayMode.WaitToComplete` указан, `My.Computer.Audio.Play` дожидается завершения звука, прежде чем выполнение вызывающего кода будет продолжено. Пользуясь этим примером, убедитесь в том, что имя файла ссылается на звуковой WAV-файл на вашем компьютере.  
   
  [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
   
- В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук.  При использовании этого примера необходимо убедиться, что ресурсы приложения включают звуковой wav\-файл с именем Водопадом.  
+ В следующем примере метод `My.Computer.Audio.Play` воспроизводит звук. Пользуясь этим примером, убедитесь в том, что ресурсы приложения включают звуковой WAV-файла с именем Waterfall.  
   
  [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
   
-## Циклическое воспроизведение звуков  
- В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме при `PlayMode.BackgroundLoop` указано.  При использовании этого примера необходимо убедиться, что имя файла звуковому wav, который относится к файлу на локальном компьютере.  
+## <a name="playing-looping-sounds"></a>Циклическое воспроизведение звука  
+ В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме, если задан параметр `PlayMode.BackgroundLoop`. Пользуясь этим примером, убедитесь в том, что имя файла ссылается на звуковой WAV-файл на вашем компьютере.  
   
  [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
   
- В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме при `PlayMode.BackgroundLoop` указано.  При использовании этого примера необходимо убедиться, что ресурсы приложения включают звуковой wav\-файл с именем Водопадом.  
+ В следующем примере метод `My.Computer.Audio.Play` воспроизводит заданный звук в фоновом режиме, если задан параметр `PlayMode.BackgroundLoop`. Пользуясь этим примером, убедитесь в том, что ресурсы приложения включают звуковой WAV-файла с именем Waterfall.  
   
  [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
- В предыдущем примере кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он расположен в разделе **Приложения Windows Forms \> Звук**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
+ Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
- В общем случае при циклическом воспроизведении звука приложение должно будет остановить его в некоторый момент.  
+ Обычно циклическое воспроизведение звука в приложении в конечном итоге должно прекратиться.  
   
-## Остановка воспроизведения звуков в фоновом режиме  
- Используйте метод `My.Computer.Audio.Stop` для остановки текущего воспроизведения фонового или циклического звука в приложении.  
+## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Остановка воспроизведения звуков в фоновом режиме  
+ Метод `My.Computer.Audio.Stop` позволяет остановить звук, который воспроизводится в приложении в фоновом режиме или циклически.  
   
- В стандартной ситуации во время циклического воспроизведения звука приложение должно останавливать воспроизведение в некоторый момент.  
+ Обычно циклическое воспроизведение звука в приложении в какой-то момент должно быть остановлено.  
   
- В следующем примере останавливается, который воспроизводит звук в фоновом режиме.  
+ Код в следующем примере останавливает звук, который воспроизводится в фоновом режиме.  
   
  [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
- В предыдущем примере кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он расположен в разделе **Приложения Windows Forms \> Звук**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
+ Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
-## Воспроизведение системных звуков  
- Используйте метод `My.Computer.Audio.PlaySystemSound` для воспроизведения указанного системного звука.  
+## <a name="playing-system-sounds"></a>Воспроизведение системных звуков  
+ Метод `My.Computer.Audio.PlaySystemSound` позволяет воспроизвести указанный системный звук.  
   
- Метод `My.Computer.Audio.PlaySystemSound` принимает в качестве параметра один из общих членов класса <xref:System.Media.SystemSound>.  Системный звук <xref:System.Media.SystemSounds.Asterisk%2A> обычно обозначает ошибку.  
+ Метод `My.Computer.Audio.PlaySystemSound` принимает в качестве параметра один из общих членов класса <xref:System.Media.SystemSound>. Системный звук <xref:System.Media.SystemSounds.Asterisk%2A> обычно указывает на ошибки.  
   
- В следующем примере используется метод `My.Computer.Audio.PlaySystemSound` для воспроизведения системного звука.  
+ Код в следующем примере использует метод `My.Computer.Audio.PlaySystemSound` для воспроизведения системного звука.  
   
  [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Devices.Audio>   
  <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>   
  <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>   

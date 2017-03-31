@@ -1,0 +1,86 @@
+---
+title: "Группирование данных (C#) | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2ef56a843117bb8b7409b10ef33ca83175849b9f
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="grouping-data-c"></a>Группирование данных (C#)
+Группированием называют операцию объединения данных в группы таким образом, чтобы у элементов в каждой группе был общий атрибут.  
+  
+ На следующем рисунке показаны результаты операции группирования последовательности символов. Ключ для каждой группы — это символ.  
+  
+ ![Операции группирования LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+  
+ Далее перечислены методы стандартных операторов запроса, которые группируют элементы данных.  
+  
+## <a name="methods"></a>Методы  
+  
+|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|-----------------|-----------------|---------------------------------|----------------------|  
+|GroupBy|Группирует элементы с общим атрибутом. Каждая группа представлена объектом <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> -или-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=fullName>|  
+|ToLookup|Вставляет элементы в <xref:System.Linq.Lookup%602> (словарь "один ко многим") в зависимости от функции выбора ключа.|Неприменимо.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
+  
+## <a name="query-expression-syntax-example"></a>Пример синтаксиса выражения запроса  
+ В следующем примере кода предложение `group by` используется для группирования целых чисел в списке на основании четности.  
+  
+```csharp  
+List<int> numbers = new List<int>() { 35, 44, 200, 84, 3987, 4, 199, 329, 446, 208 };  
+  
+IEnumerable<IGrouping<int, int>> query = from number in numbers  
+                                         group number by number % 2;  
+  
+foreach (var group in query)  
+{  
+    Console.WriteLine(group.Key == 0 ? "\nEven numbers:" : "\nOdd numbers:");  
+    foreach (int i in group)  
+        Console.WriteLine(i);  
+}  
+  
+/* This code produces the following output:  
+  
+    Odd numbers:  
+    35  
+    3987  
+    199  
+    329  
+  
+    Even numbers:  
+    44  
+    200  
+    84  
+    4  
+    446  
+    208  
+*/  
+```  
+  
+## <a name="see-also"></a>См. также  
+ <xref:System.Linq>   
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ [Предложение group](../../../../csharp/language-reference/keywords/group-clause.md)   
+ [Практическое руководство. Создание вложенной группы](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
+ [Практическое руководство. Группировка файлов по расширению (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)   
+ [Практическое руководство. Группировка результатов запросов](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
+ [Практическое руководство. Вложенный запрос в операции группирования](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)   
+ [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

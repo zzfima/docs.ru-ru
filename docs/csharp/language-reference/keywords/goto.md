@@ -1,46 +1,64 @@
 ---
-title: "goto (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "goto_CSharpKeyword"
-  - "goto"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "goto - ключевое слово [C#]"
+title: "goto (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- goto_CSharpKeyword
+- goto
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 700376096d969052a9f4633f565f9d9fd4dfec46
+ms.lasthandoff: 03/13/2017
+
 ---
-# goto (Справочник по C#)
-Оператор `goto` передает управление именованному оператору.  
+# <a name="goto-c-reference"></a>goto (Справочник по C#)
+Оператор `goto` передает управление программой непосредственно оператору с меткой.  
   
- Чаще всего оператор `goto` используется для передачи управления определенной подписи смены регистра или подписи по умолчанию в операторе `switch`.  
+ Оператор `goto` часто используется для передачи управления определенной метке смены регистра или метке по умолчанию в операторе `switch`.  
   
- Оператор `goto` также используется для выхода из вложенных циклов со сложной структурой.  
+ `goto` Этот оператор также удобно использовать для выхода из глубоко вложенных циклов.  
   
-## Пример  
- В следующем примере демонстрируется использование оператора `goto` в операторе [switch](../../../csharp/language-reference/keywords/switch.md).  
+## <a name="example"></a>Пример  
+ В следующем примере демонстрируется использование `goto` в операторе [switch](../../../csharp/language-reference/keywords/switch.md).  
   
  [!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_1.cs)]  
   
-## Пример  
- В следующем примере демонстрируется использование оператора `goto` для выхода из вложенных циклов.  
+## <a name="example"></a>Пример  
+ В следующем примере демонстрируется использование `goto` для выхода из вложенных циклов.  
   
  [!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_2.cs)]  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
- [Оператор goto](/visual-cpp/cpp/goto-statement-cpp)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
+ [Оператор goto](https://docs.microsoft.com/cpp/cpp/goto-statement-cpp)   
  [Операторы перехода](../../../csharp/language-reference/keywords/jump-statements.md)

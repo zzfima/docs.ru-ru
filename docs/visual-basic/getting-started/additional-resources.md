@@ -1,93 +1,109 @@
 ---
-title: "Дополнительные ресурсы для программистов, использующих Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Справка"
-  - "Справка, группы новостей"
-  - "Справка, веб-страницы Visual Basic"
-  - "группы новостей, Visual Studio"
-  - "ресурсы [Visual Basic], дополнительная"
-  - "поддержка, веб-узлов Visual Studio"
-  - "Visual Basic, дополнительные ресурсы"
-  - "Visual Basic, видео"
-  - "Веб-сайты, Visual Studio"
-  - "веб-трансляции"
+title: "Дополнительные ресурсы для программистов Visual Basic | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic, additional resources
+- Help
+- resources [Visual Basic], additional
+- Help, newsgroups
+- Web sites, Visual Studio
+- webcasts
+- Help, Visual Basic Web sites
+- newsgroups, Visual Studio
+- support, Visual Studio sites
+- Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Дополнительные ресурсы для программистов, использующих Visual Basic
-[!INCLUDE[vs2017banner](../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ac8a0f8f3889a9de9fbb6a43241c5ab855e938ab
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="additional-resources-for-visual-basic-programmers"></a>Дополнительные ресурсы для программистов, использующих Visual Basic
 На перечисленных ниже сайтах можно найти способы решения распространенных проблем.  
   
-## Ресурсы корпорации Майкрософт  
+## <a name="microsoft-resources"></a>Ресурсы корпорации Майкрософт  
   
-### В Интернете  
-  
-|Термин|Определение|  
-|------------|-----------------|  
-|[Центр разработчиков Microsoft Visual Basic](http://go.microsoft.com/fwlink/?LinkID=47768)|Примеры кода, сведения об обновлениях, видеоматериалы, бесплатные файлы для загрузки и техническая информация.|  
-|[Блог команды разработчиков Microsoft Visual Basic](http://go.microsoft.com/fwlink/?LinkID=123815)|Доступ к блогу команды разработчиков Visual Basic.|  
-|[Microsoft ASP.NET](http://go.microsoft.com/fwlink/?LinkID=51657)|Статьи, демонстрации, предпросмотры инструментов и другая информация для веб\-разработки в среде Visual Basic.|  
-|[Журнал MSDN](http://msdn.microsoft.com/magazine/cc159292.aspx)|Подробные статьи о среде Visual Basic.|  
-|[Шаблоны и рекомендации Майкрософт](http://msdn.microsoft.com/practices/default.aspx)|Прикладное технических руководство с качественным исходным кодом и документацией.|  
-  
-### Примеры кода  
+### <a name="on-the-web"></a>В Интернете  
   
 |Термин|Определение|  
-|------------|-----------------|  
-|[Коллекция исходных кодов](http://code.msdn.microsoft.com/)|Скачивайте примеры приложений и другие ресурсы и делитесь ими с сообществом разработчиков.|  
-|[CodePlex](http://www.codeplex.com/)|Содержит проекты программного обеспечения с открытым кодом.  CodePlex можно использовать для поиска программного обеспечения с открытым исходным кодом или создания новых проектов, чтобы поделиться ими со всем миром.|  
-|[Примеры кода Visual Basic](http://msdn.microsoft.com/vbasic/ms789074)|Примеры приложений, веб\-приложений и данных в Visual Basic.|  
+|----------|----------------|  
+|[Центр разработчиков Visual Basic корпорации Майкрософт](http://go.microsoft.com/fwlink/?LinkID=47768)|Примеры кода, сведения об обновлениях, видеоматериалы, бесплатные файлы для загрузки и техническая информация.|  
+|[Блог группы разработчиков Microsoft Visual Basic](http://go.microsoft.com/fwlink/?LinkID=123815)|Доступ к блогу команды разработчиков Visual Basic.|  
+|[Microsoft ASP.NET](http://go.microsoft.com/fwlink/?LinkID=51657)|Статьи, демонстрации, предпросмотры инструментов и другая информация для веб-разработки в среде Visual Basic.|  
+|[Журнал MSDN Magazine](http://msdn.microsoft.com/magazine/cc159292.aspx)|Подробные статьи о среде Visual Basic.|  
+|[Примеры и рекомендации корпорации Microsoft](http://msdn.microsoft.com/practices/default.aspx)|Прикладное технических руководство с качественным исходным кодом и документацией.|  
   
-### Форумы  
-  
-|Термин|Определение|  
-|------------|-----------------|  
-|[Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)|Синтаксис и компилятор языка [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].|  
-|[Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)|Обновление до [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] и работа с функциональными возможностями по взаимодействию.|  
-|[Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)|Работа в интегрированной среде разработки [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)].|  
-|[Пакеты Visual Basic Power Packs](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Надстройки, элементы управления, компоненты, примеры и инструменты, входящие в пакеты Visual Basic Power Packs.|  
-|[Общие сведения о Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)|Вопросы по [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], которые не обсуждаются на других форумах.|  
-  
-### Разговоры и тематические группы  
+### <a name="code-samples"></a>Примеры кода  
   
 |Термин|Определение|  
-|------------|-----------------|  
+|----------|----------------|  
+|[Коллекция кодов](http://code.msdn.microsoft.com/)|Скачивайте примеры приложений и другие ресурсы и делитесь ими с сообществом разработчиков.|  
+|[CodePlex](http://www.codeplex.com/)|Содержит проекты программного обеспечения с открытым кодом. CodePlex можно использовать для поиска программного обеспечения с открытым исходным кодом или создания новых проектов, чтобы поделиться ими со всем миром.|  
+|[Примеры кода Visual Basic](http://msdn.microsoft.com/vbasic/ms789074)|Примеры приложений, веб-приложений и данных в Visual Basic.|  
+  
+### <a name="forums"></a>Форумы  
+  
+|Термин|Определение|  
+|----------|----------------|  
+|[Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)|Синтаксис и компилятор языка [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].|  
+|[Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)|Обновление до [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и работа с функциональными возможностями по взаимодействию.|  
+|[Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)|Работа в интегрированной среде разработки [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].|  
+|[Пакеты Power Pack для Visual Basic](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Надстройки, элементы управления, компоненты, примеры и инструменты, входящие в пакеты Visual Basic Power Packs.|  
+|[Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)|Вопросы по [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], которые не обсуждаются на других форумах.|  
+  
+### <a name="chats-and-discussion-groups"></a>Разговоры и тематические группы  
+  
+|Термин|Определение|  
+|----------|----------------|  
 |[Группы обсуждений MSDN](http://go.microsoft.com/fwlink/?LinkId=145961)|Группы новостей, позволяющие общаться со специалистами по всему миру.|  
-|[Чаты MSDN](http://go.microsoft.com/fwlink/?LinkId=145962)|Обсуждение продуктов или технологий корпорации Майкрософт.  В качестве ведущих в каждом разговоре выступают один или несколько экспертов корпорации Майкрософт.  Для законченных разговоров доступны их записи.|  
+|[Чаты MSDN](http://go.microsoft.com/fwlink/?LinkId=145962)|Обсуждение продуктов или технологий корпорации Майкрософт. В качестве ведущих в каждом разговоре выступают один или несколько экспертов корпорации Майкрософт. Для законченных разговоров доступны их записи.|  
   
-### Видеозаписи и веб\-трансляции  
+### <a name="videos-and-webcasts"></a>Видеозаписи и веб-трансляции  
   
 |Термин|Определение|  
-|------------|-----------------|  
+|----------|----------------|  
 |[Channel9](http://go.microsoft.com/fwlink/?LinkID=123827)|Доступ к сообществу посредством видео, вики и форумов.|  
-|[Программа I'm a VB](http://msdn.microsoft.com/vbasic/dd776132)|Посмотрите интервью и узнайте, что нравится экспертам в Visual Basic и Visual Studio.|  
+|[Я — VB](http://msdn.microsoft.com/vbasic/dd776132)|Посмотрите интервью и узнайте, что нравится экспертам в Visual Basic и Visual Studio.|  
   
-### Поддержка  
-  
-|Термин|Определение|  
-|------------|-----------------|  
-|[Справка и поддержка от Майкрософт](http://go.microsoft.com/fwlink/?LinkID=108287)|Доступ к статьям базы знаний, страницам загрузки программ и обновлений, веб\-трансляциям и другим службам.|  
-|[Microsoft Connect](http://connect.microsoft.com/)|Позволяет регистрировать ошибки или отправлять предложения по Visual Studio в Майкрософт.  Сообщить об ошибке можно также, выбрав в меню **Справка** команду **Сообщить об ошибке**.|  
-  
-## Ресурсы сторонних организаций  
- Веб\-сайт MSDN предоставляет информацию об узлах сторонних организаций и группах новостей, представляющих интерес в настоящий момент.  Для получения наиболее актуального списка доступных ресурсов перейдите на [веб\-сайт сообщества MSDN Visual Basic](http://go.microsoft.com/fwlink/?LinkID=77372).  
+### <a name="support"></a>Поддержка  
   
 |Термин|Определение|  
-|------------|-----------------|  
-|[Зона DevX Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145978)|Подробные технические статьи для современного разработчика Visual Basic.|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|Форум для обсуждения новых возможностей [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] на форумах DevX.|  
+|----------|----------------|  
+|[Центр справки и поддержки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=108287)|Доступ к статьям базы знаний, страницам загрузки программ и обновлений, веб-трансляциям и другим службам.|  
+|[Microsoft Connect](http://connect.microsoft.com/)|Позволяет регистрировать ошибки или отправлять предложения по Visual Studio в Майкрософт. Сообщить об ошибке можно также, выбрав в меню **Справка** команду **Сообщить об ошибке**.|  
   
-## См. также  
+## <a name="third-party-resources"></a>Ресурсы сторонних организаций  
+ Веб-сайт MSDN предоставляет информацию об узлах сторонних организаций и группах новостей, представляющих интерес в настоящий момент. Для получения наиболее актуального списка доступных ресурсов перейдите на [веб-сайт сообщества Visual Basic в MSDN](http://go.microsoft.com/fwlink/?LinkID=77372).  
+  
+|Термин|Определение|  
+|----------|----------------|  
+|[Зона Visual Basic в DevX](http://go.microsoft.com/fwlink/?LinkId=145978)|Подробные технические статьи для современного разработчика Visual Basic.|  
+|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|Форум для обсуждения новых возможностей [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] на форумах DevX.|  
+  
+## <a name="see-also"></a>См. также  
  [Начало работы](../../visual-basic/getting-started/index.md)   
- [Обращайтесь к нам](/visual-studio/ide/talk-to-us)
+ [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)

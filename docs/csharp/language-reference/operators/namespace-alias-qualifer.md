@@ -1,44 +1,62 @@
 ---
-title: "Оператор :: (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "::_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - ":: - оператор [C#]"
-  - "оператор квалификатора псевдонима пространства имен (::) [C#]"
-  - "пространства имен [C#], :: - оператор"
+title: "Оператор :: (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- ::_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- ':: operator [C#]'
+- 'namespaces [C#], :: operator'
+- namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 12a0265d430a5a110d8c73107a48b36e0ab15405
+ms.lasthandoff: 03/13/2017
+
 ---
-# Оператор :: (Справочник по C#)
-Квалификатор псевдонима пространства имен \(`::`\) служит для поиска идентификаторов.  Он всегда размещается между двумя идентификаторами, как показано в следующем примере.  
+# <a name="-operator-c-reference"></a>Оператор :: (Справочник по C#)
+Квалификатор псевдонима пространства имен (`::`) служит для поиска идентификаторов. Он всегда размещается между двумя идентификаторами, как показано в следующем примере.  
   
  [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
-## Заметки  
- Квалификатор псевдонима пространства имен может быть `global`.  Это вызывает поиск в глобальном пространстве имен, а не в пространстве имен с псевдонимами.  
+## <a name="remarks"></a>Примечания  
+ Квалификатор псевдонима пространства имен может быть `global`. Он вызывает поиск в глобальном пространстве имен, а не в пространстве имен с псевдонимом.  
   
-## Дополнительные сведения  
- Пример, демонстрирующий использование оператора `::` см. в следующем разделе.  
+## <a name="for-more-information"></a>Дополнительные сведения  
+ Пример использования оператора `::` см. в следующем разделе:  
   
 -   [Практическое руководство. Использование псевдонима глобального пространства имен](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Операторы C\#](../../../csharp/language-reference/operators/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Операторы в C#](../../../csharp/language-reference/operators/index.md)   
  [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [Оператор .](../../../csharp/language-reference/operators/member-access-operator.md)   
+ [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)   
  [Псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md)

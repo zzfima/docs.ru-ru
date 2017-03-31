@@ -1,39 +1,57 @@
 ---
-title: "Практическое руководство. Перехват несовместимого с CLS исключения | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "исключения [C#], несовместимый с CLS"
+title: "Практическое руководство. Перехват несовместимого с CLS исключения | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
 caps.latest.revision: 8
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 8
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 3515ecab379a0e910cdd5ba82a4a39b085cc816f
+ms.lasthandoff: 03/13/2017
+
 ---
-# Практическое руководство. Перехват несовместимого с CLS исключения
-Некоторые языки .NET, включая C\+\+\/CLI, позволяют вызывать исключения, которые не являются производными от <xref:System.Exception>.  Такие исключения называются *несовместимыми с CLS исключениями* или *несовместимыми исключениями*.  В [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] невозможно вызвать несовместимое с CLS исключение, однако такое исключение можно перехватить следующими двумя способами.  
+# <a name="how-to-catch-a-non-cls-exception"></a>Практическое руководство. Перехват несовместимого с CLS исключения
+Некоторые языки .NET, включая C++/CLI, позволяют объектам вызывать исключения, которые не являются производными от <xref:System.Exception>. Такие исключения называются *несовместимыми с CLS исключениями* или *необработанными исключениями*. В [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] невозможно вызвать несовместимые с CLS исключения, однако можно перехватить их следующими двумя способами.  
   
--   В блоке `catch (Exception e)` как <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
+-   В блоке `catch (Exception e)` как исключение <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
   
-     По умолчанию сборка [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] перехватывает несовместимые с CLS исключения как упакованные исключения.  Данный метод используется, если требуется получить доступ к оригинальному исключению, которое доступно через свойство <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>.  Процедура, приведенная далее в этом разделе, описывает перехват исключений данным способом.  
+     По умолчанию сборка [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] перехватывает несовместимые с CLS исключения как заключенные в оболочку. Используйте этот способ, если требуется доступ к исходному исключению, который может осуществляться через свойство <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>. Далее в этом разделе описывается процедура перехвата исключений таким способом.  
   
--   В блоке общего перехвата \(это блок перехвата, для которого не указан тип исключения\), который помещается после блока `catch (Exception)` или `catch (Exception e)`.  
+-   В общем блоке перехвата (блоке перехвата, для которого не указан тип исключения), который помещается после блока `catch (Exception)` или `catch (Exception e)`.  
   
-     Данный метод используется, если требуется выполнить какое\-либо действие \(например, произвести запись в файл журнала\) в ответ на несовместимое с CLS исключение, а доступ к сведениям об исключении не требуется.  По умолчанию среда CLR упаковывает все исключения.  Чтобы запретить это поведение, добавьте следующий атрибут уровня сборки в код \(обычно атрибут добавляют в файл AssemblyInfo.cs\): `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
+     Используйте этот способ, если требуется выполнить какое-либо действие (например, запись в файл журнала) в ответ на несовместимые с CLS исключения, и вам не нужен доступ к сведениям об исключении. По умолчанию среда CLR создает оболочку для всех исключений. Чтобы отключить этот режим, добавьте этот атрибут уровня сборки в код, как правило, в файле AssemblyInfo.cs: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
   
-### Чтобы перехватить несовместимое с CLS исключение  
+### <a name="to-catch-a-non-cls-exception"></a>Перехват несовместимого с CLS исключения  
   
-1.  В `catch(Exception e) block` используйте ключевое слово `as`, чтобы проверить, можно ли привести `e` к <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
+1.  В `catch(Exception e) block` используйте ключевое слово `as` для проверки возможности приведения `e` к <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
   
-2.  Обратитесь к оригинальному исключению, используя свойство <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>.  
+2.  Получите доступ к исходному исключению через свойство <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>.  
   
-## Пример  
- В следующем примере показан перехват несовместимого с CLS исключения, которое было вызвано из библиотеки классов, написанной на C\+\+\/CLR.  Обратите внимание, что в этом примере коду клиента [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] заранее известно, что вызывается исключение типа <xref:System.String?displayProperty=fullName>.  Свойство <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> можно привести к оригинальному типу при условии, что этот тип доступен из кода.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как перехватить несовместимое с CLS исключение, которое было вызвано из библиотеки классов, написанной на C++/CLR. Обратите внимание, что в этом примере клиентскому коду [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] заранее известно, что тип вызываемого исключения — <xref:System.String?displayProperty=fullName>. Свойство <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> можно привести к исходному типу при условии, что этот тип доступен из кода.  
   
 ```  
 // Class library written in C++/CLR.  
@@ -64,6 +82,6 @@ caps.handback.revision: 8
    }             
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.CompilerServices.RuntimeWrappedException>   
- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/exceptions-and-exception-handling.md)
+ [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)

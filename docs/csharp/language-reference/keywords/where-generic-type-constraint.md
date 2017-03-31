@@ -1,66 +1,84 @@
 ---
-title: "where (ограничение универсального типа) (справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "whereconstraint"
-  - "whereconstraint_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "where (ограничение универсального типа) [C#]"
+title: "where (ограничение универсального типа) (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- whereconstraint
+- whereconstraint_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- where (generic type constraint) [C#]
 ms.assetid: d7aa871b-0714-416a-bab2-96f87ada4310
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d5c0b9fff370893d890518c6a95a74889b3f2295
+ms.lasthandoff: 03/13/2017
+
 ---
-# where (ограничение универсального типа) (справочник по C#)
-Предложение `where` используется в определении универсального типа для указания ограничений типов, которые могут использоваться в качестве аргументов параметра типа, определенного в универсальном объявлении.  Например, можно объявить универсальный класс `MyGenericClass`, чтобы параметр типа `T` реализовывал интерфейс <xref:System.IComparable%601>.  
+# <a name="where-generic-type-constraint-c-reference"></a>where (ограничение универсального типа) (справочник по C#)
+В определении универсального типа предложение `where` позволяет задать ограничения для типов, которые можно использовать как аргументы для параметра типа, определенных в универсальном объявлении. Например, можно объявить универсальный класс `MyGenericClass`, чтобы параметр типа `T` реализовывал интерфейс <xref:System.IComparable%601>:  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
 > [!NOTE]
->  Дополнительные сведения о применении предложения "where" в выражении запроса см. в разделе [Предложение where](../../../csharp/language-reference/keywords/where-clause.md).  
+>  Дополнительные сведения о предложении where в выражении запроса см. в разделе [Предложение where](../../../csharp/language-reference/keywords/where-clause.md).  
   
- Кроме ограничений интерфейса, предложение `where` может включать ограничение базового класса, указывающее, что тип должен обладать указанным классом в качестве базового \(или являться этим классом\), чтобы его можно было использовать как аргумент типа для этого универсального типа.  Если такое ограничение используется, оно должно располагаться перед любыми другими ограничениями данного параметра типа.  
+ Наряду с ограничениями интерфейса предложение `where` может включать ограничение базового класса, согласно которому тип должен иметь указанный класс как базовый (либо быть таким классом) — только в этом случае его можно будет использовать как аргумент типа для соответствующего универсального типа. Если такое ограничение используется, оно должно быть указано перед любыми другими ограничениями данного параметра типа.  
   
  [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
- Предложение `where` также может включать ограничение конструктора.  Можно создать экземпляр параметра типа с помощью нового оператора, однако для этого оператор типа должен быть ограничен ограничением конструктора `new()`.  Ограничение [new\(\)](../../../csharp/language-reference/keywords/new-constraint.md) указывает компилятору, что у любого типа предоставленных аргументов должен быть доступный конструктор без параметров или по умолчанию.  Примеры.  
+ Предложение `where` также может включать ограничение конструктора. С помощью оператора new можно создать экземпляр параметра типа, однако для этого параметр типа должен ограничиваться ограничением конструктора `new()`. [Ограничение new()](../../../csharp/language-reference/keywords/new-constraint.md) сообщает компилятору о том, что все предоставленные аргументы типа должны иметь доступный конструктор без параметров (или конструктор по умолчанию). Пример:  
   
  [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
- Ограничение `new()` располагается последним в предложении `where`.  
+ Ограничение `new()` отображается в предложении `where` последним.  
   
- При работе с несколькими параметрами типа используйте по одному предложению `where` для каждого параметра типа, например:  
+ Если параметров типа несколько, для каждого из них необходимо использовать по одному предложению `where`, например:  
   
  [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
- Также можно прикреплять ограничения к параметрам типа универсальных методов, например:  
+ Кроме того, ограничения можно присоединять к параметрам типа универсальных методов следующим образом:  
   
 ```  
 public bool MyMethod<T>(T t) where T : IMyInterface { }  
 ```  
   
- Обратите внимание, что синтаксис, описывающий ограничения параметра типа для делегатов, такой же, как и для методов:  
+ Обратите внимание на то, что ограничения параметров типа для делегатов имеют такой же синтаксис, как и методы:  
   
 ```  
 delegate T MyDelegate<T>() where T : new()  
 ```  
   
- Сведения об универсальных методах\-делегатах см. в разделе [Универсальные методы\-делегаты](../../../csharp/programming-guide/generics/generic-delegates.md).  
+ Дополнительные сведения об универсальных делегатах см. в разделе [Универсальные делегаты](../../../csharp/programming-guide/generics/generic-delegates.md).  
   
  Дополнительные сведения о синтаксисе и применении ограничений см. в разделе [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)   
  [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

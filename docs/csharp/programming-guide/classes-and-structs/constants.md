@@ -1,58 +1,76 @@
 ---
-title: "Константы (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# - язык, константы"
-  - "константы [C#]"
+title: "Константы (руководство по программированию в C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, constants
+- constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ad6c8119d74be0f178681b334f940ff5c38c05ed
+ms.lasthandoff: 03/13/2017
+
 ---
-# Константы (Руководство по программированию на C#)
-Константы представляют собой неизменные значения, известные во время компиляции и неизменяемые на протяжении времени существования программы.  Константы объявляются с модификатором [const](../../../csharp/language-reference/keywords/const.md).  Только встроенные типы C\# \(за исключением <xref:System.Object?displayProperty=fullName>\) могут быть объявлены как `const`.  Список встроенных типов см. в разделе [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md).  Определяемые пользователем типы, включая классы, структуры и массивы, не могут быть `const`.  Для создания класса, структуры или массива, которые инициализируются один раз во время выполнения \(например, в конструкторе\) и после этого не могут быть изменены, используется модификатор [readonly](../../../csharp/language-reference/keywords/readonly.md).  
+# <a name="constants-c-programming-guide"></a>Константы (Руководство по программированию на C#)
+Константы — это постоянные значения, которые известны во время компиляции и не изменяются во время выполнения программы. Константы должны объявляться с модификатором [const](../../../csharp/language-reference/keywords/const.md). Объявлять как `const` можно только встроенные типы (кроме <xref:System.Object?displayProperty=fullName>). Список встроенных типов см. в [таблице встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md). Пользовательские типы, включая классы, структуры и массивы, не могут объявляться как `const`. Модификатор [readonly](../../../csharp/language-reference/keywords/readonly.md) позволяет создать класс, структуру или массив, которые инициализируются один раз (например, в конструкторе), и впоследствии изменить их нельзя.  
   
- Язык C\# не поддерживает методы, свойства и события с ключевым словом `const`.  
+ C# не поддерживает методы, свойства или события `const`.  
   
- Тип перечисления позволяет определять именованные константы для целочисленных встроенных типов \(например, `int`, `uint`, `long` и т. д.\).  Дополнительные сведения см. в разделе [перечисление](../../../csharp/language-reference/keywords/enum.md).  
+ Тип перечисления позволяет определять именованные константы для целочисленных встроенных типов (например `int`, `uint`, `long` и т. д.). Дополнительные сведения см. в разделе [Перечисление](../../../csharp/language-reference/keywords/enum.md).  
   
- Константы должны инициализировать сразу после объявления.  Примеры.  
+ Константы должны инициализироваться сразу после объявления. Пример:  
   
  [!code-cs[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
   
- В этом примере константа `months` всегда имеет значение 12, и ее значение не может быть изменено даже самим классом.  Когда компилятор встречает идентификатор константы в исходном коде C\# \(например, `months`\), он подставляет литеральное значение непосредственно в его создающий код IL.  Поскольку адрес переменной, связанный с константой во время выполнения, отсутствует, поля `const` не могут быть переданы по ссылке и отображены как значение l\-value в выражении.  
+ В этом примере константа `months` всегда имеет значение 12, и его не может изменить даже сам класс. На самом деле в случае, если компилятор встречает идентификатор константы в исходном коде C# (например, `months`), он подставляет значение литерала непосредственно в создаваемый им промежуточный язык (IL). Поскольку с константой в среде выполнения не связан адрес ни одной переменной, поля `const` не могут передаваться по ссылке и отображаться в выражении как левостороннее значение.  
   
 > [!NOTE]
->  При ссылке на значения констант, определенных в другом коде, например DLL, следует соблюдать осторожность.  Если новое значение константы определяется в новой версии DLL, программа по\-прежнему будет хранить старое литеральное значение вплоть до перекомпиляции в новую версию.  
+>  Будьте внимательны, ссылаясь на постоянные значения, определенные в другом коде, например, в DLL. Если в новой версии DLL для константы определяется новое значение, старое значение литерала хранится в вашей программе вплоть до повторной компиляции для новой версии.  
   
  Несколько констант одного типа можно объявить одновременно, например:  
   
  [!code-cs[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_2.cs)]  
   
- Используемое для инициализации константы выражение может ссылаться на другую константу, если при этом не создается циклическая ссылка.  Примеры.  
+ Выражение, которое используется для инициализации константы, может ссылаться на другую константу, если не создает циклическую ссылку. Пример:  
   
  [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
- Константы могут быть отмечены модификаторами [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или `protected` `internal`.  Эти модификаторы доступа определяют порядок доступа к константе для пользователей класса.  Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Константы могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или `protected``internal`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к константе. Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Доступ к константам осуществляется так, как если бы они были [статическими](../../../csharp/language-reference/keywords/static.md) полями, поскольку значение константы одинаково для всех экземпляров типа.  Для их объявления не нужно использовать ключевое слово `static`.  В выражениях, которые не входят в класс, в котором определена константа, для доступа к ней необходимо использовать имя класса, точку и имя этой константы.  Примеры.  
+ Доступ к константам осуществляется так, как если бы они были [статическими](../../../csharp/language-reference/keywords/static.md) полями, поскольку значение константы одинаково для всех экземпляров типа. Для их объявления используйте ключевое слово `static`. Выражения, которые не относятся к классу, определяющему константу, должны включать имя класса, период и имя константы для доступа к этой константе. Пример:  
   
  [!code-cs[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [Типы](../../../csharp/programming-guide/types/index.md)   
  [readonly](../../../csharp/language-reference/keywords/readonly.md)   
- [Immutability in C\# Part One: Kinds of Immutability](http://go.microsoft.com/fwlink/?LinkId=112379)
+ [Неизменность в C#, часть 1. Виды неизменности](http://go.microsoft.com/fwlink/?LinkId=112379)

@@ -1,75 +1,92 @@
 ---
-title: "float (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "float"
-  - "float_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "float - ключевое слово [C#]"
-  - "числа с плавающей запятой [C#], float - ключевое слово"
+title: "float (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- float
+- float_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- float keyword [C#]
+- floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1c3a66e4f9c690effb35e280e00e29930ec64d75
+ms.lasthandoff: 03/13/2017
+
 ---
-# float (Справочник по C#)
-Ключевое слово `float` обозначает простой тип, используемый для хранения 32\-разрядных значений с плавающей запятой.  В следующей таблице представлен приблизительный диапазон и точность для типа `float`.  
+# <a name="float-c-reference"></a>float (Справочник по C#)
+Ключевое слово `float` обозначает простой тип, в котором хранятся 32-разрядные значения с плавающей запятой. В приведенной ниже таблице представлен точный и приблизительный диапазон значений для типа `float`.  
   
-|Тип|Приблизительный диапазон|Точность|Тип платформы .NET Framework|  
-|---------|------------------------------|--------------|----------------------------------|  
-|`float`|\-3.4 × 10<sup>38</sup>to \+3.4 × 10<sup>38</sup>|7 знаков|<xref:System.Single?displayProperty=fullName>|  
+|Тип|Приблизительный диапазон значений|Точность|Тип платформы .NET Framework|  
+|----------|-----------------------|---------------|-------------------------|  
+|`float`|От -3.4 × 10<sup>38</sup>до +3.4 × 10<sup>38</sup>|7 знака|<xref:System.Single?displayProperty=fullName>|  
   
-## Литералы  
- По умолчанию фактический численный литерал в правой части оператора назначения обрабатывается как тип [double](../../../csharp/language-reference/keywords/double.md).  Следовательно, для инициализации переменной типа с плавающей запятой нужно использовать суффикс `f` или `F`, как показано в следующем примере:  
+## <a name="literals"></a>Литералы  
+ По умолчанию фактический числовой литерал в правой части оператора назначения обрабатывается как [double](double.md). Таким образом, для инициализации переменной с плавающей запятой следует использовать суффикс `f` или `F`, как показано в следующих примерах:  
   
-```  
-  
+```csharp
 float x = 3.5F;  
-```  
+```
   
- Если в предыдущем объявлении не использовать суффикс, то будет выдана ошибка компиляции, потому что это приведет к попытке сохранить значение типа [double](../../../csharp/language-reference/keywords/double.md) в переменной типа `float`.  
+ Если этот суффикс не указан в предыдущем объявлении, вы получите ошибку компиляции, поскольку пытаетесь сохранить значение [double](double.md) в переменную `float`.  
   
-## Преобразования  
- В одном выражении можно вместе использовать целочисленные типы и типы с плавающей запятой.  В таком случае целочисленные типы преобразуются в типы с плавающей запятой.  Вычисление выражения выполняется в соответствии со следующими правилами.  
+## <a name="conversions"></a>Преобразования  
+ В одном и том же выражении можно сочетать и числовые целочисленные типы и типы с плавающей запятой. В этом случае целочисленные типы преобразуются в типы с плавающей запятой. Выражение вычисляется по следующим правилам:  
   
--   Если одним из типов с плавающей запятой является [double](../../../csharp/language-reference/keywords/double.md), то результатом вычисления выражения является тип [double](../../../csharp/language-reference/keywords/double.md) или [bool](../../../csharp/language-reference/keywords/bool.md) в случае выражений сравнения либо логических выражений.  
+-   Если одним из типов с плавающей запятой является [double](double.md), то выражение оценивается в реляционных или логических выражениях как [double](double.md) или [bool](bool.md).  
   
--   Если в выражении не используется тип [double](../../../csharp/language-reference/keywords/double.md), то результатом вычисления выражения является тип `float` или [bool](../../../csharp/language-reference/keywords/bool.md) в случае выражений сравнения либо логических выражений.  
+-   Если в выражении нет типа [double](double.md), выражение оценивается в реляционных или логических выражениях как `float` или [bool](bool.md).  
   
- Выражения с плавающей запятой могут содержать следующие наборы значений:  
+ Выражение с плавающей запятой может содержать следующие наборы значений:  
   
--   положительный и отрицательный ноль;  
+-   Положительный и отрицательный ноль  
   
--   положительную и отрицательную бесконечность;  
+-   Положительная и отрицательная бесконечность  
   
--   нечисловое значение \(NaN\);  
+-   Нечисловое значение (NaN)  
   
--   Конечный набор ненулевых значений.  
+-   Конечный набор ненулевых значений  
   
- Дополнительные сведения об этих значениях см. в документе "Стандарт организации IEEE в отношении двоичной арифметики с плавающей запятой" \(IEEE Standard Binary Floating\-Point Arithmetic\), который доступен на веб\-узле организации [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269) \(на английском языке\).  
+ Дополнительные сведения об этих значениях см. в документе "Стандарт IEEE для двоичной арифметики с плавающей запятой" на веб-сайте [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269).  
   
-## Пример  
- В следующем примере типы [int](../../../csharp/language-reference/keywords/int.md), [short](../../../csharp/language-reference/keywords/short.md) и `float` включены в математическое выражение, результатом вычисления которого является тип `float`.  \(Следует помнить, что ключевое слово `float` является псевдонимом типа <xref:System.Single?displayProperty=fullName>\). Обратите внимание, что тип [double](../../../csharp/language-reference/keywords/double.md) в этом выражении отсутствует.  
+## <a name="example"></a>Пример  
+ В следующем примере [int](int.md), [short](short.md) и `float` включены в математическое выражение и дают результат `float`. (Помните, что `float` является псевдонимом для типа <xref:System.Single?displayProperty=fullName>.) Обратите внимание, что в выражении нет типа [double](double.md).  
   
  [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Single>   
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [Ключевые слова в C#](index.md)   
+ [Таблица целых типов](integral-types-table.md)   
+ [Таблица встроенных типов](built-in-types-table.md)   
+ [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)   
+ [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)

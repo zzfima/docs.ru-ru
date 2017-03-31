@@ -1,59 +1,77 @@
 ---
-title: "volatile (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "volatile_CSharpKeyword"
-  - "volatile"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "volatile - ключевое слово [C#]"
+title: "volatile (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- volatile_CSharpKeyword
+- volatile
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
 caps.latest.revision: 29
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 29
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d31ba6dd73ec4f5abcb34dc481144b154301f1af
+ms.lasthandoff: 03/13/2017
+
 ---
-# volatile (Справочник по C#)
-Ключевое слово `volatile` указывает, что поле может быть изменено несколькими потоками, выполняющимися одновременно.  Поля, объявленные как `volatile`, не проходят оптимизацию компилятором, которая предусматривает доступ посредством отдельного потока.  Это гарантирует наличие наиболее актуального значения в поле в любое время.  
+# <a name="volatile-c-reference"></a>volatile (Справочник по C#)
+Ключевое слово `volatile` означает, что поле может изменить несколько потоков, выполняемых одновременно. Поля, объявленные `volatile`, не участвуют в оптимизации компилятора, предполагающей доступ для одного потока. Это гарантирует, что в любой момент времени в поле будет содержаться актуальное значение.  
   
- Как правило, модификатор `volatile` используется для поля, обращение к которому выполняется через несколько потоков без использования оператора [lock](../../../csharp/language-reference/keywords/lock-statement.md) для сериализации доступа.  
+ Обычно модификатор `volatile` используется для поля, к которому обращаются несколько потоков; при этом для сериализации доступа оператор [lock](../../../csharp/language-reference/keywords/lock-statement.md) не применяется.  
   
- Ключевое слово `volatile` можно применять к полям следующих типов.  
+ Ключевое слово `volatile` может применяться к полям следующих типов:  
   
 -   Ссылочные типы.  
   
--   Типы указателей \(в небезопасном контексте\).  Обратите внимание, что несмотря на то, что сам указатель может быть "volatile", объект, на который он указывает, таковым быть не может.  Другими словами, нельзя объявить указатель "volatile".  
+-   Типы указателей (в небезопасном контексте). Несмотря на то, что сам указатель может быть изменяемым, объект, на который он указывает, должен быть постоянным. Другими словами, объявить указатель на изменяемый объект невозможно.  
   
--   Типы, такие как sbyte, byte, short, ushort, int, uint, char, float и bool.  
+-   Типы: sbyte, byte, short, ushort, int, uint, char, float и bool.  
   
 -   Тип перечисления с одним из следующих базовых типов: byte, sbyte, short, ushort, int или uint.  
   
--   Параметры универсальных типов, являющиеся ссылочными типами.  
+-   Параметры универсального типа называются ссылочными типами.  
   
 -   <xref:System.IntPtr> и <xref:System.UIntPtr>.  
   
- Ключевое слово volatile можно применить только к полям класса или структуры.  Локальные переменные не могут быть объявлены как `volatile`.  
+ Ключевое слово volatile можно применять только к полям класса или структуры. Локальные переменные не могут объявляться как `volatile`.  
   
-## Пример  
- В следующем примере показано как объявить открытую переменную поля в качестве `volatile`.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как объявить переменную поля открытого типа `volatile`.  
   
  [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
-## Пример  
- В следующем примере демонстрируется создание вспомогательного или рабочего потока и использование его для выполнения обработки параллельно с основным потоком.  Дополнительные сведения о многопоточности см. в разделах [Threading](../Topic/Managed%20Threading.md) и [Потоки](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md).  
+## <a name="example"></a>Пример  
+ Следующий пример демонстрирует создание вспомогательного или рабочего потока и его применение для выполнения обработки параллельно с обработкой основного потока. Дополнительные сведения о многопоточности см. в разделах [Потоки](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87) и [Потоки](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
   
  [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)

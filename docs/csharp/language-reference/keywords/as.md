@@ -1,54 +1,72 @@
 ---
-title: "as (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "as_CSharpKeyword"
-  - "as"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "as - ключевое слово [C#]"
-  - "преобразование типов [С#], as - ключевое слово"
+title: "as (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- as_CSharpKeyword
+- as
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- type conversion [C#], as keyword
+- as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6c284f288df11e2ac32b7c27f914e3f699bd78f0
+ms.lasthandoff: 03/13/2017
+
 ---
-# as (Справочник по C#)
-Можно выполнить с помощью оператора `as` в некоторых случаях совместимость между ссылочными типами или [тип, допускающий значение NULL](../../../csharp/programming-guide/nullable-types/index.md).  В следующем коде приведен пример.  
+# <a name="as-c-reference"></a>as (Справочник по C#)
+Оператор `as` можно использовать для выполнения определенных типов преобразований между совместимыми ссылочными типами или [типами, допускающими значение NULL](../../../csharp/programming-guide/nullable-types/index.md). Вот пример кода:  
   
  [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_1.cs)]  
   
-## Заметки  
- Оператор `as` подобен оператору приведения.  Однако если преобразование невозможно, то `as` возвращает `null` вместо вызова исключения.  Рассмотрим следующий пример:  
+## <a name="remarks"></a>Примечания  
+ Оператор `as` аналогичен операции приведения. Однако, если преобразование невозможно, `as` возвращает `null`, а не вызывает исключение. Рассмотрим следующий пример.  
   
 ```  
 expression as type  
 ```  
   
- Код эквивалентен следующему выражению, за исключением того, что переменная `expression` вычисляется только один раз.  
+ Этот код является эквивалентом следующего выражения, за исключением того, что переменная `expression` вычисляется только один раз.  
   
 ```  
 expression is type ? (type)expression : (type)null  
 ```  
   
- Обратите внимание, что оператор `as` выполняет только преобразования ссылок, подобные преобразования и преобразования упаковка\-преобразования.  Оператор `as` не может выполнять другие преобразования, например определенное пользователем преобразование, вместо этого следует выполнять с помощью результатов выражения.  
+ Обратите внимание, что оператор `as` выполняет только преобразования ссылок, преобразования типов, допускающих значение NULL, и преобразования-упаковки. Оператор `as` не может выполнять другие преобразования, например пользовательские преобразования, которые следует выполнять с помощью выражения приведения.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_2.cs)]  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
- [?Оператор :](../../../csharp/language-reference/operators/conditional-operator.md)   
+ [Оператор ?:](../../../csharp/language-reference/operators/conditional-operator.md)   
  [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)

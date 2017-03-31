@@ -1,32 +1,51 @@
 ---
-title: "string (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "string"
-  - "string_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "строки [C#], справочник"
-  - "@ - строковый литерал"
-  - "строковые литералы [C#]"
-  - "string - ключевое слово [C#]"
+title: "string (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- string
+- string_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- strings [C#], reference
+- '@ string literal'
+- string literals [C#]
+- string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a616808a8e6ff5e259c503c0143db4b8f73bdef2
+ms.lasthandoff: 03/13/2017
+
 ---
-# string (Справочник по C#)
-Тип `string` представляет последовательность из нуля или более символов в кодировке Юникод.  Тип `string` — это псевдоним для типа <xref:System.String> платформы .NET Framework.  
+# <a name="string-c-reference"></a>string (Справочник по C#)
+Тип `string` представляет последовательность, состоящую из нуля или более символов в кодировке Юникод. `string` — псевдоним для <xref:System.String> в .NET Framework.  
   
- Несмотря на то, что тип `string` является ссылочным типом, операторы равенства \(`==` и `!=`\) определены для сравнения значений объектов типа `string`, а не ссылок.  Это упрощает проверку равенства строк.  Например:  
+ Несмотря на то, что `string` представляет собой ссылочный тип, операторы равенства (`==` и`!=`) по определению сравнивают не ссылки, а значения объектов `string`. Это делает проверку равенства строк более интуитивно понятной. Например:  
   
-```c#  
+```csharp  
   
       string a = "hello";  
 string b = "h";  
@@ -36,40 +55,40 @@ Console.WriteLine(a == b);
 Console.WriteLine((object)a == (object)b);  
 ```  
   
- В этом примере отображается "True", а затем "False", поскольку содержимое строк одинаково, но `a` и `b` не ссылаются на один и тот же экземпляр строки.  
+ Отображается значение True, а затем False, поскольку содержимое строк эквивалентно, однако `a` и `b` не относятся к одному и тому же экземпляру строки.  
   
- Оператор \+ служит для объединения строк.  
+ Оператор + объединяет строки:  
   
-```c#  
+```csharp  
   
 string a = "good " + "morning";  
 ```  
   
- В данном примере создается строковый объект, содержащий текст "good morning".  
+ При этом создается строковый объект, содержащий слова "good morning".  
   
- Строки являются *неизменяемыми*: содержимое строкового объекта невозможно изменить после создания объекта, хотя из\-за синтаксиса изменения кажутся возможными.  Например, при написании этого кода компилятор на самом деле создает новый строковый объект для новой последовательности знаков, и этот новый объект получает значение "b".  Затем строку "h" можно применять для сборки мусора.  
+ Строки *неизменяемы*, т. е. содержимое созданного строкового объекта изменить нельзя, хотя синтаксис выглядит так, будто это возможно. Например, при написании кода компилятор фактически создает новый строковый объект для хранения новой последовательности символов, а затем этот новый объект назначается b. После этого строка h может быть отправлена в мусор.  
   
-```c#  
+```csharp  
   
       string b = "h";  
 b += "ello";  
 ```  
   
- Оператор \[\] служит для доступа только для чтения к отдельным знакам объекта `string`.  
+ Оператор [] позволяет предоставить к отдельным символам `string` доступ только для чтения:  
   
-```c#  
+```csharp  
   
       string str = "test";  
 char x = str[2];  // x = 's';  
 ```  
   
- Строковые литералы имеют тип `string` и могут быть написаны в двух формах: в кавычках и в кавычках с @.  Строковые литералы в кавычках заключены в двойные кавычки \("\).  
+ Строковые литералы имеют тип `string` и могут быть записаны в двух формах: в кавычках или с @-quoted. Строковые литералы в кавычках заключаются в двойные кавычки ("):  
   
-```c#  
+```csharp  
 "good morning"  // a string literal  
 ```  
   
- Строковые литералы могут содержать любые символьные литералы.  Escape\-последовательности также поддерживаются.  В следующем примере используется escape\-последовательность `\\` для обратной косой черты, `\u0066` для буквы "f" и `\n` для перехода на новую строку.  
+ Строковые литералы могут содержать любые символьные литералы. Escape-последовательности включены. В следующем примере escape-последовательность `\\` используется для получения обратной косой черты, `\u0066` — для получения буквы f, и `\n` — для получения новой строки.  
   
 ```  
   
@@ -78,44 +97,44 @@ Console.WriteLine(a);
 ```  
   
 > [!NOTE]
->  Escape\-код `\`u`dddd` \(где `dddd` — четырехзначное число\) представляет знак Юникода U\+`dddd`.  Также распознаются восьмизначные escape\-коды Юникода: `\Udddddddd`.  
+>  Escape-код `\`u`dddd` (где `dddd` состоит из четырех цифр) представляет символ Юникода U+`dddd`. Также распознаются восьмизначные escape-коды Юникода: `\Udddddddd`.  
   
- Литералы из точных сток начинаются со знака @ и заключены в двойные кавычки.  Например:  
+ Строковые литералы verbatim начинаются с @ и также заключаются в двойные кавычки. Пример:  
   
-```c#  
+```csharp  
 @"good morning"  // a string literal  
 ```  
   
- Преимущество точных сток заключается в том, что escape\-последовательности *не* обрабатывается, благодаря чему можно удобно написать, например, полное имя и путь файла:  
+ Преимущество сток verbatim состоит в том, что escape-последовательности *не* обрабатываются, что позволяет легко написать, например, полное имя файла:  
   
-```c#  
+```csharp  
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"  
 ```  
   
- Чтобы включить знак двойной кавычки в строку в кавычках с @, следует использовать знак кавычек дважды:  
+ Чтобы добавить в строку @-quoted двойные кавычки, продублируйте этот символ:  
   
-```c#  
+```csharp  
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- Знак @ также можно применять для использования указанных идентификаторов \([\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)\), являющихся ключевыми словами C\#.  
+ Кроме того, символ @ применяется для использования ссылочных идентификаторов ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)), представляющих собой ключевые слова C#.  
   
- Дополнительные сведения о строках в C\# см. в разделе [Строки](../../../csharp/programming-guide/strings/index.md).  
+ Дополнительные сведения о строках в С# см. в разделе [Строки](../../../csharp/programming-guide/strings/index.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Рекомендации по использованию строк](../Topic/Best%20Practices%20for%20Using%20Strings%20in%20the%20.NET%20Framework.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Рекомендации по использованию строк](http://msdn.microsoft.com/library/b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)   
  [Типы значений](../../../csharp/language-reference/keywords/value-types.md)   
- [Основные операции со строками](../Topic/Basic%20String%20Operations%20in%20the%20.NET%20Framework.md)   
- [Создание новых строк](../Topic/Creating%20New%20Strings%20in%20the%20.NET%20Framework.md)   
+ [Базовые операции со строками](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
+ [Создание новых строк](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
  [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

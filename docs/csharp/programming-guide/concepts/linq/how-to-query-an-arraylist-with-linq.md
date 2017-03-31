@@ -1,0 +1,105 @@
+---
+title: "Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#) | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 09489e2dabd34da0446a623e91cd85de35c3c70b
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)
+При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть список объектов `Student` <xref:System.Collections.ArrayList>, [предложение from](../../../../csharp/language-reference/keywords/from-clause.md) должно иметь следующий вид:  
+  
+```  
+  
+var query = from Student s in arrList  
+...  
+  
+```  
+  
+ Указав тип переменной диапазона, вы приводите каждый элемент в <xref:System.Collections.ArrayList> к `Student`.  
+  
+ Использование явным образом типизированной переменной диапазона в выражении запроса эквивалентно вызову метода <xref:System.Linq.Enumerable.Cast%2A>. Если выполнить приведение не удается, <xref:System.Linq.Enumerable.Cast%2A> создает исключение. <xref:System.Linq.Enumerable.Cast%2A> и <xref:System.Linq.Enumerable.OfType%2A> — это два метода стандартных операторов запросов, оперирующие неуниверсальными типами <xref:System.Collections.IEnumerable>. Дополнительные сведения см. в разделе [Связи типов в операциях запроса LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
+  
+## <a name="example"></a>Пример  
+ Следующий пример демонстрирует простой запрос к <xref:System.Collections.ArrayList>. Обратите внимание на то, что в этом примере инициализаторы объектов используются, когда код вызывает метод <xref:System.Collections.ArrayList.Add%2A>, однако, это не обязательно.  
+  
+```csharp  
+using System;  
+using System.Collections;  
+using System.Linq;  
+  
+namespace NonGenericLINQ  
+{  
+    public class Student  
+    {  
+        public string FirstName { get; set; }  
+        public string LastName { get; set; }  
+        public int[] Scores { get; set; }  
+    }  
+  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            ArrayList arrList = new ArrayList();  
+            arrList.Add(  
+                new Student  
+                    {  
+                        FirstName = "Svetlana", LastName = "Omelchenko", Scores = new int[] { 98, 92, 81, 60 }  
+                    });  
+            arrList.Add(  
+                new Student  
+                    {  
+                        FirstName = "Claire", LastName = "O’Donnell", Scores = new int[] { 75, 84, 91, 39 }  
+                    });  
+            arrList.Add(  
+                new Student  
+                    {  
+                        FirstName = "Sven", LastName = "Mortensen", Scores = new int[] { 88, 94, 65, 91 }  
+                    });  
+            arrList.Add(  
+                new Student  
+                    {  
+                        FirstName = "Cesar", LastName = "Garcia", Scores = new int[] { 97, 89, 85, 82 }  
+                    });  
+  
+            var query = from Student student in arrList  
+                        where student.Scores[0] > 95  
+                        select student;  
+  
+            foreach (Student s in query)  
+                Console.WriteLine(s.LastName + ": " + s.Scores[0]);  
+  
+            // Keep the console window open in debug mode.  
+            Console.WriteLine("Press any key to exit.");  
+            Console.ReadKey();  
+        }  
+    }  
+}  
+/* Output:   
+    Omelchenko: 98  
+    Garcia: 97  
+*/  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

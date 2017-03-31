@@ -1,75 +1,85 @@
 ---
-title: "Getting Started with LINQ in C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#]"
-  - "queries [LINQ in C#]"
-  - "LINQ, C#"
-  - "queries [LINQ], LINQ in C#"
+title: "Начало работы с LINQ в C# | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#]
+- queries [LINQ in C#]
+- LINQ, C#
+- queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 88eff7c3909a31939f5789fd19bc4f1d07d013b7
+ms.lasthandoff: 03/13/2017
+
 ---
-# Getting Started with LINQ in C# #
-Этот раздел содержит основные общие сведения, которые помогут понять остальные части документации и примеров [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+# <a name="getting-started-with-linq-in-c"></a>Начало работы с LINQ в C##
+Этот раздел содержит основные сведения, которые необходимы для понимания остальной документации по LINQ и примеров.  
   
-## В этом подразделе  
- [Introduction to LINQ Queries \(C\#\)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Содержит описание трех частей основной операции запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)], которые являются общими для всех языков и источников данных.  
+## <a name="in-this-section"></a>Содержание  
+ [Введение в запросы LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ Описание трех составляющих основной операции запроса LINQ, которые являются общими для всех языков и источников данных.  
   
- [LINQ and Generic Types \(C\#\)](../../../../csharp/programming-guide/concepts/linq/linq-and-generic-types.md)  
- Содержит краткое введение в универсальные шаблоны и их применение в LINQ.  
+ [LINQ и универсальные типы (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-generic-types.md)  
+ Краткое введение в универсальные типы и принципы их использования в запросах LINQ.  
   
- [Basic LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
- Содержит описание наиболее распространенных типов операций запроса и их выражение в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] и C\#.  
+ [Основные операции запроса LINQ](../../../../csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
+ Описание наиболее распространенных типов операций запросов и их выражение в C#.  
   
- [Преобразования данных с помощью LINQ \(C\#\)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
- Содержит описание различных способов преобразования данных, полученных в запросах.  
+ [Преобразования данных с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
+ Описание различных способов преобразования данных, полученных в результате запросов.  
   
- [Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
- Содержит сведения о сохранении и преобразовании типов в трех частях операции запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]  
+ [Связи типов в операциях запроса LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+ Сведения о сохранении и преобразовании типов в трех составляющих операции запроса LINQ.  
   
- [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
- Сравнивает синтаксис метода и синтаксис запроса как два способа выражения запроса LINQ.  
+ [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
+ Сравнение синтаксиса методов и синтаксиса запросов как двух способов выражения запроса LINQ.  
   
- [C\# Features That Support LINQ](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
- Содержит описание языковых конструкций, добавленных в C\# 3.0 для поддержки [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+ [Возможности C#, поддерживающие LINQ](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
+ Описание языковых конструкций, добавленных в C# 3.0 для поддержки LINQ.  
   
- [Walkthrough: Writing Queries in C\#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Содержит пошаговые инструкции по созданию проекта C\# [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)], добавлению простого источника данных и выполнению некоторых базовых операций запроса.  
+ [Пошаговое руководство. Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ Пошаговые инструкции по созданию проекта LINQ в C#, добавлению простого источника данных и выполнению некоторых базовых операций запросов.  
   
-## Связанные подразделы  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)  
- Содержит ссылки на разделы, в которых объясняются технологии [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+## <a name="related-sections"></a>Связанные разделы  
+ [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ Ссылки на разделы, в которых описываются технологии LINQ.  
   
  [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- Содержит общие сведения о запросах в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] и ссылки на дополнительные ресурсы.  
+ Общие сведения о запросах в LINQ и ссылки на дополнительные ресурсы.  
   
- [Visual Studio IDE and Tools Support for LINQ](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Содержит описание средств, доступных в среде Visual Studio, для проектирования, кодирования и отладки поддерживающих LINQ приложений.  
+ [Интегрированная среда разработки Visual Studio и поддержка средств для LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
+ Описание инструментов, доступных в среде Visual Studio для проектирования, написания кода и отладки приложений с поддержкой LINQ.  
   
- [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)  
- Содержит описание версий платформы .NET Framework, пространств имен и ссылок, необходимых для создания проектов LINQ.  
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Представление стандартных методов, используемых в запросах LINQ.  
   
- [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Представляет стандартные методы, используемые в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
-  
- [Примеры LINQ](../Topic/LINQ%20Samples.md)  
- Содержит ссылки на разделы, в которых объясняются примеры [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
-  
- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Содержит ссылки на разделы, посвященные использованию LINQ с Visual Basic.  
-  
-## См. также  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)
+ [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ Ссылки на разделы, посвященные использованию LINQ в Visual Basic.

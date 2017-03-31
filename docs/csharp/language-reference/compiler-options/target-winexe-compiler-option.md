@@ -1,61 +1,79 @@
 ---
-title: "/target:winexe (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/target:winexe"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/target compiler options [C#], /target:winexe"
-  - "-target compiler options [C#], /target:winexe"
-  - "target compiler options [C#], /target:winexe"
+title: "-target:winexe (параметры компилятора C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /target:winexe
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /target compiler options [C#], /target:winexe
+- -target compiler options [C#], /target:winexe
+- target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e9a640c0cfa1d0494457f8ffe94bf15877b24919
+ms.lasthandoff: 03/13/2017
+
 ---
-# /target:winexe (C# Compiler Options)
-Параметр **\/target:winexe** указывает компилятору создавать исполняемый файл \(EXE\-файл\) программы Windows.  
+# <a name="targetwinexe-c-compiler-options"></a>/target:winexe (параметры компилятора C#)
+Параметр **/target:winexe** заставляет компилятор создать исполняемый файл (EXE), программу Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /target:winexe  
 ```  
   
-## Заметки  
- Исполняемый файл создается с расширением ЕХЕ.  Программа Windows предоставляет интерфейс пользователя из библиотеки .NET Framework или из API\-интерфейсов Win32.  
+## <a name="remarks"></a>Примечания  
+ Исполняемый файл создается с расширением ЕХЕ. Программа Windows предоставляет пользовательский интерфейс либо из библиотеки .NET Framework, либо с помощью API Win32.  
   
- Для создания консольного приложения используется параметр [\/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md).  
+ Воспользуйтесь параметром [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), чтобы создать консольное приложение.  
   
- Если не указано иное с помощью параметра [\/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), имя выходного файла совпадает с именем входного файла, который содержит метод [Main](../../../csharp/programming-guide/main-and-command-args/main-and-command-line-arguments.md).  
+ Если не указано иное с помощью параметра [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), имя выходного файла совпадает с именем входного файла, который содержит метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
   
- Для создания программы Windows используются все файлы, указанные в командной строке до следующего параметра **\/out** или [\/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
+ Для создания DLL-файла используются все файлы, указанные в командной строке вплоть до следующего параметра **/out** или [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
   
- В файле исходного кода, который компилируется в EXE\-файл, должен содержаться один и только один метод **Main**.  Если код содержит несколько классов с методом **Main**, то указать, какой именно класс содержит метод **Main**, можно с помощью параметра [\/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
+ В файлах исходного кода, который компилируется в EXE-файл, должен содержаться один и только один метод **Main**. Параметр [/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md) позволяет указывать класс, содержащий метод **Main**, в случаях, когда код содержит несколько классов с методом **Main**.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
 1.  Откройте страницу **Свойства** проекта.  
   
-2.  Выберите страницу свойств **Приложение**.  
+2.  Перейдите на страницу свойств **Приложение**.  
   
 3.  Измените значение свойства **Тип выходных данных**.  
   
- Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
-## Пример  
- Компиляция файла `in.cs` в программу Windows:  
+## <a name="example"></a>Пример  
+ Компиляция `in.cs` в программу Windows:  
   
 ```  
 csc /target:winexe in.cs  
 ```  
   
-## См. также  
- [\/target \(Specify Output File Format\)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>См. также  
+ [/target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

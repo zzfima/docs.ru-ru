@@ -1,29 +1,47 @@
 ---
-title: "Оператор (ссылка C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "[]_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "оператор индекса [C#]"
-  - "квадратные скобки [ ] - оператор [C#]"
-  - "[] - оператор [C#]"
-  - "оператор индексирования [C#]"
+title: "Оператор [] (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '[]_CSharpKeyword'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- subscript operator [C#]
+- square brackets [ ] operator [C#]
+- '[] operator [C#]'
+- indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
 caps.latest.revision: 20
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 20
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4eaecd5cd70c396a62856087a7b37f38e02d2383
+ms.lasthandoff: 03/13/2017
+
 ---
-# Оператор (ссылка C#)
-Квадратные скобки \(`[]`\) используются для массивов, индексаторов и атрибутов.  Кроме того, они могут использоваться с указателями.  
+# <a name="-operator-c-reference"></a>Оператор [] (Справочник по C#)
+Квадратные скобки (`[]`) используются для массивов, индексаторов и атрибутов. Кроме того, их можно использовать с указателями.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Тип массива указывается перед оператором `[]`:  
   
  [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
@@ -32,32 +50,33 @@ caps.handback.revision: 20
   
  [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
- Если индекс массива выходит за границы диапазона, происходит вызов исключения.  
+ Если индекс массива выходит за границы диапазона, создается исключение.  
   
- Перегрузка оператора индексирования массива невозможна; однако типы могут определять индексаторы и свойства, принимающие один или более параметров.  Параметры индексатора заключаются в квадратные скобки, как и индексы массива, но, в отличие от индексов массива, которые должны быть целочисленными, эти параметры могут быть любого типа.  
+ Перегрузка оператора индексирования массива невозможна. Однако типы могут определять индексаторы и свойства, принимающие один или несколько параметров. Параметры индексатора заключаются в квадратные скобки, как и индексы массива, но, в отличие от индексов массива, которые должны быть целочисленными, эти параметры могут быть любого типа.  
   
  Например, в платформе .NET Framework определен тип `Hashtable`, связывающий ключи и значения произвольного типа.  
   
  [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
- Также квадратные скобки используются для определения [Атрибуты](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md):  
+ Кроме того, квадратные скобки используются для определения [атрибутов](../../../csharp/programming-guide/concepts/attributes/index.md):  
   
  [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
- Квадратные скобки можно использовать для создания индекса из указателя.  
+ Квадратные скобки можно использовать для создания индекса на основе указателя:  
   
  [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  Проверка границ не выполняется.  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Операторы C\#](../../../csharp/language-reference/operators/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Операторы в C#](../../../csharp/language-reference/operators/index.md)   
  [Массивы](../../../csharp/programming-guide/arrays/index.md)   
  [Индексаторы](../../../csharp/programming-guide/indexers/index.md)   
- [небезопасное](../../../csharp/language-reference/keywords/unsafe.md)   
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
  [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
+
