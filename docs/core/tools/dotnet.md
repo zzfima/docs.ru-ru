@@ -1,41 +1,39 @@
 ---
-title: "Команда dotnet | Microsoft Docs"
+title: "Команда dotnet — CLI .NET Core | Документы Майкрософт"
 description: "Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании."
 keywords: "dotnet, CLI, команды CLI, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: e3eedff7d98245bd63d758236840568eabd05445
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: a470403e703ffb55de3d91cd5334c09bf11be06d
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-command"></a>Команда dotnet
 
 ## <a name="name"></a>Имя
 
-`dotnet` — универсальный драйвер для выполнения команд командной строки
+`dotnet` — универсальный драйвер для выполнения команд командной строки.
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```
-dotnet [command] [arguments] [--version] [--info] [-d|--diagnostics] [-v|--verbose]
-dotnet [-h|--help]
-```
+`dotnet [command] [arguments] [--version] [--info] [-d|--diagnostics] [-v|--verbose] [--fx-version] [--additionalprobingpath] [-h|--help]`
 
 ## <a name="description"></a>Описание
 
-`dotnet` — это универсальный драйвер для цепочки инструментов интерфейса командной строки (CLI). Если вызвать его без указания команды, будут выведены краткие инструкции по использованию.
+`dotnet` — это универсальный драйвер для цепочки инструментов интерфейса командной строки (CLI). Если вызвать его без указания команды, выводятся краткие инструкции по использованию.
 
 Каждая отдельная функция реализуется в виде команды. Для использования функции необходимо указать команду после `dotnet`, например [`dotnet build`](dotnet-build.md). Все аргументы после команды относятся именно к ней.
 
-Единственный случай, когда `dotnet` используется в качестве команды самостоятельно, — это запуск переносимых приложений. Просто укажите библиотеку DLL переносимого приложения после команды `dotnet`, чтобы выполнить приложение.
+Единственный случай, когда `dotnet` используется в качестве команды самостоятельно, — это запуск [платформозависимых приложений](../app-types.md). Просто укажите библиотеку DLL приложения после команды `dotnet`, чтобы выполнить приложение (Например, `dotnet myapp.dll`).
 
 ## <a name="options"></a>Параметры
 
@@ -47,52 +45,66 @@ dotnet [-h|--help]
 
 Включает вывод диагностических данных.
 
+`--fx-version <VERSION>`
+
+Версия установленной общей платформы, используемая для запуска приложения.
+
+`--additionalprobingpath <PATH>`
+
+Путь, содержащий политику проверки и проверяемые сборки.
+
 `--version`
 
 Выводит версию средств CLI.
 
 `--info`
 
-Выводит более подробные сведения о средствах CLI, например текущую операционную систему, фиксацию SHA для версии и т. д.
+Выводит подробные сведения о средствах CLI и окружении, например текущую операционную систему, фиксацию SHA для версии и т. д.
 
 `-h|--help`
 
-Выводит краткую справку по команде. При использовании только с `dotnet` также выводится список доступных команд.
+Выводит краткую справку по команде. При использовании с `dotnet` также выводится список доступных команд.
 
 ## <a name="dotnet-commands"></a>Команды dotnet
 
-Для dotnet имеются следующие команды:
+### <a name="general"></a>Общие
 
-* [dotnet-new](dotnet-new.md)
-  * Инициализирует проект C# или F# для заданного шаблона.
-* [dotnet-restore](dotnet-restore.md)
-  * Восстанавливает зависимости для данного приложения.
-* [dotnet-build](dotnet-build.md)
-  * Выполняет сборку приложения .NET Core.
-* [dotnet-publish](dotnet-publish.md)
-  * Публикует переносимое или автономное приложение .NET.
-* [dotnet-run](dotnet-run.md)
-  * Запускает приложение из источника.
-* [dotnet-test](dotnet-test.md)
-  * Выполняет тесты с помощью средства выполнения тестов, указанного в файле project.json.
-* [dotnet-pack](dotnet-pack.md)
-  * Создает пакет NuGet с кодом.
-* [dotnet-migrate](dotnet-migrate.md)
-  * Переносит допустимый проект предварительной версии 2 в проект пакета SDK .NET Core 1.0.
-* [dotnet-msbuild](dotnet-msbuild.md)
-  * Обеспечивает доступ к командной строке MSBuild.
-* [dotnet-clean](dotnet-clean.md)
-  * Очистка выходных данных сборки.
-* [dotnet-sln](dotnet-sln.md)
-  * Параметры для добавления, удаления и перечисления проектов в файле решения.
-* Команды для изменения проекта
-  * Ссылки — добавление, удаление и перечисление ссылок между проектами.
-    * [dotnet-add reference](dotnet-add-reference.md)
-    * [dotnet-remove reference](dotnet-remove-reference.md)
-    * [dotnet-list reference](dotnet-list-reference.md)
-  * Пакеты — добавление и удаление пакетов NuGet в проекте.
-    * [dotnet-add package](dotnet-add-package.md)
-    * [dotnet-remove package](dotnet-remove-package.md)
+Команда | Функция
+--- | ---
+[dotnet-build](dotnet-build.md) | Выполняет сборку приложения .NET Core.
+[dotnet-clean](dotnet-clean.md) | Очистка выходных данных сборки.
+[dotnet-migrate](dotnet-migrate.md) | Переносит допустимый проект предварительной версии 2 в проект пакета SDK .NET Core 1.0.
+[dotnet-msbuild](dotnet-msbuild.md) | Обеспечивает доступ к командной строке MSBuild.
+[dotnet-new](dotnet-new.md) | Инициализирует проект C# или F# для заданного шаблона.
+[dotnet-pack](dotnet-pack.md) | Создает пакет NuGet с кодом.
+[dotnet-publish](dotnet-publish.md) | Публикует платформозависимое или автономное приложение .NET.
+[dotnet-restore](dotnet-restore.md) | Восстанавливает зависимости для данного приложения.
+[dotnet-run](dotnet-run.md) | Запускает приложение из источника.
+[dotnet-sln](dotnet-sln.md) | Параметры для добавления, удаления и перечисления проектов в файле решения.
+[dotnet-test](dotnet-test.md) | Выполняет тесты с помощью средства запуска тестов.
+
+### <a name="project-references"></a>Ссылки на проекты
+
+Команда | Функция
+--- | ---
+[dotnet-add reference](dotnet-add-reference.md) | Добавление ссылки на проект.
+[dotnet-list reference](dotnet-list-reference.md) | Перечисление ссылок на проект.
+[dotnet-remove reference](dotnet-remove-reference.md) | Удаление ссылки на проект.
+
+### <a name="nuget-packages"></a>Пакеты NuGet
+
+Команда | Функция
+--- | ---
+[dotnet-add package](dotnet-add-package.md) | Добавление пакета NuGet.
+[dotnet-remove package](dotnet-remove-package.md) | Удаление пакета NuGet.
+
+### <a name="nuget-commands"></a>Команды NuGet
+
+Команда | Функция
+--- | ---
+[dotnet-nuget delete](dotnet-nuget-delete.md) | Удаляет пакет с сервера или из списка.
+[dotnet-nuget locals](dotnet-nuget-locals.md) | Очищает или перечисляет локальные ресурсы NuGet в кэше HTTP-запросов, временном кэше или папке пакетов, используемой на уровне компьютера.
+[dotnet-nuget push](dotnet-nuget-push.md) | Отправляет пакет на сервер и публикует его.
 
 ## <a name="examples"></a>Примеры
 
@@ -108,13 +120,15 @@ dotnet [-h|--help]
 
 `dotnet build`
 
-Запуск переносимого приложения с именем `myapp.dll`: `dotnet myapp.dll`
+Запуск платформозависимого приложения `myapp.dll`:
 
-## <a name="environment"></a>Среда
+`dotnet myapp.dll`
+
+## <a name="environment-variables"></a>Переменные среды
 
 `DOTNET_PACKAGES`
 
-Основной кэш пакетов. Если значение не задано, по умолчанию используется путь $HOME/.nuget/packages в Unix или %HOME%\NuGet\Packages в Windows.
+Основной кэш пакетов. Если значение не задано, то по умолчанию в Unix используется `$HOME/.nuget/packages`, а в Windows — `%HOME%\NuGet\Packages`.
 
 `DOTNET_SERVICING`
 
@@ -122,4 +136,5 @@ dotnet [-h|--help]
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Указывает, собираются ли данные по использованию средств .NET Core для отправки в корпорацию Майкрософт. `true` для отказа от использования функции телеметрии (допускаются значения true, 1 или yes); в противном случае — `false` (допускаются значения false, 0 или no). Если значение не задано, то по умолчанию используется значение `false`, то есть функция телеметрии включена.
+Указывает, собираются ли данные по использованию средств .NET Core для отправки в корпорацию Майкрософт. Задайте значение `true`, чтобы отказаться от функции телеметрии (принимаются значения `true`, `1` или `yes`), в противном случае задайте значение `false`, чтобы согласиться на функции телеметрии (принимаются значения `false`, `0` или `no`). Если значение не задано, то по умолчанию используется `false` и функция телеметрии включена.
+

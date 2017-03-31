@@ -1,23 +1,23 @@
 ---
-title: "Команда dotnet-pack | Microsoft Docs"
+title: "Команда dotnet-pack — CLI .NET Core | Документы Майкрософт"
 description: "Команда dotnet-pack создает пакеты NuGet для проекта .NET Core."
 keywords: "dotnet-pack, CLI, команда CLI, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 88289a09a22bf20ec9089ec6a74269cd682a305b
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 6bb8d618cc092131bd6a904fb66f02c4f3a9ecca
+ms.lasthandoff: 03/22/2017
 
 ---
 
-#<a name="dotnet-pack"></a>dotnet-pack
+# <a name="dotnet-pack"></a>dotnet-pack
 
 ## <a name="name"></a>Имя
 
@@ -25,24 +25,21 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```
-dotnet pack [project] [-o|--output] [--no-build] [--include-symbols] [--include-source] [-c|--configuration] [--version-suffix] [-s|--serviceable] [-v|--verbosity]
-dotnet pack [-h|--help]
-```
+`dotnet pack [<PROJECT>] [-o|--output] [--no-build] [--include-symbols] [--include-source] [-c|--configuration] [--version-suffix <VERSION_SUFFIX>] [-s|--serviceable] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Описание
 
-Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet. При наличии параметра `--include-symbols` будет создан другой пакет, содержащий символы отладки. 
+Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet. При наличии параметра `--include-symbols` создается другой пакет, содержащий отладочные символы. 
 
-Зависимости NuGet упаковываемого проекта добавляются в файл `nuspec`, чтобы их можно было разрешить при установке пакета. Межпроектные ссылки не упаковываются в проекте. В настоящее время при наличии межпроектных зависимостей требуется один пакет на каждый проект.
+Зависимости NuGet упакованного проекта добавляются в файл *NUSPEC*, чтобы их можно было разрешить при установке пакета. Межпроектные ссылки не упаковываются в проекте. Сейчас при наличии межпроектных зависимостей требуется один пакет на каждый проект.
 
-`dotnet pack` по умолчанию сначала выполняет сборку проекта. Чтобы избежать этого, передайте параметр `--no-build`. Это может быть полезно, например, в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был только что собран. 
+`dotnet pack` по умолчанию сначала выполняет сборку проекта. Чтобы избежать этого, передайте параметр `--no-build`. Это часто бывает полезно, например, в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был собран недавно. 
 
 ## <a name="arguments"></a>Аргументы
 
-`project` 
+`PROJECT` 
     
-Упаковываемый проект. Это может быть путь к файлу [csproj](csproj.md) или каталогу. Если значение не указано, по умолчанию используется текущий каталог. 
+Упаковываемый проект. Это путь к файлу [CSPROJ](csproj.md) или каталогу. Если значение не задано, по умолчанию используется текущий каталог. 
 
 ## <a name="options"></a>Параметры
 
@@ -60,23 +57,23 @@ dotnet pack [-h|--help]
 
 `--include-symbols`
 
-Создает символы nupkg. 
+Создает символы `nupkg`. 
 
 `--include-source`
 
 Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`. 
 
-`-c|--configuration <Debug|Release>`
+`-c|--configuration <CONFIGURATION>`
 
-Конфигурация, используемая при сборке проекта. Если значение не задано, по умолчанию используется значение `Debug`.
+Конфигурация, используемая при сборке проекта. Если значение не указано, по умолчанию используется конфигурация `Debug`.
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Определяет значение для свойства $(VersionSuffix) MSBuild в проекте.
+Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.
 
 `-s|--serviceable`
 
-Задает флаг "подлежит обслуживанию" в пакете. Дополнительные сведения см. на странице: https://aka.ms/nupkgservicing.
+Задает флаг "подлежит обслуживанию" в пакете. Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).
 
 `--verbosity <LEVEL>`
 
@@ -88,18 +85,18 @@ dotnet pack [-h|--help]
 
 `dotnet pack`
 
-Упаковка проекта app1:
+Упаковка проекта `app1`:
 
 `dotnet pack ~/projects/app1/project.csproj`
     
-Упаковка проекта в текущем каталоге; полученные пакеты помещаются в указанную папку:
+Упаковка проекта в текущем каталоге; полученные пакеты помещаются в папку `nupkgs`:
 
 `dotnet pack --output nupkgs`
 
-Упаковка проекта в текущем каталоге в указанную папку и пропуск этапа сборки:
+Упаковка проекта в текущем каталоге в папку `nupkgs` и пропуск этапа сборки:
 
 `dotnet pack --no-build --output nupkgs`
 
-Упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса. Суффикс версии проекта настраивается как `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` в файле *CSPROJ*.
+Если суффикс версии пакета в файле *CSPROJ* настроен как `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`, упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса:
 
 `dotnet pack --version-suffix "ci-1234"`

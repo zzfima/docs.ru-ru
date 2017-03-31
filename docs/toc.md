@@ -129,9 +129,12 @@
 # [Руководство по .NET Core](core/index.md)
 ## [Начало работы](core/getting-started.md)
 ## [Необходимые компоненты для Windows](core/windows-prerequisites.md)
+## [Предварительные требования для macOS](core/macos-prerequisites.md)
 ## [Учебники](core/tutorials/index.md)
 ### [Building a complete .NET Core solution on Windows, using Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md) (Создание полного решения .NET Core в Windows с помощью Visual Studio 2017)
 ### [Начало работы с .NET Core в Mac OS](core/tutorials/using-on-macos.md)
+### [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs.md)
+### [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Начало работы с .NET Core с помощью средств интерфейса командной строки](core/tutorials/using-with-xplat-cli.md)
 #### [Организация и тестирование проектов с использованием командной строки .NET Core](core/tutorials/testing-with-cli.md)
 ### [Разработка библиотек с помощью кроссплатформенных средств](core/tutorials/libraries.md)
@@ -139,8 +142,12 @@
 ### [Управление версиями зависимостей пакетов для .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
 ### [Размещение .NET Core из машинного кода](core/tutorials/netcore-hosting.md)
 ## [Пакеты, метапакеты и платформы](core/packages.md)
+## [Общие сведения об изменениях CLI](core/tools/cli-msbuild-architecture.md)
+### [Управление зависимостями](core/tools/dependencies.md)
+### [Дополнения к формату CSPROJ](core/tools/csproj.md)
 ## Миграция
 ### [Миграция на формат CSPROJ](core/migration/index.md)
+### [Сопоставление между project.json и CSPROJ](core/tools/project-json-to-csproj.md)
 ### [Миграция из DNX](core/migration/from-dnx.md)
 ## [Развертывание приложений](core/deploying/index.md)
 ### [Создание пакета NuGet с помощью кроссплатформенных средств](core/deploying/creating-nuget-packages.md)
@@ -154,12 +161,7 @@
 ### [Поддержка .NET Core](core/versions/lts-current.md)
 ### [🔧 Обслуживание](core/versions/servicing.md)
 ## [Каталог идентификаторов сред выполнения](core/rid-catalog.md)
-## [Средства .NET Core](core/tools/index.md)
-### [Общие сведения об изменениях CLI](core/tools/cli-msbuild-architecture.md)
-### [Управление зависимостями](core/tools/dependencies.md)
-### [Развертывание приложений](core/deploying/index.md)
-### [Дополнения к формату CSPROJ](core/tools/csproj.md)
-### [Сопоставление между project.json и CSPROJ](core/tools/project-json-to-csproj.md)
+## [Средства интерфейса командной строки .NET Core](core/tools/index.md)
 ### [Телеметрия](core/tools/telemetry.md)
 ### [Модель расширяемости](core/tools/extensibility.md)
 ### [Непрерывная интеграция](core/tools/using-ci-with-cli.md)
@@ -179,6 +181,7 @@
 ### [dotnet-run](core/tools/dotnet-run.md)
 ### [dotnet-sln](core/tools/dotnet-sln.md)
 ### [dotnet-test](core/tools/dotnet-test.md)
+### [dotnet-vstest](core/tools/dotnet-vstest.md)
 ### Команды для изменения проекта
 #### Ссылки
 ##### [dotnet-add-reference](core/tools/dotnet-add-reference.md)
@@ -193,13 +196,13 @@
 ### [Анализ зависимостей сторонних разработчиков](core/porting/third-party-deps.md)
 ### [Перенос библиотек](core/porting/libraries.md)
 ### [🔧 Пакеты NuGet](core/porting/nuget-packages.md)
+## [VS 2015/project.json docs](project-json.md)
 <!-- End .NET Core Content -->
 
 <!-- .NET Framework Content -->
 # [Руководство по Docker в .NET Framework](framework/index.md)
 ## [Docker](framework/docker/index.md)
 ### [Запуск консольных приложений в контейнерах](framework/docker/console.md)
-### [Запуск приложений ASP.NET MVC в контейнерах](framework/docker/aspnetmvc.md)
 <!-- End .NET Framework Content -->
 
 <!-- Start of C# Content -->
@@ -408,14 +411,6 @@
 
 ## [Разработка приложений](visual-basic/developing-apps/index.md)
 
-### [Использование среды разработки Visual Basic](visual-basic/developing-apps/using-ide/using-the-visual-basic-development-environment.md)
-#### [Параметры Visual Basic](visual-basic/developing-apps/using-ide/settings.md)
-#### [Фрагменты кода IntelliSense в Visual Basic](visual-basic/developing-apps/using-ide/intellisense-code-snippets.md)
-#### [Рефакторинг](https://docs.microsoft.com/en-us/visualstudio/vb-ide/refactoring-vb)
-#### [Создание кода](https://docs.microsoft.com/en-us/visualstudio/vb-ide/code-generation-vb)
-#### [Справка для обработчиков событий в коде Visual Basic](visual-basic/developing-apps/using-ide/help-for-event-handlers.md)
-#### [Практическое руководство. Компиляция и выполнение проекта в Visual Basic](visual-basic/developing-apps/using-ide/how-to-compile-and-run-a-project.md)
-
 ### [Программирование в Visual Basic](visual-basic/developing-apps/programming/index.md)
 #### [Доступ к ресурсам компьютера](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
 #### [Запись сведений в журнал из приложения](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
@@ -434,7 +429,6 @@
 #### [Зависимость My от типа проекта](visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 
 ### [Доступ к данным](visual-basic/developing-apps/accessing-data.md)
-### [Отладка](visual-basic/developing-apps/debugging.md)
 ### [Создание и использование компонентов](visual-basic/developing-apps/creating-and-using-components.md)
 
 ### [Печать и отчеты](visual-basic/developing-apps/printing/printing-and-reporting.md)

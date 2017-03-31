@@ -1,19 +1,19 @@
 ---
-title: "Команда dotnet-test | Microsoft Docs"
+title: "Команда dotnet-test — CLI .NET Core | Документы Майкрософт"
 description: "Команда `dotnet test` служит для выполнения модульных тестов в проекте."
 keywords: "dotnet-test, CLI, команда CLI, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 21f3850520b922f16c77f831a045ec58bdf1b5c1
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -21,26 +21,23 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="name"></a>Имя
 
-`dotnet-test` — .NET драйвер тестов
+`dotnet-test` — драйвер тестов .NET, используемый для проведения модульных тестов.
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```
-dotnet test [project] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity]
-dotnet test [-h|--help]
-```
+`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Описание
 
-Команда `dotnet test` служит для выполнения модульных тестов в проекте. Модульные тесты — это проекты библиотек классов, которые имеют зависимости от среды модульного тестирования (например, NUnit или xUnit) и средства запуска тестов dotnet для этой среды. Они упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
+Команда `dotnet test` служит для выполнения модульных тестов в проекте. Модульные тесты — это проекты библиотек классов, которые имеют зависимости от среды модульного тестирования (например, MSText, NUnit или xUnit) и средства запуска тестов dotnet для этой среды. Они упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
 
-Для тестирования проектов также нужно указать средство выполнения тестов. Для этого используется обычный элемент `<PackageReference>`, как показано в следующем образце файла проекта:
+Для тестовых проектов также нужно указать средство выполнения тестов. Для этого используется обычный элемент `<PackageReference>`, как показано в следующем образце файла проекта:
 
 [!code-xml[Базовый шаблон XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>Параметры
 
-`project`
+`PROJECT`
     
 Указывает путь к тестовому проекту. Если значение не задано, по умолчанию используется текущий каталог.
 
@@ -68,13 +65,13 @@ dotnet test [-h|--help]
 
 Указывает средство ведения журнала для результатов тестирования. 
 
-`-c|--configuration <Debug|Release>`
+`-c|--configuration <CONFIGURATION>`
 
-Конфигурация для сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить параметр SDK по умолчанию.
+Конфигурация для сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
 
 `-f|--framework <FRAMEWORK>`
 
-Поиск тестовых двоичных файлов для определенной платформы.
+Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -98,12 +95,11 @@ dotnet test [-h|--help]
 
 `dotnet test` 
 
-Выполнение тестов в проекте test1:
+Выполнение тестов в проекте `test1`:
 
 `dotnet test ~/projects/test1/test1.csproj` 
 
 ## <a name="see-also"></a>См. также
 
-[Платформы](../../standard/frameworks.md)
-
-[Каталог идентификаторов сред выполнения (RID)](../rid-catalog.md)
+* [Целевые платформы](../../standard/frameworks.md)
+* [Каталог идентификаторов сред выполнения (RID)](../rid-catalog.md)
