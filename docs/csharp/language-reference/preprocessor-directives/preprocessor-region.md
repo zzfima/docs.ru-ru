@@ -39,8 +39,7 @@ ms.lasthandoff: 03/13/2017
 Директива `#region` позволяет указать блок кода, который можно разворачивать и сворачивать с помощью функции [структурирования](https://docs.microsoft.com/visualstudio/ide/outlining) в редакторе кода Visual Studio. В больших файлах кода удобно сворачивать или скрывать одну или несколько областей, чтобы не отвлекаться от той части файла, над которой в настоящее время идет работа. В следующем примере показано, как определить область:  
   
 ```  
-  
-      #region MyClass definition  
+#region MyClass definition  
 public class MyClass   
 {  
     static void Main()   
@@ -59,3 +58,4 @@ public class MyClass
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+
