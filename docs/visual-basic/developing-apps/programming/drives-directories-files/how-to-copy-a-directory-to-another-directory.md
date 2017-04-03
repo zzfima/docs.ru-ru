@@ -1,75 +1,91 @@
 ---
-title: "Практическое руководство. Копирование каталога в другой каталог в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "каталоги [Visual Basic], копирование"
-  - "папки [Visual Basic], копирование"
-  - "ввод-вывод [Visual Basic], копирование каталогов"
-  - "ввод-вывод [Visual Basic], копирование папок"
+title: "Практическое руководство. Копирование каталога в другой каталог в Visual Basic | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- I/O [Visual Basic], copying directories
+- I/O [Visual Basic], copying folders
+- folders [Visual Basic], copying
+- directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Практическое руководство. Копирование каталога в другой каталог в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0b2d59f347df075e3f8c4f952b62e8ad7fa1643f
+ms.lasthandoff: 03/13/2017
 
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> можно использовать для копирования каталога в другой каталог.  Этот метод копирует содержимое каталога, а также сам каталог.  Если каталог назначения не существует, он будет создан.  Если каталог с тем же именем существует в местоположении назначения, а параметру `overwrite` присвоено значение `False`, то содержимое двух каталогов будут объединено.  Можно указать новое имя каталога во время выполнения операции.  
+---
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Практическое руководство. Копирование каталога в другой каталог в Visual Basic
+Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> позволяет копировать один каталог в другой. Этот метод копирует и содержимое каталога, и сам каталог. Если целевой каталог не существует, он будет создан. Если каталог с тем же именем уже существует в целевом расположении, а параметр `overwrite` имеет значение `False`, содержимое двух каталогов будут объединено. Во время операции можно указать новое имя для каталога.  
   
- При копировании файлов в каталоге могут создаваться исключения, например, если при объединении каталогов тот или иной файл уже существует в каталоге, а параметру `overwrite` присвоено значение `False`.  В случае возникновения таких исключений они объединяются в одно исключение. Свойство `Data` такого исключения содержит записи, в которых ключ представляет путь к файлу или каталогу, а значение — сообщение исключения.  
+ При копировании файлов в каталоге могут возникать исключения, вызываемые определенным файлом, например файлом, существующим во время слияния, если параметр `overwrite` имеет значение `False`. Если такие исключения возникают, они объединяются в общее исключение. Свойство `Data` этого исключения содержит записи, в которых путь к файлу и каталогу является ключом, а соответствующее значение содержит сведения о конкретном исключении.  
   
-### Чтобы скопировать каталог в другой каталог  
+### <a name="to-copy-a-directory-to-another-directory"></a>Копирование каталога в другой каталог  
   
--   Используйте метод `CopyDirectory`, указав имена исходного каталога и каталога назначения.  В следующем примере каталог `TestDirectory1` копируется в каталог `TestDirectory2`, при этом происходит перезапись существующих файлов.  
+-   Воспользуйтесь методом `CopyDirectory`, указав имена исходного и целевого каталогов. Представленный в приведенном ниже примере код копирует каталог с именем `TestDirectory1` в `TestDirectory2`, перезаписывая существующие файлы.  
   
      [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
-     Данный пример кода доступен также в качестве фрагмента кода IntelliSense.  В окне выбора фрагмента кода он находится в разделе **Файловая система — Обработка дисков, папок и файлов**.  Дополнительные сведения см. в разделе [Фрагменты кода](/visual-studio/ide/code-snippets).  
+     Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагментов кода он находится в разделе **Файловая система: обработка дисков, папок и файлов**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
-## Отказоустойчивость  
- При следующих условиях возможно возникновение исключения.  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ При следующих условиях возможно возникновение исключения:  
   
--   Новое имя каталога содержит двоеточие \(:\) или косую черту \(\\ или \/\) \(<xref:System.ArgumentException>\).  
+-   Новое имя, указанное для каталога, содержит двоеточие (:) или косую черту (\ или /) (<xref:System.ArgumentException>).  
   
--   Путь может являться недопустимым по одной из следующих причин: путь представляет собой строку нулевой длины \(пустую строку\); путь содержит только пробелы; путь содержит недопустимые знаки; или путь представляет собой путь к устройству \(начинается с \\\\.  \\\) \(<xref:System.ArgumentException>\).  
+-   Путь является недопустимым, так как представляет собой строку нулевой длины (пустую строку), содержит только пробелы, содержит недопустимые символы или представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Путь не является допустимым, поскольку он равен `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   Путь является недопустимым, поскольку это `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Параметр `destinationDirectoryName` равен `Nothing` или является пустой строкой \(<xref:System.ArgumentNullException>\).  
+-   `destinationDirectoryName` — `Nothing` или пустая строка (<xref:System.ArgumentNullException>).  
   
--   Исходный каталог не существует \(<xref:System.IO.DirectoryNotFoundException>\).  
+-   Исходный каталог не существует (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Исходный каталог является корневым \(<xref:System.IO.IOException>\).  
+-   Исходный каталог является корневым каталогом (<xref:System.IO.IOException>).  
   
--   Объединенный путь указывает на существующий файл \(<xref:System.IO.IOException>\).  
+-   Объединенный путь указывает на существующий файл (<xref:System.IO.IOException>).  
   
--   Исходный и конечный пути совпадают \(<xref:System.IO.IOException>\).  
+-   Исходный и конечный пути совпадают (<xref:System.IO.IOException>).  
   
--   Параметр `ShowUI` имеет значение `UIOption.AllDialogs`, а пользователь отменил операцию, или один или несколько файлов в каталоге не могут быть скопированы \(<xref:System.OperationCanceledException>\).  
+-   `ShowUI` имеет значение `UIOption.AllDialogs`, и пользователь отменяет операцию либо один или несколько файлов в каталоге скопировать не удается (<xref:System.OperationCanceledException>).  
   
--   Операция является циклической \(<xref:System.InvalidOperationException>\).  
+-   Эта операция циклична (<xref:System.InvalidOperationException>).  
   
--   Путь содержит двоеточие \(:\) \(<xref:System.NotSupportedException>\).  
+-   Путь содержит двоеточие (:) (<xref:System.NotSupportedException>).  
   
--   Длина пути превышает максимальную длину, определенную в системе \(<xref:System.IO.PathTooLongException>\).  
+-   Длина пути превышает максимальную длину, определенную системой (<xref:System.IO.PathTooLongException>).  
   
--   Имя файла или папки в пути содержит двоеточие \(:\) или имеет недопустимый формат \(<xref:System.NotSupportedException>\).  
+-   Имя файла или папки в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
--   У пользователя отсутствуют необходимые разрешения на просмотр пути \(<xref:System.Security.SecurityException>\).  
+-   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
   
--   Конечный файл существует, но к нему нет доступа \(<xref:System.UnauthorizedAccessException>\).  
+-   Конечный файл существует, но недоступен (<xref:System.UnauthorizedAccessException>).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   
  [Практическое руководство. Поиск подкаталогов по шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
  [Практическое руководство. Получение коллекции содержащихся в каталоге файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

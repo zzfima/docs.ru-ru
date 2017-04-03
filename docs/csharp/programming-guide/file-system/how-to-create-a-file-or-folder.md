@@ -1,36 +1,54 @@
 ---
-title: "Практическое руководство. Создание файла или папки (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "создание файлов [C#]"
-  - "создание папок [C#]"
-  - "файлы [C#]"
-  - "папки [C#]"
+title: "Практическое руководство. Создание файла или папки (руководство по программированию на C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- folders [C#]
+- creating files [C#]
+- files [C#]
+- creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: bba53c8d175d95aa3b89ba458517d439a8d2bb11
+ms.lasthandoff: 03/13/2017
+
 ---
-# Практическое руководство. Создание файла или папки (Руководство по программированию на C#)
-Можно программно создать папку на компьютере, создать вложенную папку, создать файл во вложенной папке и записать данные в этот файл.  
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Практическое руководство. Создание файла или папки (Руководство по программированию на C#)
+Вы можете программно создать на компьютере папку, вложенную папку и файл во вложенной папке, а затем записать данные в этот файл.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
- Если папка уже существует, метод <xref:System.IO.Directory.CreateDirectory%2A> ничего не делает и исключение не возникает.  Однако <xref:System.IO.File.Create%2A?displayProperty=fullName> заменяет существующий файл новым файлом.  В этом примере используется оператор `if`\-`else` для предотвращения замены существующего файла.  
+ Если папка уже существует, <xref:System.IO.Directory.CreateDirectory%2A> ничего не делает и исключение не возникает. При этом <xref:System.IO.File.Create%2A?displayProperty=fullName> заменяет существующий файл на новый. Для того чтобы этого избежать, в примере используется оператор `if`-`else`.  
   
- Внесение следующих изменений в примере позволяет задать различные результаты в зависимости от того, существует ли уже файл с определенным именем.  Если такого файла не существует, код создает его.  Если такой файл существует, код добавляет данные в этот файл.  
+ Изменив пример указанным ниже образом, вы можете задать различные результаты в зависимости от того, существует ли файл с определенным именем. Если файл не существует, он создается. Если файл существует, код добавляет в него данные.  
   
--   Укажите непроизвольное имя файла.  
+-   Укажите конкретное имя файла.  
   
-    ```c#  
+    ```csharp  
     // Comment out the following line.  
     //string fileName = System.IO.Path.GetRandomFileName();  
   
@@ -39,9 +57,9 @@ caps.handback.revision: 22
   
     ```  
   
--   Замените инструкцию `if`\-`else` инструкцией `using` в следующем коде.  
+-   В следующем коде замените оператор `if`-`else` на `using`.  
   
-    ```c#  
+    ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
     {  
         for (byte i = 0; i < 100; i++)  
@@ -52,28 +70,28 @@ caps.handback.revision: 22
   
     ```  
   
- Запустите образец несколько раз, чтобы убедиться, что данные добавляются в файл каждый раз.  
+ Выполните код в примере несколько раз, чтобы убедиться, что каждый раз данные добавляются в файл.  
   
- Другие значения `FileMode`, которые можно попробовать, см. в разделе <xref:System.IO.FileMode>.  
+ Другие значения `FileMode`, которые можно использовать для проверки, см. в разделе <xref:System.IO.FileMode>.  
   
- При следующих условиях возможно возникновение исключения.  
+ При следующих условиях возможно возникновение исключения:  
   
--   Неверное имя папки.  Например, в нем содержатся недопустимые знаки, или имя состоит из одних пробелов \(класс <xref:System.ArgumentException>\).  Используйте класс <xref:System.IO.Path> для создания допустимых имен путей.  
+-   Имя папки недопустимо, например, содержит недопустимые символы или только пробелы (класс <xref:System.ArgumentException>). Для создания допустимых имен путей используйте класс <xref:System.IO.Path>.  
   
--   Родительская папка или создаваемая папка доступна только для чтения \(класс <xref:System.IO.IOException>\).  
+-   Родительская папка создаваемой папки доступна только для чтения (класс <xref:System.IO.IOException>).  
   
--   Именем папки является `null` \(класс <xref:System.ArgumentNullException>\).  
+-   Имя папки имеет значение `null` (класс <xref:System.ArgumentNullException>).  
   
--   Имя папки имеет слишком большую длину \(класс <xref:System.IO.PathTooLongException>\).  
+-   Слишком длинное имя папки (класс <xref:System.IO.PathTooLongException>).  
   
--   В имени папки присутствует только двоеточие, ":" \(класс <xref:System.IO.PathTooLongException>\).  
+-   Имя папки содержит только двоеточие, ":" (класс <xref:System.IO.PathTooLongException>).  
   
-## Безопасность платформы .NET Framework  
- Экземпляр класса <xref:System.Security.SecurityException> может появляться в ситуациях частичного доверия.  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+ В ситуациях частичного доверия может создаваться экземпляр класса <xref:System.Security.SecurityException>.  
   
- Если пользователь не имеет разрешения для создания папки, в примере возникает экземпляр класса <xref:System.UnauthorizedAccessException>.  
+ Если у вас нет разрешения на создание папки, код в приведенном примере создаст экземпляр класса <xref:System.UnauthorizedAccessException>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.IO?displayProperty=fullName>   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Файловая система и реестр](../../../csharp/programming-guide/file-system/file-system-and-the-registry.md)
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

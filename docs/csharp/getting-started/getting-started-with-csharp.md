@@ -1,50 +1,69 @@
 ---
-title: "Приступая к работе с Visual C# | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "начало работы, Visual C#"
-  - "Visual C#, начало работы"
+title: "Начало работы с C# | Документация Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- Visual C#, getting started
+- getting started, Visual C#
 ms.assetid: d6ec050f-3956-4737-8030-a4fa3521d29f
 caps.latest.revision: 50
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 48
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 1f84c40950d2a23681094e06118ae2e1bdbd5a71
+ms.lasthandoff: 03/13/2017
+
 ---
-# Приступая к работе с Visual C# #
-Сведения в следующих разделах будут полезны при разработке приложений с помощью C\#.  В этих разделах также содержатся общие сведения о множестве новых возможностей в Visual Studio и языке C\#.  
+# <a name="getting-started-with-c"></a>Начало работы с C##
+Перечисленные здесь разделы будут полезны для тех, кто начинает разработку приложений на C#. В этих разделах также содержатся общие сведения о множестве новых возможностей в Visual Studio и языке C#.  
   
-## В этом подразделе  
- [Критические изменения Visual C\# в Visual Studio 2013](../../csharp/getting-started/breaking-changes-in-visual-studio-2013.md)  
- Содержит список критических изменений в компиляторе C\#, вышедших после предыдущей версии.  
+## <a name="in-this-section"></a>Содержание  
+ [Критические изменения Visual C# в Visual Studio 2013](../../csharp/getting-started/breaking-changes-in-visual-studio-2013.md)  
+ Содержит список критических изменений в компиляторе C#, вышедших после предыдущей версии.  
   
- [Введение в язык C\# и .NET Framework](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
- Содержит общие сведения о языке C\# и платформе .NET.  
+ [Введение в язык C# и платформу .NET Framework](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
+ Содержит общие сведения о языке C# и платформе .NET.  
   
- [Дополнительные ресурсы для программистов Visual C\#](../../csharp/getting-started/additional-resources.md)  
- Содержит ссылки на веб\-сайты и группы новостей, которые помогут найти ответы на общие вопросы.  
+ [Дополнительные ресурсы для программистов Visual C#](../../csharp/getting-started/additional-resources.md)  
+ Содержит ссылки на веб-сайты и группы новостей, которые помогут найти ответы на общие вопросы.  
   
-## Связанные подразделы  
- [Использование среды разработки Visual C\#](/visual-studio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Предоставляет руководство по использованию интегрированной среды разработки [!INCLUDE[csprcs](../../csharp/includes/csprcs-md.md)].  
+## <a name="related-sections"></a>Связанные разделы  
+ [Использование среды разработки Visual Studio для C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ Предоставляет руководство по использованию интегрированной среды разработки [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
   
- [Руководство по программированию на C\#](../../csharp/programming-guide/index.md)  
- Содержит сведения о понятиях программирования C\# и описание выполнения различных задач на C\#.  
+ [Руководство по программированию на C#](../../csharp/programming-guide/index.md)  
+ Содержит сведения о понятиях программирования C# и описание выполнения различных задач на C#.  
   
- [Справочник по C\#](../../csharp/language-reference/index.md)  
- Содержит подробные справочные сведения о ключевых словах, операторах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C\#.  
+ [Справочник по C#](../../csharp/language-reference/index.md)  
+ Содержит подробные справочные сведения о ключевых словах, операторах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.  
   
- [Примеры Visual Studio](/visual-studio/ide/visual-studio-samples)  
+ [Примеры Visual Studio](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)  
  Представлены сведения о способах доступа к примерам в сети.  
   
  [Пошаговые руководства](../../csharp/walkthroughs.md)  
- Приведены ссылки на пошаговые руководства по написанию программ, использующих C\#, и дано краткое описание каждого пошагового руководства.  
+ Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.  
   
-## См. также  
- [Начало работы с Visual C\# и Visual Basic](/visual-studio/ide/getting-started-with-visual-csharp-and-visual-basic)   
- [Центр обучения начинающих разработчиков](http://go.microsoft.com/fwlink/?LinkId=123826)
+## <a name="see-also"></a>См. также  
+ [Начало работы с Visual C# и Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Центр обучения для начинающих разработчиков](http://go.microsoft.com/fwlink/?LinkId=123826)

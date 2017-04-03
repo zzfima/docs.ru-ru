@@ -1,56 +1,102 @@
 ---
-title: "Модификатор параметров out (справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "параметры out [C#]"
-  - "параметры [C#], out"
+title: "Модификатор параметров out (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- parameters [C#], out
+- out parameters [C#]
 ms.assetid: 3fce0dc5-03f4-4faa-bd61-36c41bc6baf1
 caps.latest.revision: 9
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 9
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: af1f16016053d3c1b3cae34ff0cb6a3ce8cee9e7
+ms.lasthandoff: 03/13/2017
+
 ---
-# Модификатор параметров out (справочник по C#)
-Ключевое слово `out` используется для передачи аргументов по ссылке.  Оно похоже на ключевое слово [ref](../../../csharp/language-reference/keywords/ref.md), за исключением того, что `ref` требует инициализации переменной перед ее передачей.  Для работы с параметром `out` определение метода и вызывающий метод должны явно использовать ключевое слово `out`.  Примеры.  
+# <a name="out-parameter-modifier-c-reference"></a>Модификатор параметров out (справочник по C#)
+Ключевое `out` инициирует передачу аргументов по ссылке. Оно схоже с ключевым словом [ref](../../../csharp/language-reference/keywords/ref.md) за исключением того, что при использовании `ref` перед передачей переменную необходимо инициализировать. Для применения параметра `out` определение метода и метод вызова должны явно использовать ключевое слово `out`. Пример:  
   
- [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_1.cs)]  
+ [!code-cs[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/out/out-1.cs)]  
+
+> [!NOTE] 
+> Ключевое слово `out` также можно использовать с параметром универсального типа для указания на то, что тип параметра является ковариантным. Дополнительные сведения об использовании ключевого слова `out` в этом контексте см. в разделе [out (универсальный модификатор)](../../../csharp/language-reference/keywords/out-generic-modifier.md).
   
- Несмотря на то что переменные, передаваемые в качестве аргументов `out`, могут не инициализироваться перед передачей, вызываемый метод должен присвоить значение перед возвратом метода.  
+ Переменные, передаваемые в качестве аргументов `out`, не требуется инициализировать перед передачей в вызове метода. Но перед передачей управления из вызванного метода он должен присвоить значение.  
   
- Ключевые слова `ref` и `out` приводят к разным результатам во время выполнения, однако во время компиляции они не считаются частью сигнатуры метода.  Поэтому, если единственное различие между методами заключается в том, что один метод принимает аргумент `ref`, а другой — `out`, они не могут быть перегружены.  Следующий пример кода не будет компилироваться.  
+ Несмотря на то, что ключевые слова `ref` и `out` вызвать другое поведение среды выполнения, они не считаются частью подписи метода во время компиляции. Таким образом, методы не могут быть перегружены, если единственное различие состоит в том, что один метод принимает аргумент `ref`, а другой — аргумент `out`. Следующий код, например, компилироваться не будет.  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_2.cs)]  
+```csharp
+class CS0663_Example
+{
+    // Compiler error CS0663: "Cannot define overloaded 
+    // methods that differ only on ref and out".
+    public void SampleMethod(out int i) { }
+    public void SampleMethod(ref int i) { }
+}
+```
   
- Однако перегрузка возможна, если один метод принимает аргумент `ref` или `out`, а другой не принимает ни одного, как показано в следующем примере:  
+Перегрузка допустима, если один метод принимает аргумент `ref` или `out`, а другой не использует ни одного из них, как показано далее.  
   
- [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#3](../../../../samples/snippets/csharp/language-reference/keywords/out/out-3.cs)]  
   
- Свойства не являются переменными и поэтому не могут быть переданы в качестве параметров `out`.  
+ Свойства не являются переменными и поэтому не могут быть переданы как параметры `out`.  
   
  Сведения о передаче массивов см. в разделе [Передача массивов при помощи параметров ref и out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
- Нельзя использовать ключевые слова `ref` и `out` для следующих типов методов:  
+ Ключевые слова `ref` и `out` нельзя использовать для следующих типов методов.  
   
--   Методы Async, которые можно указать с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md).  
+-   Асинхронные методы, которые определяются с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md).  
   
--   Методы итератора, которые включают формулировку [получение выходных данных](../../../csharp/language-reference/keywords/yield.md) или `yield break`.  
+-   Методы итератора, которые включают оператор [yield return](../../../csharp/language-reference/keywords/yield.md) или `yield break`.  
+
+## <a name="declaring-out-arguments"></a>Объявление аргументов `out`   
+
+ Объявление метода с аргументами `out` полезно в случае, если требуется, чтобы метод возвращал несколько значений. В следующем примере используется `out` для возвращения трех переменных с помощью вызова одного метода. Обратите внимание, что третьему аргумент присвоено значение null. Это позволяет методам возвращать значения по желанию.  
   
-## Пример  
- Объявление метода `out` используется тогда, когда необходимо, чтобы метод возвращал несколько значений.  В следующем примере используется ключевое слово `out` для возврата трех переменных с помощью одного вызова метода.  Обратите внимание, что третьему аргументу начинается значение 0.  Это позволяет методам возвращать значения на выбор.  
+ [!code-cs[csrefKeywordsMethodParams#4](../../../../samples/snippets/csharp/language-reference/keywords/out/out-4.cs)]  
+
+ [Шаблон Try](https://docs.microsoft.com/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) предполагает возврат значения типа `bool`, указывающего на успешность выполнения операции, и значения, полученного в результате операции, в аргументе `out`. Этот шаблон используется рядом методов анализа, например методом @System.DateTime.TryParse(System.String,@System.DateTime).
+   
+## <a name="calling-a-method-with-an-out-argument"></a>Вызов метода с аргументом `out`
+
+В C# 6 и более ранних версиях необходимо было объявлять переменную в отдельном операторе, прежде чем передавать ее как аргумент `out`. В приведенном ниже примере переменная `number` объявляется перед передачей в метод [Int32.TryParse](xref:System.Int32.TryParse(System.String,@System.Int32), который пытается преобразовать строку в число.
+
+ [!code-cs[csrefKeywordsMethodParams#5](../../../../samples/snippets/csharp/language-reference/keywords/out/out-5.cs)]  
+
+Начиная с версии 7 языка C# переменную `out` можно объявлять в списке аргументов вызова метода, а не отдельно. Это делает код более кратким и удобным для восприятия, а также предотвращает непреднамеренное присвоение значения переменной перед вызовом метода. Приведенный ниже пример аналогичен предыдущему за тем исключением, что переменная `number` объявляется в вызове метода [Int32.TryParse](xref:System.Int32.TryParse(System.String,@System.Int32).
+
+ [!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/out/out-6.cs)]  
+   
+В предыдущем примере переменная `number` строго типизирована как `int`. Вы также можете объявить неявно типизированную локальную переменную, как в приведенном ниже примере.
+
+ [!code-cs[csrefKeywordsMethodParams#7](../../../../samples/snippets/csharp/language-reference/keywords/out/out-7.cs)]  
+   
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
- [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_4.cs)]  
-  
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
-  
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)   
  [Параметры методов](../../../csharp/language-reference/keywords/method-parameters.md)

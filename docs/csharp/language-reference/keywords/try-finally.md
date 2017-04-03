@@ -1,53 +1,71 @@
 ---
-title: "try-finally (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "finally"
-  - "finally_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "finally - ключевое слово [C#]"
-  - "try-finally - оператор [C#]"
+title: "try-finally (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- finally
+- finally_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- finally keyword [C#]
+- try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
 caps.latest.revision: 25
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 25
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 3f7618aa6d4ae3535b2b6cb562349650b3eba1ed
+ms.lasthandoff: 03/13/2017
+
 ---
-# try-finally (Справочник по C#)
-С помощью блока `finally` можно выполнить очистку всех ресурсов, выделенных в блоке [try](../../../csharp/language-reference/keywords/try-catch.md), и можно запускать код даже при возникновении исключения в блоке `try`.  Как правило, операторы блока `finally` выполняются, когда элемент управления покидает оператор `try`.  Передача управления может возникать в результате выполнения нормального выполнения, `break`, `continue`, `goto` или оператора `return`, или распространения исключения из оператора `try`.  
+# <a name="try-finally-c-reference"></a>try-finally (Справочник по C#)
+С помощью блока `finally` можно выполнить очистку всех ресурсов, выделенных в блоке [try](../../../csharp/language-reference/keywords/try-catch.md), и запускать код даже при возникновении исключения в блоке `try`. Как правило, операторы блока `finally` выполняются, когда элемент управления покидает оператор `try`. Передача управления может возникать в результате нормального выполнения, выполнения операторов `break`, `continue`, `goto` или `return` или распространения исключения из оператора `try`.  
   
- Внутри обработанного исключения гарантируется выполнение соответствующий блок `finally`.  Однако если исключение не обработано, то выполнение блока `finally` зависит от того, как запускается операция развертывания исключения.  Это, в свою очередь, зависит от способа настройки компьютера.  Дополнительные сведения см. в статье [Обработка необработанных исключений в CLR](http://go.microsoft.com/fwlink/?LinkId=128371).  
+ Внутри обработанного исключения гарантируется выполнение связанного блока `finally`. Однако если исключение не обработано, то выполнение блока `finally` зависит от того, как запускается операция развертывания исключения. Это, в свою очередь, зависит от способа настройки компьютера. Дополнительные сведения см. в разделе [Обработка необработанных исключений в CLR](http://go.microsoft.com/fwlink/?LinkId=128371).  
   
- Как правило, когда необработанное исключение завершения работы приложения, выполняется ли блок `finally` не имеет значения.  Однако если имеются операторы в блоке `finally`, которые необходимо запускать даже в такой ситуации, одним из решений является добавление блока `catch` в оператор `try`\-`finally`.  Кроме того, можно перехватить исключение, которое может создаваться в блоке `try` оператора `try`\-`finally` выше по стеку вызовов.  То есть можно перехватить исключение в метод, который вызывает метод, содержащий оператора `try`\-`finally`, или в метод, который вызывает этот метод, или в любом методе в стеке вызовов.  Если исключение не обработано, среда выполнения блока `finally` зависит от того, активирует ли операционная система операцию развертывания исключения.  
+ Как правило, когда необработанное исключение приводит к завершению работы приложения, выполнение блока `finally` не имеет значения. Однако если в блоке `finally` есть операторы, которые необходимо запускать даже в такой ситуации, одним из решений является добавление блока `catch` в оператор `try`-`finally`. Кроме того, можно перехватить исключение, которое может создаваться в блоке `try` оператора `try`-`finally` выше в стеке вызовов. То есть можно перехватить исключение в методе, который вызывает метод, содержащий оператор `try`-`finally`, или в методе, который вызывает этот метод, или в любом методе в стеке вызовов. Если исключение не перехвачено, выполнение блока `finally` зависит от того, активирует ли операционная система операцию развертывания исключения.  
   
-## Пример  
- В следующем примере недопустимая инструкция преобразования вызывает исключение `System.InvalidCastException`.  Исключение является необработанным.  
+## <a name="example"></a>Пример  
+ В следующем примере недопустимый оператор преобразования вызывает исключение `System.InvalidCastException`. Исключение не обрабатывается.  
   
  [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_1.cs)]  
   
- В следующем примере исключения из метода `TryCast` перехватывается в методе далее вверх по стеку вызовов.  
+ В следующем примере исключение из метода `TryCast` перехватывается в методе выше в стеке вызовов.  
   
  [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_2.cs)]  
   
- Дополнительные сведения о `finally` см. в разделе [try\-catch\-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
+ Дополнительные сведения о `finally` см. в разделе [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
- C\# также содержит [оператор using](../../../csharp/language-reference/keywords/using-statement.md), который предоставляет аналогичную функциональность для объектов <xref:System.IDisposable> в удобном синтаксисе.  
+ C# также содержит [оператор using](../../../csharp/language-reference/keywords/using-statement.md), который предоставляет аналогичную функциональность для объектов <xref:System.IDisposable> в удобном синтаксисе.  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
- [Операторы try, throw и catch \(C\+\+\)](/visual-cpp/cpp/try-throw-and-catch-statements-cpp)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
+ [Операторы try, throw и catch (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Операторы обработки исключений](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try\-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [Практическое руководство. Явное создание исключения](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md)
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
+ [Практическое руководство. Явное создание исключений](https://msdn.microsoft.com/library/xhcbs8fz)

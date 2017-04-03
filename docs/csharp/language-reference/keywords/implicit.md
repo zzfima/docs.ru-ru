@@ -1,38 +1,56 @@
 ---
-title: "implicit (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "implicit"
-  - "implicit_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "implicit - ключевое слово [C#]"
+title: "implicit (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- implicit
+- implicit_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7109a6e467539ca8161b3b44bfb50697314f3c13
+ms.lasthandoff: 03/13/2017
+
 ---
-# implicit (Справочник по C#)
-Ключевое слово `implicit` служит для объявления неявного оператора преобразования пользовательского типа.  Этот оператор обеспечивает неявное преобразование между пользовательским типом и другим типом, если при преобразовании исключается утрата данных.  
+# <a name="implicit-c-reference"></a>implicit (Справочник по C#)
+Ключевое слово `implicit` служит для объявления неявного оператора преобразования пользовательского типа. Этот оператор обеспечивает неявное преобразование между пользовательским типом и другим типом, если при преобразовании исключается утрата данных.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-cs[csrefKeywordsConversion#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicit_1.cs)]  
   
- Неявное преобразование позволяет устранить ненужные операции приведения и повышает понятность кода.  Однако поскольку при неявных преобразованиях разработчикам не требуется явным образом приводить один тип к другому, нужно осторожно применять неявные преобразования, чтобы обеспечить правильные результаты.  В общем случае операторы неявного преобразования не должны создавать исключений и не должны терять данные, чтобы их можно было безопасно использовать.  Если оператор преобразования не соответствует таким условиям, его нужно пометить словом `explicit`.  Дополнительные сведения см. в разделе [Использование операторов преобразования](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
+ Неявное преобразование позволяет устранить ненужные операции приведения и повышает удобочитаемость исходного кода. Однако поскольку при неявных преобразованиях разработчикам не требуется явным образом приводить один тип к другому, нужно осторожно применять неявные преобразования, чтобы обеспечить правильные результаты. В общем случае операторы неявного преобразования не должны создавать исключений и не должны терять данные, чтобы их можно было безопасно использовать. Если оператор преобразования не соответствует таким условиям, его нужно пометить словом `explicit`. Дополнительные сведения см. в разделе [Использование операторов преобразования](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
- [явные](../../../csharp/language-reference/keywords/explicit.md)   
- [оператор](../../../csharp/language-reference/keywords/operator.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
+ [explicit](../../../csharp/language-reference/keywords/explicit.md)   
+ [Оператор (справочник по C#)](../../../csharp/language-reference/keywords/operator.md)   
  [Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

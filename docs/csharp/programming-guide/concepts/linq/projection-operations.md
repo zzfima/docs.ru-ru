@@ -1,0 +1,183 @@
+---
+title: "Операции проекции (C#) | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 232afc23e180ab868bfa825d680b7fe4371b3805
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="projection-operations-c"></a>Операции проекции (C#)
+Проекцией называют операцию преобразования объекта в новую форму, которая часто состоит только из тех его свойств, которые будут использоваться впоследствии. С помощью проекции можно создать новый тип, построенный из каждого объекта. Вы можете проецировать свойство и выполнять над ним математические функции. Также можно проецировать исходный объект, не изменяя его.  
+  
+ Методы стандартных операторов запросов, которые выполняют проецирование, перечислены в следующем разделе.  
+  
+## <a name="methods"></a>Методы  
+  
+|Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
+|-----------------|-----------------|---------------------------------|----------------------|  
+|Выбрать|Проецирует значения, основанные на функции преобразования.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
+|SelectMany|Проецирует последовательности значений, основанных на функции преобразования, а затем выравнивает их в одну последовательность.|Использование нескольких предложений `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName>|  
+  
+## <a name="query-expression-syntax-examples"></a>Примеры синтаксиса выражений запросов  
+  
+### <a name="select"></a>Выбрать  
+ В приведенном ниже примере предложение `select` используется для проецирования первой буквы из каждой строки в списке строк.  
+  
+```csharp  
+List<string> words = new List<string>() { "an", "apple", "a", "day" };  
+  
+var query = from word in words  
+            select word.Substring(0, 1);  
+  
+foreach (string s in query)  
+    Console.WriteLine(s);  
+  
+/* This code produces the following output:  
+  
+    a  
+    a  
+    a  
+    d  
+*/  
+```  
+  
+### <a name="selectmany"></a>SelectMany  
+ В приведенном ниже примере несколько предложений `from` используются для проецирования каждого слова из каждой строки в списке строк.  
+  
+```csharp  
+List<string> phrases = new List<string>() { "an apple a day", "the quick brown fox" };  
+  
+var query = from phrase in phrases  
+            from word in phrase.Split(' ')  
+            select word;  
+  
+foreach (string s in query)  
+    Console.WriteLine(s);  
+  
+/* This code produces the following output:  
+  
+    an  
+    apple  
+    a  
+    day  
+    the  
+    quick  
+    brown  
+    fox  
+*/  
+```  
+  
+## <a name="select-versus-selectmany"></a>Select или SelectMany  
+ Задача обоих методов `Select()` и `SelectMany()` заключается в создании результирующего значения (или значений) из исходных значений. `Select()` создает один результат для каждого исходного значения. Таким образом, общий результат является коллекцией, имеющей то же количество элементов, что и исходная коллекция. `SelectMany()`, напротив, создает общий результат, содержащий соединенные подколлекции из каждого исходного значения. Функция преобразования, которая передается в качестве аргумента методу `SelectMany()`, должна возвращать перечисляемую последовательность значений для каждого исходного значения. Эти перечисляемые последовательности затем объединяются `SelectMany()` для создания одной большой последовательности.  
+  
+ На двух рисунках, приведенных ниже, показаны принципиальные различия между работой этих двух методов. В обоих случаях предполагается, что функция выбора (преобразования) выбирает массив цветов из каждого исходного значения.  
+  
+ На этом рисунке представлено, как `Select()` возвращает коллекцию, которая имеет то же количество элементов, что и исходная коллекция.  
+  
+ ![Концептуальная иллюстрация действия Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+  
+ На этом рисунке показано, как `SelectMany()` объединяет промежуточные последовательности массивов в один конечный результат, содержащий все значения из промежуточных массивов.  
+  
+ ![Схема работы SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+  
+### <a name="code-example"></a>Пример кода  
+ В приведенном ниже примере сравнивается действие `Select()` и `SelectMany()`. Код создает "букет" из цветов путем получения первых двух элементов из каждого списка названий цветов в исходной коллекции. В этом примере "одно значение", которое использует функция преобразования <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>, само является коллекцией значений. Этот требует дополнительного цикла `foreach` для перечисления каждой строки в каждой подпоследовательности.  
+  
+```csharp  
+class Bouquet  
+{  
+    public List<string> Flowers { get; set; }  
+}  
+  
+static void SelectVsSelectMany()  
+{  
+    List<Bouquet> bouquets = new List<Bouquet>() {  
+        new Bouquet { Flowers = new List<string> { "sunflower", "daisy", "daffodil", "larkspur" }},  
+        new Bouquet{ Flowers = new List<string> { "tulip", "rose", "orchid" }},  
+        new Bouquet{ Flowers = new List<string> { "gladiolis", "lily", "snapdragon", "aster", "protea" }},  
+        new Bouquet{ Flowers = new List<string> { "larkspur", "lilac", "iris", "dahlia" }}  
+    };  
+  
+    // *********** Select ***********              
+    IEnumerable<List<string>> query1 = bouquets.Select(bq => bq.Flowers);  
+  
+    // ********* SelectMany *********  
+    IEnumerable<string> query2 = bouquets.SelectMany(bq => bq.Flowers);  
+  
+    Console.WriteLine("Results by using Select():");  
+    // Note the extra foreach loop here.  
+    foreach (IEnumerable<String> collection in query1)  
+        foreach (string item in collection)  
+            Console.WriteLine(item);  
+  
+    Console.WriteLine("\nResults by using SelectMany():");  
+    foreach (string item in query2)  
+        Console.WriteLine(item);  
+  
+    /* This code produces the following output:  
+  
+       Results by using Select():  
+        sunflower  
+        daisy  
+        daffodil  
+        larkspur  
+        tulip  
+        rose  
+        orchid  
+        gladiolis  
+        lily  
+        snapdragon  
+        aster  
+        protea  
+        larkspur  
+        lilac  
+        iris  
+        dahlia  
+  
+       Results by using SelectMany():  
+        sunflower  
+        daisy  
+        daffodil  
+        larkspur  
+        tulip  
+        rose  
+        orchid  
+        gladiolis  
+        lily  
+        snapdragon  
+        aster  
+        protea  
+        larkspur  
+        lilac  
+        iris  
+        dahlia  
+    */  
+  
+}  
+```  
+  
+## <a name="see-also"></a>См. также  
+ <xref:System.Linq>   
+ [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md)   
+ [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
+ [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
+ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 03/07/2017
 
 Официальная спецификация — это набор файлов с расширением CS, которые определяют API, являющиеся частью стандарта. [Справочный каталог](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref) для каждого [компонента](https://github.com/dotnet/corefx/tree/master/src) определяет API библиотеки .NET Standard. Хотя справочные артефакты находятся в [репозитории CoreFX](https://github.com/dotnet/corefx), они не относятся непосредственно к .NET Core.
 
-Метапакет [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([источник](https://github.com/dotnet/corefx/blob/master/pkg/NETStandard.Library/NETStandard.Library.packages.targets)) описывает набор библиотек, определяющих (частично) одну или несколько версий библиотеки .NET Standard.
+Метапакет [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([источник](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) описывает набор библиотек, определяющих (частично) одну или несколько версий библиотеки .NET Standard.
 
 Отдельный компонент, например System.Runtime, описывает следующее:
 

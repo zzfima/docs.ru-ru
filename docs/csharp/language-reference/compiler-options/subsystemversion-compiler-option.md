@@ -1,23 +1,41 @@
 ---
-title: "-subsystemversion (параметры компилятора C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
+title: "-subsystemversion (параметры компилятора C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8766904cad739b29c7dfe80b29305ea2b3bd2e6f
+ms.lasthandoff: 03/13/2017
+
 ---
-# /subsystemversion (параметры компилятора C#)
+# <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (параметры компилятора C#)
 Указывает минимальную версию подсистемы, в которой может выполняться созданный исполняемый файл, то есть определяет версии Windows, в которых может работать исполняемый файл. Чаще всего этот параметр предоставляет исполняемому файлу возможность использовать определенные возможности безопасности, недоступные в прежних версиях Windows.  
   
 > [!NOTE]
->  Чтобы задать саму подсистему, используйте [/target-](../../../csharp/language-reference/compiler-options/target-compiler-option.md) параметр компилятора.  
+>  Чтобы задать саму подсистему, используйте параметр компилятора [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,25 +60,25 @@ caps.handback.revision: 19
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8-md.md)]|6.02|  
+|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
   
 ## <a name="default-values"></a>Значения по умолчанию  
- Значение по умолчанию **/subsystemversion** параметр компилятора зависит от условий в следующем списке:  
+ Значение по умолчанию параметра компилятора **/subsystemversion** зависит от условий в следующем списке.  
   
 -   Значение по умолчанию — 6.02, если задан любой параметр компилятора из следующего списка.  
   
-    -   [/ target: appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
+    -   [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
   
-    -   [/ target: winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
+    -   [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
   
-    -   [/platform:ARM](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
+    -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
--   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net-v45-md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
+-   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
   
 -   Если ни одно из предыдущих условий не верно, значение по умолчанию — 4.00.  
   
 ## <a name="setting-this-option"></a>Задание этого параметра  
- Чтобы задать **/subsystemversion** параметра компилятора в Visual Studio, необходимо открыть CSPROJ-файл и указать значение для `SubsystemVersion` Свойства в MSBuild XML. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. в разделе «Значения по умолчанию» ранее в этом разделе или [Общие свойства проектов MSBuild](/visual-studio/msbuild/common-msbuild-project-properties).  
+ Чтобы задать параметр компилятора **/subsystemversion** в Visual Studio, необходимо открыть CSPROJ-файл и указать значение для свойства `SubsystemVersion` в XML MSBuild. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. выше в подразделе "Значения по умолчанию" или в разделе [Общие свойства проектов MSBuild](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)
+ [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

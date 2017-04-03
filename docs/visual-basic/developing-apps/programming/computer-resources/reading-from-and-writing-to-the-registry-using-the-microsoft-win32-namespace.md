@@ -1,27 +1,44 @@
 ---
-title: "Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32 (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "реестр, Visual Basic"
+title: "Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32 (Visual Basic) | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- registry, Visual Basic
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32 (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2243630d940035046aae9a4c50bcdba3c15f7210
+ms.lasthandoff: 03/13/2017
 
-Хотя `My.Computer.Registry` должно хватать для удовлетворения основных потребностей при программировании с использованием реестра, в пространстве имен <xref:Microsoft.Win32> платформы [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] можно также использовать классы <xref:Microsoft.Win32.Registry> и <xref:Microsoft.Win32.RegistryKey>.  
+---
+# <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32 (Visual Basic)
+Хотя `My.Computer.Registry` должно хватать для удовлетворения основных потребностей при программировании с использованием реестра, в пространстве имен <xref:Microsoft.Win32> платформы [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] можно также использовать классы <xref:Microsoft.Win32.Registry> и <xref:Microsoft.Win32.RegistryKey>.  
   
 ## <a name="keys-in-the-registry-class"></a>Разделы в классе Registry  
  Класс <xref:Microsoft.Win32.Registry> предоставляет основные разделы реестра, которые можно использовать для доступа к подразделам и их значениям. Сами основные разделы доступны только для чтения. В таблице ниже перечислены и описаны семь разделов, предоставляемых классом <xref:Microsoft.Win32.Registry>.  

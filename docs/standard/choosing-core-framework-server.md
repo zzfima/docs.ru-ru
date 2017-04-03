@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
-ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
+ms.openlocfilehash: 7151c87d373afce88c83239499ba33980383ab98
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -93,6 +93,8 @@ ms.lasthandoff: 02/23/2017
 * Реализация служб WCF. Хотя в среду .NET Core и добавлена [библиотека клиента WCF](https://github.com/dotnet/wcf), позволяющая использовать службы WCF, по состоянию на июнь 2016 г. сервер WCF можно реализовать только в среде .NET Framework. Этот сценарий не входит в текущий план для .NET Core, но он будет рассмотрен в будущем.
 
 * Службы, связанные с рабочим процессом. Службы Windows Workflow Foundation (WF), Workflow Services (WCF и WF в одной службе) и WCF Data Services (ранее службы данных ADO.NET) доступны только в среде .NET Framework, и их добавление в .NET Core не планируется.
+
+* Windows Presentation Foundation (WPF) и Windows Forms: приложения WPF и Windows Forms доступны только на платформе .NET Framework. Переносить их в .NET Core не планируется. 
 
 * Поддержка языков. В настоящее время в среде .NET Core отсутствуют средства для поддержки языков Visual Basic и F#, но их поддержка будет добавлена в Visual Studio 2017 и более поздние версии.
 

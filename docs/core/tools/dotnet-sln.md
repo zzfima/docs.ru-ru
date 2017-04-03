@@ -1,21 +1,22 @@
 ---
-title: "Команда dotnet-sln | Документы Майкрософт"
+title: "Команда dotnet-sln — CLI .NET Core | Документы Майкрософт"
 description: "Команда dotnet-sln предоставляет удобный способ добавлять проекты в файл решений, удалять или перечислять их."
 keywords: "dotnet-sln, CLI, команда CLI, .NET Core"
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 84c2a9cab36dcfa76f90d75c83f4988ba441b0a8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-sln"></a>dotnet-sln
 
 ## <a name="name"></a>Имя
@@ -25,11 +26,11 @@ ms.lasthandoff: 03/07/2017
 ## <a name="synopsis"></a>Краткий обзор
 
 ```
-dotnet sln [<solution_name>] add <project> <project>
-dotnet sln [<solution_name>] add **/**
-dotnet sln [<solution_name>] remove <project> <project>
-dotnet sln [<solution_name>] remove **/**
-dotnet sln [<solution_name>] list
+dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
+dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
+dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
 
@@ -39,17 +40,17 @@ dotnet sln [-h|--help]
 
 ## <a name="commands"></a>Команды
 
-`add <project>`
+`add <PROJECT> ...`
 
 `add **/*`
 
-Добавляет один или несколько проектов в файл решений. Шаблон глобализации поддерживается в терминалах на основе Unix или Linux.
+Добавляет один или несколько проектов в файл решений. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.
 
-`remove <project>`
+`remove <PROJECT> ...`
 
 `remove **/*`
 
-Удаляет один или несколько проектов из файла решений. Шаблон глобализации поддерживается в терминалах на основе Unix или Linux.
+Удаляет один или несколько проектов из файла решений. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.
 
 `list`
 
@@ -57,9 +58,9 @@ dotnet sln [-h|--help]
 
 ## <a name="arguments"></a>Аргументы
 
-`solution_name`
+`SOLUTION_NAME`
 
-Используемый файл решений. Если он не указан, команда будет искать текущий каталог для него. Если файлов решений в каталоге несколько, нужно указать один.
+Используемый файл решений. Если он не указан, команда ищет текущий каталог для него. Если файлов решений в каталоге несколько, нужно указать один.
 
 ## <a name="options"></a>Параметры
 
@@ -81,7 +82,7 @@ dotnet sln [-h|--help]
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Добавление нескольких проектов в решение с помощью шаблона глобализации:
+Добавление нескольких проектов в решение с помощью стандартной маски:
 
 `dotnet sln add **/**/*.fsproj`
 

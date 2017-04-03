@@ -1,43 +1,61 @@
 ---
-title: "sealed (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "sealed"
-  - "sealed_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "sealed - ключевое слово [C#]"
+title: "sealed (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- sealed
+- sealed_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
 caps.latest.revision: 30
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 30
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a546a6019daf836ab870775e4432660aa723fd69
+ms.lasthandoff: 03/13/2017
+
 ---
-# sealed (Справочник по C#)
-При применении к классу модификатор `sealed` запрещает другим классам наследовать от этого класса.  В приведенном примере класс `B` наследует от класса `A`, но ни какие классы не могут наследовать от класса `B`.  
+# <a name="sealed-c-reference"></a>sealed (Справочник по C#)
+При применении к классу модификатор `sealed` запрещает другим классам наследовать от этого класса. В следующем примере класс `B` наследует от класса `A`, но никакие классы не могут наследовать от класса `B`.  
   
 ```  
 class A {}      
 sealed class B : A {}  
 ```  
   
- Модификатор `sealed` можно использовать для метода или свойства, которое переопределяет виртуальный метод или свойство в базовом классе.  Это позволяет классам наследовать от вашего класса, запрещая им при этом переопределять определенные виртуальные методы или свойства.  
+ Модификатор `sealed` можно использовать для метода или свойства, которое переопределяет виртуальный метод или свойство в базовом классе. Это позволяет классам наследовать от вашего класса, запрещая им при этом переопределять определенные виртуальные методы или свойства.  
   
-## Пример  
- В приведенном примере класс `Z` наследует от класса `Y`, но `Z` не может переопределить виртуальную функцию `F`, которая объявлена в классе `X` и запечатана в классе `Y`.  
+## <a name="example"></a>Пример  
+ В следующем примере класс `Z` наследует от класса `Y`, но `Z` не может переопределить виртуальную функцию `F`, которая объявлена в классе `X` и запечатана в классе `Y`.  
   
  [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
- Чтобы предотвратить переопределение производных классов при определении новых методов или свойств, не назначайте их в качестве виртуальных \([virtual](../../../csharp/language-reference/keywords/virtual.md)\).  
+ Чтобы предотвратить переопределение производных классов при определении новых методов или свойств, не назначайте их в качестве виртуальных ([virtual](../../../csharp/language-reference/keywords/virtual.md)).  
   
  Нельзя использовать модификатор [abstract](../../../csharp/language-reference/keywords/abstract.md) с запечатанным классом, поскольку абстрактный класс должен наследоваться классом, реализующим абстрактные методы или свойства.  
   
- При применении `sealed` модификатора к методу или свойству его необходимо всегда использовать с [override](../../../csharp/language-reference/keywords/override.md).  
+ При применении к методу или свойству модификатор `sealed` всегда следует использовать с [override](../../../csharp/language-reference/keywords/override.md).  
   
  Поскольку структуры неявно запечатаны, их нельзя наследовать.  
   
@@ -45,7 +63,7 @@ sealed class B : A {}
   
  Дополнительные примеры см. в разделе [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
  Чтобы наследовать от запечатанного класса, можно применить следующую инструкцию в приведенном выше примере:  
@@ -56,23 +74,23 @@ sealed class B : A {}
   
  `'MyDerivedC' cannot inherit from sealed class 'SealedClass'.`  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Заметки  
- Определяя, нужно ли запечатывать класс, метод или свойство, имейте в виду следующее:  
+## <a name="remarks"></a>Примечания  
+ Чтобы определить, нужно ли запечатывать класс, метод или свойство, имейте в виду следующее:  
   
--   Потенциальные преимущества, которые производные классы могут получить от возможности настраивать ваш класс.  
+-   потенциальные преимущества, которые производные классы могут получить от возможности настраивать ваш класс;  
   
--   Возможные проблемы из\-за того, что производные классы могут корректировать ваши классы, препятствуя их нормальной работе.  
+-   вероятность того, что производные классы могут корректировать ваши классы, препятствуя их нормальной работе.  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
  [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
  [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
  [override](../../../csharp/language-reference/keywords/override.md)   
- [виртуальные](../../../csharp/language-reference/keywords/virtual.md)
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)

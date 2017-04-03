@@ -1,25 +1,43 @@
 ---
-title: "internal (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "internal_CSharpKeyword"
-  - "internal"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "internal - ключевое слово [C#]"
+title: "internal (справочник по C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- internal_CSharpKeyword
+- internal
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6b50c4c2a6e545e0313beb0450d9ca5ff170ad05
+ms.lasthandoff: 03/13/2017
+
 ---
-# internal (Справочник по C#)
-Ключевое слово `internal`[модификатор доступа](../../../csharp/language-reference/keywords/access-modifiers.md) для типов и членов типов.  Внутренние типы или члены доступны только внутри файлов в одной и той же сборке \(см. следующий пример\).  
+# <a name="internal-c-reference"></a>internal (Справочник по C#)
+Ключевое слово `internal` является [модификатором доступа](../../../csharp/language-reference/keywords/access-modifiers.md) для типов и членов типов. Внутренние типы или члены доступны только внутри файлов в той же сборке, как в следующем примере:  
   
 ```  
 public class BaseClass   
@@ -29,18 +47,18 @@ public class BaseClass
 }  
 ```  
   
- Доступ к типам или членам с модификатором доступа `protected internal` может осуществляться из текущей сборки или из типов, которые являются производными от содержащего их класса.  
+ Доступ к типам и членам, которые имеют модификатор доступа `protected internal`, может осуществляться из текущей сборки или типов, которые являются производными от содержащего класса.  
   
  Сравнение модификатора `internal` с другими модификаторами доступа см. в разделах [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md) и [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Дополнительные сведения о сборках см. в разделе [Сборки и глобальный кэш сборок](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md).  
+ Дополнительные сведения о сборках см. в разделе [Сборки и глобальный кэш сборок](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
   
- Внутренний доступ чаще всего используется в разработке на основе компонентов, так как он позволяет группе компонентов взаимодействовать в закрытой форме, не открывая доступ остальной части кода приложения.  Например, структура для построения графических пользовательских интерфейсов может предоставлять классы `Control` и `Form`, взаимодействующие при помощи членов с внутренним доступом.  Так как эти члены являются закрытыми, они не предоставляются коду, использующему структуру.  
+ Обычно доступ к внутренним компонентам используется в разработке на основе компонентов, так как он позволяет группе компонентов взаимодействовать в закрытой форме, без их предоставления остальной части кода приложения. Например, платформа для создания графических интерфейсов пользователя может предоставлять классы `Control` и `Form`, взаимодействующие с помощью членов с внутренним доступом. Поскольку эти члены являются внутренними, они не предоставляются коду, использующему платформу.  
   
- Создание ссылки на тип или член с внутренним доступом за пределами сборки, в которой он был определен, приведет к ошибке.  
+ Будет ошибкой ссылаться на тип или член с внутренним доступом из-за пределов сборки, в которой он определен.  
   
-## Пример  
- В этом примере содержится два файла: `Assembly1.cs` и `Assembly1`\_`a.cs`.  Первый файл содержит внутренний базовый класс `BaseClass`.  Попытка создания экземпляра `BaseClass` во втором файле приведет к ошибке.  
+## <a name="example"></a>Пример  
+ Этот пример содержит два файла, `Assembly1.cs` и `Assembly1`_`a.cs`. Первый файл содержит внутренний базовый класс `BaseClass`. Во втором файле попытка создать экземпляр `BaseClass` приведет к ошибке.  
   
 ```  
 // Assembly1.cs  
@@ -63,8 +81,8 @@ class TestAccess
 }  
 ```  
   
-## Пример  
- В этом примере используются те же файлы, что и в примере 1, но уровень доступности `BaseClass` изменен на `public`.  Кроме того, уровень доступности члена `IntM` изменен на `internal`.  В этом случае можно создать экземпляр класса, но доступ к внутреннему члену отсутствует.  
+## <a name="example"></a>Пример  
+ В этом примере используйте те же файлы, которые использовались в примере 1, однако измените уровень доступности `BaseClass` на `public`. Кроме того, измените уровень доступности члена `IntM` на `internal`. В этом случае можно создать экземпляр класса, но нельзя получить доступ к внутреннему члену.  
   
 ```  
 // Assembly2.cs  
@@ -88,16 +106,16 @@ public class TestAccess
 }  
 ```  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова C\#](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
  [public](../../../csharp/language-reference/keywords/public.md)   
- [закрытый](../../../csharp/language-reference/keywords/private.md)   
- [защищенные](../../../csharp/language-reference/keywords/protected.md)
+ [private](../../../csharp/language-reference/keywords/private.md)   
+ [protected](../../../csharp/language-reference/keywords/protected.md)

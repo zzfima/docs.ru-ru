@@ -1,40 +1,58 @@
 ---
-title: "Исключения, создаваемые компилятором (Руководство по программированию в C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "исключения [C#], создаваемые компилятором"
+title: "Исключения, создаваемые компилятором (руководство по программированию в C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4015551ac983610afc8bf1f08e73a33c1ac338ff
+ms.lasthandoff: 03/13/2017
+
 ---
-# Исключения, создаваемые компилятором (Руководство по программированию в C#)
-Некоторые исключения автоматически создаются средой CLR приложения платформы .NET Framework, когда происходит сбой основной операции.  Эти исключения и условия их возникновения перечислены в следующей таблице.  
+# <a name="compiler-generated-exceptions-c-programming-guide"></a>Исключения, создаваемые компилятором (Руководство по программированию в C#)
+Некоторые исключения создаются средой .NET Framework CLR (CLR) автоматически, когда происходит сбой основной операции. В следующей таблице перечислены эти исключения и условия возникновения ошибок.  
   
 |Исключение|Описание|  
-|----------------|--------------|  
-|<xref:System.ArithmeticException>|Основной класс исключений, происходящих при выполнении арифметических операций, таких как <xref:System.DivideByZeroException> и <xref:System.OverflowException>.|  
-|<xref:System.ArrayTypeMismatchException>|Создается, когда массив не может хранить данный элемент, поскольку фактический тип элемента несовместим с фактическим типом массива.|  
-|<xref:System.DivideByZeroException>|Создается при попытке разделить целое число на ноль.|  
-|<xref:System.IndexOutOfRangeException>|Создается при попытке индексирования массива, если индекс меньше нуля или выходит за границы массива.|  
-|<xref:System.InvalidCastException>|Создается, когда происходит сбой явного преобразования из основного типа в интерфейс либо в производный тип во время выполнения.|  
-|<xref:System.NullReferenceException>|Создается при попытке ссылки на объект, значение которого равно [null](../../../csharp/language-reference/keywords/null.md).|  
-|<xref:System.OutOfMemoryException>|Создается при неудаче попытки выделения памяти с помощью оператора [new](../../../csharp/language-reference/keywords/new-operator.md).  Это означает, что память, доступная для среды выполнения, уже исчерпана.|  
-|<xref:System.OverflowException>|Создается при переполнении арифметической операции в контексте `checked`.|  
-|<xref:System.StackOverflowException>|Создается, когда стек выполнения переполнен за счет слишком большого количества вызовов отложенных методов; обычно является признаком очень глубокой или бесконечной рекурсии.|  
-|<xref:System.TypeInitializationException>|Создается, когда статический конструктор создает исключение, и не существует ни одного совместимого предложения `catch` для его захвата.|  
+|---------------|-----------------|  
+|<xref:System.ArithmeticException>|Базовый класс для исключений, возникающих во время арифметических операций, таких как <xref:System.DivideByZeroException> и <xref:System.OverflowException>.|  
+|<xref:System.ArrayTypeMismatchException>|Возникает, если массив не может сохранить данный элемент, поскольку фактический тип элемента несовместим с фактическим типом массива.|  
+|<xref:System.DivideByZeroException>|Возникает при попытке деления целого значения на ноль.|  
+|<xref:System.IndexOutOfRangeException>|Возникает при попытке индексирования массива, если индекс меньше нуля или выходит за границы массива.|  
+|<xref:System.InvalidCastException>|Возникает, если явное преобразование из базового типа в интерфейс или в производный тип завершается ошибкой во время выполнения.|  
+|<xref:System.NullReferenceException>|Возникает при попытке сослаться на объект, имеющий значение [null](../../../csharp/language-reference/keywords/null.md).|  
+|<xref:System.OutOfMemoryException>|Возникает, если попытка распределения памяти с помощью оператора [new](../../../csharp/language-reference/keywords/new-operator.md) завершается ошибкой. Это означает, что ресурсы памяти, доступные для среды CLR, исчерпаны.|  
+|<xref:System.OverflowException>|Возникает при переполнении арифметической операции в контексте `checked`.|  
+|<xref:System.StackOverflowException>|Возникает, когда чрезмерное количество ожидающих вызовов метода истощает стек выполнения; обычно это указывает на крайне глубокую или бесконечную рекурсию.|  
+|<xref:System.TypeInitializationException>|Возникает, когда статический конструктор создает исключение, а совместимого предложения `catch` для его захвата нет.|  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/exceptions-and-exception-handling.md)   
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)   
  [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)   
- [try\-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try\-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [try\-catch\-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
+ [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

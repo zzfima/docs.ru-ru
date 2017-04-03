@@ -4,16 +4,16 @@ description: "Пошаговое руководство, описывающее 
 keywords: ".NET Core, интерфейс командной строки"
 author: cartermp
 ms.author: mairaw
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 240061d2515c14ba7ab733f4cc9e7e38fb2a5c7c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: e30414ac3dd48bbb060ad6f2a33a0a124cba0fa3
+ms.openlocfilehash: 6ffca900d5649823e6aa2e28486a64a2f7844efc
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Пакет SDK для .NET Core 1.0.0](https://www.microsoft.com/net/download/core).
+- [Пакет SDK для .NET Core 1.0](https://www.microsoft.com/net/download/core).
 - Текстовый редактор или редактор кода по вашему выбору.
 
 ## <a name="hello-console-app"></a>Первое консольное приложение
@@ -163,3 +163,4 @@ Fibonacci Numbers 1-15:
 ## <a name="see-also"></a>См. также
 
 [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
+

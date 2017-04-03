@@ -1,21 +1,22 @@
 ---
-title: "Команда dotnet-add package | Документы Майкрософт"
+title: "Команда dotnet-add package — CLI .NET Core | Документы Майкрософт"
 description: "Команду dotnet-add package удобно использовать для добавления ссылки на пакет NuGet в проект."
 keywords: "dotnet-add, CLI, команда CLI, .NET Core"
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 88e0da69-a5ea-46cc-8b46-5493242b7af9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 806f4383452cb250f302dc30ab2d59f7e4772026
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 41b46e879056d385ceb3abaec27db974cab812e3
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-add-package"></a>dotnet-add package
 
 ## <a name="name"></a>Имя
@@ -24,14 +25,11 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```
-dotnet add [project] package <package_name> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]
-dotnet add package [-h|--help]
-```
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory] [-h|--help]`
 
 ## <a name="description"></a>Описание
 
-`dotnet add package` предоставляет удобный способ для добавления ссылки на пакет в файл проекта. После запуска этой команды выполняется проверка совместимости, чтобы убедиться, что добавляемый пакет совместим со всеми платформами в проекте. Если проверка проходит успешно, выполняется команда восстановления [restore](dotnet-restore.md) и в файл проекта добавляется фрагмент `<PackageReference>`.
+Команда `dotnet add package` предоставляет удобный способ для добавления ссылки на пакет в файл проекта. После запуска этой команды выполняется проверка совместимости, чтобы убедиться, что пакет совместим со всеми платформами в проекте. Если проверка проходит успешно, в файл проекта добавляется элемент `<PackageReference>` и выполняется команда [dotnet restore](dotnet-restore.md).
 
 Например, при добавлении `Newtonsoft.Json` в *ToDo.csproj* создаются выходные данные примерно следующего вида:
 
@@ -39,7 +37,7 @@ dotnet add package [-h|--help]
 Microsoft (R) Build Engine version 15.1.545.13942
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-  Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
+Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'ToDo.csproj'.
 log  : Restoring packages for ToDo.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
@@ -50,21 +48,19 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to file 'ToDo.csproj'.
 ```
 
-Файл *ToDo.csproj* теперь содержит фрагмент [`<PackageReference>`](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) для пакета, на который указывает ссылка.
+Файл *ToDo.csproj* теперь содержит элемент [`<PackageReference>`](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) для пакета, на который указывает ссылка.
 
 ```xml
-<PackageReference Include="Newtonsoft.Json">
-  <Version>9.0.1</Version>
-</PackageReference>
+<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
 ## <a name="arguments"></a>Аргументы
 
-`project`
+`PROJECT`
 
-Целевой файл проекта. Если он не указан, команда ищет текущий каталог для него.
+Указывает файл проекта. Если он не указан, команда ищет текущий каталог для него.
 
-`package_name`
+`PACKAGE_NAME`
 
 Добавляемая ссылка на пакет.
 
@@ -80,7 +76,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to f
 
 `-f|--framework <FRAMEWORK>`
 
-Добавляет ссылку на пакет только при ориентации на конкретную платформу.
+Добавляет ссылку на пакет только при ориентации на конкретную [платформу](../../standard/frameworks.md).
 
 `-n|--no-restore`
 
@@ -88,7 +84,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to f
 
 `-s|--source <SOURCE>`
 
-Указывает конкретный источник пакета NuGet для использования во время операции восстановления.
+Указывает конкретный источник пакета NuGet во время операции восстановления.
 
 `--package-directory <PACKAGE_DIRECTORY>`
 

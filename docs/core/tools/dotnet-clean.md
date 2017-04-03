@@ -1,22 +1,23 @@
 ---
-title: "Команда dotnet-clean | Документы Майкрософт"
+title: "Команда dotnet-clean — CLI .NET Core | Документы Майкрософт"
 description: "Команда dotnet-clean очищает текущий каталог."
 keywords: "dotnet-clean, CLI, CLI command, команда интерфейса командной строки, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 3c00f4616932318b5dc5d77cbdf6c645696a4226
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 0bdd8b9ab133ca92e414618412d95d8136d6234a
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-clean"></a>dotnet-clean
+
+# <a name="dotnet-clean"></a>dotnet-clean
 
 ## <a name="name"></a>Имя
 
@@ -24,36 +25,39 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```
-dotnet clean [project] [-o|--output] [-f|--framework] [-c|--configuration] [-v|--verbosity]
-dotnet clean [--help] 
-```
+`dotnet clean [<PROJECT>] [-o|--output] [-f|--framework] [-c|--configuration] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Описание
 
-Команда `dotnet clean` очистит выходные данные предыдущей сборки. Она реализуется как целевой объект MSBuild, поэтому проект получит оценку. Будут очищены только выходные данные, созданные во время сборки. Очищаются папки с промежуточными (`obj`) и окончательными выходными данными (`bin`). 
+Команда `dotnet clean` очищает выходные данные предыдущей сборки. Она реализуется как [целевой объект MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets), поэтому при выполнении команды проект получает оценку. Очищаются только выходные данные, созданные во время сборки. Очищаются папки с промежуточными (*obj*) и окончательными выходными данными (*bin*).
+
+## <a name="arguments"></a>Аргументы
+
+`PROJECT`
+
+Очищаемый проект MSBuild. Если файл проекта не указан, MSBuild ищет в текущем рабочем каталоге файл с расширением, заканчивающимся на *PROJ*, и использует его.
 
 ## <a name="options"></a>Параметры
 
 `-h|--help`
 
-Выводит краткую справку по команде.  
+Выводит краткую справку по команде.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Каталог, в который помещены двоичные значения сборки. При указании этого параметра также необходимо определить `--framework`. Если вы не задали это свойство во время сборки, его не нужно указывать для очистки.
+Каталог, куда помещаются выходные данные сборки. Укажите параметр `-f|--framework <FRAMEWORK>` с параметром выходного каталога, если задали платформу при сборке проекта.
 
 `-f|--framework <FRAMEWORK>`
 
-Платформа, указанная во время сборки. Если вы не задали это свойство во время сборки, его не нужно указывать для очистки. Платформа должна быть определена в [файле проекта](csproj.md).
+[Платформа](../../standard/frameworks.md), указанная во время сборки. Платформа должна быть определена в [файле проекта](csproj.md). Если вы указали платформу во время сборки, нужно указать ее эту платформу при очистке.
 
-`-c|--configuration [Debug|Release]`
+`-c|--configuration <CONFIGURATION>`
 
-Определяет конфигурация, с которой была запущена сборка.  Если значение не указано, по умолчанию используется значение `Debug`. Если вы не задали это свойство во время сборки, его не нужно указывать для очистки.
+Определяет конфигурацию. Если значение не указано, по умолчанию используется значение `Debug`. Это свойство требуется при очистке только в том случае, если вы указали его во время сборки.
 
-`-v|--verbosity <Quiet|Minimal|Normal|Diag>`
+`-v|--verbosity <LEVEL>`
 
-Определяет уровень детализации для вызова команды `dotnet clean`. Уровни детализации являются стандартными [уровнями детализации MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference). 
+Задает уровень детализации команды. Допустимые уровни: q[uiet], m[inimal], n[ormal], d[etailed] и diag[nostic].
 
 ## <a name="examples"></a>Примеры
 

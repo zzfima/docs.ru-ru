@@ -1,75 +1,94 @@
 ---
-title: "Типы, допускающие значения NULL (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# - язык, типы, допускающие значения NULL"
-  - "типы, допускающие значения NULL [C#]"
-  - "типы [C#], допускающие значения NULL"
+title: "Типы, допускающие значение NULL (руководство по программированию на C#) | Документация Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- nullable types [C#]
+- C# language, nullable types
+- types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
 caps.latest.revision: 44
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 44
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 75726b9864abc0c9b556085e5215c6692d80fb12
+ms.lasthandoff: 03/13/2017
+
 ---
-# Типы, допускающие значения NULL (Руководство по программированию на C#)
-Тип, допускающие значения NULL, являются экземплярами структуры <xref:System.Nullable%601?displayProperty=fullName>.  Тип, допускающий значения NULL, может представлять правильный диапазон значений для своего базового типа значений и дополнительное пустое значение `null`.  Например, для `Nullable<Int32>`, называемого "тип Int32, допускающий значения NULL", можно назначить любое значение от \-2 147 483 648 до 2 147 483 647 или значение `null`.  Для `Nullable<bool>` можно назначить значения [true](../../../csharp/language-reference/keywords/true.md) [false](../../../csharp/language-reference/keywords/false.md) или [null](../../../csharp/language-reference/keywords/null.md).  Возможность назначения значения `null` для числовых и логических типов особенно полезна при работе с базами данных и другими типами данных, содержащих элементы, которым может быть не назначено значение.  Например, логическое поле в базе данных может хранить значения `true` или `false` или может быть не задано.  
+# <a name="nullable-types-c-programming-guide"></a>Типы, допускающие значения NULL (Руководство по программированию на C#)
+Все типы, допускающие значение NULL, являются экземплярами структуры <xref:System.Nullable%601?displayProperty=fullName>. Тип, допускающий значение NULL, может принимать такой же диапазон значений, как и его базовый тип значения, а также дополнительное значение `null`. Например, для типа `Nullable<Int32>` (Int32, допускающий значения NULL) можно назначить любое значение в диапазоне от -2147483648 до 2147483647 или значение `null`. Тип `Nullable<bool>` может иметь значения [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), или [null](../../../csharp/language-reference/keywords/null.md). Возможность назначения `null` для числовых и логических типов особенно полезна при работе с базами данных и другими источниками данных, которые могут содержать элементы без присвоенного значения. Например, логическое поле в базе данных может хранить значения `true` или `false`, или может быть неопределенным.  
   
  [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
- Выходные данные показаны в примере:  
+ Этот пример кода отображает такие выходные данные:  
   
  `num = Null`  
   
  `Nullable object must have a value.`  
   
- Дополнительные примеры см. в разделе [Использование допускающих значение NULL типов](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
+ Дополнительные примеры см. в разделе [Using Nullable Types (C# Programming Guide)](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) (Руководство по программированию на C#. Использование типов, допускающих значение NULL)  
   
-## Общие сведения о типах, допускающих значения NULL  
+## <a name="nullable-types-overview"></a>Обзор типов, допускающих значения NULL  
  Типы, допускающие значения NULL, имеют следующие характеристики.  
   
--   Типы, допускающие значения NULL, представляют переменные типа значения, которым можно назначать значение `null`.  Нельзя создать тип, допускающий значения NULL, на основе ссылочного типа.  \(Ссылочные типы уже поддерживают значение `null`.\)  
+-   Типы, допускающие значение NULL, представляют переменные типа значения, которым может быть назначено значение `null`. Нельзя создать тип, допускающий значение NULL, на основе ссылочного типа. (Ссылочные типы всегда поддерживают значение `null`.)  
   
--   Синтаксис `T?` является краткой формой для <xref:System.Nullable%601>, где `T` — это тип значения.  Две эти формы взаимозаменяемы.  
+-   Синтаксис `T?` является сокращением для <xref:System.Nullable%601>, где `T` является типом значения. Эти две формы записи являются взаимозаменяемыми.  
   
--   Назначение значения для типа, допускающего значение null, выполняется так же, как и для обычного типа значения, например `int? x = 10;` или `double? d = 4.108`.  Типу, допускающему значение "null", также можно присваивать значение `null`: `int? x = null.`  
+-   Типу, допускающему значение NULL, можно присвоить значение так же, как и обычному типу значения, например `int? x = 10;` или `double? d = 4.108`. Также типу, допускающему значение NULL, может быть присвоено значение `null`: `int? x = null.`.  
   
--   Используйте метод <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=fullName> для возврата назначенного значения или значения по умолчанию для базового типа, если значением является `null`, например `int j = x.GetValueOrDefault();`  
+-   Используйте метод <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=fullName>, чтобы возвращать присвоенное значение или значение по умолчанию для базового типа, если значение равно `null`, например так: `int j = x.GetValueOrDefault();`.  
   
--   Воспользуйтесь свойствами только для чтения <xref:System.Nullable%601.HasValue%2A> и <xref:System.Nullable%601.Value%2A> для тестирования наличия значения null и извлечения значения, как показано в следующем примере: `if(x.HasValue) j = x.Value;`  
+-   Используйте свойства <xref:System.Nullable%601.HasValue%2A> и <xref:System.Nullable%601.Value%2A>, доступные только для чтения, чтобы проверить наличие значения NULL и получить значение, как показано в следующем примере: `if(x.HasValue) j = x.Value;`.  
   
-    -   Свойство `HasValue` возвращает `true`, если переменная содержит значение, или `false`, если оно `null`.  
+    -   Свойство `HasValue` возвращает `true`, если переменная содержит допустимое значение, или `false`, если она имеет значение `null`.  
   
-    -   Свойство `Value` возвращает значение, если оно назначено.  В противном случае создается исключение <xref:System.InvalidOperationException?displayProperty=fullName>.  
+    -   Свойство `Value` возвращает значение, если оно назначено. В противном случае создается исключение <xref:System.InvalidOperationException?displayProperty=fullName>.  
   
-    -   По умолчанию для свойства `HasValue` используется значение `false`.  Свойство `Value` не имеет значения по умолчанию.  
+    -   По умолчанию для объекта `HasValue` установлено значение `false`. Свойство `Value` не имеет значения по умолчанию.  
   
-    -   С типом, допускающим значение null, можно также использовать операторы `==` и `!=`, как показано в следующем примере: `if (x != null) y = x;`  
+    -   Вы также можете использовать с типом, допускающим значение NULL, операторы `==` и `!=`, как показано в следующем примере: `if (x != null) y = x;`.  
   
--   Используйте оператор `??`, чтобы назначить значение по умолчанию, которое применяется в том случае, если тип с текущим значением `null`, допускающий значения NULL, назначен типу, не допускающему значения NULL \(например, `int? x = null; int y = x ?? -1;`\)  
+-   Используйте оператор `??`, чтобы назначить значение по умолчанию, которое будет применяться в том случае, если тип, допускающий значение NULL, имеет значение `null` и присваивается типу, не допускающему значение NULL (например, `int? x = null; int y = x ?? -1;`).  
   
--   Вложенные типы, допускающие значения NULL, использовать нельзя.  Компиляция следующей строки невозможна: `Nullable<Nullable<int>> n;`  
+-   Нельзя создавать вложенные типы, допускающие значение NULL. Этот код компилироваться не будет: `Nullable<Nullable<int>> n;`.  
   
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
 -   [Использование допускающих значение NULL типов](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
--   [Упаковка\-преобразование типов, допускающих значение NULL](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
+-   [Упаковка-преобразование типов, допускающих значение NULL](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
   
--   [Оператор ??](../../../csharp/language-reference/operators/null-conditional-operator.md)  
+-   [?? Оператор](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Nullable>   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [C\#](../../../csharp/csharp.md)   
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Делает точного поднятая" средний "?](http://go.microsoft.com/fwlink/?LinkId=112382)
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [C#](../../../csharp/csharp.md)   
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [What exactly does 'lifted' mean?](http://go.microsoft.com/fwlink/?LinkId=112382) (Что означает термин "расширенные"?)
+

@@ -1,44 +1,62 @@
 ---
-title: "Практическое руководство. Копирование, удаление и перемещение файлов и папок (Руководство по программированию в C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "ввод-вывод [C#]"
+title: "Практическое руководство. Копирование, удаление и перемещение файлов и папок (руководство по программированию в C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c7e9a170882c4e8dbb04dc014642a28ad4365e39
+ms.lasthandoff: 03/13/2017
+
 ---
-# Практическое руководство. Копирование, удаление и перемещение файлов и папок (Руководство по программированию в C#)
-В следующих примерах показано, как синхронно копировать, перемещать и удалять файлы и папки с использованием классов <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName> и <xref:System.IO.DirectoryInfo?displayProperty=fullName> из пространства имен <xref:System.IO?displayProperty=fullName>.  В этих примерах не используется индикатор хода выполнения или какой\-либо иной пользовательский интерфейс.  Если нужно использовать стандартное диалоговое окна хода выполнения, см. раздел [Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами](../../../csharp/programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md).  
+# <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Практическое руководство. Копирование, удаление и перемещение файлов и папок (Руководство по программированию в C#)
+В следующих примерах показано, как синхронно копировать, перемещать и удалять файлы и папки с использованием классов <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName> и <xref:System.IO.DirectoryInfo?displayProperty=fullName> из пространства имен <xref:System.IO?displayProperty=fullName>. В этих примерах не используется индикатор хода выполнения или какой-либо иной пользовательский интерфейс. Если нужно использовать стандартное диалоговое окна хода выполнения, см. раздел [Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
   
- Используйте <xref:System.IO.FileSystemWatcher?displayProperty=fullName> для предоставления событий, которые позволяют вычислять ход выполнения при работе с несколькими файлами.  Другим подходом является использование вызова неуправляемого кода для вызова в Windows Shell методов, относящихся к обработке файлов.  Сведения о способах асинхронного выполнения таких операций над файлами см. раздел [Асинхронный файловый ввод\-вывод](../Topic/Asynchronous%20File%20I-O.md).  
+ Используйте <xref:System.IO.FileSystemWatcher?displayProperty=fullName> для предоставления событий, которые позволяют вычислять ход выполнения при работе с несколькими файлами. Другим подходом является использование вызова неуправляемого кода для вызова в Windows Shell методов, относящихся к обработке файлов. Сведения о способах асинхронного выполнения таких операций над файлами см. в разделе [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys).  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как копировать файлы и каталоги.  
   
  [!code-cs[csFilesandFolders#7](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_1.cs)]  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как перемещать файлы и каталоги.  
   
  [!code-cs[csFilesandFolders#8](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_2.cs)]  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как удалять файлы и каталоги.  
   
  [!code-cs[csFilesandFolders#9](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_3.cs)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.IO?displayProperty=fullName>   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Файловая система и реестр](../../../csharp/programming-guide/file-system/file-system-and-the-registry.md)   
- [Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами](../../../csharp/programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md)   
- [Файловый и потоковый ввод\-вывод](../Topic/File%20and%20Stream%20I-O.md)   
- [Распространенные задачи ввода\-вывода](../Topic/Common%20I-O%20Tasks.md)
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Файловая система и реестр (руководство по программированию на C#)](index.md)   
+ [Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами](how-to-provide-a-progress-dialog-box-for-file-operations.md)   
+ [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)   
+ [Распространенные задачи ввода-вывода](https://msdn.microsoft.com/library/ms404278)

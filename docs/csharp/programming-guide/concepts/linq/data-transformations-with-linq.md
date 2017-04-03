@@ -1,78 +1,97 @@
 ---
-title: "Преобразования данных с помощью LINQ (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#], преобразования данных"
-  - "исходные элементы [LINQ в C#]"
-  - "объединение нескольких вводов [LINQ в C#]"
-  - "несколько выводов для одной выходной последовательности [LINQ в C#]"
-  - "подмножество исходных элементов [LINQ в C#]"
-  - "источники данных [LINQ в C#], преобразования данных"
-  - "преобразования данных [LINQ в C#]"
+title: "Преобразования данных с помощью LINQ (C#) | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], data transformations
+- source elements [LINQ in C#]
+- joining multiple inputs [LINQ in C#]
+- multiple outputs for one output sequence [LINQ in C#]
+- subset of source elements [LINQ in C#]
+- data sources [LINQ in C#], data transformations
+- data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0b7f8874e9a22ca14bee009cab98e13d96bd9621
+ms.lasthandoff: 03/13/2017
+
 ---
-# Преобразования данных с помощью LINQ (C#)
-[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] используется не только для извлечения данных.  Это также мощное средство для преобразования данных.  С помощью запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] можно использовать исходную последовательность в качестве входных данных и изменять ее различными способами для создания новой выходной последовательности.  Можно изменить последовательность сама без изменения элементов сами, сортировка и группирование. Однако при необходимости наиболее запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] предусмотрена удобная возможность создания новых типов.  Это выполняется в предложении [select](../../../../csharp/language-reference/keywords/select-clause.md).  Например, можно выполнить следующие задачи.  
+# <a name="data-transformations-with-linq-c"></a>Преобразования данных с помощью LINQ (C#)
+[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] предназначен не только для получения данных. Это эффективный инструмент для их преобразования. С помощью запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] можно использовать исходную последовательность в качестве входных данных и изменять ее различными способами для создания новой выходной последовательности. Можно изменить саму последовательность, не изменяя элементы, с помощью сортировки и группировки. Однако самой интересной функцией запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] можно назвать возможность создания новых типов. Это выполняется в предложении [select](../../../../csharp/language-reference/keywords/select-clause.md). Например, можно выполнить следующие задачи.  
   
--   Объединить несколько входных последовательностей в одну выходную последовательность, которая имеет новый тип.  
+-   Объединение нескольких входных последовательностей в одну выходную последовательность, имеющую новый тип.  
   
--   Создать выходные последовательности, элементы которых состоят только из одного или нескольких свойств каждого элемента в исходной последовательности.  
+-   Создание выходных последовательностей, элементы которых состоят из одного или нескольких свойств каждого элемента в исходной последовательности.  
   
--   Создать выходные последовательности, элементы которых состоят из результатов операций, выполняемых над исходными данными.  
+-   Создание выходных последовательностей, элементы которых состоят из результатов операций, выполняемых с источником данных.  
   
--   Создать выходные последовательности в другом формате.  Например, можно преобразовать данные из строк SQL или текстовых файлов в XML.  
+-   Создание выходных последовательностей в другом формате. Например, можно преобразовать данные из строк SQL или текстовых файлов в XML.  
   
- Это только несколько примеров.  Разумеется, эти преобразования могут объединяться различными способами в одном запросе.  Более того, выходные последовательности одного запроса могут использоваться как входные последовательности для нового запроса.  
+ Это лишь несколько примеров. Очевидно, что эти преобразования могут сочетаться различными способами в одном запросе. Более того, выходную последовательность одного запроса можно использовать как входную последовательность для нового запроса.  
   
-## Соединение нескольких входных последовательностей в одну выходную  
- Запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] можно использовать для создания выходной последовательности, содержащей элементы из нескольких входных последовательностей.  В следующем примере показано объединение двух находящихся в памяти структур данных, но те же принципы могут применяться для соединения данных из источников XML, SQL или DataSet.  Предположим, что существуют два следующих типа классов.  
+## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Объединение нескольких входных последовательностей в одну выходную  
+ Запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] можно использовать для создания выходной последовательности, содержащей элементы из нескольких входных последовательностей. Следующий пример демонстрирует объединение двух структур данных в памяти, однако те же принципы могут применяться для объединения данных из источников XML, SQL или DataSet. Рассмотрим следующие два типа классов:  
   
  [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
- В следующем примере показан запрос.  
+ В следующем примере показан запрос:  
   
  [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
- Дополнительные сведения см. в разделах [Предложение join](../../../../csharp/language-reference/keywords/join-clause.md) и [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md).  
+ Дополнительные сведения см. в разделе [Предложение join](../../../../csharp/language-reference/keywords/join-clause.md) и [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
-## Выбор подмножества каждого исходного элемента  
- Существует два основных способа выбора подмножества каждого элемента в исходной последовательности.  
+## <a name="selecting-a-subset-of-each-source-element"></a>Выбор подмножества каждого исходного элемента  
+ Существует два основных способа выбора подмножества каждого элемента в исходной последовательности:  
   
-1.  Чтобы выбрать только один член исходного элемента, используйте операцию dot.  В следующем примере предполагается, что объект `Customer` содержит несколько открытых свойств, включая строку с именем `City`.  При выполнении этот запрос создаст выходную последовательность строк.  
+1.  Выбор только одного члена исходного элемента с помощью операции dot. В следующем примере предполагается, что объект `Customer` содержит несколько открытых свойств, включая строку с именем `City`. При выполнении этот запрос создаст выходную последовательность строк.  
   
     ```  
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  Для создания элементов, содержащих более одного свойства исходного элемента, можно использовать инициализатор объектов либо с именованным объектом, либо с анонимным типом.  В следующем примере показано использование анонимного типа для инкапсуляции двух свойств из каждого элемента `Customer`.  
+2.  Для создания элементов, содержащих более одного свойства исходного элемента, можно использовать инициализатор объектов с именованным объектом или анонимным типом. В следующем примере показано использование анонимного типа для инкапсуляции двух свойств из каждого элемента `Customer`:  
   
     ```  
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  
   
- Дополнительные сведения см. в разделах [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) и [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Дополнительные сведения см. в разделе [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) и [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-## Преобразование находящихся в памяти объектов в XML  
- Запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] упрощают преобразования данных между структурами данных в памяти, базами данных SQL, наборами данных [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)] и потоками или документами XML.  В следующем примере объекты в находящейся в памяти структуре данных преобразуются в XML\-элементы.  
+## <a name="transforming-in-memory-objects-into-xml"></a>Преобразование объектов в памяти в XML  
+ Запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] упрощают преобразование данных между структурами данных в памяти, базах данных SQL, наборах данных [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] и XML-потоках или XML-документах. В следующем примере объекты в структуре данных в памяти преобразуются в XML-элементы.  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
- Код формирует следующие выходные XML\-данные.  
+ Этот код создает следующий выходные данные XML:  
   
 ```  
 < Root>  
@@ -94,21 +113,20 @@ caps.handback.revision: 15
 </Root>  
 ```  
   
- Дополнительные сведения см. в разделе [Создание XML\-деревьев на языке C\#](../Topic/Creating%20XML%20Trees%20in%20C%23%20\(LINQ%20to%20XML\)1.md).  
+ Дополнительные сведения см. в разделе [Создание деревьев XML C# (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md).  
   
-## Выполнение операций над исходными элементами  
- Выходная последовательность может не содержать какие\-либо элементы или свойства элементов из исходной последовательности.  Результатом может быть последовательность значений, вычисляемых с использованием исходных элементов в качестве входных аргументов.  При выполнении следующего простого запроса выводится последовательность строк, значения которых рассчитаны на основе исходной последовательности элементов типа `double`.  
+## <a name="performing-operations-on-source-elements"></a>Выполнение операций с исходными элементами  
+ Выходная последовательность не может содержать любые элементы или свойства элементов из исходной последовательности. Результатом может быть последовательность значений, вычисляемых с использованием исходных элементов в качестве входных аргументов. При выполнении следующего простого запроса выводится последовательность строк, значения которых вычисляются на основе исходной последовательности элементов типа `double`.  
   
 > [!NOTE]
->  Вызов методов в выражениях запроса не поддерживается, если запрос будет перенесен в какой\-либо другой домен.  Например, невозможно вызвать обычный C\# метод в [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], так как в SQL Server для него отсутствует контекст.  Тем не менее, хранимые процедуры можно сопоставить методам и вызывать последние.  Дополнительные сведения см. в разделе [Хранимые процедуры](../Topic/Stored%20Procedures.md).  
+>  Вызов методов в выражениях запросов не поддерживается, если запрос будет преобразован в некоторую другую область. Например, невозможно вызвать обычный метод C# в [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)], так как в SQL Server для него отсутствует контекст. Тем не менее можно сопоставить хранимые процедуры методов и вызвать их. Дополнительные сведения см. в разделе [Хранимые процедуры](http://msdn.microsoft.com/library/4d23dd7a-a85f-44ff-a717-af7d0950c0fc).  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
-## См. также  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md)   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)   
+## <a name="see-also"></a>См. также  
+ [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)   
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
  [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md)   
- [Практическое руководство. Объединение данных с помощью соединений](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+ [предложение select](../../../../csharp/language-reference/keywords/select-clause.md)

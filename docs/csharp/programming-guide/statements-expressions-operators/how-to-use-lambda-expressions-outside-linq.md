@@ -1,24 +1,42 @@
 ---
-title: "Практическое руководство. Использование лямбда-выражений вне LINQ (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "лямбда-выражения [C#], вне LINQ"
+title: "Практическое руководство. Использование лямбда-выражений вне LINQ (руководство по программированию на C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lambda expressions [C#], outside LINQ
 ms.assetid: 2b519274-6ee4-4455-ab2e-aed67dbfd07c
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 54e1c54c0fe06847a5d36ca1e58b21884880bc3c
+ms.lasthandoff: 03/13/2017
+
 ---
-# Практическое руководство. Использование лямбда-выражений вне LINQ (Руководство по программированию на C#)
-Лямбда\-выражения не ограничиваются запросами [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  Их можно использовать везде, где ожидается значение\-делегат, то есть везде, где можно использовать анонимные методы.  В следующем примере показано, как использовать лямбда\-выражение в обработчике событий Windows Forms.  Обратите внимание, что входные типы \(<xref:System.Object> и <xref:System.Windows.Forms.MouseEventArgs>\) выводятся компилятором, их не нужно явным образом указывать во входных параметрах лямбда\-выражения.  
+# <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a>Практическое руководство. Использование лямбда-выражений вне LINQ (Руководство по программированию на C#)
+Лямбда-выражения не ограничиваются запросами [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]. Их можно использовать везде, где ожидается значение делегата, т. е. там, где можно использовать анонимный метод. В представленном ниже примере показано, как использовать лямбда-выражение в обработчике событий Windows Forms. Обратите внимание на то, что типы входных данных (<xref:System.Object> и <xref:System.Windows.Forms.MouseEventArgs>) выводятся компилятором и не требуют прямого указания параметров лямбда-выражений.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 public partial class Form1 : Form  
@@ -32,7 +50,7 @@ public partial class Form1 : Form
 }  
 ```  
   
-## См. также  
- [Лямбда\-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+## <a name="see-also"></a>См. также  
+ [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
  [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)
+ [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

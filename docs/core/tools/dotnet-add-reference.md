@@ -1,37 +1,35 @@
 ---
-title: "Команда dotnet-add reference | Документы Майкрософт"
+title: "Команда dotnet-add reference — CLI .NET Core | Документы Майкрософт"
 description: "Команду dotnet-add reference удобно использовать для добавления ссылок между проектами."
 keywords: "dotnet-add, CLI, команда CLI, .NET Core"
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e2a3efd-443c-4f23-a1b1-a662a5387879
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 7d23377244cfe60730b50bd247209de6e90bec70
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 1b342f0aea19c01d7bdae94552019f4c171fd1a2
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
 ## <a name="name"></a>Имя
 
-`dotnet-add reference` — добавляет перекрестные ссылки между проектами.
+`dotnet-add reference` — добавляет перекрестные ссылки между проектами (P2P).
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```
-dotnet add [project] reference [-f|--framework] <project_references>
-dotnet add reference [-h|--help]
-```
+`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
 ## <a name="description"></a>Описание
 
-Команду `dotnet add reference` удобно использовать для добавления ссылок на проекты в проект. После запуска этой команды в файл проекта добавляются фрагменты [`<ProjectReference>`](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items).
+Команду `dotnet add reference` удобно использовать для добавления ссылок на проекты в проект. После запуска этой команды в файл проекта добавляются элементы [`<ProjectReference>`](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items).
 
 ```xml
 <ItemGroup>
@@ -43,13 +41,13 @@ dotnet add reference [-h|--help]
 
 ## <a name="arguments"></a>Аргументы
 
-`project`
+`PROJECT`
 
-Целевой файл проекта. Если он не указан, команда будет искать текущий каталог для него.
+Указывает файл проекта. Если он не указан, команда будет искать текущий каталог для него.
 
-`project_references`
+`PROJECT_REFERENCES`
 
-Добавляемые перекрестные ссылки между проектами. Вы можете указать один или несколько проектов. Стандартная маска поддерживается в терминалах на основе Unix или Linux.
+Добавляемые перекрестные ссылки между проектами (P2P). Укажите один или несколько проектов. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в системах на основе Unix или Linux.
 
 ## <a name="options"></a>Параметры
 
@@ -59,7 +57,7 @@ dotnet add reference [-h|--help]
 
 `-f|--framework <FRAMEWORK>`
 
-Добавляет ссылки на проекты только при ориентации на конкретную платформу.
+Добавляет ссылки на проекты только при ориентации на конкретную [платформу](../../standard/frameworks.md).
 
 ## <a name="examples"></a>Примеры
 
@@ -74,3 +72,4 @@ dotnet add reference [-h|--help]
 Добавление нескольких ссылок на проект с помощью стандартной маски в Linux/Unix:
 
 `dotnet add app/app.csproj reference **/*.csproj`
+

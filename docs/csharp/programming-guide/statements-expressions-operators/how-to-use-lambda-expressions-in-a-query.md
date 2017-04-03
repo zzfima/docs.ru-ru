@@ -1,38 +1,56 @@
 ---
-title: "Практическое руководство. Использование лямбда-выражений в запросах (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "лямбда-выражения [C#], в LINQ"
+title: "Практическое руководство. Использование лямбда-выражений в запросах (руководство по программированию на C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7bfc46015b0d4603c4d63478e804f862c0c65b68
+ms.lasthandoff: 03/13/2017
+
 ---
-# Практическое руководство. Использование лямбда-выражений в запросах (Руководство по программированию на C#)
-Лямбда\-выражения не используются непосредственно в синтаксисе запросов, но их можно использовать в вызовах методов, а выражения запросов могут содержать вызовы методов.  Некоторые операции запросов могут быть выражены только с помощью синтаксиса методов.  Дополнительные сведения о различиях между синтаксисом запросов и синтаксисом методов см. в разделе [Query Syntax and Method Syntax in LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Практическое руководство. Использование лямбда-выражений в запросах (Руководство по программированию на C#)
+Использовать лямбда-выражения непосредственно в синтаксисе запросов нельзя, однако их включают в вызовы методов, а те, в свою очередь, могут содержаться в выражениях запросов. Фактически некоторые операции запросов могут быть выражены только в синтаксисе методов. Дополнительные сведения о различиях между синтаксисом запросов и синтаксисом методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
-## Пример  
- В следующем примере показано использование лямбда\-выражения в запросе на основе метода с помощью стандартного оператора запроса <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>.  Обратите внимание, что в этом примере метод <xref:System.Linq.Enumerable.Where%2A> имеет входной параметр делегата типа <xref:System.Func%601>, а этот делегат получает на вход целое число и возвращает логическое значение.  Лямбда\-выражение может быть преобразовано в тип этого делегата.  Если бы это был запрос [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)] с использованием метода <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>, то следовало бы использовать параметр `Expression<Func\<int,bool>>`, но лямбда\-выражение было бы точно таким же.  Дополнительные сведения о типах выражений см. в разделе <xref:System.Linq.Expressions.Expression?displayProperty=fullName>.  
+## <a name="example"></a>Пример  
+ В следующем примере показано применение лямбда-выражения в основанном на методе запросе с использованием стандартного оператора запросов <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>. Обратите внимание на то, что метод <xref:System.Linq.Enumerable.Where%2A> в этом примере имеет входной параметр с делегатом типа <xref:System.Func%601>, и этот делегат принимает целое число как входящие данные и возвращает логическое значение. Лямбда-выражение может быть преобразовано в этот делегат. Если бы это был запрос [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], в котором используется метод <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>, параметр имел бы тип `Expression<Func\<int,bool>>`, однако вид лямбда-выражения при этом бы не изменился. Дополнительные сведения о типах выражений см. в разделе <xref:System.Linq.Expressions.Expression?displayProperty=fullName>.  
   
  [!code-cs[csProgGuideLINQ#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_1.cs)]  
   
-## Пример  
- В следующем примере показано использование лямбда\-выражения в вызове метода в выражении запроса.  Лямбда\-выражение здесь необходимо использовать, поскольку стандартный оператор запроса <xref:System.Linq.Enumerable.Sum%2A> нельзя вызвать с помощью синтаксиса запроса.  
+## <a name="example"></a>Пример  
+ В приведенном ниже примере показано, как использовать лямбда-выражение в вызове метода выражения запроса. Лямбда-выражения необходимы в связи с тем, что с помощью синтаксиса запросов вызвать стандартный оператор запроса <xref:System.Linq.Enumerable.Sum%2A> нельзя.  
   
- Запрос сначала группирует учащихся их уровню согласно перечислению `GradeLevel`.  Затем для каждой группы добавляются итоговые оценки для каждого учащегося.  Для этого требуются две операции `Sum`.  Внутренняя операция `Sum` вычисляет итоговую оценку каждого студента, а внешняя операция `Sum` вычисляет общую оценку для всех учащихся в группе.  
+ Сначала запрос группирует учащихся по успеваемости, как задано в перечислении `GradeLevel`. Затем для каждой группы он добавляет итоговые оценки каждого учащегося. Для этого требуются две операции `Sum`. Внутренняя операция `Sum` вычисляет общий результат для каждого учащегося, а внешняя операция `Sum` рассчитывает промежуточный общий результат по всем учащимся в группе.  
   
  [!code-cs[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
-## Компиляция кода  
- Чтобы запустить этот код, вставьте метод его в класс `StudentClass` в [Практическое руководство. Запрос коллекции объектов](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) и вызовите его из метода `Main`.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Чтобы выполнить этот код, скопируйте и вставьте метод в `StudentClass`, описанный в документе [Практическое руководство. Запрос коллекции объектов](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md), а затем вызовите его из метода `Main`.  
   
-## См. также  
- [Лямбда\-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Деревья выражений](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>См. также  
+ [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+ [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)

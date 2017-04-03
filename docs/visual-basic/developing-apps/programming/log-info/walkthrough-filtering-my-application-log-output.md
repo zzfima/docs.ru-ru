@@ -1,48 +1,65 @@
 ---
-title: "Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Log-объект, фильтрация вывода"
-  - "Объект My.Application.Log, фильтрация вывода"
-  - "журналы событий приложений, вывод фильтрации"
+title: "Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic) | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My.Log object, filtering output
+- My.Application.Log object, filtering output
+- application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: caa4b8be16e5000d02d82a83199a25d13ad07bba
+ms.lasthandoff: 03/13/2017
 
-В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию `My.Application.Log` объекта, чтобы контролировать, какие данные передаются из `Log` объект в прослушиватели и управление информацией, записываемой прослушивателями. Можно изменить режим ведения журнала даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.  
+---
+# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)
+В этом пошаговом руководстве демонстрируется изменение фильтрации журнала по умолчанию для объекта `My.Application.Log`, чтобы контролировать, какие данные передаются из объекта `Log` в прослушиватели и какие данные записываются прослушивателями. Режим ведения журнала можно изменить даже после создания приложения, поскольку сведения о конфигурации хранятся в файле конфигурации приложения.  
   
 ## <a name="getting-started"></a>Начало работы  
- Каждое сообщение, `My.Application.Log` запись имеет соответствующий уровень серьезности, использовать какие механизмы фильтрации для управления выводом в журнал. Этот пример приложения использует `My.Application.Log` методов для записи нескольких журналов сообщений с различными уровнями серьезности.  
+ Каждое сообщение, записываемое объектом `My.Application.Log`, имеет соответствующий уровень степени серьезности, используемый механизмами фильтрации для управления выходными данными журнала. В этом примере приложения используются методы `My.Application.Log` для записи нескольких сообщений журналов с различными уровнями степени серьезности.  
   
-#### <a name="to-build-the-sample-application"></a>Построение примера приложения  
+#### <a name="to-build-the-sample-application"></a>Создание примера приложения  
   
-1.  Откройте новую [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] проекта приложения Windows.  
+1.  Откройте новый проект приложения Windows [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
 2.  Добавьте кнопку с именем Button1 в форму Form1.  
   
-3.  В <xref:System.Windows.Forms.Control.Click> обработчик событий для кнопки Button1, добавьте следующий код:  
+3.  В обработчике событий <xref:System.Windows.Forms.Control.Click> для кнопки Button1 добавьте следующий код:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
 4.  Запустите приложение в отладчике.  
   
-5.  Нажмите клавишу **Button1**.  
+5.  Нажмите кнопку **Button1**.  
   
-     Приложение записывает следующие сведения в файл выходных данных и журналов отладки приложения.  
+     Приложение записывает следующие сведения в файл выходных данных отладки и файл журнала приложения.  
   
      `DefaultSource Information: 0 : In Button1_Click`  
   
@@ -50,38 +67,37 @@ caps.handback.revision: 22
   
 6.  Закройте приложение.  
   
-     Сведения о просмотре окна отладочного вывода приложения см. в разделе [окно вывода](/visual-studio/ide/reference/output-window). Сведения о расположении файла журнала приложения см. в разделе [Пошаговое руководство: определение информация](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Сведения о просмотре окна вывода отладочных данных приложения см. в разделе [Окно вывода](https://docs.microsoft.com/visualstudio/ide/reference/output-window). Сведения о расположении файла журнала приложения см. в разделе [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
-    >  По умолчанию приложение записывает вывод в файл журнала при закрытии приложения.  
+    >  По умолчанию приложение записывает выходные данные в файл журнала при закрытии приложения.  
   
-     В примере выше, второй вызов <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> метод и вызов <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> метод выходные данные журнала, во время первого и последнего вызовы `WriteEntry` метода нет. Это, поскольку уровни серьезности `WriteEntry` и `WriteException` являются «Сведения» и «Ошибка», для которых разрешены `My.Application.Log` объекта фильтрации журнала по умолчанию. Однако события с уровнями серьезности «Начало» и «Stop» не выводятся в журнал.  
+     В примере выше второй вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> и вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> формируют выходные данные для журнала, а первый и последний вызовы метода `WriteEntry` — нет. Это связано с тем, что уровнями серьезности для `WriteEntry` и `WriteException` являются "Информация" и "Ошибка". Оба эти значения разрешены при фильтрации журнала по умолчанию для объекта `My.Application.Log`. Однако событиям с уровнями серьезности "Запуск" и "Остановка" запрещено создание выходных данных журнала.  
   
-## <a name="filtering-for-all-myapplicationlog-listeners"></a>Фильтрация для всех прослушивателей My.Application.Log  
-  `My.Application.Log` Объектов используют <xref:System.Diagnostics.SourceSwitch> с именем `DefaultSwitch` для управления передачей сообщений `WriteEntry` и `WriteException` методы прослушивателей журнала. Можно настроить `DefaultSwitch` в файле конфигурации приложения, установив его значение на одно из <xref:System.Diagnostics.SourceLevels> значений перечисления. По умолчанию его значение равно «Сведения».  
+## <a name="filtering-for-all-myapplicationlog-listeners"></a>Фильтрация всех прослушивателей My.Application.Log  
+ Объект `My.Application.Log` использует <xref:System.Diagnostics.SourceSwitch>с именем `DefaultSwitch` для управления сообщениями, передаваемыми из методов `WriteEntry` и `WriteException` в прослушиватели журнала. Можно настроить `DefaultSwitch` в файле конфигурации приложения, задав в качестве его значения одно из значений перечисления <xref:System.Diagnostics.SourceLevels>. По умолчанию используется значение "Информация".  
   
- В этой таблице показан уровень серьезности, необходимый для записи сообщения в прослушиватели для данного идентификатора `DefaultSwitch` параметр.  
+ В этой таблице показан уровень серьезности, необходимый журналу для записи сообщения в прослушиватели с конкретным параметром `DefaultSwitch`.  
   
-|||  
-|-|-|  
 |Значение DefaultSwitch|Уровень серьезности сообщения, необходимый для вывода|  
+|---|---| 
 |`Critical`|`Critical`|  
 |`Error`|`Critical` или `Error`|  
 |`Warning`|`Critical`, `Error` или `Warning`|  
 |`Information`|`Critical`, `Error`, `Warning` или `Information`|  
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` или `Verbose`|  
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` или `Transfer`|  
-|`All`|Разрешены все сообщения.|  
+|`All`|Все сообщения разрешены.|  
 |`Off`|Все сообщения блокируются.|  
   
 > [!NOTE]
->   `WriteEntry` И `WriteException` каждый из методов имеет перегрузку, которая не содержит уровень серьезности. Неявный уровень серьезности для `WriteEntry` перегрузка является «Сведения» и неявный уровень серьезности для `WriteException` перегрузка является «Ошибка».  
+>  Каждый метод `WriteEntry` и `WriteException` имеет перегрузку, которая не указывает уровень серьезности. Неявным уровнем серьезности для перегрузки `WriteEntry` является "Информация", а неявным уровнем серьезности для перегрузки `WriteException` — "Ошибка".  
   
- В следующей таблице показано в предыдущем примере показаны выходные данные журнала: по умолчанию `DefaultSwitch` параметр «Сведения», только второй вызов `WriteEntry` метод и вызов `WriteException` Выходные данные журнала создают метод.  
+ В этой таблице приводятся выходные данные журнала из предыдущего примера: с параметром `DefaultSwitch` по умолчанию "Информация" только второй вызов метода `WriteEntry` и вызов метода `WriteException` формируют выходные данные журнала.  
   
-#### <a name="to-log-only-activity-tracing-events"></a>В журнал только события отслеживания действий  
+#### <a name="to-log-only-activity-tracing-events"></a>Запись в журнал только событий трассировки действий  
   
-1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите **Открыть**.  
+1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
      -или-  
   
@@ -93,13 +109,13 @@ caps.handback.revision: 22
   
     3.  Нажмите кнопку **Добавить**.  
   
-2.  Найдите `<switches>` раздела, в котором находится в `<system.diagnostics>` раздела, в котором находится на верхнем уровне `<configuration>` раздел.  
+2.  Найдите раздел `<switches>` в разделе `<system.diagnostics>` раздела `<configuration>` верхнего уровня.  
   
-3.  Найдите элемент, добавляющий `DefaultSwitch` коллекцию переключателей. Он должен выглядеть аналогично этому элементу:  
+3.  Найдите элемент, добавляющий `DefaultSwitch` в коллекцию переключателей. Он должен выглядеть аналогично следующему элементу:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Измените значение `value` атрибут «ActivityTracing».  
+4.  Измените значение атрибута `value` данного свойства на "ActivityTracing".  
   
 5.  Содержимое файла app.config должно быть похоже на следующий код XML:  
   
@@ -132,9 +148,9 @@ caps.handback.revision: 22
   
 6.  Запустите приложение в отладчике.  
   
-7.  Нажмите клавишу **Button1**.  
+7.  Нажмите кнопку **Button1**.  
   
-     Приложение записывает следующие сведения в файл выходных данных и журналов отладки приложения.  
+     Приложение записывает следующие сведения в файл выходных данных отладки и файл журнала приложения.  
   
      `DefaultSource Start: 4 : Entering Button1_Click`  
   
@@ -142,21 +158,21 @@ caps.handback.revision: 22
   
 8.  Закройте приложение.  
   
-9. Измените значение `value` атрибут «Сведения».  
+9. Измените значение атрибута `value` снова на "Информация".  
   
     > [!NOTE]
-    >   `DefaultSwitch` Переключение параметр определяет только `My.Application.Log`. Он не влияет на способ [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> и <xref:System.Diagnostics.Debug?displayProperty=fullName> поведение классов.  
+    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. Он не влияет на поведение классов [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> и <xref:System.Diagnostics.Debug?displayProperty=fullName>.  
   
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Отдельные фильтрации для прослушивателей My.Application.Log  
- В предыдущем примере показано, как изменить фильтрацию для всех `My.Application.Log` Выходные данные. В этом примере демонстрируется способ фильтрации для отдельных прослушивателей журнала. По умолчанию приложение имеет два прослушивателя, которые выполняют запись в отладочный вывод приложения и файл журнала.  
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Отдельная фильтрация прослушивателей My.Application.Log  
+ В предыдущем примере показано, как изменить фильтрацию для всех выходных данных `My.Application.Log`. В этом примере демонстрируется способ фильтрации отдельных прослушивателей журнала. По умолчанию приложение имеет два прослушивателя, которые выполняют запись в файл выходных данных отладки и файл журнала приложения.  
   
- Файл конфигурации управляет поведением прослушивателей журнала, позволяя каждому из них иметь фильтр, аналогичный переключателю `My.Application.Log`. Прослушиватель журнала будет выводить сообщение только в том случае, если уровень серьезности сообщения допускается журнала `DefaultSwitch` и фильтром прослушивателя журнала.  
+ Файл конфигурации управляет поведением прослушивателей журнала, разрешая каждому из них иметь фильтр, аналогичный переключателю `My.Application.Log`. Прослушиватель журнала будет выводить сообщение только в том случае, если уровень серьезности сообщения допускается фильтром `DefaultSwitch` журнала и фильтром прослушивателя журнала.  
   
- В этом примере демонстрируется настройка фильтрации для нового прослушивателя отладки и добавление его `Log` объекта. Прослушиватели отладки по умолчанию должны быть удалены из `Log` объекта, чтобы обеспечить поступление сообщений отладки только из нового прослушивателя отладки.  
+ В этом примере демонстрируется настройка фильтрации для нового прослушивателя отладки и добавление его в объект `Log`. Прослушиватель отладки по умолчанию должен быть удален из объекта `Log`, чтобы сообщения отладки поступали только из нового прослушивателя отладки.  
   
-#### <a name="to-log-only-activity-tracing-events"></a>В журнал только события отслеживания действий  
+#### <a name="to-log-only-activity-tracing-events"></a>Запись в журнал только событий трассировки действий  
   
-1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите **Открыть**.  
+1.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений** и выберите команду **Открыть**.  
   
      -или-  
   
@@ -168,11 +184,11 @@ caps.handback.revision: 22
   
     3.  Нажмите кнопку **Добавить**.  
   
-2.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений**. Выберите **Открыть**.  
+2.  Щелкните правой кнопкой мыши файл app.config в **обозревателе решений**. Выберите команду **Открыть**.  
   
-3.  Найдите `<listeners>` раздела `<source>` статьи с `name` атрибутом «DefaultSource», который находится под `<sources>` раздел.  `<sources>` Раздел находится под `<system.diagnostics>` раздела верхнего уровня `<configuration>` раздел.  
+3.  Найдите раздел `<listeners>` в разделе `<source>` с атрибутом `name`, равным DefaultSource, в разделе `<sources>`. Раздел `<sources>` находится в разделе `<system.diagnostics>` раздела `<configuration>` верхнего уровня.  
   
-4.  Этот элемент, чтобы добавить `<listeners>` раздел:  
+4.  Добавьте этот элемент в раздел `<listeners>`:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -196,7 +212,7 @@ caps.handback.revision: 22
     </add>  
     ```  
   
-      <xref:System.Diagnostics.EventTypeFilter> Фильтр принимает один из <xref:System.Diagnostics.SourceLevels> значений перечисления, как его `initializeData` атрибута.  
+     Фильтр <xref:System.Diagnostics.EventTypeFilter> принимает одно из значений перечисления <xref:System.Diagnostics.SourceLevels> в качестве своего атрибута `initializeData`.  
   
 7.  Содержимое файла app.config должно быть похоже на следующий код XML:  
   
@@ -241,15 +257,15 @@ caps.handback.revision: 22
   
 8.  Запустите приложение в отладчике.  
   
-9. Нажмите клавишу **Button1**.  
+9. Нажмите кнопку **Button1**.  
   
-     Приложение записывает следующие сведения в файле журнала:  
+     Приложение записывает следующие сведения в файл выходных данных приложения:  
   
      `Default Information: 0 : In Button1_Click`  
   
      `Default Error: 2 : Error in the application.`  
   
-     Приложение записывает меньше информации в вывод отладки приложения из-за более строгой фильтрации.  
+     В связи с более ограничивающим фильтром приложение записывает меньше данных в выходные данные отладки приложения.  
   
      `Default Error   2   Error`  
   
@@ -258,9 +274,9 @@ caps.handback.revision: 22
  Дополнительные сведения об изменении параметров журнала после развертывания см. в разделе [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>См. также  
- [Пошаговое руководство: Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [Пошаговое руководство: Изменение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [Пошаговое руководство: Создание пользовательских прослушивателей журнала](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [Практическое руководство: запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Переключатели трассировки](../Topic/Trace%20Switches.md)   
- [Запись сведений в приложение](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
+ [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
+ [Пошаговое руководство. Создание пользовательских прослушивателей журнала](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
+ [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
+ [Переключатели трассировки](http://msdn.microsoft.com/library/8ab913aa-f400-4406-9436-f45bc6e54fbe)   
+ [Запись сведений в журнал из приложения](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
