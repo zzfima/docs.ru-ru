@@ -1,0 +1,8 @@
+# [Коллекции и структуры данных](index.md)
+# [Выбор класса коллекции](selecting-a-collection-class.md)
+# [Часто используемые типы коллекций](commonly-used-collection-types.md)
+# [Когда следует использовать универсальные коллекции](when-to-use-generic-collections.md)
+# [Сравнение и сортировка в коллекциях](comparisons-and-sorts-within-collections.md)
+# [Отсортированные типы коллекций](sorted-collection-types.md)
+# [Типы коллекций Hashtable и Dictionary](hashtable-and-dictionary-collection-types.md)
+# [Потокобезопасные коллекции](thread-safe/)
