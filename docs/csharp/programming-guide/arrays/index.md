@@ -1,48 +1,66 @@
 ---
-title: "Массивы (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "массивы [C#]"
-  - "C# - язык, массивы"
+title: "Массивы (руководство по программированию на C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- arrays [C#]
+- C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 caps.latest.revision: 33
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 33
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: ada8ff44630118ce0e8b8d71668e2c56ebef4bbb
+ms.lasthandoff: 03/31/2017
+
 ---
-# Массивы (Руководство по программированию на C#)
-Можно сохранить несколько переменных одного типа в структуре данных массива.  Массив объявляется указанием типа элементов.  
+# <a name="arrays-c-programming-guide"></a>Массивы (Руководство по программированию на C#)
+В структуре данных массива можно хранить несколько переменных одного типа. Чтобы объявить массив, следует указать тип его элементов.  
   
  `type[] arrayName;`  
   
- В следующем примере показано создание одномерных, многомерных массивов и массивов массивов.  
+ В следующих примерах создаются одномерные массивы, многомерные массивы и массивы массивов:  
   
  [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## Общие сведения о массивах  
- Массив имеет следующие свойства.  
+## <a name="array-overview"></a>Общие сведения о массивах  
+ Массив имеет следующие свойства:  
   
 -   Массив может быть [одномерным](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [многомерным](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) или [массивом массивов](../../../csharp/programming-guide/arrays/jagged-arrays.md).  
   
--   Заданы количество измерений и длину каждого измерения, когда создается экземпляр массива.  Эти значения невозможно изменить во время существования экземпляра.  
+-   Количество измерений и длина каждого из измерений задаются, когда создается экземпляр массива. Эти значения нельзя изменить во время существования экземпляра.  
   
--   Значения по умолчанию числовых элементов массива задано равным нулю, а элементы ссылок имеют значение NULL.  
+-   Используемые по умолчанию значения числовых элементов массива равны нулю, и элементам ссылки присвоено значение NULL.  
   
--   Невыровненный массив является массивом массивов и поэтому его элементы являются ссылочными типами и инициализируются значением `null`.  
+-   В массиве массивов элементы являются ссылочными типами и инициализируются значением `null`.  
   
--   Индексация массивов начинается с нуля: массив с элементами `n` индексируется от `0` до `n-1`.  
+-   Массивы индексируются от нуля: массив с `n` элементами индексируется от `0` до `n-1`.  
   
--   Элементы массива могут быть любых типов, включая тип массива.  
+-   Элементы массива могут иметь любой тип, в том числе тип массива.  
   
--   Типы массива являются [ссылочными типами](../../../csharp/language-reference/keywords/reference-types.md), производными от абстрактного базового типа <xref:System.Array>.  Поскольку этот тип реализует <xref:System.Collections.IEnumerable> и <xref:System.Collections.Generic.IEnumerable%601>, в C\# во всех массивах можно использовать итерацию [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
+-   Типы массивов — это [ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md), производные от абстрактного базового типа <xref:System.Array>. Так как этот тип реализует <xref:System.Collections.IEnumerable> и <xref:System.Collections.Generic.IEnumerable%601>, во всех массивах на C# можно использовать итерацию [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
   
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
   
 -   [Массивы как объекты](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
   
@@ -50,14 +68,12 @@ caps.handback.revision: 33
   
 -   [Передача массивов в качестве аргументов](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [Передача массивов при помощи параметров ref и out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
+-   [Передача массивов при помощи параметров ref и out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
--   [Дополнительные сведения о переменных](http://go.microsoft.com/fwlink/?LinkId=221230) в [Начало работы с Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
-  
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Коллекции](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   
- [Array Collection Type](http://msdn.microsoft.com/ru-ru/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Коллекции](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
+ [Array Collection Type](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8) (Тип коллекции Array)

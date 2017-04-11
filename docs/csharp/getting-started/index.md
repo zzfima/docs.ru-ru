@@ -11,9 +11,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e2ad151a91e5aabb36f18a7478e39d972573eb1
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
+ms.openlocfilehash: ca0acaaf61d87a9a55204d1ff44e3572c64d54d0
+ms.lasthandoff: 04/04/2017
 
 ---
 
@@ -35,6 +35,7 @@ ms.lasthandoff: 03/13/2017
 
 - [Начало работы с Visual Studio Code](with-visual-studio-code.md)
 
-   Visual Studio Code — это редактор для программирования на платформах Windows, Linux и macOS, поддерживающий IntelliSense (автозавершение кода) и отладку программ.
+   Visual Studio Code — это бесплатный редактор кода, оптимизированный для сборки и отладки современных веб-приложений и облачных приложений. Он поддерживает технологию IntelliSense и доступен для Linux, macOS и Windows.
 
    В этой статье показано, как создать и выполнить простое приложения Hello World с помощью Visual Studio Code и .NET Core.
+

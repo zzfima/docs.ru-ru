@@ -12,3 +12,4 @@ ms.lasthandoff: 03/08/2017
 ## <a name="content-retired"></a>Более не поддерживаемое содержимое!
 
 Учебник по началу работы с .NET Core и Visual Studio 2017 см. в разделе [Создание приложения "Hello World" на C# с помощью .NET Core Visual Studio 2017](../../csharp/getting-started/with-visual-studio.md).
+
