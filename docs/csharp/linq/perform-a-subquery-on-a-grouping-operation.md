@@ -2,7 +2,7 @@
 title: "Вложенный запрос в операции группирования"
 description: "Сведения о выполнении вложенного запроса в операции группирования."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

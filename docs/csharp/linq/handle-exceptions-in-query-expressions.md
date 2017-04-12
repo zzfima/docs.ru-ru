@@ -2,7 +2,7 @@
 title: "Обработка исключений в выражениях запросов"
 description: "Практическое руководство по обработке исключений в выражениях запросов."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

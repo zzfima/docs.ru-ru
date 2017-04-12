@@ -2,7 +2,7 @@
 title: "Динамическое определение фильтров предикатов во время выполнения"
 description: "Динамическое определение фильтров предикатов во время выполнения."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

@@ -2,7 +2,7 @@
 title: "Соединение с помощью составных ключей"
 description: "Практическое руководство по соединению с помощью составных ключей."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

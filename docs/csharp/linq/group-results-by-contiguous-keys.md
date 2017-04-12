@@ -2,7 +2,7 @@
 title: "Группирование результатов по смежным ключам"
 description: "Сведения о группировании результатов по смежным ключам."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

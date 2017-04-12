@@ -2,8 +2,8 @@
 title: "Публикация приложения Hello World с помощью Visual Studio 2017"
 description: "Публикация приложения Hello World с помощью Visual Studio 2017"
 keywords: ".NET, .NET core, консольное приложение .NET Core, публикации (.NET Core), развертывание (.NET Core)"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

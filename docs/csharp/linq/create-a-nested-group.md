@@ -2,7 +2,7 @@
 title: "Создание вложенной группы"
 description: "Практическое руководство по созданию вложенной группы."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

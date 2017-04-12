@@ -2,7 +2,7 @@
 title: "Синтаксис LINQ"
 description: "Знакомство с LINQ для C#"
 keywords: .NET, .NET Core, LINQ, C#
-author: stevehoag
+author: BillWagner
 ms.author: wiwagn
 ms.date: 11/30/2016
 ms.topic: article

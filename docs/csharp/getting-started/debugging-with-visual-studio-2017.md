@@ -2,8 +2,8 @@
 title: "Отладка приложения Hello World на C# в Visual Studio 2017"
 description: "Сведения об отладке в Visual Studio 2017 на примере приложения Hello World, написанного на C#"
 keywords: ".NET Core, консольное приложение .NET Core, отладка .NET Core"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core
