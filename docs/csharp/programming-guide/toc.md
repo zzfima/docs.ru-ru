@@ -11,7 +11,6 @@
 ## [Индексаторы](indexers/)
 ## [Интерфейсы](interfaces/)
 ## [Взаимодействие](interop/)
-## [Выражения запросов LINQ](linq-query-expressions/)
 ## [Main() и аргументы командной строки](main-and-command-args/)
 ## [Пространства имен](namespaces/)
 ## [Типы, допускающие значения NULL](nullable-types/)
