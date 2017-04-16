@@ -1,0 +1,57 @@
+---
+title: "Управление версиями обнаружения | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
+caps.latest.revision: 10
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 10
+---
+# Управление версиями обнаружения
+В этом разделе приведены общие сведения о реализации некоторых новых функций обнаружения.  Также приводятся общие сведения о выборе версии обнаружения.  
+  
+## Управление версиями обнаружения  
+ Функция обнаружения поддерживает три версии протокола обнаружения WS\-Discovery.  API обнаружения позволяют выбирать используемую версию протокола.  В этом документе кратко описаны параметры, связанные с версиями.  
+  
+ У следующих классов Discovery теперь имеется свойство <xref:System.ServiceModel.Discovery.DiscoveryVersion>, их конструкторы также принимают аргумент <xref:System.ServiceModel.Discovery.DiscoveryVersion>:  
+  
+-   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+  
+-   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+  
+-   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+  
+-   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+  
+### DiscoveryVersion.WSDiscoveryApril2005  
+ При указании параметра конструктора <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> реализация будет использовать версию протокола WS\-Discovery от апреля 2005 г. \(April2005\).  Эта версия соответствует опубликованной версии спецификации протокола WS\-Discovery.  Эту версию следует использовать для взаимодействия с приложениями прежних версий, использующими версию протокола WS\-Discovery от апреля 2005 г.  
+  
+### DiscoveryVersion.WSDiscovery11  
+ По умолчанию интерфейсы API используют версию обнаружения <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11>.  Эта версия протокола обнаружения WS\-Discovery на данный момент является стандартной.  
+  
+## DiscoveryVersion.WSDiscoveryCD1  
+ При указании параметра конструктора <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryCD1> реализация будет использовать рассматриваемый соответствующим комитетом проект 1 версии протокола WS\-Discovery.  Эту версию протокола следует использовать для взаимодействия с реализациями, в которых применяется версия CD1 протокола WS\-Discovery.  
+  
+## Поддержка нескольких конечных точек обнаружения UDP с различными версиями обнаружения на одном узле службы  
+ Может потребоваться предоставление доступа к нескольким конечным точкам обнаружения UDP с различными версиями обнаружения на одном узле службы.  Для этого необходимо задать для каждой из конечных точек обнаружения UDP уникальный адрес.  Следующий пример показывает, как это сделать.  
+  
+```  
+UdpDiscoveryEndpoint newVersionUdpEndpoint = new UdpDiscoveryEndpoint(DiscoveryVersion.WSDiscovery11);  
+UdpDiscoveryEndpoint oldVersionUdpEndpoint = new UdpDiscoveryEndpoint(DiscoveryVersion.WSDiscoveryApril2005);  
+  
+newVersionUdpEndpoint.Address = new EndpointAddress(newVersionUdpEndpoint.Address.Uri.ToString() + "/version11");  
+oldVersionUdpEndpoint.Address = new EndpointAddress(oldVersionUdpEndpoint.Address.Uri.ToString() + "/versionAril2005");  
+  
+serviceHost.AddServiceEndpoint(newVersionUdpEndpoint);  
+serviceHost.AddServiceEndpoint(oldVersionUdpEndpoint);  
+  
+```

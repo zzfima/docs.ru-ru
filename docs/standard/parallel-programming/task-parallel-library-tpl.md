@@ -1,0 +1,42 @@
+---
+title: "Task Parallel Library (TPL) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - ".NET, concurrency in"
+  - ".NET, parallel programming in"
+  - "Parallel Programming"
+ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
+caps.latest.revision: 37
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 37
+---
+# Task Parallel Library (TPL)
+Библиотека параллельных задач \(TPL\) представляет собой набор открытых типов и API\-интерфейсов в пространствах имен <xref:System.Threading?displayProperty=fullName> и <xref:System.Threading.Tasks?displayProperty=fullName>.  Цель TPL — повышение производительности труда разработчиков за счет упрощения процедуры добавления параллелизма в приложения.  TPL динамически масштабирует степень параллелизма для наиболее эффективного использования всех доступных процессоров.  Кроме того, в библиотеке параллельных задач осуществляется секционирование работы, планирование потоков в пуле <xref:System.Threading.ThreadPool>, поддержка отмены, управление состоянием и выполняются другие низкоуровневые задачи.  Используя библиотеку параллельных задач, можно повысить производительность кода, сосредоточившись на работе, для которой предназначена программа.  
+  
+ Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] библиотека параллельных задач является предпочтительным способом создания многопоточного и параллельного кода.  Однако не всякий код подходит для параллелизации; например, если цикл за каждую итерацию выполняет небольшой объем работ или выполняется для небольшого числа итераций, из\-за дополнительной нагрузки, которую параллелизация оказывает на систему, код может выполняться медленнее.  Кроме того, параллелизация, как и любой многопоточный код, усложняет выполнение программы.  Хотя библиотека параллельных задач упрощает многопоточные сценарии, рекомендуется иметь базовое понимание понятий потоков, например блокировки, взаимоблокировки и состояния гонки, чтобы эффективно использовать библиотеку параллельных задач.  
+  
+## Связанные разделы  
+  
+|||  
+|-|-|  
+|Название|Описание|  
+|[Data Parallelism](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Описание создания параллельных циклов `for` и `foreach` \(`For` и `For Each` в Visual Basic\).|  
+|[Task Parallelism](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|Описание создания и запуска задач неявно с использованием перегрузки <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=fullName> или явно с использованием объектов <xref:System.Threading.Tasks.Task> напрямую.|  
+|[Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)|Описание использования компонентов потоков данных в библиотеке потоков данных TPL для обработки нескольких операций, которые должны взаимодействовать друг с другом, или для обработки данных, когда они становятся доступными.|  
+|[Using TPL with Other Asynchronous Patterns](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|Описание использования библиотеки параллельных задач с другими асинхронными шаблонами в .NET.|  
+|[Potential Pitfalls in Data and Task Parallelism](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|Описание некоторых распространенных ошибок и способов их избежать.|  
+|[Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Описание способов достижения параллелизма данных с помощью запросов LINQ.|  
+|[Parallel Programming](../../../docs/standard/parallel-programming/index.md)|Узел верхнего уровня для параллельного программирования в .NET.|  
+  
+## См. также  
+ [Примеры параллельного программирования в .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

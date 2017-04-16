@@ -1,0 +1,5 @@
+# [64-разрядные приложения](64-bit-apps.md)
+# [.NET Framework 4.6 и 4.5](index.md)
+# [Веб-приложения с ASP.NET](develop-web-apps-with-aspnet.md)
+# [Клиентские приложения](develop-client-apps.md)
+# [Руководство по разработке](development-guide.md)

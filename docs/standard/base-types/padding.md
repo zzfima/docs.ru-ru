@@ -1,65 +1,52 @@
 ---
-title: "Заполнение строк"
-description: "Заполнение строк"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/26/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 1c8b3b44-d370-49e1-90b5-64ac81c02ae91c8b3b44-d370-49e1-90b5-64ac81c02ae9
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: bc3cc9028b232cc2ba6ca3130c4bdb261c4a0a42
-ms.lasthandoff: 03/02/2017
-
+title: "Заполнение строк в .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "заполнение строк"
+  - "PadLeft - метод"
+  - "PadRight - метод"
+  - "строки [платформа .NET Framework], заполнение"
+  - "пробел"
+ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
+caps.latest.revision: 12
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 12
 ---
-
-# <a name="padding-strings"></a>Заполнение строк
-
-Для создания новой строки, состоящей из исходной строки, дополненной знаками до указанной общей длины с начала или с конца, следует использовать один из следующих методов класса [System.String](xref:System.String). В качестве заполняющего знака, который, соответственно, будет повторяться либо справа, либо слева, может использоваться пробел или знак, заданный в явной форме.
-
-Имя метода | Применение
------------ | ---
-[String.PadLeft](xref:System.String.PadLeft(System.Int32)) | Дополняет строку до указанной общей длины знаками с начала.
-[String.PadRight](xref:System.String.PadRight(System.Int32)) | Дополняет строку до указанной общей длины знаками с конца.
-
-## <a name="padleft"></a>PadLeft
-
-Метод [String.PadLeft](xref:System.String.PadLeft(System.Int32)) создает новую строку, присоединяя к исходной строке знаки с начала в количестве, необходимом для достижения указанной общей длины. В методе [String.PadLeft(Int32)](xref:System.String.PadLeft(System.Int32)) в качестве заполняющих знаков используются пробелы, а метод [String.PadLeft(Int32, Char)](xref:System.String.PadLeft(System.Int32,System.Char)) позволяет задать заполняющий знак в явной форме.
-
-В следующем примере кода метод [PadLeft(Int32, Char)](xref:System.String.PadLeft(System.Int32,System.Char)) используется для создания новой строки длиной в двадцать знаков. Этот пример выводит на консоль значение "`--------Hello World!`".
-
-```csharp
-string MyString = "Hello World!";
-Console.WriteLine(MyString.PadLeft(20, '-'));
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Console.WriteLine(MyString.PadLeft(20, "-"c))
-```
-
-## <a name="padright"></a>PadRight
-
-Метод [String.PadRight](xref:System.String.PadRight(System.Int32)) создает новую строку, присоединяя к исходной строке знаки с конца в количестве, необходимом для достижения указанной общей длины. В методе [String.PadRight(Int32)](xref:System.String.PadRight(System.Int32)) в качестве заполняющих знаков используются пробелы, а метод [String.PadRight(Int32, Char)](xref:System.String.PadRight(System.Int32,System.Char)) позволяет задать заполняющий знак в явной форме.
-
-В следующем примере кода метод [PadRight(Int32, Char)](xref:System.String.PadRight(System.Int32,System.Char)) используется для создания новой строки длиной в двадцать знаков. Этот пример выводит на консоль значение "`Hello World!--------`".
-
-```csharp
-string MyString = "Hello World!";
-Console.WriteLine(MyString.PadRight(20, '-'));
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Console.WriteLine(MyString.PadRight(20, "-"c))
-```
-
-## <a name="see-also"></a>См. также
-
-[Базовые операции со строками](basic-string-operations.md)
-
-
+# Заполнение строк в .NET Framework
+Для создания новой строки, состоящей из исходной строки, дополненной знаками до указанной общей длины с начала или с конца, следует использовать один из следующих методов класса <xref:System.String>.  В качестве заполняющего знака, который, соответственно, будет повторяться либо справа, либо слева, может использоваться пробел или знак, заданный в явной форме.  
+  
+|Название метода|Применение|  
+|---------------------|----------------|  
+|<xref:System.String.PadLeft%2A?displayProperty=fullName>|Дополняет строку до указанной общей длины знаками с начала.|  
+|<xref:System.String.PadRight%2A?displayProperty=fullName>|Дополняет строку до указанной общей длины знаками с конца.|  
+  
+## PadLeft  
+ Метод <xref:System.String.PadLeft%2A?displayProperty=fullName> создает новую строку, присоединяя к исходной строке знаки с начала в количестве, необходимом для достижения указанной общей длины.  В методе <xref:System.String.PadLeft%28System.Int32%29?displayProperty=fullName> в качестве заполняющих знаков используются пробелы, а метод <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=fullName> позволяет задать заполняющий знак в явной форме.  
+  
+ В следующем примере кода метод <xref:System.String.PadLeft%2A> используется для создания новой строки длиной в двадцать знаков.  Этот пример выводит на консоль текст "`--------Hello World!`".  
+  
+ [!code-cpp[Conceptual.String.BasicOps#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#3)]
+ [!code-csharp[Conceptual.String.BasicOps#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#3)]
+ [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
+  
+## PadRight  
+ Метод <xref:System.String.PadRight%2A?displayProperty=fullName> создает новую строку, присоединяя к исходной строке знаки с конца в количестве, необходимом для достижения указанной общей длины.  В методе <xref:System.String.PadRight%28System.Int32%29?displayProperty=fullName> в качестве заполняющих знаков используются пробелы, а метод <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=fullName> позволяет задать заполняющий знак в явной форме.  
+  
+ В следующем примере кода метод <xref:System.String.PadRight%2A> используется для создания новой строки длиной в двадцать знаков.  Этот пример выводит на консоль текст "`Hello World!--------`".  
+  
+ [!code-cpp[Conceptual.String.BasicOps#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#4)]
+ [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
+ [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
+  
+## См. также  
+ [Основные операции со строками](../../../docs/standard/base-types/basic-string-operations.md)

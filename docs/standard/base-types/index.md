@@ -1,35 +1,44 @@
 ---
-title: "Работа с базовыми типами"
-description: "Работа с базовыми типами"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: e53e414f-e0b6-4076-a6ab-189ba93e23cd
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2be90e0a3e6627152532ff607768dbbb333045d7
-ms.lasthandoff: 04/05/2017
-
+title: "Работа с базовыми типами в .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "типы, базовые"
+  - "базовые типы"
+  - "система типов, базовые типы"
+ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
+caps.latest.revision: 14
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 14
 ---
-
-# <a name="working-with-base-types"></a>Работа с базовыми типами
-
-В этом разделе описаны операции с базовыми типами платформы .NET, включая форматирование, преобразование и общие операции.
-
-## <a name="in-this-section"></a>Содержание
-
-[Преобразование типов](type-conversion.md) — описание порядка преобразования одного типа в другой.
-
-[Типы форматирования](formatting-types.md) — описание форматирования строк с использованием описателей формата.
-
-[Обработка строк](manipulating-strings.md) — описание способов обработки и форматирования строк.
-
-[Анализ строк](parsing-strings.md) — описание преобразования строк в типы.
-
-[Система общих типов CTS](common-type-system.md) — описание типов, используемых в .NET.
-
+# Работа с базовыми типами в .NET Framework
+В этом разделе описаны операции с базовыми типами платформы .NET Framework, включая форматирование, преобразование и общие операции.  
+  
+## В этом подразделе  
+ [Преобразование типов в .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
+ Описывается порядок преобразования из одного типа в другой.  
+  
+ [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
+ Описывает форматирование строк с использованием описателей формата строки.  
+  
+ [Обработка строк](../../../docs/standard/base-types/manipulating-strings.md)  
+ Описывает процедуры обработки и форматирования строк.  
+  
+ [Разбор строк](../../../docs/standard/base-types/parsing-strings.md)  
+ Описывает преобразования строк в типы платформы .NET Framework.  
+  
+## Связанные подразделы  
+ [Система общих типов CTS](../../../docs/standard/base-types/common-type-system.md)  
+ Описываются типы, используемые платформой .NET Framework.  
+  
+ [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)  
+ Описывает методы работы с часовыми поясами и преобразованиями часовых поясов в приложениях, работающих с часовыми поясами.

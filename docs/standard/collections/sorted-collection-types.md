@@ -1,60 +1,59 @@
 ---
-title: "Отсортированные типы коллекций"
-description: "Отсортированные типы коллекций"
-keywords: .NET, .NET Core
-author: mairaw
-ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: bdc9c13e-e56a-433b-a293-c92364f6e9cb
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 28d5024f759b3a7474aef1fa344d39f9933b6322
-ms.lasthandoff: 03/02/2017
-
+title: "Отсортированные типы коллекций | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "коллекции [платформа .NET Framework], SortedList - тип коллекции"
+  - "группировка данных в коллекциях, SortedList - тип коллекции"
+  - "SortedDictionary - тип коллекции"
+  - "SortedList - класс, группировка данных в коллекциях"
+  - "SortedList - тип коллекции"
+ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
+caps.latest.revision: 16
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 16
 ---
-
-# <a name="sorted-collection-types"></a>Отсортированные типы коллекций  
- 
- Класс [System.Collections.SortedList](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) универсальный класс [System.Collections.Generic.SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2), а также универсальный класс [System.Collections.Generic.SortedDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2) схожи с классом [Hashtable](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) и универсальным классом [Dictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) в том, что реализуют интерфейс [IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary), однако сортировку своих элементов они выполняют по ключам. Кроме того, в них отсутствуют функции вставки O(1) и извлечения характеристик хэш-таблиц. Эти три класса имеют ряд схожих свойств:  
-
- *   Все три класса реализуют интерфейс [System.Collections.IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary). Два универсальных класса из них также реализуют универсальный интерфейс [System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2).  
- 
- *   Каждый элемент является парой ключ-значение для перечисления.   
+# Отсортированные типы коллекций
+Класс <xref:System.Collections.SortedList?displayProperty=fullName>, универсальные классы <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> и <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> подобны классу <xref:System.Collections.Hashtable> и универсальному классу <xref:System.Collections.Generic.Dictionary%602> в том, что реализуют интерфейс <xref:System.Collections.IDictionary>, но поддерживают их элементы в порядке сортировки по ключу и не имеют характеристики вставки и извлечения O\(1\) хэш\-таблиц.  Эти три класса имеют некоторые общие возможности:  
   
-> [!NOTE]  
-> При перечислении неуниверсальный класс [SortedList](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) возвращает объект [DictionaryEntry](https://docs.microsoft.com/dotnet/core/api/System.Collections.DictionaryEntry), тогда как два универсальных класса возвращают объекты [KeyValuePair&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.KeyValuePair-2).  
-   
-*   Элементы сортируются в соответствии с реализацией [System.Collections.IComparer](https://docs.microsoft.com/dotnet/core/api/System.Collections.IComparer) (для неуниверсального класса `SortedList`) или реализацией [System.Collections.Generic.IComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IComparer-1) (для двух универсальных классов).  
-   
- *   Каждый класс предоставляет свойства, которые возвращают коллекции, содержащие только ключи или только значения.  
-   
-В таблице ниже перечислены некоторые различия между двумя классами отсортированных списков и классом [SortedDictionary<TKey, TValue>](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2).  
-   
- Неуниверсальный класс `SortedList` и универсальный класс `SortedList<TKey, TValue>`. | Универсальный класс `SortedDictionary<TKey, TValue>`.  
- --------------------------------------------------------------------------------- | ------------------------------  
- Свойства, возвращающие ключи и значения, индексируются, что позволяет выполнять эффективное индексированное извлечение. | Неиндексированное извлечение.  
- Извлечение — O(log n). | Извлечение — O(log n).  
- Вставка и удаление, как правило, являются O(n); тем не менее вставка является O(1) для данных, которые уже отсортированы, чтобы каждый элемент добавлялся в конец списка. (Предполагается, что изменение размера не требуется.) | Вставка и удаление являются O(log n).  
- Использует меньше памяти, чем `SortedDictionary<TKey, TValue>`. | Использует больше памяти, чем неуниверсальный класс `SortedList` и универсальный класс `SortedList<TKey, TValue>`.  
+-   Все три класса реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=fullName>.  Два универсальных класса также реализуют универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>.  
   
- Для отсортированных списков или словарей, которые должны быть доступны одновременно из нескольких потоков, можно добавить логику сортировки в класс, производный от класса [ConcurrentDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2).  
+-   Каждый элемент представляет собой пару ключ\/значение для осуществления перечисления.  
   
- > [!NOTE]  
- > Для значений, содержащих собственные ключи (например, записи о сотрудниках, содержащие идентификатор сотрудника), можно создать коллекцию с ключом, имеющую некоторые характеристики списка и словаря, путем создания класса, производного от универсального класса [KeyedCollection&lt;TKey, TItem&gt;]().  
-   
- Класс [SortedSet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedSet-1) предоставляет самобалансируемое дерево, в котором данные хранятся в отсортированном порядке после операций вставки, удаления и поиска. Этот класс и класс [HashSet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.HashSet-1) реализуют интерфейс [ISet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.ISet-1).  
-   
-## <a name="see-also"></a>См. также  
+    > [!NOTE]
+    >  При перечислении неуниверсальный класс <xref:System.Collections.SortedList> возвращает объекты <xref:System.Collections.DictionaryEntry>, но оба универсальных типа возвращают объекты <xref:System.Collections.Generic.KeyValuePair%602>.  
   
-[System.Collections.IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)  
-   
-[System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2)  
-   
-[ConcurrentDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2)  
- 
-[Часто используемые типы коллекций](commonly-used-collection-types.md) 
-
+-   Элементы сортируются согласно реализации <xref:System.Collections.IComparer?displayProperty=fullName> \(для неуниверсального класса <xref:System.Collections.SortedList>\) или реализации <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> \(для обоих универсальных классов\).  
+  
+-   Каждый класс предоставляет свойства, которые возвращают коллекции, содержащие только ключи или только значения.  
+  
+ В следующей таблице перечислены некоторые различия между двумя классами отсортированных списков и классом <xref:System.Collections.Generic.SortedDictionary%602>.  
+  
+|Неуниверсальный класс <xref:System.Collections.SortedList> и универсальный класс <xref:System.Collections.Generic.SortedList%602>|Универсальный класс <xref:System.Collections.Generic.SortedDictionary%602>|  
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Свойства, возвращающие ключи и значения, индексируются, позволяя производить эффективное индексированное извлечение.|Неиндексированное извлечение.|  
+|Извлечение O\(log `n`\).|Извлечение O\(log `n`\).|  
+|Вставка и удаление, как правило, являются O\(`n`\); однако, для данных, которые уже упорядочены, вставка является O\(1\), поэтому каждый элемент будет добавляться в конец списка. \(Предполагается, что изменение размера не требуется.\)|Вставка и удаление являются O\(log `n`\).|  
+|Использует меньше памяти, чем <xref:System.Collections.Generic.SortedDictionary%602>.|Использует больше памяти, чем неуниверсальный класс <xref:System.Collections.SortedList> и универсальный класс <xref:System.Collections.Generic.SortedList%602>.|  
+  
+ Для упорядоченных списков или словарей, которые должны быть одновременно доступны при обращении из нескольких потоков, можно добавить логику сортировки в класс, производный от <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.  
+  
+> [!NOTE]
+>  Для значений, содержащих собственные ключи \(например, запись о сотруднике, в которой содержится идентификатор сотрудника\), можно создать коллекцию с ключом, имеющую некоторые характеристики списка и некоторые характеристики словаря, путем наследования от универсального класса <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
+  
+ Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], класс <xref:System.Collections.Generic.SortedSet%601> предоставляет самобалансирующееся дерево, которое поддерживает данные в отсортированном порядке после операций вставки, удаления и поиска.  Этот класс и класс <xref:System.Collections.Generic.HashSet%601> реализуют интерфейс <xref:System.Collections.Generic.ISet%601>.  
+  
+## См. также  
+ <xref:System.Collections.IDictionary?displayProperty=fullName>   
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
+ [Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)

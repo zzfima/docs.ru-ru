@@ -1,0 +1,5 @@
+# [Универсальные интерфейсы](interfaces.md)
+# [Универсальные коллекции в .NET Framework](collections.md)
+# [Универсальные делегаты для управления массивами и списками](delegates-for-manipulating-arrays-and-lists.md)
+# [Универсальные шаблоны](index.md)
+# [Ковариация и контрвариация](covariance-and-contravariance.md)

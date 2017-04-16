@@ -1,0 +1,478 @@
+---
+title: "Managed Extensibility Framework (MEF) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Managed Extensibility Framework, Обзор"
+  - "MEF, общие сведения"
+ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
+caps.latest.revision: 31
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 31
+---
+# Managed Extensibility Framework (MEF)
+В этом разделе содержится обзор Managed Extensibility Framework, которая появилась на платформе .NET Framework 4.  
+  
+<a name="what_is_mef"></a>   
+## <a name="what-is-mef"></a>Что такое MEF  
+ Платформа Managed Extensibility Framework (MEF) — это библиотека для создания простых расширяемых приложений. Она позволяет разработчикам приложений находить и использовать расширения без каких-либо настроек. Она также позволяет разработчикам расширений легко инкапсулировать код и избегать ненадежных жестких зависимостей. MEF позволяет повторно использовать в приложениях не только расширения, но и целые приложения.  
+  
+<a name="the_problem_of_extensibility"></a>   
+## <a name="the-problem-of-extensibility"></a>Проблема расширяемости  
+ Представьте себе, что вы являетесь архитектором крупного приложения, которое должно обеспечивать поддержку для расширяемости. Приложение должно включать потенциально большое количество небольших компонентов, а также отвечает за их создание и запуск.  
+  
+ Простейшим подходом к решению такой проблемы является включение компонентов в виде исходного кода в приложение и их вызов прямо из кода.  Такой подход имеет ряд очевидных недостатков.  Самое главное, что нельзя добавлять новые компоненты без изменения исходного кода — данное ограничение может быть приемлемым, например, для веб-приложения, но не для клиентского приложения.  Столь же проблематичной может оказаться ситуация, что у вас не будет доступа к исходному коду для компонентов, так как они могут разрабатываться сторонними производителями, и в силу ряда причин вы не сможете разрешить им доступ к своим приложениям.  
+  
+ Несколько более сложный подход будет заключаться в предоставлении точки или интерфейса расширения, позволяющего разделять приложение и его компоненты.  В рамках этой модели можно предоставить интерфейс, который может реализовывать компонент, а также интерфейс API, позволяющий ему взаимодействовать с приложением.  Это позволяет решить проблему необходимости доступа к исходному коду, но по-прежнему имеет свои собственные сложности.  
+  
+ Так как приложение не в состоянии самостоятельно обнаруживать компоненты, ему по-прежнему необходимо явным образом сообщать, какие компоненты имеются в наличии и подлежат загрузке.  Обычно для этого применяется явная регистрация доступных компонентов в файле конфигурации. Это означает, что обеспечение нужных компонентов превращается в задачу обслуживания, особенно в тех случаях, когда обновление должен выполнять конечный пользователь, а не сам разработчик.  
+  
+ Кроме того, компоненты могут взаимодействовать друг с другом, за исключением строго определенных каналов самого приложения.  Если в архитектуре приложения не учтена потребность в определенной связи, то обычно это оказывается невозможным.  
+  
+ Наконец, разработчики компонентов вынуждены принимать жесткие зависимости от того, какая именно сборка содержит реализуемый ими интерфейс.  Это затрудняет возможное применение компонента в нескольких приложениях и также может вызвать проблемы при создании тестовой платформы для компонентов.  
+  
+<a name="what_mef_provides"></a>   
+## <a name="what-mef-provides"></a>Сведения о возможностях MEF  
+ Вместо явной регистрации доступных компонентов, MEF позволяет обнаруживать их неявным образом, через *композиции*.  Компонент MEF, называемый *часть*, декларативно указывает как свои зависимости (известный как *импортирует*) и какие возможности (известный как *экспортирует*) это делает доступными. При создании некоторой части обработчик композиции MEF удовлетворяет свои импортируемые компоненты за счет элементов, доступных из других частей.  
+  
+ Такой поход позволяет решить проблемы, рассмотренные в предыдущем разделе.  Так как части MEF декларативно указывают свои возможности, они могут быть обнаружены во время выполнения, то есть, приложение может применять части без жестко кодированных ссылок или ненадежных файлов конфигурации.  Платформа MEF позволяет приложениям обнаруживать и анализировать части с помощью своих метаданных без создания экземпляров и даже без загрузки их сборок. В результате нет необходимости четко указывать время и способ загрузки расширений.  
+  
+ Кроме обеспечиваемого экспорта, часть может указать свои импортируемые элементы, которые будут заполнены другими частями.  Это делает связь между частями не только возможной, но и простой, и обеспечивает качественное разбиение кода. Например, общие для нескольких компонентов службы можно выделить в отдельную часть, которую можно будет легко изменять или заменять.  
+  
+ Так как для модели MEF жесткие зависимости от определенной сборки приложения не требуются, она позволяет повторно использовать расширения в различных приложениях.  Это также упрощает разработку окружения теста, не зависящего от приложения, для тестирования компонентов расширений.  
+  
+ Расширяемое приложение, созданное с помощью платформы MEF, объявляет импортируемый элемент, который может быть заполнен компонентами расширения, а также может объявить экспортируемые элементы, позволяющие применять службы приложений для расширений.  Каждый компонент расширения объявляет экспортируемый элемент, а также может объявлять импортируемые элементы.  Таким образом, сами компоненты расширения автоматически становятся расширяемыми.  
+  
+<a name="where_is_mef_available"></a>   
+## <a name="where-is-mef-available"></a>Где находится MEF?  
+ MEF является неотъемлемой частью [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и присутствует везде, где применяется платформа.NET Framework.  MEF можно использовать в клиентских приложениях, независимо от того, применяют они Windows Forms, WPF или любую другую технологию, либо в серверных приложениях, где применяется ASP.NET.  
+  
+<a name="mef_and_maf"></a>   
+## <a name="mef-and-maf"></a>MEF и MAF  
+ На платформе .NET Framework предыдущих версий появилась платформа Managed Add-in Framework (MAF), которая позволяет изолировать и управлять расширениями в приложениях.  MAF находится на более высоком уровне, чем MEF, и отвечает за изоляцию расширения, а также загрузку и выгрузку сборки, тогда как MEF отвечает за возможность обнаружения, расширяемости и переноса.  Обе эти платформы тесно взаимодействуют друг с другом, и каждое одиночное приложение могут воспользоваться преимуществами их обоих.  
+  
+<a name="simplecalculator_an_example_application"></a>   
+## <a name="simplecalculator-an-example-application"></a>Пример приложения SimpleCalculator  
+ Чтобы узнать о возможностях MEF, проще всего создать простое приложение MEF. В этом примере выполняется создание очень простого калькулятора, который называется SimpleCalculator. SimpleCalculator предназначен для создания консольного приложения, принимающего основные арифметические команды в формате «5 +&3;» или «6 -&2;» и возвращающего правильные ответы. Благодаря применению MEF, вы сможете добавлять новые операторы без изменения кода приложения.  
+  
+ Чтобы загрузить полный код для этого примера, см. раздел [Пример SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).  
+  
+> [!NOTE]
+>  Пример с SimpleCalculator предназначен просто для демонстрации концепции и синтаксиса платформы MEF, а не описания реального сценария для ее использования. Многие приложения, которые будут использовать возможности MEF, являются более сложными, чем SimpleCalculator. Более сложные примеры см. в разделе [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282) на Codeplex.  
+  
+ Для запуска в [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)], создайте новый проект консольного приложения с именем `SimpleCalculator`. Добавьте ссылку на сборку System.ComponentModel.Composition, где находится MEF. Откройте файл Module1.vb или Program.cs и добавьте операторы `Imports` или `using` для System.ComponentModel.Composition и System.ComponentModel.Composition.Hosting. Оба этих пространства имен содержат типы MEF, необходимые для разработки расширяемого приложения. В Visual Basic добавьте ключевое слово `Public` в строку, объявляющую модуль `Module1`.  
+  
+<a name="composition_container_and_catalogs"></a>   
+## <a name="composition-container-and-catalogs"></a>Контейнер композиции и каталоги  
+ Основным элементом модели композиции MEF является *контейнер композиции*, который содержит все доступные части и выполняет композицию.  (То есть, обеспечивает сопоставление импортируемых и экспортируемых элементов.)  Наиболее распространенным типом контейнера композиции является <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>, который будет использоваться для SimpleCalculator.  
+  
+ В Visual Basic в модуле Module1.vb добавьте открытый класс с именем `Program`. Затем добавьте следующую строку в класс `Program` в модуле Module1.vb или Program.cs:  
+  
+```vb  
+Dim _container As CompositionContainer  
+```  
+  
+```csharp  
+private CompositionContainer _container;  
+```  
+  
+ Для обнаружения доступных частей в контейнерах композиции используется *каталога*. Каталог – это объект, который делает доступными части, обнаруженные в определенном источнике.  MEF содержит каталоги для обнаружения частей с заданным типом, сборкой или директорией. Разработчики приложений могут легко создавать новые каталоги для обнаружения частей из других источников, например, веб-служб.  
+  
+ Добавьте следующий конструктор в класс `Program`:  
+  
+```vb  
+Public Sub New()  
+    'An aggregate catalog that combines multiple catalogs  
+     Dim catalog = New AggregateCatalog()  
+  
+    'Adds all the parts found in the same assembly as the Program class  
+    catalog.Catalogs.Add(New AssemblyCatalog(GetType(Program).Assembly))  
+  
+    'Create the CompositionContainer with the parts in the catalog  
+    _container = New CompositionContainer(catalog)  
+  
+    'Fill the imports of this object  
+    Try  
+        _container.ComposeParts(Me)  
+    Catch ex As Exception  
+        Console.WriteLine(ex.ToString)  
+    End Try  
+End Sub  
+```  
+  
+```csharp  
+private Program()  
+{  
+    //An aggregate catalog that combines multiple catalogs  
+    var catalog = new AggregateCatalog();  
+    //Adds all the parts found in the same assembly as the Program class  
+    catalog.Catalogs.Add(new AssemblyCatalog(typeof(Program).Assembly));  
+  
+    //Create the CompositionContainer with the parts in the catalog  
+    _container = new CompositionContainer(catalog);  
+  
+    //Fill the imports of this object  
+    try  
+    {  
+        this._container.ComposeParts(this);  
+    }  
+    catch (CompositionException compositionException)  
+    {  
+        Console.WriteLine(compositionException.ToString());  
+   }  
+}  
+```  
+  
+ Вызов <xref:System.ComponentModel.Composition.AttributedModelServices.ComposeParts%2A> указывает контейнеру композиции на необходимость компоновки определенного набора частей, в данном случае текущий экземпляр `Program`. Однако на этом этапе ничего не происходит, так как в `Program` нет импортируемых элементов для заполнения.  
+  
+<a name="imports_and_exports_with_attributes"></a>   
+## <a name="imports-and-exports-with-attributes"></a>Импортируемые и экспортируемые элементы с атрибутами  
+ Во-первых, необходимо выбрать `Program` для импорта калькулятора. Это позволит отделять вопросы пользовательского интерфейса, например, ввод и вывод консоли, который будет поступать в `Program`, от логики калькулятора.  
+  
+ Добавьте следующий код в класс `Program` :  
+  
+```vb  
+<Import(GetType(ICalculator))>  
+Public Property calculator As ICalculator  
+```  
+  
+```csharp  
+[Import(typeof(ICalculator))]  
+public ICalculator calculator;  
+```  
+  
+ Обратите внимание, что объявление `calculator` не является необычным, однако оно помечено <xref:System.ComponentModel.Composition.ImportAttribute> атрибута.  Этот атрибут объявляет что-нибудь, подлежащее импорту; то есть, это будет заполнено обработчиком композиции при составлении объекта.  
+  
+ Каждый импортируемый элемент имеет *контракт*, который определяет соответствующие его экспортируемые. Контракт может быть явно заданный строкой, или он может создаваться автоматически платформой MEF из заданного типа (в данном случае интерфейс `ICalculator`).  Любой экспортируемый элемент, объявленный с помощью контракта сопоставления, будет подставляться в этот импорт.  Следует отметить, что типом объекта `calculator` на самом деле является `ICalculator`, это не является обязательным. Контракт не зависит от типа импортирующего объекта.  (В этом случае можно опустить `typeof(ICalculator)`.  MEF автоматически предположит, что контракт должен быть основан на типе импорта, если не указано явным образом.)  
+  
+ Добавьте этот простейший интерфейс в модуль или пространство имен `SimpleCalculator`:  
+  
+```vb  
+Public Interface ICalculator  
+    Function Calculate(ByVal input As String) As String  
+End Interface  
+```  
+  
+```csharp  
+public interface ICalculator  
+{  
+    String Calculate(String input);  
+}  
+```  
+  
+ Теперь, после определения `ICalculator`, нужен класс, который его реализует.  Добавьте следующий класс в модуль или пространство имен `SimpleCalculator`:  
+  
+```vb  
+<Export(GetType(ICalculator))>  
+Public Class MySimpleCalculator  
+   Implements ICalculator  
+  
+End Class  
+```  
+  
+```csharp  
+[Export(typeof(ICalculator))]  
+class MySimpleCalculator : ICalculator  
+{  
+  
+}  
+```  
+  
+ Здесь используется экспортируемый элемент, соответствующий импортируемому элементу в `Program`. Чтобы экспортируемый элемент соответствовал импортируемому, экспорт должен иметь такой же контракт.  Экспорт по контракту на основе `typeof(MySimpleCalculator)` вызовет несовпадение, и импортируемый элемент не будет заполнен; контракт должен в точности совпадать.  
+  
+ Так как контейнер композиции будет заполняться всеми доступными в этой сборке частями, часть `MySimpleCalculator` будет доступна.  Когда конструктор для `Program` выполняет композицию для объекта `Program`, его импортируемый элемент будет заполняться объектом `MySimpleCalculator`, который будет создан для этой цели.  
+  
+ Для уровня пользовательского интерфейса (`Program`) никакая другая информация не требуется.  Таким образом, можно заполнить остальную часть логики интерфейса пользователя в методе `Main`.  
+  
+ Добавьте следующий код в метод `Main`.  
+  
+```vb  
+Sub Main()  
+    Dim p As New Program()  
+    Dim s As String  
+    Console.WriteLine("Enter Command:")  
+    While (True)  
+        s = Console.ReadLine()  
+        Console.WriteLine(p.calculator.Calculate(s))  
+    End While  
+End Sub  
+```  
+  
+```csharp  
+static void Main(string[] args)  
+{  
+    Program p = new Program(); //Composition is performed in the constructor  
+    String s;  
+    Console.WriteLine("Enter Command:");  
+    while (true)  
+    {  
+        s = Console.ReadLine();  
+        Console.WriteLine(p.calculator.Calculate(s));  
+    }  
+}  
+```  
+  
+ Этот код просто считывает строку входных данных и вызывает функцию `Calculate` калькулятора `ICalculator` с результатом, который он записывает в консоль. То есть, весь код, требуемый в `Program`.  Все остальные действия будут выполняться по частям.  
+  
+<a name="further_imports_and_importmany"></a>   
+## <a name="further-imports-and-importmany"></a>Дополнительные импортируемые элементы и атрибут ImportMany  
+ Чтобы приложение SimpleCalculator было расширяемым, оно должно импортировать список операций. Обычный <xref:System.ComponentModel.Composition.ImportAttribute> подставляет один и только один атрибут <xref:System.ComponentModel.Composition.ExportAttribute>.  Если имеется несколько значений, обработчик композиции выдаст ошибку.  Чтобы создать импортируемый элемент, который может заполняться произвольным количеством экспортируемых элементов, можно использовать <xref:System.ComponentModel.Composition.ImportManyAttribute> атрибута.  
+  
+ Добавьте следующее свойство операций `MySimpleCalculator` класса:  
+  
+```vb  
+<ImportMany()>  
+Public Property operations As IEnumerable(Of Lazy(Of IOperation, IOperationData))  
+```  
+  
+```csharp  
+[ImportMany]  
+IEnumerable<Lazy<IOperation, IOperationData>> operations;  
+```  
+  
+ <xref:System.Lazy%602> — это тип, предоставляемый MEF для хранения косвенных ссылок на экспортируемые элементы.</T, TMetadata>  Здесь, помимо самих экспортируемых объектов, предоставляются также *экспорта метаданных*, или сведения, описывающие экспортируемый объект. Каждый <xref:System.Lazy%602> содержит `IOperation` объект, представляющий собой фактическую операцию и `IOperationData` объект, представляющий ее метаданные.\</T, TMetadata>  
+  
+ Добавьте следующие простые интерфейсы в модуль или пространство имен `SimpleCalculator`:  
+  
+```vb  
+Public Interface IOperation  
+    Function Operate(ByVal left As Integer, ByVal right As Integer) As Integer  
+End Interface  
+  
+Public Interface IOperationData  
+    ReadOnly Property Symbol As Char  
+End Interface  
+```  
+  
+```csharp  
+public interface IOperation  
+{  
+     int Operate(int left, int right);  
+}  
+  
+public interface IOperationData  
+{  
+    Char Symbol { get; }  
+}  
+```  
+  
+ В этом случае метаданными для каждой операции является символ, представляющий данную операцию, например, +, -, * и т. д. Чтобы сделать доступной операцию сложения, добавьте следующий класс в модуль или пространство имен `SimpleCalculator`:  
+  
+```vb  
+<Export(GetType(IOperation))>  
+<ExportMetadata("Symbol", "+"c)>  
+Public Class Add  
+    Implements IOperation  
+  
+    Public Function Operate(ByVal left As Integer, ByVal right As Integer) As Integer Implements IOperation.Operate  
+        Return left + right  
+    End Function  
+End Class  
+```  
+  
+```csharp  
+[Export(typeof(IOperation))]  
+[ExportMetadata("Symbol", '+')]  
+class Add: IOperation  
+{  
+    public int Operate(int left, int right)  
+    {  
+        return left + right;  
+    }  
+}  
+```  
+  
+ <xref:System.ComponentModel.Composition.ExportAttribute> атрибут функции, как и раньше.  <xref:System.ComponentModel.Composition.ExportMetadataAttribute> атрибут присоединяет метаданные в виде пары имя значение, данный экспорт.  Если `Add` реализует `IOperation`, то класс, реализующий `IOperationData`, явным образом не определен. Вместо этого, он создается неявным образом платформой MEF со свойствами на основе имен предоставленных метаданных.  (Это один из нескольких способов доступа к метаданным в MEF.)  
+  
+ Композиция в платформе MEF *рекурсивного*. Вы явным образом составили композицию объекта `Program`, импортировавшего `ICalculator`, который получил тип `MySimpleCalculator`.  `MySimpleCalculator`, в свою очередь, импортирует коллекцию объектов `IOperation`, и данный импорт будет заполнен при создании `MySimpleCalculator`, одновременно с импортируемыми элементами `Program`. Если `Add` класс объявил дополнительный импортируемый элемент, он тоже должен быть заполнен, и т. д. Любой незаполненный импорт будет вызывать ошибку композиции.  (Однако можно объявить, что импортируемые элементы являются необязательными, или присвоить им значения по умолчанию.)  
+  
+<a name="calculator_logic"></a>   
+## <a name="calculator-logic"></a>Логика калькулятора  
+ При наличии всех этих частей все, что остается, представляет собой саму логику калькулятора. Добавьте следующий код в класс `MySimpleCalculator` для реализации метода `Calculate`:  
+  
+```vb  
+Public Function Calculate(ByVal input As String) As String Implements ICalculator.Calculate  
+    Dim left, right As Integer  
+    Dim operation As Char  
+    Dim fn = FindFirstNonDigit(input) 'Finds the operator  
+    If fn < 0 Then  
+        Return "Could not parse command."  
+    End If  
+    operation = input(fn)  
+    Try  
+        left = Integer.Parse(input.Substring(0, fn))  
+        right = Integer.Parse(input.Substring(fn + 1))  
+    Catch ex As Exception  
+        Return "Could not parse command."  
+    End Try  
+    For Each i As Lazy(Of IOperation, IOperationData) In operations  
+        If i.Metadata.symbol = operation Then  
+            Return i.Value.Operate(left, right).ToString()  
+        End If  
+    Next  
+    Return "Operation not found!"  
+End Function  
+```  
+  
+```csharp  
+public String Calculate(String input)  
+{  
+    int left;  
+    int right;  
+    Char operation;  
+    int fn = FindFirstNonDigit(input); //finds the operator  
+    if (fn < 0) return "Could not parse command.";  
+  
+    try  
+    {  
+        //separate out the operands  
+        left = int.Parse(input.Substring(0, fn));  
+        right = int.Parse(input.Substring(fn + 1));  
+    }  
+    catch   
+    {  
+        return "Could not parse command.";  
+    }  
+  
+    operation = input[fn];  
+  
+    foreach (Lazy<IOperation, IOperationData> i in operations)  
+    {  
+        if (i.Metadata.Symbol.Equals(operation)) return i.Value.Operate(left, right).ToString();  
+    }  
+    return "Operation Not Found!";  
+}  
+```  
+  
+ Начальные действия анализируют входную строку по левому и правому операндам, а также символ оператора.  В цикле `foreach` анализируется каждый член коллекции `operations`. Эти объекты имеют тип <xref:System.Lazy%602>, и их значения метаданных и экспортируемому объекту может осуществляться с помощью <xref:System.Lazy%602.Metadata%2A> свойство и <xref:System.Lazy%601.Value%2A>свойства соответственно.</T, TMetadata> В этом случае, если обнаружено, что свойство `Symbol` объекта `IOperationData` совпадает, калькулятор вызывает метод `Operate` объекта `IOperation` и возвращает результат.  
+  
+ Для завершения работы над калькулятором также нужен вспомогательный метод, который возвращает позицию первого нецифрового символа в строке.  Добавьте в класс `MySimpleCalculator` следующий вспомогательный метод:  
+  
+```vb  
+Private Function FindFirstNonDigit(ByVal s As String) As Integer  
+    For i = 0 To s.Length  
+        If (Not (Char.IsDigit(s(i)))) Then Return i  
+    Next  
+    Return -1  
+End Function  
+```  
+  
+```csharp  
+private int FindFirstNonDigit(String s)  
+{  
+    for (int i = 0; i < s.Length; i++)  
+    {  
+        if (!(Char.IsDigit(s[i]))) return i;  
+    }  
+    return -1;  
+}  
+```  
+  
+ Теперь вы должны получить возможность скомпилировать и запустить проект. В Visual Basic убедитесь, что вы добавили ключевое слово `Public` в `Module1`. В окне консоли введите операцию сложения, например, "5 +&3;", и калькулятор вернет результат.  Любой другой оператор вернет сообщение "Операция не найдена !".  
+  
+<a name="extending_simplecalculator_using_a_new_class"></a>   
+## <a name="extending-simplecalculator-using-a-new-class"></a>Расширение приложения SimpleCalculator с помощью нового класса  
+ Теперь, когда калькулятор работает, добавление новой операции является простой задачей. Добавьте следующий класс в модуль или пространство имен `SimpleCalculator`:  
+  
+```vb  
+<Export(GetType(IOperation))>  
+<ExportMetadata("Symbol", "-"c)>  
+Public Class Subtract  
+    Implements IOperation  
+  
+    Public Function Operate(ByVal left As Integer, ByVal right As Integer) As Integer Implements IOperation.Operate  
+        Return left - right  
+    End Function  
+End Class  
+```  
+  
+```csharp  
+[Export(typeof(IOperation))]  
+[ExportMetadata("Symbol", '-')]  
+class Subtract : IOperation  
+{  
+    public int Operate(int left, int right)  
+    {  
+        return left - right;  
+    }  
+}  
+```  
+  
+ Скомпилируйте и запустите проект. Выполните операцию вычитания, например, "5 -&3;". Теперь калькулятор выполняет операции вычитания наряду со сложением.  
+  
+<a name="extending_simplecalculator_using_a_new_assembly"></a>   
+## <a name="extending-simplecalculator-using-a-new-assembly"></a>Расширение приложения SimpleCalculator с помощью новой сборки  
+ Процедура добавления классов в исходный код является довольно простой, но MEF позволяет искать части за пределами исходного кода приложения. Чтобы продемонстрировать это, необходимо изменить приложение SimpleCalculator для поиска каталога, а также его собственной сборке, частей путем добавления <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>.  
+  
+ Добавьте новый каталог с именем `Extensions` в проект SimpleCalculator.  Убедитесь, что добавление выполняется на уровне проекта, а не на уровне решения. Затем добавьте новый проект библиотеки классов в решение с именем `ExtendedOperations`. Новый проект будет скомпилирован в отдельную сборку.  
+  
+ Откройте конструктор свойств проекта для проекта ExtendedOperations и щелкните **компиляции** или **построения** вкладки. Изменение **выходной путь построения** или **выходной путь** чтобы он указывал на каталог расширений в каталоге проекта SimpleCalculator (.. \SimpleCalculator\Extensions\\).  
+  
+ В модуле Module1.vb или Program.cs добавьте следующую строку в конструктор `Program`:  
+  
+```vb  
+catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\Extensions"))  
+```  
+  
+```csharp  
+catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));  
+```  
+  
+ Замените пример пути на путь к каталогу расширений.  (Этот абсолютный путь используется только для отладки.  В реальном приложении будет использоваться относительный путь.) <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> добавит все части, найденные в сборках в каталоге Extensions, в контейнер композиции.  
+  
+ В проекте ExtendedOperations добавьте ссылки на приложение SimpleCalculator и System.ComponentModel.Composition. В файле класса ExtendedOperations добавьте оператор `Imports` или `using` для System.ComponentModel.Composition. В Visual Basic также добавьте оператор `Imports` для SimpleCalculator. Затем добавьте следующий класс в файл класса ExtendedOperations:  
+  
+```vb  
+<Export(GetType(SimpleCalculator.IOperation))>  
+<ExportMetadata("Symbol", "%"c)>  
+Public Class Modulo  
+    Implements IOperation  
+  
+    Public Function Operate(ByVal left As Integer, ByVal right As Integer) As Integer Implements IOperation.Operate  
+        Return left Mod right  
+    End Function  
+End Class  
+```  
+  
+```csharp  
+[Export(typeof(SimpleCalculator.IOperation))]  
+[ExportMetadata("Symbol", '%')]  
+public class Mod : SimpleCalculator.IOperation  
+{  
+    public int Operate(int left, int right)  
+    {  
+        return left % right;  
+    }  
+}  
+```  
+  
+ Следует отметить, что для совпадения контрактов <xref:System.ComponentModel.Composition.ExportAttribute> атрибут должен иметь тот же тип, что <xref:System.ComponentModel.Composition.ImportAttribute>.  
+  
+ Скомпилируйте и запустите проект. Проверьте новый оператор Mod (%).  
+  
+<a name="conclusion"></a>   
+## <a name="conclusion"></a>Заключение  
+ В этом разделе рассмотрены основные концепции платформы MEF.  
+  
+-   Части, каталоги и контейнер композиции  
+  
+     Части и контейнер композиции являются базовыми строительными блоками приложения MEF. Часть — это любой объект, который импортирует или экспортирует значение, вплоть до самого себя. Каталог содержит коллекцию частей из определенного источника.  Контейнер композиции использует части, предоставленные каталогом для выполнения композиции, связывания импортируемых и экспортируемых элементов.  
+  
+-   Импортируемые и экспортируемые элементы  
+  
+     Импортируемые и экспортируемые элементы позволяют компонентам взаимодействовать друг с другом. При импорте компонент указывает на необходимость в определенном значении или объекте, а при экспорте он указывает на доступность значения. Каждый импортируемый элемент сопоставляется со списком экспортируемых элементов при помощи своего контракта.  
+  
+<a name="where_do_i_go_now"></a>   
+## <a name="where-do-i-go-now"></a>Что теперь предстоит делать?  
+ Чтобы загрузить полный код для этого примера, см. раздел [Пример SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).  
+  
+ Дополнительные сведения и примеры кода см. в разделе [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282). Список типов MEF см. в разделе <xref:System.ComponentModel.Composition?displayProperty=fullName> пространства имен.

@@ -1,0 +1,1 @@
+Международный совет по прессе и телекоммуникациям (International Press Telecommunications Council, IPTC)

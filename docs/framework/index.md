@@ -1,30 +1,57 @@
 ---
-title: "Руководство по .NET Framework"
-description: "Дополнительные сведения о .NET Framework"
-keywords: .NET, .NET Framework, .NET Server, .NET Desktop
-author: BillWagner
-manager: wpickett
-ms.date: 09/28/2016
-ms.topic: article
-ms.prod: .net-framework-4.6
-ms.technology: dotnet-bcl
-ms.devlang: dotnet
-ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
-translationtype: Human Translation
-ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
-ms.openlocfilehash: cd7442b304ff28b02826a84684b594dfdd0d9873
-
+title: ".NET Framework 4.6 и 4.5 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "f61f02f2-2f20-483d-8f56-a9c8f3a54986"
+helpviewer_keywords: 
+  - "платформа .NET Framework, документация"
+  - "документация, .NET Framework"
+ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
+caps.latest.revision: 75
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 71
 ---
-
-# <a name="net-framework-on-docker-guide"></a>Руководство по Docker в .NET Framework
-
-.NET Framework — это платформа разработки для создания приложений для Windows, Windows Phone, Windows Server и Microsoft Azure. Она состоит из среды CLR и библиотеки классов .NET Framework, которая содержит классы, интерфейсы и типы значений, поддерживающие широкий диапазон технологий. Платформа .NET Framework предоставляет среду управляемого выполнения, возможности упрощения разработки и развертывания, а также возможности интеграции с различными языками программирования, включая Visual Basic, Visual C# и F#.
-
-Запуск существующего приложения в [контейнерах Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) описывается в статье [Docker в .NET Framework](docker/index.md).
- 
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+# .NET Framework 4.6 и 4.5
+> [!NOTE]
+>  Этот набор содержимого .NET Framework включает сведения для версий .NET Framework 4.5, 4.5.1, 4.5.2, 4.6 и 4.6.1. Чтобы скачать платформу .NET Framework, изучите раздел [Установка .NET Framework](../../docs/framework/install/guide-for-developers.md). Список новых функций и изменений в .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)] и их вспомогательных выпусках см. в статье [Новые возможности](../../docs/framework/whats-new/index.md). Список поддерживаемых платформ см. в разделе [Системные требования .NET Framework](../../docs/framework/get-started/system-requirements.md).  
+  
+ .NET Framework — это платформа разработки для создания приложений для Windows, Windows Phone, Windows Server и Microsoft Azure. Она состоит из среды CLR и библиотеки классов .NET Framework, которая содержит классы, интерфейсы и типы значений, поддерживающие широкий диапазон технологий. Платформа .NET Framework предоставляет среду управляемого выполнения, возможности упрощения разработки и развертывания, а также возможности интеграции с различными языками программирования, включая Visual Basic и Visual C\#.  
+  
+> [!NOTE]
+>  Чтобы скачать платформу .NET Framework, изучите раздел [Установка .NET Framework](../../docs/framework/install/guide-for-developers.md).  
+  
+ Общие сведения о платформе .NET Framework для пользователей и разработчиков см. в разделе [Начало работы](../../docs/framework/get-started/index.md). Введение в архитектуру и основные функции платформы .NET Framework см. в [обзоре](../../docs/framework/get-started/overview.md).  
+  
+ Документация .NET Framework включает подробный справочник по библиотекам классов, общие обзоры, пошаговые процедуры, а также сведения о примерах, компиляторах и средствах с интерфейсом командной строки. Найти нужную информацию поможет приведенный ниже перечень основных разделов.  
+  
+## В этом подразделе  
+ [Новые возможности](../../docs/framework/whats-new/index.md)  
+ Здесь приводится описание ключевых новых функций и изменений в последних версиях .NET Framework. Сюда включены списки устаревших типов и членов, а также руководство по переносу приложений с предыдущей версии .NET Framework.  
+  
+ [Начало работы](../../docs/framework/get-started/index.md)  
+ Здесь содержится комплексный обзор платформы .NET Framework и ссылки на дополнительные ресурсы.  
+  
+ [Руководства по миграции](../Topic/Migration%20Guide%20to%20the%20.NET%20Framework%204.6%20and%204.5%20.md)  
+ Здесь содержатся ресурсы и список изменений, которые нужно учитывать при миграции приложения на новую версию платформы .NET Framework.  
+  
+ [Руководство по разработке](../../docs/framework/development-guide.md)  
+ Здесь содержится руководство по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, безопасность и развертывание приложений, а также сведения о динамическом программировании, взаимодействии, расширении среды, управлении памятью и работе с потоками.  
+  
+ [Tools](../../docs/framework/tools/index.md)  
+ Инструменты, описанные в этом разделе, помогут в разработке, настройке и развертывании приложений с помощью технологий .NET Framework.  
+  
+ [Библиотека классов .NET Framework](../Topic/.NET%20Framework%20Class%20Library.md)  
+ Синтаксис, примеры кода и другие сведения для каждого класса, содержащегося в пространствах имен .NET Framework.  
+  
+ [Дополнительные библиотеки классов и интерфейсов API](../../ml/index.xml)  
+ Предоставляет документацию по классам, содержащимся во внештатных выпусках.
