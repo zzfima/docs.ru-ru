@@ -61,7 +61,7 @@ caps.handback.revision: 15
   
  Этот пример выводит на консоль значение `-1`.  
   
- В предыдущем примере по умолчанию учитывается язык и региональные параметры. Для сравнения строк без учета языка и региональных параметров используйте перегрузку метода <xref:System.String.Compare%2A?displayProperty=fullName>, которая позволяет указать язык и региональные параметры с помощью параметра *culture*. Пример, демонстрирующий использование метода <xref:System.String.Compare%2A?displayProperty=fullName> для сравнения без учета языка и региональных параметров, см. в разделе [Сравнение строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ В предыдущем примере по умолчанию учитывается язык и региональные параметры. Для сравнения строк без учета языка и региональных параметров используйте перегрузку метода <xref:System.String.Compare%2A?displayProperty=fullName>, которая позволяет указать язык и региональные параметры с помощью параметра *culture*. Пример, демонстрирующий использование метода <xref:System.String.Compare%2A?displayProperty=fullName> для сравнения без учета языка и региональных параметров, см. в разделе [Сравнение строк без учета языка и региональных параметров](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## CompareOrdinal  
  Метод <xref:System.String.CompareOrdinal%2A?displayProperty=fullName> сравнивает два строковых объекта без учета локального языка и региональных параметров. Возвращаемые этим методом значения идентичны значениям, возвращаемым методом **Compare** в предыдущей таблице.  
@@ -91,7 +91,7 @@ caps.handback.revision: 15
   
  Этот пример выводит на консоль значение `-1`.  
   
- Все перегрузки метода <xref:System.String.CompareTo%2A?displayProperty=fullName> по умолчанию выполняют сравнение с учетом языка и региональных параметров и регистра. У этого метода нет перегрузок, позволяющих выполнять сравнение без учета языка и региональных параметров. В целях повышения ясности кода рекомендуется использовать вместо него метод **String.Compare**, указывая <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> для операций с учетом языка и региональных параметров и <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> для операций без учета языка и региональных параметров. Примеры, демонстрирующие использование метода **String.Compare** для сравнения с учетом и без учета языка и региональных параметров, см. в разделе [Сравнение строк без учета языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
+ Все перегрузки метода <xref:System.String.CompareTo%2A?displayProperty=fullName> по умолчанию выполняют сравнение с учетом языка и региональных параметров и регистра. У этого метода нет перегрузок, позволяющих выполнять сравнение без учета языка и региональных параметров. В целях повышения ясности кода рекомендуется использовать вместо него метод **String.Compare**, указывая <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> для операций с учетом языка и региональных параметров и <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> для операций без учета языка и региональных параметров. Примеры, демонстрирующие использование метода **String.Compare** для сравнения с учетом и без учета языка и региональных параметров, см. в разделе [Сравнение строк без учета языка и региональных параметров](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
 ## Равно  
  С помощью метода **String.Equals** можно легко определить идентичность двух строк. Этот метод учитывает регистр и возвращает логическое значение **true** или **false**. Метод можно вызывать из существующего класса, как показано в следующем примере. В примере ниже метод **Equals** используется для определения того, содержит ли строковый объект фразу "Hello World".  
@@ -152,4 +152,4 @@ caps.handback.revision: 15
   
 ## См. также  
  [Основные операции со строками](../../../docs/standard/base-types/basic-string-operations.md)   
- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

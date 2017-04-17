@@ -102,5 +102,5 @@ caps.handback.revision: 12
   
 ## См. также  
  [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)   
+ [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../ocs/standard/datetime/choosing-between-datetime.md)   
  [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
