@@ -51,4 +51,4 @@ caps.handback.revision: 15
  Для элементов, которые являются производными классами от <xref:System.Windows.FrameworkElement> или <xref:System.Windows.FrameworkContentElement>, можно использовать эквивалентное свойство зависимостей <xref:System.Windows.FrameworkElement.Language%2A> вместо атрибута `xml:lang`. По умолчанию свойство <xref:System.Windows.FrameworkElement.Language%2A> использует "en\-US", если не установлено иное, посредством этого свойства или путем обработки атрибута `xml:lang`.  
   
 ## См. также  
- [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [Глобализация для WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

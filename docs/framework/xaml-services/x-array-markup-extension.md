@@ -74,8 +74,8 @@ caps.handback.revision: 20
   
  `</x:Array>`  
   
- Для настраиваемых типов, используемых в качестве элементов массива, класс также должен поддерживать требования для элементов, созданных в XAML как объектные элементы.  Дополнительные сведения см. в разделе [Код XAML и пользовательские классы для WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Для настраиваемых типов, используемых в качестве элементов массива, класс также должен поддерживать требования для элементов, созданных в XAML как объектные элементы.  Дополнительные сведения см. в разделе [Код XAML и пользовательские классы для WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## См. также  
- [Расширения разметки и XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
+ [Расширения разметки и XAML WPF](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

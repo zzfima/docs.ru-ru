@@ -40,7 +40,7 @@ caps.handback.revision: 16
   
  Изменение объекта, возвращаемого с помощью API ресурса, такого как <xref:System.Windows.FrameworkElement.FindResource%2A>, или изменение объекта непосредственно в <xref:System.Windows.ResourceDictionary> приводит к изменению исходного ресурса.  Если ссылки на этот ресурс были динамическими, потребители этого ресурса получат измененный ресурс.  
   
- Если ссылки на ресурс были статическими, изменения ресурса после обработки [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] не имеют значения.  Дополнительные сведения о статических и динамических ссылках на ресурсы см. в разделе [Ресурсы XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Если ссылки на ресурс были статическими, изменения ресурса после обработки [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] не имеют значения.  Дополнительные сведения о статических и динамических ссылках на ресурсы см. в разделе [Ресурсы XAML](../../../ocs/framework/wpf/advanced/xaml-resources.md).  
   
  Явное указание `x:Shared="true"` делают редко, поскольку это значение подразумевается по умолчанию.  Отсутствует непосредственный эквивалент кода для `x:Shared` в объектной модели WPF; он может быть задан только при использовании XAML и должны быть обработан WPF\-поведением по умолчанию или в промежуточном потоке узлов XAML в пути загрузки при обработке с помощью служб XAML .NET Framework и своих модулей чтения XAML.  
   
@@ -58,5 +58,5 @@ caps.handback.revision: 16
   
 ## См. также  
  <xref:System.Windows.ResourceDictionary>   
- [Ресурсы XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [Базовые элементы](../../../docs/framework/wpf/advanced/base-elements.md)
+ [Ресурсы XAML](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
+ [Базовые элементы](../../../ocs/framework/wpf/advanced/base-elements.md)

@@ -49,4 +49,4 @@ caps.handback.revision: 15
   
 ## См. также  
  [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)   
- [Общие сведения о языке XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [Общие сведения о языке XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

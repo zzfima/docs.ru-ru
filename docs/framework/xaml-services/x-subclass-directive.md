@@ -65,4 +65,4 @@ caps.handback.revision: 20
   
 ## См. также  
  [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [Код XAML и пользовательские классы для WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [Код XAML и пользовательские классы для WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

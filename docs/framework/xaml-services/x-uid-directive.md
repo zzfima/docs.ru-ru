@@ -46,9 +46,9 @@ caps.handback.revision: 12
  Платформы могут задать конкретное свойство в своей модели объекта как псевдоним для `x:Uid`, применив атрибут <xref:System.Windows.Markup.UidPropertyAttribute> к определяющему типу.  Если платформа определяет конкретное свойство, нельзя указать `x:Uid` и член с псевдонимом в одном объекте.  Если указаны `x:Uid` и член с псевдонимом, API служб XAML платформы .NET Framework в этом случае обычно выдает исключение <xref:System.Xaml.XamlDuplicateMemberException>.  
   
 ## Примечания об использовании WPF  
- Дополнительные сведения о роли `x:Uid` в процессе локализации WPF и в форме BAML языка XAML см. в разделе [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) или <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ Дополнительные сведения о роли `x:Uid` в процессе локализации WPF и в форме BAML языка XAML см. в разделе [Глобализация для WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md) или <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## См. также  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>   
  <xref:Microsoft.Build.Tasks.Windows.UidManager>   
- [Глобализация для WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [Глобализация для WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

@@ -82,6 +82,6 @@ caps.handback.revision: 19
  Кроме того, некоторые встроенные элементы, имеющие отношение к разрыву строки в модели потокового документа, намеренно не должны отображать лишние пробелы даже в коллекции значащих пробелов. Например, элемент <xref:System.Windows.Documents.LineBreak> используется для той же цели, что и тег \<BR\/\> в [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)], а для удобства чтения в разметке <xref:System.Windows.Documents.LineBreak> обычно отделяется от любого последующего текста автоматически добавленным символом перевода строки. Этот символ не следует нормализовать, чтобы он не стал начальным пробелом в следующей строке. Чтобы включить это поведение, в определении класса для элемента <xref:System.Windows.Documents.LineBreak> применяется <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, который затем интерпретируется процессором [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] так, чтобы пробелы вокруг <xref:System.Windows.Documents.LineBreak> всегда отсекались.  
   
 ## См. также  
- [Обзор XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [Обзор XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
  [XML Character Entities and XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)   
  [xml:space Handling in XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

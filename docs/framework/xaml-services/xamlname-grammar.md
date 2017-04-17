@@ -64,7 +64,7 @@ Nl
 Number, Letter  
 ```  
   
- Язык XAML определяет вторую грамматику, DottedXamlName, которая используется для ссылок, определяемых свойством и событием, а также для вложенных членов.  Дополнительные сведения см. в разделах <xref:System.Windows.DependencyProperty> и [Общие сведения о языке XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Язык XAML определяет вторую грамматику, DottedXamlName, которая используется для ссылок, определяемых свойством и событием, а также для вложенных членов.  Дополнительные сведения см. в разделах <xref:System.Windows.DependencyProperty> и [Общие сведения о языке XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
  Строковые значения типа DottedXamlName должны соответствовать следующей грамматике:  
   

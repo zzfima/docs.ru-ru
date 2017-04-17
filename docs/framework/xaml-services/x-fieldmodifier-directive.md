@@ -58,8 +58,8 @@ caps.handback.revision: 14
  По умолчанию разделяемый класс для корневого элемента является открытым, но его можно объявить закрытым с помощью [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) также влияет на уровень доступа к экземпляру класса корневого элемента.  `x:Name` и `x:FieldModifier` можно поместить в корневой элемент, но при этом всего лишь создается открытая копия поля корневого элемента, а действительный уровень доступа класса корневого элемента по\-прежнему контролируется [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
   
 ## См. также  
- [Код XAML и пользовательские классы для WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [Код программной части и XAML в WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [Код XAML и пользовательские классы для WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [Код программной части и XAML в WPF](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
  [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)   
- [Построение приложения WPF](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
+ [Построение приложения WPF](../../../ocs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
