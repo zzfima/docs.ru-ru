@@ -1,0 +1,8 @@
+# [События](index.md)
+## [Практическое руководство. Вызов и прием событий](how-to-raise-and-consume-events.md)
+## [Практическое руководство. Обработка нескольких событий с помощью их свойств](how-to-handle-multiple-events-using-event-properties.md)
+## [Практическое руководство. Прием событий в приложениях Web Forms](how-to-consume-events-in-a-web-forms-application.md)
+## [Шаблон разработки Observer](observer-design-pattern.md)
+### [Рекомендации по шаблону разработки Observer](observer-design-pattern-best-practices.md)
+### [Практическое руководство. Реализация поставщика](how-to-implement-a-provider.md)
+### [Практическое руководство. Реализация объекта Observer](how-to-implement-an-observer.md)
