@@ -2,7 +2,7 @@
 title: "LINQ в C#"
 description: "Ссылки на разделы, содержащие более подробные сведения о LINQ."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

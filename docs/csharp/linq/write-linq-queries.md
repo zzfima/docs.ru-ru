@@ -2,7 +2,7 @@
 title: "Создание запросов LINQ на языке C#"
 description: "Содержит инструкции по написанию запросов."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
