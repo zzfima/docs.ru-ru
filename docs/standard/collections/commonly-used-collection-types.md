@@ -1,59 +1,66 @@
 ---
-title: "Часто используемые типы коллекций"
-description: "Часто используемые типы коллекций"
-keywords: .NET, .NET Core
+title: "Часто используемые типы коллекций | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [.NET Framework], generic
+- objects [.NET Framework], grouping in collections
+- generics [.NET Framework], collections
+- IList interface, grouping data in collections
+- IDictionary interface, grouping data in collections
+- grouping data in collections, generic collection types
+- Collections classes
+- generic collections
+ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 55861611-1e40-4cc2-9ec5-0b2df4ba6c0c
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: f44b8a87bf263032b991fc1bbc70712136910106
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1f8d938d61492b4da4b35a56fba169a12ed4787e
+ms.lasthandoff: 04/18/2017
 
 ---
-
 # <a name="commonly-used-collection-types"></a>Часто используемые типы коллекций
-
-Типы коллекций — это распространенные виды коллекций данных, такие как хэш-таблицы, очереди, стеки, контейнеры, словари и списки.
-
-Коллекции основаны на интерфейсе [`ICollection`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ICollection), интерфейсе [`IList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IList), интерфейсе [`IDictionary`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary) или их универсальных аналогах. Интерфейс `IList` и `IDictionary` являются производными от интерфейса `ICollection`. Таким образом, все коллекции прямо или косвенно основаны на интерфейсе `ICollection`. В коллекциях, основанных на интерфейсе `IList` (например, [`Array`](https://docs.microsoft.com/dotnet/core/api/System.Array), [`ArrayList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ArrayList) или [`List<T>)`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1)) или напрямую на интерфейсе `ICollection` (например, [`Queue`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Queue), [`ConcurrentQueue<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentQueue-1), [`Stack`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Stack), [`ConcurrentStack<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentStack-1) или [`LinkedList<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.LinkedList-1)), каждый элемент содержит только значение. В коллекциях, основанных на интерфейсе `IDictionary` (например, классы [`Hashtable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) и [`SortedList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) и универсальные классы [`Dictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) и [`SortedList<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2)) или классах [`ConcurrentDictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2), каждый элемент содержит ключ и значение. Класс [`KeyedCollection<TKey, TItem>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) является уникальным, поскольку он представляет собой список значений с встроенными в значения ключами. Поэтому он функционирует как список и как словарь.
-
-Универсальные коллекции являются наилучшим решением для реализации строгой типизации. Однако если язык не поддерживает универсальные шаблоны, пространство имен [`System.Collections`](https://docs.microsoft.com/dotnet/core/api/System.Collections) содержит базовые коллекции, такие как [`CollectionBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.CollectionBase), [`ReadOnlyCollectionBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ReadOnlyCollectionBase) и [`DictionaryBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.DictionaryBase), которые являются абстрактными базовыми классами с возможностью расширения для создания классов коллекций, которые являются строго типизированными. Если требуется эффективный доступ к многопотоковой коллекции, в пространстве имен [`System.Collections.Concurrent`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent) следует использовать универсальные коллекции.
-
-Коллекции могут различаться в зависимости от способов хранения и сортировки элементов, вариантов выполнения поисков и проведения сравнений. Класс [`Queue`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Queue) и универсальный класс [`Queue<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Queue-1) предоставляют списки по принципу "первым поступил — первым обслужен", а класс [`Stack`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Stack) и универсальный класс [`Stack<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Stack-1) предоставляют списки по принципу "последним поступил — первым обслужен". Класс [`SortedList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) и универсальный класс [`SortedList<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) предоставляют сортируемые версии класса [`Hashtable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) и универсального класса [`Dictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2). Элементы `Hashtable` или `Dictionary<TKey, TValue>` имеют доступ только по ключу элемента, а элементы `SortedList` или [`KeyedCollection<TKey, TItem>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) доступны с помощью ключа или индекса элемента. Индексы во всех коллекциях отсчитываются от нуля за исключением [`Array`](https://docs.microsoft.com/dotnet/core/api/System.Array), допускающего массивы с индексацией не от нуля.
-
-Функция LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс [`IEnumerable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) или [`IEnumerable<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1). Запросы LINQ предоставляют общий шаблон для доступа к данным, являются более четкими и удобочитаемыми, чем стандартные циклы foreach, а также предоставляют возможности фильтрации, сортировки и группировки. LINQ запросы также могут повысить производительность.
-
-## <a name="related-topics"></a>Связанные разделы
-
-Заголовок | Описание
------ | -----------
-[`Collections and Data Structures`](index.md) | Описание различных типов коллекций, доступных в .NET Framework, в том числе стеков, очередей, списков, массивов и библиотек.
-[`Hashtable and Dictionary Collection Types`](hashtable-and-dictionary-collection-types.md) | Описывает возможности универсальных и неуниверсальных типов словарей на основе хэша.
-[`Sorted Collection Types`](sorted-collection-types.md) | Описывает производительность и характеристики отсортированных коллекций.
-
-## <a name="reference"></a>Ссылки
-
-[`System.Collections`](https://docs.microsoft.com/dotnet/core/api/System.Collections)
-
-[`System.Collections.Generic`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic)
-
-[`System.Collections.ICollection`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ICollection)
-
-[`System.Collections.Generic.ICollection<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.ICollection-1)
-
-[`System.Collections.IList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IList)
-
-[`System.Collections.Generic.IList<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1)
-
-[`System.Collections.IDictionary`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)
-
-[`System.Collections.Generic.IDictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2)
-
-[`System.Linq`](https://docs.microsoft.com/dotnet/core/api/System.Linq)
-
+Типы коллекций — это распространенные виды коллекций данных, такие как хэш-таблицы, очереди, стеки, контейнеры, словари и списки.  
+  
+ Коллекции основаны на интерфейсе <xref:System.Collections.ICollection>, <xref:System.Collections.IList> или <xref:System.Collections.IDictionary> либо их универсальных аналогах. Интерфейсы <xref:System.Collections.IList> и <xref:System.Collections.IDictionary> являются производными от интерфейса <xref:System.Collections.ICollection>. Таким образом, все коллекции прямо или косвенно основаны на интерфейсе <xref:System.Collections.ICollection>. В коллекциях, основанных на интерфейсе <xref:System.Collections.IList> (например, <xref:System.Array>, <xref:System.Collections.ArrayList> или <xref:System.Collections.Generic.List%601>) или напрямую на интерфейсе <xref:System.Collections.ICollection> (например, <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> или <xref:System.Collections.Generic.LinkedList%601>), каждый элемент содержит только значение. В коллекциях, основанных на интерфейсе <xref:System.Collections.IDictionary> (например, классы <xref:System.Collections.Hashtable> и <xref:System.Collections.SortedList> и универсальные классы <xref:System.Collections.Generic.Dictionary%602> и <xref:System.Collections.Generic.SortedList%602>) или классах <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, каждый элемент содержит ключ и значение.  Класс <xref:System.Collections.ObjectModel.KeyedCollection%602> является уникальным, поскольку он представляет собой список значений со встроенными в значения ключами. Поэтому он функционирует как список и как словарь.  
+  
+ Универсальные коллекции являются наилучшим решением для реализации строгой типизации. Однако если язык не поддерживает универсальные шаблоны, пространство имен <xref:System.Collections> содержит базовые коллекции, такие как <xref:System.Collections.CollectionBase>, <xref:System.Collections.ReadOnlyCollectionBase> и <xref:System.Collections.DictionaryBase>, которые являются абстрактными базовыми классами с возможностью расширения для создания классов коллекций, которые являются строго типизированными. Если требуется эффективный доступ к многопотоковой коллекции, в пространстве имен <xref:System.Collections.Concurrent> следует использовать универсальные коллекции.  
+  
+ Коллекции могут различаться в зависимости от способов хранения и сортировки элементов, вариантов выполнения поисков и проведения сравнений. Класс <xref:System.Collections.Queue> и универсальный класс <xref:System.Collections.Generic.Queue%601> предоставляют списки по принципу "первым поступил — первым обслужен", а класс <xref:System.Collections.Stack> и универсальный класс <xref:System.Collections.Generic.Stack%601> предоставляют списки по принципу "последним поступил — первым обслужен". Класс <xref:System.Collections.SortedList> и универсальный класс <xref:System.Collections.Generic.SortedList%602> предоставляют сортируемые версии класса <xref:System.Collections.Hashtable> и универсального класса <xref:System.Collections.Generic.Dictionary%602>. Элементы <xref:System.Collections.Hashtable> или <xref:System.Collections.Generic.Dictionary%602> имеют доступ только по ключу элемента, а элементы <xref:System.Collections.SortedList> или <xref:System.Collections.ObjectModel.KeyedCollection%602> доступны с помощью ключа или индекса элемента. Индексы во всех коллекциях отсчитываются от нуля за исключением <xref:System.Array>, допускающего массивы с индексацией не от нуля.  
+  
+ Функция LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>. LINQ запросы предоставляют общий шаблон для доступа к данным, являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, а также предоставляют возможности фильтрации, сортировки и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в разделе [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) и [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+  
+## <a name="related-topics"></a>Связанные разделы  
+  
+|Заголовок|Описание|  
+|-----------|-----------------|  
+|[Коллекции и структуры данных](../../../docs/standard/collections/index.md)|Описание различных типов коллекций, доступных в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], в том числе стеков, очередей, списков, массивов и словарей.|  
+|[Типы коллекций Hashtable и Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Описание возможностей универсальных и неуниверсальных типов словарей на основе хэша.|  
+|[Отсортированные типы коллекций](../../../docs/standard/collections/sorted-collection-types.md)|Описание классов, которые предоставляют функции сортировки списков и наборов.|  
+|[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описание универсальных функций, в том числе универсальных коллекций, делегатов и интерфейсов, предоставляемых платформой [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Ссылки на документацию по C#, Visual Basic и Visual C++, а также на вспомогательные технологии, такие как Reflection.|  
+  
+## <a name="reference"></a>Ссылка  
+ <xref:System.Collections?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic?displayProperty=fullName>  
+  
+ <xref:System.Collections.ICollection?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>  
+  
+ <xref:System.Collections.IList?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
+  
+ <xref:System.Collections.IDictionary?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>
