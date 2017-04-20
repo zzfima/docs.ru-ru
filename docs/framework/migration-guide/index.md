@@ -1,5 +1,5 @@
 ---
-title: "Руководство по миграции на .NET Framework 4.6 и 4.5 | Документы Майкрософт"
+title: "Руководство по переходу на .NET Framework 4.7, 4.6 и 4.5 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,13 +18,13 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 9004e102dac346e7d7d627f5adc573a18a53952e
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: d745ff3729fed78cdaf7402d8e8847e95a4ed400
+ms.openlocfilehash: aa587b7ca0beaabae8eb44f83355427579241b47
+ms.lasthandoff: 04/13/2017
 
 ---
-# <a name="migration-guide-to-the-net-framework-46-and-45"></a>Руководство по миграции на .NET Framework 4.6 и 4.5 
-Если приложение создано с использованием более ранней версии платформы .NET Framework, обычно его можно легко обновить до .NET Framework 4.5 и ее доработанных выпусков (4.5.1 и 4.5.2), NET Framework 4.6 и ее доработанных выпусков (4.6.1 и 4.6.2) или .NET Framework 4.7. Откройте проект в Visual Studio. Если проект был создан в более ранней версии, автоматически откроется диалоговое окно **Совместимость проекта**. Дополнительные сведения об обновлении проекта в Visual Studio см. в разделах [Перенос, миграция и обновление проектов Visual Studio](https://docs.microsoft.com/en-us/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) и [Целевая платформа и совместимость для Visual Studio 2017](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs).  
+# <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Руководство по переходу на .NET Framework 4.7, 4.6 и 4.5 
+Если приложение создано с использованием более ранней версии .NET Framework, обычно его можно легко обновить до версии .NET Framework 4.5 и ее доработанных выпусков (4.5.1 и 4.5.2), версии NET Framework 4.6 и ее доработанных выпусков (4.6.1 и 4.6.2) или версии .NET Framework 4.7. Откройте проект в Visual Studio. Если проект был создан в более ранней версии, автоматически откроется диалоговое окно **Совместимость проекта**. Дополнительные сведения об обновлении проекта в Visual Studio см. в разделах [Перенос, миграция и обновление проектов Visual Studio](https://docs.microsoft.com/en-us/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) и [Целевая платформа и совместимость для Visual Studio 2017](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs).  
   
  Однако некоторые изменения в платформе .NET Framework требуют внесения изменений в код. Кроме того, возможно, вы захотите воспользоваться преимуществами новых возможностей в версии .NET Framework 4.5, ее доработанных выпусках, в версии .NET Framework 4.6 и ее доработанных выпусках или в версии .NET Framework 4.7. Внесение подобных изменений в приложение для новой версии платформы .NET Framework обычно называется *миграцией*. Если нет необходимости в миграции приложения, его можно выполнить в среде .NET Framework 4.5 и более поздних версий без компиляции.  
   
