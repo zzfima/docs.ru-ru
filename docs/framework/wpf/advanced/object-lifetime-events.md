@@ -45,7 +45,7 @@ caps.handback.revision: 18
 # События времени жизни объекта
 В этом разделе описываются конкретные события [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], обозначающие этапы времени жизни объекта, а именно создание, использование и уничтожение.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Предварительные требования  

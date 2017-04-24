@@ -25,7 +25,7 @@ caps.handback.revision: 16
   
  В этом разделе рассматриваются обычные типы заметок, особенно клейкие заметки и световые эффекты, и рассказывается, как [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] облегчает использование этих типов заметок в приложениях при помощи элементов управления просмотра документов [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  К элементам управления просмотра документов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], поддерживающим пользовательские заметки, относятся <xref:System.Windows.Controls.FlowDocumentReader> и <xref:System.Windows.Controls.FlowDocumentScrollViewer>, а также элементы управления, унаследованные от <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, как, например, <xref:System.Windows.Controls.DocumentViewer> и <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="caf1_type_stickynotes"></a>   
 ## Клейкие заметки  

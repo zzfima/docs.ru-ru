@@ -27,7 +27,7 @@ caps.handback.revision: 14
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет несколько уровней доступа к изображениям и службам отрисовки.  На верхнем слое объекты <xref:System.Windows.Shapes.Shape> просты в использовании и предоставляют множество полезных возможностей, таких как разметка и участие в системе событий [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="shapes"></a>   
 ## Объекты фигур  

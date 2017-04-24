@@ -29,7 +29,7 @@ caps.handback.revision: 20
 # Общие сведения о классах Transform
 В этом разделе описывается использование класса [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> для поворота, масштабирования, сдвига и наклона объектов <xref:System.Windows.FrameworkElement>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatIsATransformSection"></a>   
 ## Что такое Transform  

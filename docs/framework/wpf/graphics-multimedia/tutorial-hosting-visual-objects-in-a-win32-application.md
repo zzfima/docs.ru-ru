@@ -25,7 +25,7 @@ caps.handback.revision: 13
   
  В этом руководстве описан процесс написания приложения [Пример проверки нажатий, включающий взаимодействие с Win32](http://go.microsoft.com/fwlink/?LinkID=159995), в котором визуальные объекты [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] размещены в окне [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## Требования  

@@ -24,7 +24,7 @@ caps.handback.revision: 24
 # Общие сведения о шаблонах данных
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Модель шаблонов данных предоставляет большую гибкость при определении представления данных. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]элементы управления имеют встроенные функции для поддержки настройки представления данных. В этом разделе сначала демонстрируется определение <xref:System.Windows.DataTemplate> и затем представлены другие возможности шаблонов данных, такие как выбор шаблона на основе пользовательской логики и поддержка отображения иерархических данных.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Предварительные требования  
@@ -36,7 +36,7 @@ caps.handback.revision: 24
   
 <a name="DataTemplating_Basic"></a>   
 ## <a name="data-templating-basics"></a>Основы шаблонов данных  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Чтобы продемонстрировать важность <xref:System.Windows.DataTemplate> важно, давайте разберем пример привязки данных. В этом примере у нас есть <xref:System.Windows.Controls.ListBox> , привязанный к списку `Task` объектов. Каждый `Task` объект имеет `TaskName` (строка), `Description` (строка), `Priority` (int) и свойство типа `TaskType`, который является `Enum` значениями `Home` и `Work`.  
   

@@ -23,7 +23,7 @@ caps.handback.revision: 37
 # Возможности шрифта OpenType
 В этом разделе содержится обзор некоторых основных возможностей [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] технологии шрифтов в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Формат шрифтов OpenType  

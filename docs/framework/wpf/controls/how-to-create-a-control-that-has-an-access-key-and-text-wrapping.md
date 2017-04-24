@@ -31,8 +31,8 @@ caps.handback.revision: 19
   
  Элемент управления <xref:System.Windows.Controls.Label> не поддерживает перенос текста.  Если вам требуется метка, которая содержит текст в несколько строк, вы можете разместить другой элемент, который поддерживает перенос текста и поместить элемент внутри метки.  В следующем примере показано использование <xref:System.Windows.Controls.TextBlock> для создания метки, которая содержит несколько строк текста.  
   
- [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]
- [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
   
  **Добавление клавиши доступа и поддержки переноса текста в Label**  
   
@@ -42,8 +42,8 @@ caps.handback.revision: 19
   
  Следующий пример показывает, как создать <xref:System.Windows.Controls.Label>, который имеет клавишу доступа и поддерживает перенос текста.  Чтобы включить перенос текста, пример устанавливает свойство <xref:System.Windows.Controls.AccessText.TextWrapping%2A> и используется знак подчеркивания для указания клавиши доступа.  \(Символ, который следует сразу за знаком подчеркивания, является клавишей доступа\).  
   
- [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]
- [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
   
 ## См. также  
  [How to: Set the Target Property of a Label](http://msdn.microsoft.com/ru-ru/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

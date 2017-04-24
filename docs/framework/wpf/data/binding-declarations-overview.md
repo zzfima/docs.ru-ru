@@ -26,7 +26,7 @@ caps.handback.revision: 33
 # Общие сведения об объявлении привязок
 В этом разделе обсуждаются различные способы объявления привязок.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prereq"></a>   
 ## Предварительные требования  

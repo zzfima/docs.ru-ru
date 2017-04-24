@@ -68,7 +68,7 @@ caps.handback.revision: 15
   
  Например, рассмотрим следующую схему.  
   
- [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  -->  
   
  В следующем примере используется свойство `Namespaces` для сопоставления пространства имен "http://schemas.contoso.com/carSchema" и "Contoso.Cars".  
   
@@ -98,18 +98,18 @@ caps.handback.revision: 15
 ### <a name="import-options-choosing-collection-types"></a>Параметры импорта. Выбор типов коллекции  
  Коллекции элементов представляют два специальных шаблона в формате XML: список элементов и ассоциации между двумя элементами. Ниже представлен пример списка строк.  
   
- [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  -->  
   
  Ниже приведен пример ассоциации между строкой и целым числом (`city name` и `population`).  
   
- [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  -->  
   
 > [!NOTE]
 >  Любая ассоциация может также считаться списком. Например, указанную выше ассоциацию можно рассматривать как список сложных объектов `city` с двумя полями (полем строки и целочисленным полем). Оба шаблона имеют представление в схеме XSD. Список и ассоциацию невозможно различить, поэтому такие шаблоны всегда обрабатываются как списки, если в схеме отсутствует специальная заметка, характерная для [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В заметке указывается, что данный шаблон представляет ассоциацию. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Как правило, список импортируется как контракт данных коллекции, наследуемый от универсального списка, или как массив [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в зависимости от того, используется ли в схеме стандартный шаблон именования коллекций. Это описывается более подробно в [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Обычно ассоциации импортируются либо как <xref:System.Collections.Generic.Dictionary%602> или контракта данных коллекции, который является производным от объекта словаря.\</TKey, TValue> Например, рассмотрим следующую схему.  
   
- [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  -->  
   
  Импорт выполняется следующим образом (вместо свойств для удобочитаемости показаны поля.)  
   

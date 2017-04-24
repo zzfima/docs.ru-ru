@@ -43,7 +43,7 @@ caps.handback.revision: 21
   
  В этом разделе описана настройка и использование файлов данных приложения.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resource_Files"></a>   
 ## Файлы ресурсов  

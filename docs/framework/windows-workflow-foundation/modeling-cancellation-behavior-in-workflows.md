@@ -84,7 +84,7 @@ caps.handback.revision: 9
   
  В следующем примере метод <xref:System.Activities.NativeActivity.Cancel%2A> переопределяет пользовательское действие `ParallelForEach`, основанное на действии <xref:System.Activities.NativeActivity>.Если действие отменяется, это переопределение отрабатывает логику отмены для действия.Этот пример является частью образца [Нестандартное действие ParallelForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md).  
   
- [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  
+ <!-- TODO: review snippet reference [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  -->  
   
  Производные действия <xref:System.Activities.NativeActivity> могут определять, запрошена ли отмена, проверяя значение свойства <xref:System.Activities.NativeActivityContext.IsCancellationRequested%2A>, и помечать себя как отмененные действия, вызывая метод <xref:System.Activities.NativeActivityContext.MarkCanceled%2A>.Вызов метода <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> не приводит к немедленному завершению действия.Как обычно, среда выполнения завершит действие, когда у него не останется больше ожидающей выполнения работы, но если вызывается метод <xref:System.Activities.NativeActivityContext.MarkCanceled%2A>, то конечным состоянием будет <xref:System.Activities.ActivityInstanceState>, а не <xref:System.Activities.ActivityInstanceState>.  
   

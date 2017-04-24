@@ -46,7 +46,7 @@ caps.handback.revision: 31
   
  Для обеспечения согласованного механизма идентификации и загрузки этих типов файлов из указанных мест [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] использует расширяемость *схемы URI типа "pack"*.  Этот раздел содержит обзор данной схемы, описывает создание [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] типа "pack" для различных скриптов, показывает абсолютное и относительное разрешение [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] и [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], а также описывает использование [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] типа "pack" из разметки и кода.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="The_Pack_URI_Scheme"></a>   
 ## Схема URI типа "pack"  

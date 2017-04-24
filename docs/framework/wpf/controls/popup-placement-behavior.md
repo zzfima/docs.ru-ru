@@ -27,7 +27,7 @@ caps.handback.revision: 13
 > [!NOTE]
 >  <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ContextMenu> классы также определяются эти пять свойств и ведут себя аналогичным образом.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>Размещение всплывающего окна  

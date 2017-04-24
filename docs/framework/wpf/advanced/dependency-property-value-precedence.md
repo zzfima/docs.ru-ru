@@ -24,7 +24,7 @@ caps.handback.revision: 26
 # Приоритет значения свойств зависимостей
 <a name="introduction"></a> В этом разделе объясняется, как работа системы свойств [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] может повлиять на значение [свойства зависимостей](GTMT), и описывает приоритет, по которому аспекты системы свойств применяются к действительному значению свойства.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Предварительные требования  

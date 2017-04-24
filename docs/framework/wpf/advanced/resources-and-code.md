@@ -25,7 +25,7 @@ caps.handback.revision: 13
 # Ресурсы и код
 Этот обзор сосредоточен на том, как [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ресурсы могут быть доступны или созданы с помощью кода, а не синтаксиса [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Дополнительные сведения об общем использовании ресурсов и ресурсов с точки зрения синтаксиса [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="accessing"></a>   
 ## Доступ к ресурсам из кода  

@@ -26,7 +26,7 @@ caps.handback.revision: 30
 # Общие сведения о перетаскивании
 В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши \(или другого указывающего устройства\) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drag_and_Drop_Support"></a>   
 ## Поддержка перетаскивания в WPF  

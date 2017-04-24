@@ -36,7 +36,7 @@ caps.handback.revision: 11
  ![Кнопка с красной границей.](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
 Кнопка, использующая пользовательский шаблон элемента управления, когда в ней находится указатель мыши  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Предварительные требования  

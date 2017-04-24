@@ -27,7 +27,7 @@ caps.handback.revision: 29
 # Общие сведения о свойствах зависимости
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет набор служб, которые могут использоваться для расширения функциональности свойства [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].  Собирательно, эти службы называют системой свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Свойство, поддерживаемое системой свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], называется [свойством зависимостей](GTMT). Этот обзор содержит описание системы свойств [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и возможностей [свойства зависимостей](GTMT). Он также включает руководство по использованию существующих [свойств зависимостей](GTMT) в разметке XAML и в программном коде.  Этот раздел также знакомит со специальными аспектами свойств зависимости такими, как метаданные свойства зависимости и способы создания собственного свойства зависимости в настраиваемом классе.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Предварительные требования  

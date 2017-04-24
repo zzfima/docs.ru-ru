@@ -28,7 +28,7 @@ caps.handback.revision: 22
 # Общие сведения о классе Geometry
 В данном обзоре объясняется, как использовать классы [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> для описания фигур.  Также в данном обзоре описаны различия между объектами класса <xref:System.Windows.Media.Geometry> и элементами класса <xref:System.Windows.Shapes.Shape>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## Понятие о классе Geometry  

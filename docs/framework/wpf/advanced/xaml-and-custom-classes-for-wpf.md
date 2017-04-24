@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # Код XAML и пользовательские классы для WPF
 В соответствии с реализацией в языке XAML [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] границы поддерживают возможность указывать пользовательские класс или структуру в любых  [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] язык, а затем получить доступ к такой класс с помощью разметки XAML.  В одном файле разметки можно использовать сочетание заданных в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] типов и пользовательских типов, обычно сопоставляя пользовательские типы с префиксом пространства имен XAML.  В этом разделе обсуждаются требования, пользовательский класс должен удовлетворять как использовать как элемент XAML.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## Пользовательские классы в приложениях или сборках  

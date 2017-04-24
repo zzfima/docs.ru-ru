@@ -49,7 +49,7 @@ caps.handback.revision: 11
   
 4.  Svcutil.exe также создает конфигурацию для клиента, использующего <xref:System.ServiceModel.BasicHttpBinding> класса. При использовании среды [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] назовите этот файл App.config. Обратите внимание, что информация об адресе и привязке нигде внутри реализации службы не указывается. Кроме того, для извлечения этих сведений из файла конфигурации не требуется писать код.  
   
-     [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  -->  
   
 5.  Создайте экземпляр класса `ClientCalculator` в приложении, затем вызовите операции службы.  
   

@@ -21,7 +21,7 @@ caps.handback.revision: 52
 # Общие сведения об управлении приложением
 Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, которая применяется к реализации и управлению приложения.  В этом разделе приводится обзор описаний функциональности в <xref:System.Windows.Application> класс для создания и управления приложениями.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## Класс приложения  
  IN [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]общую функциональность, инкапсулируются в области определения приложения  <xref:System.Windows.Application> класс.  <xref:System.Windows.Application> класс включает в себя следующие функциональные возможности:  
@@ -133,7 +133,7 @@ caps.handback.revision: 52
 ## Время жизни приложения  
  Время жизни приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] помечено несколькими событиями, которые вызываются <xref:System.Windows.Application>, чтобы позволить вам знать, когда ваше приложении запущено, активировано, отключено и завершило работу.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Splash_Screen"></a>   
 ### Экран\-заставка  

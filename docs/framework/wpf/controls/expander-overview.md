@@ -22,7 +22,7 @@ caps.handback.revision: 19
 # Общие сведения об элементе управления Expander
 Элемент управления <xref:System.Windows.Controls.Expander> обеспечивает способ предоставления содержимого в развертываемой области, имеющей вид окна и включающей заголовок.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="CreatinganExpanderinXAML"></a>   
 ## Создание простого элемента управления Expander  

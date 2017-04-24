@@ -89,8 +89,8 @@ caps.handback.revision: 11
 ## Использование градиента в качестве маски непрозрачности  
  Для создания градиентной заливки вам необходимо указать две или более позиции градиента.  Каждая позиция градиента содержит описание цвета и позиции \(см.: [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) для получения дополнительных сведений о создании и использовании градиентов\).  Процесс такой же, как при использовании градиента в качестве маски непрозрачности, за исключением того, что вместо смешения цветов, градиент маски непрозрачности смешивает значения альфа\-канала.  Таким образом, фактический цвет содержимого градиента не имеет значения; только альфа\-канал или непрозрачность каждого цвета.  Пример.  
   
- [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]
- [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->  
   
 <a name="specifyinggradientcolors"></a>   
 ## Задание позиции градиента для маски непрозрачности  
@@ -106,8 +106,8 @@ caps.handback.revision: 11
   
  *aa* в предыдущей строке представляет двузначное шестнадцатеричное значение, используемое для указания непрозрачности цвета.  *rr*, *gg*, и *bb* представляют собой двузначные шестнадцатеричные значения, используемые для указания красной, зеленой и синей компоненты цвета.  Каждая шестнадцатеричная цифра может иметь значение от 0 до 9 либо от A до F.  0 соответствует наименьшему значению, а F — наибольшему.  Альфа\-значение 00 указывает на то, что цвет является полностью прозрачным, в то время как альфа\-значение FF создает цвет, который является полностью непрозрачным.  В следующем примере шестнадцатеричная форма записи [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] используется для задания двух цветов.  Первый — полностью непрозрачный, в то время как второй — полностью прозрачный.  
   
- [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]
- [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->  
   
 <a name="usingimageasopacitymask"></a>   
 ## Использование изображения в качестве маски непрозрачности  
@@ -118,15 +118,15 @@ caps.handback.revision: 11
   
  Для использования изображения в качестве маски непрозрачности используйте <xref:System.Windows.Media.ImageBrush> для включения изображения.  При создании изображения, которое будет использоваться в качестве маски непрозрачности, сохраните рисунок в формате, поддерживающем несколько уровней прозрачности, например в [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)].  В следующем примере показан код, используемый для создания предыдущего рисунка.  
   
- [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#uielementopacitymask)]
- [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#uielementopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#uielementopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#uielementopacitymask)]  -->  
   
 <a name="tilingimageopacitymask"></a>   
 ### Использование мозаичного изображения в качестве маски непрозрачности  
  В следующем примере это же изображение используется с другим <xref:System.Windows.Media.ImageBrush>, но возможности заполнения кисти используются для создания мозаичных элементов изображения с 50 пикселями в квадрате.  
   
- [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]
- [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#tiledimageasopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->  
   
 <a name="drawingbrushasopacitymask"></a>   
 ## Создание маски непрозрачности из чертежа  
@@ -137,15 +137,15 @@ caps.handback.revision: 11
   
  Для использования рисунка в качестве маски непрозрачности используйте <xref:System.Windows.Media.DrawingBrush> для хранения рисунка.  В следующем примере показан код, используемый для создания предыдущего рисунка:  
   
- [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]
- [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->  
   
 <a name="tileddrawingbrush"></a>   
 ### Использование мозаичного рисунка в качестве маски непрозрачности  
  Как и <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> могут быть сделаны для мозаичного отображения его рисунка.  В следующем примере кисть рисования используется для создания мозаичной маски непрозрачности.  
   
- [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]
- [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->  
   
 ## См. также  
  [Рисование с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   

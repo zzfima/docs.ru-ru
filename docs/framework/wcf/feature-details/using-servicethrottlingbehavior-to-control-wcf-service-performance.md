@@ -28,7 +28,7 @@ caps.handback.revision: 8
   
  В следующем примере кода показано использование <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> класс из файла конфигурации приложения, который задает <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, и <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> свойства 1 в качестве упрощенного примера. Фактические условия определяют оптимальные параметры для каждого конкретного приложения.  
   
- [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  
+ <!-- TODO: review snippet reference [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  -->  
   
  Точное поведение времени выполнения зависит от значения <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> и <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> свойства, которые определяют, сколько сообщений могут обрабатываться в операции одновременно и временем существования службы <xref:System.ServiceModel.InstanceContext> относительно сеансов входящих каналов, соответственно.  
   

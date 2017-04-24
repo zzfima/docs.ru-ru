@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  Создайте файл Web.config, чтобы настроить использование пользовательской привязки "reliableSessionOverHttps", использующей надежный сеанс и транспорт HTTPS, с конечной точкой службы `CalculatorService`.  
   
-     [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
   
 4.  Создайте файл Service.svc, содержащий строку:  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  Задайте пользовательской привязке "reliableSessionOverHttps" использовать транспорт HTTPS и надежные сеансы.  
   
-     [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
   
 5.  Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
   

@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  Создайте файл Web.config для настройки конечной точки службы `CalculatorService`, использующей привязку <xref:System.ServiceModel.WSHttpBinding> с разрешением надежного сеанса и требованием доставки сообщений в порядке их отправления.  
   
-     [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  -->  
   
 4.  Создайте файл Service.svc, содержащий строку:  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  Программа Svcutil.exe также создает конфигурацию для клиента, использующего класс <xref:System.ServiceModel.WSHttpBinding>.Этот файл должен иметь имя App.config, если используется [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
   
-     [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  -->  
   
 5.  Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
   

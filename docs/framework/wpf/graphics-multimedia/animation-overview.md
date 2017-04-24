@@ -110,7 +110,7 @@ caps.handback.revision: 73
   
 1.  Создание <xref:System.Windows.Media.Animation.Storyboard> и добавить анимацию в качестве дочернего. Ниже показано, как создать <xref:System.Windows.Media.Animation.Storyboard> в XAML.  
   
-     [!code-xml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]  
+     <!-- TODO: review snippet reference [!code-xml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]  -->  
   
      Для создания <xref:System.Windows.Media.Animation.Storyboard> в коде объявите <xref:System.Windows.Media.Animation.Storyboard> переменных на уровне класса.  
   

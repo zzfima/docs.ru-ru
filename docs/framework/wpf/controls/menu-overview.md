@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # Обзор меню
 <xref:System.Windows.Controls.Menu> позволяет упорядочивать элементы, связанные с командами и обработчиками событий, в иерархическом порядке. Каждый <xref:System.Windows.Controls.Menu> элемент содержит коллекцию <xref:System.Windows.Controls.MenuItem> элементы.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Элемент управления меню  

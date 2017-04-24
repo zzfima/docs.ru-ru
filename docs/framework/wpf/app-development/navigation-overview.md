@@ -43,7 +43,7 @@ caps.handback.revision: 65
 > [!NOTE]
 >  В этом разделе термин "браузер" относится только к браузерам, в которых можно размещать приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. В настоящее время к этим браузерам относятся [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] и Firefox.  В случае, когда специфические компоненты [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживаются только одним определенным браузером, указывается версия браузера.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAMLBrowserApplications"></a>   
 ## Переходы в приложениях WPF  

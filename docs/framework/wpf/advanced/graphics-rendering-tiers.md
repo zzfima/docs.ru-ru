@@ -25,7 +25,7 @@ caps.handback.revision: 43
 # Уровни графической отрисовки
 Уровень отрисовки определяет возможности графического оборудования и производительности для устройства, которое запускает приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="graphics_hardware"></a>   
 ## Графическое оборудование  

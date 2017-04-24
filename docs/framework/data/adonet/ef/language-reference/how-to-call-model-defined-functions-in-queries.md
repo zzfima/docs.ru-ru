@@ -33,7 +33,7 @@ caps.handback.revision: 3
  В следующей концептуальной модели функция возвращает сведения о количестве лет, истекших с момента приема инструктора на работу.  \(Сведения о добавлении функции к концептуальной модели см. в разделе [How to: Define Custom Functions in the Conceptual Model](http://msdn.microsoft.com/ru-ru/0dad7b8b-58f6-4271-b238-f34810d68e5f).\)  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
- [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  
+ <!-- TODO: review snippet reference [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  -->  
   
 ## Пример  
  Затем добавьте в приложение следующий метод и с помощью атрибута <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> сопоставьте его с функцией концептуальной модели:  

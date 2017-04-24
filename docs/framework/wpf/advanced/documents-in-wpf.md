@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # Документы в WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предлагает широкий диапазон свойств документа, который позволяет создавать содержимое высокого качества, предназначенное для более легкого доступа и чтения, чем в предыдущих поколениях [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  В дополнение к расширенным возможностям и качеству приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] также предоставляет интегрированные службы для отображения документов, упаковки и безопасности.  Этот раздел содержит введение в типы документов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и упаковку документов.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="types_of_documents"></a>   
 ## Типы документов  

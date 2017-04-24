@@ -30,7 +30,7 @@ caps.handback.revision: 35
   
  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], в коллекции <xref:System.Collections.Concurrent> пространства имен предоставляют эффективный потокобезопасные операции для доступа к элементам коллекций из нескольких потоков. Неизменяемые классы коллекций в пространстве имен System.Collections.Immutable ([пакет NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) являются по своей природе потокобезопасными, поскольку операции выполняются с копией исходной коллекции и не может изменяться исходной коллекции.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Общие возможности коллекций  

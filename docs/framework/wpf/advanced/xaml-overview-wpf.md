@@ -33,7 +33,7 @@ caps.handback.revision: 50
 # Общие сведения о языке XAML (WPF)
 В этом разделе описаны возможности языка XAML и показано, как можно использовать язык XAML для написания приложений [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В частности, в этом разделе описывается реализация XAML в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Сам язык XAML — это более широкое понятие языка, чем [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_xaml"></a>   
 ## Общие сведения о XAML  

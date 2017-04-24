@@ -83,8 +83,8 @@ caps.handback.revision: 8
 ## Пример  
  Следующий пример содержит исходный код HTML и код для веб\-формы ASP.NET, который запрашивает у пользователя ввод значения даты и времени.  Клиентский скрипт записывает сведения о локальной дате и времени запроса пользователя, а также смещение часового пояса пользователя от времени UTC в скрытое поле.  Эти сведения затем анализируются сервером, который возвращает веб\-страницу, отображающую введенные пользователем данные.  Она также отображает дату и время запроса пользователя, используя локальное время пользователя, время на сервере и время UTC.  
   
- [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]
- [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  
+ <!-- TODO: review snippet reference [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  -->  
   
  Клиентский скрипт вызывает метод JavaScript `toLocaleString`.  Он создает строку, которая соответствует правилам форматирования локальной системы пользователя, которая, вероятнее всего, будет успешно обработана на сервере.  
   

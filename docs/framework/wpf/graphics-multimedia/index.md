@@ -31,7 +31,7 @@ caps.handback.revision: 29
 > [!NOTE]
 >  Крайне нежелательно использовать типы WPF в службе Windows.  Использование типов WPF в службе Windows может привести к непредвиденному поведению этой службы.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## Новые графические и мультимедийные возможности в WPF 4  

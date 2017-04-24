@@ -22,7 +22,7 @@ caps.handback.revision: 48
 # Общие сведения об отрисовке графики в WPF
 В этом разделе дан обзор визуального уровня [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Он посвящен роли класса <xref:System.Windows.Media.Visual> для поддержки отрисовки в модели [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="role_of_visual_object"></a>   
 ## Роль визуального объекта  

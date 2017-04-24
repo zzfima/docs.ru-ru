@@ -48,13 +48,13 @@ caps.handback.revision: 41
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Определение адреса конечной точки в конфигурации  
  Для определения конечной точки в файле конфигурации, используйте [ <> \> ](http://msdn.microsoft.com/ru-ru/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента.  
   
- [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  -->  
   
  Когда <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> вызывается (то есть, когда ведущее приложение пытается запустить службу), система выполняет поиск [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент с атрибутом name, указывающее «UE. Samples.HelloService». Если [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент найден, система загружает указанный класс и создает конечные точки, с помощью конечных точек, содержащиеся в файле конфигурации. Благодаря такому механизму можно загружать и запускать службу с двумя строками кода, при этом не указывая привязку и адрес в коде. Преимуществом этого подхода является отсутствие необходимости в повторной компиляции или повторном развертывании приложения при внесении этих изменений.  
   
  Необязательные заголовки объявлены в [ <> \</> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Ниже приведен пример элементов, используемых для задания конечных точек службы в файле конфигурации, различающем два заголовка: клиентов типа "Gold" из «http://tempuri1.org/» и клиентов типа "Standard" из «http://tempuri2.org/». Клиент, вызывающий эту службу необходимо наличие [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) в своем файле конфигурации.  
   
- [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  -->  
   
  Можно настроить заголовки для отдельных сообщений конечной точки, а не всех одновременно (как показано выше). Это делается с помощью <xref:System.ServiceModel.OperationContextScope> для создания нового контекста в клиентском приложении для добавления пользовательского заголовка в исходящее сообщение, как показано в следующем примере.  
   

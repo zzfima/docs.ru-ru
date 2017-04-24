@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # Общие сведения о модели содержимого TextElement
 Данный раздел содержит основные сведения о поддерживаемом содержимом для модели <xref:System.Windows.Documents.TextElement>.  Класс <xref:System.Windows.Documents.Paragraph> является типом <xref:System.Windows.Documents.TextElement>.  Модель содержимого описывает объекты\/элементы, которые могут содержаться в других объектах.  В разделе содержится обобщение модели содержимого для объектов, являющихся производными от <xref:System.Windows.Documents.TextElement>.  Дополнительные сведения см. в разделе [Общие сведения о документе нефиксированного формата](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="text_element_classes"></a>   
 ## Диаграмма модели содержимого  

@@ -26,7 +26,7 @@ caps.handback.revision: 9
 # Синтаксис DateTime XAML
 Некоторые элементы управления, такие как <xref:System.Windows.Controls.Calendar> и <xref:System.Windows.Controls.DatePicker>, имеют свойства, которые используют тип <xref:System.DateTime>.  Хотя обычно начальные дата или время для этих элементов управления задаются в файле кода программной части во время выполнения, можно указать начальные дату или время в XAML.  Средство синтаксического анализа WPF XAML обрабатывает анализ значений <xref:System.DateTime>, используя встроенный синтаксис текста XAML.  В этом разделе описываются особенности синтаксиса текста XAML <xref:System.DateTime>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="where_datetime_xaml_syntax_is_used"></a>   
 ## Когда использовать синтаксис XAML даты и времени  

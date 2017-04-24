@@ -24,7 +24,7 @@ caps.handback.revision: 31
 > [!IMPORTANT]
 >  В [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] и более поздних версиях класс <xref:System.Windows.Media.Effects.BitmapEffect> является устаревшим.  При попытке использовать класс <xref:System.Windows.Media.Effects.BitmapEffect> вызывается устаревшее исключение.  Неустаревшей альтернативой классу <xref:System.Windows.Media.Effects.BitmapEffect> является класс <xref:System.Windows.Media.Effects.Effect>.  В большинстве случаев класс <xref:System.Windows.Media.Effects.Effect> намного быстрее.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wpf_effects"></a>   
 ## Эффекты точечного рисунка в WPF  

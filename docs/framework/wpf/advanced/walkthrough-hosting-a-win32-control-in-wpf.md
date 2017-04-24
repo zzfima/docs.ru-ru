@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  В этом разделе представлено пошаговое руководство по разработке приложения, пример которого представлен в документе [Hosting a Win32 ListBox Control in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998). В этом приложении размещается элемент управления "Список" [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  Эта общая процедура может быть расширена для размещения любого окна [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## Требования  

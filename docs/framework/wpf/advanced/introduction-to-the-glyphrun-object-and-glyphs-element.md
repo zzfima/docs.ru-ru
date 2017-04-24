@@ -26,7 +26,7 @@ caps.handback.revision: 20
 # Знакомство с объектом GlyphRun и элементом Glyphs
 В этом разделе описывается <xref:System.Windows.Media.GlyphRun> объекта и <xref:System.Windows.Documents.Glyphs> элемента.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>Введение в GlyphRun  

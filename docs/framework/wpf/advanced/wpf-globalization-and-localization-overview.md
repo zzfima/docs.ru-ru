@@ -26,7 +26,7 @@ caps.handback.revision: 34
   
  Локализация — это перевод ресурсов приложения в локализованные версии для конкретных языков и региональных параметров, которые поддерживает приложение.  При локализации в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] используются интерфейсы API из пространства имен <xref:System.Windows.Markup.Localizer>. Эти интерфейсы API поддерживают средство командной строки [LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  Сведения о том, как построить и использовать LocBaml, см. в разделе [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## Рекомендации по глобализации и локализации в WPF  
  Большую часть функциональных возможностей глобализации и локализации, встроенных в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], можно создать, следуя советам по проектированию пользовательского интерфейса и локализации, представленным в этом разделе.  

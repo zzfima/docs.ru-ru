@@ -24,7 +24,7 @@ caps.handback.revision: 13
 # Рисование форматированного текста
 В этом разделе представлены общие сведения о функциях объекта <xref:System.Windows.Media.FormattedText>.  Данный объект предоставляет элемент управления нижнего уровня, предназначенные для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="technology_overview"></a>   
 ## Общие сведения о технологии  

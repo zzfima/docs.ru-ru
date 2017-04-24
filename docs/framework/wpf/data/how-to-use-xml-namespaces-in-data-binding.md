@@ -30,8 +30,8 @@ caps.handback.revision: 12
   
  Элемент <xref:System.Windows.Data.XmlNamespaceMapping> можно использовать для сопоставления пространства имен и <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>, как показано в следующем примере.  Затем можно использовать <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> для ссылки на пространство имен [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  В этом примере элемент управления <xref:System.Windows.Controls.ListBox> отображает *title* и *dc:date* из каждого *item*.  
   
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]  -->
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  -->  
   
  Обратите внимание на то, что указанный <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> не обязан соответствовать тому, который используется в источнике [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]; если префикс изменяется в источнике [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], то сопоставление по\-прежнему работает.  
   

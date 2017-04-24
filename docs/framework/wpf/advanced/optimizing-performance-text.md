@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
  Этот раздел содержит рекомендации по повышению производительности отрисовки текста.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Отрисовка текста на уровне глифа  

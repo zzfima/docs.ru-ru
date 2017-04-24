@@ -49,7 +49,7 @@ caps.handback.revision: 13
   
  В следующем примере продемонстрирован класс `LibraryPatron`, который включает коллекцию указанного типа `LibraryItem`. Второй класс определяет тип `LibraryItem`. Третий и четвертый классы \(`Book` и `Newspaper`\) наследуются от класса `LibraryItem`.  
   
- [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]
+ <!-- TODO: review snippet reference [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]  -->
  [!code-vb[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#3)]  
   
  В следующем примере кода демонстрируется создание экземпляра сериализатора с использованием параметра `knownTypes`.  

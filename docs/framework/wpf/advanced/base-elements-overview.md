@@ -21,7 +21,7 @@ caps.handback.revision: 18
 # Общие сведения о базовых элементах
 Многие классы в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются производными от четырех классов, на которые в документации [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] часто ссылаются как на базовые классы элементов.  Этими классами являются <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement> <xref:System.Windows.ContentElement> и <xref:System.Windows.FrameworkContentElement>.  Класс <xref:System.Windows.DependencyObject> также связан, поскольку это общий базовый класс <xref:System.Windows.UIElement> и <xref:System.Windows.ContentElement>  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="base_apis"></a>   
 ## Базовый элемент интерфейсов API в классах WPF  

@@ -21,7 +21,7 @@ caps.handback.revision: 42
 # Построение приложения WPF
 Приложения [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] могут быть построены как исполняемые файлы \(.exe\), библиотеки \(.dll\) или как комбинация обоих типов сборки [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  В этом разделе приведены основные сведения о построении приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описаны основные шаги процесса построения.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## Построение приложения WPF  

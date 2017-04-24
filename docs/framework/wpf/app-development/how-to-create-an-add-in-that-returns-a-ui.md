@@ -36,7 +36,7 @@ caps.handback.revision: 5
 ## Пример  
  Чтобы создать надстройку, возвращающую[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], требуется специальный код для каждого сегмента конвейера, надстройки и ведущего приложения.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Contract"></a>   
 ## Реализация сегмента конвейера «контракт»  

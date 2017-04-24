@@ -25,7 +25,7 @@ caps.handback.revision: 19
 # Общие сведения о свойствах Alignment, Margin, Padding
 Класс <xref:System.Windows.FrameworkElement> предоставляет ряд свойств, используемых для точного размещения дочерних элементов.  В этом разделе рассмотрены четыре наиболее важных свойства <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A> и <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  Эффекты этих свойств важно понимать, поскольку они обеспечивают основу для контроля положения элементов в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## Введение в позиционирование элемента  

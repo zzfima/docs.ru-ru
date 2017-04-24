@@ -22,7 +22,7 @@ caps.handback.revision: 14
 # Атрибуты и комментарии локализации
 Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] являются свойствами в исходном коде [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], предоставленными разработчиками для обеспечения правил и подсказок при локализации.  Комментарии локализации [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержат два набора данных: атрибуты локализуемости и комментарии локализации в свободной форме.  Атрибуты локализуемости используются API локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для указания того, какие ресурсы должны быть локализованы.  Комментарии произвольной формы представляют собой любые сведения, которые автор приложения хочет указать.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Localizer_Comments_"></a>   
 ## Комментарии локализации  

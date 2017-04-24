@@ -97,7 +97,7 @@ caps.handback.revision: 25
   
 4.  Конфигурация для клиента, использующего <xref:System.ServiceModel.NetTcpBinding> также создается программой Svcutil.exe. Имя этого файла должно задаваться в файле App.config, если используется Visual Studio.  
   
-     [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  -->  
   
 5.  Создайте экземпляр класса `ClientCalculator` в приложении и вызовите операции службы.  
   

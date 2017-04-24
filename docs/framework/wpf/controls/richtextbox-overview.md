@@ -22,7 +22,7 @@ caps.handback.revision: 10
 # Общие сведения о RichTextBox
 Элемент управления <xref:System.Windows.Controls.RichTextBox> позволяет отображать или изменять содержимое потока, в том числе абзацы, изображения, таблицы и др.  В этом разделе представляется класс <xref:System.Windows.Controls.TextBox> и приводятся примеры его использования в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## Textbox или RichTextBox?  

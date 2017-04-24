@@ -35,7 +35,7 @@ caps.handback.revision: 33
   
  Кроме того важно понимать ресурсы, которые позволяют стили и шаблоны для повторного использования. Дополнительные сведения о ресурсах см. в разделе [ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Пример шаблонов и стилей  

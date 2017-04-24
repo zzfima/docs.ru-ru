@@ -24,7 +24,7 @@ caps.handback.revision: 7
   
  В этом разделе содержатся рекомендации по оптимизации производительности привязки данных.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## Как разрешаются ссылки для привязки данных  

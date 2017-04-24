@@ -27,7 +27,7 @@ caps.handback.revision: 32
 > [!NOTE]
 >  Файлы ресурсов, описанных в этом разделе отличаются от файлы ресурсов, описанные в [ресурса приложения WPF, содержимое и файлы данных](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) и отличаются от внедренных или связанных ресурсов, приведенных в [управление ресурсами приложения (.NET)](../Topic/Managing%20Application%20Resources%20\(.NET\).md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>Использование ресурсов в XAML  

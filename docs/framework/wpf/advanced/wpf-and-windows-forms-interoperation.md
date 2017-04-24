@@ -28,7 +28,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  Особое внимание уделено скрипту *гибридного элемента управления*.  Гибридный элемент управления состоит из элемента управления одной технологии и вложенного в него элемента управления другой технологии.  Это также называется *вложенное взаимодействие*.  В *многоуровневом гибридном элементе управления* более одного уровня вложения.  Примером многоуровневого вложенного взаимодействия является элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], который содержит элемент управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], содержащий другой элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  Многоуровневые гибридные элементы управления не поддерживаются.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## Размещение элементов управления Windows Forms в WPF  

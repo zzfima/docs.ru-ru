@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # Обзор объектов Drawing
 В этом разделе представлены объекты <xref:System.Windows.Media.Drawing> и инструкции по их использованию для эффективного рисования фигур, точечных рисунков, текста и мультимедиа.  Используйте объекты <xref:System.Windows.Media.Drawing> при создании картинок, рисования при помощи <xref:System.Windows.Media.DrawingBrush> или использовании объектов <xref:System.Windows.Media.Visual>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatisadrawingsection"></a>   
 ## Понятие объекта Drawing  

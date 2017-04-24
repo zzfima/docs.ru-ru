@@ -34,7 +34,7 @@ caps.handback.revision: 29
 # Общие сведения об обработке изображений
 Данный раздел представляет собой введение в [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)].  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] позволяет разработчикам отображать, преобразовывать и форматировать изображения.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="_wpfImaging"></a>   
 ## Компонент WPF Imaging  

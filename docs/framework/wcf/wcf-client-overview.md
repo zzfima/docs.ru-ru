@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Например, созданный файл конфигурации для службы `ISampleService`, используемый в предыдущих примерах, содержит следующие сведения о конечных точках.  
   
- [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
+ <!-- TODO: review snippet reference [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  -->  
   
  Этот файл конфигурации содержит целевую конечную точку в элементе `<client>`. [!INCLUDE[crabout](../../../includes/crabout-md.md)]с помощью нескольких целевых конечных точек в разделе <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=fullName> или <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=fullName> конструкторы.  
   

@@ -52,8 +52,8 @@ caps.handback.revision: 24
   
  В следующем примере <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> используется для анимации элемента <xref:System.Windows.Shapes.Rectangle> в четырех разных местах.  
   
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
   
  Подобно анимации From\/To\/By, анимация по полным кадрам может применяться к свойству с помощью <xref:System.Windows.Media.Animation.Storyboard> в разметке и коде или с помощью метода <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> в коде.  Также можно использовать анимацию по полным кадрам, чтобы создать <xref:System.Windows.Media.Animation.AnimationClock> и применить его к одному или нескольким свойствам.  Дополнительные сведения о различных способах применения анимации см. в разделе [Общие сведения о методах анимации свойств](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
   
@@ -130,8 +130,8 @@ caps.handback.revision: 24
   
 -   Так как свойство <xref:System.Windows.Media.Animation.Timeline.Duration%2A> было установлено в значение 10 секунд, анимация хранит его конечное значение в течение двух секунд до времени окончания, равного 0:0:10.  
   
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]
- [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
   
 <a name="interpolationmethods"></a>   
 ## Методы интерполяции  
@@ -173,8 +173,8 @@ caps.handback.revision: 24
 ### Сплайновая интерполяция  
  Сплайновую интерполяцию можно использовать для достижения более реалистичных временных эффектов.  Поскольку анимация часто используются для имитации эффектов, которые возникают в реальных условиях, разработчикам может потребоваться тонкое управление ускорением и замедлением объектов и сегментами времени.  Полные сплайновые кадры позволяют создавать анимацию с помощью сплайновой интерполяции.  Вместе с другими полными кадрами определяются <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> и <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>.  С полным сплайновым кадром также указывается <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>.  В следующем примере показан один сплайновый полный кадр для <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>.  Обратите внимание на свойство <xref:System.Windows.Media.Animation.KeySpline>; именно этим сплайновый полный кадр отличается от других типов полных кадров.  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
   
  [Кривая Безье третьего порядка](GTMT) определяется начальной точкой, конечной точкой и двумя контрольными точками.  Свойство <xref:System.Windows.Media.Animation.KeySpline> сплайнового полного кадра определяет две контрольные точки кривой Безье, которая располагается между \(0,0\) и \(1,1\).  Первая контрольная точка определяет коэффициент кривизны первой половины кривой Безье, а вторая контрольная точка определяет коэффициент кривизны второй половины сегмента Безье.  Полученная кривая описывает частоту изменения для этого сплайнового полного кадра.  Чем круче кривая, тем быстрее полный кадр изменяет свои значения.  Чем более плоской становится кривая, тем медленнее изменяет свои значения полный кадр.  
   
@@ -185,8 +185,8 @@ caps.handback.revision: 24
  ![Кривая Безье](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm\_keyspline\_0\_1\_1\_0")  
 Ключевой сплайн с контрольными точками \(0,0, 1,0\) и \(1,0, 0,0\)  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
   
  Этот полный кадр анимируется быстро при запуске, замедляется и затем снова ускоряется перед завершением.  
   
@@ -195,15 +195,15 @@ caps.handback.revision: 24
  ![Кривая Безье](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm\_keyspline\_025\_050\_075\_10")  
 Ключевой сплайн с контрольными точками \(0,25, 0,5\) и \(0,75, 1,0\)  
   
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]
- [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->  
   
  Поскольку изгиб кривой Безье изменяется незначительно, этот полный кадр анимируется почти с постоянной скоростью; он несколько замедляется перед завершением.  
   
  В следующем примере <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> используется для анимации положения прямоугольника.  Поскольку <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> использует объекты <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>, для перехода между значениями полного кадра используется сплайновая интерполяция.  
   
- [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]
- [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->  
   
  Сплайновую интерполяцию достаточно трудно понять. Помочь в этом может эксперимент с различными настройками.  Пример [Key Spline Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160011) \("Анимация ключевого сплайна"\) позволяет изменять значения ключевого сплайна и видеть результаты этих изменений в анимации.  
   
@@ -213,8 +213,8 @@ caps.handback.revision: 24
   
  В следующем примере создается <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>, который использует линейную, сплайновую и дискретную интерполяцию.  
   
- [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]
- [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->  
   
 <a name="keytimes"></a>   
 ## Дополнительные сведения о длительности и времени полного кадра  
@@ -235,8 +235,8 @@ caps.handback.revision: 24
   
 -   Четвертый полный кадр анимируется от 500 до 600.  Он запускается по окончании третьего полного кадра \(в момент времени 9 секунд\), воспроизводится в течение 1 секунды и заканчивается в момент времени 0:0:10.  
   
- [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]
- [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  -->  
   
 ### Значения в процентах  
  Процентное значение указывает, что полный кадр заканчивается по истечении некоторого процента от <xref:System.Windows.Media.Animation.Timeline.Duration%2A> анимации.  В [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] задайте процент в виде числа за которым следует символ `%`.  В коде используйте метод <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> и передайте его <xref:System.Double>, указав процент.  Значение должно быть больше или равно 0 и меньше или равно 100%.  В следующем примере показана анимация длительностью 10 секунд и четыре полных кадра, время которых указывается в виде процентов.  
@@ -249,8 +249,8 @@ caps.handback.revision: 24
   
 -   Четвертый полный кадр анимируется от 500 до 600.  Он запускается по окончании третьего полного кадра \(в момент времени 9 секунд\), воспроизводится в течение 1 секунды и заканчивается в момент времени 0:0:10 \(1 \* 10 \= 10\).  
   
- [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]
- [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  -->  
   
 ### Специальные значения, унифицирование  
  Используйте расчет времени <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, если необходимо, чтобы каждый полный кадр продолжался одно и то же количество времени.  
@@ -265,16 +265,16 @@ caps.handback.revision: 24
   
 -   Четвертый полный кадр анимируется от 500 до 600.  Он запускается по окончании второго полного кадра \(в момент времени 7,5 секунды\), воспроизводится в течение 2,5 секунд и заканчивается в момент времени 0:0:1.  
   
- [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]
- [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  -->  
   
 ### Специальные значения, скорость  
  Используйте расчет времени <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, если требуется анимация с постоянной скоростью.  
   
  Время полного кадра <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> выделяет доступное время в соответствии с длиной каждого из полных кадров для определения длительности каждого кадра.  Это приведет к тому, что скорость или темп анимации остаются постоянными.  В следующем примере показана анимация длительностью 10 секунд и три полных кадра, время которых задается как <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
   
- [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]
- [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  -->
+ <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  -->  
   
  Обратите внимание, что если временем последнего полного кадра является <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> или <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, его определяемое время будет установлено в 100 процентов.  Если первый полный кадр в мультикадровой анимации является процентным, его полное время будет равным 0.  \(Если в коллекции полных кадров содержится лишь один полный кадр, являющийся процентным, его полное время будет равным 100 %\).  
   

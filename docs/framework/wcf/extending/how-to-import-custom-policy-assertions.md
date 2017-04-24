@@ -50,9 +50,9 @@ caps.handback.revision: 8
   
 1.  Добавьте тип импортера в `<extensions>` элемент внутри [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) элемент в файле конфигурации клиента.  
   
-     [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]
-     [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
-     [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  
+     <!-- TODO: review snippet reference [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  -->  
   
 2.  В клиентском приложении используйте <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName> или <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> для разрешения метаданных и импортер будет вызываться автоматически.  
   

@@ -25,7 +25,7 @@ caps.handback.revision: 17
 # Настройки реестра графической отрисовки
 В этом разделе предоставлен обзор параметров реестра для отрисовки графики [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], влияющих на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## Когда следует использовать параметры реестра графической отрисовки  

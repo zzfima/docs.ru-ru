@@ -22,7 +22,7 @@ caps.handback.revision: 20
 # Обзор трехмерной графики
 <a name="introduction"></a> Функциональные возможности [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] системы [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяют разработчикам рисовать, преобразовывать и анимировать трехмерную графику как в разметке, так и в процедурном коде.  Разработчики могут сочетать графику [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] и [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] для создания многофункциональных элементов управления, предоставления сложных визуальных представлений данных или повышения удобства работы с интерфейсом приложения. Поддержка [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] не предполагает предоставления полнофункциональной платформы для создания игр. В этом разделе содержатся общие сведения о функциональных возможностях [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] в графической системе [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="threed_in_2d"></a>   
 ## 3\-D в контейнере 2\-D  

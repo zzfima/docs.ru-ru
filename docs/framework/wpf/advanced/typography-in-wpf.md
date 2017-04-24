@@ -21,7 +21,7 @@ caps.handback.revision: 26
 # Оформление в WPF
 В этом разделе содержится введение в основные типографические возможности [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Эти возможности включают повышение качества и производительности отрисовки текста, типографическую поддержку [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], расширенный международный текст, улучшенную поддержку шрифтов и новые текстовые API.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## Улучшенное качество и производительность работы с текстом  

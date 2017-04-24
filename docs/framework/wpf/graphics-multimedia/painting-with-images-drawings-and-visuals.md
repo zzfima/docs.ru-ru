@@ -26,7 +26,7 @@ caps.handback.revision: 27
 # Рисование с помощью объектов Image, Drawing и Visual
 В этом разделе описывается использование объектов <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush> для рисования в области с помощью изображения, <xref:System.Windows.Media.Drawing> или <xref:System.Windows.Media.Visual>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereqs"></a>   
 ## Предварительные требования  

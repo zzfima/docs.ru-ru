@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # Свойства зависимостей типа коллекция
 Данный раздел содержит рекомендации и рекомендуемые шаблоны для реализации [свойства зависимостей](GTMT), типом которых является коллекция.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="implementing"></a>   
 ## Реализация свойства зависимостей типа коллекция  
@@ -36,7 +36,7 @@ caps.handback.revision: 7
   
  Рассмотрим следующий пример.  В следующем разделе примера показано определение класса `Aquarium`.  Класс определяет свойство зависимостей типа коллекция `AquariumObjects`, которое использует базовый тип <xref:System.Collections.Generic.List%601> с ограничением типа <xref:System.Windows.FrameworkElement>.  В вызове <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> для свойства зависимости метаданные устанавливают значение по умолчанию новым базовым <xref:System.Collections.Generic.List%601>.  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]
+ <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
  [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
 [!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
 [!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  

@@ -22,7 +22,7 @@ caps.handback.revision: 11
 # Общие сведения о TileBrush
 Объекты <xref:System.Windows.Media.TileBrush> предоставляют разработчику практически полный контроль над тем, как область закрашивается изображением, <xref:System.Windows.Media.Drawing> или <xref:System.Windows.Media.Visual>.  В этом разделе описано, как использовать возможности <xref:System.Windows.Media.TileBrush> для большего контроля над тем, как методы <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush> закрашивают область.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisite"></a>   
 ## Предварительные требования  

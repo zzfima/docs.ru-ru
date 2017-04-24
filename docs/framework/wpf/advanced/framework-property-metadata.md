@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # Метаданные свойств среды
 Параметры метаданных свойств среды выводятся для свойств объектных элементов, которые находятся на [уровне среды WPF](GTMT) в архитектуре [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В общем, обозначение [уровень среды WPF](GTMT) означает, что такие возможности, как отрисовка, привязка данных и уточнения системы свойств, обрабатываются [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] представлением [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и исполняемыми файлами.  Метаданные свойств среды запрашиваются этими системами для определения зависимых от свойств характеристик конкретных свойств элементов.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Предварительные требования  

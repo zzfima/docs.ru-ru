@@ -21,7 +21,7 @@ caps.handback.revision: 9
 # Элементы управления
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поставляется с большинством общих компонентов пользовательского интерфейса, которые используются практически в каждом приложении Windows, например <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu> и <xref:System.Windows.Controls.ListBox>.  Ранее эти объекты назывались элементами управления.  Хотя пакет SDK [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] продолжает использовать термин "элемент управления" для общего обозначения любого класса, который представляет видимый объект в приложении, обратите внимание, что классу не требуется наследование от класса <xref:System.Windows.Controls.Control>, чтобы иметь визуальное представление.  Классы, которые наследуют от класса <xref:System.Windows.Controls.Control>, содержат <xref:System.Windows.Controls.ControlTemplate>, который позволяет потребителю элемента управления радикально изменить внешний вид элемента управления, для чего не требуется создавать новый подкласс.  В этом разделе обсуждается использование элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] \(тех, которые наследуются от класса <xref:System.Windows.Controls.Control>, и тех, которые не наследуются\).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="creating_an_instance_of_a_control"></a>   
 ## Создание экземпляра элемента управления  

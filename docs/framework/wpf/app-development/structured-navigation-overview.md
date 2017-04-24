@@ -25,7 +25,7 @@ caps.handback.revision: 36
   
  Класс <xref:System.Windows.Controls.Page> не реализует поддержку структурной навигации.  Вместо этого, класс <xref:System.Windows.Navigation.PageFunction%601> производится из класса <xref:System.Windows.Controls.Page> и расширяет его с помощью основных конструкций, необходимых для структурированных переходов.  В этом разделе показано, как установить структурную навигацию, используя объект <xref:System.Windows.Navigation.PageFunction%601>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Structured_Navigation"></a>   
 ## Структурная навигация  

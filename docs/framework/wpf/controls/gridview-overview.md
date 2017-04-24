@@ -23,7 +23,7 @@ caps.handback.revision: 25
 # Общие сведения о GridView
 Режим представления <xref:System.Windows.Controls.GridView> является одним из режимов представления для элемента управления <xref:System.Windows.Controls.ListView>.  Класс <xref:System.Windows.Controls.GridView> и его вспомогательные классы используются для просмотра коллекций элементов в таблицах, в которых в качестве интерактивных заголовков столбцов обычно используются кнопки.  В этом разделе описывается класс <xref:System.Windows.Controls.GridView> и возможности его использования.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## Что такое представление GridView?  

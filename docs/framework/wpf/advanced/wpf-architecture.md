@@ -54,7 +54,7 @@ caps.handback.revision: 16
 # Архитектура WPF
 В этом разделе предлагается ознакомительная демонстрация иерархии классов [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  Она охватывает большую часть подсистем [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и описывает их взаимодействие.  Здесь также подробно рассматриваются некоторые архитектурные решения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="System_Object"></a>   
 ## System.Object  

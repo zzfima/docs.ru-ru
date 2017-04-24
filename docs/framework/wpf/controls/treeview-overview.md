@@ -23,7 +23,7 @@ caps.handback.revision: 32
 # Обзор элемента управления &quot;TreeView&quot;
 Элемент управления <xref:System.Windows.Controls.TreeView> предоставляет способ для отображения данных в виде иерархической структуры с помощью сворачиваемых узлов.  В этом разделе рассматриваются элементы управления <xref:System.Windows.Controls.TreeView> и <xref:System.Windows.Controls.TreeViewItem> и даны простые примеры их использования.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Simple_TreeView_Control"></a>   
 ## Что такое элемент управления "TreeView"?  

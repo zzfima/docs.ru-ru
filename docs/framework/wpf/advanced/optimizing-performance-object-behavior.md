@@ -25,7 +25,7 @@ caps.handback.revision: 11
 # Оптимизация производительности: поведение объекта
 Понимание внутреннего поведения объектов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поможет найти оптимальное сочетание функциональных возможностей и производительности.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Not_Removing_Event_Handlers"></a>   
 ## Сохранение обработчиков событий для объектов может поддерживать объекты в активном состоянии  

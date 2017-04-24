@@ -26,7 +26,7 @@ caps.handback.revision: 18
   
  В следующих разделах объясняются многие двунаправленные возможности, приводятся примеры, иллюстрирующие способы достижения наилучшего отображения на экране двунаправленного содержимого.  Большинство образцов использует [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], хотя принцип можно легко применить к коду [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] или [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="FlowDirection"></a>   
 ## FlowDirection  

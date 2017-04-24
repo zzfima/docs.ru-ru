@@ -38,7 +38,7 @@ caps.handback.revision: 24
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]позволяет создавать несколько типов диалоговых окон, включая окна сообщений, общие диалоговые окна и пользовательские диалоговые окна. В этом разделе обсуждаются и [пример диалогового окна](http://go.microsoft.com/fwlink/?LinkID=159984) содержатся соответствующие примеры.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Окна сообщений  

@@ -35,7 +35,7 @@ caps.handback.revision: 20
   
  Для построения этого набора приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализует множество служб.  Этот раздел предоставляет обзор этих служб и место, где искать дополнительные сведения.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Application_Management"></a>   
 ## Управление приложениями  

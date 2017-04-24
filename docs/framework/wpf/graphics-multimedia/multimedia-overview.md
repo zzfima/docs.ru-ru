@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # Общие сведения о мультимедиа
 Мультимедийные возможности [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] позволяют интегрировать в приложения звук и видео, чтобы повысить эффективность работы с ними. В этом разделе представлено описание мультимедийных возможностей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="mediaapi"></a>   
 ## Мультимедийный интерфейс API  

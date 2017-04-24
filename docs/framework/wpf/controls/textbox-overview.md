@@ -22,7 +22,7 @@ caps.handback.revision: 9
 # Общие сведения о TextBox
 Класс <xref:System.Windows.Controls.TextBox> позволяет отобразить или отредактировать неформатированный текст.  Часто <xref:System.Windows.Controls.TextBox> используется для изменения неформатированного текста в форме.  Например, форма запроса имени пользователя, номера телефона и т.д может использовать для ввода текста элемент управления <xref:System.Windows.Controls.TextBox>.  В этом разделе представляется класс <xref:System.Windows.Controls.TextBox> и приводятся примеры его использования в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## Textbox или RichTextBox?  

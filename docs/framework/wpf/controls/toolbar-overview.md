@@ -22,7 +22,7 @@ caps.handback.revision: 27
 # Общие сведения о панели инструментов ToolBar
 Элементы управления <xref:System.Windows.Controls.ToolBar> являются контейнером для группы команд или элементов управления, обычно связанных между собой по функциональности.  Панель инструментов <xref:System.Windows.Controls.ToolBar> обычно содержит кнопки, которые вызывают команды.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="ToolBarControl"></a>   
 ## Элемент управления ToolBar  

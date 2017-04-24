@@ -42,9 +42,9 @@ caps.handback.revision: 8
   
  В следующем примере кода показан файл конфигурации клиента, который предписывает [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] возвращать сведения об управляемом исключении из объекта обратного вызова клиента в сообщениях SOAP.  
   
- [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]
- [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]
- [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  
+ <!-- TODO: review snippet reference [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]  -->
+ <!-- TODO: review snippet reference [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  -->
+ <!-- TODO: review snippet reference [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  -->  
   
 ## <a name="using-the-clientviabehavior-behavior"></a>Использование поведения ClientViaBehavior  
  Можно использовать <xref:System.ServiceModel.Description.ClientViaBehavior> поведение, чтобы указать универсальный код ресурса, для которого необходимо создать канал транспорта. Используйте это поведение, если непосредственное назначение сети не является предназначенным средством обработки сообщения. Благодаря этому возможны диалоги с несколькими участками передачи, если точно не известно, знает ли вызывающее приложение конечную точку назначения, или заголовок назначения `Via` не является адресом.  

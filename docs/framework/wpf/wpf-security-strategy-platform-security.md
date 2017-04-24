@@ -35,7 +35,7 @@ caps.handback.revision: 26
   
  В остальной части этого раздела рассматриваются компоненты на каждом из этих уровней, относящихся к [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Operating_System_Security"></a>   
 ## Безопасность операционной системы  

@@ -46,7 +46,7 @@ caps.handback.revision: 60
 > [!NOTE]
 >  Приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], реализуемые в браузере, включая [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и свободные страницы [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], не предоставляют свои собственные окна.  Вместо этого они размещаются в окнах, предоставляемых [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)].  См. раздел [Общие сведения о приложениях браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="TheWindowClass"></a>   
 ## Класс "Окно"  
@@ -136,7 +136,7 @@ caps.handback.revision: 60
 ## Время существования окна  
  Как и любой класс, окно имеет время существования, которое начинается с момента создания, после которого осуществляется его открытие, активация, деактивация и, в конечном счете, закрытие.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Opening_a_Window"></a>   
 ### Открытие окна  
@@ -414,7 +414,7 @@ caps.handback.revision: 60
   
  Также можно изменить вид и поведение границы неклиентской области, настраивая режим изменения размера окна, стиль окна и будет ли оно отображается в виде кнопки на панели задач рабочего стола.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resize_Mode"></a>   
 ### Режим изменения размера  

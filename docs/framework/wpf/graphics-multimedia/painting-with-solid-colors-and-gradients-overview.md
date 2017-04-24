@@ -26,7 +26,7 @@ caps.handback.revision: 18
 # Общие сведения о закраске сплошным цветом и градиентом
 В этом разделе описано использование объектов <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush> и <xref:System.Windows.Media.RadialGradientBrush> для закраски сплошным цветом, линейным градиентом и радиальным градиентом.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="solidcolor"></a>   
 ## Закраска области сплошным цветом  
