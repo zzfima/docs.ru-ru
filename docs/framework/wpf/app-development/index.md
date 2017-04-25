@@ -39,11 +39,7 @@ ms.lasthandoff: 04/08/2017
   
  Для создания этого набора приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализует множество служб. Этот раздел предоставляет обзор этих служб и место, где искать дополнительные сведения.  
   
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> a8ea58d... fix build errors
   
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Управление приложениями  
