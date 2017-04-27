@@ -18,9 +18,9 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 404c69662c992bfba3399225fdca12376f33baa9
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 8571258a2fa4e7bd5180301e30e0fea8117eede6
+ms.openlocfilehash: 83ffd29d4301ae8848cc01de8e7def045b24a0ca
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="getting-started-with-the-net-framework"></a>Начало работы с .NET Framework
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/08/2017
   
  Перед разработкой приложений или компонентов платформы .NET Framework выполните следующие действия:  
   
-1.  Если платформа не предустановлена в операционной системе, установите версию платформы .NET Framework, на которой будет работать ваше приложение. Последней рабочей версией является .NET Framework 4.7, которая предустановлена в обновлении Windows 10 Creative Update, но недоступна в более ранних версиях операционной системы Windows. Требования к системе для .NET Framework см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения об установке других версий .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Существуют дополнительные внештатные выпуски пакетов платформы .NET Framework. Дополнительные сведения об этих пакетах см. в разделе [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
+1.  Если платформа не предустановлена в операционной системе, установите версию платформы .NET Framework, на которой будет работать ваше приложение. Последней рабочей версией является .NET Framework 4.7, которая предустановлена в ОС Windows 10 Creators Update, но недоступна в более ранних версиях Windows. Требования к системе для .NET Framework см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения об установке других версий .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Существуют дополнительные внештатные выпуски пакетов платформы .NET Framework. Дополнительные сведения об этих пакетах см. в разделе [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
 2.  Выберите язык или языки платформы .NET Framework, которые вы будете использовать для разработки приложений. Доступен ряд языков, в том числе Visual Basic, C#, Visual F# и C++ от Microsoft. (Язык программирования, позволяющий разрабатывать приложения для .NET Framework, соответствует [спецификации Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862).)  
   
@@ -92,3 +92,4 @@ ms.lasthandoff: 04/08/2017
  [Новые возможности](../../../docs/framework/whats-new/index.md)   
  [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkId=227195)   
  [Руководство по разработке](../../../docs/framework/development-guide.md)
+

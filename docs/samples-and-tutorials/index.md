@@ -1,49 +1,46 @@
 ---
-title: "Примеры и учебники"
-description: "Примеры и учебники"
-keywords: .NET
+title: "Примеры и руководства"
+description: "Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET."
+keywords: ".NET, .NET Core, ASP.NET, C#, пример, руководство"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/25/2016
+ms.date: 04/11/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: e9d2ecc6da01a394ab794032f5bd42840311edec
-ms.lasthandoff: 04/10/2017
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 977dd60bb21b466a6bec357a6dec73aa9a931ead
+ms.lasthandoff: 04/12/2017
 
 ---
 
-# <a name="samples-and-tutorials"></a>Примеры и учебники
+# <a name="samples-and-tutorials"></a>Примеры и руководства
 
-У нас есть полный каталог примеров и учебников, которые можно использовать для изучения .NET. Здесь содержатся примеры и учебники для .NET Core и языка C#.
+Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET. Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#. Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](http://fsharp.org/learn.html). Если вы хотите изучать язык C# в интерактивном редакторе кода, воспользуйтесь нашими [интерактивными руководствами](http://go.microsoft.com/fwlink/p/?LinkId=817234). Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).
 
-Отличные ресурсы по изучению языка программирования F# можно найти на [сайте F# Foundation](http://fsharp.org/learn.html). 
-
-Отличные ресурсы по изучению ASP.NET Core можно найти на [сайте ASP.NET](https://docs.microsoft.com/aspnet/core/tutorials/).
-
-Кроме того, если вам интересно изучать C# в интерактивном режиме, обратитесь к следующим [интерактивным учебникам](http://go.microsoft.com/fwlink/?LinkId=817234).
-
-## <a name="general"></a>Общие
+## <a name="net-core"></a>.NET Core
 
 ### <a name="samples"></a>Примеры
 
 **[Тестирование модулей в .NET Core с помощью команды dotnet-test](../core/testing/unit-testing-with-dotnet-test.md)**
 
-В этом руководстве показано, как создать веб-приложение ASP.NET Core и связанные тесты модулей. Сначала создается простое приложение веб-службы, а затем добавляются тесты. После этого создаются дополнительные тесты, помогающие организовать реализацию новых функций. Полный пример доступен [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test).
+Из этого руководства вы узнаете, как создать веб-приложение ASP.NET Core и соответствующие модульные тесты. Сначала создается простое приложение веб-службы, а потом добавляются тесты. Затем создаются дополнительные тесты для внедрения новых функций. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) доступен в репозитории dotnet/docs на сайте GitHub.
 
 ### <a name="tutorials"></a>Учебники
 
 **[Написание консольных приложений .NET Core с помощью средств командной строки: пошаговое руководство](../core/tutorials/using-with-xplat-cli.md)**
 
-В этом руководстве показано, как с помощью средств командной строки в .NET Core создавать кроссплатформенные консольные приложения.  Мы начнем с самого простого консольного приложения, а затем охватим несколько проектов, включая тестирование. Новые компоненты будут добавляться поэтапно на основе того, что вы уже узнали и создали. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/core/console-apps).
+В этом руководстве показано, как с помощью средств интерфейса командной строки в .NET Core создавать кроссплатформенные консольные приложения. Мы начнем с самого простого консольного приложения, а затем охватим несколько проектов, включая тестирование. Пошаговое добавление функций позволит наращивать знания в ходе работы. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/core/console-apps) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Написание библиотек с помощью кроссплатформенных средств](../core/tutorials/libraries.md)**
 
-В этом примере описывается создание библиотек для .NET с помощью кроссплатформенных средств командной строки.  Они предоставляют эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах.
-Полный пример доступен [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library).
+В этом примере рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки. Они предоставляют эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) доступен в репозитории dotnet/docs на сайте GitHub.
+
+## <a name="aspnet-core"></a>ASP.NET Core
+
+См. [руководства по ASP.NET Core](https://docs.microsoft.com/aspnet/core/tutorials/). Многие статьи по ASP.NET Core содержат ссылки на специально созданные примеры.
 
 ## <a name="c-language"></a>C# - язык
 
@@ -51,57 +48,72 @@ ms.lasthandoff: 04/10/2017
 
 **[Итераторы](../csharp/iterators.md)**
 
-В этом примере демонстрируется синтаксис и функции для создания и использования итераторов C#. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators).
+В этом примере демонстрируется синтаксис и функции для создания и использования итераторов C#. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Индексаторы](../csharp/indexers.md)**
 
-В этом примере демонстрируется синтаксис и функции для индексаторов C#. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers).
+В этом примере демонстрируется синтаксис и функции для индексаторов C#. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Делегаты и события](../csharp/delegates-events.md)**
 
-В этом примере демонстрируется синтаксис и функции для делегатов и событий C#. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events). Второй пример, посвященный событиям, находится в [том же репозитории](https://github.com/dotnet/docs/tree/master/samples/csharp/events).
+В этом примере демонстрируется синтаксис и функции для делегатов и событий C#. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events) доступен в репозитории dotnet/docs на сайте GitHub. [Второй пример](https://github.com/dotnet/docs/tree/master/samples/csharp/events), посвященный событиям, находится в том же репозитории.
 
 **[Деревья выражений](../csharp/expression-trees.md)**
 
-В этом примере демонстрируется ряд проблем, которые можно устранить с помощью деревьев выражений. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees).
+В этом примере демонстрируется ряд проблем, которые можно устранить с помощью деревьев выражений. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **Примеры LINQ**
 
-В этой серии примеров демонстрируются многие функции встроенных в язык запросов.  Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp).
+В этой серии примеров демонстрируются многие функции встроенного языка запросов (LINQ). [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) доступен в репозитории dotnet/docs на сайте GitHub.
 
 ### <a name="tutorials"></a>Учебники
 
 **[Консольное приложение](../csharp/tutorials/console-teleprompter.md)**
 
-В этом учебнике демонстрируется консольный ввод-вывод, структура консольного приложения и основы модели асинхронного программирования на базе Task. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter).
+В этом руководстве демонстрируется консольный ввод-вывод, структура консольного приложения и основные сведения о модели асинхронного программирования на основе задач. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Клиент REST](../csharp/tutorials/console-webapiclient.md)**
 
-В этом учебнике демонстрируется веб-взаимодействие, сериализация JSON и объектно-ориентированные функции языка C#. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+В этом руководстве демонстрируется веб-взаимодействие, сериализация JSON и объектно-ориентированные функции языка C#. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Работа с LINQ](../csharp/tutorials/working-with-linq.md)**
 
-В этом учебнике демонстрируется множество функций LINQ и элементы языка, которые их поддерживают. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq).
+В этом учебнике демонстрируется множество функций LINQ и элементы языка, которые их поддерживают. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Микрослужбы, размещенные в Docker](../csharp/tutorials/microservices.md)**
 
-В этом учебнике демонстрируется создание микрослужбы ASP.NET Core и ее размещение в Docker. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice).
+В этом учебнике демонстрируется создание микрослужбы ASP.NET Core и ее размещение в Docker. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](../core/tutorials/using-on-mac-vs.md)**
 
-Этот учебник описывает, как создать простое консольное приложение .NET Core с помощью Visual Studio для Mac.
+В этом руководстве показано, как создать простое консольное приложение .NET Core с помощью Visual Studio для Mac.
 
 **[Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 Этот учебник описывает, как выполнить сборку полноценного решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.
 
-## <a name="deploying-to-containers"></a>Развертывание в контейнерах
+## <a name="deploying-to-containers"></a>Развертывание в контейнеры
 
 **[Запуск приложений ASP.NET MVC в контейнерах Windows](../framework/docker/aspnetmvc.md)**
 
-В этом учебнике демонстрируется, как развернуть существующее приложение ASP.NET MVC в контейнере Windows Docker.
-Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator).
+В этом руководстве показано, как развернуть существующее приложение ASP.NET MVC в контейнер Windows Docker. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator) доступен в репозитории dotnet/docs на сайте GitHub.
 
 **[Запуск консольных приложений .NET Framework в контейнерах Windows](../framework/docker/console.md)**
 
-В этом учебнике демонстрируется, как развернуть существующее консольное приложение в контейнере Docker. Готовая версия созданного кода находится [в репозитории docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
+В этом руководстве показано, как развернуть существующее консольное приложение в контейнер Windows. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) доступен в репозитории dotnet/docs на сайте GitHub.
+
+## <a name="viewing-and-downloading-samples"></a>Просмотр и скачивание примеров
+
+Во многих статьях показан исходный код и примеры, которые можно просмотреть и скачать на сайте GitHub. Чтобы просмотреть пример, просто перейдите по ссылке на него. Чтобы скачать код, выполните следующие действия:
+
+1. Скачайте репозиторий, содержащий пример кода, выполнив одну из следующих процедур:
+   * Загрузите ZIP-файл репозитория на свой компьютер. Распакуйте архив.
+   * Создайте [ответвление](https://help.github.com/articles/fork-a-repo/) репозитория и [клонируйте](https://help.github.com/articles/cloning-a-repository/) его на свой компьютер. Создание и клонирование ответвления позволяет участвовать в работе над документами путем сохранения изменений в ответвлении с последующим созданием запроса на включение внесенных изменений в официальный репозиторий docs. Дополнительные сведения см. в [руководстве по участию в работе над документацией .NET](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) и [руководстве по участию в работе над документацией ASP.NET](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).
+   * Клонируйте репозиторий локально. Если вы клонируете репозиторий docs непосредственно на свой компьютер, вы не сможете сохранять изменения напрямую в официальном репозитории и, соответственно, не сможете участвовать в работе над документацией в дальнейшем. Чтобы сохранить возможность последующего участия в работе над документацией, используйте описанную выше процедуру ответвления и клонирования.
+1. Откройте в репозитории папку с примером. Относительный путь к папке с примером отображается в адресной строке браузера при переходе по ссылке на пример.
+1. Запустить пример можно несколькими способами:
+   * Воспользуйтесь [средствами CLI dotnet](../core/tools/index.md): в окне консоли перейдите в папку с примером и используйте команды CLI dotnet.
+   * Воспользуйтесь программой [Visual Studio](https://www.visualstudio.com/) или [Visual Studio для Mac](https://www.visualstudio.com/vs/visual-studio-mac/): откройте пример, последовательно щелкнув **"Файл" > "Открыть" > "Проект/решение"**, перейдите в папку проекта, содержащую пример, и выберите файл проекта (*.csproj* или *.fsproj*).
+   * Воспользуйтесь программой [Visual Studio Code](https://code.visualstudio.com/): откройте пример, последовательно щелкнув **"Файл" > "Открыть папку"** и выбрав папку проекта, содержащую пример.
+   * Воспользуйтесь другой средой IDE, которая поддерживает проекты .NET Core.
+

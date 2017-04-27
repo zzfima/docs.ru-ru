@@ -21,9 +21,9 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 887ddf85b1da556feee211c4b29f0a08550c84ad
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
+ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/08/2017
   
 -   Типы сжатия на основе пути <xref:System.IO.Compression.ZipFile> и <xref:System.IO.Compression.ZipFileExtensions> недоступны. Вместо этого используйте типы в пространстве имен [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
   
- При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведениях см. в разделах [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) и <xref:System.IO.WindowsRuntimeStreamExtensions>.  
+ При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведениях см. в статьях [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) и [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  Дополнительные сведения об операциях ввода-вывода в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. в статье [Краткое руководство: чтение и запись файла](http://go.microsoft.com/fwlink/p/?LinkId=243072) в Центре разработки для Windows.  
   
@@ -182,3 +182,4 @@ ms.lasthandoff: 04/08/2017
 -   [Сопоставленные в памяти файлы](../../../docs/standard/io/memory-mapped-files.md)  
   
  Описание отображаемых в память файлов, позволяющих разместить содержимое файлов с диска в виртуальной памяти. С их помощью можно вносить изменения в очень большие файлы и создавать совместно используемую память для межпроцессного взаимодействия.
+
