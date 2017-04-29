@@ -3,7 +3,6 @@ title: "Запуск консольных приложений в Docker"
 description: "Узнайте, как запускать существующее консольное приложение .NET Framework в контейнере Windows Docker/"
 author: spboyer
 keywords: ".NET, контейнер, консольный, приложения"
-manager: wpickett
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework-4.6
@@ -11,8 +10,9 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: fd610bdba56679dd522149d8e91dc91858c7f7ed
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: fd610bdba56679dd522149d8e91dc91858c7f7ed
 
 Помимо самого ответа к нему было добавлено имя `Environment.MachineName`, чтобы продемонстрировать разницу между запуском приложения в локальной среде и в контейнере Windows. При запуске приложения в локальной среде должно возвращаться имя вашего локального компьютера, а при запуске в контейнере Windows — идентификатор сеанса контейнера.
 
-Полный пример доступен в репозитории [dotnet/core-docs в службе GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
+[Полный пример](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) доступен в репозитории dotnet/docs в службе GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Перед началом перемещения приложения в контейнер необходимо знать некоторые термины Docker.
 
@@ -51,7 +51,7 @@ ms.openlocfilehash: fd610bdba56679dd522149d8e91dc91858c7f7ed
 Контейнеры Windows поддерживаются в [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) и [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
->При использовании Windows Server 2016 контейнеры необходимо включить вручную, так как установщик Docker для Windows этот компонент не включает. Убедитесь, что в операционной системе применены все обновления, и выполните инструкции из статьи [Развертывание узла контейнера](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment), чтобы установить контейнеры и компоненты Docker.
+>При использовании Windows Server 2016 контейнеры необходимо включить вручную, так как установщик Docker для Windows этот компонент не включает. Убедитесь, что в операционной системе применены все обновления, и выполните инструкции из статьи [Развертывание узла контейнера](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment), чтобы установить контейнеры и компоненты Docker.
 
 Контейнеры Windows поддерживаются в Docker для Windows 1.12 Beta 26 или более поздней версии. По умолчанию Docker включает контейнеры Linux. Переключитесь на контейнеры Windows. Для этого щелкните правой кнопкой мыши значок Docker в панели задач и выберите **Переключиться на контейнеры Windows**. Docker запустит процесс изменения и, возможно, потребуется перезагрузить компьютер.
 
@@ -60,7 +60,7 @@ ms.openlocfilehash: fd610bdba56679dd522149d8e91dc91858c7f7ed
 ## <a name="building-the-application"></a>Построение приложения
 Обычно консольные приложения распространяются с помощью установщика, через FTP или в рамках развертывания через общую папку. При развертывании в контейнер необходимо скомпилировать ресурсы и поместить их в промежуточное расположение, которое можно будет использовать при создании образа Docker.
 
-В скрипте *build.ps1* приложение компилируется с помощью [MSBuild](https://msdn.microsoft.com/en-us/library/dd393574.aspx), чем завершается этап сборки ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
+В скрипте *build.ps1* приложение компилируется с помощью [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx), чем завершается этап сборки ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
 
 В вызове `Invoke-MSBuild` `OutputPath` имеет значение **publish**, а `Configuration` — значение **Release**. 
 
@@ -144,9 +144,4 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 ## <a name="summary"></a>Сводка
 С помощью простого добавления Dockerfile и публикации консольное приложение .NET Framework можно поместить в контейнер и запускать несколько экземпляров, выполнять чистые запуск и завершение работы и использовать многие другие возможности Windows Server 2016 без какого-либо изменения кода приложения.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
