@@ -2,6 +2,7 @@
 title: "Устранение рисков. Выделение пространства для столбцов со звездочкой в элементе управления &quot;Сетка&quot; | Документация Майкрософт"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
