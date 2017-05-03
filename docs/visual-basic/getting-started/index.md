@@ -30,25 +30,25 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d94b01f24ea1c45ecbf6b14ecfdf164d8b8b10c
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 31c50b38b2bfdc68e0f2ab03bc4d3b67e843a09d
+ms.lasthandoff: 05/01/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Приступая к работе с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
   
 ## <a name="in-this-section"></a>Содержание раздела  
- [Критические изменения Visual Basic в Visual Studio 2015](../../visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)  
+ [Критические изменения Visual Basic в Visual Studio 2015](breaking-changes-in-visual-studio.md)  
  Список всех изменений в этом выпуске, которые могут заблокировать компиляцию приложения или изменить его поведение во время выполнения.  
   
  [Дополнительные ресурсы для программистов, использующих Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
  Список веб-узлов и групп новостей, которые помогут найти ответы на общие вопросы.  
   
- [Изучение Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
+ [Дополнительные сведения о Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
  Содержит ссылки на ресурсы для обучения программированию в Visual Basic.  
   
- [Получить Visual Basic](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)  
+ [Получить Visual Basic](https://www.visualstudio.com/downloads/)  
  Предоставляет ссылки для скачивания версий Visual Studio, включая поддержку Visual Basic и бесплатные версии.  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/13/2017
  [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  Способы получения поддержки и обеспечения обратной связи.  
   
- [Visual Studio](http://msdn.microsoft.com/en-us/06ddebea-2c83-4a45-bb48-6264c797ed93)  
+ [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
  Ссылки на документацию по [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
   
  [C#](../../csharp/csharp.md)  
