@@ -19,10 +19,11 @@ caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b6874fe1d3730d2d05a862ee60417a7ce90f226c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
+ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/04/2017
 
 ---
 
@@ -56,7 +57,8 @@ ms.lasthandoff: 04/08/2017
 [Начало работы](../../docs/framework/get-started/index.md)  
 Здесь содержится комплексный обзор платформы .NET Framework и ссылки на дополнительные ресурсы.  
   
-[Руководство по миграции](../../docs/framework/migration-guide/index.md) Здесь содержатся ресурсы и список изменений, которые нужно учитывать при миграции приложения на новую версию платформы .NET Framework.  
+[Руководство по миграции](../../docs/framework/migration-guide/index.md)   
+Здесь содержатся ресурсы и список изменений, которые нужно учитывать при миграции приложения на новую версию платформы .NET Framework.  
   
 [Руководство по разработке](../../docs/framework/development-guide.md)  
 Здесь содержится руководство по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, безопасность и развертывание приложений, а также сведения о динамическом программировании, взаимодействии, расширении среды, управлении памятью и работе с потоками.  
@@ -64,7 +66,8 @@ ms.lasthandoff: 04/08/2017
 [Инструменты](../../docs/framework/tools/index.md)  
 Инструменты, описанные в этом разделе, помогут в разработке, настройке и развертывании приложений с помощью технологий .NET Framework.  
   
-[Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7) Синтаксис, примеры кода и другие сведения для каждого класса, содержащегося в пространствах имен .NET Framework.  
+[Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7)   
+Синтаксис, примеры кода и другие сведения для каждого класса, содержащегося в пространствах имен .NET Framework.  
   
 [Дополнительные библиотеки классов и API-интерфейсы](../../docs/framework/additional-apis/index.md)  
 Документация для классов, содержащихся в виде внештатных выпусков, как и для классов, используемых с определенными платформами или реализациями платформы .NET Framework.
