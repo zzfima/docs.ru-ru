@@ -1,23 +1,24 @@
 ---
+
 title: "Начало работы | Руководство по языку C#"
-description: "Короткие и простые руководства, которые позволят быстро создать приложение с помощью C# и .NET Core."
-keywords: "C#, приступая к работе, приобретение, установка"
+description: "Начало работы с C#"
+keywords: "C#, начало работы, приобретение, установка"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/17/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
-translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 9728e449abbac2530faba84516b8591b178180ee
-ms.lasthandoff: 05/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: 0e3341434ef8ac354e8bc47a4c2a72cf019bd2ab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/14/2017
 
 ---
-
-# <a name="getting-started-with-c"></a>Начало работы с C##
+# <a name="get-started-with-c"></a>Начало работы с C# #
 
 В этом разделе собраны короткие и простые руководства, которые позволяют быстро создать приложение с помощью C# и .NET Core. Это статьи по началу работы с Visual Studio 2017 и Visual Studio Code. Вы можете создать простое приложение Hello World, а если у вас есть Visual Studio 2017, еще и простую библиотеку классов, которую затем можно использовать в других приложениях.
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2017
 
    Библиотека классов позволяет определять типы и члены типов, которые можно вызвать из любого приложения. В этой статье вы создадите библиотеку классов с единственным методом, который определяет, начинается ли строка с символа верхнего регистра. Когда вы закончите создавать библиотеку, можно разработать [модульный тест](testing-library-with-visual-studio.md) и убедиться, что все работает как надо, а затем библиотеку можно сделать доступной для [приложений, в которых ее нужно использовать](consuming-library-with-visual-studio.md).
 
-* [Начало работы с Visual Studio Code](with-visual-studio-code.md)
+- [Начало работы с Visual Studio Code](with-visual-studio-code.md)
 
    Visual Studio Code — это бесплатный редактор кода, оптимизированный для сборки и отладки современных веб-приложений и облачных приложений. Он поддерживает технологию IntelliSense и доступен для Linux, macOS и Windows.
 

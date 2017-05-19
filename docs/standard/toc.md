@@ -1,4 +1,4 @@
-# [Начало работы с .NET](getting-started.md)
+# [Начало работы с .NET](get-started.md)
 # [Обзор .NET](tour.md)
 # [Архитектурные компоненты .NET](components.md)
 # [Библиотека .NET Standard](library.md)

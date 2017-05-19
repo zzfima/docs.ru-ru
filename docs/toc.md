@@ -6,7 +6,7 @@
 
 <!-- .NET Core Content -->
 # [Руководство по .NET Core](core/index.md)
-## [Начало работы](core/getting-started.md)
+## [Начало работы](core/get-started.md)
 ## [Необходимые компоненты для Windows](core/windows-prerequisites.md)
 ## [Предварительные требования для macOS](core/macos-prerequisites.md)
 ## [Учебники](core/tutorials/index.md)
