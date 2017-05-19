@@ -29,19 +29,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f84c40950d2a23681094e06118ae2e1bdbd5a71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="getting-started-with-c"></a>Начало работы с C##
 Перечисленные здесь разделы будут полезны для тех, кто начинает разработку приложений на C#. В этих разделах также содержатся общие сведения о множестве новых возможностей в Visual Studio и языке C#.  
   
 ## <a name="in-this-section"></a>Содержание  
- [Критические изменения Visual C# в Visual Studio 2013](../../csharp/getting-started/breaking-changes-in-visual-studio-2013.md)  
- Содержит список критических изменений в компиляторе C#, вышедших после предыдущей версии.  
-  
  [Введение в язык C# и платформу .NET Framework](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
  Содержит общие сведения о языке C# и платформе .NET.  
   
