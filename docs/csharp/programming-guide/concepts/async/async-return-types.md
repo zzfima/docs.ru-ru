@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4c1bab99fc1139f03e5f754cfecaee392b947171
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: d974e93c3c50a61889a9ed37ad5f68f7a131a538
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/13/2017
   
  В следующем примере асинхронный метод `TaskOfT_MethodAsync` содержит оператор return, который возвращает целое число. Поэтому в объявлении метода должен указываться тип возвращаемого значения `Task<int>`.  
   
-```cs  
+```csharp  
 // TASK<T> EXAMPLE  
 async Task<int> TaskOfT_MethodAsync()  
 {  
@@ -64,7 +65,7 @@ async Task<int> TaskOfT_MethodAsync()
   
  В следующем коде вызывается и ожидается метод `TaskOfT_MethodAsync`. Результат назначается переменной `result1`.  
   
-```cs  
+```csharp  
 // Call and await the Task<T>-returning async method in the same statement.  
 int result1 = await TaskOfT_MethodAsync();  
 ```  
@@ -74,7 +75,7 @@ int result1 = await TaskOfT_MethodAsync();
 > [!WARNING]
 >  Свойство <xref:System.Threading.Tasks.Task%601.Result%2A> является свойством блокировки. При попытке доступа к нему до завершения его задачи поток, который в текущий момент активен, блокируется до того момента, пока задача не будет завершена, а ее значение не станет доступным. В большинстве случаев следует получать доступ к этому значению с помощью `await` вместо прямого обращения к свойству.  
   
-```cs  
+```csharp  
 // Call and await in separate statements.  
 Task<int> integerTask = TaskOfT_MethodAsync();  
   
@@ -86,7 +87,7 @@ int result2 = await integerTask;
   
  Операторы отображения в следующем коде проверяют, одинаковы ли значения переменной `result1`, переменной `result2` и свойства `Result`. Помните, что свойство `Result` является блокирующим свойством, и к нему не стоит обращаться до того, как его задача закончит ожидание.  
   
-```cs  
+```csharp  
 // Display the values of the result1 variable, the result2 variable, and  
 // the integerTask.Result property.  
 textBox1.Text += String.Format("\r\nValue of result1 variable:   {0}\r\n", result1);  
@@ -99,7 +100,7 @@ textBox1.Text += String.Format("Value of integerTask.Result: {0}\r\n", integerTa
   
  В следующем примере асинхронный метод `Task_MethodAsync` не содержит оператор return. Следовательно, вы указываете для метода тип возвращаемого значения `Task`, который позволяет ожидать `Task_MethodAsync`. Определение типа `Task` не включает свойство `Result` для хранения возвращаемого значения.  
   
-```cs  
+```csharp  
 // TASK EXAMPLE  
 async Task Task_MethodAsync()  
 {  
@@ -118,7 +119,7 @@ async Task Task_MethodAsync()
   
  В следующем коде вызывается и ожидается метод `Task_MethodAsync`.  
   
-```cs  
+```csharp  
 // Call and await the Task-returning async method in the same statement.  
 await Task_MethodAsync();  
 ```  
@@ -127,7 +128,16 @@ await Task_MethodAsync();
   
  В следующем коде вызов `Task_MethodAsync` отделяется от ожидания задачи, которая возвращает `Task_MethodAsync`.  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+// Call and await in separate statements.  
+Task simpleTask = Task_MethodAsync();  
+  
+// You can do other work that does not rely on simpleTask before awaiting.  
+textBox1.Text += String.Format("\r\nApplication can continue working while the Task runs. . . .\r\n");  
+  
+await simpleTask;  
+```  
+  
 ##  <a name="BKMK_VoidReturnType"></a> Тип возвращаемого значения Void  
  В основном тип возвращаемого значения void используется в обработчиках событий, где требуется тип возвращаемого значения void. Тип возврата void также можно использовать для переопределения методов, возвращающих void, или для методов, выполняющих действия, которые можно классифицировать как "запустить и забыть". Тем не менее вы должны возвращать `Task` везде, где это возможно, поскольку нельзя ожидать асинхронный метод, возвращающий void. Любой вызывающий объект такого метода должен иметь возможность завершить свою работу, не дожидаясь завершения вызванного асинхронного метода, и он не должен зависеть ни от каких значений и исключений, создаваемых асинхронным методом.  
   
@@ -137,7 +147,21 @@ await Task_MethodAsync();
   
  Следующий код определяет асинхронный обработчик событий.  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```csharp  
+// VOID EXAMPLE  
+private async void button1_Click(object sender, RoutedEventArgs e)  
+{  
+    textBox1.Clear();  
+  
+    // Start the process and await its completion. DriverAsync is a   
+    // Task-returning async method.  
+    await DriverAsync();  
+  
+    // Say goodbye.  
+    textBox1.Text += "\r\nAll done, exiting button-click event handler.";  
+}  
+```  
+  
 ##  <a name="BKMK_Example"></a> Полный пример  
  Следующий проект Windows Presentation Foundation (WPF) содержит примеры кода из этого раздела.  
   
@@ -161,7 +185,7 @@ await Task_MethodAsync();
   
 6.  В окне **XAML** MainWindow.xaml замените код на следующий.  
   
-    ```cs  
+    ```csharp  
     <Window x:Class="AsyncReturnTypes.MainWindow"  
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -181,7 +205,7 @@ await Task_MethodAsync();
   
 8.  Замените код в MainWindow.xaml.cs на следующий.  
   
-    ```cs  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Linq;  

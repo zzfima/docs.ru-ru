@@ -14,10 +14,11 @@ ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3e4ff1807605164afc95eaebf37a131d9dddb79c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 87a8efd8e8631ac200a95069f889d6756cbd5a4a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/13/2017
  Дополнительные сведения о функциональном программировании см. в разделе [Сравнение функционального и императивного программирования (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
   
 #### <a name="domain-specific-fp-languages"></a>Предметные языки функционального программирования  
- Не смотря на то что основные языки функционального программирования широко не используются, специальные предметные языки функционального программирования имеют больший успех. Например, каскадные таблицы стилей (CSS) используются для определения вида многих веб-страниц, а преобразования XSLT широко используются в обработке XML-данных. Дополнительные сведения об XSLT см. в разделе [Преобразования XSLT](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03).  
+ Не смотря на то что основные языки функционального программирования широко не используются, специальные предметные языки функционального программирования имеют больший успех. Например, каскадные таблицы стилей (CSS) используются для определения вида многих веб-страниц, а преобразования XSLT широко используются в обработке XML-данных. Дополнительные сведения об XSLT см. в разделе [Преобразования XSLT](../../../../standard/data/xml/xslt-transformations.md).  
   
 ## <a name="terminology"></a>Терминология  
  Следующие таблицы определяют некоторые термины, связанные с функциональными преобразованиями.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
  Дополнительные сведения см. в разделе [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  коллекция  
- Структурированный набор данных обычно стандартного типа. Для совместимости с LINQ коллекция должна реализовывать интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Linq.IQueryable> (либо один из их универсальных аналогов: <xref:System.Collections.Generic.IEnumerator%601> или <xref:System.Linq.IQueryable%601>).  
+ Структурированный набор данных обычно стандартного типа. Для обеспечения совместимости с LINQ коллекция должна реализовывать интерфейс <xref:System.Collections.IEnumerable> или интерфейс <xref:System.Linq.IQueryable> (или один из их основных прототипов <xref:System.Collections.Generic.IEnumerator%601> или <xref:System.Linq.IQueryable%601>).  
   
  кортеж (анонимные типы)  
  Как математическое понятие, кортеж представляет собой конечную последовательность объектов, каждый определенного типа. Кортеж называется также упорядоченным списком. Анонимные типы представляют собой языковую реализацию этой концепции, которая позволяет объявить класс неименованного типа и одновременно создать экземпляр объекта этого типа.  
