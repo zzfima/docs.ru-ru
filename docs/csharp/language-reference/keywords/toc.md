@@ -114,7 +114,7 @@
 ## [Ключевые слова преобразований](conversion-keywords.md)
 ### [explicit](explicit.md)
 ### [implicit](implicit.md)
-### [operator2](operator.md)
+### [operator](operator.md)
 ## [Ключевые слова доступа](access-keywords.md)
 ### [base](base.md)
 ### [this](this.md)
