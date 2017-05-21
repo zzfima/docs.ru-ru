@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-translationtype: Human Translation
-ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
-ms.openlocfilehash: a5abc801decbcedb4980b8b4992d128aa1e1bb2e
-ms.lasthandoff: 05/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 4ff34455c7cc6135f7324b18d3aebca576d70edf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -31,6 +32,7 @@ ms.lasthandoff: 05/02/2017
 -->
 * [Кроссплатформенная поддержка](../../core/index.md)
     - Благодаря поддержке .NET Core язык C# работает на многих платформах. Если вы хотите попробовать C# на macOS или на одном из многих поддерживаемых дистрибутивов Linux, получите дополнительные сведения о .NET Core.
+
 <!--
 - [.NET Compiler Platform SDK](../roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write code that performs static analysis on C# code. You can use these APIs to find potential errors, or bad practices, suggest fixes, and even implement those fixes.
