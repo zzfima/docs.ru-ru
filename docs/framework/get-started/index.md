@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 5713faed77786a87dc349a1c7e02ec9703b3700d
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
@@ -82,11 +82,11 @@ ms.lasthandoff: 05/03/2017
 |Заголовок|Описание|
 |-----------|-----------------|
 |[Обзор набора средств Visual Studio для Unity](../../../docs/framework/get-started/overview.md)|Содержит подробные сведения для разработчиков, которые занимаются созданием приложений, предназначенных для платформы .NET Framework.|
+|[Руководство по установке](../../../docs/framework/install/index.md)|Содержит сведения об установке платформы .NET Framework.|  
 |[.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|Содержит описание внештатных выпусков платформы .NET Framework и порядка их использования в приложении.|
 |[Требования к системе](../../../docs/framework/get-started/system-requirements.md)|Содержит требования к оборудованию и операционной системе для использования платформы .NET Framework.|
 |[.NET Core и открытый исходный код](../../../docs/framework/get-started/net-core-and-open-source.md)|Описание .NET Core относительно .NET Framework и сведения о получении доступа к проектам .NET Core с открытым исходным кодом.|
 |[Документация по .NET Core](https://docs.microsoft.com/dotnet/)|Концептуальная и справочная документация по API для .NET Core.|
-|[Руководство по установке](../../../docs/framework/install/guide-for-developers.md)|Содержит сведения об установке платформы .NET Framework.|
 
 ## <a name="see-also"></a>См. также
  [Руководство по .NET Framework](../../../docs/framework/index.md)   
