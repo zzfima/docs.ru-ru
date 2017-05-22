@@ -1,6 +1,7 @@
 # [Инструкции, выражения и операторы](index.md)
 ## [Операторы](statements.md)
 ## [Выражения](expressions.md)
+### [Элементы, воплощающие выражение](expression-bodied-members.md)
 ## [Операторы](operators.md)
 ## [Анонимные функции](anonymous-functions.md)
 ### [Лямбда-выражения](lambda-expressions.md)
