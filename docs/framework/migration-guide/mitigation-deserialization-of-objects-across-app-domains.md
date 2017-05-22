@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Устранение рисков: десериализация объектов между доменами приложений
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/18/2017
   
 1.  Приложение использует два или большее количество доменов приложений с разными базовыми папками приложения.  
   
-2.  Некоторые типы явно добавляются в <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> путем вызова такого метода, как <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> или <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>. Эти типы не отмечены как сериализуемые и не сохраняются в глобальном кэше сборок.  
+2.  Некоторые типы явно добавляются в <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> путем вызова метода, например <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> или <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>. Эти типы не отмечены как сериализуемые и не сохраняются в глобальном кэше сборок.  
   
 3.  Затем код, выполняющийся в домене приложения не по умолчанию, пытается считать значение из файла конфигурации или использовать XML для десериализации объекта.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="mitigation"></a>Уменьшение  
  Чтобы устранить эту проблему, выполните следующие действия.  
   
-1.  При возникновении исключения найдите вызов `get_Evidence` в стеке вызовов. Исключением может быть любое из большого подмножества исключений, в том числе <xref:System.IO.FileNotFoundException> и <xref:System.Runtime.Serialization.SerializationException>.  
+1.  При возникновении исключения найдите вызов `get_Evidence` в стеке вызовов. Может возникать любое исключение из подмножества исключений, включая <xref:System.IO.FileNotFoundException> и <xref:System.Runtime.Serialization.SerializationException>.  
   
 2.  Найдите в приложении место, где в логический контекст вызова не добавляются никакие объекты, и добавьте следующий код.  
   

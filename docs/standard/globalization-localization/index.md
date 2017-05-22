@@ -21,10 +21,11 @@ caps.latest.revision: 42
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d6313cea51b98b3b19363f3c465e5adf241ab3d4
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 46a0ccb9db4d468e68b1e8d1d278308e6e87e85e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Глобализация и локализация приложений .NET Framework
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/08/2017
   
 ## <a name="reference"></a>Ссылка  
  Пространство имен <xref:System.Globalization?displayProperty=fullName>  
- Содержит классы, определяющие сведения, относящиеся к языку и региональным параметрам, такие как язык, страна или регион, используемые календари, шаблоны форматирования дат, денежных единиц и чисел, а также порядок сортировки строк.  
+ Содержит классы, определяющие сведения, относящиеся к культуре, такие как язык, название страны, используемые календари, шаблоны форматирования дат, денежных единиц и чисел, а также порядок сортировки строк.  
   
  Пространство имен <xref:System.Resources>  
  Предоставляет классы для создания и использования ресурсов, а также управления ими.  
