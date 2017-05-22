@@ -38,6 +38,7 @@
 ## [Модульное тестирование](core/testing/index.md)
 ### [Модульное тестирование с помощью команды dotnet test и xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Модульное тестирование с помощью команды dotnet test и MSTest](core/testing/unit-testing-with-mstest.md)
+### [Выполнение выборочных модульных тестов](core/testing/selective-unit-tests.md)
 ## [Управление версиями](core/versions/index.md)
 ### [Поддержка .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
@@ -84,6 +85,7 @@
 # [Руководство по .NET Framework](framework/index.md)
 ## [Новые возможности](framework/whats-new/)
 ## [Начало работы](framework/get-started/)
+## [Руководство по установке](framework/install/)
 ## [Руководство по миграции](framework/migration-guide/)
 ## [Руководство по Docker в .NET Framework](framework/docker/index.md)
 ### [Запуск консольных приложений в контейнерах](framework//docker/console.md)
@@ -132,6 +134,7 @@
 <!-- End What's New -->
 <!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
+## Основные понятия C#
 ### [ Система типов C#](csharp/programming-guide/types/index.md)
 ### [Пространства имен](csharp/programming-guide/namespaces/index.md)
 ### [Базовые типы](csharp/basic-types.md)
@@ -183,12 +186,11 @@
 
 ## [Обзор языка F#](fsharp/tour.md)
 
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-### [Функции как значения первого класса](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
+## Учебники
 ### [Начало работы](fsharp/tutorials/getting-started/index.md)
 #### [Начало работы с Visual Studio](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
+#### [Начало работы с Visual Studio для Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
 #### [Начало работы с Visual Studio Code и Ionide](fsharp/tutorials/getting-started/getting-started-vscode.md)
 #### [Начало работы с программами командной строки](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [Окно "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/index.md)
@@ -203,7 +205,13 @@
 #### [Создание поставщика типов](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [Безопасность поставщиков типов](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Устранение неполадок поставщиков типов](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
+
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## Введение в функциональное программирование
+### [Функции как значения первого класса](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
+### Асинхронное и параллельное программирование
 #### [Асинхронное программирование](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
 <!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
