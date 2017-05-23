@@ -20,23 +20,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: a2ef49f9192c7fa414b02e7e41a270606f52bb3c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 
 # <a name="net-framework-guide"></a>Руководство по .NET Framework
 
 > [!NOTE]
->  Этот набор содержимого .NET Framework включает сведения для версий .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 и 4.7. Сведения о скачивании .NET Framework см. в [руководстве по установке](../../docs/framework/install/guide-for-developers.md). См. список [новых возможностей и изменений в .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], вспомогательных выпусках и .NET Framework 4.7](../../docs/framework/whats-new/index.md). Список поддерживаемых платформ см. в описании [системных требований .NET Framework](../../docs/framework/get-started/system-requirements.md).  
+> Этот набор содержимого .NET Framework включает сведения для версий .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 и 4.7. Сведения о скачивании .NET Framework см. в [руководстве по установке](../../docs/framework/install/guide-for-developers.md). См. список [новых возможностей и изменений в .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], вспомогательных выпусках и .NET Framework 4.7](../../docs/framework/whats-new/index.md). Список поддерживаемых платформ см. в описании [системных требований .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
-Платформа .NET Framework предоставляет множество служб, включая управление памятью, безопасность типа и памяти, функции безопасности, работу с сетями и развертывание приложений. Она предоставляет удобные структуры данных и интерфейсы API, которые абстрагируют операционную систему Windows более низкого уровня. В .NET Framework вы можете использовать различные языки программирования, включая C#, F # и Visual Basic.
+.NET Framework — это платформа разработки для создания приложений для Интернета, Windows, Windows Phone, Windows Server и Microsoft Azure. Она состоит из среды CLR и библиотеки классов .NET Framework, которая содержит обширный набор функциональных возможностей, а также обеспечивает поддержку многих отраслевых стандартов.
 
- .NET Framework — это платформа разработки для создания приложений для Windows, Windows Phone, Windows Server и Microsoft Azure. Она состоит из среды CLR и библиотеки классов .NET Framework, которая содержит обширный набор функциональных возможностей, а также обеспечивает поддержку многих отраслевых стандартов.  
-
-Платформа .NET Framework предоставляет множество служб, включая управление памятью, безопасность типа и памяти, функции безопасности, работу с сетями и развертывание приложений. Она предоставляет удобные структуры данных и интерфейсы API, которые абстрагируют операционную систему Windows более низкого уровня. В .NET Framework вы можете использовать различные языки программирования, включая C#, F # и Visual Basic.
+Платформа .NET Framework предоставляет множество служб, включая управление памятью, безопасность типа и памяти, функции безопасности, работу с сетями и развертывание приложений. Она предоставляет удобные структуры данных и интерфейсы API, которые абстрагируют операционную систему Windows более низкого уровня. В .NET Framework вы можете использовать различные языки программирования, включая C#, F # и Visual Basic.  
 
 Общие сведения о платформе .NET Framework для пользователей и разработчиков см. в разделе [Начало работы](../../docs/framework/get-started/index.md). См. [обзорные сведения](../../docs/framework/get-started/overview.md) об архитектуре и основных возможностях платформы .NET Framework.  
 
@@ -48,9 +46,10 @@ ms.lasthandoff: 05/04/2017
 
 Статья [Восстановление .NET Framework](./install/repair.md) содержит сведения о том, как восстановить платформу .NET Framework, если при ее установке возникают ошибки.
 
-Сведения о скачивании .NET Framework см. в [руководстве по установке](../../docs/framework/install/guide-for-developers.md).  
+Сведения о скачивании .NET Framework см. в разделе [Установка .NET Framework для разработчиков](../../docs/framework/install/guide-for-developers.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>Содержание
+
 [Новые возможности](../../docs/framework/whats-new/index.md)  
 Здесь приводится описание ключевых новых возможностей и изменений в последних версиях .NET Framework. Сюда включены списки устаревших типов и членов, а также руководство по переносу приложений с предыдущей версии .NET Framework.  
   
@@ -71,3 +70,4 @@ ms.lasthandoff: 05/04/2017
   
 [Дополнительные библиотеки классов и API-интерфейсы](../../docs/framework/additional-apis/index.md)  
 Документация для классов, содержащихся в виде внештатных выпусков, как и для классов, используемых с определенными платформами или реализациями платформы .NET Framework.
+
