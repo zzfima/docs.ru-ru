@@ -48,7 +48,6 @@ ms.lasthandoff: 05/10/2017
  Если требуется, чтобы числовой действительный литерал рассматривался как `decimal`, следует использовать суффикс m или M, например:  
   
 ```  
-  
 decimal myMoney = 300.5m;  
 ```  
   
@@ -58,14 +57,12 @@ decimal myMoney = 300.5m;
  Целочисленные типы неявно преобразуются в тип `decimal` и результатом является тип `decimal`. Поэтому инициализацию десятичной переменной можно выполнить с помощью целочисленного литерала без суффикса следующим образом:  
   
 ```  
-  
 decimal myMoney = 300;  
 ```  
   
  Неявное преобразование между типами с плавающей запятой и типом `decimal` отсутствует, поэтому для преобразования между этими двумя типами следует использовать приведение. Например:  
   
 ```  
-  
       decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
@@ -92,7 +89,6 @@ Console.WriteLine(dec + dub);
 // You can fix the error by using explicit casting of either operand.  
 Console.WriteLine(dec + (decimal)dub);  
 Console.WriteLine((double)dec + dub);  
-  
 ```  
   
  В результате выводится следующее сообщение об ошибке:  
@@ -121,3 +117,4 @@ Console.WriteLine((double)dec + dub);
  [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
+

@@ -35,14 +35,12 @@ ms.lasthandoff: 05/22/2017
  Чтобы определить конкретные версии, в которых запускается приложение, добавьте в файл конфигурации этого приложения один или несколько элементов [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md). Каждый элемент `<supportedRuntime>` определяет поддерживаемую версию среды выполнения. При этом первый элемент указывает наиболее предпочтительную версию, а последний элемент — наименее предпочтительную версию.  
   
 ```xml  
-  
 <configuration>  
    <startup>  
       <supportedRuntime version="v2.0.50727" />  
       <supportedRuntime version="v4.0" />  
    </startup>  
 </configuration>  
-  
 ```  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Настройка в приложении поддержки .NET Framework 4 или 4](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
@@ -98,3 +96,4 @@ ms.lasthandoff: 05/22/2017
  [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md)   
  [Политика жизненного цикла поддержки Microsoft .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=248212)   
  [Проблемы при миграции на .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=248212)
+

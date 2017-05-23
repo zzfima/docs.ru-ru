@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: afedd3d99aea9f73d175fd2957a7d586ebce6d72
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,6 @@ ms.lasthandoff: 03/13/2017
  В объявлении типа или члена типа можно использовать модификатор `unsafe`. Все текстовое пространство типа или члена типа считается небезопасным контекстом. Например, следующий метод объявлен с модификатором `unsafe`:  
   
 ```  
-  
       unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
 {  
     // Unsafe context: can use pointers here.  
@@ -52,14 +52,12 @@ ms.lasthandoff: 03/13/2017
  Область небезопасного контекста простирается от списка параметров до конца метода, поэтому в списке параметров можно также использовать указатели:  
   
 ```  
-  
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}  
 ```  
   
  Кроме того, небезопасный блок позволяет добавлять небезопасный код в блок. Пример:  
   
 ```  
-  
       unsafe  
 {  
     // Unsafe context: can use pointers here.  
@@ -81,3 +79,4 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Буферы фиксированного размера](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+

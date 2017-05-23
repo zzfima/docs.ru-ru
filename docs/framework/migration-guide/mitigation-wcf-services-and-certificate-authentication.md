@@ -41,7 +41,6 @@ ms.lasthandoff: 04/18/2017
      Это выполняется в следующем файле конфигурации:  
   
     ```xml  
-  
     <configuration>  
         <system.serviceModel>  
             <bindings>  
@@ -58,7 +57,6 @@ ms.lasthandoff: 04/18/2017
             </bindings>  
         </system.ServiceModel>  
     </configuration>  
-  
     ```  
   
 -   Если привязка динамически настраивается в исходном коде, обновите свойство <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> для использования TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) или более ранней версии протокола в исходном коде.  

@@ -36,17 +36,14 @@ ms.lasthandoff: 04/18/2017
 -   Можно отказаться от этого изменения без модификации исходного кода, добавив следующий код в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла app.config:  
   
     ```xml  
-  
     <runtime>  
         <AppContextSwitchOverrides value = "Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true" />  
      </runtime>  
-  
     ```  
   
 -   Можно изменить исходный код для восстановления предыдущего поведения, сравнивая вручную свойства <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> и <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> после вызова метода <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>, как делает следующий фрагмент кода.  
   
     ```csharp  
-  
     if (memberDescriptor1.Equals(memberDescriptor2) &   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)) {  
           // Code to execute if true.  
@@ -54,28 +51,23 @@ ms.lasthandoff: 04/18/2017
     else {  
           // Code to execute if false.     
     }  
-  
     ```  
   
     ```  
-  
     If memberDescriptor1.Equals(memberDescriptor2) And   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)  
           // Code to execute if True.  
     Else  
           // Code to execute if False.     
     End If  
-  
     ```  
   
  Для приложений, предназначенных для [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] и более ранних версий, можно включить это изменение, добавив следующее значение в файл app.config:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  

@@ -50,7 +50,6 @@ ms.lasthandoff: 03/24/2017
  В приведенном ниже коде метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> возвращает `Task\<byte[]>`, `getContentsTask`. Задача является обещанием создать фактический массив байтов после завершения задачи. Оператор `await` применяется к `getContentsTask` для приостановки выполнения в `SumPageSizesAsync` до завершения `getContentsTask`. В то же время управление возвращается вызывающему объекту `SumPageSizesAsync`. Когда `getContentsTask` завершается, результатом выражения `await` является массив байтов.  
   
 ```csharp  
-  
 private async Task SumPageSizesAsync()  
 {  
     // To use the HttpClient type in desktop apps, you must include a using directive and add a   
@@ -64,7 +63,6 @@ private async Task SumPageSizesAsync()
     //byte[] urlContents = await client.GetByteArrayAsync(url);  
     // . . .  
 }  
-  
 ```  
   
 > [!IMPORTANT]
@@ -78,7 +76,6 @@ TResult result = await AsyncMethodThatReturnsTaskTResult();
   
 // Keyword await used with a method that returns a Task.  
 await AsyncMethodThatReturnsTask();  
-  
 ```  
   
  Выражение `await` не блокирует поток, в котором оно выполняется. Вместо этого оно приводит к тому, что компилятор регистрирует остальную часть асинхронного метода как продолжение ожидаемой задачи. Затем управление возвращается в объект, вызывающий асинхронный метод. Когда задача завершается, она вызывает свое продолжение и выполнение асинхронного метода возобновляется с того момента, где оно было остановлено.  
@@ -100,7 +97,6 @@ await AsyncMethodThatReturnsTask();
  В следующем примере Windows Forms демонстрируется использование `await` в асинхронном методе `WaitAsynchronouslyAsync`. Сравните поведение этого метода с поведением `WaitSynchronously`. Без применения к задаче оператора `await` метод `WaitSynchronously` выполняется синхронно, несмотря на использование модификатора `async` в его определении и вызов <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName> в его теле.  
   
 ```csharp  
-  
 private async void button1_Click(object sender, EventArgs e)  
 {  
     // Call the method that runs asynchronously.  
@@ -137,3 +133,4 @@ public async Task<string> WaitSynchronously()
  [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md)   
  [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [async](../../../csharp/language-reference/keywords/async.md)
+

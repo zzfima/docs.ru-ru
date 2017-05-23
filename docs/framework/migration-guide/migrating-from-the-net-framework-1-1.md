@@ -17,9 +17,10 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -37,7 +38,6 @@ ms.lasthandoff: 04/18/2017
           <supportedRuntime version="v4.0"/>  
        </startup>  
     </configuration>  
-  
     ```  
   
 -   Можно перекомпилировать приложение с помощью компилятора, предназначенного для [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Если для разработки и компиляции решения первоначально использовалась среда Visual Studio 2003, можно открыть решение в среде [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] и использовать диалоговое окно **Совместимость проекта** для конвертации решения и файлов проекта из форматов, используемых Visual Studio 2003, в формат Microsoft Build Engine (MSBuild), используемый средой [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)].  
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/18/2017
       <CompatSortNLSVersion enabled="4096"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
  Однако в некоторых случаях может потребоваться изменить исходный код и перекомпилировать приложение.  
@@ -76,3 +75,4 @@ ms.lasthandoff: 04/18/2017
  Нерекомендуемые типы и члены несколько по-разному влияют на перенацеленные и перекомпилированные приложения. Устаревший тип или член не будет влиять на перенацеленное приложение, если он физически не удален из его сборки. При перекомпиляции приложения, в котором используются устаревшие типы или члены, обычно появляется предупреждение компилятора, а не ошибка. Однако в некоторых случаях при такой перекомпиляции возникает ошибка компилятора, и код, в котором используется устаревший тип или член, не компилируется успешно. В этом случае перед перекомпиляцией приложения необходимо переписать исходный код, в котором вызывается устаревший тип или член. Дополнительные сведения об устаревших типах и членах см. в статье [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md).  
   
  Чтобы оценить влияние типов и членов, не рекомендованных к использованию после выпуска [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], см. статью [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md). Просмотрите списки устаревших типов и членов для [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] и [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+

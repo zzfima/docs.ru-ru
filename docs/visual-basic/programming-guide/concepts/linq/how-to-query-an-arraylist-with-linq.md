@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -30,10 +31,8 @@ ms.lasthandoff: 03/13/2017
 При использовании LINQ для запросов к неуниверсальным <xref:System.Collections.IEnumerable>коллекций, такие как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции.</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> Например, если у вас есть <xref:System.Collections.ArrayList>из `Student` объектов, к [предложение From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:</xref:System.Collections.ArrayList>  
   
 ```  
-  
 Dim query = From student As Student In arrList   
 ...  
-  
 ```  
   
  Путем указания типа переменной диапазона, выполняется приведение каждого элемента в <xref:System.Collections.ArrayList>для `Student`.</xref:System.Collections.ArrayList>  
@@ -97,3 +96,4 @@ End Module
   
 ## <a name="see-also"></a>См. также  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+

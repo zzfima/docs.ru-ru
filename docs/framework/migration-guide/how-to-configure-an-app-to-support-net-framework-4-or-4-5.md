@@ -18,9 +18,10 @@ caps.latest.revision: 14
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 86dce70e92c0e424b169b6fc58e87c5652ebcb69
+ms.contentlocale: ru-ru
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -64,7 +65,6 @@ ms.lasthandoff: 04/18/2017
         <supportedRuntime version="<version>"/>  
       </startup>  
     </configuration>  
-  
     ```  
   
      где *\<version>* указывает версию среды CLR, соответствующей версии платформы .NET Framework, которую поддерживает приложение. Можно использовать следующие строки:  
@@ -94,3 +94,4 @@ ms.lasthandoff: 04/18/2017
 ## <a name="see-also"></a>См. также  
  [Миграция из .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
  [Руководство по переходу на .NET Framework 4.7, 4.6 и 4.5](../../../docs/framework/migration-guide/index.md)
+

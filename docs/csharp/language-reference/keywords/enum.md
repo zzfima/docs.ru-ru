@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f064ed0710a83e4bf0eaf5c35b962c29443f9d23
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,14 +45,12 @@ ms.lasthandoff: 03/13/2017
  По умолчанию первый перечислитель имеет значение 0, и значение каждого последующего перечислителя увеличивается на 1. Например, в следующем перечислении `Sat` — `0`, `Sun` — `1`, `Mon` — `2`и т. д.  
   
 ```  
-  
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Перечисления могут использовать инициализаторы для переопределения значений по умолчанию, как показано в следующем примере.  
   
 ```  
-  
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -60,7 +59,6 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  Каждый тип перечисления имеет базовый тип, который может быть любым целочисленным типом за исключением [char](../../../csharp/language-reference/keywords/char.md). Базовым типом перечисления элементов по умолчанию является [int](../../../csharp/language-reference/keywords/int.md). Чтобы объявить перечисление другого целого типа, например [byte](../../../csharp/language-reference/keywords/byte.md), используется двоеточие после идентификатора, за которым следует тип, как показано в следующем примере.  
   
 ```  
-  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -76,7 +74,6 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  Базовый тип указывает, какой объем хранилища выделяется для каждого перечислителя. Тем не менее необходимо явное приведение, чтобы преобразовывать из типа `enum` в целочисленный тип. Например, следующий оператор назначает перечислитель `Sun` для переменной типа [int](../../../csharp/language-reference/keywords/int.md) с помощью приведения, чтобы преобразовать `enum` в `int`.  
   
 ```  
-  
 int x = (int)Days.Sun;  
 ```  
   
@@ -122,3 +119,4 @@ int x = (int)Days.Sun;
  [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

@@ -42,7 +42,6 @@ ms.lasthandoff: 05/15/2017
 Классы объявляются с помощью ключевого слова `class`, как показано в следующем примере:  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -122,3 +121,4 @@ Console.Write(child1.name);   // Error
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)
+

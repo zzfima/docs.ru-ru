@@ -35,11 +35,9 @@ ms.lasthandoff: 05/22/2017
 -   Добавив элемент `<EnableMultiMonitorDisplayClipping>` в раздел `<appSettings>` файла конфигурации приложения, можно включить или отключить это поведение для приложений, выполняющихся в Windows 8 или более поздней версии. Например, следующий раздел конфигурации отключает отрисовку без обрезки.  
   
     ```  
-  
     <appSettings>  
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>  
       </appSettings>  
-  
     ```  
   
      Параметр конфигурации `<EnableMultiMonitorDisplayClipping>` может иметь одно из двух значений:  
@@ -52,3 +50,4 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+
