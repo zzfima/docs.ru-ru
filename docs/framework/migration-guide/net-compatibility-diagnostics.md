@@ -479,7 +479,7 @@ ms.lasthandoff: 05/22/2017
 |Область|Пограничный случай|  
 |Версия|4.5|  
 |Тип|Среда выполнения|  
-|Затронутые API|<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=fullName>|  
+|Затронутые API|<xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>|  
 |Анализаторы|CD0043|  
   
 <a name="diagnostic44"></a>   
