@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a97cdc61caf2cd9d1f71a6763e4903bb5a5fdc54
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 65e882db800d51c69f6f135b4d4529af0bc86653
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -50,16 +51,16 @@ ms.lasthandoff: 03/13/2017
   
 -   Мы рекомендуем при написании запросов LINQ использовать синтаксис запросов везде, где это возможно, а синтаксис метода — только если это совершенно необходимо. Между этими формами синтаксиса нет никакой разницы в семантике или производительности. Выражения запросов обычно более удобочитаемыми, чем аналогичные выражения с использованием синтаксиса метода.  
   
--   Некоторых операции запросов, например <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.Max%2A>, не имеют эквивалентных выражений запроса, поэтому должны быть выражены как вызов метода. Синтаксис запросов и синтаксис методов можно сочетать друг с другом различными способами. Дополнительные сведения см. в статье [Query syntax and method syntax in LINQ](query-syntax-and-method-syntax-in-linq.md) (Синтаксис запросов и синтаксис методов в LINQ).  
+-   Некоторых операции запросов, например <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.Max%2A>, не имеют эквивалентных предложений выражения для запросов и должны выражаться как вызовы методов. Синтаксис запросов и синтаксис методов можно сочетать друг с другом различными способами. Дополнительные сведения см. в статье [Query syntax and method syntax in LINQ](query-syntax-and-method-syntax-in-linq.md) (Синтаксис запросов и синтаксис методов в LINQ).  
   
--   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
+-   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражения. Дополнительные сведения см. в статье [Expression trees](../../../expression-trees.md) (Деревья выражений).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
 Чтобы получить дополнительные сведения о LINQ, сначала ознакомьтесь с некоторыми основным понятиями в статье [Query expression basics](../../../linq/query-expression-basics.md) (Базовая информация о выражении запроса), а затем переходите к документации по интересующей вас технологии LINQ.   
 -   XML-документы: [LINQ to XML](linq-to-xml.md)  
   
--   Платформа Entity Framework для ADO.NET: [LINQ to Entities](http://msdn.microsoft.com/library/641f9b68-9046-47a1-abb0-1c8eaeda0e2d)  
+-   Платформа Entity Framework для ADO.NET: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
 -   Коллекции, файлы, строки и другие сущности .NET: [LINQ to Objects](linq-to-objects.md)
 

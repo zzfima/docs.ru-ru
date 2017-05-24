@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-translationtype: Human Translation
-ms.sourcegitcommit: 7cb3ed91b4dd80286035f8f445e7bbb43641e4e9
-ms.openlocfilehash: b0fd29de1879990dada25cd50df83f6675bf85d9
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
+ms.openlocfilehash: 31503e39d8a96092dbce03c17397e1adfec6421e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/20/2017
 
 ## <a name="self-contained-deployments-scd"></a>Автономные развертывания
 
-В случае с автономным развертыванием вы развертываете приложение и зависимости сторонних разработчиков вместе с версией .NET Core, с помощью которой создавалось приложение. Процесс создания автономного приложения не включает [собственные зависимости .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) для различных платформ (например, OpenSSL для macOS), поэтому их нужно установить перед запуском приложения.
+В случае с автономным развертыванием приложение и зависимости сторонних разработчиков развертываются вместе с версией .NET Core, с помощью которой создавалось приложение. Процесс создания автономного приложения не включает [собственные зависимости .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) для различных платформ (например, OpenSSL для macOS), поэтому их нужно установить перед запуском приложения.
 
 ### <a name="why-deploy-a-self-contained-deployment"></a>Зачем использовать автономное развертывание
 
@@ -72,7 +73,6 @@ ms.lasthandoff: 04/20/2017
 - развертывание, зависящее от платформы, с зависимостями сторонних разработчиков;
 - автономное развертывание;
 - автономное развертывание с зависимостями сторонних разработчиков;
-- компактное автономное развертывание.
 
 # <a name="see-also"></a>См. также
 
@@ -80,3 +80,4 @@ ms.lasthandoff: 04/20/2017
 [Deploying .NET Core apps with Visual Studio](deploy-with-vs.md)  (Развертывание приложений .NET Core с помощью Visual Studio)  
 [Пакеты, метапакеты и платформы](../packages.md)   
 [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
+

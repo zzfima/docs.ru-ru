@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a75967e61d2c674e87e321de1fb6e4062cca4f19
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 287cf223b1e2fc62cdf8a73db95000337cedebef
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="gt-operator-c-reference"></a>Оператор =&gt; (справочник по C#)
@@ -43,17 +44,40 @@ ms.lasthandoff: 03/13/2017
   
  В следующем примере показано два способа поиска и отображения длины самой короткой строки в массиве строк. В первой части примера лямбда-выражение (`w => w.Length`) применяется к каждому элементу массива `words`, а затем используется метод <xref:System.Linq.Enumerable.Min%2A> для поиска наименьшей длины. Для сравнения — вторая часть примера показывает более долгое решение, использующее синтаксис запросов для выполнения того же действия.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+string[] words = { "cherry", "apple", "blueberry" };  
+  
+// Use method syntax to apply a lambda expression to each element  
+// of the words array.   
+int shortestWordLength = words.Min(w => w.Length);  
+Console.WriteLine(shortestWordLength);  
+  
+// Compare the following code that uses query syntax.  
+// Get the lengths of each word in the words array.  
+var query = from w in words  
+            select w.Length;  
+// Apply the Min method to execute the query and get the shortest length.  
+int shortestWordLength2 = query.Min();  
+Console.WriteLine(shortestWordLength2);  
+  
+// Output:   
+// 5  
+// 5  
+```  
+  
 ## <a name="remarks"></a>Примечания  
  Оператор `=>` имеет тот же приоритет, что и оператор присваивания (`=`) и является правоассоциативным.  
   
  Можно явно задать тип входной переменной или позволить компилятору передать его. В любом случае переменная является строго типизированной во время компиляции. При указании типа необходимо заключить имя типа и имя переменной в скобки, как показано в следующем примере.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+int shortestWordLength = words.Min((string w) => w.Length);  
+```  
+  
 ## <a name="example"></a>Пример  
  В следующем примере показано, как создать лямбда-выражение для перегрузки стандартного оператора запросов <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>, который принимает два аргумента. Поскольку лямбда-выражение имеет несколько параметров, параметры должны заключаться в круглые скобки. Второй параметр `index` представляет собой индекс текущего элемента в коллекции. Выражение `Where` возвращает все строки, длина которых меньше индекса их позиции в массиве.  
   
-```cs  
+```csharp  
 static void Main(string[] args)  
 {  
     string[] digits = { "zero", "one", "two", "three", "four", "five",   

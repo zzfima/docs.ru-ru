@@ -41,7 +41,7 @@
 ### [Закрытые конструкторы](private-constructors.md)
 ### [Статические конструкторы](static-constructors.md)
 ### [Практическое руководство. Создание конструктора копии](how-to-write-a-copy-constructor.md)
-## [Деструкторы](destructors.md)
+## [Методы завершения](destructors.md)
 ## [Инициализаторы объектов и коллекций](object-and-collection-initializers.md)
 ### [Практическое руководство. Инициализация объектов с помощью инициализатора объектов](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Практическое руководство. Инициализация словаря с помощью инициализатора коллекций](how-to-initialize-a-dictionary-with-a-collection-initializer.md)

@@ -6,7 +6,7 @@
 
 <!-- .NET Core Content -->
 # [Руководство по .NET Core](core/index.md)
-## [Начало работы](core/getting-started.md)
+## [Начало работы](core/get-started.md)
 ## [Необходимые компоненты для Windows](core/windows-prerequisites.md)
 ## [Предварительные требования для macOS](core/macos-prerequisites.md)
 ## [Учебники](core/tutorials/index.md)
@@ -29,6 +29,8 @@
 ### [Сопоставление между project.json и CSPROJ](core/tools/project-json-to-csproj.md)
 ### [Миграция из DNX](core/migration/from-dnx.md)
 ## [Развертывание приложений](core/deploying/index.md)
+### [Развертывание приложений с помощью средств командной строки](core/deploying/deploy-with-cli.md)
+### [Развертывание приложений с помощью Visual Studio](core/deploying/deploy-with-vs.md)
 ### [Создание пакета NuGet с помощью кроссплатформенных средств](core/deploying/creating-nuget-packages.md)
 ## [Docker](core/docker/index.md)
 ### [Создание образов Docker для приложений .NET Core](core/docker/building-net-docker-images.md)
@@ -36,9 +38,10 @@
 ## [Модульное тестирование](core/testing/index.md)
 ### [Модульное тестирование с помощью команды dotnet test и xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Модульное тестирование с помощью команды dotnet test и MSTest](core/testing/unit-testing-with-mstest.md)
+### [Выполнение выборочных модульных тестов](core/testing/selective-unit-tests.md)
 ## [Управление версиями](core/versions/index.md)
 ### [Поддержка .NET Core](core/versions/lts-current.md)
-### [🔧 Обслуживание](core/versions/servicing.md)
+<!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Каталог идентификаторов сред выполнения](core/rid-catalog.md)
 ## [Средства интерфейса командной строки .NET Core](core/tools/index.md)
 ### [Телеметрия](core/tools/telemetry.md)
@@ -74,7 +77,7 @@
 ### [Организация проектов для .NET Core](core/porting/project-structure.md)
 ### [Анализ зависимостей сторонних разработчиков](core/porting/third-party-deps.md)
 ### [Перенос библиотек](core/porting/libraries.md)
-### [🔧 Пакеты NuGet](core/porting/nuget-packages.md)
+<!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [VS 2015/project.json docs](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -82,6 +85,7 @@
 # [Руководство по .NET Framework](framework/index.md)
 ## [Новые возможности](framework/whats-new/)
 ## [Начало работы](framework/get-started/)
+## [Руководство по установке](framework/install/)
 ## [Руководство по миграции](framework/migration-guide/)
 ## [Руководство по Docker в .NET Framework](framework/docker/index.md)
 ### [Запуск консольных приложений в контейнерах](framework//docker/console.md)
@@ -90,7 +94,7 @@
 ### [Ресурсы в приложениях для настольных систем](framework/resources/)
 ### [Специальные возможности](framework/ui-automation/)
 ### [Данные и моделирование](framework/data/)
-### [Клиентские приложения](framework/develop-client-applications.md)
+### [Клиентские приложения](framework/develop-client-apps.md)
 #### [Общие клиентские технологии](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows Forms](framework/winforms/)
@@ -128,9 +132,9 @@
 ### [Новые возможности C# 7](csharp/whats-new/csharp-7.md)
 ### [Новые возможности C# 6](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
-## [🔧 Окно "Интерактивный C#"](csharp/interactive/)
+<!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
-## [Основные понятия C#](csharp/concepts.md)
+## Основные понятия C#
 ### [ Система типов C#](csharp/programming-guide/types/index.md)
 ### [Пространства имен](csharp/programming-guide/namespaces/index.md)
 ### [Базовые типы](csharp/basic-types.md)
@@ -138,7 +142,7 @@
 ### [Структуры](csharp/structs.md)
 ### [Кортежи](csharp/tuples.md)
 ### [Интерфейсы](csharp/programming-guide/interfaces/index.md)
-### [Методы и лямбда-выражения](csharp/methods-lambda-expressions.md)
+<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
 #### [Методы](csharp/methods.md)
 #### [Лямбда-выражения](csharp/lambda-expressions.md)
 ### [Свойства](csharp/properties.md)
@@ -156,7 +160,7 @@
 #### [Различия между делегатами и событиями](csharp/distinguish-delegates-events.md)
 ### [LINQ](csharp/linq/)
 ### [Асинхронное программирование](csharp/async.md)
-### [🔧 Параллельное программирование](csharp/parallel.md)
+<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [Соответствие шаблону](csharp/pattern-matching.md)
 ### [Деревья выражений](csharp/expression-trees.md)
 #### [Описание деревьев выражений](csharp/expression-trees-explained.md)
@@ -167,11 +171,11 @@
 #### [Преобразование выражений](csharp/expression-trees-translating.md)
 #### [Сводка](csharp/expression-trees-summary.md)
 ### [Взаимодействие на уровне машинного кода](csharp/programming-guide/interop/index.md)
-### [🔧 Отражение и создание кода](csharp/reflection.md)
+<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [Документирование кода](csharp/codedoc.md)
 ### [Управление версиями](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-## [🔧 Использование платформы компилятора .NET](csharp/roslyn/index.md)
+<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
 ## [Руководство по программированию на C#](csharp/programming-guide/)
 ## [Справочник по языку](csharp/language-reference/)
 ## [Пошаговые руководства](csharp/walkthroughs.md)
@@ -182,12 +186,11 @@
 
 ## [Обзор языка F#](fsharp/tour.md)
 
-## [Введение в функциональное программирование](fsharp/introduction-to-functional-programming/index.md)
-### [Функции как значения первого класса](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
-## [Учебники](fsharp/tutorials/index.md)
+<!--## [Tutorials](fsharp/tutorials/index.md)-->
+## Учебники
 ### [Начало работы](fsharp/tutorials/getting-started/index.md)
 #### [Начало работы с Visual Studio](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
+#### [Начало работы с Visual Studio для Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
 #### [Начало работы с Visual Studio Code и Ionide](fsharp/tutorials/getting-started/getting-started-vscode.md)
 #### [Начало работы с программами командной строки](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [Окно "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/index.md)
@@ -202,10 +205,16 @@
 #### [Создание поставщика типов](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [Безопасность поставщиков типов](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Устранение неполадок поставщиков типов](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-### [Асинхронное и параллельное программирование](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)
+
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## Введение в функциональное программирование
+### [Функции как значения первого класса](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+
+<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
+### Асинхронное и параллельное программирование
 #### [Асинхронное программирование](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
-## [Использование языка F# в Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)
+<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
 ### [Компоненты среды разработки Visual F#](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
 ### [Настройка проектов](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
 ### [Нацеливание на предыдущие версии .NET](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
@@ -215,7 +224,7 @@
 ### [Начало работы с хранилищем файлов Azure с помощью языка F#](fsharp/using-fsharp-on-azure/file-storage.md)
 ### [Начало работы с хранилищем очередей Azure с помощью языка F#](fsharp/using-fsharp-on-azure/queue-storage.md)
 ### [Начало работы с хранилищем таблиц Azure с помощью языка F#](fsharp/using-fsharp-on-azure/table-storage.md)
-### [Использование языка F# в Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)
+<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
 ### [Управление пакетами для зависимостей F# в Azure](fsharp/using-fsharp-on-azure/package-management.md)
 
 ## [Справочник по языку F#](fsharp/language-reference/index.md)

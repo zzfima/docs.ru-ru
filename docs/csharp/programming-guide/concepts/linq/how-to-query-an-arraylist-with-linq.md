@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 09489e2dabd34da0446a623e91cd85de35c3c70b
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -29,10 +30,8 @@ ms.lasthandoff: 03/13/2017
 При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции. Например, если у вас есть список объектов `Student` <xref:System.Collections.ArrayList>, [предложение from](../../../../csharp/language-reference/keywords/from-clause.md) должно иметь следующий вид:  
   
 ```  
-  
 var query = from Student s in arrList  
 ...  
-  
 ```  
   
  Указав тип переменной диапазона, вы приводите каждый элемент в <xref:System.Collections.ArrayList> к `Student`.  
@@ -103,3 +102,4 @@ namespace NonGenericLINQ
   
 ## <a name="see-also"></a>См. также  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

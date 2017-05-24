@@ -15,9 +15,10 @@ ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8ebea6b2a62120293eec50b5f304dbfd426a8fe1
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 
@@ -33,7 +34,6 @@ ms.lasthandoff: 03/13/2017
  В этом примере используется следующий XML-документ: [пример XML-файла: несколько заказов на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
-  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
   
 ' LINQ to XML query  
@@ -67,3 +67,4 @@ Results are identical
   
 ## <a name="see-also"></a>См. также  
  [LINQ to XML для пользователей XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

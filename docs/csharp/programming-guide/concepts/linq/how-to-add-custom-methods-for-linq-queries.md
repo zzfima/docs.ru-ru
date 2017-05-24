@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7843620518dd7965724f0108a8fa008c95bd4793
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 5f3ac26abe3eccc19b928375059e2562c4aa6a80
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)
@@ -35,7 +36,7 @@ ms.lasthandoff: 03/13/2017
   
  В следующем примере кода показано, как создать метод расширения `Median` для вычисления срединного значения последовательности чисел типа `double`.  
   
-```cs  
+```csharp  
 public static class LINQExtension  
 {  
     public static double Median(this IEnumerable<double> source)  
@@ -69,26 +70,69 @@ public static class LINQExtension
   
  В следующем примере кода показано использование метода `Median` для массива типа `double`.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+```csharp  
+double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };  
+  
+var query1 = numbers1.Median();  
+  
+Console.WriteLine("double: Median = " + query1);  
+```  
+
+```csharp  
+/*  
+ This code produces the following output:  
+  
+ Double: Median = 4.85  
+*/  
+```  
+  
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>Перегрузка метода агрегирования для принятия различных типов  
  Метод агрегирования можно перегрузить, чтобы он принимал последовательности различных типов. Стандартный способ — создание перегрузки для каждого типа. Другой подход заключается в создании перегрузки, которая будет принимать универсальный тип и преобразовывать его в конкретный тип с помощью делегата. Вы можете сочетать оба способа.  
   
 #### <a name="to-create-an-overload-for-each-type"></a>Создание перегрузки для каждого типа  
  Вы можете создать конкретную перегрузку для каждого типа, который требуется поддерживать. В следующем примере кода показана перегрузка метода `Median` для типа `integer`.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+```csharp  
+//int overload  
+  
+public static double Median(this IEnumerable<int> source)  
+{  
+    return (from num in source select (double)num).Median();  
+}  
+```   
  Теперь можно вызвать перегрузки `Median` для типов `integer` и `double`, как показано в следующем примере кода:  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };  
+  
+var query1 = numbers1.Median();  
+  
+Console.WriteLine("double: Median = " + query1);  
+```  
+  
+```csharp  
+int[] numbers2 = { 1, 2, 3, 4, 5 };  
+  
+var query2 = numbers2.Median();  
+  
+Console.WriteLine("int: Median = " + query2);  
+```  
+  
+```csharp  
+/*  
+ This code produces the following output:  
+  
+ Double: Median = 4.85  
+ Integer: Median = 3  
+*/  
+```  
+
 #### <a name="to-create-a-generic-overload"></a>Создание универсальной перегрузки  
  Вы также можете создать перегрузку, которая принимает последовательность универсальных объектов. Эта перегрузка принимает делегат в качестве параметра и использует его для преобразования последовательности объектов универсального типа в конкретный тип.  
   
  В следующем примере кода демонстрируется перегрузка метода `Median`, принимающая делегат <xref:System.Func%602> в качестве параметра. Этот делегат принимает объект универсального типа T и возвращает объект типа `double`.  
   
-```cs  
+```csharp  
 // Generic overload.  
   
 public static double Median<T>(this IEnumerable<T> numbers,  
@@ -102,16 +146,65 @@ public static double Median<T>(this IEnumerable<T> numbers,
   
  В следующем примере кода показано, как вызвать метод `Median` для массива целых чисел и массива строк. Для строк вычисляется срединное значение длин строк в массиве. В примере демонстрируется передача параметра делегата <xref:System.Func%602> в метод `Median` для каждого из случаев.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+int[] numbers3 = { 1, 2, 3, 4, 5 };  
+  
+/*   
+  You can use the num=>num lambda expression as a parameter for the Median method   
+  so that the compiler will implicitly convert its value to double.  
+  If there is no implicit conversion, the compiler will display an error message.            
+*/  
+  
+var query3 = numbers3.Median(num => num);  
+  
+Console.WriteLine("int: Median = " + query3);  
+  
+string[] numbers4 = { "one", "two", "three", "four", "five" };  
+  
+// With the generic overload, you can also use numeric properties of objects.  
+  
+var query4 = numbers4.Median(str => str.Length);  
+  
+Console.WriteLine("String: Median = " + query4);  
+  
+/*  
+ This code produces the following output:  
+  
+ Integer: Median = 3  
+ String: Median = 4  
+*/  
+```   
 ## <a name="adding-a-method-that-returns-a-collection"></a>Добавление метода, возвращающего коллекцию  
  Вы можете расширить интерфейс <xref:System.Collections.Generic.IEnumerable%601> с помощью метода настраиваемого запроса, который возвращает последовательность значений. В этом случае метод должен возвращать коллекцию типа <xref:System.Collections.Generic.IEnumerable%601>. Такие методы можно использовать для применения фильтров или преобразований данных к последовательности значений.  
   
  В следующем примере показано, как создать метод расширения с именем `AlternateElements`, который возвращает каждый второй элемент в коллекции, начиная с первого элемента.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```csharp  
+// Extension method for the IEnumerable<T> interface.   
+// The method returns every other element of a sequence.  
+  
+public static IEnumerable<T> AlternateElements<T>(this IEnumerable<T> source)  
+{  
+    List<T> list = new List<T>();  
+  
+    int i = 0;  
+  
+    foreach (var element in source)  
+    {  
+        if (i % 2 == 0)  
+        {  
+            list.Add(element);  
+        }  
+  
+        i++;  
+    }  
+  
+    return list;  
+}  
+```  
  Этот метод расширения вызывается для любых перечислимых коллекций так же, как другие методы из интерфейса <xref:System.Collections.Generic.IEnumerable%601>, как показано в следующем примере кода:  
   
-```cs  
+```csharp  
 string[] strings = { "a", "b", "c", "d", "e" };  
   
 var query = strings.AlternateElements();  

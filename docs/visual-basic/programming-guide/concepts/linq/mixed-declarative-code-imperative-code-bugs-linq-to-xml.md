@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -61,7 +62,6 @@ Dim root As XElement = _
 For Each e As XElement In root.Elements()  
     root.Add(New XElement(e.Name, e.Value))  
 Next  
-  
 ```  
   
  Этот код представляет собой бесконечный цикл. Инструкция `foreach` последовательно применяется ко всей оси `Elements()`, при этом добавляются новые элементы к элементу `doc`. После этого она переходит на только что добавленные элементы. И поскольку она выделяет память для новых объектов на каждом шаге, она захватит всю доступную память.  
@@ -79,7 +79,6 @@ For Each e As XElement In root.Elements().ToList()
     root.Add(New XElement(e.Name, e.Value))  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Теперь код работает, как и положено. В итоге получается следующее XML-дерево:  
@@ -109,7 +108,6 @@ For Each e As XElement In root.Elements()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Однако этот код не выполнит поставленной задачи. В такой ситуации после удаления первого элемента A он удаляется из XML-дерева, которое содержится в корне, при этом коду метода элементов (Elements method), который выполняет последовательный переход, не удастся найти следующий элемент.  
@@ -136,7 +134,6 @@ For Each e As XElement In root.Elements().ToList()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Выводятся следующие результаты.  
@@ -156,7 +153,6 @@ Dim root As XElement = _
     </Root>  
 root.RemoveAll()  
 Console.WriteLine(root)  
-  
 ```  
   
 ## <a name="why-cant-linq-automatically-handle-this"></a>Почему LINQ не может автоматически обрабатывать такие ошибки?  
@@ -169,7 +165,6 @@ Dim z = _
     From e In root.Elements() _  
     Where (TestSomeCondition(e)) _  
     Select DoMyProjection(e)  
-  
 ```  
   
  Такому коду для проведения анализа потребуется анализировать методы TestSomeCondition и DoMyProjection, а также все методы, которые вызывают их, чтобы определить, есть ли у кода какие-либо побочные эффекты. Однако коду анализа не удавалось просто искать код, в котором есть побочные эффекты. Для этого потребовалось бы выбрать только тот код, у которого есть побочные эффекты на дочерних элементах `root`.  
@@ -197,8 +192,8 @@ Dim root As XElement = _
 Dim newRoot As XElement = New XElement("Root", _  
     root.Elements(), root.Elements())  
 Console.WriteLine(newRoot)  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  
  [Дополнительно программированию LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

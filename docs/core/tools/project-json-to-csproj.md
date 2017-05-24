@@ -10,16 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/30/2017
 
 ---
 
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Сопоставление между свойствами project.json и CSPROJ
 
-Автор: [Nate McMaster](http://github.com/natemcmaster) (Нейт Макмастер)
+Автор: [Nate McMaster](https://github.com/natemcmaster) (Нейт Макмастер)
 
 При разработке инструментария .NET Core были внесены важные структурные изменения, направленные на прекращение поддержки файлов *project.json* и перенос проектов .NET Core на формат MSBuild/CSPROJ.
 
@@ -323,7 +324,7 @@ And it's really great!</Description>
 
 ```xml
 <PropertyGroup>
-  <RuntimeIdentifiers>win7-x64;osx.10-11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+  <RuntimeIdentifiers>win7-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
 
@@ -664,7 +665,6 @@ And it's really great!</Description>
 ```
 
 ## <a name="see-also"></a>См. также
-[Справочник по файлу project.json](project-json.md)
 
 [Краткий обзор изменений в интерфейсе командной строки](../tools/cli-msbuild-architecture.md)
 

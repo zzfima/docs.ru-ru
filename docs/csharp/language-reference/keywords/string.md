@@ -34,20 +34,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a616808a8e6ff5e259c503c0143db4b8f73bdef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="string-c-reference"></a>string (Справочник по C#)
-Тип `string` представляет последовательность, состоящую из нуля или более символов в кодировке Юникод. `string` — псевдоним для <xref:System.String> в .NET Framework.  
+Тип `string` представляет последовательность, состоящую из нуля или более символов в кодировке Юникод. `string` — это псевдоним для <xref:System.String> в .NET Framework.  
   
  Несмотря на то, что `string` представляет собой ссылочный тип, операторы равенства (`==` и`!=`) по определению сравнивают не ссылки, а значения объектов `string`. Это делает проверку равенства строк более интуитивно понятной. Например:  
   
 ```csharp  
-  
-      string a = "hello";  
+string a = "hello";  
 string b = "h";  
 // Append to contents of 'b'  
 b += "ello";  
@@ -60,7 +60,6 @@ Console.WriteLine((object)a == (object)b);
  Оператор + объединяет строки:  
   
 ```csharp  
-  
 string a = "good " + "morning";  
 ```  
   
@@ -68,17 +67,15 @@ string a = "good " + "morning";
   
  Строки *неизменяемы*, т. е. содержимое созданного строкового объекта изменить нельзя, хотя синтаксис выглядит так, будто это возможно. Например, при написании кода компилятор фактически создает новый строковый объект для хранения новой последовательности символов, а затем этот новый объект назначается b. После этого строка h может быть отправлена в мусор.  
   
-```csharp  
-  
-      string b = "h";  
+```csharp
+string b = "h";  
 b += "ello";  
 ```  
   
  Оператор [] позволяет предоставить к отдельным символам `string` доступ только для чтения:  
   
 ```csharp  
-  
-      string str = "test";  
+string str = "test";  
 char x = str[2];  // x = 's';  
 ```  
   
@@ -91,8 +88,7 @@ char x = str[2];  // x = 's';
  Строковые литералы могут содержать любые символьные литералы. Escape-последовательности включены. В следующем примере escape-последовательность `\\` используется для получения обратной косой черты, `\u0066` — для получения буквы f, и `\n` — для получения новой строки.  
   
 ```  
-  
-      string a = "\\\u0066\n";  
+string a = "\\\u0066\n";  
 Console.WriteLine(a);  
 ```  
   
@@ -130,11 +126,12 @@ Console.WriteLine(a);
 ## <a name="see-also"></a>См. также  
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Рекомендации по использованию строк](http://msdn.microsoft.com/library/b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7)   
+ [Рекомендации по использованию строк](../../../standard/base-types/best-practices-strings.md)   
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)   
  [Типы значений](../../../csharp/language-reference/keywords/value-types.md)   
- [Базовые операции со строками](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
- [Создание новых строк](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
+ [Базовые операции со строками](../../../standard/base-types/basic-string-operations.md)   
+ [Создание новых строк](../../../standard/base-types/creating-new.md)   
  [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+

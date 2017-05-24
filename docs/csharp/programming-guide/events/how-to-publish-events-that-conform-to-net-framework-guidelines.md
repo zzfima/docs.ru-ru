@@ -27,16 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 78d069249c8131a091a206703c475faaf641d17b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 6d529e60643966fbabd5290543146977b4dc83c5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework (Руководство по программированию в C#)
 Следующая процедура демонстрирует добавление событий, которые соответствуют стандартному шаблону [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] для классов и структур. Все события в библиотеке классов [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] основаны на делегате <xref:System.EventHandler>, который определен следующим образом:  
   
-```  
+```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
@@ -49,10 +50,24 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 1.  (Пропустите этот шаг и перейдите к шагу 3a, если не нужно отправлять пользовательские данные с определенным событием.) Объявите класс для пользовательских данных в области, видимой для классов Publisher и Subscriber. Затем добавьте необходимые члены для хранения пользовательских данных о событиях. В этом примере возвращается простая строка.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    public class CustomEventArgs : EventArgs  
+    {  
+        public CustomEventArgs(string s)  
+        {  
+            msg = s;  
+        }  
+        private string msg;  
+        public string Message  
+        {  
+            get { return msg; }  
+        }   
+    }  
+    ```  
+  
 2.  (Пропустите этот шаг, если используется универсальная версия <xref:System.EventHandler%601>.) Объявите делегат в своем классе публикации. Присвойте ему имя, которое заканчивается на *EventHandler*. Второй параметр указывает настраиваемый тип EventArgs.  
   
-    ```  
+    ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
     ```  
   
@@ -60,20 +75,19 @@ public delegate void EventHandler(object sender, EventArgs e);
   
     1.  Если у вас нет пользовательского класса EventArgs, тип события будет неуниверсальным делегатом EventHandler. Нет необходимости объявлять делегат, так как он уже объявлен в пространстве имен <xref:System>, которое включается при создании проекта C#. Добавьте следующий код в класс Publisher.  
   
-        ```  
+        ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
     2.  Если вы используете неуниверсальную версию <xref:System.EventHandler>, и имеется пользовательский класс, производный от <xref:System.EventArgs>, объявите событие внутри класса публикации и используйте делегат из шага 2 в качестве типа.  
   
-        ```  
+        ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
-  
         ```  
   
     3.  Если используется универсальная версия, пользовательский делегат не требуется. Вместо этого в классе публикации укажите тип события как `EventHandler<CustomEventArgs>`, подставив имя своего класса в угловые скобки.  
   
-        ```  
+        ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  
         ```  
   

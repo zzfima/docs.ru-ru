@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c072d365b4ecffb524b57c2328217da05a8af3ed
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f111ba3db26f247cbc56ee296b652bc04efb837d
+ms.openlocfilehash: 66c68530f5684e4d75b9aaa21334e54dde5b64b6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="using-static-directive-c-reference"></a>Директива using static (справочник по C#)
@@ -46,7 +47,7 @@ using static <fully-qualified-type-name>
 
 Директива `using static` была представлена в C# версии 6.
 
-## <a name="reamrks"></a>Примечания
+## <a name="remarks"></a>Примечания
  
 Обычно при вызове статического члена необходимо указать имя типа и имя нужного члена. Повторный ввод одного и того же имени типа для вызова относящихся к нему элементов может сделать код слишком длинным и сложным. Например, следующее определение класса `Circle` ссылается на ряд членов класса @System.Math.
   

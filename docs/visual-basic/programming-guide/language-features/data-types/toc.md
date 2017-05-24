@@ -23,5 +23,6 @@
 ### [Переменные структуры](structure-variables.md)
 ### [Структуры и другие элементы программирования](structures-and-other-programming-elements.md)
 ### [Структуры и классы](structures-and-classes.md)
+## [Кортежи](tuples.md)
 ## [Эффективное использование типов данных](efficient-use-of-data-types.md)
 ## [Устранение неполадок, связанных с типами данных](troubleshooting-data-types.md)

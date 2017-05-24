@@ -18,10 +18,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 09f682d9c3a1cf5d42bba878676d84b9328a1a81
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Совместимость версий в .NET Framework
@@ -34,14 +35,12 @@ ms.lasthandoff: 04/18/2017
  Чтобы определить конкретные версии, в которых запускается приложение, добавьте в файл конфигурации этого приложения один или несколько элементов [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md). Каждый элемент `<supportedRuntime>` определяет поддерживаемую версию среды выполнения. При этом первый элемент указывает наиболее предпочтительную версию, а последний элемент — наименее предпочтительную версию.  
   
 ```xml  
-  
 <configuration>  
    <startup>  
       <supportedRuntime version="v2.0.50727" />  
       <supportedRuntime version="v4.0" />  
    </startup>  
 </configuration>  
-  
 ```  
   
  Дополнительные сведения см. в разделе [Практическое руководство. Настройка в приложении поддержки .NET Framework 4 или 4](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
@@ -49,7 +48,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="version-compatibility-for-components"></a>Совместимость версий компонентов  
  Приложение может определять версию платформы .NET Framework, в которой оно запускается, однако компонент не может. Компоненты и библиотеки классов загружаются в контексте конкретного приложения и, следовательно, автоматически запускаются в той версии .NET Framework, в которой запускается это приложение.  
   
- Из-за этого ограничения гарантии совместимости особенно важны для компонентов. Начиная с .NET Framework 4, можно указывать, в какой степени компонент должен оставаться совместимым в различных версиях, применив к этому компоненту атрибут <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=fullName>. Этот атрибут может использоваться разными средствами для обнаружения возможных нарушений гарантии совместимости в будущих версиях компонента.  
+ Из-за этого ограничения гарантии совместимости особенно важны для компонентов. Начиная с .NET Framework 4, можно задать, в какой степени компонент должен оставаться совместимым в различных версиях, применив к этому компоненту атрибут <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=fullName>. Этот атрибут может использоваться разными средствами для обнаружения возможных нарушений гарантии совместимости в будущих версиях компонента.  
   
 ## <a name="backward-compatibility-and-the-net-framework-45"></a>Обратная совместимость и .NET Framework 4.5  
  Платформа .NET Framework 4.5 и ее доработанные выпуски (4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 и 4.7) обратно совместимы с приложениями, созданными с помощью более ранних версий .NET Framework. Иными словами, приложения и компоненты, созданные с использованием предыдущих версий платформы .NET Framework, будут без внесения изменений работать в .NET Framework 4.5. Однако по умолчанию приложения выполняются в той версии среды CLR, для которой они были разработаны, поэтому, чтобы обеспечить возможность выполнения приложения в .NET Framework 4.5, может потребоваться предоставить файл конфигурации. Дополнительные сведения см. в разделе [Совместимость версий для приложений](#Apps) выше.  
@@ -97,3 +96,4 @@ ms.lasthandoff: 04/18/2017
  [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md)   
  [Политика жизненного цикла поддержки Microsoft .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=248212)   
  [Проблемы при миграции на .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=248212)
+

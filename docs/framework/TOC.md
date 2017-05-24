@@ -1,4 +1,4 @@
-# [Руководство по разработке для .NET Framework](development-guide.md)
+# [Руководство по разработке](development-guide.md)
 ## [Основные сведения о приложениях](../standard/application-essentials.md)
 ## [Данные и моделирование](data/index.md)
 ## [Клиентские приложения](develop-client-apps.md)
@@ -15,4 +15,3 @@
 ## [Разработка для нескольких платформ](../standard/cross-platform/index.md)
 ## [Развертывание](deployment/index.md)
 ## [Производительность](performance/index.md)
-

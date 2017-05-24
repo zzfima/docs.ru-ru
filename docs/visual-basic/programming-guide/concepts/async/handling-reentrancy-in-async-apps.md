@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ TOTAL bytes returned:  890591
  В следующем коде показаны эти изменения, которые помечены звездочками. Изменения добавляются в код в конце этого раздела, или можно загрузить из завершенного приложения [образцы Async: повторного входа в приложениях рабочего стола .NET](http://go.microsoft.com/fwlink/?LinkId=266571). Имя проекта — DisableStartButton.  
   
 ```vb  
-  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
     ' This line is commented out to make the results clearer in the output.  
     'ResultsTextBox.Text = ""  
@@ -161,7 +161,6 @@ End Sub
   
         ' *** Declare a System.Threading.CancellationTokenSource.  
         Dim cts As CancellationTokenSource  
-  
     ```  
   
 2.  В `StartButton_Click` определите, выполняется ли операция на данный момент. Если значение `cts` — `Nothing`, операция не активна. Если значение не `Nothing`, отменить операцию, которая уже выполняется.  
@@ -171,7 +170,6 @@ End Sub
     If cts IsNot Nothing Then  
         cts.Cancel()  
     End If  
-  
     ```  
   
 3.  Задайте для `cts` другое значение, представляющее текущий процесс.  
@@ -180,7 +178,6 @@ End Sub
     ' *** Now set cts to cancel the current process if the button is chosen again.  
     Dim newCTS As CancellationTokenSource = New CancellationTokenSource()  
     cts = newCTS  
-  
     ```  
   
 4.  В конце `StartButton_Click`, текущий процесс будет завершен, поэтому значение `cts` к `Nothing`.  
@@ -190,7 +187,6 @@ End Sub
     If cts Is newCTS Then  
         cts = Nothing  
     End If  
-  
     ```  
   
  В следующем коде показаны все изменения в `StartButton_Click`. Добавления помечены звездочками.  
@@ -226,7 +222,6 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
         cts = Nothing  
     End If  
 End Sub  
-  
 ```  
   
  В `AccessTheWebAsync` внесите следующие изменения.  
@@ -275,7 +270,6 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
     ResultsTextBox.Text &=  
         String.Format(vbCrLf & vbCrLf & "TOTAL bytes returned:  " & total & vbCrLf)  
 End Function  
-  
 ```  
   
  При выборе **начать** несколько раз во время этого приложения, он должен создать результаты, которые похожи на следующие выходные данные.  
@@ -318,7 +312,6 @@ TOTAL bytes returned:  890591
  Следующий результат показан результат, если пользователь выбирает **запустить** кнопку только один раз. Указывает метку буквы A, что получается после первой **запустить** кнопка. Нумерация показывает порядок отображения URL-адресов в списке целевых объектов для загрузки.  
   
 ```  
-  
 #Starting group A.  
 #Task assigned for group A.  
   
@@ -390,7 +383,6 @@ C-8. msdn.microsoft.com/library/ff730837.aspx               148010
 TOTAL bytes returned:  920526  
   
 #Group C is complete.  
-  
 ```  
   
  Группы B и C запускаются до завершения группы A, однако результаты для каждой группы отображаются отдельно. Все выходные данные для группы A отображается первой, затем все выходные данные для группы B, а затем все выходные данные для группы C. Приложение всегда отображаются группы в порядке и для каждой группы, всегда отображает сведения об отдельных веб-сайтов в порядке следования URL-адреса в список URL-адресов.  
@@ -705,3 +697,4 @@ End Function
 ## <a name="see-also"></a>См. также  
  [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+

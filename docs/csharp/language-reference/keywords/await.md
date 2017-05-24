@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c2db2c58449cadcc33904f31cca215fb78405d2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 3656141c32a04e3a32a2992185f4c418c6915482
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="await-c-reference"></a>await (Справочник по C#)
@@ -48,13 +49,35 @@ ms.lasthandoff: 03/13/2017
   
  В приведенном ниже коде метод <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> возвращает `Task\<byte[]>`, `getContentsTask`. Задача является обещанием создать фактический массив байтов после завершения задачи. Оператор `await` применяется к `getContentsTask` для приостановки выполнения в `SumPageSizesAsync` до завершения `getContentsTask`. В то же время управление возвращается вызывающему объекту `SumPageSizesAsync`. Когда `getContentsTask` завершается, результатом выражения `await` является массив байтов.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+private async Task SumPageSizesAsync()  
+{  
+    // To use the HttpClient type in desktop apps, you must include a using directive and add a   
+    // reference for the System.Net.Http namespace.  
+    HttpClient client = new HttpClient();  
+    // . . .  
+    Task<byte[]> getContentsTask = client.GetByteArrayAsync(url);  
+    byte[] urlContents = await getContentsTask;  
+  
+    // Equivalently, now that you see how it works, you can write the same thing in a single line.  
+    //byte[] urlContents = await client.GetByteArrayAsync(url);  
+    // . . .  
+}  
+```  
+  
 > [!IMPORTANT]
 >  Полный пример см. в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Вы можете скачать этот пример в разделе [Примеры кода для разработчиков](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409) на веб-сайте Майкрософт. Этот пример представлен в проекте AsyncWalkthrough_HttpClient.  
   
  Как показано в предыдущем примере, если `await` применяется к результату вызова метода, который возвращает `Task<TResult>`, то типом выражения `await` является TResult. Если `await` применяется к результату вызова метода, который возвращает `Task`, то типом выражения `await` является void. В следующем примере демонстрируется это различие.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+// Keyword await used with a method that returns a Task<TResult>.  
+TResult result = await AsyncMethodThatReturnsTaskTResult();  
+  
+// Keyword await used with a method that returns a Task.  
+await AsyncMethodThatReturnsTask();  
+```  
+  
  Выражение `await` не блокирует поток, в котором оно выполняется. Вместо этого оно приводит к тому, что компилятор регистрирует остальную часть асинхронного метода как продолжение ожидаемой задачи. Затем управление возвращается в объект, вызывающий асинхронный метод. Когда задача завершается, она вызывает свое продолжение и выполнение асинхронного метода возобновляется с того момента, где оно было остановлено.  
   
  Выражение `await` может находиться только в теле немедленно включающего метода, лямбда-выражения или анонимного метода, помеченного модификатором `async`. Термин *await* служит как ключевое слово только в этом контексте. В другом месте он интерпретируется как идентификатор. Внутри метода, лямбда-выражения или анонимного метода выражение `await` не может использоваться в теле синхронной функции, в выражении запроса, в блоке [оператора lock](../../../csharp/language-reference/keywords/lock-statement.md) или в [небезопасном](../../../csharp/language-reference/keywords/unsafe.md) контексте.  
@@ -73,8 +96,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
  В следующем примере Windows Forms демонстрируется использование `await` в асинхронном методе `WaitAsynchronouslyAsync`. Сравните поведение этого метода с поведением `WaitSynchronously`. Без применения к задаче оператора `await` метод `WaitSynchronously` выполняется синхронно, несмотря на использование модификатора `async` в его определении и вызов <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName> в его теле.  
   
-```cs  
-  
+```csharp  
 private async void button1_Click(object sender, EventArgs e)  
 {  
     // Call the method that runs asynchronously.  
@@ -111,3 +133,4 @@ public async Task<string> WaitSynchronously()
  [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md)   
  [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [async](../../../csharp/language-reference/keywords/async.md)
+

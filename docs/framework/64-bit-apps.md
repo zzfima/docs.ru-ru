@@ -18,10 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d1ddfa9842909a491af2541c9ac770989fc2164
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="64-bit-applications"></a>64-разрядные приложения
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/18/2017
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/platform (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Вы можете создавать платформенно-независимые приложения MSIL с помощью **/clr:safe**. Дополнительные сведения см. в разделе [/clr (компиляция CLR)](http://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c).<br /><br /> Visual C++ содержит отдельные компиляторы для каждой 64-разрядной операционной системы. Дополнительные сведения об использовании Visual C++ для создания приложений, выполняемых как собственные в 64-разрядной операционной системе Windows, см. в разделе [64-разрядное программирование](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
+|Visual C++|Вы можете создавать платформенно-независимые приложения MSIL с помощью **/clr:safe**. Дополнительные сведения см. в разделе [/clr (компиляция CLR)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ содержит отдельные компиляторы для каждой 64-разрядной операционной системы. Дополнительные сведения об использовании Visual C++ для создания приложений, выполняемых как собственные в 64-разрядной операционной системе Windows, см. в разделе [64-разрядное программирование](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Определение состояния EXE- или DLL-файлов  
  Чтобы определить, будет ли EXE- или DLL-файл выполняться только на определенной платформе или в эмуляторе WOW64, воспользуйтесь [средством преобразования CorFlags (CorFlags.exe)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md). Кроме того, программа CorFlags.exe используется для изменения состояния платформы EXE- или DLL-файла. В заголовке среды CLR сборки Visual Studio основной номер версии среды выполнения имеет значение 2, а дополнительный номер версии среды выполнения — значение 5. Приложения, у которых дополнительный номер версии среды выполнения имеет значение 0, обрабатываются как приложения прежних версий и всегда запускаются в эмуляторе WOW64.  

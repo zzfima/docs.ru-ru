@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b6701834f1a99536abda37f3fbc2450bd795dcb5
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -87,7 +88,6 @@ Public Class XElementNullContainer
         member = Nothing  
     End Sub  
 End Class  
-  
 ```  
   
  В этом примере выводятся следующие данные:  
@@ -103,3 +103,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>См. также  
  [Сериализация графов объектов, содержащих объекты XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+
