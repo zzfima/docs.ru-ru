@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 247fbf574f13985fc941f252c0a6e7268194c079
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-452"></a>Изменения среды выполнения в .NET Framework 4.5.2
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/18/2017
   
 |Функция|Изменение|Последствия|Область|  
 |-------------|------------|------------|-----------|  
-|Отношения через представление QueryView|Entity Framework больше не создает исключение <xref:System.StackOverflowException>, если приложение выполняет запрос, включающий представление QueryView со свойством навигации 0..1, которое пытается включить связанные сущности в запрос (например, вызывая метод `.Include(e=>e.RelatedNavProp)`).|Это изменение влияет только на код, использующий представления QueryView с отношениями 1-0..1 при выполнении запросов, вызывающих метод `.Include`. Эта функция повышает надежность и должна быть прозрачна почти для всех приложений. Тем не менее, если она вызывает непредвиденное поведение, ее можно отключить, добавив следующую запись в раздел `<appSettings>` файла конфигурации приложения:<br /><br /> `<add key="EntityFramework_SimplifyUserSpecifiedViews"  value="false" />`|Пограничный случай|  
+|Отношения через представление QueryView|Entity Framework больше не создает исключение <xref:System.StackOverflowException>, если приложение выполняет запрос, включающий представление QueryView со свойством навигации 0..1, которое пытается включить связанные объекты в запрос (например, вызывая метод `.Include(e=>e.RelatedNavProp)`).|Это изменение влияет только на код, использующий представления QueryView с отношениями 1-0..1 при выполнении запросов, вызывающих метод `.Include`. Эта функция повышает надежность и должна быть прозрачна почти для всех приложений. Тем не менее, если она вызывает непредвиденное поведение, ее можно отключить, добавив следующую запись в раздел `<appSettings>` файла конфигурации приложения:<br /><br /> `<add key="EntityFramework_SimplifyUserSpecifiedViews"  value="false" />`|Пограничный случай|  
   
 ## <a name="see-also"></a>См. также  
  [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-5-2.md)   
