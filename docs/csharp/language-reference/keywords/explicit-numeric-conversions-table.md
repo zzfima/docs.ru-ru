@@ -28,16 +28,16 @@ caps.handback.revision: 14
 |Исходный тип|Целевой тип|  
 |------------------|-----------------|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong` или `char`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` или `char`|  
+|[byte](../../../csharp/language-reference/keywords/byte.md)|`sbyte` или `char`|  
 |[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`,  `byte`,  `ushort`,  `uint`,  `ulong` или  `char`|  
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short` или `char`|  
-|[Целочисленное значение.](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` `` или `char`|  
+|[Целочисленное значение.](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` или `char`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` или `char`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` или `char`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` или `char`|  
 |[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte` или `short`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` `` или `decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` `` или `decimal`|  
+|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` или `decimal`|  
+|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` или `decimal`|  
 |[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`или `double`|  
   
 ## Заметки  
