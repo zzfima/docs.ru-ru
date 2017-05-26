@@ -67,7 +67,7 @@ ms.lasthandoff: 05/15/2017
 -   [Сравнения на равенство](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   

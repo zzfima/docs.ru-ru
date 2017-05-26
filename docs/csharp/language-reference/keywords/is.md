@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c0d300dbb47e64d2425f8af3bc6a819b145786fa
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -168,7 +169,7 @@ ms.lasthandoff: 03/13/2017
 
 # <a name="c-language-specification"></a>Спецификация языка C#
   
-[!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по C#](../../../csharp/language-reference/index.md)   

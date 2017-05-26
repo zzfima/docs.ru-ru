@@ -1,41 +1,41 @@
 ---
 title: "Инструменты Visual Studio для Docker"
 description: "Использование инструментов Visual Studio для Docker"
-keywords: ".NET, .NET Core, Docker, ASP.NET Core, Visual Studio 2015"
+keywords: .NET, .NET Core, Docker, ASP.NET Core, Visual Studio
 author: spboyer
 ms.author: shboyer
-ms.date: 09/16/2016
+ms.date: 04/27/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: d3ea05484650d64284affa70c7377df929e44bfc
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/01/2017
 
 ---
 
-# <a name="visual-studio-tools-for-docker"></a>Инструменты Visual Studio для Docker 
-Для разработки и отладки приложения в контейнере Docker может потребоваться целая череда задач по настройке различных средств. [Инструменты Visual Studio для Docker](https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4) помогут вам преодолеть все препятствия и приступить к отладке приложения с помощью клавиши F5 непосредственно в локально размещенном контейнере Docker. 
+# <a name="visual-studio-tools-for-docker"></a>Инструменты Visual Studio для Docker
 
-> [!NOTE]
->Текущая версия предназначена для контейнеров Docker в Linux. Поддержка контейнеров Windows ожидается в ближайшее время.
+[Microsoft Visual Studio 2017](https://www.visualstudio.com/) с [Docker для Windows](https://docs.docker.com/docker-for-windows/install/) поддерживает сборку, отладку и выполнение веб-приложений и консольных приложений .NET Framework и .NET Core с использованием контейнеров Windows и Linux.
 
 ## <a name="prerequisites"></a>Предварительные требования
-- [Microsoft Visual Studio 2015 с обновлением 3](https://www.visualstudio.com/downloads/download-visual-studio-vs)
-- [Предварительная версия 2 средств Visual Studio 2015 для .NET Core 1.0.1](https://go.microsoft.com/fwlink/?LinkID=827546)
-- [Docker для Windows](https://www.docker.com/products/docker#/windows) для локального выполнения контейнеров Docker
+
+- [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
+- [Docker для Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="installation-and-setup"></a>Установка и настройка
-Скачайте и установите [инструменты Visual Studio для Docker](https://aka.ms/DockerToolsForVS) из [Галереи Visual Studio](http://visualstudiogallery.msdn.microsoft.com/) или выполните их поиск в разделе **Расширения и обновления** в Visual Studio. 
 
-Обязательная конфигурация Docker для Windows предполагает настройку **[общих дисков](https://docs.docker.com/docker-for-windows/#/shared-drives)**. Этот параметр необходим для поддержки сопоставления и отладки томов.
+Установите [Microsoft Visual Studio 2017](https://www.visualstudio.com/) с рабочей нагрузкой .NET Core. Ознакомьтесь с разделом [Docker для Windows: что следует знать перед установкой](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) и установите [Docker для Windows](https://docs.docker.com/docker-for-windows/install/).
+
+Обязательная конфигурация Docker для Windows предполагает настройку **[общих дисков](https://docs.docker.com/docker-for-windows/#shared-drives)**. Этот параметр необходим для поддержки сопоставления и отладки томов.
 
 Щелкните правой кнопкой мыши значок Docker в области уведомлений, выберите пункт "Параметры", а затем выберите "Общие диски".
 
-![Общие диски](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png) 
+![Общие диски](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
 ## <a name="create-an-aspnet-web-application-and-add-docker-support"></a>Создание веб-приложения ASP.NET и добавление поддержки Docker
 
@@ -51,8 +51,8 @@ ms.lasthandoff: 03/02/2017
 
 В проект будут добавлены указанные ниже файлы.
 
-- **Dockerfile**. Файл Docker для приложений ASP.NET Core основан на образе [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore). Этот образ включает пакеты NuGet платформы ASP.NET Core, которые были предварительно скомпилированы JIT-компилятором для повышения производительности запуска. При создании консольных приложений .NET Core инструкция FROM в файле Dockerfile ссылается на самую последнюю версию образа [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet).
-- **docker-compose.yml**. Базовый файл Compose в Docker, который служит для определения коллекции образов, сборка и выполнение которых будут выполняться с помощью команд docker-compose build и run.  
+- **Dockerfile**. Файл Docker для приложений ASP.NET Core основан на образе [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore). Этот образ включает пакеты NuGet платформы ASP.NET Core, которые были предварительно скомпилированы JIT-компилятором для повышения производительности запуска. При создании консольных приложений .NET Core инструкция FROM в файле Dockerfile ссылается на самую последнюю версию образа [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet).   
+- **docker-compose.yml**. Базовый файл Compose в Docker, который служит для определения коллекции образов, сборка и выполнение которых будут выполняться с помощью команд docker-compose build и run.   
 - **docker-compose.dev.debug.yml**. Дополнительный файл docker-compose с итеративными изменениями, применяемыми в конфигурации отладки. Для их объединения среда Visual Studio вызывает команду -f docker-compose.yml -f docker-compose.dev.debug.yml. Этот файл Compose используется средствами разработки Visual Studio.   
 - **docker-compose.dev.release.yml**. Дополнительный файл Compose в Docker для отладки определения выпуска. Этот файл подключает отладчик к тому, чтобы он не менял содержимое рабочего образа.  
 
@@ -69,7 +69,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80"
-
 ``` 
 
 В этом примере `image: user/hellodockertools${TAG}` создает образ `user/hellodockertools:dev`, когда приложение выполняется в режиме **отладки**, и образ `user/hellodockertools:latest`, когда оно выполняется в режиме **выпуска**. 
@@ -77,6 +76,7 @@ services:
 Если вы планируете помещать образ в реестр, значение `user` необходимо изменить на имя пользователя Docker Hub. Например, измените его на `spboyer/hellodockertools` или на URL-адрес своего закрытого реестра `privateregistry.domain.com/` в зависимости от конфигурации.
 
 ### <a name="debugging"></a>Отладка
+
 Выберите пункт **Docker** в раскрывающемся списке отладки на панели инструментов и нажмите клавишу F5, чтобы начать отладку приложения. 
 
 - Будет получен образ microsoft/aspnetcore (если его еще нет в вашем кэше).
@@ -102,6 +102,7 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 ```
 
 ### <a name="edit-and-continue"></a>Изменить и продолжить
+
 Изменения статических полей и файлов шаблонов Razor (CSHTML) применяются автоматически без необходимости выполнять этап компиляции. Внесите изменение, сохраните его и нажмите кнопку "Обновить" в браузере, чтобы увидеть обновление.  
 
 Для внесения изменений в файлы кода требуются компиляция и перезапуск Kestrel в контейнере. После внесения изменения нажмите клавиши CTRL+F5, чтобы выполнить процесс и запустить приложение без контейнера. Повторная сборка или остановка контейнера Docker не производится. Выполнив команду `docker ps` в командной строке, можно увидеть, что исходный контейнер по-прежнему выполняется, как и 10 минут назад. 
@@ -111,7 +112,8 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   10 minutes ago      Up 10 minutes       0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-### <a name="publishing-docker-images"></a>Публикация образов Docker 
+### <a name="publishing-docker-images"></a>Публикация образов Docker
+
 После завершения цикла разработки и отладки приложения инструменты Visual Studio для Docker помогут вам создать рабочий образ приложения. Выберите в раскрывающемся списке отладки значение **Выпуск** и выполните сборку приложения. Инструментарий создаст образ с тегом `:latest`, который можно отправить в закрытый реестр или в Docker Hub. 
 
 С помощью команды `docker images` можно получить список образов.

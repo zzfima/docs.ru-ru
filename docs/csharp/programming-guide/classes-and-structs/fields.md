@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 1e5b1880e6821b2fd4595baad31f7a1bd5599ac4
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -66,7 +67,7 @@ ms.lasthandoff: 03/13/2017
  Поле может быть объявлено доступным только для чтения ([readonly](../../../csharp/language-reference/keywords/readonly.md)). Полю только для чтения можно присвоить значение только во время инициализации или в конструкторе. Поле `static``readonly` очень похоже на константу, за исключением того, что компилятор C# не имеет доступа к значению статического поля только для чтения во время компиляции, но только во время выполнения. Дополнительные сведения см. в разделе [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   

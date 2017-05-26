@@ -34,7 +34,7 @@ ms.lasthandoff: 05/11/2017
 
 В следующей таблице перечислены все версии .NET Standard и поддерживаемые платформы:
 
-[!INCLUDE [net-standard-table](../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Чтобы найти самую высокую версию .NET Standard, на которую можно ориентироваться, выполните следующее:
 1. Найдите строку, которая соответствует вашей целевой платформе .NET.
