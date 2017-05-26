@@ -1,6 +1,6 @@
 ---
 title: "byte (справочник по C#) | Документы Майкрософт"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c522506b4541edb2a81036e93e8872711f849b9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 57c4b1c7ead9386ff4067da5915a55a79f5e562e
+ms.openlocfilehash: fce94687cbf055219913758d49642c8e4a999db3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="byte-c-reference"></a>byte (справочник по C#)
+
 Ключевое слово `byte` обозначает целочисленный тип данных, в котором хранятся значения, описанные в приведенной ниже таблице.  
   
 |Тип|Диапазон|Размер|Тип платформы .NET Framework|  
@@ -44,14 +46,20 @@ ms.lasthandoff: 03/13/2017
 |`byte`|От 0 до 255|8-разрядное целое число без знака|<xref:System.Byte?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Литералы  
- Переменную типа `byte` можно объявить и инициализировать, как показано в примере:  
+
+ Переменную `byte` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал не соответствует диапазону `byte` (т. е. его значение меньше <xref:System.Byte.MinValue?displayProperty=fullName> или больше <xref:System.Byte.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
+
+В следующем примере целые числа, равные 201 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из типа [int](../../../csharp/language-reference/keywords/int.md) в значения `byte`.    
   
-```  
-byte myByte = 255;  
-```  
-  
- В приведенном выше объявлении целочисленный литерал `255` неявным образом преобразуется из типа [int](../../../csharp/language-reference/keywords/int.md) в тип `byte`. Если целочисленный литерал выходит за пределы диапазона значений типа `byte`, происходит ошибка компиляции.  
-  
+[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
+
+> [!NOTE] 
+> Для обозначения шестнадцатеричного литерала используйте префикс `0x` или `0X`, а для обозначения двоичного литерала — префикс `0b` или `0B`. У десятичных литералов префиксов нет.
+
+Начиная с версии C# 7, для повышения удобочитаемости в качестве разделителя разрядов можно также использовать символ подчеркивания (`_`), как показано в следующем примере.
+
+[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
+ 
 ## <a name="conversions"></a>Преобразования  
  Существует предопределенное неявное преобразование типа `byte` в типы [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) или [decimal](../../../csharp/language-reference/keywords/decimal.md).  
   

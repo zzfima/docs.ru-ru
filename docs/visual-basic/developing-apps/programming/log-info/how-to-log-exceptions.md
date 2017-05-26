@@ -1,84 +1,101 @@
 ---
-title: "Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "исключения, ведение журналов"
-  - "исключения, отслеживание"
+title: "Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- exceptions, logging
+- exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8a5233f5e39c5e6c423a453cd241be40877d2ba8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
-Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал информации об исключениях, возникающих в приложении.  В этих примерах показано, как использовать метод `My.Application.Log.WriteException` для регистрации в журнале явно перехватываемых и необработанных исключений.  
+---
+# <a name="how-to-log-exceptions-in-visual-basic"></a>Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic
+Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал сведений об исключениях, возникающих в приложении. Эти примеры демонстрируют применение метода `My.Application.Log.WriteException` для регистрации явно перехваченных исключений и исключений, которые не обрабатываются.  
   
- Для записи в журнал данных трассировки используйте метод `My.Application.Log.WriteEntry`.  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
+ Для записи сведений в журнал используйте метод `My.Application.Log.WriteEntry`. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
   
-### Регистрация обработанного исключения в журнале  
+### <a name="to-log-a-handled-exception"></a>Запись обработанного исключения в журнал  
   
-1.  Создайте метод, который будет генерировать информацию об исключении.  
+1.  Создайте метод, который будет генерировать сведения об исключении.  
   
      [!code-vb[VbVbalrMyApplicationLog#9](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_1.vb)]  
   
-2.  Используйте блок `Try...Catch` для перехвата исключения.  
+2.  Воспользуйтесь блоком `Try...Catch` для перехвата исключения.  
   
      [!code-vb[VbVbalrMyApplicationLog#6](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_2.vb)]  
   
-3.  Поместите код, который может сгенерировать исключение, в блок `Try`.  
+3.  Поместите код, который может генерировать исключение, в блок `Try`.  
   
-     Удалите комментарий строки `Dim` и `MsgBox`, чтобы возникло исключение <xref:System.NullReferenceException>.  
+     Раскомментируйте строки `Dim` и `MsgBox`, чтобы вызвать исключение <xref:System.NullReferenceException>.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
-4.  В блоке `Catch` используйте метод `My.Application.Log.WriteException` для записи информации об исключении.  
+4.  В блоке `Catch` для записи сведений об исключении используйте метод `My.Application.Log.WriteException`.  
   
      [!code-vb[VbVbalrMyApplicationLog#8](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_4.vb)]  
   
-     В следующем примере показан полный код для регистрации в журнале обработанного исключения.  
+     В следующем примере показан полный код для записи обработанного исключения в журнал.  
   
      [!code-vb[VbVbalrMyApplicationLog#10](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_5.vb)]  
   
-### Регистрация необработанного исключения в журнале  
+### <a name="to-log-an-unhandled-exception"></a>Запись необработанного исключения в журнал  
   
-1.  Выберите проект в **обозревателе решений**.  В меню **Проект** выберите пункт **Свойства**.  
+1.  Выберите проект в **Обозревателе решений**. В меню **Проект** выберите пункт **Свойства**.  
   
-2.  Перейдите на вкладку **Приложение**.  
+2.  Перейдите на вкладку **Приложение** .  
   
-3.  Нажмите кнопку **Просмотреть события приложения**, чтобы открыть редактор кода.  
+3.  Нажмите кнопку **Просмотреть события приложения** , чтобы открыть редактор кода.  
   
      Откроется файл ApplicationEvents.vb.  
   
-4.  Откройте в редакторе кода файл ApplicationEvents.vb.  В меню **Общие** выберите **События MyApplication**.  
+4.  Откройте в редакторе кода файл ApplicationEvents.vb. В меню **Общие** выберите пункт **События MyApplication**.  
   
-5.  В меню **Объявления** выберите **UnhandledException**.  
+5.  В меню **Объявления** выберите пункт **UnhandledException**.  
   
-     Приложение создает событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> до запуска главного приложения.  
+     Приложение создает событие <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> до запуска основного приложения.  
   
-6.  Добавьте метод `My.Application.Log.WriteException` к обработчику событий `UnhandledException`.  
+6.  Добавьте метод `My.Application.Log.WriteException` в обработчик событий `UnhandledException` .  
   
      [!code-vb[VbVbalrMyApplicationLog#4](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_6.vb)]  
   
-     В следующем примере показан полный код для регистрации в журнале необработанного исключения.  
+     В следующем примере показан полный код для записи необработанного исключения в журнал.  
   
      [!code-vb[VbVbalrMyApplicationLog#5](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_7.vb)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
  [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [Пошаговое руководство. Изменение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+ [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

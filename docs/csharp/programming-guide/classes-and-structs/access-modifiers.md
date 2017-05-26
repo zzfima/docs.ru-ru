@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9940012829038f585ad78a10b70fe2941753e40e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: c8d870feccd1fe44caf566ce45349818b6ddf6e9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Модификаторы доступа (Руководство по программированию в C#)
@@ -76,7 +77,7 @@ ms.lasthandoff: 03/13/2017
   
  Пользовательские операторы всегда должны объявляться как открытые. Дополнительные сведения см. в разделе [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md).  
   
- Деструкторы не могут иметь модификаторы доступа.  
+ Методы завершения не могут иметь модификаторы доступа.  
   
  Чтобы настроить уровень доступа для члена класса или структуры, добавьте в объявление этого члена соответствующее ключевое слово, как показано в следующем примере.  
   

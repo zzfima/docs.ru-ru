@@ -19,45 +19,85 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4c4f3ab00b4de2a6f38858dd5f332db3d47eb85b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 7acde09659624fd097471824e6407dc181d88893
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Вариативность в универсальных интерфейсах (C#)
 В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Поддержка вариативности позволяет выполнять неявное преобразование классов, реализующих эти интерфейсы. Сейчас вариативными являются следующие интерфейсы.  
   
--   <xref:System.Collections.Generic.IEnumerable%601> (T является ковариантным интерфейсом)  
+-   <xref:System.Collections.Generic.IEnumerable%601> (T является ковариантным)  
   
--   <xref:System.Collections.Generic.IEnumerator%601> (T является ковариантным интерфейсом)  
+-   <xref:System.Collections.Generic.IEnumerator%601> (T является ковариантным)  
   
--   <xref:System.Linq.IQueryable%601> (T является ковариантным интерфейсом)  
+-   <xref:System.Linq.IQueryable%601> (T является ковариантным)  
   
--   <xref:System.Linq.IGrouping%602> (`TKey` и `TElement` являются ковариантными интерфейсами)  
+-   <xref:System.Linq.IGrouping%602> (`TKey` и `TElement` являются ковариантными)  
   
--   <xref:System.Collections.Generic.IComparer%601> (T является ковариантным интерфейсом)  
+-   <xref:System.Collections.Generic.IComparer%601> (T является контравариантным)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601> (T является ковариантным интерфейсом)  
+-   <xref:System.Collections.Generic.IEqualityComparer%601> (T является контравариантным)  
   
--   <xref:System.IComparable%601> (T является ковариантным интерфейсом)  
+-   <xref:System.IComparable%601> (T является контравариантным)  
   
  Ковариация позволяет методу иметь тип возвращаемого значения, степень наследования которого больше, чем указано в параметре универсального типа интерфейса. Чтобы продемонстрировать функцию ковариации, рассмотрим следующие универсальные интерфейсы: `IEnumerable<Object>` и `IEnumerable<String>`. Интерфейс `IEnumerable<String>` не наследует интерфейс `IEnumerable<Object>`. При этом тип `String` наследует тип `Object`, и в некоторых случаях может потребоваться назначить объекты этих интерфейсов друг другу. Это показано в следующем примере кода.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<String> strings = new List<String>();  
+IEnumerable<Object> objects = strings;  
+```  
+  
  В более ранних версиях .NET Framework этот код приводит к ошибке компиляции в C# в `Option Strict On`. Но теперь можно использовать `strings` вместо `objects`, как показано в предыдущем примере, поскольку интерфейс <xref:System.Collections.Generic.IEnumerable%601> является ковариантным.  
   
- Контравариантность позволяет методу иметь типы аргументов, степень наследования которых меньше, чем указано в параметре универсального типа интерфейса. Чтобы продемонстрировать функцию контравариантности, предположим, что создан класса `BaseComparer` для сравнения экземпляров класса `BaseClass`. Класс `BaseComparer` реализует интерфейс `IEqualityComparer<BaseClass>`. Поскольку теперь интерфейс <xref:System.Collections.Generic.IEqualityComparer%601> является контравариантным, можно использовать класс `BaseComparer` для сравнения экземпляров классов, наследующих класс `BaseClass`. Это показано в следующем примере кода.  
+ Контравариантность позволяет методу иметь типы аргументов, степень наследования которых меньше, чем указано в параметре универсального типа интерфейса. Чтобы продемонстрировать функцию контравариантности, предположим, что создан класса `BaseComparer` для сравнения экземпляров класса `BaseClass`. Класс `BaseComparer` реализует интерфейс `IEqualityComparer<BaseClass>`. Поскольку теперь интерфейс <xref:System.Collections.Generic.IEqualityComparer%601> является контравариантным, для сравнения экземпляров классов, наследующих класс `BaseClass`, можно использовать класс `BaseComparer`. Это показано в следующем примере кода.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+// Simple hierarchy of classes.  
+class BaseClass { }  
+class DerivedClass : BaseClass { }  
+  
+// Comparer class.  
+class BaseComparer : IEqualityComparer<BaseClass>   
+{  
+    public int GetHashCode(BaseClass baseInstance)  
+    {  
+        return baseInstance.GetHashCode();  
+    }  
+    public bool Equals(BaseClass x, BaseClass y)  
+    {  
+        return x == y;  
+    }  
+}  
+class Program  
+{  
+    static void Test()  
+    {  
+        IEqualityComparer<BaseClass> baseComparer = new BaseComparer();  
+  
+        // Implicit conversion of IEqualityComparer<BaseClass> to   
+        // IEqualityComparer<DerivedClass>.  
+        IEqualityComparer<DerivedClass> childComparer = baseComparer;  
+    }  
+}  
+```  
+  
  Дополнительные примеры см.в разделе [Использование вариативности в интерфейсах для универсальных коллекций (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
   
  Вариативность в универсальных интерфейсах поддерживается только для ссылочных типов. Типы значений не поддерживают вариативность. Например, `IEnumerable<int>` нельзя неявно преобразовать в `IEnumerable<object>`, так как типом значения является integer.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- Кроме того, важно помнить, что классы, которые реализуют вариативные интерфейсы, сами являются инвариантными. Например, несмотря на то что <xref:System.Collections.Generic.List%601> реализует ковариантный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, нельзя неявно преобразовать `List<Object>` в `List<String>`. Это показано в следующем примере кода.  
+```csharp  
+IEnumerable<int> integers = new List<int>();  
+// The following statement generates a compiler errror,  
+// because int is a value type.  
+// IEnumerable<Object> objects = integers;  
+```  
   
-```cs  
+ Кроме того, важно помнить, что классы, которые реализуют вариативные интерфейсы, сами являются инвариантными. Например, несмотря на то, что <xref:System.Collections.Generic.List%601> реализует ковариантный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, неявно преобразовать `List<Object>` в `List<String>` нельзя. Это показано в следующем примере кода.  
+  
+```csharp  
 // The following line generates a compiler error  
 // because classes are invariant.  
 // List<Object> list = new List<String>();  
@@ -69,5 +109,5 @@ IEnumerable<Object> listObjects = new List<String>();
 ## <a name="see-also"></a>См. также  
  [Использование вариативности в интерфейсах для универсальных коллекций (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)   
  [Создание вариативных универсальных интерфейсов (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)   
- [Универсальные интерфейсы](http://msdn.microsoft.com/library/88bf5b04-d371-4edb-ba38-01ec7cabaacf)   
+ [Универсальные интерфейсы](../../../../standard/generics/interfaces.md)   
  [Вариативность в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

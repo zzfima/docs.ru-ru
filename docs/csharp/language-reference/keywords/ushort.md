@@ -1,6 +1,6 @@
 ---
 title: "ushort (справочник по C#) | Документы Майкрософт"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d27a7b3b44d91b5b52e82b13fb111d865f851297
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort (справочник по C#)
+
 Ключевое слово `ushort` обозначает целочисленный тип данных, в котором хранятся значения, размер и диапазон которых приведен в следующей таблице.  
   
 |Тип|Диапазон|Размер|Тип платформы .NET Framework|  
@@ -44,25 +46,32 @@ ms.lasthandoff: 03/13/2017
 |`ushort`|От 0 до 65 535|16-разрядное целое число без знака|<xref:System.UInt16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Литералы  
- Переменную типа `ushort` можно объявить и инициализировать, как показано в примере:  
+
+Переменную `ushort` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал не соответствует диапазону `ushort` (т. е. его значение меньше <xref:System.UInt16.MinValue?displayProperty=fullName> или больше <xref:System.UInt16.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
+
+В следующем примере целые числа, равные 65 034 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из типа [int](../../../csharp/language-reference/keywords/int.md) в значения `ushort`.    
   
-```  
-  
-ushort myShort = 65535;  
-```  
-  
- В приведенном выше объявлении целочисленный литерал `65535` неявным образом преобразуется из типа [int](../../../csharp/language-reference/keywords/int.md) в тип `ushort`. Если целочисленный литерал выходит за пределы диапазона значений типа `ushort`, происходит ошибка компиляции.  
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
+
+> [!NOTE] 
+> Для обозначения шестнадцатеричного литерала используйте префикс `0x` или `0X`, а для обозначения двоичного литерала — префикс `0b` или `0B`. У десятичных литералов префиксов нет.
+
+Начиная с версии C# 7, для повышения удобочитаемости в качестве разделителя разрядов можно также использовать символ подчеркивания (`_`), как показано в следующем примере.
+
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>Разрешение перегрузки компилятора
   
  При вызове перегруженных методов необходимо использовать приведение типов. Рассмотрим, например, следующие перегруженные методы, в которых используются параметры типов `ushort` и [int](../../../csharp/language-reference/keywords/int.md):  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
-  
+ 
  Использование приведения типа `ushort` гарантирует вызов метода правильного типа, например:  
   
-```  
+```csharp  
 // Calls the method with the int parameter:  
 SampleMethod(5);  
 // Calls the method with the ushort parameter:  
@@ -74,35 +83,32 @@ SampleMethod((ushort)5);
   
  Существует предопределенное неявное преобразование типа [byte](../../../csharp/language-reference/keywords/byte.md) или [char](../../../csharp/language-reference/keywords/char.md) в тип `ushort`. В противном случае для выполнения явного преобразования следует использовать приведение. Рассмотрим, например, следующие две переменные `x` и `y` типа `ushort`:  
   
-```  
-  
+```csharp 
 ushort x = 5, y = 12;  
 ```  
   
  Следующая инструкция назначения приведет к ошибке компиляции, потому что арифметическое выражение, расположенное справа от оператора назначения, по умолчанию оценивается как имеющее тип `int`.  
   
-```  
-  
+```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
  Для устранения этой проблемы используйте приведение:  
   
-```  
-  
+```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
  Тем не менее можно использовать следующие инструкции, в которых переменная назначения имеет такой же или больший размер при хранении:  
   
-```  
+```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
  Обратите внимание, что неявного преобразования типов с плавающей запятой в тип `ushort` не существует. Например, следующая инструкция приводит к ошибке компилятора, если не выполнить явное приведение типов:  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ushort x = 3.0;   
 // OK -- explicit conversion:  

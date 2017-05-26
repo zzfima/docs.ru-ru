@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce73de9177d6138b9acb00f3c7d3ace8e7a064f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: da3fef282ac71de07057131069bf58d4f761ad2d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="nameof-c-and-visual-basic-reference"></a>nameof (Справочник по C# и Visual Basic)
@@ -44,8 +45,7 @@ ms.lasthandoff: 03/13/2017
   
 ```csharp  
 if (x == null) throw new ArgumentNullException(nameof(x));  
-WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode”  
-  
+WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"  
 ```  
   
 ## <a name="key-use-cases"></a>Основные варианты использования  
@@ -56,7 +56,6 @@ WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode”
 void f(string s) {  
     if (s == null) throw new ArgumentNullException(nameof(s));  
 }  
-  
 ```  
   
  Ссылки на действия MVC:  
@@ -65,7 +64,6 @@ void f(string s) {
              @typeof(UserController),  
              @nameof(UserController.SignUp))  
 %>  
-  
 ```  
   
  INotifyPropertyChanged:  
@@ -74,13 +72,11 @@ int p {
     get { return this.p; }  
     set { this.p = value; PropertyChanged(this, new PropertyChangedEventArgs(nameof(this.p)); } // nameof(p) works too  
 }  
-  
 ```  
   
  Свойство зависимости XAML:  
  ```csharp  
 public static DependencyProperty AgeProperty = DependencyProperty.Register(nameof(Age), typeof(int), typeof(C));  
-  
 ```  
   
  Ведение журнала:  
@@ -88,7 +84,6 @@ public static DependencyProperty AgeProperty = DependencyProperty.Register(nameo
 void f(int i) {  
     Log(nameof(f), "method entry");  
 }  
-  
 ```  
   
  Атрибуты:  
@@ -121,11 +116,10 @@ nameof(c.Method2) -> "Method2"
 nameof(z) -> "z" // inside of Method2 ok, inside Method1 is a compiler error  
 nameof(Stuff) = "Stuff"  
 nameof(T) -> "T" // works inside of method but not in attributes on the method  
-nameof(f) -> “f”  
+nameof(f) -> "f"  
 nameof(f<T>) -> syntax error  
 nameof(f<>) -> syntax error  
-nameof(Method2()) -> error “This expression does not have a name”  
-  
+nameof(Method2()) -> error "This expression does not have a name"  
 ```  
   
  Многие из примеров выше применимы к Visual Basic.  Ниже приведены несколько примеров для Visual Basic:  
@@ -139,7 +133,6 @@ Dim x = Nothing
 NameOf(x.ToString(2)) -> ' error  "This expression does not have a name"  
 Dim o = Nothing  
 NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of instance; instance will not be evaluated"  
-  
 ```  
   
 ## <a name="remarks"></a>Примечания  
@@ -147,8 +140,22 @@ NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of ins
   
  Так как аргумент должен быть синтаксическим выражением, существует несколько запрещенных элементов, которые не следует перечислять.  Ниже приведены те элементы, которые могут приводить к ошибкам: предопределенные типы (например, `int` или `void`), типы, допускающие значение NULL (`Point?`), типы массивов (`Customer[,]`), типы указателей (`Buffer*`), полный псевдоним (`A::B`) и несвязанные универсальные типы (`Dictionary<,>`), символы предварительной обработки (`DEBUG`) и метки (`loop:`).  
   
- Если необходимо получить полное имя, можно использовать выражение `typeof` вместе с `nameof`.  
-  
+ Если необходимо получить полное имя, можно использовать выражение `typeof` вместе с `nameof`.  Пример:
+```csharp  
+class C {
+    void f(int i) {  
+        Log($"{typeof(C)}.{nameof(f)}", "method entry");  
+    }
+}
+``` 
+
+ К сожалению, `typeof` не является константным выражением, как `nameof`, поэтому использовать `typeof` в сочетании с `nameof` в тех же местах, что и `nameof`, нельзя.  Например, следующий код приведет к ошибке компиляции CS0182:
+ ```csharp  
+[DebuggerDisplay("={" + typeof(C) + nameof(GetString) + "()}")]  
+class C {  
+    string GetString() { }  
+}  
+```    
  В примерах показано, что можно использовать имя типа и получать доступ к имени метода экземпляра.  Не нужно иметь экземпляр типа, как это требуется в вычисленных выражениях.  Применение имени типа может оказаться очень удобным в некоторых ситуациях. Так как вы просто ссылаетесь на имя и не используете данные экземпляра, то не нужно придумывать переменную экземпляра или выражение.  
   
  В выражениях атрибутов в классе можно ссылаться на члены класса.  
@@ -166,3 +173,4 @@ NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of ins
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)   
  [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)
+

@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c2a9740a23ff370c1376dfa737b7e2dcd33def7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3814213389119f1fb6692fd57b0f5636a81025bb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>Практическое руководство. Использование пула потоков (C#)
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/13/2017
   
  В следующем примере пул потоков .NET Framework используется для вычисления результата `Fibonacci` для десяти чисел в диапазоне от 20 до 40. Каждый результат `Fibonacci` представлен классом `Fibonacci`, который предоставляет метод с именем `ThreadPoolCallback`, выполняющий вычисление. Создается объект, представляющий каждое значение `Fibonacci`, а затем метод `ThreadPoolCallback` передается в объект <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>, который назначает для выполнения метода доступный в пуле поток.  
   
- Поскольку каждому объекту `Fibonacci` присваивается полупроизвольное значение для расчета, а процессорное время распределяется между потоками, узнать, сколько времени займет вычисление всех десяти результатов, заранее невозможно. Именно поэтому во время конструирования каждому объекту `Fibonacci` передается экземпляр класса <xref:System.Threading.ManualResetEvent>класса. Каждый объект сигнализирует предоставленному объекту события о завершении расчетов, что позволяет основному потоку блокировать выполнение <xref:System.Threading.WaitHandle.WaitAll%2A> до получения результатов по всем десяти объектам `Fibonacci`. После этого метод `Main` отображает каждый результат `Fibonacci`.  
+ Поскольку каждому объекту `Fibonacci` присваивается полупроизвольное значение для расчета, а процессорное время распределяется между потоками, узнать, сколько времени займет вычисление всех десяти результатов, заранее невозможно. Именно поэтому во время конструирования каждому объекту `Fibonacci` передается экземпляр класса <xref:System.Threading.ManualResetEvent>. Каждый объект сигнализирует предоставленному объекту события о завершении расчетов, что позволяет основному потоку блокировать выполнение <xref:System.Threading.WaitHandle.WaitAll%2A> до получения результатов по всем десяти объектам `Fibonacci`. После этого метод `Main` отображает каждый результат `Fibonacci`.  
   
 ## <a name="example"></a>Пример  
   
@@ -159,4 +160,4 @@ Fibonacci(27) = 196418
  [Группировка потоков в пул (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
  [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  @System.Threading.Monitor   
- [Безопасность](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ [Безопасность](../../../../standard/security/index.md)

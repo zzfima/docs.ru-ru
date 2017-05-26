@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d61870e6d2d8f905c56f86bbb6e6d99d5dae80c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 47103d13a68c5250c33dbca3e89de2f1f3e13449
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="using-constructors-c-programming-guide"></a>Использование конструкторов (Руководство по программированию на C#)
@@ -116,4 +117,4 @@ Console.WriteLine("{0}, {1}", a, b);
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Деструкторы](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)

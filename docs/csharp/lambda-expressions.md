@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 82b912eb393aeaf6e222f2ce20e6a1a99b4a3662
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
+ms.openlocfilehash: bbb524e50d74207227420d073afd5758d3d5aaa7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -31,11 +32,11 @@ ms.lasthandoff: 03/13/2017
 
 Лямбда-выражение использует `=>`, [оператор объявления лямбда-выражения](language-reference/operators/lambda-operator.md), для отделения списка параметров лямбда-выражения от исполняемого кода. Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора, и поместить блок выражений или операторов с другой стороны. Например, однострочное лямбда-выражение `x => x * x` задает параметр с именем `x` и возвращает значение `x` в квадрате. Можно назначить это выражение типу делегата, как показано в следующем примере:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda1.cs#1)]
 
 Можно также передать его непосредственно в качестве аргумента метода:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
 ## <a name="expression-lambdas"></a>Выражения-лямбды ##
 
@@ -47,15 +48,15 @@ ms.lasthandoff: 03/13/2017
 
 Если лямбда-выражение имеет только один входной параметр, скобки можно не ставить; во всех остальных случаях они обязательны. Нулевое количество входных параметры задается пустыми скобками:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#1)]
 
 Два и более входных параметра разделяются запятыми и заключаются в скобки:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#2)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#2)]
 
 Как правило, компилятор использует определение типа для определения типов параметров. Тем не менее иногда компилятору бывает трудно или даже невозможно определить входные типы. В этом случае типы можно указать в явном виде, как показано в следующем примере.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
 Обратите внимание, что тело выражения-лямбды может состоять из вызова метода, как было показано в предыдущем примере. Однако при создании деревьев выражений, которые вычисляются вне .NET Framework, например в SQL Server или Entity Framework (EF), рекомендуется воздержаться от использования вызовов методов в лямбда-выражениях, поскольку методы могут не иметь смысла вне контекста среды выполнения .NET. Если вы решите использовать вызовы методов в этом случае, их необходимо тщательно протестировать, чтобы убедиться, что вызовы методов успешно разрешаются.
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 03/13/2017
 
 Тело лямбды оператора может состоять из любого количества операторов; однако на практике обычно используется не более двух-трех.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/statement1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/statement1.cs#1)]
 
 Лямбды операторов, как и анонимные методы, не могут использоваться для создания деревьев выражений.
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 03/13/2017
 
 С помощью ключевых слов [async](language-reference/keywords/async.md) и [await](language-reference/keywords/await.md) можно легко создавать лямбда-выражения и операторы, включающие асинхронную обработку. Например, в примере вызывается метод `ShowSquares`, который выполняется асинхронно.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/async1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/async1.cs#1)]
 
 Дополнительные сведения о создании и использовании асинхронных методов см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](programming-guide/concepts/async/index.md).
 
@@ -87,11 +88,11 @@ ms.lasthandoff: 03/13/2017
 
 Кортеж определяется путем заключения в скобки списка его компонентов с разделителями-запятыми. В следующем примере кортеж с пятью компонентами используется для передачи последовательности чисел в лямбда-выражение, которое удваивает каждое значение и возвращает кортеж с пятью компонентами, содержащий результат операций умножения.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples1.cs#1)]
 
 Как правило, поля кортежи именуются как `Item1`, `Item2` и т. д. Тем не менее кортеж с именованными компонентами можно определить, как показано в следующем примере:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples2.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples2.cs#1)]
 
 Дополнительные сведения о поддержке кортежей в C# см. в разделе [Типы кортежей C#](tuples.md).
 
@@ -99,35 +100,35 @@ ms.lasthandoff: 03/13/2017
 
 В LINQ to Objects, наряду с другими реализациями, есть входной параметр, тип которого принадлежит к семейству универсальных делегатов @System.Func%601. Эти делегаты используют параметры типа для определения количества и типов входных параметров, а также тип возвращаемого значения делегата. Делегаты `Func` очень полезны для инкапсуляции пользовательских выражений, которые применяются к каждому элементу в наборе исходных данных. Например, рассмотрим делегат @System.Func%601 со следующим синтаксисом:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
 Экземпляр делегата может быть создан с помощью следующего кода,
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#2)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#2)]
 
 где `int` является входным параметром, а `bool` — возвращаемым значением. Возвращаемое значение всегда указывается в последнем параметре типа. Следующий делегат `Func` при вызове возвращает значение true или false, которое показывает, равен ли входной параметр 5:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
 Лямбда-выражения также можно использовать, когда аргумент имеет тип @System.Linq.Expressions.Expression%601, например в стандартных операторах запросов, которые определены в типе @System.Linq.Queryable. При указании аргумента @System.Linq.Expressions.Expression%601 лямбда-выражение компилируется в дерево выражений. В следующем примере используется стандартный оператор запроса [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
 Компилятор может вывести тип входного параметра ввода; но его также можно определить явным образом. Данное лямбда-выражение подсчитывает указанные целые значения (`n`), которые при делении на два дают остаток 1.
 
 Следующий пример кода создает последовательность, которая содержит все элементы массива `numbers`, расположенные до 9, поскольку это первое число последовательности, не удовлетворяющее условию.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#5)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#5)]
 
 В следующем примере показано, как указать несколько входных параметров путем их заключения в скобки. Этот метод возвращает все элементы в массиве чисел до того числа, значение которого меньше его порядкового номера в массиве.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
 ## <a name="type-inference-in-lambda-expressions"></a>Определение типа в лямбда-выражениях ##
 
 При написании лямбда-выражений обычно не требуется указывать тип входных параметров, поскольку компилятор может выводить этот тип на основе тела лямбда-выражения, типов параметров и других факторов, как описано в спецификации языка C#. Для большинства стандартных операторов запросов первой входное значение имеет тип элементов в исходной последовательности. При запросе `IEnumerable<Customer>` входная переменная считается объектом `Customer`, а это означает, что у вас есть доступ к его методам и свойствам.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/infer1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/infer1.cs#1)]
 
 Общие правила определения типа для лямбда-выражений формулируются следующим образом:
 
@@ -143,7 +144,7 @@ ms.lasthandoff: 03/13/2017
 
 Лямбда-выражения могут ссылаться на *внешние переменные* (см. раздел [Анонимные методы](programming-guide/statements-expressions-operators/anonymous-methods.md)), находящиеся в области метода, в котором определена лямбда-функция, или в области типа, который содержит лямбда-выражение. Переменные, полученные таким способом, сохраняются для использования в лямбда-выражениях, даже если бы в ином случае они оказались за границами области действия и уничтожились сборщиком мусора. Внешняя переменная должна быть определенным образом присвоена, прежде чем она сможет использоваться в лямбда-выражениях. В следующем примере демонстрируются эти правила.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/scope.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/scope.cs#1)]
 
  Следующие правила применимы к области действия переменной в лямбда-выражениях.
 

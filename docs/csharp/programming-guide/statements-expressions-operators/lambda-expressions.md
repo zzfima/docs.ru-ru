@@ -32,14 +32,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6083af22fe8743a3d952138e04be90536cbd75d3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (Руководство по программированию в C#)
-Лямбда-выражение — это [анонимная функция](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md), с помощью которой можно создавать типы [делегатов](../../../csharp/programming-guide/delegates/using-delegates.md) или [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b). С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций. Лямбда-выражения особенно полезны при написании выражений запросов LINQ.  
+Лямбда-выражение — это [анонимная функция](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , с помощью которой можно создавать типы [делегатов](../../../csharp/programming-guide/delegates/using-delegates.md) или [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций. Лямбда-выражения особенно полезны при написании выражений запросов LINQ.  
   
  Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора [=>](../../../csharp/language-reference/operators/lambda-operator.md), и поместить блок выражений или операторов с другой стороны. Например, лямбда-выражение `x => x * x` задает параметр с именем `x` и возвращает значение `x` . Можно назначить это выражение типу делегата, как показано в следующем примере:  
   
@@ -69,11 +70,11 @@ namespace ConsoleApplication1
 }  
 ```  
   
- Оператор `=>` имеет такой же приоритет, что и присваивание (`=`), и является [правоассоциативным](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (см. раздел "Ассоциативность" статьи об операторах).  
+ Оператор `=>` имеет такой же приоритет, как и присваивание (`=`), и является [правоассоциативным](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (см. раздел "Ассоциативность" статьи об операторах).  
   
  Лямбда-операторы используются в запросах [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] на основе методов в качестве аргументов стандартных методов операторов запроса, таких как <xref:System.Linq.Enumerable.Where%2A>.  
   
- При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Where%2A> в классе <xref:System.Linq.Enumerable> (как это делается в [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] применительно к объектам и [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]) параметр является типом делегата <xref:System.Func%602?displayProperty=fullName>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове того же метода, например в классе <xref:System.Linq.Queryable?displayProperty=fullName> (как в [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]), параметр имеет тип <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, где Func — это любые делегаты функции с числом входных параметров до шестнадцати. Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Where` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.  
+ При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Where%2A> в классе <xref:System.Linq.Enumerable> (как это делается в [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] на объекты и [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]) параметром является тип делегата <xref:System.Func%602?displayProperty=fullName>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове того же метода, к примеру, в классе <xref:System.Linq.Queryable?displayProperty=fullName> (как это делается в [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]) типом параметра будет <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, где Func — это любые делегаты Func с числом входных параметров не более шестнадцати. Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Where` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.  
   
  Обратите внимание: в приведенном выше примере сигнатура делегата имеет один неявный входной параметр типа `int`и возвращает значение типа `int`. Лямбда-выражение можно преобразовать в делегат соответствующего типа, поскольку он также имеет один входной параметр (`x`) и возвращает значение, которое компилятор может неявно преобразовать в тип `int`. (Вывод типов более подробно рассматривается в следующих разделах.) Делегат, вызываемый посредством входного параметра 5, возвращает результат 25.  
   
@@ -115,9 +116,9 @@ namespace ConsoleApplication1
 
  Тело лямбды оператора может состоять из любого количества операторов; однако на практике обычно используется не более двух-трех.  
   
- [StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
+[!code-csharp[StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
 
- [StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
+[!code-csharp[StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
 
  Лямбды операторов, как и анонимные методы, не могут использоваться для создания деревьев выражений.  
   
@@ -174,7 +175,7 @@ public partial class Form1 : Form
  Дополнительные сведения о создании и использовании асинхронных методов см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md).  
   
 ## <a name="lambdas-with-the-standard-query-operators"></a>Лямбды со стандартными операторами запросов  
- Многие стандартные операторы запросов имеют входной параметр, тип которого принадлежит к семейству <xref:System.Func%602> универсальных делегатов. Эти делегаты используют параметры типа для определения количества и типов входных параметров, а также тип возвращаемого значения делегата. Делегаты `Func` очень полезны для инкапсуляции пользовательских выражений, которые применяются к каждому элементу в наборе исходных данных. В качестве примера рассмотрим следующий тип делегата.  
+ Многие стандартные операторы запросов имеют входной параметр, тип которого принадлежит к семейству <xref:System.Func%602> универсальных делегатов. Эти делегаты используют параметры типа для определения количества и типов входных параметров, а также тип возвращаемого значения делегата. Делегаты`Func` очень полезны для инкапсуляции пользовательских выражений, которые применяются к каждому элементу в наборе исходных данных. В качестве примера рассмотрим следующий тип делегата.  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
@@ -189,7 +190,7 @@ bool result = myFunc(4); // returns false of course
   
  Также лямбда-выражения можно использовать, когда аргумент имеет тип `Expression<Func>`, например в стандартных операторах запросов, как указано в System.Linq.Queryable. При определении аргумента `Expression<Func>` лямбда компилируется в дерево выражений.  
   
- Стандартный оператор запроса, метод <xref:System.Linq.Enumerable.Count%2A>, показан здесь:  
+ Ниже показан метод <xref:System.Linq.Enumerable.Count%2A>, являющийся стандартным оператором запроса.  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
@@ -274,7 +275,6 @@ class Test
         Console.ReadKey();  
     }  
 }  
-  
 ```  
   
  Следующие правила применимы к области действия переменной в лямбда-выражениях.  
@@ -300,6 +300,7 @@ class Test
  [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
- [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
+ [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [Примеры C# в Visual Studio 2008 (см. файлы примеров запросов LINQ и программу XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
  [Рекурсивные лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=112395)
+

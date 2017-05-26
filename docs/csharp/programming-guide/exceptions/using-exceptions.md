@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8a4bbb2f6d8060cd9196dd510cd89c827c9d697d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: a8c29002ae2287df60996ed2b23068eec1e2739b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Использование исключений (Руководство по программированию на C#)
@@ -59,7 +60,7 @@ ms.lasthandoff: 03/13/2017
   
  Если после выдачи исключения обнаружить совместимый блок `catch` в стеке вызовов не удается, происходит одно из трех:  
   
--   Если исключение возникает в деструкторе, он прерывается, и вызывается базовый деструктор (если есть).  
+-   Если исключение возникает в методе завершения, он прерывается, и вызывается базовый метод завершения (если есть).  
   
 -   Если стек вызовов содержит статический конструктор или инициализатор статического поля, выдается исключение <xref:System.TypeInitializationException>, а исходное исключение назначается свойству <xref:System.Exception.InnerException%2A> нового исключения.  
   
