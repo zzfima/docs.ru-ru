@@ -1,62 +1,67 @@
 ---
 title: "Добро пожаловать в .NET"
-description: "Начало работы"
-keywords: .NET
+description: "Начало работы с семейством технологий .NET"
+keywords: ".NET, .NET Core, начало работы, новости"
 author: richlander
-manager: wpickett
-ms.date: 10/12/2016
+ms.author: mairaw
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-technologies
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: dac380e7c493abc733c136f022d3634b807d8836
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 315b24896797badd0a7540477f79f3f220e5c300
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/18/2017
 
 ---
 
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
 
-> Ознакомьтесь с учебниками [Начало работы с .NET Core](core/getting-started.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут.
+Чтобы научиться создавать приложения .NET Core, см. статью о [начале работы с .NET Core](core/get-started.md).
 
-Добро пожаловать в .NET! С помощью .NET вы можете создавать любые приложения: от облачных и приложений Интернета вещей до игр. Вы можете приступить к созданию приложения для Windows, Linux, Android, Mac OS или iOS прямо сейчас. В мире миллионы разработчиков применяют .NET для создания критически важных бизнес-приложений, личных программ и захватывающих игр. Ваше приложение может стать следующим.
-
-Приложения и игры можно разрабатывать в Windows, Mac OS и Linux. Имеются бесплатные средства, с помощью которых можно создавать приложения или игры и развертывать их на серверах или настольных компьютерах либо публиковать в магазинах приложений. Они доступны учащимся и применяются крупными предприятиями по всему миру.
+С помощью .NET можно создавать приложения различных типов (например, облачные приложения, приложения Интернета вещей и игры), в которых используются кроссплатформенные инструменты. Эти приложения работают на платформах Android, iOS, Linux, macOS и Windows. Вы можете развертывать приложения на серверах или компьютерах и публиковать их в магазинах приложений для развертывания на мобильных устройствах. Платформа .NET доступна для студентов и любителей. Приглашаем всех принять участие в динамичном международном сообществе разработчиков и внести свой вклад в разработку различных технологий .NET.
 
 ## <a name="news"></a>Новости
 
-В сообществе .NET всегда найдется что-то новое. Вот последние новости, с которыми можно ознакомиться:
-
 - [Введение в .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
-- [Объявление о выпуске .NET Core 1.0.1](https://blogs.msdn.microsoft.com/dotnet/2016/09/13/announcing-september-2016-updates-for-net-core-1-0/)
-- [Объявление о выпуске .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)
-- [Объявление о выпуске .NET Core 1.0](https://blogs.msdn.microsoft.com/dotnet/announcing-net-core-1-0)
-- [Объявление о выпуске ASP.NET Core 1.0](https://blogs.msdn.microsoft.com/webdev/2016/06/27/announcing-asp-net-core-1-0/)
+- [Объявление о выпуске .NET Core 2.0 (предварительная версия 1)](https://blogs.msdn.microsoft.com/dotnet/2017/05/10/announcing-net-core-2-0-preview-1/)
+- [Объявление о выпуске ASP.NET Core 2.0.0 (предварительная версия 1) и обновлений для веб-разработчиков .NET](https://blogs.msdn.microsoft.com/webdev/2017/05/10/aspnet-2-preview-1/)
+- [Последнее обновление для Visual Studio 2017 и следующая предварительная версия](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/)
+- [Выпуск общедоступной версии Visual Studio для Mac](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
+- [Объявление о выпуске средств .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, пакет SDK для .NET Core 1.0.1)](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)
+- [Объявление об общедоступном выпуске Visual Studio 2017](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)
+- [Новые возможности .NET Core и Visual Studio 2017 (видео)](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)
+- [Объявление о выпуске .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)
+- [Новые возможности в C# 7.0](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/)
+- [Объявление о средствах F# 4.1 и Visual F# Tools для Visual Studio 2017](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-f-4-1-and-the-visual-f-tools-for-visual-studio-2017-2/)
 - [Решение Xamarin с открытым исходным кодом уже доступно.](https://blog.xamarin.com/live-from-evolve-open-source-xamarin-ready-for-you/)
 - [Неделя с .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
-- [Благодарим за просмотр трансляции с конференции dotnetConf 2016!](https://blogs.msdn.microsoft.com/dotnet/2016/06/09/thank-you-for-watching-dotnetconf-2016/)
+- [Конференция Build 2017 на канале Channel 9 — видео о последних технологиях и новостях Майкрософт!](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
 ## <a name="documentation"></a>Документация
 
-В этой документации вы узнаете, как создать приложение с нуля или завершить приложение, над которым вы уже работаете. Ниже перечислены ключевые разделы.
+Эта документация охватывает применение .NET для различных платформ и языков.  Чтобы начать работу с .NET для различных языков, воспользуйтесь одним из следующих разделов.
 
+- [Руководство по платформе .NET](standard/index.md)
+- [Руководство по .NET Core](core/index.md)
+- [Руководство по .NET Framework](framework/index.md)
 - [Руководство по языку C#](csharp/index.md)
 - [Руководство по языку F#](fsharp/index.md)
-- [Интерфейсы API .NET Core](../api/index.md)
-- [Руководство по .NET Core](core/index.md)
-- [Руководство по .NET Standard](standard/index.md)
+- [Руководство по Visual Basic](visual-basic/index.md)
 
-## <a name="open-source"></a>Открытый исходный код
+Кроме того, можете обратиться к [Справочнику по API .NET](https://docs.microsoft.com/dotnet/api).
 
-Многие части .NET создаются разработчиками ПО с открытым исходным кодом. Вы можете внести свой вклад в эту [документацию по .NET](https://github.com/dotnet/core-docs). Вы также можете ознакомиться с исходным кодом продуктов .NET, включая [.NET Core](https://github.com/dotnet/core) и [Xamarin](http://open.xamarin.com), и принять участие в их разработке. Основные проекты от корпорации Майкрософт были переданы в фонд [.NET Foundation](http://dotnetfoundation.org).
+## <a name="open-source"></a>Открыть исходный код
 
-## <a name="community"></a>Сообщество
+В этой документации используется полностью [открытый исходный код](https://github.com/dotnet/docs).  Вы можете внести свой вклад в проект любым удобным способом — сообщив о проблеме или приняв участие в создании документации.  Кроме того, большая часть самой платформы .NET имеет открытый исходный код.
 
-Добро пожаловать в сообщество .NET. Вы можете присоединиться к активным участникам [сообщества .NET](https://www.microsoft.com/net/community), чтобы узнать новости или обратиться за помощью.
+- [Домашняя страница .NET Core](https://github.com/dotnet/core)
+- [Библиотеки .NET](https://github.com/dotnet/corefx)
+- [Среда выполнения .NET Core](https://github.com/dotnet/coreclr)
+- [Платформа компилятора Roslyn (C# и Visual Basic) и средства IDE](https://github.com/dotnet/roslyn)
+- [Компилятор F# и средства IDE](https://github.com/microsoft/visualfsharp)
 
-
-
-<!--HONumber=Nov16_HO1-->
-
+Вы можете присоединиться к активным участникам [сообщества .NET](https://www.microsoft.com/net/community), чтобы узнать новости или обратиться за помощью.
 

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 362745101d1a8f7dd61b5e3aabe1c27190c46c07
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ea4f6ebfaf06a8b2b5d161d9986eebd28f50d5b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Практическое руководство. Чтение из текстовых файлов в Visual Basic
@@ -63,15 +64,15 @@ ms.lasthandoff: 03/13/2017
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Путь является недопустимым, так как представляет собой строку нулевой длины (пустую строку), содержит только пробелы, содержит недопустимые символы или представляет собой путь к устройству (<xref:System.ArgumentException>).  
+-   Путь является недопустимым, поскольку путь представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (<xref:System.ArgumentException>).  
   
--   Путь является недопустимым, поскольку это `Nothing` (<xref:System.ArgumentNullException>).  
+-   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   Файл не существует (<xref:System.IO.FileNotFoundException>).  
   
--   Файл уже используется другим процессом, или возникла ошибка ввода-вывода (<xref:System.IO.IOException>).  
+-   Файл уже используется другим процессом или возникла ошибка ввода-вывода (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную системой (<xref:System.IO.PathTooLongException>).  
+-   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
 -   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
