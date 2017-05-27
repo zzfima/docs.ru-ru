@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 5e1e95d92123b2874aace0c36005a8a07a6203fc
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Руководство по программированию (LINQ to XML) (C#)
@@ -39,8 +40,8 @@ ms.lasthandoff: 03/13/2017
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Общие сведения о классах [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] и подробные сведения о трех наиболее важных классах: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XDocument>.|  
-|[Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Приводит общие представления и основанные на задачах сведения о создании XML-деревьев. Можно создавать XML-деревья при помощи функциональной конструкции либо путем синтаксического анализа текста XML из строки или файла. Для заполнения дерева XML также можно использовать <xref:System.Xml.XmlReader>.|  
+|[Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Приводит общие сведения о классах [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], а также дает подробные сведения о трех самых важных классах: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> и <xref:System.Xml.Linq.XDocument>.|  
+|[Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Приводит общие представления и основанные на задачах сведения о создании XML-деревьев. Можно создавать XML-деревья при помощи функциональной конструкции либо путем синтаксического анализа текста XML из строки или файла. Для распределения содержимого по XML-дереву можно использовать <xref:System.Xml.XmlReader>.|  
 |[Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)|Предоставляет подробные сведения о создании XML-деревьев, в которых используется пространство имен.|  
 |[Сериализация XML-деревьев (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)|Описывает подходы к сериализации XML-дерева, также предоставляются инструкции о том, какие подходы использовать.|  
 |[Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|Перечисляет и описывает методы оси [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], которые необходимо изучить перед предоставлением запросов [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
