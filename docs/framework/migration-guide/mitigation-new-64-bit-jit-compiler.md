@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 994da1622246d09930fa9b74d6debac4f7a24b5b
+ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
+ms.openlocfilehash: f5bab95cc5a4ff49a0ff81e209f0a71c78914976
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Устранение рисков. Новый 64-разрядный JIT-компилятор
@@ -63,17 +63,15 @@ ms.lasthandoff: 04/18/2017
 ## <a name="mitigation-of-other-issues"></a>Устранение других проблем  
  При возникновении любых других различий в поведении между кодом, скомпилированным с помощью старого и нового 64-разрядных JIT-компиляторов, или между отладочной и окончательной версиями приложения, которые обе скомпилированы новым 64-разрядным JIT-компилятором, можно выполнить следующие действия для компиляции приложения с помощью старого 64-разрядного JIT-компилятора.  
   
--   Для каждого отдельного приложения можно добавить элемент [\<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) в файл конфигурации приложения. Следующее действие отключает компиляцию с помощью нового 64-разрядного JIT-компилятора и вместо этого использует устаревший 64-разрядный JIT-компилятор.  
+-   Для каждого отдельного приложения можно добавить элемент [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) в файл конфигурации приложения. Следующее действие отключает компиляцию с помощью нового 64-разрядного JIT-компилятора и вместо этого использует устаревший 64-разрядный JIT-компилятор.  
   
     ```xml  
-  
     <?xml version ="1.0"?>  
     <configuration>  
         <runtime>  
-           <useLegacyJIT enabled="1" />  
+           <useLegacyJit enabled="1" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   Для каждого отдельного пользователя можно добавить значение `REG_DWORD` с именем `useLegacyJit` в раздел реестра `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework`. Значение 1 включает устаревший 64-разрядный JIT-компилятор; значение 0 отключает его и включает новый 64-разрядный JIT-компилятор.  
@@ -84,4 +82,5 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>См. также  
  [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
- [Элемент \<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+ [Элемент \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+

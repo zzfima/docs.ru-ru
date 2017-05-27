@@ -2,6 +2,7 @@
 title: "Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND | Документация Майкрософт"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -17,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: 22c258b06a5cc8fa3fec72665d7e413b0cdd11ee
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND
@@ -47,7 +48,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 Разработчики, которые определили, что правильным значением был адрес области памяти, в которой содержалось значение `form.Handle`, могут отказаться от этого изменения в поведении, установив для переключателя <xref:System.Security.AppContext> `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` значение `true`:
 
-- путем программной установки переключателей совместимости в экземпляре [AppContext](assetID:///T:System.Security.AppContext);
+- путем программной установки переключателей совместимости в экземпляре <xref:System.Security.AppContext>;
 
 - путем добавления следующей строки в раздел `<runtime>` файла app.config:
    
