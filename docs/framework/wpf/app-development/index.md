@@ -17,10 +17,11 @@ caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: aa6ebe6c4ddc9b5cdec267cb2fc114440c189f0c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="application-development"></a>Разработка приложений
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/08/2017
   
 -   отслеживание переходов в [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и отдельных приложениях с окнами переходов и фреймами.  
   
- Эти возможности реализуются с помощью класса <xref:System.Windows.Application>, который добавляется в приложения с использованием *определения приложения*.  
+ Эти возможности реализуются с помощью класса <xref:System.Windows.Application>, который добавляется в приложения с помощью *определения приложения*.  
   
  Дополнительные сведения см. в разделе [Общие сведения об управлении приложением](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
   
@@ -85,29 +86,29 @@ ms.lasthandoff: 04/08/2017
   
  Дополнительные сведения см. в разделе [Общие сведения об окнах WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
   
- <xref:System.Windows.Window> поддерживает возможность создания особого типа окна, называемого диалоговым окном. Можно создавать модальные и немодальные типы диалоговых окон.  
+ <xref:System.Windows.Window> поддерживает возможность создать особый тип окна, известный как диалоговое окно. Можно создавать модальные и немодальные типы диалоговых окон.  
   
- Для удобства и получения выгоды от повторного использования и согласованного пользовательского интерфейса между приложениями [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три общих диалоговых окна [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> и <xref:System.Windows.Controls.PrintDialog>.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет три стандартных диалоговых окна [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, и <xref:System.Windows.Controls.PrintDialog>, чтобы упростить работу, предоставить возможность повторного использования кода и обеспечить согласованность пользовательского интерфейса в разных приложениях.  
   
- Окно сообщения представляет собой особый тип диалогового окна для отображения важной текстовой информации для пользователей и задания простых вопросов (да, нет, ОК, отмена). Для создания и отображения окон сообщений используется класс <xref:System.Windows.MessageBox>.  
+ Окно сообщения представляет собой особый тип диалогового окна для отображения важной текстовой информации для пользователей и задания простых вопросов (да, нет, ОК, отмена). Класс <xref:System.Windows.MessageBox> используется для создания и отображения окон сообщений.  
   
  Дополнительные сведения см. в разделе [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Навигация  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает навигацию в интернет-стиле с помощью страниц (<xref:System.Windows.Controls.Page>) и гиперссылок (<xref:System.Windows.Documents.Hyperlink>). Навигация может быть реализована разнообразными способами, включая следующие:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] поддерживает навигацию в стиле веб, реализуя страницы (<xref:System.Windows.Controls.Page>) и гиперссылки (<xref:System.Windows.Documents.Hyperlink>). Навигация может быть реализована разнообразными способами, включая следующие:  
   
 -   автономные страницы, размещенные в веб-браузере;  
   
 -   страницы, скомпилированные в приложение [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], которое размещается в веб-браузере;  
   
--   страницы компилируются в автономное приложение и размещаются с помощью окна навигации (<xref:System.Windows.Navigation.NavigationWindow>);  
+-   страницы, скомпилированные в автономном приложении и размещенные в окне навигации (<xref:System.Windows.Navigation.NavigationWindow>);  
   
--   страницы, размещенные с помощью фрейма (<xref:System.Windows.Controls.Frame>), который может размещаться в отдельной странице или странице, компилируемой либо в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], либо в автономное приложение.  
+-   страницы, размещенные во фрейме (<xref:System.Windows.Controls.Frame>), который может размещаться на отдельной странице или на странице, скомпилированной в [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] или в автономное приложение.  
   
  Для облегчения навигации [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] реализует следующее:  
   
--   <xref:System.Windows.Navigation.NavigationService>, совместно используемый обработчик переходов для обработки запросов перемещения, который используется <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] для поддержки переходов внутри приложения;  
+-   совместно используемый обработчик переходов <xref:System.Windows.Navigation.NavigationService> для обработки запросов перемещения, который используют <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> и [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] для поддержки переходов внутри приложения;  
   
 -   методы навигации для инициирования навигации;  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 04/08/2017
   
  Сведения см. в разделе [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также поддерживает специальный тип навигации, известный как структурированная навигация. Структурированная навигация может использоваться для вызова одной или нескольких страниц, которые возвращают данные структурированным и предсказуемым способом, согласованным с вызывающими функциями. Эта возможность зависит от класса <xref:System.Windows.Navigation.PageFunction%601>, который описан далее в разделе [Общие сведения о структурной навигации](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> также служит для упрощения создания сложных топологий переходов, которые описаны в разделе [Общие сведения о топологии переходов](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] также поддерживает специальный тип навигации, известный как структурированная навигация. Структурированная навигация может использоваться для вызова одной или нескольких страниц, которые возвращают данные структурированным и предсказуемым способом, согласованным с вызывающими функциями. Эта возможность зависит от класса <xref:System.Windows.Navigation.PageFunction%601>, который описан далее в разделе [Общие сведения о структурной навигации](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> также позволяет упростить создание сложных топологий переходов, которые описаны в разделе [Общие сведения о топологии переходов](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Размещение  

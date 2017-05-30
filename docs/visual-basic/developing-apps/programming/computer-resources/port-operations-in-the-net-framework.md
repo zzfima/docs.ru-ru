@@ -30,16 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 61b91fe5f3bb016bace838b9eeabb1a59190bfe9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c1a36f120e2c6d896f95967e53838fef85ce7915
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Операции с портами в .NET Framework в Visual Basic
-Доступ к последовательным портам компьютера можно получить с помощью классов [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] в пространстве имен <xref:System.IO.Ports?displayProperty=fullName>. Наиболее важный класс, <xref:System.IO.Ports.SerialPort>, предоставляет средства для синхронного и управляемого событиями ввода-вывода, доступа к состоянию подключения-отключения устройства, а также доступа к свойствам драйвера последовательного порта. Он может быть вложен в объект <xref:System.IO.Stream>, доступный через свойство <xref:System.IO.Ports.SerialPort.BaseStream%2A>. Вложение класса <xref:System.IO.Ports.SerialPort> в объект <xref:System.IO.Stream> обеспечивает доступ к этому последовательному порту для классов, использующих потоки. Пространство имен включает перечисления, которые упрощают управление последовательными портами.  
+Доступ к последовательным портам компьютера можно получить с помощью классов [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] из пространства имен <xref:System.IO.Ports?displayProperty=fullName>. Наиболее важный из них, класс <xref:System.IO.Ports.SerialPort>, предоставляет средства для синхронного и управляемого событиями ввода-вывода, для доступа к состоянию подключения-отключения устройства, а также для доступа к свойствам драйвера последовательного порта. Он может быть заключен в объект <xref:System.IO.Stream>, доступный через свойство <xref:System.IO.Ports.SerialPort.BaseStream%2A>. Упаковка <xref:System.IO.Ports.SerialPort> в объект <xref:System.IO.Stream> предоставляет доступ к последовательному порту для классов, использующих потоки. Пространство имен включает перечисления, которые упрощают управление последовательными портами.  
   
- Проще всего создать объект <xref:System.IO.Ports.SerialPort> с помощью метода <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ Самый простой способ создать объект <xref:System.IO.Ports.SerialPort> — это метод <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
 > [!NOTE]
 >  Классы [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] нельзя использовать для прямого доступа к другим типам портов, таким как параллельные порты, USB-порты и т. д.  
@@ -49,12 +50,12 @@ ms.lasthandoff: 03/13/2017
   
 |Перечисление|Описание|  
 |---|---|   
-|<xref:System.IO.Ports.Handshake>|Определяет протокол управления, которые используется для связи с объектом <xref:System.IO.Ports.SerialPort> через последовательный порт.|  
+|<xref:System.IO.Ports.Handshake>|Определяет протокол управления, который организует связь с последовательным портом для объекта <xref:System.IO.Ports.SerialPort>.|  
 |<xref:System.IO.Ports.Parity>|Задает бит четности для объекта <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.SerialData>|Указывает тип символа, полученный на последовательный порт объекта <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.SerialError>|Указывает ошибки, возникающие в объекте <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.SerialPinChange>|Указывает тип изменений, произведенных на объекте <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.StopBits>|Указывает число стоповых битов, используемых в объекте <xref:System.IO.Ports.SerialPort>.|  
+|<xref:System.IO.Ports.SerialData>|Указывает тип символа, полученного от последовательного порта в объект <xref:System.IO.Ports.SerialPort>.|  
+|<xref:System.IO.Ports.SerialError>|Указывает ошибки, возникшие в объекте <xref:System.IO.Ports.SerialPort>.|  
+|<xref:System.IO.Ports.SerialPinChange>|Указывает тип изменения, произошедшего с объектом <xref:System.IO.Ports.SerialPort>.|  
+|<xref:System.IO.Ports.StopBits>|Указывает число стоповых битов, используемых для объекта <xref:System.IO.Ports.SerialPort>.|  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Devices.Ports>   

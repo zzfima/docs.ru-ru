@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8ac37ce1a225a66069e34abedd2ee0c273b8f8a9
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML или Другие XML-технологии
@@ -31,9 +32,9 @@ ms.lasthandoff: 03/13/2017
  Сравнение [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] с моделью DOM см. в разделе [Сравнение LINQ to XML или DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML или XmlReader  
- <xref:System.Xml.XmlReader> — это быстрое однопроходное средство синтаксического анализа без кэширования.  
+ <xref:System.Xml.XmlReader> - это быстрое однопроходное средство синтаксического анализа без кэширования.  
   
- Технология [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] реализована на основе <xref:System.Xml.XmlReader>, и эти средства тесно связаны друг с другом. В то же время <xref:System.Xml.XmlReader> можно использовать отдельно.  
+ Технология [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] реализована на основе <xref:System.Xml.XmlReader>, и эти средства тесно связаны друг с другом. Но вы можете использовать объект <xref:System.Xml.XmlReader> и сам по себе.  
   
  Предположим, что необходимо создать веб-службу, которая будет выполнять в каждую секунду анализ сотен XML-документов, имеющих одинаковую структуру, так что для анализа XML потребуется записать лишь одну реализацию кода. В этом случае может потребоваться использовать объект <xref:System.Xml.XmlReader> самостоятельно.  
   

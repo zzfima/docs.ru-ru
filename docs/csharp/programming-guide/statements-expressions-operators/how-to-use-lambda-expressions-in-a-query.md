@@ -27,22 +27,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7bfc46015b0d4603c4d63478e804f862c0c65b68
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Практическое руководство. Использование лямбда-выражений в запросах (Руководство по программированию на C#)
 Использовать лямбда-выражения непосредственно в синтаксисе запросов нельзя, однако их включают в вызовы методов, а те, в свою очередь, могут содержаться в выражениях запросов. Фактически некоторые операции запросов могут быть выражены только в синтаксисе методов. Дополнительные сведения о различиях между синтаксисом запросов и синтаксисом методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано применение лямбда-выражения в основанном на методе запросе с использованием стандартного оператора запросов <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>. Обратите внимание на то, что метод <xref:System.Linq.Enumerable.Where%2A> в этом примере имеет входной параметр с делегатом типа <xref:System.Func%601>, и этот делегат принимает целое число как входящие данные и возвращает логическое значение. Лямбда-выражение может быть преобразовано в этот делегат. Если бы это был запрос [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], в котором используется метод <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>, параметр имел бы тип `Expression<Func\<int,bool>>`, однако вид лямбда-выражения при этом бы не изменился. Дополнительные сведения о типах выражений см. в разделе <xref:System.Linq.Expressions.Expression?displayProperty=fullName>.  
+ Следующий пример демонстрирует, как можно применить лямбда-выражение в запросе, основанном на методе, с помощью стандартного оператора запросов <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>. Обратите внимание на то, что метод <xref:System.Linq.Enumerable.Where%2A> в этом примере имеет входной параметр с типом делегата <xref:System.Func%601>, а этот делегат принимает на вход целое число и возвращает логическое значение. Лямбда-выражение может быть преобразовано в этот делегат. Если вы примените запрос [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], в котором используется метод <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>, параметр будет иметь тип `Expression<Func\<int,bool>>`, но лямбда-выражение останется точно таким же. Дополнительные сведения о типах выражений см. в статье <xref:System.Linq.Expressions.Expression?displayProperty=fullName>.  
   
  [!code-cs[csProgGuideLINQ#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_1.cs)]  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере показано, как использовать лямбда-выражение в вызове метода выражения запроса. Лямбда-выражения необходимы в связи с тем, что с помощью синтаксиса запросов вызвать стандартный оператор запроса <xref:System.Linq.Enumerable.Sum%2A> нельзя.  
+ В приведенном ниже примере показано, как использовать лямбда-выражение в вызове метода выражения запроса. Мы вынуждены использовать лямбда-выражения, поскольку синтаксис запросов не позволяет вызвать стандартный оператор запроса <xref:System.Linq.Enumerable.Sum%2A>.  
   
  Сначала запрос группирует учащихся по успеваемости, как задано в перечислении `GradeLevel`. Затем для каждой группы он добавляет итоговые оценки каждого учащегося. Для этого требуются две операции `Sum`. Внутренняя операция `Sum` вычисляет общий результат для каждого учащегося, а внешняя операция `Sum` рассчитывает промежуточный общий результат по всем учащимся в группе.  
   

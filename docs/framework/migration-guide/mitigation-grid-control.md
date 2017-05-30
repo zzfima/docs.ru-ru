@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: c7acce9d41af7e72b04b89751a7b186c9581dfea
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 75b3c39fa2739b58fdee5c2183d5dfaaeb2f6af5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>Устранение рисков. Выделение пространства для столбцов со звездочкой в элементе управления "Сетка"
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/18/2017
 
 Новый алгоритм изменяет фактическую ширину, назначенную \*-столбцам в ряде случаев:
 
-- Если один или несколько \*-столбцов также имеют минимальную или максимальную ширину, переопределяющую пропорциональное выделение для этого столбца. (Минимальная ширина может быть производной от явного объявления <xref:System.Windows.FrameworkElement.MinWidth%2A> или неявного минимума, полученного из содержимого столбца. Максимальная ширина может быть только задана явно, в объявлении <xref:System.Windows.FrameworkElement.MaxWidth%2A>.)
+- Если один или несколько \*-столбцов также имеют минимальную или максимальную ширину, переопределяющую пропорциональное выделение для этого столбца. (Минимальная ширина может быть производной от явного объявления <xref:System.Windows.FrameworkElement.MinWidth%2A> или неявного минимума, полученного из содержимого столбца. Максимальная ширина может быть определена только явным образом в объявлении <xref:System.Windows.FrameworkElement.MaxWidth%2A>.)
 
 - Когда один или несколько \*-столбцов объявляют слишком большой \*-вес — более 10^298.
 

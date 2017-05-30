@@ -22,12 +22,12 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Устранение рисков: кадры PNG в объектах Icon
-Начиная с .NET Framework 4.6 метод <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> успешно преобразует значки с кадрами PNG в объекты <xref:System.Drawing.Bitmap>.  
+Начиная с версии .NET Framework 4.6, метод <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> успешно преобразует значки с кадрами PNG в объекты <xref:System.Drawing.Bitmap>.  
   
- В приложениях, предназначенных для .NET Framework 4.5.2 и более ранних версий, метод <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> вызывает исключение <xref:System.ArgumentOutOfRangeException>, если у объекта <xref:System.Drawing.Icon> есть кадры PNG.  
+ В приложениях, предназначенных для .NET Framework 4.5.2 и более ранних версий, метод <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=fullName> создает исключение <xref:System.ArgumentOutOfRangeException>, если объект <xref:System.Drawing.Icon> содержит кадры PNG.  
   
 ## <a name="impact"></a>Последствия  
- Это изменение затрагивает приложения, которые компилируются повторно для платформы .NET Framework 4.6 и в которых реализуется специальная обработка исключения <xref:System.ArgumentOutOfRangeException>, создаваемого при наличии кадров PNG в объекте <xref:System.Drawing.Icon>. При выполнении в .NET Framework 4.6 преобразование проходит успешно, исключение <xref:System.ArgumentOutOfRangeException> больше не создается, поэтому обработчик исключений больше не вызывается.  
+ Это изменение затрагивает приложения, которые компилируются повторно для платформы .NET Framework 4.6 и в которых реализована специальная обработка исключения <xref:System.ArgumentOutOfRangeException>, создаваемого при наличии кадров PNG в объекте <xref:System.Drawing.Icon>. При выполнении в .NET Framework 4.6 такое преобразование теперь проходит успешно и исключение <xref:System.ArgumentOutOfRangeException> не создается, поэтому обработчик этого исключения никогда не вызывается.  
   
 ### <a name="mitigation"></a>Уменьшение  
  Если такое поведение нежелательно, можно сохранить прежнее поведение, добавив в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла app.config следующий элемент:  

@@ -59,7 +59,7 @@ ms.lasthandoff: 05/22/2017
   
 -   Элементы массива могут иметь любой тип, в том числе тип массива.  
   
--   Типы массивов — это [ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md), производные от абстрактного базового типа <xref:System.Array>. Так как этот тип реализует <xref:System.Collections.IEnumerable> и <xref:System.Collections.Generic.IEnumerable%601>, во всех массивах на C# можно использовать итерацию [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
+-   Типы массивов — это [ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md), производные от абстрактного базового типа <xref:System.Array>. Поскольку этот тип реализует <xref:System.Collections.IEnumerable> и <xref:System.Collections.Generic.IEnumerable%601>, вы можете просматривать в цикле [foreach](../../../csharp/language-reference/keywords/foreach-in.md) любые массивы C#.  
   
 ## <a name="related-sections"></a>Связанные разделы  
   

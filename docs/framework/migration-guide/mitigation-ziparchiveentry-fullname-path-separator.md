@@ -29,14 +29,14 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Устранение рисков: разделитель пути ZipArchiveEntry.FullName
-Начиная с приложений, предназначенных для [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], разделитель пути, используемый в свойстве <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=fullName>, изменен: вместо обратной косой черты ("\\"), используемой в предыдущих версиях платформы .NET Framework, теперь используется косая черта ("/").   Объекты <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=fullName> создаются путем вызова одной из перегрузок метода <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=fullName>.  
+Начиная с приложений, предназначенных для [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], изменен разделитель пути для свойства <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=fullName>: вместо обратной косой черты ("\\"), используемой в предыдущих версиях платформы .NET Framework, теперь используется прямая косая черта ("/").   Объекты <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=fullName> создаются путем вызова одной из перегрузок метода <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=fullName>.  
   
 ## <a name="impact"></a>Последствия  
  Изменение обеспечивает соответствие реализации .NET разделу 4.4.17.1 [спецификации формата ZIP-файла](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) и позволяет распаковывать ZIP-архивы в системах, отличных от Windows.  
   
  При распаковке ZIP-файла, созданного приложением, предназначенным для предыдущей версии платформы .NET Framework в операционных системах, отличающихся от Windows, таких как Macintosh, не удается сохранить структуру каталогов. Например, на компьютерах Macintosh создается набор файлов, имя которых объединяет путь к каталогу, вместе со всеми символами обратной косой черты ("\\"), и имя файла. В результате структура каталогов распакованных файлов не сохраняется.  
   
- Влияние этого изменения на ZIP-файлы, которые распаковываются в операционной системе Windows API-интерфейсами в пространстве имен .NET Framework <xref:System.IO>, должно быть минимальным, поскольку эти API могут беспрепятственно обрабатывать как косую черту ("/"), так и обратную косую черту ("\\") в качестве символа разделителя пути.  
+ Влияние этого изменения на ZIP-файлы, которые распаковываются в операционной системе Windows API-интерфейсами из пространства имен .NET Framework <xref:System.IO>, должно быть минимальным, поскольку эти API без проблем принимают в качестве символа разделителя пути как косую черту ("/"), так и обратную косую черту ("\\") .  
   
 ## <a name="mitigation"></a>Уменьшение  
  Если такое поведение нежелательно, от него можно отказаться, добавив параметр конфигурации в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения. Ниже показаны как раздел `<runtime>`, так и параметр отключения функции.  
