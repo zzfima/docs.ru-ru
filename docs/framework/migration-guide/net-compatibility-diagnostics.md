@@ -200,7 +200,7 @@ ms.lasthandoff: 05/22/2017
 |Область|Пограничный случай|  
 |Версия|4.5|  
 |Тип|Среда выполнения|  
-|Затронутые API|<xref:System.Xml.Linq.LoadOptions?displayProperty=fullName>|  
+|Затронутые API|<xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=fullName>|  
 |Анализаторы|CD0019|  
   
 <a name="diagnostic20"></a>   
