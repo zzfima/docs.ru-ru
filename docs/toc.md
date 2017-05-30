@@ -55,7 +55,7 @@
 ## [Необходимые компоненты для Windows](core/windows-prerequisites.md)
 ## [Предварительные требования для macOS](core/macos-prerequisites.md)
 ## [Учебники](core/tutorials/index.md)
-### [Building a complete .NET Core solution on Windows, using Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md) (Создание полного решения .NET Core в Windows с помощью Visual Studio 2017)
+### [Создание полного решения .NET Core в Windows с помощью Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Начало работы с .NET Core в Mac OS](core/tutorials/using-on-macos.md)
 ### [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs.md)
 ### [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs-full-solution.md)
