@@ -17,25 +17,25 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: c51d905ab1b2dc6ca923463536ecdc19735d7643
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: ec15e14b299b5bed46d8d35a8c60e5f73a1d5237
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
   
 > [!NOTE]
->  Сведения о скачивании и установке платформы .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md).  
+>  Сведения о скачивании и установке .NET Framework см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
   
  В следующей таблице приводится краткий обзор истории версий .NET Framework и сопоставление каждой версии с Visual Studio, Windows и Windows Server. Обратите внимание, что Visual Studio предусматривает работу с различными версиями, поэтому вы не ограничены только указанной версией платформы .NET Framework.  
   
  В каждой новой версии платформы .NET Framework сохранены функции предыдущих версий и добавлены новые функции. Среда CLR определяется своим собственным номером версии. Номер версии платформы .NET Framework увеличивается при каждом выпуске, хотя версия среды CLR увеличивается не всегда. Например, в .NET Framework 4 и более поздние выпуски входит среда CLR 4, а в .NET Framework 2.0, 3.0 и 3.5 — среда CLR 2.0. (Версии 3 среды CLR не было.)  
   
- Полный список поддерживаемых операционных систем см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения о загрузках см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Для определения установленных версий .NET Framework на компьютере см. [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
+ Полный список поддерживаемых операционных систем см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Скачиваемые файлы см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md). Для определения установленных версий .NET Framework на компьютере см. [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
- Версии платформы .NET Framework, установленные в версиях операционных систем, помеченные птичкой (✓) в столбцах **Включено в/может быть установлено в Windows** и **Включено в/может быть установлено в Windows Server**, необходимо [включить в панели управления](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md) (для Windows) или с помощью диспетчера сервера (для Windows Server).  
+ Версии платформы .NET Framework, установленные в версиях операционных систем, помеченные птичкой (✓) в столбцах **Включено в/может быть установлено в Windows** и **Включено в/может быть установлено в Windows Server**, необходимо [включить в панели управления](../../../docs/framework/install/dotnet-35-windows-10.md) (для Windows) или с помощью диспетчера сервера (для Windows Server).  
   
 |Версия платформы .NET Framework|Версия среды CLR|Функции|Включено в версию Visual Studio|✓ Включено в<br />+ Может быть установлено в<br />Windows|✓ Включено в<br />+ Может быть установлено в<br />Windows Server|Определение установленной версии .NET|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
@@ -64,12 +64,12 @@ ms.lasthandoff: 05/15/2017
   
      [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] и [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] используются здесь только в качестве примеров. Этот принцип применяется к любому приложению, предназначенному для более поздней версии .NET Framework, чем установленная в системе, в которой оно выполняется.  
   
- Некоторые изменения в платформе .NET Framework могут потребовать внесения изменений в код вашего приложения. Ознакомьтесь с разделом [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md), прежде чем запускать существующие приложения в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или более поздних версий. Дополнительные сведения об установке текущей версии см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Сведения о поддержке платформы .NET Framework см. на странице [Политика жизненного цикла поддержки платформы Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) веб-сайта поддержки Майкрософт.  
+ Некоторые изменения в платформе .NET Framework могут потребовать внесения изменений в код вашего приложения. Ознакомьтесь с разделом [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md), прежде чем запускать существующие приложения в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или более поздних версий. Дополнительные сведения об установке текущей версии см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md). Сведения о поддержке платформы .NET Framework см. на странице [Политика жизненного цикла поддержки платформы Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) веб-сайта поддержки Майкрософт.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Выбор более старых версий в качестве целевой платформы и запуск приложений  
  Версии .NET Framework 2.0, 3.0 и 3.5 построены на базе одной и той же версии среды CLR (CLR 2.0). Эти версии представляют последовательные уровни единой установки. Каждая версия построена на базе предыдущих версий. Невозможно запустить версии 2.0, 3.0 и 3.5 параллельно на одном компьютере. При установке версии 3.5 автоматически создаются уровни версий 2.0 и 3.0, и приложения, созданные для версий 2.0, 3.0 и 3.5, могут выполняться в версии 3.5. Однако в .NET Framework 4 этот принцип "слоев" закончился. Начиная с .NET Framework 4, разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Дополнительные сведения см. в разделе [Сборки и параллельное выполнение](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
   
- Кроме того, если в приложении выбрана целевая платформа версии 2.0, 3.0 или 3.5, пользователям может потребоваться включить .NET Framework 3.5 на компьютере с [!INCLUDE[win8](../../../includes/win8-md.md)] или [!INCLUDE[win81](../../../includes/win81-md.md)], прежде чем они смогут запустить это приложение. Дополнительные сведения см. в разделе [Установка .NET Framework 3.5 в Windows 8 и более поздних версий](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md).  
+ Кроме того, если в приложении выбрана целевая платформа версии 2.0, 3.0 или 3.5, пользователям может потребоваться включить .NET Framework 3.5 на компьютере с [!INCLUDE[win8](../../../includes/win8-md.md)] или [!INCLUDE[win81](../../../includes/win81-md.md)], прежде чем они смогут запустить это приложение. Дополнительные сведения см. в разделе [Установка .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).  
   
 ## <a name="next-steps"></a>Следующие шаги  
   
@@ -81,8 +81,9 @@ ms.lasthandoff: 05/15/2017
   
 -   Сведения об определении версий или обновлений, установленных на компьютере, см. в разделах [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) и [Практическое руководство. Определение установленных обновлений .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md).  
   
-## <a name="see-also"></a>См. также  
- [Совместимость версий](../../../docs/framework/migration-guide/version-compatibility.md)   
- [Политика жизненного цикла поддержки Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
- [Устранение неполадок](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+## <a name="see-also"></a>См. также
+
+[Совместимость версий](../../../docs/framework/migration-guide/version-compatibility.md)   
+[Политика жизненного цикла поддержки Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 

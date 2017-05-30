@@ -55,13 +55,13 @@ ms.lasthandoff: 05/22/2017
   
 -   Путь является недопустимым по одной из следующих причин: это строка нулевой длины; она содержит только пробелы; она содержит недопустимые знаки. (<xref:System.ArgumentException>).  
   
--   Путь является недопустимым, поскольку это `Nothing` (<xref:System.ArgumentNullException>).  
+-   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Параметр `File` содержит несуществующий путь (<xref:System.IO.FileNotFoundException> или <xref:System.IO.DirectoryNotFoundException>).  
+-   `File` указывает на путь, который не существует (<xref:System.IO.FileNotFoundException> или <xref:System.IO.DirectoryNotFoundException>).  
   
--   Файл уже используется другим процессом, или возникла ошибка ввода-вывода (<xref:System.IO.IOException>).  
+-   Файл уже используется другим процессом или возникла ошибка ввода-вывода (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную системой (<xref:System.IO.PathTooLongException>).  
+-   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
 -   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   

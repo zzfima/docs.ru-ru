@@ -42,11 +42,11 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic
-Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей к файлам. Для указания определенного шаблона можно использовать параметр `wildCards` .  
+Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей для файлов. Для указания определенного шаблона можно использовать параметр `wildCards` .  
   
  Если соответствующие файлы не найдены, возвращается пустая коллекция.  
   
- Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> позволяет копировать файлы в каталог.  
+ Для копирования файлов в каталог можно использовать метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>.  
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Копирование файлов с определенным шаблоном в каталог  
   
@@ -70,15 +70,15 @@ ms.lasthandoff: 05/22/2017
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  При следующих условиях возможно возникновение исключения:  
   
--   Путь является недопустимым, так как представляет собой строку нулевой длины (пустую строку), содержит только пробелы, содержит недопустимые символы или представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
+-   Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Путь является недопустимым, поскольку это `Nothing` (<xref:System.ArgumentNullException>).  
+-   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   Каталог не существует (<xref:System.IO.DirectoryNotFoundException>).  
   
 -   Каталог указывает на существующий файл (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную системой (<xref:System.IO.PathTooLongException>).  
+-   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
 -   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   

@@ -52,19 +52,19 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Неверное имя каталога. Например, оно содержит недопустимые символы или только пробелы (<xref:System.ArgumentException>).  
+-   Неверное имя каталога. Например, оно содержит недопустимые символы или состоит из одних пробелов (<xref:System.ArgumentException>).  
   
 -   Родительский каталог создаваемого каталога доступен только для чтения (<xref:System.IO.IOException>).  
   
--   Имя каталога имеет значение `Nothing` (<xref:System.ArgumentNullException>).  
+-   Именем каталога является `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   Слишком длинное имя каталога (<xref:System.IO.PathTooLongException>).  
   
--   Имя каталога содержит только двоеточие ":" (<xref:System.NotSupportedException>).  
+-   Имя каталога состоит из двоеточия ":" (<xref:System.NotSupportedException>).  
   
--   Пользователь не имеет необходимых разрешений для создания каталога (<xref:System.UnauthorizedAccessException>).  
+-   У пользователя нет разрешения на создание каталога (<xref:System.UnauthorizedAccessException>).  
   
--   У пользователя отсутствуют разрешения в ситуации частичного доверия (<xref:System.Security.SecurityException>).  
+-   У пользователя нет разрешений в ситуации частичного доверия (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   

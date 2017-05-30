@@ -28,9 +28,9 @@ ms.lasthandoff: 05/22/2017
 
 Свойство <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>, которое появилось в .NET Framework 2.0, позволяет приложению зарегистрировать значение дескриптора родительского окна таким образом, что любой пользовательский интерфейс, необходимый для доступа к ключу (например, запрос ПИН-кода или окно согласия), будет открываться в режиме модального дочернего окна для указанного окна. В приложениях, ориентированных на .NET Framework версии 4.7, этому свойству можно назначить дескриптор окна (HWND).
 
-В версиях .NET Framework до 4.6.2 для значения, присваиваемого свойству <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>, ожидался тип <xref:System.IntPtr>, представляющий расположение в памяти, где находилось значение HWND. В Windows 7 и более ранних версиях операционной системы Windows задание свойству значения `form.Handle` не на что не влияло, но в Windows 8 и более поздних версиях оно приводит к <xref:System.Security.Cryptography> с сообщением "Неверный параметр".
+В версиях .NET Framework до 4.6.2 для значения, присваиваемого свойству <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>, ожидался тип <xref:System.IntPtr>, представляющий расположение в памяти, где находилось значение HWND. В Windows 7 и более ранних версиях операционной системы Windows задание свойству значения `form.Handle` не на что не влияло, но в Windows 8 и более поздних версиях оно приводит к <xref:System.Security.Cryptography> с сообщением "Неверный параметр".
 
-В приложениях, ориентированных на .NET Framework версии 4.7, приложение Windows Forms может задать свойство <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A> с помощью похожего кода:
+Начиная с приложений, предназначенных для .NET Framework 4.7, приложение Windows Forms может установить значение свойства <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A> с помощью следующего кода:
 
 ```csharp
 cspParameters.ParentWindowHandle = form.Handle;
@@ -46,7 +46,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>Уменьшение
 
-Разработчики, которые определили, что правильным значением был адрес области памяти, в которой содержалось значение `form.Handle`, могут отказаться от этого изменения в поведении, установив для переключателя <xref:System.Security.AppContext> `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` значение `true`:
+Разработчики, которые определили, что правильным значением был адрес области памяти, в которой содержалось значение `form.Handle`, могут отказаться от этого изменения в поведении, установив параметру `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` переключателя <xref:System.Security.AppContext> значение `true`:
 
 - путем программной установки переключателей совместимости в экземпляре <xref:System.Security.AppContext>;
 

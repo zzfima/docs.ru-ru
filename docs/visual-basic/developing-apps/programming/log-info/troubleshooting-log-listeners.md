@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
   
 ### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a>Определение прослушивателей журнала для объекта Log в коде  
   
-1.  Импортируйте пространство имен <xref:System.Diagnostics> в начале файла кода. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+1.  Импортируйте пространство имен <xref:System.Diagnostics> в начало файла кода. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
      [!code-vb[VbVbalrMyApplicationLog#13](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_1.vb)]  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbVbalrMyApplicationLog#19](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_3.vb)]  
   
-     Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
+     Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

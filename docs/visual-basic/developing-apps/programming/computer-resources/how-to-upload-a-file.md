@@ -42,7 +42,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Практическое руководство. Передача файла в Visual Basic
-Для передачи файла и хранения его в удаленном расположении можно использовать метод <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>. Если для параметра `ShowUI` установлено значение `True`, отображается диалоговое окно, показывающее ход загрузки и позволяющее пользователю отменить операцию.  
+Метод <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> можно использовать для отправки файла и сохранения его в удаленном расположении. Если для параметра `ShowUI` установлено значение `True`, отображается диалоговое окно, показывающее ход загрузки и позволяющее пользователю отменить операцию.  
   
 ### <a name="to-upload-a-file"></a>Передача файла  
   
@@ -65,11 +65,11 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Исключение может возникнуть при следующих условиях:  
   
--   Путь локального файла не является допустимым (<xref:System.ArgumentException>).  
+-   Недопустимый путь к локальному файлу (<xref:System.ArgumentException>).  
   
--   Проверка подлинности не пройдена (<xref:System.Security.SecurityException>).  
+-   Сбой проверки подлинности (<xref:System.Security.SecurityException>).  
   
--   Истекло время ожидания подключения (<xref:System.TimeoutException>).  
+-   Время ожидания соединения истекло (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   

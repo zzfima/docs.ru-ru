@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Практическое руководство. Запись текста в файлы с помощью StreamWriter в Visual Basic
-Код в этом примере открывает объект <xref:System.IO.StreamWriter> с помощью метода `My.Computer.FileSystem.OpenTextFileWriter` и использует его для записи строки в текстовый файл с помощью метода <xref:System.IO.TextWriter.WriteLine%2A> класса <xref:System.IO.StreamWriter>.  
+В этом примере с помощью метода `My.Computer.FileSystem.OpenTextFileWriter` открывается объект <xref:System.IO.StreamWriter>, который используется для записи строки в текстовый файл с помощью метода <xref:System.IO.TextWriter.WriteLine%2A> класса <xref:System.IO.StreamWriter>.  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbFileIOWrite#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-with-a-streamwriter_1.vb)]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
   
 -   Файл существует и является файлом только для чтения (<xref:System.IO.IOException>).  
   
--   Диск переполнен (<xref:System.IO.IOException>).  
+-   Диск заполнен (<xref:System.IO.IOException>).  
   
 -   Слишком длинное имя пути (<xref:System.IO.PathTooLongException>).  
   

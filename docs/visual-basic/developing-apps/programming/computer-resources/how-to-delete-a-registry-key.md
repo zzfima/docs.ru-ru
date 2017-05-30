@@ -45,7 +45,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Практическое руководство. Удаление раздела реестра в Visual Basic
-Для удаления разделов реестра можно использовать методы <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> и <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29>.  
+Методы <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> и <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> можно использовать для удаления разделов реестра.  
   
 ## <a name="procedure"></a>Процедура  
   
@@ -60,11 +60,11 @@ ms.lasthandoff: 05/22/2017
   
  При следующих условиях возможно возникновение исключения:  
   
--   Имя раздела переставляет собой значение `Nothing` (<xref:System.ArgumentNullException>).  
+-   Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Пользователь не имеет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).  
+-   У пользователя нет разрешений на удаление разделов реестра (<xref:System.Security.SecurityException>).  
   
--   Длина имени раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
+-   Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
 -   Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
   
