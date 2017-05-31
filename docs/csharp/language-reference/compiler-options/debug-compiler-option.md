@@ -43,7 +43,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /debug[+ | -]  
 /debug:{full | pdbonly}  
 ```  
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>Пример  
  Разместите отладочную информацию в выходном файле `app.pdb`.  
   
-```  
+```console  
 csc /debug /pdb:app.pdb test.cs  
 ```  
   

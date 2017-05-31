@@ -46,7 +46,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
@@ -76,14 +76,14 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>Пример  
  Компиляция `in.cs` и создание ссылки на файл ресурсов `rf.resource`:  
   
-```  
+```console  
 csc /linkresource:rf.resource in.cs  
 ```  
   
 ## <a name="example"></a>Пример  
  Скомпилируйте `A.cs` в библиотеку DLL, создайте ссылку на машинную библиотеку N.dll и поместите выходные данные в глобальный кэш сборок (GAC). В этом примере оба файла A.dll и N.dll будут расположены в глобальном кэше сборок.  
   
-```  
+```console  
 csc /linkresource:N.dll /t:library A.cs  
 gacutil -i A.dll  
 ```  
@@ -91,7 +91,7 @@ gacutil -i A.dll
 ## <a name="example"></a>Пример  
  В этом примере выполняются те же действия, что и в предыдущем примере, но с использованием параметров компоновщика сборок.  
   
-```  
+```console  
 csc /t:module A.cs  
 al /out:A.dll A.netmodule /link:N.dll   
 gacutil -i A.dll  

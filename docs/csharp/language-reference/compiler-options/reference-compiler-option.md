@@ -48,7 +48,7 @@ ms.lasthandoff: 03/31/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/31/2017
   
  При этом устанавливаются внешние псевдонимы "GridV1" и "GridV2", которые используются посредством оператора "extern":  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
@@ -103,13 +103,13 @@ extern alias GridV2;
   
  После выполнения описанных выше действий можно ссылаться на элемент управления "сетка" из файла grid.dll, предваряя имя элемента управления префиксом GridV1, как показано в следующем коде:  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
  Кроме того, можно ссылаться на элемент управления "сетка" из файла grid20.dll, предваряя имя элемента управления префиксом GridV2, как показано ниже:  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   

@@ -41,7 +41,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /appconfig:file  
 ```  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>Пример  
  В следующем примере показан файл app.config, позволяющий приложению иметь ссылки на реализации .NET Framework и .NET Framework для реализации Silverlight любой сборки .NET Framework, существующей в обеих реализациях. Параметр компилятора **/appconfig** указывает расположение этого файла app.config.  
   
-```  
+```xml  
 <configuration>  
       <runtime>  
       <assemblyBinding>  

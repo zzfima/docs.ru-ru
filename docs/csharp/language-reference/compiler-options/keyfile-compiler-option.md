@@ -43,7 +43,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /keyfile:file  
 ```  
   
