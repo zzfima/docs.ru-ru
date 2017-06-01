@@ -41,7 +41,7 @@ ms.lasthandoff: 05/22/2017
 ## <a name="mitigation"></a>Уменьшение  
  Если такое поведение нежелательно, от него можно отказаться, добавив параметр конфигурации в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения. Ниже показаны как раздел `<runtime>`, так и параметр отключения функции.  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=true" />  
 </runtime>  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/22/2017
   
  Кроме того, в приложениях, предназначенных для предыдущих версий .NET Framework, но выполняемых в [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] и более поздних версиях, можно включить такое поведение, добавив параметр конфигурации в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла конфигурации приложения. Ниже показаны как раздел `<runtime>`, так и параметр включения функции.  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=false" />  
 </runtime>  

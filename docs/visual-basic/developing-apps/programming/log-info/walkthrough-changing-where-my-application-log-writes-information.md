@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f2563a334248740ff1bd4fc49662229d8f3bf27e
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Пошаговое руководство. Изменение места записи информации для My.Application.Log (Visual Basic)
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  Добавьте в этот раздел `<listeners>` следующие элементы.  
   
-    ```  
+    ```xml  
     <!-- Uncomment to connect the application file log. -->  
     <!-- <add name="FileLog" /> -->  
     <!-- Uncomment to connect the event log. -->  
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/22/2017
   
 6.  Добавьте в этот раздел `<sharedListeners>` следующие элементы.  
   
-    ```  
+    ```xml  
     <add name="FileLog"  
          type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
                Microsoft.VisualBasic, Version=8.0.0.0,   
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/22/2017
   
 7.  Содержимое файла app.config должно быть похоже на следующий код XML:  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.diagnostics>  
@@ -176,17 +176,17 @@ ms.lasthandoff: 05/22/2017
   
 1.  Найдите элемент `<add>` прослушивателя из раздела `<sharedListeners>` .  
   
-2.  Атрибут `type` содержит имя типа прослушивателя. Этот тип должен наследовать от класса <xref:System.Diagnostics.TraceListener>. Используйте строгое имя типа, чтобы гарантировать, что используется верный тип. Дополнительные сведения см. в разделе "Создание ссылки на строго именованный тип" ниже.  
+2.  Атрибут `type` содержит имя типа прослушивателя. Тип должен наследоваться от класса <xref:System.Diagnostics.TraceListener>. Используйте строгое имя типа, чтобы гарантировать, что используется верный тип. Дополнительные сведения см. в разделе "Создание ссылки на строго именованный тип" ниже.  
   
      Вот некоторые типы, которые можно использовать:  
   
-    -   прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, который записывает данные в файловый журнал;  
+    -   Прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, который добавляет запись в журнал файлов.  
   
-    -   прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>, который записывает информацию в журнал событий компьютера, указанный в параметре `initializeData`;  
+    -   Прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>, который добавляет информацию в журнал событий компьютера, определяемый параметром `initializeData`.  
   
-    -   прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>, которые записывают данные в файл, указанный в параметре `initializeData`;  
+    -   Прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>, которые добавляют запись в файл, определяемый параметром `initializeData`.  
   
-    -   прослушиватель <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>, который выводит данные в консоль командной строки.  
+    -   Прослушиватель <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>, который добавляет запись в консоль командной строки.  
   
      Сведения о том, куда записывают информацию другие типы прослушивателей журналов, приведены в документации по этим типам.  
   
@@ -213,5 +213,5 @@ ms.lasthandoff: 05/22/2017
  <xref:System.Diagnostics.TraceListener>   
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ [Практическое руководство. Запись сведений о событиях в текстовый файл](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
  [Практическое руководство. Запись в журнал событий приложения](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

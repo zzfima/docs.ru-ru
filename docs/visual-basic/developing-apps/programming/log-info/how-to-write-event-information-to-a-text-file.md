@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  Добавьте в этот раздел `<listeners>` следующий элемент:  
   
-    ```  
+    ```xml  
     <add name="FileLogListener" />  
     ```  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  Добавьте в этот раздел `<sharedListeners>` следующий элемент:  
   
-    ```  
+    ```xml  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   
