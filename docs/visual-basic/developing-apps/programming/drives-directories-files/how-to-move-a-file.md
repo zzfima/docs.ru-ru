@@ -1,64 +1,82 @@
 ---
-title: "Практическое руководство. Перемещение файла в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "файлы, перемещение"
+title: "Практическое руководство. Перемещение файла в Visual Basic | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- files, moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Практическое руководство. Перемещение файла в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 44e0e81a28d1475a3f3cf6bcb7372b05eb8037bf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
+---
+# <a name="how-to-move-a-file-in-visual-basic"></a>Практическое руководство. Перемещение файла в Visual Basic
 Метод `My.Computer.FileSystem.MoveFile` может использоваться для перемещения файла в другую папку. Если целевая структура не существует, она будет создана.  
   
-### Перемещение файла  
+### <a name="to-move-a-file"></a>Перемещение файла  
   
--   Используйте метод `MoveFile`, чтобы переместить файл, указав имя и расположение исходного и целевого файлов. В данном примере перемещается файл с именем `test.txt` из `TestDir1` в `TestDir2`. Обратите внимание, что имя целевого файла указывается даже несмотря на то, что оно совпадает с именем исходного файла.  
+-   Используйте метод `MoveFile` , чтобы переместить файл, указав имя и расположение исходного и целевого файлов. В данном примере перемещается файл с именем `test.txt` из `TestDir1` в `TestDir2`. Обратите внимание, что имя целевого файла указывается даже несмотря на то, что оно совпадает с именем исходного файла.  
   
      [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
   
-### Перемещение и переименование файла  
+### <a name="to-move-a-file-and-rename-it"></a>Перемещение и переименование файла  
   
--   Используйте метод `MoveFile`, чтобы переместить файл, указав имя и расположение исходного файла, целевое расположение и новое имя в целевом расположении. В данном примере файл с именем `test.txt` перемещается из `TestDir1` в `TestDir2` и переименовывается в `nexttest.txt`.  
+-   Используйте метод `MoveFile` , чтобы переместить файл, указав имя и расположение исходного файла, целевое расположение и новое имя в целевом расположении. В данном примере файл с именем `test.txt` перемещается из `TestDir1` в `TestDir2` и переименовывается в `nexttest.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
   
-## Отказоустойчивость  
+## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Путь является недопустимым, так как он представляет собой строку нулевой длины \(пустую строку\), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству \(начинается с символов \\\\.\\\) \(<xref:System.ArgumentException>\).  
+-   Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Путь не является допустимым, поскольку он равен `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Параметр `destinationFileName` имеет значение `Nothing` или является пустой строкой \(<xref:System.ArgumentNullException>\).  
+-   Параметр `destinationFileName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
   
--   Исходный файл является недопустимым или не существует \(<xref:System.IO.FileNotFoundException>\).  
+-   Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).  
   
--   Объединенный путь указывает на существующий каталог, целевой файл существует и `overwrite` имеет значение `False`, файл в целевом каталоге с тем же именем уже используется или пользователь не имеет необходимых разрешений для доступа к файлу \(<xref:System.IO.IOException>\).  
+-   Объединенный путь указывает на существующий каталог, целевой файл существует и `overwrite` имеет значение `False`, файл в целевом каталоге с тем же именем уже используется или пользователь не имеет необходимых разрешений для доступа к файлу (<xref:System.IO.IOException>).  
   
--   Имя файла или каталога в пути содержит двоеточие \(:\) или имеет недопустимый формат \(<xref:System.NotSupportedException>\).  
+-   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
--   `showUI` имеет значение `True`, `onUserCancel` имеет значение `ThrowException`, и либо пользователь отменил операцию, либо произошла неопределенная ошибка ввода\-вывода \(<xref:System.OperationCanceledException>\).  
+-   Параметр `showUI` имеет значение `True`, параметр `onUserCancel` имеет значение `ThrowException`, и либо пользователь отменил операцию, либо произошла неопределенная ошибка ввода-вывода (<xref:System.OperationCanceledException>).  
   
--   Длина пути превышает максимальную длину, определенную в системе \(<xref:System.IO.PathTooLongException>\).  
+-   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
--   У пользователя отсутствуют необходимые разрешения на просмотр пути \(<xref:System.Security.SecurityException>\).  
+-   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
   
--   У пользователя отсутствует необходимое разрешение \(<xref:System.UnauthorizedAccessException>\).  
+-   У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>   
  [Практическое руководство. Переименование файла](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)   
  [Практическое руководство. Создание копии файла в другом каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   

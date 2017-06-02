@@ -1,68 +1,72 @@
 ---
-title: "Managed Threading | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "threading [.NET Framework], about threading"
-  - "managed threading"
+title: "Управляемые потоки | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- threading [.NET Framework], about threading
+- managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3d6aa14f94b4a1537b49cda17229cd073b5d8486
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
+
 ---
-# Managed Threading
-При разработке приложения для компьютеров с одним или несколькими процессорами может потребоваться, чтобы приложение обеспечивало взаимодействие с пользователем, даже если это приложение в настоящий момент занято другими действиями.  Одним из способов, обеспечивающих взаимодействие приложения и пользователя в процессе обработки данным приложением других событий, является использование нескольких потоков выполнения.  Поскольку в этом разделе представлены основные принципы работы с потоками, внимание будет сосредоточено на принципах управляемых потоков и их использовании.  
+# <a name="managed-threading"></a>Управляемая поточность
+При разработке для компьютеров как с одним, так и с несколькими процессорами, необходимо, чтобы приложение обеспечивало наиболее эффективное взаимодействие с пользователем, даже если в приложении выполняются другие задачи. Использование нескольких потоков выполнения — это один из способов обеспечить в приложении возможность реагирования на действия пользователя при одновременном использовании процессора для выполнения задач между появлением или даже во время появления событий пользователя. Хотя в этом разделе приведены основные сведения о потоковом выполнении, здесь также рассматриваются принципы работы управляемых потоков и их использование.  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря введению классов <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> и <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), новых классов параллельных коллекций в пространстве имен <xref:System.Collections.Concurrent?displayProperty=fullName> и новой модели программирования, построенной по принципу управления задачами, а не потоками.  Для получения дополнительной информации см. [Parallel Programming](../../../docs/standard/parallel-programming/index.md).  
+>  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> и <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), новым классам параллельных коллекций из пространства имен <xref:System.Collections.Concurrent?displayProperty=fullName> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](../../../docs/standard/parallel-programming/index.md).  
   
-## В этом подразделе  
- [Managed Threading Basics](../../../docs/standard/threading/managed-threading-basics.md)  
- Обзор управляемых потоков, а также обсуждение случаев использования нескольких потоков.  
+## <a name="in-this-section"></a>Содержание  
+ [Основы управляемых потоков](../../../docs/standard/threading/managed-threading-basics.md)  
+ Обзор управляемых потоков и случаев использования нескольких потоков.  
   
- [Using Threads and Threading](../../../docs/standard/threading/using-threads-and-threading.md)  
+ [Использование потоков и работа с потоками](../../../docs/standard/threading/using-threads-and-threading.md)  
  Описание способов создания, запуска, приостановки, возобновления и отмены потоков.  
   
- [Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Обсуждение уровней синхронизации, способов предотвращения зависаний и состояний гонки, а также использования однопроцессорных и многопроцессорных систем и других вопросов, связанных с потоками.  
+ [Рекомендации по работе с потоками](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ Обсуждение уровней синхронизации, способов предотвращения взаимоблокировки и состояния гонки, однопроцессорных и многопроцессорных компьютеров и других проблем, связанных с многопоточностью.  
   
- [Threading Objects and Features](../../../docs/standard/threading/threading-objects-and-features.md)  
- Описание управляемых классов, используемых для синхронизации работы потоков, и данных объектов, взаимодействующих с разными потоками; обзор потоков из группы потоков.  
+ [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)  
+ Описание управляемых классов, которые можно использовать для синхронизации действий потоков и данных объектов, доступных в разных потоках, а также обзор пула потоков.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Threading>  
- Классы, которые применяются для использования и синхронизации управляемых потоков.  
+ Содержит классы для использования и синхронизации управляемых потоков.  
   
  <xref:System.Collections.Concurrent>  
- Классы коллекции, которые могут безопасно использоваться несколькими потоками.  
+ Содержит классы коллекций, которые могут безопасно использоваться несколькими потоками.  
   
  <xref:System.Threading.Tasks>  
- Классы для создания и планирования задач параллельной обработки.  
+ Содержит классы для создания и планирования задач параллельной обработки.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Домены приложений](../../../docs/framework/app-domains/application-domains.md)  
- Общие сведения о доменах приложений и их использовании в среде CLI.  
+ Общие сведения о доменах приложений и их использовании в Common Language Infrastructure.  
   
- [Асинхронный файловый ввод\-вывод](../../../docs/standard/io/асинхронный-файловый-ввод-вывод.md)  
+ [Асинхронный файловый ввод-вывод](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Описывает преимущества и основные операции асинхронного ввода и вывода.  
   
- [Event\-based Asynchronous Pattern \(EAP\)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  Общие сведения об асинхронном программировании.  
   
- [Calling Synchronous Methods Asynchronously](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- Объяснение способа вызова методов в потоках из пула потоков с помощью встроенных функциональных возможностей делегатов.  
+ [Асинхронный вызов синхронных методов](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+ Описание способов вызова методов в потоках пула потоков с помощью встроенных функций делегатов.  
   
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)  
+ [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
  Описание библиотек параллельного программирования, упрощающих использование нескольких потоков в приложениях.  
   
- [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- Описание системы параллельного выполнения запросов для использования преимуществ, предоставляемых наличием нескольких процессоров.
+ [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+ Описание системы для выполнения запросов в параллельном режиме, позволяющей воспользоваться преимуществами нескольких процессоров.

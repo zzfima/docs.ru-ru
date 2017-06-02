@@ -1,4 +1,4 @@
-# [Сборки и глобальный кэш сборок (Visual Basic)](index.md)
+# [Сборки и глобальный кэш сборок](index.md)
 ## [Дружественные сборки](friend-assemblies.md)
 ### [Практическое руководство. Создание неподписанных дружественных сборок](how-to-create-unsigned-friend-assemblies.md)
 ### [Практическое руководство. Создание подписанных дружественных сборок](how-to-create-signed-friend-assemblies.md)

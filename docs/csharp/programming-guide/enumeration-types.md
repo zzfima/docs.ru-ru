@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c23c17967474af0f91c0dda6d071073234736c6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Типы перечислений (Руководство по программированию в C#)
@@ -81,7 +82,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 ## <a name="enumeration-types-as-bit-flags"></a>Типы перечислений как битовые флаги  
  Тип перечисления можно использовать для определения битовых флагов, благодаря чему экземпляр типа перечисления может хранить любую комбинацию значений, определенных в списке перечислителя. (Конечно, некоторые комбинации могут не иметь смысла или быть недопустимы в коде программы.)  
   
- Перечисление битовых флагов создается путем применения атрибута <xref:System.FlagsAttribute?displayProperty=fullName> и определением соответствующим образом значений так, чтобы с ними могли выполняться битовые операции `AND`, `OR`, `NOT` и `XOR`. В перечисление битовых флагов включите именованную константу с нулевым значением, что означает "флаги не установлены". Не придавайте флагу нулевое значение, если оно не означает "флаги не установлены".  
+ Чтобы создать перечисление битовых флагов, нужно применить атрибут <xref:System.FlagsAttribute?displayProperty=fullName> и определить значения так, чтобы для них могли выполняться битовые операции `AND`, `OR`, `NOT` и `XOR`. В перечисление битовых флагов включите именованную константу с нулевым значением, что означает "флаги не установлены". Не придавайте флагу нулевое значение, если оно не означает "флаги не установлены".  
   
  В следующем примере определена другая версия перечисления `Days`, которая называется `Days2`. У `Days2` имеется атрибут `Flags`, и каждому значению присваивается следующая степень числа 2. Это позволяет создать переменную `Days2` со значением `Days2.Tuesday` и `Days2.Thursday`.  
   
@@ -95,20 +96,17 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- Дополнительные сведения о том, что необходимо учитывать при определении типов перечислений при помощи атрибута <xref:System.FlagsAttribute?displayProperty=fullName>, см. в разделе <xref:System.Enum?displayProperty=fullName>.  
+ Дополнительные сведения о том, что необходимо учитывать при определении типов перечислений при помощи атрибута <xref:System.FlagsAttribute?displayProperty=fullName>, см. в статье <xref:System.Enum?displayProperty=fullName>.  
   
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Использование методов System.Enum для получения и обработки значений перечисления  
- Все перечисления являются экземплярами типа <xref:System.Enum?displayProperty=fullName>. Нельзя произвести новые классы от класса <xref:System.Enum?displayProperty=fullName>, но можно использовать его методы для получения данных экземпляра перечисления и для обработки этих данных.  
+ Все перечисления являются экземплярами типа <xref:System.Enum?displayProperty=fullName>. Нельзя унаследовать новые классы от класса <xref:System.Enum?displayProperty=fullName>, но можно использовать его методы для получения и изменения данных об экземпляре перечисления.  
   
  [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   
- Дополнительные сведения см. в разделе <xref:System.Enum?displayProperty=fullName>.  
+ Для получения дополнительной информации см. <xref:System.Enum?displayProperty=fullName>.  
   
  Можно также создать для перечисления новый метод, используя метод расширения. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).  
-  
-## <a name="featured-book-chapter"></a>Важная глава книги  
- [Дополнительные сведения о переменных](http://go.microsoft.com/fwlink/?LinkId=221230) в публикации [Введение в Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
+
 ## <a name="see-also"></a>См. также  
  <xref:System.Enum?displayProperty=fullName>   
  [Руководство по программированию на C#](../../csharp/programming-guide/index.md)   

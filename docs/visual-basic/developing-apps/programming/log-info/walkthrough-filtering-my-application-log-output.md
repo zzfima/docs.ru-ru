@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: caa4b8be16e5000d02d82a83199a25d13ad07bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)
@@ -51,7 +52,7 @@ ms.lasthandoff: 03/13/2017
   
 2.  Добавьте кнопку с именем Button1 в форму Form1.  
   
-3.  В обработчике событий <xref:System.Windows.Forms.Control.Click> для кнопки Button1 добавьте следующий код:  
+3.  В обработчик события <xref:System.Windows.Forms.Control.Click> добавьте следующий код для Button1:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
@@ -72,10 +73,10 @@ ms.lasthandoff: 03/13/2017
     > [!NOTE]
     >  По умолчанию приложение записывает выходные данные в файл журнала при закрытии приложения.  
   
-     В примере выше второй вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> и вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> формируют выходные данные для журнала, а первый и последний вызовы метода `WriteEntry` — нет. Это связано с тем, что уровнями серьезности для `WriteEntry` и `WriteException` являются "Информация" и "Ошибка". Оба эти значения разрешены при фильтрации журнала по умолчанию для объекта `My.Application.Log`. Однако событиям с уровнями серьезности "Запуск" и "Остановка" запрещено создание выходных данных журнала.  
+     В приведенном выше примере второй вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> и вызов метода <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> приводят к получению данных журнала, а первый и последний вызовы метода `WriteEntry` — нет. Это связано с тем, что уровнями серьезности для `WriteEntry` и `WriteException` являются "Информация" и "Ошибка". Оба эти значения разрешены при фильтрации журнала по умолчанию для объекта `My.Application.Log`. Однако событиям с уровнями серьезности "Запуск" и "Остановка" запрещено создание выходных данных журнала.  
   
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>Фильтрация всех прослушивателей My.Application.Log  
- Объект `My.Application.Log` использует <xref:System.Diagnostics.SourceSwitch>с именем `DefaultSwitch` для управления сообщениями, передаваемыми из методов `WriteEntry` и `WriteException` в прослушиватели журнала. Можно настроить `DefaultSwitch` в файле конфигурации приложения, задав в качестве его значения одно из значений перечисления <xref:System.Diagnostics.SourceLevels>. По умолчанию используется значение "Информация".  
+ Объект `My.Application.Log` использует <xref:System.Diagnostics.SourceSwitch> с именем `DefaultSwitch` для управления сообщениями, передаваемыми из методов `WriteEntry` и `WriteException` в прослушиватели журнала. `DefaultSwitch` можно настроить в файле конфигурации приложения, задав в качестве его значения одно из значений перечисления <xref:System.Diagnostics.SourceLevels>. По умолчанию используется значение "Информация".  
   
  В этой таблице показан уровень серьезности, необходимый журналу для записи сообщения в прослушиватели с конкретным параметром `DefaultSwitch`.  
   
@@ -161,7 +162,7 @@ ms.lasthandoff: 03/13/2017
 9. Измените значение атрибута `value` снова на "Информация".  
   
     > [!NOTE]
-    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. Он не влияет на поведение классов [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> и <xref:System.Diagnostics.Debug?displayProperty=fullName>.  
+    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. На поведение классов [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> и <xref:System.Diagnostics.Debug?displayProperty=fullName> он не влияет.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Отдельная фильтрация прослушивателей My.Application.Log  
  В предыдущем примере показано, как изменить фильтрацию для всех выходных данных `My.Application.Log`. В этом примере демонстрируется способ фильтрации отдельных прослушивателей журнала. По умолчанию приложение имеет два прослушивателя, которые выполняют запись в файл выходных данных отладки и файл журнала приложения.  
@@ -212,7 +213,7 @@ ms.lasthandoff: 03/13/2017
     </add>  
     ```  
   
-     Фильтр <xref:System.Diagnostics.EventTypeFilter> принимает одно из значений перечисления <xref:System.Diagnostics.SourceLevels> в качестве своего атрибута `initializeData`.  
+     Фильтр <xref:System.Diagnostics.EventTypeFilter> принимает одно из значений перечисления <xref:System.Diagnostics.SourceLevels> как атрибут `initializeData`.  
   
 7.  Содержимое файла app.config должно быть похоже на следующий код XML:  
   
@@ -278,5 +279,5 @@ ms.lasthandoff: 03/13/2017
  [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [Пошаговое руководство. Создание пользовательских прослушивателей журнала](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
  [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Переключатели трассировки](http://msdn.microsoft.com/library/8ab913aa-f400-4406-9436-f45bc6e54fbe)   
+ [Переключатели трассировки](../../../../framework/debug-trace-profile/trace-switches.md)   
  [Запись сведений в журнал из приложения](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

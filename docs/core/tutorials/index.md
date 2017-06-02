@@ -1,5 +1,5 @@
 ---
-title: "Учебники по .NET Core"
+title: "Учебники по .NET Core | Документы Майкрософт"
 description: "Учебники по .NET Core"
 keywords: .NET, .NET Core
 author: richlander
@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: 3f8c62a6a3b179e146874761465ad2665c20a6dd
-ms.lasthandoff: 04/11/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
@@ -23,11 +24,11 @@ ms.lasthandoff: 04/11/2017
 ## <a name="building-applications-with-visual-studio-2017"></a>Разработка приложений с помощью Visual Studio 2017
 
 - [Создание приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/with-visual-studio.md)
-- [Отладка приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/debugging-with-visual-studio-2017.md)
-- [Публикация приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/publishing-with-visual-studio-2017.md)
-- [Создание библиотеки классов C#](../../csharp/getting-started/library-with-visual-studio-2017.md)
+- [Отладка приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/debugging-with-visual-studio.md)
+- [Публикация приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/publishing-with-visual-studio.md)
+- [Создание библиотеки классов C#](../../csharp/getting-started/library-with-visual-studio.md)
 - [Тестирование библиотеки классов C#](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [Использование библиотеки классов C# в .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio-2017.md)
+- [Использование библиотеки классов C# в .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Создание полного решения C# .NET Core в Windows](using-on-windows-full-solution.md)
 - [Учебник по NoSQL: сборка консольного приложения C# DocumentDB в .NET Core](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
 

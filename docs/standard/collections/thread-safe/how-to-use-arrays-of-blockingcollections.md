@@ -1,32 +1,35 @@
 ---
-title: "Практическое руководство. Использование массивов для блокировки коллекций в конвейере | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "потокобезопасные коллекции, блокировка коллекций в конвейере"
+title: "Практическое руководство. Использование массивов для блокировки коллекций в конвейере | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- thread-safe collections, blocking collections in pipeline
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 234dfa6a3a905b9db53ae8699bbe1c62f3411184
+ms.lasthandoff: 04/18/2017
+
 ---
-# Практическое руководство. Использование массивов для блокировки коллекций в конвейере
-В следующем примере показано как использовать массив объектов <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> со статическими методами, например, методом <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> и методом <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>, для реализации быстрой и гибкой передачи данных между компонентами.  
+# <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Практическое руководство. Использование массивов для блокировки коллекций в конвейере
+В следующем примере показано, как использовать массивы объектов <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> со статическими методами, например <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>, для реализации быстрой и гибкой передачи данных между компонентами.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показана основная реализация конвейера, в котором каждый объект выполняет параллельную операцию получения данных из входной коллекции, выполняет их преобразование и передает их в выходную коллекцию.  
   
  [!code-csharp[CDS_BlockingCollection#07](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example07.cs#07)]
  [!code-vb[CDS_BlockingCollection#07](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/bcpipeline.vb#07)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Collections.Concurrent?displayProperty=fullName>   
  [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)

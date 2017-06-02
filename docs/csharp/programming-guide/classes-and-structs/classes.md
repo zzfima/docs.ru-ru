@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a7d66be3ce0a4a24fd95d5b77787dcad5598f4d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 1f327e7171df8b91d4c5a787c879069a4e44f562
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>Классы (Руководство по программированию на C#)
@@ -84,14 +85,14 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Объектно-ориентированное программирование](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)   
+ [Объектно-ориентированное программирование](../concepts/object-oriented-programming.md)   
  [Полиморфизм](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
  [Члены](../../../csharp/programming-guide/classes-and-structs/members.md)   
  [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Деструкторы](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [Объекты](../../../csharp/programming-guide/classes-and-structs/objects.md)

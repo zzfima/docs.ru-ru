@@ -1,44 +1,48 @@
 ---
-title: "Выбор класса коллекции | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "коллекции [платформа .NET Framework], выбор класса коллекции"
-  - "Collections - классы"
-  - "коллекции типа "первым поступил - первым обслужен""
-  - "группировка данных в коллекциях, выбор класса коллекции"
-  - "индексированные коллекции"
-  - "коллекции типа "последним поступил - первым обслужен""
+title: "Выбор класса коллекции | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- last-in-first-out collections
+- first-in-first-out collections
+- collections [.NET Framework], selecting collection class
+- indexed collections
+- Collections classes
+- grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 20
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 403a78e3fc1496b91403b3c42494e34d12607b70
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
+
 ---
-# Выбор класса коллекции
-Внимательно относитесь к выбору класса коллекции.  Неправильный тип может ограничить возможности использования коллекции.  Как правило, не рекомендуется использовать типы в пространстве имен <xref:System.Collections>, если приложение не создается специально для .NET Framework версии 1.1  Универсальные и параллельные версии коллекций предпочтительны из\-за повышенной безопасности типов и других усовершенствований.  
+# <a name="selecting-a-collection-class"></a>Выбор класса коллекции
+Внимательно относитесь к выбору класса коллекции. Неправильный тип может ограничить возможности использования коллекции. Как правило, не рекомендуется использовать типы в пространстве имен <xref:System.Collections>, если приложение не создается специально для .NET Framework версии 1.1 Универсальные и параллельные версии коллекций предпочтительны из-за повышенной безопасности типов и других усовершенствований.  
   
  Ответьте на следующие вопросы.  
   
 -   Нужен ли вам последовательный список, элемент которого обычно удаляется сразу после извлечения его значения?  
   
-    -   Если да, то рассмотрите возможность использования класса <xref:System.Collections.Queue> или универсального класса <xref:System.Collections.Generic.Queue%601>, если требуется обработка по принципу "первым поступил — первым обслужен" \(FIFO\).  Рассмотрите возможность использования класса <xref:System.Collections.Stack> или универсального класса <xref:System.Collections.Generic.Stack%601>, если требуется обработка по принципу "последним поступил — первым обслужен" \(LIFO\).  Для безопасного доступа из нескольких потоков используйте параллельные версии классов <xref:System.Collections.Concurrent.ConcurrentQueue%601> и <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+    -   Если да, то рассмотрите возможность использования класса <xref:System.Collections.Queue> или универсального класса <xref:System.Collections.Generic.Queue%601>, если требуется обработка по принципу "первым поступил — первым обслужен" (FIFO). Рассмотрите возможность использования класса <xref:System.Collections.Stack> или универсального класса <xref:System.Collections.Generic.Stack%601>, если требуется обработка по принципу "последним поступил — первым обслужен" (LIFO). Для безопасного доступа из нескольких потоков используйте параллельные версии классов <xref:System.Collections.Concurrent.ConcurrentQueue%601> и <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
     -   Если нет, то следует использовать другие коллекции.  
   
--   Нужен ли доступ к элементам в определенном порядке \(FIFO, LIFO\) или в произвольным порядке?  
+-   Нужен ли доступ к элементам в определенном порядке (FIFO, LIFO) или в произвольным порядке?  
   
-    -   Класс <xref:System.Collections.Queue> и универсальный класс <xref:System.Collections.Generic.Queue%601> или <xref:System.Collections.Concurrent.ConcurrentQueue%601> предоставляют доступ в порядке FIFO.  Подробнее см. в разделе [Преимущества использования потокобезопасных коллекций](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+    -   Класс <xref:System.Collections.Queue> и универсальный класс <xref:System.Collections.Generic.Queue%601> или <xref:System.Collections.Concurrent.ConcurrentQueue%601> предоставляют доступ в порядке FIFO. Дополнительные сведения см. в разделе [Преимущества использования потокобезопасных коллекций](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
-    -   Класс <xref:System.Collections.Stack> и универсальный класс <xref:System.Collections.Generic.Stack%601> или <xref:System.Collections.Concurrent.ConcurrentStack%601> предоставляют доступ в порядке LIFO.  Подробнее см. в разделе [Преимущества использования потокобезопасных коллекций](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+    -   Класс <xref:System.Collections.Stack> и универсальный класс <xref:System.Collections.Generic.Stack%601> или <xref:System.Collections.Concurrent.ConcurrentStack%601> предоставляют доступ в порядке LIFO. Дополнительные сведения см. в разделе [Преимущества использования потокобезопасных коллекций](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
     -   Универсальный класс <xref:System.Collections.Generic.LinkedList%601> предоставляет последовательный доступ от начала к концу списка или наоборот.  
   
@@ -62,28 +66,28 @@ caps.handback.revision: 20
   
 -   Требуется ли сортировать элементы в порядке, отличном от порядка их поступления?  
   
-    -   Класс <xref:System.Collections.Hashtable> сортирует элементы по хэш\-коду.  
+    -   Класс <xref:System.Collections.Hashtable> сортирует элементы по хэш-коду.  
   
-    -   Класс <xref:System.Collections.SortedList> и универсальные классы <xref:System.Collections.Generic.SortedDictionary%602> и <xref:System.Collections.Generic.SortedList%602> сортируют элементы по ключу на основе реализаций интерфейса <xref:System.Collections.IComparer> и универсального интерфейса <xref:System.Collections.Generic.IComparer%601>.  
+    -   Класс <xref:System.Collections.SortedList> и универсальные классы <xref:System.Collections.Generic.SortedDictionary%602> и <xref:System.Collections.Generic.SortedList%602> сортируют элементы по ключу, основываясь на реализациях интерфейса <xref:System.Collections.IComparer> и универсального интерфейса <xref:System.Collections.Generic.IComparer%601>.  
   
-    -   Класс <xref:System.Collections.ArrayList> предоставляет метод <xref:System.Collections.ArrayList.Sort%2A>, который принимает реализацию <xref:System.Collections.IComparer> в качестве параметра.  Его универсальный аналог, универсальный класс <xref:System.Collections.Generic.List%601>, предоставляет метод <xref:System.Collections.Generic.List%601.Sort%2A>, который принимает реализацию универсального интерфейса <xref:System.Collections.Generic.IComparer%601> в качестве параметра.  
+    -   Класс <xref:System.Collections.ArrayList> предоставляет метод <xref:System.Collections.ArrayList.Sort%2A>, который принимает реализацию <xref:System.Collections.IComparer> в качестве параметра. Его универсальный аналог, универсальный класс <xref:System.Collections.Generic.List%601>, предоставляет метод <xref:System.Collections.Generic.List%601.Sort%2A>, который принимает реализацию универсального интерфейса <xref:System.Collections.Generic.IComparer%601> в качестве параметра.  
   
 -   Требуются ли быстрый поиск и получение данных?  
   
-    -   <xref:System.Collections.Specialized.ListDictionary> быстрее, чем <xref:System.Collections.Hashtable>, для небольших коллекций \(10 элементов или меньше\).  Универсальный класс <xref:System.Collections.Generic.Dictionary%602> обеспечивает более быстрый поиск, чем универсальный класс <xref:System.Collections.Generic.SortedDictionary%602>.  Многопоточной реализацией является <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.  <xref:System.Collections.Concurrent.ConcurrentBag%601> обеспечивает быструю многопоточную вставку для неупорядоченных данных.  Подробнее об обоих многопоточных типах см. в разделе [Преимущества использования потокобезопасных коллекций](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+    -   <xref:System.Collections.Specialized.ListDictionary> быстрее, чем <xref:System.Collections.Hashtable>, для небольших коллекций (10 элементов или меньше). Универсальный класс <xref:System.Collections.Generic.Dictionary%602> обеспечивает более быстрый поиск, чем универсальный класс <xref:System.Collections.Generic.SortedDictionary%602>. Многопоточной реализацией является <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> обеспечивает быструю многопоточную вставку для неупорядоченных данных. Дополнительные сведения об обоих многопоточных типах см. в разделе [Преимущества использования потокобезопасных коллекций](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
 -   Требуются ли вам коллекции, принимающие только строки?  
   
-    -   Классы <xref:System.Collections.Specialized.StringCollection> \(на основе <xref:System.Collections.IList>\) и <xref:System.Collections.Specialized.StringDictionary> \(на основе <xref:System.Collections.IDictionary>\) находятся в пространстве имен <xref:System.Collections.Specialized>.  
+    -   Классы <xref:System.Collections.Specialized.StringCollection> (на основе <xref:System.Collections.IList>) и <xref:System.Collections.Specialized.StringDictionary> (на основе <xref:System.Collections.IDictionary>) находятся в пространстве имен <xref:System.Collections.Specialized>.  
   
     -   Кроме того, можно использовать любой из универсальных классов коллекций в пространстве имен <xref:System.Collections.Generic> как строго типизированную строковую коллекцию, указав класс <xref:System.String> в качестве аргумента универсального типа.  
   
-## LINQ to Objects и PLINQ  
- Язык LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>.  Запросы LINQ обеспечивают общий шаблон для доступа к данным, обычно являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, а также предоставляют возможности фильтрации, сортировки и группировки.  Подробнее см. в разделе [LINQ to Objects](../../../ocs/visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
+## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects и PLINQ  
+ Язык LINQ to Objects позволяет использовать запросы LINQ для доступа к объектам в памяти при условии, что тип объекта реализует интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>. Запросы LINQ обеспечивают общий шаблон для доступа к данным, обычно являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, а также предоставляют возможности фильтрации, сортировки и группировки. Дополнительные сведения см. в разделе [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
   
- Язык PLINQ предоставляет параллельную реализацию языка LINQ to Objects, которая может обеспечить более быстрое выполнение запросов во многих сценариях за счет более эффективного использования многоядерных компьютеров.  Подробнее см. в разделе [Parallel LINQ \(PLINQ\)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Язык PLINQ предоставляет параллельную реализацию языка LINQ to Objects, которая может обеспечить более быстрое выполнение запросов во многих сценариях за счет более эффективного использования многоядерных компьютеров. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Collections>   
  <xref:System.Collections.Specialized>   
  <xref:System.Collections.Generic>   

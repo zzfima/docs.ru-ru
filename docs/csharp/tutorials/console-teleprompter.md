@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41e8976e7b133380687a65265fd5ebe9a810a4ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="prerequisites"></a>Предварительные требования
 Компьютер должен быть настроен для выполнения .NET Core. Инструкции по установке см. на странице [.NET Core](https://www.microsoft.com/net/core). Это приложение можно запустить в ОС Windows, Linux, macOS или в контейнере Docker. Вам потребуется редактор кода, но вы можете выбрать любой привычный для вас. 
 ## <a name="create-the-application"></a>Создание приложения
-Первым шагом является создание нового приложения. Откройте командную строку и создайте новый каталог для приложения. Перейдите в этот каталог. В командной строке введите команду `dotnet new console`. Она создает начальный набор файлов для базового приложения Hello World.
+Первым шагом является создание нового приложения. Откройте командную строку и создайте новый каталог для приложения. Перейдите в этот каталог. В командной строке введите команду `dotnet new console`. Эта команда создает начальный набор файлов для базового приложения Hello World.
 
 Прежде чем вносить изменения в это приложение, давайте разберем процедуру его запуска. Когда вы создадите приложение, наберите в командной строке команду `dotnet restore`. Она запускает процесс восстановления из пакета NuGet. NuGet представляет собой диспетчер пакетов для .NET. Эта команда загружает все отсутствующие зависимости для проекта. Поскольку мы имеем дело с новым проектом, для него пока не существует зависимостей, поэтому при первом запуске будет загружена только платформа .NET Core. После этого первого запуска команду `dotnet restore` нужно будет запускать только после добавления новых зависимых пакетов или при обновлении версий используемых зависимостей. Этот процесс также создает файл блокировки проекта (project.lock.json) в каталоге проекта. Этот файл помогает управлять зависимостями проекта. Он указывает локальное расположение всех зависимостей проекта. Этот файл не обязательно помещать в систему управления версиями. Он будет автоматически создан при выполнении команды `dotnet restore`. 
 
@@ -53,7 +54,7 @@ namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>Чтение и вывод файла
-Первая функция, которую мы добавим, это чтение данных из текстового файла и вывод полученного текста в консоль. Сначала нам нужно добавить текстовый файл. Скопируйте в каталог проекта файл [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) из репозитория GitHub для этого [примера](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter). Он будет источником текста для вашего приложения.
+Первая функция, которую мы добавим, будет считывать данные из текстового файла и выводить полученный текст в консоль. Сначала нам нужно добавить текстовый файл. Скопируйте в каталог проекта файл [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) из репозитория GitHub для этого [примера](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter). Он будет источником текста для вашего приложения. Чтобы скачать пример приложения для этого раздела, воспользуйтесь инструкциями в разделе [Примеры и руководства](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Теперь добавьте в класс Program (он расположен сразу за методом `Main`) следующий метод:
 

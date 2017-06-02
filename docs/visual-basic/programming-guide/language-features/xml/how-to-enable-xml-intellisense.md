@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 84af19189fa3fc510c8d4f8e408cbb2a393d8b8f
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -52,7 +53,7 @@ XML IntelliSense в Visual Basic предоставляет завершение
   
  Дополнительные сведения о возможностях XML IntelliSense в Visual Basic см. в разделе [XML IntelliSense в Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md). Дополнительные сведения об импорте пространства имен XML см. в разделе [оператор Imports (пространство имен XML)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md) или [страница "ссылки" в конструкторе проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
  ![ссылка на видео](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") для просмотра видеоверсии этого раздела, в разделе [видео: Включение XML IntelliSense в Visual Basic](http://go.microsoft.com/fwlink/?LinkId=102466). Связанные демонстрационные видеоролики см. в разделе [как мне Включение XML IntelliSense и пространства имен XML используйте?](http://go.microsoft.com/fwlink/?LinkId=143035).  
   

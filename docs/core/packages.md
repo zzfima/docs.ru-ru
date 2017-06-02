@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e0ba4886bd954c8e772a85a677775167e7c4bc53
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -37,12 +38,12 @@ ms.lasthandoff: 03/07/2017
 
 Ниже приведен список основных пакетов NuGet для .NET Core:
 
-- [System.Runtime](https://www.nuget.org/packages/System.Runtime) — базовый пакет .NET Core, включающий [Object](http://docs.microsoft.com/dotnet/core/api/System.Object), [String](http://docs.microsoft.com/dotnet/core/api/System.String), [Array](http://docs.microsoft.com/dotnet/core/api/System.Array), [Action](http://docs.microsoft.com/dotnet/core/api/System.Action) и [IList&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1).
-- [System.Collections](https://www.nuget.org/packages/System.Collections) — набор универсальных коллекций, включая [List&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) и [Dictionary&lt;K,V&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2).
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) — набор типов для сетевого взаимодействия по протоколу HTTP, включая [HttpClient](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpClient) и [HttpResponseMessage](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpResponseMessage).
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) — набор типов для чтения из локального или сетевого дискового хранилища и записи в него, включая [File](http://docs.microsoft.com/dotnet/core/api/System.IO.File) и [Directory](http://docs.microsoft.com/dotnet/core/api/System.IO.Directory).
-- [System.Linq](https://www.nuget.org/packages/System.Linq) — набор типов для запроса объектов, включая Enumerable и [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2).
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection) — набор типов для загрузки, проверки и активации типов, включая [Assembly](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly), [TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) и [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo).
+- [System.Runtime](https://www.nuget.org/packages/System.Runtime) — основной пакет .NET Core, включающий <xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action> и <xref:System.Collections.Generic.IList%601>.
+- [System.Collections](https://www.nuget.org/packages/System.Collections) — набор, состоящий в основном из универсальных коллекций, включая <xref:System.Collections.Generic.List%601> и <xref:System.Collections.Generic.Dictionary%602>.
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) — набор типов для сетевого взаимодействия по протоколу HTTP, включающий <xref:System.Net.Http.HttpClient> и <xref:System.Net.Http.HttpResponseMessage>.
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) — набор типов для чтения из локального или сетевого дискового хранилища и записи в него, включающий <xref:System.IO.File> и <xref:System.IO.Directory>.
+- [System.Linq](https://www.nuget.org/packages/System.Linq) — набор типов для выполнения запросов к объектам, включающий `Enumerable` и <xref:System.Linq.ILookup%602>.
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection) — набор типов для загрузки, просмотра и активации типов, включающий <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> и <xref:System.Reflection.MethodInfo>.
 
 Обычно вместо включения пакетов в отдельные проекты гораздо проще включить *метапакет*, представляющий собой набор пакетов, которые часто используются совместно. (Дополнительные сведения о метапакетах см. в следующем разделе.) Но если вам требуется один пакет, его можно включить как показано в примере ниже, где задается ссылка на пакет [System.Runtime](https://www.nuget.org/packages/System.Runtime/). 
 
@@ -139,13 +140,13 @@ ms.lasthandoff: 03/07/2017
 
 Нацеливание на `netstandard1.3` и одновременное использование версии 1.6.0 библиотеки `NETStandard.Library` может показаться странным. Однако это допустимый сценарий использования, так как метапакет поддерживает более старые версии `netstandard`. Например, вы могли выбрать версию 1.6.0 метапакета для стандартизации всех библиотек, которые предназначены для различных версий `netstandard`. При таком подходе необходимо восстанавливать только `NETStandard.Library` 1.6.0, но не предыдущие версии. 
 
-Обратное (например, нацеливание на `netstandard1.6` с помощью `NETStandard.Library` версии 1.3.0) недопустимо. Нацеливание на платформу определенной версии с помощью метапакета более ранней версии невозможно, так как такой метапакет не будет предоставлять ресурсы для платформы более поздней версии. Согласно схеме управления версиями метапакетов метапакеты соответствуют самой поздней версии платформы, которую они описывают. Вследствие такой схемы управления версиями первая версия `NETStandard.Library` —&1;.6.0, при условии, что она содержит ресурсы `netstandard1.6`. Версия 1.3.0 используется в предыдущем примере для согласованности с другим приведенным выше примером, хотя такой версии на самом деле нет.
+Обратное (например, нацеливание на `netstandard1.6` с помощью `NETStandard.Library` версии 1.3.0) недопустимо. Нацеливание на платформу определенной версии с помощью метапакета более ранней версии невозможно, так как такой метапакет не будет предоставлять ресурсы для платформы более поздней версии. Согласно схеме управления версиями метапакетов метапакеты соответствуют самой поздней версии платформы, которую они описывают. Вследствие такой схемы управления версиями первая версия `NETStandard.Library` — 1.6.0, при условии, что она содержит ресурсы `netstandard1.6`. Версия 1.3.0 используется в предыдущем примере для согласованности с другим приведенным выше примером, хотя такой версии на самом деле нет.
 
 ### <a name="net-core-application"></a>Приложение .NET Core
 
 Платформа приложений .NET Core (TFM: `netcoreapp`) представляет пакеты и связанные интерфейсы API, которые входят в состав распространяемого пакета .NET Core и предоставляемой им модели консольных приложений. Приложения .NET Core должны использовать эту платформу вследствие нацеливания на модель консольных приложений, так же как и библиотеки, предназначенные для выполнения только в .NET Core. При использовании этой платформы приложения и библиотеки могут выполняться только в .NET Core. 
 
-Метапакет `Microsoft.NETCore.App` предназначен для платформы `netcoreapp`. Он обеспечивает доступ к примерно&40; библиотекам, предоставляемым пакетом `NETStandard.Library`, и примерно&20; дополнительным библиотекам (всего около&60; библиотек). Вы можете ссылаться на дополнительные библиотеки, предназначенные для `netcoreapp` или совместимых платформ, например `netstandard`, для получения доступа к дополнительным интерфейсам API. 
+Метапакет `Microsoft.NETCore.App` предназначен для платформы `netcoreapp`. Он обеспечивает доступ к примерно 40 библиотекам, предоставляемым пакетом `NETStandard.Library`, и примерно 20 дополнительным библиотекам (всего около 60 библиотек). Вы можете ссылаться на дополнительные библиотеки, предназначенные для `netcoreapp` или совместимых платформ, например `netstandard`, для получения доступа к дополнительным интерфейсам API. 
 
 Большинство дополнительных библиотек, предоставляемых `Microsoft.NETCore.App`, также предназначены для `netstandard`, при условии что их зависимости обеспечиваются другими библиотеками `netstandard`. Это означает, что библиотеки `netstandard` также могут ссылаться на эти пакеты в качестве зависимостей. 
 

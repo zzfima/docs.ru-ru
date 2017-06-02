@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 4347ba0e740419b53a1aa662c43933dead107e9c
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство: Внедрение сведений о типах из сборок Microsoft Office в Visual Studio (Visual Basic)
 Если внедрить сведения о типах в приложении, которое ссылается на COM-объекты, можно исключить потребность в основной сборки взаимодействия (PIA). Кроме того внедренные сведения о типах позволяет обеспечить независимость от версии приложения. То есть программы могут записываться использовать типы из нескольких версий библиотеки COM без конкретной основной сборки ВЗАИМОДЕЙСТВИЯ для каждой версии. Это типично для приложений, использующих объекты из библиотек Microsoft Office. Внедрение данных о типе позволяет одному построению программы работать с различными версиями Microsoft Office на разных компьютерах без необходимости повторного развертывания программы или основной сборки ВЗАИМОДЕЙСТВИЯ для каждой версии Microsoft Office.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Необходимо выполнить следующие требования.  

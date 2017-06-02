@@ -31,17 +31,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92750040466914389abc3e8bf1de84c44bb0987c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 02491e64813f84d031debdca09161d88aab1b94c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="class-c-reference"></a>класс (Справочник по C#)
 Классы объявляются с помощью ключевого слова `class`, как показано в следующем примере:  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -71,12 +71,12 @@ ms.lasthandoff: 03/13/2017
   
 -   [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Деструкторы](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
 -   [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
+-   [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+
 -   [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
 -   [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
@@ -114,10 +114,11 @@ Console.Write(child1.name);   // Error
  Наконец, обратите внимание, что для объекта, созданного с помощью конструктора по умолчанию (`child3`), поле age по умолчанию было инициализировано с нулевым значением.  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)
+

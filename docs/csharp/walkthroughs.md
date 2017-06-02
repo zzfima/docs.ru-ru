@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c4c52096803ff0cbf311afb2a0e38a7f37cf86c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
@@ -43,7 +44,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="in-this-section"></a>Содержание  
 
  [Доступ к Интернету с помощью модификатора Async и оператора Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Демонстрируется создание асинхронных решений с помощью модификатора [async](../csharp/language-reference/keywords/async.md) и оператора [await](../csharp/language-reference/keywords/await.md), представленных в [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)].  
+ Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../csharp/language-reference/keywords/async.md) и [Await](../csharp/language-reference/keywords/await.md).  
   
  [Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
  Описание процесса создания типа [!INCLUDE[wrt](../csharp/includes/wrt_md.md)], его упаковки в компонент [!INCLUDE[wrt](../csharp/includes/wrt_md.md)] и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)], разработанного для Windows с помощью JavaScript.  

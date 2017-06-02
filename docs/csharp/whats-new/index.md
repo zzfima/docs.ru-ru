@@ -1,5 +1,5 @@
 ---
-title: "Новые возможности C# | Руководство по языку C#"
+title: "Новые возможности C# — руководство по языку C# | Документы Майкрософт"
 description: "Как развивается язык C#"
 keywords: "C#, последние функции, новые возможности, Roslyn"
 author: BillWagner
@@ -10,38 +10,39 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-translationtype: Human Translation
-ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
-ms.openlocfilehash: 1285ea5dca29025408f7e164e425fde64323671a
-ms.lasthandoff: 03/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: f337a916f0a15c6e81b228ec378a34e97055f68e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
 # <a name="whats-new-in-c"></a>Новые возможности C# #
 
 
-* [C# 7](csharp-7.md)
-    - На этой странице описываются новейшие функции в языке C#. Сюда входит C# 7, который сейчас доступен в [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/).
+* [C# 7](csharp-7.md)
+    - На этой странице описываются новейшие функции в языке C#. Здесь речь идет о C# 7, который сейчас доступен в [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/).
 
 * [C# 6](csharp-6.md)
     - На этой странице описываются функции, добавленные в C# 6. Эти функции доступны в Visual Studio 2015 для разработчиков Windows и в .NET Core 1.0 для разработчиков, исследующих C# на macOS и Linux.
 
-* [Интерактивный C#](../interactive/index.md) 
-    - На этой странице описывается C# Interactive, интерактивная REPL-оболочка, которую можно использовать для исследования языка C#. Ее можно использовать для интерактивной записи кода и мгновенного его выполнения без компиляции или сборки.
-
+<!--* [C# Interactive](../interactive/index.md): 
+    - This page describes C# Interactive, an interactive Read Eval Print Loop (REPL) that you can use to explore the C# language. You can use it to write code interactively and see it execute immediately, without any compile or build step.
+-->
 * [Кроссплатформенная поддержка](../../core/index.md)
-    - С поддержкой .NET Core язык C# работает на разных платформах. Если вы хотите попробовать C# на macOS или на одном из многих поддерживаемых дистрибутивов Linux, получите дополнительные сведения о .NET Core.
+    - Благодаря поддержке .NET Core язык C# работает на многих платформах. Если вы хотите попробовать C# на macOS или на одном из многих поддерживаемых дистрибутивов Linux, получите дополнительные сведения о .NET Core.
 
-- [Пакет SDK для платформы компилятора .NET](../roslyn/index.md)
-    - Пакет SDK для платформы компилятора .NET позволяет записывать код, который выполняет статический анализ в коде C#. Вы можете использовать эти API, чтобы найти возможные ошибки, нерекомендуемые параметры или предлагать исправления и реализовать их.
-
-
+<!--
+- [.NET Compiler Platform SDK](../roslyn/index.md):
+    - The .NET Compiler Platform SDK enables you to write code that performs static analysis on C# code. You can use these APIs to find potential errors, or bad practices, suggest fixes, and even implement those fixes.
+-->
   
 ## <a name="previous-versions"></a>Предыдущие версии
 Ниже перечислены основные функции, представленные в предыдущих версиях языка C# и Visual Studio .NET.  
   
  * Visual Studio .NET 2013 
-     - Эта версия Visual Studio включает исправления ошибок, повышение производительности и предварительные версии технологий платформы компилятора .NET ("Roslyn"), который стал [пакетом SDK для платформы компилятора .NET](../roslyn/index.md).
+     - Эта версия Visual Studio включает исправления ошибок, повышение производительности и предварительные версии технологий платформы компилятора .NET ("Roslyn"), который стал <!--Link to ../roslyn/index.md-->пакетом SDK для платформы компилятора .NET.
 
  * C# 5, Visual Studio .NET 2012 
      - `Async` / `await`, и атрибуты [сведений о вызывающем объекте](../programming-guide/concepts/caller-information.md).

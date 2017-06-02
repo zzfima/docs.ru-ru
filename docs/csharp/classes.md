@@ -2,18 +2,19 @@
 title: "Классы | Руководство по C#"
 description: "Сведения о типах классов и их создании"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b5614123d38ae00cb471ef85d0eb92c03c68bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: f2cfeac321860a609c21046818c36fbc6aa3c636
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
 
 [!code-csharp[Ссылочные типы](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-При создании объекта выделяется память в управляемой куче, и переменная хранит только ссылку на расположение объекта. Для типов в управляемой куче требуются временные затраты как при их выделении, так и удалении с помощью функции автоматического управления памятью в среде CLR, которая называется *сборкой мусора*. Сборка мусора является высоко оптимизированным процессом и в большинстве случаев не приводит к возникновению проблем производительности. Дополнительные сведения о сборке мусора см. в разделе [Автоматическое управление памятью и сборка мусора](../standard/garbagecollection/gc.md).  
+При создании объекта выделяется память в управляемой куче, и переменная хранит только ссылку на расположение объекта. Для типов в управляемой куче требуются временные затраты как при их выделении, так и удалении с помощью функции автоматического управления памятью в среде CLR, которая называется *сборкой мусора*. Сборка мусора является высоко оптимизированным процессом и в большинстве случаев не приводит к возникновению проблем производительности. Дополнительные сведения о сборке мусора см. в разделе [Автоматическое управление памятью и сборка мусора](../standard/garbage-collection/gc.md).  
   
 Ссылочные типа полностью поддерживают *наследование*, фундаментальную характеристику объектно ориентированного программирования. При создании класса его можно наследовать от любого другого интерфейса или класса, который не определен как [запечатанный](https://msdn.microsoft.com/library/88c54tsw.aspx), а другие классы могут наследоваться от этого класса и переопределять виртуальные методы. Дополнительные сведения см. в разделе [Наследование](https://msdn.microsoft.com/library/ms173149.aspx).
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 03/13/2017
 [Члены класса и структуры](https://msdn.microsoft.com/library/ms173113.aspx)   
 [Методы класса и структуры](https://msdn.microsoft.com/library/ms173114.aspx)   
 [Конструкторы](https://msdn.microsoft.com/library/ace5hbzh.aspx)   
-[Деструкторы](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
+[Методы завершения](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
 [Объекты](https://msdn.microsoft.com/library/ms173110.aspx)
 
 

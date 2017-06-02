@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6023f09a9a355c9ab00252f9e2ac6cc45abf42ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
@@ -76,9 +77,9 @@ ms.lasthandoff: 03/13/2017
   
 -   [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Деструкторы](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [События](../../../csharp/programming-guide/events/index.md)  
+  
+-   [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/13/2017
  Некоторые методы и свойства специально предназначены для того, чтобы их вызов или доступ к ним осуществлялся из *клиентского кода*, то есть из кода за пределами этого класса или структуры. Другие методы и свойства могут использоваться только в самом классе или структуре. Важно ограничить доступность кода так, чтобы только нужные элементы клиентского кода получали к нему доступ. Уровень доступности для типов и их членов вы можете задать с помощью модификаторов доступа [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), `protected internal` и [private](../../../csharp/language-reference/keywords/private.md). По умолчанию используется режим доступа `private`. Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Наследование  
- Классы (но не структуры) поддерживают наследование. Класс, производный от другого класса (*базового класса*), автоматически включает все открытые, защищенные и внутренние члены базового класса, за исключением конструкторов и деструкторов. Дополнительные сведения см. в статьях о [наследовании](../../../csharp/programming-guide/classes-and-structs/inheritance.md) и [полиморфизме](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Классы (но не структуры) поддерживают наследование. Класс, производный от другого класса (*базового класса*), автоматически включает все открытые, защищенные и внутренние члены базового класса за исключением конструкторов и методов завершения. Дополнительные сведения см. в статьях о [наследовании](../../../csharp/programming-guide/classes-and-structs/inheritance.md) и [полиморфизме](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
  Классы могут быть объявлены как [абстрактные](../../../csharp/language-reference/keywords/abstract.md). Это означает, что один или несколько их членов не имеют реализации. Из абстрактных классов нельзя напрямую создать экземпляры. Они выполняют роль базовых классов для других классов, которые предоставляют реализацию недостающих членов. Также классы можно объявить [запечатанными](../../../csharp/language-reference/keywords/sealed.md), чтобы запретить наследование от них других классов. Дополнительные сведения см. в статье [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 03/13/2017
  Классы и структуры могут наследовать несколько интерфейсов. Наследование интерфейса означает, что тип реализует все методы, определенные в этом интерфейсе. Дополнительные сведения см. в статье [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="generic-types"></a>Универсальные типы  
- Для класса или структуры можно определить один или несколько параметров типа. Клиентский код назначает тип при создании экземпляра типа. Например, класс <xref:System.Collections.Generic.List%601> в пространстве имен <xref:System.Collections.Generic> определен с одним параметром типа. Клиентский код создает экземпляр `List<string>` или `List<int>`, информируя о том, сущности какого типа будут храниться в этом списке. Дополнительные сведения см. в статье [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md).  
+ Для класса или структуры можно определить один или несколько параметров типа. Клиентский код назначает тип при создании экземпляра типа. Например, класс <xref:System.Collections.Generic.List%601> в пространстве имен <xref:System.Collections.Generic> определен с помощью одного параметра типа. Клиентский код создает экземпляр `List<string>` или `List<int>`, информируя о том, сущности какого типа будут храниться в этом списке. Дополнительные сведения см. в статье [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md).  
   
 ### <a name="static-types"></a>Статические типы  
  Классы (но не структуры) могут быть объявлены как [статические](../../../csharp/language-reference/keywords/static.md). Статический класс может содержать только статические члены. Для него нельзя создать экземпляр с помощью ключевого слова new. При запуске программы в память загружается одна копия такого класса. Доступ к его членам осуществляется через имя класса. Классы и структуры могут содержать статические члены. Дополнительные сведения см. в статье [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
@@ -122,7 +123,7 @@ ms.lasthandoff: 03/13/2017
  Внутри метода класса или структуры можно использовать неявное типизирование, чтобы компилятор самостоятельно определял правильный тип во время компиляции. Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

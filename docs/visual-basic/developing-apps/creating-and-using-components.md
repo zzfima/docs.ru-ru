@@ -27,14 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ca4df41897fafc5d7981c85741ae4fa1a8c641f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 1235f62f6ac0878e16387c35150764f3585bc004
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Создание и использование компонентов в Visual Basic
-*Компонент* — это класс, реализующий интерфейс <xref:System.ComponentModel.IComponent?displayProperty=fullName> или непосредственно либо косвенно наследуемый из класса, который реализует <xref:System.ComponentModel.IComponent>. Компонент [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] является объектом, допускающим повторное использование, который может взаимодействовать с другими объектами и обеспечивает контроль над внешними ресурсами и поддержку во время разработки.  
+*Компонент* — это класс, который реализует интерфейс <xref:System.ComponentModel.IComponent?displayProperty=fullName> или прямо либо косвенно наследуется из класса, реализующего <xref:System.ComponentModel.IComponent>. Компонент [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] является объектом, допускающим повторное использование, который может взаимодействовать с другими объектами и обеспечивает контроль над внешними ресурсами и поддержку во время разработки.  
   
  Важной особенностью компонентов является то, что они поддерживают проектирование, то есть класс, являющийся компонентом, может использоваться в интегрированной среде разработки [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]. Компонент можно добавить на панель элементов, перетащить в форму, кроме того, с ним можно выполнять различные действия в области конструктора. Обратите внимание, что базовая поддержка во время разработки для компонентов встроена в [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)], а значит разработчику компонентов не нужно прикладывать дополнительные усилия, чтобы воспользоваться преимуществами базовых функций во время разработки.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="when-to-create-a-component"></a>Когда требуется создание компонента  
  Если ваш класс будет использоваться в области конструктора (например, конструктора Windows Forms или веб-форм), но у него отсутствует интерфейс пользователя, он должен быть компонентом и реализовывать интерфейс <xref:System.ComponentModel.IComponent> или быть производным от класса, который непосредственно или косвенно реализует <xref:System.ComponentModel.IComponent>.  
   
- Классы <xref:System.ComponentModel.Component> и <xref:System.ComponentModel.MarshalByValueComponent> являются базовой реализацией интерфейса <xref:System.ComponentModel.IComponent>. Основное различие между этими классами заключается в том, что для класса <xref:System.ComponentModel.Component> маршалинг выполняется по ссылке, а для класса <xref:System.ComponentModel.IComponent> — по значению. Ниже приведены общие указания по реализации.  
+ Классы <xref:System.ComponentModel.Component> и <xref:System.ComponentModel.MarshalByValueComponent> являются базовыми реализациями интерфейса <xref:System.ComponentModel.IComponent>. Основное различие между этими классами состоит в том, что класс <xref:System.ComponentModel.Component> маршалируется по ссылке, в класс <xref:System.ComponentModel.IComponent> — по значению. Ниже приведены общие указания по реализации.  
   
 -   Если для компонента необходимо выполнить маршалинг по ссылке, он должен быть производным от <xref:System.ComponentModel.Component>.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 03/13/2017
  Дополнительные сведения о поддержке во время разработки см. в разделе [Атрибуты времени разработки для компонентов](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3) и [Расширение поддержки времени разработки](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
 ## <a name="component-classes"></a>Классы компонентов  
- Пространство имен <xref:System.ComponentModel> предоставляет классы, используемые для реализации поведения компонентов и элементов управления во время разработки и во время выполнения. Это пространство имен содержит базовые классы и интерфейсы для реализации атрибутов и преобразователей типов, привязки к источникам данных и лицензирования компонентов.  
+ Пространство имен <xref:System.ComponentModel> предоставляет классы, используемые для реализации поведения компонентов и элементов управления во время разработки и выполнения. Это пространство имен содержит базовые классы и интерфейсы для реализации атрибутов и преобразователей типов, привязки к источникам данных и лицензирования компонентов.  
   
  Ниже перечислены основные классы компонентов.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 03/13/2017
   
 -   <xref:System.ComponentModel.LicenseProvider>. Абстрактный базовый класс для реализации поставщика лицензий.  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>. Указывает класс <xref:System.ComponentModel.LicenseProvider> для использования с классом.  
+-   <xref:System.ComponentModel.LicenseProviderAttribute>. Указывает класс <xref:System.ComponentModel.LicenseProvider> для использования с каким-либо классом.  
   
  Ниже приведены классы, которые обычно используются для описания и постоянного хранения компонентов.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 03/13/2017
  [Классы компонентов](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
  Сведения о том, что делает класс компонентом, а также описание способов предоставления функций компонента, управления доступом к компонентам и управления созданием экземпляров компонента.  
   
- [Разрешение вопросов, связанных с созданием элементов управления и компонентов](http://msdn.microsoft.com/library/e9c8c099-2271-4737-882f-50f336c7a55e)  
+ [Разрешение вопросов, связанных с созданием элементов управления и компонентов](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Способы решения распространенных проблем.  
   
 ## <a name="see-also"></a>См. также  

@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f4e74e2da4a5f8ba0a9964a5eff4f2a492b8981f
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Практическое руководство. Использование XML-документации (Руководство по программированию в C#)
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/13/2017
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
  **\<summary>**  
- ** Хранилище для свойства name\</summary>**  
+ **Хранилище для свойства name\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
  **\<summary>Конструктор класса.\</summary>**   
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/13/2017
  **\<param name="s"> Здесь описание параметра s\</param>**  
  **\<seealso cref="T:System.String">**  
  **Атрибут cref можно использовать в любом теге для ссылки на тип или член,**   
- ** и тогда компилятор проверит существование ссылки. \</seealso>**  
+ **и тогда компилятор проверит существование ссылки. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
  **\<summary>**  

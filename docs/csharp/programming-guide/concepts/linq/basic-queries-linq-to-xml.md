@@ -14,10 +14,11 @@ ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e3879dfe92f158c545a1f4a42c6bfc35aae06f3c
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/24/2017
 
 
 ---
@@ -30,9 +31,9 @@ ms.lasthandoff: 03/13/2017
 |-----------|-----------------|  
 |[Практическое руководство. Поиск элементов с определенным атрибутом (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Показывает, каким образом находится конкретный элемент с определенным атрибутом и значением.|  
 |[Практическое руководство. Поиск элементов с определенным дочерним элементом (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Показывает, каким образом находится конкретный элемент с его дочерним элементом с определенным значением.|  
-|[Сравнение запросов к XDocument Запросы к XElement (C#)](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Объясняется разница между составлением запросов по дереву XML, корень которого находится в <xref:System.Xml.Linq.XElement>, и составлением запросов по дереву XML, корень которого находится в <xref:System.Xml.Linq.XDocument>.|  
+|[Сравнение запросов к XDocument Запросы к XElement (C#)](../../../../csharp/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Объясняет разницу между составлением запросов по XML-дереву, корень которого находится в <xref:System.Xml.Linq.XElement>, и составлением запросов по XML-дереву, корень которого находится в <xref:System.Xml.Linq.XDocument>.|  
 |[Практическое руководство. Поиск потомков с определенным именем элемента (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Показывает, как найти все потомки элемента с определенным именем. В этом примере используется ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.|  
-|[Практическое руководство. Поиск одного потомка с помощью метода потомков (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Показано, как использовать метод оси <xref:System.Xml.Linq.XContainer.Descendants%2A> для поиска единственного элемента с уникальным именем.|  
+|[Практическое руководство. Поиск одного потомка с помощью метода потомков (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Показывает, как использовать <xref:System.Xml.Linq.XContainer.Descendants%2A> метод оси для поиска единственного элемента с уникальным именем.|  
 |[Практическое руководство. Создание запросов со сложной фильтрацией (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Показывает с более сложным фильтром.|  
 |[Практическое руководство. Фильтрация по необязательным элементам (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|Показывает, как находить узлы в дереве неправильной формы.|  
 |[Практическое руководство. Поиск всех узлов в пространстве имен (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Показывает, как найти все узлы в определенном пространстве имен.|  

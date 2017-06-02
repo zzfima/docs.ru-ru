@@ -1,46 +1,50 @@
 ---
-title: "Типы коллекций Hashtable и Dictionary | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "коллекции [платформа .NET Framework], Hashtable - тип коллекции"
-  - "группировка данных в коллекциях, Hashtable - тип коллекции"
-  - "hash - функция"
-  - "хэш-таблицы"
-  - "Hashtable - класс, группировка данных в коллекциях"
-  - "Hashtable - тип коллекции"
+title: "Типы коллекций Hashtable и Dictionary | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Hashtable class, grouping data in collections
+- Hashtable collection type
+- hash tables
+- grouping data in collections, Hashtable collection type
+- hash function
+- collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 caps.latest.revision: 16
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 16
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 59aa4bd6160491ac6c6a4f45131531226ec7e58f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
+
 ---
-# Типы коллекций Hashtable и Dictionary
-Класс <xref:System.Collections.Hashtable?displayProperty=fullName> и универсальные классы <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=fullName>.  Универсальный класс <xref:System.Collections.Generic.Dictionary%602> также реализует универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>.  Таким образом, каждый элемент в этих коллекциях является парой "ключ\-значение".  
+# <a name="hashtable-and-dictionary-collection-types"></a>Типы коллекций Hashtable и Dictionary
+Класс <xref:System.Collections.Hashtable?displayProperty=fullName> и универсальные классы <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=fullName>. Универсальный класс <xref:System.Collections.Generic.Dictionary%602> также реализует универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>. Таким образом, каждый элемент в этих коллекциях является парой "ключ-значение".  
   
- Объект <xref:System.Collections.Hashtable> состоит из контейнеров, содержащих элементы коллекции.  Контейнер — это виртуальная подгруппа элементов внутри объекта <xref:System.Collections.Hashtable>, которая обеспечивает более простой и быстрый поиск и извлечение, чем в большинстве коллекций.  Каждый контейнер связан с хэш\-кодом, который создается с помощью хэш\-функции и основан на ключе элемента.  
+ Объект <xref:System.Collections.Hashtable> состоит из контейнеров, содержащих элементы коллекции. Контейнер — это виртуальная подгруппа элементов внутри объекта <xref:System.Collections.Hashtable>, которая обеспечивает более простой и быстрый поиск и извлечение, чем в большинстве коллекций. Каждый контейнер связан с хэш-кодом, который создается с помощью хэш-функции и основан на ключе элемента.  
   
- Универсальный класс <xref:System.Collections.Generic.HashSet%601> — это неупорядоченная коллекция для хранения уникальных элементов.  
+ Универсальный класс <xref:System.Collections.Generic.HashSet%601> — это неупорядоченная коллекция для хранения уникальных элементов.  
   
- Хэш\-функция — это алгоритм, возвращающий числовой хэш\-код на основе ключа.  Ключом является значение какого\-либо свойства хранимого объекта.  Хэш\-функция должна всегда возвращать один и тот же хэш\-код для определенного ключа.  Возможна ситуация, когда хэш\-функция создает один хэш\-код для разных ключей. Однако хэш\-функция, создающая уникальный хэш\-код для каждого уникального ключа, обеспечивает лучшую производительность при извлечении элементов из хэш\-таблицы.  
+ Хэш-функция — это алгоритм, возвращающий числовой хэш-код на основе ключа. Ключом является значение какого-либо свойства хранимого объекта. Хэш-функция должна всегда возвращать один и тот же хэш-код для определенного ключа. Возможна ситуация, когда хэш-функция создает один хэш-код для разных ключей. Однако хэш-функция, создающая уникальный хэш-код для каждого уникального ключа, обеспечивает лучшую производительность при извлечении элементов из хэш-таблицы.  
   
- Каждый объект, который используется в качестве элемента в <xref:System.Collections.Hashtable>, должен иметь возможность создать свой хэш\-код, используя реализацию метода <xref:System.Object.GetHashCode%2A>.  Однако хэш\-функцию также можно указать для всех элементов в <xref:System.Collections.Hashtable>, используя конструктор <xref:System.Collections.Hashtable>, принимающий реализацию <xref:System.Collections.IHashCodeProvider> в качестве одного из своих параметров.  
+ Каждый объект, который используется в качестве элемента в <xref:System.Collections.Hashtable>, должен иметь возможность создать свой хэш-код, используя реализацию метода <xref:System.Object.GetHashCode%2A>. Однако хэш-функцию также можно указать для всех элементов в <xref:System.Collections.Hashtable>, используя конструктор <xref:System.Collections.Hashtable>, принимающий реализацию <xref:System.Collections.IHashCodeProvider> в качестве одного из своих параметров.  
   
- Когда объект добавляется в <xref:System.Collections.Hashtable>, он сохраняется в контейнере, который связан с хэш\-кодом, соответствующим хэш\-коду объекта.  При поиске значения в <xref:System.Collections.Hashtable> создается хэш\-код для этого значения, и поиск осуществляется в контейнере, связанном с этим хэш\-кодом.  
+ Когда объект добавляется в <xref:System.Collections.Hashtable>, он сохраняется в контейнере, который связан с хэш-кодом, соответствующим хэш-коду объекта. При поиске значения в <xref:System.Collections.Hashtable> создается хэш-код для этого значения, и поиск осуществляется в контейнере, связанном с этим хэш-кодом.  
   
- Например, хэш\-функция для строки может принимать коды ASCII каждого символа в строке и объединять их для создания хэш\-кода.  Строка "пикник" будет иметь хэш\-код, отличный от хэш\-кода строки "корзина", поэтому строки "пикник" и "корзина" будут находиться в разных контейнерах.  В то же время строки "приказ" и "каприз" будут иметь одинаковый хэш\-код и будут находиться в одном контейнере.  
+ Например, хэш-функция для строки может принимать коды ASCII каждого символа в строке и объединять их для создания хэш-кода. Строка "пикник" будет иметь хэш-код, отличный от хэш-кода строки "корзина", поэтому строки "пикник" и "корзина" будут находиться в разных контейнерах. В то же время строки "приказ" и "каприз" будут иметь одинаковый хэш-код и будут находиться в одном контейнере.  
   
- Классы <xref:System.Collections.Generic.Dictionary%602> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602> ``  имеют ту же функциональность, что и класс <xref:System.Collections.Hashtable>.  Объект <xref:System.Collections.Generic.Dictionary%602> конкретного типа \(отличного от <xref:System.Object>\) обеспечивает лучшую производительность, чем <xref:System.Collections.Hashtable> для типов значений.  Это происходит потому, что элементы <xref:System.Collections.Hashtable> относятся к типу <xref:System.Object>, поэтому при сохранении или извлечении типа значения происходит упаковка или распаковка.  Класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602> ``  следует использовать в случае, когда к коллекции могут обращаться несколько потоков одновременно.  
+ Классы <xref:System.Collections.Generic.Dictionary%602> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602> имеют ту же функциональность, что и класс <xref:System.Collections.Hashtable>. Объект <xref:System.Collections.Generic.Dictionary%602> конкретного типа (отличного от <xref:System.Object>) обеспечивает лучшую производительность, чем <xref:System.Collections.Hashtable> для типов значений. Это происходит потому, что элементы <xref:System.Collections.Hashtable> относятся к типу <xref:System.Object>, поэтому при сохранении или извлечении типа значения происходит упаковка или распаковка. Класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602> следует использовать в том случае, когда к коллекции могут обращаться несколько потоков одновременно.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Collections.Hashtable>   
  <xref:System.Collections.IDictionary>   
  <xref:System.Collections.IHashCodeProvider>   

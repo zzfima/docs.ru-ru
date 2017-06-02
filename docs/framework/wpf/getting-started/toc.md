@@ -1,0 +1,6 @@
+# [Начало работы](index.md)
+## [Введение в WPF в Visual Studio 2015](introduction-to-wpf-in-vs.md)
+## [Новые возможности в WPF версии 4.5](whats-new.md)
+## [Пошаговое руководство. Создание первого классического приложения WPF](walkthrough-my-first-wpf-desktop-application.md)
+## [Пошаговые руководства по WPF](wpf-walkthroughs.md)
+## [Отзывы и предложения сообщества WPF](community-feedback.md)

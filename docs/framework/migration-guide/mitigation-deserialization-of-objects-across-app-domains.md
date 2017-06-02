@@ -1,36 +1,41 @@
 ---
-title: "Уменьшение: десериализация объектов между доменами приложений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Устранение рисков: десериализация объектов между доменами приложений | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 5
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
+
 ---
-# Уменьшение: десериализация объектов между доменами приложений
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Устранение рисков: десериализация объектов между доменами приложений
 В некоторых случаях, когда приложение использует два или большее количество доменов с разными базовыми папками приложения, при попытке выполнить десериализацию объектов в логическом контексте вызова между доменами приложения возникнет исключение.  
   
-## Диагностика проблемы  
+## <a name="diagnosing-the-issue"></a>Диагностика проблемы  
  Проблема возникает при следующей последовательности условий.  
   
 1.  Приложение использует два или большее количество доменов приложений с разными базовыми папками приложения.  
   
-2.  Некоторые типы явно добавляются в <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> путем вызова метода, например <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> или <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>.  Эти типы не отмечены как сериализуемые и не сохраняются в глобальном кэше сборок.  
+2.  Некоторые типы явно добавляются в <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> путем вызова метода, например <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> или <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>. Эти типы не отмечены как сериализуемые и не сохраняются в глобальном кэше сборок.  
   
 3.  Затем код, выполняющийся в домене приложения не по умолчанию, пытается считать значение из файла конфигурации или использовать XML для десериализации объекта.  
   
 4.  Чтобы считать значение из файла конфигурации или десериализовать объект, объект <xref:System.Xml.XmlReader> пытается получить доступ к системе конфигурации.  
   
-5.  Если система конфигурации еще не была инициализирована, это следует сделать.  Это означает, что, помимо прочего, среда выполнения должна создать стабильный путь для системы конфигурации, следующим образом.  
+5.  Если система конфигурации еще не была инициализирована, это следует сделать. Это означает, что, помимо прочего, среда выполнения должна создать стабильный путь для системы конфигурации, следующим образом.  
   
     1.  Выполняется поиск сведений о том, что домен приложений не является доменом по умолчанию.  
   
@@ -42,10 +47,10 @@ caps.handback.revision: 5
   
 6.  Поскольку типы логическом контексте вызова не могут быть разрешены в домене приложений по умолчанию, возникает исключение.  
   
-## Уменьшение  
+## <a name="mitigation"></a>Уменьшение  
  Чтобы устранить эту проблему, выполните следующие действия.  
   
-1.  При возникновении исключения найдите вызов `get_Evidence` в стеке вызовов.  Может возникать любое исключение из подмножества исключений, включая <xref:System.IO.FileNotFoundException> и <xref:System.Runtime.Serialization.SerializationException>.  
+1.  При возникновении исключения найдите вызов `get_Evidence` в стеке вызовов. Может возникать любое исключение из подмножества исключений, включая <xref:System.IO.FileNotFoundException> и <xref:System.Runtime.Serialization.SerializationException>.  
   
 2.  Найдите в приложении место, где в логический контекст вызова не добавляются никакие объекты, и добавьте следующий код.  
   
@@ -53,5 +58,5 @@ caps.handback.revision: 5
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)

@@ -1,55 +1,42 @@
 ---
 title: "Организация проекта для поддержки .NET Framework и .NET Core"
-description: "Организация проекта для поддержки .NET Framework и .NET Core"
-keywords: .NET, .NET Core
+description: "Эта статья поможет владельцам проектов, которые хотят скомпилировать свое решение одновременно для .NET Framework и .NET Core."
+keywords: ".NET, .NET Core, .NET Framework, макет проекта, поддержка нескольких платформ"
 author: conniey
 ms.author: mairaw
-ms.date: 07/18/2016
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-translationtype: Human Translation
-ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
-ms.openlocfilehash: b86693b1d6eed0ff5b8d1831e324354241f29806
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9fd4e033a5f33d4f560b12e23950abd62c7825c5
+ms.openlocfilehash: d83378b094fbae16c788c04269b833a4ecae3608
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/07/2017
 
 ---
 
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Организация проекта для поддержки .NET Framework и .NET Core
 
-> [!WARNING]
-> Этот раздел еще не был обновлен с учетом последней версии инструментария.
+Эта статья поможет владельцам проектов, которые хотят скомпилировать свое решение одновременно для .NET Framework и .NET Core. В ней описываются несколько вариантов организации проектов, которые могут помочь разработчикам достичь этой цели. Следующий список содержит несколько типичных сценариев, которые следует принимать во внимание при выборе макета проекта .NET Core. Этот список может охватывать не все необходимые случаи. Устанавливайте приоритеты в зависимости от потребностей вашего проекта.
 
-Эта статья призвана помочь владельцем проектов, которым требуется скомпилировать свои решения одновременно для .NET Framework и .NET Core.  В ней описываются несколько вариантов организации проектов, которые могут помочь разработчикам достичь этой цели.  Ниже приводятся несколько типичных сценариев, которые следует принять во внимание при выборе способа компоновки проекта с помощью .NET Core.  Они могут не охватывать все конкретные случаи.
+* [**Объединение существующих проектов и проектов .NET Core в единые проекты**][option-csproj]
 
-* [**Объединение существующих проектов и проектов .NET Core в единые проекты**][option-xproj]
-  
   *Преимущества*
   * Упрощение процесса сборки благодаря компиляции одного, а не нескольких проектов, каждый из которых предназначен для отдельной версии .NET Framework или платформы.
-  * Упрощение управления файлами исходного кода для проектов, предназначенных для различных платформ, так как управлять приходится только одним файлом проекта.  При использовании альтернативных подходов добавление и удаление файлов исходного кода требует синхронизации этих изменений с другими проектами вручную.
+  * Упрощение управления файлами исходного кода для проектов, предназначенных для различных платформ, благодаря тому, что вам приходится управлять только одним файлом проекта. При использовании альтернативных подходов добавление и удаление файлов исходного кода требует синхронизации этих изменений с другими проектами вручную.
   * Простое создание пакета NuGet для использования.
   * Позволяет писать код для конкретной версии .NET Framework в библиотеках посредством директив компилятора.
-  
-  *Неподдерживаемые сценарии*
-  * Не позволяет разработчикам, не имеющим среды Visual Studio 2015, открывать существующие проекты. Для поддержки предыдущих версий Visual Studio лучше [хранить файлы проектов в разных папках](#support-vs).
-  * Не позволяет совместно использовать библиотеку .NET Core в разных типах проектов в одном файле решения. Для поддержки такого сценария лучше [создать переносимую библиотеку классов](#support-pcl).
-  * Не позволяет использовать модификации сборки или загрузки проекта, которые поддерживаются целями и задачами MSBuild. Для поддержки такого сценария лучше [создать переносимую библиотеку классов](#support-pcl).
-
-* <a name="support-vs"></a>[**Разделение существующих и новых проектов .NET Core**][option-xproj-folder]
-  
-  *Преимущества*
-  * Продолжение работы над существующими проектами, причем разработчикам и участникам, у которых нет Visual Studio 2015, не нужно производить обновление.
-  * Снижение вероятности появления новых ошибок в существующих проектах, так как в них не требуется обработка кода.
-
-* <a name="support-pcl"></a>[**Сохранение существующих проектов и создание переносимых библиотек классов (PCL), предназначенных для .NET Core**][option-pcl]
-
-  *Преимущества*
-  * Ссылки на библиотеки .NET Core в классических и веб-проектах, предназначенных для полной версии .NET Framework, в рамках одного решения.
-  * Поддержка изменений в процессе сборки или загрузки проекта. Такими изменениями может быть включение задач и целей MSBuild в файл `*.csproj`.
 
   *Неподдерживаемые сценарии*
-  * Не позволяет писать код для определенной версии .NET Framework, так как [предопределенные символы препроцессора][how-to-multitarget] не поддерживаются.
+  * Для открытия существующих проектов разработчики должны использовать Visual Studio 2017. Для поддержки предыдущих версий Visual Studio лучше [хранить файлы проектов в разных папках](#support-vs).
+
+* <a name="support-vs"></a>[**Разделение существующих и новых проектов .NET Core**][option-csproj-folder]
+
+  *Преимущества*
+  * Продолжение работы над существующими проектами для разработчиков и участников, у которых нет Visual Studio 2017.
+  * Снижение вероятности появления новых ошибок в существующих проектах, так как не требуется обработка кода.
 
 ## <a name="example"></a>Пример
 
@@ -59,70 +46,45 @@ ms.lasthandoff: 03/15/2017
 
 [**Исходный код**][example-initial-project-code]
 
-В зависимости от ограничений и сложности существующих проектов добавить поддержку .NET Core для этого репозитория можно несколькими разными способами, описанными ниже.
+В зависимости от ограничений и сложности существующих проектов добавить поддержку .NET Core для этого репозитория можно несколькими способами, которые описаны ниже.
 
-## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project-xproj"></a>Замена существующих проектов проектом .NET Core (XPROJ), предназначенным для различных платформ
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Замена существующих проектов на проект .NET Core, предназначенный для нескольких платформ
 
-Репозиторий можно реорганизовать так, что все существующие файлы `*.csproj` будут удалены и будет создан единственный файл `*.xproj`, предназначенный для нескольких платформ.  Это удобно по той причине, что один проект можно компилировать для разных платформ.  Это также позволяет управлять различными параметрами компиляции, зависимостями и т. д. для каждой целевой платформы.
+Измените файлы в репозитории, удалив все существующие файлы *\*.csproj* и создав единственный файл *\*.csproj*, предназначенный для нескольких платформ. Это удобно по той причине, что один проект можно компилировать для разных платформ. Это также позволяет управлять различными параметрами компиляции и зависимостями для каждой целевой платформы.
 
-![Создание файла XPROJ, предназначенного для различных платформ][example-xproj]
+![Создание файла CSPROJ, предназначенного для нескольких платформ][example-csproj]
 
-[**Исходный код**][example-xproj-code]
-
-Обратите внимание на следующие изменения:
-* добавление `global.json`;
-* замена `packages.config` и `*.csproj` на `project.json` и `*.xproj`;
-* изменения в [файле project.json проекта Car][example-xproj-projectjson] и связанном с ним [тестовом проекте ][example-xproj-projectjson-test] с целью поддержки сборки для текущей платформы .NET Framework, а также других платформ.
-
-## <a name="create-a-portable-class-library-pcl-to-target-net-core"></a>Создание переносимой библиотеки классов (PCL), предназначенной для .NET Core
-
-Если существующие проекты содержат сложные операции или свойства сборки в файле `*.csproj`, может быть проще создать библиотеку PCL.
-
-![][example-pcl]
-
-[**Исходный код**][example-pcl-code]
+[**Исходный код**][example-csproj-code]
 
 Обратите внимание на следующие изменения:
-*  Переименование `project.json` в `{project-name}.project.json`
-    * Позволяет предотвратить возможный конфликт в Visual Studio при попытке восстановить пакеты для библиотек в том же каталоге. Дополнительные сведения см. на странице [вопросов и ответов по NuGet](https://docs.nuget.org/consume/nuget-faq#working-with-packages) в разделе _I have multiple projects in the same folder, how can I use separate packages.config or project.json files for each project?_ (У меня несколько проектов в одной папке. Как разделить файлы packages.config или project.json для каждого проекта?).
-    *  **Альтернативный вариант**: создайте библиотеку PCL в другой папке и используйте ссылку на первоначальный исходный код, чтобы избежать этой проблемы.  Размещение библиотеки PCL в другой папке имеет дополнительное преимущество: пользователи, у которых нет Visual Studio 2015, могут по-прежнему работать со старыми проектами, не загружая новое решение.
-*  Для нацеливания на .NET Standard после создания библиотеки PCL в Visual Studio откройте **свойства проекта**. В разделе **Целевые платформы** щелкните ссылку **Нацелить на стандартную платформу .NET**.  Чтобы отменить это изменение, выполните те же самые действия.
+* Замена файлов *packages.config* и *\*.csproj* на новый файл [.NET Core*\*.csproj*][example-csproj-netcore]. Пакеты NuGet указываются с помощью `<PackageReference> ItemGroup`.
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Сохранение существующих проектов и создание проекта .NET Core
 
 При наличии существующих проектов, предназначенных для более старых платформ, можно оставить эти проекты без изменения и использовать проект .NET Core для новых платформ.
 
-![Проект .NET Core с существующей библиотекой PCL в другой папке][example-xproj-different-folder]
+![Проект .NET Core с существующим проектом в другой папке][example-csproj-different-folder]
 
-[**Исходный код**][example-xproj-different-code]
+[**Исходный код**][example-csproj-different-code]
 
 Обратите внимание на следующие изменения:
 * Проект .NET Core и существующие проекты хранятся в разных папках.
-    * Это позволяет избежать упомянутой выше проблемы при восстановлении пакетов, которая возникает из-за наличия нескольких файлов project.json или package.config в одной папке.
-    * Хранение проектов в разных папках делает необязательным наличие Visual Studio 2015 (из-за использования файлов project.json).  Вы можете создать отдельное решение, которое открывает только старые проекты.
+    * Размещение проектов в разных папках позволяет обойтись без Visual Studio 2017. Вы можете создать отдельное решение, которое открывает только старые проекты.
 
 ## <a name="see-also"></a>См. также
 
-Дополнительные указания по переходу на использование файлов project.json и XPROJ см. в [документации по переносу в .NET Core][porting-doc].
+Дополнительные указания по переходу на .NET Core [документации по переходу на .NET Core][porting-doc].
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "Существующий проект"
 [example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
 
-[example-xproj]: media/project-structure/project.xproj.png "Создание файла XPROJ, предназначенного для различных платформ"
-[example-xproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/
-[example-xproj-projectjson]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/src/Car/project.json
-[example-xproj-projectjson-test]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/tests/Car.Tests/project.json
+[example-csproj]: media/project-structure/project.csproj.png "Создание файла CSPROJ, предназначенного для нескольких платформ"
+[example-csproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/
+[example-csproj-netcore]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
 
-[example-xproj-different-folder]: media/project-structure/project.xproj.different.png "Проект .NET Core с существующей библиотекой PCL в другой папке"
-[example-xproj-different-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj-keep-csproj/
+[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "Проект .NET Core с существующей библиотекой PCL в другой папке"
+[example-csproj-different-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-csproj-keep-existing/
 
-[example-pcl]: media/project-structure/project.pcl.png " Библиотека PCL, предназначенная для .NET Core"
-[example-pcl-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-pcl
-
-[option-xproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project-xproj
-[option-pcl]: #create-a-portable-class-library-pcl-to-target-net-core
-[option-xproj-folder]: #keep-existing-projects-and-create-a-net-core-project
-
-[how-to-multitarget]: ../tutorials/libraries.md#how-to-multitarget
-
+[option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
+[option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project

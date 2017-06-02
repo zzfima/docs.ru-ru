@@ -14,8 +14,8 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -30,17 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07743cabc00f65b1369c2733e5119cf1eaf47e0a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f88f7dcc7880621cf0f482b32ad7c1e5f1b51257
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
   
  [Написание асинхронной программы](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- В этом пошаговом руководстве описывается создание асинхронных решений с помощью ключевых слов [Async](../visual-basic/language-reference/modifiers/async.md) и [Await](../visual-basic/language-reference/operators/await-operator.md), представленных в [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)].  
+ Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../visual-basic/language-reference/modifiers/async.md) и [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Объявление и вызов событий](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  В этом пошаговом руководстве описывается, каким образом объявляются и вызываются события в [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  

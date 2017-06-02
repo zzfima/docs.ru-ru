@@ -1,34 +1,39 @@
 ---
-title: "Программирование с использованием доменов приложений и сборок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "домены приложений, программирование"
-  - "сборки [платформа .NET Framework], программирование"
-  - "программирование доменов приложений"
-  - "программирование сборок"
+title: "Программирование с использованием доменов приложений и сборок | Документация Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], programming
+- programming assemblies
+- application domains, programming
+- programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1cfd73bf6d8de9ea4ff9854e6882683514cb3c56
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/02/2017
+
 ---
-# Программирование с использованием доменов приложений и сборок
-При выполнении приложения .NET Framework такие ведущие приложения, как Microsoft Internet Explorer, ASP.NET и оболочка Windows, создают в этом процессе [домен приложения](../../../docs/framework/app-domains/application-domains.md), после чего загружают и выполняют в этом домене пользовательский код.  В большинстве случаев заниматься созданием доменов приложений и загрузкой сборок в домены не приходится, поскольку эти задачи выполняет ведущее приложение среды выполнения.  
+# <a name="programming-with-application-domains-and-assemblies"></a>Программирование с использованием доменов приложений и сборок
+Такие узлы, как Microsoft Internet Explorer, ASP.NET и оболочки Windows, загружают среду CLR в процесс, создают в этом процессе [домен приложения](../../../docs/framework/app-domains/application-domains.md), а затем загружают и выполняют пользовательский код в этом домене приложения при запуске приложения .NET Framework. В большинстве случаев вам не нужно беспокоиться о создании доменов приложений и загрузке сборок в них, так как эти задачи выполняет хост-приложение среды выполнения.  
   
- Тем не менее, домены приложений придется создавать самостоятельно, если разрабатывается хост\-приложение среды CLR, инструментарий или код, который необходимо выгружать программно, или подключаемые компоненты, загружаемые и выгружаемые во время выполнения.  Даже в том случае, если создавать хост\-приложение среды CLR не требуется, в этом разделе можно найти важные сведения о порядке использования доменов приложений и загружаемых в них сборок.  
+ Тем не менее, если вы создаете приложение для размещения среды CLR, средства или код для создания средств или код для выгрузки программным способом, а также подключаемые компоненты для динамической выгрузки и повторной загрузки, вы будете создавать домены приложений. Даже если вы не создаете хост-приложение среды выполнения, в этом разделе содержатся важные сведения по работе с доменами приложений и загруженными в них сборками.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Руководства по работе с доменами приложений и сборками](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
- Ссылки на все разделы практического руководства основной документации по программированию с использованием доменов приложений и сборок.  
+ Ссылки на все разделы практического руководства базовой документации по программированию с использованием доменов приложений и сборок.  
   
  [Использование доменов приложений](../../../docs/framework/app-domains/use.md)  
  Примеры создания, настройки и использования доменов приложений.  
@@ -36,7 +41,7 @@ caps.handback.revision: 11
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Описание способов создания, подписи и установки атрибутов сборок.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Предоставление динамических методов и сборок](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Описание способов создания динамических сборок.  
   
@@ -46,5 +51,5 @@ caps.handback.revision: 11
  [Домены приложений](../../../docs/framework/app-domains/application-domains.md)  
  Общие сведения о доменах приложений.  
   
- [Общие сведения об отражении](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Использование класса **Отражение** для получения сведений о сборке.
+ [Общие сведения о классе Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ Использование класса **Reflection** для получения сведений о сборке.

@@ -4,16 +4,17 @@ description: "Свойства"
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 04/03/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 871beb36f9801a0456eec1501fdbf07375c9b418
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9eab74a3b259037aff30320753191eee95aa974
+ms.openlocfilehash: 763a76a8ea0e48fd6935c951ce584efad50dabb9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/25/2017
 
 ---
 
@@ -25,6 +26,7 @@ ms.lasthandoff: 03/13/2017
 Однако в отличие от полей свойства реализуются с помощью методов доступа, которые определяют инструкции, выполняемые при обращении к свойству или при его назначении.
 
 ## <a name="property-syntax"></a>Синтаксис свойства
+
 Синтаксис свойств является естественным расширением полей. Поле определяет место хранения:
 
 ```csharp
@@ -40,16 +42,27 @@ public class Person
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
+
     // remaining implementation removed from listing
 }
 ```
 
 Синтаксис, показанный выше, является синтаксисом *автосвойств*. Компилятор создает место хранения для поля, поддерживающего свойство. Компилятор также реализует тело методов доступа `get` и `set`.
+
+Бывает, что свойство необходимо инициализировать со значением, отличным от значения по умолчанию для его типа.  C# позволяет это сделать, указав значение после закрывающей фигурной скобки свойства. В этом случае в качестве начального значения для свойства `FirstName` можно задать пустую строку, а не `null`. Для этого используется следующий код:
+
+```csharp
+public class Person
+{
+    public string FirstName { get; set; } = string.Empty;
+
+    // remaining implementation removed from listing
+}
+```
+
+Как вы увидите далее в этой статье, данная функция особенно полезна для свойств, предназначенных только для чтения.
+
 Вы можете определить хранилище самостоятельно, как показано ниже:
 
 ```csharp
@@ -64,14 +77,31 @@ public class Person
     // remaining implementation removed from listing
 }
 ```
- 
+
+Если реализация свойства представляет собой одиночное выражение, в качестве метода получения или задания можно использовать *элементы, воплощающие выражение*.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get => firstName;
+        set => firstName = value;
+    }
+    private string firstName;
+    // remaining implementation removed from listing
+}
+```
+
+Такой упрощенный синтаксис будет применяться в этом разделе везде, где это возможно.
+
 В примере выше определяется свойство для чтения и записи. Обратите внимание на ключевое слово `value` в методе доступа set. Метод доступа `set` всегда имеет один параметр с именем `value`. Метод доступа `get` должен возвращать значение, которое можно преобразовать в свойство (`string` в этом примере).
  
-Это основные сведения о синтаксисе. Существует множество различных вариантов, поддерживающих разные идиомы. Рассмотрим их, а также соответствующие параметры синтаксиса. 
+Это основные сведения о синтаксисе. Существует множество различных вариантов, поддерживающих разные идиомы. Рассмотрим их, а также соответствующие параметры синтаксиса.
 
 ## <a name="scenarios"></a>Сценарии
 
-Приведенные выше примеры демонстрируют один из простейших вариантов определения свойств: свойство для чтения и записи без проверки. Путем написания нужного кода в методах доступа `get` и `set` можно реализовать много разных сценариев.  
+Приведенные выше примеры демонстрируют один из простейших вариантов определения свойств: свойство для чтения и записи без проверки. Путем написания нужного кода в методах доступа `get` и `set` можно реализовать много разных сценариев.
 
 ### <a name="validation"></a>Проверка
 
@@ -82,7 +112,7 @@ public class Person
 {
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -96,9 +126,11 @@ public class Person
 ```
 
 В приведенном выше примере код применяет правило о том, что имя не может быть пустым или содержать только пробелы. Если разработчик пишет
+
 ```csharp
 hero.FirstName = "";
 ```
+
 Это назначение создает исключение `ArgumentException`. Поскольку метод доступа set свойства должен иметь тип возвращаемого значения void, чтобы сообщить об ошибках в методе доступа set, создается исключение.
 
 Это простой пример проверки. Этот синтаксис можно расширить для любых компонентов в вашем сценарии. Можно проверить отношения между разными свойствами или соответствие любым внешним условиям. Любые допустимые операторы C# являются допустимыми в методе доступа свойства.
@@ -111,20 +143,43 @@ hero.FirstName = "";
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        private set;
-    }
+    public string FirstName { get; private set; }
+
     // remaining implementation removed from listing
 }
 ```
 
 Теперь к свойству `FirstName` можно получать доступ из любого кода, но назначить его можно только из другого кода в классе `Person`.
+
 Вы можете добавить любой ограничивающий модификатор доступа для методов доступа set или get. Модификатор доступа, установленный для отдельного метода доступа, должен задавать более строгие ограничения, чем модификатор доступа для определения свойства. Приведенный выше пример допустим, так как свойство `FirstName` является открытым (`public`) а метод доступа set — закрытым (`private`). Нельзя объявить свойство `private` с методом доступа `public`. Свойство также можно объявить как `protected`, `internal`, `protected internal` или даже `private`.   
 
 Также допускается размещение более строгих модификаторов для метода доступа `get`. Например, свойство `public` может быть открытым, а метод доступа `get` ограничен типом `private`. Этот сценарий редко реализуется на практике.
- 
+
+Кроме того, можно ограничить изменения в свойстве, разрешив задавать его только в конструкторе или инициализаторе свойств. Внести соответствующие изменения в класс `Person` можно следующим образом:
+
+```csharp
+public class Person
+{
+    public Person(string firstName)
+    {
+        this.FirstName = firstName;
+    }
+
+    public string FirstName { get; }
+
+    // remaining implementation removed from listing
+}
+```
+
+Эта функция чаще всего используется для инициализации коллекций, которые представляются как свойства, доступные только для чтения:
+
+```csharp
+public class Measurements
+{
+    public ICollection<DataPoint> points { get; } = new List<DataPoint>();
+}
+```
+
 ### <a name="computed-properties"></a>Вычисляемые свойства
 
 Свойство не обязательно должно просто возвращать значение поля члена. Можно создать свойства, возвращающие вычисляемое значение. Расширим объект `Person` так, чтобы он возвращал полное имя, вычисляемое путем объединения имени и фамилии:
@@ -132,25 +187,11 @@ public class Person
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
-    public string FullName
-    {
-        get
-        {
-            return $"{FirstName} {LastName}";
-        }
-    }
+    public string FullName { get { return $"{FirstName} {LastName}"; } }
 }
 ```
 
@@ -161,17 +202,9 @@ public class Person
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
     public string FullName =>  $"{FirstName} {LastName}";
 }
@@ -186,17 +219,9 @@ public class Person
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
     private string fullName;
     public string FullName
@@ -219,7 +244,7 @@ public class Person
     private string firstName;
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             firstName = value;
@@ -230,7 +255,7 @@ public class Person
     private string lastName;
     public string LastName
     {
-        get { return lastName; }
+        get => lastName;
         set
         {
             lastName = value;
@@ -252,7 +277,7 @@ public class Person
 ```
 
 Эта окончательная версия вычисляет свойство `FullName` только при необходимости.
-Если ранее вычисленная версия является допустимой, используется она. Если другое изменение состояния делает ранее вычисленную версию недействительной, она будет пересчитана. Разработчикам, использующим этот класс, необязательно знать детали реализации. Ни одно из этих внутренних изменений не влияет на использование объекта person. Это главная причина для использования свойств для предоставления доступа к членам данных объекта. 
+Если ранее вычисленная версия является допустимой, используется она. Если другое изменение состояния делает ранее вычисленную версию недействительной, она будет пересчитана. Разработчикам, использующим этот класс, необязательно знать детали реализации. Ни одно из этих внутренних изменений не влияет на использование объекта person. Это главная причина для использования свойств для предоставления доступа к членам данных объекта.
  
 ### <a name="inotifypropertychanged"></a>INotifyPropertyChanged
 
@@ -263,7 +288,7 @@ public class Person : INotifyPropertyChanged
 {
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -288,7 +313,7 @@ public class Person : INotifyPropertyChanged
 
 Кроме того, это пример случая, когда можно писать код в методах доступа для поддержки необходимых сценариев.
 
-## <a name="summing-up"></a>Заключение 
+## <a name="summing-up"></a>Заключение
 
 Свойства — это своего рода интеллектуальные поля в классе или объекте. Из-за пределов объекта они представляются полями в объекте. Однако для реализации свойства можно использовать полную палитру функциональных возможностей C#.
 Вы можете предоставлять разные уровни доступа, выполнять проверки, отложенное вычисление или любые другие требования, необходимые в вашем сценарии.

@@ -4,23 +4,21 @@ description: "Разработка библиотек с помощью крос
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 94b6d965c7a39a02723b641f6551e54dd4df1f07
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
+ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/02/2017
 
 ---
 
 # <a name="developing-libraries-with-cross-platform-tools"></a>Разработка библиотек с помощью кроссплатформенных средств
-
-> [!WARNING]
-> Этот раздел еще не был обновлен с учетом последней версии инструментария.
 
 В этой статье рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки (CLI).  CLI предоставляет эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах.  Вы по-прежнему можете создавать библиотеки с помощью Visual Studio. Если вы предпочитаете такой способ, обратитесь к [руководству по Visual Studio](libraries-with-vs.md).
 
@@ -28,7 +26,7 @@ ms.lasthandoff: 03/07/2017
 
 На компьютере должны быть установлены [пакет SDK и интерфейс CLI для .NET Core ](https://www.microsoft.com/net/core).
 
-Для разделов этого документа, касающихся версий .NET Framework или переносимых библиотек классов (PCL), необходима платформа [.NET Framework](http://getdotnet.azurewebsites.net/), установленная на компьютере с Windows.  
+При работе с разделами, в которых используются различные версии .NET Framework, на компьютере с ОС Windows должна быть установлена платформа [.NET Framework](http://getdotnet.azurewebsites.net/).  
 
 Кроме того, если необходимо поддерживать целевые платформы .NET Framework предыдущих версий, требуется установить пакеты нацеливания и пакеты для разработчиков, предназначенные для предыдущих версий платформы, со [страницы целевых платформ .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html).  См. таблицу ниже.
 
@@ -48,42 +46,27 @@ ms.lasthandoff: 03/07/2017
 
 В этом разделе есть таблица, в которой версии .NET Standard сопоставляются с различными реализациями:
 
-| Имя платформы | Alias |  |  |  |  |  | | |
-| :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|.NET Standard | netstandard | 1,0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 |
-|.NET Core|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1,0|
-|.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|4.6.3|
-|Платформы Mono и Xamarin||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|*|
-|Универсальная платформа Windows |uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|||
-|Windows|win|&rarr;|8.0|8.1|||||
-|Windows Phone|wpa|&rarr;|&rarr;|8.1|||||
-|Windows Phone Silverlight|wp|8.0|||||||
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 Вот что значит эта таблица в контексте создания библиотеки:
 
-При выборе версии платформы .NET Standard необходимо найти компромисс между доступом к новейшим интерфейсам API и возможностью нацеливания на большее количество платформ и версий .NET.  Диапазон поддерживаемых платформ и версий определяется выбранной версией `netstandardX.X` (где `X.X` — это номер версии), которая добавляется в файл `project.json`.
-
-Кроме того, соответствующий [зависимый пакет NuGet](https://www.nuget.org/packages/NETStandard.Library/) — `NETStandard.Library` версии `1.6.0`.  Хотя ничто не мешает вам использовать `Microsoft.NETCore.App`, как в случае с консольными приложениями, как правило, делать это не рекомендуется.  Если вам нужны интерфейсы API из пакета, который не указан в `NETStandard.Library`, вы всегда можете указать его в дополнение к `NETStandard.Library` в разделе `dependencies` файла `project.json`.
+При выборе версии платформы .NET Standard необходимо найти компромисс между доступом к новейшим интерфейсам API и возможностью нацеливания на большее количество платформ и версий .NET.  Диапазон целевых платформ и версий определяется выбранной версией `netstandardX.X` (где `X.X` — это номер версии), которая добавляется в файл проекта (`.csproj` или `.fsproj`).
 
 При нацеливании на платформу .NET Standard есть три основных варианта, выбор которых зависит от ваших потребностей.
 
-1. Можно использовать последнюю версию .NET Standard (`netstandard1.6`), если вам нужен доступ к большинству интерфейсов API, а охват максимально возможного количества реализаций не важен.
-2. Вы можете использовать более раннюю версию .NET Standard для нацеливания на более ранние реализации .NET за счет отсутствия доступа к некоторым новейшим интерфейсам API.
-    
-    Например, если требуется гарантированная совместимость с .NET Framework 4.6 и более поздними версиями, следует выбрать `netstandard1.3`:
+1. Вы можете использовать версию .NET Standard по умолчанию, которая предоставляется шаблонами `netstandard1.4` и обеспечивает доступ к большинству API-интерфейсов .NET Standard, сохраняя совместимость с UWP, .NET Framework 4.6.1 и новой платформой .NET Standard 2.0.
 
-    ```json
-    {
-        "dependencies":{
-            "NETStandard.Library":"1.6.0"
-        },
-        "frameworks":{
-            "netstandard1.3":{}
-        }
-    }
+    ```xml
+    <Project Sdk="Microsoft.NET.Sdk">
+        <PropertyGroup>
+            <TargetFramework>netstandard1.4</TargetFramework>
+        </PropertyGroup>
+    </Project>
     ```
+
+2. Можно использовать более раннюю или более позднюю версию .NET Standard, изменив значение в узле `TargetFramework` файла проекта.
     
-    Версии .NET Standard обладают обратной совместимостью. Это означает, что библиотеки `netstandard1.0` выполняются на платформах `netstandard1.1` и более поздних версий.  Однако прямой совместимости нет: более ранние платформы .NET Standard не могут ссылаться на более поздние.  Это значит, что библиотеки `netstandard1.0` не могут ссылаться на библиотеки, предназначенные для `netstandard1.1` или более поздних версий.  Выберите версию Standard, которая предоставляет подходящее сочетание интерфейсов API и поддерживаемых платформ для ваших потребностей.
+    Версии .NET Standard обладают обратной совместимостью. Это означает, что библиотеки `netstandard1.0` выполняются на платформах `netstandard1.1` и более поздних версий.  Однако прямой совместимости нет: более ранние платформы .NET Standard не могут ссылаться на более поздние.  Это значит, что библиотеки `netstandard1.0` не могут ссылаться на библиотеки, предназначенные для `netstandard1.1` или более поздних версий.  Выберите версию Standard, которая предоставляет подходящее сочетание интерфейсов API и поддерживаемых платформ для ваших потребностей.  Сейчас рекомендуем использовать версию `netstandard1.4`.
     
 3. Если требуется нацеливание на .NET Framework версии 4.0 или более ранней или использование интерфейса API, доступного в .NET Framework, но не в .NET Standard (например, `System.Drawing`), прочитайте следующие подразделы, чтобы узнать, как осуществляется настройка для разных версий.
 
@@ -94,7 +77,7 @@ ms.lasthandoff: 03/07/2017
 
 Имейте в виду, что некоторые используемые здесь версии .NET Framework больше не поддерживаются.  Сведения о неподдерживаемых версиях см. в статье [Вопросы и ответы о политике по срокам поддержки Microsoft .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us).
 
-Чтобы охватить максимальное количество разработчиков и проектов, используйте .NET Framework 4 в качестве базовой целевой платформы. Для нацеливания на .NET Framework сначала необходимо использовать моникер целевой платформы (TFM), соответствующий версии .NET Framework, которая должна поддерживаться.
+Чтобы охватить максимальное количество разработчиков и проектов, используйте .NET Framework 4.0 в качестве базовой целевой платформы. Для нацеливания на .NET Framework сначала необходимо использовать моникер целевой платформы (TFM), соответствующий версии .NET Framework, которая должна поддерживаться.
 
 ```
 .NET Framework 2.0   --> net20
@@ -107,109 +90,56 @@ ms.lasthandoff: 03/07/2017
 .NET Framework 4.6   --> net46
 .NET Framework 4.6.1 --> net461
 .NET Framework 4.6.2 --> net462
-.NET Framework 4.6.3 --> net463
+.NET Framework 4.7 --> net47
 ```
 
-Например, вот как создать библиотеку, предназначенную для .NET Framework 4:
+Вставьте этот моникер целевой платформы в раздел `TargetFramework` файла проекта.  Например, вот как создать библиотеку, предназначенную для .NET Framework 4.0:
 
-```json
-{
-    "frameworks":{
-        "net40":{}
-    }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net40</TargetFramework>
+    </PropertyGroup>
+</Project>
 ```
 
 Вот и все!  Хотя эта библиотека компилируется только для .NET Framework 4, ее можно использовать в более поздних версиях .NET Framework.
-
-## <a name="how-to-target-a-portable-class-library-pcl"></a>Нацеливание на переносимую библиотеку классов (PCL)
-
-> [!NOTE]
-> В этих инструкциях предполагается, что на компьютере установлена платформа .NET Framework.  Чтобы установить зависимости, обратитесь к разделу [Предварительные требования](#prerequisites).
-
-Нацеливание на библиотеку PCL немного сложнее, чем на платформу .NET Standard или .NET Framework.  Начинающие могут обратиться к [списку профилей PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY/preview), чтобы найти целевой пакет NuGet, соответствующий нужному профилю PCL.
-
-Затем необходимо выполнить указанные ниже действия:
-
-1. В разделе `frameworks` файла `project.json` создайте запись с именем `.NETPortable,Version=v{version},Profile=Profile{profile}`, где `{version}` и `{profile}` — это номера версии и профиля PCL соответственно.
-2. В этой новой записи укажите каждую сборку, используемую для данной целевой платформы, в записи `frameworkAssemblies`.  Эти сборки включают `mscorlib`, `System` и `System.Core`.
-3. При настройке для различных версий (см. следующий раздел) необходимо явным образом перечислить зависимости для каждой целевой платформы в соответствующих записях.  Вы больше не сможете использовать глобальную запись `dependencies`.
-
-Ниже приведен пример нацеливания на профиль PCL 328. Профиль 328 поддерживает: .NET Standard 1.4, .NET Framework 4, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8.1 и Silverlight 5.
-
-```json
-{
-    "frameworks":{
-        ".NETPortable,Version=v4.0,Profile=Profile328":{
-            "frameworkAssemblies":{
-                "mscorlib":"",
-                "System":"",
-                "System.Core":""
-            }
-        }
-    }
-}
-```
-
-При сборке проекта, включающего профиль PCL 328 в качестве платформы в файле *project.json*, в папке */bin/debug* должна быть следующая вложенная папка:
-
-```
-portable-net40+sl50+netcore45+wpa81+wp8/
-```
-
-Эта папка содержит файлы `.dll`, необходимые для выполнения библиотеки.
 
 ## <a name="how-to-multitarget"></a>Настройка для различных версий
 
 > [!NOTE]
 > В приведенных ниже инструкциях предполагается, что на компьютере установлена платформа .NET Framework.  Сведения о зависимостях, которые необходимо установить, и о том, где их можно скачать, см. в разделе [Предварительные требования](#prerequisites).
 
-Если проект поддерживает как .NET Framework, так и .NET Core, может потребоваться нацеливание на более старые версии .NET Framework. В такой ситуации, если вам нужно применять более новые интерфейсы API и языковые конструкции для новых целевых платформ, используйте директивы `#if` в коде. Кроме того, может потребоваться добавить разные пакеты и зависимости в файл `project.json file` для каждой целевой платформы, чтобы включить различные интерфейсы API, необходимые в каждом случае.
+Если проект поддерживает как .NET Framework, так и .NET Core, может потребоваться нацеливание на более старые версии .NET Framework. В такой ситуации, если вам нужно применять более новые интерфейсы API и языковые конструкции для новых целевых платформ, используйте директивы `#if` в коде. Кроме того, может потребоваться добавить разные пакеты и зависимости для каждой целевой платформы, чтобы включить различные интерфейсы API, необходимые в каждом случае.
 
 Предположим, имеется библиотека, выполняющая сетевые операции по протоколу HTTP. Для .NET Standard и .NET Framework версии 4.5 или более поздней можно использовать класс `HttpClient` из пространства имен `System.Net.Http`. Однако в более ранних версиях .NET Framework нет класса `HttpClient`, поэтому вместо него можно использовать класс `WebClient` из пространства имен `System.Net`.
 
-Файл `project.json` мог бы выглядеть следующим образом.
+Файл проекта может выглядеть следующим образом:
 
-```json
-{
-    "frameworks":{
-        "net40":{
-            "frameworkAssemblies": {
-                "System.Net":"",
-                "System.Text.RegularExpressions":""
-            }
-        },
-        "net452":{
-            "frameworkAssemblies":{
-                "System.Net":"",
-                "System.Net.Http":"",
-                "System.Text.RegularExpressions":"",
-                "System.Threading.Tasks":""
-            }
-        },
-        "netstandard1.6":{
-            "dependencies": {
-                "NETStandard.Library":"1.6.0",
-            }
-        }
-    }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+  </PropertyGroup>
+
+  <!-- Need to conditionally bring in references for the .NET Framework 4.0 target -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
+    <Reference Include="System.Net" />
+  </ItemGroup>
+
+  <!-- Need to conditionally bring in references for the .NET Framework 4.5 target -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
+</Project>
 ```
 
-Обратите внимание на то, что на сборки .NET Framework необходимо ссылаться явным образом для целевых платформ `net40` и `net452`, а ссылки на пакеты NuGet также указываются явным образом для целевой платформы `netstandard1.6`.  Это обязательное требование в сценариях настройки для различных систем.
+Вы заметите три основных изменения:
 
-Далее операторы `using` в файле исходного кода можно изменить следующим образом:
-
-```csharp
-#if NET40
-// This only compiles for the .NET Framework 4 targets
-using System.Net;
-#else
-// This compiles for all other targets
-using System.Net.Http;
-using System.Threading.Tasks;
-#endif
-```
+1. Узел `TargetFramework` был заменен на `TargetFrameworks`, внутри которого содержатся три моникера целевой платформы.
+2. Добавлен узел `<ItemGroup>` для целевой платформы `net40 `, который извлекает одну ссылку на .NET Framework.
+3. Добавлен узел `<ItemGroup>` для целевой платформы `net45`, который извлекает две ссылки на .NET Framework.
 
 Система сборки распознает следующие символы препроцессора, используемые в директивах `#if`:
 
@@ -232,14 +162,27 @@ using System.Threading.Tasks;
 .NET Standard 1.6    --> NETSTANDARD1_6
 ```
 
-В середине исходного кода можно применять директивы `#if` для условного использования библиотек. Пример:
+Ниже приведен пример использования условной компиляции для каждого целевого объекта:
 
 ```csharp
+using System;
+using System.Text.RegularExpressions;
+#if NET40
+// This only compiles for the .NET Framework 4 targets
+using System.Net;
+#else
+ // This compiles for all other targets
+using System.Net.Http;
+using System.Threading.Tasks;
+#endif
+
+namespace MultitargetLib
+{
     public class Library
     {
 #if NET40
-        private readonly WebClient _client = new WebClient();
-        private readonly object _locker = new object();
+         private readonly WebClient _client = new WebClient();
+         private readonly object _locker = new object();
 #else
         private readonly HttpClient _client = new HttpClient();
 #endif
@@ -249,216 +192,98 @@ using System.Threading.Tasks;
         public string GetDotNetCount()
         {
             string url = "http://www.dotnetfoundation.org/";
-          
+
             var uri = new Uri(url);
-            
+
             string result = "";
-            
+
             // Lock here to provide thread-safety.
             lock(_locker)
             {
                 result = _client.DownloadString(uri);
             }
-            
+
             int dotNetCount = Regex.Matches(result, ".NET").Count;
-            
+
             return $"Dotnet Foundation mentions .NET {dotNetCount} times!";
         }
 #else
-        // .NET 4.5+ can use async/await!
-        public async Task<string> GetDotNetCountAsync()
-        {
-            string url = "http://www.dotnetfoundation.org/";
-            
-            // HttpClient is thread-safe, so no need to explicitly lock here
-            var result = await _client.GetStringAsync(url);
-            
-            int dotNetCount = Regex.Matches(result, ".NET").Count;
-            
-            return $"dotnetfoundation.orgmentions .NET {dotNetCount} times in its HTML!";
-        }
-#endif
+         // .NET 4.5+ can use async/await!
+         public async Task<string> GetDotNetCountAsync()
+         {
+             string url = "http://www.dotnetfoundation.org/";
+
+             // HttpClient is thread-safe, so no need to explicitly lock here
+             var result = await _client.GetStringAsync(url);
+
+             int dotNetCount = Regex.Matches(result, ".NET").Count;
+
+             return $"dotnetfoundation.org mentions .NET {dotNetCount} times in its HTML!";
+         }
+ #endif
     }
+}
 ```
 
-При сборке проекта, включающего профиль `net40`, `net45` и `netstandard1.6` в качестве платформ в файле *project.json*, в папке */bin/debug* должны быть следующие вложенные папки:
+При сборке этого проекта с `dotnet build` вы увидите, что в папке `bin/` появились три каталога:
 
 ```
 net40/
 net45/
-netstandard1.6/
+netstandard1.4/
 ```
 
-### <a name="but-what-about-multitargeting-with-portable-class-libraries"></a>Настройка для различных версий в случае с переносимыми библиотеками классов
-
-Для кроссплатформенной компиляции с PCL в качестве целевой платформы необходимо добавить определение сборки в файл `project.json` в разделе `buildOptions` целевой библиотеки PCL.  Затем можно применять директивы `#if` в исходном коде, которые используют определение сборки в качестве символа препроцессора.
-
-Например, для нацеливания на [профиль PCL 328](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY/preview) (.NET Framework 4, Windows 8, Windows Phone Silverlight 8, Windows Phone 8.1, Silverlight 5) при кроссплатформенной компиляции можно сослаться на него как PORTABLE328.  Просто добавьте его в файл `project.json` в виде атрибута `buildOptions`:
-
-```json
-{
-    "frameworks":{
-        "netstandard1.6":{
-           "dependencies":{
-                "NETStandard.Library":"1.6.0",
-            }
-        },
-        ".NETPortable,Version=v4.0,Profile=Profile328":{
-            "buildOptions": {
-                "define": [ "PORTABLE328" ]
-            },
-            "frameworkAssemblies":{
-                "mscorlib":"",
-                "System":"",
-                "System.Core":"",
-                "System.Net"
-            }
-        }
-    }
-}
-
-```
-
-Теперь можно выполнить условную компиляцию для целевой платформы:
-
-```csharp
-#if !PORTABLE328
-using System.Net.Http;
-using System.Threading.Tasks;
-// Potentially other namespaces which aren't compatible with Profile 328
-#endif
-```
-
-Так как `PORTABLE328` теперь распознается компилятором, библиотека профиля PCL 328, созданная компилятором, не будет включать `System.Net.Http` или `System.Threading.Tasks`.
-
-При сборке проекта, включающего профиль PCL 328 и `netstandard1.6` в качестве платформ в файле *project.json*, в папке */bin/debug* будут следующие вложенные папки:
-
-```
-portable-net40+sl50+netcore45+wpa81+wp8/
-netstandard1.6/
-```
-
-## <a name="how-to-use-native-dependencies"></a>Использование зависимостей в машинном коде
-
-Вам может потребоваться создать библиотеку, которая зависит от файла `.dll` в машинном коде.  При создании такой библиотеки есть два варианта:
-
-1. сошлитесь на библиотеку `.dll` в машинном коде непосредственно в файле `project.json`;
-2. упакуйте библиотеку `.dll` в собственный пакет NuGet а затем установите зависимость от него.
-
-В первом случае в файл `project.json` необходимо включить следующее:
-
-1. задать для `allowUnsafe` значение `true` в разделе `buildOptions`;
-2. указать [идентификатор среды выполнения (RID)](../rid-catalog.md) в разделе `runtimes`;
-3. указать путь на файлы `.dll` в машинном коде, ссылки на которые задаются.
-
-Вот пример файла `project.json` для файла `.dll` в машинном коде в корневом каталоге проекта, выполняющегося в Windows:
-
-```json
-{
-    "buildOptions":{
-        "allowUnsafe":true
-    },
-    "runtimes":{
-        "win10-x64":{}
-    },
-    "packOptions":{
-        "files":{
-            "mappings":{
-                "runtimes/win10-x64/native":{
-                    "includeFiles":[ "native-lib.dll"]
-                }
-            }            
-        }
-    }
-}
-```
-
-Если вы распространяете библиотеку в виде пакета, файл `.dll` рекомендуется размещать на корневом уровне проекта.
-
-Во втором случае вам необходимо выполнить сборку пакета NuGet на основе файлов `.dll`, разместите его в канале NuGet или MyGet, а затем напрямую установите зависимость от него.  Вам по-прежнему необходимо задать для `allowUnsafe` значение `true` в разделе `buildOptions` файла `project.json`.  Ниже приведен пример (предполагается, что `MyNativeLib` — это пакет Nuget версии `1.2.0`).
-
-```json
-{
-    "buildOptions":{
-        "allowUnsafe":true
-    },
-    "dependencies":{
-        "MyNativeLib":"1.2.0"
-    }
-}
-```
-
-Пример упаковки кроссплатформенных двоичных файлов в машинном коде см. на странице [Пакет Libuv для ASP.NET](https://github.com/aspnet/libuv-package) и в [соответствующей справке в KestrelHttpServer](https://github.com/aspnet/KestrelHttpServer/blob/1.0.0/src/Microsoft.AspNetCore.Server.Kestrel/project.json#L19).
+Каждый из них содержит файлы `.dll` для соответствующего целевого объекта.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Тестирование библиотек в .NET Core
 
-Необходимо иметь возможность тестирования проектов на различных платформах.  Проще всего применять средство тестирования [xUnit](http://xunit.github.io/), которое также используется проектами .NET Core.  Настройка тестовых проектов для решения зависит от [его структуры](#structuring-a-solution).  В приведенном ниже примере предполагается, что все исходные проекты находятся в папке `/src` верхнего уровня, а все тестовые проекты — в папке `/test` верхнего уровня.
+Необходимо иметь возможность тестирования проектов на различных платформах.  Вы можете использовать [xUnit](http://xunit.github.io/) или MSTest без дополнительной настройки.  Обе платформы тестирования идеально подходят для модульного тестирования библиотеки в .NET Core.  Настройка тестовых проектов для решения зависит от [его структуры](#structuring-a-solution).  В следующем примере предполагается, что каталог с тестами и каталог с исходным кодом находятся в одном и том же каталоге верхнего уровня.
 
-1. Файл `global.json` должен находиться на уровне решения, на котором известно, где находятся тестовые проекты:
+> [! СВЕДЕНИЯ] В этом примере используются некоторые [команды интерфейса командной строки .NET](../tools/index.md).  Дополнительные сведения см. в разделах [dotnet new](../tools/dotnet-new.md) и [dotnet sln](../tools/dotnet-sln.md).
+
+1. Настройте решение.  Это можно сделать с помощью следующих команд:
+
+```bash
+mkdir SolutionWithSrcAndTest
+cd SolutionWithSrcAndTest
+dotnet new sln
+dotnet new classlib -o MyProject
+dotnet new xunit -o MyProject.Test
+dotnet sln add MyProject/MyProject.csproj
+dotnet sln add MyProject.Test/MyProject.Test.csproj
+```
+
+Эти команды создадут проекты и объединят их в решение.  Ваш каталог для `SolutionWithSrcAndTest` должен выглядеть следующим образом:
+
+```    
+/SolutionWithSrcAndTest
+|__SolutionWithSrcAndTest.sln
+|__MyProject/
+|__MyProject.Test/
+```
+
+2. Перейдите в каталог тестового проекта и добавьте ссылку на `MyProject.Test` из `MyProject`.
+
+```bash
+cd MyProject.Test
+dotnet add reference ../MyProject/MyProject.csproj
+```
+
+3. Восстановите пакеты и соберите проекты:
+
+```bash
+dotnet restore
+dotnet build
+```
+
+4. Убедитесь, что xUnit запущен, выполнив команду `dotnet test`.  Если вы решили использовать MSTest, запустите средство запуска консоли MSTest вместо xUnit.
     
-    ```json
-    {
-        "projects":[ "src", "test"]
-    }
-    ```
-    
-    Структура папок решения должна выглядеть следующим образом.
-    
-    ```
-    /SolutionWithSrcAndTest
-    |__global.json
-    |__/src
-    |__/test
-    ```
-    
-2. Создайте тестовый проект, создав папку проекта в папке `/test` и файл `project.json` в новой папке проекта.  Вы можете создать файл `project.json`, выполнив команду `dotnet new`, и изменить файл `project.json` впоследствии.  Файл должен содержать следующее:
-
-   * `netcoreapp1.0`в качестве единственной записи в разделе `frameworks`;
-   * ссылка на `Microsoft.NETCore.App` версии `1.0.0`;
-   * ссылка на xUnit версии `2.2.0-beta2-build3300`;
-   * ссылка на `dotnet-test-xunit`версию `2.2.0-preview2-build1029`;
-   * ссылка проекта на тестируемую библиотеку;
-   * запись `"testRunner":"xunit"`.
-   
-   Вот пример (тестируется библиотека `LibraryUnderTest` версии `1.0.0`):
-   
-   ```json
-   {
-        "testRunner":"xunit",
-        "dependencies":{
-            "LibraryUnderTest":{
-                "version":"1.0.0",
-                "target":"project"
-            },
-            "Microsoft.NETCore.App":{
-                "version":"1.0.0",
-                "type":"platform"
-            },
-            "xunit":"2.2.0-beta2-build3300",
-            "dotnet-test-xunit":"2.2.0-preview2-build1029",
-        },
-        "frameworks":{
-            "netcoreapp1.0":{}
-        }
-   }
-   ```
-3. Восстановите пакеты, выполнив команду `dotnet restore`.  Если вы еще не восстановили пакеты, это следует сделать на уровне решения.
-
-4. Перейдите к тестовому проекту и выполните тесты с помощью команды `dotnet test`:
-
-    ```
-    $ cd path-to-your-test-project
-    $ dotnet test
-    ```
-
 Вот и все!  Теперь вы можете протестировать библиотеку для всех платформ с помощью средств командной строки.  Теперь, когда все настроено, протестировать библиотеку очень легко:
 
 1. Внесите изменения в библиотеку.
 2. Выполните тесты в тестовом каталоге из командной строки с помощью команды `dotnet test`.
 
 При вызове команды `dotnet test` будет автоматически выполнена повторная сборка кода.
-
-Не забывайте выполнять команду `dotnet restore` из командной строки каждый раз при добавлении новой зависимости.
 
 ## <a name="how-to-use-multiple-projects"></a>Использование нескольких проектов
 
@@ -467,18 +292,28 @@ netstandard1.6/
 Представим, что необходимо создать библиотеку, которую можно использовать в идиоматичном коде на языках C# и F#.  Это означает, что библиотека будет использоваться способами, естественными для языков C# и F#.  Например, в C# можно использовать библиотеку следующим образом:
 
 ```csharp
-var convertResult = await AwesomeLibrary.ConvertAsync(data);
-var result = AwesomeLibrary.Process(convertResult);
+using AwesomeLibrary.CSharp;
+
+...
+public Task DoThings(Data data)
+{
+    var convertResult = await AwesomeLibrary.ConvertAsync(data);
+    var result = AwesomeLibrary.Process(convertResult);
+    // do something with result
+}
 ```  
 
 В F# это может выглядеть так.
 
 ```fsharp
-let result =
-    data
-    |> AwesomeLibrary.convertAsync 
-    |> Async.RunSynchronously 
-    |> AwesomeLibrary.process
+open AwesomeLibrary.FSharp
+
+...
+
+let doWork data = async {
+    let! result = AwesomeLibrary.AsyncConvert data // Uses an F# async function rather than C# async method
+    // do something with result
+}
 ```
 
 Подобные сценарии использования предполагают, что интерфейсы API, к которым осуществляется доступ, должны иметь разную структуру для C# и F#.  Стандартным подходом к решению этой задачи является факторинг всей логики библиотеки в базовом проекте и определение в проектах C# и F# уровней API, которые вызывают этот базовый проект.  Далее в этом разделе будут использоваться следующие имена:
@@ -487,95 +322,41 @@ let result =
 * **AwesomeLibrary.CSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке C;#
 * **AwesomeLibrary.FSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке F.#
 
+Чтобы получить ту же структуру каталогов, что и в этом руководстве, выполните следующие команды в окне терминала:
+
+```console
+dotnet new sln
+mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
+cd ..
+mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
+cd ..
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+cd ..
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+```
+
+Эти команды добавят три указанные выше проекта и файл решения, который связывает их вместе.  Создание файла решения и связывание проектов позволит вам собирать и восстанавливать проекты из верхнего уровня.
+
 ### <a name="project-to-project-referencing"></a>Ссылки проектов на проекты
 
-Для ссылки на проект лучше всего использовать указанный ниже способ:
+Ссылку на проект лучше всего добавить с помощью интерфейса командной строки .NET.  Из каталогов проекта **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** выполните следующую команду:
 
-1. Убедитесь в том, что проект, на который необходимо сослаться, имеет подходящее имя для содержащей его папки на диске.  Это имя будет применяться для ссылки на проект.
-2. Сошлитесь на имя из (1) в файле `project.json` исходного проекта, указав `"target":"project"`.
-
-Файлы `project.json` проектов **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** теперь должны ссылаться на **AwesomeLibrary.Core** в качестве целевого проекта `project`.  Если настройка для различных версий не производится, можно использовать глобальную запись `dependencies`:
-
-```json
-{
-    "dependencies":{
-        "AwesomeLibrary.Core":{
-            "target":"project"
-        }
-    }
-}
+```console
+$ dotnet add reference ../AwesomeLibrary.Core.csproj
 ```
 
-Если настройка для различных версий производится, использование глобальной записи `dependencies` может быть невозможным. В этом случае необходимо сослаться на **AwesomeLibrary.Core** в целевой записи `dependencies`.  Например, при нацеливании на `netstandard1.6` это можно сделать следующим образом:
+Теперь файлы **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** будут ссылаться на **AwesomeLibrary.Core** в качестве целевого объекта `ProjectReference`.  Чтобы это проверить, просмотрите файлы проектов, и вы увидите в них следующий код:
 
-```json
-{
-    "frameworks":{
-        "netstandard1.6":{
-            "dependencies":{
-                "AwesomeLibrary.Core":{
-                    "target":"project"
-                }
-            }
-        }
-    }
-}
+```xml
+<ItemGroup>
+    <ProjectReference Include="..\AwesomeLibrary.Core\AwesomeLibrary.Core.csproj" />
+</ItemGroup>
 ```
+
+Если вы не хотите использовать интерфейс командной строки .NET, можете добавить этот код в каждый файл проекта вручную.
 
 ### <a name="structuring-a-solution"></a>Структурирование решения
 
-Еще один важный аспект решений с несколькими проектами — правильное формирование общей структуры. Чтобы структурировать библиотеку из нескольких проектов, необходимо использовать папки `/src` и `/test` верхнего уровня:
-
-```
-/AwesomeLibrary
-|__global.json
-|__/src
-   |__/AwesomeLibrary.Core
-      |__Source Files
-      |__project.json
-   |__/AwesomeLibrary.CSharp
-      |__Source Files
-      |__project.json
-   |__/AwesomeLibrary.FSharp
-      |__Source Files
-      |__project.json
-|__/test
-   |__/AwesomeLibrary.Core.Tests
-      |__Test Files
-      |__project.json
-   |__/AwesomeLibrary.CSharp.Tests
-      |__Test Files
-      |__project.json
-   |__/AwesomeLibrary.FSharp.Tests
-      |__Test Files
-      |__project.json
-```
-
-Файл `global.json` для этого решения будет выглядеть следующим образом.
-
-```json
-{
-    "projects":["src", "test"]
-}
-```
-
-При таком подходе применяется структура, аналогичная той, что создается при выполнении команды `dotnet new`: все проекты помещаются в каталог `/src`, а все тесты — в каталог `/test`.
-
-Вот как можно восстановить пакеты, выполнить сборку и протестировать весь проект:
-
-```
-$ dotnet restore
-$ cd src/AwesomeLibrary.FSharp
-$ dotnet build
-$ cd ../AwesomeLibrary.CSharp
-$ dotnet build
-$ cd ../../test/AwesomeLibrary.Core.Tests
-$ dotnet test
-$ cd ../AwesomeLibrary.CSharp.Tests
-$ dotnet test
-$ cd ../AwesomeLibrary.FSharp.Tests
-$ dotnet test
-```
-
-Вот и все!
-
+Еще один важный аспект решений с несколькими проектами — правильное формирование общей структуры. Код можно упорядочить так, как вам удобно. Если каждый проект связан с файлом решения с помощью `dotnet sln add`, вы сможете запускать команды `dotnet restore` и `dotnet build` на уровне проекта.

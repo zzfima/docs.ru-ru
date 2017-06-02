@@ -30,16 +30,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5c0b9fff370893d890518c6a95a74889b3f2295
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: e5baa75c55d58a4d975fc42472f90ff4125cbb5c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ограничение универсального типа) (справочник по C#)
 В определении универсального типа предложение `where` позволяет задать ограничения для типов, которые можно использовать как аргументы для параметра типа, определенных в универсальном объявлении. Например, можно объявить универсальный класс `MyGenericClass`, чтобы параметр типа `T` реализовывал интерфейс <xref:System.IComparable%601>:  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+public class MyGenericClass<T> where T:IComparable { }  
+```  
+  
 > [!NOTE]
 >  Дополнительные сведения о предложении where в выражении запроса см. в разделе [Предложение where](../../../csharp/language-reference/keywords/where-clause.md).  
   
@@ -59,13 +63,13 @@ ms.lasthandoff: 03/13/2017
   
  Кроме того, ограничения можно присоединять к параметрам типа универсальных методов следующим образом:  
   
-```  
+```csharp  
 public bool MyMethod<T>(T t) where T : IMyInterface { }  
 ```  
   
  Обратите внимание на то, что ограничения параметров типа для делегатов имеют такой же синтаксис, как и методы:  
   
-```  
+```csharp  
 delegate T MyDelegate<T>() where T : new()  
 ```  
   
@@ -74,7 +78,7 @@ delegate T MyDelegate<T>() where T : new()
  Дополнительные сведения о синтаксисе и применении ограничений см. в разделе [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по C#](../../../csharp/language-reference/index.md)   

@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0579d59e8da24428d9e174baf0cc865d62c08195
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 7ef4ce7a953265816cd36a0ad08b77c227280bde
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/07/2017
 
 Для платформ Windows можно использовать MSI. 
 
-Все двоичные файлы можно найти на [странице, посвященной началу работы с .NET Core](https://aka.ms/dotnetcoregs), на которой имеются ссылки на последние стабильные выпуски. Чтобы использовать более новые или самые последние (возможно, нестабильные) выпуски, воспользуйтесь ссылками в [репозитории CLI](https://github.com/dotnet/cli). 
+Все двоичные файлы можно найти в [руководстве по установке .NET Core](https://aka.ms/dotnetcoregs), в котором есть ссылки на последние стабильные выпуски. Чтобы использовать более новые или самые последние (возможно, нестабильные) выпуски, воспользуйтесь ссылками в [репозитории CLI](https://github.com/dotnet/cli). 
 
 ## <a name="using-the-installer-script"></a>Использование скрипта установки
 Скрипт установки позволяет выполнять установку на сервере сборки без прав администратора. Кроме того, с его помощью очень легко обеспечить автоматизацию. Скрипт самостоятельно скачивает необходимые файлы ZIP или TAR и распаковывает их. Он также добавляет расположение установки на локальном компьютере в переменную PATH, благодаря чему средства становятся доступными для вызова сразу после установки. 
@@ -62,12 +63,12 @@ Travis может выполнять как задание `osx` (OS X 10.11),
 
 ### <a name="appveyor"></a>AppVeyor
 
-Средство [appveyor.com ci](https://www.appveyor.com/) уже имеет предварительную версию 2 пакета SDK для .NET Core, установленную в рабочем образе сборки `Visual Studio 2015`.
+Средство [appveyor.com ci](https://www.appveyor.com/) уже содержит пакет SDK для .NET Core версии 1.0.1, установленный в образе рабочей роли сборки `Visual Studio 2017`.
 
 Просто используйте следующую команду:
 
 ```yaml
-os: Visual Studio 2015
+os: Visual Studio 2017
 ```
 
 Есть возможность установить определенную версию пакета SDK для .NET Core. Дополнительные сведения см. в [примере appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml). 

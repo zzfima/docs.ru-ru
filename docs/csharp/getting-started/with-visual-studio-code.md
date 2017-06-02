@@ -1,23 +1,24 @@
 ---
-title: "Начало работы с Visual Studio Code | Руководство по языку C#"
+title: "Приступая к работе с Visual Studio Code | Руководство по языку C#"
 description: "Узнайте, как создать и отладить приложение .NET Core на языке C# с помощью VS Code."
-keywords: "C#, приступая к работе, приобретение, установка, Visual Studio Code, кроссплатформенный"
+keywords: "C#, приступая к работе, получение, установка, Visual Studio Code, кроссплатформенный"
 author: kendrahavens
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 5/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4550129f4e6f1eeb3521ad7fe3233f2bda49e5c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: a8233995046e6fdf980bf630da18908a02d2bfb0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/14/2017
 
 ---
 
-# <a name="getting-started-with-visual-studio-code"></a>Начало работы с Visual Studio Code
+# <a name="get-started-with-visual-studio-code"></a>Приступая к работе с Visual Studio Code
 
 .NET Core предоставляет быструю модульную платформу для создания серверных приложений, работающих на ОС Windows, Linux и macOS. Visual Studio Code с расширением C# позволяет эффективно работать с кодом, а также обеспечивает полную поддержку IntelliSense (интеллектуальное завершение кода) и отладки для языка C#.
 
@@ -94,6 +95,6 @@ ms.lasthandoff: 03/13/2017
 > Дополнительные сведения и советы по отладке для .NET Core с помощью OmniSharp в VS Code вы найдете [на странице инструкций по настройке отладчика .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
 ## <a name="see-also"></a>См. также
-- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Настройка Visual Studio Code)
-- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)
+[Настройка Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
+[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)
 

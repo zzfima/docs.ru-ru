@@ -1,10 +1,9 @@
 # [Учебники](index.md)
-## [🔧 Использование Visual Studio для создания, отладки и развертывания приложений](create-debug-deploy.md)
-## [🔧 Использование окна "Интерактивный C#" для исследования и экспериментов](exploring-with-csharp-interactive.md)
-## [🔧 Создание переносимых библиотек](creating-portable-libraries.md)
-## [🔧 Асинхронное программирование пользовательского интерфейса](asynchronous-ui-programming.md)
-## [🔧 Асинхронное серверное программирование](asynchronous-server-programming.md)
-## [🔧 Параллельное программирование](concurrent-programming.md)
+<!--## [🔧 Using C# Interactive to explore and experiment](exploring-with-csharp-interactive.md)-->
+<!--## [🔧 Creating portable libraries](creating-portable-libraries.md)-->
+<!--## [🔧 Asynchronous UI programming](asynchronous-ui-programming.md)-->
+<!--## [🔧 Asynchronous server programming](asynchronous-server-programming.md)-->
+<!--## [🔧 Concurrent programming](concurrent-programming.md)-->
 ## [Наследование в C# и .NET](inheritance.md)
 ## [Консольное приложение](console-teleprompter.md)
 ## [Клиент REST](console-webapiclient.md)

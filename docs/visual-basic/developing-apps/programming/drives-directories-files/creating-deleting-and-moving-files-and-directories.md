@@ -1,47 +1,64 @@
 ---
-title: "Создание, удаление и перемещение файлов и папок в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "примеры [Visual Basic], копирование файлов и каталогов"
-  - "примеры [Visual Basic], создание файлов и папок"
-  - "примеры [Visual Basic], перемещение файлов и каталогов"
-  - "примеры [Visual Basic], переименование файлов и каталогов"
-  - "ввод-вывод [Visual Basic], копирование каталогов"
-  - "ввод-вывод [Visual Basic], копирование файлов"
-  - "ввод-вывод [Visual Basic], копирование папок"
-  - "ввод-вывод [Visual Basic], создание каталогов"
-  - "ввод-вывод [Visual Basic], создание файлов"
-  - "ввод-вывод [Visual Basic], создание папок"
-  - "ввод-вывод [Visual Basic], удаление каталогов"
-  - "ввод-вывод [Visual Basic], удаление файлов"
-  - "ввод-вывод [Visual Basic], удаление папок"
-  - "ввод-вывод [Visual Basic], перемещение каталогов"
-  - "ввод-вывод [Visual Basic], перемещение файлов"
-  - "ввод-вывод [Visual Basic], перемещение папок"
-  - "ввод-вывод [Visual Basic], переименование каталогов"
-  - "ввод-вывод [Visual Basic], переименование файлов"
-  - "ввод-вывод [Visual Basic], переименование папок"
+title: "Создание, удаление и перемещение файлов и папок в Visual Basic | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- examples [Visual Basic], moving files and directories
+- I/O [Visual Basic], deleting folders
+- I/O [Visual Basic], moving directories
+- I/O [Visual Basic], copying directories
+- examples [Visual Basic], creating files and directories
+- I/O [Visual Basic], copying folders
+- I/O [Visual Basic], moving folders
+- examples [Visual Basic], copying files and directories
+- I/O [Visual Basic], deleting directories
+- I/O [Visual Basic], copying files
+- examples [Visual Basic], renaming files and directories
+- I/O [Visual Basic], creating folders
+- I/O [Visual Basic], renaming files
+- I/O [Visual Basic], deleting files
+- I/O [Visual Basic], creating directories
+- I/O [Visual Basic], creating files
+- I/O [Visual Basic], renaming directories
+- I/O [Visual Basic], renaming folders
+- I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# Создание, удаление и перемещение файлов и папок в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6484c8233c2834732aefb270323723b6c9757f05
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
+---
+# <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Создание, удаление и перемещение файлов и папок в Visual Basic
 В этом разделе перечислены задачи, связанные с созданием, удалением, перемещением и переименованием файлов и каталогов в Visual Basic.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Практическое руководство. Копирование файлов по заданному шаблону в каталог](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  Демонстрация копирования файлов с определенным шаблоном имени файла, например только файлов с расширением TXT, в заданный каталог.  
   
@@ -84,47 +101,47 @@ caps.handback.revision: 14
  [Практическое руководство. Анализ путей к файлам](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  Демонстрация использования методов объекта `My` для объединения путей к файлам.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Описание объекта `My.Computer.FileSystem` и его элементов.  
+ Описание объекта `My.Computer.FileSystem` и его членов.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>  
- Описание метода `CombinePath`.  
+ Описывает метод `CombinePath`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- Описание метода `CopyDirectory`.  
+ Описывает метод `CopyDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
- Описание метода `CopyFile`.  
+ Описывает метод `CopyFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
- Описание метода `CreateDirectory`.  
+ Описывает метод `CreateDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteDirectory%2A>  
- Описание метода `DeleteDirectory`.  
+ Описывает метод `DeleteDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A>  
- Описание метода `DeleteFile`.  
+ Описывает метод `DeleteFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A>  
- Описание метода `GetParentPath`.  
+ Описывает метод `GetParentPath`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveDirectory%2A>  
- Описание метода `MoveDirectory`.  
+ Описывает метод `MoveDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>  
- Описание метода `MoveFile`.  
+ Описывает метод `MoveFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameDirectory%2A>  
- Описание метода `RenameDirectory`.  
+ Описывает метод `RenameDirectory`.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>  
- Описание метода `RenameFile`.  
+ Описывает метод `RenameFile`.  
   
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
- Описание объекта `SpecialDirectories`.  
+ Описывает объект `SpecialDirectories`.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Перечень задач, связанных с чтением из файлов.  
   

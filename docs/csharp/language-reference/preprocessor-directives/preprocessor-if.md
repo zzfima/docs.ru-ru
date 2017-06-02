@@ -1,24 +1,43 @@
 ---
-title: "#if (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#if"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#if - директива [C#]"
+title: "#If (Справочник по C#) | Документация Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#if'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: 4fc51446d297015d9e492703c9b1868c3b513c53
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
+
 ---
-# #if (Справочник по C#)
-При обнаружении компилятором C\# директивы `#if`, за которой далее следует директива [\#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), компиляция кода между двумя директивами выполняется только в том случае, если определен указанный символ.  В отличие от C и C\+\+, символу нельзя присвоить числовое значение; оператор \#if языка C\# принадлежит типу Boolean, и он только проверяет, определен ли символ.  Например:  
+# <a name="if-c-reference"></a>#if (Справочник по C#)
+Когда компилятор C# встречает директиву `#if`, за которой следует директива [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), код между этими директивами он компилирует только в том случае, когда определен указанный символ.  В отличие от C и C++, здесь нельзя назначить символу числовое значение. Оператор #if языка C# является логическим и проверяет только одно условие — определен ли указанный символ. Например:  
   
 ```  
 #define DEBUG  
@@ -28,26 +47,26 @@ caps.handback.revision: 17
 #endif  
 ```  
   
- Операторы [\=\=](../../../csharp/language-reference/operators/equality-comparison-operator.md) \(равенство\), [\!\=](../../../csharp/language-reference/operators/not-equal-operator.md) \(неравенство\) можно использовать только для проверки возвращаемых ими значений [true](../../../csharp/language-reference/keywords/true.md) или [false](../../../csharp/language-reference/keywords/false.md).  Значение True означает, что символ определен.  Оператор `#if DEBUG` имеет то же значение, что и оператор `#if (DEBUG == true)`.  Можно использовать операторы &&\(и\) [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) \(или\) и [\!](../../../csharp/language-reference/operators/logical-negation-operator.md) \(not\) определить, были ли определены несколько символов.  Можно группировать символы и операторы при помощи скобок.  
+ Операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) (равенство) и [! =](../../../csharp/language-reference/operators/not-equal-operator.md) (неравенство) вы можете использовать только для проверки значений [true](../../../csharp/language-reference/keywords/true.md) или [false](../../../csharp/language-reference/keywords/false.md). Значение true означает, что символ определен. Инструкция `#if DEBUG` имеет то же значение, что и `#if (DEBUG == true)`. Вы можете использовать операторы [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) (логическое И), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) (логическое ИЛИ) и [!](../../../csharp/language-reference/operators/logical-negation-operator.md) (логическое НЕ) для проверки нескольких символов. Можно также группировать символы и операторы при помощи скобок.  
   
-## Заметки  
- Оператор `#if`, вместе с операторами [\#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [\#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [\#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [\#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) и [\#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md), позволяет включать или исключать код на основе существования одного или нескольких символов.  Это особенно полезно при компиляции кода для построения отладки или при компиляции для определенной конфигурации.  
+## <a name="remarks"></a>Примечания  
+ `#if`, как и директивы [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) и [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md), позволяет включить или исключить код в зависимости от существования одного или нескольких символов. Это может быть полезно при компиляции кода для отладки или для определенной конфигурации.  
   
- Условная директива, начинающаяся с директивы `#if`, должна быть явным образом оканчиваться директивой `#endif`.  
+ Условные директивы, начинающиеся с директивы `#if`, должны явным образом завершаться директивой `#endif`.  
   
- Директива `#define` позволяет определить символ, который, при его использовании в качестве выражения, переданного директиве `#if`, приведет к получению значения `true`.  
+ `#define` позволяет определить символ, чтобы директива `#if`, которой передается этот символ, возвращала значение `true`.  
   
- Также можно определить символ с помощью параметра компилятора [\/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md).  Для отмены определения символа служит директива [\#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Также символ можно определить с помощью параметра компилятора [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
- Символ, определенный с помощью `/define` или `#define`, не конфликтует с одноименной переменной.  Имя переменной не должно передаваться директиве предварительной обработки, а символ может вычисляться только директивой предварительной обработки.  
+ Символ, определенный с помощью `/define` или `#define`, не конфликтует с одноименной переменной. Соответственно, имя переменной не должно передаваться директиве препроцессора, а символ может использоваться только в директиве препроцессора.  
   
- Область символа создается с помощью директивы `#define` в файле, в котором символ был определен.  
+ Символ, создаваемый с помощью `#define`, будет определен в пределах того файл, в котором он определен.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // preprocessor_if.cs  
-#define DEBUG #define MYTEST  
+#define DEBUG#define MYTEST  
 using System;  
 public class MyClass   
 {  
@@ -66,8 +85,8 @@ public class MyClass
 }  
 ```  
   
-  **DEBUG and MYTEST are defined**   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Директивы препроцессора C\#](../../../csharp/language-reference/preprocessor-directives/index.md)
+ **Определение символов DEBUG и MYTEST**   
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)

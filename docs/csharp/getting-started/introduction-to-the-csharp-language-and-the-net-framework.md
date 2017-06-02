@@ -28,17 +28,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfd3c08f69461d65140ef948672774a7435c326d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: a2c5986dfb9ed4f80e15e8e3ddf061ef858a1e93
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Введение в язык C# и .NET Framework
 C# — это изящный объектно-ориентированный язык со строгой типизацией, позволяющий разработчикам создавать различные безопасные и надежные приложения, работающие на платформе [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]. C# можно использовать для создания клиентских приложений Windows, XML-веб-служб, распределенных компонентов, приложений клиент-сервер, приложений баз данных и т. д. Visual C# предоставляет развитый редактор кода, удобные конструкторы пользовательского интерфейса, интегрированный отладчик и многие другие средства, которые упрощают разработку приложений на языке C# для платформы [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)].  
   
 > [!NOTE]
->  В документации по [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] предполагается, что у вас есть понимание основных концепций программирования. Если вы еще совсем новичок, рекомендуем сначала исследовать [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)], которая доступна в Интернете. Также для приобретения практических навыков программирования будут полезны книги и веб-ресурсы о C#.  
+> В документации по [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] предполагается, что у вас есть понимание основных концепций программирования. Если вы еще совсем новичок, рекомендуем сначала исследовать [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)], которая доступна в Интернете. Также для приобретения практических навыков программирования будут полезны книги и веб-ресурсы о C#.  
   
 ## <a name="c-language"></a>C# - язык  
  Синтаксис C# очень богат, но при этом прост и удобен в изучении. Характерные фигурные скобки C# мгновенно узнаются всеми, кто знаком с C, C++ или Java. Разработчики, знающие любой из этих языков, обычно очень быстро начинают эффективно работать в C#. Синтаксис C# упрощает многие сложности C++, но при этом предоставляет отсутствующие в Java мощные функции, например обнуляемые типы значений, перечисления, делегаты, лямбда-выражения и прямой доступ к памяти. C# поддерживает универсальные методы и типы, которые обеспечивают более высокий уровень безопасности и производительности, а также итераторы, позволяющие определять в классах коллекций собственное поведение итерации, которое может легко применить в клиентском коде. Выражения [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)] создают очень удобную языковую конструкцию для строго типизированных запросов.  
@@ -85,15 +86,6 @@ C# — это изящный объектно-ориентированный я
  Помимо служб времени выполнения, платформа [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] содержит обширную библиотеку, в которую входит более 4000 классов. Эти классы распределены по пространствам имен, соответствующим разным полезных функциям: от операций файлового ввода и вывода до управления строками, от синтаксического анализа XML до элементов управления Windows Forms. Обычно приложения C# активно используют библиотеку классов [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] для решения типовых задач взаимодействия.  
   
  Дополнительные сведения см. в [обзоре платформы Microsoft .NET Framework](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355).  
-  
-## <a name="featured-book-chapters"></a>Главы в популярных книгах  
- [C# Language Fundamentals](http://go.microsoft.com/fwlink/?LinkId=195416) (Основные понятия языка C#) в книге [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412) (Изучение C# 3.0: овладение основными понятиями C# 3.0).  
-  
- [C# Language Fundamentals](http://go.microsoft.com/fwlink/?LinkId=195413) (Программирование на C# для платформы .NET) в книге [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412) (Изучение C# 3.0: овладение основными понятиями C# 3.0).  
-  
- [Introducing C#](http://go.microsoft.com/fwlink/?LinkId=221226) (Введение в C#) в книге [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) (Начало работы с Visual C# 2010).  
-  
- [Visual Studio 2008 and C# Express 2008](http://go.microsoft.com/fwlink/?LinkId=195414) (Visual Studio 2008 и C# Express 2008) в книге [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412) (Изучение C# 3.0: овладение основными понятиями C# 3.0).  
   
 ## <a name="see-also"></a>См. также  
  [C#](../../csharp/csharp.md)   
