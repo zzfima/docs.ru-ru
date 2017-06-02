@@ -102,11 +102,11 @@ ms.lasthandoff: 05/13/2017
 
    Например, приведенный ниже пример указывает, что приложение выполняется в 64-разрядной операционной системе Windows 10 и в 64-разрядной операционной системе OS X 10.11.
 
-       ```xml
-        <PropertyGroup>
-          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-        </PropertyGroup>
-       ```
+```xml
+<PropertyGroup>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+</PropertyGroup>
+```
    Также обратите внимание, что элемент `<RuntimeIdentifiers>` можно переносить в другие группы `<PropertyGroup>` в пределах файла *csproj*. Полный пример файла *csproj* будет приведен далее в этом разделе.
 
 1. Создайте отладочную сборку приложения.
