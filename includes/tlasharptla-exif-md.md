@@ -1,0 +1,1 @@
+Файл формата EXIF (Exchangeable image file)

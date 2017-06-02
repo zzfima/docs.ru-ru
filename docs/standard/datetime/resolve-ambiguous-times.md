@@ -1,86 +1,60 @@
 ---
-title: "Практическое руководство. Разрешение проблемы неоднозначности времени"
-description: "Практическое руководство. Разрешение проблемы неоднозначности времени"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 08/16/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: e86050c6-d16d-405e-8bba-7205945c9a81
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: f4ab3b4bf3487e70be7e885e9b8a2281927eb30e
-ms.lasthandoff: 03/02/2017
-
+title: "Практическое руководство. Разрешение проблемы неоднозначности времени | Microsoft Docs"
+ms.custom: ""
+ms.date: "04/10/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "неоднозначное время [платформа .NET Framework]"
+  - "часовые пояса [платформа .NET Framework], неоднозначное время"
+ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
+caps.latest.revision: 10
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 10
 ---
-
-# <a name="how-to-resolve-ambiguous-times"></a>Практическое руководство. Разрешение проблемы неоднозначности времени
-
-Неоднозначное время — это время, которое соответствует более чем одному значению времени в формате UTC. Это происходит, когда часы переводятся назад, как при переходе в одном часовом поясе с летнего времени на его стандартное время. При обработке неоднозначного времени можно выполнить одно из следующих действий:
-
-* Сделать предположение о том, насколько время соответствует времени в формате UTC. Например, можно предположить, что неоднозначное время всегда выражается в стандартном времени часового пояса.
-
-* Если неоднозначное время является элементом данных, введенных пользователем, то можно предложить пользователю устранить неоднозначность.
-
-В этом разделе показано, как устранить неоднозначное время, предполагая, что оно представляет собой стандартное время часового пояса.
-
-## <a name="to-map-an-ambiguous-time-to-a-time-zones-standard-time"></a>Сопоставление неоднозначного времени стандартному времени часового пояса
-
-1. Вызовите метод [System.TimeZoneInfo.IsAmbiguousTime(DateTime)](xref:System.TimeZoneInfo.IsAmbiguousTime(System.DateTime)) или [System.TimeZoneInfo.IsAmbiguousTime(DateTimeOffset)](xref:System.TimeZoneInfo.IsAmbiguousTime(System.DateTimeOffset)), чтобы определить, является ли время неоднозначным.
-
-2. Если время является неоднозначным, вычитайте время из объекта [TimeSpan](xref:System.TimeSpan), возвращаемого свойством часового пояса [BaseUtcOffset](xref:System.TimeZoneInfo.BaseUtcOffset).
-
-3. Вызовите метод `static` (`Shared` в Visual Basic) [SpecifyKind](xref:System.DateTime.SpecifyKind(System.DateTime,System.DateTimeKind)), чтобы задать значение даты и времени в формате UTC для свойства [Kind](xref:System.DateTime.Kind) равным [DateTimeKind.Utc](xref:System.DateTimeKind.Utc).
-
-## <a name="example"></a>Пример
-
-В следующем примере показано, как преобразовать неоднозначное время [DateTime](xref:System.DateTime) в формат UTC, предполагая, что оно представляет собой местное время часового пояса. 
-
-```csharp
-private DateTime ResolveAmbiguousTime(DateTime ambiguousTime)
-{
-   // Time is not ambiguous
-   if (! TimeZoneInfo.Local.IsAmbiguousTime(ambiguousTime))
-   { 
-      return ambiguousTime; 
-   }
-   // Time is ambiguous
-   else
-   {
-      DateTime utcTime = DateTime.SpecifyKind(ambiguousTime - TimeZoneInfo.Local.BaseUtcOffset, 
-                                              DateTimeKind.Utc);      
-      Console.WriteLine("{0} local time corresponds to {1} {2}.", 
-                        ambiguousTime, utcTime, utcTime.Kind.ToString());
-      return utcTime;            
-   }   
-}
-```
-
-```vb
-Private Function ResolveAmbiguousTime(ambiguousTime As Date) As Date
-   ' Time is not ambiguous
-   If Not TimeZoneInfo.Local.IsAmbiguousTime(ambiguousTime) Then 
-      Return TimeZoneInfo.ConvertTimeToUtc(ambiguousTime) 
-   ' Time is ambiguous
-   Else
-      Dim utcTime As Date = DateTime.SpecifyKind(ambiguousTime - TimeZoneInfo.Local.BaseUtcOffset, DateTimeKind.Utc)      
-      Console.WriteLine("{0} local time corresponds to {1} {2}.", ambiguousTime, utcTime, utcTime.Kind.ToString())
-      Return utcTime            
-   End If   
-End Function
-```
-
-Пример состоит из метода с именем `ResolveAmbiguousTime`, который определяет, является ли значение [DateTime](xref:System.DateTime), переданное в него, неоднозначным. Если значение является неоднозначным, то метод возвращает значение [DateTime](xref:System.DateTime), представляющее собой соответствующее время в формате UTC. Метод обрабатывает это преобразование путем вычитания значения свойства [BaseUtcOffset](xref:System.TimeZoneInfo.BaseUtcOffset) местного часового пояса из локального времени. 
-
-Как правило, неоднозначное время обрабатывается вызовом метода [GetAmbiguousTimeOffsets](xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets(System.DateTime)) для извлечения массива объектов [TimeSpan](xref:System.TimeSpan), содержащих возможные смещения неоднозначного времени относительно UTC. Однако в этом примере происходит произвольное предположение, что неоднозначное время следует всегда сопоставлять со стандартным временем часового пояса. Свойство [BaseUtcOffset](xref:System.TimeZoneInfo.BaseUtcOffset) возвращает смещение между временем по UTC и временем стандартного часового пояса.
-
-## <a name="see-also"></a>См. также
-
-[Даты, время и часовые пояса](index.md)
-
-[Практическое руководство. Предоставление пользователям возможности разрешения неоднозначности времени](let-users-resolve-ambiguous-times.md)
-
-
+# Практическое руководство. Разрешение проблемы неоднозначности времени
+Неоднозначное время — это время, которое соответствует более чем одному значению времени в формате UTC.  Это происходит, когда часы переводятся назад, как при переходе в одном часовом поясе с летнего времени на его стандартное время.  При обработке неоднозначного времени, можно выполнить одно из следующих действий:  
+  
+-   Сделать предположение о том, насколько время соответствует времени в формате UTC.  Например, можно предположить, что неоднозначное время всегда выражается в стандартном времени часового пояса.  
+  
+-   Если неоднозначное время является элементом данных, введенных пользователем, то можно предложить пользователю устранить неоднозначность.  
+  
+ В этом разделе показано, как устранить неоднозначное время, предполагая, что оно представляет собой стандартное время часового пояса.  
+  
+### Сопоставление неоднозначного времени стандартному времени часового пояса  
+  
+1.  Вызовите метод <xref:System.TimeZoneInfo.IsAmbiguousTime%2A>, чтобы определить, является ли время неоднозначным.  
+  
+2.  Если время является неоднозначным, вычитайте время из объекта <xref:System.TimeSpan>, возвращаемого свойством часового пояса <xref:System.TimeZoneInfo.BaseUtcOffset%2A>.  
+  
+3.  Вызовите метод `static` \(`Shared` в Visual Basic .NET\) <xref:System.DateTime.SpecifyKind%2A>, чтобы задать значение даты и времени в формате UTC для свойства <xref:System.DateTime.Kind%2A> равным <xref:System.DateTimeKind?displayProperty=fullName>.  
+  
+## Пример  
+ В следующем примере показано, как преобразовать неоднозначное время в формат UTC, предполагая, что оно представляет собой местное время часового пояса.  
+  
+ [!code-csharp[System.TimeZone2.Concepts#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#10)]
+ [!code-vb[System.TimeZone2.Concepts#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#10)]  
+  
+ Пример состоит из метода с именем `ResolveAmbiguousTime`, который определяет является ли значение <xref:System.DateTime>, переданное в него, неоднозначным.  Если значение является неоднозначным, то метод возвращает значение <xref:System.DateTime>, представляющее собой соответствующее время в формате UTC.  Метод обрабатывает это преобразование путем вычитания значения свойства <xref:System.TimeZoneInfo.BaseUtcOffset%2A> местного часового пояса из локального времени.  
+  
+ Как правило, неоднозначное время обрабатывается вызовом метода <xref:System.TimeSpan> для извлечения массива объектов <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A>, содержащих возможные смещения неоднозначного времени относительно UTC.  Однако в этом примере происходит произвольное предположение, что неоднозначное время следует всегда сопоставлять со стандартным временем часового пояса.  Свойство <xref:System.TimeZoneInfo.BaseUtcOffset%2A> возвращает смещение между временем по UTC и временем стандартного часового пояса.  
+  
+ В этом примере все ссылки на местный часовой пояс выполняются через свойство <xref:System.TimeZoneInfo.Local%2A?displayProperty=fullName>. Местный часовой пояс никогда не назначается в качестве переменной объекта.  Это рекомендуется, поскольку вызов метода <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=fullName> внесет изменения во все объекты, которым назначен этот часовой пояс.  
+  
+## Компиляция кода  
+ Для этого примера необходимо следующее.  
+  
+-   Чтобы ссылка на System.Core.dll была добавлена в проект.  
+  
+-   Чтобы пространство имен <xref:System> было импортировано с помощью оператора `using` \(обязательно в коде C\#\).  
+  
+## См. также  
+ [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)   
+ [Практическое руководство. Предоставление пользователям возможности разрешения неоднозначности времени](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)

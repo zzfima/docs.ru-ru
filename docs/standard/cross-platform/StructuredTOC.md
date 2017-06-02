@@ -1,0 +1,7 @@
+# [Разработка для нескольких платформ](index.md)
+## [Переносимая библиотека классов](cross-platform-development-with-the-portable-class-library.md)
+## [Использование переносимой библиотеки классов с MVVM](using-portable-class-library-with-model-view-view-model.md)
+## [Ресурсы приложений для библиотек, предназначенных для нескольких платформ](app-resources-for-libraries-that-target-multiple-platforms.md)
+## [Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework](support-for-windows-store-apps-and-windows-runtime.md)
+## [Передача URI в среду выполнения Windows](passing-a-uri-to-the-windows-runtime.md)
+## [Метод WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)](windowsruntimestreamextensions-asrandomaccessstream-method.md)

@@ -1,39 +1,46 @@
 ---
-title: "Выполнение операций форматирования"
-description: "Выполнение операций форматирования"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/25/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 982f0b64-7e69-4bbe-a688-0117f86a603c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: e464c4014ce315c88d5c281f6fd0d0299b640716
-ms.lasthandoff: 03/02/2017
-
+title: "Выполнение операций форматирования | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "форматирование дат [платформа .NET Framework]"
+  - "форматирование [платформа .NET Framework], базовые типы"
+  - "форматирование [платформа .NET Framework], разделы практического руководства"
+  - "форматирование строк [платформа .NET Framework], разделы практического руководства"
+  - "строки [платформа .NET Framework], форматирование"
+  - "форматирование времени [платформа .NET Framework]"
+ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
+caps.latest.revision: 7
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 7
 ---
-
-# <a name="performing-formatting-operations"></a>Выполнение операций форматирования
-
-В перечисленных далее разделах содержатся пошаговые инструкции для выполнения конкретных операций форматирования.
-
-* [Практическое руководство. Добавление начальных нулей к числу](pad-number.md)
-
-* [Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов](define-custom.md)
-
-* [Практическое руководство. Извлечение дня недели из конкретной даты](extract-day.md)
-
-* [Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени](roundtrip.md)
-
-* [Практическое руководство. Отображение миллисекунд в значениях даты и времени](display-milliseconds.md)
-
-* [Практическое руководство. Отображение дат в календарях, отличных от григорианского](display-dates.md)
-
-## <a name="see-also"></a>См. также
-
-[Типы форматирования](formatting-types.md)
-
+# Выполнение операций форматирования
+В следующих разделах приведены пошаговые инструкции для выполнения определенных операций форматирования.  
+  
+-   [Практическое руководство. Добавление к числу начальных нулей.](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+  
+-   [Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
+  
+-   [Практическое руководство. Преобразование числовых данных, введенных пользователем в веб\-элементах управления, в числа](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
+  
+-   [Практическое руководство. Извлечение дня недели из конкретной даты](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
+  
+-   [Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
+  
+-   [Практическое руководство. Отображение сведений о локализованной дате и времени для веб\-пользователей](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
+  
+-   [Практическое руководство. Отображение миллисекунд в значениях даты и времени](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
+  
+-   [Практическое руководство. Отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
+  
+## См. также  
+ [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)
