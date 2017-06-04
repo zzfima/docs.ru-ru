@@ -33,128 +33,84 @@ ms.lasthandoff: 03/10/2017
 Платформа .NET обеспечивает обширную поддержку форматирования, позволяя разработчикам справиться с описанными проблемами. 
 
 > [!NOTE]
-> Форматирование приводит к преобразованию значения определенного типа в его строковое представление. Обратной по отношению к форматированию операцией является анализ. В ходе анализа на основании строкового представления создается экземпляр некоторого типа данных. Дополнительные сведения о преобразовании строк в другие типы данных см. в статье [Анализ строк](parsing-strings.md).
-
-Обзор включает следующие разделы.
-
-* [Форматирование в .NET](#formatting-in-net)
-
-* [Форматирование по умолчанию при помощи метода ToString](#default-formatting-using-the-tostring-method)
-
-* [Переопределение метода ToString](#overriding-the-tostring-method)
-
-* [Метод ToString и строки формата](#the-tostring-method-and-format-strings)
-
-    * [Строки стандартного формата](#standard-format-strings)
-    
-    * [Строки настраиваемого формата](#custom-format-strings)
-    
-    * [Строки форматов и типы .NET](#format-strings-and-net-types)
-    
-* [Форматирование с учетом языка и региональных параметров с помощью поставщиков формата и интерфейса IFormatProvider](#culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface)
-
-    * [Форматирование числовых значений, зависящее от языка и региональных параметров](#culture-sensitive-formatting-of-numeric-values)
-    
-    * [Форматирование значений даты и времени, зависящее от языка и региональных параметров](#culture-sensitive-formatting-of-date-and-time-values)
-    
-* [Интерфейс IFormattable](#the-iformattable-interface)
-
-* [Составное форматирование](#composite-formatting)
-
-* [Настраиваемое форматирование с использованием интерфейса ICustomFormatter](#custom-formatting-with-icustomformatter)
-
-* [Связанные статьи](#related-topics)
-
-* [Ссылки](#reference)
-
-## <a name="formatting-in-net"></a>Форматирование в .NET
-
-Базовый механизм форматирования — это используемая по умолчанию реализация метода [Object.ToString](xref:System.Object.ToString), которая описана ниже в разделе [Форматирование по умолчанию при помощи метода ToString](#default-formatting-using-the-tostring-method). При этом платформа .NET предоставляет несколько способов изменения и расширения имеющихся по умолчанию возможностей форматирования. В число этих требований входят следующие:
-
-* Переопределение метода [Object.ToString](xref:System.Object.ToString), позволяющее определить настраиваемое строковое представление значения объекта. Дополнительные сведения см. ниже в разделе [Переопределение метода ToString](#overriding-the-tostring-method).
-
-* Определение описателей формата, позволяющих использовать несколько видов строкового представления значения объекта. Например, описатель формата "X" в следующем операторе позволяет преобразовать целое число в шестнадцатеричное строковое представление.
-
-  ```csharp
-  int integerValue = 60312;
-  Console.WriteLine(integerValue.ToString("X"));   // Displays EB98.
-  ```
-
-  ```vb
-  Dim integerValue As Integer = 60312
-  Console.WriteLine(integerValue.ToString("X"))   ' Displays EB98.
-  ```
+>  Форматирование приводит к преобразованию значения определенного типа в его строковое представление. Обратной по отношению к форматированию операцией является анализ. В ходе анализа на основании строкового представления создается экземпляр некоторого типа данных. Дополнительные сведения о преобразовании строк в другие типы данных см. в разделе [Разбор строк](../../../docs/standard/base-types/parsing-strings.md).  
   
-  Дополнительные сведения об описателях форматов см. в разделе [Метод ToString и строки формата](#the-tostring-method-and-format-strings).
+ Платформа .NET Framework обеспечивает обширную поддержку форматирования, позволяя разработчикам справиться с описанными проблемами.  
   
-* Использование поставщиков форматирования, позволяющих воспользоваться преимуществами соглашений о форматировании, присущих конкретному языку и региональным параметрам. Например, следующий оператор выводит значение валюты с использованием соглашений о форматировании языка и региональных параметров "en-US". 
-
-  ```csharp
-  double cost = 1632.54; 
-  Console.WriteLine(cost.ToString("C", 
-                  new System.Globalization.CultureInfo("en-US")));   
-  // The example displays the following output:
-  //       $1,632.54
-  ```
-
-  ```vb
-  Dim cost As Double = 1632.54
-  Console.WriteLine(cost.ToString("C", New System.Globalization.CultureInfo("en-US")))
-  ' The example displays the following output:
-  '       $1,632.54
-  ```
+ Обзор включает следующие разделы.  
   
-  Дополнительные сведения о форматировании при помощи поставщиков форматирования см. в разделе [Форматирование с учетом языка и региональных параметров с помощью поставщиков формата и интерфейса IFormatProvider](#culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface).  
+-   [Форматирование в платформе .NET Framework](#NetFormatting)  
   
-* Реализация интерфейса [IFormattable](xref:System.IFormattable), позволяющая преобразовывать строки с помощью класса [Convert](xref:System.Convert) и использовать составное форматирование. Дополнительные сведения см. в разделе [Интерфейс IFormattable](#the-iformattable-interface).
-
-* Использование составного форматирования, позволяющее внедрить строковую презентацию в состав более крупной строки. Дополнительные сведения см. в разделе [Составное форматирование](#composite-formatting).
-
-* Реализация интерфейсов [ICustomFormatter](xref:System.ICustomFormatter) и [IFormatProvider](xref:System.IFormatProvider), позволяющая создать полноценное настраиваемое решение для форматирования. Дополнительные сведения см. в разделе [Настраиваемое форматирование с использованием интерфейса ICustomFormatter](#custom-formatting-with-icustomformatter).
-
-В следующих подразделах перечисленные методы преобразования объектов в их строковые представления рассматриваются более подробно.
-
-## <a name="default-formatting-using-the-tostring-method"></a>Форматирование по умолчанию при помощи метода ToString
-
-Любой производный от [System.Object](xref:System.Object) тип автоматически наследует метод [ToString](xref:System.Object.ToString) без параметров, по умолчанию возвращающий имя типа. В следующем примере демонстрируется использование метода [ToString](xref:System.Object.ToString) по умолчанию. Здесь определен класс с именем `Automobile`, у которого нет реализации. При создании экземпляра этого класса и вызове его метода [ToString](xref:System.Object.ToString) отображается имя типа. Обратите внимание, что метод [ToString](xref:System.Object.ToString) не вызывается в примере явным образом. Метод [Console.WriteLine(Object)](xref:System.Console.WriteLine(System.Object)) неявно вызывает метод [ToString](xref:System.Object.ToString) объекта, переданного ему в качестве аргумента. 
-
-```csharp
-using System;
-
-public class Automobile
-{
-   // No implementation. All members are inherited from Object.
-}
-
-public class Example
-{
-   public static void Main()
-   {
-      Automobile firstAuto = new Automobile();
-      Console.WriteLine(firstAuto);
-   }
-}
-// The example displays the following output:
-//       Automobile
-```
-
-```vb 
-Public Class Automobile
-   ' No implementation. All members are inherited from Object.
-End Class
-
-Module Example
-   Public Sub Main()
-      Dim firstAuto As New Automobile()
-      Console.WriteLine(firstAuto)
-   End Sub
-End Module
-' The example displays the following output:
-'       Automobile
-```
-
-Поскольку производными от [Object](xref:System.Object) являются все типы, кроме интерфейсов, данная функциональность автоматически присутствует в пользовательских классах и структурах. Тем не менее метод [ToString](xref:System.Object.ToString) по умолчанию обладает весьма ограниченной функциональностью: хотя метод позволяет определить имя типа, никаких сведений об экземпляре типа он не предоставляет. Для формирования строкового представления объекта, позволяющего получить сведения о конкретном объекте, следует переопределить метод [ToString](xref:System.Object.ToString).
-
+-   [Форматирование по умолчанию с помощью метода ToString](#DefaultToString)  
+  
+-   [Переопределение метода ToString](#OverrideToString)  
+  
+-   [Метод ToString и строки формата](#FormatStrings)  
+  
+    -   [Строки стандартного формата](#standardStrings)  
+  
+    -   [Строки настраиваемого формата](#customStrings)  
+  
+    -   [Строки форматов и типы библиотеки классов .NET Framework](#stringRef)  
+  
+-   [Форматирование с учетом языка и региональных параметров с помощью поставщиков формата и интерфейса IFormatProvider](#FormatProviders)  
+  
+    -   [Форматирование числовых значений, зависящее от языка и региональных параметров](#numericCulture)  
+  
+    -   [Форматирование значений даты и времени, зависящее от языка и региональных параметров](#dateCulture)  
+  
+-   [Интерфейс IFormattable](#IFormattable)  
+  
+-   [Составное форматирование](#CompositeFormatting)  
+  
+-   [Настраиваемое форматирование с использованием интерфейса ICustomFormatter](#Custom)  
+  
+-   [Связанные разделы](#RelatedTopics)  
+  
+-   [Ссылки](#Reference)  
+  
+<a name="NetFormatting"></a>   
+## Форматирование в платформе .NET Framework  
+ Базовый механизм форматирования — это используемая по умолчанию реализация метода <xref:System.Object.ToString%2A?displayProperty=fullName>, описанная ниже в подразделе [Форматирование по умолчанию с помощью метода ToString](#DefaultToString). При этом платформа .NET Framework предоставляет несколько способов изменения и расширения имеющихся по умолчанию возможностей форматирования. В число этих требований входят следующие:  
+  
+-   Переопределение метода <xref:System.Object.ToString%2A?displayProperty=fullName>, позволяющее определить настраиваемое строковое представление значения объекта. Дополнительные сведения см. ниже в подразделе [Переопределение метода ToString](#OverrideToString).  
+  
+-   Определение описателей формата, позволяющих использовать несколько видов строкового представления значения объекта. Например, описатель формата "X" в следующем операторе позволяет преобразовать целое число в шестнадцатеричное строковое представление.  
+  
+     [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
+     [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]  
+  
+     Дополнительные сведения об описателях форматов см. в подразделе [Метод ToString и строки формата](#FormatStrings).  
+  
+-   Использование поставщиков форматирования, позволяющих воспользоваться преимуществами соглашений о форматировании, присущих конкретному языку и региональным параметрам. Например, следующий оператор выводит значение валюты с использованием соглашений о форматировании языка и региональных параметров "en\-US".  
+  
+     [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
+     [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]  
+  
+     Дополнительные сведения о форматировании с помощью поставщиков форматирования см. в подразделе [Поставщики форматирования и интерфейс IFormatProvider](#FormatProviders).  
+  
+-   Реализация интерфейса <xref:System.IFormattable>, позволяющая преобразовывать строки с помощью класса <xref:System.Convert> и использовать составное форматирование. Дополнительные сведения см. в подразделе [Интерфейс IFormattable](#IFormattable).  
+  
+-   Использование составного форматирования, позволяющее внедрить строковую презентацию в состав более крупной строки. Дополнительные сведения см. в подразделе [Составное форматирование](#CompositeFormatting).  
+  
+-   Реализация интерфейсов <xref:System.ICustomFormatter> и <xref:System.IFormatProvider>, позволяющая создать полноценное настраиваемое решение для форматирования. Дополнительные сведения см. в подразделе [Настраиваемое форматирование с использованием интерфейса ICustomFormatter](#Custom).  
+  
+ В следующих подразделах перечисленные методы преобразования объектов в их строковые представления рассматриваются более подробно.  
+  
+ [К началу](#Introduction)  
+  
+<a name="DefaultToString"></a>   
+## Форматирование по умолчанию с помощью метода ToString  
+ Любой производный от <xref:System.Object?displayProperty=fullName> тип автоматически наследует метод `ToString` без параметров, по умолчанию возвращающий имя типа. В следующем примере демонстрируется использование метода `ToString` по умолчанию. Здесь определен класс с именем `Automobile`, у которого нет реализации. При создании экземпляра этого класса и вызове его метода `ToString` отображается имя класса. Обратите внимание, что метод `ToString` не вызывается в примере явным образом. Метод <xref:System.Console.WriteLine%28System.Object%29?displayProperty=fullName> неявно вызывает метод `ToString` объекта, переданного ему в качестве аргумента.  
+  
+ [!code-csharp[Conceptual.Formatting.Overview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/default1.cs#1)]
+ [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
+  
+> [!WARNING]
+>  Начиная с [!INCLUDE[win81](../../../includes/win81-md.md)][!INCLUDE[wrt](../../../includes/wrt-md.md)] включает интерфейс [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) с единственным методом [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), который обеспечивает поддержку форматирования по умолчанию. Однако рекомендуется, чтобы управляемые типы не реализовывали интерфейс `IStringable`. Дополнительные сведения см. в подразделе "[!INCLUDE[wrt](../../../includes/wrt-md.md)] и интерфейс `IStringable`" справочных сведений о методе <xref:System.Object.ToString%2A?displayProperty=fullName>.  
+  
+ Поскольку производными от <xref:System.Object> являются все типы, кроме интерфейсов, данная функциональность автоматически присутствует в пользовательских классах и структурах. Тем не менее метод `ToString` по умолчанию обладает весьма ограниченной функциональностью: хотя метод позволяет определить имя типа, никаких сведений об экземпляре типа он не предоставляет. Для формирования строкового представления объекта, позволяющего получить сведения о конкретном объекте, следует переопределить метод `ToString`.  
+  
 > [!NOTE]
 > Структуры наследуют от типа [ValueType](xref:System.ValueType), который также является производным от [Object](xref:System.Object). Хотя [ValueType](xref:System.ValueType) переопределяет [Object.ToString](xref:System.Object.ToString), его реализация идентична.
 

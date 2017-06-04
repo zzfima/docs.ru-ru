@@ -1,0 +1,168 @@
+---
+title: "Пошаговое руководство. Применение стилей к содержимому WPF | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-winforms"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "jsharp"
+helpviewer_keywords: 
+  - "взаимодействие [WDF]"
+  - "стили, содержимое WPF"
+  - "конструктор WPF, стиль содержимого WPF"
+ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
+caps.latest.revision: 10
+author: "dotnet-bot"
+ms.author: "dotnetcontent"
+manager: "wpickett"
+caps.handback.revision: 10
+---
+# Пошаговое руководство. Применение стилей к содержимому WPF
+В этом пошаговом руководстве показано, как применить стили к элементу управления Windows Presentation Foundation \(WPF\), размещенному на форме Windows Forms.  
+  
+ В руководстве выполняются следующие задачи:  
+  
+-   создание проекта;  
+  
+-   создание элемента управления WPF;  
+  
+-   применение стиля к элементу управления WPF.  
+  
+> [!NOTE]
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.  Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+  
+## Обязательные компоненты  
+ Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
+  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+  
+## Создание проекта  
+ Первым шагом является создание проекта Windows Forms.  
+  
+> [!NOTE]
+>  При размещении содержимого WPF поддерживаются только проекты C\# и Visual Basic.  
+  
+#### Создание проекта  
+  
+-   В Visual Basic или Visual C\# создайте проект приложения Windows Forms с именем `StylingWpfContent`.  
+  
+## Создание типов элемента управления WPF  
+ После добавления в проект типа элемента управления WPF можно разместить его в элементе управления <xref:System.Windows.Forms.Integration.ElementHost>.  
+  
+#### Создание типов элемента управления WPF  
+  
+1.  Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>.  Используйте имя по умолчанию для этого типа элемента управления \(`UserControl1.xaml`\).  Подробнее см. в разделе [Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+  
+2.  Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования.  Подробнее см. в разделе [Практическое руководство. Выбор и перемещение элементов в область конструктора](http://msdn.microsoft.com/ru-ru/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+  
+3.  В окне **Свойства** присвойте свойствам <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> значение `200`.  
+  
+4.  Добавьте элемент управления <xref:System.Windows.Controls.Button?displayProperty=fullName> в <xref:System.Windows.Controls.UserControl> и присвойте свойству <xref:System.Windows.Controls.ContentControl.Content%2A> значение "Отмена".  
+  
+5.  Добавьте второй элемент управления <xref:System.Windows.Controls.Button?displayProperty=fullName> в <xref:System.Windows.Controls.UserControl> и присвойте свойству <xref:System.Windows.Controls.ContentControl.Content%2A> значение "ОК".  
+  
+6.  Выполните построение проекта.  
+  
+## Применение стиля к элементу управления WPF  
+ Для изменения внешнего вида и поведения элемента управления WPF к нему можно применить различные стили.  
+  
+#### Применение стиля к элементу управления WPF  
+  
+1.  Откройте `Form1` в конструкторе Windows Forms.  
+  
+2.  На **панели элементов** дважды щелкните `UserControl1`, чтобы создать экземпляр `UserControl1` на форме.  
+  
+     Экземпляр `UserControl1` разместится в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> с именем `elementHost1`.  
+  
+3.  В панели смарт\-тега для `elementHost1` откройте раскрывающийся список **Редактировать содержимое**.  
+  
+     `UserControl1` откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+  
+4.  В представлении XAML вставьте следующий код XAML после открывающего тега `<UserControl>` .  
+  
+     Этот код XAML создает градиент с контрастной градиентной границей.  При нажатии на элемент управления градиенты изменяются, формируя образ нажатой кнопки.  Дополнительные сведения см. в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+  
+```xaml  
+<UserControl.Resources>  
+    <LinearGradientBrush x:Key="NormalBrush" EndPoint="0,1" StartPoint="0,0">  
+        <GradientStop Color="#FFF" Offset="0.0"/>  
+        <GradientStop Color="#CCC" Offset="1.0"/>  
+    </LinearGradientBrush>  
+    <LinearGradientBrush x:Key="PressedBrush" EndPoint="0,1" StartPoint="0,0">  
+        <GradientStop Color="#BBB" Offset="0.0"/>  
+        <GradientStop Color="#EEE" Offset="0.1"/>  
+        <GradientStop Color="#EEE" Offset="0.9"/>  
+        <GradientStop Color="#FFF" Offset="1.0"/>  
+    </LinearGradientBrush>  
+    <LinearGradientBrush x:Key="NormalBorderBrush" EndPoint="0,1" StartPoint="0,0">  
+        <GradientStop Color="#CCC" Offset="0.0"/>  
+        <GradientStop Color="#444" Offset="1.0"/>  
+    </LinearGradientBrush>  
+    <LinearGradientBrush x:Key="BorderBrush" EndPoint="0,1" StartPoint="0,0">  
+        <GradientStop Color="#CCC" Offset="0.0"/>  
+        <GradientStop Color="#444" Offset="1.0"/>  
+    </LinearGradientBrush>  
+    <LinearGradientBrush x:Key="PressedBorderBrush" EndPoint="0,1" StartPoint="0,0">  
+        <GradientStop Color="#444" Offset="0.0"/>  
+        <GradientStop Color="#888" Offset="1.0"/>  
+    </LinearGradientBrush>  
+  
+    <Style x:Key="SimpleButton" TargetType="{x:Type Button}" BasedOn="{x:Null}">  
+        <Setter Property="Background" Value="{StaticResource NormalBrush}"/>  
+        <Setter Property="BorderBrush" Value="{StaticResource NormalBorderBrush}"/>  
+        <Setter Property="Template">  
+            <Setter.Value>  
+                <ControlTemplate TargetType="{x:Type Button}">  
+                    <Grid x:Name="Grid">  
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"/>  
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>  
+                    </Grid>  
+                    <ControlTemplate.Triggers>  
+                        <Trigger Property="IsPressed" Value="true">  
+                            <Setter Property="Background" Value="{StaticResource PressedBrush}" TargetName="Border"/>  
+                            <Setter Property="BorderBrush" Value="{StaticResource PressedBorderBrush}" TargetName="Border"/>  
+                        </Trigger>  
+                    </ControlTemplate.Triggers>  
+                </ControlTemplate>  
+            </Setter.Value>  
+        </Setter>  
+    </Style>  
+</UserControl.Resources>  
+```  
+  
+1.  Примените стиль `SimpleButton`, определенный на предыдущем шаге, к кнопке "Отмена", вставив следующий код XAML в `<Button>` тег кнопки "Отмена".  
+  
+    ```  
+    Style="{StaticResource SimpleButton}  
+    ```  
+  
+     Объявление кнопки будет выглядеть так, как в XAML ниже.  
+  
+```xaml  
+<Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"  
+                Style="{StaticResource SimpleButton}">Cancel</Button>  
+```  
+  
+1.  Выполните построение проекта.  
+  
+2.  Откройте `Form1` в конструкторе Windows Forms.  
+  
+3.  Новый стиль применяется для элемента управления button.  
+  
+4.  Чтобы запустить приложение, в меню **Отладка** выберите команду **Начать отладку**.  
+  
+5.  Нажмите кнопки OK и Отмена и просмотрите  различия.  
+  
+## См. также  
+ <xref:System.Windows.Forms.Integration.ElementHost>   
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
+ [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)   
+ [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)   
+ [Конструктор WPF](http://msdn.microsoft.com/ru-ru/c6c65214-8411-4e16-b254-163ed4099c26)   
+ [Общие сведения о языке XAML \(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)

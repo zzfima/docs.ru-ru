@@ -1,0 +1,189 @@
+---
+title: "Внутрипроцессное параллельное выполнение | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "внутрипроцессное параллельное выполнение"
+  - "параллельное выполнение, внутрипроцессное"
+ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
+caps.latest.revision: 25
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 25
+---
+# Внутрипроцессное параллельное выполнение
+Начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе.  Управляемые COM\-компоненты по умолчанию выполняются в той версии платформы .NET Framework, в которой они были созданы, вне зависимости от загруженной для процесса версии .NET Framework.  
+  
+## Фон  
+ Платформа .NET Framework всегда предоставляла возможность параллельного размещения для приложений с управляемым кодом, но до появления версии [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] эта функция не была доступна для управляемых COM\-компонентов.  Загруженные в процесс COM\-компоненты ранее выполнялись в уже загруженной версии среды выполнения или в последней установленной версии платформы .NET Framework.  Если эта версия была несовместима с COM\-компонентом, то выполнение завершалось с ошибкой.  
+  
+ Платформа [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] предоставляет новый подход к параллельному размещению, который обеспечивает выполнение следующих требований.  
+  
+-   Установка новой версии платформы .NET Framework не повлияет на существующие приложения.  
+  
+-   Приложения будут выполняться в той версии платформы .NET Framework, в которой они были построены.  Новая версия платформы .NET Framework не используется, если явным образом не указано иное.  В то же время приложения легче перевести на использование новой версии платформы .NET Framework.  
+  
+## Влияние на пользователей и разработчиков  
+  
+-   **Конечные пользователи и системные администраторы**.  Эти группы пользователей теперь могут быть уверены, что установка новой версии среды выполнения \(отдельно или вместе с приложением\) не окажет влияния на работу компьютера.  Существующие приложения будут выполняться как раньше.  
+  
+-   **Разработчики приложений**.  Параллельное размещение не затрагивает разработчиков приложений.  Приложения по умолчанию всегда выполняются в версиях платформы .NET Framework, в которых они были созданы. Это поведение не изменено.  Разработчики могут переопределить это поведение и настроить приложение на выполнение в более новой версии платформы .NET Framework \(см. [сценарий 2](#scenarios)\).  
+  
+-   **Разработчики и пользователи библиотек**.  Параллельное размещение не устраняет проблемы совместимости, с которыми сталкиваются разработчики библиотек.  Библиотека, загруженная приложением напрямую \(через прямую ссылку или с помощью вызова <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>\) продолжает использовать среду выполнения класса <xref:System.AppDomain>, в который она загружена.  Следует проверить корректность работы библиотек со всеми версиями платформы .NET Framework, поддержка которых необходима.  Если приложение компилируется с помощью среды выполнения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], но содержит библиотеку, построенную с помощью более старой среды выполнения, то эта библиотека также будет использовать среду выполнения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  Однако, если приложение было создано с помощью более старой среды выполнения и библиотеки, которая построена в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], приложение также необходимо явным образом настроить на использование [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] \(см. [сценарий 3](#scenarios)\).  
+  
+-   **Разработчики управляемых COM\-компонентов**.  Управляемые COM\-компоненты ранее автоматически выполнялись в последней версии среды выполнения, установленной на компьютере.  Теперь COM\-компоненты можно запускать в той версии среды выполнения, в которой они были созданы.  
+  
+     Как отражено в следующей таблице, созданные на платформе .NET Framework версии 1.1 компоненты могут запускаться параллельно с компонентами версии 4, но не могут выполняться вместе с компонентами версий 2.0, 3.0 или 3.5, так как параллельное размещение для этих версий невозможно.  
+  
+    |Версия платформы .NET Framework|1.1|2.0 \- 3.5|4|  
+    |-------------------------------------|---------|----------------|-------|  
+    |1.1|Неприменимо|Нет|Да|  
+    |2.0 \- 3.5|Нет|Неприменимо|Да|  
+    |4|Да|Да|Неприменимо|  
+  
+> [!NOTE]
+>  Версии платформы .NET Framework 3.0 и 3.5 созданы с помощью инкрементального построения на базе версии 2.0 и не требуют параллельного запуска.  По сути они представляют собой одну и ту же версию.  
+  
+<a name="scenarios"></a>   
+## Общие сценарии параллельного размещения  
+  
+-   **Сценарий 1:** собственное приложение, которое использует COM\-компоненты, созданные в более ранних версиях платформы .NET Framework.  
+  
+     Установленные версии платформы .NET Framework: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и все остальные версии платформы .NET Framework, используемые COM\-компонентами.  
+  
+     Необходимые действия: в этой ситуации не следует предпринимать никаких действий.  COM\-компоненты будут выполняться в той версии платформы .NET Framework, в которой они были зарегистрированы.  
+  
+-   **Сценарий 2**: управляемое приложение, созданное в [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], которое желательно запустить [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], но допустимо и в [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], если версия 2.0 отсутствует.  
+  
+     Установленные версии платформы .NET Framework: более ранняя версия платформы .NET Framework и [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+  
+     Необходимые действия: откройте [файл конфигурации приложения](../../../docs/framework/configure-apps/index.md) в каталоге приложения и установите значения элементов [\<startup\>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) и [\<supportedRuntime\>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) следующим образом:  
+  
+    ```  
+    <configuration>  
+      <startup >  
+        <supportedRuntime version="v2.0.50727" />  
+        <supportedRuntime version="v4.0" />  
+      </startup>  
+    </configuration>  
+    ```  
+  
+-   **Сценарий 3:** собственное приложение, которое использует COM\-компоненты, созданные в более ранних версиях платформы .NET Framework. При этом приложение необходимо запустить с помощью [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+  
+     Установленные версии платформы .NET Framework: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+  
+     Необходимые действия: откройте файл конфигурации приложения в каталоге приложения и используйте элемент `<startup>`, атрибут `useLegacyV2RuntimeActivationPolicy` которого имеет значение `true`, и набор элементов `<supportedRuntime>` следующим образом:  
+  
+    ```  
+    <configuration>  
+      <startup useLegacyV2RuntimeActivationPolicy="true">  
+        <supportedRuntime version="v4.0" />  
+      </startup>  
+    </configuration>  
+    ```  
+  
+## Пример  
+ В следующем примере показан неуправляемый узел COM, на котором управляемый COM\-компонент выполняется с помощью версии платформы .NET Framework, для которой был предназначен данный компонент.  
+  
+ Для выполнения следующего примера скомпилируйте и зарегистрируйте следующий управляемый компонент COM с помощью [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Чтобы зарегистрировать компонент, в меню **Проект** выберите пункт **Свойства**, щелкните вкладку **Сборка**, а затем выберите флажок **Регистрация для COM\-взаимодействия**.  
+  
+```  
+using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+using System.Runtime.InteropServices;  
+  
+namespace BasicComObject  
+{  
+    [ComVisible(true), Guid("9C99C4B5-CA54-4c58-8988-49B6811BA53B")]  
+    public class MyObject : SimpleObjectModel.IPrintInfo  
+    {  
+        public MyObject()  
+        {  
+        }  
+        public void PrintInfo()  
+        {  
+            Console.WriteLine("MyObject was activated in {0} runtime in:\n\tAppDomain {1}:{2}", System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion(), AppDomain.CurrentDomain.Id, AppDomain.CurrentDomain.FriendlyName);  
+        }  
+    }  
+}  
+```  
+  
+ Скомпилируйте следующее неуправляемое приложение C\+\+, которое активирует COM\-объект, созданный в предыдущем примере.  
+  
+```  
+#include "stdafx.h"  
+#include <string>  
+#include <iostream>  
+#include <objbase.h>  
+#include <string.h>  
+#include <process.h>  
+  
+using namespace std;  
+  
+int _tmain(int argc, _TCHAR* argv[])  
+{  
+    char input;  
+    CoInitialize(NULL) ;  
+    CLSID clsid;  
+    HRESULT hr;  
+    HRESULT clsidhr = CLSIDFromString(L"{9C99C4B5-CA54-4c58-8988-49B6811BA53B}",&clsid);  
+    hr = -1;  
+    if (FAILED(clsidhr))  
+    {  
+        printf("Failed to construct CLSID from String\n");  
+    }  
+    UUID id = __uuidof(IUnknown);  
+    IUnknown * pUnk = NULL;  
+    hr = ::CoCreateInstance(clsid,NULL,CLSCTX_INPROC_SERVER,id,(void **) &pUnk);  
+    if (FAILED(hr))  
+    {  
+        printf("Failed CoCreateInstance\n");  
+    }else  
+    {  
+        pUnk->AddRef();  
+        printf("Succeeded\n");  
+    }  
+  
+    DISPID dispid;  
+    IDispatch* pPrintInfo;  
+    pUnk->QueryInterface(IID_IDispatch, (void**)&pPrintInfo);  
+    OLECHAR FAR* szMethod[1];  
+    szMethod[0]=OLESTR("PrintInfo");   
+    hr = pPrintInfo->GetIDsOfNames(IID_NULL,szMethod, 1, LOCALE_SYSTEM_DEFAULT, &dispid);  
+    DISPPARAMS dispparams;  
+    dispparams.cNamedArgs = 0;  
+    dispparams.cArgs = 0;  
+    VARIANTARG* pvarg = NULL;  
+    EXCEPINFO * pexcepinfo = NULL;  
+    WORD wFlags = DISPATCH_METHOD ;  
+;  
+    LPVARIANT pvRet = NULL;  
+    UINT * pnArgErr = NULL;  
+    hr = pPrintInfo->Invoke(dispid,IID_NULL, LOCALE_USER_DEFAULT, wFlags,  
+        &dispparams, pvRet, pexcepinfo, pnArgErr);  
+    printf("Press Enter to exit");  
+    scanf_s("%c",&input);  
+    CoUninitialize();  
+    return 0;  
+}  
+  
+```  
+  
+## См. также  
+ [Элемент \<startup\>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [Элемент \<supportedRuntime\>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

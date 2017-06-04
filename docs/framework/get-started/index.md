@@ -1,17 +1,17 @@
 ---
-title: "Начало работы с .NET Framework | Документы Майкрософт"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+title: "Начало работы с .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - ".NET Framework, начало работы"
+  - "начало работы [.NET Framework]"
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 caps.latest.revision: 35
 author: rpetrusha

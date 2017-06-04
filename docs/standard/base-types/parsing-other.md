@@ -1,86 +1,56 @@
 ---
-title: "Анализ других строк в .NET"
-description: "Анализ других строк в .NET"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/29/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 67670b10-3df4-45ea-8908-5ba3f056887c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: db80cc5f37e814f224ff76b14a906bb4d41064fb
-ms.lasthandoff: 03/02/2017
-
+title: "Анализ других строк в .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "тип данных Char, разбор строк"
+  - "перечисления [.NET Framework], разбор строк"
+  - "базовые типы, разбор строк"
+  - "разбор строк, другие строки"
+  - "тип данных Boolean, разбор строк"
+ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
+caps.latest.revision: 15
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 15
 ---
-
-# <a name="parsing-other-strings-in-net"></a>Анализ других строк в .NET
-
-Кроме числовых строк и строк [DateTime](xref:System.DateTime) можно также разбирать строки, представляющие типы [Char](xref:System.Char), [Boolean](xref:System.Boolean) и [Enum](xref:System.Enum), в типы данных.
-
-## <a name="char"></a>Char
-
-Метод статического анализа, связанный с типом данных[Char](xref:System.Char), полезен для преобразования строки, содержащей один символ, в его значение в кодировке Юникод. В следующем примере кода выполняется разбор строки в символ Юникода.
-
-```csharp
-string MyString1 = "A";
-char MyChar = Char.Parse(MyString1);
-// MyChar now contains a Unicode "A" character.
-```
-
-```vb
-Dim MyString1 As String = "A"
-Dim MyChar As Char = Char.Parse(MyString1)
-' MyChar now contains a Unicode "A" character.
-```
-
-## <a name="boolean"></a>Boolean
-
-Тип данных [Boolean](xref:System.Boolean) содержит метод [Parse](xref:System.Boolean.Parse(System.String)), который можно использовать для преобразования строки, представляющей значение `Boolean`, в реальный тип `Boolean`. Этот метод не учитывает регистр и может успешно анализировать строку, содержащую значения "True" или "False". Метод `Parse`, связанный с типом `Boolean`, может также анализировать строки, окруженные пробелами. Если передается любая другая строка, создается исключение [FormatException](xref:System.FormatException).
-
-В следующем примере кода показано использование метода `Parse` для преобразования строки в значение `Boolean`.
-
-```csharp
-string MyString2 = "True";
-bool MyBool = bool.Parse(MyString2);
-// MyBool now contains a True Boolean value.
-```
-
-```vb
-Dim MyString1 As String = "A"
-Dim MyChar As Char = Char.Parse(MyString1)
-' MyChar now contains a Unicode "A" character.
-```
-
-## <a name="enumeration"></a>Перечисление
-
-Статический метод [Parse](xref:System.Enum.Parse(System.Type,System.String)) можно использовать, чтобы инициализировать значение строки типом перечисления. Этот метод принимает тип перечисления для разбора, анализируемую строку и необязательный флаг `Boolean`, указывающий, будет ли при анализе учитываться регистр. Анализируемая строка может содержать несколько значений, разделенных запятыми; перед этими значениями или после них могут быть один или несколько пробелов. Если строка содержит несколько значений, то возвращаемый объект будет содержать сочетание заданных значений, полученное с использованием побитовой операции OR.
-
-В следующем примере показано использование метода `Parse` для преобразования строкового представления в значение перечисления. Перечислению [DayOfWeek](xref:System.DayOfWeek) присваивается значение Thursday из строки.
-
-```csharp
-string MyString3 = "Thursday";
-DayOfWeek MyDays = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), MyString3);
-Console.WriteLine(MyDays);
-// The result is Thursday.
-```
-
-```vb
-Dim MyString3 As String = "Thursday"
-Dim MyDays As DayOfWeek = CType([Enum].Parse(GetType(DayOfWeek), MyString3), DayOfWeek)
-Console.WriteLine("{0:G}", MyDays)
-' The result is Thursday.
-```
-
-## <a name="see-also"></a>См. также
-
-[Анализ строк в .NET](parsing-strings.md)
-
-[Типы форматирования в .NET](formatting-types.md)
-
-[Преобразование типов в .NET](type-conversion.md)
-
-
+# Анализ других строк в .NET Framework
+Кроме числовых строк и строк <xref:System.DateTime>, можно также разбирать строки, представляющие типы <xref:System.Char>, <xref:System.Boolean> и <xref:System.Enum> в типы данных.  
+  
+## Char  
+ Статический метод разбора, связанный с типом данных **Char**, полезен для преобразования строки, содержащей один знак, в его значение в кодировке Юникод.  В следующем примере кода выполняется разбор строки в знак Юникода.  
+  
+ [!code-cpp[Conceptual.String.Parse#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#2)]
+ [!code-csharp[Conceptual.String.Parse#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#2)]
+ [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
+  
+## Boolean  
+ Тип данных **Boolean** содержит метод **Parse**, который можно использовать для преобразования строки с логическим значением в реальный тип **Boolean**.  Этот метод не учитывает регистр и может успешно разбирать строку, содержащую значения "True" или "False". Метод **Parse**, связанный с типом **Boolean**, может также разбирать строки, окруженные пробелами.  Если передается любая другая строка, то создается исключение <xref:System.FormatException>.  
+  
+ В следующем примере кода показано использование метода **Parse** для преобразования строки в логическое значение.  
+  
+ [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
+ [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
+ [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
+  
+## Перечисление  
+ Можно использовать статический метод **Parse**, чтобы инициализировать значение строки типом перечисления.  Этот метод получает тип перечисления для разбора, разбираемую строку и необязательный логический флаг, показывающий, будет ли при разборе учитываться регистр.  Разбираемая строка может содержать несколько значений, разделенных запятыми; перед этими значениями или после них могут быть один или несколько пробелов.  Если строка содержит несколько значений, то возвращаемый объект будет содержать сочетание заданных значений, полученное с использованием поразрядной операции ИЛИ.  
+  
+ В следующем примере показано использование метода **Parse** для преобразования строкового представления в значение перечисления.  Перечислению <xref:System.DayOfWeek> присваивается значение **Thursday** из строки.  
+  
+ [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
+ [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
+ [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
+  
+## См. также  
+ [Разбор строк](../../../docs/standard/base-types/parsing-strings.md)   
+ [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)   
+ [Преобразование типов в .NET Framework](../../../docs/standard/base-types/type-conversion.md)
