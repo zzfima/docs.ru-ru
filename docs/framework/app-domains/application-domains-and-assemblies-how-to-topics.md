@@ -1,26 +1,31 @@
 ---
-title: "Руководства по работе с доменами приложений и сборками | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "домены приложений, практические руководства"
-  - "сборки [платформа .NET Framework], практические руководства"
+title: "Руководства по работе с доменами приложений и сборками | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], how-tos
+- application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: afbedbf1565f698d0bda2afe6e75d68c610f2aa2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/02/2017
+
 ---
-# Руководства по работе с доменами приложений и сборками
-Следующий список содержит ссылки на все разделы руководств, находящиеся в основной документации по программированию с использованием доменов приложений и сборок.  
+# <a name="application-domains-and-assemblies-how-to-topics"></a>Руководства по работе с доменами приложений и сборками
+В следующих разделах содержатся ссылки на все разделы практического руководства базовой документации по программированию с использованием доменов приложений и сборок.  
   
  **Домены приложений**  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 6
   
 -   [Практическое руководство. Создание ссылки на сборку со строгим именем](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)  
   
--   [Практическое руководство. Отключение функции пропуска строгих имен](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
+-   [Практическое руководство. Отключение возможности обхода строгих имен](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
 -   [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
@@ -58,5 +63,5 @@ caps.handback.revision: 6
   
 -   [Практическое руководство. Просмотр содержимого сборок](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Домены приложений и сборки](../../../docs/framework/app-domains/index.md)

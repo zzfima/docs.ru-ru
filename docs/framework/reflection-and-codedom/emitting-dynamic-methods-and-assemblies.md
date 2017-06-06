@@ -1,29 +1,34 @@
 ---
-title: "Emitting Dynamic Methods and Assemblies | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "reflection emit"
-  - "dynamic assemblies"
-  - "metadata, emit interfaces"
-  - "reflection emit, overview"
-  - "assemblies [.NET Framework], emitting dynamic assemblies"
+title: "Предоставление динамических методов и сборок | Документация Microsoft"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reflection emit
+- dynamic assemblies
+- metadata, emit interfaces
+- reflection emit, overview
+- assemblies [.NET Framework], emitting dynamic assemblies
 ms.assetid: 8e8e2631-62fd-40e7-a8ee-0039b06749bc
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d8e4c5bb677be7e20f6571ea6eb53831027ade27
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/02/2017
+
 ---
-# Emitting Dynamic Methods and Assemblies
-В этом разделе описывается набор управляемых типов в пространстве имен <xref:System.Reflection.Emit>, позволяющий компилятору или средству порождать метаданные и код MSIL во время выполнения, а также при необходимости создавать переносимый исполняемый \(PE\) файл на диске.  Основными пользователями этого пространства имен являются обработчики скриптов и компиляторы.  В этом разделе функциональные возможности, предоставляемые пространством имен <xref:System.Reflection.Emit>, называются порождением отражения.  
+# <a name="emitting-dynamic-methods-and-assemblies"></a>Предоставление динамических методов и сборок
+В этом разделе описывается набор управляемых типов в пространстве имен <xref:System.Reflection.Emit>, позволяющий компилятору или средству порождать метаданные и код MSIL во время выполнения, а также при необходимости создавать переносимый исполняемый (PE) файл на диске. Основными пользователями этого пространства имен являются обработчики скриптов и компиляторы. В этом разделе функциональные возможности, предоставляемые пространством имен <xref:System.Reflection.Emit>, называются порождением отражения.  
   
  Порождение отражения предоставляет следующие возможности:  
   
@@ -39,15 +44,15 @@ caps.handback.revision: 18
   
 -   определение символьной информации для определяемых модулей, которая может использоваться такими средствами, как отладчики и профилировщики кода.  
   
- Помимо управляемых типов в пространстве имен <xref:System.Reflection.Emit>, существуют неуправляемые интерфейсы метаданных, которые описаны в справочной документации [Интерфейсы метаданных](../../../ocs/framework/unmanaged-api/metadata/metadata-interfaces.md).  Управляемое порождение отражения обеспечивает более строгую проверку семантических ошибок и более высокий уровень абстрагирования метаданных, чем неуправляемые интерфейсы метаданных.  
+ Наряду с управляемыми типами в пространстве имен <xref:System.Reflection.Emit> существуют неуправляемые интерфейсы метаданных, которые описаны в статье [Интерфейсы метаданных](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) справочной документации. Управляемое порождение отражения обеспечивает более строгую проверку семантических ошибок и более высокий уровень абстрагирования метаданных, чем неуправляемые интерфейсы метаданных.  
   
- Другим полезным ресурсом для работы с метаданными и кодом MSIL является документация по инфраструктуре Common Language Infrastructure \(CLI\), особенно раздел II, посвященный определению и семантике метаданных, и раздел III, посвященный набору инструкций CIL.  Документация доступна в Интернете в библиотеке [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) и на [веб\-сайте Ecma](http://go.microsoft.com/fwlink/?LinkId=116487).  
+ Другим полезным ресурсом для работы с метаданными и кодом MSIL является документация по инфраструктуре Common Language Infrastructure (CLI), особенно раздел II, посвященный определению и семантике метаданных, и раздел III, посвященный набору инструкций CIL. Документацию можно найти на сайтах [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) и [ECMA](http://go.microsoft.com/fwlink/?LinkId=116487).  
   
-## В этом подразделе  
- [Security Issues in Reflection Emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+## <a name="in-this-section"></a>Содержание  
+ [Вопросы безопасности в порождении отражения](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
  Описываются проблемы безопасности, связанные с созданием динамических сборок с помощью порождения отражения.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Reflection.Emit.OpCodes>  
  Каталог кодов инструкций MSIL, которые можно использовать для построения тел методов.  
   
@@ -60,8 +65,8 @@ caps.handback.revision: 18
  <xref:System.Reflection>  
  Содержит управляемые классы, используемые для просмотра метаданных и управляемого кода.  
   
-## Связанные подразделы  
- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Описываются способы просмотра метаданных и управляемого кода.  
   
  [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
