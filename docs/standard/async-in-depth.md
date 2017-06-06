@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
 ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 03/10/2017
 
 ## <a name="task-and-tasklttgt"></a>Task и Task&lt;T&gt;
 
-Task (задача) — это конструкции, реализующие [модель параллельной обработки на основе обещаний (Promise)](https://en.wikipedia.org/wiki/Futures_and_promises).  Если в двух словах, они "обещают", что работа будет выполнена позже, позволяя взаимодействовать с помощью обещания с чистым API.
+Task (задача) — это конструкции, реализующие [модель параллельной обработки на основе обещаний (Promise)](https://en.wikipedia.org/wiki/Futures_and_promises).  Если в двух словах, она "обещает", что работа будет выполнена позже, позволяя взаимодействовать с помощью обещания с чистым API.
 
 *   `Task` представляет одну операцию, которая не возвращает значение.
 *   `Task<T>` представляет одну операцию, которая возвращает значение типа `T`.
