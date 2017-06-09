@@ -88,7 +88,7 @@ ms.lasthandoff: 05/10/2017
  Дополнительные сведения см. в разделе [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) и [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Преобразование объектов в памяти в XML  
- Запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] упрощают преобразование данных между структурами данных в памяти, базах данных SQL, наборах данных [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] и XML-потоках или XML-документах. В следующем примере объекты в структуре данных в памяти преобразуются в XML-элементы.  
+ Запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] упрощают преобразование данных между структурами данных в памяти, базах данных SQL, наборах данных [!INCLUDE[vstecado](~/includes/vstecado-md.md)] и XML-потоках или XML-документах. В следующем примере объекты в структуре данных в памяти преобразуются в XML-элементы.  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
