@@ -1,5 +1,0 @@
-# [Справочник по неуправляемым API](index.md)
-# [Общие типы данных](common-data-types-unmanaged-api-reference.md)
-# [Константы](constants-unmanaged-api-reference.md)
-# [Битовая маска COR_PRF_ALLOWABLE_AFTER_ATTACH](cor-prf-allowable-after-attach-bitmask.md)
-# [Атрибут GUID_ManagedName](guid-managedname-attribute.md)

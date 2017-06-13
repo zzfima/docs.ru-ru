@@ -1,5 +1,0 @@
-# [Схема параметров поставщиков языков и компиляторов](index.md)
-## [Элемент <system.codedom>](system-codedom-element.md)
-### [Элемент <compilers>](compilers-element.md)
-#### [Элемент <compiler>](compiler-element.md)
-##### [Элемент <providerOption>](provideroption-element.md)
