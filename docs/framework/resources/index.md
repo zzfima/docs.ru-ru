@@ -22,11 +22,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ffe0b574b00e3ce420d83658f5844f26c3f8ea72
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: 3bbfaf3272444fbd2127f01ae4d5c9ca0db7bd39
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 04/08/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>Ресурсы в приложениях для настольных систем
@@ -51,25 +51,25 @@ ms.lasthandoff: 06/02/2017
  Дополнительные сведения см. в статье [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Извлечение ресурсов  
- Приложение во время выполнения загружает соответствующие локализованные ресурсы отдельно для каждого потока на основе языка и региональных параметров, которые заданы свойством <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. Значение этого свойства формируется следующим образом:  
+ Во время выполнения приложение загружает соответствующие локализованные ресурсы для каждого потока на основе языка и региональных параметров, заданных свойством <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. Значение этого свойства формируется следующим образом:  
   
--   Присвоением свойству <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> объекта <xref:System.Globalization.CultureInfo>, который представляет локализованные значения языка и региональных параметров.  
+-   Путем непосредственного назначения объекта <xref:System.Globalization.CultureInfo>, представляющего локализованный язык и региональные параметры, свойству <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>.  
   
--   Если язык и региональные параметры не заданы явным образом, соответствующие значения по умолчанию для пользовательского интерфейса каждого потока извлекаются из свойства <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
+-   Если язык и региональные параметры не назначены явно, путем получения заданных по умолчанию языка и региональных параметров пользовательского интерфейса для потоков из свойства <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
   
 -   Если заданные по умолчанию язык и региональные параметры пользовательского интерфейса для потоков явно не назначены, путем получения языка и региональных параметров для текущего пользователя на локальном компьютере путем вызова функции Windows `GetUserDefaultUILanguage`.  
   
- Дополнительные сведения об указании языка и региональных параметров для пользовательского интерфейса см. в разделах справки <xref:System.Globalization.CultureInfo> и <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Дополнительные сведения об установке текущего языка и региональных параметров пользовательского интерфейса см. на страницах справочника <xref:System.Globalization.CultureInfo> и <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
   
- Ресурсы для текущего или определенного языка и региональных параметров пользовательского интерфейса можно получить с помощью класса <xref:System.Resources.ResourceManager?displayProperty=fullName>. Хотя класс <xref:System.Resources.ResourceManager> чаще всего используется для получения ресурсов в настольных приложениях, пространство имен приложение <xref:System.Resources?displayProperty=fullName> содержит дополнительные типы, которые также можно использовать для получения ресурсов. К ним относятся следующие методы.  
+ Ресурсы для текущего или определенного языка и региональных параметров пользовательского интерфейса можно получить с помощью класса <xref:System.Resources.ResourceManager?displayProperty=fullName>. Хотя класс <xref:System.Resources.ResourceManager> чаще всего используется для получения ресурсов в настольных приложениях, пространство имен <xref:System.Resources?displayProperty=fullName> содержит дополнительные типы, которые также можно использовать для получения ресурсов. Сюда входит следующее.  
   
--   Класс <xref:System.Resources.ResourceReader>, который позволяет перечислять ресурсы, встроенные в сборку или хранящиеся в отдельном двоичном RESOURCES-файле. Это удобно, когда точные имена ресурсов, доступных во время выполнения, неизвестны.  
+-   Класс <xref:System.Resources.ResourceReader>, позволяющий перечислять ресурсы, встроенные в сборку или хранящиеся в отдельном двоичном RESOURCES-файле. Это удобно, когда точные имена ресурсов, доступных во время выполнения, неизвестны.  
   
--   Класс <xref:System.Resources.ResXResourceReader>, который позволяет получать ресурсы из XML-файла (.resx).  
+-   Класс <xref:System.Resources.ResXResourceReader>, позволяющий получать ресурсы из XML-файла (.resx).  
   
--   Класс <xref:System.Resources.ResourceSet>, который позволяет получать ресурсы для конкретного языка и региональных параметров без учета правил отката. Ресурсы могут храниться в сборке или отдельном двоичном RESOURCES-файле. Можно также разработать реализацию <xref:System.Resources.IResourceReader>, которая позволит использовать класс <xref:System.Resources.ResourceSet> для извлечения ресурсов из другого источника.  
+-   Класс <xref:System.Resources.ResourceSet>, позволяющий получать ресурсы для конкретного языка и региональных параметров без учета правил отката. Ресурсы могут храниться в сборке или отдельном двоичном RESOURCES-файле. Можно также разработать реализацию <xref:System.Resources.IResourceReader>, которая позволит использовать класс <xref:System.Resources.ResourceSet> для получения ресурсов из других источников.  
   
--   Класс <xref:System.Resources.ResXResourceSet>, который позволяет получить в память все элементы из XML-файла ресурсов.  
+-   Класс <xref:System.Resources.ResXResourceSet>, позволяющий получать все элементы из XML-файла ресурсов в память.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Globalization.CultureInfo>   
