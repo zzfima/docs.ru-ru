@@ -37,22 +37,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f471bac04a853e5876b9da52b7b858e1e1766e28
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 16b71732272dacd6610b8b32eb74ff07fafec314
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 Классы в пространстве имен <xref:System.IO> используются для работы с дисками, файлами и каталогами.  
   
- Пространство имен <xref:System.IO> содержит классы <xref:System.IO.File> и <xref:System.IO.Directory>, обеспечивающие функциональные возможности [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] для работы с файлами и каталогами. Поскольку методы этих объектов являются статическими или общими элементами, их можно использовать непосредственно, без предварительного создания экземпляра класса. С этими классами связаны классы <xref:System.IO.FileInfo> и <xref:System.IO.DirectoryInfo>, которые будут знакомы пользователям функции `My`. Чтобы использовать эти классы, необходимо полностью уточнить имена или импортировать подходящие пространства имен, включив операторы `Imports` в начало соответствующего кода. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+ Пространство имен <xref:System.IO> содержит классы <xref:System.IO.File> и <xref:System.IO.Directory>, обеспечивающие функциональные возможности [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для работы с файлами и каталогами. Поскольку методы этих объектов являются статическими или общими элементами, их можно использовать непосредственно, без предварительного создания экземпляра класса. С этими классами связаны классы <xref:System.IO.FileInfo> и <xref:System.IO.DirectoryInfo>, которые будут знакомы пользователям функции `My`. Чтобы использовать эти классы, необходимо полностью уточнить имена или импортировать подходящие пространства имен, включив операторы `Imports` в начало соответствующего кода. Дополнительные сведения см. в статье [Оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  В других подразделах этого раздела для работы с дисками, файлами и каталогами вместо класса `My.Computer.FileSystem` используется объект `System.IO`. Объект `My.Computer.FileSystem` предназначен главным образом для использования в программах [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Классы `System.IO` предназначены для использования в любом языке, который поддерживает [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)], в том числе [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+>  В других подразделах этого раздела для работы с дисками, файлами и каталогами вместо класса `My.Computer.FileSystem` используется объект `System.IO`. Объект `My.Computer.FileSystem` предназначен главным образом для использования в программах [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Классы `System.IO` предназначены для использования в любом языке, который поддерживает [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], в том числе [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="definition-of-a-stream"></a>Определение потока  
- [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] использует потоки для поддержки чтения и записи файлов. Поток можно представить в виде одномерного набора связанных данных, у которого есть начало и конец, где курсор указывает текущее положение в потоке.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] использует потоки для поддержки чтения и записи файлов. Поток можно представить в виде одномерного набора связанных данных, у которого есть начало и конец, где курсор указывает текущее положение в потоке.  
   
  ![Курсор показывает текущую позицию в файловом потоке.](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2017
  Для получения дополнительной информации см. [Composing Streams](https://msdn.microsoft.com/library/e4y2dch9).  
   
 ## <a name="types-of-streams"></a>Типы потоков  
- В [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] поток представлен классом <xref:System.IO.Stream>, который образует абстрактный класс для всех других потоков. Невозможно непосредственно создать экземпляр класса <xref:System.IO.Stream>, но необходимо использовать один из реализуемых им классов.  
+ В [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] поток представлен классом <xref:System.IO.Stream>, который образует абстрактный класс для всех других потоков. Невозможно непосредственно создать экземпляр класса <xref:System.IO.Stream>, но необходимо использовать один из реализуемых им классов.  
   
  Существует много типов потоков, но при работе с файлами ввода-вывода наиболее важными типами являются класс <xref:System.IO.FileStream>, который предоставляет способ чтения и записи файлов, и класс <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>, который предоставляет способ создания файлов и каталогов в изолированном хранилище. К другим потокам, которые можно использовать при работе с файловым вводом-выводом, относятся следующие:  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 05/22/2017
 |Определение атрибутов файла|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Разрешения файла  
- Доступом к файлам и каталогам можно управлять с помощью класса <xref:System.Security.Permissions.FileIOPermission>. Это может быть особенно важно для разработчиков, работающих с веб-формами, которые по умолчанию выполняются в контексте специальной локальной учетной записи пользователя ASP.NET, создаваемой в рамках установок [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] и [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Когда такое приложение запрашивает доступ к ресурсу, учетная запись пользователя ASP.NET имеет ограниченные разрешения, что может помешать пользователю выполнять действия, такие как запись в файл из веб-приложения. Дополнительные сведения см. в статьях [о разрешениях безопасности](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) и <xref:System.Security.Permissions.FileIOPermission>.  
+ Доступом к файлам и каталогам можно управлять с помощью класса <xref:System.Security.Permissions.FileIOPermission>. Это может быть особенно важно для разработчиков, работающих с веб-формами, которые по умолчанию выполняются в контексте специальной локальной учетной записи пользователя ASP.NET, создаваемой в рамках установок [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] и [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Когда такое приложение запрашивает доступ к ресурсу, учетная запись пользователя ASP.NET имеет ограниченные разрешения, что может помешать пользователю выполнять действия, такие как запись в файл из веб-приложения. Дополнительные сведения см. в статьях [о разрешениях безопасности](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) и <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Изолированное хранилище файлов  
  Изолированное хранилище — это попытка устранить проблемы, которые могут возникать, если при работе с файлами у пользователя или кода отсутствуют необходимые разрешения. Изолированное хранилище назначает каждому пользователю секцию данных, которая может содержать одно или несколько хранилищ. Хранилища могут изолироваться друг от друга по пользователю или по сборке. Доступ к хранилищу имеет только пользователь и сборка, которые его создали. Хранилище действует в качестве полноценной виртуальной файловой системы — в пределах одного хранилища можно создавать и использовать каталоги и файлы.  

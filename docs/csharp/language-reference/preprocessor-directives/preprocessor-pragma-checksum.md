@@ -29,14 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5daf71faea5736036e9e3e0178e84ea03c314ff6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: acb554a757886d1924fa7ef69814b98b3b440871
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/15/2017
 
 ---
-# <a name="pragma-checksum-c-reference"></a>##pragma checksum (справочник по C#)
-Создание контрольных сумм для исходных файлов для помощи в отладке страниц [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)].  
+# <a name="pragma-checksum-c-reference"></a>#pragma checksum (Справочник по C#)
+Создание контрольных сумм для исходных файлов для помощи в отладке страниц [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,9 +58,9 @@ ms.lasthandoff: 03/13/2017
 ## <a name="remarks"></a>Примечания  
  Отладчик Visual Studio использует контрольную сумму, чтобы подтвердить нахождение правильного источника. Компилятор вычисляет контрольную сумму для исходного файла, а затем передает результат в файл базы данных (PDB) программы. Отладчик затем использует PDB-файл для сравнения с контрольной суммой, вычисленной им для исходного файла.  
   
- Это решение не работает для проектов [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)], так как контрольная сумма вычисляется для созданного исходного файла, а не для ASPX-файла. Чтобы решить эту проблему, `#pragma checksum` обеспечивает поддержку контрольных сумм для страниц [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)].  
+ Это решение не работает для проектов [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)], так как контрольная сумма вычисляется для созданного исходного файла, а не для ASPX-файла. Чтобы решить эту проблему, `#pragma checksum` обеспечивает поддержку контрольных сумм для страниц [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
- При создании проекта [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] в [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] созданный исходный файл содержит контрольную сумму для ASPX-файла, из которого создается источник. Затем компилятор записывает эти данные в PDB-файл.  
+ При создании проекта [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] в [!INCLUDE[csprcs](~/includes/csprcs-md.md)] созданный исходный файл содержит контрольную сумму для ASPX-файла, из которого создается источник. Затем компилятор записывает эти данные в PDB-файл.  
   
  Если компилятор не обнаруживает директиву `#pragma checksum` в файле, он вычисляет контрольную сумму и записывает значение в PDB-файл.  
   

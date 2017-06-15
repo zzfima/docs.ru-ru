@@ -1,5 +1,5 @@
 ---
-title: "Разработка библиотек с помощью кроссплатформенных средств"
+title: "Разработка библиотек с помощью кроссплатформенных средств| Microsoft Docs"
 description: "Разработка библиотек с помощью кроссплатформенных средств"
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
-ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
+ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/02/2017
 
 В этом разделе есть таблица, в которой версии .NET Standard сопоставляются с различными реализациями:
 
-[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Вот что значит эта таблица в контексте создания библиотеки:
 
@@ -319,12 +319,13 @@ let doWork data = async {
 Подобные сценарии использования предполагают, что интерфейсы API, к которым осуществляется доступ, должны иметь разную структуру для C# и F#.  Стандартным подходом к решению этой задачи является факторинг всей логики библиотеки в базовом проекте и определение в проектах C# и F# уровней API, которые вызывают этот базовый проект.  Далее в этом разделе будут использоваться следующие имена:
 
 * **AwesomeLibrary.Core** — базовый проект, содержащий всю логику библиотеки;
-* **AwesomeLibrary.CSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке C;#
-* **AwesomeLibrary.FSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке F.#
+* **AwesomeLibrary.CSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке C#
+* **AwesomeLibrary.FSharp** — проект с открытыми интерфейсами API, предназначенными для использования в коде на языке F#
 
 Чтобы получить ту же структуру каталогов, что и в этом руководстве, выполните следующие команды в окне терминала:
 
 ```console
+mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
@@ -332,9 +333,9 @@ mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
 cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
 Эти команды добавят три указанные выше проекта и файл решения, который связывает их вместе.  Создание файла решения и связывание проектов позволит вам собирать и восстанавливать проекты из верхнего уровня.
@@ -344,7 +345,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
 Ссылку на проект лучше всего добавить с помощью интерфейса командной строки .NET.  Из каталогов проекта **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** выполните следующую команду:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core.csproj
+$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Теперь файлы **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** будут ссылаться на **AwesomeLibrary.Core** в качестве целевого объекта `ProjectReference`.  Чтобы это проверить, просмотрите файлы проектов, и вы увидите в них следующий код:
@@ -360,3 +361,4 @@ $ dotnet add reference ../AwesomeLibrary.Core.csproj
 ### <a name="structuring-a-solution"></a>Структурирование решения
 
 Еще один важный аспект решений с несколькими проектами — правильное формирование общей структуры. Код можно упорядочить так, как вам удобно. Если каждый проект связан с файлом решения с помощью `dotnet sln add`, вы сможете запускать команды `dotnet restore` и `dotnet build` на уровне проекта.
+

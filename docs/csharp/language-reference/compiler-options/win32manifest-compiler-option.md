@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b9a5c7c994644d512d4049dbc5aab3fbea70d6ae
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bb28bf28c3d8a426322e1c1795941de7e9aa4bf6
+ms.openlocfilehash: fd8c0a9a398c8f8d6c589ffcf0426a375a82a6a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (параметры компилятора C#)
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /win32manifest: filename  
 ```  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 03/13/2017
  Имя и расположение пользовательского файла манифеста.  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию компилятор [!INCLUDE[csharp_current_short](../../../csharp/language-reference/compiler-options/includes/csharp_current_short_md.md)] внедряет манифест приложения, определяющий запрошенный уровень выполнения "asInvoker". Он создает манифест в той же папке, в которой создан исполняемый файл, обычно в папке bin\Debug или bin\Release при использовании Visual Studio. Если необходимо предоставить пользовательский манифест, например, чтобы задать уровень выполнения highestAvailable or requireAdministrator, используйте этот параметр, чтобы указать имя файла.  
+ По умолчанию компилятор [!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] внедряет манифест приложения, определяющий запрошенный уровень выполнения "asInvoker". Он создает манифест в той же папке, в которой создан исполняемый файл, обычно в папке bin\Debug или bin\Release при использовании Visual Studio. Если необходимо предоставить пользовательский манифест, например, чтобы задать уровень выполнения highestAvailable or requireAdministrator, используйте этот параметр, чтобы указать имя файла.  
   
 > [!NOTE]
 >  Этот параметр и параметр [/win32res (C# Compiler Options)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) являются взаимоисключающими. При попытке использовать оба параметра в одной командной строке возникнет ошибка построения.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
   
 -   Вы предоставляете пользовательский манифест, не определяющий запрошенный уровень выполнения.  
   
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] создает стандартный файл с расширением MANIFEST и сохраняет его в каталоги отладки и выпуска вместе с исполняемым файлом. Пользовательский манифест можно добавить, создав его в любом текстовом редакторе и добавив полученный файл в проект. Кроме того, можно щелкнуть значок **проект** в **обозревателе решений** и нажать кнопку **Добавить новый элемент**, а затем **Файл манифеста приложения**. Добавленный новый или существующий файл манифеста появится в раскрывающемся списке **Манифест**. Дополнительные сведения см. в разделе [Страница "Приложение" в конструкторе проектов (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] создает стандартный файл с расширением MANIFEST и сохраняет его в каталоги отладки и выпуска вместе с исполняемым файлом. Пользовательский манифест можно добавить, создав его в любом текстовом редакторе и добавив полученный файл в проект. Кроме того, можно щелкнуть значок **проект** в **обозревателе решений** и нажать кнопку **Добавить новый элемент**, а затем **Файл манифеста приложения**. Добавленный новый или существующий файл манифеста появится в раскрывающемся списке **Манифест**. Дополнительные сведения см. в разделе [Страница "Приложение" в конструкторе проектов (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
  Манифест приложения можно предоставить во время пользовательского действия, выполняемого после сборки, или в составе файла ресурсов Win32 с помощью параметра [/nowin32manifest (C# Compiler Options)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md). Этот же параметр можно использовать, если вы хотите, чтобы ваше приложение требовало виртуализации файлов или реестров в Windows Vista. В этом случае компилятор не будет создавать и внедрять манифест по умолчанию в переносимый исполняемый файл (PE).  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 03/13/2017
 > [!NOTE]
 >  Компилятор вставляет в XML-код имя стандартного приложения, "MyApplication.app". Это позволяет приложениям работать в Windows Server 2003 с пакетом обновления 3.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
   <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>  
