@@ -35,17 +35,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a7d963bad57beb968631e1cf79d7e97dd1554de1
-ms.openlocfilehash: d4739a1ba1c09b29aba25d5439592b82610a2092
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>Введение в запросы LINQ (C#)
-*Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов. Со временем для различных типов источников данных, например SQL для реляционных баз данных и XQuery для XML, были разработаны разные языки. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных или формата данных, для которых они должны обеспечить поддержку. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] упрощает ситуацию, реализуя согласованную модель работы с данными для различных типов источников данных и форматов данных. В запросе [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] вы всегда работаете с объектами. Одинаковые базовые шаблоны кода используются для запроса и преобразования данных в XML-документах, базах данных SQL, наборах данных [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)], коллекциях .NET и любых других форматах, для которых доступен поставщик [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)].  
+*Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов. Со временем для различных типов источников данных, например SQL для реляционных баз данных и XQuery для XML, были разработаны разные языки. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных или формата данных, для которых они должны обеспечить поддержку. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] упрощает ситуацию, реализуя согласованную модель работы с данными для различных типов источников данных и форматов данных. В запросе [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] вы всегда работаете с объектами. Одинаковые базовые шаблоны кода используются для запроса и преобразования данных в XML-документах, базах данных SQL, наборах данных [!INCLUDE[vstecado](~/includes/vstecado-md.md)], коллекциях .NET и любых других форматах, для которых доступен поставщик [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="three-parts-of-a-query-operation"></a>Три составляющие операции запроса  
- Все операции запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] состоят из трех отдельных действий:  
+ Все операции запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] состоят из трех отдельных действий:  
   
 1.  получение источника данных;  
   
@@ -57,18 +57,18 @@ ms.lasthandoff: 04/18/2017
   
  [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
- На следующем рисунке показана полная операция запроса. В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] выполнение запроса отличается от самого запроса; другими словами, вы не получаете данные, просто создав переменную запроса.  
+ На следующем рисунке показана полная операция запроса. В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] выполнение запроса отличается от самого запроса; другими словами, вы не получаете данные, просто создав переменную запроса.  
   
  ![Полная операция запроса LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "INQ_Query")  
   
 ## <a name="the-data-source"></a>Источник данных  
- В предыдущем примере, поскольку источник данных является массивом, он неявно поддерживает универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Это значит, что его можно запросить с помощью [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Запрос выполняется в операторе `foreach`, а `foreach` требует интерфейс <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>. Типы, которые поддерживают <xref:System.Collections.Generic.IEnumerable%601> или производный интерфейс (например, универсальный интерфейс <xref:System.Linq.IQueryable%601>), называются *запрашиваемыми типами*.  
+ В предыдущем примере, так как источник данных является массивом, он неявно поддерживает универсальный <xref:System.Collections.Generic.IEnumerable%601> интерфейса. Это значит, что его можно запросить с помощью [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Запрос выполняется в `foreach` инструкции и `foreach` требует <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>. Типы, которые поддерживают <xref:System.Collections.Generic.IEnumerable%601> или производный интерфейс, например универсальные <xref:System.Linq.IQueryable%601> называются *запрашиваемые типы*.  
   
- Запрашиваемый тип не требует внесения изменений или специальной обработки, чтобы служить источником данных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Если источник данных не находится в памяти в качестве запрашиваемого типа, поставщик [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] должен представить его как таковой. Например, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] загружает XML-документ в запрашиваемый тип <xref:System.Xml.Linq.XElement>.  
+ Запрашиваемый тип не требует внесения изменений или специальной обработки, чтобы служить источником данных [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Если источник данных не находится в памяти в качестве запрашиваемого типа, поставщик [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] должен представить его как таковой. Например [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] загружает XML-документ в запрашиваемый <xref:System.Xml.Linq.XElement> типа:  
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- В [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] сначала необходимо создать объектно-реляционное сопоставление во время разработки вручную либо с помощью [средства LINQ to SQL в Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Вы создаете запросы к объектам, а [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] во время выполнения обрабатывает взаимодействие с базой данных. В следующем примере `Customers` представляет определенную таблицу в базе данных, а тип результата запроса, <xref:System.Linq.IQueryable%601>, является производным от <xref:System.Collections.Generic.IEnumerable%601>.  
+ В [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] сначала необходимо создать объектно-реляционное сопоставление во время разработки вручную либо с помощью [средства LINQ to SQL в Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Вы создаете запросы к объектам, а [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] во время выполнения обрабатывает взаимодействие с базой данных. В следующем примере `Customers` представляет определенную таблицу в базе данных и тип результата запроса, <xref:System.Linq.IQueryable%601>, является производным от <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -80,15 +80,15 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных поставщиков [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Однако общее правило очень просто: источником данных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] является любой объект, который поддерживает универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> или интерфейс, наследуемый от него.  
+ Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных поставщиков [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Тем не менее, базовое правило очень прост: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источником данных является любой объект, поддерживающий универсальный <xref:System.Collections.Generic.IEnumerable%601> интерфейс или интерфейс, который наследует от него.  
   
 > [!NOTE]
->  Такие типы, как <xref:System.Collections.ArrayList>, поддерживающие неуниверсальный интерфейс <xref:System.Collections.IEnumerable>, также могут использоваться как источники данных [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  Типы, такие как <xref:System.Collections.ArrayList> , поддерживающие неуниверсальный <xref:System.Collections.IEnumerable> интерфейс может также использоваться как [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источника данных. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> Запрос  
  Запрос указывает, какую информацию нужно извлечь из источника или источников данных. Дополнительно в запросе можно указать, как следует сортировать, группировать и формировать возвращаемую информацию. Запрос хранится в переменной запроса и инициализируется выражением запроса. Чтобы упростить написание запросов, в C# был представлен новый синтаксис запроса.  
   
- В предыдущем примере запрос возвращает все четные числа из массива целых чисел. Выражение запроса содержит три предложения: `from`, `where` и `select`. (Если вы знакомы с SQL, то должны были заметить, что порядок предложений противоположен порядку в SQL.) Предложение `from` указывает источник данных, предложение `where` применяет фильтр, а предложение `select` задает тип возвращаемых элементов. Эти и другие предложения запросов подробно описываются в разделе [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md). А сейчас важно то, что в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] сама переменная запроса не выполняет никаких действий и не возвращает никаких данных. Она просто хранит сведения, необходимые для предоставления результатов при выполнении запроса на более позднем этапе. Дополнительные сведения о принципах конструирования запросов см. в разделе [Общие сведения о стандартных операторах запросов (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ В предыдущем примере запрос возвращает все четные числа из массива целых чисел. Выражение запроса содержит три предложения: `from`, `where` и `select`. (Если вы знакомы с SQL, то должны были заметить, что порядок предложений противоположен порядку в SQL.) Предложение `from` указывает источник данных, предложение `where` применяет фильтр, а предложение `select` задает тип возвращаемых элементов. Эти и другие предложения запросов подробно описываются в разделе [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md). А сейчас важно то, что в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] сама переменная запроса не выполняет никаких действий и не возвращает никаких данных. Она просто хранит сведения, необходимые для предоставления результатов при выполнении запроса на более позднем этапе. Дополнительные сведения о принципах конструирования запросов см. в разделе [Общие сведения о стандартных операторах запросов (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 > [!NOTE]
 >  Запросы могут также выражаться с помощью синтаксиса методов. Дополнительные сведения см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -109,7 +109,7 @@ IQueryable<Customer> custQuery =
   
  [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
- Чтобы принудительно вызвать немедленное выполнение любого запроса и кэшировать его результаты, можно вызвать метод <xref:System.Linq.Enumerable.ToList%2A> или <xref:System.Linq.Enumerable.ToArray%2A>.  
+ Чтобы принудительно вызвать немедленное выполнение любого запроса и кэшировать его результаты, можно вызвать <xref:System.Linq.Enumerable.ToList%2A> или <xref:System.Linq.Enumerable.ToArray%2A> методы.  
   
  [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
