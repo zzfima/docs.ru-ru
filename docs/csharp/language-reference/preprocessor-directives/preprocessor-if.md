@@ -1,5 +1,5 @@
 ---
-title: "#If (Справочник по C#) | Документация Майкрософт"
+title: "#<a name=\"if-c-reference--microsoft-docs\"></a>If (Справочник по C#) | Документация Майкрософт"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="if-c-reference"></a>#if (Справочник по C#)
 Когда компилятор C# встречает директиву `#if`, за которой следует директива [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), код между этими директивами он компилирует только в том случае, когда определен указанный символ.  В отличие от C и C++, здесь нельзя назначить символу числовое значение. Оператор #if языка C# является логическим и проверяет только одно условие — определен ли указанный символ. Например:  
   
-```  
+```csharp
 #define DEBUG  
 // ...  
 #if DEBUG  
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="example"></a>Пример  
   
-```  
+```csharp
 // preprocessor_if.cs  
 #define DEBUG#define MYTEST  
 using System;  
@@ -90,3 +90,4 @@ public class MyClass
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

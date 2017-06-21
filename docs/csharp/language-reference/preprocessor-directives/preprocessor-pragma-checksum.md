@@ -1,5 +1,5 @@
 ---
-title: "##pragma checksum (справочник по C#) | Документы Майкрософт"
+title: "#<a name=\"pragma-checksum-c-reference--microsoft-docs\"></a>#pragma checksum (справочник по C#) | Документы Майкрософт"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/15/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/15/2017
   
 ## <a name="example"></a>Пример  
   
-```  
+```csharp
 class TestClass  
 {  
     static int Main()  
@@ -80,3 +80,4 @@ class TestClass
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+
