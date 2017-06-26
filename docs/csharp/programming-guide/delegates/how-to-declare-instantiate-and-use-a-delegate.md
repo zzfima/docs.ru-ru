@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Объявление, создание экземпляра и использование делегата (Руководство по программированию в C#) | Документация Майкрософт"
+title: "Практическое руководство. Объявление, создание экземпляра и использование делегата (руководство по программированию в C#) | Документация Майкрософт"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,7 +34,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Практическое руководство. Объявление, создание экземпляра и использование делегата (Руководство по программированию в C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Практическое руководство. Объявление, создание экземпляра и использование делегата (руководство по программированию в C#)
 В C# 1.0 и более поздних версий делегаты можно объявлять так, как показано в следующем примере.  
   
  [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
