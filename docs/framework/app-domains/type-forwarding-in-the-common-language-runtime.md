@@ -1,40 +1,45 @@
 ---
-title: "Переадресация типов в общеязыковой среде CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сборки [платформа .NET Framework], перенаправление типов"
-  - "перенаправление типов"
+title: "Перенаправление типа в общеязыковой среде CLR | Документы Майкрософт"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], type forwarding
+- type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3515a15432d2b7ff68c19dbd966806d0df3be7a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/02/2017
+
 ---
-# Переадресация типов в общеязыковой среде CLR
-Переадресация типа позволяет переместить тип в другую сборку без перекомпиляции приложений, использующих исходную сборку.  
+# <a name="type-forwarding-in-the-common-language-runtime"></a>Переадресация типов в общеязыковой среде CLR
+Перенаправление типа позволяет переместить тип в другую сборку без повторной компиляции приложений, использующих исходную сборку.  
   
- Предположим, например, что приложение использует класс `Example` в сборке с именем `Utility.dll`.  Разработчики `Utility.dll` могут решить провести оптимизацию сборки, и в этом процессе они могут переместить класс `Example` в другую сборку.  Если старая версия `Utility.dll` заменяется новой версией `Utility.dll` и ее сопутствующей сборкой, то приложение, использующее класс `Example` получает отказ, поскольку оно не может найти класс `Example` в новой версии `Utility.dll`.  
+ Предположим, например, что приложение использует класс `Example` в сборке с именем `Utility.dll`. Разработчики `Utility.dll` могут принять решение выполнить рефакторинг сборки и в ходе этого процесса могут переместить класс `Example` в другую сборку. Если старую версию `Utility.dll` заменить новой версией `Utility.dll` и ее сопутствующей сборкой, приложение, использующее класс `Example`, завершится ошибкой, поскольку не сможет найти класс `Example` в новой версии `Utility.dll`.  
   
- Разработчики `Utility.dll` могут избежать этого с помощью пересылки запросов для класса `Example`, используя атрибут <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>.  Если атрибут применяется к новой версии `Utility.dll`, то запросы к классу `Example` направляются на сборку, которая теперь содержит этот класс.  Существующее приложение продолжает функционировать нормально без перекомпиляции.  
+ Разработчики `Utility.dll` могут избежать этого, перенаправляя запросы к классу `Example` с помощью атрибута <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>. Если атрибут применен к новой версии `Utility.dll`, запросы класса `Example` перенаправляются в сборку, которая теперь содержит этот класс. Существующее приложение продолжает нормально функционировать без перекомпиляции.  
   
 > [!NOTE]
->  В платформе .NET Framework версии 2.0 типы из сборок, написанных на Visual Basic, не могут быть перенаправлены.  Однако приложение, написанное на Visual Basic, может использовать перенаправленные типы.  А именно, если приложение использует сборку, написанную на C\# или C\+\+, и тип из этой сборки перенаправляется в другую сборку, то Visual Basic приложение может использовать этот перенаправленный тип.  
+>  В платформе .NET Framework версии 2.0 нельзя перенаправлять типы из сборок, написанных на Visual Basic. Тем не менее приложения, написанные на Visual Basic, могут использовать перенаправленные типы. То есть если приложение использует сборку, написанную на языке C# или C++, и тип из этой сборки перенаправляется в другую сборку, приложение Visual Basic можно использовать перенаправленный тип.  
   
-## Пересылка типов  
- Для пересылки типа нужно выполнить четыре шага:  
+## <a name="forwarding-types"></a>Перенаправление типов  
+ Для перенаправления типа следует выполнить следующую процедуру.  
   
 1.  Переместите исходный код для типа из исходной сборки в целевую сборку.  
   
-2.  В сборке, в которой раньше находился тип, добавьте <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> для типа, который был перемещен.  В следующем коде показан атрибут для типа с именем `Example`, который был перемещен.  
+2.  В сборке, где раньше находился тип, добавьте <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> для типа, который был перемещен. В следующем коде показан атрибут для типа с именем `Example`, который был перемещен.  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -44,11 +49,11 @@ caps.handback.revision: 7
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3.  Скомпилируйте сборку, которая сейчас содержит тип.  
+3.  Скомпилируйте сборку, которая теперь содержит тип.  
   
-4.  Перекомпилируйте сборку, в которой раньше находился тип, со ссылкой на сборку, содержащую тип сейчас.  Например, при компиляции файла C\# из командной строки, используйте параметр [\/reference \(Import Metadata\)](../Topic/-reference%20\(C%23%20Compiler%20Options\).md), чтобы указать сборку, содержащую тип.  В C\+\+, используйте директиву [\#using](../Topic/%23using%20Directive%20\(C++\).md) в исходном файле, чтобы указать сборку, содержащую тип.  
+4.  Перекомпилируйте сборку, где раньше находился тип, со ссылкой на сборку, которая теперь содержит тип. Например, при компиляции файла C# из командной строки используйте параметр [/reference (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md), чтобы указать сборку, содержащую тип. В C++ используйте директиву [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) в исходном файле, чтобы указать сборку, содержащую тип.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>   
- [Перенаправление типов \(C\+\+\/CLI\)](../Topic/Type%20Forwarding%20\(C++-CLI\).md)   
- [Директива \#using](../Topic/%23using%20Directive%20\(C++\).md)
+ [Перенаправление типов (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)   
+ [Директива #using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
