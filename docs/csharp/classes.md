@@ -72,7 +72,7 @@ ms.lasthandoff: 03/13/2017
 
 [!code-csharp[Пример класса](../../samples/snippets/csharp/concepts/classes/class-example.cs)]  
   
-## <a name="c-language-specification"></a>спецификация языка C#  
+## <a name="c-language-specification"></a>Спецификация языка C#  
 Дополнительные сведения см. в [спецификации языка C#](https://msdn.microsoft.com/library/ms228593.aspx). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
 ## <a name="see-also"></a>См. также  
