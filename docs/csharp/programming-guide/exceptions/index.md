@@ -46,7 +46,7 @@ ms.lasthandoff: 05/10/2017
  [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## <a name="exceptions-overview"></a>Общие сведения об исключениях  
- Исключения имеют следующие свойства.  
+ Исключения имеют следующие свойства:  
   
 -   Исключения представляют собой типы, производные в конечном счете от `System.Exception`.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/10/2017
 -   Управляемые исключения реализованы в платформе .NET Framework на основе структурированного механизма обработки исключений Win32. Дополнительные сведения см. в статьях [Structured Exception Handling (C/C++)](https://docs.microsoft.com/cpp/cpp/structured-exception-handling-c-cpp) (Структурированная обработка исключений в C и C++) и [A Crash Course on the Depths of Win32 Structured Exception Handling](http://go.microsoft.com/fwlink/?LinkId=119654) (Интенсивное погружение в структурированную обработку исключений на платформе Win32).  
   
 ## <a name="related-sections"></a>Связанные разделы  
- Дополнительные сведения об исключениях и обработке исключений вы найдете в следующих статьях.  
+ Дополнительные сведения об исключениях и обработке исключений вы найдете в следующих статьях:  
   
 -   [Использование исключений](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
   
