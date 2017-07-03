@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/15/2017
 
 ## <a name="how-to-target-the-net-standard"></a>Нацеливание на .NET Standard
 
-Если вы плохо знакомы с платформой .NET Standard, дополнительные сведения можно получить в разделе [Библиотека .NET Standard](../../standard/library.md).
+Если вы плохо знакомы с платформой .NET Standard, дополнительные сведения можно получить в разделе [Библиотека .NET Standard](../../standard/net-standard.md).
 
 В этом разделе есть таблица, в которой версии .NET Standard сопоставляются с различными реализациями:
 
