@@ -23,20 +23,23 @@ caps.handback.revision: 21
   
 -   Объявите событие в классе и вызовите его в соответствующих областях.  
   
-    ```  
+    ```csharp  
     namespace ImplementInterfaceEvents  
     {  
         public interface IDrawingObject  
         {  
             event EventHandler ShapeChanged;  
         }  
+        
         public class MyEventArgs : EventArgs   
         {  
             // class members  
         }  
+        
         public class Shape : IDrawingObject  
         {  
             public event EventHandler ShapeChanged;  
+            
             void ChangeShape()  
             {  
                 // Do something here before the event…  
@@ -45,6 +48,7 @@ caps.handback.revision: 21
   
                 // or do something here after the event.   
             }  
+            
             protected virtual void OnShapeChanged(MyEventArgs e)  
             {  
                 if(ShapeChanged != null)  
@@ -53,7 +57,6 @@ caps.handback.revision: 21
                 }  
             }  
         }  
-  
     }  
     ```  
   
