@@ -1,5 +1,5 @@
 ---
-title: "Структура программы в C# | Краткий обзор языка C#"
+title: "Структура программы в C# — краткий обзор языка C# | Microsoft Docs"
 description: "Узнайте, из каких блоков составляется программа на C#"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ef19d7fa2164990edd5e27651d28aa085ec90ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3642b6525691d6179eca66f11d5002377323cdf3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="program-structure"></a>Структура программы
+<a id="program-structure" class="xliff"></a>
+# Структура программы
 
 В C# основными понятиями организационной структуры являются ***программы***, ***пространства имен***, ***типы***, ***члены*** и ***сборки***. Программа на языке C# состоит из одного или нескольких файлов. В программе объявляются типы, которые содержат члены. Эти типы можно организовать в пространства имен. Примерами типов являются классы и интерфейсы. К членам относятся поля, методы, свойства и события. При компиляции программы на C# упаковываются в сборки. Сборка — это файл, обычно с расширением `.exe` или `.dll`, если она реализует ***приложение*** или ***библиотеку***, соответственно.
 

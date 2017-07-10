@@ -1,6 +1,6 @@
 ---
-title: "Атрибуты в C# | Краткий обзор языка C#"
-description: "Сведения о декларативном программировании с использованием атрибутов в C#"
+title: "Атрибуты в C# — краткий обзор языка C# | Microsoft Docs"
+description: "Узнайте о декларативном программировании в C# с использованием атрибутов"
 keywords: .NET, C#
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ef8b93bf0a2cf98c5251b888b61db9ab12d9a71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 9e7ad62e85df83f181fa4aa8ea6da56b6f739f14
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="attributes"></a>Атрибуты
+<a id="attributes" class="xliff"></a>
+# Атрибуты
 
 Типы, члены и другие сущности в программе C# поддерживают модификаторы, которые управляют некоторыми аспектами их поведения. Например, доступность метода определяется с помощью модификаторов `public`, `protected`, `internal` и `private`. C# обобщает эту возможность, позволяя пользователям определять собственные типы декларативных сведений, назначать их для сущностей программы и извлекать во время выполнения. В программах эти дополнительные декларативные сведения определяются и используются посредством ***атрибутов***.
 

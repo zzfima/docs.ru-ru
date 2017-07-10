@@ -1,5 +1,5 @@
 ---
-title: "Массивы в C# | Краткий обзор языка C#"
+title: "Массивы в C# — краткий обзор языка C# | Microsoft Docs"
 description: "Массивы — это самый простой тип коллекций в языке C#"
 keywords: ".NET, C#, массив, коллекция"
 author: BillWagner
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3a029a1199c32cf2d943a02ce196512e44bd79a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 8816ac61cda27a086746fe2734d62f395058acd5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="arrays"></a>Массивы
+<a id="arrays" class="xliff"></a>
+# Массивы
 
 ***Массив*** — это структура данных, содержащая несколько переменных, доступ к которым осуществляется по вычисляемым индексам. Содержащиеся в массиве переменные именуются ***элементами*** этого массива. Все они имеют одинаковый тип, который называется ***типом элементов*** массива.
 

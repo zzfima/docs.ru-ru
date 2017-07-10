@@ -1,6 +1,6 @@
 ---
-title: "Интерфейсы в C# | Краткий обзор языка C#"
-description: "В языке C# интерфейсы определяют контракты, которые реализуются в типах#"
+title: "Интерфейсы в C# — краткий обзор языка C# | Microsoft Docs"
+description: "Интерфейсы определяют контракты, которые реализуются в типах C#"
 keywords: ".NET, c#, интерфейсы, множественное наследование, полиморфизм"
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 477db71cb3226247c7a13dbd9febd00c87f5c154
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 6c18de7a4aa86a321b65b4ce65e07c48ca1dbc24
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="interfaces"></a>Интерфейсы
+<a id="interfaces" class="xliff"></a>
+# Интерфейсы
 
 ***Интерфейс*** определяет контракт, который может быть реализован классами и структурами. Интерфейс может содержать методы, свойства, события и индексаторы. Интерфейс не предоставляет реализацию членов, которые в нем определены. Он лишь перечисляет члены, которые должны быть определены в классах или структурах, реализующих этот интерфейс.
 

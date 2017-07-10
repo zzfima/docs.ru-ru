@@ -1,5 +1,5 @@
 ---
-title: "Делегаты в C# | Краткий обзор языка C#"
+title: "Делегаты в C# — краткий обзор языка C# | Microsoft Docs"
 description: "Информация о позднем связывании с помощью делегатов в C#"
 keywords: ".NET, c#, делегат, лямбда-выражения, позднее связывание"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
-ms.openlocfilehash: 9cfefa5f781944b41828ebb61004f960e6cf3d59
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 217fd974f547a4a84b328979ee94ee634038b213
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="delegates"></a>Делегаты
+<a id="delegates" class="xliff"></a>
+# Делегаты
 
 ***Тип delegate*** представляет ссылки на методы с конкретным списком параметров и типом возвращаемого значения. Делегаты позволяют использовать методы как сущности, сохраняя их в переменные и передавая в качестве параметров. Принцип работы делегатов близок к указателям функций из некоторых языков, но в отличие от указателей функций делегаты являются объектно-ориентированными и строго типизированными.
 

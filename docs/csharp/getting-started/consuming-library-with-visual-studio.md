@@ -1,5 +1,5 @@
 ---
-title: "Использование библиотеки классов для .NET Core в Visual Studio 2017"
+title: "Использование библиотеки классов для .NET Core в Visual Studio 2017 | Microsoft Docs"
 description: "Информация о том, как вызывать члены библиотеки классов в Visual Studio 2017."
 keywords: ".NET Core, библиотека классов .NET Core, .NET Standard, дистрибутив библиотеки классов .NET Standard"
 author: BillWagner
@@ -11,14 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5ad07e4116c75eb9b9d513c2a4fe43dfe62660d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Использование библиотеки классов для .NET Core в Visual Studio 2017
+<a id="consuming-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
+# Использование библиотеки классов для .NET Core в Visual Studio 2017
 
 Итак, вы уже проделали шаги, описанные в статьях [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](./library-with-visual-studio.md) и [Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017](testing-library-with-visual-studio.md), создав и протестировав библиотеку классов. Затем вы создали версию выпуска этой библиотеки, а теперь пора предоставить ее для использования вызывающим объектам. Для этого существуют два способа:
 
@@ -26,7 +27,8 @@ ms.lasthandoff: 05/03/2017
 
 * Если же библиотеку нужно сделать общедоступной, ее следует предоставлять как пакет NuGet.
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>Включение библиотеки в решение в качестве проекта
+<a id="including-a-library-as-a-project-in-a-solution" class="xliff"></a>
+## Включение библиотеки в решение в качестве проекта
 
 Ранее вы включали модульные тесты в решение библиотеки классов. Теперь можно точно так же включить в это решение новое приложение. Например, библиотеку классов можно использовать в консольном приложении, которое будет предлагать пользователю ввести строку и определять, является ли первый символ этой строки символом верхнего регистра:
 
@@ -62,7 +64,8 @@ ms.lasthandoff: 05/03/2017
 
 Чтобы отладить и опубликовать приложение, которое использует эту библиотеку, выполните действия из статей [Отладка приложения Hello World на C# в Visual Studio 2017](debugging-with-visual-studio.md) и [Публикация приложения Hello World в Visual Studio 2017](publishing-with-visual-studio.md).
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>Распространение библиотеки в виде пакета NuGet
+<a id="distributing-the-library-in-a-nuget-package" class="xliff"></a>
+## Распространение библиотеки в виде пакета NuGet
 
 Библиотеку классов можно распространить и для других разработчиков, опубликовав ее в виде пакета NuGet. Visual Studio не поддерживает создание пакетов NuGet. Для создания пакета используйте [служебную программу командной строки](../../core/tools/dotnet.md) `dotnet` следующим образом:
 

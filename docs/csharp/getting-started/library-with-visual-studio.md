@@ -1,5 +1,5 @@
 ---
-title: "Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017"
+title: "Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017 | Microsoft Docs"
 description: "Сведения о сборке библиотеки классов, написанной на языке C#, с помощью Visual Studio 2017"
 keywords: ".NET Core, библиотека классов .NET Standard, Visual Studio 2017"
 author: BillWagner
@@ -11,23 +11,25 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 1ecccb03bc28da51a580b790b5ba8dd594bb7f18
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: c29c4d2d1332fbf9e9e162e671200384a930aff1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017
+<a id="building-a-class-library-with-c-and-net-core-in-visual-studio-2017" class="xliff"></a>
+# Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017
 
 *Библиотека классов* определяет типы и методы, которые могут быть вызваны из любого приложения. Библиотека классов, разработанная с использованием .NET Core, поддерживает библиотеку .NET Standard, что позволяет использовать эту библиотеку на любой платформе .NET, которая поддерживает нужную версию библиотеки .NET Standard. Когда вы завершите создание библиотеки классов, вы сможете по своему усмотрению распространять ее как независимый компонент или включить в состав одного или нескольких приложений.
 
 > [!NOTE]
-> Список версий .NET Standard и поддерживаемых платформ вы найдете в статье [Библиотека .NET Standard](../../standard/library.md).
+> Список версий .NET Standard и поддерживаемых ими платформ см. в разделе [.NET Standard](../../standard/net-standard.md).
 
 В этой статье вы создадите простую служебную библиотеку с одним методом для обработки строк. Вы реализуете его как [метод расширения](../../csharp/programming-guide/classes-and-structs/extension-methods.md), чтобы вызывать его так же, как любой член класса @System.String.
 
-## <a name="creating-a-class-library-solution"></a>Создание решения для библиотеки классов
+<a id="creating-a-class-library-solution" class="xliff"></a>
+## Создание решения для библиотеки классов
 
 Начнем с создания решения для нашего проекта библиотеки классов и связанных с ней проектов. Решение Visual Studio служит контейнером для одного или нескольких проектов. Чтобы создать решение, выполните следующее.
 
@@ -37,7 +39,8 @@ ms.lasthandoff: 05/03/2017
 
    ![Диалоговое окно создания проекта](./media/library-with-visual-studio/newproject.png)
 
-## <a name="creating-the-class-library-project"></a>Создание проекта для библиотеки классов
+<a id="creating-the-class-library-project" class="xliff"></a>
+## Создание проекта для библиотеки классов
 
 Теперь можно создать проект библиотеки классов.
 
@@ -59,7 +62,8 @@ ms.lasthandoff: 05/03/2017
 
    ![Область вывода, показывающая успешное завершение сборки](./media/library-with-visual-studio/buildsucceeds.png)
 
-## <a name="next-step"></a>Дальнейшие действия
+<a id="next-step" class="xliff"></a>
+## Дальнейшие действия
 
 Итак, вы успешно создали библиотеку. Пока вы еще не вызывали ее методов, поэтому нельзя быть уверенным, что все работает так, как ожидалось. Следующий шаг в разработке библиотеки — тестирование с помощью [проекта модульного тестирования C#](testing-library-with-visual-studio.md).
 
