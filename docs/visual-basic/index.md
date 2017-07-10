@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -59,7 +60,7 @@ Visual Basic предназначен для эффективного созда
  Содержит сведения о языке Visual Basic и компиляторе.  
 
  [Разработка приложений в Visual Basic](../visual-basic/developing-apps/index.md)  
- Затрагивает многие аспекты разработки в Visual Basic, такие как безопасность, обработка исключений и использование библиотеки классов [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)].
+ Затрагивает многие аспекты разработки в Visual Basic, такие как безопасность, обработка исключений и использование библиотеки классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
 
  [COM-взаимодействие](../visual-basic/programming-guide/com-interop/index.md)  
  Рассматривает проблемы взаимодействия, связанные с созданием и использованием объектов модели COM в Visual Basic.  
@@ -75,4 +76,4 @@ Visual Basic предназначен для эффективного созда
  Ссылки на разделы об основах Visual Studio.  
   
  [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
- Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] SDK.
+ Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.

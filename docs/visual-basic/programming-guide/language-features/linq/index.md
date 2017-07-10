@@ -31,18 +31,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 26d2ceac051905f5ac46b59f6fd2598e924355c7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: cdfd19e9df6ec107c1195e7555ce07aea8967588
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="linq-in-visual-basic"></a>LINQ в Visual Basic
-Этот раздел содержит обзоры, примеры и общие сведения, которые помогут вам освоить и использовать Visual Basic и [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)].  
+Этот раздел содержит обзоры, примеры и общие сведения, которые помогут вам освоить и использовать Visual Basic и [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 ## <a name="in-this-section"></a>Содержание  
  [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- Знакомит с концепциями поставщиков, операторов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], описывает структуру запросов и функции языка.  
+ Знакомит с концепциями поставщиков, операторов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], описывает структуру запросов и функции языка.  
   
  [How to: Query a Database](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md) (Практическое руководство. Выполнение запросов к базе данных)  
  Предоставляет пример подключения к базе данных SQL Server и выполнения запроса с помощью LINQ.  

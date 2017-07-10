@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Процедуры в Visual Basic
-*Процедура* — это блок операторов [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], заключенных между оператором объявления (`Function`, `Sub`, `Operator`, `Get`, `Set`) и соответствующим объявлением `End`. Каждый исполняемый оператор в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] должен быть включен в какую-либо процедуру.  
+*Процедура* — это блок операторов [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], заключенных между оператором объявления (`Function`, `Sub`, `Operator`, `Get`, `Set`) и соответствующим объявлением `End`. Каждый исполняемый оператор в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] должен быть включен в какую-либо процедуру.  
   
 ## <a name="calling-a-procedure"></a>Вызов процедуры  
  Процедура вызывается из другого места в коде. Это называется *вызовом процедуры*. После завершения процедуры она возвращает управление в код, из которого она была вызвана (*вызывающий код*). Вызывающий код — это оператор или выражение в составе оператора, в которых указывается имя процедуры и передается управление процедуре.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/15/2017
  В большинстве случаев процедура должна работать с разными данными при каждом вызове. Эти данные можно передать в процедуру при ее вызове. В процедуре можно определить *параметры* (ноль или более), каждый из которых представляет одно из передаваемых значений. Каждому параметру в определении процедуры соответствует *аргумент* при вызове процедуры. Аргумент представляет значение, которое передается в соответствующий параметр для заданного вызова процедуры.  
   
 ## <a name="types-of-procedures"></a>Типы процедур  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] использует несколько типов процедур.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] использует несколько типов процедур.  
   
 -   [Подпрограммы](./sub-procedures.md) выполняют действия, но не возвращают значение в вызывающий код.  
   

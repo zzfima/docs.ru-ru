@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND
@@ -46,9 +46,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>Уменьшение
 
-Разработчики, которые определили, что правильным значением был адрес области памяти, в которой содержалось значение `form.Handle`, могут отказаться от этого изменения в поведении, установив параметру `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` переключателя <xref:System.Security.AppContext> значение `true`:
+Разработчики, которые определили, что правильным значением был адрес области памяти, в которой содержалось значение `form.Handle`, могут отказаться от этого изменения в поведении, установив параметру `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` переключателя <xref:System.AppContext> значение `true`:
 
-- путем программной установки переключателей совместимости в экземпляре <xref:System.Security.AppContext>;
+- путем программной установки переключателей совместимости в экземпляре <xref:System.AppContext>;
 
 - путем добавления следующей строки в раздел `<runtime>` файла app.config:
    
@@ -58,7 +58,7 @@ cspParameters.ParentWindowHandle = form.Handle;
    </runtime>
    ```
 
-Пользователи, которые хотят изменить поведение приложений, выполняемых на платформе .NET Framework 4.7, но ориентированных на более ранние версии платформы .NET Framework, могут задать переключателю <xref:System.Security.AppContext> значение `false`.
+Пользователи, которые хотят изменить поведение приложений, выполняемых на платформе .NET Framework 4.7, но ориентированных на более ранние версии платформы .NET Framework, могут задать переключателю <xref:System.AppContext> значение `false`.
  
 ## <a name="see-also"></a>См. также
 

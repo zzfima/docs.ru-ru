@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 815f459a651adf98dfb78a8444f4b873dece8283
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 76055b9c0a611fa3688e5bada1dd8e7d426765e3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="development-with-my-visual-basic"></a>Разработка с использованием My (Visual Basic)
@@ -59,7 +60,7 @@ Visual Basic предоставляет новые функции для быс�
  Описывает объекты `My.Resources` и `My.Settings`, которые предоставляют доступ к ресурсам и параметрам приложения.  
   
  [Обзор модели приложения в Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Описывает модель запуска и завершения работы приложения в [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Описывает модель запуска и завершения работы приложения в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Зависимость My от типа проекта](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Предоставляет подробные сведения о том, какие функции `My` доступны в разных типах проектов.  
