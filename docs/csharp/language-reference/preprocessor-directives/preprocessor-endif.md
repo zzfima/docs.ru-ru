@@ -18,7 +18,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 9
 ---
 # #endif (Справочник по C#)
-`#endif` определяет конец условной директивы, которая началась в директивы [\#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md).  Например:  
+`#endif` определяет конец условной директивы, которая началась с директивы [\#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md).  Например:  
   
 ```  
   
