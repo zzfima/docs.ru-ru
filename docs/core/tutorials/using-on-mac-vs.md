@@ -4,19 +4,22 @@ description: "В этом разделе рассматривается созд
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
-ms.date: 03/16/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: ed8787d72647f18544bde8ed721cf37f31fbb5fe
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: c377d0669efed9abb50965652d286ceb6fad3299
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
+<a id="getting-started-with-net-core-on-macos-using-visual-studio-for-mac" class="xliff"></a>
+
+# Начало работы с .NET Core в macOS с помощью Visual Studio для Mac
 
 Visual Studio для Mac предоставляет полнофункциональную интегрированную среду для разработки приложений .NET Core. В этом разделе рассматривается создание простого консольного приложения с помощью Visual Studio для Mac и .NET Core.
 
@@ -25,21 +28,23 @@ Visual Studio для Mac предоставляет полнофункциона
 > * В Visual Studio для Mac выберите пункт **Справка > Сообщить о проблеме** в меню или элемент **Сообщить о проблеме** на экране приветствия. При этом открывается окно для заполнения отчета об ошибках.
 > * Чтобы внести предложение, выберите пункт **Справка > Отправить предложение** в меню или элемент **Отправить предложение** на экране приветствия. При этом открывается [веб-страница UserVoice Visual Studio для Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
 
-## <a name="prerequisites"></a>Предварительные требования
+<a id="prerequisites" class="xliff"></a>
 
-[.NET Core и OpenSSL](https://www.microsoft.com/net/core#macos)
+## Предварительные требования
 
 Дополнительные сведения о необходимых компонентах см. в разделе [Необходимые компоненты для .NET Core на Mac](../../core/macos-prerequisites.md).
 
-## <a name="getting-started"></a>Начало работы
+<a id="getting-started" class="xliff"></a>
+
+## Начало работы
 
 Если вы уже установили необходимые компоненты и Visual Studio для Mac, пропустите этот раздел и перейдите к разделу [Создание проекта](#creating-a-project). Выполните следующие действия, чтобы установить необходимые компоненты и Visual Studio для Mac:
 
-1. Скачайте и установите [.NET Core и OpenSSL](https://www.microsoft.com/net/core#macos).
+Скачайте [установщик Visual Studio для Mac](https://www.visualstudio.com/vs/visual-studio-mac/). Запустите установщик. Прочитайте и примите условия лицензионного соглашения. Во время установки у вас будет возможность установить Xamarin — технологию разработки кроссплатформенных мобильных приложений. Установка Xamarin и связанных ее компонентов является необязательным шагом для разработки .NET Core. Пошаговые инструкции по установке Visual Studio для Mac см. в разделе [Введение в Visual Studio для Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/). После завершения установки запустите интегрированную среду разработки Visual Studio для Mac.
 
-1. Скачайте [установщик Visual Studio для Mac](https://www.visualstudio.com/vs/visual-studio-mac/). Запустите установщик. Прочитайте и примите условия лицензионного соглашения. Во время установки у вас будет возможность установить Xamarin — технологию разработки кроссплатформенных мобильных приложений. Установка Xamarin и связанных ее компонентов является необязательным шагом для разработки .NET Core. Пошаговые инструкции по установке Visual Studio для Mac см. в разделе [Введение в Visual Studio для Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/). После завершения установки запустите интегрированную среду разработки Visual Studio для Mac.
+<a id="creating-a-project" class="xliff"></a>
 
-## <a name="creating-a-project"></a>Создание проекта
+## Создание проекта
 
 1. На экране приветствия выберите **Создать проект**.
 
@@ -57,13 +62,17 @@ Visual Studio для Mac предоставляет полнофункциона
 
    ![Главное окно с открытым файлом Program.cs](./media/using-on-mac-vs/vsmac4.png)
 
-## <a name="run-the-application"></a>Запуск приложения
+<a id="run-the-application" class="xliff"></a>
+
+## Запуск приложения
 
 Запустите приложение в режиме отладки с помощью клавиши <kbd>F5</kbd> или в режиме выпуска с помощью сочетания клавиш <kbd>CTRL</kbd>+<kbd>F5</kbd>.
 
 ![В области вывода приложения отображается "Hello World!"](./media/using-on-mac-vs/vsmac5.png)
 
-## <a name="next-step"></a>Дальнейшие действия
+<a id="next-step" class="xliff"></a>
+
+## Дальнейшие действия
 
 Раздел [Создание полноценного решения .NET Core на macOS с помощью Visual Studio для Mac](using-on-mac-vs-full-solution.md) описывает, как выполнить сборку полноценного решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.
 
