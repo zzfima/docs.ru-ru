@@ -24,7 +24,9 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND
+<a id="mitigation-cspparametersparentwindowhandle-expects-an-hwnd" class="xliff"></a>
+
+# Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND
 
 Свойство <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>, которое появилось в .NET Framework 2.0, позволяет приложению зарегистрировать значение дескриптора родительского окна таким образом, что любой пользовательский интерфейс, необходимый для доступа к ключу (например, запрос ПИН-кода или окно согласия), будет открываться в режиме модального дочернего окна для указанного окна. В приложениях, ориентированных на .NET Framework версии 4.7, этому свойству можно назначить дескриптор окна (HWND).
 
@@ -36,7 +38,9 @@ ms.lasthandoff: 05/23/2017
 cspParameters.ParentWindowHandle = form.Handle;
 ``` 
 
-## <a name="impact"></a>Последствия
+<a id="impact" class="xliff"></a>
+
+## Последствия
 
 В приложениях, ориентированных на .NET Framework не старше версии 4.7, в которых нужно зарегистрировать связь с родительским окном, рекомендуется использовать упрощенную форму:
 
@@ -44,7 +48,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 cspParameters.ParentWindowHandle = form.Handle;
 ``` 
 
-## <a name="mitigation"></a>Уменьшение
+<a id="mitigation" class="xliff"></a>
+
+## Уменьшение
 
 Разработчики, которые определили, что правильным значением был адрес области памяти, в которой содержалось значение `form.Handle`, могут отказаться от этого изменения в поведении, установив параметру `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` переключателя <xref:System.AppContext> значение `true`:
 
@@ -60,7 +66,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 Пользователи, которые хотят изменить поведение приложений, выполняемых на платформе .NET Framework 4.7, но ориентированных на более ранние версии платформы .NET Framework, могут задать переключателю <xref:System.AppContext> значение `false`.
  
-## <a name="see-also"></a>См. также
+<a id="see-also" class="xliff"></a>
+
+## См. также
 
 [Изменения целевой платформы в .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
 
