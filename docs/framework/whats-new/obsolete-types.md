@@ -25,7 +25,8 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
+# Устаревшие типы в платформе .NET Framework
+<a id="obsolete-types-in-the-net-framework" class="xliff"></a>
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md).  
   
 -   [Устаревшие типы в системных сборках](#obsolete_types_in_system_assemblies)  
@@ -81,11 +82,13 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualC.dll](#visualc)  
   
 <a name="obsolete_types_in_system_assemblies"></a>   
-## <a name="obsolete-types-in-system-assemblies"></a>Устаревшие типы в системных сборках  
+## Устаревшие типы в системных сборках
+<a id="obsolete-types-in-system-assemblies" class="xliff"></a>  
  В следующих разделах перечислены типы, объявленные устаревшими в системных сборках. Такие сборки используются при разработке неспециализированных\- приложений, основанных на платформе .NET Framework.  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>Сборка: mscorlib.dll  
+### Сборка: mscorlib.dll
+<a id="assembly-mscorlibdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -150,7 +153,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="Core"></a>   
-### <a name="assembly-systemcoredll"></a>Сборка: System.Core.dll  
+### Сборка: System.Core.dll
+<a id="assembly-systemcoredll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -159,7 +163,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>Сборка: System.Data.dll  
+### Сборка: System.Data.dll
+<a id="assembly-systemdatadll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -171,7 +176,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>Сборка: System.Data.OracleClient.dll  
+### Сборка: System.Data.OracleClient.dll
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -187,7 +193,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>Сборка: System.Design.dll  
+### Сборка: System.Design.dll
+<a id="assembly-systemdesigndll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -209,7 +216,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>Сборка: System.dll  
+### Сборка: System.dll
+<a id="assembly-systemdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -224,7 +232,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### <a name="assembly-systementerpriseservicesdll"></a>Сборка: System.EnterpriseServices.dll  
+### Сборка: System.EnterpriseServices.dll
+<a id="assembly-systementerpriseservicesdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -233,7 +242,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="net"></a>   
-### <a name="assembly-systemnetdll"></a>Сборка: System.Net.dll  
+### Сборка: System.Net.dll
+<a id="assembly-systemnetdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -250,7 +260,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>Сборка: System.ServiceModel.dll  
+### Сборка: System.ServiceModel.dll
+<a id="assembly-systemservicemodeldll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -266,7 +277,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll  
+### Сборка: System.Web.dll
+<a id="assembly-systemwebdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -287,7 +299,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="mobile"></a>   
-### <a name="assembly-systemwebmobiledll"></a>Сборка: System.Web.Mobile.dll  
+### Сборка: System.Web.Mobile.dll
+<a id="assembly-systemwebmobiledll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -487,7 +500,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="workflow_activities"></a>   
-### <a name="assembly-systemworkflowactivitiesdll"></a>Сборка: System.Workflow.Activities.dll  
+### Сборка: System.Workflow.Activities.dll
+<a id="assembly-systemworkflowactivitiesdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -500,7 +514,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>Сборка: System.Workflow.ComponentModel.dll  
+### Сборка: System.Workflow.ComponentModel.dll
+<a id="assembly-systemworkflowcomponentmodeldll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -518,7 +533,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### <a name="assembly-systemworkflowruntimedll"></a>Сборка: System.Workflow.Runtime.dll  
+### Сборка: System.Workflow.Runtime.dll
+<a id="assembly-systemworkflowruntimedll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------| 
@@ -533,7 +549,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="workflowservices"></a>   
-### <a name="assembly-systemworkflowservicesdll"></a>Сборка: System.WorkflowServices.dll  
+### Сборка: System.WorkflowServices.dll
+<a id="assembly-systemworkflowservicesdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -562,7 +579,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>Сборка: System.Xaml.dll  
+### Сборка: System.Xaml.dll
+<a id="assembly-systemxamldll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -571,7 +589,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>Сборка: System.Xml.dll  
+### Сборка: System.Xml.dll
+<a id="assembly-systemxmldll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -584,7 +603,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="WindowsBase"></a>   
-### <a name="assembly-windowsbasedll"></a>Сборка: WindowsBase.dll  
+### Сборка: WindowsBase.dll
+<a id="assembly-windowsbasedll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -593,17 +613,20 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
-## <a name="obsolete-types-in-microsoft-assemblies"></a>Устаревшие типы в сборках Microsoft  
+## Устаревшие типы в сборках Microsoft
+<a id="obsolete-types-in-microsoft-assemblies" class="xliff"></a>  
  В следующих разделах перечислены устаревшие типы в системных сборках корпорации Microsoft. Это сборки специального назначения, например, сборки для конкретного языка (как Microsoft.JScript.dll или Microsoft.VisualC.dll).  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Сборка: IEHost.dll и IEExec.exe  
+### Сборка: IEHost.dll и IEExec.exe
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
  Сборки IEHost.dll и IEExec.exe удалены из платформы .NET Framework. Все их типы и члены устарели и не поддерживаются, начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Эти сборки использовались для размещения элементов управления Windows Forms и для запуска исполняемых файлов в Internet Explorer. Взамен рекомендуется использовать ClickOnce, XAML-приложения браузера (XBAP) и Microsoft Silverlight.  
   
  [К началу](#introduction)  
   
 <a name="Engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>Сборка: Microsoft.Build.Engine.dll  
+### Сборка: Microsoft.Build.Engine.dll
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -613,7 +636,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="jscript"></a>   
-### <a name="assembly-microsoftjscriptdll"></a>Сборка: Microsoft.JScript.dll  
+### Сборка: Microsoft.JScript.dll
+<a id="assembly-microsoftjscriptdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -639,7 +663,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="VBCompat"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Сборка: Microsoft.VisualBasic.Compatibility.dll  
+### Сборка: Microsoft.VisualBasic.Compatibility.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -714,7 +739,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="VBCompatData"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Сборка: Microsoft.VisualBasic.Compatibility.Data.dll  
+### Сборка: Microsoft.VisualBasic.Compatibility.Data.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydatadll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -771,7 +797,8 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="visualc"></a>   
-### <a name="assembly-microsoftvisualcdll"></a>Сборка: Microsoft.VisualC.dll  
+### Сборка: Microsoft.VisualC.dll
+<a id="assembly-microsoftvisualcdll" class="xliff"></a>  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -786,7 +813,8 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=fullName>|Сборка Microsoft.VisualC.dll устарела и существует только из соображений обратной совместимости.|  
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=fullName>|Сборка Microsoft.VisualC.dll устарела и существует только из соображений обратной совместимости.|  
   
-## <a name="see-also"></a>См. также  
+## См. также
+<a id="see-also" class="xliff"></a>  
  [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)
 
