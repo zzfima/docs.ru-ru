@@ -21,20 +21,22 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: ec4594343c5a78649d7d7a4d151545612da9138b
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/20/2017
 
 ---
-# <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
+# Требования к системе для .NET Framework
+<a id="net-framework-system-requirements" class="xliff"></a>
 Таблицы в этом разделе содержат требования к оборудованию, операционной системе и программному обеспечению для .NET Framework 4.5 и доработанных выпусков (4.5.1 и 4.5.2), для [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и ее доработанных выпусков (4.6.1 и 4.6.2) и .NET Framework 4.7. Для сред разработки, позволяющих разрабатывать приложения для платформы .NET Framework, существует отдельный набор требований.
 
- Сведения и ссылки для загрузки см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md).
+ Сведения о скачивании и ссылки для скачивания см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).
 
  Сведения о жизненном цикле поддержки версий .NET Framework см. в разделе [Политика жизненного цикла поддержки продуктов Майкрософт](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
 
-## <a name="hardware-requirements"></a>Требования к оборудованию
+## Требования к оборудованию
+<a id="hardware-requirements" class="xliff"></a>
 
 |||
 |-|-|
@@ -44,11 +46,13 @@ ms.lasthandoff: 05/11/2017
 |32-разрядная|4,5 ГБ|
 |64-разрядная версия|4,5 ГБ|
 
-## <a name="installation-requirements"></a>Требования к установке
+## Требования к установке
+<a id="installation-requirements" class="xliff"></a>
 
 - Для установки платформе .NET Framework требуются права администратора. Если у вас нет прав администратора на компьютере, где требуется установить платформу .NET Framework, обратитесь к администратору сети.
 
-## <a name="supported-client-operating-systems"></a>Поддерживаемые клиентские операционные системы
+## Поддерживаемые клиентские операционные системы
+<a id="supported-client-operating-systems" class="xliff"></a>
 
 |Операционная система|Поддерживаемые выпуски|Предустановлена с операционной системой|Может устанавливаться отдельно|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -58,7 +62,7 @@ ms.lasthandoff: 05/11/2017
 |Windows 10|32- и 64-разрядная|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
 |[!INCLUDE[win81](../../../includes/win81-md.md)]|32-разрядная версия, 64-разрядная версия и ARM|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |[!INCLUDE[win8](../../../includes/win8-md.md)]|32-разрядная версия, 64-разрядная версия и ARM|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-|Windows 7 SP1|32- и 64-разрядные версии|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|
+|Windows 7 SP1|32- и 64-разрядные версии|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |Windows Vista SP2|32- и 64-разрядные версии|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
 |Windows XP|32- и 64-разрядные версии|--|.NET Framework 4|
 
@@ -74,7 +78,8 @@ ms.lasthandoff: 05/11/2017
 
 - В 64-разрядных операционных системах платформа .NET Framework поддерживает как среду WOW64 (32-разрядная обработка на 64-разрядном компьютере), так и собственную 64-разрядную обработку.
 
-## <a name="supported-server-operating-systems"></a>Поддерживаемые серверные операционные системы
+## Поддерживаемые серверные операционные системы
+<a id="supported-server-operating-systems" class="xliff"></a>
 
 |Операционная система|Поддерживаемые выпуски|Предустановлена с операционной системой|Может устанавливаться отдельно|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -96,7 +101,9 @@ ms.lasthandoff: 05/11/2017
 
 - В 64-разрядных операционных системах платформа .NET Framework поддерживает как среду WOW64 (32-разрядная обработка на 64-разрядном компьютере), так и собственную 64-разрядную обработку.
 
-## <a name="see-also"></a>См. также
- [Руководство по установке](../../../docs/framework/install/guide-for-developers.md)   
+## См. также
+<a id="see-also" class="xliff"></a>
+ [Руководство по установке](../../../docs/framework/install/index.md)   
  [Начало работы](../../../docs/framework/get-started/index.md)   
- [Устранение неполадок](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+ [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+

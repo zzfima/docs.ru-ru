@@ -18,18 +18,20 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 6237bdaf1d12743bee71633acf8cef69c21b414e
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 6a6e4c9c2bdacc01f82d3a53aec706809bcfaa5a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>Практическое руководство.Определение установленных обновлений платформы .NET Framework
+# Практическое руководство.Определение установленных обновлений платформы .NET Framework
+<a id="how-to-determine-which-net-framework-updates-are-installed" class="xliff"></a>
 Установленные обновления для каждой версии .NET Framework на компьютере, перечислены в реестре Windows. Для просмотра этих сведений можно использовать редактор реестра (regedit.exe).  
   
- В редакторе реестра версии .NET Framework и установленные обновления для каждой версии хранятся в разных подразделах. Сведения об обнаружении номеров установленных версий см. в статье [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Сведения об установке .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md).  
+ В редакторе реестра версии .NET Framework и установленные обновления для каждой версии хранятся в разных подразделах. Сведения об обнаружении номеров установленных версий см. в статье [Практическое руководство. Определение установленных версий .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Сведения об установке .NET Framework см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
   
-### <a name="to-find-installed-updates"></a>Поиск установленных обновлений  
+### Поиск установленных обновлений
+<a id="to-find-installed-updates" class="xliff"></a>  
   
 1.  Откройте программу **regedit.exe**. В Windows 8 и более поздних версиях откройте рабочий стол и введите имя. В более ранних версиях Windows, в меню **Пуск** щелкните **Выполнить**, а затем в поле **Открыть** введите **regedit.exe**.  
   
@@ -41,7 +43,8 @@ ms.lasthandoff: 05/15/2017
   
      Установленные обновления перечислены в подразделах, соответствующих версии .NET Framework, к которой они относятся. Каждому обновлению присваивается номер базы знаний Microsoft (KB).  
   
-## <a name="example"></a>Пример  
+## Пример
+<a id="example" class="xliff"></a>  
  В следующем примере кода программным образом определяются обновления .NET Framework, установленные на компьютере. Для запуска этого примера требуются права администратора.  
   
  [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
@@ -49,7 +52,6 @@ ms.lasthandoff: 05/15/2017
  Выходные данные этого примера выглядят примерно следующим образом:  
   
 ```  
-  
 Microsoft .NET Framework 3.5 SP1  
   KB953595  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)  
   SP1  
@@ -73,11 +75,12 @@ Microsoft .NET Framework 4 Extended
   KB2487367  Security Update for Microsoft .NET Framework 4 Extended (KB2487367)  
   KB2533523  Update for Microsoft .NET Framework 4 Extended (KB2533523)  
   KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
-  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
- [Руководство по установке](../../../docs/framework/install/guide-for-developers.md)   
- [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+## См. также
+<a id="see-also" class="xliff"></a>
+
+[Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[Установка .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
 

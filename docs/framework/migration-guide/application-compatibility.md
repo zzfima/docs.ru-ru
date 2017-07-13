@@ -1,148 +1,102 @@
 ---
 title: "Совместимость приложений в .NET Framework | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/19/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - dotnet-clr
+- app-compat
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 caps.latest.revision: 19
+ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 8d4409b2bce36fe056d61633b056c1eac6ff290a
-ms.openlocfilehash: 076a603a6ea9f22ae7d1c554091506efae8b36eb
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3d0d39f1d6d15dc2757387ea83d3a0f868f6ec17
+ms.openlocfilehash: 9169b8ec118ed0d9ab3f05eec47317cf68551754
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/31/2017
 
 ---
-# <a name="application-compatibility-in-the-net-framework"></a>Совместимость приложений в .NET Framework
-В следующих статьях представлено описание проблем совместимости приложений в последних версиях .NET Framework.  
-  
--   Версии 4 и 4.5: [Совместимость приложений в .NET Framework 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
-  
--   Версии 4.5 и 4.5.1: [Совместимость приложений в .NET Framework 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   Версии 4.5.1 и 4.5.2: [Совместимость приложений в .NET Framework 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   Версии 4.5.2 и 4.6: [Совместимость приложений в .NET Framework 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   Версии 4.6 и [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: [Совместимость приложений в .NET Framework 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   Версии 4.6.1 и [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: [Совместимость приложений в .NET Framework 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
 
-- Версии 4.6.2 и NET Framework 4.7: [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)  
+# Совместимость приложений в .NET Framework
+<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
 
-Как правило, корпорация Microsoft старается обеспечить очень высокий уровень обратной совместимости между версиями .NET Framework, чтобы приложения, созданные для конкретной версии, работали в более поздних версиях без каких-либо изменений. Большинство проблем совместимости приложений оказывают не слишком серьезны, а большая часть приложений вовсе не требует внесения изменений в код приложения. Те из них, для которых требуется внесение изменений в код, указаны в столбце "Влияние" в таблицах, доступных по этим ссылкам.  
-  
-## <a name="migrating-from-versions-before-the-net-framework-4"></a>Миграция из версий, предшествовавших .NET Framework 4
-  
- Если выполняется миграция из версии, предшествующей .NET Framework 4, просмотрите следующие разделы о проблемах совместимости приложений, которые могут повлиять на работу приложения.  
-  
--   [Проблемы при миграции на .NET Framework 4](http://msdn.microsoft.com/library/ee941656\(v=vs.100\).aspx)  
-  
--   [Совместимость приложений в 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
-  
--   [Совместимость приложений в 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   [Совместимость приложений в 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Совместимость приложений в 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Совместимость приложений в 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Совместимость приложений в 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+## Вступление
+<a id="introduction" class="xliff"></a>
+Важной задачей каждого выпуска .NET является совместимость. Совместимость гарантирует, что каждая версия дополняет предыдущие и позволяет им работать так же, как и раньше. С другой стороны, изменения в функциях по сравнению с предыдущими версиями (для улучшения производительности, устранения проблем с безопасностью или исправления ошибок) могут привести к проблемам совместимости в существующем коде или приложениях, которые запускаются в более поздней версии. Платформа .NET Framework учитывает изменения целевой платформы и среды выполнения. Изменения целевой платформы влияют на приложения, разработанные для конкретной версии .NET Framework, но запускаемые на более поздней версии платформы. Изменения среды выполнения влияют на все приложения, запускаемые на конкретной версии платформы.
 
-- [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-4"></a>Миграция из .NET Framework 4  
+Каждое приложение разрабатывается для конкретной версии платформы .NET Framework, которую можно указать следующими способами.
 
-Если выполняется миграция из .NET Framework 4 в более позднюю версию, просмотрите следующие статьи о проблемах совместимости приложений, которые могут повлиять на работу приложения:  
-  
--   [Совместимость приложений в 4.5](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
-  
--   [Совместимость приложений в 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   [Совместимость приложений в 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Совместимость приложений в 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Совместимость приложений в 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Совместимость приложений в 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+* Назначив требуемую версию .NET Framework в Visual Studio.
+* Указав требуемую версию .NET Framework в файле проекта.
+* Применив <xref:System.Runtime.Versioning.TargetFrameworkAttribute> к исходному коду.
 
-- [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-45"></a>Миграция из .NET Framework 4,5  
- Если выполняется миграция из .NET Framework 4.5 в более позднюю версию, просмотрите следующие разделы о проблемах совместимости приложений, которые могут повлиять на работу приложения.  
-  
--   [Совместимость приложений в 4.5.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-1.md)  
-  
--   [Совместимость приложений в 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Совместимость приложений в 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Совместимость приложений в 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Совместимость приложений в 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+При использовании более новой версии .NET Framework по сравнению с целевой, платформа будет имитировать поведение старой целевой версии. Другими словами, приложение будет запущено на более новой версии платформы, но будет работать так, как если бы оно было запущено на более ранней версии. Такая имитация позволяет устранить многие проблемы совместимости между версиями .NET Framework.
 
-- [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-451"></a>Миграция из .NET Framework 4.5.1  
+## Изменения в среде выполнения
+<a id="runtime-changes" class="xliff"></a>
 
- Если выполняется миграция из .NET Framework 4.5.1 в более позднюю версию, просмотрите следующие разделы о проблемах совместимости приложений, которые могут повлиять на работу приложения.  
-  
--   [Совместимость приложений в 4.5.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5-2.md)  
-  
--   [Совместимость приложений в 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Совместимость приложений в 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Совместимость приложений в 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+Проблемы среды выполнения возникают, когда на компьютере устанавливается новая среда выполнения и запускаются те же двоичные файлы, но наблюдается другое поведение. Если двоичный файл был скомпилирован для платформы .NET Framework 4.0, он будет запускаться на платформе .NET Framework 4.5 и в более поздних версиях в режиме совместимости с .NET Framework 4.0. Многие изменения, затрагивающие версию 4.5, не повлияют на двоичный файл, скомпилированный для версии 4.0. Это относится к домену приложения и зависит от параметров начальной сборки.
 
-- [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-452"></a>Миграция из .NET Framework 4.5.2  
- Если выполняется миграция из .NET Framework 4.5.2 в более позднюю версию, просмотрите следующие разделы о проблемах совместимости приложений, которые могут повлиять на работу приложения.  
-  
--   [Совместимость приложений в 4.6](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6.md)  
-  
--   [Совместимость приложений в 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Совместимость приложений в 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+## Изменение целевой платформы
+<a id="retargeting-changes" class="xliff"></a>
 
-- [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-46"></a>Миграция из .NET Framework 4.6  
- Если выполняется миграция из .NET Framework 4.6 в более позднюю версию, просмотрите следующие разделы о проблемах совместимости приложений, которые могут повлиять на работу приложения.  
-  
--   [Совместимость приложений в 4.6.1](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)  
-  
--   [Совместимость приложений в 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)  
+Проблемы, связанные с изменением целевой платформы, возникают, когда для сборки с целевой платформой 4.0 устанавливается целевая платформа 4.5. Теперь в сборке доступны новые возможности, но могут возникнуть и проблемы совместимости со старыми функциями. Опять же, это зависит от начальной сборки и распространяется на консольное приложение, которое использует сборку, или веб-сайт, который ссылается на сборку.
 
-- [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)
-  
-## <a name="migrating-from-the-net-framework-461"></a>Миграция из .NET Framework 4.6.1  
- Если выполняется миграция из .NET Framework 4.6.1, просмотрите следующие разделы о проблемах совместимости приложений, которые могут повлиять на работу приложения.
- 
-- [Совместимость приложений в 4.6.2](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-6-2.md)
+## Диагностика совместимости .NET
+<a id="net-compatibility-diagnostics" class="xliff"></a>
 
-- [Совместимость приложений в 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md)  
+Диагностика совместимости .NET выполняется с помощью анализаторов на базе Roslyn, которые помогают выявить проблемы совместимости приложений между версиями .NET Framework. Этот список содержит все доступные анализаторы, несмотря на то, что в рамках конкретной миграции будут действовать только некоторые из них. Анализаторы определят, какие проблемы применимы для запланированного переноса и будут исследовать только их.
 
-## <a name="migrating-from-the-net-framework-462"></a>Миграция из .NET Framework 4.6.2
+Каждая проблема содержит следующую информацию.
 
-Если выполняется миграция из .NET Framework 4.6.2, просмотрите раздел [Совместимость приложений в платформе 4.7](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-7.md) о проблемах совместимости приложений, которые могут повлиять на работу приложения.  
+-   Описание того, что изменилось по сравнению с предыдущей версией.
 
-## <a name="see-also"></a>См. также  
- [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
- [Новые возможности](../../../docs/framework/whats-new/index.md)   
- [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
+-   Сведения о влиянии изменения на клиентов, а также о наличии обходных путей для сохранения совместимости между версиями.
+
+-   Оценка степени важности изменения. Проблемы совместимости приложений делятся на следующие категории.
+
+    |   |   |
+    |---|---|
+    |Значительно|Значительное изменение, влияющее на большое количество приложений или требующее существенного изменения кода.|
+    |Дополнительный номер|Изменение, влияющее на небольшое количество приложений или требующее незначительного изменения кода.|
+    |Пограничный случай|Изменение, влияющее на приложения в исключительных ситуациях.|
+    |Прозрачный|Изменение без заметного влияния на разработчика или пользователя приложения.|
+
+-   Версия указывает, когда изменение впервые появилось на платформе. Некоторые изменения появляются в конкретной версии и отменяются в более поздней версии; это также указывается.
+
+-   Тип изменения:
+
+    |   |   |
+    |---|---|
+    |Изменение целевой платформы|Изменение влияет на приложения, которые перекомпилированы для использования в новой версии платформы .NET Framework.|
+    |Среда выполнения|Изменение влияет на существующие приложения, предназначенные для предыдущей версии платформы .NET Framework, но работающие в более поздней версии.|
+
+-   Затронутые API, если таковые имеются.
+
+-   Идентификаторы доступных средств диагностики
+
+## Использование
+<a id="usage" class="xliff"></a>
+Для начала выберите тип изменения совместимости ниже.
+
+* [Изменение целевой платформы](./retargeting/index.md)
+* [Изменения среды выполнения](./runtime/index.md)
+
+
+## См. также
+<a id="see-also" class="xliff"></a>
+
+* [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [Новые возможности](../../../docs/framework/whats-new/index.md)
+* [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)
 

@@ -16,19 +16,22 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4c2156087ca168bafb1b7333310066cef73f3334
+ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
+ms.openlocfilehash: 0b32fa96cd002e927fa00e8c2a797d1ff6b17cb8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Устранение рисков. Службы WCF и проверка подлинности сертификатов
+# Устранение рисков. Службы WCF и проверка подлинности сертификатов
+<a id="mitigation-wcf-services-and-certificate-authentication" class="xliff"></a>
 В платформе .NET Framework 4.6 в список протоколов WCF SSL по умолчанию добавляются протоколы TLS 1.1 и TLS 1.2. Если на клиентском компьютере и на сервере установлена платформа .NET Framework 4.6 или более поздняя версия, для согласования используется протокол TLS 1.2.  
   
-## <a name="impact"></a>Последствия  
+## Последствия
+<a id="impact" class="xliff"></a>  
  Протокол TLS 1.2 не поддерживает проверку подлинности MD5. В результате, если пользователь применяет SSL-сертификат, который использует хэш-алгоритм MD5, клиенту WCF не удается подключиться к службе WCF. Дополнительные сведения см. в разделе [Устранение рисков. Службы WCF и проверка подлинности сертификатов](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md).  
   
-## <a name="mitigation"></a>Уменьшение  
+## Уменьшение
+<a id="mitigation" class="xliff"></a>  
  Эту проблему можно решить, чтобы клиент WCF мог подключиться к серверу WCF, выполнив любое из следующих действий.  
   
 -   Обновите сертификат, чтобы он не использовал алгоритм MD5. Это рекомендуемое решение.  
@@ -59,11 +62,12 @@ ms.lasthandoff: 04/18/2017
     </configuration>  
     ```  
   
--   Если привязка динамически настраивается в исходном коде, обновите свойство <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> для использования TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) или более ранней версии протокола в исходном коде.  
+-   Если привязка настроена в исходном коде динамически, настройте свойство <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> на использование TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=fullName>) или более ранней версии протокола в исходном коде.  
   
     > [!CAUTION]
     >  Это решение не рекомендуется, поскольку сертификат с хэш-алгоритмом MD5 считается небезопасным.  
   
-## <a name="see-also"></a>См. также  
+## См. также
+<a id="see-also" class="xliff"></a>  
  [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 
