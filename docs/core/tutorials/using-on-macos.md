@@ -10,33 +10,36 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 6c08f16690a8c081ac17484c6bc7a331d9041356
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="getting-started-with-net-core-on-macos"></a>Начало работы с .NET Core в Mac OS
+# Начало работы с .NET Core в Mac OS
+<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
 
 В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core для macOS. Вы узнаете, как создавать проекты и модульные тесты, использовать средства отладки и включать библиотеки сторонних разработчиков с помощью [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
 > В этой статье используется [Visual Studio Code](http://code.visualstudio.com) для macOS.
 
-## <a name="prerequisites"></a>Предварительные требования
+## Предварительные требования
+<a id="prerequisites" class="xliff"></a>
 
 Установите [пакета SDK для .NET Core](https://www.microsoft.com/net/core). Пакет SDK для .NET Core содержит последний выпуск платформы и среды выполнения .NET Core.
 
-Установите [Visual Studio Code](http://code.visualstudio.com). В ходе этой статьи вы также установите расширения VS Code, которые улучшат возможности разработки .NET Core.
+Установите [Visual Studio Code](http://code.visualstudio.com). В ходе этой статьи вы также установите расширения Visual Studio Code, которые улучшат возможности разработки .NET Core.
 
-Установите расширение C# для VS Code, открыв VS Code и нажав клавишу <kbd>F1</kbd>, чтобы открыть палитру VS Code. Введите команду **ext install**, чтобы просмотреть список расширений. Выберите расширение C#. Перезапустите VS Code, чтобы включить расширение. Дополнительные сведения см. в [документации по расширению C# для Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+Установите расширение C# для Visual Studio Code. Для этого откройте Visual Studio Code и нажмите клавишу <kbd>F1</kbd>, чтобы открыть палитру Visual Studio Code. Введите команду **ext install**, чтобы просмотреть список расширений. Выберите расширение C#. Перезапустите Visual Studio Code, чтобы включить расширение. Дополнительные сведения см. в [документации по расширению C# для Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="getting-started"></a>Начало работы
+## Начало работы
+<a id="getting-started" class="xliff"></a>
 
 В этом руководстве вы создадите три проекта: проект библиотеки, тесты для этого проекта библиотеки и консольное приложение, которое использует библиотеку. [Просмотреть и скачать исходный код](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) для этого раздела можно в репозитории dotnet/docs на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Запустите Visual Studio Code. Нажмите клавишу <kbd>CTRL</kbd>+<kbd>\`</kbd> (символ обратной кавычки или обратного апострофа) или выберите **Вид > Встроенный терминал**, чтобы открыть встроенный терминал в VS Code. Если вы предпочитаете работать не в среде VS Code, можете открыть внешнюю оболочку, выбрав пункт меню проводника **Открыть в командной строке** (в Mac и Linux — **Открыть в терминале**).
+Запустите Visual Studio Code. Нажмите клавишу <kbd>CTRL</kbd>+<kbd>\`</kbd> (символ обратной кавычки или обратного апострофа) или выберите **Вид > Встроенный терминал**, чтобы открыть встроенный терминал в Visual Studio Code. Если вы предпочитаете работать не в среде Visual Studio Code, можете открыть внешнюю оболочку в Explorer, выбрав пункт меню проводника **Открыть в командной строке** (в Mac и Linux — **Открыть в терминале**).
 
 Для начала нужно создать файл решения, который выступает в качестве контейнера для одного или нескольких проектов .NET Core. В терминале создайте папку *golden* и откройте ее. Эта папка — корневой каталог вашего решения. Запустите команду [`dotnet new`](../tools/dotnet-new.md), чтобы создать новое решение — *golden.sln*:
 
@@ -111,7 +114,8 @@ namespace Library
 dotnet build
 ```
 
-## <a name="create-the-test-project"></a>Создание тестового проекта
+## Создание тестового проекта
+<a id="create-the-test-project" class="xliff"></a>
 
 Создайте тестовый проект для библиотеки. Из папки *golden* создайте тестовый проект:
 
@@ -174,7 +178,8 @@ dotnet test test-library/test-library.csproj
 dotnet test test-library/test-library.csproj
 ```
 
-## <a name="create-the-console-app"></a>Создание консольного приложения
+## Создание консольного приложения
+<a id="create-the-console-app" class="xliff"></a>
 
 Консольное приложение, которое будет создано в этом разделе, зависит от проекта библиотеки, который был создан ранее, и вызывает библиотечный метод этого проекта при запуске. Вы увидите, как создавать повторно используемые библиотеки для нескольких проектов с помощью этого шаблона разработки.
 
@@ -215,13 +220,14 @@ using Library;
 dotnet run -p app/app.csproj
 ```
 
-## <a name="debug-the-application"></a>Отладка приложения
+## Отладка приложения
+<a id="debug-the-application" class="xliff"></a>
 
 Установите точку останова в инструкции `WriteLine` метода `Main`. Для этого нажмите клавишу <kbd>F9</kbd>, установив курсор в строку `WriteLine`, или щелкнув в левом поле строки, в которой вы хотите установить точку останова. В поле рядом со строкой кода появится красный кружок. При достижении точки останова выполнение кода приостанавливается *перед* той строкой, в которой расположена точка останова.
 
-Откройте вкладку отладчика, щелкнув значок "Отладка" на панели инструментов VS Code и выбрав **Вид > Отладка** в меню или нажав клавиши <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>:
+Откройте вкладку отладчика, щелкнув значок "Отладка" на панели инструментов Visual Studio Code и выбрав **Вид > Отладка** в меню или нажав клавиши <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>:
 
-![Отладчик VS Code](./media/using-on-macos/vscodedebugger.png)
+![Отладчик Visual Studio Code](./media/using-on-macos/vscodedebugger.png)
 
 Нажмите кнопку "Воспроизвести", чтобы запустить приложение в режиме отладки. Приложение выполняется до точки останова, в которой оно останавливается. Выполните метод `Get` по шагам и убедитесь в том, что переданы правильные аргументы. Убедитесь, что ответ равен 42.
 

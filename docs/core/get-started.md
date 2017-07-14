@@ -1,5 +1,5 @@
 ---
-title: "Начало работы с .NET Core"
+title: "Начало работы с .NET Core | Документация Майкрософт"
 description: "Ресурсы, посвященные созданию приложений .NET Core в Windows, Linux и Mac OS."
 keywords: .NET, .NET Core
 author: mairaw
@@ -10,18 +10,20 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
-ms.openlocfilehash: 983a015557cdf09f660e84b32306662b924695aa
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="get-started-with-net-core"></a>Начало работы с .NET Core
+# Начало работы с .NET Core
+<a id="get-started-with-net-core" class="xliff"></a>
 
 Платформа .NET Core работает в операционных системах [Windows](#windows), [Linux](#linux) и [Mac OS или OS X](#os-x--macos).
 
-## <a name="windows"></a>Windows
+## Windows
+<a id="windows" class="xliff"></a>
 
 Установите .NET Core в [Windows](https://www.microsoft.com/net/core#windows). 
 
@@ -35,7 +37,8 @@ ms.lasthandoff: 05/14/2017
 
 Список поддерживаемых версий Windows см. в разделе [Предварительные требования для разработки в Windows](windows-prerequisites.md). 
 
-## <a name="linux"></a>Linux
+## Linux
+<a id="linux" class="xliff"></a>
 
 Установите .NET Core в своем дистрибутиве или версии.
 
@@ -53,14 +56,15 @@ ms.lasthandoff: 05/14/2017
 
 Платформа .NET Core поддерживается дистрибутивами и версиями Linux, которые указаны в приведенном выше списке ссылок для установки.
 
-## <a name="os-x--macos"></a>OS X и Mac OS
+## OS X и Mac OS
+<a id="os-x--macos" class="xliff"></a>
 
 Установите .NET Core для [Mac OS](https://www.microsoft.com/net/core#macos). .NET Core поддерживается в OS X El Capitan (версия 10.11) и Mac OS Sierra (версия 10.12).
 
 Чтобы приступить к разработке приложений .NET Core, воспользуйтесь следующими пошаговыми учебниками.
 
 * [Начало работы с Visual Studio Code с использованием языка C# и платформы .NET Core в Mac OS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac). В этом видеоролике на канале [Channel9](https://channel9.msdn.com) показано, как установить и использовать [Visual Studio Code](https://code.visualstudio.com/), упрощенный кроссплатформенный редактор кода от корпорации Майкрософт, для создания первого консольного приложения в .NET Core. 
-* [Начало работы с .NET Core в Mac OS с помощью Visual Studio Code](tutorials/using-on-macos.md). Обзор действий и рабочего процесса по созданию решения .NET Core с помощью VS Code, включающий модульные тесты, библиотеки сторонних разработчиков и описание работы со средствами отладки.
+* [Начало работы с .NET Core в macOS с помощью Visual Studio Code](tutorials/using-on-macos.md). Обзор действий и рабочего процесса по созданию решения .NET Core с помощью Visual Studio Code, включающий модульные тесты, библиотеки сторонних разработчиков и описание работы со средствами отладки.
 * [Начало работы с .NET Core с помощью командной строки](tutorials/using-with-xplat-cli.md). Используйте любой редактор кода для работы с [кроссплатформенным интерфейсом командной строки (CLI) .NET Core](tools/index.md).
 * [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](tutorials/using-on-mac-vs.md) — этот учебник описывает, как создать простое консольное приложение .NET Core с помощью Visual Studio для Mac.
 * [Создание полноценного решения .NET Core на macOS с помощью Visual Studio для Mac](tutorials/using-on-mac-vs-full-solution.md) — это учебник описывает, как выполнить сборку полноценного решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.

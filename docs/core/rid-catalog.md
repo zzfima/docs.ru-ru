@@ -1,5 +1,5 @@
 ---
-title: "Каталог идентификаторов сред выполнения (RID) в .NET Core"
+title: "Каталог идентификаторов сред выполнения (RID) в .NET Core | Документация Майкрософт"
 description: "Каталог идентификаторов сред выполнения (RID) в .NET Core"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
-translationtype: Human Translation
-ms.sourcegitcommit: 811b9539019b7cc2817b5742760ae52fbc2f95dd
-ms.openlocfilehash: fc59a9f3333f01caf9622dd500a5de6e2ae5132b
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 904b9be05cd2e5337272ce7ddce15b1075fbefeb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="net-core-runtime-identifier-rid-catalog"></a>Каталог идентификаторов сред выполнения (RID) в .NET Core
+# Каталог идентификаторов сред выполнения (RID) в .NET Core
+<a id="net-core-runtime-identifier-rid-catalog" class="xliff"></a>
 
-## <a name="what-are-rids"></a>Что такое идентификатор RID
+## Что такое идентификатор RID
+<a id="what-are-rids" class="xliff"></a>
 RID — это сокращение от *Runtime IDentifier* (идентификатор среды выполнения). Идентификаторы RID служат для идентификации целевых операционных систем, в которых будет выполняться приложение или ресурс (то есть сборка). Выглядят они следующим образом: ubuntu.14.04-x64, win7-x64, osx.10.11-x64. Для пакетов с собственными зависимостями они указывают, на каких платформах можно восстановить пакет. 
 
 Важно отметить, что идентификаторы RID на самом деле являются непрозрачными строками. Это означает, что для выполнения операции, для которой они указаны, требуется их точное соответствие. В качестве примера возьмем ОС [Elementary OS](https://elementary.io/), которая является простым клоном Ubuntu 14.04. Хотя платформа .NET Core и интерфейс командной строки (CLI) работают в этой версии Ubuntu, если вы попытаетесь использовать их в Elementary OS без каких-либо изменений, операция восстановления любого пакета завершится сбоем. Связано это с тем, что в настоящее время нет идентификатора RID, указывающего на Elementary OS как на целевую платформу. 
@@ -59,13 +62,15 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
 * Используйте только идентификаторы RID, которые уже определены для платформы.
 * Идентификаторы RID должны указываться точно, поэтому обращайтесь к этому документу для определения идентификаторов RID, необходимых для конкретной платформы.
 
-## <a name="using-rids"></a>Использование идентификаторов RID
+## Использование идентификаторов RID
+<a id="using-rids" class="xliff"></a>
 Для использования идентификаторов RID необходимо знать какие идентификаторы RID существуют. В платформу регулярно добавляются новые идентификаторы RID. Чтобы получить актуальный список, просмотрите файл [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) в репозитории CoreFX.
 
 > [!NOTE]
 > Мы работаем над тем, чтобы представить эту информацию в более интерактивной форме. Когда мы решим эту задачу, данная страница будет обновлена и на ней будут приведены ссылки на соответствующее средство и документацию по его использованию. 
 
-## <a name="windows-rids"></a>Идентификаторы RID для Windows
+## Идентификаторы RID для Windows
+<a id="windows-rids" class="xliff"></a>
 
 * Windows 7 или Windows Server 2008 R2
     * `win7-x64`
@@ -84,7 +89,8 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
     * `win10-arm`
     * `win10-arm64`
 
-## <a name="linux-rids"></a>Идентификаторы RID для Linux
+## Идентификаторы RID для Linux
+<a id="linux-rids" class="xliff"></a>
 
 * Red Hat Enterprise Linux
     * `rhel.7-x64`
@@ -117,7 +123,8 @@ RID — это сокращение от *Runtime IDentifier* (идентифи
     * `linuxmint.17.3-x64`
     * `linuxmint.18-x64`
 
-## <a name="os-x-rids"></a>Идентификаторы RID для OS X
+## Идентификаторы RID для OS X
+<a id="os-x-rids" class="xliff"></a>
 
 * `osx.10.10-x64`
 * `osx.10.11-x64`

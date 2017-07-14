@@ -1,5 +1,5 @@
 ---
-title: "Пакеты, метапакеты и платформы"
+title: "Пакеты, метапакеты и платформы | Документация Майкрософт"
 description: "Пакеты, метапакеты и платформы"
 keywords: .NET, .NET Core
 author: richlander
@@ -10,20 +10,22 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: e0ba4886bd954c8e772a85a677775167e7c4bc53
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: 6a8f57de57e3470b0312b0d248d91d14f613ae94
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="packages-metapackages-and-frameworks"></a>Пакеты, метапакеты и платформы
+# Пакеты, метапакеты и платформы
+<a id="packages-metapackages-and-frameworks" class="xliff"></a>
 
 .NET Core — это платформа, состоящая из пакетов NuGet. Для некоторых возможностей продукта лучше подходит мелкомодульное определение пакетов, а для других — крупномодульное. С учетом такой двойственности продукт распространяется в виде мелкомодульного набора пакетов, а затем описывается в виде более крупных блоков с помощью типа пакетов, неофициально называемого "метапакетами".
 
 Каждый пакет .NET Core поддерживает выполнение в различных средах выполнения .NET, представленных платформами. Некоторые из них — это традиционные платформы, например пакет `net46` представляет платформу .NET Framework. Другой набор — это новые платформы, которые можно представить как "платформы на основе пакетов". Они образуют новую модель определения платформ. Платформы на основе пакетов полностью формируются и определяются как пакеты, благодаря чему создается тесная связь между пакетами и платформами.
 
-## <a name="packages"></a>Пакеты
+## Пакеты
+<a id="packages" class="xliff"></a>
 
 Платформа .NET Core разделяется на набор пакетов, которые предоставляют типы-примитивы, типы данных более высокого уровня, составные типы приложений и общие служебные программы. Каждый из этих пакетов представляет отдельную сборку с тем же именем. Например, [System.Runtime](https://www.nuget.org/packages/System.Runtime) содержит сборку System.Runtime.dll. 
 
@@ -38,12 +40,12 @@ ms.lasthandoff: 04/10/2017
 
 Ниже приведен список основных пакетов NuGet для .NET Core:
 
-- [System.Runtime](https://www.nuget.org/packages/System.Runtime) — основной пакет .NET Core, включающий <xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action> и <xref:System.Collections.Generic.IList%601>.
-- [System.Collections](https://www.nuget.org/packages/System.Collections) — набор, состоящий в основном из универсальных коллекций, включая <xref:System.Collections.Generic.List%601> и <xref:System.Collections.Generic.Dictionary%602>.
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) — набор типов для сетевого взаимодействия по протоколу HTTP, включающий <xref:System.Net.Http.HttpClient> и <xref:System.Net.Http.HttpResponseMessage>.
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) — набор типов для чтения из локального или сетевого дискового хранилища и записи в него, включающий <xref:System.IO.File> и <xref:System.IO.Directory>.
+- [System.Runtime](https://www.nuget.org/packages/System.Runtime) — базовый пакет .NET Core, включающий <xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action> и <xref:System.Collections.Generic.IList%601>.
+- [System.Collections](https://www.nuget.org/packages/System.Collections) — набор универсальных коллекций, в том числе <xref:System.Collections.Generic.List%601> и <xref:System.Collections.Generic.Dictionary%602>.
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) — набор типов для сетевого взаимодействия по протоколу HTTP, в том числе <xref:System.Net.Http.HttpClient> и <xref:System.Net.Http.HttpResponseMessage>.
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) — набор типов для чтения из локального или сетевого дискового хранилища и записи в него, в том числе <xref:System.IO.File> и <xref:System.IO.Directory>.
 - [System.Linq](https://www.nuget.org/packages/System.Linq) — набор типов для выполнения запросов к объектам, включающий `Enumerable` и <xref:System.Linq.ILookup%602>.
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection) — набор типов для загрузки, просмотра и активации типов, включающий <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> и <xref:System.Reflection.MethodInfo>.
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection) — набор типов для загрузки, проверки и активации типов, в том числе <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> и <xref:System.Reflection.MethodInfo>.
 
 Обычно вместо включения пакетов в отдельные проекты гораздо проще включить *метапакет*, представляющий собой набор пакетов, которые часто используются совместно. (Дополнительные сведения о метапакетах см. в следующем разделе.) Но если вам требуется один пакет, его можно включить как показано в примере ниже, где задается ссылка на пакет [System.Runtime](https://www.nuget.org/packages/System.Runtime/). 
 
@@ -58,7 +60,8 @@ ms.lasthandoff: 04/10/2017
 </Project>
 ```
 
-## <a name="metapackages"></a>Метапакеты
+## Метапакеты
+<a id="metapackages" class="xliff"></a>
 
 Метапакеты — это принятое в NuGet соглашение для описания набора пакетов, каким-либо образом связанных друг с другом. Для представления набора пакетов в качестве метапакета пакеты делаются зависимыми. Метапакет также может определять платформу для набора пакетов путем указания соответствующей платформы. 
 
@@ -80,7 +83,8 @@ ms.lasthandoff: 04/10/2017
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) — описывает библиотеки, входящие в распространяемый пакет .NET Core. Формирует [платформу `.NETCoreApp`](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Зависит от метапакета `NETStandard.Library`.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — набор интерфейсов совместимости, которые обеспечивают выполнение переносимых библиотек классов на основе mscorlib в .NET Core.
 
-## <a name="frameworks"></a>Инфраструктуры
+## Инфраструктуры
+<a id="frameworks" class="xliff"></a>
 
 Пакеты .NET Core поддерживают набор платформ среды выполнения. Платформа описывает доступный набор API (и, возможно, других характеристик), который можно применять при создании решения для данной платформы. Платформе присваивается новая версия при добавлении новых интерфейсов API.
 
@@ -96,7 +100,8 @@ ms.lasthandoff: 04/10/2017
 
 Платформа `.NETStandard,Version=1.3` — это платформа на основе пакетов. Она использует пакеты, предназначенные для платформы, с целью определения и предоставления интерфейсов API в контексте платформы.
 
-## <a name="package-based-frameworks"></a>Платформы на основе пакетов
+## Платформы на основе пакетов
+<a id="package-based-frameworks" class="xliff"></a>
 
 Между платформами и пакетами существует двусторонняя связь. Платформы определяют интерфейсы API, доступные для конкретной платформы, например `netstandard1.3`. Пакеты, предназначенные для `netstandard1.3` (или совместимых платформ, например `netstandard1.0`), определяют интерфейсы API, доступные для `netstandard1.3`. Такое определение может казаться циклически замкнутым, но это не так. Интерфейсы API для платформы основаны на пакетах, то есть определяются в них. Сама платформа не определяет интерфейсы API.
 
@@ -111,9 +116,10 @@ ms.lasthandoff: 04/10/2017
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET Standard
+### .NET Standard
+<a id="net-standard" class="xliff"></a>
 
-Платформа .NET Standard (моникер целевой платформы: `netstandard`) представляет API, которые определяются и создаются на основе [библиотеки .NET Standard](../standard/library.md). Библиотеки, предназначенные для различных сред выполнения, должны быть нацелены на эту платформу. Они будут поддерживаться в любой среде выполнения, совместимой с .NET Standard, например .NET Core, .NET Framework и Mono или Xamarin. Каждая из этих сред выполнения поддерживает ряд версий .NET Standard в зависимости от реализуемых ими интерфейсов API. 
+Платформа .NET Standard (моникер целевой платформы: `netstandard`) представляет API, которые определяются и создаются на основе [.NET Standard](../standard/net-standard.md). Библиотеки, предназначенные для различных сред выполнения, должны быть нацелены на эту платформу. Они будут поддерживаться в любой среде выполнения, совместимой с .NET Standard, например .NET Core, .NET Framework и Mono или Xamarin. Каждая из этих сред выполнения поддерживает ряд версий .NET Standard в зависимости от реализуемых ими интерфейсов API. 
 
 Платформа `netstandard` неявно ссылается на метапакет `NETStandard.Library`. Например, следующий файл проекта MSBuild указывает, что проект предназначен для `netstandard1.6`, которая ссылается на метапакет библиотеки .NET Standard версии 1.6. 
 
@@ -142,7 +148,8 @@ ms.lasthandoff: 04/10/2017
 
 Обратное (например, нацеливание на `netstandard1.6` с помощью `NETStandard.Library` версии 1.3.0) недопустимо. Нацеливание на платформу определенной версии с помощью метапакета более ранней версии невозможно, так как такой метапакет не будет предоставлять ресурсы для платформы более поздней версии. Согласно схеме управления версиями метапакетов метапакеты соответствуют самой поздней версии платформы, которую они описывают. Вследствие такой схемы управления версиями первая версия `NETStandard.Library` — 1.6.0, при условии, что она содержит ресурсы `netstandard1.6`. Версия 1.3.0 используется в предыдущем примере для согласованности с другим приведенным выше примером, хотя такой версии на самом деле нет.
 
-### <a name="net-core-application"></a>Приложение .NET Core
+### Приложение .NET Core
+<a id="net-core-application" class="xliff"></a>
 
 Платформа приложений .NET Core (TFM: `netcoreapp`) представляет пакеты и связанные интерфейсы API, которые входят в состав распространяемого пакета .NET Core и предоставляемой им модели консольных приложений. Приложения .NET Core должны использовать эту платформу вследствие нацеливания на модель консольных приложений, так же как и библиотеки, предназначенные для выполнения только в .NET Core. При использовании этой платформы приложения и библиотеки могут выполняться только в .NET Core. 
 
