@@ -8,7 +8,7 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: dab9e2f9-9088-4089-b990-fbc3d8dcd611
-redirect_url: /dotnet/articles/core/tutorials/index
+redirect_url: /dotnet/core/tutorials/index
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 008a128110c98f8d4262348b343931b510d1aac1
 ms.openlocfilehash: 23d10dd16abda77a1c545acde56ae63930c2b38a
@@ -17,8 +17,7 @@ ms.lasthandoff: 05/24/2017
 
 ---
 
-# 🔧 Написание консольных приложений .NET Core с помощью средств CLI. Подробное пошаговое руководство
-<a id="-writing-net-core-console-apps-using-the-cli-tools-an-advanced-step-by-step-guide" class="xliff"></a>
+# <a name="-writing-net-core-console-apps-using-the-cli-tools-an-advanced-step-by-step-guide"></a>🔧 Написание консольных приложений .NET Core с помощью средств CLI. Подробное пошаговое руководство
 
 > **Примечание**
 > 

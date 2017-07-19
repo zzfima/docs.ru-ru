@@ -5,7 +5,7 @@ author: spboyer
 keywords: ".NET, контейнер, консольный, приложения"
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
@@ -17,8 +17,7 @@ ms.lasthandoff: 06/01/2017
 
 ---
 
-# Запуск консольных приложений в контейнерах Windows
-<a id="running-console-applications-in-windows-containers" class="xliff"></a>
+# <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
 Консольные приложения используются во многих целях: от простых запросов состояния до затратных по времени задач по обработке изображений документов. В любом случае возможность запуска и масштабирования этих приложений сопряжена с определенными ограничениями, связанными с необходимым оборудованием, временем запуска или запуском нескольких экземпляров.
 
@@ -49,8 +48,7 @@ ms.lasthandoff: 06/01/2017
 1. [Создание Dockerfile для образа](#creating-the-dockerfile)
 1. [Сборка и запуск контейнера Docker](#creating-the-image)
 
-## Предварительные требования
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Предварительные требования
 Контейнеры Windows поддерживаются в [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) и [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
@@ -60,8 +58,7 @@ ms.lasthandoff: 06/01/2017
 
 ![Контейнеры Windows](./media/console/SwitchContainer.png)
 
-## Построение приложения
-<a id="building-the-application" class="xliff"></a>
+## <a name="building-the-application"></a>Построение приложения
 Обычно консольные приложения распространяются с помощью установщика, через FTP или в рамках развертывания через общую папку. При развертывании в контейнер необходимо скомпилировать ресурсы и поместить их в промежуточное расположение, которое можно будет использовать при создании образа Docker.
 
 В скрипте *build.ps1* приложение компилируется с помощью [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx), чем завершается этап сборки ресурсов. Для окончательного включения нужных ресурсов в MSBuild передаются некоторые параметры. Имя файла компилируемого проекта или решения, расположение выходных данных и, наконец, конфигурация (окончательная или отладочная).
@@ -76,8 +73,7 @@ function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
 Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
 ```
 
-## Создание Dockerfile
-<a id="creating-the-dockerfile" class="xliff"></a>
+## <a name="creating-the-dockerfile"></a>Создание Dockerfile
 Базовым образом, который используется для консольного приложения .NET Framework, является `microsoft/windowsservercore`, доступный в [Docker Hub](https://hub.docker.com/r/microsoft/windowsservercore/). Базовый образ содержит минимальную установку Windows Server 2016 .NET Framework 4.6.2 и выступает в роли основного образа операционной системы для контейнеров Windows.
 
 ```
@@ -87,8 +83,7 @@ ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
 В первой строке Dockerfile с помощью инструкции [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) определяется базовый образ. Следующая инструкция файла, [`ADD`](https://docs.docker.com/engine/reference/builder/#/add), копирует ресурсы приложения из папки **publish** в корневую папку контейнера, и, наконец, параметр [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) образа объявляет, что этот образ является командой или приложением, которое будет запускаться при запуске контейнера. 
 
-## Создание образа
-<a id="creating-the-image" class="xliff"></a>
+## <a name="creating-the-image"></a>Создание образа
 Чтобы создать образ Docker, в скрипт *build.ps1* добавляется следующий код. При запуске скрипта создается образ `console-random-answer-generator` с использованием ресурсов, скомпилированных MSBuild (см. раздел [Построение приложения](#building-the-application)).
 
 ```powershell
@@ -111,8 +106,7 @@ REPOSITORY                        TAG                 IMAGE ID            CREATE
 console-random-answer-generator   latest              8f7c807db1b5        8 seconds ago       7.33 GB
 ```
 
-## Запуск контейнера
-<a id="running-the-container" class="xliff"></a>
+## <a name="running-the-container"></a>Запуск контейнера
 Контейнер можно запустить из командной строки с помощью команд Docker.
 
 ```
@@ -140,8 +134,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 Выполните команду с этим параметром и посмотрите на выходные данные команды `docker ps -a`. Обратите внимание, что идентификатор контейнера (`Environment.MachineName`) в списке отсутствует.
 
-### Запуск контейнера с помощью PowerShell
-<a id="running-the-container-using-powershell" class="xliff"></a>
+### <a name="running-the-container-using-powershell"></a>Запуск контейнера с помощью PowerShell
 В файлах примера проекта также есть скрипт *run.ps1*, который демонстрирует использование PowerShell для запуска приложения с указанием аргументов.
 
 Чтобы запустить его, откройте PowerShell и выполните следующую команду:
@@ -150,7 +143,6 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 .\run.ps1 "Is this easy or what?"
 ```
 
-## Сводка
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>Сводка
 С помощью простого добавления Dockerfile и публикации консольное приложение .NET Framework можно поместить в контейнер и запускать несколько экземпляров, выполнять чистые запуск и завершение работы и использовать многие другие возможности Windows Server 2016 без какого-либо изменения кода приложения.
 
