@@ -1,5 +1,5 @@
 ---
-title: "Начало работы с .NET Core | Документация Майкрософт"
+title: "Начало работы с .NET Core"
 description: "Ресурсы, посвященные созданию приложений .NET Core в Windows, Linux и Mac OS."
 keywords: .NET, .NET Core
 author: mairaw
@@ -9,21 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 890e6af3095866608e9c91ea26b4d0edb6d81e29
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Начало работы с .NET Core
-<a id="get-started-with-net-core" class="xliff"></a>
+# <a name="get-started-with-net-core"></a>Начало работы с .NET Core
 
 Платформа .NET Core работает в операционных системах [Windows](#windows), [Linux](#linux) и [Mac OS или OS X](#os-x--macos).
 
-## Windows
-<a id="windows" class="xliff"></a>
+## <a name="windows"></a>Windows
 
 Установите .NET Core в [Windows](https://www.microsoft.com/net/core#windows). 
 
@@ -37,8 +35,7 @@ ms.lasthandoff: 05/27/2017
 
 Список поддерживаемых версий Windows см. в разделе [Предварительные требования для разработки в Windows](windows-prerequisites.md). 
 
-## Linux
-<a id="linux" class="xliff"></a>
+## <a name="linux"></a>Linux
 
 Установите .NET Core в своем дистрибутиве или версии.
 
@@ -56,8 +53,7 @@ ms.lasthandoff: 05/27/2017
 
 Платформа .NET Core поддерживается дистрибутивами и версиями Linux, которые указаны в приведенном выше списке ссылок для установки.
 
-## OS X и Mac OS
-<a id="os-x--macos" class="xliff"></a>
+## <a name="os-x--macos"></a>OS X и Mac OS
 
 Установите .NET Core для [Mac OS](https://www.microsoft.com/net/core#macos). .NET Core поддерживается в OS X El Capitan (версия 10.11) и Mac OS Sierra (версия 10.12).
 

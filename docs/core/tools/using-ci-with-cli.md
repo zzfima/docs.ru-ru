@@ -1,5 +1,5 @@
 ---
-title: "Использование пакета SDK и инструментов .NET Core при непрерывной интеграции (CI) | Microsoft Docs"
+title: "Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)"
 description: "Сведения об использовании пакета SDK для .NET Core и входящих в него средств на сервере сборки."
 keywords: ".NET, .NET Core, непрерывная интеграция, ci, сборка, автоматизация, Travis CI, AppVeyor, Visual Studio Team Services, vsts"
 author: guardrex
@@ -10,27 +10,23 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5af11b469f906b7c074f127704eb338a78a62b34
-ms.openlocfilehash: a13f6b80248a659bda23baece3638e33a166b5df
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67c08dd9804f6b51961be250033161427159e66e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
-<a id="using-net-core-sdk-and-tools-in-continuous-integration-ci" class="xliff"></a>
+# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
 
-## Обзор
-<a id="overview" class="xliff"></a>
+## <a name="overview"></a>Обзор
 
 В этой статье описывается использование пакета SDK для .NET Core и входящих в него средств на сервере сборки. Набор инструментов .NET Core поддерживает два режима: интерактивный (разработчик вводит команды в командной строке) и автоматический (сервер непрерывной интеграции выполняет скрипт сборки). Команды, параметры, входные и выходные данные совпадают. В этом случае нужно только указать способ получения средств и систему сборки приложения. В этом документе рассматриваются сценарии ввода в эксплуатацию средства обеспечения непрерывной интеграции, а также рекомендации по разработке и структуре скриптов сборки.
 
-## Варианты установки для серверов сборки CI
-<a id="installation-options-for-ci-build-servers" class="xliff"></a>
+## <a name="installation-options-for-ci-build-servers"></a>Варианты установки для серверов сборки CI
 
-### Использование собственных установщиков
-<a id="using-the-native-installers" class="xliff"></a>
+### <a name="using-the-native-installers"></a>Использование собственных установщиков
 
 В macOS, Linux и Windows доступны собственные установщики. Установщики требуют доступа администратора (sudo) к серверу сборки. Преимущество использования собственного установщика заключается в том, что он устанавливает собственные зависимости, необходимые для выполнения средства. Кроме того, собственные установщики обеспечивают системную установку пакета SDK.
 
@@ -38,8 +34,7 @@ ms.lasthandoff: 05/31/2017
 
 Последние надежные двоичные файлы можно найти на странице, посвященной [началу работы с .NET Core](https://aka.ms/dotnetcoregs). Чтобы использовать последние (возможно, ненадежные) предварительные выпуски средств, воспользуйтесь ссылками в [репозитории GitHub](https://github.com/dotnet/cli#installers-and-binaries). Для дистрибутивов Linux также доступны архивы `tar.gz` (`tarballs`). Используйте вложенные в них скрипты, чтобы установить .NET Core.
 
-### Использование скрипта установки
-<a id="using-the-installer-script" class="xliff"></a>
+### <a name="using-the-installer-script"></a>Использование скрипта установки
 
 Скрипт установки позволяет выполнять установку на сервере сборки без прав администратора. Кроме того, с его помощью очень легко обеспечить автоматизацию. Скрипт самостоятельно скачивает средство и распаковывает его в стандартную или указанную папку. Вы также можете указать версию средства, которую следует установить, а также нужно ли установить пакет SDK целиком или только общую среду выполнения.
 
@@ -48,13 +43,11 @@ ms.lasthandoff: 05/31/2017
 > [!NOTE]
 > При использовании скрипта установки собственные зависимости не устанавливаются автоматически. Их необходимо установить вручную, если их нет в операционной системе. Список предварительных требований см. в [этом репозитории GitHub](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).
 
-## Примеры установки решений CI
-<a id="ci-setup-examples" class="xliff"></a>
+## <a name="ci-setup-examples"></a>Примеры установки решений CI
 
 В этом разделе приведены сведения о ручной настройке с помощью скрипта PowerShell или bash, а также описано несколько решений SaaS для непрерывной интеграции, таких как [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) и [Visual Studio Team Services](https://www.visualstudio.com/docs/build/overview).
 
-### Ручная настройка
-<a id="manual-setup" class="xliff"></a>
+### <a name="manual-setup"></a>Ручная настройка
 
 Каждая служба SaaS имеет собственные методы создания и настройки процесса сборки. Если вы используете другое решения SaaS, нежели упомянутые выше, или хотите внести дополнительные изменения, конфигурацию необходимо выполнить вручную.
 
@@ -136,15 +129,13 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 # Run the build process now. Implement your build script here.
 ```
 
-### Travis CI
-<a id="travis-ci" class="xliff"></a>
+### <a name="travis-ci"></a>Travis CI
 
 Средство [Travis CI](https://travis-ci.org/) можно настроить, чтобы установить пакет SDK для .NET Core с помощью языка `csharp` и ключа `dotnet`. Дополнительные сведения см. в официальной документации Travis CI по [созданию проектов C#, F# или Visual Basic](https://docs.travis-ci.com/user/languages/csharp/). Обратите внимание, что при доступе к сведениям сообщества Travis CI идентификатор языка `language: csharp` работает для всех языков .NET, в том числе F# и Mono.
 
 Travis CI выполняет в *матрице сборки* как задания macOS (OS X 10.11, OS X 10.12), так и задания Linux (Ubuntu 14.04). Вы можете указать сочетание среды выполнения, окружения, а также исключений и включений, чтобы охватить свои сочетания сборки приложения. Дополнительные сведения см. в [примере .travis.yml](https://github.com/dotnet/docs/blob/master/.travis.yml) и статье о [настройке сборки](https://docs.travis-ci.com/user/customizing-the-build) в документации по Travis CI. Средства на основе MSBuild включают среды выполнения LTS (1.0.x) и текущие среды выполнения (1.1.x). Установив этот пакет SDK, вы получите все необходимые компоненты сборки.
 
-### AppVeyor
-<a id="appveyor" class="xliff"></a>
+### <a name="appveyor"></a>AppVeyor
 
 Средство [AppVeyor](https://www.appveyor.com/) устанавливает рабочий образ сборки `Visual Studio 2017` с пакетом SDK для .NET Core 1.0.1. Но также доступны и другие образы сборки с разными версиями пакета SDK для .NET Core. Дополнительные сведения см. в [примере appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml) и [разделе о рабочих образах сборки](https://www.appveyor.com/docs/build-environment/#build-worker-images) в документации по AppVeyor.
 
@@ -160,8 +151,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### Visual Studio Team Services (VSTS)
-<a id="visual-studio-team-services-vsts" class="xliff"></a>
+### <a name="visual-studio-team-services-vsts"></a>Visual Studio Team Services (VSTS)
 
 Настройте Visual Studio Team Services, чтобы создать проекты .NET Core, используя один из следующих подходов:
 
@@ -188,15 +178,13 @@ install:
 
    ![Указание выполняемого сценария PowerShell](./media/using-ci-with-cli/screen4.png)
 
-## Оркестрация сборки
-<a id="orchestrating-the-build" class="xliff"></a>
+## <a name="orchestrating-the-build"></a>Оркестрация сборки
 
 Большая часть статьи посвящена тому, как получить средства .NET Core и настроить различные службы CI. Оркестрация или *фактическое создание* кода с помощью .NET Core до этого момента не упоминались. Способ структурирования процесса сборки зависит от многих факторов, которые нельзя здесь описать в общем виде. Дополнительные сведения об оркестрации сборок на основе каждой упомянутой в этой статье технологии, а также ресурсы и примеры см. в документации по [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) и [VSTS](https://www.visualstudio.com/docs/build/overview).
 
 Два принципиальных подхода структурирования процесса сборки кода .NET Core с использованием средств .NET Core заключаются в использовании MSBuild напрямую или с помощью программ командной строки .NET Core. Выберите подход, который проще и удобнее для вас. MSBuild предоставляет возможность представить процесс сборки в виде задач и целевых объектов, но сложность этого подхода заключается в необходимости изучения синтаксиса файла проекта MSBuild. Подход с использованием программ командной строки .NET Core, возможно, проще, но в этом случае следует написать логику оркестрации на языке написания скриптов, например `bash` или PowerShell.
 
-## См. также
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>См. также
 
 [Начало работы с .NET Core](https://www.microsoft.com/net/core#linuxubuntu)   
 
