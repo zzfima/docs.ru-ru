@@ -1,5 +1,5 @@
 ---
-title: "Приступая к работе с .NET Core в Mac OS | Документы Майкрософт"
+title: "Начало работы с .NET Core в Mac OS"
 description: "В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core в Visual Studio Code."
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
@@ -9,24 +9,22 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Начало работы с .NET Core в Mac OS
-<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
+# <a name="getting-started-with-net-core-on-macos"></a>Начало работы с .NET Core в Mac OS
 
 В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core для macOS. Вы узнаете, как создавать проекты и модульные тесты, использовать средства отладки и включать библиотеки сторонних разработчиков с помощью [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
 > В этой статье используется [Visual Studio Code](http://code.visualstudio.com) для macOS.
 
-## Предварительные требования
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Предварительные требования
 
 Установите [пакета SDK для .NET Core](https://www.microsoft.com/net/core). Пакет SDK для .NET Core содержит последний выпуск платформы и среды выполнения .NET Core.
 
@@ -34,8 +32,7 @@ ms.lasthandoff: 05/27/2017
 
 Установите расширение C# для Visual Studio Code. Для этого откройте Visual Studio Code и нажмите клавишу <kbd>F1</kbd>, чтобы открыть палитру Visual Studio Code. Введите команду **ext install**, чтобы просмотреть список расширений. Выберите расширение C#. Перезапустите Visual Studio Code, чтобы включить расширение. Дополнительные сведения см. в [документации по расширению C# для Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## Начало работы
-<a id="getting-started" class="xliff"></a>
+## <a name="getting-started"></a>Начало работы
 
 В этом руководстве вы создадите три проекта: проект библиотеки, тесты для этого проекта библиотеки и консольное приложение, которое использует библиотеку. [Просмотреть и скачать исходный код](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) для этого раздела можно в репозитории dotnet/docs на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -114,8 +111,7 @@ namespace Library
 dotnet build
 ```
 
-## Создание тестового проекта
-<a id="create-the-test-project" class="xliff"></a>
+## <a name="create-the-test-project"></a>Создание тестового проекта
 
 Создайте тестовый проект для библиотеки. Из папки *golden* создайте тестовый проект:
 
@@ -178,8 +174,7 @@ dotnet test test-library/test-library.csproj
 dotnet test test-library/test-library.csproj
 ```
 
-## Создание консольного приложения
-<a id="create-the-console-app" class="xliff"></a>
+## <a name="create-the-console-app"></a>Создание консольного приложения
 
 Консольное приложение, которое будет создано в этом разделе, зависит от проекта библиотеки, который был создан ранее, и вызывает библиотечный метод этого проекта при запуске. Вы увидите, как создавать повторно используемые библиотеки для нескольких проектов с помощью этого шаблона разработки.
 
@@ -220,8 +215,7 @@ using Library;
 dotnet run -p app/app.csproj
 ```
 
-## Отладка приложения
-<a id="debug-the-application" class="xliff"></a>
+## <a name="debug-the-application"></a>Отладка приложения
 
 Установите точку останова в инструкции `WriteLine` метода `Main`. Для этого нажмите клавишу <kbd>F9</kbd>, установив курсор в строку `WriteLine`, или щелкнув в левом поле строки, в которой вы хотите установить точку останова. В поле рядом со строкой кода появится красный кружок. При достижении точки останова выполнение кода приостанавливается *перед* той строкой, в которой расположена точка останова.
 

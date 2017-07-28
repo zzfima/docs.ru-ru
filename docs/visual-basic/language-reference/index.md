@@ -1,5 +1,5 @@
 ---
-title: "Справочник по языку Visual Basic | Microsoft Docs"
+title: "Справочник по языку Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-language-reference" class="xliff"></a>
-
-# Справочник по языку Visual Basic
+# <a name="visual-basic-language-reference"></a>Справочник по языку Visual Basic
 В этом разделе содержится справочная информация о различных аспектах языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
  [Условные обозначения и соглашения о коде](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  Содержит сводные данные о форматировании ключевых слов, заполнителей и других элементов языка в документации [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -108,11 +104,10 @@ ms.lasthandoff: 05/26/2017
  [Сообщения об ошибках](../../visual-basic/language-reference/error-messages/index.md)  
  Содержит список сообщений об ошибках компилятора [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и ошибках во время выполнения, а также справку по работе с ними.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Visual Basic](../../visual-basic/index.md)  
  Приводит комплексную справку по всем областям языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Компилятор Visual Basic с интерфейсом командной строки](../../visual-basic/reference/command-line-compiler/index.md)  
  Описывает, как использовать компилятор командной строки в качестве альтернативы компиляции программ в интегрированной среде разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].
+

@@ -1,5 +1,5 @@
 ---
-title: "Дополнительные ресурсы для программистов Visual C# (C#) | Документация Майкрософт"
+title: "Дополнительные ресурсы для программистов Visual C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7810948b8ee549d05d7e795f89822db2fdfd1648
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f843abd4ec891a7da17151140fc524acee72a346
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="additional-resources-for-visual-c-programmers"></a>Дополнительные ресурсы для программистов Visual C#
@@ -88,7 +88,8 @@ ms.lasthandoff: 05/22/2017
 ## <a name="see-also"></a>См. также  
  [C#](../../csharp/csharp.md)   
  [Приступая к работе с Visual C#](../../csharp/getting-started/getting-started-with-csharp.md)   
- [Настройка редактора](https://docs.microsoft.com/visualstudio/ide/customizing-the-editor)   
+ [Настройка редактора](/visualstudio/ide/customizing-the-editor)   
  [Практическое руководство. Присоединение к сообществу разработчиков](http://msdn.microsoft.com/library/f1503d98-7a64-41b6-a6c7-0e42a533e9c5)   
  [Практическое руководство. Отправка отзывов](http://msdn.microsoft.com/library/c9f1dd8f-bcb6-40ac-b896-1e9eca0bb209)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+

@@ -1,5 +1,5 @@
 ---
-title: "Создание образов Docker для .NET Core | Документация Майкрософт"
+title: "Создание образов Docker для .NET Core"
 description: "Общие сведения об образах Docker и .NET Core"
 keywords: .NET, .NET Core, Docker
 author: spboyer
@@ -10,22 +10,20 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7f6be5a87923a12eef879b2f5acdafc1347588e3
-ms.openlocfilehash: a8ade58a9ff1f5e68865506d91c200681cec2aeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b0e227bb932abe68db26f1d05e6170af399d0d39
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
  
 
-#Создание образов Docker для приложений .NET Core
-<a id="building-docker-images-for-net-core-applications" class="xliff"></a>
+#<a name="building-docker-images-for-net-core-applications"></a>Создание образов Docker для приложений .NET Core
 
 Чтобы понять, как можно использовать .NET Core и Docker вместе, сначала нужно ознакомиться с различными образами Docker и подходящими ситуациями для их применения. В этой статье мы по порядку разберем предлагаемые варианты, создадим веб-интерфейс API ASP.NET Core, используем средства Yeoman Docker для создания отлаживаемого контейнера, а также посмотрим, как Visual Studio Code может помочь нам в решении этих задач. 
 
-## Оптимизация образов Docker
-<a id="docker-image-optimizations" class="xliff"></a>
+## <a name="docker-image-optimizations"></a>Оптимизация образов Docker
 
 При создании образов Docker для разработчиков мы сосредоточились на трех основных сценариях:
 
@@ -41,8 +39,7 @@ ms.lasthandoff: 06/26/2017
 
 Хотя существует несколько версий образа .NET Core, они все имеют один или несколько общих уровней. Объем дискового пространства для хранения или размер разностных данных, которые нужно извлечь из реестра, гораздо меньше общего размера, так как все образы имеют общий базовый и, возможно, другие общие уровни.  
 
-## Варианты образов Docker
-<a id="docker-image-variations" class="xliff"></a>
+## <a name="docker-image-variations"></a>Варианты образов Docker
 
 Для достижения указанных выше целей мы предоставляет варианты образов в [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/).
 
@@ -50,8 +47,7 @@ ms.lasthandoff: 06/26/2017
 
 - `microsoft/dotnet:<version>-core`, то есть **microsoft/dotnet:1.0.0-core** — образ, который выполняет [переносимые приложения .NET Core](../deploying/index.md) и оптимизирован для выполнения приложений в **рабочей среде**. Он не содержит пакета SDK и предназначен для получения оптимизированных выходных данных команды `dotnet publish`. Переносимая среда выполнения хорошо подходит для сценариев с контейнерами Docker, так как использование нескольких контейнеров позволяет реализовать преимущество общих уровней образов.  
 
-## Альтернативные образы
-<a id="alternative-images" class="xliff"></a>
+## <a name="alternative-images"></a>Альтернативные образы
 
 Помимо образов, оптимизированных для разработки, сборки и рабочей среды, мы предоставляем дополнительные образы.
 
@@ -80,8 +76,7 @@ microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
 microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
 ```
 
-## Предварительные требования
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Предварительные требования
 
 Для сборки и запуска необходимо установить несколько компонентов.
 
@@ -100,8 +95,7 @@ npm install -g yo generator-aspnet generator-docker
 > [!NOTE]
 > В этом примере в качестве редактора будет использоваться [Visual Studio Code](http://code.visualstudio.com).
 
-## Создание приложения веб-интерфейса API
-<a id="creating-the-web-api-application" class="xliff"></a>
+## <a name="creating-the-web-api-application"></a>Создание приложения веб-интерфейса API
 
 Чтобы получить ориентир, перед упаковкой приложения в контейнер запустите его локально. 
 
@@ -132,8 +126,7 @@ dotnet restore
 
 Чтобы остановить приложение, нажмите клавишу `Ctrl+C`.
 
-## Добавление поддержки Docker
-<a id="adding-docker-support" class="xliff"></a>
+## <a name="adding-docker-support"></a>Добавление поддержки Docker
 
 Добавление поддержки Docker в проект осуществляется посредством генератора Yeoman от корпорации Майкрософт. В настоящее время он поддерживает проекты .NET Core, Node.js и Go путем создания файла Dockerfile и скриптов, помогающих собирать и выполнять проекты в контейнерах. Также добавляются файлы, относящиеся к Visual Studio Code (launch.json, tasks.json), для поддержки отладки и палитры команд редактора.
 
@@ -182,8 +175,7 @@ $ yo docker
 
 **Dockerfile** — это образ выпуска, основанный на **microsoft/dotnet:1.0.0-core**, который следует использовать для рабочей среды. После сборки его размер составляет приблизительно 253 МБ.
 
-### Создание образов Docker
-<a id="creating-the-docker-images" class="xliff"></a>
+### <a name="creating-the-docker-images"></a>Создание образов Docker
 С помощью скрипта `dockerTask.sh` или `dockerTask.ps1` можно выполнить сборку или компоновку образа и контейнера для приложения **api** для определенной среды. Выполните сборку образа **debug**, выполнив приведенную ниже команду.
 
 ```bash
@@ -225,8 +217,7 @@ api                 debug                70e89fbc5dbe        1 hour ago        7
 api                 latest               ef17184c8de6        1 hour ago        260.7 MB
 ```
 
-## Сводка
-<a id="summary" class="xliff"></a>
+## <a name="summary"></a>Сводка
 
 Использование генератора Docker для добавления необходимых файлов в приложение веб-интерфейса API упростило создание версий образов для разработки и рабочей среды.  Кроссплатформенность средств также достигается с помощью скрипта PowerShell, который позволяет получить те же результаты в Windows, а интеграция с Visual Studio Code дает возможность пошаговой отладки приложения в контейнере. Понимая назначение вариантов образов и целевые сценарии, вы можете оптимизировать внутренний цикл разработки и получить более эффективные образы для рабочих развертываний.  
 

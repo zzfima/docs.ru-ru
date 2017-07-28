@@ -1,5 +1,5 @@
 ---
-title: "Необходимые компоненты для .NET Core в Windows | Документация Майкрософт"
+title: "Необходимые компоненты для .NET Core в Windows"
 description: "Узнайте о том, какие зависимости необходимы для разработки и запуска приложений .NET Core на компьютере Windows."
 keywords: ".NET Core, Windows, необходимые компоненты, зависимости, Visual Studio"
 author: mairaw
@@ -9,21 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
-ms.openlocfilehash: 22f7acab3ffbe2d3af587f7af2bfaad204f8e259
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e414af0edbafed5b7f540eda6de2e5078eac789
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Необходимые компоненты для .NET Core в Windows
-<a id="prerequisites-for-net-core-on-windows" class="xliff"></a>
+# <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
 В этой статье показано, какие зависимости необходимы для развертывания и запуска приложений .NET Core на компьютерах под управлением ОС Windows, а также разработки с помощью Visual Studio.
 
-## Поддерживаемые версии Windows
-<a id="supported-windows-versions" class="xliff"></a>
+## <a name="supported-windows-versions"></a>Поддерживаемые версии Windows
 
 Платформа .NET Core поддерживается на устройствах под управлением следующих версий ОС Windows:
 
@@ -37,8 +35,7 @@ ms.lasthandoff: 06/29/2017
 
 Полный список поддерживаемых операционных систем см. в [заметках о выпуске .NET Core](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md).
 
-## Зависимости .NET Core
-<a id="net-core-dependencies" class="xliff"></a>
+## <a name="net-core-dependencies"></a>Зависимости .NET Core
 
 Для запуска платформы .NET Core в версиях до Windows 10 и Windows Server 2016 необходим распространяемый компонент Visual C++. Эта зависимость устанавливается автоматически, если вы используете установщик .NET Core. Если же вы устанавливаете .NET Core с использованием [скрипта установщика](./tools/dotnet-install-script.md) или выполняете автономное развертывание приложения .NET Core, необходимо вручную установить [распространяемый компонент Microsoft Visual C++ 2015 с обновлением 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685).
 
@@ -46,8 +43,7 @@ ms.lasthandoff: 06/29/2017
 > <em>Только для компьютеров под управлением Windows 7 и Windows Server 2008.</em><br>
 > Убедитесь, что установка Windows актуальна, а исправление [KB2533623](https://support.microsoft.com/help/2533623) установлено через Центр обновления Windows.
 
-## Необходимые компоненты для Visual Studio 2017
-<a id="prerequisites-with-visual-studio-2017" class="xliff"></a>
+## <a name="prerequisites-with-visual-studio-2017"></a>Необходимые компоненты для Visual Studio 2017
 
 Для разработки приложений .NET Core с помощью пакета SDK для .NET Core вы можете использовать любой редактор. Если же вы хотите разрабатывать приложения .NET Core в интегрированной среде разработки Windows, можно использовать [Visual Studio 2017](#visual-studio-2017).
 
@@ -57,7 +53,7 @@ ms.lasthandoff: 06/29/2017
 Чтобы использовать Visual Studio 2017 для разработки приложений .NET Core, нужно установить последнюю доступную версию Visual Studio с выбранным набором инструментов **Кроссплатформенная разработка .NET Core** (в разделе **Другие наборы инструментов**).
 ![Снимок экрана установки Visual Studio 2017 с выбранной рабочей нагрузкой "Кроссплатформенная разработка .NET Core"](./media/windows-prerequisites/vs_workloads.jpg)
 
-Существуют разные выпуски Visual Studio 2017. Чтобы приступить к работе, можно бесплатно скачать версию [Visual Studio Community 2017](https://www.visualstudio.com/downloads/).  Дополнительные сведения о процедуре установки Visual Studio см. в статье [Install Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) (Установка Visual Studio 2017).
+Существуют разные выпуски Visual Studio 2017. Чтобы приступить к работе, можно бесплатно скачать версию [Visual Studio Community 2017](https://www.visualstudio.com/downloads/).  Дополнительные сведения о процедуре установки Visual Studio см. в статье [Install Visual Studio 2017](/visualstudio/install/install-visual-studio) (Установка Visual Studio 2017).
 
 Чтобы убедиться, что вы используете последнюю доступную версию Visual Studio 2017, сделайте следующее:
 

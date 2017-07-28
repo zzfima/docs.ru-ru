@@ -1,5 +1,5 @@
 ---
-title: "Введение в язык C# и платформу .NET Framework | Документация Майкрософт"
+title: "Введение в язык C# и .NET Framework"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Введение в язык C# и .NET Framework
@@ -64,7 +64,7 @@ C# — это изящный объектно-ориентированный я
   
  Вот еще несколько ресурсов по языку C#.  
   
--   Общая вводная информация о языке хорошо представлена в Главе 1 [спецификации языка C#](../../csharp/language-reference/language-specification.md).  
+-   Общая вводная информация о языке хорошо представлена в Главе 1 [спецификации языка C#](../../csharp/language-reference/language-specification/index.md).  
   
 -   Подробные сведения о конкретных аспектах языка C# вы найдете в [справочнике по C#](../../csharp/language-reference/index.md).  
   
@@ -89,4 +89,5 @@ C# — это изящный объектно-ориентированный я
   
 ## <a name="see-also"></a>См. также  
  [C#](../../csharp/csharp.md)   
- [Начало работы с Visual C# и Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

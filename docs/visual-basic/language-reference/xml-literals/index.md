@@ -1,5 +1,5 @@
 ---
-title: "XML-литералы (Visual Basic) | Microsoft Docs"
+title: "XML-литералы (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
@@ -34,21 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7398d02ddd73576fb502a10559891127307b96c0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9182402167c64d6683670ae240cd0dd58ee9d1ef
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="xml-literals-visual-basic" class="xliff"></a>
-
-# XML-литералы (Visual Basic)
+# <a name="xml-literals-visual-basic"></a>XML-литералы (Visual Basic)
 В темах этого раздела описывается синтаксис XML-литералов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Синтаксис XML-литералов позволяет внедрять XML непосредственно в код.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
@@ -58,7 +54,6 @@ ms.lasthandoff: 05/26/2017
 |[XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XComment>.|  
 |[XML-литерал инструкции обработки](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XProcessingInstruction>.|  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+

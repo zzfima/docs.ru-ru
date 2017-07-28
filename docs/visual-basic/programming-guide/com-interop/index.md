@@ -1,5 +1,5 @@
 ---
-title: "COM-взаимодействие (Visual Basic) | Microsoft Docs"
+title: "COM-взаимодействие (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6aaa083c7d668659d2e68638b677a20ce22fa214
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29275519a00ad0c33a5b85e592532ce456daefe0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="com-interop-visual-basic" class="xliff"></a>
-
-# COM-взаимодействие (Visual Basic)
+# <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
 Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе освещаются некоторые вопросы, связанные с созданием и использованием COM-объектов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
  [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Общие сведения о COM-взаимодействии.  
   
@@ -76,9 +72,7 @@ ms.lasthandoff: 05/26/2017
  [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Описание использования существующих COM-объектов в качестве основы для новых объектов.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Взаимодействие с неуправляемым кодом](https://msdn.microsoft.com/library/sd10k43k)  
  Описываются службы взаимодействия, предоставляемые средой CLR.  
   
@@ -90,3 +84,4 @@ ms.lasthandoff: 05/26/2017
   
  [Применение атрибутов взаимодействия](https://msdn.microsoft.com/library/d4w8x20h)  
  Описание атрибутов, которые можно использовать при работе с неуправляемым кодом.
+

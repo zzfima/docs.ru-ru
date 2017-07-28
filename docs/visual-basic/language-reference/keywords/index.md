@@ -1,5 +1,5 @@
 ---
-title: "Ключевые слова (Visual Basic) | Microsoft Docs"
+title: "Ключевые слова (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,21 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="keywords-visual-basic" class="xliff"></a>
-
-# Ключевые слова (Visual Basic)
+# <a name="keywords-visual-basic"></a>Ключевые слова (Visual Basic)
 В приведенных ниже таблицах перечислены все ключевые слова языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="reserved-keywords" class="xliff"></a>
-
-## Зарезервированные ключевые слова  
+## <a name="reserved-keywords"></a>Зарезервированные ключевые слова  
  Следующие ключевые слова являются *зарезервированными*, то есть их нельзя использовать в качестве имен программных элементов, таких как переменные или процедуры. Это ограничение можно обойти, заключив имя в квадратные скобки (`[``]`). Дополнительные сведения см. в подразделе "Экранированные имена" раздела [Имена объявляемых элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 > [!NOTE]
@@ -108,9 +104,7 @@ ms.lasthandoff: 05/26/2017
 > [!NOTE]
 >  `EndIf`, `GoSub`, `Variant` и `Wend` остаются зарезервированными ключевыми словами, хотя они больше не используются в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Значение ключевого слова `Let` было изменено. `Let` сейчас используется в запросах LINQ. Дополнительные сведения см. в разделе [Предложение Let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
-<a id="unreserved-keywords" class="xliff"></a>
-
-## Незарезервированные ключевые слова  
+## <a name="unreserved-keywords"></a>Незарезервированные ключевые слова  
  Следующие ключевые слова не зарезервированы. Это означает, что их можно использовать в качестве имен для элементов программирования. Но делать так не рекомендуется, так как это может затруднить чтение кода и привести к ошибкам, которые может быть трудно найти.  
   
 |||||  
@@ -126,9 +120,7 @@ ms.lasthandoff: 05/26/2017
 |[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
 |[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
   
-<a id="related-topics" class="xliff"></a>
-
-## См. также  
+## <a name="related-topics"></a>См. также  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
@@ -151,8 +143,6 @@ ms.lasthandoff: 05/26/2017
 |[Сводка по реестру](../../../visual-basic/language-reference/keywords/registry-summary.md)|Содержит список функций, используемых для чтения, сохранения и удаления параметров программы.|  
 |[Сводка по работе со строками](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Содержит список функций, используемых для работы со строками.|  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [Члены библиотеки времени выполнения Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 

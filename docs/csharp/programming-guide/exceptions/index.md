@@ -1,5 +1,5 @@
 ---
-title: "Исключения и обработка исключений (руководство по программированию на C#) | Документация Майкрософт"
+title: "Исключения и обработка исключений (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e9faf744717980468afb995eceeb31bda93443b9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Исключения и обработка исключений (Руководство по программированию в C#)
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/26/2017
   
 -   Код в блоке `finally` выполняется даже в том случае, если создано исключение. Используйте блок `finally`, чтобы высвободить ресурсы, например закрыть потоки и файлы, которые были открыты внутри блока `try`.  
   
--   Управляемые исключения реализованы в платформе .NET Framework на основе структурированного механизма обработки исключений Win32. Дополнительные сведения см. в статьях [Structured Exception Handling (C/C++)](https://docs.microsoft.com/cpp/cpp/structured-exception-handling-c-cpp) (Структурированная обработка исключений в C и C++) и [A Crash Course on the Depths of Win32 Structured Exception Handling](http://go.microsoft.com/fwlink/?LinkId=119654) (Интенсивное погружение в структурированную обработку исключений на платформе Win32).  
+-   Управляемые исключения реализованы в платформе .NET Framework на основе структурированного механизма обработки исключений Win32. Дополнительные сведения см. в статьях [Structured Exception Handling (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (Структурированная обработка исключений в C и C++) и [A Crash Course on the Depths of Win32 Structured Exception Handling](http://go.microsoft.com/fwlink/?LinkId=119654) (Интенсивное погружение в структурированную обработку исключений на платформе Win32).  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения об исключениях и обработке исключений вы найдете в следующих статьях.  
@@ -98,3 +98,4 @@ ms.lasthandoff: 05/26/2017
  [Иерархия исключений](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [Создание надежного кода .NET](http://go.microsoft.com/fwlink/?LinkId=112400)   
  [Минидампы для определенных исключений](http://go.microsoft.com/fwlink/?LinkId=112408)
+

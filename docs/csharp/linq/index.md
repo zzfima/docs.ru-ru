@@ -1,5 +1,5 @@
 ---
-title: "LINQ (C#) | Документы Майкрософт"
+title: "Синтаксис LINQ"
 description: "Знакомство с LINQ для C#"
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 21e4420d385bff07173b265782dd23f89f61e797
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: da116ce67428e9349e03dea60b35abd52dcffee2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -38,17 +38,17 @@ ms.lasthandoff: 05/23/2017
   
 -   Запрос не будет выполняться, пока вы не начнете обращаться к переменной запроса, например, с помощью инструкции `foreach`. Дополнительные сведения см. в статье [Introduction to LINQ queries](../programming-guide/concepts/linq/introduction-to-linq-queries.md) (Введение в запросы LINQ).  
   
--   Во время компиляции выражения запроса преобразуются в вызовы метода стандартного оператора запроса. Для преобразования используются правила, заданные в спецификации C#. Любой запрос, который может быть выражен с помощью синтаксиса запросов, также может быть выражен с помощью синтаксиса методов. Однако в большинстве случаев синтаксис запроса будет понятнее и лаконичнее. Дополнительные сведения см. в статьях [C# language specification](../language-reference/language-specification.md) (Спецификация языка C#) и [Standard query operators overview](../programming-guide/concepts/linq/standard-query-operators-overview.md) (Общие сведения о стандартных операторах запроса).  
+-   Во время компиляции выражения запроса преобразуются в вызовы метода стандартного оператора запроса. Для преобразования используются правила, заданные в спецификации C#. Любой запрос, который может быть выражен с помощью синтаксиса запросов, также может быть выражен с помощью синтаксиса методов. Однако в большинстве случаев синтаксис запроса будет понятнее и лаконичнее. Дополнительные сведения см. в статьях [C# language specification](../language-reference/language-specification/index.md) (Спецификация языка C#) и [Standard query operators overview](../programming-guide/concepts/linq/standard-query-operators-overview.md) (Общие сведения о стандартных операторах запроса).  
   
 -   Мы рекомендуем при написании запросов LINQ использовать синтаксис запросов везде, где это возможно, а синтаксис метода — только если это совершенно необходимо. Между этими формами синтаксиса нет никакой разницы в семантике или производительности. Выражения запросов обычно более удобочитаемыми, чем аналогичные выражения с использованием синтаксиса метода.  
   
 -   Некоторых операции запросов, например <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.Max%2A>, не имеют эквивалентных предложений выражения для запросов и должны выражаться как вызовы методов. Синтаксис запросов и синтаксис методов можно сочетать друг с другом различными способами. Дополнительные сведения см. в статье [Query syntax and method syntax in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Синтаксис запросов и синтаксис методов в LINQ).  
   
--   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../expression-trees.md) (Деревья выражений).  
+-   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражения. Дополнительные сведения см. в статье [Expression trees](../expression-trees.md) (Деревья выражений).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Чтобы получить дополнительные сведения о LINQ, сначала ознакомьтесь с некоторыми основным понятиями в статье [Query expression basics](query-expression-basics.md) (Базовая информация о выражении запроса), а затем переходите к документации по интересующей вас технологии LINQ:   
+Чтобы получить дополнительные сведения о LINQ, сначала ознакомьтесь с некоторыми основным понятиями в статье [Query expression basics](query-expression-basics.md) (Базовая информация о выражении запроса), а затем переходите к документации по интересующей вас технологии LINQ.   
 -   XML-документы: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)  
   
 -   Платформа Entity Framework для ADO.NET: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  

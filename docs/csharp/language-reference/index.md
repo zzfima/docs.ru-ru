@@ -1,5 +1,5 @@
 ---
-title: "Справочник по C# | Документация Майкрософт"
+title: "Справочник по C#"
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
-ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-reference"></a>Справочник по C#
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/19/2017
  [Ошибки компилятора C#](../../csharp/language-reference/compiler-messages/index.md)  
  Фрагменты кода, демонстрирующие причины и способы исправления ошибок и предупреждений компилятора C#.  
   
- [Спецификация языка C#](../../csharp/language-reference/language-specification.md)  
+ [Спецификация языка C#](../../csharp/language-reference/language-specification/index.md)  
  Ссылки на последнюю версию спецификации C# в формате Microsoft Word.  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/19/2017
  [C#](../../csharp/csharp.md)  
  Портал для документации по Visual C#.  
   
- [Использование среды разработки Visual Studio для C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Использование среды разработки Visual Studio для C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Ссылки на концептуальные разделы и разделы задач, описывающие интегрированную среду разработки и редактор.  
   
  [Руководство по программированию на C#](../../csharp/programming-guide/index.md)  

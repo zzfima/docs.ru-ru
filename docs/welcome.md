@@ -1,5 +1,5 @@
 ---
-title: "Знакомство с .NET | Документация Майкрософт"
+title: "Добро пожаловать в .NET"
 description: "Начало работы с семейством технологий .NET"
 keywords: ".NET, .NET Core, начало работы, новости"
 author: richlander
@@ -9,23 +9,21 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
-ms.openlocfilehash: 7055438edf0ce4466f3ae6a5d8eb9216b324d3b7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Добро пожаловать в .NET
-<a id="welcome-to-net" class="xliff"></a>
+# <a name="welcome-to-net"></a>Добро пожаловать в .NET
 
 Чтобы научиться создавать приложения .NET Core, см. статью о [начале работы с .NET Core](core/get-started.md).
 
 С помощью .NET можно создавать приложения различных типов (например, облачные приложения, приложения Интернета вещей и игры), в которых используются кроссплатформенные инструменты. Эти приложения работают на платформах Android, iOS, Linux, macOS и Windows. Вы можете развертывать приложения на серверах или компьютерах и публиковать их в магазинах приложений для развертывания на мобильных устройствах. Платформа .NET доступна для студентов и любителей. Приглашаем всех принять участие в динамичном международном сообществе разработчиков и внести свой вклад в разработку различных технологий .NET.
 
-## Новости
-<a id="news" class="xliff"></a>
+## <a name="news"></a>Новости
 
 - [Введение в .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
 - [Объявление о выпуске .NET Core 2.0 (предварительная версия 2)](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)
@@ -42,8 +40,7 @@ ms.lasthandoff: 07/06/2017
 - [Неделя с .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
 - [Конференция Build 2017 на канале Channel 9 — видео о последних технологиях и новостях Майкрософт!](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
-## Документация
-<a id="documentation" class="xliff"></a>
+## <a name="documentation"></a>Документация
 
 Эта документация охватывает применение .NET для различных платформ и языков.  Чтобы начать работу с .NET для различных языков, воспользуйтесь одним из следующих разделов.
 
@@ -54,10 +51,9 @@ ms.lasthandoff: 07/06/2017
 - [Руководство по языку F#](fsharp/index.md)
 - [Руководство по Visual Basic](visual-basic/index.md)
 
-Кроме того, можете обратиться к [Справочнику по API .NET](https://docs.microsoft.com/dotnet/api).
+Кроме того, можете обратиться к [Справочнику по API .NET](/dotnet/api).
 
-## Открыть исходный код
-<a id="open-source" class="xliff"></a>
+## <a name="open-source"></a>Открыть исходный код
 
 В этой документации используется полностью [открытый исходный код](https://github.com/dotnet/docs).  Вы можете внести свой вклад в проект любым удобным способом — сообщив о проблеме или приняв участие в создании документации.  Кроме того, большая часть самой платформы .NET имеет открытый исходный код.
 

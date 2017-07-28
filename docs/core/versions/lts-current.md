@@ -1,5 +1,5 @@
 ---
-title: "Поддержка .NET Core | Документы Майкрософт"
+title: "Поддержка .NET Core"
 description: "Сведения о поддержке поэтапного выхода разных выпусков (LTS и Current) для .NET Core"
 keywords: ".NET, .NET Core, lts, current, fts, support, поддержка, support trains, поддержка поэтапного выхода, support tracks, отслеживание поддержки, Lifecycle, жизненный цикл, release trains, поэтапный выход выпусков"
 author: kendrahavens
@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-translationtype: Human Translation
-ms.sourcegitcommit: 1ef17b16b85c81a0b96bb1712db3734dc67d801d
-ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -41,8 +43,4 @@ ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
 ### <a name="further-reading"></a>Дополнительные сведения
 * [Справочные материалы по жизненному циклу поддержки .NET Core](https://www.microsoft.com/net/core/support)
 * [Поддерживаемые операционные системы и версии](https://github.com/dotnet/core/blob/master/roadmap.md)
-
-
-<!--HONumber=Feb17_HO1-->
-
 

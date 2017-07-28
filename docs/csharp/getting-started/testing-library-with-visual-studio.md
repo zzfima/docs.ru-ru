@@ -1,5 +1,5 @@
 ---
-title: "Тестирование библиотеки классов для .NET Core в Visual Studio 2017 | Microsoft Docs"
+title: "Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017"
 description: "Сведения о тестировании библиотеки классов, написанной на языке C#, с помощью Visual Studio 2017"
 keywords: ".NET Core, библиотека стандартных классов .NET, Visual Studio 2017, модульное тестирование"
 author: BillWagner
@@ -10,21 +10,19 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5254000ab95fb2cb877466a9c387d200b1a81cd6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
-# Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
+# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
 
 В статье [Создание библиотеки классов для C# и .NET Core в Visual Studio 2017](library-with-visual-studio.md) вы уже создали простую библиотеку классов, которая добавляет метод расширения к классу @System.String. Теперь вы создадите модульный тест и убедитесь, что все работает правильно. Новый проект модульного теста вы добавите к решению, созданному в предыдущей статье.
 
-<a id="creating-a-unit-test-project" class="xliff"></a>
-## Создание проекта модульного теста
+## <a name="creating-a-unit-test-project"></a>Создание проекта модульного теста
 
 Чтобы создать проект модульного теста, выполните следующие действия.
 
@@ -56,8 +54,7 @@ ms.lasthandoff: 06/13/2017
 
    ![Диспетчер ссылок](./media/testing-library-with-visual-studio/referencemanager.png)
 
-<a id="adding-and-running-unit-test-methods" class="xliff"></a>
-## Добавление и выполнение методов модульных тестов
+## <a name="adding-and-running-unit-test-methods"></a>Добавление и выполнение методов модульных тестов
 
 При запуске модульного теста Visual Studio выполняет каждый метод, помеченный атрибутом [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx), из класса модульных тестов (это класс, к которому применен атрибут [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx)). Метод теста завершается, когда происходит первый сбой или когда все тесты, содержащиеся в методе, будут успешно выполнены.
 
@@ -101,8 +98,7 @@ ms.lasthandoff: 06/13/2017
 
    ![Окно "Обозреватель тестов"](./media/testing-library-with-visual-studio/firsttest.png)
 
-<a id="handling-test-failures" class="xliff"></a>
-## Обработка сбоев при тестах
+## <a name="handling-test-failures"></a>Обработка сбоев при тестах
 
 Тестовый запуск прошел без ошибок, а теперь давайте немного изменим его, чтобы один из методов теста завершался сбоем:
 
@@ -123,8 +119,7 @@ ms.lasthandoff: 06/13/2017
 
 1. Удалите код, который вы добавили ранее (`"Error", `), и выполните тест еще раз. Теперь тесты будут пройдены.
 
-<a id="testing-the-release-version-of-the-library" class="xliff"></a>
-## Тестирование версии выпуска для библиотеки
+## <a name="testing-the-release-version-of-the-library"></a>Тестирование версии выпуска для библиотеки
 
 До сих пор вы выполняли тесты с отладочной версией библиотеки. Теперь, когда все созданные тесты пройдены и вы достаточно подробно проверили работу библиотеки, выполните все тесты еще раз, теперь уже для сборки выпуска библиотеки. Некоторые факторы, например оптимизации компилятора, иногда могут вызывать разное поведение сборки в режимах отладки и выпуска.
 

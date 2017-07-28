@@ -1,5 +1,5 @@
 ---
-title: "Приступая к работе с Visual Basic | Документация Майкрософт"
+title: "Приступая к работе с Visual Basic"
 ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Приступая к работе с Visual Basic
@@ -66,17 +66,18 @@ ms.lasthandoff: 05/26/2017
  [Пошаговые руководства](../../visual-basic/walkthroughs.md)  
  Перечень страниц справки, демонстрирующих различные аспекты языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
+ [Обращайтесь к нам](/visualstudio/ide/talk-to-us)  
  Способы получения поддержки и обеспечения обратной связи.  
   
- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
+ [Visual Studio](/visualstudio/)  
  Ссылки на документацию по [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [C#](../../csharp/csharp.md)  
  Ссылки на документацию по разработке приложений в [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
- [Visual C++](https://docs.microsoft.com/cpp/)  
+ [Visual C++](/cpp/)  
  Ссылки на документацию по Visual C++.  
   
  [Office and SharePoint Development](https://msdn.microsoft.com/library/d2tx7z6d) (Разработка приложений Office и SharePoint)  
  Сведения об использовании приложений Microsoft Office и [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] в рамках бизнес-приложений.
+

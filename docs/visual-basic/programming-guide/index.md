@@ -1,5 +1,5 @@
 ---
-title: "Руководство по программированию на Visual Basic | Microsoft Docs"
+title: "Руководство по программированию на Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,21 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 43f0e9958838bf9a4ca5111ccd93499e3d4d13c5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01d6a1fc688f2cdf55ab4be5c6d0a8daccda2031
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-programming-guide" class="xliff"></a>
-
-# Руководство по программированию на Visual Basic
+# <a name="visual-basic-programming-guide"></a>Руководство по программированию на Visual Basic
 Как и любой современный язык программирования, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] поддерживает множество общих программных конструкций и элементов языка. Это руководство описывает все основные элементы программирования на [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
  [Соглашения о структуре программы и коде](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Содержит документацию по базовой структуре и соглашениям кода [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], таким как соглашения об именовании, комментарии в коде и действующие в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ограничения.  
   
@@ -53,11 +49,10 @@ ms.lasthandoff: 05/26/2017
  [COM-взаимодействие](../../visual-basic/programming-guide/com-interop/index.md)  
  Поясняет проблемы взаимодействия, связанные с созданием и использованием объектов модели COM в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="related-sections" class="xliff"></a>
-
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
  Содержит справочные сведения о различных аспектах программирования на [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Компилятор Visual Basic с интерфейсом командной строки](../../visual-basic/reference/command-line-compiler/index.md)  
  Содержит информацию об использовании компилятора командной строки [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], его параметров и инструмента обновления ключевых слов.
+

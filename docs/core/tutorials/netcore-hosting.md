@@ -1,5 +1,5 @@
 ---
-title: "Размещение .NET Core | Документы Майкрософт"
+title: "Размещение .NET Core"
 description: "Размещение среды выполнения .NET Core из машинного кода"
 keywords: ".NET, .NET Core, размещение, размещение .NET Core"
 author: mjrousos
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
-ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61c321b512b1920718196319d367f467f9291b2a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/26/2017
 
 Размещение среды выполнения .NET Core является расширенным сценарием, и в большинстве случаев разработчикам .NET Core не нужно беспокоиться о размещении, так как процессы сборки .NET Core предоставляют основное приложение по умолчанию для запуска приложений .NET Core. Но в отдельных ситуациях бывает удобно разместить среду выполнения .NET Core явным образом — либо как средство вызова управляемого кода в собственном процессе, либо для получения большего контроля над работой среды выполнения.
 
-В этой статье приводится обзор действий, необходимых для запуска среды выполнения .NET Core из машинного кода, создания исходного домена приложения (<xref:System.AppDomain>) и выполнения управляемого кода в этом домене.
+В этой статье приводится обзор действий, необходимых для запуска среды выполнения .NET Core из машинного кода, создания исходного домена приложений (<xref:System.AppDomain>) и выполнения в нем управляемого кода.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -110,9 +110,9 @@ hr = runtimeHost->Start();
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
   domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",    // Target managed assembly
+  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
   L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                    // Target entry point (static method)
+  L"Main",                                  // Target entry point (static method)
   (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);

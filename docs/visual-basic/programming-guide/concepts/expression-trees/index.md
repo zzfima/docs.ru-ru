@@ -1,5 +1,5 @@
 ---
-title: "Деревья выражений (Visual Basic) | Документация Майкрософт"
+title: "Деревья выражений (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 5f22d535ea6fb55ccadba4476e2e61f32b7a64f2
-ms.lasthandoff: 03/31/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e67f6696ab6e41e9185c7d1356b98113e1473a87
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="expression-trees-visual-basic"></a>Деревья выражений (Visual Basic)
@@ -33,10 +34,10 @@ ms.lasthandoff: 03/31/2017
   
  Кроме того, деревья выражений используются в среде выполнения динамического языка (DLR) для обеспечения взаимодействия между динамическими языками и платформой .NET Framework, а также и предоставления разработчикам компиляторов возможности выдавать деревья выражений вместо промежуточного языка Microsoft (MSIL). Дополнительные сведения о DLR см. в разделе [Общие сведения о среде DLR](https://msdn.microsoft.com/library/dd233052).  
   
- Вы можете использовать компилятор C# или Visual Basic для создания дерева выражений на основе анонимного лямбда-выражения или создавать деревья выражений вручную с помощью пространства имен <xref:System.Linq.Expressions>.  
+ Вы можете использовать компилятор C# или Visual Basic для создания дерева выражений на основе анонимного лямбда-выражения или создания деревьев выражений вручную с помощью пространства имен <xref:System.Linq.Expressions>.  
   
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>Создание деревьев выражений на основе лямбда-выражений  
- Когда лямбда-выражение присваивается переменной типа <xref:System.Linq.Expressions.Expression%601>, компилятор порождает код для создания дерева выражений, представляющего лямбда-выражение.  
+ Когда лямбда-выражение назначается переменной с типом <xref:System.Linq.Expressions.Expression%601>, компилятор выдает код для создания дерева выражений, представляющего лямбда-выражение.  
   
  Компилятор Visual Basic может создавать деревья выражений только на основе лямбда-выражений (или однострочных лямбда-функций). Они не могут анализировать лямбды операторов (или многострочные лямбды). Дополнительные сведения о лямбда-выражениях в Visual Basic см. в разделе [Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
@@ -48,7 +49,7 @@ Dim lambda As Expression(Of Func(Of Integer, Boolean)) =
 ```  
   
 ## <a name="creating-expression-trees-by-using-the-api"></a>Создание деревьев выражений с помощью API-интерфейса  
- Чтобы создавать деревья выражений с помощью API, используйте класс <xref:System.Linq.Expressions.Expression>. Этот класс содержит статические фабричные методы, позволяющие создавать узлы дерева выражения конкретного типа, например <xref:System.Linq.Expressions.ParameterExpression>, который представляет переменную или параметр, или <xref:System.Linq.Expressions.MethodCallExpression>, который представляет вызов метода. В пространстве имен <xref:System.Linq.Expressions> также определены <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> и другие типы выражений. Эти типы являются производными от абстрактного типа <xref:System.Linq.Expressions.Expression>.  
+ Для создания деревьев выражений с помощью API-интерфейса используйте класс <xref:System.Linq.Expressions.Expression>. Этот класс содержит статические методы фабрики, позволяющие создать узлы дерева выражения конкретного типа, например, <xref:System.Linq.Expressions.ParameterExpression>, который представляет переменную или параметр, или <xref:System.Linq.Expressions.MethodCallExpression>, который представляет вызов метода. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> и другие зависящие от выражения типы также определяются в пространстве имен <xref:System.Linq.Expressions>. Эти типы являются производными от абстрактного типа <xref:System.Linq.Expressions.Expression>.  
   
  В следующем примере кода демонстрируется способ создания дерева выражений, представляющего лямбда-выражение `Function(num) num < 5`, с помощью API.  
   
@@ -131,7 +132,7 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
  Деревья выражений должны быть неизменными. Это означает, что если требуется изменить дерево выражений, следует создать новое дерево выражений путем копирования существующего и заменить узлы в нем. Для прохода по существующему дереву выражений можно использовать другое дерево выражений (посетитель). Дополнительные сведения см. в разделе [Практическое руководство. Изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
   
 ## <a name="compiling-expression-trees"></a>Компиляция деревьев выражений  
- Тип <xref:System.Linq.Expressions.Expression%601> имеет метод <xref:System.Linq.Expressions.Expression%601.Compile%2A>, который компилирует код, представленный деревом выражения, в исполняемый делегат.  
+ Тип <xref:System.Linq.Expressions.Expression%601> предоставляет метод  <xref:System.Linq.Expressions.Expression%601.Compile%2A>, который компилирует код, представляемый деревом выражений, в исполняемый делегат.  
   
  В следующем примере кода показан способ компиляции дерева выражений и выполнения результирующего кода.  
   
@@ -165,3 +166,4 @@ Console.WriteLine(expr.Compile()(4))
  [Лямбда-выражения](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
  [Общие сведения о среде DLR](https://msdn.microsoft.com/library/dd233052)   
  [Основные понятия программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
+

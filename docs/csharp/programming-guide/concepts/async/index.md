@@ -1,5 +1,5 @@
 ---
-title: "Асинхронное программирование с использованием ключевых слов Async и Await (C#) | Документация Майкрософт"
+title: "Асинхронное программирование с использованием ключевых слов Async и Await (C#)"
 ms.date: 2017-05-22
 ms.prod: .net
 ms.technology:
@@ -16,16 +16,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d2357336b6ffade3a9767ff13343cdfc2965be
-ms.openlocfilehash: a7c89d56bb3d2c40804ae7a2cc191a0f2f722764
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d087951ce3e3f05c7f1e8f9c99529eab2f76b8d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="asynchronous-programming-with-async-and-await-c" class="xliff"></a>
-
-# Асинхронное программирование с использованием ключевых слов Async и Await (C#)
+# <a name="asynchronous-programming-with-async-and-await-c"></a>Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
   
 [C# 5](../../../whats-new/index.md#previous-versions) вводит упрощенный подход асинхронного программирования, который использует асинхронные возможности .NET Framework 4.5 и более поздних версий, .NET Core и среды выполнения Windows. Компилятор выполняет сложную работу, которую раньше делал разработчик, при этом логическая структура кода приложения похожа на синхронный код. То есть можно пользоваться всеми преимуществами асинхронного программирования с гораздо меньшими, чем обычно, трудозатратами.  
@@ -350,9 +348,7 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [async](../../../../csharp/language-reference/keywords/async.md)   
  [await](../../../../csharp/language-reference/keywords/await.md)
 

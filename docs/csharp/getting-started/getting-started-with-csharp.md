@@ -1,5 +1,5 @@
 ---
-title: "Начало работы с C# | Документация Майкрософт"
+title: "Начало работы с C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-c"></a>Начало работы с C#
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/26/2017
  Содержит ссылки на веб-сайты и группы новостей, которые помогут найти ответы на общие вопросы.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Использование среды разработки Visual Studio для C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Использование среды разработки Visual Studio для C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Предоставляет руководство по использованию интегрированной среды разработки [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Руководство по программированию на C#](../../csharp/programming-guide/index.md)  
@@ -56,12 +56,13 @@ ms.lasthandoff: 05/26/2017
  [Справочник по C#](../../csharp/language-reference/index.md)  
  Содержит подробные справочные сведения о ключевых словах, операторах, директивах препроцессора, параметрах компилятора и ошибках и предупреждениях компилятора в среде C#.  
   
- [Примеры Visual Studio](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)  
+ [Примеры Visual Studio](/visualstudio/ide/visual-studio-samples)  
  Представлены сведения о способах доступа к примерам в сети.  
   
  [Пошаговые руководства](../../csharp/walkthroughs.md)  
  Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.  
   
 ## <a name="see-also"></a>См. также  
- [Начало работы с Visual C# и Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [Центр обучения для начинающих разработчиков](http://go.microsoft.com/fwlink/?LinkId=123826)
+

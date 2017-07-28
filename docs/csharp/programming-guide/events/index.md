@@ -1,5 +1,5 @@
 ---
-title: "События (Руководство по программированию на C#) | Microsoft Docs"
+title: "События (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,23 +30,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: b3f4673eccdbd568fa8ab042023a4b3bd8230bb3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a913a615de8185bb358376def1e2a051bdaa951
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="events-c-programming-guide" class="xliff"></a>
-
-# События (Руководство по программированию в C#)
+# <a name="events-c-programming-guide"></a>События (Руководство по программированию в C#)
 События позволяют [классу](../../../csharp/language-reference/keywords/class.md) или объекту уведомлять другие классы или объекты о возникновении каких-либо ситуаций. Класс, отправляющий (или *порождающий*) событие, называется *издателем* , а классы, принимающие (или *обрабатывающие*) событие, называются *подписчиками*.  
   
- В типичном веб-приложении или приложении Windows Forms C# вы подписываетесь на события, вызываемые элементами управления, такими как кнопки и списки. Вы можете использовать интегрированную среду разработки (IDE) [!INCLUDE[csprcs](~/includes/csprcs-md.md)], чтобы просмотреть события, публикуемые элементом управления, и выбрать те из них, которые необходимо обработать. IDE автоматически добавляет пустой метод обработчика событий и код для подписки на событие. Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
+ В типичном веб-приложении или приложении Windows Forms C# вы подписываетесь на события, вызываемые элементами управления, такими как кнопки и списки. Вы можете использовать интегрированную среду разработки (IDE) [!INCLUDE[csprcs](~/includes/csprcs-md.md)] , чтобы просмотреть события, публикуемые элементом управления, и выбрать те из них, которые необходимо обработать. IDE автоматически добавляет пустой метод обработчика событий и код для подписки на событие. Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
   
-<a id="events-overview" class="xliff"></a>
-
-## Общие сведения о событиях  
+## <a name="events-overview"></a>Общие сведения о событиях  
  События имеют следующие свойства:  
   
 -   Издатель определяет, когда возникает событие; подписчики определяют, какое действие выполняется в ответ на событие.  
@@ -59,11 +55,9 @@ ms.lasthandoff: 05/26/2017
   
 -   Если событие имеет несколько подписчиков, при возникновении события обработчики событий вызываются синхронно. Сведения об асинхронном вызове событий см. в разделе [Calling Synchronous Methods Asynchronously](https://msdn.microsoft.com/library/2e08f6yc).  
   
--   В библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] события основываются на делегате <xref:System.EventHandler> и базовом классе <xref:System.EventArgs>.  
+-   В библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] события основываются на делегате <xref:System.EventHandler> и базовом классе <xref:System.EventArgs> .  
   
-<a id="related-sections" class="xliff"></a>
-
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
 -   [Практическое руководство. Подписка и отмена подписки на события](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
@@ -80,23 +74,18 @@ ms.lasthandoff: 05/26/2017
   
 -   [Практическое руководство. Реализация пользовательских методов доступа к событиям](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Спецификация языка C#  
+## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="featured-book-chapters" class="xliff"></a>
-
-## Главы в популярных книгах  
+## <a name="featured-book-chapters"></a>Главы в популярных книгах  
  [Делегаты, события и лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=195395) в [справочном руководстве по C# 3.0, третье издание: более 250 решений для программистов на C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
  [Делегаты и события](http://go.microsoft.com/fwlink/?LinkId=195418) в статье [Изучение C# 3.0: овладение основными понятиями C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.EventHandler>   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Делегаты](../../../csharp/programming-guide/delegates/index.md)   
  [Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)   
  [Многопоточное программирование с использованием асинхронной модели на основе событий](https://msdn.microsoft.com/library/hkasytyf)
+

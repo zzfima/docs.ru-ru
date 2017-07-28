@@ -1,5 +1,5 @@
 ---
-title: "Инициализаторы набора (Visual Basic) | Microsoft Docs"
+title: "Инициализаторы коллекций (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,16 +32,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: 4b0abe2c6356370584356dce1c6fc5731d735810
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="collection-initializers-visual-basic" class="xliff"></a>
-
-# Инициализаторы коллекций (Visual Basic)
+# <a name="collection-initializers-visual-basic"></a>Инициализаторы коллекций (Visual Basic)
 *Инициализаторы набора* предлагают сокращенный синтаксис для создания коллекций и заполнения их начальным набором значений. Инициализаторы набора полезны при создании коллекции из набора известных значений и ее последующей проверки. Это может быть список команд меню или категорий, исходный набор числовых значений, статический список строк, например названий дней или месяцев либо географических расположений (список штатов), и многое другое.  
   
  Более подробную информацию о коллекциях см. в статье [Коллекции](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
@@ -53,9 +51,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 >  Инициализаторы набора также доступны в C#. Инициализаторы набора в C# предлагают те же функциональные возможности, что и в Visual Basic. Подробнее об инициализаторах набора C# см. в разделе [Инициализаторы объекта и набора](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
-<a id="syntax" class="xliff"></a>
-
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
  Инициализатор набора состоит из списка разделенных запятыми и заключенных в фигурные скобки (`{}`) значений, которым предшествует ключевое слово `From`, как показано в следующем примере кода.  
   
  [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]  
@@ -67,9 +63,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 >  Не допускается одновременно использовать инициализатор и набора и объекта для инициализации одного и того же объекта коллекции. Инициализаторы объекта можно использовать для инициализации объектов в инициализаторе набора.  
   
-<a id="creating-a-collection-by-using-a-collection-intializer" class="xliff"></a>
-
-## Создание коллекции с помощью инициализатора набора  
+## <a name="creating-a-collection-by-using-a-collection-intializer"></a>Создание коллекции с помощью инициализатора набора  
  При создании коллекции с помощью инициализатора набора каждое указываемое в инициализаторе значение передается в соответствующий метод `Add` коллекции. Например, при создании <xref:System.Collections.Generic.List%601> с помощью инициализатора набора строковое значение в инициализаторе передается методу <xref:System.Collections.Generic.List%601.Add%2A>. Если вы хотите создать коллекцию с помощью инициализатора набора, следует указать допустимый тип коллекции. Примеры допустимых типов коллекций — классы, которые реализуют интерфейс <xref:System.Collections.Generic.IEnumerable%601> или наследуют от класса <xref:System.Collections.CollectionBase>. Указанный тип должен также предоставлять метод `Add`, отвечающий следующим условиям.  
   
 -   Метод `Add` должен быть доступен из области, в которой вызывается инициализатор набора. Если инициализатор набора применяется в сценарии, в котором допускается обращение к методам коллекции, не являющимся открытыми, метод `Add` не должен обязательно быть открытым.  
@@ -88,9 +82,7 @@ ms.lasthandoff: 07/03/2017
   
  Если метод `Add` коллекции имеет параметры, сопоставимые с конструктором объекта `Customer`, значения параметров для метода `Add` можно вложить в инициализаторы набора, как описывается в следующем разделе. Если у коллекции такого метода `Add` нет, его можно создать как метод расширения. Пример создания метода `Add` как метода расширения для коллекции см. в разделе [Практическое руководство. Создание метода расширения Add, используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Пример создания настраиваемой коллекции, которую можно использовать с инициализатором набора, см. в разделе [Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
-<a id="nesting-collection-initializers" class="xliff"></a>
-
-## Инициализаторы набора с вложениями  
+## <a name="nesting-collection-initializers"></a>Инициализаторы набора с вложениями  
  В инициализатор набора можно вкладывать значения, чтобы указать конкретную перегрузку метода `Add` для создаваемой коллекции. Значения, передаваемые методу `Add`, должны быть разделены запятыми и заключены в фигурные скобки (`{}`) так же, как в литерале массива или инициализаторе набора.  
   
  При создании коллекции с помощью вложенных значений каждый элемент списка вложенных значений передается в качестве аргумента методу `Add`, который соответствует типам элементов. В следующем примере кода создается коллекция <xref:System.Collections.Generic.Dictionary%602>, в которой ключи относятся к типу `Integer`, а значения — к типу `String`. Каждый из списков вложенных значений сопоставляется с методом <xref:System.Collections.Generic.Dictionary%602.Add%2A> для `Dictionary`.  
@@ -103,18 +95,14 @@ ms.lasthandoff: 07/03/2017
   
  Методу `Add` типа коллекции передаются только списки вложенных значений первого уровня вложения. Более глубокие уровни вложения обрабатываются как литералы массива, а списки вложенных значений не сопоставляются с методом `Add` ни в одной из коллекций.  
   
-<a id="related-topics" class="xliff"></a>
-
-## Связанные разделы  
+## <a name="related-topics"></a>Связанные разделы  
   
 |Заголовок|Описание|  
 |---|---|  
 |[Практическое руководство. Создание метода расширения Add, используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Описывает создание метода расширения `Add`, который можно использовать для заполнения коллекции значениями из инициализатора набора.|  
 |[Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Описывает, как активировать использование инициализатора набора, включив метод `Add` в класс коллекции, реализующий `IEnumerable`.|  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [Коллекции](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
  [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
  [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   

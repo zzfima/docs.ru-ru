@@ -1,5 +1,5 @@
 ---
-title: "Строки в Visual Basic | Microsoft Docs"
+title: "Строки в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3bfb94cf3b3e40164ccd9ff6021e1b624c963039
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05cb6db768779895ebf3e57a0feb7bb58c65fc2a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-in-visual-basic" class="xliff"></a>
-
-# Строки в Visual Basic
+# <a name="strings-in-visual-basic"></a>Строки в Visual Basic
 В этом разделе описываются основные принципы использования строк в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
  [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  Описание основных принципов использования строк в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -64,7 +60,6 @@ ms.lasthandoff: 05/26/2017
  [Пошаговое руководство. Шифрование и расшифровка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Показывает, как шифровать и расшифровывать строки с помощью алгоритма Triple DES в версии поставщика служб шифрования.  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [Возможности и элементы языка Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)
+
