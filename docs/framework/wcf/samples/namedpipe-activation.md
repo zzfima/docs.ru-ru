@@ -1,0 +1,234 @@
+---
+title: "Активация NamedPipe | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
+caps.latest.revision: 28
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 28
+---
+# Активация NamedPipe
+Этот пример демонстрирует размещение службы, которая использует службу активации Windows \(WAS\), чтобы активировать службу, которая взаимодействует через именованные каналы.  Этот пример основан на примере [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md) и для выполнения требует [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+  
+> [!NOTE]
+>  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+  
+> [!IMPORTANT]
+>  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>   
+>  `<диск_установки>:\WF_WCF_Samples`  
+>   
+>  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>   
+>  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
+  
+## Подробные сведения об образце  
+ Пример содержит консольную программу клиента \(EXE\) и библиотеку службы \(DLL\), размещаемую в рабочем процессе, активируемом службой активации процесса Windows \(WAS\).  Действия клиента отображаются в окне консоли.  
+  
+ Служба реализует контракт, определяющий шаблон взаимодействия "запрос\-ответ".  Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции \(сложить, вычесть, умножить и разделить\), как это показано ниже в образце кода.  
+  
+```  
+[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
+public interface ICalculator  
+{  
+    [OperationContract]  
+    double Add(double n1, double n2);  
+    [OperationContract]  
+    double Subtract(double n1, double n2);  
+    [OperationContract]  
+    double Multiply(double n1, double n2);  
+    [OperationContract]  
+    double Divide(double n1, double n2);  
+}  
+```  
+  
+ Клиент осуществляет синхронные вызовы заданной математической операции, а реализация службы вычисляет и возвращает соответствующий результат.  
+  
+```  
+// Service class that implements the service contract.  
+public class CalculatorService : ICalculator  
+{  
+    public double Add(double n1, double n2)  
+    {  
+        return n1 + n2;  
+    }  
+    public double Subtract(double n1, double n2)  
+    {  
+        return n1 - n2;  
+    }  
+    public double Multiply(double n1, double n2)  
+    {  
+        return n1 * n2;  
+    }  
+    public double Divide(double n1, double n2)  
+    {  
+        return n1 / n2;  
+    }  
+}  
+  
+```  
+  
+ Образец использует изменяемую привязку `netNamedPipeBinding` без использования безопасности.  Привязка задается в файлах конфигурации для клиента и службы.  Тип привязки для службы задается в атрибуте `binding` элемента конечной точки, как показано в следующем образце конфигурации.  
+  
+ Если требуется использовать безопасную привязку именованного канала, измените настройку режима безопасности для требуемого параметра безопасности и снова запустите svcutil.exe на клиенте, чтобы получить обновленный файл конфигурации клиента.  
+  
+```  
+<system.serviceModel>  
+        <services>  
+            <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+               behaviorConfiguration="CalculatorServiceBehavior">  
+  
+        <!-- This endpoint is exposed at the base address provided by host: net.pipe://localhost/servicemodelsamples/service.svc  -->  
+        <endpoint address=""   
+                  binding="netNamedPipeBinding"  
+                  bindingConfiguration="Binding1"   
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+        <!-- the mex endpoint is explosed at net.pipe://localhost/servicemodelsamples/service.svc/mex -->  
+        <endpoint address="mex"  
+                  binding="mexNamedPipeBinding"  
+                  contract="IMetadataExchange" />  
+      </service>  
+        </services>      
+        <bindings>  
+            <netNamedPipeBinding>  
+                <binding name="Binding1" >  
+                    <security mode = "None">  
+                    </security>  
+                </binding >  
+            </netNamedPipeBinding>  
+        </bindings>  
+  
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
+    <behaviors>  
+      <serviceBehaviors>  
+        <behavior name="CalculatorServiceBehavior">  
+          <serviceMetadata />  
+          <serviceDebug includeExceptionDetailInFaults="False" />  
+        </behavior>  
+      </serviceBehaviors>  
+    </behaviors>  
+  
+  </system.serviceModel>  
+```  
+  
+ Информация конечной точки клиента настраивается, как показано в следующем образце кода.  
+  
+```  
+<system.serviceModel>  
+  
+    <client>  
+      <endpoint name=""  
+                          address="net.pipe://localhost/servicemodelsamples/service.svc"   
+                          binding="netNamedPipeBinding"   
+                          bindingConfiguration="Binding1"   
+                          contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+    </client>  
+  
+    <bindings>  
+  
+      <!--  Following is the expanded configuration section for a NetNamedPipeBinding.  
+            Each property is configured with the default value.   -->  
+  
+      <netNamedPipeBinding>  
+        <binding name="Binding1"   
+                         maxBufferSize="65536"  
+                         maxConnections="10">  
+          <security mode = "None">  
+          </security>  
+        </binding >  
+  
+      </netNamedPipeBinding>  
+    </bindings>  
+  
+  </system.serviceModel>  
+```  
+  
+ При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.  Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+  
+```  
+Add(100,15.99) = 115.99  
+Subtract(145,76.54) = 68.46  
+Multiply(9,81.25) = 731.25  
+Divide(22,7) = 3.14285714285714  
+  
+Press <ENTER> to terminate client.  
+```  
+  
+#### Настройка, сборка и выполнение образца  
+  
+1.  Убедитесь, что установлена платформа [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  Для активации WAS требуются службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+  
+2.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+  
+     Дополнительно установите компоненты активации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], работающие по протоколу, отличному от HTTP.  
+  
+    1.  В меню **Пуск** выберите **Панель управления**.  
+  
+    2.  Выберите **Программы и компоненты**.  
+  
+    3.  Нажмите кнопку **Вкл. или Выкл. компоненты Windows**.  
+  
+    4.  Разверните узел **Microsoft .NET Framework 3.0** и проверьте компонент **Активация Windows Communication Foundation с использованием протокола, отличного от HTTP**.  
+  
+3.  Настройка службы активации Windows \(WAS\) для поддержки активации именованных каналов.  
+  
+     Для удобства два нижеописанных действия выполняются в пакетном файле AddNetPipeSiteBinding.cmd, расположенном в каталоге с примерами.  
+  
+    1.  Чтобы поддерживать активацию по net.pipe, веб\-узел по умолчанию должен прежде быть привязан к протоколу net.pipe.  Сделать это позволяет файл Appcmd.exe, который устанавливается с помощью набора инструментов управления IIS 7.0.  В командной строке с повышенными привилегиями \(с правами администратора\) выполните следующую команду.  
+  
+        ```  
+        %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
+        -+bindings.[protocol='net.pipe',bindingInformation='*']  
+        ```  
+  
+        > [!NOTE]
+        >  Эта команда представляет собой одну строку текста.  
+  
+         Эта команда добавит для веб\-сайта по умолчанию привязку сайта к протоколу net.pipe.  
+  
+    2.  Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.pipe, включать поддержку net.pipe можно для каждого приложения отдельно.  Чтобы включить протокол net.pipe для приложения \/servicemodelsamples, необходимо выполнить следующую команду из командной строки с повышенными привилегиями.  
+  
+        ```  
+        %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe  
+        ```  
+  
+        > [!NOTE]
+        >  Эта команда представляет собой одну строку текста.  
+  
+         Эта команда позволяет осуществлять доступ к приложению \/servicemodelsamples как по адресу http:\/\/localhost\/servicemodelsamples, так и по адресу net.tcp:\/\/localhost\/servicemodelsamples.  
+  
+4.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+  
+5.  Удалите привязку узла к протоколу net.pipe, добавленную ранее для этого образца.  
+  
+     Для удобства выполняются два следующих действия в пакетном файле RemoveNetPipeSiteBinding.cmd, расположенном в каталоге с образцами.  
+  
+    1.  Удалите протокол net.tcp из списка включенных протоколов, выполнив следующую команду из командной строки с повышенными привилегиями.  
+  
+        ```  
+        %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
+        ```  
+  
+        > [!NOTE]
+        >  Эта команда вводится как одна строка текста.  
+  
+    2.  Удалите привязку узла к протоколу net.tcp, выполнив следующую команду из командной строки с повышенными привилегиями.  
+  
+        ```  
+        %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']  
+        ```  
+  
+        > [!NOTE]
+        >  Эта команда должна вводиться как одна строка текста.  
+  
+## См. также  
+ [Образцы размещения и сохраняемости фабрики приложений](http://go.microsoft.com/fwlink/?LinkId=193961)

@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51cce0d7ffd4806365600ee93d57806af96f08a8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 9ba49d25f9e31fc0fcceff5f213a6df703fd41e2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)
-В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> для создания регулярного выражения для более сложных сопоставлений в текстовых строках. Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.  
+В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках. Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.  
   
 ## <a name="example"></a>Пример  
   
@@ -36,18 +37,16 @@ class QueryWithRegEx
     public static void Main()  
     {  
         // Modify this path as necessary so that it accesses your version of Visual Studio.  
-        string startFolder = @"c:\program files\Microsoft Visual Studio 9.0\";  
+        string startFolder = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\";  
         // One of the following paths may be more appropriate on your computer.  
-        //string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 9.0\";  
-        //string startFolder = @"c:\program files\Microsoft Visual Studio 10.0\";  
-        //string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 10.0\";  
+        //string startFolder = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\";  
   
         // Take a snapshot of the file system.  
         IEnumerable<System.IO.FileInfo> fileList = GetFiles(startFolder);  
   
         // Create the regular expression to find all things "Visual".  
         System.Text.RegularExpressions.Regex searchTerm =  
-            new System.Text.RegularExpressions.Regex(@"Visual (Basic|C#|C\+\+|J#|SourceSafe|Studio)");  
+            new System.Text.RegularExpressions.Regex(@"Visual (Basic|C#|C\+\+|Studio)");  
   
         // Search the contents of each .htm file.  
         // Remove the where clause to find even more matchedValues!  
@@ -111,7 +110,7 @@ class QueryWithRegEx
 }  
 ```  
   
- Обратите внимание, что также можно запрашивать объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`. В этом примере в результатах создается только значение каждого совпадения. Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции. Поскольку <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указывать тип переменной диапазона в запросе.  
+ Обратите внимание, что можно также запросить объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`. В этом примере в результатах создается только значение каждого совпадения. Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции. Так как <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указать тип переменной диапазона в запросе.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
@@ -119,3 +118,4 @@ class QueryWithRegEx
 ## <a name="see-also"></a>См. также  
  [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

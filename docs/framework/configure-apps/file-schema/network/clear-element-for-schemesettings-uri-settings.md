@@ -1,0 +1,89 @@
+---
+title: "Элемент &lt;clear&gt; для schemeSettings (параметры URI) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
+caps.latest.revision: 7
+author: "mcleblanc"
+ms.author: "markl"
+manager: "markl"
+caps.handback.revision: 7
+---
+# Элемент &lt;clear&gt; для schemeSettings (параметры URI)
+Удаляет все существующие параметры схемы.  
+  
+## Синтаксис  
+  
+```  
+  
+<clear/>  
+  
+```  
+  
+## Атрибуты и элементы  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+  
+### Атрибуты  
+ Нет.  
+  
+### Дочерние элементы  
+ Нет.  
+  
+### Родительские элементы  
+  
+|Элемент|Описание|  
+|-------------|--------------|  
+|[Элемент \<schemeSettings\> \(параметры URI\)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Указывает, как <xref:System.Uri> будет анализироваться по конкретным схемам.|  
+  
+## Заметки  
+ По умолчанию класс <xref:System.Uri?displayProperty=fullName> разэкранирует закодированные знаками процента разделители путей до выполнения сжатия пути.  Это было реализовано следующим образом, как механизм обеспечения безопасности от атак:  
+  
+ `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
+  
+ Если этот URI передается вниз к модулям, не обрабатывающим корректно символы, закодированные знаками процента, это может привести к выполнению сервером следующей команды:  
+  
+ `c:\Windows\System32\cmd.exe /c dir c:\`  
+  
+ По этой причине класс <xref:System.Uri?displayProperty=fullName> сначала разэкранирует разделители пути, а затем применяет сжатие пути.  Результат передачи вредоносного URL\-адреса выше в конструктор класса <xref:System.Uri?displayProperty=fullName> приводит к следующему виду универсального кода ресурса \(URI\):  
+  
+ `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
+  
+ Это поведение по умолчанию может быть изменено так, чтобы закодированные знаками процента разделители пути не разэкранировались; для этого к конкретной схеме следует применить параметр конфигурации schemeSettings.  
+  
+## Файлы конфигурации  
+ Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+  
+## Пример  
+ В следующем примере кода показывается конфигурация, используемая классом <xref:System.Uri>, которая очищает все параметры схемы, а затем добавляет поддержку отмены использования процентных escape\-символов для разделителей пути в схеме HTTP.  
+  
+```  
+<configuration>  
+  <uri>  
+    <schemeSettings>  
+      <clear/>  
+      <add name="http" genericUriParserOptions="DontUnescapePathDotsAndSlashes"/>  
+    </schemeSettings>  
+  </uri>  
+</configuration>  
+```  
+  
+## См. также  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
+ <xref:System.Configuration.UriSection?displayProperty=fullName>   
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
+ <xref:System.GenericUriParserOptions?displayProperty=fullName>   
+ <xref:System.Uri?displayProperty=fullName>   
+ [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

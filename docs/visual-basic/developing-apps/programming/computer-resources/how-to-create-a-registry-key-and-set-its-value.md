@@ -1,87 +1,104 @@
 ---
-title: "Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "RegistryKey.CreateSubKey"
-  - "RegistryKey.SetValue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "примеры [Visual Basic], реестр"
-  - "разделы реестра, создание"
-  - "разделы реестра, значения параметра"
-  - "реестр, добавление разделов"
-  - "реестр, добавление значений"
+title: "Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic | Документы Майкрософт"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- RegistryKey.CreateSubKey
+- RegistryKey.SetValue
+dev_langs:
+- VB
+helpviewer_keywords:
+- registry keys, creating
+- registry, adding values
+- registry, adding keys
+- registry keys, setting values
+- examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
----
-# Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 28a01911dc715483aee8191972387781a6f1933e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
-Метод `CreateSubKey` объекта `My.Computer.Registry` позволяет создать раздел реестра.  
+---
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Практическое руководство. Создание раздела реестра и задание его значения в Visual Basic
+Метод `CreateSubKey` объекта `My.Computer.Registry` можно использовать для создания раздела реестра.  
   
-## Процедура  
+## <a name="procedure"></a>Процедура  
   
-#### Создание раздела реестра  
+#### <a name="to-create-a-registry-key"></a>Создание раздела реестра  
   
--   Используйте метод `CreateSubKey`, задав куст, в который нужно поместить раздел, а также имя раздела.  Параметр `Subkey` нечувствителен к регистру.  В этом примере создается раздел реестра `MyTestKey` в HKEY\_CURRENT\_USER.  
-  
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
-  
-#### Создание раздела реестра и установка его значения  
-  
-1.  Используйте метод `CreateSubkey`, задав куст, в который нужно поместить раздел, а также имя раздела.  В этом примере создается раздел реестра `MyTestKey` в HKEY\_CURRENT\_USER.  
+-   Используйте метод `CreateSubKey`, задав куст, в который нужно поместить раздел, а также имя раздела. Параметр `Subkey` нечувствителен к регистру. В этом примере создается раздел реестра `MyTestKey` в HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
-2.  Установка значения с помощью метода `SetValue`.  В этом примере строке "  MyTestKeyValue" присваивается значение "Это тестовое значение".  
+#### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Создание раздела реестра и задание его значения  
+  
+1.  Используйте метод `CreateSubkey`, задав куст, в который нужно поместить раздел, а также имя раздела. В этом примере создается раздел реестра `MyTestKey` в HKEY_CURRENT_USER.  
+  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
+  
+2.  Задайте значение с помощью метода `SetValue`. В этом примере строке " MyTestKeyValue" присваивается значение "Это тестовое значение".  
   
      [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
   
-## Пример  
- В этом примере создается раздел реестра `MyTestKey`в HKEY\_CURRENT\_USER, а затем строке `MyTestKeyValue` присваивается значение `This is a test value`.  
+## <a name="example"></a>Пример  
+ В этом примере создается раздел реестра `MyTestKey` в HKEY_CURRENT_USER, а затем строке `This is a test value` задается значение `MyTestKeyValue`.  
   
  [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
   
-## Отказоустойчивость  
- Исследуйте структуру реестра и найдите подходящее место для создания раздела.  Например, можно открыть раздел HKEY\_CURRENT\_USER\\Software для текущего пользователя и создать в нем подраздел с названием компании,  а затем добавить значения для этого подраздела.  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ Проверьте структуру реестра и найдите подходящее место для ключа. Для этого можно, например, открыть раздел HKEY_CURRENT_USER\Software текущего пользователя и создать раздел с названием вашей компании. Затем добавьте в ключ компании значения реестра.  
   
- При чтении реестра из веб\-приложения то, какой пользователь будет считаться текущим, зависит от проверки подлинности и олицетворения, реализованных в веб\-приложении.  
+ При чтении реестра из веб-приложения текущий пользователь зависит от проверки подлинности и олицетворения, реализованных в веб-приложении.  
   
- Безопаснее записывать данные в ветку текущего пользователя \(<xref:Microsoft.Win32.Registry.CurrentUser>\), чем в ветку локального компьютера \(<xref:Microsoft.Win32.Registry.LocalMachine>\).  
+ Безопаснее записывать данные в папку пользователя (<xref:Microsoft.Win32.Registry.CurrentUser>), чем на локальный компьютер (<xref:Microsoft.Win32.Registry.LocalMachine>).  
   
- При создании значения реестра следует решить, что делать, если такое значение уже есть.  Есть вероятность, что другой процесс, возможно вредоносный, уже создал это значение и имеет к нему доступ.  При добавлении данных в значение реестра они становятся доступными другим процессам.  Для предотвращения этого используется метод <xref:Microsoft.Win32.RegistryKey.GetValue%2A>.  Он возвращает `Nothing`, если данный раздел не существует.  
+ Создавая значение реестра, необходимо решить, что делать, если это значение уже существует. Другой процесс (возможно, вредоносный) мог уже создать это значение и получить к нему доступ. Данные, добавленные в значение реестра, становятся доступными для другого процесса. Чтобы этого избежать, используйте метод <xref:Microsoft.Win32.RegistryKey.GetValue%2A>. Он возвращает `Nothing`, если данный раздел еще не существует.  
   
- Небезопасно хранить секретные данные, например пароли, в реестре обычным текстом, даже если раздел реестра защищен ACL \(списком управления доступом\)  
+ Хранить секретные данные, например пароли, в реестре обычным текстом небезопасно, даже если раздел реестра защищен ACL (списком управления доступом).  
   
- При следующих условиях возможно возникновение исключения.  
+ При следующих условиях возможно возникновение исключения:  
   
--   Имя раздела представляет собой значение `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   Имя раздела — `Nothing` (<xref:System.ArgumentNullException>).  
   
--   У пользователя отсутствуют разрешения на создание разделов реестра \(<xref:System.Security.SecurityException>\).  
+-   У пользователя нет разрешения на создание разделов реестра (<xref:System.Security.SecurityException>).  
   
--   Длина имени раздела превышает ограничение в 255 знаков \(<xref:System.ArgumentException>\).  
+-   Имя раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
--   Раздел является закрытым \(<xref:System.IO.IOException>\).  
+-   Раздел является закрытым (<xref:System.IO.IOException>).  
   
--   Раздел реестра доступен только для чтения \(<xref:System.UnauthorizedAccessException>\).  
+-   Раздел реестра доступен только для чтения (<xref:System.UnauthorizedAccessException>).  
   
-## Безопасность платформы .NET Framework  
- Для выполнения этого процесса сборке требуется уровень привилегий, предоставляемых классом <xref:System.Security.Permissions.RegistryPermission>.  Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из\-за недостатка привилегий.  Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров.  Например, локальное приложение, имеющее разрешение управления доступом для кода, может не иметь разрешения операционной системы.  Дополнительные сведения см. в разделе [Code Access Security Basics](../Topic/Code%20Access%20Security%20Basics.md).  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+ Для запуска этого процесса сборке нужен уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
  <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   
- [Чтение данных из реестра и запись в реестр](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
- [Code Access Security Basics](../Topic/Code%20Access%20Security%20Basics.md)
+ [Чтение данных из реестра и запись в реестр (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+ [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8)

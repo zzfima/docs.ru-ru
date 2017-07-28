@@ -4,16 +4,17 @@ description: "Команда dotnet-sln предоставляет удобны�
 keywords: "dotnet-sln, CLI, команда CLI, .NET Core"
 author: spboyer
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 04/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7d7f0864ee1641627c4a55192d81ed76f2f44450
+ms.openlocfilehash: 0a832765d01609aebd10b13387a4317a6a246c30
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -27,9 +28,9 @@ ms.lasthandoff: 03/22/2017
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
@@ -42,13 +43,13 @@ dotnet sln [-h|--help]
 
 `add <PROJECT> ...`
 
-`add **/*`
+`add <GLOBBING_PATTERN>`
 
 Добавляет один или несколько проектов в файл решений. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.
 
 `remove <PROJECT> ...`
 
-`remove **/*`
+`remove <GLOBBING_PATTERN>`
 
 Удаляет один или несколько проектов из файла решений. [Стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) поддерживаются в терминалах на основе Unix или Linux.
 
@@ -70,19 +71,27 @@ dotnet sln [-h|--help]
 
 ## <a name="examples"></a>Примеры
 
-Добавление проекта в решение:
+Добавление проекта C# в решение:
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-Добавление проекта в решение в текущем каталоге:
-
-`dotnet sln add todo-app.csproj`
-
-Удаление проекта из решения:
+Удаление проекта C# из решения:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Добавление нескольких проектов в решение с помощью стандартной маски:
+Добавление нескольких проектов C# в решение:
 
-`dotnet sln add **/**/*.fsproj`
+`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+
+Удаление нескольких проектов C# из решения:
+
+`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+
+Добавление нескольких проектов C# в решение с помощью шаблона глобализации:
+
+`dotnet sln todo.sln add **/*.csproj`
+
+Удаление нескольких проектов C# из решения с помощью шаблона глобализации:
+
+`dotnet sln todo.sln remove **/*.csproj`
 

@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: fa8c02a6521b65e2cc4f7c8d779c1091ce399fba
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /main:class  
 ```  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
  Скомпилируйте `t2.cs` и `t3.cs`, указав, что метод **Main** будет находиться в `Test2`:  
   
-```  
+```console  
 csc t2.cs t3.cs /main:Test2  
 ```  
   

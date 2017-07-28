@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 60a6322f8e120c6a443638b4f6e409acdfa0b235
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/13/2017
  Событие может быть помечено как виртуальное событие с помощью ключевого слова [virtual](../../../csharp/language-reference/keywords/virtual.md). Это позволяет производным классам переопределять поведение события с помощью ключевого слова [override](../../../csharp/language-reference/keywords/override.md). Дополнительные сведения см. в разделе [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md). Событие, переопределяющее виртуальное событие, также может быть запечатанным ([sealed](../../../csharp/language-reference/keywords/sealed.md)), что указывает, что для производных классов оно больше не является виртуальным. И наконец, можно объявить событие абстрактным ([abstract](../../../csharp/language-reference/keywords/abstract.md)), что означает, что компилятор не будет создавать блоки доступа к событиям `add` и `remove`. Поэтому производные классы должны предоставлять собственную реализацию.  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по C#](../../../csharp/language-reference/index.md)   

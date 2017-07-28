@@ -1,0 +1,1 @@
+IFD (image file directory — каталог файла изображения)

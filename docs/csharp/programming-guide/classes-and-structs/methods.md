@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e44ef58e85fee164ab3b8be73a35083bd44c5df1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Методы (Руководство по программированию на C#)
@@ -111,22 +112,21 @@ static void Main(string[] args)
                 }  
             }  
         }  
-  
 ```  
   
- Дополнительные сведения см. в разделе [return](../../../csharp/language-reference/keywords/return.md).  
+ Для получения дополнительной информации см. [return](../../../csharp/language-reference/keywords/return.md).  
   
 ## <a name="async-methods"></a>Асинхронные методы  
- С помощью функции async можно вызывать асинхронные методы, не прибегая к использованию явных обратных вызовов или ручному разделению кода между несколькими методами или лямбда-выражениями. Функция async появилась в [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)].  
+ С помощью функции async можно вызывать асинхронные методы, не прибегая к использованию явных обратных вызовов или ручному разделению кода между несколькими методами или лямбда-выражениями. 
   
- Если пометить метод с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md), можно использовать в этом методе оператор [await](../../../csharp/language-reference/keywords/await.md). Когда управление достигает выражения await в асинхронном методе, управление возвращается вызывающему объекту и выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи можно возобновить выполнение в методе.  
+ Если пометить метод с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md) , можно использовать в этом методе инструкцию [await](../../../csharp/language-reference/keywords/await.md) . Когда управление достигает выражения await в асинхронном методе, управление возвращается вызывающему объекту и выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи можно возобновить выполнение в методе.  
   
 > [!NOTE]
 >  Асинхронный метод возвращается в вызывающий объект, когда он встречает первый ожидаемый объект, выполнение которого еще не завершено, или когда выполнение асинхронного метода доходит до конца — в зависимости от того, что происходит раньше.  
   
- Асинхронный метод может иметь тип возвращаемого значения <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> или void. Тип возврата void в основном используется для определения обработчиков событий, где требуется тип возврата void. Асинхронный метод, который возвращает тип void, не может быть ожидающим. Вызывающий объект метода, возвращающего значение типа void, не может перехватывать исключения, которые выдает этот метод.  
+ Асинхронный метод может иметь тип возврата <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> или void. Тип возврата void в основном используется для определения обработчиков событий, где требуется тип возврата void. Асинхронный метод, который возвращает тип void, не может быть ожидающим. Вызывающий объект метода, возвращающего значение типа void, не может перехватывать исключения, которые выдает этот метод.  
   
- В следующем примере `DelayAsync` является асинхронным методом с типом возвращаемого значения <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `return`, которая возвращает целое число. Поэтому объявление метода `DelayAsync` должно иметь тип возврата `Task<int>`. Поскольку тип возврата — `Task<int>`, вычисление выражения `await` в `DoSomethingAsync` создает целое число, как показывает следующая инструкция: `int result = await delayTask`.  
+ В следующем примере `DelayAsync` является асинхронным методом с типом возврата <xref:System.Threading.Tasks.Task%601>. `DelayAsync` имеет инструкцию `return`, которая возвращает целое число. Поэтому объявление метода `DelayAsync` должно иметь тип возврата `Task<int>`. Поскольку тип возврата — `Task<int>`, вычисление выражения `await` в `DoSomethingAsync` создает целое число, как показывает следующая инструкция: `int result = await delayTask`.  
   
  В следующем примере метод `startButton_Click` служит примером асинхронного метода с типом возврата void. Поскольку `DoSomethingAsync` является асинхронным методом, задача для вызова `DoSomethingAsync` должна быть ожидаемой, как показывает следующая инструкция: `await DoSomethingAsync();`. Метод `startButton_Click` должен быть определен с модификатором `async` , так как этот метод имеет выражение `await` .  
   
@@ -151,16 +151,16 @@ public Customer this[long id] => store.LookupCustomer(id);
  Если метод возвращает `void` или является асинхронным методом, то текст метода должен быть выражением инструкции (так же, как при использовании лямбда-выражений).  Свойства и индексаторы должны быть только для чтения, и вы не должны использовать ключевое слово `get` метода доступа.  
   
 ## <a name="iterators"></a>Итераторы  
- Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для возврата всех элементов по одному. Когда достигается оператор [yield return](../../../csharp/language-reference/keywords/yield.md), текущее расположение в коде запоминается. При следующем вызове итератора выполнение возобновляется с этого места.  
+ Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует инструкцию [yield return](../../../csharp/language-reference/keywords/yield.md) для возврата всех элементов по одному. Когда достигается инструкция [yield return](../../../csharp/language-reference/keywords/yield.md) , текущее расположение в коде запоминается. При следующем вызове итератора выполнение возобновляется с этого места.  
   
- Итератор вызывается из клиентского кода с помощью оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md) .  
+ Итератор вызывается из клиентского кода с помощью инструкции [foreach](../../../csharp/language-reference/keywords/foreach-in.md) .  
   
- Тип возвращаемого значения итератора может быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.  
+ Тип возврата итератора может быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.  
   
  Дополнительные сведения см. в разделе [Итераторы](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
@@ -174,3 +174,4 @@ public Customer this[long id] => store.LookupCustomer(id);
  [out](../../../csharp/language-reference/keywords/out.md)   
  [ref](../../../csharp/language-reference/keywords/ref.md)   
  [Передача параметров](passing-parameters.md)
+

@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 353abf8a0c852acbbb2949f9640c1465dec8593b
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -72,6 +73,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
  В предыдущих примерах показано, что происходит при передаче типов значений по ссылке. Можно также использовать ключевое слово `ref` для передачи ссылочных типов. Передача ссылочного типа по ссылке позволяет вызываемому методу изменять объект, на который указывает ссылочный параметр. Место хранения объекта передается методу в качестве значения ссылочного параметра. Если изменить место хранения параметра (с указанием на новый объект), необходимо изменить место хранения, на который ссылается вызывающий объект. В следующем примере экземпляр ссылочного типа передается как параметр `ref`. Дополнительные сведения о передаче ссылочных типов по значению и по ссылке см. в разделе [Передача параметров ссылочного типа](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).  
   
+
  [!code-cs[csrefKeywordsMethodParams#8](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  

@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="join-clause-c-reference"></a>Предложение join (Справочник по C#)
@@ -88,7 +89,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Соединения коллекций объектов и реляционных таблиц  
  В выражении запроса [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] операции соединения выполняются для коллекций объектов. Коллекции объектов нельзя "соединять" точно так же, как две реляционные таблицы. В [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] явные предложения `join` требуются, только если две исходные последовательности не связаны каким-либо отношением. При работе с [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] таблицы внешних ключей представлены в объектной модели как свойства основной таблицы. Например, в базе данных Northwind таблица Customer имеет связь типа "внешний ключ" с таблицей Orders. При сопоставлении таблиц с объектной моделью класс Customer имеет свойство Orders, содержащий коллекцию заказов, связанных с клиентом. Фактически соединение уже выполнено автоматически.  
   
- Дополнительные сведения о создании запросов по связанным таблицам в контексте [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] см. в разделе [Практическое руководство. Сопоставление связей баз данных](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af).  
+ Дополнительные сведения о создании запросов по связанным таблицам в контексте [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] см. в разделе [Практическое руководство. Сопоставление связей баз данных](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
 ## <a name="composite-keys"></a>Составные ключи  
  Равенство нескольких значений можно проверить с помощью составного ключа. Дополнительные сведения см. в разделе [Практическое руководство. Соединение с помощью составных ключей](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). Составные ключи можно также использовать в предложении `group`.  

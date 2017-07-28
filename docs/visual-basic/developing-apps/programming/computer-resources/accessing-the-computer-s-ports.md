@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 20e04ca70444de99076d3d59f98f19ee862a244a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
@@ -64,8 +65,8 @@ ms.lasthandoff: 03/13/2017
  Описание свойства `SerialPortNames`, которое получает коллекцию имен последовательных портов на компьютере.  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Описание метода `OpenSerialPort`, который создает и открывает объект <xref:System.IO.Ports.SerialPort?displayProperty=fullName>.  
+ Описывает метод `OpenSerialPort`, который создает и открывает объект <xref:System.IO.Ports.SerialPort?displayProperty=fullName>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  <xref:System.IO.Ports.SerialPort>  
- Описание класса .NET Framework <xref:System.IO.Ports.SerialPort>.
+ Описывает класс <xref:System.IO.Ports.SerialPort> платформы .NET Framework.

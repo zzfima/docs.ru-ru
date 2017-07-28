@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e68cde6d56d4de584861b8bcf29e072a5fc18928
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Практическое руководство. Чтение значения из раздела реестра в Visual Basic
@@ -68,14 +69,14 @@ ms.lasthandoff: 03/13/2017
   
  При следующих условиях возможно возникновение исключения:  
   
--   Имя раздела переставляет собой значение `Nothing` (<xref:System.ArgumentNullException>).  
+-   Имя ключа имеет значение `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Пользователь не имеет разрешения на чтение разделов реестра (<xref:System.Security.SecurityException>).  
+-   У пользователя нет разрешений на создание разделов реестра (<xref:System.Security.SecurityException>).  
   
--   Длина имени раздела превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
+-   Имя ключа превышает ограничение в 255 символов (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Для выполнения этого процесса сборке требуется уровень привилегий, предоставляемых классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8).  
+ Для запуска этого процесса сборке нужен уровень привилегий, предоставляемый классом <xref:System.Security.Permissions.RegistryPermission>. Если процесс выполняется в контексте с частичным доверием, он может сгенерировать исключение из-за недостатка привилегий. Аналогичным образом пользователь должен иметь правильные ACL для создания и записи параметров. Например, локальное приложение, имеющее разрешение на доступ к коду, может не иметь разрешения операционной системы. Дополнительные сведения см. в разделе [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8).  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   

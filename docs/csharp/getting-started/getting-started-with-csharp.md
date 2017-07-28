@@ -30,13 +30,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="getting-started-with-c"></a>Начало работы с C##
+# <a name="getting-started-with-c"></a>Начало работы с C#
 Перечисленные здесь разделы будут полезны для тех, кто начинает разработку приложений на C#. В этих разделах также содержатся общие сведения о множестве новых возможностей в Visual Studio и языке C#.  
   
 ## <a name="in-this-section"></a>Содержание  
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/28/2017
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Использование среды разработки Visual Studio для C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Предоставляет руководство по использованию интегрированной среды разработки [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Предоставляет руководство по использованию интегрированной среды разработки [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Руководство по программированию на C#](../../csharp/programming-guide/index.md)  
  Содержит сведения о понятиях программирования C# и описание выполнения различных задач на C#.  

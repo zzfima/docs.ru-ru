@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4673690c95d1a1fcea950db272cf0685a9d4c888
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 5cce6b538e27f654c1f4fec732a9c69372f8c9ad
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -170,8 +171,7 @@ BlockExpression body = Expression.Block(
 
 Код для создания дерева выражения для функции факториала немного больше, более сложен и содержит операторы меток и прерываний и другие элементы, использования которых хотелось бы избежать при выполнении ежедневных задач по созданию кода. 
 
-Для работы в этом разделе также обновлен код посетителя для просмотра каждого узла в этом дереве выражения и записи сведений об узлах, созданных в этом примере. Код можно просмотреть в [разделе примеров](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees).
-Вы можете поэкспериментировать самостоятельно: постройте дерево и выполните примеры.
+Для работы в этом разделе также обновлен код посетителя для просмотра каждого узла в этом дереве выражения и записи сведений об узлах, созданных в этом примере. [Просмотреть или скачать пример кода](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) можно в репозитории dotnet/docs на сайте GitHub. Поэкспериментируйте со сборкой и использованием примеров кода. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Изучение API-интерфейсов
 

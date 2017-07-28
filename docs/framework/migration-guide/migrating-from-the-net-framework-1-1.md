@@ -32,7 +32,7 @@ ms.lasthandoff: 04/18/2017
   
 -   Можно перенацелить приложение для запуска в платформе [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Для изменения целевой платформы необходимо добавить в файл конфигурации приложения элемент [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), который позволит приложению запускаться в платформе [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Такой файл конфигурации имеет следующий вид:  
   
-    ```  
+    ```xml  
     <configuration>   
        <startup>  
           <supportedRuntime version="v4.0"/>  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="breaking-changes"></a>Критические изменения  
  Когда происходит критическое изменение, обходной путь может быть доступен как для перенацеленных, так и для перекомпилированных приложений (в зависимости от конкретного изменения). В некоторых случаях для восстановления предыдущего поведения в элемент [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) файла конфигурации приложения можно добавить дочерний элемент. Например, следующий файл конфигурации восстанавливает режим сортировки и сравнения строк, используемый в [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)], и может применяться с перенацеленным или перекомпилированным приложением.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <CompatSortNLSVersion enabled="4096"/>  

@@ -31,18 +31,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31cf21a3db5f5fc7ad980765cb54041c0e99c24b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 1cc54088723bf8a7ff644cc418dd4f6212fc91f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-basic-language-features"></a>Возможности и элементы языка Visual Basic
-В следующих разделах описываются и обсуждаются основные компоненты объектно-ориентированного языка программирования [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. Как и любой современный язык программирования, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] поддерживает несколько привычных программных конструкций и элементов языка.  
+В следующих разделах описываются и обсуждаются основные компоненты объектно-ориентированного языка программирования [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. Как и любой современный язык программирования, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] поддерживает несколько привычных программных конструкций и элементов языка.  
   
- Если у вас есть опыт программирования на других языках, большая часть материала этой статьи покажется вам знакомой. Большинство конструкций похожи на те, что вы встречаются в других языках, но ориентированность [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] на события диктует некоторые незначительные отличия.  
+ Если у вас есть опыт программирования на других языках, большая часть материала этой статьи покажется вам знакомой. Большинство конструкций похожи на те, что вы встречаются в других языках, но ориентированность [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] на события диктует некоторые незначительные отличия.  
   
- Если вы пока новичок в программировании, материал этой статьи поможет вам понять основные принципы создания кода. Хорошо разобравшись с основами, вы сразу сможете создавать мощные приложения на [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Если вы пока новичок в программировании, материал этой статьи поможет вам понять основные принципы создания кода. Хорошо разобравшись с основами, вы сразу сможете создавать мощные приложения на [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="in-this-section"></a>Содержание  
  [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -79,7 +80,7 @@ ms.lasthandoff: 03/13/2017
  Описывает, что такое интерфейсы и как их можно использовать в приложениях.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Содержит ссылки на разделы, описывающие возможности [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)] и его использование в программах.  
+ Содержит ссылки на разделы, описывающие возможности [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] и его использование в программах.  
   
  [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Описывает объекты и классы, методы их использования и взаимоотношения, а также предоставляемые ими свойства, методы и события.  
@@ -107,4 +108,4 @@ ms.lasthandoff: 03/13/2017
  Описывает некоторые типы коллекций, предоставляемых платформой .NET Framework. Демонстрирует использование простых коллекций и коллекций с парами "ключ — значение".  
   
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  
- Содержит справочные сведения о различных аспектах программирования на [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].
+ Содержит справочные сведения о различных аспектах программирования на [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].

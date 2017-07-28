@@ -1,6 +1,6 @@
 ---
 title: "ulong (справочник по C#) | Документы Майкрософт"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36de0add1d7fdf58745c65d231f3789c532ab69f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (справочник по C#)
+
 Ключевое слово `ulong` обозначает целочисленный тип данных, в котором хранятся значения, размер и диапазон которых приведен в следующей таблице.  
   
 |Тип|Диапазон|Размер|Тип платформы .NET Framework|  
@@ -44,44 +46,43 @@ ms.lasthandoff: 03/13/2017
 |`ulong`|От 0 до 18 446 744 073 709 551 615|64-разрядное целое число без знака|<xref:System.UInt64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Литералы  
- Переменную типа `ulong` можно объявить и инициализировать, как показано в примере:  
+
+Переменную `ulong` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал.  Если целочисленный литерал не соответствует диапазону `ulong` (т. е. его значение меньше <xref:System.UInt64.MinValue?displayProperty=fullName> или больше <xref:System.UInt64.MaxValue?displayProperty=fullName>), возникает ошибка компиляции. 
+
+В следующем примере целые числа, равные 7 934 076 125 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, назначаются значениям `ulong`.  
   
-```  
-  
-ulong uLong = 9223372036854775808;  
-```  
-  
- Если целочисленный литерал не имеет суффикса, его тип — первый из этих типов, в котором может быть представлено его значение: [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), `ulong`. В приведенном выше примере таким типом является `ulong`.  
-  
- Суффиксы можно также использовать для задания типа литерала в соответствии со следующими правилами:  
-  
--   Если используется L или l, то в зависимости от размера литерал будет иметь целочисленный тип [long](../../../csharp/language-reference/keywords/long.md) или `ulong`.  
-  
-    > [!NOTE]
-    >  Строчную букву "l" можно использовать в качестве суффикса. Однако при этом выдается предупреждение компилятора, так как букву "l" легко перепутать с цифрой "1". Для ясности используйте "L".  
-  
--   Если используется `U` или `u`, в зависимости от размера литерал будет иметь целочисленный тип [uint](../../../csharp/language-reference/keywords/uint.md) или `ulong`.  
-  
--   Если используется UL, ul, Ul, uL, LU, lu, Lu или lU, литерал будет иметь целочисленный тип `ulong`.  
-  
-     Например, результатом использования трех следующих операторов будет системный тип `UInt64`, соответствующий псевдониму `ulong`:  
-  
-    ```  
-    Console.WriteLine(9223372036854775808L.GetType());  
-    Console.WriteLine(123UL.GetType());  
-    Console.WriteLine((123UL + 456).GetType());  
-    ```  
+[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+
+> [!NOTE] 
+> Для обозначения шестнадцатеричного литерала используйте префикс `0x` или `0X`, а для обозначения двоичного литерала — префикс `0b` или `0B`. У десятичных литералов префиксов нет. 
+
+Начиная с версии C# 7, для повышения удобочитаемости в качестве разделителя разрядов можно также использовать символ подчеркивания (`_`), как показано в следующем примере.
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ Целочисленные литералы могут также содержать суффикс, обозначающий тип. Суффикс `UL` или `ul` однозначно идентифицирует числовой литерал как значение `ulong`. Суффикс `L` обозначает `ulong`, если значение литерала превышает <xref:System.Int64.MaxValue?displayProperty=fullName>, а суффикс `U` или `u` обозначает `ulong`, если значение литерала <xref:System.UInt32.MaxValue?displayProperty=fullName>. В следующем примере суффикс `ul` используется для обозначения длинного целого числа:
+ 
+[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+
+Если целочисленный литерал не имеет суффикса, его типом будет первый из следующих типов, в котором может быть представлено его значение: 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](long.md)
+4. `ulong`
+
+## <a name="compiler-overload-resolution"></a>Разрешение перегрузки компилятора
   
  Обычно суффикс используется для вызова перегруженных методов. Рассмотрим, например, следующие перегруженные методы, в которых используются параметры типов `ulong` и [int](../../../csharp/language-reference/keywords/int.md):  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
  Использование суффикса с параметром `ulong` гарантирует вызов метода правильного типа, например:  
   
-```  
+```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
@@ -91,7 +92,7 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
   
  Неявного преобразования типа `ulong` в любой целочисленный тип не существует. Например, следующий оператор вызывает ошибку компиляции без явного приведения:  
   
-```  
+```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
@@ -99,7 +100,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  Кроме того, неявного преобразования типов с плавающей запятой в тип `ulong` не существует. Например, следующая инструкция приводит к ошибке компилятора, если не выполнить явное приведение типов:  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ulong x = 3.0;  
 // OK -- explicit conversion:  

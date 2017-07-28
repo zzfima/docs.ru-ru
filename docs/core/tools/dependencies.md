@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: f3eaf007593336234c6eff20127e9d02d2d5c9fa
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 25847dd6921e547074f4501d34d865dfb1b98b59
+ms.openlocfilehash: de496d96120df1ec275bb4a69f01b6266b0b5a89
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 03/07/2017
 
 В этом документе описывается новый тип ссылки. Кроме того, в нем показано, как добавлять в проекты зависимость пакетов, используя этот новый тип ссылки. 
 
-## <a name="the-new-packagereference-element"></a>Новый элемент <PackageReference>
+## <a name="the-new-packagereference-element"></a>Новый элемент \<PackageReference>
 Элемент `<PackageReference>` имеет следующую базовую структуру:
 
 ```xml
@@ -72,3 +73,4 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="removing-a-dependency-from-the-project"></a>Удаление зависимости из проекта
 Чтобы удалить зависимость из файла проекта, достаточно просто удалить `<PackageReference>` из файла проекта.
+

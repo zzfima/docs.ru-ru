@@ -1,47 +1,66 @@
 ---
-title: "Структуры (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# - язык, структуры"
-  - "структуры [C#]"
+title: "Структуры (руководство по программированию на C#) | Документы Майкрософт"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, structs
+- structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 41574404f923695b3ba065d3c22f102bd2843e68
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
+
 ---
-# Структуры (Руководство по программированию на C#)
+# <a name="structs-c-programming-guide"></a>Структуры (Руководство по программированию на C#)
 Структуры определяются с помощью ключевого слова [struct](../../../csharp/language-reference/keywords/struct.md), например:  
   
  [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/structs_1.cs)]  
   
  Структуры используют большую часть того же синтаксиса, что и классы, однако они более ограничены по сравнению с ними.  
   
--   В объявлении структуры поля не могут быть инициализированы до тех пор, пока они будут объявлены как постоянные или статические.  
+-   В объявлении структуры поля не могут быть инициализированы до тех пор, пока они будут объявлены как const или static.  
   
--   Структура не может объявлять используемый по умолчанию конструктор \(конструктор без параметров\) или деструктор.  
+-   Структура не может объявлять используемый по умолчанию конструктор (конструктор без параметров) или метод завершения.  
   
--   Структуры копируются при присваивании.  При присваивании структуры к новой переменной выполняется копирование всех данных, а любое изменение новой копии не влияет на данные в исходной копии.  Это важно помнить при работе с коллекциями типов значений, такими как Dictionary\<string, myStruct\>.  
+-   Структуры копируются при присваивании. При присваивании структуры к новой переменной выполняется копирование всех данных, а любое изменение новой копии не влияет на данные в исходной копии. Это важно помнить при работе с коллекциями типов значений, такими как Dictionary\<string, myStruct>.  
   
 -   Структуры являются типами значений, а классы — ссылочными типами.  
   
--   В отличие то классов структуры можно создавать без использования оператора `new`.  
+-   В отличие от классов структуры можно создавать без использования оператора `new`.  
   
 -   Структуры могут объявлять конструкторы, имеющие параметры.  
   
--   Структура не может быть унаследованной от другой структуры или класса и не может быть основой для других классов.  Все структуры наследуют непосредственно от `System.ValueType`, который наследует от `System.Object`.  
+-   Структура не может наследовать от другой структуры или класса и не может быть базовой для класса. Все структуры наследуют непосредственно от `System.ValueType`, который наследует от `System.Object`.  
   
 -   Структуры могут реализовывать интерфейсы.  
   
 -   Структура может использоваться как тип, допускающий значение NULL, и ей можно назначить значение NULL.  
   
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
 -   [Использование структур](../../../csharp/programming-guide/classes-and-structs/using-structs.md)  
@@ -54,9 +73,7 @@ caps.handback.revision: 31
   
 -   [Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [Дополнительные сведения о переменных](http://go.microsoft.com/fwlink/?LinkId=221230) IN [Начало Visual c\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)

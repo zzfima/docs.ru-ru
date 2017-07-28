@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6bf3902995531768b8b065aca70790c16d77b0ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
@@ -53,10 +54,10 @@ ms.lasthandoff: 03/13/2017
 |<xref:System.IO.FileAccess?displayProperty=fullName>|Определяет константы для доступа к файлу для чтения, записи или чтения и записи.|  
 |<xref:System.IO.FileAttributes?displayProperty=fullName>|Предоставляет атрибуты для файлов и каталогов, например `Archive`, `Hidden` и `ReadOnly`.|  
 |<xref:System.IO.FileInfo?displayProperty=fullName>|Предоставляет статические методы для создания, копирования, удаления, перемещения и открытия файлов, а также помогает при создании объектов `FileStream`.|  
-|<xref:System.IO.FileMode?displayProperty=fullName>|Управляет процессом открытия файла. Этот параметр задается во многих конструкторах объектов `FileStream` и `IsolatedStorageFileStream` и методах `Open` объектов <xref:System.IO.File> и <xref:System.IO.FileInfo>.|  
+|<xref:System.IO.FileMode?displayProperty=fullName>|Управляет процессом открытия файла. Этот параметр задается во многих конструкторах объектов `FileStream` и `IsolatedStorageFileStream`, а также в методах `Open` объектов <xref:System.IO.File> и <xref:System.IO.FileInfo>.|  
 |<xref:System.IO.FileShare?displayProperty=fullName>|Определяет константы для управления типом доступа других файловых потоков к этому же файлу.|  
 |<xref:System.IO.Path?displayProperty=fullName>|Предоставляет методы и свойства для обработки строк каталога.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|Управляет доступом к файлам и каталогам путем определения разрешений <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> и <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|Управляет доступом к файлам и папкам, определяя разрешения <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> и <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Классы, используемые для создания потоков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для создания потоков.  
@@ -76,8 +77,8 @@ ms.lasthandoff: 03/13/2017
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=fullName>|Считывает кодированные строки и примитивные типы данных из <xref:System.IO.FileStream>.|  
 |<xref:System.IO.BinaryWriter?displayProperty=fullName>|Записывает кодированные строки и примитивные типы данных в <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=fullName>|Считывает символы из <xref:System.IO.FileStream>, используя <xref:System.IO.StreamReader.CurrentEncoding%2A> для преобразования символов в байты и наоборот. <xref:System.IO.StreamReader> имеет конструктор, который пытается выяснить подходящую кодировку <xref:System.IO.StreamReader.CurrentEncoding%2A> для заданного потока на основе наличия специфичной для <xref:System.IO.StreamReader.CurrentEncoding%2A> преамбулы, такой как метка порядка байтов.|  
-|<xref:System.IO.StreamWriter?displayProperty=fullName>|Записывает символы в поток `FileStream`, используя класс <xref:System.IO.StreamWriter.Encoding%2A> для преобразования символов в байты.|  
+|<xref:System.IO.StreamReader?displayProperty=fullName>|Считывает символы из <xref:System.IO.FileStream>, преобразуя символы в байты и наоборот с помощью <xref:System.IO.StreamReader.CurrentEncoding%2A>. <xref:System.IO.StreamReader> имеет конструктор, который пытается выяснить правильный <xref:System.IO.StreamReader.CurrentEncoding%2A> для заданного потока, оценивая наличие преамбулы для конкретного <xref:System.IO.StreamReader.CurrentEncoding%2A>, например метки порядка байтов.|  
+|<xref:System.IO.StreamWriter?displayProperty=fullName>|Записывает символы в `FileStream`, преобразуя символы в байты с помощью <xref:System.IO.StreamWriter.Encoding%2A>.|  
 |<xref:System.IO.StringReader?displayProperty=fullName>|Считывает символы из `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=fullName>|Записывает символы в `String`. Вывод может быть либо потоком в любой кодировке, либо `String`.|  
   

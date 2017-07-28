@@ -1,6 +1,6 @@
 ---
 title: "Создание полного решения на .NET Core в Windows при помощи Visual Studio 2017 | Microsoft Docs"
-description: "Building a complete .NET Core solution on Windows, using Visual Studio 2017 (Создание полного решения .NET Core в Windows с помощью Visual Studio 2017)"
+description: "Создание полного решения .NET Core в Windows с помощью Visual Studio 2017"
 keywords: .NET, .NET Core
 author: bleroy
 ms.author: mairaw
@@ -9,14 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
 ms.openlocfilehash: b8505f88b324fcdf3a51d75c455ec5869e058774
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Building a complete .NET Core solution on Windows, using Visual Studio 2017 (Создание полного решения .NET Core в Windows с помощью Visual Studio 2017)
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Создание полного решения .NET Core в Windows с помощью Visual Studio 2017
 
 Visual Studio 2017 предоставляет полнофункциональную среду для разработки приложений .NET Core. Процедуры в этом документе описывают шаги, необходимые для построения стандартного решения .NET Core, которое включает повторно используемые библиотеки, тестирование и использование сторонних библиотек. 
 

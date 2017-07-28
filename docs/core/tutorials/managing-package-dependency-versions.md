@@ -1,5 +1,5 @@
 ---
-title: "Управление версиями зависимостей пакетов для .NET Core 1.0"
+title: "Управление версиями зависимостей пакетов для .NET Core 1.0 | Документация Майкрософт"
 description: "Управление версиями зависимостей пакетов для .NET Core 1.0"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: cf6c9757ab451f88c80fedb2dfebf7f5e320f365
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3576fecfd4964bc0a4ca9482888cd61e6ac44350
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>Управление версиями зависимостей пакетов для .NET Core 1.0
+# Управление версиями зависимостей пакетов для .NET Core 1.0
+<a id="how-to-manage-package-dependency-versions-for-net-core-10" class="xliff"></a>
 
 В этой статье приводятся необходимые сведения о версиях пакетов для библиотек и приложений .NET Core.
 
-## <a name="glossary"></a>Глоссарий
+## Глоссарий
+<a id="glossary" class="xliff"></a>
 
 **Исправление**. Под исправлением зависимостей понимается использование "семейства" пакетов, выпущенного в NuGet, для .NET Core 1.0.
 
@@ -28,7 +31,8 @@ ms.lasthandoff: 03/02/2017
 
 **Усечение** — удаление пакетов, которые не используются, из метапакета.  Эта операция выполняется разработчиками пакетов NuGet.  Дополнительные сведения см. в разделе [Сокращение зависимостей пакетов с помощью файла project.json](../deploying/reducing-dependencies.md). 
 
-## <a name="fix-your-dependencies-to-net-core-10"></a>Исправление зависимостей для .NET Core 1.0
+## Исправление зависимостей для .NET Core 1.0
+<a id="fix-your-dependencies-to-net-core-10" class="xliff"></a>
 
 Для надежного восстановления пакетов и написания надежного кода важно исправить зависимости до версий пакетов, поставляемых вместе с .NET Core 1.0.  Это означает, что каждый пакет должен иметь одну версию без дополнительных квалификаторов.
 
@@ -48,11 +52,13 @@ ms.lasthandoff: 03/02/2017
 
 `"System.Text.RegularExpressions":"4.0.10-rc3-24021-00"`
 
-### <a name="why-does-this-matter"></a>Почему это важно
+### Почему это важно
+<a id="why-does-this-matter" class="xliff"></a>
 
 Мы гарантируем, что, если вы исправите зависимости до версий, поставляемых вместе с .NET Core 1.0, эти пакеты будут работать вместе.  При использовании пакетов ,которые не исправлены подобным образом, такой гарантии нет.
 
-### <a name="scenarios"></a>Сценарии
+### Сценарии
+<a id="scenarios" class="xliff"></a>
 
 Хотя список пакетов и их версий, выпускаемых с .NET Core 1.0, весьма велик, вам не придется изучать его полностью, если ваш код соответствует ряду условий.
 
@@ -72,13 +78,15 @@ ms.lasthandoff: 03/02/2017
 
 Если да, необходимо исправить остальные зависимости до версии 1.0.  Правильные версии пакетов и номера сборок см. в конце этой статьи.
 
-### <a name="a-note-on-using-a-splat-string--when-versioning"></a>Замечание об использовании строки со звездочкой (\*) при управлении версиями
+### Замечание об использовании строки со звездочкой (\*) при управлении версиями
+<a id="a-note-on-using-a-splat-string--when-versioning" class="xliff"></a>
 
 Возможно, вы применяете шаблон управления версиями, предусматривающий использование строки со звездочкой (\*) наподобие следующей: `"System.Collections":"4.0.11-*"`.
 
 **Этого не следует делать**.  Использование строки со звездочкой может привести к восстановлению пакетов из разных сборок, некоторые из которых могут быть более поздними, чем выпускаемые с .NET Core 1.0.  Это, в свою очередь, может привести к несовместимости некоторых пакетов.
 
-## <a name="packages-and-version-numbers-organized-by-metapackage"></a>Пакеты и номера версий по метапакетам
+## Пакеты и номера версий по метапакетам
+<a id="packages-and-version-numbers-organized-by-metapackage" class="xliff"></a>
 
 [Список всех пакетов библиотеки .NET Standard и их версий для 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
 

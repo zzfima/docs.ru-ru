@@ -59,7 +59,7 @@ ms.lasthandoff: 04/18/2017
   
 2.  Добавьте в файл конфигурации приложения элемент [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) следующим образом:  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

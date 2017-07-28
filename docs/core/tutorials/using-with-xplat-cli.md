@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-translationtype: Human Translation
-ms.sourcegitcommit: e30414ac3dd48bbb060ad6f2a33a0a124cba0fa3
-ms.openlocfilehash: 6ffca900d5649823e6aa2e28486a64a2f7844efc
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: b1ff9218932d5ef49941ca427d9ee38503a9c103
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/30/2017
 
 ---
 
@@ -30,9 +31,9 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="hello-console-app"></a>Первое консольное приложение
 
-Сначала перейдите к существующей папке или создайте папку с любым именем на свое усмотрение. Для примера кода, который можно найти [здесь](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild), выбрано имя *Hello*.
+[Просмотреть или скачать пример кода](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) можно в репозитории dotnet/docs на сайте GitHub. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Откройте окно командной строки и введите следующее:
+Откройте командную строку и создайте папку с именем *Hello*. Перейдите в созданную папку и введите следующую команду:
 
 ```
 $ dotnet new console
@@ -44,11 +45,11 @@ $ dotnet run
 
 1. `$ dotnet new console`
 
-[`dotnet new`](../tools/dotnet-new.md) создает актуальный файл проекта `Hello.csproj` с зависимостями, необходимыми для создания консольного приложения.  Эта команда также создает `Program.cs` — простой файл, содержащий точку входа для приложения.
+   [`dotnet new`](../tools/dotnet-new.md) создает актуальный файл проекта `Hello.csproj` с зависимостями, необходимыми для создания консольного приложения.  Эта команда также создает `Program.cs` — простой файл, содержащий точку входа для приложения.
    
-`Hello.csproj`:
+   `Hello.csproj`:
 
-[!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
 
    В файле проекта указываются все данные, необходимые для восстановления зависимостей и создания программы.
 
@@ -57,15 +58,15 @@ $ dotnet run
 
    `Program.cs`:
 
-[!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
 
    Программа начинается с команды `using System`, что означает "добавить все данные пространства имен `System` в область видимости для этого файла". Пространство имен `System` содержит основные конструкции, такие как `string`, или числовые типы.
 
-   Затем мы определяем пространство имен с именем `Hello`. Вы можете сменить это имя на любое другое. Класс `Program` определен внутри этого пространства имен с методом `Main`, который принимает массив строк в качестве аргумента. Этот массив содержит список аргументов, передаваемых при вызове скомпилированной программы. В такой форме программа не использует этот массив. Единственное ее действие — вывод надписи "Hello World!" в консоль. Позднее мы внесем в код изменения, использующие этот аргумент.
+   Затем мы определяем пространство имен с именем `Hello`. Вы можете сменить это имя на любое другое. Класс `Program` определяется в этом пространстве имен с использованием метода `Main`, который принимает массив строк в качестве аргумента. Этот массив содержит список аргументов, передаваемых при вызове скомпилированной программы. В такой форме программа не использует этот массив. Единственное ее действие — вывод надписи "Hello World!" в консоль. Позднее мы внесем в код изменения, использующие этот аргумент.
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md) вызывает [NuGet](http://nuget.org) (диспетчер пакетов .NET) для восстановления дерева зависимостей. NuGet анализирует файл *Hello.csproj*, скачивает указанные в нем зависимости (или извлекает их из кэша на вашем компьютере) и записывает файл *obj/project.assets.json*.  Файл *project.assets.json* необходим для компиляции и запуска.
+   [`dotnet restore`](../tools/dotnet-restore.md) вызывает [NuGet](https://www.nuget.org/) (диспетчер пакетов .NET) для восстановления дерева зависимостей. NuGet анализирует файл *Hello.csproj*, скачивает указанные в нем зависимости (или извлекает их из кэша на вашем компьютере) и записывает файл *obj/project.assets.json*.  Файл *project.assets.json* необходим для компиляции и запуска.
    
    Файл *project.assets.json* содержит сохраняемую полную схему зависимостей NuGet и другие сведения, описывающие приложение.  Этот файл считывается другими средствами, такими как [`dotnet build`](../tools/dotnet-build.md) и [`dotnet run`](../tools/dotnet-run.md), что позволяет им обрабатывать исходный код с правильным набором зависимостей NuGet и разрешений привязки.
    
@@ -93,32 +94,32 @@ $ dotnet run
 
 1. Замените содержимое файла *Program.cs* следующим кодом:
 
-[!code-csharp[Фибоначчи](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   [!code-csharp[Фибоначчи](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
 
 2. Выполните [`dotnet build`](../tools/dotnet-build.md) для компиляции изменений.
 
 3. Запустите программу, передав параметр в приложение:
 
-```
-$ dotnet run -- John
-Hello John!
-Fibonacci Numbers 1-15:
-1: 0
-2: 1
-3: 1
-4: 2
-5: 3
-6: 5
-7: 8
-8: 13
-9: 21
-10: 34
-11: 55
-12: 89
-13: 144
-14: 233
-15: 377
-```
+   ```
+   $ dotnet run -- John
+   Hello John!
+   Fibonacci Numbers 1-15:
+   1: 0
+   2: 1
+   3: 1
+   4: 2
+   5: 3
+   6: 5
+   7: 8
+   8: 13
+   9: 21
+   10: 34
+   11: 55
+   12: 89
+   13: 144
+   14: 233
+   15: 377
+   ```
 
 Вот и все!  Вы можете расширять файл `Program.cs` по своему усмотрению.
 
@@ -128,33 +129,33 @@ Fibonacci Numbers 1-15:
 
 1. Добавьте в каталог *Hello* новый файл *FibonacciGenerator.cs* со следующим кодом:
 
-[!code-csharp[Генератор Фибоначчи](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Генератор Фибоначчи](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
 
 2. Измените метод `Main` в своем файле *Program.cs*, чтобы создать экземпляр класса new и вызвать его метод, как показано в следующем примере:
 
-[!code-csharp[Новый Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[Новый Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. Выполните [`dotnet build`](../tools/dotnet-build.md) для компиляции изменений.
 
 4. Запустите приложение, выполнив [`dotnet run`](../tools/dotnet-run.md). Ниже приведены выходные данные программы:
 
-```
-0
-1
-1
-2
-3
-5
-8
-13
-21
-34
-55
-89
-144
-233
-377
-```
+   ```
+   0
+   1
+   1
+   2
+   3
+   5
+   8
+   13
+   21
+   34
+   55
+   89
+   144
+   233
+   377
+   ```
 
 Вот и все! Теперь вы можете воспользоваться изученными здесь основными концепциями, чтобы создавать собственные программы.
 
@@ -163,4 +164,5 @@ Fibonacci Numbers 1-15:
 ## <a name="see-also"></a>См. также
 
 [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
+
 

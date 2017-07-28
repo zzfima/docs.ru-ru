@@ -1,6 +1,6 @@
 ---
 title: "int (справочник по C#) | Документы Майкрософт"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,40 +30,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 910b23cb0048d5d9f21c9c32e8f34219a425622a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 48283ce80bbbff4182362ea9ae6258d31e175e0d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="int-c-reference"></a>int (справочник по C#)
-Ключевое слово `int` обозначает целочисленный тип данных, в котором хранятся значения, размер и диапазон которых приведен в следующей таблице.  
+
+`int` обозначает целочисленный тип данных, в котором хранятся значения, размер и диапазон которых приведен в следующей таблице.  
   
 |Тип|Диапазон|Размер|Тип платформы .NET Framework|Значение по умолчанию|  
 |----------|-----------|----------|-------------------------|-------------------|  
 |`int`|От -2 147 483 648 до 2 147 483 647|32-разрядное целое число со знаком|<xref:System.Int32?displayProperty=fullName>|0|  
   
 ## <a name="literals"></a>Литералы  
- Переменную типа `int` можно объявить и инициализировать, как показано в примере:  
+ 
+Переменную `int` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал.  Если целочисленный литерал не соответствует диапазону `int` (т. е. его значение меньше <xref:System.Int32.MinValue?displayProperty=fullName> или больше <xref:System.Int32.MaxValue?displayProperty=fullName>), возникает ошибка компиляции. 
+
+В следующем примере целые числа, равные 16 342 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, назначаются значениям `int`.  
   
-```  
-  
-int i = 123;  
-```  
-  
- Если целочисленный литерал не имеет суффикса, его тип — первый из этих типов, в котором может быть представлено его значение: `int`, [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md). В этом примере типом является `int`.  
+[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
+
+> [!NOTE] 
+> Для обозначения шестнадцатеричного литерала используйте префикс `0x` или `0X`, а для обозначения двоичного литерала — префикс `0b` или `0B`. У десятичных литералов префиксов нет. 
+
+Начиная с версии C# 7, для повышения удобочитаемости в качестве разделителя разрядов можно также использовать символ подчеркивания (`_`), как показано в следующем примере.
+
+[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
+ 
+ Целочисленные литералы могут содержать суффикс, обозначающий тип, несмотря на то, что для обозначения типа `int` суффикс не предусмотрен. Если целочисленный литерал не имеет суффикса, его типом будет первый из следующих типов, в котором может быть представлено его значение: 
+
+1. `int`
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](../../../csharp/language-reference/keywords/long.md)
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
+ 
+В этих примерах литерал 90946 имеет тип `int`.
   
 ## <a name="conversions"></a>Преобразования  
  Существует предопределенное неявное преобразование типа `int` в тип [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) или [decimal](../../../csharp/language-reference/keywords/decimal.md). Пример:  
   
-```  
+```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
 float f = 123;  
 ```  
   
  Существует предопределенное неявное преобразование типа [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md) или [char](../../../csharp/language-reference/keywords/char.md) в `int`. Например, следующий оператор назначения вызывает ошибку компиляции без приведения:  
   
-```  
+```csharp  
 long aLong = 22;  
 int i1 = aLong;       // Error: no implicit conversion from long.  
 int i2 = (int)aLong;  // OK: explicit conversion.  
@@ -71,9 +87,8 @@ int i2 = (int)aLong;  // OK: explicit conversion.
   
  Обратите внимание, что неявного преобразования типов с плавающей запятой в тип `int` не существует. Например, следующая инструкция приводит к ошибке компилятора, если не выполнить явное приведение типов:  
   
-```  
-  
-      int x = 3.0;         // Error: no implicit conversion from double.  
+```csharp  
+int x = 3.0;         // Error: no implicit conversion from double.  
 int y = (int)3.0;    // OK: explicit conversion.  
 ```  
   

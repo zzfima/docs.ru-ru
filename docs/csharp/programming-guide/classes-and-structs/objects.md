@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ab83f765d6cc66bc0808a316cecabf65af7a3843
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: fe548eb5d520945e3f0d52750bbf89935947116e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>Объекты (Руководство по программированию на C#)
@@ -51,7 +52,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- Память для `p1` и `p2` выделена в стеке потока. Эта память освобождается вместе с типом или методом, в котором она объявляется. Эта одна из причин того, почему структуры копируются при присваивании. Напротив, при выходе всех ссылок на объект из области действия среда CLR автоматически освобождает память (выполняет сборку мусора), выделенную для экземпляра класса. Возможность детерминированного уничтожения объекта класса, имеющаяся в C++, в данном случае отсутствует. Дополнительные сведения о сборке мусора в [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] см. в разделе [Сборка мусора](../../../standard/garbagecollection/index.md).  
+ Память для `p1` и `p2` выделена в стеке потока. Эта память освобождается вместе с типом или методом, в котором она объявляется. Эта одна из причин того, почему структуры копируются при присваивании. Напротив, при выходе всех ссылок на объект из области действия среда CLR автоматически освобождает память (выполняет сборку мусора), выделенную для экземпляра класса. Возможность детерминированного уничтожения объекта класса, имеющаяся в C++, в данном случае отсутствует. Дополнительные сведения о сборке мусора в [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  В среде CLR процесс выделения и освобождения памяти в управляемой куче значительно оптимизирован. В большинстве случаев нет существенной разницы в затратах производительности на выделение экземпляра класса в куче и выделение экземпляра структуры в стеке.  
@@ -65,9 +66,9 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
- Реализация <xref:System.ValueType?displayProperty=fullName> `Equals` использует отражение, так как необходимо определить поля, имеющиеся в любой структуре. При создании собственных структур переопределите метод `Equals` для предоставления эффективного алгоритма равенства, соответствующего вашему типу.  
+ В реализации <xref:System.ValueType?displayProperty=fullName> `Equals` используется отражение, так как необходимо определить поля, имеющиеся в любой структуре. При создании собственных структур переопределите метод `Equals` для предоставления эффективного алгоритма равенства, соответствующего вашему типу.  
   
--   Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../../csharp/language-reference/operators/equality-comparison-operator.md). Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа. Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>. Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений. При создании собственных классов, переопределяющих `Equals`, следует выполнять инструкции из разделов [Практическое руководство. Определение равенства значений для типа](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>.  
+-   Чтобы определить, равны ли значения полей в двух экземплярах класса, можно воспользоваться методом <xref:System.Object.Equals%2A> или [оператором ==](../../../csharp/language-reference/operators/equality-comparison-operator.md). Однако их следует использовать, только если они переопределены или перегружены классом с целью предоставления пользовательского определение равенства для объектов этого типа. Класс может также реализовывать интерфейс <xref:System.IEquatable%601> или интерфейс <xref:System.Collections.Generic.IEqualityComparer%601>. Оба интерфейса предоставляют методы, которые можно использовать для проверки равенства значений. При создании собственных классов, переопределяющих `Equals`, следует выполнять инструкции из разделов [Практическое руководство. Определение равенства значений для типа ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) и <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
@@ -78,7 +79,7 @@ ms.lasthandoff: 03/13/2017
   
 -   [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Деструкторы](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+-   [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [События](../../../csharp/programming-guide/events/index.md)  
   
@@ -89,4 +90,4 @@ ms.lasthandoff: 03/13/2017
  [class](../../../csharp/language-reference/keywords/class.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [Оператор new](../../../csharp/language-reference/keywords/new-operator.md)   
- [Система общих типов CTS](http://msdn.microsoft.com/library/53c57c96-83e1-4ee3-9543-9ac832671a89)
+ [Система общих типов CTS](../../../standard/base-types/common-type-system.md)

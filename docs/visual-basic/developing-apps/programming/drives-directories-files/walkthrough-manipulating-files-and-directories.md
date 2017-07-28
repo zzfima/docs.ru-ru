@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89137b3c927a7ac8ed126f2be3695c4aa72a85fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Пошаговое руководство. Операции с файлами и каталогами в Visual Basic
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     Вызов `FolderBrowserDialog1.ShowDialog` открывает диалоговое окно **Выбор папки**. Когда пользователь нажимает кнопку **ОК**, свойство <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> передается как аргумент методу `ListFiles`, который добавляется в следующем шаге.  
+     Вызов `FolderBrowserDialog1.ShowDialog` открывает диалоговое окно **Выбор папки**. Когда пользователь нажимает **OK**, свойство <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> передается как аргумент методу `ListFiles`, который добавляется в следующем шаге.  
   
 3.  Добавьте приведенный ниже метод `ListFiles`.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 03/13/2017
   
      Этот код сперва очищает элемент **ListBox**.  
   
-     Затем метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> извлекает коллекцию строк — по одной для каждого файла в каталоге. Метод `GetFiles` принимает аргумент шаблона поиска, чтобы извлечь файлы, соответствующие определенному шаблону. В этом примере возвращаются только файлы с расширением TXT.  
+     Затем метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> возвращает коллекцию строк — по одной для каждого файла в каталоге. Метод `GetFiles` принимает аргумент шаблона поиска, чтобы извлечь файлы, соответствующие определенному шаблону. В этом примере возвращаются только файлы с расширением TXT.  
   
      Строки, возвращаемые методом `GetFiles`, затем добавляются в элемент управления **ListBox**.  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
-     Этот код проверяет, выбран ли элемент в элементе `ListBox`. Затем он получает запись пути к файлу из элемента `ListBox`. Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> используется для проверки того, существует ли файл по-прежнему.  
+     Этот код проверяет, выбран ли элемент в элементе `ListBox`. Затем он получает запись пути к файлу из элемента `ListBox`. Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> позволяет проверить, существует ли файл.  
   
      Путь к файлу передается как аргумент методу `GetTextForOutput`, который добавляется в следующем шаге. Этот метод возвращает строку, содержащую информацию о файле. Информация о файле отображается в элементе **MessageBox**.  
   
@@ -118,7 +119,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
-     Код использует метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> для получения параметров файла. Параметры файла добавляются в <xref:System.Text.StringBuilder>.  
+     Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> используется в коде для получения параметров файла. Параметры файла добавляются в <xref:System.Text.StringBuilder>.  
   
      Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> считывает содержимое файла в <xref:System.IO.StreamReader>. Первая строка содержимого файла извлекается из `StreamReader` и добавляется в `StringBuilder`.  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 03/13/2017
   
      Код задает путь к файлу журнала, чтобы файл журнала помещался в тот же каталог, где находится выбранный файл. Запись журнала должна содержать текущие дату и время, а далее информацию о файле.  
   
-     Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> с аргументом `append` со значением `True` используется для создания записи журнала.  
+     Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>, которому передается аргумент `append` со значением `True`, используется для создания записи в журнале.  
   
 2.  Запустите приложение. Перейдите к текстовому файлу, выберите его в элементе `ListBox`, установите флажок **Сохранить результаты** и щелкните **Исследовать**. Проверьте, добавлена ли запись в файл `log.txt`.  
   
@@ -180,7 +181,7 @@ ms.lasthandoff: 03/13/2017
  [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
 ## <a name="full-example-using-systemio"></a>Полный пример с использованием System.IO  
- В следующем эквивалентном примере используются классы из пространства имен <xref:System.IO> вместо объектов `My.Computer.FileSystem`.  
+ Следующий пример выполняет те же действия, используя классы из пространства имен <xref:System.IO> вместо объектов `My.Computer.FileSystem`.  
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   

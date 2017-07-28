@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a0a31353ce3ee0c48907f9550f6961260f92b64a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a090fa8df6347a98b5c971c26664e6dd1098a594
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Практическое руководство. Переименование файла в Visual Basic
@@ -51,25 +52,25 @@ ms.lasthandoff: 03/13/2017
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Путь является недопустимым, так как представляет собой строку нулевой длины (пустую строку), содержит только пробелы, содержит недопустимые символы или представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
+-   Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
   
 -   `newName` содержит сведения о пути (<xref:System.ArgumentException>).  
   
--   Путь является недопустимым, поскольку это `Nothing` (<xref:System.ArgumentNullException>).  
+-   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `newName` — `Nothing` или пустая строка (<xref:System.ArgumentNullException>).  
+-   Параметр `newName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
   
--   Исходный файл недопустим или не существует (<xref:System.IO.FileNotFoundException>).  
+-   Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).  
   
 -   Имеется существующий файл или каталог с именем, указанным в `newName` (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную системой (<xref:System.IO.PathTooLongException>).  
+-   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
 -   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
 -   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
   
--   Пользователь не имеет необходимых разрешений (<xref:System.UnauthorizedAccessException>).  
+-   У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>   

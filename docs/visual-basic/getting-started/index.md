@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Приступая к работе с Visual Basic
@@ -61,22 +61,22 @@ ms.lasthandoff: 05/15/2017
  Ссылки на страницы, знакомящие с основами объектно-ориентированного программирования и описывающие порядок создания собственных объектов и их использования для упрощения программирования.  
   
  [Примеры](../../visual-basic/sample-applications.md)  
- Ссылки на примеры кода в [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Ссылки на примеры кода в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Пошаговые руководства](../../visual-basic/walkthroughs.md)  
- Перечень страниц справки, демонстрирующих различные аспекты языка [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Перечень страниц справки, демонстрирующих различные аспекты языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  Способы получения поддержки и обеспечения обратной связи.  
   
  [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
- Ссылки на документацию по [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ Ссылки на документацию по [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [C#](../../csharp/csharp.md)  
- Ссылки на документацию по разработке приложений в [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Ссылки на документацию по разработке приложений в [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Visual C++](https://docs.microsoft.com/cpp/)  
  Ссылки на документацию по Visual C++.  
   
  [Office and SharePoint Development](https://msdn.microsoft.com/library/d2tx7z6d) (Разработка приложений Office и SharePoint)  
- Сведения об использовании приложений Microsoft Office и [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] в рамках бизнес-приложений.
+ Сведения об использовании приложений Microsoft Office и [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] в рамках бизнес-приложений.

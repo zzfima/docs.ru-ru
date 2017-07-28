@@ -43,9 +43,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8b1b077a8818315e52ada6b08ff1e1ced9bbd17c
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -85,7 +86,7 @@ Option Compare { Binary | Text }
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Если оператор Option Compare отсутствует  
  Если исходный код не содержит `Option Compare` инструкции, **Option Compare** на [компиляция, конструктор проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) используется. При использовании компилятора командной строки, параметр указан [дополнительные](../../../visual-basic/reference/command-line-compiler/optioncompare.md) используется параметр компилятора.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 #### <a name="to-set-option-compare-in-the-ide"></a>Чтобы включить Option Compare в среде разработки  
   

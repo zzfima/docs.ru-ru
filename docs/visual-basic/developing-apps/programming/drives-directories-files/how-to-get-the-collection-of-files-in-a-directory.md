@@ -31,39 +31,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5b36baee302db0214844e0553473a05603090f1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1884195983856b3331b0c40e5b3844b0731e75ac
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Практическое руководство. Получение коллекции содержащихся в каталоге файлов в Visual Basic
-Перегруженные версии методов <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> возвращают коллекцию строк только для чтения, представляющих имена файлов в каталоге:  
+Перегрузка метода <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> вернет доступную только для чтения коллекцию строк, представляющих собой имена файлов в каталоге:  
   
--   Используйте перегрузку <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29>для простого поиска файлов в указанном каталоге без поиска в подкаталогах.  
+-   Перегрузка метода <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> позволяет найти простой файл в указанном каталоге без поиска подкаталогов.  
   
--   Используйте перегрузку <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])>, чтобы указать дополнительные параметры поиска. Для указания шаблона поиска можно использовать параметр `wildCards`. Чтобы включить подкаталоги в поиск, присвойте параметру `searchType` значение <xref:Microsoft.VisualBasic.FileIO.SearchOption?displayProperty=fullName>.  
+-   Перегрузка метода <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> позволяет указать дополнительные параметры поиска. Для указания шаблона поиска можно использовать параметр `wildCards`. Чтобы включить подкаталоги в поиск, присвойте параметру `searchType` значение <xref:Microsoft.VisualBasic.FileIO.SearchOption?displayProperty=fullName>.  
   
  Если файлы, соответствующие указанному шаблону, не найдены, возвращается пустая коллекция.  
   
 ### <a name="to-list-files-in-a-directory"></a>Составление списка файлов в каталоге  
   
--   Используйте одну из перегрузок метода <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName>, указав имя и путь к каталогу, в котором выполняется поиск, в параметре `directory`. В следующем примере возвращаются и добавляются в список `ListBox1` все файлы, находящиеся в каталоге.  
+-   Используйте перегрузки одного из методов <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName>, указывая имя и путь к каталогу для поиска в параметре `directory`. В следующем примере возвращаются и добавляются в список `ListBox1` все файлы, находящиеся в каталоге.  
   
      [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
   
--   Путь является недопустимым, так как представляет собой строку нулевой длины (пустую строку), содержит только пробелы, содержит недопустимые символы или представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
+-   Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Путь является недопустимым, поскольку это `Nothing` (<xref:System.ArgumentNullException>).  
+-   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   `directory` не существует (<xref:System.IO.DirectoryNotFoundException>).  
   
 -   `directory` указывает на существующий файл (<xref:System.IO.IOException>).  
   
--   Длина пути превышает максимальную длину, определенную системой (<xref:System.IO.PathTooLongException>).  
+-   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
 -   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   

@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e9a640c0cfa1d0494457f8ffe94bf15877b24919
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /target:winexe  
 ```  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
  Компиляция `in.cs` в программу Windows:  
   
-```  
+```console  
 csc /target:winexe in.cs  
 ```  
   

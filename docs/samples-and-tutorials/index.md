@@ -1,5 +1,5 @@
 ---
-title: "Примеры и руководства"
+title: "Примеры и руководства | Документация Майкрософт"
 description: "Сведения о примерах и руководствах для .NET Core, ASP.NET Core и языке C#, которые помогут вам изучить платформу .NET."
 keywords: ".NET, .NET Core, ASP.NET, C#, пример, руководство"
 author: BillWagner
@@ -9,26 +9,31 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 977dd60bb21b466a6bec357a6dec73aa9a931ead
-ms.lasthandoff: 05/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 65c55837d6ccb93373b84aa4bdef416bdf4fa75a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="samples-and-tutorials"></a>Примеры и руководства
+# Примеры и руководства
+<a id="samples-and-tutorials" class="xliff"></a>
 
 Документация по .NET содержит набор примеров и руководств, которые помогают изучить .NET. Из этой статьи вы узнаете, как находить, просматривать и скачивать примеры и руководства для .NET Core, ASP.NET Core и C#. Ресурсы, посвященные языку программирования F#, доступны на [сайте F# Foundation](http://fsharp.org/learn.html). Если вы хотите изучать язык C# в интерактивном редакторе кода, воспользуйтесь нашими [интерактивными руководствами](http://go.microsoft.com/fwlink/p/?LinkId=817234). Инструкции по просмотру и скачиванию примеров кода см. в разделе [Просмотр и скачивание примеров](#viewing-and-downloading-samples).
 
-## <a name="net-core"></a>.NET Core
+## .NET Core
+<a id="net-core" class="xliff"></a>
 
-### <a name="samples"></a>Примеры
+### Примеры
+<a id="samples" class="xliff"></a>
 
 **[Тестирование модулей в .NET Core с помощью команды dotnet-test](../core/testing/unit-testing-with-dotnet-test.md)**
 
 Из этого руководства вы узнаете, как создать веб-приложение ASP.NET Core и соответствующие модульные тесты. Сначала создается простое приложение веб-службы, а потом добавляются тесты. Затем создаются дополнительные тесты для внедрения новых функций. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) доступен в репозитории dotnet/docs на сайте GitHub.
 
-### <a name="tutorials"></a>Учебники
+### Учебники
+<a id="tutorials" class="xliff"></a>
 
 **[Написание консольных приложений .NET Core с помощью средств командной строки: пошаговое руководство](../core/tutorials/using-with-xplat-cli.md)**
 
@@ -38,13 +43,16 @@ ms.lasthandoff: 05/02/2017
 
 В этом примере рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки. Они предоставляют эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) доступен в репозитории dotnet/docs на сайте GitHub.
 
-## <a name="aspnet-core"></a>ASP.NET Core
+## ASP.NET Core
+<a id="aspnet-core" class="xliff"></a>
 
 См. [руководства по ASP.NET Core](https://docs.microsoft.com/aspnet/core/tutorials/). Многие статьи по ASP.NET Core содержат ссылки на специально созданные примеры.
 
-## <a name="c-language"></a>C# - язык
+## C# - язык
+<a id="c-language" class="xliff"></a>
 
-### <a name="samples"></a>Примеры
+### Примеры
+<a id="samples" class="xliff"></a>
 
 **[Итераторы](../csharp/iterators.md)**
 
@@ -66,7 +74,8 @@ ms.lasthandoff: 05/02/2017
 
 В этой серии примеров демонстрируются многие функции встроенного языка запросов (LINQ). [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) доступен в репозитории dotnet/docs на сайте GitHub.
 
-### <a name="tutorials"></a>Учебники
+### Учебники
+<a id="tutorials" class="xliff"></a>
 
 **[Консольное приложение](../csharp/tutorials/console-teleprompter.md)**
 
@@ -92,7 +101,8 @@ ms.lasthandoff: 05/02/2017
 
 Этот учебник описывает, как выполнить сборку полноценного решения .NET Core, включающего многоразовую библиотеку и модульное тестирование.
 
-## <a name="deploying-to-containers"></a>Развертывание в контейнеры
+## Развертывание в контейнеры
+<a id="deploying-to-containers" class="xliff"></a>
 
 **[Запуск приложений ASP.NET MVC в контейнерах Windows](../framework/docker/aspnetmvc.md)**
 
@@ -102,7 +112,8 @@ ms.lasthandoff: 05/02/2017
 
 В этом руководстве показано, как развернуть существующее консольное приложение в контейнер Windows. [Готовый пример](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) доступен в репозитории dotnet/docs на сайте GitHub.
 
-## <a name="viewing-and-downloading-samples"></a>Просмотр и скачивание примеров
+## Просмотр и скачивание примеров
+<a id="viewing-and-downloading-samples" class="xliff"></a>
 
 Во многих статьях показан исходный код и примеры, которые можно просмотреть и скачать на сайте GitHub. Чтобы просмотреть пример, просто перейдите по ссылке на него. Чтобы скачать код, выполните следующие действия:
 

@@ -41,14 +41,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e8bf73f32dba51455542778ed91ef3bfd2898754
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a16d2168548dadf9210b653d90ce229d99469b64
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Пошаговое руководство. Управление файлами с помощью методов .NET Framework (Visual Basic)
-В этом пошаговом руководстве демонстрируется открытие и чтение файла с помощью класса <xref:System.IO.StreamReader>, проверка факта доступа к файлу в настоящий момент, поиск строки в файле, считанном с помощью экземпляра класса <xref:System.IO.StreamReader>, и запись в файл с помощью класса <xref:System.IO.StreamWriter>.  
+В этом пошаговом руководстве демонстрируются открытие и чтение файла с помощью класса <xref:System.IO.StreamReader>, проверка доступа к файлу, поиск строки в файле, считанном с помощью экземпляра класса <xref:System.IO.StreamReader>, и запись в файл с помощью класса <xref:System.IO.StreamWriter>.  
   
 [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
@@ -69,24 +70,24 @@ ms.lasthandoff: 03/13/2017
   
 |**Объект**|**Свойства**|**Значение**|  
 |---|---|---|   
-|<xref:System.Windows.Forms.Button>|**Имя**<br /><br /> **Текст**|`Submit`<br /><br /> **Сохранить запись**|  
-|<xref:System.Windows.Forms.Button>|**Имя**<br /><br /> **Текст**|`Clear`<br /><br /> **Очистить запись**|  
-|<xref:System.Windows.Forms.TextBox>|**Имя**<br /><br /> **Текст**<br /><br /> **Multiline**|`Entry`<br /><br /> **Введите произвольный текст.**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`Submit`<br /><br /> **Сохранить запись**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`Clear`<br /><br /> **Очистить запись**|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Текст**<br /><br /> **Multiline**|`Entry`<br /><br /> **Введите произвольный текст.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>Запись в файл  
- Чтобы добавить возможность записи в файл с помощью приложения, воспользуйтесь классом <xref:System.IO.StreamWriter>. Класс <xref:System.IO.StreamWriter> предназначен для вывода символов в определенной кодировке, тогда как класс <xref:System.IO.Stream> предназначен для ввода и вывода байтов. Класс <xref:System.IO.StreamWriter> следует использовать для записи строк данных в стандартный текстовый файл. Дополнительные сведения о классе <xref:System.IO.StreamWriter> см. в разделе <xref:System.IO.StreamWriter>.  
+ Чтобы добавить возможность записи в файл с помощью приложения, воспользуйтесь классом <xref:System.IO.StreamWriter>. Класс <xref:System.IO.StreamWriter> предназначен для вывода символов в определенной кодировке, тогда как класс <xref:System.IO.Stream> предназначен для ввода и вывода двоичных данных. Класс <xref:System.IO.StreamWriter> следует использовать для записи строк данных в стандартный текстовый файл. Дополнительные сведения о классе <xref:System.IO.StreamWriter> см. в статье <xref:System.IO.StreamWriter>.  
   
 #### <a name="to-add-writing-functionality"></a>Добавление возможности записи  
   
 1.  В меню **Вид** выберите пункт **Код**, чтобы открыть редактор кода.  
   
-2.  Поскольку приложение ссылается на пространство имен <xref:System.IO>, добавьте следующие операторы в самом начале кода перед объявлением класса формы, которое начинается с `Public Class Form1`.  
+2.  Поскольку приложение ссылается на пространство имен <xref:System.IO>, следует добавить следующие операторы в самом начале кода перед объявлением класса для формы, которое начинается с `Public Class Form1`.  
   
      [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_1.vb)]  
   
      Перед записью в файл необходимо создать экземпляр класса <xref:System.IO.StreamWriter>.  
   
-3.  В меню **Вид** выберите пункт **Конструктор** для возврата в окно **Конструктор Windows Forms**. Дважды щелкните кнопку `Submit`, чтобы создать обработчик событий <xref:System.Windows.Forms.Control.Click> для кнопки, а затем добавьте следующий код.  
+3.  В меню **Вид** выберите пункт **Конструктор** для возврата в окно **Конструктор Windows Forms**. Дважды щелкните кнопку `Submit`, чтобы создать для нее обработчик событий <xref:System.Windows.Forms.Control.Click>, а затем добавьте в него следующий код.  
   
      [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_2.vb)]  
   
@@ -105,37 +106,37 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_5.vb)]  
   
-4.  И, наконец добавьте код, очищающий элемент управления <xref:System.Windows.Forms.TextBox>. К событию <xref:System.Windows.Forms.Control.Click> для кнопки `Clear` добавьте следующий код.  
+4.  Наконец, добавьте код для очистки <xref:System.Windows.Forms.TextBox>. Добавьте следующий код в обработчик события `Clear` для кнопки <xref:System.Windows.Forms.Control.Click>.  
   
      [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_6.vb)]  
   
 ## <a name="adding-display-features-to-the-diary"></a>Добавление средств отображения в дневник  
- В этом разделе добавляется средство для отображения последней записи в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>. Можно также добавить элемент управления <xref:System.Windows.Forms.ComboBox>, в котором будут отображаться различные записи и из которого пользователь сможет выбрать запись для отображения в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>. Экземпляр класса <xref:System.IO.StreamReader> выполняет чтение из файла `MyDiary.txt`. Как и <xref:System.IO.StreamWriter>, класс <xref:System.IO.StreamReader> предназначен для работы с текстовыми файлами.  
+ В этом разделе вы добавите средство для отображения последней записи в элементе управления `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Вы также можете добавить элемент <xref:System.Windows.Forms.ComboBox>, который отображает разные записи и позволяет пользователю выбрать запись для отображения в `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Экземпляр класса <xref:System.IO.StreamReader> считывает информацию из `MyDiary.txt`. Как и класс <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader> предназначен для использования с текстовыми файлами.  
   
  Для реализации следующей части пошагового руководства необходимо добавить в форму элементы управления из следующей таблицы и присвоить соответствующие значения их свойствам.  
   
 |Control|Свойства|Значения|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.TextBox>|**Имя**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
-|<xref:System.Windows.Forms.Button>|**Имя**<br /><br /> **Текст**|`Display`<br /><br /> **Отображение**|  
-|<xref:System.Windows.Forms.Button>|**Имя**<br /><br /> **Текст**|`GetEntries`<br /><br /> **Показать записи**|  
-|<xref:System.Windows.Forms.ComboBox>|**Имя**<br /><br /> **Текст**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Выберите запись**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.TextBox>|**Name**<br /><br /> **Visible**<br /><br /> **Size**<br /><br /> **Multiline**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`Display`<br /><br /> **Отображение**|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**|`GetEntries`<br /><br /> **Показать записи**|  
+|<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`PickEntries`<br /><br /> **Выберите запись**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>Заполнение элемента управления ComboBox  
   
-1.  В элементе управления `PickEntries` <xref:System.Windows.Forms.ComboBox> отображается дата создания каждой из записей, чтобы пользователь мог выбрать запись за определенную дату. Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> для кнопки `GetEntries` и добавьте следующий код.  
+1.  В элементе управления `PickEntries`<xref:System.Windows.Forms.ComboBox> отображается дата создания каждой из записей, чтобы пользователь мог выбрать запись за определенную дату. Создайте обработчик события <xref:System.Windows.Forms.Control.Click> для кнопки `GetEntries` и добавьте в него следующий код.  
   
      [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_7.vb)]  
   
-2.  Чтобы протестировать код, нажмите клавишу F5 для компиляции, а затем нажмите кнопку **Показать записи**. Щелкните стрелку раскрывающегося списка элемента управления <xref:System.Windows.Forms.ComboBox>, чтобы просмотреть даты создания всех записей.  
+2.  Чтобы протестировать код, нажмите клавишу F5 для компиляции, а затем нажмите кнопку **Показать записи**. Щелкните стрелку раскрывающегося списка в <xref:System.Windows.Forms.ComboBox>, чтобы отобразить даты записей.  
   
 #### <a name="to-choose-and-display-individual-entries"></a>Выбор и просмотр отдельных записей  
   
-1.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> для кнопки `Display` и добавьте следующий код.  
+1.  Создайте обработчик события <xref:System.Windows.Forms.Control.Click> для кнопки `Display` и добавьте в него следующий код.  
   
      [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_8.vb)]  
   
-2.  Чтобы протестировать код, нажмите клавишу F5 для компиляции, а затем введите запись. Нажмите кнопку **Показать записи**, выберите запись в элементе управления <xref:System.Windows.Forms.ComboBox>, а затем нажмите кнопку **Просмотреть**. Содержимое выбранной записи появится в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>.  
+2.  Чтобы протестировать код, нажмите клавишу F5 для компиляции, а затем введите запись. Щелкните **Показать записи**, выберите запись из списка <xref:System.Windows.Forms.ComboBox> и нажмите кнопку **Отображение**. Содержимое выбранной записи появится в элементе `DisplayEntry`<xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="enabling-users-to-delete-or-modify-entries"></a>Предоставление пользователям возможности удалять и изменять записи  
  В заключение можно включить в приложение дополнительные функции, позволяющие пользователям удалять и изменять записи с помощью кнопок `DeleteEntry` и `EditEntry`. Обе кнопки неактивны, пока не выбрана ни одна запись.  
@@ -144,33 +145,33 @@ ms.lasthandoff: 03/13/2017
   
 |Control|Свойства|Значения|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Имя**<br /><br /> **Текст**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Удалить запись**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Имя**<br /><br /> **Текст**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Изменить запись**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Имя**<br /><br /> **Текст**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Сохранить изменения**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`DeleteEntry`<br /><br /> **Удалить запись**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`EditEntry`<br /><br /> **Изменить запись**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Текст**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Сохранить изменения**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Включение возможности удаления и изменения записей  
   
-1.  Добавьте следующий код к событию <xref:System.Windows.Forms.Control.Click> кнопки `Display` после `DisplayEntry.Text = ReadString`.  
+1.  Добавьте следующий код в обработчик события `Display` для кнопки <xref:System.Windows.Forms.Control.Click> после элемента `DisplayEntry.Text = ReadString`.  
   
      [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_9.vb)]  
   
-2.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> для кнопки `DeleteEntry` и добавьте следующий код.  
+2.  Создайте обработчик события <xref:System.Windows.Forms.Control.Click> для кнопки `DeleteEntry` и добавьте в него следующий код.  
   
      [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_10.vb)]  
   
-3.  Когда пользователь отображает запись, кнопка `EditEntry` становится доступной. Добавьте следующий код к событию <xref:System.Windows.Forms.Control.Click> кнопки `Display` после `DisplayEntry.Text = ReadString`.  
+3.  Когда пользователь отображает запись, кнопка `EditEntry` становится доступной. Добавьте следующий код в обработчик событий <xref:System.Windows.Forms.Control.Click> для кнопки `Display` после элемента `DisplayEntry.Text = ReadString`.  
   
      [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_11.vb)]  
   
-4.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> для кнопки `EditEntry` и добавьте следующий код.  
+4.  Создайте обработчик события <xref:System.Windows.Forms.Control.Click> для кнопки `EditEntry` и добавьте в него следующий код.  
   
      [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_12.vb)]  
   
-5.  Создайте обработчик событий <xref:System.Windows.Forms.Control.Click> для кнопки `SubmitEdit` и добавьте следующий код.  
+5.  Создайте обработчик события <xref:System.Windows.Forms.Control.Click> для кнопки `SubmitEdit` и добавьте в него следующий код.  
   
      [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_13.vb)]  
   
- Чтобы протестировать код, нажмите клавишу F5 для компиляции приложения. Щелкните **Показать записи**, выберите запись и нажмите кнопку **Посмотреть**. Запись будет отображена в элементе управления `DisplayEntry` <xref:System.Windows.Forms.TextBox>. Нажмите кнопку **Изменить запись**. Запись будет отображена в элементе управления `Entry` <xref:System.Windows.Forms.TextBox>. Отредактируйте запись в элементе управления `Entry` <xref:System.Windows.Forms.TextBox> и нажмите кнопку **Сохранить изменения**. Откройте `MyDiary.txt` файл, чтобы убедиться, что изменения внесены. Теперь выберите запись и нажмите кнопку **Удалить запись**. Когда появится окно сообщения <xref:System.Windows.Forms.MessageBox> с запросом подтверждения, нажмите кнопку **ОК**. Закройте приложение и откройте файл `MyDiary.txt` для подтверждения удаления.  
+ Чтобы протестировать код, нажмите клавишу F5 для компиляции приложения. Щелкните **Показать записи**, выберите запись и нажмите кнопку **Посмотреть**. Выбранная запись появится в элементе `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Нажмите кнопку **Изменить запись**. Выбранная запись появится в элементе `Entry`<xref:System.Windows.Forms.TextBox>. Измените запись в `Entry`<xref:System.Windows.Forms.TextBox> и щелкните действие **Сохранить изменения**. Откройте `MyDiary.txt` файл, чтобы убедиться, что изменения внесены. Теперь выберите запись и нажмите кнопку **Удалить запись**. Когда <xref:System.Windows.Forms.MessageBox> запросит подтверждение, нажмите кнопку **ОК**. Закройте приложение и откройте файл `MyDiary.txt` для подтверждения удаления.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.IO.StreamReader>   

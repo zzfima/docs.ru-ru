@@ -1,0 +1,1 @@
+Формат JPEG (Joint Photographics Experts Group)

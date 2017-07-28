@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 2569e6a07ba1456d8bba9b27bf16190e634d6b47
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-pool-blocking-period"></a>Устранение рисков: период блокировки пула
@@ -33,8 +33,8 @@ ms.lasthandoff: 04/18/2017
 ## <a name="impact"></a>Последствия  
  Это изменение позволяет немедленно повторять попытку открытого подключения к базам данных Azure SQL, повышая тем самым производительность облачных приложений.  
   
-## <a name="mitigation"></a>Устранение рисков  
- Для приложений, на которые это изменение оказывает отрицательное влияние, интервал блокировки пула подключений можно настроить, задав новое свойство <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>.  Значение свойства является членом перечисления <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName>, которое может принимать одно из трех значений:  
+## <a name="mitigation"></a>Уменьшение  
+ Для приложений, на которые это изменение оказывает существенное влияние, можно отдельно настроить интервал блокировки пула подключений, задав новое свойство <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>.  Значение этого свойства является членом перечисления <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName>, которое принимает одно из трех значений:  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/18/2017
   
 -   `PoolBlockingPeriod.NeverBlock` 
   
- Прежнее поведение можно восстановить, задав свойству <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> значение `PoolBlockingPeriod.AlwaysBlock`.  
+ Чтобы восстановить прежнее поведение, задайте свойству <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> значение `PoolBlockingPeriod.AlwaysBlock`.  
   
 ## <a name="see-also"></a>См. также  
  [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

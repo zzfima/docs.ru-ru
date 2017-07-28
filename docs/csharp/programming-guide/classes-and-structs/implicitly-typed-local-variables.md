@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59bb61d8dd530e87f342d38acb131fab5e25febf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 1aaa231a807ec50b8bcb922bf0dd218ec72d24ff
+ms.openlocfilehash: 21180ce100f81e38b327347e548929a47a2e029d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Неявно типизированные локальные переменные (Руководство по программированию в C#)
-Локальным переменным вместо явного типа можно предоставить выведенный тип `var`. Ключевое слово `var` указывает, что компилятор должен вывести тип переменной из выражения справа от оператора инициализации. Выведенный тип может быть встроенным, анонимным, определяемым пользователем либо типом, определяемым в библиотеке классов .NET Framework. Дополнительные сведения об инициализации массивов с `var` см. в разделе [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+Локальные переменные можно объявлять без указания конкретного типа. Ключевое слово `var` указывает, что компилятор должен вывести тип переменной из выражения справа от оператора инициализации. Выведенный тип может быть встроенным, анонимным, определяемым пользователем либо типом, определяемым в библиотеке классов .NET Framework. Дополнительные сведения об инициализации массивов с `var` см. в разделе [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
   
  В приведенных ниже примерах показаны различные способы объявления локальных переменных с помощью `var`:  
   
@@ -107,3 +108,4 @@ ms.lasthandoff: 03/13/2017
  [for](../../../csharp/language-reference/keywords/for.md)   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
  [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)
+

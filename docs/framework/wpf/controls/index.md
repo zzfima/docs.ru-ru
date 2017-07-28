@@ -16,14 +16,15 @@ caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 3c9baa45741cbc21e1d22ad6a126d7c3d94370cb
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7652a2e64cdc107546ac3ea51178a3542606bd43
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="controls"></a>Элементы управления
-<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поставляется с множеством стандартных компонентов пользовательского интерфейса, которые используются практически во всех приложениях Windows, таких как <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu> и <xref:System.Windows.Controls.ListBox>. Исторически эти объекты называются элементами управления. Хотя SDK [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] продолжает использовать термин "элемент управления" для общего обозначения любого класса, который представляет визуальный объект в приложении, важно отметить, что для наличия визуального представления класс не обязательно должен наследовать от класса <xref:System.Windows.Controls.Control>. Классы, которые наследуют от класса <xref:System.Windows.Controls.Control>, содержат шаблон <xref:System.Windows.Controls.ControlTemplate>, позволяющий потребителю элемента управления существенно изменить внешний вид элемента управления, не создавая новый подкласс.  В этом разделе рассматривается, как элементы управления (как те, которые наследуют от класса <xref:System.Windows.Controls.Control>, так и другие) обычно используются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+<a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержит большинство распространенных компонентов пользовательского интерфейса, которые используются практически во всех Windows-приложениях, например <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu> и <xref:System.Windows.Controls.ListBox>. Исторически эти объекты называются элементами управления. Хотя SDK [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] продолжает использовать термин "элемент управления" для обобщенного обозначения любого класса, который представляет видимый объект в приложении, важно отметить, что класс с визуальным представлением не обязательно должен наследовать от класса <xref:System.Windows.Controls.Control>. Классы, которые наследуют от класса <xref:System.Windows.Controls.Control>, содержат шаблон <xref:System.Windows.Controls.ControlTemplate>, который позволяет существенно изменить внешний вид элемента управления, не создавая новый подкласс.  В этой статье описаны типичные методы применения в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления (наследующих или не наследующих от класса <xref:System.Windows.Controls.Control>).  
   
  
   
@@ -33,10 +34,9 @@ ms.lasthandoff: 04/08/2017
   
  [!code-xml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- В следующем примере создается такое же приложение в коде. Для краткости создание <xref:System.Windows.Controls.Grid>, `grid1`, было исключено из примера.                   `grid1` имеет такие же определения столбцов и строк, как показано в предыдущем примере [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ В следующем примере создается такое же приложение в коде. Для упрощения примера из него исключено создание <xref:System.Windows.Controls.Grid>, `grid1`.                   `grid1` имеет такие же определения столбцов и строк, как показано в предыдущем примере [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
- [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
+ [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)] [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
   
 <a name="changing_the_appearance_of_a_control"></a>   
 ## <a name="changing-the-appearance-of-a-control"></a>Изменение внешнего вида элемента управления  
@@ -49,60 +49,57 @@ ms.lasthandoff: 04/08/2017
 -   Создайте новый <xref:System.Windows.Controls.ControlTemplate> для элемента управления.  
   
 ### <a name="changing-a-controls-property-value"></a>Изменение значения свойства элемента управления  
- Многие элементы управления обладают свойствами, которые позволяют изменять внешний вид элемента управления, например <xref:System.Windows.Controls.Control.Background%2A> кнопки <xref:System.Windows.Controls.Button>. Можно задать свойства значения в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и коде. Следующий пример устанавливает свойства <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A> и <xref:System.Windows.Controls.Control.FontWeight%2A> для <xref:System.Windows.Controls.Button> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ У многих элементов управления есть свойства, которые позволяют изменять внешний вид элемента управления, например <xref:System.Windows.Controls.Control.Background%2A> для <xref:System.Windows.Controls.Button>. Можно задать свойства значения в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и коде. Следующий пример устанавливает атрибуты <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A> и <xref:System.Windows.Controls.Control.FontWeight%2A> для элемента <xref:System.Windows.Controls.Button> в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  [!code-xml[ControlsOverview#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#3)]  
   
  Следующий пример устанавливает те же самые свойства в коде.  
   
- [!code-csharp[ControlsOverview#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#4)]
- [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
+ [!code-csharp[ControlsOverview#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#4)] [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>Создание стиля для элемента управления  
- Вместо установки свойств для каждого экземпляра в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] дает возможность указать внешний вид всех элементов управления путем создания <xref:System.Windows.Style>.                           В следующем примере создается <xref:System.Windows.Style>, который применяется к каждому элементу <xref:System.Windows.Controls.Button> в приложении.                          Определения <xref:System.Windows.Style> обычно задаются в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] в словаре <xref:System.Windows.ResourceDictionary>, например свойство <xref:System.Windows.FrameworkElement.Resources%2A> элемента <xref:System.Windows.FrameworkElement>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] позволяет управлять внешним видом всех элементов, создавая <xref:System.Windows.Style>, вместо того чтобы указывать свойства отдельно для каждого экземпляра в приложении.                           Следующий пример создает <xref:System.Windows.Style>, который применяется к каждому <xref:System.Windows.Controls.Button> в приложении.                          Определения <xref:System.Windows.Style> обычно определяются в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для <xref:System.Windows.ResourceDictionary>, например в свойстве <xref:System.Windows.FrameworkElement.Resources%2A> для <xref:System.Windows.FrameworkElement>.  
   
  [!code-xml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
  Можно также применить стиль только к определенным элементам управления конкретного типа, присвоив ключ для стиля и указав этот ключ в свойстве `Style` элемента управления.  Дополнительные сведения о стилях см. в разделе [Использование стилей и шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 ### <a name="creating-a-controltemplate"></a>Создание шаблона ControlTemplate  
- <xref:System.Windows.Style> позволяет задать свойства для нескольких элементов управления одновременно, но иногда может потребоваться настроить внешний вид <xref:System.Windows.Controls.Control> за пределами того, что можно сделать, создав <xref:System.Windows.Style>. Классы, которые наследуют от класса <xref:System.Windows.Controls.Control>, имеют <xref:System.Windows.Controls.ControlTemplate>, который определяет структуру и внешний вид <xref:System.Windows.Controls.Control>. Свойство <xref:System.Windows.Controls.Control.Template%2A> элемента <xref:System.Windows.Controls.Control> является общедоступным, поэтому можно предоставить <xref:System.Windows.Controls.Control> шаблон <xref:System.Windows.Controls.ControlTemplate>, который отличается от стандартного. Часто можно указать новый <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Control> вместо наследования от элемента управления для настройки внешнего вида <xref:System.Windows.Controls.Control>.  
+ <xref:System.Windows.Style> позволяет задать свойства для нескольких элементов управления одновременно, но иногда для настройки внешнего вида <xref:System.Windows.Controls.Control> вам потребуется больше возможностей, чем предоставляет <xref:System.Windows.Style>. Классы, наследующие от класса <xref:System.Windows.Controls.Control>, имеют <xref:System.Windows.Controls.ControlTemplate>, который определяет структуру и внешний вид <xref:System.Windows.Controls.Control>. Свойство <xref:System.Windows.Controls.Control.Template%2A> для <xref:System.Windows.Controls.Control> является открытым, поэтому пользователь может предоставить для <xref:System.Windows.Controls.Control> значение <xref:System.Windows.Controls.ControlTemplate>, отличное от значения по умолчанию. Обычно для настройки внешнего вида <xref:System.Windows.Controls.Control> вы можете указать новый <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Control>, а не наследовать свойства элемента управления.  
   
- Рассмотрим очень часто используемый элемент управления, <xref:System.Windows.Controls.Button>.  Основное поведение <xref:System.Windows.Controls.Button> состоит в том, чтобы позволить приложению предпринимать определенные действия, когда пользователь нажимает на него.  По умолчанию <xref:System.Windows.Controls.Button> в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображается как приподнятый прямоугольник.  При разработке приложения можно воспользоваться поведением <xref:System.Windows.Controls.Button>, то есть обработкой события нажатия кнопки. Но можно изменить внешний вид кнопки, изменив свойства кнопки.  В этом случае можно создать новый <xref:System.Windows.Controls.ControlTemplate>.  
+ Давайте рассмотрим очень популярный элемент управления <xref:System.Windows.Controls.Button>.  Основное назначение <xref:System.Windows.Controls.Button> — предоставить приложению возможность выполнить определенное действие, когда пользователь нажимает кнопку.  По умолчанию <xref:System.Windows.Controls.Button> в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображается как объемный прямоугольник.  При разработке приложения вас обычно интересует поведение <xref:System.Windows.Controls.Button>, то есть обработка события нажатия кнопки, но вы можете изменить еще и внешний вид кнопки, не ограничиваясь стандартными свойствами кнопки.  В нашем примере создается новый <xref:System.Windows.Controls.ControlTemplate>.  
   
- В следующем примере создается <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Button>.  <xref:System.Windows.Controls.ControlTemplate> создает <xref:System.Windows.Controls.Button> со скругленными углами и градиентным фоном.  <xref:System.Windows.Controls.ControlTemplate> содержит объект <xref:System.Windows.Controls.Border>, <xref:System.Windows.Controls.Border.Background%2A> которого является <xref:System.Windows.Media.LinearGradientBrush> с двумя объектами <xref:System.Windows.Media.GradientStop>.  Первый <xref:System.Windows.Media.GradientStop> использует привязку данных для привязки свойства <xref:System.Windows.Media.GradientStop.Color%2A> объекта <xref:System.Windows.Media.GradientStop> к цвету фона кнопки.  Если задано свойство <xref:System.Windows.Controls.Control.Background%2A> элемента <xref:System.Windows.Controls.Button>, то цвет этого значения будет использоваться как первый <xref:System.Windows.Media.GradientStop>. Дополнительные сведения о привязке данных см. в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md). В примере также создается <xref:System.Windows.Trigger>, изменяющий внешний вид <xref:System.Windows.Controls.Button> при <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A>, равном `true`.  
+ В следующем примере создается <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.Button>.  <xref:System.Windows.Controls.ControlTemplate> создает <xref:System.Windows.Controls.Button> со скругленными углами и градиентным фоном.  <xref:System.Windows.Controls.ControlTemplate> содержит <xref:System.Windows.Controls.Border>, у которого <xref:System.Windows.Controls.Border.Background%2A> является <xref:System.Windows.Media.LinearGradientBrush> с двумя объектами <xref:System.Windows.Media.GradientStop>.  Первый <xref:System.Windows.Media.GradientStop> использует привязку данных, чтобы связать свойство <xref:System.Windows.Media.GradientStop.Color%2A> объекта <xref:System.Windows.Media.GradientStop> с цветом фона кнопки.  Когда вы изменяете свойство <xref:System.Windows.Controls.Control.Background%2A> объекта <xref:System.Windows.Controls.Button>, соответствующий новому значению цвет будет использоваться как первый <xref:System.Windows.Media.GradientStop>. Дополнительные сведения о привязке данных см. в разделе [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md). Также этот пример создает <xref:System.Windows.Trigger>, который изменяет внешний вид <xref:System.Windows.Controls.Button>, если <xref:System.Windows.Controls.Primitives.ButtonBase.IsPressed%2A> имеет значение `true`.  
   
  [!code-xml[ControlsOverview#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#6)]  
 [!code-xml[ControlsOverview#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#7)]  
   
 > [!NOTE]
->  Свойству <xref:System.Windows.Controls.Control.Background%2A> элемента <xref:System.Windows.Controls.Button> должно быть присвоено значение <xref:System.Windows.Media.SolidColorBrush> для правильной работы примера.  
+>  Чтобы наш пример работал правильно, свойство <xref:System.Windows.Controls.Control.Background%2A> для <xref:System.Windows.Controls.Button> должно иметь значение <xref:System.Windows.Media.SolidColorBrush>.  
   
 <a name="subscribing_to_events"></a>   
 ## <a name="subscribing-to-events"></a>Подписка на события  
- Можно подписаться на событие элемента управления с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] или кода, но обрабатывать события можно только в коде.  В следующем примере показано, как подписаться на событие `Click` <xref:System.Windows.Controls.Button>.  
+ Можно подписаться на событие элемента управления с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] или кода, но обрабатывать события можно только в коде.  Следующий пример демонстрирует, как подписаться на событие `Click` объекта <xref:System.Windows.Controls.Button>.  
   
  [!code-xml[ControlsOverview#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#10)]  
   
- [!code-csharp[ControlsOverview#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#8)]
- [!code-vb[ControlsOverview#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#8)]  
+ [!code-csharp[ControlsOverview#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#8)] [!code-vb[ControlsOverview#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#8)]  
   
- Следующий пример обрабатывает событие `Click` <xref:System.Windows.Controls.Button>.  
+ Следующий пример демонстрирует, как обрабатывать событие `Click` объекта <xref:System.Windows.Controls.Button>.  
   
- [!code-csharp[ControlsOverview#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#9)]
- [!code-vb[ControlsOverview#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#9)]  
+ [!code-csharp[ControlsOverview#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#9)] [!code-vb[ControlsOverview#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#9)]  
   
 <a name="rich_content_in_controls"></a>   
 ## <a name="rich-content-in-controls"></a>Форматированное содержимое в элементах управления  
- Большинство классов, которые наследуют от класса <xref:System.Windows.Controls.Control>, могут включать форматированное содержимое. Например, <xref:System.Windows.Controls.Label> может содержать любой объект, например строку, <xref:System.Windows.Controls.Image> или <xref:System.Windows.Controls.Panel>.  Следующие классы обеспечивают поддержку форматированного содержимого и служат базовыми классами для большинства элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Большинство классов, которые наследуют от класса <xref:System.Windows.Controls.Control>, могут содержать форматированное содержимое. Например, <xref:System.Windows.Controls.Label> может содержать любой объект, <xref:System.Windows.Controls.Image> или <xref:System.Windows.Controls.Panel>.  Следующие классы обеспечивают поддержку форматированного содержимого и служат базовыми классами для большинства элементов управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   <xref:System.Windows.Controls.ContentControl> — некоторые примеры классов, которые наследуют от этого класса: <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.ToolTip>.  
+-   <xref:System.Windows.Controls.ContentControl> — в качестве примеров классов, наследующих от этого класса, можно назвать <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, и <xref:System.Windows.Controls.ToolTip>.  
   
--   <xref:System.Windows.Controls.ItemsControl> — некоторые примеры классов, которые наследуют от этого класса: <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu> и <xref:System.Windows.Controls.Primitives.StatusBar>.  
+-   <xref:System.Windows.Controls.ItemsControl> — в качестве примеров классов, наследующих от этого класса, можно назвать <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, и <xref:System.Windows.Controls.Primitives.StatusBar>.  
   
--   <xref:System.Windows.Controls.HeaderedContentControl> — некоторые примеры классов, которые наследуют от этого класса: <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox> и <xref:System.Windows.Controls.Expander>.  
+-   <xref:System.Windows.Controls.HeaderedContentControl> — в качестве примеров классов, наследующих от этого класса, можно назвать <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, и <xref:System.Windows.Controls.Expander>.  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl> — некоторые примеры классов, которые наследуют от этого класса: <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem> и <xref:System.Windows.Controls.ToolBar>.  
+-   <xref:System.Windows.Controls.HeaderedItemsControl> — в качестве примеров классов, наследующих от этого класса, можно назвать <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, и <xref:System.Windows.Controls.ToolBar>.  
   
 -  
   

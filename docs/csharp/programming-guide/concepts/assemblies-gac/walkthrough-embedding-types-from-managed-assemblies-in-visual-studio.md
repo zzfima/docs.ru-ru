@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c821afbbe8571d9573321b9d11b069aa0f7cd342
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3bb7e2c9665cf98fe48e1445dfcf8009b329a39a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)
@@ -62,7 +63,7 @@ ms.lasthandoff: 03/13/2017
   
 -   Запустите клиентскую программу, чтобы увидеть, что новая версия сборки среды выполнения позволяет обойтись без повторной компиляции клиентской программы.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-an-interface"></a>Создание интерфейса  
   
@@ -80,14 +81,32 @@ ms.lasthandoff: 03/13/2017
   
 6.  Откройте файл ISampleInterface.cs. Добавьте следующий код в файл класса ISampleInterface, чтобы создать интерфейс ISampleInterface.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Runtime.InteropServices;  
+  
+    namespace TypeEquivalenceInterface  
+    {  
+        [ComImport]  
+        [Guid("8DA56996-A151-4136-B474-32784559F6DF")]  
+        public interface ISampleInterface  
+        {  
+            void GetUserInput();  
+            string UserInput { get; }  
+        }  
+    }  
+    ```  
+  
 7.  В меню **Сервис** выберите пункт **Создать GUID**. В диалоговом окне **Создание GUID** нажмите кнопку **Формат реестра**, а затем **Копировать**. Нажмите кнопку **Выход**.  
   
 8.  В атрибуте `Guid` удалите пример GUID и вставьте GUID, скопированный из диалогового окна **Создание GUID**. Удалите фигурные скобки ({}) из скопированного GUID.  
   
 9. В **обозревателе решений** разверните папку **Свойства**. Дважды щелкните файл AssemblyInfo.cs. Добавьте в файл следующий атрибут.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    [assembly: ImportedFromTypeLib("")]  
+    ```  
+  
      Сохраните файл.  
   
 10. Сохраните проект.  
@@ -114,7 +133,29 @@ ms.lasthandoff: 03/13/2017
   
 8.  Добавьте следующий код в файл класса SampleClass, чтобы создать класс SampleClass.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+  
+    namespace TypeEquivalenceRuntime  
+    {  
+        public class SampleClass : ISampleInterface  
+        {  
+            private string p_UserInput;  
+            public string UserInput { get { return p_UserInput; } }  
+  
+            public void GetUserInput()  
+            {  
+                Console.WriteLine("Please enter a value:");  
+                p_UserInput = Console.ReadLine();  
+            }  
+        }  
+    )  
+    ```  
+  
 9. Сохраните проект.  
   
 10. Щелкните проект TypeEquivalenceRuntime правой кнопкой мыши и выберите пункт **Сборка**. DLL-файл библиотеки классов компилируется и сохраняется по указанному выходному пути для сборки (например, C:\TypeEquivalenceSample).  
@@ -135,7 +176,32 @@ ms.lasthandoff: 03/13/2017
   
 6.  Добавьте в файл Program.cs следующий код, чтобы создать клиентскую программу.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+    using System.Reflection;  
+  
+    namespace TypeEquivalenceClient  
+    {  
+        class Program  
+        {  
+            static void Main(string[] args)  
+            {  
+                Assembly sampleAssembly = Assembly.Load("TypeEquivalenceRuntime");  
+                ISampleInterface sampleClass =   
+                    (ISampleInterface)sampleAssembly.CreateInstance("TypeEquivalenceRuntime.SampleClass");  
+                sampleClass.GetUserInput();  
+                Console.WriteLine(sampleClass.UserInput);  
+                Console.WriteLine(sampleAssembly.GetName().Version.ToString());  
+                Console.ReadLine();  
+            }  
+        }  
+    }  
+    ```  
+  
 7.  Нажмите сочетание клавиш CTRL+F5, чтобы собрать и запустить программу.  
   
 ## <a name="modifying-the-interface"></a>Изменение интерфейса  
@@ -148,7 +214,10 @@ ms.lasthandoff: 03/13/2017
   
 3.  Откройте файл SampleInterface.cs. Добавьте в интерфейс ISampleInterface следующую строку кода.  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
+    ```csharp  
+    DateTime GetDate();  
+    ```  
+  
      Сохраните файл.  
   
 4.  Сохраните проект.  
@@ -165,7 +234,7 @@ ms.lasthandoff: 03/13/2017
   
 3.  Откройте файл SampleClass.cs. Добавьте в класс SampleClass следующие строки кода.  
   
-    ```cs  
+    ```csharp  
     public DateTime GetDate()  
     {  
         return DateTime.Now;  
@@ -183,6 +252,6 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>См. также  
  [-link (Параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
  [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Программирование с использованием сборок](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
+ [Программирование с использованием сборок](../../../../framework/app-domains/programming-with-assemblies.md)   
  [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 

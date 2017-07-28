@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3dbadeec14ce9c023af39ae4ff95d0183826e7c1
-ms.openlocfilehash: eb0f0636abb39eabb387388fcdd39df8aca88c34
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
@@ -57,13 +57,13 @@ ms.lasthandoff: 05/02/2017
   
     -   [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
-    -   [Устранение неполадок заблокированных установок и удалений .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+    -   [Устранение неполадок с заблокированными установками и удалениями .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
 -   Развертывание .NET Framework с клиентским приложением (для разработчиков):  
   
-    -   [Использование InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield) в проекте установки и развертывания.  
+    -   [Использование InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment) в проекте установки и развертывания.  
   
-    -   [Использование приложения Visual Studio ClickOnce](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce).  
+    -   [Использование приложения Visual Studio ClickOnce](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment).  
   
     -   [Создание пакета установки WiX](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix).  
   
@@ -171,12 +171,12 @@ ms.lasthandoff: 05/02/2017
 |Заголовок|Описание|  
 |-----------|-----------------|  
 |[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Описывается то, как среда CLR определяет, какую сборку следует использовать для выполнения запроса привязки.|  
-|[Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Описываются способы избежания проблем с идентификацией типов, которые могут привести к таким ошибкам, как <xref:System.InvalidCastException>, <xref:System.MissingMethodException> и т. д.|  
+|[Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Описывается, как избежать проблем с идентификацией типов, которые могут привести к возникновению исключений <xref:System.InvalidCastException> и <xref:System.MissingMethodException> и других ошибок.|  
 |[Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Описывается диспетчер перезапуска, который по возможности предотвращает перезагрузки, и его преимущества для приложений, устанавливающих платформу .NET Framework.|  
 |[Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md)|Описывается развертывание платформы .NET Framework и ее системных зависимостей в сети с помощью System Center Configuration Manager (SCCM).|  
 |[Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Описываются способы установки .NET Framework на компьютеры пользователей вместе с приложениями.|  
 |[Развертывание приложений, служб и компонентов](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|Рассматриваются варианты развертывания в Visual Studio, включая инструкции по публикации приложения с помощью технологии ClickOnce и установщика Windows.| 
-|[Публикация приложений ClickOnce](http://msdn.microsoft.com/library/eb6dfe79-f54c-4331-8e36-073688e70973)|Описывается, как упаковать приложение Windows Forms и развернуть его на клиентских компьютерах в сети с помощью технологии ClickOnce.|  
+|[Публикация приложений ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Описывается, как упаковать приложение Windows Forms и развернуть его на клиентских компьютерах в сети с помощью технологии ClickOnce.|  
 |[Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Описывается модель "звезда", которую платформа .NET Framework использует для упаковки и развертывания ресурсов; рассматриваются соглашения об именовании ресурсов, процесс перехода на резервные ресурсы и альтернативные способы упаковки.|  
 |[Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md)|Описывается поставка и установка приложений взаимодействия, которые обычно включают клиентскую сборку .NET Framework, одну или несколько сборок взаимодействия (представляющих различные библиотеки типов COM) и один или несколько зарегистрированных COM-компонентов.|  
 |[Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Описывается автоматический запуск и отслеживание процесса установки .NET Framework с выводом собственного представления хода выполнения установки.|  

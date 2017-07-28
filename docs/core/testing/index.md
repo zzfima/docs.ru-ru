@@ -1,5 +1,5 @@
 ---
-title: "Модульное тестирование в .NET Core"
+title: "Модульное тестирование в .NET Core | Документы Майкрософт"
 description: "Модульное тестирование в .NET Core"
 keywords: .NET, .NET Core
 author: ardalis
@@ -9,19 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-translationtype: Human Translation
-ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
-ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 4983af5386efc6b713f10f200687535b7dc36a11
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/23/2017
 
 ---
 
 # <a name="unit-testing-in-net-core"></a>Модульное тестирование в .NET Core
 
-Авторы: [Стив Смит](http://ardalis.com) (Steve Smith) и [Билл Вагнер](https://github.com/BillWagner) (Bill Wagner)
-
-При разработке платформы .NET Core учитывались возможности тестирования, поэтому создавать модульные тесты для приложений стало еще проще. В этой статье вкратце рассматриваются модульные тесты (и то, чем они отличаются от других типов тестов).
-В связанных ресурсах демонстрируется, как добавить тестовый проект в решение и как затем выполнять модульные тесты с помощью командной строки или Visual Studio.
+При разработке платформы .NET Core учитывались возможности тестирования, поэтому создавать модульные тесты для приложений стало еще проще. В этой статье вкратце рассматриваются модульные тесты (и то, чем они отличаются от других типов тестов). В связанных ресурсах демонстрируется, как добавить тестовый проект в решение и как затем выполнять модульные тесты с помощью командной строки или Visual Studio.
 
 ## <a name="getting-started-with-testing"></a>Приступая к тестированию
  
@@ -34,9 +32,8 @@ ms.lasthandoff: 04/05/2017
 
 Дополнительные сведения о модульном тестировании в проектах .NET Core:
 
-Воспользуйтесь этим [пошаговым руководством по созданию модульных тестов с помощью xUnit и интерфейса командной строки .NET](unit-testing-with-dotnet-test.md). 
-
-Команда разработчиков XUnit разработала учебник, в котором показано, как [использовать xUnit с .NET Core и Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-
-Если вы предпочитаете MSTest, обратитесь к [пошаговому руководству по созданию модульных тестов с помощью MSTest и интерфейса командной строки .NET](unit-testing-with-mstest.md).
+* Воспользуйтесь этим [пошаговым руководством по созданию модульных тестов с помощью xUnit и интерфейса командной строки .NET](unit-testing-with-dotnet-test.md). 
+* Команда разработчиков XUnit разработала учебник, в котором показано, как [использовать xUnit с .NET Core и Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Если вы предпочитаете MSTest, обратитесь к [пошаговому руководству по созданию модульных тестов с помощью MSTest и интерфейса командной строки .NET](unit-testing-with-mstest.md).
+* Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье о [выполнении выборочных модульных тестов](../testing/selective-unit-tests.md).
 

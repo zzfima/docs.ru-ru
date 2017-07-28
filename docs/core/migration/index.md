@@ -10,14 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 7ee369e62027aaf59e4c1a340bbdd30a643e2b75
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: ac870aa302c3e56b59cbfdfd0fc88e06bbaad5fb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>Перенос проектов .NET Core в формат .csproj
+<a id="migrating-net-core-projects-to-the-csproj-format" class="xliff"></a>
+
+# Перенос проектов .NET Core в формат .csproj
 
 В этом документе рассматриваются сценарии переноса для проектов .NET Core. В частности, три следующие сценарии переноса:
 
@@ -25,7 +27,9 @@ ms.lasthandoff: 05/14/2017
 2. [Перенос проекта DNX в формат csproj](#migration-from-dnx-to-csproj)
 3. [Перенос проектов RC3 и проектов .NET Core csproj предыдущих версий в окончательный формат](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-## <a name="migration-from-projectjson-to-csproj"></a>Перенос проекта project.json в формат csproj
+<a id="migration-from-projectjson-to-csproj" class="xliff"></a>
+
+## Перенос проекта project.json в формат csproj
 Перенос проекта *project.json* в формат *.csproj* можно выполнить с помощью одного из следующих методов:
 
 - [Visual Studio 2017](#visual-studio-2017)
@@ -33,7 +37,9 @@ ms.lasthandoff: 05/14/2017
  
 В обоих методах используется один и тот же базовый механизм переноса, поэтому результаты будут одинаковыми. В большинстве случаев достаточно использовать один из методов переноса проекта *project.json* в формат *csproj*. Никакого дальнейшего редактирования файла проекта вручную не требуется. Имя полученного файла *.csproj* будет совпадать с именем каталога, в котором находится проект.
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+<a id="visual-studio-2017" class="xliff"></a>
+
+### Visual Studio 2017
 
 При открытии файла *.xproj* или файла решения, который ссылается на файлы *.xproj*, появится диалоговое окно **Одностороннее обновление**. В диалоговом окне отображаются проекты для переноса. Если открыть файл решения, будут показаны все проекты, содержащиеся в файле решения. Просмотрите список проектов для переноса и нажмите кнопку **OK**.
 
@@ -46,25 +52,31 @@ Visual Studio выполнит перенос для выбранных прое
 > [!IMPORTANT]
 > Новые средства недоступны в Visual Studio 2015, поэтому вы не сможете выполнить перенос проектов с помощью этой версии Visual Studio.
 
-### <a name="dotnet-migrate"></a>dotnet migrate
+<a id="dotnet-migrate" class="xliff"></a>
+
+### dotnet migrate
 
 В сценарии для командной строки можно использовать команду [`dotnet migrate`](../tools/dotnet-migrate.md). Она переносит проект, решение или набор папок в указанном порядке, в зависимости от того, какие объекты были найдены. При переносе проекта переносятся сам проект и его зависимости.
 
 Перенесенные файлы (*project.json*, *global.json* и *.xproj*) будут перемещены в папку *backup*.
 
 > [!NOTE]
-> Если вы используете VS Code, команда `dotnet migrate` не будет изменять файлы, связанные с VS Code, такие как `tasks.json`. Эти файлы нужно будет изменить вручную. Это также справедливо, если используется проект Райдер, другой редактор или интегрированная среда разработки (IDE), отличные от Visual Studio. 
+> Если вы используете Visual Studio Code, команда `dotnet migrate` не будет изменять файлы, относящиеся к Visual Studio Code, такие как `tasks.json`. Эти файлы нужно будет изменить вручную. Это также справедливо, если используется проект Райдер, другой редактор или интегрированная среда разработки (IDE), отличные от Visual Studio. 
 
 Сравнение форматов project.json и CSPROJ см. в разделе [Сопоставление между свойствами project.json и CSPROJ](../tools/project-json-to-csproj.md).
 
-### <a name="common-issues"></a>Распространенные проблемы
+<a id="common-issues" class="xliff"></a>
+
+### Распространенные проблемы
 
 - Если вы получили сообщение об ошибке: "Исполняемый файл, соответствующий команде dotnet-migrate, не найден", выполните следующие действия:
 
 Выполните команду `dotnet --version`, чтобы просмотреть используемую версию интерфейса. [`dotnet migrate`](../tools/dotnet-migrate.md) требует использования интерфейса командной строки .NET Core версии RC3 или более поздней версии.
 Вы также получите эту ошибку, если в текущем или родительском каталоге есть файл *global.json* и версия `sdk` установлена в более раннюю.
 
-## <a name="migration-from-dnx-to-csproj"></a>Перенос проекта DNX в формат csproj
+<a id="migration-from-dnx-to-csproj" class="xliff"></a>
+
+## Перенос проекта DNX в формат csproj
 Если все еще используете DNX для разработки .NET Core, перенос необходимо выполнять в два этапа:
 
 1. Используйте [существующие руководства по переносу DNX](from-dnx.md) для переноса проекта из DNX в проект project-json с активированным интерфейсом командной строки.
@@ -73,7 +85,9 @@ Visual Studio выполнит перенос для выбранных прое
 > [!NOTE]
 > Формат DNX официально признан устаревшим при выпуске предварительной версии 1 интерфейса командной строки .NET Core. 
 
-## <a name="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj"></a>Перенос из более ранних форматов csproj NET Core в формат csproj RTM
+<a id="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj" class="xliff"></a>
+
+## Перенос из более ранних форматов csproj NET Core в формат csproj RTM
 Формат csproj .NET Core изменяется и развивается с выпуском каждой новой предварительной версии инструментов. Инструмента, с помощью которого можно перенести файл проекта из ранних версий csproj до последней версии, не существует, поэтому вам придется вручную изменить файл проекта. Фактические действия зависят от версии файла проекта, который вы переносите. Вот некоторые рекомендации, которые следует учитывать. Они основаны на изменениях, произошедших между версиями:
 
 * Удалите свойство версии инструмента из элемента `<Project>`, если оно задано. 

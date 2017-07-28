@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>Сообщения об ошибке (Visual Basic)
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/17/2017
  Сведения о способах устранения некоторых ошибок можно найти в статье [Additional Resources for Visual Basic Programmers](../../../visual-basic/getting-started/additional-resources.md) (Дополнительные ресурсы для программирования на Visual Basic).  
   
 ## <a name="run-time-errors"></a>Ошибки времени выполнения  
- Если приложение Visual Basic пытается выполнить действие, которое невозможно в текущей системе, то во время выполнения возникает ошибка, и [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] создает объект `Exception`. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] может создавать с помощью инструкции `Throw` пользовательские ошибки с любым типом данных, включая объекты `Exception`. Приложение может идентифицировать ошибки, отображая номер ошибки и сообщение перехваченного исключения. Если ошибка не будет перехвачена, приложение завершается.  
+ Если приложение Visual Basic пытается выполнить действие, которое невозможно в текущей системе, то во время выполнения возникает ошибка, и [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] создает объект `Exception`. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] может создавать с помощью инструкции `Throw` пользовательские ошибки с любым типом данных, включая объекты `Exception`. Приложение может идентифицировать ошибки, отображая номер ошибки и сообщение перехваченного исключения. Если ошибка не будет перехвачена, приложение завершается.  
   
  Код может перехватывать и проверять ошибки времени выполнения. Если вы заключите код, создающий ошибку, в блок `Try`, вы сможете перехватить любую созданную ошибку в соответствующем блоке `Catch`. Сведения о том, как в коде отлавливать ошибки во время выполнения и реагировать на них, можно найти в статье [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Оператор Try...Catch...Finally).  
   
