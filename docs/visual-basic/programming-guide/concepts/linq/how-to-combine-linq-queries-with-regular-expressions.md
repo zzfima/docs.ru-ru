@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство: объединение запросов LINQ с регулярными выражениями (Visual Basic) | Документы Microsoft"
+title: "Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (Visual Basic) | Документы Майкрософт"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,15 +20,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 283b5e844c91da22aadd7bcf88ea327ccc080be7
+ms.translationtype: MT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: d9d63a729a31394b96a78479bc115125a1a7baeb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/26/2017
 
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Практическое руководство: объединение запросов LINQ с регулярными выражениями (Visual Basic)
-В этом примере показано, как использовать <xref:System.Text.RegularExpressions.Regex>класса, чтобы создать регулярное выражение для более сложных соответствий в текстовых строках.</xref:System.Text.RegularExpressions.Regex> Запрос LINQ упрощает фильтрацию именно файлов, которые требуется поиск с помощью регулярных выражений и формирование результатов.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (Visual Basic)
+В этом примере показано, как использовать класс <xref:System.Text.RegularExpressions.Regex> при создании регулярного выражения для более сложных сопоставлений в текстовых строках. Запрос LINQ упрощает фильтрацию именно тех файлов, которые требуется найти с помощью регулярного выражения, и формирование результатов.  
   
 ## <a name="example"></a>Пример  
   
@@ -97,10 +97,10 @@ Class LinqRegExVB
 End Class  
 ```  
   
- Обратите внимание, что также можно запрашивать <xref:System.Text.RegularExpressions.MatchCollection>объект, возвращаемый `RegEx` поиска.</xref:System.Text.RegularExpressions.MatchCollection> В этом примере в результатах создается только значения каждого соответствия. Однако можно также использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции. Поскольку <xref:System.Text.RegularExpressions.MatchCollection>является неуниверсального <xref:System.Collections.IEnumerable>коллекции, необходимо явно указывать тип переменной диапазона в запросе.</xref:System.Collections.IEnumerable> </xref:System.Text.RegularExpressions.MatchCollection>  
+ Обратите внимание, что можно также запросить объект <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемый поиском `RegEx`. В этом примере в результатах создается только значение каждого совпадения. Тем не менее вы можете использовать LINQ для выполнения всех видов фильтрации, сортировки и группировки в этой коллекции. Так как <xref:System.Text.RegularExpressions.MatchCollection> является неуниверсальной коллекцией <xref:System.Collections.IEnumerable>, необходимо явно указать тип переменной диапазона в запросе.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
  [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   

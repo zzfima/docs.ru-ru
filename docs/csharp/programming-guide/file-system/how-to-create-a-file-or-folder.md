@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bba53c8d175d95aa3b89ba458517d439a8d2bb11
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 95b35941e18d22e2d484017262d9adbe8a081a8a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Практическое руководство. Создание файла или папки (Руководство по программированию на C#)
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
  [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
- Если папка уже существует, <xref:System.IO.Directory.CreateDirectory%2A> ничего не делает и исключение не возникает. При этом <xref:System.IO.File.Create%2A?displayProperty=fullName> заменяет существующий файл на новый. Для того чтобы этого избежать, в примере используется оператор `if`-`else`.  
+ Если папка уже существует, <xref:System.IO.Directory.CreateDirectory%2A> не выполняет никаких действий и исключение не возникает. Но <xref:System.IO.File.Create%2A?displayProperty=fullName> заменяет существующий файл новым. Для того чтобы этого избежать, в примере используется оператор `if`-`else`.  
   
  Изменив пример указанным ниже образом, вы можете задать различные результаты в зависимости от того, существует ли файл с определенным именем. Если файл не существует, он создается. Если файл существует, код добавляет в него данные.  
   
@@ -54,7 +55,6 @@ ms.lasthandoff: 03/13/2017
   
     // Replace that line with the following assignment.  
     string fileName = "MyNewFile.txt";  
-  
     ```  
   
 -   В следующем коде замените оператор `if`-`else` на `using`.  
@@ -67,7 +67,6 @@ ms.lasthandoff: 03/13/2017
             fs.WriteByte(i);  
         }  
     }  
-  
     ```  
   
  Выполните код в примере несколько раз, чтобы убедиться, что каждый раз данные добавляются в файл.  
@@ -76,22 +75,23 @@ ms.lasthandoff: 03/13/2017
   
  При следующих условиях возможно возникновение исключения:  
   
--   Имя папки недопустимо, например, содержит недопустимые символы или только пробелы (класс <xref:System.ArgumentException>). Для создания допустимых имен путей используйте класс <xref:System.IO.Path>.  
+-   Имя папки недопустимо, Например, оно содержит недопустимые символы или состоит из одних пробелов (класс <xref:System.ArgumentException>). Используйте класс <xref:System.IO.Path>, чтобы создавать допустимые пути.  
   
 -   Родительская папка создаваемой папки доступна только для чтения (класс <xref:System.IO.IOException>).  
   
--   Имя папки имеет значение `null` (класс <xref:System.ArgumentNullException>).  
+-   Имя папки — `null` (класс <xref:System.ArgumentNullException>).  
   
--   Слишком длинное имя папки (класс <xref:System.IO.PathTooLongException>).  
+-   Имя папки слишком длинное (класс <xref:System.IO.PathTooLongException>).  
   
--   Имя папки содержит только двоеточие, ":" (класс <xref:System.IO.PathTooLongException>).  
+-   Имя папки состоит из одного двоеточия ":" (класс <xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- В ситуациях частичного доверия может создаваться экземпляр класса <xref:System.Security.SecurityException>.  
+ Экземпляр класса <xref:System.Security.SecurityException> может быть порожден как исключение в ситуации частичного доверия.  
   
- Если у вас нет разрешения на создание папки, код в приведенном примере создаст экземпляр класса <xref:System.UnauthorizedAccessException>.  
+ Если у вас нет разрешения на создание папки, код в приведенном примере породит как исключение экземпляр класса <xref:System.UnauthorizedAccessException>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.IO?displayProperty=fullName>   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
+

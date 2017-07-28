@@ -1,5 +1,5 @@
 ---
-title: "Средства Visual Studio для Docker | Документация Майкрософт"
+title: "Инструменты Visual Studio для Docker"
 description: "Использование инструментов Visual Studio для Docker"
 keywords: .NET, .NET Core, Docker, ASP.NET Core, Visual Studio
 author: spboyer
@@ -11,26 +11,23 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: dd1a0dc226d6ac9af5a474da54ac14094855fe31
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/01/2017
 
 ---
 
-# Инструменты Visual Studio для Docker
-<a id="visual-studio-tools-for-docker" class="xliff"></a>
+# <a name="visual-studio-tools-for-docker"></a>Инструменты Visual Studio для Docker
 
 [Microsoft Visual Studio 2017](https://www.visualstudio.com/) с [Docker для Windows](https://docs.docker.com/docker-for-windows/install/) поддерживает сборку, отладку и выполнение веб-приложений и консольных приложений .NET Framework и .NET Core с использованием контейнеров Windows и Linux.
 
-## Предварительные требования
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
 - [Docker для Windows](https://docs.docker.com/docker-for-windows/install/)
 
-## Установка и настройка
-<a id="installation-and-setup" class="xliff"></a>
+## <a name="installation-and-setup"></a>Установка и настройка
 
 Установите [Microsoft Visual Studio 2017](https://www.visualstudio.com/) с рабочей нагрузкой .NET Core. Ознакомьтесь с разделом [Docker для Windows: что следует знать перед установкой](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) и установите [Docker для Windows](https://docs.docker.com/docker-for-windows/install/).
 
@@ -40,8 +37,7 @@ ms.lasthandoff: 05/23/2017
 
 ![Общие диски](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
-## Создание веб-приложения ASP.NET и добавление поддержки Docker
-<a id="create-an-aspnet-web-application-and-add-docker-support" class="xliff"></a>
+## <a name="create-an-aspnet-web-application-and-add-docker-support"></a>Создание веб-приложения ASP.NET и добавление поддержки Docker
 
 С помощью Visual Studio создайте веб-приложение ASP.NET Core. После загрузки приложения выберите пункт **Добавить поддержку Docker** в меню **Проект** или щелкните проект правой кнопкой мыши в обозревателе решений и выберите пункт **Добавить** > **Поддержка Docker**.
 
@@ -79,8 +75,7 @@ services:
 
 Если вы планируете помещать образ в реестр, значение `user` необходимо изменить на имя пользователя Docker Hub. Например, измените его на `spboyer/hellodockertools` или на URL-адрес своего закрытого реестра `privateregistry.domain.com/` в зависимости от конфигурации.
 
-### Отладка
-<a id="debugging" class="xliff"></a>
+### <a name="debugging"></a>Отладка
 
 Выберите пункт **Docker** в раскрывающемся списке отладки на панели инструментов и нажмите клавишу F5, чтобы начать отладку приложения. 
 
@@ -106,8 +101,7 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   4 minutes ago       Up 4 minutes        0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-### Изменить и продолжить
-<a id="edit-and-continue" class="xliff"></a>
+### <a name="edit-and-continue"></a>Изменить и продолжить
 
 Изменения статических полей и файлов шаблонов Razor (CSHTML) применяются автоматически без необходимости выполнять этап компиляции. Внесите изменение, сохраните его и нажмите кнопку "Обновить" в браузере, чтобы увидеть обновление.  
 
@@ -118,8 +112,7 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   10 minutes ago      Up 10 minutes       0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-### Публикация образов Docker
-<a id="publishing-docker-images" class="xliff"></a>
+### <a name="publishing-docker-images"></a>Публикация образов Docker
 
 После завершения цикла разработки и отладки приложения инструменты Visual Studio для Docker помогут вам создать рабочий образ приложения. Выберите в раскрывающемся списке отладки значение **Выпуск** и выполните сборку приложения. Инструментарий создаст образ с тегом `:latest`, который можно отправить в закрытый реестр или в Docker Hub. 
 
