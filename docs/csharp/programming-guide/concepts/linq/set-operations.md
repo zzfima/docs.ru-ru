@@ -35,28 +35,28 @@ ms.lasthandoff: 03/13/2017
 |Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Distinct|Удаляет повторяющиеся значения из коллекции.|Неприменимо.|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=fullName>|  
-|Исключения|Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.|Неприменимо.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=fullName>|  
-|Пересечение|Возвращает пересечение множеств, т. е. элементы, присутствующие в каждой из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName>|  
-|Объединение|Возвращает объединение множеств, т. е. уникальные элементы, присутствующие в одной из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=fullName>|  
+|Except|Возвращает разность множеств, т. е. элементы одной коллекции, которые отсутствуют во второй.|Неприменимо.|<xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=fullName>|  
+|Intersect|Возвращает пересечение множеств, т. е. элементы, присутствующие в каждой из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=fullName>|  
+|Union|Возвращает объединение множеств, т. е. уникальные элементы, присутствующие в одной из двух коллекций.|Неприменимо.|<xref:System.Linq.Enumerable.Union%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=fullName>|  
   
 ## <a name="comparison-of-set-operations"></a>Сравнение операций над множествами  
   
-### <a name="distinct"></a>Distinct  
+### <a name="distinct"></a>Distinct (исключение дубликатов)  
  На следующем рисунке показано воздействие метода <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> на последовательность символов. Возвращаемая последовательность содержит уникальные элементы из входной последовательности.  
   
  ![График, демонстрирующий поведение Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
   
-### <a name="except"></a>Исключения  
+### <a name="except"></a>Except (исключение)  
  На следующем рисунке показано действие метода <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>. Возвращаемая последовательность содержит только те элементы из первой входной последовательности, которых нет во второй.  
   
  ![График, отображающий действие Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
   
-### <a name="intersect"></a>Пересечение  
+### <a name="intersect"></a>Intersect (пересечение)  
  На следующем рисунке показано действие метода <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>. Возвращаемая последовательность содержит элементы, общие для обеих входных последовательностей.  
   
  ![График, отображающий пересечение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
   
-### <a name="union"></a>Объединение  
+### <a name="union"></a>Union (объединение)  
  На следующем рисунке показана операция объединения двух последовательностей символов. Возвращаемая последовательность содержит уникальные элементы из обеих входных последовательностей.  
   
  ![График, показывающий объединение двух последовательностей.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  

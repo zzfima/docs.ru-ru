@@ -87,4 +87,5 @@ ms.lasthandoff: 05/26/2017
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Methods (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/methods.md)  (Методы (руководство по программированию на C#)  
  [Inside a C# Program](../../../csharp/programming-guide/inside-a-program/index.md)  (Структура программы C#)  
+
  [\<paveover>Примеры приложений на C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

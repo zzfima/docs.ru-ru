@@ -23,12 +23,12 @@ caps.handback.revision: 18
   
  Массив содержит элементы с `array[0]` по `array[4]`.  Оператор [new](../../../csharp/language-reference/keywords/new.md) служит для создания массива и инициализации элементов массива со значениями по умолчанию.  В данном примере элементы массива инициализируются значением 0.  
   
- Массив, в котором хранятся строковые элементы, можно объявить таким же образом.  Примеры.  
+ Массив, в котором хранятся строковые элементы, можно объявить таким же образом.  Например:  
   
  [!code-cs[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
 ## Инициализация массива  
- Массив можно инициализировать при объявлении. В этом случае спецификация ранга не нужна, поскольку она уже предоставлена по числу элементов в списке инициализации.  Примеры.  
+ Массив можно инициализировать при объявлении. В этом случае спецификация ранга не нужна, поскольку она уже предоставлена по числу элементов в списке инициализации.  Например:  
   
  [!code-cs[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   
@@ -36,7 +36,7 @@ caps.handback.revision: 18
   
  [!code-cs[csProgGuideArrays#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_4.cs)]  
   
- При инициализации массива при объявлении можно использовать следующие сочетания клавиш:  
+ При инициализации массива при объявлении можно использовать следующие сокращения:  
   
  [!code-cs[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]  
   

@@ -40,7 +40,7 @@ ms.lasthandoff: 03/13/2017
 |----------------------------|-------------------------------------|  
 |**executable.exe a b c**|"a"<br /><br /> "b"<br /><br /> "c"|  
 |**executable.exe one two**|"one"<br /><br /> "two"|  
-|**executable.exe "one two" three**|"один два"<br /><br /> "три"|  
+|**executable.exe "one two" three**|"one two"<br /><br /> "three"|  
   
 > [!NOTE]
 >  При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  

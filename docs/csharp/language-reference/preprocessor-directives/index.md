@@ -19,7 +19,7 @@ ms.author: "wiwagn"
 caps.handback.revision: 13
 ---
 # Директивы препроцессора C# #
-Этот раздел содержит сведения о следующих директивах препроцессора c\#.  
+Этот раздел содержит сведения о следующих директивах препроцессора C\#.  
   
  [\#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)  
   

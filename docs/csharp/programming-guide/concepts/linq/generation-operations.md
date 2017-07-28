@@ -36,8 +36,8 @@ ms.lasthandoff: 03/13/2017
 |-----------------|-----------------|---------------------------------|----------------------|  
 |DefaultIfEmpty|Заменяет пустую коллекцию на одноэлементную коллекцию со значениями по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
 |Empty|Возвращает пустую коллекцию.|Неприменимо.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
-|Диапазон|Создает коллекцию, содержащую последовательность чисел.|Неприменимо.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
-|Повторить|Создает коллекцию, содержащую одно повторяющееся значение.|Неприменимо.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
+|Range|Создает коллекцию, содержащую последовательность чисел.|Неприменимо.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
+|Repeat|Создает коллекцию, содержащую одно повторяющееся значение.|Неприменимо.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Linq>   
