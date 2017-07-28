@@ -1,27 +1,27 @@
 ---
-title: "Начало работы с .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework, начало работы"
-  - "начало работы [.NET Framework]"
+title: "Начало работы с .NET Framework"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework, getting started
+- getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f5c2441148ba869629a88ab2fcc83131f5205493
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
@@ -86,10 +86,11 @@ ms.lasthandoff: 05/19/2017
 |[.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|Содержит описание внештатных выпусков платформы .NET Framework и порядка их использования в приложении.|
 |[Требования к системе](../../../docs/framework/get-started/system-requirements.md)|Содержит требования к оборудованию и операционной системе для использования платформы .NET Framework.|
 |[.NET Core и открытый исходный код](../../../docs/framework/get-started/net-core-and-open-source.md)|Описание .NET Core относительно .NET Framework и сведения о получении доступа к проектам .NET Core с открытым исходным кодом.|
-|[Документация по .NET Core](https://docs.microsoft.com/dotnet/)|Концептуальная и справочная документация по API для .NET Core.|
+|[Документация по .NET Core](/dotnet/)|Концептуальная и справочная документация по API для .NET Core.|
 
 ## <a name="see-also"></a>См. также
  [Руководство по .NET Framework](../../../docs/framework/index.md)   
  [Новые возможности](../../../docs/framework/whats-new/index.md)   
  [Браузер API .NET](/dotnet/api/)   
  [Руководство по разработке](../../../docs/framework/development-guide.md)
+

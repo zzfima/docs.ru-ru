@@ -1,5 +1,5 @@
 ---
-title: "Работа с потоками (Visual Basic) | Microsoft Docs"
+title: "Работа с потоками (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,16 +20,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 0c9cf36aeee43afc710dd3261f5d012ba53c02e5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 840cc7df20250acb67bd09a8d39b353c772e82da
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="threading-visual-basic" class="xliff"></a>
-
-# Работа с потоками (Visual Basic)
+# <a name="threading-visual-basic"></a>Работа с потоками (Visual Basic)
 Потоки позволяют программе на Visual Basic осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно. Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.  
   
  Потоки имеют следующие свойства.  
@@ -53,9 +51,7 @@ ms.lasthandoff: 05/26/2017
 > [!NOTE]
 >  Начиная с [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> и <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), новым классам параллельной коллекции из пространства имен <xref:System.Collections.Concurrent?displayProperty=fullName> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](https://msdn.microsoft.com/library/dd460693).  
   
-<a id="related-topics" class="xliff"></a>
-
-## См. также  
+## <a name="related-topics"></a>См. также  
   
 |Заголовок|Описание|  
 |-----------|-----------------|  
@@ -67,3 +63,4 @@ ms.lasthandoff: 05/26/2017
 |[Группировка потоков в пул (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|Описание использования пула рабочих потоков, управляемых системой.|  
 |[Практическое руководство. Использование пула потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Демонстрация синхронизированного использования нескольких потоков в пуле.|  
 |[Работа с потоками](https://msdn.microsoft.com/library/3e8s7xdd)|Описание реализации работы с потоками на платформе .NET Framework.|
+

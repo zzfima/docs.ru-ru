@@ -1,5 +1,5 @@
 ---
-title: "Операторы и выражения в Visual Basic | Microsoft Docs"
+title: "Операторы и выражения в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,23 +36,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 069178fe753c3e09116c8a4845f96faf13eb72ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3675af3ac8a0a80b5fb5f208c1679dc28ab77acf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="operators-and-expressions-in-visual-basic" class="xliff"></a>
-
-# Операторы и выражения в Visual Basic
+# <a name="operators-and-expressions-in-visual-basic"></a>Операторы и выражения в Visual Basic
 *Оператор* представляет собой элемент кода, который выполняет операцию с одним элементом кода или несколькими, содержащими значения. К элементам значений относятся переменные, константы, литералы, свойства, возвращаемые значения из процедур `Function` и `Operator`, а также выражения.  
   
  *Выражение* представляет собой набор элементов значений в сочетании с операторами, результатом которого является новое значение. Операторы работают с элементами значений, выполняя вычисления, сравнения и другие операции.  
   
-<a id="types-of-operators" class="xliff"></a>
-
-## Типы операторов  
+## <a name="types-of-operators"></a>Типы операторов  
  В [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] доступны следующие типы операторов:  
   
 -   [Арифметические операторы](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) выполняют обычные вычисления с числовыми значениями, включая сдвиг их битовых шаблонов.  
@@ -65,9 +61,7 @@ ms.lasthandoff: 05/26/2017
   
  Элементы значений, объединенные с оператором, называются *операндами* этого оператора. Операторы, объединенные с элементами значений, формируют выражения. Исключением является оператор присваивания, который образует *инструкцию*. Дополнительные сведения см. в разделе [Выписки](../../../../visual-basic/programming-guide/language-features/statements.md).  
   
-<a id="evaluation-of-expressions" class="xliff"></a>
-
-## Вычисление выражений  
+## <a name="evaluation-of-expressions"></a>Вычисление выражений  
  Конечный результат выражения представляет собой значение, которое обычно имеет знакомый тип данных, например `Boolean`, `String` или числовой тип.  
   
  Ниже приведены примеры выражений.  
@@ -96,9 +90,8 @@ ms.lasthandoff: 05/26/2017
   
  Дополнительные сведения и примеры см. в разделе [Перегрузка операторов в Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [Операторы](../../../../visual-basic/language-reference/operators/index.md)   
  [Эффективное сочетание операторов](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
  [Операторы](../../../../visual-basic/language-reference/statements/index.md)
+

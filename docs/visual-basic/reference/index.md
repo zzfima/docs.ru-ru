@@ -1,5 +1,5 @@
 ---
-title: "Справочник по Visual Basic | Документация Майкрософт"
+title: "Справочник по Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: c730caa8b3beaa3e26e63b324a5394a4a0c46d64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c341ec68a12019814d0185cab9b89ad5928d171
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-visual-basic"></a>Справочник по Visual Basic
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/26/2017
  [Справочная документация по .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
  Ссылки на сведения о работе с библиотекой класса [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- [Спецификация языка Visual Basic](../../visual-basic/reference/language-specification.md)  
+ [Спецификация языка Visual Basic](../../visual-basic/reference/language-specification/index.md)  
  Ссылки на полную спецификацию языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] с подробной информацией о всех аспектах этого языка.  
   
 ## <a name="reference"></a>Ссылка  
@@ -59,11 +59,12 @@ ms.lasthandoff: 05/26/2017
  Это пространство имен предоставляет компонент, позволяющий напечатать факсимильное изображение формы в том виде, в каком она отображается на экране.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие элементы пользовательского интерфейса (Visual Studio)](https://docs.microsoft.com/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ [Общие элементы пользовательского интерфейса (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  Содержит разделы, посвященные диалоговым окнам в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Средства XML в Visual Studio](https://docs.microsoft.com/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ [Средства XML в Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Содержит ссылки на разделы, посвященные разным средствам XML, доступным в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Справочник по автоматизации и возможностям расширения среды](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  Содержит ссылки на разделы, посвященные автоматизации и возможностям расширения в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], как для общих, так и для зависимых от языка компонентов.
+

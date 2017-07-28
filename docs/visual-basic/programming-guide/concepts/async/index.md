@@ -1,5 +1,5 @@
 ---
-title: "Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic) | Документация Майкрософт"
+title: "Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,16 +20,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7efef9e445d542e4575c94af78179316bf628aa1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 87f089a6de77dc5d4085b12f68b0511ec22b3f63
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="asynchronous-programming-with-async-and-await-visual-basic" class="xliff"></a>
-
-# Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)
+# <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
   
  Visual Studio 2012 вводит упрощенный подход асинхронного программирования, который использует асинхронные возможности .NET Framework 4.5 (и более высоких версий) и среды выполнения Windows. Компилятор выполняет сложную работу, которую раньше делал разработчик, при этом логическая структура кода приложения похожа на синхронный код. То есть можно пользоваться всеми преимуществами асинхронного программирования с гораздо меньшими, чем обычно, трудозатратами.  
@@ -333,9 +331,7 @@ End Class
 ' Length of the downloaded string: 41763.  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [Оператор Await](../../../../visual-basic/language-reference/operators/await-operator.md)   
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 

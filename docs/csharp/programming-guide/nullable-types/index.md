@@ -1,5 +1,5 @@
 ---
-title: "Типы, допускающие значение NULL (руководство по программированию на C#) | Документация Майкрософт"
+title: "Типы, допускающие значения NULL (Руководство по программированию на C#)"
 ms.date: 2017-05-15
 ms.prod: .net
 ms.technology:
@@ -29,25 +29,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: 2d13fdbef24ee16855261a3c1e26d7fca4f986f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 909c90da69d85512399eacd16e1ba6db7aad2291
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="nullable-types-c-programming-guide" class="xliff"></a>
-
-# Типы, допускающие значения NULL (Руководство по программированию на C#)
+# <a name="nullable-types-c-programming-guide"></a>Типы, допускающие значения NULL (Руководство по программированию на C#)
 Типы, допускающие значения NULL, являются экземплярами структуры <xref:System.Nullable%601?displayProperty=fullName>. Тип, допускающий значение NULL, может принимать такой же диапазон значений, как и его базовый тип значения, а также дополнительное значение `null`. Например, для типа `Nullable<Int32>` (Int32, допускающий значения NULL) можно назначить любое значение в диапазоне от -2147483648 до 2147483647 или значение `null`. Тип `Nullable<bool>` может иметь значения [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md), или [null](../../../csharp/language-reference/keywords/null.md). Возможность назначения `null` для числовых и логических типов особенно полезна при работе с базами данных и другими источниками данных, которые могут содержать элементы без присвоенного значения. Например, логическое поле в базе данных может хранить значения `true` или `false`, или может быть неопределенным. 
   
 [!code-cs[типы, допускающие значение NULL](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 Дополнительные примеры см. в разделе [Using Nullable Types (C# Programming Guide)](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) (Руководство по программированию на C#. Использование типов, допускающих значение NULL)  
   
-<a id="nullable-types-overview" class="xliff"></a>
-
-## Обзор типов, допускающих значения NULL  
+## <a name="nullable-types-overview"></a>Обзор типов, допускающих значения NULL  
  Типы, допускающие значения NULL, имеют следующие характеристики.  
   
 -   Типы, допускающие значение NULL, представляют переменные типа значения, которым может быть назначено значение `null`. Нельзя создать тип, допускающий значение NULL, на основе ссылочного типа. (Ссылочные типы всегда поддерживают значение `null`.)  
@@ -72,9 +68,7 @@ ms.lasthandoff: 06/13/2017
   
 -   Нельзя создавать вложенные типы, допускающие значение NULL. Этот код компилироваться не будет: `Nullable<Nullable<int>> n;`.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
 -   [Использование допускающих значение NULL типов](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
@@ -83,14 +77,10 @@ ms.lasthandoff: 06/13/2017
   
 -   [?? Оператор](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Спецификация языка C#  
+## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Nullable>   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [C#](../../../csharp/csharp.md)   

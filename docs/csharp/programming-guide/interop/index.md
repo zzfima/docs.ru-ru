@@ -1,5 +1,5 @@
 ---
-title: "Взаимодействие (руководство по программированию на C#) | Документация Майкрософт"
+title: "Взаимодействие (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,23 +30,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: be95d675d22dedcbf45c8eb1e8fd8d9f5ce0b56c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df2f33c4599baef6d606738cbe5766fdd88e4ef3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="interoperability-c-programming-guide" class="xliff"></a>
-
-# Взаимодействие (Руководство по программированию в C#)
+# <a name="interoperability-c-programming-guide"></a>Взаимодействие (Руководство по программированию в C#)
 Возможность взаимодействия позволяет использовать уже созданный неуправляемый код, экономя средства на разработку. Код, который выполняется под управлением среды CLR, называется *управляемым кодом*, а код, который выполняется вне среды CLR, называется *неуправляемым кодом*. COM, COM +, компоненты C++, компоненты ActiveX и Microsoft Win32 API являются примерами неуправляемого кода.  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] обеспечивает взаимодействие с неуправляемым кодом посредством служб вызова неуправляемого кода (PInvoke), пространства имен <xref:System.Runtime.InteropServices>, COM-взаимодействия и взаимодействия с C++.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения о взаимодействии](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  Описывает способы взаимодействия между управляемым кодом C# и неуправляемым кодом.  
   
@@ -65,15 +61,12 @@ ms.lasthandoff: 05/26/2017
  [Пример COM-класса](../../../csharp/programming-guide/interop/example-com-class.md)  
  Предлагает пример предоставления класса C# в качестве COM-объекта.  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Спецификация языка C#  
+## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Взаимодействие с неуправляемым кодом](https://msdn.microsoft.com/library/sd10k43k)   
  [Walkthrough: Office Programming](../../../csharp/programming-guide/interop/walkthrough-office-programming.md) (Пошаговое руководство. Программирование приложений Office)
+

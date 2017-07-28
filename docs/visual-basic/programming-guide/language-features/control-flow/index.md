@@ -1,5 +1,5 @@
 ---
-title: "Поток управления в Visual Basic | Microsoft Docs"
+title: "Управление ходом выполнения в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,23 +34,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 86ac374a3c2378d7ac167823ceee008260a4deb0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a764732919c32499a062c9136c261539334688cb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="control-flow-in-visual-basic" class="xliff"></a>
-
-# Управление ходом выполнения в Visual Basic
+# <a name="control-flow-in-visual-basic"></a>Управление ходом выполнения в Visual Basic
 При отсутствии вмешательства извне программа последовательно выполняет все свои инструкции от начала до конца. Некоторые очень простые программы могут быть написаны только с таким однонаправленным потоком. Но мощь и преимущества любого языка программирования в значительной степени связаны с возможностями изменения порядка выполнения с помощью операторов управления и циклов.  
   
  Структуры управления позволяют контролировать поток выполнения программы. С помощью структур управления можно написать код [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], который принимает решения или повторяет определенные действия. Другие структуры управления позволяют обеспечивать гарантированное удаление ресурса или запускать серию операторов для одной ссылки на объект.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Содержание  
+## <a name="in-this-section"></a>Содержание  
  [Структуры решений](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  Содержит описание структур управления, используемых для ветвления.  
   
@@ -63,8 +59,7 @@ ms.lasthandoff: 05/26/2017
  [Вложенные структуры управления](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  Содержит описание структур управления, находящихся внутри других структур управления.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Сводка по управлению ходом выполнения](../../../../visual-basic/language-reference/keywords/control-flow-summary.md)  
  Содержит ссылки на разделы справочника по языку, посвященные этой теме.
+

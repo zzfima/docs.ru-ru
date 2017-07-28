@@ -1,5 +1,5 @@
 ---
-title: "Ошибки компилятора C# | Документация Майкрософт"
+title: "Ошибки компилятора C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,31 +30,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1570586c0bb6084fe9dfdfb15640c20c422492dd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f474528cd2833fd55435d9880d4a1d0d63846aa0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-errors"></a>Ошибки компилятора C#
 Для некоторых ошибок компилятора C# существуют отдельные статьи, которые описывают причины этих ошибок, а иногда и методы их устранения. Используйте один из следующих вариантов действий, чтобы проверить наличие справки по конкретному сообщению об ошибке.  
   
--   Найдите номер ошибки (например, CS0029) в [окне вывода](https://docs.microsoft.com/visualstudio/ide/reference/output-window), а затем поищите его в MSDN.  
+-   Найдите номер ошибки (например, CS0029) в [окне вывода](/visualstudio/ide/reference/output-window), а затем поищите его в MSDN.  
   
--   Выберите номер ошибки (например, CS0029) в [окне вывода](https://docs.microsoft.com/visualstudio/ide/reference/output-window) и нажмите клавишу F1.  
+-   Выберите номер ошибки (например, CS0029) в [окне вывода](/visualstudio/ide/reference/output-window) и нажмите клавишу F1.  
   
 -   В указателе справки введите номер ошибки в поле **Найти**.  
   
  Если вы все равно не можете найти информацию об ошибке, перейдите в конец этой страницы и отправьте отзыв, указав номер или текст ошибки.  
   
- Сведения о настройке ошибок и предупреждений в C# см. в статье [Build Page, Project Designer (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp) (Страница "Сборка" в конструкторе проектов (C#)).  
+ Сведения о настройке ошибок и предупреждений в C# см. в статье [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp) (Страница "Сборка" в конструкторе проектов (C#)).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
  [К сожалению, конкретные сведения об этой ошибке C# отсутствуют](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)   
- [Страница "Сборка" в конструкторе проектов (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)   
+ [Страница "Сборка" в конструкторе проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)   
  [/warn (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)   
  [/nowarn (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+

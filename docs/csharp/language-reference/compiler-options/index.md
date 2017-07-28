@@ -1,5 +1,5 @@
 ---
-title: "Параметры компилятора C# | Документация Майкрософт"
+title: "Параметры компилятора C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c355f42106cfb7790591108b9b0f0938c34fdb32
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 12fd3210aeda6c260c91232baf99381a55b00cab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-options"></a>Параметры компилятора C#
@@ -63,11 +64,12 @@ ms.lasthandoff: 03/13/2017
  Отсортированный по алфавиту список параметров компилятора.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Build Page, Project Designer](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp) (Страница "Сборка" в конструкторе проектов)  
+ [Build Page, Project Designer](/visualstudio/ide/reference/build-page-project-designer-csharp) (Страница "Сборка" в конструкторе проектов)  
  Описывает свойства, влияющие на процессы компиляции, сборки и отладки проекта. Содержит сведения о настраиваемых этапах сборки для проектов Visual C#.  
   
- [Default and Custom Builds](https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio) (Сборки по умолчанию и пользовательские сборки)  
+ [Default and Custom Builds](/visualstudio/ide/compiling-and-building-in-visual-studio) (Сборки по умолчанию и пользовательские сборки)  
  Сведения о типах сборки и конфигурациях.  
   
- [Preparing and Managing Builds](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) (Подготовка к сборке и управление сборкой)  
+ [Preparing and Managing Builds](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) (Подготовка к сборке и управление сборкой)  
  Процедуры выполнения сборки в среде разработки Visual Studio.
+

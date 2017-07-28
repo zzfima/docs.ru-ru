@@ -1,5 +1,5 @@
 ---
-title: "Объекты (Visual Basic) | Microsoft Docs"
+title: "Объекты (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -28,21 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6d4ed7e551c9a0d039f0206a86fa3a748dd728ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98503c5764690d6dea90bf46a229e9ee2fd81df7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="objects-visual-basic" class="xliff"></a>
-
-# Объекты (Visual Basic)
+# <a name="objects-visual-basic"></a>Объекты (Visual Basic)
 В этом разделе приводятся ссылки на другие разделы, содержащие описание объектов времени выполнения Visual Basic и таблицы процедур, свойств и событий их элементов.  
   
-<a id="visual-basic-run-time-objects" class="xliff"></a>
-
-## Объекты времени выполнения Visual Basic  
+## <a name="visual-basic-run-time-objects"></a>Объекты времени выполнения Visual Basic  
   
 |||  
 |---|---|  
@@ -73,8 +69,7 @@ ms.lasthandoff: 05/26/2017
 |[Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Предлагает свойства для создания экземпляров каждой веб-службы, на которую ссылается текущий проект, а также для доступа к этим экземплярам.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Предоставляет методы и свойства для анализа структурированных текстовых файлов.|  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)   
  [Visual Basic](../../../visual-basic/index.md)
+
