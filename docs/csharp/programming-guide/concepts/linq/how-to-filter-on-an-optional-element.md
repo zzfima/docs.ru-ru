@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Фильтрация по необязательным элементам (C#) | Документы Майкрософт"
+title: "Практическое руководство. Фильтрация по необязательным элементам (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bc732e029b1548a551128b7f8daca5f10dc19c03
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d0d849bb8c6174408810f2d2192faea6db6afd5b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Практическое руководство. Фильтрация по необязательным элементам (C#)
 Иногда необходимо выполнить фильтрацию элемента, даже если неизвестно, существует ли он в документе XML. Поиск должен быть выполнен, чтобы, если конкретный элемент не имеет дочернего узла, при фильтрации по этому элементу не возникло исключение null reference. В следующем примере элемент `Child5` не имеет дочернего узла `Type`, тем не менее запрос выполняется правильно.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется метод расширения <xref:System.Xml.Linq.Extensions.Elements%2A>.  
+ Этот пример использует метод расширений <xref:System.Xml.Linq.Extensions.Elements%2A>.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -114,3 +114,4 @@ Child Four Text
  [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
  [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Операции проекции (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Отправка строк в последовательный порт в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Отправка строк в последовательный порт в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 14c5de8d0fa8195129b7ae65c1d373834307488a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 602b249d01252bbb1853ed02d9af86697d54b0a5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Практическое руководство. Отправка строк в последовательный порт в Visual Basic
-В этом разделе описывается, как использовать `My.Computer.Ports` для отправки строк в последовательные порты компьютера в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+В этом разделе описывается, как использовать `My.Computer.Ports` для отправки строк в последовательные порты компьютера в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="example"></a>Пример  
  Этот пример кода отправляет строку в последовательный порт COM1. Возможно, на вашем компьютере потребуется использовать другой последовательный порт.  
@@ -68,3 +68,4 @@ ms.lasthandoff: 05/22/2017
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
  [Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
  [Практическое руководство. Отображение доступных последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+

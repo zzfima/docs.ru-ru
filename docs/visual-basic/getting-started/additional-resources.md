@@ -1,5 +1,5 @@
 ---
-title: "Дополнительные ресурсы для программистов Visual Basic | Документы Майкрософт"
+title: "Дополнительные ресурсы для программистов, использующих Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 692e0a53391556c6327e493d3d45e811db4cfdb7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ebc788f629e011dff88c1db119ce25a3829e009
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>Дополнительные ресурсы для программистов, использующих Visual Basic
@@ -70,11 +70,11 @@ ms.lasthandoff: 05/22/2017
   
 |Термин|Определение|  
 |----------|----------------|  
-|[Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)|Синтаксис и компилятор языка [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].|  
-|[Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)|Обновление до [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и работа с функциональными возможностями по взаимодействию.|  
-|[Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)|Работа в интегрированной среде разработки [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].|  
+|[Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)|Синтаксис и компилятор языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
+|[Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)|Обновление до [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] и работа с функциональными возможностями по взаимодействию.|  
+|[Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)|Работа в интегрированной среде разработки [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].|  
 |[Пакеты Power Pack для Visual Basic](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Надстройки, элементы управления, компоненты, примеры и инструменты, входящие в пакеты Visual Basic Power Packs.|  
-|[Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)|Вопросы по [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], которые не обсуждаются на других форумах.|  
+|[Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)|Вопросы по [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], которые не обсуждаются на других форумах.|  
   
 ### <a name="chats-and-discussion-groups"></a>Разговоры и тематические группы  
   
@@ -103,8 +103,9 @@ ms.lasthandoff: 05/22/2017
 |Термин|Определение|  
 |----------|----------------|  
 |[Зона Visual Basic в DevX](http://go.microsoft.com/fwlink/?LinkId=145978)|Подробные технические статьи для современного разработчика Visual Basic.|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|Форум для обсуждения новых возможностей [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] на форумах DevX.|  
+|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|Форум для обсуждения новых возможностей [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] на форумах DevX.|  
   
 ## <a name="see-also"></a>См. также  
  [Начало работы](../../visual-basic/getting-started/index.md)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Обращайтесь к нам](/visualstudio/ide/talk-to-us)
+

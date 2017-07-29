@@ -1,5 +1,5 @@
 ---
-title: "Буферы фиксированного размера (руководство по программированию на C#) | Документы Майкрософт"
+title: "Буферы фиксированного размера (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6c5cacb588dc263e5b72e4b3cd93ad10b4b681f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Буферы фиксированного размера (Руководство по программированию на C#)
@@ -55,7 +56,7 @@ private fixed char name[30];
   
  [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
- Размер массива из 128 элементов `char` составляет 256 байт. В буферах типа [char](../../../csharp/language-reference/keywords/char.md) фиксированного размера на один символ всегда приходится два байта независимо от кодировки. Это справедливо даже в том случае, когда буферы char маршалируются в методы API или структуры с `CharSet = CharSet.Auto` или `CharSet = CharSet.Ansi`. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.CharSet>.  
+ Размер массива из 128 элементов `char` составляет 256 байт. В буферах типа [char](../../../csharp/language-reference/keywords/char.md) фиксированного размера на один символ всегда приходится два байта независимо от кодировки. Это справедливо даже в том случае, когда буферы char маршалируются в методы API или структуры с `CharSet = CharSet.Auto` или `CharSet = CharSet.Ansi`. Для получения дополнительной информации см. <xref:System.Runtime.InteropServices.CharSet>.  
   
  Еще одним распространенным массивом фиксированного размера является массив [bool](../../../csharp/language-reference/keywords/bool.md). Элементы в массиве `bool` всегда имеют размер в один байт. Массивы `bool` не подходят для создания битовых массивов или буферов.  
   
@@ -77,3 +78,4 @@ private fixed char name[30];
  [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [Взаимодействие](../../../csharp/programming-guide/interop/index.md)
+

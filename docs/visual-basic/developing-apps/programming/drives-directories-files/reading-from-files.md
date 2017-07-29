@@ -1,5 +1,5 @@
 ---
-title: "Чтение из файлов в Visual Basic | Документы Майкрософт"
+title: "Чтение из файлов в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6e2dbabb7ad2141840fbfaed054494e5604e24c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Чтение из файлов в Visual Basic
@@ -90,4 +90,5 @@ ms.lasthandoff: 05/22/2017
  Объясняет, как использовать функцию `My` с файлами и каталогами.  
   
  [Пошаговое руководство. Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Объясняет, как использовать методы [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] с файлами и каталогами.
+ Объясняет, как использовать методы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] с файлами и каталогами.
+

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Перемещение файла в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Перемещение файла в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e0e81a28d1475a3f3cf6bcb7372b05eb8037bf
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a2623ec7e440e8fdf85138cd0b3de9ab18b773c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Практическое руководство. Перемещение файла в Visual Basic
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/22/2017
   
 -   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Параметр `destinationFileName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
+-   Параметр`destinationFileName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
   
 -   Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2017
   
 -   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
   
--   Параметр `showUI` имеет значение `True`, параметр `onUserCancel` имеет значение `ThrowException`, и либо пользователь отменил операцию, либо произошла неопределенная ошибка ввода-вывода (<xref:System.OperationCanceledException>).  
+-   `showUI` имеет значение `True`, `onUserCancel` имеет значение `ThrowException`, и либо пользователь отменил операцию, либо произошла неопределенная ошибка ввода-вывода (<xref:System.OperationCanceledException>).  
   
 -   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
   
@@ -81,3 +81,4 @@ ms.lasthandoff: 05/22/2017
  [Практическое руководство. Переименование файла](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)   
  [Практическое руководство. Создание копии файла в другом каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   
  [Практическое руководство. Анализ путей к файлам](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+

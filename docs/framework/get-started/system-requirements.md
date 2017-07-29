@@ -1,5 +1,5 @@
 ---
-title: "Требования к системе для .NET Framework | Документация Майкрософт"
+title: "Требования к системе для .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,23 +20,21 @@ caps.latest.revision: 95
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b48b2d7b8b6256c2395cee069d7705001258a0a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Требования к системе для .NET Framework
-<a id="net-framework-system-requirements" class="xliff"></a>
+# <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 Таблицы в этом разделе содержат требования к оборудованию, операционной системе и программному обеспечению для .NET Framework 4.5 и доработанных выпусков (4.5.1 и 4.5.2), для [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и ее доработанных выпусков (4.6.1 и 4.6.2) и .NET Framework 4.7. Для сред разработки, позволяющих разрабатывать приложения для платформы .NET Framework, существует отдельный набор требований.
 
  Сведения о скачивании и ссылки для скачивания см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).
 
  Сведения о жизненном цикле поддержки версий .NET Framework см. в разделе [Политика жизненного цикла поддержки продуктов Майкрософт](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
 
-## Требования к оборудованию
-<a id="hardware-requirements" class="xliff"></a>
+## <a name="hardware-requirements"></a>Требования к оборудованию
 
 |||
 |-|-|
@@ -46,13 +44,11 @@ ms.lasthandoff: 06/20/2017
 |32-разрядная|4,5 ГБ|
 |64-разрядная версия|4,5 ГБ|
 
-## Требования к установке
-<a id="installation-requirements" class="xliff"></a>
+## <a name="installation-requirements"></a>Требования к установке
 
 - Для установки платформе .NET Framework требуются права администратора. Если у вас нет прав администратора на компьютере, где требуется установить платформу .NET Framework, обратитесь к администратору сети.
 
-## Поддерживаемые клиентские операционные системы
-<a id="supported-client-operating-systems" class="xliff"></a>
+## <a name="supported-client-operating-systems"></a>Поддерживаемые клиентские операционные системы
 
 |Операционная система|Поддерживаемые выпуски|Предустановлена с операционной системой|Может устанавливаться отдельно|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -78,8 +74,7 @@ ms.lasthandoff: 06/20/2017
 
 - В 64-разрядных операционных системах платформа .NET Framework поддерживает как среду WOW64 (32-разрядная обработка на 64-разрядном компьютере), так и собственную 64-разрядную обработку.
 
-## Поддерживаемые серверные операционные системы
-<a id="supported-server-operating-systems" class="xliff"></a>
+## <a name="supported-server-operating-systems"></a>Поддерживаемые серверные операционные системы
 
 |Операционная система|Поддерживаемые выпуски|Предустановлена с операционной системой|Может устанавливаться отдельно|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -101,8 +96,7 @@ ms.lasthandoff: 06/20/2017
 
 - В 64-разрядных операционных системах платформа .NET Framework поддерживает как среду WOW64 (32-разрядная обработка на 64-разрядном компьютере), так и собственную 64-разрядную обработку.
 
-## См. также
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>См. также
  [Руководство по установке](../../../docs/framework/install/index.md)   
  [Начало работы](../../../docs/framework/get-started/index.md)   
  [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

@@ -1,5 +1,5 @@
 ---
-title: "Секционирование данных (C#) | Документы Майкрософт"
+title: "Секционирование данных (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8bab82ff0921871e610eef37650d1aa52e16006c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1690dac93d5e74f1305bd457f8bc749bec5449
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="partitioning-data-c"></a>Секционирование данных (C#)
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/13/2017
   
 |Имя оператора|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-------------------|-----------------|---------------------------------|----------------------|  
-|Skip|Пропускает элементы до указанной позиции в последовательности.|Неприменимо.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=fullName>|  
+|Пропустить|Пропускает элементы до указанной позиции в последовательности.|Неприменимо.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=fullName>|  
 |SkipWhile|Пропускает элементы, пока элемент не удовлетворит условию функции предиката.|Неприменимо.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=fullName>|  
 |Take|Возвращает элементы на указанную позицию в последовательности.|Неприменимо.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=fullName>|  
 |TakeWhile|Принимает элементы, пока элемент не удовлетворит условию функции предиката.|Неприменимо.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=fullName>|  
@@ -46,3 +47,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Linq>   
  [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+

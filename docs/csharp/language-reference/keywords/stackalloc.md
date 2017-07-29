@@ -1,5 +1,5 @@
 ---
-title: "stackalloc (справочник по C#) | Документы Майкрософт"
+title: "stackalloc (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 337a06daaf36a1eb265f66cd191fc48b80f0bae1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53d61cfdcf4d356a28881c57ad923017c2b479ae
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Справочник по C#)
@@ -57,7 +57,7 @@ block = stackalloc int[100];
   
  Поскольку задаются типы указателей, `stackalloc` требует [небезопасного](../../../csharp/language-reference/keywords/unsafe.md) контекста. Дополнительные сведения см. в разделе [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
   
- `stackalloc` действует как [_alloca](https://docs.microsoft.com/cpp/c-runtime-library/reference/alloca) в библиотеке времени выполнения C.  
+ `stackalloc` действует как [_alloca](/cpp/c-runtime-library/reference/alloca) в библиотеке времени выполнения C.  
   
  Представленный ниже код вычисляет и отображает первые 20 чисел в последовательности Фибоначчи. Каждое из них представляет собой сумму двух предыдущих чисел. В этом коде блок памяти, размер которого позволяет сохранить 20 элементов типа `int`, выделяется не куче, а стеку. Адрес блока хранится в указателе `fib`. Эта память не подвергаются сборке мусора, а значит, ее не нужно закреплять (с помощью атрибута [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)). Время существования блока памяти ограничивается временем существования метода, который его определяет. Освободить эту память прежде, чем метод выдаст результат, невозможно.  
   
@@ -76,3 +76,4 @@ block = stackalloc int[100];
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+

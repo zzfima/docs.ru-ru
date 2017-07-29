@@ -1,0 +1,1 @@
+Объекты данных Microsoft ActiveX (ADO)

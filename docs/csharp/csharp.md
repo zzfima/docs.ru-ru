@@ -1,5 +1,5 @@
 ---
-title: "C# | Документы Майкрософт"
+title: C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d8470043d266275cd70d48299be96f1ee6f50682
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f9a46179f25c166923f702b745e874406adfdeac
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c"></a>C#
@@ -44,10 +45,10 @@ C# (произносится “Си-шарп”) — это язык прог�
   
 ## <a name="in-this-section"></a>Содержание  
  [Начало работы с C#](../csharp/getting-started/getting-started-with-csharp.md)  
- Представлены возможности языка C# для программистов, начинающих работу с языком или [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)], и приведены инструкции по поиску справки по [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)].  
+ Представлены возможности языка C# для программистов, начинающих работу с языком или [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], и приведены инструкции по поиску справки по [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Использование среды разработки Visual Studio для C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- В этом разделе представлена среда разработки [!INCLUDE[csprcs](../csharp/includes/csprcs_md.md)].  
+ [Использование среды разработки Visual Studio для C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ В этом разделе представлена среда разработки [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Руководство по программированию на C#](../csharp/programming-guide/index.md)  
  Сведения и практические примеры способов использования конструкций языка C#.  
@@ -62,9 +63,10 @@ C# (произносится “Си-шарп”) — это язык прог�
  Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Спецификация языка C#](../csharp/language-reference/language-specification.md)  
+ [Спецификация языка C#](../csharp/language-reference/language-specification/index.md)  
  Ссылки на последнюю версию спецификации C# в формате Microsoft Word.  
   
 ## <a name="see-also"></a>См. также  
- [Начало работы с Visual C# и Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [Разработка .NET](https://msdn.microsoft.com/library/ff361664)
+

@@ -1,5 +1,5 @@
 ---
-title: "Основные запросы (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Основные запросы (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3879dfe92f158c545a1f4a42c6bfc35aae06f3c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 272cfadeccb505960f7872274a2af8c18efc3679
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Основные запросы (LINQ to XML) (C#)
-В этом разделе показаны примеры основных запросов [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+В этом разделе показаны примеры основных запросов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>Содержание  
   
@@ -39,9 +38,10 @@ ms.lasthandoff: 05/24/2017
 |[Практическое руководство. Поиск всех узлов в пространстве имен (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Показывает, как найти все узлы в определенном пространстве имен.|  
 |[Практическое руководство. Сортировка элементов (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|Показывает, как составлять запрос, при котором его результаты будут отсортированы.|  
 |[Практическое руководство. Сортировка элементов по множеству ключей (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Показывает способ сортировки по нескольким ключам.|  
-|[Практическое руководство. Вычисление промежуточных значений (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Показано, как следует использовать предложение `Let` для вычисления промежуточных значений запроса [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
+|[Практическое руководство. Вычисление промежуточных значений (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Показано, как следует использовать предложение `Let` для вычисления промежуточных значений запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Практическое руководство. Написание запроса, ищущего элементы на основании контекста (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Показывает, как выбирать элементы на основе других элементов в дереве.|  
 |[Практическое руководство. Отладка пустых наборов результатов запроса (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Показывает нужный метод устранения неполадки при устранении ошибок в XML, которые находятся в пространстве имен по умолчанию.|  
   
 ## <a name="see-also"></a>См. также  
  [Выполнение запросов к деревьям XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+

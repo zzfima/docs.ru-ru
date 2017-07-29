@@ -1,5 +1,5 @@
 ---
-title: "#pragma warning (справочник по C#) | Документы Майкрософт"
+title: "#<a name=\"pragma-warning-c-reference\"></a>pragma warning (справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,18 +30,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 820b6de93a2a739d97084250601e41a5eb4a89f8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75c11acfd096d36c96ceb9e9c5c0d16e47e58fa1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma warning (справочник по C#)
+# <a name="pragma-warning-c-reference"></a>#pragma warning (Справочник по C#)
 `#pragma warning` может включать или отключать определенные предупреждения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
@@ -57,7 +58,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="example"></a>Пример  
   
-```  
+```csharp
 // pragma_warning.cs  
 using System;  
   
@@ -86,3 +87,4 @@ public class D
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)   
  [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md)
+

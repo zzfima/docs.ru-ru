@@ -1,5 +1,5 @@
 ---
-title: "Добавление элементов, атрибутов и узлов в дерево XML (C#) | Документы Майкрософт"
+title: "Добавление элементов, атрибутов и узлов в дерево XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 858d5b2c5ed680a0e52e374b8ec98762d7fde043
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6894e0685d413297c01118df16d01f7d956ee333
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Добавление элементов, атрибутов и узлов в дерево XML (C#)
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/13/2017
 |<xref:System.Xml.Linq.XContainer.Add%2A>|Добавляет содержимое в конце дочернего содержимого <xref:System.Xml.Linq.XContainer>.|  
 |<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Добавляет содержимое в начале дочернего содержимого <xref:System.Xml.Linq.XContainer>.|  
   
- Следующие методы позволяют добавлять содержимое как одноуровневые узлы для <xref:System.Xml.Linq.XNode>. Самым распространенным узлом, к которому можно добавлять содержимое как одноуровневые узлы, является <xref:System.Xml.Linq.XElement>, хотя можно добавлять содержимое в другие типы узлов, например <xref:System.Xml.Linq.XText> или <xref:System.Xml.Linq.XComment>.  
+ Следующие методы позволяют добавлять содержимое как одноуровневые узлы для <xref:System.Xml.Linq.XNode>. Самым распространенным узлом, к которому можно добавлять содержимое как одноуровневые узлы, является <xref:System.Xml.Linq.XElement>, хотя можно добавлять содержимое в виде таких узлов и к другим типам узлов, например <xref:System.Xml.Linq.XText> или <xref:System.Xml.Linq.XComment>.  
   
 |Метод|Описание|  
 |------------|-----------------|  
@@ -91,3 +91,4 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>См. также  
  [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

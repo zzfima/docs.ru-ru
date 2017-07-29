@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения об осях LINQ to XML (C#) | Документы Майкрософт"
+title: "Общие сведения об осях LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b43d3cb5cc7154c1133c5fa17e5bdacca97a38c9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdd4e6ffc17bc2c39d0dbeadbba955aacfe02dd9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Общие сведения об осях LINQ to XML (C#)
@@ -27,9 +26,9 @@ ms.lasthandoff: 05/22/2017
   
  Как описано в разделе [Общие сведения о классе XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), объект <xref:System.Xml.Linq.XElement> представляет собой узел с одним элементом. Содержимое элемента может быть сложным (иногда называется структурированным содержимым), или это может быть простой элемент. Простой элемент может быть пустым или содержать значение. Если узел содержит структурированное содержимое, можно использовать различные методы оси, чтобы получить перечисление элементов-потомков. Наиболее часто используемыми методами оси являются <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
- В дополнение к методам оси, которые возвращают коллекции, есть еще два метода, которые обычно используются в запросах [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Метод <xref:System.Xml.Linq.XContainer.Element%2A> возвращает одиночный <xref:System.Xml.Linq.XElement>. Метод <xref:System.Xml.Linq.XElement.Attribute%2A> возвращает одиночный <xref:System.Xml.Linq.XAttribute>.  
+ В дополнение к методам оси, которые возвращают коллекции, есть еще два метода, которые обычно используются в запросах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Метод <xref:System.Xml.Linq.XContainer.Element%2A> возвращает одиночный <xref:System.Xml.Linq.XElement>. Метод <xref:System.Xml.Linq.XElement.Attribute%2A> возвращает одиночный <xref:System.Xml.Linq.XAttribute>.  
   
- Во многих случаях запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] обеспечивают самый эффективный способ проверки и преобразования дерева и извлечения из него данных. Запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] работают с объектами, которые реализуют <xref:System.Collections.Generic.IEnumerable%601>, а оси [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] возвращают <xref:System.Collections.Generic.IEnumerable%601> коллекций <xref:System.Xml.Linq.XElement> и <xref:System.Collections.Generic.IEnumerable%601> коллекций <xref:System.Xml.Linq.XAttribute>. Эти коллекции нужны для выполнения запросов.  
+ Во многих случаях запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] обеспечивают самый эффективный способ проверки и преобразования дерева и извлечения из него данных. Запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] работают с объектами, которые реализуют <xref:System.Collections.Generic.IEnumerable%601>, а оси [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] возвращают <xref:System.Collections.Generic.IEnumerable%601> коллекций <xref:System.Xml.Linq.XElement> и <xref:System.Collections.Generic.IEnumerable%601> коллекций <xref:System.Xml.Linq.XAttribute>. Эти коллекции нужны для выполнения запросов.  
   
  В дополнение к методам оси, получающим коллекции элементов и атрибутов, существуют методы оси, которые позволяют проходить по всему дереву максимально подробно. Например, вместо того чтобы иметь дело с элементами и атрибутами, можно работать с узлами дерева. Узлы - это более глубокий уровень гранулярности, чем элементы и атрибуты. При работе с узлами можно просматривать комментарии XML, текстовые узлы XML, инструкции по обработке XML и др. Эти возможности важны, например, для разработчика текстового процессора, который хочет сохранить документы как XML. Обычно большинство программистов на XML в первую очередь связаны с элементами, атрибутами и их значениями.  
   
@@ -69,3 +68,4 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="see-also"></a>См. также  
  [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

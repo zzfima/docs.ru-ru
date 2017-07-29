@@ -1,5 +1,5 @@
 ---
-title: "Обработка повторного входа в асинхронных приложениях (C#) | Документы Майкрософт"
+title: "Обработка повторного входа в асинхронных приложениях (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7be76ad572be522071d9e8c2ae9cf8c770fd1fd0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd51c81c9589831146942ad9f0eae3642d4678e9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Обработка повторного входа в асинхронных приложениях (C#)
@@ -119,7 +119,7 @@ TOTAL bytes returned:  890591
      Разрешение всем запрошенным операциям выполняться асинхронно и настройка согласования отображения выходных данных для вывода результатов каждой операции вместе и по порядку.  
   
 ###  <a name="BKMK_DisableTheStartButton"></a> Отключение кнопки запуска  
- Можно заблокировать кнопку **Start`StartButton_Click` во время операции, отключив кнопку в верхней части обработчика событий**. Затем можно повторно включить кнопку из блока `finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.  
+ Можно заблокировать кнопку **Start`StartButton_Click` во время операции, отключив кнопку в верхней части обработчика событий** . Затем можно повторно включить кнопку из блока `finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.  
   
  В следующем коде показаны эти изменения, которые помечены звездочками. Вы можете добавить изменения в код в конце этого раздела или скачать готовое приложение в разделе [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571). Имя проекта — DisableStartButton.  
   
@@ -157,7 +157,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Чтобы настроить этот сценарий, внесите следующие изменения в основной код, который содержится в разделе [Проверка и выполнение примера приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Также можно загрузить готовое приложение в разделе [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571). Этот проект называется CancelAndRestart.  
   
-1.  Объявите переменную <xref:System.Threading.CancellationTokenSource>, `cts`, который находится в области для всех методов.  
+1.  Объявите переменную <xref:System.Threading.CancellationTokenSource>, `cts`, которая находится в области действия всех методов.  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -236,7 +236,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
 -   Добавьте параметр, чтобы принимать токен отмены из `StartButton_Click`.  
   
--   Используйте метод <xref:System.Net.Http.HttpClient.GetAsync%2A> для загрузки веб-сайтов, поскольку `GetAsync` принимает аргумент <xref:System.Threading.CancellationToken>.  
+-   Используйте метод <xref:System.Net.Http.HttpClient.GetAsync%2A> для загрузки веб-сайтов, так как `GetAsync` принимает аргумент <xref:System.Threading.CancellationToken>.  
   
 -   Перед вызовом метода `DisplayResults` для отображения результатов для каждого загруженного веб-сайта проверьте `ct`, чтобы убедиться, что текущая операция не отменена.  
   
@@ -615,7 +615,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
      В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.  
   
-8.  Добавьте ссылку на <xref:System.Net.Http>.  
+8.  Добавьте ссылку для <xref:System.Net.Http>.  
   
 9. В **обозревателе решений** откройте контекстное меню для MainWindow.xaml.cs и выберите пункт **Просмотреть код**.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Сохранение объекта в Visual Studio (C#) | Документы Майкрософт"
+title: "Пошаговое руководство. Сохранение объекта в Visual Studio (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f76e40e2503bf857922490d728c3a9f3432aa31f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Пошаговое руководство. Сохранение объекта в Visual Studio (C#)
@@ -44,7 +45,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-create-the-loan-class"></a>Создание класса Loan  
   
-1.  Создайте проект библиотеки классов и назовите его LoanClass. Дополнительные сведения см. в разделе [Создание проектов и решений](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1.  Создайте проект библиотеки классов и назовите его LoanClass. Дополнительные сведения см. в разделе [Создание проектов и решений](/visualstudio/ide/creating-solutions-and-projects).  
   
 2.  В **обозревателе решений** щелкните правой кнопкой мыши файл Class1 и выберите команду **Переименовать**. Измените имя файла на `Loan` и нажмите клавишу ВВОД. При переименовании файла класс также будет переименован в `Loan`.  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 03/13/2017
   
 7.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
   
-8.  В конструкторе добавьте в форму четыре элемента управления <xref:System.Windows.Forms.TextBox>.  
+8.  В конструкторе добавьте на форму четыре элемента управления <xref:System.Windows.Forms.TextBox>.  
   
 9. В редакторе кода добавьте следующий код:  
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 03/13/2017
     public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
     ```  
   
- Следующим шагом будет добавление кода сериализации в приложение LoanApp. Для сериализации класса и записи в файл следует использовать пространства имен <xref:System.IO> и <xref:System.Xml.Serialization>. Во избежание ввода полных имен можно добавить ссылки на необходимые библиотеки классов.  
+ Следующим шагом будет добавление кода сериализации в приложение LoanApp. Чтобы выполнить сериализацию класса и записать данные в файл, используйте пространства имен <xref:System.IO> и <xref:System.Xml.Serialization>. Во избежание ввода полных имен можно добавить ссылки на необходимые библиотеки классов.  
   
 ### <a name="to-add-references-to-namespaces"></a>Добавление ссылок на пространства имен  
   

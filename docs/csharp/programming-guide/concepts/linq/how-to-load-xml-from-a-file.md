@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Загрузка XML-кода из файла (C#) | Документы Майкрософт"
+title: "Практическое руководство. Загрузка XML-кода из файла (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3d93bcde05cf69db3786385cb674bfc32a1e8708
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 683c87608ecc9dea71c55a4b3c426ad3fd9f36fe
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Практическое руководство. Загрузка XML-кода из файла (C#)
-В этом разделе демонстрируется загрузка XML-файла из URI с помощью метода <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
+В этом разделе показана загрузка XML из URI с помощью метода <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показана загрузка XML-документа из файла. В следующем примере загружается файл books.xml и происходит вывод XML-дерева на консоль.  
@@ -66,3 +67,4 @@ Console.WriteLine(booksFromFile);
   
 ## <a name="see-also"></a>См. также  
  [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

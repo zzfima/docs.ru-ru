@@ -1,5 +1,5 @@
 ---
-title: "Классы (руководство по программированию на C#) | Документы Майкрософт"
+title: "Классы (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 1f327e7171df8b91d4c5a787c879069a4e44f562
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eedb087f177b1bff6f4d4177cd56ac4cca016490
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>Классы (Руководство по программированию на C#)
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/15/2017
   
  В отличие от C++, класс в C# может только напрямую наследовать от одного базового класса. Тем не менее, поскольку базовый класс может сам наследовать от другого класса, класс может косвенно наследовать от нескольких базовых классов. Кроме того, класс может напрямую реализовать несколько интерфейсов. Дополнительные сведения см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
   
- Класс может быть объявлен [абстрактным](../../../csharp/language-reference/keywords/abstract.md). Абстрактный класс содержит абстрактные методы, которые имеют определение сигнатуры, но не имеют реализации. Нельзя создавать экземпляры абстрактных классов. Они могут использоваться только через производные классы, реализующие абстрактные методы. С другой стороны, [запечатанный](../../../csharp/language-reference/keywords/sealed.md) класс не позволяет другим классам наследовать от него. Дополнительные сведения см. в разделе [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ Класс может быть объявлен [абстрактным](../../../csharp/language-reference/keywords/abstract.md). Абстрактный класс содержит абстрактные методы, которые имеют определение сигнатуры, но не имеют реализации. Нельзя создавать экземпляры абстрактных классов. Они могут использоваться только через производные классы, реализующие абстрактные методы. И наоборот, [запечатанный](../../../csharp/language-reference/keywords/sealed.md) класс не позволяет другим классам быть от него производными. Дополнительные сведения см. в статье [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
  Определения классов можно разделить между различными исходными файлами. Дополнительные сведения см. в разделе [Разделяемые классы и методы](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   
@@ -96,3 +96,4 @@ ms.lasthandoff: 05/15/2017
  [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [Объекты](../../../csharp/programming-guide/classes-and-structs/objects.md)
+

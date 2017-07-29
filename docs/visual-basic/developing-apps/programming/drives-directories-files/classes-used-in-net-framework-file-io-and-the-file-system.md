@@ -1,5 +1,5 @@
 ---
-title: "Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic) | Документы Майкрософт"
+title: "Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a87d2e6f87b92b5f66706095d3f485c080008e0f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)
 В приведенных ниже таблицах перечислены классы, обычно используемые для файлового ввода-вывода в .NET Framework. Они разделены на классы файлового ввода-вывода, классы для создания потоков и классы для чтения и записи в поток.  
   
- Документацию по [!INCLUDE[dnprdnlong](../../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](https://msdn.microsoft.com/library/hfa3fa08).  
+ Документацию по [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] и более полный список см. в разделе [Общие сведения о библиотеке классов](https://msdn.microsoft.com/library/hfa3fa08).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Основные классы ввода-вывода для файлов, каталогов и дисков  
  В приведенной ниже таблице перечислены и описаны основные классы, используемые для файлового ввода-вывода.  
@@ -87,3 +87,4 @@ ms.lasthandoff: 05/22/2017
  [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)   
  [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys)   
  [Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 86422f931585629bd34553a777ccec8a6f33fc8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 812fd59769da386f8d0b81eb80a4cd93c9764534
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Практическое руководство. Копирование файлов в каталог с использованием шаблона в Visual Basic
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/22/2017
   
  Если соответствующие файлы не найдены, возвращается пустая коллекция.  
   
- Для копирования файлов в каталог можно использовать метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>.  
+ Для копирования файлов в каталог можно использовать метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> .  
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>Копирование файлов с определенным шаблоном в каталог  
   
@@ -90,3 +90,4 @@ ms.lasthandoff: 05/22/2017
  [Практическое руководство. Поиск подкаталогов по шаблону](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
  [Исправление неполадок, связанных с чтением из текстовых файлов и записью в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
  [Практическое руководство. Получение коллекции содержащихся в каталоге файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+

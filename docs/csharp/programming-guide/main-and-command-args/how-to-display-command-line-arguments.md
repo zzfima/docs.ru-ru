@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Отображение аргументов командной строки (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Отображение аргументов командной строки (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e46860ecc2f5062abb440a764443ecee19c5153d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf8a57cce252b3596f0a19c9df643427615467c6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Практическое руководство. Отображение аргументов командной строки (Руководство по программированию на C#)
@@ -40,10 +41,10 @@ ms.lasthandoff: 03/13/2017
 |----------------------------|-------------------------------------|  
 |**executable.exe a b c**|"a"<br /><br /> "b"<br /><br /> "c"|  
 |**executable.exe one two**|"one"<br /><br /> "two"|  
-|**executable.exe "one two" three**|"one two"<br /><br /> "three"|  
+|**executable.exe "one two" three**|"один два"<br /><br /> "три"|  
   
 > [!NOTE]
->  При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](/visualstudio/ide/reference/debug-page-project-designer).  
   
 ## <a name="example"></a>Пример  
  Этот пример отображает аргументы командной строки, передаваемые в приложение командной строки. Показанные выходные данные — первая запись в таблице выше.  
@@ -56,3 +57,4 @@ ms.lasthandoff: 03/13/2017
  [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

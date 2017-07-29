@@ -1,5 +1,5 @@
 ---
-title: "Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND | Документация Майкрософт"
+title: "Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -17,16 +17,14 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
-ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b65aaf7149ca29b2af3efdf44ee9489a04c73a2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="mitigation-cspparametersparentwindowhandle-expects-an-hwnd" class="xliff"></a>
-
-# Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND
+# <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Устранение рисков: CspParameters.ParentWindowHandle ожидает HWND
 
 Свойство <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>, которое появилось в .NET Framework 2.0, позволяет приложению зарегистрировать значение дескриптора родительского окна таким образом, что любой пользовательский интерфейс, необходимый для доступа к ключу (например, запрос ПИН-кода или окно согласия), будет открываться в режиме модального дочернего окна для указанного окна. В приложениях, ориентированных на .NET Framework версии 4.7, этому свойству можно назначить дескриптор окна (HWND).
 
@@ -38,9 +36,7 @@ ms.lasthandoff: 05/23/2017
 cspParameters.ParentWindowHandle = form.Handle;
 ``` 
 
-<a id="impact" class="xliff"></a>
-
-## Последствия
+## <a name="impact"></a>Последствия
 
 В приложениях, ориентированных на .NET Framework не старше версии 4.7, в которых нужно зарегистрировать связь с родительским окном, рекомендуется использовать упрощенную форму:
 
@@ -48,9 +44,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 cspParameters.ParentWindowHandle = form.Handle;
 ``` 
 
-<a id="mitigation" class="xliff"></a>
-
-## Уменьшение
+## <a name="mitigation"></a>Уменьшение
 
 Разработчики, которые определили, что правильным значением был адрес области памяти, в которой содержалось значение `form.Handle`, могут отказаться от этого изменения в поведении, установив параметру `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` переключателя <xref:System.AppContext> значение `true`:
 
@@ -66,9 +60,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 Пользователи, которые хотят изменить поведение приложений, выполняемых на платформе .NET Framework 4.7, но ориентированных на более ранние версии платформы .NET Framework, могут задать переключателю <xref:System.AppContext> значение `false`.
  
-<a id="see-also" class="xliff"></a>
-
-## См. также
+## <a name="see-also"></a>См. также
 
 [Изменения целевой платформы в .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
 

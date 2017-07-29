@@ -1,5 +1,5 @@
 ---
-title: "Пошаговые руководства по C# | Документы Майкрософт"
+title: "Пошаговые руководства по C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e49290852ccdc83ab7879366102602f0ca3f99b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/28/2017
  Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../csharp/language-reference/keywords/async.md) и [Await](../csharp/language-reference/keywords/await.md).  
   
  [Создание компонента среды выполнения Windows на C# или в Visual Basic и его вызов из JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
- Описание процесса создания типа [!INCLUDE[wrt](../csharp/includes/wrt_md.md)], его упаковки в компонент [!INCLUDE[wrt](../csharp/includes/wrt_md.md)] и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)], разработанного для Windows с помощью JavaScript.  
+ Описание процесса создания типа [!INCLUDE[wrt](~/includes/wrt-md.md)], его упаковки в компонент [!INCLUDE[wrt](~/includes/wrt-md.md)] и последующего вызова компонента из приложения [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)], разработанного для Windows с помощью JavaScript.  
   
  [Программирование для Office (C# и Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Описание процесса создания книги Excel и документа Word с помощью C# и Visual Basic.  
@@ -71,10 +71,10 @@ ms.lasthandoff: 03/28/2017
  Описание некоторых наиболее типичных задач, таких как добавление или удаление вкладки в элементе управления `TabControl`, закрепление элемента управления в родительском элементе и изменение ориентации элемента управления `SplitContainer`.  
   
  [Написание запросов на C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Описание возможностей C#, которые служат для написания выражений запросов [!INCLUDE[vbteclinq](../csharp/includes/vbteclinq_md.md)].  
+ Описание возможностей C#, которые служат для написания выражений запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
  [Обработка данных (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
- Описание сценария [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)] для добавления, изменения и удаления данных в базе данных.  
+ Описание сценария [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для добавления, изменения и удаления данных в базе данных.  
   
  [Простая модель объектов и простой запрос (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
  Описание процесса создания класса сущностей и простого запроса для фильтрации класса сущностей.  
@@ -83,15 +83,16 @@ ms.lasthandoff: 03/28/2017
  Описание процесса использования LINQ to SQL для доступа к данным только с помощью хранимых процедур.  
   
  [Запросы по связям (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
- Описание процесса использования сопоставлений [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)] для представления связей внешних ключей в базе данных.  
+ Описание процесса использования сопоставлений [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для представления связей внешних ключей в базе данных.  
 
- [Написание визуализатора на C#](https://docs.microsoft.com/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ [Написание визуализатора на C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
  Описание процесса написания простого визуализатора на C#.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Примеры и пошаговые руководства по развертыванию](https://docs.microsoft.com/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ [Примеры и пошаговые руководства по развертыванию](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  Пошаговое описание примеров распространенных скриптов развертывания.  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../csharp/programming-guide/index.md)   
- [Примеры Visual Studio](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)
+ [Примеры Visual Studio](/visualstudio/ide/visual-studio-samples)
+

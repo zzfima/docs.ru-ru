@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Проецирование нового типа (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Проецирование нового типа (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1aa8c4676890dcc25108d919a501bde44299db04
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b772326b3b8827351ffbfbb1888b105bd6e537df
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Практическое руководство. Проецирование нового типа (LINQ to XML) (C#)
-В других примерах в этом разделе показаны запросы, возвращающие результаты в виде <xref:System.Collections.Generic.IEnumerable%601> из <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> из `string` и <xref:System.Collections.Generic.IEnumerable%601> из `int`. Это наиболее распространенные типы результатов, но подходят не для всех сценариев. Во многих случаях требуется, чтобы запросы возвращали <xref:System.Collections.Generic.IEnumerable%601> другого типа.  
+В других примерах данного раздела показаны запросы, возвращающие результаты в виде значений <xref:System.Collections.Generic.IEnumerable%601> типа <xref:System.Xml.Linq.XElement>, значений <xref:System.Collections.Generic.IEnumerable%601> типа `string` и значений <xref:System.Collections.Generic.IEnumerable%601> типа `int`. Это наиболее распространенные типы результатов, но подходят не для всех сценариев. Во многих случаях требуется, чтобы запросы возвращали <xref:System.Collections.Generic.IEnumerable%601> какого-то другого типа.  
   
 ## <a name="example"></a>Пример  
  В данном примере показано, как создавать экземпляры объектов в предложении `select`. Сначала в коде определяется новый класс с помощью конструктора, а затем модифицируется инструкция `select`, чтобы это выражение представляло новый экземпляр нового класса.  
@@ -68,3 +68,4 @@ Baby Monitor:2
   
 ## <a name="see-also"></a>См. также  
  [Проекции и преобразования (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

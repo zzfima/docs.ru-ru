@@ -1,5 +1,5 @@
 ---
-title: "Отложенное выполнение и отложенное вычисление в LINQ to XML (C#) | Документы Майкрософт"
+title: "Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f9d60242c75b996d25997b2adc83ccafcc538de
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 10ecebc2563df5a12b71a743727b1be21b19b671
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/13/2017
   
  Технологии LINQ предусматривают широкое использование отложенного выполнения как в членах основных классов <xref:System.Linq?displayProperty=fullName>, так и в методах расширений в различных пространствах имен LINQ, таких как <xref:System.Xml.Linq.Extensions?displayProperty=fullName>.  
   
- Отложенное выполнение напрямую поддерживается в языке C# с помощью ключевого слова [yield`yield-return` (в форме оператора ](../../../../csharp/language-reference/keywords/yield.md)), когда оно используется внутри блока итератора. Такой итератор должен возвращать коллекцию типа <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601> (или производного типа).  
+ Отложенное выполнение напрямую поддерживается в языке C# с помощью ключевого слова [yield`yield-return` (в форме оператора ](../../../../csharp/language-reference/keywords/yield.md)), когда оно используется внутри блока итератора. Такой итератор должен возвращать коллекцию типа <xref:System.Collections.IEnumerator> либо <xref:System.Collections.Generic.IEnumerator%601> (или одного из производных типов).  
   
 ## <a name="eager-vs-lazy-evaluation"></a>Сравнение безотложного  и отложенного вычислений  
  При создании метода, реализующего отложенное выполнение, необходимо также решать вопрос о том, следует ли реализовывать этот метод с помощью отложенного или безотложного вычисления.  
@@ -50,3 +50,4 @@ ms.lasthandoff: 03/13/2017
  [Основные принципы и терминология (функциональное преобразование) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)   
  [Операции агрегирования (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)   
  [yield](../../../../csharp/language-reference/keywords/yield.md)
+

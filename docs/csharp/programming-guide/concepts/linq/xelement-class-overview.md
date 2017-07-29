@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения о классе XElement (C#) | Документы Майкрософт"
+title: "Общие сведения о классе XElement (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 193ae8193d73d57638835c96c3f7dfd28d320473
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 20c6c7aed7d00b26d08f3733147616313ad851f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xelement-class-overview-c"></a>Общие сведения о классе XElement (C#)
-Класс <xref:System.Xml.Linq.XElement> — это один из фундаментальных классов в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Он обозначает элемент XML. Этот класс можно использовать для создания элементов, изменения содержимого элемента, добавления, изменения или удаления дочерних элементов, добавления к элементам атрибутов или сериализации содержимого элемента в текстовой форме. Можно также настроить взаимодействие с другими классами в <xref:System.Xml?displayProperty=fullName>, например <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.Xsl.XslCompiledTransform>.  
+Класс <xref:System.Xml.Linq.XElement> - это один из фундаментальных классов в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Он обозначает элемент XML. Этот класс можно использовать для создания элементов, изменения содержимого элемента, добавления, изменения или удаления дочерних элементов, добавления к элементам атрибутов или сериализации содержимого элемента в текстовой форме. Можно также настроить взаимодействие с другими классами в <xref:System.Xml?displayProperty=fullName>, например <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ## <a name="xelement-functionality"></a>Функциональные особенности класса XElement  
  В этом разделе рассматриваются функциональные особенности класса <xref:System.Xml.Linq.XElement>.  
@@ -36,11 +37,11 @@ ms.lasthandoff: 03/13/2017
   
 -   Можно создать XML-дерево при помощи кода. Дополнительные сведения см. в разделе [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
   
--   Можно выполнить анализ XML из нескольких источников, в том числе из <xref:System.IO.TextReader>, текстовых файлов или веб-адреса (URL-адреса). Дополнительные сведения см. в разделе [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md).  
+-   Можно выполнить синтаксический анализ XML из нескольких источников, в том числе из <xref:System.IO.TextReader>, текстовых файлов или веб-адреса (URL-адреса). Дополнительные сведения см. в разделе [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md).  
   
--   Для заполнения дерева можно использовать <xref:System.Xml.XmlReader>. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+-   Для распределения контента по дереву можно использовать <xref:System.Xml.XmlReader>. Для получения дополнительной информации см. <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
--   Если установлен модуль, позволяющий записывать содержимое в средство <xref:System.Xml.XmlWriter>, то можно использовать метод <xref:System.Xml.Linq.XContainer.CreateWriter%2A>, чтобы создать средство записи, передать его этому модулю, после чего использовать содержимое, записанное в <xref:System.Xml.XmlWriter>, для заполнения дерева XML.  
+-   Если установлен модуль, позволяющий заносить содержимое в средство <xref:System.Xml.XmlWriter>, то можно использовать метод <xref:System.Xml.Linq.XContainer.CreateWriter%2A>, чтобы создать модуль записи, передать его этому модулю, после чего использовать контент, записанный в систему <xref:System.Xml.XmlWriter>, чтобы заполнить XML-дерево.  
   
  Однако наиболее распространенным является такой метод создания XML-дерева:  
   
@@ -60,7 +61,7 @@ XElement contacts =
     );  
 ```  
   
- Другим распространенным способом создания дерева XML является использование результатов запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] для заполнения дерева XML, как показано в следующем примере:  
+ Другим распространенным способом создания дерева XML является использование результатов запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для заполнения дерева XML, как показано в следующем примере:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -93,17 +94,17 @@ Console.WriteLine(xmlTree);
 ```  
   
 ### <a name="serializing-xml-trees"></a>Сериализация деревьев XML  
- Дерево XML можно сериализовать в <xref:System.IO.File>, <xref:System.IO.TextWriter> или <xref:System.Xml.XmlWriter>.  
+ Можно сериализовать XML-дерево в <xref:System.IO.File>, <xref:System.IO.TextWriter> или в <xref:System.Xml.XmlWriter>.  
   
  Дополнительные сведения см. в разделе [Сериализация XML-деревьев (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md).  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>Получение XML-данных через методы оси  
- Можно воспользоваться методами оси для получения свойств, дочерних элементов, элементов-потомков и элементов-предков. При выполнении запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] используются методы оси и обеспечиваются гибкие и эффективные способы навигации по XML-дереву, а также его обработки.  
+ Можно воспользоваться методами оси для получения свойств, дочерних элементов, элементов-потомков и элементов-предков. При выполнении запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] используются методы оси и обеспечиваются гибкие и эффективные способы навигации по XML-дереву, а также его обработки.  
   
  Дополнительные сведения см. в разделе [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md).  
   
 ### <a name="querying-xml-trees"></a>Выполнение запросов деревьям XML  
- Вы можете создавать запросы [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], которые извлекают данные из дерева XML.  
+ Вы можете создавать запросы [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые извлекают данные из дерева XML.  
   
  Дополнительные сведения см. в разделе [Выполнение запросов к деревьям XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md).  
   
@@ -114,3 +115,4 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

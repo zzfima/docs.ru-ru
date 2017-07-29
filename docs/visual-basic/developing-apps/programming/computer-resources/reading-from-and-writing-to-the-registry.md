@@ -1,5 +1,5 @@
 ---
-title: "Чтение данных из реестра и запись в реестр (Visual Basic) | Документы Майкрософт"
+title: "Чтение данных из реестра и запись в реестр (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,17 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a093754423ba8b6942170792655e65e256df49bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 742aeb48f028918040479593a31b1223fba1b02f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Чтение данных из реестра и запись в реестр (Visual Basic)
 В этом разделе описываются задачи и приводятся основные разделы, связанные с реестром.  
   
- При программировании в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] можно получить доступ к реестру с помощью функций, предоставляемых [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], классов платформы .NET Framework для работы с реестром. Реестр содержит данные, исходящие как от операционной системы, так и от приложений, установленных на компьютере. Работа с реестром может привести к нарушению безопасности, допуская несанкционированный доступ к системным ресурсам или защищенной информации.  
+ При программировании в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] можно получить доступ к реестру с помощью функций, предоставляемых [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], классов платформы .NET Framework для работы с реестром. Реестр содержит данные, исходящие как от операционной системы, так и от приложений, установленных на компьютере. Работа с реестром может привести к нарушению безопасности, допуская несанкционированный доступ к системным ресурсам или защищенной информации.  
   
 ## <a name="in-this-section"></a>Содержание  
  [Практическое руководство. Создание раздела реестра и задание его значения](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
  Описывает использование метода `DeleteSubKey` свойства `My.Computer.Registry.CurrentUser` для удаления раздела реестра.  
   
  [Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Описывает использование классов `Registry` и `RegistryKey` объекта [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] для доступа к реестру.  
+ Описывает использование классов `Registry` и `RegistryKey` объекта [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для доступа к реестру.  
   
  [Безопасность и реестр](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  Описывает вопросы безопасности, связанные с реестром.  
@@ -66,3 +66,4 @@ ms.lasthandoff: 05/22/2017
   
  <xref:Microsoft.Win32.Registry>  
  Обзор класса `Registry` со ссылками на отдельные разделы и члены.
+

@@ -1,5 +1,5 @@
 ---
-title: "Пошаговые руководства по Visual Basic | Документы Майкрософт"
+title: "Пошаговые руководства для Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f88f7dcc7880621cf0f482b32ad7c1e5f1b51257
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b4e9eba6d086d0094c8368d7c3d67c676fe0bd3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
@@ -44,19 +44,19 @@ ms.lasthandoff: 05/22/2017
  Демонстрирует создание асинхронных решений с помощью ключевых слов [Async](../visual-basic/language-reference/modifiers/async.md) и [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Объявление и вызов событий](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- В этом пошаговом руководстве описывается, каким образом объявляются и вызываются события в [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ В этом пошаговом руководстве описывается, каким образом объявляются и вызываются события в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Обработка событий](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  В этом пошаговом руководстве описывается обработка событий с помощью стандартного ключевого слова `WithEvents` или новых ключевых слов `AddHandler` / `RemoveHandler`.  
   
  [Создание и реализация интерфейсов](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- В этом пошаговом руководстве описывается объявление и реализация интерфейсов в [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ В этом пошаговом руководстве описывается объявление и реализация интерфейсов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Определение классов](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  В этом пошаговом руководстве описывается объявление класса и его полей, а также свойств, методов и событий.  
   
  [Написание запросов в Visual Basic](../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- В этом пошаговом руководстве описывается, как использовать возможности языка Visual Basic для написания выражений запросов [!INCLUDE[vbteclinqext](../csharp/getting-started/includes/vbteclinqext_md.md)].  
+ В этом пошаговом руководстве описывается, как использовать возможности языка Visual Basic для написания выражений запросов [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
  [Реализация IEnumerable(Of T) в Visual Basic](../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  В этом пошаговом руководстве описывается создание класса, реализующего интерфейс `IEnumerable(Of String)` и класс, реализующий интерфейс `IEnumerator(Of String)` для считывания текстового файла строка за строкой.  
@@ -65,10 +65,10 @@ ms.lasthandoff: 05/22/2017
  В этом пошаговом руководстве описывается, как использовать операторы `Declare` и вызывать API Windows. Он содержит сведения об использовании атрибутов для управления маршалингом вызова API, а также о способах предоставления вызова API как метода класса.  
   
  [Создание объектов COM с помощью Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- В этом пошаговом руководстве описывается создание COM-объектов в [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], как с применением шаблона COM-класса, так и без него.  
+ В этом пошаговом руководстве описывается создание COM-объектов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], как с применением шаблона COM-класса, так и без него.  
   
  [Реализация наследования с использованием COM-объектов](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- В этом пошаговом руководстве описывается использование [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 6.0 для создания COM-объекта, содержащего класс, и его последующее применение в качестве базового класса в [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ В этом пошаговом руководстве описывается использование [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 для создания COM-объекта, содержащего класс, и его последующее применение в качестве базового класса в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Многопоточность](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  В этом пошаговом руководстве описывается создание многопоточного приложения, которое выполняет поиск заданного слова в текстовом файле.  
@@ -95,13 +95,14 @@ ms.lasthandoff: 05/22/2017
  В этом пошаговом руководстве описывается использование класса <xref:System.Security.Cryptography.DESCryptoServiceProvider> для шифрования и расшифровки строк.  
   
  [Управление файлами и папками в Visual Basic](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- В этом пошаговом руководстве описывается использование функций [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
+ В этом пошаговом руководстве описывается использование функций [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
   
  [Управление файлами с помощью методов .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- В этом пошаговом руководстве описывается использование методов [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
+ В этом пошаговом руководстве описывается использование методов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
   
  [Сохранение объекта в Visual Basic](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  В этом пошаговом руководстве описывается создание простого объекта и сохранение его данных в файл.  
   
  [Основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  В этом пошаговом руководстве описывается разработка типа "Сначала тест", при которой разработчик сначала пишет модульные тесты, а затем исходный код для их успешного выполнения.
+

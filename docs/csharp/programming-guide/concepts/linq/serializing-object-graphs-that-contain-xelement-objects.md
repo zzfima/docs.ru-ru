@@ -1,5 +1,5 @@
 ---
-title: "Сериализация графов объектов, содержащих объекты XElement (C#) | Документы Майкрософт"
+title: "Сериализация графов объектов, содержащих объекты XElement (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,23 +19,25 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 752092f7455fa0a10efcaa41166b66ff1f87b16e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4e7b1d6365eb27596477de39577caa4144aa3501
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>Сериализация графов объектов, содержащих объекты XElement (C#)
-В этом разделе описаны возможности сериализации графов объектов, содержащих ссылки на объекты типа <xref:System.Xml.Linq.XElement>. Чтобы упростить такой тип сериализации, тип <xref:System.Xml.Linq.XElement> реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>.  
+В этом разделе описаны возможности сериализации графов объектов, содержащих ссылки на объекты с типом <xref:System.Xml.Linq.XElement>. Для обеспечения сериализации этого типа класс <xref:System.Xml.Linq.XElement> реализует интерфейс <xref:System.Xml.Serialization.IXmlSerializable>.  
   
- Обратите внимание на то, что сериализацию реализует только класс <xref:System.Xml.Linq.XElement>.  
+ Обратите внимание, что сериализацию реализует только класс <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="in-this-section"></a>Содержание  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Практическое руководство. Сериализация с использованием XmlSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Демонстрируется способ сериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>.|  
-|[Практическое руководство. Сериализация с использованием DataContractSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Демонстрируется способ сериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[Практическое руководство. Сериализация с использованием XmlSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Xml.Serialization.XmlSerializer>.|  
+|[Практическое руководство. Сериализация с использованием DataContractSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Демонстрирует, как выполнять сериализацию с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="see-also"></a>См. также  
  [Расширенные методы программирования LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

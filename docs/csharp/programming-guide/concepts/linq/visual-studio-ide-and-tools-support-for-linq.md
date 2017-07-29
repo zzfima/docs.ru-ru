@@ -1,5 +1,5 @@
 ---
-title: "Интегрированная среда разработки Visual Studio и поддержка средств для LINQ (C#) | Документы Майкрософт"
+title: "Интегрированная среда разработки Visual Studio и поддержка средств для LINQ (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ffc0506fda6cd2dc0faf1e68514a0a5715f20a94
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 028f501b455da2a930d3e39ba25da38ef9fdfd8d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Интегрированная среда разработки Visual Studio и поддержка средств для LINQ (C#)
 Интегрированная среда разработки Visual Studio (IDE) предоставляет следующие возможности, поддерживающие разработку приложений LINQ.  
   
 ## <a name="object-relational-designer"></a>Object Relational Designer  
- Реляционный конструктор объектов — это средство визуального проектирования, которое можно использовать в приложениях [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) для создания классов в C#, представляющих реляционные данные в основной базе данных. Дополнительные сведения см. в разделе [Средства LINQ to SQL в Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Реляционный конструктор объектов — это средство визуального проектирования, которое можно использовать в приложениях [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) для создания классов в C#, представляющих реляционные данные в основной базе данных. Дополнительные сведения см. в разделе [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>Средство командной строки SQLMetal  
  SQLMetal — это средство командной строки, которое может использоваться в процессах сборки для создания классов из существующей базы данных, предназначенных для работы в приложениях LINQ to SQL. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](http://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  
@@ -38,7 +39,8 @@ ms.lasthandoff: 03/13/2017
  Редактор кода C# поддерживает LINQ с новой технологией IntelliSense и возможностями форматирования.  
   
 ## <a name="visual-studio-debugger-support"></a>Поддержка отладчика Visual Studio  
- Отладчик Visual Studio поддерживает отладку выражений запросов. Дополнительные сведения см. в разделе [Отладка LINQ](https://docs.microsoft.com/visualstudio/debugger/debugging-linq).  
+ Отладчик Visual Studio поддерживает отладку выражений запросов. Дополнительные сведения см. в разделе [Отладка LINQ](/visualstudio/debugger/debugging-linq).  
   
 ## <a name="see-also"></a>См. также  
  [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+

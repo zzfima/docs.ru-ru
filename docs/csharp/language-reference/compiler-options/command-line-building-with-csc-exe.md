@@ -1,5 +1,5 @@
 ---
-title: "Построение из командной строки с помощью csc.exe | Документы Майкрософт"
+title: "Построение из командной строки с помощью csc.exe"
 ms.date: 2017-04-19
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d90dc35fd985cbe35cfe86f7c299bd12aed11365
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd47544e11222dfb0035f37196abcdf5654d5537
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-build-with-cscexe"></a>Построение из командной строки с помощью csc.exe
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/10/2017
 
 Если используется стандартное окно командной строки, необходимо изменить путь к файлу *csc.exe*, прежде чем вызывать его из любого подкаталога на компьютере. Чтобы задать соответствующие переменные среды для поддержки построения из командной строки, необходимо запустить пакетный файл *vsvars32.bat*. Дополнительные сведения о файле *vsvars32.bat*, включая инструкции по его поиску и запуску, см. в разделе [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
-Если на вашем компьютере установлен только пакет [!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong_md.md)], компилятор C# можно использовать из **командной строки SDK**, которая открывается через пункт меню **Microsoft .NET Framework SDK**.
+Если на вашем компьютере установлен только пакет [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], компилятор C# можно использовать из **командной строки SDK**, которая открывается через пункт меню **Microsoft .NET Framework SDK**.
 
 Для программного построения программ C# можно также использовать средство MSBuild. Дополнительные сведения см. в разделе [MSBuild](/visualstudio/msbuild/msbuild).
 
@@ -81,37 +81,37 @@ ms.lasthandoff: 05/10/2017
 
 - Компиляция *File.cs* и создание *File.exe*:
 
-```
+```console
 csc File.cs 
 ```
 
 - Компиляция *File.cs* и создание *File.dll*:
 
-```
+```console
 csc /target:library File.cs
 ```
 
 - Компиляция *File.cs* и создание *My.exe*:
 
-```
+```console
 csc /out:My.exe File.cs
 ```
 
 - Компиляция всех файлов C# в текущем каталоге с включенными оптимизациями и определение символа DEBUG. Выводится файл *File2.exe*:
 
-```
+```console
 csc /define:DEBUG /optimize /out:File2.exe *.cs
 ```
 
 - Компиляция всех файлов C# в текущем каталоге с созданием отладочной версии *File2.dll*. Логотипы и предупреждения не отображаются:
 
-```
+```console
 csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
 ```
 
 - Компиляция всех файлов C# в текущем каталоге в файл *Something.xyz* (библиотеку DLL):
 
-```
+```console
 csc /target:library /out:Something.xyz *.cs
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Проверка с использованием XSD (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Проверка с использованием XSD (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3a510c91b74df1e5d0ad26655fa33e8447ea850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cec3090541f7bbc306eb41fff409dc890cc55d17
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Практическое руководство. Проверка с использованием XSD (LINQ to XML) (C#)
-Пространство имен <xref:System.Xml.Schema> содержит методы расширения, облегчающие проверку правильности XML-дерева по XSD-файлу. Дополнительные сведения см. в документации по методу <xref:System.Xml.Schema.Extensions.Validate%2A>.  
+Пространство имен <xref:System.Xml.Schema> содержит методы расширения, облегчающие проверку правильности XML-дерева по XSD-файлу. Дополнительные сведения см. в документации метода <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается <xref:System.Xml.Schema.XmlSchemaSet>, а затем два объекта <xref:System.Xml.Linq.XDocument> проверяются по набору схем. Правильность одного документа подтверждается, а второго - нет.  
+ В следующем примере создается набор схем <xref:System.Xml.Schema.XmlSchemaSet>, затем с его помощью проводится проверка правильности двух объектов <xref:System.Xml.Linq.XDocument>. Правильность одного документа подтверждается, а второго - нет.  
   
 ```csharp  
 string xsdMarkup =  
@@ -139,3 +140,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Schema.Extensions.Validate%2A>   
  [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Объекты (руководство по программированию на C#) | Документы Майкрософт"
+title: "Объекты (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: fe548eb5d520945e3f0d52750bbf89935947116e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2a23d02e4ea95e908f97bc7264ee64d6899aee8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>Объекты (Руководство по программированию на C#)
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/15/2017
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- Память для `p1` и `p2` выделена в стеке потока. Эта память освобождается вместе с типом или методом, в котором она объявляется. Эта одна из причин того, почему структуры копируются при присваивании. Напротив, при выходе всех ссылок на объект из области действия среда CLR автоматически освобождает память (выполняет сборку мусора), выделенную для экземпляра класса. Возможность детерминированного уничтожения объекта класса, имеющаяся в C++, в данном случае отсутствует. Дополнительные сведения о сборке мусора в [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).  
+ Память для `p1` и `p2` выделена в стеке потока. Эта память освобождается вместе с типом или методом, в котором она объявляется. Эта одна из причин того, почему структуры копируются при присваивании. Напротив, при выходе всех ссылок на объект из области действия среда CLR автоматически освобождает память (выполняет сборку мусора), выделенную для экземпляра класса. Возможность детерминированного уничтожения объекта класса, имеющаяся в C++, в данном случае отсутствует. Дополнительные сведения о сборке мусора в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] см. в разделе [Сборка мусора](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  В среде CLR процесс выделения и освобождения памяти в управляемой куче значительно оптимизирован. В большинстве случаев нет существенной разницы в затратах производительности на выделение экземпляра класса в куче и выделение экземпляра структуры в стеке.  
@@ -91,3 +91,4 @@ ms.lasthandoff: 05/15/2017
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [Оператор new](../../../csharp/language-reference/keywords/new-operator.md)   
  [Система общих типов CTS](../../../standard/base-types/common-type-system.md)
+

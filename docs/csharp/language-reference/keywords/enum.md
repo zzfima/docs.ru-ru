@@ -1,5 +1,5 @@
 ---
-title: "enum (справочник по C#) | Документы Майкрософт"
+title: "enum (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f064ed0710a83e4bf0eaf5c35b962c29443f9d23
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf12724ec9e450a2bc237db614f235d7f03a4a7e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="enum-c-reference"></a>enum (Справочник по C#)
@@ -62,7 +62,7 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
- Утвержденные типы для перечисления: `byte`, [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) и [ulong](../../../csharp/language-reference/keywords/ulong.md).  
+ Утвержденные типы для перечисления: `byte`, [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md)и [ulong](../../../csharp/language-reference/keywords/ulong.md).  
   
  Переменной типа `Days` может быть присвоено любое значение в диапазоне базового типа; значения не ограничиваются именованными константами.  
   
@@ -77,12 +77,12 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 int x = (int)Days.Sun;  
 ```  
   
- При применении <xref:System.FlagsAttribute?displayProperty=fullName> к перечислению, содержащему элементы, которые могут быть объединены с помощью побитовой операции `OR`, атрибут влияет на поведение `enum` при использовании с некоторыми средствами. Эти изменения можно заметить при использовании таких средств, как методы класса <xref:System.Console> и вычислитель выражений. (См. третий пример.)  
+ При применении <xref:System.FlagsAttribute?displayProperty=fullName> к перечислению, содержащему элементы, которые могут быть объединены с помощью побитовой операции `OR` , атрибут влияет на поведение `enum` при использовании с некоторыми средствами. Эти изменения можно заметить при использовании таких средств, как методы класса <xref:System.Console> и вычислитель выражений. (См. третий пример.)  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Как и в случае с любой другой константой, все ссылки на отдельные значения перечисления преобразуются в числовые литералы во время компиляции. Это может создать потенциальные проблемы с управлением версиями, как описано в разделе [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md).  
   
- Назначение дополнительных значений для новых версий перечислений или изменение значений элементов перечислений в новой версии может вызвать проблемы в зависимом исходном коде. Значения перечислений часто используются в операторах [switсh](../../../csharp/language-reference/keywords/switch.md). Если были добавлены дополнительные элементы для типа `enum` , раздел по умолчанию инструкции switch может быть выбран неожиданным образом.  
+ Назначение дополнительных значений для новых версий перечислений или изменение значений элементов перечислений в новой версии может вызвать проблемы в зависимом исходном коде. Значения перечислений часто используются в инструкциях [switсh](../../../csharp/language-reference/keywords/switch.md) . Если были добавлены дополнительные элементы для типа `enum` , раздел по умолчанию инструкции switch может быть выбран неожиданным образом.  
   
  Если другие разработчики используют ваш код, необходимо предоставить рекомендации о том, как их код должен реагировать при добавлении новых элементов к любому типу `enum` .  
   
@@ -97,7 +97,7 @@ int x = (int)Days.Sun;
  [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано использование и влияние атрибута <xref:System.FlagsAttribute?displayProperty=fullName> на объявление `enum`.  
+ В следующем примере кода показано использование и влияние атрибута <xref:System.FlagsAttribute?displayProperty=fullName> на объявление `enum` .  
   
  [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   

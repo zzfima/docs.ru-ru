@@ -1,5 +1,5 @@
 ---
-title: "Анализ XML (C#) | Документы Майкрософт"
+title: "Анализ XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbbe2c5d37d06292ef251428eb1da157de1a9b49
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 13807e57b3616d51bd88b37d0acc703a18445a02
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="parsing-xml-c"></a>Анализ XML (C#)
@@ -33,11 +34,12 @@ ms.lasthandoff: 03/13/2017
 |Раздел|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Анализ строки (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md)|Показывает, как анализировать строку для создания XML-дерева.|  
-|[Практическое руководство. Загрузка XML-кода из файла (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Демонстрируется загрузка кода XML из URI с помощью метода <xref:System.Xml.Linq.XElement.Load%2A>.|  
-|[Сохранение пробелов при загрузке и анализе XML](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md)|Описывает, как управлять поведением пробелов [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] при загрузке XML-деревьев.|  
+|[Практическое руководство. Загрузка XML-кода из файла (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|Показывает, как загружать XML из URI-кода с помощью метода <xref:System.Xml.Linq.XElement.Load%2A>.|  
+|[Сохранение пробелов при загрузке и анализе XML](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-loading-or-parsing-xml1.md)|Описывает, как управлять поведением пробелов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] при загрузке XML-деревьев.|  
 |[Практическое руководство. Перехват ошибок анализа (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-catch-parsing-errors.md)|Показывает, как выявлять плохо отформатированные или недопустимые коды XML.|  
-|[Практическое руководство. Создание дерева из XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Показано, как создать дерево XML непосредственно из <xref:System.Xml.XmlReader>.|  
-|[Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Демонстрируется способ потоковой передачи фрагментов XML с помощью <xref:System.Xml.XmlReader>.<br /><br /> При обработке объемных XML-файлов может оказаться, что загрузка в память всего дерева XML неосуществима. Вместо этого можно организовать поток XML-фрагментов.|  
+|[Практическое руководство. Создание дерева из XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Показывает, как создавать XML-дерево непосредственно из <xref:System.Xml.XmlReader>.|  
+|[Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Показывает, как организовать поток XML-фрагментов с помощью <xref:System.Xml.XmlReader>.<br /><br /> При обработке объемных XML-файлов может оказаться, что загрузка в память всего дерева XML неосуществима. Вместо этого можно организовать поток XML-фрагментов.|  
   
 ## <a name="see-also"></a>См. также  
  [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

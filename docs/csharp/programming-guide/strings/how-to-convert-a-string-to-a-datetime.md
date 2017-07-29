@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Преобразование строки в значение типа DateTime (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Преобразование строки в значение типа \"DateTime\" (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,14 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f31deeb2b29495ab48781c7e673fed37e8ad8dce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>Практическое руководство. Преобразование строки в значение типа "DateTime" (Руководство по программированию в C#)
-В программах часто предоставляется возможность ввода пользователями дат в виде строковых значений. Для преобразования даты в виде строки в объект <xref:System.DateTime?displayProperty=fullName> можно использовать метод <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> или статический метод <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName>, как показано в приведенном ниже примере.  
+В программах часто предоставляется возможность ввода пользователями дат в виде строковых значений. Чтобы преобразовать дату в строковом формате в объект <xref:System.DateTime?displayProperty=fullName> , можно использовать метод <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> или статический метод <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> , как показано в приведенном ниже примере.  
   
  **Язык и региональные параметры**.  В разных языках приняты разные способы записи дат.  Например, в США дата 01/20/2008 соответствует 20 января 2008 года.  Во французском языке такая дата приведет к созданию исключения InvalidFormatException. Связано это с тем, что во французском принята запись дат в формате День/Месяц/Год, а в США — Месяц/День/Год.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
  Ниже приведен простой пример преобразования строки в объект dateTime.  
   
- Дополнительные примеры строк дат см. в разделе <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
+ Дополнительные примеры строк с датами см. в разделе <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -73,3 +74,4 @@ Press any key to continue . . .
   
 ## <a name="see-also"></a>См. также  
  [Строки](../../../csharp/programming-guide/strings/index.md)
+
