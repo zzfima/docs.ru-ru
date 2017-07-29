@@ -1,5 +1,5 @@
 ---
-title: "explicit (справочник по C#) | Документы Майкрософт"
+title: "explicit (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5c842eba24f0a30d357afc24aeed10c1447345e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f11a930f0be5d504c92271b66009613de5d68579
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="explicit-c-reference"></a>explicit (Справочник по C#)
@@ -73,3 +73,4 @@ ms.lasthandoff: 03/13/2017
  [оператор (справочник по C#)](../../../csharp/language-reference/keywords/operator.md)   
  [Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)   
  [Связанные пользовательские явные преобразования в C#](http://go.microsoft.com/fwlink/?LinkId=112384)
+

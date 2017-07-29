@@ -1,5 +1,5 @@
 ---
-title: "Доступ к параметрам приложения (Visual Basic) | Документы Майкрософт"
+title: "Доступ к параметрам приложения (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3864089caaf24eb61a3db9a97c674dc42e40a3cd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6ac0be10bbae9071a3ac128d1456d560836d0607
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-application-settings-visual-basic"></a>Доступ к параметрам приложения (Visual Basic)
@@ -57,5 +57,6 @@ ms.lasthandoff: 05/22/2017
 |Определение значений пользовательских параметров|[Практическое руководство. Чтение параметров приложения в Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Управление параметрами приложения (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-settings-dotnet)   
+ [Управление параметрами приложения (.NET)](/visualstudio/ide/managing-application-settings-dotnet)   
  [Объект My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Операции создания (C#) | Документы Майкрософт"
+title: "Операции создания (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a75605af25bebbeb476730013bdefd2815846881
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa3cfe74d96e600463562a8aae92b7caa229dd06
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generation-operations-c"></a>Операции создания (C#)
@@ -36,9 +37,10 @@ ms.lasthandoff: 03/13/2017
 |-----------------|-----------------|---------------------------------|----------------------|  
 |DefaultIfEmpty|Заменяет пустую коллекцию на одноэлементную коллекцию со значениями по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
 |Empty|Возвращает пустую коллекцию.|Неприменимо.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
-|Range|Создает коллекцию, содержащую последовательность чисел.|Неприменимо.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
-|Repeat|Создает коллекцию, содержащую одно повторяющееся значение.|Неприменимо.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
+|Диапазон|Создает коллекцию, содержащую последовательность чисел.|Неприменимо.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
+|Повторить|Создает коллекцию, содержащую одно повторяющееся значение.|Неприменимо.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Linq>   
  [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+

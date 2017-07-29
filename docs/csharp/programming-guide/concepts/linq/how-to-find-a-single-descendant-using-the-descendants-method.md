@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Поиск одного потомка с помощью метода потомков (C#) | Документ Майкрософт"
+title: "Практическое руководство. Поиск одного потомка с помощью метода потомков (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fbce5524a214f96b0d44b281e18d43675bfe0b4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 89e20ede65caf65e91a37cbee69c80146a1443f0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Практическое руководство. Поиск одного потомка с помощью метода потомков (C#)
-Метод оси <xref:System.Xml.Linq.XContainer.Descendants%2A> позволяет быстро написать код для поиска единственного элемента с уникальным именем. Этот способ особенно полезен, если нужно найти конкретного потомка с заданным именем. Можно написать собственный код для перехода к нужному элементу, но часто быстрей и легче написать такой код с помощью оси <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+Метод оси <xref:System.Xml.Linq.XContainer.Descendants%2A> можно использовать для быстрого написания кода с целью поиска одного уникально именованного элемента. Этот способ особенно полезен, если нужно найти конкретного потомка с заданным именем. Можно написать собственный код для перехода к нужному элементу, но часто быстрей и легче написать такой код с помощью оси <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Пример  
  В этом примере используется стандартный оператор запроса <xref:System.Linq.Enumerable.First%2A>.  
@@ -87,3 +87,4 @@ GC3 Value
   
 ## <a name="see-also"></a>См. также  
  [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

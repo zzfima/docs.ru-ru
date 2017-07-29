@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Перечисление всех узлов в дереве (C#) | Документы Майкрософт"
+title: "Практическое руководство. Перечисление всех узлов в дереве (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,17 +14,17 @@ ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0d91ec6807a533a504c643bc1303d1a42953f942
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ae2f34e085b0084d5cb589cfdd14562ca6f50bc1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Практическое руководство. Перечисление всех узлов в дереве (C#)
 Иногда нужно вывести список всех узлов дерева. Это полезно, если требуется узнать, как метод или свойство повлияли на дерево. Одним из подходов для вывода списка всех узлов в текстовом формате является создание выражения XPath, которое точно определяет каждый конкретный узел дерева.  
   
- Не слишком удобно выполнять выражения XPath с помощью [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Выражения XPath имеют более низкую производительность, чем запросы [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], к тому же запросы [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] являются более мощными. Однако для определения узлов в XML-дереве выражения XPath подходят хорошо.  
+ Не слишком удобно выполнять выражения XPath с помощью [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Выражения XPath имеют более низкую производительность, чем запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], к тому же запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] являются более мощными. Однако для определения узлов в XML-дереве выражения XPath подходят хорошо.  
   
 ## <a name="example"></a>Пример  
  В этом примере показана функция с именем `GetXPath`, создающая конкретное выражение XPath для каждого узла XML-дерева. Она формирует соответствующие выражения XPath, даже если узлы находятся в пространстве имен. Выражения XPath создаются с помощью префиксов пространства имен.  
@@ -362,3 +362,4 @@ class Program
   
 ## <a name="see-also"></a>См. также  
  [Дополнительные способы создания запросов (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

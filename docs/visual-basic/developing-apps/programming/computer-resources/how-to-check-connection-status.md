@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Проверка состояния подключения в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Проверка состояния подключения в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4163a16e7c338c5e55751a9567fc85109867cfda
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3654eb51bb47317c2dc7bf74979a847438b0ae8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Практическое руководство. Проверка состояния подключения в Visual Basic
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]  
   
-     Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+     Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   

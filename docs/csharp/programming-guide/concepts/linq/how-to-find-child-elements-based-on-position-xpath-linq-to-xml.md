@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML) | Документы Майкрософт"
+title: "Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce711d5e0ce82d4fcb0351c21ac7a769c414b2a4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 247cb8f2be3a005413045198443b132b25241775
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск дочерних элементов по положению (XPath-LINQ to XML)
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/13/2017
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Можно использовать операторы <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A> либо перегрузку <xref:System.Linq.Enumerable.Where%2A>, принимающую индекс. При использовании перегрузки <xref:System.Linq.Enumerable.Where%2A> применяется лямбда-выражение, принимающее два аргумента. Следующий пример показывает обе возможности выбора на основе позиции.  
+ Существует два простых подхода к написанию этого запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Можно использовать операторы <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A> или перегруженный оператор <xref:System.Linq.Enumerable.Where%2A>, который потребляет индекс. При использовании перегрузки оператора <xref:System.Linq.Enumerable.Where%2A> необходимо использовать лямбда-выражение, которое имеет два аргумента. Следующий пример показывает обе возможности выбора на основе позиции.  
   
 ## <a name="example"></a>Пример  
  В данном примере производится поиск второго элемента через четвертый элемент `Test`. Результатом является коллекция элементов.  
@@ -92,3 +92,4 @@ Results are identical
   
 ## <a name="see-also"></a>См. также  
  [LINQ to XML для пользователей XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

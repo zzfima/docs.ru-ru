@@ -1,5 +1,5 @@
 ---
-title: "Доступ к файлам с помощью Visual Basic | Документы Майкрософт"
+title: "Доступ к файлам с помощью Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -40,14 +40,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2a2a60f9033d6bdec0b9a0d5905adb2b1953bf66
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 71e941bf33c3b1051c22c8170b327df9fae7d4b9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="file-access-with-visual-basic"></a>Доступ к файлам с помощью Visual Basic
-Объект `My.Computer.FileSystem` предоставляет средства для работы с файлами и папками. Его свойства, методы и события позволяют создавать, копировать, перемещать, исследовать и удалять файлы и папки. `My.Computer.FileSystem` обеспечивает более высокую производительность, чем устаревшие функции (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` и т. д.), предоставляемые [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] для обеспечения обратной совместимости.  
+Объект `My.Computer.FileSystem` предоставляет средства для работы с файлами и папками. Его свойства, методы и события позволяют создавать, копировать, перемещать, исследовать и удалять файлы и папки. `My.Computer.FileSystem` обеспечивает более высокую производительность, чем устаревшие функции (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` и т. д.), предоставляемые [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] для обеспечения обратной совместимости.  
   
 ## <a name="in-this-section"></a>Содержание  
  [Чтение из файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
@@ -70,3 +71,4 @@ ms.lasthandoff: 03/13/2017
   
  [Исправление неполадок, связанных с чтением из текстовых файлов и записью в такие файлы](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  Список распространенных проблем, возникающих при чтении и записи в текстовые файлы, и предлагаемые способы их устранения.
+

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 8a5233f5e39c5e6c423a453cd241be40877d2ba8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: adf2dc683a139d21f24379efc779d4510a2057eb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Практическое руководство. Запись в журнал сведений об исключениях в Visual Basic
@@ -99,3 +99,4 @@ ms.lasthandoff: 05/22/2017
  [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
  [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+

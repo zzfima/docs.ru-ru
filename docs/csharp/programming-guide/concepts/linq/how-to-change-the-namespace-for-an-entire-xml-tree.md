@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Изменение пространства имен для всего дерева XML (C#) | Документы Майкрософт"
+title: "Практическое руководство. Изменение пространства имен для всего дерева XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce710355e410e123fb9c4129e8d7bf339d5beff
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ffebf1bda275eb815ff3e15538fd69de6d3b0c1a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Практическое руководство. Изменение пространства имен для всего дерева XML (C#)
-Иногда необходимо программно изменить пространство имен для элемента или атрибута. В LINQ to XML это делается легко. Можно задать свойство <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>. Свойство <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> задать нельзя, но можно легко скопировать атрибуты в <xref:System.Collections.Generic.List%601?displayProperty=fullName>, удалить существующие атрибуты, а затем добавить новые атрибуты в новом пространстве имен.  
+Иногда необходимо программно изменить пространство имен для элемента или атрибута. В LINQ to XML это делается легко. Можно установить свойство <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>. Свойство <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> не может быть установлено, но можно легко скопировать атрибуты в объект <xref:System.Collections.Generic.List%601?displayProperty=fullName>, заменив существующие атрибуты, а затем добавить новые атрибуты из нового пространства имен.  
   
  Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
@@ -91,3 +91,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>См. также  
  [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

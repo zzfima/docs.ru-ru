@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Загрузка файла в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Загрузка файла в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,21 +34,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bd37b52d12876dad6ec4b2a1bb34f4987f933c08
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8988b922df921c2de3e2c4f6d7a8e98887ba7b0a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Практическое руководство. Загрузка файла в Visual Basic
-Метод <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> можно использовать для загрузки удаленного файла и его сохранения в определенное расположение. Если для параметра `ShowUI` установлено значение `True`, отображается диалоговое окно, показывающее ход загрузки и позволяющее пользователю отменить операцию. По умолчанию существующие файлы с тем же именем не перезаписываются. Если требуется перезаписывать существующие файлы, установите для параметра `overwrite` значение `True`.  
+Метод <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> можно использовать для скачивания удаленного файла и сохранения его в определенном месте. Если для параметра `ShowUI` установлено значение `True`, отображается диалоговое окно, показывающее ход загрузки и позволяющее пользователю отменить операцию. По умолчанию существующие файлы с тем же именем не перезаписываются. Если требуется перезаписывать существующие файлы, установите для параметра `overwrite` значение `True`.  
   
  При следующих условиях возможно возникновение исключения:  
   
 -   Недопустимое имя диска (<xref:System.ArgumentException>).  
   
--   Не предоставлена необходимая проверка подлинности (<xref:System.UnauthorizedAccessException> или <xref:System.Security.SecurityException>).  
+-   Не была предоставлена необходимая аутентификация (<xref:System.UnauthorizedAccessException> или <xref:System.Security.SecurityException>).  
   
 -   Сервер не отвечает в пределах указанного `connectionTimeout` (<xref:System.TimeoutException>).  
   

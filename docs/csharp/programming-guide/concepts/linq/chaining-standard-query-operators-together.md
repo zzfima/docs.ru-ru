@@ -1,5 +1,5 @@
 ---
-title: "Связывание стандартных операторов запросов (C#) | Документы Майкрософт"
+title: "Связывание стандартных операторов запросов (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e9da047fcc224176d028f8caef8b57bc134dc21
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40c65c80c08caa310cb72a194534ad63fcea890a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Связывание стандартных операторов запросов (C#)
@@ -27,9 +27,9 @@ ms.lasthandoff: 03/13/2017
  Стандартные операторы запросов также можно объединять в цепочки. Например, можно вставить оператор <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>, который также будет действовать как отложенный. Этот оператор не материализует промежуточные результаты.  
   
 ## <a name="example"></a>Пример  
- В этом примере метод <xref:System.Linq.Enumerable.Where%2A> вызывается до вызова метода `ConvertCollectionToUpperCase`. Метод <xref:System.Linq.Enumerable.Where%2A> действует практически так же, как отложенные методы, которые использовались в предыдущих примерах в этом учебнике, `ConvertCollectionToUpperCase` и `AppendString`.  
+ В данном примере метод <xref:System.Linq.Enumerable.Where%2A> вызывается до вызова метода `ConvertCollectionToUpperCase`. Метод <xref:System.Linq.Enumerable.Where%2A> действует практически так же, как отложенные методы, использовавшиеся в предыдущих примерах, приведенных в этом учебнике, `ConvertCollectionToUpperCase` и `AppendString`.  
   
- Отличие заключается в том, что в этом случае метод <xref:System.Linq.Enumerable.Where%2A> просматривает свою исходную коллекцию, определяет, что первый элемент не передает предикат, а затем переходит к следующему элементу, который передает предикат. После этого метод выдает второй элемент.  
+ Отличие заключается в том, что в этом случае метод <xref:System.Linq.Enumerable.Where%2A> просматривает свою исходную коллекцию, определяет, что первый элемент не передает предикат, а затем переходит к следующему элементу, который предикат передает. После этого метод выдает второй элемент.  
   
  Однако базовый принцип остался прежним: промежуточные коллекции материализуются только в случае необходимости.  
   
@@ -100,3 +100,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>См. также  
  [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Соглашения о написании кода на C# (руководство по программированию на C#) | Документы Майкрософт"
+title: "Соглашения о написании кода на C# (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f32fdc0eb1954cdac30c39e05c74d43301d850c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Соглашения о написании кода на C# (Руководство по программированию на C#)
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="layout-conventions"></a>Соглашения о расположении  
  Чтобы выделить структуру кода и облегчить чтение кода, в хорошем макете используется форматирование. Примеры и образцы корпорации Майкрософт соответствуют следующим соглашениям.  
   
--   Использование параметров редактора кода по умолчанию (логичные отступы, отступы по четыре символа, использование пробелов для табуляции). Дополнительные сведения см. в разделе ["Параметры", "Текстовый редактор", C#, "Форматирование"](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
+-   Использование параметров редактора кода по умолчанию (логичные отступы, отступы по четыре символа, использование пробелов для табуляции). Дополнительные сведения см. в разделе ["Параметры", "Текстовый редактор", C#, "Форматирование"](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
 -   Запись только одного оператора в строке.  
   
@@ -221,3 +221,4 @@ ms.lasthandoff: 05/10/2017
 ## <a name="see-also"></a>См. также  
  [Соглашения о написании кода в Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
  [Правила написания безопасного кода](../../../standard/security/secure-coding-guidelines.md)
+

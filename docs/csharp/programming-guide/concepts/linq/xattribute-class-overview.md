@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения о классе XAttribute (C#) | Документы Майкрософт"
+title: "Общие сведения о классе XAttribute (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1b461158fed20ea5824d89ec455abb667d3fef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdac066fbd467768cedcf93f6258cbde0b6dd847
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xattribute-class-overview-c"></a>Общие сведения о классе XAttribute (C#)
-Атрибуты - это пары «имя-значение», ассоциированные с элементом. Класс <xref:System.Xml.Linq.XAttribute> представляет атрибуты XML.  
+Атрибуты - это пары «имя-значение», ассоциированные с элементом. Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибуты.  
   
 ## <a name="overview"></a>Обзор  
- Работа с атрибутами [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] аналогична работе с элементами. Они имеют аналогичные конструкторы. Аналогичны и методы, используемые для получения их коллекций. По своему виду выражение запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] для коллекции атрибутов весьма напоминает выражение запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] для коллекции элементов.  
+ Работа с атрибутами [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] аналогична работе с элементами. Они имеют аналогичные конструкторы. Аналогичны и методы, используемые для получения их коллекций. По своему виду выражение запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для коллекции атрибутов весьма напоминает выражение запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для коллекции элементов.  
   
  Порядок, в котором атрибуты добавлялись к элементу, сохраняется. Иначе говоря, при просмотре атрибутов они отображаются в том же порядке, в каком были добавлены.  
   
 ## <a name="the-xattribute-constructor"></a>Конструктор XAttribute  
- Чаще всего используется следующий конструктор класса <xref:System.Xml.Linq.XAttribute>:  
+ Чаще всего используется следующий конструктор класса <xref:System.Xml.Linq.XAttribute>.  
   
 |Конструктор|Описание|  
 |-----------------|-----------------|  
@@ -91,9 +92,10 @@ Console.WriteLine(c);
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>Атрибуты не являются узлами  
- Между атрибутами и элементами имеются существенные различия. Объекты <xref:System.Xml.Linq.XAttribute> не являются узлами в дереве XML. Они представляют собой пары «имя-значение», ассоциированные с элементом XML. В отличие от модели DOM, это более точно отражает структуру XML. Хотя объекты <xref:System.Xml.Linq.XAttribute> фактически не являются узлами дерева XML, работа с объектами <xref:System.Xml.Linq.XAttribute> весьма напоминает работу с объектами <xref:System.Xml.Linq.XElement>.  
+ Между атрибутами и элементами имеются существенные различия. Объекты <xref:System.Xml.Linq.XAttribute> не являются узлами в дереве XML. Они представляют собой пары «имя-значение», ассоциированные с элементом XML. В отличие от модели DOM, это более точно отражает структуру XML. Хотя объекты <xref:System.Xml.Linq.XAttribute> фактически не являются узлами XML-дерева, работа с объектами <xref:System.Xml.Linq.XAttribute> весьма напоминает работу с объектами <xref:System.Xml.Linq.XElement>.  
   
  Это различие имеет первостепенную важность только для разработчиков, создающих коды, которые взаимодействуют с XML-деревьями на уровне узлов. Для многих разработчиков это различие не имеет значения.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

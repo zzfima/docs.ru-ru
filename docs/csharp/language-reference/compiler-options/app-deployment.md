@@ -1,5 +1,5 @@
 ---
-title: "Развертывание приложений C# | Документы Майкрософт"
+title: "Развертывание приложений C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,18 +31,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3aa401ae0f44fe7904f1d426ce0051c452078b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fe9c4d38836821364bec3fea746676cd1df4ba8e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deployment-of-c-applications"></a>Развертывание приложений C#
 После того, как сборка приложения C# будет завершена, ее нужно распространить. C# — это язык .NET, а значит, для распространения исполняемых файлов C# на другие компьютеры на этих компьютерах должна быть установлена платформа .NET Framework (и, возможно, другие зависимости, характерные для вашего приложения). Для распространения платформы .NET Framework доступны различные параметры. Общие сведения см. в [Руководстве по развертыванию .NET Framework для разработчиков](https://msdn.microsoft.com/library/ee942965).  
   
- Перенос готовых приложений на другие компьютеры обычно называется развертыванием. Среда разработки Microsoft предоставляет механизмы для развертывания. Дополнительные сведения см. в разделе [Развертывание приложений и компонентов](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components).  
+ Перенос готовых приложений на другие компьютеры обычно называется развертыванием. Среда разработки Microsoft предоставляет механизмы для развертывания. Дополнительные сведения см. в разделе [Развертывание приложений и компонентов](/visualstudio/deployment/deploying-applications-services-and-components).  
   
  Если сборки и распространение в основном выполняются из командной строки, рассмотрите другие способы развертывания и перераспределения зависимостей.  
   
 ## <a name="see-also"></a>См. также  
  [Сборка из командной строки с помощью csc.exe](command-line-building-with-csc-exe.md)
+
