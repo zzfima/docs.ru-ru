@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Преобразование формы дерева XML (C#) | Документы Майкрософт"
+title: "Практическое руководство. Преобразование формы дерева XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8f11c77bc6273642bc4ffce3bf546c5a897729bc
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3558cb7592641d784f0150ce7016563ad9c81c46
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Практическое руководство. Преобразование формы дерева XML (C#)
@@ -100,7 +100,7 @@ Console.WriteLine(newCustOrd);
 ## <a name="example"></a>Пример  
  В этом примере выполняется переименование некоторых элементов и преобразование некоторых атрибутов в элементы.  
   
- Код вызывает метод `ConvertAddress`, который возвращает список объектов <xref:System.Xml.Linq.XElement>. По отношению к методу аргументом является запрос, который определяет сложный элемент `Address`, в котором атрибут `Type` обладает значением `"Shipping"`.  
+ Код вызывает `ConvertAddress`, который возвращает объекты <xref:System.Xml.Linq.XElement>. По отношению к методу аргументом является запрос, который определяет сложный элемент `Address`, в котором атрибут `Type` обладает значением `"Shipping"`.  
   
  В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
@@ -152,3 +152,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>См. также  
  [Проекции и преобразования (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

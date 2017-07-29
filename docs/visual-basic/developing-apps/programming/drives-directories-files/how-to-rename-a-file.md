@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Переименование файла в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Переименование файла в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a090fa8df6347a98b5c971c26664e6dd1098a594
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f003cfc7c7880a47515f7328a0503072f3b02cbf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Практическое руководство. Переименование файла в Visual Basic
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
- Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагментов кода фрагмент находится в разделе **файловая система: обработка дисков, папок и файлов**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагментов кода фрагмент находится в разделе **файловая система: обработка дисков, папок и файлов**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  При следующих условиях возможно возникновение исключения:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/22/2017
   
 -   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Параметр `newName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
+-   Параметр`newName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
   
 -   Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).  
   
@@ -78,3 +78,4 @@ ms.lasthandoff: 05/22/2017
  [Создание, удаление и перемещение файлов и каталогов](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)   
  [Практическое руководство. Создание копии файла в том же каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
  [Практическое руководство. Создание копии файла в другом каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+

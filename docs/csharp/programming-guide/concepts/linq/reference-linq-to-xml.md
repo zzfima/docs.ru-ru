@@ -1,5 +1,5 @@
 ---
-title: "Ссылка (LINQ to XML) | Документы Майкрософт"
+title: "Ссылка (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5afdbf5566e3c077252a6207ae965e48cf00ae83
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80aed8cce447ba3ea0e702e06bf88ec4840adc5b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-linq-to-xml"></a>Ссылка (LINQ to XML)
@@ -33,7 +34,8 @@ ms.lasthandoff: 03/13/2017
   
  Справочную информацию по методам расширений, которые помогают при проверке XML-деревьев XSD-файла, см. в разделе <xref:System.Xml.Schema.Extensions?displayProperty=fullName>.  
   
- Справочную информацию по методам расширений, которые позволяют проверять запросы XPath в XML-дереве, см. в разделе <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
+ Справочную информацию по методам расширений, которые позволяют выполнить запросы XPath к XML-дереву, см. в разделе <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
   
 ## <a name="see-also"></a>См. также  
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+

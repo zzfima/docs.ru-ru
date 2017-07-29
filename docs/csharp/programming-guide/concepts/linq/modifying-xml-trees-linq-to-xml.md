@@ -1,5 +1,5 @@
 ---
-title: "Изменение деревьев XML (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Изменение деревьев XML (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 8ec47e6d-2363-4694-be46-8d5ca4d15fc9
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b7de6f5d53767a6d7910762618a109e5202d988e
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cb4ff851dbea97f254d5290ce021d560849e3d9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="modifying-xml-trees-linq-to-xml-c"></a>Изменение деревьев XML (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] служит для хранения XML-дерева в памяти. После загрузки или синтаксического анализа XML-дерева из источника [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] позволяет изменить это дерево, после чего его можно сериализовать, сохранив, например, в файл или отправив на удаленный сервер.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] служит для хранения XML-дерева в памяти. После загрузки или синтаксического анализа XML-дерева из источника [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет изменить это дерево, после чего его можно сериализовать, сохранив, например, в файл или отправив на удаленный сервер.  
   
  При изменении дерева на месте используются такие методы, как <xref:System.Xml.Linq.XContainer.Add%2A>.  
   
@@ -41,3 +41,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

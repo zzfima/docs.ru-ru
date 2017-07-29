@@ -1,5 +1,5 @@
 ---
-title: "Новые возможности Visual Basic | Документы Майкрософт"
+title: "Новые возможности Visual Basic"
 ms.date: 2017-04-27
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 18544a0311e24cf427111e364421db6e9fc27326
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
@@ -105,7 +105,7 @@ Visual Basic/Visual Studio .NET 2002
 
 Например, следующий класс `Sentence`, написанный на языке C#, включает метод `FindNext`, который выполняет поиск следующего слова в предложении, которое начинается с заданной подстроки. Строка возвращается как значение, возвращаемое по ссылке, а переменная `Boolean`, переданная в метод по ссылке, показывает, дал ли поиск какие-то результаты. Это означает, что вызывающий объект может не только читать, но и изменять возвращаемое значение, а внесенные изменения отражаются в классе `Sentence`.
 
-[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
+[!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
 Проще всего изменить найденное в предложении слово с помощью представленного ниже кода. Обратите внимание на то, что при этом значение назначается не методу, а выражению, которое возвращается этим методом и представляет собой значение, возвращаемое по ссылке.
 
@@ -191,5 +191,5 @@ End Interface
  Теперь компилятор использует стандартные правила разрешения перегрузки, чтобы выбрать оптимальную `GetDetails` для вызова, а в Visual Basic можно объявить связи интерфейса, как показано в примере.  
   
 ## <a name="see-also"></a>См. также  
- [Новые возможности Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/ide/whats-new-in-visual-studio)
+ [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
 

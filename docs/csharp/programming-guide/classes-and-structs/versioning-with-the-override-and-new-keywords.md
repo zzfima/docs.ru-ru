@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Управление версиями с помощью ключевых слов &quot;Override&quot; и &quot;New&quot; (руководство по программированию в C#) | Документы Майкрософт"
+title: "Практическое руководство. Управление версиями с помощью ключевых слов \"Override\" и \"New\" (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b464b4c395af093bb9124bb671c5c212c750f497
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Практическое руководство. Управление версиями с помощью ключевых слов "Override" и "New" (Руководство по программированию в C#)
@@ -77,7 +78,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- Если вы не хотите, чтобы ваш метод переопределял новый метод базового класса, воспользуйтесь следующими рекомендациями. Чтобы избежать путаницы между двумя методами, вы можете переименовать свой метод. Эта работа требует времени и подвержена ошибкам, а в некоторых случаях непрактична. В то же время, если проект относительно небольшой, метод можно переименовать, используя параметры рефакторинга в Visual Studio. Дополнительные сведения см. в разделе [Рефакторинг классов и типов (конструктор классов)](https://docs.microsoft.com/visualstudio/ide/refactoring-classes-and-types-class-designer).  
+ Если вы не хотите, чтобы ваш метод переопределял новый метод базового класса, воспользуйтесь следующими рекомендациями. Чтобы избежать путаницы между двумя методами, вы можете переименовать свой метод. Эта работа требует времени и подвержена ошибкам, а в некоторых случаях непрактична. В то же время, если проект относительно небольшой, метод можно переименовать, используя параметры рефакторинга в Visual Studio. Дополнительные сведения см. в разделе [Рефакторинг классов и типов (конструктор классов)](/visualstudio/ide/refactoring-classes-and-types-class-designer).  
   
  Кроме того, предупреждения можно избежать с помощью ключевого слова `new` в определении производного класса:  
   
@@ -105,3 +106,4 @@ ms.lasthandoff: 03/13/2017
  [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+

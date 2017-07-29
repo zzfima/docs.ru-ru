@@ -1,5 +1,5 @@
 ---
-title: "Устранение неполадок, связанных с прослушивателями журнала (Visual Basic) | Документы Майкрософт"
+title: "Устранение неполадок, связанных с прослушивателями журнала (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b651902563a60a68443f7d3f3b917a9c1ae085bc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0542aef4dc60821939e85760e6fadf0dfb528dec
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>Устранение неполадок, связанных с прослушивателями журнала (Visual Basic)
@@ -64,7 +64,8 @@ ms.lasthandoff: 05/22/2017
   
      Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [Пошаговое руководство. Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+

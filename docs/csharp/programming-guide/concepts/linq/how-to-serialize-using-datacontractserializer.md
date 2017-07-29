@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Сериализация с использованием DataContractSerializer (C#) | Документы Майкрософт"
+title: "Практическое руководство. Сериализация с использованием DataContractSerializer (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 76be9d08aea9472d1b7c4b558a168965dea13374
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: da57267bb8fd33263c950db0ca3d0a5b1b5817d4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>Практическое руководство. Сериализация с использованием DataContractSerializer (C#)
-В этом разделе показан пример сериализации и десериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.  
+Этот раздел показывает пример сериализации и десериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>. Затем они сериализуются в текстовые файлы и десериализуются из текстовых файлов.  
+ В следующем примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>. Затем они сериализуются в текстовые файлы и десериализуются из текстовых файлов.  
   
 ```csharp  
 using System;  
@@ -109,3 +110,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>См. также  
  [Сериализация графов объектов, содержащих объекты XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+

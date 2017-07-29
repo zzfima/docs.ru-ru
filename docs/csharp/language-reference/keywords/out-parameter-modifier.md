@@ -1,5 +1,5 @@
 ---
-title: "Модификатор параметров out (справочник по C#) | Документы Майкрософт"
+title: "Модификатор параметров out (справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: a2f2e9b9239836b051820bda66523822e95cdf52
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 227241d1b290dde2e9de66e6c0e3c904b432bae0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Модификатор параметров out (справочник по C#)
@@ -77,7 +77,7 @@ class CS0663_Example
   
  [!code-cs[csrefKeywordsMethodParams#4](../../../../samples/snippets/csharp/language-reference/keywords/out/out-4.cs)]  
 
- [Шаблон Try](https://docs.microsoft.com/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) предполагает возврат значения типа `bool`, указывающего на успешность выполнения операции, и значения, полученного в результате операции, в аргументе `out`. Этот шаблон используется рядом методов анализа, например методом @System.DateTime.TryParse(System.String,@System.DateTime).
+ [Шаблон Try](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) предполагает возврат значения типа `bool`, указывающего на успешность выполнения операции, и значения, полученного в результате операции, в аргументе `out`. Этот шаблон используется рядом методов анализа, например методом @System.DateTime.TryParse(System.String,@System.DateTime).
    
 ## <a name="calling-a-method-with-an-out-argument"></a>Вызов метода с аргументом `out`
 
@@ -101,3 +101,4 @@ class CS0663_Example
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Параметры методов](../../../csharp/language-reference/keywords/method-parameters.md)
+

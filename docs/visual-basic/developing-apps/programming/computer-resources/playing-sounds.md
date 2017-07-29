@@ -1,5 +1,5 @@
 ---
-title: "Воспроизведение звуков (Visual Basic) | Документы Майкрософт"
+title: "Воспроизведение звуков (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c9790c9bcd8731546b5d5e1e4aba7ba6f93fe5b1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a15efff54bd54fdaced6c741cd6acf5c8b544cdd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="playing-sounds-visual-basic"></a>Воспроизведение звуков (Visual Basic)
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/22/2017
   
  [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
- Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
  Обычно циклическое воспроизведение звука в приложении в конечном итоге должно прекратиться.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/22/2017
   
  [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
- Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Код в приведенном выше примере также доступен как фрагмент кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Звук**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
 ## <a name="playing-system-sounds"></a>Воспроизведение системных звуков  
  Метод `My.Computer.Audio.PlaySystemSound` позволяет воспроизвести указанный системный звук.  
@@ -97,3 +97,4 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>   
  <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>   
  <xref:Microsoft.VisualBasic.AudioPlayMode>
+

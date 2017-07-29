@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на языке C#) | Документы Майкрософт"
+title: "Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на языке C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,17 +31,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 1f5f15c305619c538aa276396c31296f42c8f40a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c0ef96f1cb074c32208457c192d53c69d95a102d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-programming-guide"></a>Практическое руководство. Анализ строк с помощью метода String.Split (руководство по программированию на языке C#)
-В следующем примере кода демонстрируется возможность анализа строки кода с помощью метода <xref:System.String.Split%2A?displayProperty=fullName>. В качестве входных данных метод <xref:System.String.Split%2A> принимает массив символов, который определяет, какие символы разделяют нужные подстроки целевой строки.  Функция возвращает массив подстрок.  
+В приведенном ниже примере кода демонстрируется возможность анализа строки с помощью метода <xref:System.String.Split%2A?displayProperty=fullName> . В качестве входных данных метод <xref:System.String.Split%2A> принимает массив символов, который определяет, какие символы разделяют нужные подстроки целевой строки.  Функция возвращает массив подстрок.  
   
- В этом примере в качестве символов-разделителей используются пробелы, запятые, точки, двоеточия и символы табуляции, которые передаются в метод <xref:System.String.Split%2A> в виде массива.  Каждое слово в целевой строке отображается отдельно от полученного в результате массива строк.  
+ В этом примере в качестве символов-разделителей используются пробелы, запятые, точки, двоеточия и символы табуляции, которые передаются в метод <xref:System.String.Split%2A>в виде массива.  Каждое слово в целевой строке отображается отдельно от полученного в результате массива строк.  
   
 ## <a name="example"></a>Пример  
  [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-parse-strings-using-string-split_1.cs)]  

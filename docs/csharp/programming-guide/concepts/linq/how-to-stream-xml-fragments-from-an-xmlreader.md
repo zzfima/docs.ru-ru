@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#) | Документы Майкрософт"
+title: "Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,28 +19,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 06e2cf4b350fecf8e8310519c573ac140f05267a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84b2c4f9726a552fa60cc68266c418b25dbf0408
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)
 При необходимости обработать большой XML-файл загрузка в память полного XML-дерева, возможно, будет неосуществима. В этом разделе показано, как обрабатывать фрагменты в потоке с помощью <xref:System.Xml.XmlReader>.  
   
- Одним из наиболее эффективных способов использования <xref:System.Xml.XmlReader> для чтения объектов <xref:System.Xml.Linq.XElement> является написание собственного пользовательского метода оси. Метод оси обычно возвращает коллекцию, например <xref:System.Collections.Generic.IEnumerable%601> из <xref:System.Xml.Linq.XElement>, как показано в примере в этом разделе. В пользовательском методе оси после создания XML-фрагмента с помощью вызова метода <xref:System.Xml.Linq.XNode.ReadFrom%2A> возвратите коллекцию, используя `yield return`. Тем самым в пользовательском методе оси обеспечивается семантика отложенного выполнения.  
+ Одним из самых эффективных способов использования <xref:System.Xml.XmlReader> для чтения объектов <xref:System.Xml.Linq.XElement> является написание собственного метода оси. Метод оси, как правило, возвращает коллекцию, например <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, как показано в примере этого раздела. В пользовательском методе оси после создания XML-фрагмента с помощью вызова метода <xref:System.Xml.Linq.XNode.ReadFrom%2A> возвратите коллекцию, используя `yield return`. Тем самым в пользовательском методе оси обеспечивается семантика отложенного выполнения.  
   
- При создании XML-дерева из объекта <xref:System.Xml.XmlReader> <xref:System.Xml.XmlReader> должен находиться на элементе. Метод <xref:System.Xml.Linq.XNode.ReadFrom%2A> не выполняет возврат до тех пор, пока не считает закрывающий тег элемента.  
+ При создании XML-дерева из объекта <xref:System.Xml.XmlReader> модулю чтения <xref:System.Xml.XmlReader> должен быть указан обрабатываемый элемент. Метод <xref:System.Xml.Linq.XNode.ReadFrom%2A> не выполняет возврат до тех пор, пока не считает закрывающий тег элемента.  
   
- Если вы хотите создать частичное дерево, можно создать экземпляр <xref:System.Xml.XmlReader>, поместить модуль чтения на узле, который требуется преобразовать в дерево <xref:System.Xml.Linq.XElement>, а затем создать объект <xref:System.Xml.Linq.XElement>.  
+ Если нужно создать частичное дерево, можно создать экземпляр <xref:System.Xml.XmlReader>, указать для модуля чтения узел, который должен быть преобразован в дерево <xref:System.Xml.Linq.XElement>, и создать объект <xref:System.Xml.Linq.XElement>.  
   
  В разделе [Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) приводятся сведения и пример потоковой передачи более сложного документа.  
   
  Раздел [Практическое руководство. Выполнение потокового преобразования крупных XML-документов](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) содержит пример использования LINQ to XML для преобразования чрезвычайно больших XML-документов, используя небольшой объем памяти.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается пользовательский метод оси. Его можно запросить с помощью запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Пользовательский метод оси `StreamRootChildDoc` специально разработан для чтения документа с повторяющимся элементом `Child`.  
+ В следующем примере создается пользовательский метод оси. Его можно запросить с помощью запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Пользовательский метод оси `StreamRootChildDoc` специально разработан для чтения документа с повторяющимся элементом `Child`.  
   
 ```csharp  
 static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  
@@ -101,3 +101,4 @@ ccc
   
 ## <a name="see-also"></a>См. также  
  [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

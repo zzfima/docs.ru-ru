@@ -1,5 +1,5 @@
 ---
-title: "Структуры (руководство по программированию на C#) | Документы Майкрософт"
+title: "Структуры (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 41574404f923695b3ba065d3c22f102bd2843e68
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce12f402c0748ea6729c82e3f188c0a58f63d628
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="structs-c-programming-guide"></a>Структуры (Руководство по программированию на C#)
@@ -77,3 +77,4 @@ ms.lasthandoff: 05/22/2017
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
+

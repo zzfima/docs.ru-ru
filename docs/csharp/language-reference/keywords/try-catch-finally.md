@@ -1,5 +1,5 @@
 ---
-title: "try-catch-finally (справочник по C#) | Документы Майкрософт"
+title: "try-catch-finally (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ebaf3d90c672bd3c069af12307f3745a12af3739
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05b2e0075aae79f85fba26d64690eefadaa166cd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (Справочник по C#)
@@ -53,8 +53,9 @@ ms.lasthandoff: 03/13/2017
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Операторы try, throw и catch (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [Операторы try, throw и catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Операторы обработки исключений](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [Практическое руководство. Явное создание исключения](https://msdn.microsoft.com/library/xhcbs8fz)   
  [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Введение в запросы LINQ (C#) | Документы Майкрософт"
+title: "Введение в запросы LINQ (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8427a0f439516cbba0b38db25f48b0083a337b1b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>Введение в запросы LINQ (C#)
@@ -68,7 +68,7 @@ ms.lasthandoff: 07/03/2017
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- В [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] сначала необходимо создать объектно-реляционное сопоставление во время разработки вручную либо с помощью [средства LINQ to SQL в Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Вы создаете запросы к объектам, а [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] во время выполнения обрабатывает взаимодействие с базой данных. В следующем примере `Customers` представляет собой определенную таблицу в базе данных, а тип результата запроса (<xref:System.Linq.IQueryable%601>) является производным от <xref:System.Collections.Generic.IEnumerable%601>.  
+ В [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] сначала необходимо создать объектно-реляционное сопоставление во время разработки вручную либо с помощью [средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). Вы создаете запросы к объектам, а [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] во время выполнения обрабатывает взаимодействие с базой данных. В следующем примере `Customers` представляет собой определенную таблицу в базе данных, а тип результата запроса (<xref:System.Linq.IQueryable%601>) является производным от <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -122,5 +122,4 @@ IQueryable<Customer> custQuery =
  [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
  [Ключевые слова запроса (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
-
 

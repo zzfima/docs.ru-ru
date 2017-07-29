@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Анализ путей к файлам в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Анализ путей к файлам в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a23fb13e99e94d6fa144c82edffca7afaaef96b3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6327d661c6f1fe7647cc64b56d7f72f1f3455467
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>Практическое руководство. Анализ путей к файлам в Visual Basic
@@ -46,13 +46,13 @@ ms.lasthandoff: 05/22/2017
   
 -   Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> возвращает абсолютный путь к родительскому элементу указанного пути.  
   
--   Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> возвращает объект <xref:System.IO.FileInfo>, к которому можно выполнить запрос, чтобы определить свойства файла, например имя и путь.  
+-   Метод <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> возвращает объект <xref:System.IO.FileInfo> , к которому можно выполнить запрос, чтобы определить свойства файла, например имя и путь.  
   
  По расширению файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем Form1.vb может вовсе не быть исходным файлом Visual Basic.  
   
 ### <a name="to-determine-a-files-name-and-path"></a>Определение имени и пути для файла  
   
--   Используйте свойства <xref:System.IO.FileInfo.DirectoryName%2A> и <xref:System.IO.FileInfo.Name%2A> объекта <xref:System.IO.FileInfo>, чтобы определить для файла имя и путь. В этом примере определяются и отображаются имя и путь.  
+-   Используйте свойства <xref:System.IO.FileInfo.DirectoryName%2A> и <xref:System.IO.FileInfo.Name%2A> объекта <xref:System.IO.FileInfo> , чтобы определить для файла имя и путь. В этом примере определяются и отображаются имя и путь.  
   
      [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
   
@@ -68,3 +68,4 @@ ms.lasthandoff: 05/22/2017
  <xref:System.IO.FileInfo>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>   
  [Практическое руководство. Получение коллекции содержащихся в каталоге файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+

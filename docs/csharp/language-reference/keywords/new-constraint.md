@@ -1,5 +1,5 @@
 ---
-title: "Ограничение new (справочник по C#) | Документы Майкрософт"
+title: "Ограничение new (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10f3693678f5a3eeaa335739bb383e204c80b375
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 762941794184605f90443ed8f36c88ecfa50aa84
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="new-constraint-c-reference"></a>Ограничение new (Справочник по C#)
@@ -59,3 +59,4 @@ ms.lasthandoff: 03/13/2017
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
+

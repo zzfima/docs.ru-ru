@@ -1,5 +1,5 @@
 ---
-title: "Использование конструкторов (руководство по программированию на C#) | Документы Майкрософт"
+title: "Использование конструкторов (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 47103d13a68c5250c33dbca3e89de2f1f3e13449
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75b55fde2fbd1697aed7eb0665a571c63b9b0b42
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-constructors-c-programming-guide"></a>Использование конструкторов (Руководство по программированию на C#)
@@ -106,7 +106,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- Конструкторы могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или `protected``internal`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут создавать класс. Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Конструкторы могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или `protected internal`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут создавать класс. Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Конструктор можно объявить статическим, используя ключевое слово [static](../../../csharp/language-reference/keywords/static.md). Статические конструкторы вызываются автоматически непосредственно перед доступом к статическим полям и обычно используются для инициализации членов статического класса. Дополнительные сведения см. в разделе [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   
@@ -118,3 +118,4 @@ Console.WriteLine("{0}, {1}", a, b);
  [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+

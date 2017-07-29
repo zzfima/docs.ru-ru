@@ -1,5 +1,5 @@
 ---
-title: "Запись сведений в журнал из приложения (Visual Basic) | Документы Майкрософт"
+title: "Запись сведений в журнал из приложения (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 25bf4e1d8b9b87c1545272c0d2746dc808d3fa4b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58f21df20425b0164586143ad5af6f363a90c3ef
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Запись сведений в журнал из приложения (Visual Basic)
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
  Объект `Log` предоставляет методы для записи информации в прослушиватели журнала приложения, а свойство `TraceSource` объекта `Log` предоставляет подробные сведения о конфигурации. Объект `Log` настраивается в файле конфигурации приложения.  
   
- Объект `My.Log` доступен только для приложений ASP.NET. Для клиентских приложений следует использовать объект `My.Application.Log`. Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Logging.Log>.  
+ Объект `My.Log` доступен только для приложений ASP.NET. Для клиентских приложений следует использовать объект `My.Application.Log`. Для получения дополнительной информации см. <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Задачи  
   
@@ -67,3 +67,4 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [Устранение неполадок, связанных с прослушивателями журнала](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

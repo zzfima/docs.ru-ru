@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Чтение и запись закодированного документа (C#) | Документы Майкрософт"
+title: "Практическое руководство. Чтение и запись закодированного документа (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f599d279e804372ef8779514939f14cee15c5e3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fc7c21c1aa6f4035bfaee509c7bc542542635313
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Практическое руководство. Чтение и запись закодированного документа (C#)
 Чтобы создать закодированный XML-документ, следует добавить объект <xref:System.Xml.Linq.XDeclaration> в XML-дерево, задав требуемое имя кодовой страницы для кодировки.  
   
- Любое значение, возвращаемое <xref:System.Text.Encoding.WebName%2A>, является допустимым.  
+ Любое значение, возвращенное методом <xref:System.Text.Encoding.WebName%2A>, является допустимым.  
   
  При чтении закодированного документа свойству <xref:System.Xml.Linq.XDeclaration.Encoding%2A> нужно будет задать имя этой кодовой страницы.  
   
- Если свойству <xref:System.Xml.Linq.XDeclaration.Encoding%2A> задать допустимое имя кодовой страницы, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] выполняет сериализацию с указанной кодировкой.  
+ Если свойству <xref:System.Xml.Linq.XDeclaration.Encoding%2A> задать допустимое имя кодовой страницы, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] выполняет сериализацию с указанной кодировкой.  
   
 ## <a name="example"></a>Пример  
  В следующем примере создаются два документа: один с кодировкой utf-8, а другой с кодировкой utf-16. Документы затем загружаются, а кодировка указывается в консоли.  
@@ -95,3 +96,4 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
  [Расширенные методы программирования LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

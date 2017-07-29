@@ -1,5 +1,5 @@
 ---
-title: "Сериализация с помощью объявления XML (C#) | Документы Майкрософт"
+title: "Сериализация с помощью объявления XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c0389630c7fc4b8aa394974b7e42cce2a5101a4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36ffb8ddd584785c660896ca77707d504638852f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>Сериализация с помощью объявления XML (C#)
 В этом разделе описывается, как указывать, должна ли при сериализации формироваться XML-декларация.  
   
 ## <a name="xml-declaration-generation"></a>Формирование XML-декларации  
- При сериализации в <xref:System.IO.File> или <xref:System.IO.TextWriter> с помощью метода <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> или метода <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> формируется объявление XML. При сериализации в <xref:System.Xml.XmlWriter> параметры модуля записи (заданные в объекте <xref:System.Xml.XmlWriterSettings>) определяют, будет ли сформировано объявление XML.  
+ При сериализации в <xref:System.IO.File> или <xref:System.IO.TextWriter> с помощью метода <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> или метода <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> формируется XML-декларация. При сериализации в <xref:System.Xml.XmlWriter> параметры модуля записи (заданные в объекте <xref:System.Xml.XmlWriterSettings>) определяют, будет ли сформирована XML-декларация.  
   
  При сериализации в строку при помощи метода `ToString` итоговый XML-документ не будет содержать XML-декларацию.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>Сериализация с использованием декларации XML  
- В приведенном ниже примере создается объект <xref:System.Xml.Linq.XElement>, документ сохраняется в файл, а затем файл выводится в консоль.  
+ Следующий пример создает <xref:System.Xml.Linq.XElement>, сохраняет документ в файл, а затем выводит файл на консоль.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -55,7 +56,7 @@ Console.WriteLine(str);
 ```  
   
 ### <a name="serializing-without-an-xml-declaration"></a>Сериализация без XML-декларации  
- В приведенном ниже примере демонстрируется, как сохранить <xref:System.Xml.Linq.XElement> в <xref:System.Xml.XmlWriter>.  
+ В следующем примере демонстрируется, как сохранять <xref:System.Xml.Linq.XElement> в <xref:System.Xml.XmlWriter>.  
   
 ```csharp  
 StringBuilder sb = new StringBuilder();  
@@ -79,3 +80,4 @@ Console.WriteLine(sb.ToString());
   
 ## <a name="see-also"></a>См. также  
  [Сериализация XML-деревьев (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

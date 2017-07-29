@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Извлечение значений элемента (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Извлечение значений элемента (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,20 +14,20 @@ ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3f844917ff1d9841c1c6f7f727f593868ec43b8
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 70e60c799157c7aa577bb8abd1fa6aaad746d3d1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Практическое руководство. Извлечение значений элемента (LINQ to XML) (C#)
-В этом разделе показано получение значений элементов. Это можно сделать двумя основными способами. Первый способ состоит в приведении <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute> к требуемому типу. Оператор явного преобразования, который преобразует содержимое элемента или атрибута в указанный тип и присваивает полученное значение указанной переменной. Кроме того, можно использовать свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> или <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>.  
+В этом разделе показано получение значений элементов. Это можно сделать двумя основными способами. Первый способ состоит в приведении <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute> к желаемому типу. Оператор явного преобразования, который преобразует содержимое элемента или атрибута в указанный тип и присваивает полученное значение указанной переменной. Иначе можно использовать свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> или <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>.  
   
- Однако при использовании C# приведение, как правило, является лучшим подходом. В частности, становится проще написание кода, обеспечивающего получение значения элемента или атрибута, который может существовать или не существовать, после приведения элемента (или атрибута) к типу, допускающему значение NULL. Это демонстрирует последний пример из данного раздела. Однако невозможно задать содержимое элемента посредством приведения так же, как через свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>.  
+ Однако при использовании C# приведение, как правило, является лучшим подходом. В частности, становится проще написание кода, обеспечивающего получение значения элемента или атрибута, который может существовать или не существовать, после приведения элемента (или атрибута) к типу, допускающему значение NULL. Это демонстрирует последний пример из данного раздела. Однако нельзя так задать содержимое элемента через приведение, как через свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>.  
   
 ## <a name="example"></a>Пример  
- Для получения значения элемента нужно просто привести объект <xref:System.Xml.Linq.XElement> к требуемому типу. Всегда можно привести элемент к строке следующим образом:  
+ Для получения значения элемента нужно просто привести объект <xref:System.Xml.Linq.XElement> к желаемому типу. Всегда можно привести элемент к строке следующим образом:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -58,12 +58,12 @@ Console.WriteLine("Value of e:" + (int)e);
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] предусматривает операторы явного приведения для следующих типов данных: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` и `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предусматривает операторы явного приведения для следующих типов данных: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` и `GUID?`.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] предоставляет аналогичные операторы приведения для объектов <xref:System.Xml.Linq.XAttribute>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]предоставляет аналогичные операторы приведения для объектов <xref:System.Xml.Linq.XAttribute>.  
   
 ## <a name="example"></a>Пример  
- Свойство <xref:System.Xml.Linq.XElement.Value%2A> можно использовать для получения содержимого элемента.  
+ Свойство <xref:System.Xml.Linq.XElement.Value%2A> может использоваться для получения содержимого элемента.  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");   
@@ -79,7 +79,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Пример  
- Иногда осуществляются попытки получить значение элемента, в отношении которого неизвестно, существует ли он. В этом случае назначение приведенному элементу типа, допускающего значение NULL (либо типа `string`, либо одного из типов в [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)], допускающих значение NULL), приводит к тому, что если элемент не существует, то переменной просто присваивается значение `null`. В приведенном ниже коде показано, что при отсутствии сведений о том, существует ли элемент, проще использовать приведение типа, чем свойство <xref:System.Xml.Linq.XElement.Value%2A>.  
+ Иногда осуществляются попытки получить значение элемента, в отношении которого неизвестно, существует ли он. В этом случае назначение приведенному элементу типа, допускающего значение NULL (либо типа `string`, либо одного из типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], допускающих значение NULL), приводит к тому, что если элемент не существует, то переменной просто присваивается значение `null`. В следующем коде показано, что при отсутствии сведений о том, существует ли элемент, проще использовать приведение типа, чем свойство <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -159,3 +159,4 @@ v4:element does not exist
   
 ## <a name="see-also"></a>См. также  
  [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

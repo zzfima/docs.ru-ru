@@ -1,5 +1,5 @@
 ---
-title: "Итераторы (C#) | Документы Майкрософт"
+title: "Итераторы (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,11 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 11a606ef18bc497630c0a417488e533a0880056f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="iterators-c"></a>Итераторы (C#)
@@ -368,7 +368,7 @@ public class Stack<T> : IEnumerable<T>
   
  Итераторы не поддерживают метод <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>. Для повторной итерации сначала необходимо получить новый итератор.  
   
- Дополнительные сведения см. в [спецификации языка C#](../../../csharp/language-reference/language-specification.md).  
+ Дополнительные сведения см. в [спецификации языка C#](../../../csharp/language-reference/language-specification/index.md).  
   
 ##  <a name="BKMK_UseOfIterators"></a> Использование итераторов  
  Итераторы позволяют поддерживать простоту цикла `foreach`, когда необходимо использовать сложный код для заполнения последовательности списков. Это может оказаться полезным в следующих случаях:  
@@ -386,3 +386,4 @@ public class Stack<T> : IEnumerable<T>
  [yield](../../../csharp/language-reference/keywords/yield.md)   
  [Использование оператора foreach с массивами](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
  [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
+

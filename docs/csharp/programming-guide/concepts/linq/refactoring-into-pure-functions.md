@@ -1,5 +1,5 @@
 ---
-title: "Рефакторинг в чистые функции (C#) | Документы Майкрософт"
+title: "Рефакторинг в чистые функции (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d0243dbc1a884cb48eeebd71079c3b17bc520553
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e3bb704cab77d4ad9895624bf7f721920000378
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Рефакторинг в чистые функции (C#)
@@ -89,7 +89,7 @@ public class Program
 }  
 ```  
   
- Эта версия программы дает те же выходные данные, что и первая версия, так как функция `HypenatedConcat` изменила значение (состояние) своего первого параметра, вызвав функцию-член <xref:System.Text.StringBuilder.Append%2A>. Обратите внимание, что это изменение происходит несмотря на то, что функция `HypenatedConcat` использует передачу параметра по значению.  
+ Эта версия программы дает те же выходные данные, что и первая версия, поскольку функция `HypenatedConcat` изменила значение (состояние) своего первого параметра, вызвав функцию-член <xref:System.Text.StringBuilder.Append%2A>. Обратите внимание, что это изменение происходит несмотря на то, что функция `HypenatedConcat` использует передачу параметра по значению.  
   
 > [!IMPORTANT]
 >  Передача параметров по значению для ссылочных типов приводит к созданию копии ссылки на передаваемый объект. Эта копия все еще связана с теми же данными экземпляра, что и первоначальная ссылка (пока ссылочная переменная не будет присвоена новому объекту). Вызов по значению необязательно требуется функции для изменения параметра.  
@@ -126,3 +126,4 @@ class Program
 ## <a name="see-also"></a>См. также  
  [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
  [Сравнение функционального и императивного программирования (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+

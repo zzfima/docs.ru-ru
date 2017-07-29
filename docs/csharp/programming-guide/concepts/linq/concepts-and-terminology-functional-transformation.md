@@ -1,5 +1,5 @@
 ---
-title: "Основные принципы и терминология (функциональное преобразование) (C#) | Документы Майкрософт"
+title: "Основные принципы и терминология (функциональное преобразование) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 87a8efd8e8631ac200a95069f889d6756cbd5a4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ba05385b4cf686ac7bf8a203140338d31da80680
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Основные принципы и терминология (функциональное преобразование) (C#)
@@ -87,3 +86,4 @@ ms.lasthandoff: 05/10/2017
 ## <a name="see-also"></a>См. также  
  [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
  [Сравнение функционального и императивного программирования (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+

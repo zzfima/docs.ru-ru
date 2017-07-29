@@ -1,5 +1,5 @@
 ---
-title: "Запись данных в буфер обмена и чтение их оттуда (Visual Basic) | Документы Майкрософт"
+title: "Запись данных в буфер обмена и чтение их оттуда (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 06a97ffe88fdae344b07d04b6ce560d4c163d431
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3b60942cf3e3a7f588a7838bcae0cb7b6fae2278
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Запись данных в буфер обмена и чтение их оттуда (Visual Basic)
@@ -50,13 +50,13 @@ ms.lasthandoff: 05/22/2017
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
- Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Буфер обмена**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Буфер обмена**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
  Используйте метод <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> для извлечения изображения из буфера обмена. Код в этом примере проверяет наличие изображения в буфере обмена, прежде чем извлекать его и назначать `PictureBox1`.  
   
  [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
- Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Буфер обмена**. Дополнительные сведения см. в разделе [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Приложения Windows Forms > Буфер обмена**. Дополнительные сведения см. в разделе [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
  Элементы, добавленные в буфер обмена, сохраняются даже после того, как работа приложения завершается.  
   
@@ -100,3 +100,4 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>   
  [Практическое руководство. Чтение данных объекта из XML-файла](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
  [Практическое руководство. Запись данных объекта в XML-файл](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+

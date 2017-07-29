@@ -1,5 +1,5 @@
 ---
-title: "Пример XML-файла. Клиенты и заказы (LINQ to XML) | Документы Майкрософт"
+title: "Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0517fd9aee4645f4449c863a802bd910259e81ae
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b289cbbc5bb735565549d550940b09b0d8a35f6a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Этот файл содержит сведения о заказчиках и заказах.  
+Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит сведения о заказчиках и заказах.  
   
  Раздел [Пример XSD-файла. Клиенты и заказы](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) содержит XSD, с помощью которого можно проверить этот документ. Здесь используются функции XSD `xs:key` и `xs:keyref` для установления того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связи между элементом `CustomerID` каждого из элементов `Order` и атрибутом `CustomerID` каждого из элементов `Customer`.  
   
@@ -452,3 +453,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>См. также  
  [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

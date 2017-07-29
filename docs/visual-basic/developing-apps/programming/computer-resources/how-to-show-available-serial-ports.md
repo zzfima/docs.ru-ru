@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Отображение доступных последовательных портов в Visual Basic | Документы Майкрософт"
+title: "Практическое руководство. Отображение доступных последовательных портов в Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 99231dca529afe13aede6de9c537e160e970a850
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bab6177c788a847b46586db19a525c1a1b36476d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Практическое руководство. Отображение доступных последовательных портов в Visual Basic
-В этом разделе описывается использование класса `My.Computer.Ports` для отображения доступных последовательных портов компьютера в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+В этом разделе описывается использование класса `My.Computer.Ports` для отображения доступных последовательных портов компьютера в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  Чтобы дать пользователю возможность выбрать используемый порт, имена последовательных портов отображаются в элементе управления <xref:System.Windows.Forms.ListBox>.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/22/2017
   
  [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
- Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**. Дополнительные сведения см. в статье [Фрагменты кода](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Для этого примера требуются:  
@@ -74,3 +74,4 @@ ms.lasthandoff: 05/22/2017
  [Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
  [Практическое руководство. Отправка строк в последовательные порты](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
  [Практическое руководство. Получение строк из последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+

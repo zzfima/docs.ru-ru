@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Программирование приложений Office (C# и Visual Basic) | Документы Майкрософт"
+title: "Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)
@@ -47,9 +47,9 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
 Для выполнения данного пошагового руководства на компьютере должны быть установлены Microsoft Office Excel и Microsoft Office Word.  
   
- Если используется операционная система, более ранняя, чем [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)], убедитесь, что установлена платформа [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)].  
+ Если используется операционная система, более ранняя, чем [!INCLUDE[windowsver](~/includes/windowsver-md.md)], убедитесь, что установлена платформа [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)].  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>Настройка надстройки Excel  
   
@@ -73,7 +73,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
 1.  В **обозревателе решений** щелкните имя проекта правой кнопкой мыши и выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.  
   
-2.  На вкладке **Сборки** в списке **Имя компонента** выберите **Microsoft.Office.Interop.Excel**, версия `<version>.0.0.0` (расшифровку номеров версий продуктов Office см. в разделе [Версии Майкрософт](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), а затем, удерживая нажатой клавишу CTRL, выберите **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Если сборки отсутствуют, может потребоваться проверить, что они установлены и отображаются (см. раздел [Практическое руководство. Установка основных сборок взаимодействия Microsoft Office](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  На вкладке **Сборки** в списке **Имя компонента** выберите **Microsoft.Office.Interop.Excel**, версия `<version>.0.0.0` (расшифровку номеров версий продуктов Office см. в разделе [Версии Майкрософт](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), а затем, удерживая нажатой клавишу CTRL, выберите **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Если сборки отсутствуют, может потребоваться проверить, что они установлены и отображаются (см. раздел [Практическое руководство. Установка основных сборок взаимодействия Microsoft Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Нажмите кнопку **ОК**.  
   
@@ -105,7 +105,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
      В этом методе используются две новые возможности C#. Оба эти возможности уже существуют в Visual Basic.  
   
-    -   У метода [Add](http://go.microsoft.com/fwlink/?LinkId=210910) есть *необязательный параметр* для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)], позволяют опускать аргумент для таких параметров, если требуется использовать значение параметра по умолчанию. Поскольку в предыдущем примере никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   У метода [Add](http://go.microsoft.com/fwlink/?LinkId=210910) есть *необязательный параметр* для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], позволяют опускать аргумент для таких параметров, если требуется использовать значение параметра по умолчанию. Поскольку в предыдущем примере никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Дополнительные сведения см. в разделе [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
@@ -215,3 +215,4 @@ Visual Studio предлагает новые функции C# и Visual Basic,
  [Walkthrough: Creating Your First VSTO Add-in for Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  (Пошаговое руководство. Создание первой надстройки VSTO для Excel)  
  [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)   
  [Взаимодействие](../../../csharp/programming-guide/interop/index.md)
+

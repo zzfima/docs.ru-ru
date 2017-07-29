@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Запись в журнал событий приложения (Visual Basic) | Документы Майкрософт"
+title: "Практическое руководство. Запись в журнал событий приложения (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: f35229004c0b4c2ed75714ee43e5513bed5e0435
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7cc73b0644003f8231a7792b0b62d143159da075
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Практическое руководство. Запись в журнал событий приложения (Visual Basic)
@@ -103,3 +103,4 @@ ms.lasthandoff: 06/26/2017
  [Работа с журналами приложения](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [Практическое руководство. Запись в журнал сведений об исключениях](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
  [Пошаговое руководство. Определение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Рефакторинг с использованием метода расширения (C#) | Документы Майкрософт"
+title: "Рефакторинг с использованием метода расширения (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8d4df7081c765ce09f95f51822dbd7543876b87
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4145e38a6fc49d53d274520dd155cffb5e7f9d5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Рефакторинг с использованием метода расширения (C#)
@@ -261,3 +261,4 @@ StyleName:Code >Hello World<
 ## <a name="see-also"></a>См. также  
  [Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
  [Рефакторинг в чистые функции (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Сериализация с использованием XmlSerializer (C#) | Документы Майкрософт"
+title: "Практическое руководство. Сериализация с использованием XmlSerializer (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6721edf0a533d89e8987f4bf231142f3a236d0c7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 826c10835da385a0fd7b052db4d6981b706fc6ed
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>Практическое руководство. Сериализация с использованием XmlSerializer (C#)
 Этот раздел показывает пример сериализации и десериализации с помощью <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>. Затем объекты сериализуются в поток памяти и далее десериализуются из потока памяти.  
+ В следующем примере создается некоторое количество объектов, содержащих объекты <xref:System.Xml.Linq.XElement>. Затем объекты сериализуются в поток памяти и далее десериализуются из потока памяти.  
   
 ```csharp  
 using System;  
@@ -107,3 +108,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>См. также  
  [Сериализация графов объектов, содержащих объекты XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+

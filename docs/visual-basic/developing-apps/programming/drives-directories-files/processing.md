@@ -1,5 +1,5 @@
 ---
-title: "Операции с дисками, папками и файлами (Visual Basic) | Документы Майкрософт"
+title: "Операции с дисками, папками и файлами (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4cbb2ead7075e8cda58ac4ec33d9fb6535d3284a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Операции с дисками, папками и файлами (Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] можно использовать для обработки дисков, папок и файлов с помощью объекта `My.Computer.FileSystem`, который обеспечивает лучшую производительность и проще в использовании, чем традиционные методы, такие как `FileOpen` и `Write` (хотя они по-прежнему доступны). Эти методы подробно обсуждаются в следующих разделах.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] можно использовать для обработки дисков, папок и файлов с помощью объекта `My.Computer.FileSystem`, который обеспечивает лучшую производительность и проще в использовании, чем традиционные методы, такие как `FileOpen` и `Write` (хотя они по-прежнему доступны). Эти методы подробно обсуждаются в следующих разделах.  
   
 ## <a name="in-this-section"></a>Содержание  
  [Доступ к файлам с помощью Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/22/2017
  Обзор концепций файлового ввода-вывода в .NET Framework, включая потоки, изолированное хранилище, события файла, атрибуты файла и доступ к файлам.  
   
  [Пошаговое руководство. Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Демонстрация использования [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] для управления файлами и папками.  
+ Демонстрация использования [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для управления файлами и папками.  
   
  [Пошаговое руководство. Операции с файлами и каталогами в Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Демонстрация использования объекта `My.Computer.FileSystem` для управления файлами и папками.  
@@ -64,3 +64,4 @@ ms.lasthandoff: 05/22/2017
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Справочная документация по объекту `My.Computer.FileSystem` и его членам.
+

@@ -1,5 +1,5 @@
 ---
-title: "static (справочник по C#) | Документация Майкрософт"
+title: "static (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 36c9fd396914f2d958615b9f62666a0d0cc47fc1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e46dc2f00d1c185379dba1017ca445b9ae5ae72
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-c-reference"></a>static (Справочник по C#)
@@ -66,7 +66,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  Классы и статические классы могут иметь статические конструкторы. Статические конструкторы вызываются на определенном этапе между запуском программы и созданием экземпляра класса.  
   
 > [!NOTE]
->  Ключевое слово `static` имеет более ограниченное применение по сравнению с C++. Сведения о сравнении с ключевым словом С++ см. в статье [Классы хранения (C++)](https://docs.microsoft.com/cpp/cpp/storage-classes-cpp#static).
+>  Ключевое слово `static` имеет более ограниченное применение по сравнению с C++. Сведения о сравнении с ключевым словом С++ см. в статье [Классы хранения (C++)](/cpp/cpp/storage-classes-cpp#static).
   
  В качестве демонстрации статических членов рассмотрим класс, представляющий сотрудника компании. Предположим, что этот класс содержит метод для подсчета сотрудников и поле для хранения их числа. И метод, и поле не принадлежат никакому экземпляру сотрудника. Они принадлежат классу компании. В связи с этим они должны объявляться как статические члены класса.  
   
