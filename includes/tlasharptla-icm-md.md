@@ -1,0 +1,1 @@
+ICM (Image Color Management — управление цветом изображений)

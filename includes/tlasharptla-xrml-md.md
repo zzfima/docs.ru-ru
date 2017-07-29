@@ -1,0 +1,1 @@
+Язык XrML (Extensible Rights Markup Language)
