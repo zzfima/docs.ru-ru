@@ -1,5 +1,5 @@
 ---
-title: "Отсортированные типы коллекций | Документация Майкрософт"
+title: "Отсортированные типы коллекций"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,15 +19,14 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 375babff42f13c41852651811f92f6bdda91b1e2
-ms.openlocfilehash: 7b4a762e3021e80a15d66b15589eec2e269a2888
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Отсортированные типы коллекций
-<a id="sorted-collection-types" class="xliff"></a>
+# <a name="sorted-collection-types"></a>Отсортированные типы коллекций
 Класс <xref:System.Collections.SortedList?displayProperty=fullName>, универсальный класс <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> и универсальный класс <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> похожи на класс <xref:System.Collections.Hashtable> и универсальный класс <xref:System.Collections.Generic.Dictionary%602> в том, что они реализуют интерфейс <xref:System.Collections.IDictionary>, но сортировка элементов в них осуществляется по ключу. Кроме того, в них отсутствует возможность вставки O(1) и извлечения характеристик хэш-таблиц. Эти три класса имеют ряд схожих свойств:  
   
 -   Все три класса реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=fullName>. Два универсальных класса также реализуют универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>.  
@@ -57,8 +56,7 @@ ms.lasthandoff: 06/15/2017
   
  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], класс <xref:System.Collections.Generic.SortedSet%601> предоставляет самобалансируемое дерево, в котором после операций вставки, удаления или поиска данные сохраняются в отсортированном порядке. Этот класс и класс <xref:System.Collections.Generic.HashSet%601> реализуют интерфейс <xref:System.Collections.Generic.ISet%601>.  
   
-## См. также
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>См. также  
  <xref:System.Collections.IDictionary?displayProperty=fullName>   
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   

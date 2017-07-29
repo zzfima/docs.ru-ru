@@ -1,5 +1,5 @@
 ---
-title: "64-разрядные приложения | Документы Майкрософт"
+title: "64-разрядные приложения"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="64-bit-applications"></a>64-разрядные приложения
@@ -74,3 +74,4 @@ ms.lasthandoff: 05/10/2017
  Чтобы определить, будет ли EXE- или DLL-файл выполняться только на определенной платформе или в эмуляторе WOW64, воспользуйтесь [средством преобразования CorFlags (CorFlags.exe)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md). Кроме того, программа CorFlags.exe используется для изменения состояния платформы EXE- или DLL-файла. В заголовке среды CLR сборки Visual Studio основной номер версии среды выполнения имеет значение 2, а дополнительный номер версии среды выполнения — значение 5. Приложения, у которых дополнительный номер версии среды выполнения имеет значение 0, обрабатываются как приложения прежних версий и всегда запускаются в эмуляторе WOW64.  
   
  Метод <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> используется для программного определения того, будет ли EXE- или DLL-файл выполняться на определенной платформе или в эмуляторе WOW64.
+

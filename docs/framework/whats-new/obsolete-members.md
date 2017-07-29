@@ -1,5 +1,5 @@
 ---
-title: "Устаревшие члены в платформе .NET Framework | Документы Майкрософт"
+title: "Устаревшие члены в платформе .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,15 +18,14 @@ caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
-ms.openlocfilehash: d7f9c49fbe771e7ac7a5f346129e04c3b4932e3d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80de2914b9fefc5705853faffa283bdde6a4fe1c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Устаревшие члены в платформе .NET Framework
-<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
+# <a name="obsolete-members-in-the-net-framework"></a>Устаревшие члены в платформе .NET Framework
 В таблицах этой статьи перечислены устаревшие в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] \( члены типов (включая ее доработанные выпуски), например [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]\) и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] \( (включая ее доработанные выпуски)\), упорядоченные по сборкам. Перейдите по следующим ссылкам, чтобы просмотреть список устаревших членов и рекомендованных альтернативных вариантов в каждой сборке. В этом разделе не перечисляются члены устаревших типов. Список устаревших типов см. в разделе [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md).  
   
 -   [Устаревшие члены в системных сборках](#SystemMembers)  
@@ -96,13 +95,11 @@ ms.lasthandoff: 05/23/2017
     -   [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
-## Устаревшие члены в системных сборках
-<a id="obsolete-members-in-system-assemblies" class="xliff"></a>  
+## <a name="obsolete-members-in-system-assemblies"></a>Устаревшие члены в системных сборках  
  В следующих таблицах перечислены устаревшие элементы в системных сборках. Такие сборки используются при разработке неспециализированных\- приложений, основанных на платформе .NET Framework.  
   
 <a name="mscorlib"></a>   
-### Сборка: mscorlib.dll
-<a id="assembly-mscorlibdll" class="xliff"></a>  
+### <a name="assembly-mscorlibdll"></a>Сборка: mscorlib.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -268,8 +265,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Threading.WaitHandle?displayProperty=fullName>|<xref:System.Threading.WaitHandle.Handle%2A>|Взамен используйте свойство <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=fullName>.|  
   
 <a name="PresentationCore"></a>   
-### Сборка: PresentationCore.dll
-<a id="assembly-presentationcoredll" class="xliff"></a>  
+### <a name="assembly-presentationcoredll"></a>Сборка: PresentationCore.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -304,8 +300,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=fullName>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|Эффекты для точечных рисунков использовать не рекомендуется, они больше не работают. Рассмотрите возможность использовать <xref:System.Windows.Media.Effects.Effect?displayProperty=fullName>, где это уместно.|  
   
 <a name="PresFW"></a>   
-### Сборка: PresentationFramework.dll
-<a id="assembly-presentationframeworkdll" class="xliff"></a>  
+### <a name="assembly-presentationframeworkdll"></a>Сборка: PresentationFramework.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -315,8 +310,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=fullName>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|Взамен предлагается <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=fullName>.|  
   
 <a name="Act"></a>   
-### Сборка: System.Activities.dll
-<a id="assembly-systemactivitiesdll" class="xliff"></a>  
+### <a name="assembly-systemactivitiesdll"></a>Сборка: System.Activities.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -324,8 +318,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=fullName>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Не используйте этот конструктор. Вместо этого используйте <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=fullName> или <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=fullName>.|  
   
 <a name="ActPres"></a>   
-### Сборка: System.Activities.Presentation.dll
-<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>  
+### <a name="assembly-systemactivitiespresentationdll"></a>Сборка: System.Activities.Presentation.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -340,8 +333,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Не используйте это свойство. Вместо него используйте <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>.|  
   
 <a name="core"></a>   
-### Сборка: System.Core.dll
-<a id="assembly-systemcoredll" class="xliff"></a>  
+### <a name="assembly-systemcoredll"></a>Сборка: System.Core.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -384,8 +376,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=fullName>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|При использовании данного члена возникает ошибка компилятора.<br /><br /> Этот метод использовать не следует.|  
   
 <a name="data"></a>   
-### Сборка: System.Data.dll
-<a id="assembly-systemdatadll" class="xliff"></a>  
+### <a name="assembly-systemdatadll"></a>Сборка: System.Data.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -407,8 +398,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=fullName>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29> не рекомендуется к использованию. Используйте <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=fullName>.|  
   
 <a name="entity"></a>   
-### Сборка: System.Data.Entity.dll
-<a id="assembly-systemdataentitydll" class="xliff"></a>  
+### <a name="assembly-systemdataentitydll"></a>Сборка: System.Data.Entity.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -418,8 +408,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.Objects.ObjectContext?displayProperty=fullName>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|Вместо него используйте <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29>.|  
   
 <a name="oracleclient"></a>   
-### Сборка: System.Data.OracleClient.dll
-<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
+### <a name="assembly-systemdataoracleclientdll"></a>Сборка: System.Data.OracleClient.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -428,8 +417,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29> не рекомендуется к использованию. Используйте <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=fullName>.|  
   
 <a name="design"></a>   
-### Сборка: System.Design.dll
-<a id="assembly-systemdesigndll" class="xliff"></a>  
+### <a name="assembly-systemdesigndll"></a>Сборка: System.Design.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -482,8 +470,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=fullName>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|Этот метод использовать не рекомендуется. Вместо него используйте <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=fullName>.|  
   
 <a name="system"></a>   
-### Сборка: System.dll
-<a id="assembly-systemdll" class="xliff"></a>  
+### <a name="assembly-systemdll"></a>Сборка: System.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -595,8 +582,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=fullName>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> При использовании данного члена возникает ошибка компилятора.<br /><br /> Используйте <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=fullName>, чтобы добавить утверждения в <xref:System.Security.Claims.ClaimsIdentity>.|  
   
 <a name="drawing"></a>   
-### Сборка: System.Drawing.dll
-<a id="assembly-systemdrawingdll" class="xliff"></a>  
+### <a name="assembly-systemdrawingdll"></a>Сборка: System.Drawing.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -604,8 +590,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=fullName>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Этот конструктор не рекомендуется к использованию. Используйте <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|  
   
 <a name="messaging"></a>   
-### Сборка: System.Messaging.dll
-<a id="assembly-systemmessagingdll" class="xliff"></a>  
+### <a name="assembly-systemmessagingdll"></a>Сборка: System.Messaging.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -613,8 +598,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Messaging.MessageQueue?displayProperty=fullName>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Этот метод возвращает <xref:System.Messaging.MessageEnumerator?displayProperty=fullName>, где некорректно используется семейство методов <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=fullName>. Взамен рекомендуется использовать <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=fullName>.|  
   
 <a name="servicemodel"></a>   
-### Сборка: System.ServiceModel.dll
-<a id="assembly-systemservicemodeldll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldll"></a>Сборка: System.ServiceModel.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -626,8 +610,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=fullName>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|Это свойство не рекомендуется к использованию и сохраняется только из соображений обратной совместимости. Чтобы определить, следует ли использовать NTLM, можно использовать локальную политику компьютера.|  
   
 <a name="smDisc"></a>   
-### Сборка: System.ServiceModel.Discovery.dll
-<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldiscoverydll"></a>Сборка: System.ServiceModel.Discovery.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -635,16 +618,14 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=fullName>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Свойство <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> является устаревшим. Рассмотрите возможность задать свойства транспорта с помощью <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=fullName>.|  
   
 <a name="datavisualization"></a>   
-### Сборка: System.Web.DataVisualization.dll.
-<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>  
+### <a name="assembly-systemwebdatavisualizationdll"></a>Сборка: System.Web.DataVisualization.dll.  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=fullName>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> не рекомендуется к использованию. Рассмотрите возможность использовать <xref:System.Web.UI.Control.ViewState%2A?displayProperty=fullName>.|  
   
 <a name="web"></a>   
-### Сборка: System.Web.dll
-<a id="assembly-systemwebdll" class="xliff"></a>  
+### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -679,16 +660,14 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=fullName>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|Рекомендуемой альтернативой является свойство <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=fullName>. Создайте <xref:System.Xml.XPath.XPathDocument?displayProperty=fullName> и вызовите <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=fullName>, чтобы получить <xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>.|  
   
 <a name="dynamicdata"></a>   
-### Сборка: System.Web.DynamicData.dll.
-<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>  
+### <a name="assembly-systemwebdynamicdatadll"></a>Сборка: System.Web.DynamicData.dll.  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=fullName>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Используйте свойство `EnablePersistedSelection` для элементов управления с привязкой к данным, таких как <xref:System.Web.UI.WebControls.GridView?displayProperty=fullName> или <xref:System.Web.UI.WebControls.ListView?displayProperty=fullName>.|  
   
 <a name="extensions"></a>   
-### Сборка: System.Web.Extensions.dll.
-<a id="assembly-systemwebextensionsdll" class="xliff"></a>  
+### <a name="assembly-systemwebextensionsdll"></a>Сборка: System.Web.Extensions.dll.  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -702,8 +681,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=fullName>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|Это свойство устарело. Вместо него используйте <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=fullName>.|  
   
 <a name="services"></a>   
-### Сборка: System.Web.Services.dll
-<a id="assembly-systemwebservicesdll" class="xliff"></a>  
+### <a name="assembly-systemwebservicesdll"></a>Сборка: System.Web.Services.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -711,8 +689,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=fullName>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|В одной из будущих версий это свойство будет удалено. Наличие в сообщении SOAP конкретного заголовка больше не является обязательным.|  
   
 <a name="forms"></a>   
-### Сборка: System.Windows.Forms.dll
-<a id="assembly-systemwindowsformsdll" class="xliff"></a>  
+### <a name="assembly-systemwindowsformsdll"></a>Сборка: System.Windows.Forms.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -729,8 +706,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=fullName>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|Это свойство использовать не рекомендуется. Взамен используйте свойство <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName>.|  
   
 <a name="xaml"></a>   
-### Сборка: System.Xaml.dll
-<a id="assembly-systemxamldll" class="xliff"></a>  
+### <a name="assembly-systemxamldll"></a>Сборка: System.Xaml.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -738,8 +714,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=fullName>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|Аргумент `expressionType` не используется синтаксическим анализатором XAML. Чтобы задать ожидаемый тип возвращаемого значения, используйте <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=fullName>. Чтобы задать пользовательскую обработку для типов выражений, используйте <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>.|  
   
 <a name="xml"></a>   
-### Сборка: System.Xml.dll
-<a id="assembly-systemxmldll" class="xliff"></a>  
+### <a name="assembly-systemxmldll"></a>Сборка: System.Xml.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -761,26 +736,22 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=fullName>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|Этот метод устарел и будет удален в одном из будущих выпусков платформы .NET Framework. Используйте перегрузку <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=fullName>, которая не принимает параметр <xref:System.Security.Policy.Evidence?displayProperty=fullName>.|  
   
 <a name="MicrosoftMembers"></a>   
-## Устаревшие члены в сборках Microsoft
-<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>  
+## <a name="obsolete-members-in-microsoft-assemblies"></a>Устаревшие члены в сборках Microsoft  
  В следующих таблицах перечислены устаревшие члены в системных сборках корпорации Microsoft. Это сборки специального назначения, включающие сборки для конкретного языка (например, Microsoft.VisualBasic.dll) или систему построения (например, Microsoft.Build.Engine.dll).  
   
 <a name="IEHost"></a>   
-### Сборка: IEHost.dll и IEExec.exe
-<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Сборка: IEHost.dll и IEExec.exe  
  Сборки IEHost.dll и IEExec.exe удалены из платформы .NET Framework. Все их типы и члены устарели и не поддерживаются в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Эти сборки использовались для размещения элементов управления Windows Forms и для запуска исполняемых файлов в Internet Explorer. Взамен этой технологии рекомендуется использовать ClickOnce, XAML-приложения браузера (XBAP) и Microsoft Silverlight.  
   
 <a name="isymwrapper"></a>   
-### Сборка: ISymWrapper.dll
-<a id="assembly-isymwrapperdll" class="xliff"></a>  
+### <a name="assembly-isymwrapperdll"></a>Сборка: ISymWrapper.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=fullName>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|Взамен рекомендуется использовать <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=fullName>.                                          <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=fullName> принимает указатель интерфейса средства импорта как <xref:System.IntPtr?displayProperty=fullName> вместо <xref:System.Int32?displayProperty=fullName>, а следовательно одинаково хорошо подходит для 32-разрядной и 64-разрядной архитектуры.|  
   
 <a name="conversion"></a>   
-### Сборка: Microsoft.Build.Conversion.v4.0.dll
-<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildconversionv40dll"></a>Сборка: Microsoft.Build.Conversion.v4.0.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -790,8 +761,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=fullName>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|Взамен используйте метод <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=fullName> без параметров.|  
   
 <a name="engine"></a>   
-### Сборка: Microsoft.Build.Engine.dll
-<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildenginedll"></a>Сборка: Microsoft.Build.Engine.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -799,32 +769,28 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Если вы просто передаете в платформу .NET Framework расположение в виде <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, достаточно изменить конструктор <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName>, чтобы он не принимал параметры. В противном случае пользовательские наборы инструментов в реестре, в файле конфигурации или в дополнительных элементах в <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=fullName> ядра. Тогда вы сможете применить конструктор <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> или <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=fullName>.|  
   
 <a name="BuildFW"></a>   
-### Сборка: Microsoft.Build.Framework.dll
-<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildframeworkdll"></a>Сборка: Microsoft.Build.Framework.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=fullName>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> При использовании данного члена возникает ошибка компилятора.<br /><br /> Взамен используйте свойство <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=fullName>.|  
   
 <a name="BuildUtil4"></a>   
-### Сборка: Microsoft.Build.Utilities.v4.0.dll
-<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildutilitiesv40dll"></a>Сборка: Microsoft.Build.Utilities.v4.0.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=fullName>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Используйте свойство <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=fullName>.|  
   
 <a name="data_entity_tasks"></a>   
-### Сборка: Microsoft.Data.Entity.Build.Tasks.dll
-<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>  
+### <a name="assembly-microsoftdataentitybuildtasksdll"></a>Сборка: Microsoft.Data.Entity.Build.Tasks.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
 |<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=fullName> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Используется только для обратной совместимости с версией 3.5.|  
   
 <a name="visualbasic"></a>   
-### Сборка: Microsoft.VisualBasic.dll
-<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasicdll"></a>Сборка: Microsoft.VisualBasic.dll  
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
@@ -841,7 +807,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=fullName>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|При использовании данного члена возникает ошибка компилятора.<br /><br /> Этот метод использовать не следует.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|Раздел реестра `DynData` применим только на платформе Win9x, для которой эта версия .NET Framework не предназначена. Используйте вместо него раздел реестра `PerformanceData`. В одной из будущих версий платформы это свойство будет удалено.|  
   
-## См. также
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>См. также  
  [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md)
+

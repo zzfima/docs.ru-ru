@@ -1,5 +1,5 @@
 ---
-title: "Руководство по разработке для .NET Framework | Документация Майкрософт"
+title: "Руководство по разработке для .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -16,10 +16,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: b630f2dc91068168b1d57b37ad80d79f5e3d1738
-ms.openlocfilehash: 88219e428409a71eb2706c97dca31ccde38bb918
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/18/2017
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>Ссылка  
- [Библиотека классов .NET Framework](https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.7)  
+ [Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Здесь приводится синтаксис, примеры кода и сведения по использованию для всех классов, содержащихся в пространствах имен [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -93,3 +94,4 @@ ms.lasthandoff: 04/18/2017
   
  [Примеры по платформе .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Здесь содержатся ссылки на приложения в галерее примеров кода MSDN, демонстрирующие технологии .NET Framework.
+

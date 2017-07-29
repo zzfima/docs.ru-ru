@@ -1,5 +1,5 @@
 ---
-title: "Устранение рисков: пользовательские реализации IMessageFilter.PreFilterMessage | Документы Майкрософт"
+title: "Устранение рисков: реализации пользовательских IMessageFilter.PreFilterMessage"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d85c827b414cc94410a921bfae9ce3e1764d22ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ef3e03edef48676e2e32201b422c66f117487907
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Устранение рисков: реализации пользовательских IMessageFilter.PreFilterMessage
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/22/2017
   
     -   добавляет фильтр сообщений путем вызова метода <xref:System.Windows.Forms.Application.AddMessageFilter%2A>,  
   
-    -   удаляет фильтр сообщений путем вызова метода <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A>,    
+    -   удаляет фильтр сообщений путем вызова метода <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A>, метод.  
   
 -   **а также** передает сообщения путем вызова метода <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=fullName>.  
   

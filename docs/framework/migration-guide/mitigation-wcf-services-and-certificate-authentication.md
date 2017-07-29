@@ -1,5 +1,5 @@
 ---
-title: "Устранение рисков. Службы WCF и проверка подлинности сертификатов | Документация Майкрософт"
+title: "Устранение рисков. Службы WCF и проверка подлинности сертификатов"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,23 +15,20 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 0b32fa96cd002e927fa00e8c2a797d1ff6b17cb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Устранение рисков. Службы WCF и проверка подлинности сертификатов
-<a id="mitigation-wcf-services-and-certificate-authentication" class="xliff"></a>
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Устранение рисков. Службы WCF и проверка подлинности сертификатов
 В платформе .NET Framework 4.6 в список протоколов WCF SSL по умолчанию добавляются протоколы TLS 1.1 и TLS 1.2. Если на клиентском компьютере и на сервере установлена платформа .NET Framework 4.6 или более поздняя версия, для согласования используется протокол TLS 1.2.  
   
-## Последствия
-<a id="impact" class="xliff"></a>  
+## <a name="impact"></a>Последствия  
  Протокол TLS 1.2 не поддерживает проверку подлинности MD5. В результате, если пользователь применяет SSL-сертификат, который использует хэш-алгоритм MD5, клиенту WCF не удается подключиться к службе WCF. Дополнительные сведения см. в разделе [Устранение рисков. Службы WCF и проверка подлинности сертификатов](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md).  
   
-## Уменьшение
-<a id="mitigation" class="xliff"></a>  
+## <a name="mitigation"></a>Уменьшение  
  Эту проблему можно решить, чтобы клиент WCF мог подключиться к серверу WCF, выполнив любое из следующих действий.  
   
 -   Обновите сертификат, чтобы он не использовал алгоритм MD5. Это рекомендуемое решение.  
@@ -67,7 +64,6 @@ ms.lasthandoff: 05/30/2017
     > [!CAUTION]
     >  Это решение не рекомендуется, поскольку сертификат с хэш-алгоритмом MD5 считается небезопасным.  
   
-## См. также
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>См. также  
  [Изменения среды выполнения](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 
