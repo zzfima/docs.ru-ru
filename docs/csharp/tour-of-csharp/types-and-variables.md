@@ -1,5 +1,5 @@
 ---
-title: "Типы и переменные в C# — краткий обзор языка C# | Microsoft Docs"
+title: "Типы и переменные в C#. Краткий обзор языка C#"
 description: "Сведения о типах и об объявлении переменных в C#"
 keywords: ".NET, C#, тип, ссылочный тип, тип значения"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="types-and-variables" class="xliff"></a>
-# Типы и переменные
+# <a name="types-and-variables"></a>Типы и переменные
 
 В C# существуют две разновидности типов: *ссылочные типы* и *типы значений*. Переменные типа значений содержат непосредственно данные, а в переменных ссылочных типов хранятся ссылки на нужные данные, которые именуются объектами. Две переменные ссылочного типа могут ссылаться на один и тот же объект, поэтому может случиться так, что операции над одной переменной затронут объект, на который ссылается другая переменная. Каждая переменная типа значения имеет собственную копию данных, и операции над одной переменной не могут затрагивать другую (за исключением переменных параметров `ref` и `out`).
 

@@ -1,5 +1,5 @@
 ---
-title: "Приступая к работе с Visual Studio Code — руководство по языку C# | Microsoft Docs"
+title: "Начало работы с Visual Studio Code. Руководство по языку C#"
 description: "Узнайте, как создать и отладить в Visual Studio Code свое первое приложение .NET Core на языке C#."
 keywords: "C#, приступая к работе, получение, установка, Visual Studio Code, кроссплатформенный"
 author: kendrahavens
@@ -10,28 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e1e9ce39b2de05478a2bf010584e2e7fd8eb02f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-visual-studio-code" class="xliff"></a>
-# Приступая к работе с Visual Studio Code
+# <a name="get-started-with-visual-studio-code"></a>Приступая к работе с Visual Studio Code
 
 .NET Core предоставляет быструю модульную платформу для создания серверных приложений, работающих на ОС Windows, Linux и macOS. Visual Studio Code с расширением C# позволяет эффективно работать с кодом, а также обеспечивает полную поддержку IntelliSense (интеллектуальное завершение кода) и отладки для языка C#.
 
-<a id="prerequisites" class="xliff"></a>
-## Предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 1. Установите [Visual Studio Code](https://code.visualstudio.com/).
 2. Установите [пакета SDK для .NET Core](https://www.microsoft.com/net/download/core).
 3. Установите [расширение C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) из Marketplace для Visual Studio Code.
 
-<a id="hello-world" class="xliff"></a>
-## Hello World
+## <a name="hello-world"></a>Hello World
 
 Давайте начнем с создания простой программы Hello World для .NET Core.
 
@@ -66,8 +63,7 @@ ms.lasthandoff: 05/27/2017
 
 Вы можете просмотреть небольшие видеоматериалы с информацией о процессе настройки для [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), или [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
-<a id="debug" class="xliff"></a>
-## Отладка
+## <a name="debug"></a>Отладка
 1. Откройте файл *Program.cs*, щелкнув его. Когда вы в первый раз открываете файл C# в Visual Studio Code, в редакторе загружается [OmniSharp](http://www.omnisharp.net/).
 
   ![Откройте файл Program.cs](media/with-visual-studio-code/opencs.png)
@@ -98,8 +94,7 @@ ms.lasthandoff: 05/27/2017
 > [!TIP] 
 > Дополнительные сведения и советы по отладке .NET Core в Visual Studio Code с помощью OmniSharp см. в разделе [Инструкции по настройке отладчика .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-<a id="see-also" class="xliff"></a>
-## См. также
+## <a name="see-also"></a>См. также
 [Настройка Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
 [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)
 
