@@ -1,5 +1,5 @@
 ---
-title: "Команда dotnet-nuget-delete — CLI .NET Core | Документы Майкрософт"
+title: "Команда dotnet-nuget-delete — CLI .NET Core"
 description: "Команда dotnet-nuget-delete удаляет пакет с сервера или из списка."
 keywords: "dotnet-nuget-delete, CLI, команда CLI, .NET Core"
 author: karann-msft
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 4b8694b83089d85646c9abd7e7f598cdb5879162
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce6886f2f4cc8cc633cfc61215fe17550f746c91
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 

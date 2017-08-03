@@ -1,5 +1,5 @@
 ---
-title: "Команда dotnet-build — CLI .NET Core | Документы Майкрософт"
+title: "Команда dotnet-build — CLI .NET Core"
 description: "Команда dotnet-build выполняет сборку проекта и всех его зависимостей."
 keywords: "dotnet-build, CLI, команда CLI, .NET Core"
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: e5deac8a7b8faac97ccf8b801f274a2c03268d64
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2006b15978f384e53e43a0a2562e81d10582abd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -35,9 +36,9 @@ ms.lasthandoff: 03/22/2017
 
 Для сборки нужен файл *project.assets.json*, содержащий список зависимостей приложения. Этот файл создается при выполнении [`dotnet restore`](dotnet-restore.md) перед сборкой проекта. Без файла ресурсов инструментарий не способен разрешать ссылочные сборки, что приведет к ошибкам.
 
-`dotnet build` использует MSBuild для сборки проекта, поддерживая при этом как параллельные, так и инкрементные сборки. Дополнительные сведения см. в разделе [Инкрементные сборки](https://docs.microsoft.com/visualstudio/msbuild/incremental-builds). 
+`dotnet build` использует MSBuild для сборки проекта, поддерживая при этом как параллельные, так и инкрементные сборки. Дополнительные сведения см. в разделе [Инкрементные сборки](/visualstudio/msbuild/incremental-builds). 
 
-Помимо своих параметров, команда `dotnet build` принимает и параметры MSBuild, например `/p` для задания свойств или `/l` для определения средства ведения журнала. Дополнительные сведения об этих параметрах см. в разделе [Справочник по командной строке MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference). 
+Помимо своих параметров, команда `dotnet build` принимает и параметры MSBuild, например `/p` для задания свойств или `/l` для определения средства ведения журнала. Дополнительные сведения об этих параметрах см. в разделе [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
 
 То, является ли проект исполняемым, определяется свойством `<OutputType>` в файле проекта. Следующий пример описывает проект, который создаст исполняемый код:
 

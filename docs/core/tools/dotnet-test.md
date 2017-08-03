@@ -1,5 +1,5 @@
 ---
-title: "Команда dotnet-test — CLI .NET Core | Документы Майкрософт"
+title: "Команда dotnet-test — CLI .NET Core"
 description: "Команда dotnet test служит для выполнения модульных тестов в проекте."
 keywords: "dotnet-test, CLI, команда CLI, .NET Core"
 author: blackdwarf
@@ -10,33 +10,25 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3308488672df2621c04de40f642c732f81284019
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="dotnet-test" class="xliff"></a>
+#<a name="dotnet-test"></a>dotnet-test
 
-#dotnet-test
-
-<a id="name" class="xliff"></a>
-
-## Имя
+## <a name="name"></a>Имя
 
 `dotnet-test` — драйвер тестов .NET, используемый для проведения модульных тестов.
 
-<a id="synopsis" class="xliff"></a>
-
-## Краткий обзор
+## <a name="synopsis"></a>Краткий обзор
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-<a id="description" class="xliff"></a>
-
-## Описание
+## <a name="description"></a>Описание
 
 Команда `dotnet test` служит для выполнения модульных тестов в проекте. Модульные тесты — это проекты консольных приложений, у которых есть зависимости от среды модульного тестирования (например, MSTest, NUnit или xUnit) и от средства запуска тестов dotnet для этой среды. Они упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
 
@@ -44,9 +36,7 @@ ms.lasthandoff: 06/20/2017
 
 [!code-xml[Базовый шаблон XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-<a id="options" class="xliff"></a>
-
-## Параметры
+## <a name="options"></a>Параметры
 
 `PROJECT`
     
@@ -100,9 +90,7 @@ ms.lasthandoff: 06/20/2017
 
 Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
-<a id="examples" class="xliff"></a>
-
-## Примеры
+## <a name="examples"></a>Примеры
 
 Выполнение тестов в проекте в текущем каталоге:
 
@@ -112,9 +100,7 @@ ms.lasthandoff: 06/20/2017
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-<a id="filter-option-details" class="xliff"></a>
-
-## Сведения о параметре "Фильтр"
+## <a name="filter-option-details"></a>Сведения о параметре "Фильтр"
 
 `--filter <EXPRESSION>`
 
@@ -150,9 +136,7 @@ ms.lasthandoff: 06/20/2017
 
 Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье о [выполнении выборочных модульных тестов](../testing/selective-unit-tests.md).
 
-<a id="see-also" class="xliff"></a>
-
-## См. также
+## <a name="see-also"></a>См. также
 
 [Платформы и целевые объекты](../../standard/frameworks.md)   
 [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)

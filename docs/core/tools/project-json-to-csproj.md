@@ -1,5 +1,5 @@
 ---
-title: "Сравнение project.json и CSPROJ — .NET Core | Документы Майкрософт"
+title: "Сравнение project.json и CSPROJ — .NET Core"
 description: "См. сопоставление между элементами project.json и CSPROJ."
 keywords: project.json, CSPROJ, .NET Core, MSBuild
 author: natemcmaster
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/30/2017
 </PropertyGroup>
 ```
 
-Значение `<AssemblyName>` будет отличаться от `<PackageId>`, если свойство `buildOptions\outputName` было определено в project.json. Дополнительные сведения см. в разделе [Другие общие параметры сборки](#other-common-build-options).
+Значение `<AssemblyName>` будет отличаться от значения `<PackageId>`, если свойство `buildOptions\outputName` было определено в project.json. Дополнительные сведения см. в разделе [Другие общие параметры сборки](#other-common-build-options).
 
 ### <a name="version"></a>version
 
@@ -494,7 +494,7 @@ And it's really great!</Description>
 }
 ```
 
-Эквивалентом в MSBuild являются [цели](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets):
+Эквивалентом в MSBuild являются [цели](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -562,12 +562,12 @@ And it's really great!</Description>
 }
 ```
 
-Не поддерживается в CSPROJ. Вместо этого необходимо создать файлы для включения содержимого в ваш файл *NUSPEC*. Дополнительные сведения см. в разделе [Включение файлов содержимого](https://docs.microsoft.com/nuget/schema/nuspec#including-content-files).
+Не поддерживается в CSPROJ. Вместо этого необходимо создать файлы для включения содержимого в ваш файл *NUSPEC*. Дополнительные сведения см. в разделе [Включение файлов содержимого](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>файлы
 
 В *project.json* сборку и упаковку можно расширить для компиляции и внедрения из разных папок.
-В MSBuild это делается с помощью [элементов](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items). Следующий пример описывает типичное преобразование:
+В MSBuild это делается с помощью [элементов](/visualstudio/msbuild/common-msbuild-project-items). Следующий пример описывает типичное преобразование:
 
 ```json
 {
@@ -620,7 +620,7 @@ And it's really great!</Description>
 
 Макет пакета внутри NUPKG можно изменить с помощью `PackagePath="path"`.
 
-Кроме `Content`, для большинства групп элементов требуется явное добавление `Pack="true"` для включения в пакет. `Content` помещается в папку *content* пакета, так как для свойства `<IncludeContentInPack>` MSBuild по умолчанию задано значение `true`. Дополнительные сведения см. в статье [Включение содержимого в пакет](https://docs.microsoft.com/nuget/schema/msbuild-targets#including-content-in-a-package).
+Кроме `Content`, для большинства групп элементов требуется явное добавление `Pack="true"` для включения в пакет. `Content` помещается в папку *content* пакета, так как для свойства `<IncludeContentInPack>` MSBuild по умолчанию задано значение `true`. Дополнительные сведения см. в статье [Включение содержимого в пакет](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
 `PackagePath="%(Identity)"` позволяет быстро настроить относительный путь к файлу проекта в качестве пути к пакету.
 

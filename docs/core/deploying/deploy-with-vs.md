@@ -1,5 +1,5 @@
 ---
-title: "Развертывание приложений .NET Core с помощью Visual Studio | Документы Майкрософт"
+title: "Развертывание приложений .NET Core с помощью Visual Studio"
 description: "Сведения о развертывании приложений .NET Core с помощью Visual Studio"
 keywords: ".NET, .NET Core, разработка .NET Core"
 author: rpetrusha
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
-ms.openlocfilehash: c6fe1813f0d09207c6730fc5dce682647e25eb03
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5cc9de1371ba90532e20c11c9f82002ad5a5fa92
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/13/2017
 
       1. На вкладке **Публикация** выберите **Опубликовать**. Visual Studio записывает файлы, которые составляют приложение, в локальную файловую систему.
 
-      1. Теперь на вкладке **Публикация** отображается один профиль — **FolderProfile**. Параметры конфигурации профиля отображаются на вкладке в разделе **Сводка**.
+      1. Теперь на вкладке **Публикация** отображается один профиль — **FolderProfile**. Параметры конфигурации профиля отображаются на вкладке в разделе **Сводка**.
 
    Итоговые файлы помещаются в каталог с именем `PublishOutput`, который находится в подкаталоге каталога *\bin\release* проекта.
 
