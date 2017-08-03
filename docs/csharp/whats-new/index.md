@@ -1,5 +1,5 @@
 ---
-title: "Новые возможности C# — руководство по языку C# | Документы Майкрософт"
+title: "Новые возможности C# — руководство по C#"
 description: "Как развивается язык C#"
 keywords: "C#, последние функции, новые возможности, Roslyn"
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f337a916f0a15c6e81b228ec378a34e97055f68e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3ea221cfe71256ac44238f99f272c55c5810d0c3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/23/2017
     - This page describes C# Interactive, an interactive Read Eval Print Loop (REPL) that you can use to explore the C# language. You can use it to write code interactively and see it execute immediately, without any compile or build step.
 -->
 * [Кроссплатформенная поддержка](../../core/index.md)
-    - Благодаря поддержке .NET Core язык C# работает на многих платформах. Если вы хотите попробовать C# на macOS или на одном из многих поддерживаемых дистрибутивов Linux, получите дополнительные сведения о .NET Core.
+    - Благодаря поддержке .NET Core язык C# работает на многих платформах. Если вы хотите попробовать C# на macOS или на одном из множества поддерживаемых дистрибутивов Linux, узнайте больше о .NET Core.
 
 <!--
 - [.NET Compiler Platform SDK](../roslyn/index.md):

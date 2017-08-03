@@ -1,5 +1,5 @@
 ---
-title: "Новые возможности .NET Framework | Документы Майкрософт"
+title: "Новые возможности .NET Framework"
 ms.custom: 
 ms.date: 05/02/2017
 ms.prod: .net-framework
@@ -16,11 +16,11 @@ caps.latest.revision: 292
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: 0c6ce1020dbd1488f4abd51e13b887eab0068521
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7197f2453367e4613b4d44f0d84be5984525a5a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -190,8 +190,7 @@ API-интерфейсы WPF для печати в классе <xref:System.Pr
 ### <a name="aspnet"></a>ASP.NET
  В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] в ASP.NET представлены следующие улучшения.
 
- **Улучшена поддержка локализованных сообщений об ошибках в модулях проверки заметок к данным.**
- Модули проверки заметок к данным позволяют выполнять проверки путем добавления одного атрибута или нескольких к свойству класса. Элемент <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> атрибута определяет текст сообщения об ошибке, если проверка не пройдена. Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], в ASP.NET упрощена локализация сообщений об ошибках. Локализация сообщений об ошибках происходит в указанных далее случаях.
+ **Улучшенная поддержка локализованных сообщений об ошибках в элементах управления по проверке заметок к данным**. Эти элементы позволяют вам выполнять проверки путем добавления атрибутов к свойству класса. Элемент <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> атрибута определяет текст сообщения об ошибке, если проверка не пройдена. Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], в ASP.NET упрощена локализация сообщений об ошибках. Локализация сообщений об ошибках происходит в указанных далее случаях.
 
 1.  В атрибуте проверки указан <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName>.
 
@@ -230,8 +229,7 @@ End Class
 
  Кроме того, локализация заметок к данным является расширяемой. Разработчики могут подключить собственный поставщик локализатора строк путем реализации интерфейса <xref:System.Web.Globalization.IStringLocalizerProvider> для хранения строки локализации в месте, отличном от файла ресурсов.
 
- **Поддержка асинхронного выполнения с поставщиками хранилищ состояния сеансов.**
- Теперь ASP.NET позволяет использовать методы, возвращающие задачи, с поставщиками хранилища состояния сеанса, тем самым разрешая приложениям ASP.NET реализовывать преимущества масштабируемости асинхронных операций. Для поддержки асинхронных операций с поставщиками хранилищ состояния сеансов ASP.NET предлагает новый интерфейс <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>, который наследует от <xref:System.Web.IHttpModule> и позволяет разработчикам реализовывать их собственные модули состояния сеансов и асинхронные поставщики хранилищ сеансов. Интерфейс определяется следующим образом:
+ **Поддержка асинхронных операций с поставщиками хранилища состояния сеансов**. Теперь ASP.NET позволяет использовать методы, возвращающие задачи, с поставщиками хранилища состояния сеанса, благодаря чему приложениям ASP.NET доступны предоставляемые асинхронностью возможности масштабируемости. Для поддержки асинхронных операций с поставщиками хранилищ состояния сеансов ASP.NET предлагает новый интерфейс <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>, который наследует от <xref:System.Web.IHttpModule> и позволяет разработчикам реализовывать их собственные модули состояния сеансов и асинхронные поставщики хранилищ сеансов. Интерфейс определяется следующим образом:
 
 ```csharp
 public interface ISessionStateModule : IHttpModule {
@@ -242,8 +240,7 @@ public interface ISessionStateModule : IHttpModule {
 
  Кроме того, класс <xref:System.Web.SessionState.SessionStateUtility> включает два новых метода (<xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> и <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>), которые можно использоваться для поддержки асинхронных операций.
 
- **Поддержка асинхронного выполнения поставщиков кэша вывода.**
- Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], возвращающие задачи методы могут использоваться с поставщиками кэша вывода для реализации преимуществ масштабируемости асинхронных операций.  Поставщики, реализующие эти методы, сокращают вероятность блокировок потоков на веб-сервере и улучшают масштабируемость службы ASP.NET.
+ **Поддержка асинхронных операций для поставщиков кэша вывода**. Начиная с версии [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], методы, которые возвращают задачи, могут использоваться с поставщиками кэша вывода, благодаря чему становятся доступны предоставляемые асинхронностью возможности масштабируемости.  Поставщики, реализующие эти методы, сокращают вероятность блокировок потоков на веб-сервере и улучшают масштабируемость службы ASP.NET.
 
  Для поддержки поставщиков кэша асинхронного вывода были добавлены следующие API:
 
@@ -273,8 +270,7 @@ public interface ISessionStateModule : IHttpModule {
 
 <a name="Crypto462"></a> 
 ### <a name="cryptography"></a>Шифрование
- **Поддержка сертификатов X509, содержащих FIPS 186-3 DSA.**
- В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] добавлена поддержка сертификатов X509 с алгоритмом DSA, ключи которых превышают 1024-разрядное ограничение FIPS 186-2.
+ **Поддержка сертификатов X509, содержащих алгоритм цифровых подписей (DSA) FIPS 186-3**. В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] добавлена поддержка сертификатов X509 с алгоритмом DSA, ключи которых превышают ограничение FIPS 186-2 в 1024 разряда.
 
  В дополнение к поддержке больших размеров ключей FIPS 186-3 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] позволяет использовать вычисление подписей с семейством алгоритмов хэширования SHA-2 (SHA256, SHA384 и SHA512). Поддержка FIPS 186 3 осуществляется с помощью нового класса <xref:System.Security.Cryptography.DSACng?displayProperty=fullName>.
 
@@ -318,8 +314,7 @@ public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certif
 End Function
 ```
 
- **Повышенная четкость входных данных для процедур формирования ключа ECDiffieHellman.**
- В .NET Framework 3.5 добавлена поддержка соглашения о ключах Диффи — Хеллмана на эллиптических кривых с тремя разными процедурами формирования ключа. Входные данные для процедур и сами процедуры настраивались с помощью свойств объекта <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Однако поскольку не все процедуры правильно считывали каждое входное свойство, часто возникала путаница.
+ **Улучшенная читаемость входных данных для подпрограмм формирования ключа ECDiffieHellman**. В .NET Framework 3.5 была добавлена поддержка трех разных подпрограмм формирования ключа с протоколом Диффи — Хеллмана на эллиптических кривых. Входные данные для процедур и сами процедуры настраивались с помощью свойств объекта <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Однако поскольку не все процедуры правильно считывали каждое входное свойство, часто возникала путаница.
 
  Для решения этой проблемы в [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] в базовый класс <xref:System.Security.Cryptography.ECDiffieHellman> были добавлены следующие три метода, предназначенные для более четкого представления этих процедур формирования ключа и их входных данных.
 
@@ -329,8 +324,7 @@ End Function
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Получает материал ключа с помощью формулы<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> здесь *x* является вычисляемым результатом алгоритма Диффи-Хелмана на эллиптических кривых.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyTls%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Получает материал ключа с помощью алгоритма наследования псевдослучайной функции (PRF) TLS.|
 
- **Поддержка симметричного шифрования с помощью постоянного ключа.**
- В библиотеку шифрования Windows (CNG) добавлена поддержка для хранения постоянных симметричных ключей и использования симметричных ключей, хранящихся в оборудовании. Разработчики могут применять эти возможности благодаря [!INCLUDE[net_v462](../../../includes/net-v462-md.md)].  Поскольку понятие имен ключей и поставщиков ключей зависит от реализации, для применения этой функции требуется использовать конструктор конкретных типов реализации, а не предпочтительный метод (например, вызов `Aes.Create`).
+ **Поддержка симметричного шифрования с постоянным ключом**. В библиотеку шифрования Windows (CNG) была добавлена поддержка хранения постоянных симметричных ключей и использования симметричных ключей, хранящихся в оборудовании. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] открывает разработчикам доступ к этой функциональности.  Поскольку понятие имен ключей и поставщиков ключей зависит от реализации, для применения этой функции требуется использовать конструктор конкретных типов реализации, а не предпочтительный метод (например, вызов `Aes.Create`).
 
  Поддержка симметричного шифрования с помощью постоянных ключей доступна для алгоритмов AES (<xref:System.Security.Cryptography.AesCng>) и 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Пример:
 
@@ -371,8 +365,7 @@ Public Shared Function EncryptDataWithPersistedKey(data As Byte(), iv As Byte())
 End Function
 ```
 
- **Поддержка SignedXml для хэширования SHA-2**
-В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] добавлена поддержка класса <xref:System.Security.Cryptography.Xml.SignedXml> для методов подписи RSA-SHA256, RSA-SHA384 и RSA-SHA512 PKCS#1 и алгоритмов выборки SHA256, SHA384 и SHA512.
+ **Поддержка SignedXml для хэширования SHA-2**. В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] добавлена поддержка класса <xref:System.Security.Cryptography.Xml.SignedXml> для методов подписи PKCS#1 RSA-SHA256, RSA-SHA384 и RSA-SHA512 и алгоритмов выборки SHA256, SHA384 и SHA512.
 
  Константы URI представлены в <xref:System.Security.Cryptography.Xml.SignedXml>:
 
@@ -391,15 +384,13 @@ End Function
 ### <a name="sqlclient"></a>SqlClient
  Поставщик данных .NET framework для SQL Server (<xref:System.Data.SqlClient?displayProperty=fullName>) предлагает следующие новые возможности в [!INCLUDE[net_v462](../../../includes/net-v462-md.md)].
 
- **Объединение подключений в пул и использование времени ожидания в базах данных SQL Azure.**
- Если включено объединение подключений в пул и наступает время ожидания или возникает другая ошибка входа, происходит кэширование исключения. При последующих попытках подключения для следующих 5 секунд на 1 минуту создается кэшированное исключение.  Дополнительные сведения см. в разделе [Объединение подключений в пул (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
+ **Объединение подключений в пул и работа с временем ожидания в базах данных SQL Azure**. Если включено объединение подключений в пул и при входе возникает простой или другая ошибка, происходит кэширование исключения, и это исключение будет выдаваться для любых последующих попыток подключения в период от 5 секунд до 1 минуты.  Дополнительные сведения см. в разделе [Объединение подключений в пул (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
 
  Это поведение является нежелательным при подключении к базам данных SQL Azure, поскольку попытки соединения могут завершиться временными ошибками, которые обычно быстро исправляются. В целях максимальной оптимизации процедуры повторных попыток подключения поведение периода блокировки пула подключений удаляется при сбое соединений с базами данных SQL Azure.
 
  За счет добавленного нового ключевого слова `PoolBlockingPeriod` вы можете выбирать период времени блокировки, лучше всего подходящий для вашего приложения. К этим значениям относятся следующие.
 
- `Auto`
- Период блокировки пула подключений для приложения, которое подключается к базе данных SQL Azure, отключается, а период блокировки пула подключений для приложения, которое подключается к другому экземпляру SQL Server, включается. Это значение по умолчанию. Если имя конечной точки сервера заканчивается любой из приведенных ниже строк, она считается базой данных SQL Azure.
+ `Auto` — период блокировки пула для приложения, которое подключается к базе данных SQL Azure, становится неактивным, а для приложения, которое подключается к другому экземпляру SQL Server, наоборот, активируется. Это значение по умолчанию. Если имя конечной точки сервера заканчивается любой из приведенных ниже строк, она считается базой данных SQL Azure.
 
 - .database.windows.net
 
@@ -423,8 +414,7 @@ End Function
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
  В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows Communication Foundation содержит ряд улучшений в следующих областях.
 
- **Поддержка безопасности транспорта WCF для сертификатов, сохраненных с помощью CNG.**
- Безопасность транспорта WCF поддерживает сертификаты, сохраненные с использованием библиотеки шифрования Windows (CNG). В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] эта поддержка ограничивается использованием сертификатов с открытым ключом, длина экспоненты которого не превышает 32 бита. Если приложение предназначено для [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], эта функция включена по умолчанию.
+ **Поддержка защиты транспорта WCF для сертификатов, хранимых с помощью CNG**. Защита транспорта WCF поддерживает сертификаты, хранимые с использованием библиотеки шифрования Windows (CNG). В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] эта поддержка ограничивается использованием сертификатов с открытым ключом, длина экспоненты которого не превышает 32 бита. Если приложение предназначено для [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], эта функция включена по умолчанию.
 
  Для приложений, которые предназначены для [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] и более ранних версий, но работают в [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], эту функцию можно включить путем добавления следующей строки в раздел [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) файла app.config или web.config.
 
@@ -446,8 +436,7 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **Улучшенная поддержка нескольких правил коррекции летнего времени с помощью класса DataContractJsonSerializer.**
- Клиенты могут использовать параметр конфигурации приложения, чтобы определить, поддерживает ли класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> несколько правил коррекции для одного часового пояса. Это функция, включаемая пользователем. Чтобы ее включить, добавьте следующий параметр в файл app.config:
+ **Улучшенная поддержка множества правил перехода на летнее время с помощью класса DataContractJsonSerializer**. Клиенты могут использовать специальный параметр конфигурации приложения, чтобы определить, поддерживает ли класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> множество правил перевода времени для одного часового пояса. Это функция, включаемая пользователем. Чтобы ее включить, добавьте следующий параметр в файл app.config:
 
 ```xml
 <runtime>
@@ -484,8 +473,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 Дополнительные сведения о структуре <xref:System.TimeZoneInfo> и коррекциях часового пояса см. в статье [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md).
 
- **Наилучшее соответствие NetNamedPipeBinding.**
- В WCF представлен новый параметр приложения, который может быть задан в клиентских приложениях для их постоянного подключения к службе, прослушивающей URI, наилучшим образом соответствующий запрошенному. Если этот параметр приложения имеет значение `false` (по умолчанию), клиенты могут использовать <xref:System.ServiceModel.NetNamedPipeBinding> для подключения к службе, прослушивающей URI, который является подстрокой запрошенного URI.
+ **Более точный подбор соответствия с помощью NetNamedPipeBinding**. В WCF представлен новый параметр для клиентских приложений, позволяющий им всегда подключаться к ожидающей передачи данных службе с тем URI, который точнее всего соответствует их запросу. Если этот параметр приложения имеет значение `false` (по умолчанию), клиенты могут использовать <xref:System.ServiceModel.NetNamedPipeBinding> для подключения к службе, прослушивающей URI, который является подстрокой запрошенного URI.
 
  Например, клиент пытается подключиться к службе, прослушивающей `net.pipe://localhost/Service1`, но другая служба на этом компьютере, запущенная с правами администратора, прослушивает `net.pipe://localhost`. Если этому параметру приложения задать значение `false`, клиент будет пытаться подключиться не к той службе. После установки значения `true` для параметра приложения клиент будет всегда подключаться к наиболее подходящей службе.
 
@@ -502,8 +490,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 </configuration>
 ```
 
- **SSL 3.0 не является протоколом по умолчанию.**
- При использовании NetTcp для обеспечения безопасности транспорта и применении типа учетных данных сертификата SSL 3.0 больше не является протоколом по умолчанию для согласования безопасного соединения. В большинстве случаев существующие приложения не должны затрагиваться, поскольку TLS 1.0 входит в список протоколов для NetTcp. Все существующие клиенты должны иметь возможность согласовывать подключение с помощью хотя бы TLS 1.0.      Если требуется Ssl3, воспользуйтесь одним из указанных ниже механизмов конфигурации и добавьте его в список установленных протоколов.
+ **SSL 3.0 больше не является протоколом по умолчанию**. При использовании NetTcp с защитой транспорта и сертификатом типа "учетные данные" протокол SSL 3.0 больше не применяется по умолчанию для согласования безопасного соединения. В большинстве случаев существующие приложения не должны затрагиваться, поскольку TLS 1.0 входит в список протоколов для NetTcp. Все существующие клиенты должны иметь возможность согласовывать подключение с помощью хотя бы TLS 1.0.      Если требуется Ssl3, воспользуйтесь одним из указанных ниже механизмов конфигурации и добавьте его в список установленных протоколов.
 
 - Свойство <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=fullName>.
 
@@ -517,8 +504,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
  В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows Presentation Foundation содержит ряд улучшений в следующих областях.
 
- **Сортировка групп**
-Приложение, использующее объект <xref:System.Windows.Data.CollectionView> для группирования данных, теперь может явно объявлять порядок сортировки групп. Явная сортировка позволяет решить проблему неочевидного упорядочивания, которая возникает, когда приложение динамически добавляет или удаляет группы или когда оно изменяет значения свойств элементов, участвующих в группировании. Она также может повысить производительность процесса создания группы путем перемещения сравнений свойств группирования из сортировки полной коллекции в сортировку групп.
+ **Сортировка групп**. Приложение, использующее объект <xref:System.Windows.Data.CollectionView> для группировки данных, теперь может явно объявлять порядок сортировки групп. Явная сортировка позволяет решить проблему неочевидного упорядочивания, которая возникает, когда приложение динамически добавляет или удаляет группы или когда оно изменяет значения свойств элементов, участвующих в группировании. Она также может повысить производительность процесса создания группы путем перемещения сравнений свойств группирования из сортировки полной коллекции в сортировку групп.
 
  Для поддержки сортировки групп новые свойства <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=fullName> и <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=fullName> описывают способ сортировки коллекции групп, созданной объектом <xref:System.ComponentModel.GroupDescription>. Эта процедура аналогична способу, которым свойства <xref:System.Windows.Data.ListCollectionView> с аналогичными именами описывают принцип сортировки элементов данных.
 
@@ -540,13 +526,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 </SortDescriptions>
 ```
 
- **Поддержка программируемой клавиатуры.**
- Поддержка программируемой клавиатуры позволяет отслеживать фокус в приложениях WPF путем автоматического вызова и отклонения новой программируемой клавиатуры в Windows 10 при получении элементом управления, который может принимать текстовые входные данные, сигнала о сенсорном вводе.
+ **Поддержка экранной клавиатуры**. Теперь приложения WPF могут отслеживать фокус: когда элемент управления, способный принимать текстовый ввод, получает сенсорные входные данные, возможен автоматический вызов и закрытие новой экранной клавиатуры в Windows 10.
 
  В предыдущих версиях платформы .NET Framework приложения WPF не использовали отслеживание фокуса без отключения поддержки пера и сенсорного ввода WPF.  В результате приложения WPF должны выбрать между полной поддержкой сенсорного ввода WPF или использованием мыши Windows.
 
- **DPI для каждого монитора.**
- В целях эксплуатации во множестве сред с высоким и смешанным разрешением для приложений WPF платформа WPF в [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] включает поддержку DPI для каждого монитора. Дополнительные сведения о включении в приложении WPF поддержки DPI для каждого монитора см. в [примерах и в руководстве разработчика](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) на сайте GitHub.
+ **Поддержка разных DPI для разных мониторов**. В связи со все более частым использованием приложений WPF в средах с высоким DPI или с множеством разных DPI в [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] поддерживается контроль DPI для каждого отдельного монитора. Дополнительные сведения о включении в приложении WPF поддержки DPI для каждого монитора см. в [примерах и в руководстве разработчика](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) на сайте GitHub.
 
  В предыдущих версиях платформы .NET Framework приложения WPF поддерживают DPI на уровне системы. Другими словами, ОС соответствующим образом масштабирует пользовательский интерфейс приложения в зависимости от разрешения экрана монитора, на котором отображается приложение. ,
 
@@ -562,14 +546,11 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
  В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Windows Workflow Foundation содержит ряд улучшений в следующих областях.
 
- **Поддержка выражений C# и IntelliSense в повторно размещаемом конструкторе WF.**
- Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF поддерживает выражения C# в конструкторе Visual Studio и рабочих процессах кода. Повторно размещаемый конструктор рабочих процессов является ключевой возможностью WF, позволяющей размещать конструкторы рабочих процессов в приложении вне среды Visual Studio (например, в WPF).  Windows Workflow Foundation поддерживает выражения C# и IntelliSense в повторно размещаемом конструкторе рабочих процессов. Дополнительные сведения см. в [блоге по Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+ **Поддержка выражений C# и IntelliSense в конструкторе рабочих процессов WF, размещенном внутри приложений**. Начиная с версии [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF поддерживает выражения C# в конструкторе Visual Studio и в процессах работы с кодом. Повторно размещаемый конструктор рабочих процессов является ключевой возможностью WF, позволяющей размещать конструкторы рабочих процессов в приложении вне среды Visual Studio (например, в WPF).  Windows Workflow Foundation поддерживает выражения C# и IntelliSense в повторно размещаемом конструкторе рабочих процессов. Дополнительные сведения см. в [блоге по Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
- `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
- В версиях .NET Framework, более ранних, чем [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], в случае перестроения проекта рабочего процесса из Visual Studio происходит нарушение работы IntelliSense конструктора WF. Несмотря на успешное построение проекта, типы рабочих процессов отсутствуют в конструкторе, и в окне **Список ошибок** отображаются предупреждения из IntelliSense о недостающих типах рабочего процесса. В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] эта проблема решена и IntelliSense работает.
+ `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`. В версиях до [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] при перестройке проекта Workflow из Visual Studio происходит нарушение работы IntelliSense в конструкторе WF. Несмотря на успешное построение проекта, типы рабочих процессов отсутствуют в конструкторе, и в окне **Список ошибок** отображаются предупреждения из IntelliSense о недостающих типах рабочего процесса. В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] эта проблема решена и IntelliSense работает.
 
- **Приложения Workflow версии 1 с функцией отслеживания рабочего процесса теперь работают в режиме FIPS.**
- Теперь на компьютерах с включенным режимом поддержки стандарта FIPS можно успешно запускать приложение Workflow версии 1 с функцией отслеживания рабочих процессов. Чтобы реализовать этот сценарий, необходимо внести следующее изменение в файл app.config:
+ **Приложения Workflow версии 1 с отслеживанием теперь работают в режиме FIPS**. Теперь на компьютерах с режимом поддержки FIPS можно без ошибок запускать приложения Workflow версии 1 с включенной функцией отслеживания. Чтобы реализовать этот сценарий, необходимо внести следующее изменение в файл app.config:
 
 ```xml
 <add key="microsoft:WorkflowRuntime:FIPSRequired" value="true" />
@@ -577,8 +558,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
  Если этот сценарий не реализован, запущенное приложение продолжает создавать исключение с сообщением "Данная реализация не является частью протестированных криптографических алгоритмов Windows Platform FIPS".
 
- **Усовершенствования рабочего процесса при использовании динамического обновления с конструктором рабочих процессов Visual Studio.**
- Теперь конструктор рабочих процессов, конструктор действия FlowChart и другие конструкторы действий успешно загружают и отображают рабочие процессы, которые были сохранены после вызова метода <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>. В версиях .NET Framework, предшествующих [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], загрузка XAML-файла в Visual Studio для рабочего процесса, который был сохранен после вызова метода <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>, может привести к возникновению следующих проблем.
+ **Исправлена работа Workflow при использовании динамического обновления с конструктором Workflow в Visual Studio**. Теперь конструктор Workflow, конструктор действий FlowChart и другие конструкторы действий Workflow без ошибок загружают и отображают рабочие процессы, сохраненные после вызова метода <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>. В версиях .NET Framework, предшествующих [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], загрузка XAML-файла в Visual Studio для рабочего процесса, который был сохранен после вызова метода <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>, может привести к возникновению следующих проблем.
 
 - Конструктор рабочих процессов не может правильно загрузить XAML-файл (если <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=fullName> находится в конце строки).
 
@@ -1092,23 +1072,13 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 - **Усовершенствования профилирования.** Следующие новые неуправляемые API профилирования обеспечивают более надежное профилирование:
 
-     [Структура COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) 
-     [Перечисление COR_PRF_HIGH_MONITOR](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) 
-     [Метод GetAssemblyReferences](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) 
-     [Метод GetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) 
-     [Метод SetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) 
-     [Метод AddAssemblyReference](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
+     [Структура COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) [Перечисление COR_PRF_HIGH_MONITOR](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) [Метод GetAssemblyReferences](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) [Метод GetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) [Метод SetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) [Метод AddAssemblyReference](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
      Предыдущие реализации `ICorProfiler` поддерживали отложенную загрузку зависимых сборок. Новые API профилирования требуют немедленной доступности для загрузки вставляемых профилировщиком зависимых сборок вместо их загрузки после полной инициализации приложения. Это изменение не влияет на пользователей существующих API `ICorProfiler`.
 
 - **Усовершенствования отладки.** Следующие новые интерфейсы API отладки неуправляемого кода обеспечивают более эффективную интеграцию с профилировщиком. Теперь можно получить доступ к метаданным, вставленным профилировщиком, а также к локальным переменным и коду, созданным запросами компилировщика ReJIT во время отладки дампа.
 
-     [Метод SetWriteableMetadataUpdateMode](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) 
-     [Метод EnumerateLocalVariablesEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) 
-     [Метод GetLocalVariableEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) 
-     [Метод GetCodeEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) 
-     [Метод GetActiveReJitRequestILCode](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md) 
-     [Метод GetInstrumentedILMap](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
+     [Метод SetWriteableMetadataUpdateMode](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) [Метод EnumerateLocalVariablesEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) [Метод GetLocalVariableEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) [Метод GetCodeEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) [Метод GetActiveReJitRequestILCode](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md) [Метод GetInstrumentedILMap](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
 - **Изменения трассировки событий.** Платформа .NET Framework 4.5.2 поддерживает внепроцессную трассировку действий, основанную на трассировке событий Windows (ETW), для более крупных контактных зон. Это позволяет поставщикам решений автоматического управления питанием (АРМ) предлагать облегченные средства, точно отслеживающие стоимость отдельных запросов и действий в разных потоках.  Эти события вызываются только при включении их контроллерами ETW. Таким образом, изменения не влияют на ранее написанный код ETW или код, который выполняется при отключенной трассировке ETW.
 

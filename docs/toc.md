@@ -1,7 +1,7 @@
 # [Приветствие](welcome.md)
 
-<!-- Start of .NET Platform Guide -->
-# [Руководство по платформе .NET](standard/index.md)
+<!-- Start of .NET Guide -->
+# [Руководство по .NET](standard/index.md)
 ## [Начало работы с .NET](standard/get-started.md)
 ## [Обзор .NET](standard/tour.md)
 ## [Микрослужбы .NET: архитектура контейнерных приложений .NET](standard/microservices-architecture/)
@@ -48,7 +48,7 @@
 ## [Параллельное программирование](standard/parallel-programming/)
 ## [Безопасность](standard/security/)
 ## [Разработка для нескольких платформ](standard/cross-platform/)
-<!-- End of .NET Platform Guide -->
+<!-- End of .NET Guide -->
 
 <!-- .NET Core Content -->
 # [Руководство по .NET Core](core/index.md)
@@ -124,6 +124,8 @@
 ### [Анализ зависимостей сторонних разработчиков](core/porting/third-party-deps.md)
 ### [Перенос библиотек](core/porting/libraries.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
+## [Сборка .NET Core из исходного кода](core/build/index.md)
+### [Упаковка дистрибутивов .NET Core](core/build/distribution-packaging.md)
 ## [VS 2015/project.json docs](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -201,7 +203,7 @@
 #### [Строго типизированные делегаты](csharp/delegates-strongly-typed.md)
 #### [Общие шаблоны делегатов](csharp/delegates-patterns.md)
 #### [Общие сведения о событиях](csharp/events-overview.md)
-#### [Шаблон событий .NET](csharp/event-pattern.md)
+#### [Стандартные шаблоны событий .NET](csharp/event-pattern.md)
 #### [Обновленный шаблон событий .NET](csharp/modern-events.md)
 #### [Различия между делегатами и событиями](csharp/distinguish-delegates-events.md)
 ### [LINQ](csharp/linq/)
@@ -231,14 +233,13 @@
 # [Руководство по языку F#](fsharp/index.md)
 
 ## [Обзор языка F#](fsharp/tour.md)
-
+## [Начало работы](fsharp/get-started/index.md)
+### [Начало работы с Visual Studio](fsharp/get-started/get-started-visual-studio.md)
+### [Начало работы с Visual Studio для Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
+### [Начало работы с Visual Studio Code и Ionide](fsharp/get-started/get-started-vscode.md)
+### [Начало работы с интерфейсом командной строки .NET Core](fsharp/get-started/get-started-command-line.md)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Учебники
-### [Начало работы](fsharp/tutorials/getting-started/index.md)
-#### [Начало работы с Visual Studio](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
-#### [Начало работы с Visual Studio для Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
-#### [Начало работы с Visual Studio Code и Ionide](fsharp/tutorials/getting-started/getting-started-vscode.md)
-#### [Начало работы с программами командной строки](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [Окно "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/index.md)
 #### [Параметры окна "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [Поставщики типов](fsharp/tutorials/type-providers/index.md)
@@ -1058,7 +1059,7 @@
 ##### [/win32resource](visual-basic/reference/command-line-compiler/win32resource.md)
 #### [Параметры компилятора, упорядоченные по категориям](visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 ### [Справочная документация по .NET Framework](visual-basic/reference/net-framework-reference-information.md)
-### [Спецификация языка](visual-basic/reference/language-specification.md)
+### [Спецификация языка](visual-basic/reference/language-specification/)
 ## [Примеры приложений](visual-basic/sample-applications.md)
 ## [Пошаговые руководства](visual-basic/walkthroughs.md)
 

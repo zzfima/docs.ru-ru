@@ -1,60 +1,80 @@
 ---
-title: "Директивы препроцессора C# | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "cs.preprocessor"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "ключевые слова [C#], директивы препроцессора"
-  - "директивы препроцессора [C#]"
+title: "Директивы препроцессора C#"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- cs.preprocessor
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- preprocessor directives [C#]
+- keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 91bb2daefbc677fad8a3dd93b37aac996234d48c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Директивы препроцессора C# #
-Этот раздел содержит сведения о следующих директивах препроцессора C\#.  
+# <a name="c-preprocessor-directives"></a>Директивы препроцессора C#
+В этом разделе содержатся сведения о следующих директивах препроцессора C#.  
   
- [\#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)  
+ [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)  
   
- [\#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)  
+ [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)  
   
- [\#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)  
+ [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)  
   
- [\#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)  
+ [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)  
   
- [\#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)  
+ [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)  
   
- [\#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
+ [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)  
   
- [\#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)  
+ [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)  
   
- [\#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)  
+ [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)  
   
- [\#line](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)  
+ [#line](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)  
   
- [\#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)  
+ [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)  
   
- [\#endregion](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)  
+ [#endregion](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)  
   
- [\#pragma](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)  
+ [#pragma](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)  
   
- [\#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+ [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
   
- [\#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
+ [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
   
- См. раздел отдельные разделы, в которых можно получить дополнительные сведения и примеры.  
+ Дополнительные сведения и примеры см. в разделах по каждой из этих директив.  
   
- Хотя компилятор не имеет отдельный препроцессор, рассматриваются рекомендации, описанные в этом разделе, если таковое имело место.  Они используются для помощи в условной компиляции.  В отличие от директив языков C и C\+\+ данные директивы нельзя использовать для создания макросов.  
+ Хотя у компилятора нет отдельного препроцессора, директивы, описанные в этом разделе, обрабатываются так, как если бы он был. Они используются в условной компиляции. В отличие от директив C и C++ вы не можете использовать их для создания макросов.  
   
  Директива препроцессора должна быть единственной инструкцией в строке.  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+

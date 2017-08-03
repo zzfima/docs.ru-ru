@@ -1,52 +1,68 @@
 ---
-title: "Константы и перечисления в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "константы"
-  - "объявление констант, перечисления"
-  - "перечисления [Visual Basic]"
-  - "соглашения об именовании, константы"
-  - "библиотеки объектов, обозреватель объектов"
-  - "код Visual Basic, константы"
-  - "код Visual Basic, перечисления"
-  - "код Visual Basic, улучшение читаемости с помощью констант"
+title: "Константы и перечисления в Visual Basic"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- enumerations [Visual Basic]
+- Visual Basic code, constants
+- constants
+- object libraries, Object Browser
+- Visual Basic code, enumerations
+- declaring constants, enumerations
+- naming conventions, constants
+- Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Константы и перечисления в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ef8ade1100bb660af4d968d4b600aba41073fc2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
-Константы позволяют иcпользовать значимые имена вместо постоянных числовых значений.  Константы хранят значения, которые, как видно из самого названия, остаются при выполнении приложения постоянными.  Использование констант позволяет оперировать значимыми именами вместо чисел, что делает код удобочитаемым.  
+---
+# <a name="constants-and-enumerations-in-visual-basic"></a>Константы и перечисления в Visual Basic
+Константы позволяют использовать наглядные имена вместо неизменяемых значений. Как можно понять из их названия, константы хранят значения, которые остаются постоянными в ходе выполнения приложения. С константами вы можете использовать значимые имена вместо чисел, чтобы сделать свой код более удобочитаемым.  
   
- Перечисления предлагают удобный способ работы с наборами связанных констант и присвоения постоянным значениям имен.  Например, можно объявить перечисление для набора целочисленных констант, связанных с днями недели, а затем использовать в коде названия дней недели, а не числа.  
+ Перечисления — это удобный способ работать с наборами связанных констант и связывать постоянные значения с именами. Например, вы можете объявить перечисление для набора целочисленных констант, связанных с днями недели, а затем использовать в коде названия дней, а не числа.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|[Общие сведения о константах](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|В этом разделе описываются константы и их использование.|  
-|[Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|В этом разделе описываются перечисления и их использование.|  
+|---|---|  
+|[Общие сведения о константах](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|В статьях этого раздела описываются константы и их использование.|  
+|[Общие сведения о перечислениях](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|В статьях этого раздела описываются перечисления и их использование.|  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
-|[Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Описание `Const` оператор ", которая используется для объявления константы.|  
-|[Оператор Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)|Описание `Enum` выписка, которая используется для создания перечисления.|  
-|[Оператор Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Описание `Option Explicit` выписка, которая используется на уровне модуля, чтобы заставить явное объявление всех переменных в данном модуле.|  
-|[Option Infer \- оператор](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Описывает оператор `Option Infer`, позволяющий использовать вывод локального типа в объявляющих переменных.|  
-|[Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Описывает оператор `Option Strict`, ограничивающий неявное преобразование типов данных расширяющими преобразованиями, запрещающий позднее связывание и неявную типизацию, результатом которой является тип `Object`.|
+|---|---|  
+|[Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Описание оператора `Const`, который используется для объявления констант.|  
+|[Оператор Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)|Описание оператора `Enum`, который используется для создания перечислений.|  
+|[Оператор Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Описание оператора `Option Explicit`, который используется на уровне модулей для принудительного объявления всех переменных этого модуля в явном виде.|  
+|[Оператор Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Описание оператора `Option Infer`, который позволяет использовать вывод локального типа при объявлении переменных.|  
+|[Оператор Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Описание оператора `Option Strict`, который ограничивает неявные преобразования типов данных, допуская только преобразование в сторону расширения, запрещает позднее связывание и неявную типизацию, которая приводит к типу `Object`.|
+

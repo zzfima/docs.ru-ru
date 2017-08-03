@@ -1,20 +1,19 @@
 ---
-title: "Общие сведения об атрибутах (Visual Basic)"
+title: "Атрибуты (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: 
+- devlang-csharp
 ms.topic: article
 dev_langs:
-- VB
-ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
+- CSharp
+ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
 translation.priority.mt:
 - cs-cz
 - pl-pl
@@ -22,66 +21,68 @@ translation.priority.mt:
 - tr-tr
 ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
+ms.openlocfilehash: ab55021a073f914905e29163ba2a669f69d6dcab
 ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="attributes-overview-visual-basic"></a>Общие сведения об атрибутах (Visual Basic)
-Атрибуты предоставляют мощное средство для связывания метаданных или декларативной информации с кодом (сборки, типы, методы, свойства и т. д.). Связав атрибут связан с сущностью программы, вы можете проверять этот атрибут во время выполнения, используя технику *отражения*. Дополнительные сведения см. в статье [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
+# <a name="attributes-c"></a>Атрибуты (C#)
+Атрибуты предоставляют мощное средство для связывания метаданных или декларативной информации с кодом (сборки, типы, методы, свойства и т. д.). Связав атрибут связан с сущностью программы, вы можете проверять этот атрибут во время выполнения, используя технику *отражения*. Подробнее см. в разделе [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
   
  Атрибуты имеют следующие свойства.  
   
--   Атрибуты добавляют в программу метаданные. *Метаданные* — это сведения о типах, определенных в программе. Все сборки .NET содержат некоторый набор метаданных, описывающих типы и члены типов, определенные в этой сборке. Вы можете добавить пользовательские атрибуты, чтобы указать любую дополнительную информацию. Дополнительные сведения см. в статье [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание пользовательских атрибутов (Visual Basic)).  
+-   Атрибуты добавляют в программу метаданные. *Метаданные* — это сведения о типах, определенных в программе. Все сборки .NET содержат некоторый набор метаданных, описывающих типы и члены типов, определенные в этой сборке. Вы можете добавить пользовательские атрибуты, чтобы указать любую дополнительную информацию. Подробнее см. в разделе [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md).  
   
 -   Вы можете применить один или несколько атрибутов ко всей сборке, к модулю или к более мелким элементам программы, например к классам и свойствам.  
   
 -   Атрибуты могут принимать аргументы, так же как методы и свойства.  
   
--   Программа может проверить собственные метаданные или метаданные в других программах, используя отражение. Дополнительные сведения см. в статье [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic)).  
+-   Программа может проверить собственные метаданные или метаданные в других программах, используя отражение. Дополнительные сведения см. в разделе [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
 ## <a name="using-attributes"></a>Использование атрибутов  
- Атрибуты можно использовать почти в любых объявлениях, но для каждого атрибута можно ограничить типы объявлений, в которых он является допустимым. В Visual Basic атрибуты заключаются в угловые скобки (\< >). Они должны располагаться непосредственно перед тем элементом, к которому они применяются, и обязательно в той же строке.  
+ Атрибуты можно использовать почти в любых объявлениях, но для каждого атрибута можно ограничить типы объявлений, в которых он является допустимым. Чтобы указать атрибут на C#, поместите имя атрибута в квадратных скобках ([]) над объявлением сущности, к которой он применяется.  
   
  В этом примере атрибут <xref:System.SerializableAttribute> используется для применения определенной характеристики к классу:  
   
-```vb  
-<System.Serializable()> Public Class SampleClass  
-    ' Objects of this type can be serialized.  
-End Class  
+```csharp  
+[System.Serializable]  
+public class SampleClass  
+{  
+    // Objects of this type can be serialized.  
+}  
 ```  
   
  Метод с атрибутом <xref:System.Runtime.InteropServices.DllImportAttribute> объявляется следующим образом:  
   
-```vb  
-Imports System.Runtime.InteropServices  
+```csharp  
+using System.Runtime.InteropServices;  
 ```  
   
-```vb  
-<System.Runtime.InteropServices.DllImport("user32.dll")>   
-Sub SampleMethod()  
-End Sub  
+```csharp  
+[System.Runtime.InteropServices.DllImport("user32.dll")]  
+extern static void SampleMethod();  
 ```  
   
  В объявлении можно разместить несколько атрибутов:  
   
-```vb  
-Imports System.Runtime.InteropServices  
+```csharp  
+using System.Runtime.InteropServices;  
 ```  
   
-```vb  
-Sub MethodA(<[In](), Out()> ByVal x As Double)  
-End Sub  
-Sub MethodB(<Out(), [In]()> ByVal x As Double)  
-End Sub  
+```csharp  
+void MethodA([In][Out] ref double x) { }  
+void MethodB([Out][In] ref double x) { }  
+void MethodC([In, Out] ref double x) { }  
 ```  
   
  Некоторые атрибуты можно указать для одной сущности более одного раза. Пример такого многократно используемого атрибута — <xref:System.Diagnostics.ConditionalAttribute>:  
   
-```vb  
-<Conditional("DEBUG"), Conditional("TEST1")>   
-Sub TraceMethod()  
-End Sub  
+```csharp  
+[Conditional("DEBUG"), Conditional("TEST1")]  
+void TraceMethod()  
+{  
+    // ...  
+}  
 ```  
   
 > [!NOTE]
@@ -90,10 +91,10 @@ End Sub
 ### <a name="attribute-parameters"></a>Параметры атрибутов  
  Многие атрибуты имеют параметры, которые могут быть позиционными, неименованными или именованными. Позиционные параметры необходимо указывать в строгом порядке и их нельзя опускать. Именованные параметры являются необязательными и их можно указывать в любом порядке. Сначала указываются позиционные параметры. Например, эти три атрибута являются эквивалентными:  
   
-```vb  
-<DllImport("user32.dll")>  
-<DllImport("user32.dll", SetLastError:=False, ExactSpelling:=False)>  
-<DllImport("user32.dll", ExactSpelling:=False, SetLastError:=False)>  
+```csharp  
+[DllImport("user32.dll")]  
+[DllImport("user32.dll", SetLastError=false, ExactSpelling=false)]  
+[DllImport("user32.dll", ExactSpelling=false, SetLastError=false)]  
 ```  
   
  Первый параметр (имя библиотеки DLL) является позиционным и всегда располагается первым, остальные параметры являются именованными. В этом примере оба именованных параметра имеют значение по умолчанию (false), и мы можем их опустить. Сведения о значениях параметров по умолчанию указываются в документации по каждому отдельному атрибуту.  
@@ -103,8 +104,8 @@ End Sub
   
  Чтобы явным образом определить целевой объект атрибута, используйте следующий синтаксис:  
   
-```vb  
-<target : attribute-list>  
+```csharp  
+[target : attribute-list]  
 ```  
   
  Возможные значения `target` перечислены в следующей таблице.  
@@ -112,15 +113,42 @@ End Sub
 |Целевое значение|Применение|  
 |------------------|----------------|  
 |`assembly`|Вся сборка|  
-|`module`|Текущий модуль сборки (это не то же самое, что модуль Visual Basic)|  
+|`module`|Модуль текущей сборки|  
+|`field`|Поле в классе или структуре|  
+|`event`|Событие|  
+|`method`|Метод либо методы доступа к свойствам `get` и `set`|  
+|`param`|Параметры метода или параметры метода доступа `set`|  
+|`property`|Свойство|  
+|`return`|Возвращаемое значение метода, индексатора свойства или метода доступа к свойствам `get`|  
+|`type`|Структура, класс, интерфейс, перечисление или делегат|  
   
- Следующий пример демонстрирует, как применить атрибуты к сборкам и модулям. Дополнительные сведения см. в статье [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Распространенные атрибуты (Visual Basic)).  
+ Следующий пример демонстрирует, как применить атрибуты к сборкам и модулям. Дополнительные сведения см. в разделе [Общие атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md).  
   
-```vb  
-Imports System.Reflection  
-<Assembly: AssemblyTitleAttribute("Production assembly 4"),   
-Module: CLSCompliant(True)>   
+```csharp  
+using System;  
+using System.Reflection;  
+[assembly: AssemblyTitleAttribute("Production assembly 4")]  
+[module: CLSCompliant(true)]  
 ```  
+  
+ В следующем примере показано, как применять атрибуты к методам, параметрам и возвращаемым значениям методов в C#.  
+  
+```csharp  
+// default: applies to method  
+[SomeAttr]  
+int Method1() { return 0; }  
+  
+// applies to method  
+[method: SomeAttr]  
+int Method2() { return 0; }  
+  
+// applies to return value  
+[return: SomeAttr]  
+int Method3() { return 0; }  
+```  
+  
+> [!NOTE]
+>  Вне зависимости от целевых объектов, для которых действует атрибут `SomeAttr`, необходимо задать целевой объект для `return`, даже если атрибут `SomeAttr` назначен только возвращаемым значениям. Другими словами, компилятор не будет использовать сведения `AttributeUsage` для разрешения конфликтов между неоднозначными целевыми объектами атрибута. Подробнее см. в разделе [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md).  
   
 ## <a name="common-uses-for-attributes"></a>Популярные методы применения атрибутов  
  В следующем списке перечислены несколько распространенных применений для атрибутов.  
@@ -150,18 +178,18 @@ Module: CLSCompliant(True)>
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения:  
   
--   [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))  
+-   [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))  
+-   [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [How to: Create a C/C++ Union by Using Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md) (Практическое руководство. Создание объединения C/C++ с помощью атрибутов (Visual Basic))  
+-   [Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Распространенные атрибуты (Visual Basic))  
+-   [Общие атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md) (Сведения о вызывающем (Visual Basic))  
+-   [Caller Information (C#)](../../../../csharp/programming-guide/concepts/caller-information.md) (Сведения о вызывающем объекте (C#))  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  (Отражение (Visual Basic))  
+ [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
+ [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)
 

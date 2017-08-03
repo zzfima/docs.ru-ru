@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic | Документация Майкрософт"
+title: Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -47,8 +47,7 @@ Visual Basic предназначен для эффективного созда
  [Начало работы](../visual-basic/getting-started/index.md)   
  Помогает приступить к работе и содержит список новых возможностей и возможностей, доступных в различных выпусках продукта.  
    
- [Programming Concepts](../visual-basic/programming-guide/concepts/index.md) (Основные понятия программирования). 
- Описывает основные понятия языка Visual Basic, которые наиболее важны для программистов.
+ [Основные понятия программирования](../visual-basic/programming-guide/concepts/index.md) Основные понятия языка Visual Basic, которые наиболее важны для программистов.
 
  [Соглашения о структуре программы и коде](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Содержит документацию по базовой структуре и соглашениям кода Visual Basic, таким как соглашения об именовании, комментарии в коде и действующие в Visual Basic ограничения.  
@@ -72,8 +71,9 @@ Visual Basic предназначен для эффективного созда
  Ссылки на пошаговые инструкции для стандартных сценариев.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Начало разработки в Visual Studio](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Начало разработки в Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Ссылки на разделы об основах Visual Studio.  
   
  [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
+

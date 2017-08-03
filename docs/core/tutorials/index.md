@@ -1,6 +1,6 @@
 ---
-title: "Учебники по .NET Core | Документы Майкрософт"
-description: "Учебники по .NET Core"
+title: "Учебники по .NET Core"
+description: "Руководства по .NET Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/23/2017
 - [Тестирование библиотеки классов C#](../../csharp/getting-started/testing-library-with-visual-studio.md)
 - [Использование библиотеки классов C# в .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Создание полного решения C# .NET Core в Windows](using-on-windows-full-solution.md)
-- [Учебник по NoSQL: сборка консольного приложения C# DocumentDB в .NET Core](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Учебник по NoSQL: сборка консольного приложения C# DocumentDB в .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Разработка приложений с помощью Visual Studio Code
 
@@ -55,5 +55,5 @@ ms.lasthandoff: 05/23/2017
 - [Управление версиями зависимостей пакетов для .NET Core 1.0](managing-package-dependency-versions.md)
 - [Размещение .NET Core из машинного кода](netcore-hosting.md)
 
-Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
+Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](/aspnet/core/).
 

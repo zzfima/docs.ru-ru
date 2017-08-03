@@ -1,6 +1,6 @@
 ---
-title: "Перенос кода в .NET Core из .NET Framework | Документы Майкрософт"
-description: "Перенос кода в .NET Core из .NET Framework"
+title: "Перенос кода в .NET Core из .NET Framework"
+description: "Общие сведения о процессе переноса и инструментах, которые могут оказаться полезными при переносе проектов .NET Framework в .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f922fd75bf22d3cfb0c54276443820bae175bc79
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40930b572b385c5407d309ddcacdcc86097a9919
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
