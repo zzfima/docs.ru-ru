@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Добавление функций границы и блокировки в коллекцию | Документация Майкрософт"
+title: "Практическое руководство. Добавление функций границы и блокировки в коллекцию"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,14 +15,15 @@ caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: df159b1ab3f7c16564ce493a585246c4c461a8f9
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3258534cb0bf67b180080eca4f7cefc65c609fa4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Практическое руководство. Добавление функций границы и блокировки в коллекцию
-В данном примере показано, как добавлять функциональные возможности границ и блокировок в пользовательский класс коллекции с помощью реализации интерфейса <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName> в классе, затем показано использование экземпляра класса в качестве механизма внутреннего хранения для объекта класса <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>. Дополнительные сведения о границах и блокировках см. в разделе [Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+В этом примере показано, как добавлять функциональные возможности границ и блокировок в пользовательский класс коллекции путем реализации интерфейса <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName> в классе и последующего использования экземпляра класса в качестве механизма внутреннего хранения для объекта класса <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>. Дополнительные сведения о границах и блокировках см. в разделе [Общие сведения о коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
 ## <a name="example"></a>Пример  
  Пользовательский класс коллекции является базовой очередью с приоритетами, в которой уровни приоритета представляются в виде массива объектов класса <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>. Внутри каждой очереди дополнительное упорядочивание не выполняется.  
@@ -37,3 +38,4 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>См. также  
  [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)
+
