@@ -55,11 +55,6 @@
       "branch": "master"
     },
     {
-      "path_to_root": "api",
-      "url": "https://github.com/MicrosoftDocs/dotnet-docs-yml4loc",
-      "branch": "master"
-    },
-    {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/dotnet/docs",
       "branch": "live"
