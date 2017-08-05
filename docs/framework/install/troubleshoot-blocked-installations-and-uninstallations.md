@@ -1,7 +1,7 @@
 ---
 title: "Устранение неполадок заблокированных установок и удалений .NET Framework"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -90,5 +90,4 @@ ms.lasthandoff: 07/28/2017
 [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)   
 [Практическое руководство. Определение установленных версий платформы .NET Framework](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [Версии и зависимости](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-
 
