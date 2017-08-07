@@ -116,5 +116,6 @@
 ### [Рекомендуемые теги](../../../../_vblang/spec/documentation-comments.md#recommended-tags)
 ### [Строки идентификаторов](../../../../_vblang/spec/documentation-comments.md#id-strings)
 ### [Пример комментариев для документации](../../../../_vblang/spec/documentation-comments.md#documentation-comments-example)
-## Грамматика: [vb.html](http://ljw1004.github.io/vbspec/vb.html). Также доступна загрузка в формате ANTLR: [vb.g4](vb.g4?raw=true).
-
+## Грамматика
+### [vb.html](http://ljw1004.github.io/vbspec/vb.html)
+### [vb.g4 — формат ANTLR](http://ljw1004.github.io/vbspec/vb.g4?raw=true)

@@ -36,10 +36,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b8b7951c01ac5a82c79a0942fdc99368c2d0175
+ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
+ms.openlocfilehash: 906fa362c249c3e5abbd6f2ed3ba879a81334aeb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
@@ -140,7 +140,7 @@ char c = 'Z';
  Все перечисления наследуют от <xref:System.Enum?displayProperty=fullName>, который наследует от <xref:System.ValueType?displayProperty=fullName>. К перечислениям применимы все те же правила, что к структурам. Дополнительные сведения см. в статье [Enumeration Types](../../../csharp/programming-guide/enumeration-types.md) (Типы перечислений).  
   
 ### <a name="reference-types"></a>Ссылочные типы  
- Тип, который определен как [класс](../../../csharp/language-reference/keywords/class.md), [делегат](../../../csharp/language-reference/keywords/delegate.md), массив или [интерфейс](../../../csharp/language-reference/keywords/interface.md), называется *ссылочным типом*. Если вы объявите переменную ссылочного типа, то во время выполнения эта переменная содержит значение [NULL](../../../csharp/language-reference/keywords/null.md) до тех пор, пока вы явным образом не создадите экземпляр объекта с помощью оператора [new](../../../csharp/language-reference/keywords/new.md) или не сохраните в переменной объект, созданный в другом месте с помощью `new, as shown in the following example:`  
+ Тип, который определен как [класс](../../../csharp/language-reference/keywords/class.md), [делегат](../../../csharp/language-reference/keywords/delegate.md), массив или [интерфейс](../../../csharp/language-reference/keywords/interface.md), называется *ссылочным типом*. Когда во время выполнения вы объявляете переменную ссылочного типа, такая переменная будет содержать значение [NULL](../../../csharp/language-reference/keywords/null.md), пока вы явным образом не создадите экземпляр объекта с помощью оператора [new](../../../csharp/language-reference/keywords/new.md) или не назначите его объекту, созданному в другом месте, используя `new`, как показано в следующем примере:
   
 ```csharp  
 MyClass mc = new MyClass();  

@@ -1,6 +1,6 @@
 ---
 title: "Спецификация языка Visual Basic"
-ms.date: 2015-07-20
+ms.date: 2017-08-02
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e35bb15d75b715c4137c2bca5ea94697dbbe340
+ms.sourcegitcommit: a16c50310dc45f231d921bce0ae6549864652951
+ms.openlocfilehash: eb8260d1c7349e2a1402f92a54ee118eb2d9ca7d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="visual-basic-language-specification"></a>Спецификация языка Visual Basic
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/28/2017
   
  Спецификация доступна в [Центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=188623).  
   
-На этом сайте содержится [спецификация по VB 11](../../../../_vblang/spec/introduction.md). Она создана на основе файлов Markdown, содержащихся в [GitHub-репозитории dotnet/vblang](https://github.com/dotnet/vb/blob/master/spec/README.md).
+На этом сайте содержится [спецификация по VB 11](../../../../_vblang/spec/introduction.md). Она создана на основе файлов Markdown, содержащихся в [GitHub-репозитории dotnet/vblang](https://github.com/dotnet/vblang/blob/master/spec/README.md).
 
 Найденные в спецификации проблемы следует публиковать в репозитории [dotnet/vblang](https://github.com/dotnet/vblang/issues). Если же вам интересно исправить какие-то из найденных вами ошибок, вы можете отправить [запрос на вытягивание](https://github.com/dotnet/vblang/pulls) в тот же репозиторий.
 
@@ -50,4 +50,3 @@ ms.lasthandoff: 07/28/2017
 
 >[!div class="step-by-step"]
 [Далее](../../../../_vblang/spec/introduction.md)
-

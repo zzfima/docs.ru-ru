@@ -65,9 +65,12 @@
             - name: Параллельное программирование в .NET Framework
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
-            - name: Безопасность в .NET Framework
+            - name: Безопасность в .NET
               tocHref: /dotnet/standard/security/
               topicHref: /dotnet/standard/security/index
+            - name: Сериализация в .NET
+              tocHref: /dotnet/standard/serialization/
+              topicHref: /dotnet/standard/serialization/index
             - name: Управляемая поточность
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
@@ -211,9 +214,6 @@
             - name: Безопасность в .NET Framework
               tocHref: /dotnet/framework/security/
               topicHref: /dotnet/framework/security/index
-            - name: Сериализация в .NET Framework
-              tocHref: /dotnet/framework/serialization/
-              topicHref: /dotnet/framework/serialization/index
             - name: Инструменты .NET Framework
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index

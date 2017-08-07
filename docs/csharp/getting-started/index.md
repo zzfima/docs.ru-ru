@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 09415f996c9dd03c34a74cfe2d2d030f2b4b6fe8
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="get-started-with-c"></a>Начало работы с C# #
@@ -33,7 +33,7 @@ ms.lasthandoff: 07/28/2017
 
    Библиотека классов позволяет определять типы и члены типов, которые можно вызвать из любого приложения. В этой статье вы создадите библиотеку классов с единственным методом, который определяет, начинается ли строка с символа верхнего регистра. Когда вы закончите создавать библиотеку, можно разработать [модульный тест](testing-library-with-visual-studio.md) и убедиться, что все работает как надо, а затем библиотеку можно сделать доступной для [приложений, в которых ее нужно использовать](consuming-library-with-visual-studio.md).
 
-- [Начало работы с Visual Studio Code](with-visual-studio-code.md)
+- [Начало работы с C# и Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code — это бесплатный редактор кода, оптимизированный для сборки и отладки современных веб-приложений и облачных приложений. Он поддерживает технологию IntelliSense и доступен для Linux, macOS и Windows.
 

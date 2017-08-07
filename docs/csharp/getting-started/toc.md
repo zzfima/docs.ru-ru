@@ -5,6 +5,6 @@
 ## [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](library-with-visual-studio.md)
 ### [Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017](testing-library-with-visual-studio.md)
 ### [Использование библиотеки классов для .NET Core в Visual Studio 2017](consuming-library-with-visual-studio.md)
-## [Начало работы с Visual Studio Code](with-visual-studio-code.md)
+## [Начало работы с C# и Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 <!--## [🔧 Getting started with cross-platform tools](with-cross-platform-tools.md)-->
 <!--## [🔧 Getting started with C# Interactive](with-csharp-interactive.md)-->
