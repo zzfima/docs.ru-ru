@@ -1,5 +1,5 @@
 ---
-title: .NET Core
+title: "Руководство по .NET Core"
 description: ".NET Core — это модульная высокопроизводительная реализация .NET для создания приложений Windows, Linux и Mac. Для начала получите дополнительную информацию о .NET Core."
 keywords: .NET, .NET Core
 author: richlander
@@ -10,14 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e002411d9856bc5f98566ed1bd9d8122e884d5d
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
-# <a name="net-core"></a>.NET Core
+# <a name="net-core-guide"></a>Руководство по .NET Core
 
 > Ознакомьтесь с [учебниками по началу работы](get-started.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут.
 
@@ -124,13 +124,13 @@ ms.lasthandoff: 07/28/2017
 - Библиотеки [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) и [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) являются специфичными для платформ, так как интерфейсы API хранения и шифрования данных существенно различаются в каждой ОС. 
 - Библиотеки [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) и [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) не зависят от платформы, так как они создают структуры данных и работают с ними.
 
-## <a name="comparisons-to-other-net-platforms"></a>Сравнение с другими платформами .NET
+## <a name="comparisons-to-other-net-implementations"></a>Сравнение с другими реализациями .NET
 
-Масштаб и значение .NET Core проще всего понять в сравнении с существующими платформами .NET. 
+Масштаб и значение .NET Core проще всего понять в сравнении с существующими реализациями .NET. 
 
 ### <a name="comparison-with-net-framework"></a>Сравнение с .NET Framework
 
-Платформа .NET была представлена корпорацией Майкрософт в 2000 году и с тех пор прошла долгий путь развития. Платформа .NET Framework была основным продуктом .NET, предоставлявшимся корпорацией Майкрософт в течение 15 лет. 
+Платформа .NET была представлена корпорацией Майкрософт в 2000 году и с тех пор прошла долгий путь развития. .NET Framework была основной реализацией .NET, предоставлявшейся корпорацией Майкрософт в течение 15 лет. 
 
 Основные различия между .NET Core и .NET Framework 
 
@@ -140,7 +140,7 @@ ms.lasthandoff: 07/28/2017
 - **Платформы**. Платформа .NET Framework поддерживает Windows и Windows Server, в то время как .NET Core также поддерживает Mac OS и Linux.
 - **Открытый исходный код**. Платформа .NET Core имеет открытый исходный код. В случае с .NET Framework открытый исходный код имеет только [подмножество библиотек, доступных только для чтения](https://github.com/microsoft/referencesource).
 
-Хотя платформа .NET Core является уникальной и существенно отличается от .NET Framework и других платформ .NET, совместное использование кода реализуется достаточно просто посредством либо исходного кода, либо двоичных файлов. 
+Хотя платформа .NET Core является уникальной и существенно отличается от .NET Framework и других реализаций .NET, достаточно просто наладить взаимодействие как в формате исходного кода, так и в виде двоичных файлов. 
 
 ### <a name="comparison-with-mono"></a>Сравнение с Mono
 
