@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 8e0fd8db2810c36358a7bcf94f4bc5e7d2aa399e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/01/2017
 
 Обязательная конфигурация Docker для Windows предполагает настройку **[общих дисков](https://docs.docker.com/docker-for-windows/#shared-drives)**. Этот параметр необходим для поддержки сопоставления и отладки томов.
 
-Щелкните правой кнопкой мыши значок Docker в области уведомлений, выберите пункт "Параметры", а затем выберите "Общие диски".
+Щелкните правой кнопкой мыши значок Docker в области уведомлений, выберите пункт **Параметры**, а затем **Общие диски**. Выберите диск, на котором Docker будет хранить файлы, и примените эти изменения.
 
 ![Общие диски](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
@@ -48,6 +48,8 @@ ms.lasthandoff: 05/01/2017
 Контекстное меню проекта
 
 ![Щелкните правой кнопкой мыши и выберите пункт "Добавить" > "Поддержка Docker".](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+
+При добавлении в проект поддержки Docker можно выбрать контейнеры Windows или Linux. (Узел Docker должен работать на контейнерах такого же типа. Если вам нужно изменить тип контейнера для работающего экземпляра Docker, щелкните правой кнопкой мыши значок **Docker** в области уведомлений и выберите **Switch to Windows containers** (Переключить на контейнеры Windows) или **Switch to Linux containers** (Переключить на контейнеры Linux). 
 
 В проект будут добавлены указанные ниже файлы.
 
