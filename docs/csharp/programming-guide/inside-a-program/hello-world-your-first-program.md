@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Создаем первую программу (Руководство по программированию на C#)
@@ -123,11 +123,11 @@ ms.lasthandoff: 07/28/2017
   
 2.  Выполните одно из следующих действий, чтобы открыть окно командной строки.  
   
-    -   В Windows 8 на **начальном** экране выполните поиск по термину `Developer Command Prompt`, а затем выберите **Командная строка разработчика для VS2012**.  
+    -   В меню **Пуск** Windows 10 введите `Developer Command Prompt` в строке поиска, а затем выберите пункт **Командная строка разработчика для VS 2017**.  
   
          Откроется окно "Командная строка разработчика".  
   
-    -   В Windows 7 откройте меню **Пуск**, разверните папку для текущей версии Visual Studio, откройте контекстное меню для **Инструменты Visual Studio** и выберите **Командная строка разработчика для VS2012**.  
+    -   В Windows 7 откройте меню **Пуск**, разверните папку текущей версии Visual Studio, откройте контекстное меню **Инструменты Visual Studio** и выберите пункт **Командная строка разработчика для VS 2017**.  
   
          Откроется окно "Командная строка разработчика".  
   
