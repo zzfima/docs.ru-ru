@@ -40,6 +40,8 @@
 ### [-preferreduilang (параметры компилятора C#)](preferreduilang-compiler-option.md)
 ### [-recurse (параметры компилятора C#)](recurse-compiler-option.md)
 ### [-reference (параметры компилятора C#)](reference-compiler-option.md)
+### [-refout (параметры компилятора C#)](refout-compiler-option.md)
+### [-refonly (параметры компилятора C#)](refonly-compiler-option.md)
 ### [-resource (параметры компилятора C#)](resource-compiler-option.md)
 ### [-subsystemversion (параметры компилятора C#)](subsystemversion-compiler-option.md)
 ### [-target (параметры компилятора C#)](target-compiler-option.md)
