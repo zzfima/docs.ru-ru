@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: 7d7753a2c15cc20169005ea1c5f64eb74067cb24
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="discards---c-guide"></a>Пустые переменные — руководство по языку C#
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/01/2017
 
 [!code-csharp[Класс и пустые переменные](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 
-Подробнее о деконструкции пользовательских типов с помощью пустых переменных: [Деконструкция кортежей и других типов](deconstruct.md#deconstructing-a-user-defined type-with-discards).
+Подробнее о деконструкции пользовательских типов с помощью пустых переменных: [Деконструкция кортежей и других типов](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
 
 ## <a name="pattern-matching-with-switch-and-is"></a>Сопоставление шаблонов с операторами `switch` и `is`
 
