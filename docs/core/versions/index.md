@@ -3,16 +3,16 @@ title: "Управление версиями .NET Core"
 description: "Сведения о принципах работы управления версиями в .NET Core."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/10/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 94614e436734389df7bf3a6e2df2abe49593021a
+ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
+ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="net-core-versioning"></a>Управление версиями .NET Core
@@ -154,6 +154,10 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ### <a name="preview-versions"></a>Предварительные версии
 
 Для предварительных версий к номеру версии добавляется `-preview-[number]-([build]|"final")`. Например, `2.0.0-preview-1-final`.
+
+### <a name="servicing-versions"></a>Сервисные версии
+
+После выхода выпуска его ветви обычно перестают создавать ежедневные сборки и вместо них начинают формировать сервисные сборки. Для сервисных версий к номеру версии добавляется `-servicing-[number]`. Например, `2.0.1-servicing-006924`.
 
 ### <a name="lts-vs-current"></a>Сравнение LTS и Current
 
