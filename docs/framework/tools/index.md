@@ -1,5 +1,5 @@
 ---
-title: "Инструменты .NET Framework | Microsoft Docs"
+title: "Инструменты .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -24,11 +24,11 @@ caps.latest.revision: 65
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 792ffdaefdd3379673df7789bd499eade26b0a6d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bee585074a444e8df5d67e035d5e0b65d292f8ac
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-tools"></a>Инструменты .NET Framework
@@ -149,3 +149,4 @@ ms.lasthandoff: 04/08/2017
   
  [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
  Включает средства, упрощающие создание, развертывание и управление приложениями Windows Communication Foundation (WCF).
+

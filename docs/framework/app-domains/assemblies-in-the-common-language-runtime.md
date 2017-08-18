@@ -1,5 +1,5 @@
 ---
-title: "Сборки в среде CLR | Microsoft Docs"
+title: "Сборки в среде CLR"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -24,11 +24,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 07064975c0deb878b1bf2be6c2d1429c1718725f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: faa41efa7f3ad898557e966d141aa8f5108d60bd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Сборки в среде CLR
@@ -72,3 +72,4 @@ ms.lasthandoff: 06/02/2017
   
 ## <a name="reference"></a>Ссылки  
  <xref:System.Reflection.Assembly?displayProperty=fullName>
+
