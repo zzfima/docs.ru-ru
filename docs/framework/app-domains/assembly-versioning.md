@@ -1,5 +1,5 @@
 ---
-title: "Управление версиями сборок | Документы Майкрософт"
+title: "Управление версиями сборок"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 1e6c2e433b5520e0720511c483f1378df8977f13
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 124d53efb8d87a9b002abb4cb8359a1bbf6f479b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assembly-versioning"></a>Управление версиями сборок
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/02/2017
   
  Указанные шаги показаны на следующей иллюстрации.  
   
- ![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
+ ![сборка, расширяющая myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
 Разрешение запроса привязки сборки  
   
  Дополнительные сведения о настройке приложений см. в разделе [Настройка приложений](../../../docs/framework/configure-apps/index.md). Дополнительные сведения о политике привязки см. в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -85,3 +85,4 @@ ms.lasthandoff: 06/02/2017
  [Настройка приложений](../../../docs/framework/configure-apps/index.md)   
  [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md)   
  [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+

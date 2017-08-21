@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Загрузка сборок в домен приложения | Документы Майкрософт"
+title: "Практическое руководство. Загрузка сборок в домен приложения"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,17 +17,17 @@ caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7caaa27fed13c33508b7decde1d87e723167d96b
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: c319da0f8e6f3cdfb83e659a778136d668699834
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Практическое руководство. Загрузка сборок в домен приложения
-Существует несколько способов загрузки сборки в домен приложения. Рекомендуется использовать метод <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` в Visual Basic) класса [System.Reflection.Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx). Другими способами загрузки сборок являются:  
+Существует несколько способов загрузки сборки в домен приложения. Рекомендуется использовать метод <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` в Visual Basic) класса <xref:System.Reflection.Assembly?displayProperty=fullName>. Другими способами загрузки сборок являются:  
   
--   Метод <xref:System.Reflection.Assembly.LoadFrom%2A> класса [Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) загружает сборку, заданную расположением ее файла. При загрузке сборок с помощью этого метода используется другой контекст загрузки.  
+-   Метод <xref:System.Reflection.Assembly.LoadFrom%2A> класса <xref:System.Reflection.Assembly> загружает сборку, заданную расположением ее файла. При загрузке сборок с помощью этого метода используется другой контекст загрузки.  
   
 -   Методы <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> и <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> загружают сборку в контекст, предназначенный только для отражения. Сборки, загруженные в этом контексте, могут быть проверены, но не выполнены, позволяя производить проверку сборок, предназначенных для других платформ. См. раздел [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
@@ -57,3 +57,4 @@ ms.lasthandoff: 06/02/2017
  [Использование доменов приложений](../../../docs/framework/app-domains/use.md)   
  [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)   
  [Домены приложений и сборки](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+
