@@ -1,28 +1,26 @@
 ---
-title: "Команда dotnet-list reference — CLI .NET Core"
-description: "Команду dotnet-list reference удобно использовать для перечисления ссылок между проектами."
-keywords: "dotnet-list, CLI, команда CLI, .NET Core"
-author: spboyer
+title: "Команда dotnet list reference — CLI .NET Core"
+description: "Команду dotnet list reference удобно использовать для перечисления ссылок между проектами."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8f954a0c-03f8-4fbc-a529-b313ab12c623
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 701345e4db51d26b9eefe8f02b6c0526934de5c9
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: b3e903c15a7486faa279d47ad5e2e00c090b19af
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-list-reference"></a>dotnet list reference
 
-# <a name="dotnet-list-reference"></a>dotnet-list reference
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Имя
 
-`dotnet-list reference` — перечисляет перекрестные ссылки между проектами.
+`dotnet list reference` — перечисляет перекрестные ссылки между проектами.
 
 ## <a name="synopsis"></a>Краткий обзор
 

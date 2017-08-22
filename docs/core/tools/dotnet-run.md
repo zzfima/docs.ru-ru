@@ -1,32 +1,44 @@
 ---
-title: "Команда dotnet-run — CLI .NET Core"
-description: "Команда dotnet-run — это удобное средство для запуска приложения из исходного кода."
-keywords: "dotnet-run, CLI, команда CLI, .NET Core"
-author: blackdwarf
+title: "Команда dotnet run — CLI .NET Core"
+description: "Команда dotnet run — это удобное средство для запуска приложения из исходного кода."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/22/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0a6fce4f83808076b7cbcabdaa948badde2cf80
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 30dd1a7715c8573062837aaf71344258d0036b5d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-run"></a>dotnet run
 
-# <a name="dotnet-run"></a>dotnet-run
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя 
+## <a name="name"></a>Имя
 
-`dotnet-run` — выполняет исходный код без дополнительных явных команд компиляции или запуска.
+`dotnet run` — выполняет исходный код без дополнительных явных команд компиляции или запуска.
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
+
+---
 
 ## <a name="description"></a>Описание
 
@@ -37,45 +49,91 @@ ms.lasthandoff: 07/28/2017
 Когда в проекте задано несколько платформ, выполнение `dotnet run` приводит к ошибке, если только для указания платформы не используется параметр `-f|--framework <FRAMEWORK>`.
 
 Команда `dotnet run` используется в контексте проектов, а не созданных сборок. Если вместо этого вы пытаетесь запустить библиотеку DLL платформозависимого приложения, следует использовать [dotnet](dotnet.md) без команды. Например, для выполнения `myapp.dll` используйте:
- 
+
 ```
 dotnet myapp.dll
 ```
 
 Дополнительные сведения о драйвере `dotnet` см. в разделе [Средства интерфейса командной строки (CLI) .NET Core](index.md).
 
-Для запуска приложения команда `dotnet run` разрешает зависимости приложения, выходящие за пределы общей среды выполнения, из кэша NuGet. Из-за использования кэшированных зависимостей не рекомендуется применять команду `dotnet run` для запуска приложений в рабочей среде. Вместо этого [создайте развертывание](../deploying/index.md) с помощью команды [`dotnet publish`](dotnet-publish.md) и разверните опубликованные выходные данные. 
+Для запуска приложения команда `dotnet run` разрешает зависимости приложения, выходящие за пределы общей среды выполнения, из кэша NuGet. Из-за использования кэшированных зависимостей не рекомендуется применять команду `dotnet run` для запуска приложений в рабочей среде. Вместо этого [создайте развертывание](../deploying/index.md) с помощью команды [`dotnet publish`](dotnet-publish.md) и разверните опубликованные выходные данные.
 
 ## <a name="options"></a>Параметры
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `--`
 
-Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после этого передаются выполняемому приложению. 
+Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после этого передаются выполняемому приложению.
+
+`-c|--configuration {Debug|Release}`
+
+Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Выполняет сборку и запуск приложения с использованием указанной [платформы](../../standard/frameworks.md). Эта платформа должна быть указана в файле проекта.
 
 `-h|--help`
 
 Выводит краткую справку по команде.
 
-`-c|--configuration <CONFIGURATION>`
+`--launch-profile <NAME>`
 
-Конфигурация, используемая для сборки проекта. Значение по умолчанию — `Debug`.
+Имя профиля запуска (при его наличии), который следует использовать при запуске приложения. Профили запуска обычно определяются в файле *launchSettings.json* и, как правило, называются `Development`, `Staging` и `Production`. Дополнительные сведения см. в разделе [Работа с несколькими средами](/aspnetcore/fundamentals/environments).
+
+`--no-build`
+
+Не выполняет сборку проекта перед запуском.
+
+`--no-launch-profile`
+
+Не пытается использовать файл *launchSettings.json* для настройки приложения.
+
+`--no-restore`
+
+Не выполняет неявное восстановление при выполнении команды.
+
+`-p|--project <PATH>`
+
+Задает путь к запускаемому файлу проекта (имя папки или полный путь). Если значение не задано, по умолчанию используется текущий каталог.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--`
+
+Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после этого передаются выполняемому приложению.
+
+`-c|--configuration {Debug|Release}`
+
+Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
 Выполняет сборку и запуск приложения с использованием указанной [платформы](../../standard/frameworks.md). Эта платформа должна быть указана в файле проекта.
+
+`-h|--help`
+
+Выводит краткую справку по команде.
 
 `-p|--project <PATH/PROJECT.csproj>`
 
 Указывает путь и имя файла проекта. (См. примечание.) Если значение не задано, по умолчанию используется текущий каталог.
 
 > [!NOTE]
-> Используйте путь и имя файла проекта с параметром `-p|--project`. Регрессия в интерфейсе командной строки не позволяет указать путь к папке сейчас. Для получения дополнительных сведений и отслеживания этой проблемы см. раздел [dotnet run -p, не удается запустить проект (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992).
+> Используйте путь и имя файла проекта с параметром `-p|--project`. Регрессия в интерфейсе командной строки не позволяет указать путь к папке в пакете SDK для .NET Core 1.x. Дополнительные сведения об этой проблеме см. в разделе [dotnet run -p, не удается запустить проект (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992).
+
+---
 
 ## <a name="examples"></a>Примеры
 
 Выполнение проекта в текущем каталоге:
 
-`dotnet run` 
+`dotnet run`
 
 Выполнение указанного проекта:
 
