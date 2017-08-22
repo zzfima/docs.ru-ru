@@ -1,28 +1,26 @@
 ---
-title: "Команда dotnet-migrate — CLI .NET Core"
-description: "Команда dotnet-migrate переносит проект и все его зависимости."
-keywords: "dotnet-migrate, интерфейс командной строки, команда CLI .NET Core"
-author: blackdwarf
+title: "Команда dotnet migrate — CLI .NET Core"
+description: "Команда dotnet migrate переносит проект и все его зависимости."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8491d69b2e0df7b3bd2741e34abdb9631777019
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 674b19f9fc546e057c7b7fa4b024a0b013eda7e5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-migrate"></a>dotnet migrate
 
-# <a name="dotnet-migrate"></a>dotnet-migrate
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Имя
 
-`dotnet-migrate` — перемещает проект .NET Core предварительной версии 2 в проект пакета SDK для .NET Core 1.0.
+`dotnet migrate` — перемещает проект .NET Core предварительной версии 2 в проект пакета SDK для .NET Core 1.0.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -41,7 +39,7 @@ ms.lasthandoff: 07/28/2017
 * Файл *solution.sln*, куда переносятся проекты, на которые ссылается решение.
 * Рекурсивно все подкаталоги в этом каталоге.
 
-Команда `dotnet migrate` сохраняет перенесенный файл *project.json* в каталоге `backup` (создается, если не существует). Это поведение можно переопределить с помощью параметра `--skip-backup`. 
+Команда `dotnet migrate` сохраняет перенесенный файл *project.json* в каталоге `backup` (создается, если не существует). Это поведение можно переопределить с помощью параметра `--skip-backup`.
 
 По умолчанию операция миграции выводит состояние процесса миграции в стандартный вывод (STDOUT). Если вы используете параметр `--report-file <REPORT_FILE>`, выходные данные сохраняются в указанном файле. 
 
@@ -64,11 +62,11 @@ ms.lasthandoff: 07/28/2017
 
 `-h|--help`
 
-Выводит краткую справку по команде.  
+Выводит краткую справку по команде.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-Файл CSPROJ шаблона для переноса. По умолчанию используется тот же шаблон, что и проигнорированный в `dotnet new console`. 
+Файл CSPROJ шаблона для переноса. По умолчанию используется тот же шаблон, что и проигнорированный в `dotnet new console`.
 
 `-v|--sdk-package-version <VERSION>`
 
@@ -107,4 +105,3 @@ ms.lasthandoff: 07/28/2017
 Перенос только текущего проекта без взаимных зависимостей проектов. Кроме того, используется определенная версия пакета SDK:
 
 `dotnet migrate -s -v 1.0.0-preview4`
-

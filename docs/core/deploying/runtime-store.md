@@ -1,0 +1,160 @@
+---
+title: "Хранилище пакетов среды выполнения"
+description: "В этом разделе описываются хранилище пакетов среды выполнения и целевые манифесты, используемые платформой .NET Core."
+keywords: ".NET, .NET Core, dotnet store, хранилище пакетов среды выполнения"
+author: bleroy
+ms.author: mairaw
+ms.date: 08/12/2017
+ms.topic: article
+ms.prod: .net-core
+ms.devlang: dotnet
+ms.assetid: 9521d8b4-25fc-412b-a65b-4c975ebf6bfd
+ms.translationtype: HT
+ms.sourcegitcommit: 57e9a2b8aa952860a380b60c44fd2df16ef6463c
+ms.openlocfilehash: e039190b49b35bd2675a175c6ff3631d6d344e4a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
+
+---
+# <a name="runtime-package-store"></a>Хранилище пакетов среды выполнения
+
+Начиная с версии .NET Core 2.0, можно упаковывать и развертывать приложения на основе известного набора пакетов, имеющегося в целевой среде. Преимущества заключаются в ускорении развертывания, сокращении используемого дискового пространства и в некоторых случаях повышении производительности запуска.
+
+Эта возможность реализована в виде *хранилища пакетов среды выполнения*, представляющего собой каталог на диске, в котором хранятся пакеты (как правило, */usr/local/share/dotnet/store* в macOS или Linux и *C:/Program Files/dotnet/store* в Windows). В этом каталоге есть подкаталоги для архитектур и [целевых платформ](../../standard/frameworks.md). Структура файлов аналогична [структуре ресурсов NuGet на диске](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure):
+
+\dotnet   
+&nbsp;&nbsp;\store   
+&nbsp;&nbsp;&nbsp;&nbsp;\x64   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\net47   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+&nbsp;&nbsp;&nbsp;&nbsp;\x86   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\net47   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+
+В файле *целевого манифеста* содержится список пакетов, имеющихся в хранилище пакетов среды выполнения. Разработчики могут указывать этот манифест в качестве целевого при публикации приложений. Целевой манифест, как правило, предоставляется владельцем целевой рабочей среды.
+
+## <a name="preparing-a-runtime-environment"></a>Подготовка среды выполнения
+
+Администратор среды выполнения может оптимизировать приложения для более быстрого развертывания и сокращения используемого дискового пространства, создав хранилище пакетов среды выполнения и соответствующий целевой манифест.
+
+Для этого сначала необходимо создать *манифест хранилища пакетов*, который содержит список пакетов, имеющихся в хранилище пакетов среды выполнения. Формат этого файла совместим с форматом файла проекта (*CSPROJ*).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="<NUGET_PACKAGE>" Version="<VERSION>" />
+    <!-- Include additional packages here -->
+  </ItemGroup>
+</Project>
+```
+
+**Пример**
+
+В приведенном ниже примере манифест хранилища пакетов (*packages.csproj*) используется для добавления [`Newtonsoft.Json`](https://www.nuget.org/packages/Newtonsoft.Json/) и [`Moq`](https://www.nuget.org/packages/moq/) в хранилище пакетов среды выполнения.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Moq" Version="4.7.63" />
+  </ItemGroup>
+</Project>
+```
+
+Чтобы подготовить хранилище пакетов среды выполнения, выполните команду `dotnet store`, указав манифест хранилища пакетов, среду выполнения и платформу.
+
+```console
+dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
+```
+
+**Пример**
+
+```console
+dotnet store --manifest packages.csproj --runtime win10-x64 --framework netstandard2.0 --framework-version 2.0.0
+```
+
+В команду [`dotnet store`](../tools/dotnet-store.md) можно передать несколько путей к целевым манифестам хранилищ пакетов, указав параметр и путь несколько раз.
+
+По умолчанию выходные данные команды представляют собой хранилище пакетов в подкаталоге *.dotnet/store* профиля пользователя. С помощью параметра `--output <OUTPUT_DIRECTORY>` можно задать другое расположение. Корневой каталог хранилища содержит файл *artifact.xml* целевого манифеста. Этот файл можно сделать доступным для скачивания и использования разработчиками, которые при публикации своих приложений хотят задать это хранилище в качестве целевого.
+
+**Пример**
+
+После выполнения команды в предыдущем примере создается приведенный ниже файл *artifact.xml*. Обратите внимание на то, что пакет [`Castle.Core`](https://www.nuget.org/packages/Castle.Core/) является зависимостью `Moq`, поэтому он включается автоматически и указывается в файле манифеста *artifacts.xml*.
+
+```xml
+<StoreArtifacts>
+  <Package Id="newtonsoft.json" Version="10.0.3" />
+  <Package Id="castle.core" Version="4.1.0" />
+  <Package Id="moq" Version="4.7.63" />
+</StoreArtifacts>
+```
+
+## <a name="publishing-an-app-against-a-target-manifest"></a>Публикация приложения для целевого манифеста
+
+Если на диске есть файл целевого манифеста, путь к нему указывается при публикации приложения с помощью команды [`dotnet publish`](../tools/dotnet-publish.md).
+
+```console
+dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
+```
+
+**Пример**
+
+```console
+dotnet publish --manifest manifest.xml
+```
+
+Опубликованное приложение развертывается в среде, в которой имеются пакеты, описываемые в целевом манифесте. В противном случае приложение не запустится.
+
+Чтобы при публикации приложения указать несколько целевых манифестов, добавьте параметр и путь несколько раз (например, `--manifest manifest1.xml --manifest manifest2.xml`). При этом приложение ограничивается объединением множеств пакетов, указанных в целевых файлах манифестов, которые заданы в команде.
+
+## <a name="specifying-target-manifests-in-the-project-file"></a>Указание целевых манифестов в файле проекта
+
+Помимо указания целевых манифестов с помощью команды [`dotnet publish`](../tools/dotnet-publish.md), их можно указать в файле проекта в виде разделенного точками с запятой списка путей под тегом **\<TargetManifestFiles>**.
+
+```xml
+<PropertyGroup>
+  <TargetManifestFiles>manifest1.xml;manifest2.xml</TargetManifestFiles>
+</PropertyGroup>
+```
+
+Указывать целевые манифесты в файле проекта следует только в том случае, если целевая среда приложения известна, как в случае с проектами .NET Core. В случае с проектами с открытым кодом ситуация иная. Пользователи проекта с открытым кодом, как правило, развертывают его в разных рабочих средах. В этих рабочих средах обычно предустановлены разные наборы пакетов. Делать предположения о целевых манифестах в таких средах нельзя, поэтому следует использовать параметр `--manifest` команды [`dotnet publish`](../tools/dotnet-publish.md).
+
+## <a name="aspnet-core-implicit-store"></a>Неявное хранилище ASP.NET Core
+
+Хранилище пакетов среды выполнения неявно используется приложением ASP.NET Core при его развертывании в качестве приложения с [зависящим от платформы развертыванием (FDD)](index.md#framework-dependent-deployments-fdd). Целевые платформы в [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) включают в себя манифесты, ссылающиеся на неявное хранилище пакетов в целевой системе. Кроме того, если приложение FDD зависит от пакета `Microsoft.AspNetCore.All`, опубликованное приложение будет содержать только приложение и его ресурсы, но не пакеты, перечисленные в метапакете `Microsoft.AspNetCore.All`. Предполагается, что эти пакеты имеются в целевой системе.
+
+Хранилище пакетов среды выполнения устанавливается на узле при установке пакета SDK для .NET Core. Другие установщики также могут предоставлять хранилище пакетов среды выполнения. Сюда относятся установки пакета SDK для .NET Core из архива Zip или Tarball, `apt-get`, Red Hat Yum, пакет .NET Core Windows Server Hosting и установки хранилища пакетов среды выполнения, осуществленные вручную.
+
+При развертывании приложения с [зависящим от платформы развертыванием (FDD)](index.md#framework-dependent-deployments-fdd) в целевой среде должен быть установлен пакет SDK для .NET Core. Если приложение развертывается в среде, в которой нет ASP.NET Core, можно отказаться от использования неявного хранилища, указав параметр **\<PublishWithAspNetCoreTargetManifest>** со значением `false` в файле проекта, как в следующем примере:
+
+```xml
+<PropertyGroup>
+  <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+</PropertyGroup>
+```
+
+> [!NOTE] 
+> В случае с приложениями с [автономным развертыванием (SCD)](index.md#self-contained-deployments-scd) предполагается, что в целевой системе необязательно имеются требуемые пакеты манифеста. Поэтому для приложения SCD параметру **\<PublishWithAspNetCoreTargetManifest>** нельзя присвоить значение `true`.
+
+Если вы развертываете приложение с зависимостью манифеста, которая присутствует в развертывании (сборка имеется в папке *bin*), хранилище пакетов среды выполнения *не используется* для этой сборки на узле. Сборка в папке *bin* используется вне зависимости от ее наличия в хранилище пакетов среды выполнения на узле.
+
+Версия зависимости, указанная в манифесте, должна соответствовать версии зависимости в хранилище пакетов среды выполнения. Если версия зависимости в целевом манифесте и версия, имеющаяся в хранилище пакетов среды выполнения, не совпадают и приложение не включает в себя требуемую версию пакета, приложение не будет запускаться. В исключении будет указано имя целевого манифеста, вызываемого для сборки хранилища пакетов среды выполнения, что может помочь в устранении несоответствия.
+
+Если развертывание *усекается* при публикации, в публикуемых выходных данных будут отсутствовать только те версии пакетов манифеста, которые вы указали. Чтобы приложение могло запускаться, на узле должны присутствовать пакеты с указанными версиями.
+
+## <a name="see-also"></a>См. также
+ [dotnet-publish](../tools/dotnet-publish.md)   
+ [dotnet-store](../tools/dotnet-store.md)   
+

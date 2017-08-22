@@ -1,38 +1,51 @@
 ---
-title: "Команда dotnet-restore — CLI .NET Core"
+title: "Команда dotnet restore — CLI .NET Core"
 description: "Вы узнаете, как восстановить зависимости и связанные с проектом средства при помощи команды dotnet restore."
 keywords: "dotnet-restore, CLI, команда CLI, .NET Core"
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 03/24/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a9e471bd1d66d68703b025cd3eaa009cb296a9fb
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: e9f122c71330f93e02157e36f9fbbc92a0dddfce
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-restore"></a>dotnet restore
 
-# <a name="dotnet-restore"></a>dotnet-restore
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Имя
 
-`dotnet-restore` — восстанавливает зависимости и средства проекта.
+`dotnet restore` — восстанавливает зависимости и средства проекта.
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet restore [<ROOT>] [-s|--source] [-r|--runtime] [--packages] [--disable-parallel] [--configfile] [--no-cache] [--ignore-failed-sources] [--no-dependencies] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [-h|--help]
+```
+
+---
 
 ## <a name="description"></a>Описание
 
 Команда `dotnet restore` использует NuGet для восстановления зависимостей, а также связанных с проектом средств, которые указаны в файле проекта. По умолчанию восстановление зависимостей и средств производится параллельно.
 
-Для восстановления зависимостей NuGet требуются каналы, где находятся пакеты. Каналы обычно предоставляются посредством файла конфигурации *NuGet.config*. Файл конфигурации по умолчанию предоставляется при установке средств CLI. Вы можете указать дополнительные веб-каналы, создав собственный файл *NuGet.config* в каталоге проекта. Можно также указать дополнительные веб-каналы на вызов из командной строки. 
+Для восстановления зависимостей NuGet требуются каналы, где находятся пакеты. Каналы обычно предоставляются посредством файла конфигурации *NuGet.config*. Файл конфигурации по умолчанию предоставляется при установке средств CLI. Вы можете указать дополнительные веб-каналы, создав собственный файл *NuGet.config* в каталоге проекта. Можно также указать дополнительные веб-каналы на вызов из командной строки.
 
 Для зависимостей можно указать, куда помещаются восстанавливаемые пакеты во время операции восстановления, с помощью аргумента `--packages`. Если значение не указано, используется кэш пакетов NuGet по умолчанию. Он находится в каталоге `.nuget/packages` в домашнем каталоге пользователя во всех операционных системах (например, */home/user1* в Linux или *C:\Users\user1* в Windows).
 
@@ -42,47 +55,95 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="arguments"></a>Аргументы
 
-`ROOT` 
-    
+`ROOT`
+
 Дополнительный путь к файлу проекта для восстановления.
 
 ## <a name="options"></a>Параметры
 
-`-h|--help`
-
-Выводит краткую справку по команде.
-
-`-s|--source <SOURCE>`
-
-Указывает источник пакета NuGet для использования во время операции восстановления. Переопределяет все источники, указанные в файлах *NuGet.config*. Чтобы указать несколько источников, задайте этот параметр несколько раз.
-
-`-r|--runtime <RUNTIME_IDENTIFIER>`
-
-Задает среду выполнения для восстановления пакетов. Это позволяет восстановить пакеты для сред выполнения, явно не указанных в теге `<RuntimeIdentifiers>` файла *CSPROJ*. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md). Чтобы указать несколько идентификаторов RID, задайте этот параметр несколько раз.
-
-`--packages <PACKAGES_DIRECTORY>`
-
-Задает каталог для восстановленных пакетов. 
-
-`--disable-parallel`
-
-Отключает параллельное восстановление нескольких проектов. 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `--configfile <FILE>`
 
 Файл конфигурации NuGet (*NuGet.config*), используемый для операции восстановления.
 
-`--no-cache`
+`--disable-parallel`
 
-Отключает кэширование пакетов и HTTP-запросов.
+Отключает параллельное восстановление нескольких проектов.
+
+`--force`
+
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Равносильно удалению файла *project.assets.json*.
+
+`-h|--help`
+
+Выводит краткую справку по команде.
 
 `--ignore-failed-sources`
 
 Предупреждение о сбоях источников выдается только при наличии пакетов, соответствующих требованию к версии.
 
+`--no-cache`
+
+Отключает кэширование пакетов и HTTP-запросов.
+
 `--no-dependencies`
 
 Восстанавливая проект с перекрестными ссылками между проектами, не восстанавливайте ссылки, — только корневой проект.
+
+`--packages <PACKAGES_DIRECTORY>`
+
+Задает каталог для восстановленных пакетов.
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Задает среду выполнения для восстановления пакетов. Это позволяет восстановить пакеты для сред выполнения, явно не указанных в теге `<RuntimeIdentifiers>` файла *CSPROJ*. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md). Чтобы указать несколько идентификаторов RID, задайте этот параметр несколько раз.
+
+`-s|--source <SOURCE>`
+
+Указывает источник пакета NuGet для использования во время операции восстановления. Переопределяет все источники, указанные в файлах *NuGet.config*. Чтобы указать несколько источников, задайте этот параметр несколько раз.
+
+`--verbosity <LEVEL>`
+
+Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`--configfile <FILE>`
+
+Файл конфигурации NuGet (*NuGet.config*), используемый для операции восстановления.
+
+`--disable-parallel`
+
+Отключает параллельное восстановление нескольких проектов.
+
+`-h|--help`
+
+Выводит краткую справку по команде.
+
+`--ignore-failed-sources`
+
+Предупреждение о сбоях источников выдается только при наличии пакетов, соответствующих требованию к версии.
+
+`--no-cache`
+
+Отключает кэширование пакетов и HTTP-запросов.
+
+`--no-dependencies`
+
+Восстанавливая проект с перекрестными ссылками между проектами, не восстанавливайте ссылки, — только корневой проект.
+
+`--packages <PACKAGES_DIRECTORY>`
+
+Задает каталог для восстановленных пакетов.
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Задает среду выполнения для восстановления пакетов. Это позволяет восстановить пакеты для сред выполнения, явно не указанных в теге `<RuntimeIdentifiers>` файла *CSPROJ*. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md). Чтобы указать несколько идентификаторов RID, задайте этот параметр несколько раз.
+
+`-s|--source <SOURCE>`
+
+Указывает источник пакета NuGet для использования во время операции восстановления. Переопределяет все источники, указанные в файлах *NuGet.config*. Чтобы указать несколько источников, задайте этот параметр несколько раз.
 
 `--verbosity <LEVEL>`
 
@@ -92,21 +153,20 @@ ms.lasthandoff: 07/28/2017
 
 Восстановление зависимостей и средств для проекта в текущем каталоге:
 
-`dotnet restore` 
+`dotnet restore`
 
 Восстановление зависимостей и средств для проекта `app1` по указанному пути:
 
 `dotnet restore ~/projects/app1/app1.csproj`
-    
+
 Восстановление зависимостей и средств для проекта в текущем каталоге с использованием пути к файлу, заданного в качестве источника:
 
-`dotnet restore -s c:\packages\mypackages` 
+`dotnet restore -s c:\packages\mypackages`
 
 Восстановление зависимостей и средств для проекта в текущем каталоге с использованием двух путей к файлу, заданных в качестве источника:
 
-`dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages` 
+`dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
 
 Восстановление зависимостей и средств для проекта в текущем каталоге с выводом минимального объема выходных данных:
 
 `dotnet restore --verbosity minimal`
-
