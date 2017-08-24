@@ -30,7 +30,7 @@ caps.handback.revision: 11
 |[double](../../../csharp/language-reference/keywords/double.md)|Число с плавающей запятой|D или d|  
 |[enum](../../../csharp/language-reference/keywords/enum.md)|Перечисление||  
 |[float](../../../csharp/language-reference/keywords/float.md)|Число с плавающей запятой|F или f|  
-|[Целочисленное значение.](../../../csharp/language-reference/keywords/int.md)|Целое число со знаком||  
+|[int](../../../csharp/language-reference/keywords/int.md)|Целое число со знаком||  
 |[long](../../../csharp/language-reference/keywords/long.md)|Целое число со знаком|L или l|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|Целое число со знаком||  
 |[short](../../../csharp/language-reference/keywords/short.md)|Целое число со знаком||  

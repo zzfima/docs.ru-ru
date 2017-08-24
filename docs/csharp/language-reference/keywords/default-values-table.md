@@ -46,7 +46,7 @@ int myInt = 0;
 |[double](../../../csharp/language-reference/keywords/double.md)|0,0D|  
 |[enum](../../../csharp/language-reference/keywords/enum.md)|Значение, созданное выражением \(E\)0, где E — идентификатор перечисления.|  
 |[float](../../../csharp/language-reference/keywords/float.md)|0,0F|  
-|[Целочисленное значение.](../../../csharp/language-reference/keywords/int.md)|0|  
+|[int](../../../csharp/language-reference/keywords/int.md)|0|  
 |[long](../../../csharp/language-reference/keywords/long.md)|0L|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|0|  
 |[short](../../../csharp/language-reference/keywords/short.md)|0|  
