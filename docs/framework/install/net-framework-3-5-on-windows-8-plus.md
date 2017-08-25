@@ -13,10 +13,10 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 ms.translationtype: HT
-ms.sourcegitcommit: 20b0c1b36f705deb2f46ef4ab23653f829faf7ca
-ms.openlocfilehash: 8a0395e28c01363eed27f327ea623feb4832c844
+ms.sourcegitcommit: 93f77dd5c3ca61935ae98ddef15f9c5cf7644bbb
+ms.openlocfilehash: e9c8dcfacff689761d9ec891db8a1a4756acece0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/08/2017
   
 - [Скачивание установщика .NET Framework 3.5](http://www.microsoft.com/en-us/download/details.aspx?id=21) (Примечание. Во время скачивания установщика не выполняется загрузка самой платформы .NET Framework; этот установщик обращается к Центру обновления Windows.)  
   
-Во время установки могут возникнуть ошибки 0x800f0906, 0x800f0907 или 0x800f081f. В этом случае обратитесь к разделу [Ошибка установки .NET Framework 3.5: 0x800f0906, 0x800f0907 или 0x800f081f](https://support.microsoft.com/en-us/kb/2734782). Обратите внимание, что их можно устранить, установив [обновление системы безопасности 3005628](https://support.microsoft.com/kb/3005628).  
+Во время установки могут возникнуть ошибки 0x800f0906, 0x800f0907 или 0x800f081f. В этом случае обратитесь к разделу [Ошибка установки .NET Framework 3.5: 0x800f0906, 0x800f0907 или 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09). Обратите внимание, что их можно устранить, установив [обновление системы безопасности 3005628](https://support.microsoft.com/kb/3005628).  
   
 Если ни один из указанных способов не подходит или у вас нет подключения к Интернету, необходимо использовать установочный носитель Windows. Подробные сведения о разрешении для кода ошибки 0x800f0906 см. в разделе "Метод 3" в [статье об ошибках установки .NET Framework 3.5](https://support.microsoft.com/en-us/kb/2734782). Если у вас нет установочного носителя, обратитесь к разделу [Создание установочного носителя Windows 8.1](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0).  
   

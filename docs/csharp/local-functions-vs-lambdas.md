@@ -6,7 +6,7 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 06/27/2016
 ms.topic: article
-ms.prod: visual-studio-dev-15
+ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
@@ -17,8 +17,7 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 08/16/2017
 
 ---
-
-### <a name="local-functions-compared-to-lambda-expressions"></a>Сравнение локальных функций и лямбда-выражений
+# <a name="local-functions-compared-to-lambda-expressions"></a>Сравнение локальных функций и лямбда-выражений
 
 На первый взгляд [локальные функции](programming-guide/classes-and-structs/local-functions.md) и [лямбда-выражения](lambda-expressions.md) во многом похожи.
 В зависимости от ваших требований локальные функции зачастую позволяют реализовать более простое и эффективное решение.
