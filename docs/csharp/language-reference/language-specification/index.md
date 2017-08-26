@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8586e5601db67105e9e2f4290f37d2598fb89a
+ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
+ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="c-60-draft-language-specification"></a>Предварительная спецификация языка C# 6.0
@@ -47,8 +47,9 @@ ms.lasthandoff: 07/28/2017
 Найденные в предварительной спецификации проблемы следует публиковать в репозитории [dotnet/csharplang](https://github.com/dotnet/csharplang/issues). Если же вам интересно исправить какие-то из найденных вами ошибок, вы можете отправить [запрос на вытягивание](https://github.com/dotnet/csharplang/pulls) в тот же репозиторий.
 
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../language-reference/index.md) [Руководство по программированию на C#](../../programming-guide/index.md)
+ [Справочник по C#](../../language-reference/index.md)  
+ [Руководство по программированию на C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
-[Далее](../../../../_csharplang/spec/lexical-structure.md)
+[Вперед](../../../../_csharplang/spec/lexical-structure.md)
 
