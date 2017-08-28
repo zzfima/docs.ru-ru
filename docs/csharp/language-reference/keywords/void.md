@@ -1,5 +1,5 @@
 ---
-title: "void (справочник по C#) | Документы Майкрософт"
+title: "void (справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,33 +30,33 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b4aa3c7c54e5e4d53975262adbbd9b54c701a69e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d1bd7ece5ce3b558c616a4eb3a4668c3c13eb1cb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="void-c-reference"></a>void (справочник по C#)
-При использовании в качестве типа возвращаемого значения для метода ключевое слово `void` указывает, что метод не возвращает значение.  
-  
- Ключевое слово `void` не допускается в списке параметров метода. Не принимающий параметров и не возвращающий значений метод объявляется следующим образом:  
-  
-```  
-public void SampleMethod()  
-{  
-    // Body of the method.  
-}  
-```  
-  
- Ключевое слово `void` также используется в небезопасном контексте для объявления указателя на неизвестный тип. Дополнительные сведения см. в разделе [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
-  
- Ключевое слово `void` является псевдонимом типа <xref:System.Void?displayProperty=fullName> платформы .NET Framework.  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
-  
-## <a name="see-also"></a>См. также  
+При использовании в качестве типа возвращаемого значения для метода ключевое слово `void` указывает, что метод не возвращает значение.
+
+Ключевое слово `void` не допускается в списке параметров метода. Не принимающий параметров и не возвращающий значений метод объявляется следующим образом:
+
+```csharp
+public void SampleMethod()
+{
+    // Body of the method.
+}
+```
+
+Ключевое слово `void` также используется в небезопасном контексте для объявления указателя на неизвестный тип. Дополнительные сведения см. в разделе [Типы указателей](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).
+
+`void` — это псевдоним для типа <xref:System.Void?displayProperty=fullName> в .NET Framework.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>См. также
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   

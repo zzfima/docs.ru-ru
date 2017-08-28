@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#) | Документы Майкрософт"
+title: "Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eb358daf212b171acd998a1aa74fe2ecd82a239a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bfa7781241b837f353fe34d43b8cc6ab82f15564
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (C#)
@@ -64,7 +64,7 @@ var result = await myTask;
   
     -   Создайте приложение WPF, которое содержит текстовое поле и кнопку. Назовите кнопку `startButton`, а текстовое поле — `resultsTextBox`.  
   
-    -   Добавьте ссылку на <xref:System.Net.Http>.  
+    -   Добавьте ссылку для <xref:System.Net.Http>.  
   
     -   Добавьте в файл MainWindow.xaml.cs директиву `using` для `System.Net.Http`.  
   
@@ -84,7 +84,7 @@ var result = await myTask;
   
 3.  Добавьте следующие вспомогательные методы в проект:  
   
-    -   `ProcessURLAsync` использует метод <xref:System.Net.Http.HttpClient> для загрузки содержимого веб-сайта в виде массива байтов. Вспомогательный метод `ProcessURLAsync` затем отображает и возвращает длину массива.  
+    -   `ProcessURLAsync` использует метод <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта в виде массива байтов. Вспомогательный метод `ProcessURLAsync` затем отображает и возвращает длину массива.  
   
     -   `DisplayResults` показывает число байтов в массиве байтов для каждого URL-адреса. Эти выходные данные показывают, когда именно каждая задача завершает загрузку.  
   
@@ -112,7 +112,7 @@ var result = await myTask;
   
 4.  Наконец, определите метод `CreateMultipleTasksAsync`, который выполняет следующие действия.  
   
-    -   Метод объявляет объект `HttpClient`, который требуется для доступа к методу <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> в `ProcessURLAsync`.  
+    -   Этот метод объявляет объект `HttpClient`, который используется методом доступа <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> в `ProcessURLAsync`.  
   
     -   Метод создает и запускает три задачи типа <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом. При завершении каждой задачи `DisplayResults` отображает URL-адрес и длину загруженного содержимого задачи. Поскольку задачи выполняются асинхронно, порядок, в котором отображаются результаты, может отличаться от порядка, в котором они были объявлены.  
   

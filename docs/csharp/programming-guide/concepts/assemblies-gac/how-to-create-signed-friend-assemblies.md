@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Создание подписанных дружественных сборок (C#) | Документы Майкрософт"
+title: "Практическое руководство. Создание подписанных дружественных сборок (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 890cead4b28b8532dd7bd7f571defe7e280e4cdc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Практическое руководство. Создание подписанных дружественных сборок (C#)
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Создайте файл C# с именем `friend_signed_A`, содержащий приведенный ниже код. Код использует атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> для объявления friend_signed_B в качестве дружественной сборки.  
+3.  Создайте файл C# с именем `friend_signed_A`, содержащий приведенный ниже код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
   
      Средство задания строгих имен создает новый открытый ключ при каждом запуске. Таким образом, необходимо заменить открытый ключ в следующем коде только что созданным открытым ключом, как показано в следующем примере.  
   
@@ -95,14 +96,14 @@ ms.lasthandoff: 03/13/2017
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     Имя сборки, созданное компилятором, должно соответствовать имени дружественной сборки, переданной в атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.  Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     Имя сборки, созданной компилятором, должно соответствовать имени дружественной сборки, передаваемой атрибуту <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Необходимо явно указать имя выходной сборки (EXE или DLL) с помощью параметра компилятора `/out`.  Дополнительные сведения см. в разделе [/out (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
 7.  Запустите файл friend_signed_B.exe.  
   
      Программа выводит строку "Class1.Test".  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Существует сходство между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission>. Основное различие заключается в том, что <xref:System.Security.Permissions.StrongNameIdentityPermission> могут требоваться разрешения безопасности для выполнения определенного раздела кода, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> контролирует видимость типов и членов `internal`.  
+ Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
@@ -113,3 +114,4 @@ ms.lasthandoff: 03/13/2017
  [Sn.exe (средство строгих имен)](https://msdn.microsoft.com/library/k5b5tt23)   
  [Создание и использование сборок со строгими именами](https://msdn.microsoft.com/library/xwb8f617)   
  [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+

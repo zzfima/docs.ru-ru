@@ -1,5 +1,5 @@
 ---
-title: "sizeof (справочник по C#) | Документы Майкрософт"
+title: "sizeof (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7a1944caceaba3ffb8d83a8f67e5ef2975bf9644
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15d11071c369fad398d40cfef301e462c006d5e4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sizeof-c-reference"></a>sizeof (Справочник по C#)
@@ -74,7 +74,7 @@ int intSize = sizeof(int);
 |`sizeof(decimal)`|16|  
 |`sizeof(bool)`|1|  
   
- Для всех остальных типов, в том числе для структур, оператор `sizeof` можно использовать только в блоках небезопасного кода. Можно также использовать метод <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>, однако возвращаемое им значение не всегда совпадает со значением метода `sizeof`. Метод <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> возвращает размер после маршалинга типа, тогда как оператор `sizeof` возвращает размер сразу после выделения памяти средой CLR, включая заполнения.  
+ Для всех остальных типов, в том числе для структур, оператор `sizeof` можно использовать только в блоках небезопасного кода. Несмотря на то, что вы можете использовать метод <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>, возвращаемое им значение не всегда совпадает со значением, которое возвращает метод `sizeof`. Метод <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> возвращает размер после маршалинга типа, тогда как оператор `sizeof` возвращает размер сразу после выделения памяти средой CLR, включая заполнения.  
   
 ## <a name="example"></a>Пример  
  [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
@@ -91,3 +91,4 @@ int intSize = sizeof(int);
  [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)   
  [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md)
+

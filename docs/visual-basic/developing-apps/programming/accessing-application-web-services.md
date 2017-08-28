@@ -1,5 +1,5 @@
 ---
-title: "Доступ к веб-службам приложения (Visual Basic) | Документы Майкрософт"
+title: "Доступ к веб-службам приложения (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b9e7bb7884da98f419d6de4a7463216a32bb0a5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1933167db4e42ae1a2d1634573bc824750a792da
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>Доступ к веб-службам приложения (Visual Basic)
-Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект. Каждый экземпляр создается по запросу. Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`. Имя свойства совпадает с именем веб-службы, к которой обращается свойство. Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, — это веб-служба.  
+Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект. Каждый экземпляр создается по запросу. Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`. Имя свойства совпадает с именем веб-службы, к которой обращается свойство. Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, является веб-службой.  
   
 ## <a name="tasks"></a>Задачи  
  В следующей таблице перечислены возможные способы доступа к веб-службам, на которые ссылается приложение.  
@@ -50,3 +50,4 @@ ms.lasthandoff: 04/12/2017
   
 ## <a name="see-also"></a>См. также  
  [Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+

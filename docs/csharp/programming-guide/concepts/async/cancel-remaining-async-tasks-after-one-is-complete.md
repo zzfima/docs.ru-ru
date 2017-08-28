@@ -1,5 +1,5 @@
 ---
-title: "Отмена оставшихся асинхронных задач после завершения одной из них (C#) | Документы Майкрософт"
+title: "Отмена оставшихся асинхронных задач после завершения одной из них (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: fa0a35df3c2038859a8c2861780fd8dfa98d4429
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 23e68327cfc52845b203acdf5f69253de746d566
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Отмена оставшихся асинхронных задач после завершения одной из них (C#)
-Используя метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> вместе с <xref:System.Threading.CancellationToken>, можно отменить все остальные задачи, если одна задача завершена. Метод `WhenAny` принимает аргумент, который представляет собой коллекцию задач. Метод запускает все задачи и возвращает одну задачу. Одна задача считается завершенной, когда завершена любая задача в коллекции.  
+Используя метод <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> вместе с <xref:System.Threading.CancellationToken>, можно отменить все оставшиеся задачи после выполнения отдельной задачи. Метод `WhenAny` принимает аргумент, который представляет собой коллекцию задач. Метод запускает все задачи и возвращает одну задачу. Одна задача считается завершенной, когда завершена любая задача в коллекции.  
   
  В этом примере показано, как использовать маркер отмены в сочетании с `WhenAny` для приостановки завершения первой задачи из коллекции задач и отмены оставшихся задач. Каждая задача загружает содержимое веб-сайта. Пример отображает длину содержимого первой завершаемой загрузки и отменяет другие загрузки.  
   
@@ -74,13 +74,13 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
 }  
 ```  
   
- В `AccessTheWebAsync` в этом примере используется запрос, метод <xref:System.Linq.Enumerable.ToArray%2A> и метод `WhenAny` для создания и запуска массив задач. Применение `WhenAny` к массиву возвращает одну задачу, которая, если ожидается, вычисляется как первая завершившаяся задача в массиве задач.  
+ В `AccessTheWebAsync` в этом примере используются запрос, метод <xref:System.Linq.Enumerable.ToArray%2A> и метод `WhenAny` для создания и запуска массива задач. Применение `WhenAny` к массиву возвращает одну задачу, которая, если ожидается, вычисляется как первая завершившаяся задача в массиве задач.  
   
  Внесите следующие изменения в `AccessTheWebAsync`. Звездочками отмечены изменения в файле кода.  
   
 1.  Закомментируйте или удалите цикл.  
   
-2.  Создайте запрос, который во время выполнения создает коллекцию общих заданий. Каждый вызов `ProcessURLAsync` возвращает <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом.  
+2.  Создайте запрос, который во время выполнения создает коллекцию общих заданий. Каждый вызов `ProcessURLAsync` возвращает <xref:System.Threading.Tasks.Task%601>, где `TResult` — это целое число.  
   
     ```csharp  
     // ***Create a query that, when executed, returns a collection of tasks.  
@@ -95,7 +95,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Вызовите `WhenAny` для коллекции задач. `WhenAny` возвращает `Task(Of Task(Of Integer))` или `Task<Task<int>>`.  То есть `WhenAny` возвращает задачу, которая вычисляется как одна задача `Task(Of Integer)` или `Task<int>`, если она ожидается. Одна задача — это первая завершившаяся задача в коллекции. Задача, которая завершается первой, назначается `firstFinishedTask`. Тип `firstFinishedTask` — <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом, поскольку это возвращаемый тип `ProcessURLAsync`.  
+4.  Вызовите `WhenAny` для коллекции задач. `WhenAny` возвращает `Task(Of Task(Of Integer))` или `Task<Task<int>>`.  То есть `WhenAny` возвращает задачу, которая вычисляется как одна задача `Task(Of Integer)` или `Task<int>`, если она ожидается. Одна задача — это первая завершившаяся задача в коллекции. Задача, которая завершается первой, назначается `firstFinishedTask`. `firstFinishedTask` имеет тип <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом, поскольку это возвращаемый тип `ProcessURLAsync`.  
   
     ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
@@ -103,7 +103,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
     ```  
   
-5.  В этом примере нас интересует только та задача, которая завершается первой. Таким образом, мы используем <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>, чтобы отменить оставшиеся задачи.  
+5.  В этом примере нас интересует только та задача, которая завершается первой. Таким образом, используйте <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> для отмены оставшихся задач.  
   
     ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
@@ -279,3 +279,4 @@ namespace CancelAfterOneTask
  [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)
+

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
-ms.openlocfilehash: 42ded63bacfb6ff2ceadde6fa37c7bddb413a933
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6b5e01f7244b8b7b83fbc76a80eae0c1432c936a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods"></a>Методы #
@@ -280,14 +280,12 @@ if (person != null)
 Часто используются определения методов, которые просто немедленно возвращаются с результатом выражения или которые имеют единственную инструкцию в тексте метода.  Для определения таких методов существует сокращенный синтаксис с использованием `=>`:
 
 ```csharp
-
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
 public void Print() => Console.WriteLine(First + " " + Last);
 // Works with operators, properties, and indexers too.
 public static Complex operator +(Complex a, Complex b) => a.Add(b);
 public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
-
 ```
 
 Если метод возвращает `void` или является асинхронным, текст этого метода должен быть выражением оператора (как и при использовании лямбда-выражений).  Свойства и индексаторы должны быть доступны только для чтения, и использовать ключевое слово метода доступа `get` не следует.
@@ -303,12 +301,12 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 ## <a name="see-also"></a>См. также ##
 
-[Модификаторы доступа](https://msdn.microsoft.com/library/wxh6fsc7.aspx)
-[Статические классы и члены статических классов](https://msdn.microsoft.com/library/79b3xss3.aspx)
-[Наследование](https://msdn.microsoft.com/library/ms173149.aspx)
-[Абстрактные и запечатанные классы и члены классов](https://msdn.microsoft.com/library/ms173150.aspx)
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)
+[Модификаторы доступа](https://msdn.microsoft.com/library/wxh6fsc7.aspx)   
+[Статические классы и члены статических классов](https://msdn.microsoft.com/library/79b3xss3.aspx)   
+[Наследование](https://msdn.microsoft.com/library/ms173149.aspx)   
+[Абстрактные и запечатанные классы и члены классов](https://msdn.microsoft.com/library/ms173150.aspx)   
+[params](https://msdn.microsoft.com/library/w5zay9db.aspx)   
+[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)   
+[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)   
 [Передача параметров](https://msdn.microsoft.com/library/0f66670z.aspx)
 

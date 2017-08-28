@@ -1,5 +1,5 @@
 ---
-title: "/addmodule (параметры компилятора C#) | Документы Майкрософт"
+title: "-addmodule (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 614dbefbb472ef2cd03fcb1ba7a44f08c450bf4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79fdad111b1f059e6a3b00e393ea2474f71db947
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="addmodule-c-compiler-options"></a>/addmodule (параметры компилятора C#)
@@ -69,6 +69,7 @@ csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)   
  [Многофайловые сборки](../../../framework/app-domains/multifile-assemblies.md)   
  [Практическое руководство. Создание многофайловой сборки](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+

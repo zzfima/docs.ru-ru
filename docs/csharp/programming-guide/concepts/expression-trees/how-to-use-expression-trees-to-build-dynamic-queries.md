@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Использование деревьев выражений для построения динамических запросов (C#) | Документы Майкрософт"
+title: "Практическое руководство. Использование деревьев выражений для построения динамических запросов (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 76dc6ebe2cc2489d83a2693a3143d36d46c8ef82
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b09674690093ea89fcf59b79d90d34e9605b44a2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Практическое руководство. Использование деревьев выражений для построения динамических запросов (C#)
@@ -129,3 +129,4 @@ foreach (string company in results)
  [Деревья выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
  [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
  [Практическое руководство. Динамическое определение фильтров предикатов во время выполнения](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+

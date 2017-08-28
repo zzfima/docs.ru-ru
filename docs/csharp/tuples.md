@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
-ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0efb478491ab4c226ec56519c9a957b19ce0478f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -25,8 +25,10 @@ ms.lasthandoff: 04/26/2017
 В этом разделе вы узнаете, какие правила языка регулируют кортежи в C# 7 и каким образом их можно использовать, получите вводные рекомендации по работе с кортежами.
 
 > [!NOTE]
-> Для новых функций кортежа требуется тип `System.ValueTuple`. Для Visual Studio 2017 необходимо добавить пакет NuGet [System.ValueTuple](https://www.nuget.org/packages/System.ValueTuple/) из коллекции NuGet.
-> Если этого не сделать, может возникать ошибка компиляции вида `error CS8179: Predefined type 'System.ValueTuple``2' is not defined or imported` или `error CS8137: Cannot define a class or member that utilizes tuples because the compiler required type 'System.Runtime.CompilerServices.TupleElementNamesAttribute' cannot be found.`.
+> Для новых функций кортежа требуются типы @System.ValueTuple.
+> Для использования на платформах, которые не включают эти типы, необходимо добавить пакет NuGet [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/).
+>
+> Это похоже на другие функции языка, использующие типы, предоставляемые на платформе. В качестве примеров можно привести функции `async` и `await`, использующие интерфейс `INotifyCompletion`, а также LINQ на базе `IEnumerable<T>`. Тем не менее по мере увеличения степени независимости .NET от платформы механизм доставки изменяется. Периодичность поставки новых выпусков .NET Framework не всегда совпадает с выпусками обновлений для компилятора языка. Если новые функции языка используют новые типы, эти типы будут предоставляться в виде пакетов NuGet при выпуске таких новых функций. Как только эти новые типы будут добавлены в стандартный API-интерфейс .NET и включены в состав платформы, требование обязательно использовать пакет NuGet будет снято.
 
 Для начала обсудим, почему была добавлена поддержка кортежей. Методы возвращают один объект. Кортежи позволяют легко упаковать в этот объект сразу несколько значений. 
 
@@ -43,7 +45,7 @@ ms.lasthandoff: 04/26/2017
 
 ## <a name="named-and-unnamed-tuples"></a>Именованные и неименованные кортежи
 
-Структура `ValueTuple` включает поля с именами `Item1`, `Item2`, `Item3` и т. д., аналогичные свойствам, определенным в существующих типах `Tuple`.
+Структура `ValueTuple` включает поля с именами `Item1`, `Item2`, `Item3` и т. д., аналогичные свойствам, определенным в существующих типах `Tuple`.
 Только эти имена можно использовать для *неименованных кортежей*. Если никакие альтернативные имена полей кортежу не предоставлены, значит, вы создали неименованный кортеж:
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Неименованный кортеж")]

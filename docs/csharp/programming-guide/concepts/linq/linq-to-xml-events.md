@@ -1,5 +1,5 @@
 ---
-title: "События LINQ to XML (C#) | Документы Майкрософт"
+title: "События LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,18 +19,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f19439004a9551f5e13588201ca3aaf201620681
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ccc3928795f188b7cf7b23d88a1f35ff043b889
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-events-c"></a>События LINQ to XML (C#)
-События [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] позволяют получать уведомления, когда изменяется дерево XML.  
+События [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяют получать уведомления, когда изменяется дерево XML.  
   
- События можно добавить в экземпляр любого объекта <xref:System.Xml.Linq.XObject>. Обработчик событий будет получать уведомления об изменениях объекта <xref:System.Xml.Linq.XObject> и всех его потомков. Например, можно добавить обработчик события в корень дерева и обрабатывать все изменения дерева в этом обработчике события.  
+ Можно добавить события в экземпляр любого объекта <xref:System.Xml.Linq.XObject>. Обработчик события будет получать уведомления об изменениях объекта <xref:System.Xml.Linq.XObject> и всех его потомков. Например, можно добавить обработчик события в корень дерева и обрабатывать все изменения дерева в этом обработчике события.  
   
- Примеры таких событий [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] см. в разделах <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.  
+ Примеры таких событий [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] см. в разделах <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.  
   
 ## <a name="types-and-events"></a>Типы и события  
  Используйте следующие типы при работе с событиями.  
@@ -115,3 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>См. также  
  [Расширенные методы программирования LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

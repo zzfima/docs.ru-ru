@@ -1,5 +1,5 @@
 ---
-title: "LINQ to Objects (C#) | Документы Майкрософт"
+title: LINQ to Objects (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 33402b552672fa79925fd1264444f39b19c02cd9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 565b506a2b01c9d32fbd339d700e663527ee3b6e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
-LINQ to Objects означает использование запросов LINQ с любой коллекцией объектов <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> напрямую, без обращения к промежуточному поставщику LINQ или API, такому как [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) или [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). LINQ позволяет запрашивать любые перечислимые коллекции, включая <xref:System.Collections.Generic.List%601>, <xref:System.Array> и <xref:System.Collections.Generic.Dictionary%602>. Коллекция может быть определена пользователем или возвращена API .NET Framework.  
+Термин "LINQ to Objects" означает использование запросов LINQ с любой коллекцией <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601> напрямую, без привлечения промежуточного поставщика LINQ, API [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) или [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Вы можете выполнить запрос LINQ к любой перечислимой коллекции, такой как <xref:System.Collections.Generic.List%601>, <xref:System.Array> или <xref:System.Collections.Generic.Dictionary%602>. Коллекция может быть определена пользователем или возвращена API .NET Framework.  
   
  В общем смысле LINQ to Objects представляет собой новый подход к коллекциям. Раньше нужно было написать сложные циклы `foreach`, определяющие порядок извлечения данных из коллекции. При использовании LINQ пишется декларативный код, описывающий, какие данные необходимо извлечь.  
   
@@ -60,3 +61,4 @@ LINQ to Objects означает использование запросов LIN
   
  [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  Ссылки на разделы, рассказывающие LINQ и содержащие примеры кода выполнения запросов.
+

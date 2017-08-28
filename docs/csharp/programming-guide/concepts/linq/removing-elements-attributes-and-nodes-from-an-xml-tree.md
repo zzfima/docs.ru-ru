@@ -1,5 +1,5 @@
 ---
-title: "Удаление элементов, атрибутов и узлов из дерева XML (C#) | Документы Майкрософт"
+title: "Удаление элементов, атрибутов и узлов из дерева XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23091224f314582908438f29340b811498d4c90e
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Удаление элементов, атрибутов и узлов из дерева XML (C#)
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом примере показано три подхода к удалению элементов. Сначала удаляется одиночный элемент. Затем коллекция элементов возвращается, материализуется с помощью оператора <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> и удаляется. Наконец, извлекается коллекция элементов, которые удаляются с помощью метода расширения <xref:System.Xml.Linq.Extensions.Remove%2A>.  
+ В этом примере показано три подхода к удалению элементов. Сначала удаляется одиночный элемент. Затем он возвращает коллекцию элементов, материализует их с помощью оператора <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> и удаляет коллекцию. Наконец, он получает коллекцию элементов и удаляет их с помощью метода расширения <xref:System.Xml.Linq.Extensions.Remove%2A>.  
   
  Дополнительные сведения об операторе <xref:System.Linq.Enumerable.ToList%2A> см. в разделе [Преобразование типов данных (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md).  
   
@@ -92,3 +92,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>См. также  
  [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

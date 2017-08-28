@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Получение сведений о файлах, папках и дисках (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Получение сведений о файлах, папках и дисках (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16950f835938846804ade1a8ad23d907aa69b9c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6067ea9d51c31c9398c7b1fcd83ca8fa3a4fec76
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Практическое руководство. Получение сведений о файлах, папках и дисках (Руководство по программированию на C#)
@@ -46,15 +47,15 @@ ms.lasthandoff: 03/13/2017
   
 -   <xref:System.IO.File?displayProperty=fullName>  
   
- Классы <xref:System.IO.FileInfo> и <xref:System.IO.DirectoryInfo> представляют файл или каталог, и содержат свойства, представляющие многие атрибуты файла, поддерживаемые файловой системой NTFS. Они также содержат методы для открытия, закрытия, перемещения и удаления файлов и папок. Экземпляры этих классов можно создать, передав в конструктор строку, представляющую имя файла, папки или диска.  
+ Классы <xref:System.IO.FileInfo> и <xref:System.IO.DirectoryInfo> представляют файл или каталог и содержат свойства, представляющие многие атрибуты файла, поддерживаемые файловой системой NTFS. Они также содержат методы для открытия, закрытия, перемещения и удаления файлов и папок. Экземпляры этих классов можно создать, передав в конструктор строку, представляющую имя файла, папки или диска.  
   
 ```csharp  
 System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");  
 ```  
   
- Имена файлов, папок или дисков можно также получить, используя вызовы <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> и <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>.  
+ Имена файлов, папок или дисков можно также получить с помощью вызова <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> и <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>.  
   
- Классы <xref:System.IO.Directory?displayProperty=fullName> и <xref:System.IO.File?displayProperty=fullName> предоставляют статические методы для поиска данных о каталогах и файлах.  
+ Классы <xref:System.IO.Directory?displayProperty=fullName> и <xref:System.IO.File?displayProperty=fullName> предоставляют статические методы для получения сведений о каталогах и файлах.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показаны различные способы доступа к сведениям о файлах и папках.  
@@ -78,3 +79,4 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
  <xref:System.IO?displayProperty=fullName>   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
+

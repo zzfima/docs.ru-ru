@@ -1,5 +1,5 @@
 ---
-title: "/target:winmdobj (параметры компилятора C#) | Документы Майкрософт"
+title: "-target:winmdobj (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7581ec18db0d2741452b47ad6200482b63c102be
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3967f7f9326652271ce55aa286e9f42f94dee775
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (параметры компилятора C#)
@@ -37,7 +38,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /target:winmdobj  
 ```  
   
@@ -58,17 +59,18 @@ ms.lasthandoff: 03/13/2017
   
 3.  В списке **Тип выходных данных** выберите **Файл WinMD**.  
   
-     Параметр **Файл WinMD[!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)] доступен только для шаблонов приложений для**.  
+     Параметр **Файл WinMD[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] доступен только для шаблонов приложений для** .  
   
- Сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Пример  
  Следующая команда компилирует `filename.cs` в промежуточный WINMDOBJ-файл.  
   
-```  
+```console  
 csc /target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>См. также  
  [/target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+

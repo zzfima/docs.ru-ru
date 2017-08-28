@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Копирование, удаление и перемещение файлов и папок (руководство по программированию в C#) | Документы Майкрософт"
+title: "Практическое руководство. Копирование, удаление и перемещение файлов и папок (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,14 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7e9a170882c4e8dbb04dc014642a28ad4365e39
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4cfec46e0af0056a0de20a1ed83a370cd010055
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Практическое руководство. Копирование, удаление и перемещение файлов и папок (Руководство по программированию в C#)
-В следующих примерах показано, как синхронно копировать, перемещать и удалять файлы и папки с использованием классов <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName> и <xref:System.IO.DirectoryInfo?displayProperty=fullName> из пространства имен <xref:System.IO?displayProperty=fullName>. В этих примерах не используется индикатор хода выполнения или какой-либо иной пользовательский интерфейс. Если нужно использовать стандартное диалоговое окна хода выполнения, см. раздел [Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
+В следующих примерах показано, как синхронно копировать, перемещать и удалять файлы и папки с помощью классов <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName>, и <xref:System.IO.DirectoryInfo?displayProperty=fullName> из пространства имен <xref:System.IO?displayProperty=fullName>. В этих примерах не используется индикатор хода выполнения или какой-либо иной пользовательский интерфейс. Если нужно использовать стандартное диалоговое окна хода выполнения, см. раздел [Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
   
  Используйте <xref:System.IO.FileSystemWatcher?displayProperty=fullName> для предоставления событий, которые позволяют вычислять ход выполнения при работе с несколькими файлами. Другим подходом является использование вызова неуправляемого кода для вызова в Windows Shell методов, относящихся к обработке файлов. Сведения о способах асинхронного выполнения таких операций над файлами см. в разделе [Асинхронный файловый ввод-вывод](https://msdn.microsoft.com/library/kztecsys).  
   
@@ -60,3 +61,4 @@ ms.lasthandoff: 03/13/2017
  [Практическое руководство. Предоставление диалогового окна "Ход выполнения" для операций с файлами](how-to-provide-a-progress-dialog-box-for-file-operations.md)   
  [Файловый и потоковый ввод-вывод](https://msdn.microsoft.com/library/k3352a4t)   
  [Распространенные задачи ввода-вывода](https://msdn.microsoft.com/library/ms404278)
+

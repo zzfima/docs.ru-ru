@@ -1,5 +1,5 @@
 ---
-title: "Статические классы и члены статических классов (руководство по программированию в C#) | Документы Майкрософт"
+title: "Статические классы и члены статических классов (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f93706bb5df41e46c860ca70d131d94015a6348f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Статические классы и члены статических классов (Руководство по программированию в C#)
@@ -58,7 +59,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Как и в случае с типами всех классов, сведения о типе для статического класса загружаются средой CLR [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)], когда загружается программа, которая ссылается на класс. Программа не может точно указать, когда загружается класс. Однако гарантируется загрузка этого класса, инициализация его полей и вызов статического конструктора перед первым обращением к классу в программе. Статический конструктор вызывается только один раз, и статический класс остается в памяти на время существования домена приложения, в котором находится программа.  
+ Как и в случае с типами всех классов, сведения о типе для статического класса загружаются средой CLR [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], когда загружается программа, которая ссылается на класс. Программа не может точно указать, когда загружается класс. Однако гарантируется загрузка этого класса, инициализация его полей и вызов статического конструктора перед первым обращением к классу в программе. Статический конструктор вызывается только один раз, и статический класс остается в памяти на время существования домена приложения, в котором находится программа.  
   
 > [!NOTE]
 >  Создание нестатического класса, который допускает создание только одного экземпляра самого себя, см. в документе [Реализация Singleton в C#](http://go.microsoft.com/fwlink/?LinkID=100567).  
@@ -106,7 +107,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Вызов статического метода генерирует инструкцию вызова в промежуточном языке Microsoft (MSIL), в то время как вызов метода экземпляра генерирует инструкцию `callvirt`, которая также проверяет наличие ссылок на пустые объекты. Однако в большинстве случаев разница в производительности двух видов вызовов несущественна.  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
@@ -115,3 +116,4 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [class](../../../csharp/language-reference/keywords/class.md)   
  [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
  [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "/reference (параметры компилятора C#) | Документы Майкрософт"
+title: "-reference (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 11bb7fc9490879714542bfbd77a81d58e7d8e8ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-c-compiler-options"></a>/reference (параметры компилятора C#)
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/31/2017
  Файл ответов csc (RSP-файл), который ссылается на часто используемые сборки .NET Framework, используется по умолчанию. Параметр [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) позволяет запретить компилятору использовать файл csc.rsp.  
   
 > [!NOTE]
-> В Visual Studio используйте диалоговое окно **Добавление ссылки**. Дополнительные сведения см. в разделе [Практическое руководство. Добавление или удаление ссылок с помощью диспетчера ссылок](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Чтобы обеспечить эквивалентное поведение при добавлении ссылок с помощью `/reference` и диалогового окна **Добавление ссылки**, свойству **Внедрить типы взаимодействия** добавляемой сборки должно быть задано значение **False**. **True** является значением по умолчанию для этого свойства.  
+> В Visual Studio используйте диалоговое окно **Добавление ссылки**. Дополнительные сведения см. в разделе [Практическое руководство. Добавление или удаление ссылок с помощью диспетчера ссылок](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Чтобы обеспечить эквивалентное поведение при добавлении ссылок с помощью `/reference` и диалогового окна **Добавление ссылки**, свойству **Внедрить типы взаимодействия** добавляемой сборки должно быть задано значение **False**. **True** является значением по умолчанию для этого свойства.  
   
 ## <a name="example"></a>Пример  
  В этом примере показано, как использовать [псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md).  
@@ -115,4 +115,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

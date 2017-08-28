@@ -1,5 +1,5 @@
 ---
-title: "in (универсальный модификатор) (справочник по C#) | Документы Майкрософт"
+title: "in (универсальный модификатор) (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6c490d14b47aaa527fe2ddb3627ea0a84bfe604
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2c20a74b48fad8eb7021e23002d06e78a1fd624
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (универсальный модификатор) (Справочник по C#)
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/13/2017
   
  Тип может быть объявлен контравариантным в универсальном интерфейсе или делегате, если он используется только как тип аргументов метода, но не как тип значения, возвращаемого методом. Параметры `Ref` и `out` не могут быть вариантными.  
   
- Интерфейс с параметром контравариантного типа позволяет своим методам принимать аргументы производных типов, степень наследования у которых меньше, чем у параметра типа интерфейса. Например, поскольку в .NET Framework 4 в интерфейсе <xref:System.Collections.Generic.IComparer%601> тип T является контравариантным, можно назначить объект типа `IComparer(Of Person)` объекту типа `IComparer(Of Employee)` без применения каких-либо специальных методов преобразования, если `Employee` наследует `Person`.  
+ Интерфейс с параметром контравариантного типа позволяет своим методам принимать аргументы производных типов, степень наследования у которых меньше, чем у параметра типа интерфейса. Например, поскольку в .NET Framework 4 в интерфейсе <xref:System.Collections.Generic.IComparer%601> тип T является ковариантным, можно присвоить объект типа `IComparer(Of Person)` объекту типа `IComparer(Of Employee)` без применения каких-либо специальных методов преобразования, если `Employee` наследует `Person`.  
   
  Контравариантный делегат может быть назначен другому делегату того же типа, но с производным параметром универсального типа меньшей степени.  
   
@@ -65,3 +65,4 @@ ms.lasthandoff: 03/13/2017
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
  [Ковариация и контравариантность](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
+

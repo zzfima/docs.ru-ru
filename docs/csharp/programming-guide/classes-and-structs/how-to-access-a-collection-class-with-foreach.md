@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Доступ к классу коллекции с помощью оператора foreach (руководство по программированию в C#) | Документы Майкрософт"
+title: "Практическое руководство. Доступ к классу коллекции с помощью оператора foreach (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 841132b5181c5e17d1eabae11d3550811aa959ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ad81ab699b079f4aabb04a886211e94a937335d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>Практическое руководство. Доступ к классу коллекции с помощью оператора foreach (Руководство по программированию в C#)
@@ -45,16 +45,15 @@ ms.lasthandoff: 03/24/2017
  [!code-cs[csProgGuideCollections #3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## <a name="example"></a>Пример  
- По сути, класс `Tokens` использует массив для хранения токенов. Поскольку массивы реализуют типы <xref:System.Collections.IEnumerator> и <xref:System.Collections.IEnumerable>, пример кода может использовать методы перечисления массивов (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.Current%2A>) вместо определения их в классе `Tokens`. Определения методов содержатся в примере для уточнения способа их определения и предназначения каждого из них.  
+ По сути, класс `Tokens` использует массив для хранения токенов. Поскольку массивы реализуют <xref:System.Collections.IEnumerator> и <xref:System.Collections.IEnumerable>, в этом примере кода можно использовать методы перечисления массива (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.Current%2A>) вместо того, чтобы определять их в классе `Tokens`. Определения методов содержатся в примере для уточнения способа их определения и предназначения каждого из них.  
   
  [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
- В языке C# классу коллекции необязательно реализовывать <xref:System.Collections.IEnumerable> и <xref:System.Collections.IEnumerator> для совместимости с `foreach`. Если в классе содержатся обязательные члены <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.Current%2A>, он будет работать с оператором `foreach`. Пропуск интерфейсов имеет преимущество, поскольку позволяет определить тип возврата для `Current`, который более специфичен, чем тип <xref:System.Object>. Это повышает типобезопасность.  
+ В C# для класса коллекции необязательно реализовывать <xref:System.Collections.IEnumerable> и <xref:System.Collections.IEnumerator> в совместимой с `foreach` форме. Если класс содержит необходимые члены <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> и <xref:System.Collections.IEnumerator.Current%2A>, он может работать с циклом `foreach`. Пропуск интерфейсов имеет преимущество, поскольку позволяет определить тип возврата для `Current`, который более специфичен, чем тип <xref:System.Object>. Это повышает типобезопасность.  
   
  Например, измените следующие строки в предыдущем примере.  
   
 ```csharp  
-  
 // Change the Tokens class so that it no longer implements IEnumerable.  
 public class Tokens  
 {  
@@ -74,13 +73,11 @@ public class Tokens
         {   }  
     }  
  }  
-  
 ```  
   
  Поскольку `Current` возвращает строку, компилятор может определить, когда используется несовместимый тип в операторе `foreach`, как показано в следующем коде.  
   
 ```csharp  
-  
 // Error: Cannot convert type string to int.  
 foreach (int item in f)    
 ```  
@@ -93,3 +90,4 @@ foreach (int item in f)
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Массивы](../../../csharp/programming-guide/arrays/index.md)   
  [Коллекции](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+

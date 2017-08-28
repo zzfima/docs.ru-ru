@@ -1,64 +1,84 @@
 ---
-title: "Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "абстрактные свойства [C#]"
-  - "свойства [C#], абстрактный"
+title: "Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- properties [C#], abstract
+- abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c6decaae138a21c24e94e2ed74111c860777f64b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)
-В следующем примере показано, как определить [абстрактные](../../../csharp/language-reference/keywords/abstract.md) свойства.  Если объявление абстрактного свойства не предоставляет реализацию методов доступа к свойствам, оно объявляет, что класс поддерживает свойства, но оставляет реализацию метода доступа производному классу.  В следующем примере показано, как реализовать абстрактные свойства, унаследованные от базового класса.  
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)
+В следующем примере показано, как определять [абстрактные](../../../csharp/language-reference/keywords/abstract.md) свойства. В объявлении абстрактного свойства не предоставляется реализация методов доступа к свойству. В нем объявляется, что класс поддерживает свойства, однако реализация методов доступа к ним передается в производные классы. В следующем примере показано, как реализовать абстрактные свойства, наследуемые от базового класса.  
   
- Этот пример состоит из трех файлов, каждый из которых компилируется отдельно, и на результирующую сборку которого ссылается следующая компиляция.  
+ Этот пример включает три файла, каждый из которых компилируется отдельно в сборку, на которую задаются ссылки при последующей компиляции:  
   
--   abstractshape.cs: класс `Shape`, содержащий абстрактное свойство `Area`.  
+-   abstractshape.cs: класс `Shape`, который содержит абстрактное свойство `Area`.  
   
--   shapes.cs: вложенные классы класса `Shape`.  
+-   shapes.cs: подклассы класса `Shape`.  
   
--   shapetest.cs: Тестовая программа для отображения областей некоторых производных от `Shape` объектов.  
+-   shapetest.cs: тестовая программа для отображения областей некоторых объектов, производных от `Shape`.  
   
- Для компиляции примера используйте следующую команду:  
+ Чтобы скомпилировать этот пример, используйте следующую команду:  
   
  `csc abstractshape.cs shapes.cs shapetest.cs`  
   
- Будет создан исполняемый файл shapetest.exe.  
+ При этом будет создан исполняемый файл shapetest.exe.  
   
-## Пример  
- Этот файл объявляет класс `Shape`, содержащий свойство `Area` типа `double`.  
+## <a name="example"></a>Пример  
+ В этом файле объявляется класс `Shape`, который содержит свойство `Area` типа `double`.  
   
  [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
--   Модификаторы свойства помещаются в самом объявлении свойства.  Примеры.  
+-   Модификаторы свойства помещаются в само объявление свойства. Например:  
   
     ```  
     public abstract double Area  
     ```  
   
--   При объявлении абстрактного свойства \(такого как `Area` в этом примере\) просто указываются имеющиеся методы доступа к свойствам, и их реализация не выполняется.  В этом примере имеется только метод доступа [get](../../../csharp/language-reference/keywords/get.md), поэтому свойство доступно только для чтения.  
+-   При объявлении абстрактного свойства, такого как `Area` в этом примере, вы просто указываете используемые методы доступа, но не реализуете их. В этом примере используется только метод доступа [get](../../../csharp/language-reference/keywords/get.md), поэтому свойство будет доступно только для чтения.  
   
-## Пример  
- В следующем коде показано три вложенных класса `Shape` и переопределение или свойства `Area` для предоставления собственной реализации.  
+## <a name="example"></a>Пример  
+ В следующем коде представлены три подкласса класса `Shape` и демонстрируется, как они переопределяют свойство `Area` для получения его собственной реализации.  
   
  [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
-## Пример  
- В следующем коде показана тестовая программа, создающая ряд производных от `Shape` объектов и печатающая их области.  
+## <a name="example"></a>Пример  
+ В следующем коде показана тестовая программа, которая создает несколько производных от `Shape` объектов и печатает их области.  
   
  [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
  [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Практическое руководство. Создание и использование сборок с помощью командной строки](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md)
+ [Практическое руководство. Создание и использование сборок с помощью командной строки](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
+

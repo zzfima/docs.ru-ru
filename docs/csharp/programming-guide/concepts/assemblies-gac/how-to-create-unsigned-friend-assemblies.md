@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Создание неподписанных дружественных сборок (C#) | Документы Майкрософт"
+title: "Практическое руководство. Создание неподписанных дружественных сборок (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7d2924f0a619c234871232e155bb6f23e43aee4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 967436204ab0824a510c12dc4c6e288d91d7dfa0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Практическое руководство. Создание неподписанных дружественных сборок (C#)
@@ -32,7 +33,7 @@ ms.lasthandoff: 03/13/2017
   
 1.  Откройте окно командной строки.  
   
-2.  Создайте файл C# с именем `friend_signed_A.`, содержащий приведенный ниже код. Код использует атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> для объявления friend_signed_B в качестве дружественной сборки.  
+2.  Создайте файл C# с именем `friend_signed_A.`, содержащий приведенный ниже код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -104,7 +105,7 @@ ms.lasthandoff: 03/13/2017
      Программа выведет две строки: "Class1.Test" и "Class2.Test".  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Существует сходство между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission>. Основное различие заключается в том, что <xref:System.Security.Permissions.StrongNameIdentityPermission> могут требоваться разрешения безопасности для выполнения определенного раздела кода, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> контролирует видимость типов и членов `internal`.  
+ Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
@@ -112,3 +113,4 @@ ms.lasthandoff: 03/13/2017
  [Дружественные сборки (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
  [Практическое руководство. Создание подписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
  [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+

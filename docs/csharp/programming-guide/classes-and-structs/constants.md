@@ -1,5 +1,5 @@
 ---
-title: "Константы (руководство по программированию в C#) | Документы Майкрософт"
+title: "Константы (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,15 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ad6c8119d74be0f178681b334f940ff5c38c05ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 85273420e9e0dbf4b8f24568d97be127c85d5f42
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="constants-c-programming-guide"></a>Константы (Руководство по программированию на C#)
-Константы — это постоянные значения, которые известны во время компиляции и не изменяются во время выполнения программы. Константы должны объявляться с модификатором [const](../../../csharp/language-reference/keywords/const.md). Объявлять как `const` можно только встроенные типы (кроме <xref:System.Object?displayProperty=fullName>). Список встроенных типов см. в [таблице встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md). Пользовательские типы, включая классы, структуры и массивы, не могут объявляться как `const`. Модификатор [readonly](../../../csharp/language-reference/keywords/readonly.md) позволяет создать класс, структуру или массив, которые инициализируются один раз (например, в конструкторе), и впоследствии изменить их нельзя.  
+Константы — это постоянные значения, которые известны во время компиляции и не изменяются во время выполнения программы. Константы должны объявляться с модификатором [const](../../../csharp/language-reference/keywords/const.md). Только встроенные типы C# (за исключением <xref:System.Object?displayProperty=fullName>) можно объявлять как `const`. Список встроенных типов см. в [таблице встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md). Пользовательские типы, включая классы, структуры и массивы, не могут объявляться как `const`. Модификатор [readonly](../../../csharp/language-reference/keywords/readonly.md) позволяет создать класс, структуру или массив, которые инициализируются один раз (например, в конструкторе), и впоследствии изменить их нельзя.  
   
  C# не поддерживает методы, свойства или события `const`.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
   
- Константы могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или `protected``internal`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к константе. Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Константы могут иметь пометку [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) или `protected internal`. Эти модификаторы доступа определяют, каким образом пользователи класса смогут получать доступ к константе. Дополнительные сведения см. в разделе [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Доступ к константам осуществляется так, как если бы они были [статическими](../../../csharp/language-reference/keywords/static.md) полями, поскольку значение константы одинаково для всех экземпляров типа. Для их объявления используйте ключевое слово `static`. Выражения, которые не относятся к классу, определяющему константу, должны включать имя класса, период и имя константы для доступа к этой константе. Пример:  
   
@@ -75,3 +75,4 @@ ms.lasthandoff: 03/13/2017
  [Типы](../../../csharp/programming-guide/types/index.md)   
  [readonly](../../../csharp/language-reference/keywords/readonly.md)   
  [Неизменность в C#, часть 1. Виды неизменности](http://go.microsoft.com/fwlink/?LinkId=112379)
+

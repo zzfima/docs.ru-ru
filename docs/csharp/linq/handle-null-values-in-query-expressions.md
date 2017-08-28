@@ -11,15 +11,16 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 14b64bf8d3590f4f7dc3d1b00cb50d0bc421d9bc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f4f189504c57c9c01268b10bc96ad3c9af49ddbd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Обработка значений NULL в выражениях запросов
 
-В этом примере показано, как обрабатывать возможные нулевые значения в исходных коллекциях. Коллекции объектов, такие как <xref:System.Collections.Generic.IEnumerable%601>, могут содержать элементы со значением [NULL](../language-reference/keywords/null.md). Если исходная коллекция пуста или содержит элемент со значением NULL, а запрос не обрабатывает такие значения, при выполнении этого запроса возникает исключение <xref:System.NullReferenceException>.  
+В этом примере показано, как обрабатывать возможные нулевые значения в исходных коллекциях. Коллекция объектов, например <xref:System.Collections.Generic.IEnumerable%601>, может содержать элементы со значением [NULL](../language-reference/keywords/null.md). Если исходная коллекция имеет значение NULL или содержит элемент со значением NULL, а запрос не обрабатывает такие значения, при выполнении этого запроса возникает исключение <xref:System.NullReferenceException>.  
   
 ## <a name="example"></a>Пример
 
@@ -39,3 +40,4 @@ ms.lasthandoff: 03/13/2017
  <xref:System.Nullable%601>   
  [Выражения запросов LINQ](index.md)   
  [Типы, допускающие значения NULL](../programming-guide/nullable-types/index.md)
+

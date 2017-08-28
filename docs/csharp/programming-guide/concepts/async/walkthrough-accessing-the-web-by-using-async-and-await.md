@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#) | Документы Майкрософт"
+title: "Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 2874eaadd23fdfdc1baf9337169ad5a52c05905f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7c03cad060e2ba459277c28f929df88be70e4044
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)
@@ -105,7 +105,7 @@ ms.lasthandoff: 03/28/2017
   
 6.  Поместите текстовое поле и кнопку так, чтобы оба элемента управления отображались в окне **MainWindow**.  
   
-     Дополнительные сведения о конструкторе XAML WPF см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
+     Дополнительные сведения о конструкторе XAML WPF см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
 ##  <a name="BKMK_AddReference"></a>   
 ###  <a name="AddRef"></a> Добавление ссылки  
@@ -271,20 +271,20 @@ ms.lasthandoff: 03/28/2017
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
 ###  <a name="GetURLContents"></a> Преобразование GetURLContents в асинхронный метод  
   
-1.  Для преобразования синхронного решения в асинхронное лучше всего начать с `GetURLContents`, так как вызовы метода <xref:System.Net.HttpWebRequest.GetResponse%2A> <xref:System.Net.HttpWebRequest> и метода <xref:System.IO.Stream.CopyTo%2A> <xref:System.IO.Stream> используются тогда, когда приложение обращается к сети. Платформа .NET Framework упрощает преобразование путем предоставления асинхронных версий этих методов.  
+1.  Чтобы преобразовать синхронное решение в асинхронное, лучше всего начать с метода `GetURLContents`, поскольку вызовы метода <xref:System.Net.HttpWebRequest> <xref:System.Net.HttpWebRequest.GetResponse%2A> и метода <xref:System.IO.Stream> <xref:System.IO.Stream.CopyTo%2A> выполняются, когда приложение подключается к Интернету. Платформа .NET Framework упрощает преобразование путем предоставления асинхронных версий этих методов.  
   
      Дополнительные сведения о методах, которые используются в `GetURLContents`, см. в разделе <xref:System.Net.WebRequest>.  
   
     > [!NOTE]
     >  По мере выполнения шагов в этом пошаговом руководстве возникают различные ошибки компилятора. Их можно игнорировать и продолжить процедуры пошагового руководства.  
   
-     Измените метод, который вызывается в третьей строке `GetURLContents` из `GetResponse`, на асинхронный метод <xref:System.Net.WebRequest.GetResponseAsync%2A>, основанный на задачах.  
+     Измените метод, который вызывается в третьей строке `GetURLContents` из `GetResponse`, асинхронным методом <xref:System.Net.WebRequest.GetResponseAsync%2A>, основанным на задачах.  
   
     ```csharp  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
-2.  `GetResponseAsync` возвращает <xref:System.Threading.Tasks.Task%601>. В этом случае *переменная, возвращаемая задачей*, `TResult`, имеет тип <xref:System.Net.WebResponse>. Задача является обещанием создать фактический объект `WebResponse` после загрузки запрошенных данных и выполнения задачи до завершения.  
+2.  `GetResponseAsync` возвращает значение типа <xref:System.Threading.Tasks.Task%601>. В этом случае *переменная, возвращаемая задачей*, `TResult`, имеет тип <xref:System.Net.WebResponse>. Задача является обещанием создать фактический объект `WebResponse` после загрузки запрошенных данных и выполнения задачи до завершения.  
   
      Для получения значения `WebResponse` из задачи примените оператор [await](../../../../csharp/language-reference/keywords/await.md) для вызова метода `GetResponseAsync`, как показано в приведенном ниже примере кода.  
   
@@ -307,9 +307,9 @@ ms.lasthandoff: 03/28/2017
   
 3.  Из-за добавления оператора `await` в предыдущем шаге возникает ошибка компилятора. Этот оператор можно использовать только в методах, помеченных модификатором [async](../../../../csharp/language-reference/keywords/async.md). Пропустите ошибку, повторяя действия по замене вызова `CopyTo` вызовом метода `CopyToAsync`.  
   
-    -   Измените имя вызываемого метода на <xref:System.IO.Stream.CopyToAsync%2A>.  
+    -   Измените имя метода, вызывающего <xref:System.IO.Stream.CopyToAsync%2A>.  
   
-    -   Метод `CopyTo` или `CopyToAsync` копирует байты в свой аргумент `content` и не возвращает осмысленное значение. В синхронной версии вызов метода `CopyTo` — это просто оператор, который не возвращает значение. Асинхронная версия (`CopyToAsync`) возвращает <xref:System.Threading.Tasks.Task>. Задача работает как Task(void) и позволяет ожидать метод. Примените `Await` или `await` к вызову `CopyToAsync`, как показано в следующем примере кода.  
+    -   Метод `CopyTo` или `CopyToAsync` копирует байты в свой аргумент `content` и не возвращает осмысленное значение. В синхронной версии вызов метода `CopyTo` — это просто оператор, который не возвращает значение. Асинхронная версия — `CopyToAsync` — возвращает <xref:System.Threading.Tasks.Task>. Задача работает как Task(void) и позволяет ожидать метод. Примените `Await` или `await` к вызову `CopyToAsync`, как показано в следующем примере кода.  
   
         ```csharp  
         await responseStream.CopyToAsync(content);  
@@ -332,7 +332,7 @@ ms.lasthandoff: 03/28/2017
     private async byte[] GetURLContents(string url)  
     ```  
   
-5.  Тип возвращаемого значения асинхронного метода может быть только <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> или `void` в C#. Как правило, тип возвращаемого значения `void` используется только в асинхронном обработчике событий, где `void` является обязательным. В других случаях используется `Task(T)`, если завершенный метод имеет оператор [return](../../../../csharp/language-reference/keywords/return.md), возвращающий значение типа T, или `Task`, если завершенный метод не возвращает осмысленное значение. Можно представить тип возвращаемого значения `Task` как Task(void).  
+5.  Возвращаемым типом асинхронного метода может быть только <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> или `void` в C#. Как правило, тип возвращаемого значения `void` используется только в асинхронном обработчике событий, где `void` является обязательным. В других случаях используется `Task(T)`, если завершенный метод имеет оператор [return](../../../../csharp/language-reference/keywords/return.md), возвращающий значение типа T, или `Task`, если завершенный метод не возвращает осмысленное значение. Можно представить тип возвращаемого значения `Task` как Task(void).  
   
      Дополнительные сведения см. в разделе [Асинхронные типы возвращаемых значений (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
@@ -450,7 +450,7 @@ ms.lasthandoff: 03/28/2017
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ###  <a name="GetURLContentsAsync"></a> Замена GetURLContentsAsync методом .NET Framework  
   
-1.  Платформа .NET Framework 4.5 предоставляет много асинхронных методов, которые вы можете использовать. Один из них, метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> класса <xref:System.Net.Http.HttpClient>, выполняет то, что нужно для этого пошагового руководства. Его можно использовать вместо метода `GetURLContentsAsync`, созданного в предыдущей процедуре.  
+1.  Платформа .NET Framework 4.5 предоставляет много асинхронных методов, которые вы можете использовать. Один из них, метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> <xref:System.Net.Http.HttpClient>, выполняет именно те операции, которые требуются для данного пошагового руководства. Его можно использовать вместо метода `GetURLContentsAsync`, созданного в предыдущей процедуре.  
   
      Первым шагом является создание объекта `HttpClient` в методе `SumPageSizesAsync`. Добавьте следующее объявление в начале метода.  
   

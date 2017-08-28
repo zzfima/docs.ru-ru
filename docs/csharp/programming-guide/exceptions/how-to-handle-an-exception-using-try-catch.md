@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Обработка исключений с помощью блока try-catch (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Обработка исключений с помощью блока try-catch (руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10eac61f4b9bb186d28044862ebc7273c6eb07b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f6f714cd1b652845e77405ff74fbfc860e71dc21
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Практическое руководство. Обработка исключений с помощью блока try-catch (Руководство по программированию на C#)
@@ -50,3 +51,4 @@ ms.lasthandoff: 03/13/2017
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)   
  [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

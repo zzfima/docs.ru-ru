@@ -1,5 +1,5 @@
 ---
-title: "-win32manifest (параметры компилятора C#) | Документы Майкрософт"
+title: "-win32manifest (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bb28bf28c3d8a426322e1c1795941de7e9aa4bf6
-ms.openlocfilehash: fd8c0a9a398c8f8d6c589ffcf0426a375a82a6a8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 938317fdf0c56469b85b1231a47f83e9c2a7d0f2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (параметры компилятора C#)
@@ -65,7 +65,7 @@ ms.lasthandoff: 07/03/2017
   
 -   Вы предоставляете пользовательский манифест, не определяющий запрошенный уровень выполнения.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] создает стандартный файл с расширением MANIFEST и сохраняет его в каталоги отладки и выпуска вместе с исполняемым файлом. Пользовательский манифест можно добавить, создав его в любом текстовом редакторе и добавив полученный файл в проект. Кроме того, можно щелкнуть значок **проект** в **обозревателе решений** и нажать кнопку **Добавить новый элемент**, а затем **Файл манифеста приложения**. Добавленный новый или существующий файл манифеста появится в раскрывающемся списке **Манифест**. Дополнительные сведения см. в разделе [Страница "Приложение" в конструкторе проектов (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] создает стандартный файл с расширением MANIFEST и сохраняет его в каталоги отладки и выпуска вместе с исполняемым файлом. Пользовательский манифест можно добавить, создав его в любом текстовом редакторе и добавив полученный файл в проект. Кроме того, можно щелкнуть значок **проект** в **обозревателе решений** и нажать кнопку **Добавить новый элемент**, а затем **Файл манифеста приложения**. Добавленный новый или существующий файл манифеста появится в раскрывающемся списке **Манифест**. Дополнительные сведения см. в разделе [Страница "Приложение" в конструкторе проектов (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
  Манифест приложения можно предоставить во время пользовательского действия, выполняемого после сборки, или в составе файла ресурсов Win32 с помощью параметра [/nowin32manifest (C# Compiler Options)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md). Этот же параметр можно использовать, если вы хотите, чтобы ваше приложение требовало виртуализации файлов или реестров в Windows Vista. В этом случае компилятор не будет создавать и внедрять манифест по умолчанию в переносимый исполняемый файл (PE).  
   
@@ -92,4 +92,5 @@ ms.lasthandoff: 07/03/2017
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
  [/nowin32manifest (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

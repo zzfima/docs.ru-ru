@@ -1,5 +1,5 @@
 ---
-title: "uint (справочник по C#) | Документы Майкрософт"
+title: "uint (справочник по C#)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 24a47d83f9f8a778b6df53b5e1e5444eda819680
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="uint-c-reference"></a>uint (справочник по C#)
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>Литералы  
 
-Переменную `uint` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал не соответствует диапазону `uint` (т. е. его значение меньше <xref:System.UInt32.MinValue?displayProperty=fullName> или больше <xref:System.UInt32.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
+Переменную `uint` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `uint` (то есть если он меньше <xref:System.UInt32.MinValue?displayProperty=fullName> или больше <xref:System.UInt32.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
 
 В следующем примере целые числа, равные 3 000 000 000 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, назначаются значениям `uint`.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/24/2017
 
 [!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
- Целочисленные литералы могут также содержать суффикс, обозначающий тип. Суффикс `U` или "u" обозначает либо `uint`, либо `ulong` в зависимости от числового значения литерала. В следующем примере суффикс `u` используется для обозначения целого числа без знака обоих типов. Обратите внимание на то, что первый литерал представляет собой `uint`, поскольку его значение меньше <xref:System.UInt32.MaxValue?displayProperty=fullName>, а второй — `ulong`, поскольку его значение больше <xref:System.UInt32.MaxValue?displayProperty=fullName>.
+ Целочисленные литералы могут также содержать суффикс, обозначающий тип. Суффикс `U` или "u" обозначает либо `uint`, либо `ulong` в зависимости от числового значения литерала. В следующем примере суффикс `u` используется для обозначения целого числа без знака обоих типов. Обратите внимание, что первый литерал имеет тип `uint`, поскольку его значение меньше <xref:System.UInt32.MaxValue?displayProperty=fullName>, а второй имеет тип `ulong`, поскольку его значение больше <xref:System.UInt32.MaxValue?displayProperty=fullName>.
 
 [!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
  
@@ -104,7 +104,7 @@ uint y = (uint)3.0;
  Дополнительные сведения о правилах выполнения неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.UInt32>   
@@ -115,3 +115,4 @@ uint y = (uint)3.0;
  [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

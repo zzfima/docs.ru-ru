@@ -1,60 +1,80 @@
 ---
-title: "/recurse (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/recurse"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/recurse compiler option [C#]"
-  - "recurse compiler option [C#]"
-  - "-recurse compiler option [C#]"
+title: "-recurse (параметры компилятора C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /recurse
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /recurse compiler option [C#]
+- recurse compiler option [C#]
+- -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 99664f8b32f5f9e5bf491c5bfde2c1649de42dd9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# /recurse (C# Compiler Options)
-Параметр "\/recurse" позволяет компилировать файлы исходного кода, содержащиеся во всех дочерних каталогах, либо в указанном каталоге \(dir\), либо в каталоге проекта.  
+# <a name="recurse-c-compiler-options"></a>/recurse (параметры компилятора C#)
+Параметр /recurse позволяет компилировать файлы исходного кода во всех вложенных каталогах заданного каталога (dir) или каталога проекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /recurse:[dir\]file  
 ```  
   
-## Аргументы  
- `dir` \(необязательно\)  
- Папка, в которой следует начать поиск.  Если не указан, поиск начинается в каталоге проекта.  
+## <a name="arguments"></a>Аргументы  
+ `dir` (необязательно)  
+ Каталог, с которого будет начинаться поиск. Если этот параметр не задан, поиск начинается с каталога проекта.  
   
  `file`  
- Файлы, которые нужно найти.  Допускается использование специальных знаков.  
+ Файлы для поиска. Поддерживаются подстановочные знаки.  
   
-## Заметки  
- Параметр **\/recurse** позволяет компилировать файлы исходного кода, содержащиеся во всех дочерних каталогах, либо в указанном каталоге \(`dir`\), либо в каталоге проекта.  
+## <a name="remarks"></a>Примечания  
+ Параметр **/recurse** позволяет компилировать файлы исходного кода во всех вложенных каталогах заданного каталога (`dir`) или каталога проекта.  
   
- Для компиляции всех файлов из папки проекта без использования параметра **\/recurse** в имени файла можно использовать специальные знаки.  
+ Чтобы скомпилировать все соответствующие файлы в каталоге проекта, не задавая параметр **/recurse**, можно использовать подстановочные знаки в именах файлов.  
   
- Этот параметр компилятора недоступен в среде разработки Visual Studio и не может быть изменен программным способом.  
+ Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.  
   
-## Пример  
- Выполняется компиляция всех файлов C\# в текущем каталоге:  
+## <a name="example"></a>Пример  
+ Компиляция всех файлов C# в текущем каталоге:  
   
-```  
+```console  
 csc *.cs  
 ```  
   
- Выполняется компиляция всех файлов C\# в каталоге "dir1\\dir2" и во всех вложенных каталогах, а также создается dir2.dll:  
+ Компиляция всех файлов C# в каталоге dir1\dir2 и всех вложенных в него каталогах, а также создание файла dir2.dll:  
   
-```  
+```console  
 csc /target:library /out:dir2.dll /recurse:dir1\dir2\*.cs  
 ```  
   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>См. также  
+ [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

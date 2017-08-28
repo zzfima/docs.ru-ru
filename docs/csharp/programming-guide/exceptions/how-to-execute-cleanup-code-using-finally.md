@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Выполнение кода очистки с использованием блока finally (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Выполнение кода очистки с использованием блока finally (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b9c22ca8ee9c83e6f1808520530c6d1912d8f4f1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b1f7bccacf20a9322f4de75740cdc34b4a97fa4c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Практическое руководство. Выполнение кода очистки с использованием блока finally (Руководство по программированию на C#)
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideExceptions#17](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_2.cs)]  
   
- Так как исключение может возникнуть в любой момент в блоке `try` до вызова `OpenWrite()`, или может произойти сбой самого вызова `OpenWrite()`, мы не можем гарантировать, что файл будет открыт при попытке закрыть его. Блок `finally` добавляет проверку, чтобы убедиться, что объект <xref:System.IO.FileStream> не имеет значения `null` перед вызовом метода <xref:System.IO.Stream.Close%2A>. Без проверки `null` блок `finally` может создавать собственное исключение <xref:System.NullReferenceException>, однако создания исключений в блоках `finally` следует по возможности избегать.  
+ Так как исключение может возникнуть в любой момент в блоке `try` до вызова `OpenWrite()`, или может произойти сбой самого вызова `OpenWrite()`, мы не можем гарантировать, что файл будет открыт при попытке закрыть его. Блок `finally` добавляет проверку того, что объект <xref:System.IO.FileStream> имеет отличное от `null` значение, прежде чем будет вызван метод <xref:System.IO.Stream.Close%2A>. Без проверки `null` блок `finally` может создавать собственное исключение <xref:System.NullReferenceException>, однако создания исключений в блоках `finally` следует по возможности избегать.  
   
  Подключение к базе данных — еще один подходящий кандидат для заключения в блок `finally`. Так как количество разрешенных подключений к серверу базы данных иногда ограничено, закрывать подключения к базе данных рекомендуется как можно быстрее. Если перед закрытием подключения возникает исключение, это еще один случай, когда использование блока `finally` предпочтительнее, чем ожидание сборки мусора.  
   
@@ -57,3 +58,4 @@ ms.lasthandoff: 03/13/2017
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+

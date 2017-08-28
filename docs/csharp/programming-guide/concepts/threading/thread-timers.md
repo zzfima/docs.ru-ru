@@ -1,5 +1,5 @@
 ---
-title: "Таймеры потоков (C#) | Документы Майкрософт"
+title: "Таймеры потоков (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-timers-c"></a>Таймеры потоков (C#)
-Класс <xref:System.Threading.Timer?displayProperty=fullName> полезен для периодического выполнения задач в отдельном потоке. Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.  
+Класс <xref:System.Threading.Timer?displayProperty=fullName> полезно использовать для периодического выполнения задачи в отдельном потоке. Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.  
   
 ## <a name="thread-timer-example"></a>Пример таймера потока  
  В следующем примере задача запускается каждые две секунды и использует флаг для инициализации метода <xref:System.IDisposable.Dispose%2A>, который останавливает таймер. В этом примере сведения о состояния отображаются в окне вывода.  
@@ -88,3 +89,4 @@ private void TimerTask(object StateObj)
 ## <a name="see-also"></a>См. также  
  <xref:System.Threading>   
  [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+

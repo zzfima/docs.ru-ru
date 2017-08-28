@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework (руководство по программированию в C#) | Документы Майкрософт"
+title: "Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,24 +27,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 6d529e60643966fbabd5290543146977b4dc83c5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 21badd504a54c7000fef76e901cc952134eff61e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Практическое руководство. Публикация событий, соответствующих рекомендациям .NET Framework (Руководство по программированию в C#)
-Следующая процедура демонстрирует добавление событий, которые соответствуют стандартному шаблону [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] для классов и структур. Все события в библиотеке классов [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] основаны на делегате <xref:System.EventHandler>, который определен следующим образом:  
+Следующая процедура демонстрирует добавление событий, которые соответствуют стандартному шаблону [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для классов и структур. Все события в библиотеке классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] основаны на делегате <xref:System.EventHandler>, который определен следующим образом:  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] представляет общую версию этого делегата, <xref:System.EventHandler%601>. В следующих примерах демонстрируется использование обеих версий.  
+>  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] представляет универсальную версию этого делегата, <xref:System.EventHandler%601>. В следующих примерах демонстрируется использование обеих версий.  
   
- Хотя события в определяемых классах могут быть основаны на любом допустимом типе делегата, даже на делегатах, возвращающих значение, обычно рекомендуется основывать события на шаблоне [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] с помощью <xref:System.EventHandler>, как показано в следующем примере.  
+ Хотя события в определяемых классах могут быть основаны на любом допустимом типе делегата, даже на делегатах, возвращающих значение, обычно рекомендуется основывать события на шаблоне [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] с помощью <xref:System.EventHandler>, как показано в следующем примере.  
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Публикация событий, основанных на шаблоне EventHandler  
   
@@ -79,7 +79,7 @@ public delegate void EventHandler(object sender, EventArgs e);
         public event EventHandler RaiseCustomEvent;  
         ```  
   
-    2.  Если вы используете неуниверсальную версию <xref:System.EventHandler>, и имеется пользовательский класс, производный от <xref:System.EventArgs>, объявите событие внутри класса публикации и используйте делегат из шага 2 в качестве типа.  
+    2.  Если вы используете неуниверсальную версию <xref:System.EventHandler> и имеется пользовательский класс, производный от <xref:System.EventArgs>, объявите событие внутри класса публикации и используйте делегат из шага 2 в качестве типа.  
   
         ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
@@ -101,3 +101,4 @@ public delegate void EventHandler(object sender, EventArgs e);
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [События](../../../csharp/programming-guide/events/index.md)   
  [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+

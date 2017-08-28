@@ -1,5 +1,5 @@
 ---
-title: "object (справочник по C#) | Документы Майкрософт"
+title: "object (справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cf1ec249c928f4bc23827ef0b831a8a64659ab8c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 744debc51f68cc52f03bce09c9f276a66ae085e1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="object-c-reference"></a>object (справочник по C#)
-Тип `object` является псевдонимом для <xref:System.Object> в .NET Framework. В унифицированной системе типов C# все типы, стандартные и определяемые пользователем, ссылочные типы и типы значений, напрямую или косвенно наследуются из <xref:System.Object>. Переменным типа `object` можно назначать значения любого типа. Если переменная типа значения преобразуется в объект, она считается *упакованной*. Если переменная типа значения преобразуется в тип значения, она считается *распакованной*. Дополнительные сведения см. в разделе [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+Тип `object` — это псевдоним для <xref:System.Object> в .NET Framework. В унифицированной системе типов C# все типы, стандартные и определяемые пользователем, ссылочные типы и типы значений напрямую или косвенно наследуются из <xref:System.Object>. Переменным типа `object` можно назначать значения любого типа. Если переменная типа значения преобразуется в объект, она считается *упакованной*. Если переменная типа значения преобразуется в тип значения, она считается *распакованной*. Дополнительные сведения см. в разделе [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как переменные типа `object` могут принимать значения любого типа данных и как переменные типа `object` могут применять методы к <xref:System.Object> из платформы .NET Framework.  
@@ -54,3 +54,4 @@ ms.lasthandoff: 03/13/2017
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)   
  [Типы значений](../../../csharp/language-reference/keywords/value-types.md)
+

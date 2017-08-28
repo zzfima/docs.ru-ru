@@ -1,51 +1,71 @@
 ---
-title: "/pdb (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/pdb"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-pdb compiler option [C#]"
-  - "pdb compiler option [C#]"
-  - "/pdb compiler option [C#]"
+title: "-pdb (параметры компилятора C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /pdb
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -pdb compiler option [C#]
+- pdb compiler option [C#]
+- /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
 caps.latest.revision: 8
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 8
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7c72c12347a9096aeed063b84310356cb07b49c3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# /pdb (C# Compiler Options)
-Параметр компилятора **\/pdb** указывает имя и расположение файла символов отладки.  
+# <a name="pdb-c-compiler-options"></a>/pdb (параметры компилятора C#)
+Параметр компилятора **/pdb** задает имя и расположение файла отладочных символов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /pdb:filename  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `filename`  
- Имя и расположение файла символов отладки.  
+ Имя и расположение файла отладочных символов.  
   
-## Заметки  
- После указания [\/debug \(Emit Debugging Information\)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) компилятор создаст PDB\-файл в том же каталоге, в котором будут созданы выходной файл \(с расширением EXE или DLL\), с тем же самым именем, что и у выходного файла.  
+## <a name="remarks"></a>Примечания  
+ Если указан параметр [/debug (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/debug-compiler-option.md), компилятор создаст в каталоге с выходным файлом (EXE или DLL) PDB-файл с тем же именем.  
   
- Параметр **\/pdb** позволяет указать расположение и имя файла с расширением PDB, отличное от заданного по умолчанию.  
+ С помощью параметра **/pdb** можно задать имя PDB-файла, отличающееся от используемого по умолчанию.  
   
- Этот параметр не может быть установлен в среде разработки Visual Studio и его нельзя изменить программным способом.  
+ Этот параметр компилятора нельзя задать в среде разработки Visual Studio или изменить программными средствами.  
   
-## Пример  
- Скомпилируйте файл `t.cs` и создайте PDB\-файл с именем tt.pdb:  
+## <a name="example"></a>Пример  
+ Компиляция файла `t.cs` и создание файла tt.pdb:  
   
-```  
+```console  
 csc /debug /pdb:tt t.cs  
 ```  
   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>См. также  
+ [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

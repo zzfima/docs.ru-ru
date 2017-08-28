@@ -1,5 +1,5 @@
 ---
-title: "Упаковка-преобразование типов, допускающих значение NULL (руководство по программированию на C#) | Документы Майкрософт"
+title: "Упаковка-преобразование типов, допускающих значение NULL (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,15 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e4ff2e8a31ca5a59494f80597460e90107e78c8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Упаковка-преобразование типов, допускающих значение NULL (Руководство по программированию на C#)
-Объекты на основе типов, допускающих значения NULL, могут быть упакованы, только если объект имеет значение, отличное от NULL. Если <xref:System.Nullable%601.HasValue%2A> имеет значение `false`, ссылке на объект присваивается `null` и упаковка-преобразование не выполняется. Пример:  
+Объекты на основе типов, допускающих значения NULL, могут быть упакованы, только если объект имеет значение, отличное от NULL. Если <xref:System.Nullable%601.HasValue%2A> имеет значение `false`, ссылке на объект присваивается `null` и упаковка-преобразование не выполняется. Например:  
   
 ```csharp  
 bool? b = null;  
@@ -45,7 +45,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- Объект имеет значение, отличное от NULL, если <xref:System.Nullable%601.HasValue%2A> имеет значение `true`, выполняется упаковка-преобразование, однако упаковывается только базовый тип, который лежит в основе объекта, допускающего значения NULL. При упаковке-преобразовании ненулевого типа значения, допускающего NULL, происходит упаковка самого типа значения, а не <xref:System.Nullable%601?displayProperty=fullName>, который упаковывает тип значения. Пример:  
+ Объект имеет значение, отличное от NULL, если <xref:System.Nullable%601.HasValue%2A> имеет значение `true`, выполняется упаковка-преобразование, однако упаковывается только базовый тип, который лежит в основе объекта, допускающего значение NULL. При упаковке-преобразовании ненулевого типа значения, допускающего NULL, происходит упаковка самого типа значения, а не <xref:System.Nullable%601?displayProperty=fullName>, который упаковывает тип значения. Например:  
   
 ```csharp  
 bool? b = false;  
@@ -94,3 +94,4 @@ int? i2 = (int?)iBoxed;
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Типы, допускающие значения NULL](../../../csharp/programming-guide/nullable-types/index.md)   
  [Практическое руководство. Идентификация типа, допускающего значение NULL](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+

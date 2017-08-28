@@ -1,5 +1,5 @@
 ---
-title: "LINQ и строки (C#) | Документы Майкрософт"
+title: "LINQ и строки (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,21 +19,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 39c181bbf3c865b3c3a7f840b600be3ed6f56a7a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 49c51595ffff45df503308b9eba55fc67b4da2e8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-and-strings-c"></a>LINQ и строки (C#)
-LINQ можно использовать для запроса и преобразования строк и коллекций строк. При этом лучше всего его потенциал раскрывается при работе с частично структурированными данными в текстовых файлах. Запросы LINQ можно комбинировать с традиционными строковыми функциями и регулярными выражениями. Например, с помощью метода <xref:System.String.Split%2A> или <xref:System.Text.RegularExpressions.Regex.Split%2A> можно создать массив строк, которые можно будет запрашивать или изменять посредством LINQ. Метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> можно использовать в предложении `where` запроса LINQ. Кроме того, LINQ позволяет запрашивать или изменять результаты <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемые регулярным выражением.  
+LINQ можно использовать для запроса и преобразования строк и коллекций строк. При этом лучше всего его потенциал раскрывается при работе с частично структурированными данными в текстовых файлах. Запросы LINQ можно комбинировать с традиционными строковыми функциями и регулярными выражениями. Например, используя метод <xref:System.String.Split%2A> или <xref:System.Text.RegularExpressions.Regex.Split%2A>, можно создать массив строк, который затем можно запрашивать или изменять с помощью LINQ. Метод <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> можно использовать в предложении `where` запроса LINQ. Также LINQ можно использовать для запроса или изменения результатов <xref:System.Text.RegularExpressions.MatchCollection>, возвращаемых регулярным выражением.  
   
  Методы, описанные в этом разделе, позволяют преобразовать частично структурированные текстовые данные в XML. Дополнительные сведения см. в разделе [Практическое руководство. Создание кода XML из CSV-файлов](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd).  
   
  Примеры в этом разделе делятся на две категории:  
   
 ## <a name="querying-a-block-of-text"></a>Запрос блока текста  
- Текстовые блоки можно запрашивать, анализировать и изменять, формируя из них доступный для запросов массив более мелких строк с помощью метода <xref:System.String.Split%2A> или <xref:System.Text.RegularExpressions.Regex.Split%2A>. Исходный текст можно разбить на слова, предложения, абзацы, страницы или другие фрагменты, а затем применить другие способы фрагментации, необходимые для вашего запроса.  
+ Вы можете запрашивать, анализировать и изменять блоки текста, разбивая их на запрашиваемый массив строк меньшего размера с помощью методов <xref:System.String.Split%2A> или <xref:System.Text.RegularExpressions.Regex.Split%2A>. Исходный текст можно разбить на слова, предложения, абзацы, страницы или другие фрагменты, а затем применить другие способы фрагментации, необходимые для вашего запроса.  
   
  [Практическое руководство. Подсчет вхождений слова в строке (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
  Показывает, как использовать LINQ для простых запросов текста.  
@@ -77,3 +78,4 @@ LINQ можно использовать для запроса и преобра
 ## <a name="see-also"></a>См. также  
  [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
  [Практическое руководство. Создание кода XML из CSV-файлов](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+

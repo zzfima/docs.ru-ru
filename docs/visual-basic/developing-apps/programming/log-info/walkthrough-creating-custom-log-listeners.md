@@ -1,5 +1,5 @@
 ---
-title: "Создание пользовательских прослушивателей журнала (Visual Basic) | Документы Майкрософт"
+title: "Создание пользовательских прослушивателей журнала (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,31 +31,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 98cec8d5077e777f18c18ad1af0040b3359151f7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bc6fde8dcbb27157f3fd180ad393bb406222195e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Пошаговое руководство. Создание пользовательских прослушивателей журнала (Visual Basic)
 В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.  
   
 ## <a name="getting-started"></a>Начало работы  
- Прослушиватели журнала должны наследовать от класса <xref:System.Diagnostics.TraceListener>класса.  
+ Прослушиватели журналов должны наследовать от класса <xref:System.Diagnostics.TraceListener>.  
   
 #### <a name="to-create-the-listener"></a>Создание прослушивателя  
   
--   В приложении создайте класс `SimpleListener`, наследуемый от класса <xref:System.Diagnostics.TraceListener>.  
+-   В приложении создайте класс с именем `SimpleListener`, который наследует от класса <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
-     Методы <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A>, требуемые базовым классом, вызывают функцию `MsgBox` для отображения входных данных.  
+     Методы <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A>, которые нужны для базового класса, используют `MsgBox` для отображения входных данных.  
   
-     Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> применяется к методам <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A> таким образом, чтобы их атрибуты соответствовали методам базового класса. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> позволяет узлу, на котором выполняется код, определять, что код обеспечивает синхронизацию защиты узла.  
+     К методам <xref:System.Diagnostics.TraceListener.Write%2A> и <xref:System.Diagnostics.TraceListener.WriteLine%2A> применяется атрибут <xref:System.Security.Permissions.HostProtectionAttribute>, чтобы их атрибуты соответствовали методы базового класса. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> позволяет узлу, на котором выполняется код, проверять наличие в коде синхронизации защиты узла.  
   
     > [!NOTE]
-    >  Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> действует только для неуправляемых приложений, на которых размещена среда CLR и которые реализуют защиту узлов, таких как SQL Server.  
+    >  Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> действует только для неуправляемых приложений, на которых размещена среда CLR и реализована защита узлов, например для SQL Server.  
   
  Чтобы объект `My.Application.Log` использовал прослушиватель журнала, следует присвоить строгое имя сборке, содержащей прослушиватель журнала.  
   
@@ -136,3 +136,4 @@ ms.lasthandoff: 03/13/2017
  [Практическое руководство. Запись в журнал сведений об исключениях](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
  [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+

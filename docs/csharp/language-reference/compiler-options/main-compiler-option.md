@@ -1,5 +1,5 @@
 ---
-title: "-main (параметры компилятора C#) | Документы Майкрософт"
+title: "-main (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa8c02a6521b65e2cc4f7c8d779c1091ce399fba
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eee7ef4698f4b6bf7c90ff8e22a1a3ae106bec35
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="main-c-compiler-options"></a>/main (параметры компилятора C#)
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/13/2017
   
 3.  Измените свойство **Автоматически запускаемый объект**.  
   
-     Сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
+     Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
   
 ## <a name="example"></a>Пример  
  Скомпилируйте `t2.cs` и `t3.cs`, указав, что метод **Main** будет находиться в `Test2`:  
@@ -75,4 +75,5 @@ csc t2.cs t3.cs /main:Test2
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

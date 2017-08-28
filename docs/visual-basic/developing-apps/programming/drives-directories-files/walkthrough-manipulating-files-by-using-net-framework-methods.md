@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Управление файлами с помощью методов .NET Framework (Visual Basic) | Документы Майкрософт"
+title: "Управление файлами с помощью методов .NET Framework (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,20 +41,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a16d2168548dadf9210b653d90ce229d99469b64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eab8ebe0f1e6f3e86b9c4aa7c3b24a2763a27ffc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Пошаговое руководство. Управление файлами с помощью методов .NET Framework (Visual Basic)
 В этом пошаговом руководстве демонстрируются открытие и чтение файла с помощью класса <xref:System.IO.StreamReader>, проверка доступа к файлу, поиск строки в файле, считанном с помощью экземпляра класса <xref:System.IO.StreamReader>, и запись в файл с помощью класса <xref:System.IO.StreamWriter>.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Создание приложения  
- Запустите [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] и начните проект с создания формы, которую пользователь сможет использовать для записи в намеченный файл.  
+ Запустите [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] и начните проект с создания формы, которую пользователь сможет использовать для записи в намеченный файл.  
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  В поле **Имя** введите `MyDiary`, а затем нажмите кнопку **ОК**.  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] добавит проект в **обозреватель решений**, после чего откроется **конструктор Windows Forms**.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] добавит проект в **обозреватель решений**, после чего откроется **конструктор Windows Forms**.  
   
 4.  Добавьте в форму элементы управления из следующей таблицы и установите для их свойств соответствующие значения.  
   

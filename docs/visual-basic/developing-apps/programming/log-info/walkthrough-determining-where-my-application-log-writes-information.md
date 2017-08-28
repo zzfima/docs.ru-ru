@@ -1,5 +1,5 @@
 ---
-title: "Определение места записи информации для My.Application.Log (Visual Basic) | Документы Майкрософт"
+title: "Определение места записи информации для My.Application.Log (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Пошаговое руководство. Определение места записи информации для My.Application.Log (Visual Basic)
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Определение прослушивателей для объекта My.Application.Log  
   
-1.  Найдите файл конфигурации сборки. Во время разработки сборки доступ к файлу app.config в [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] можно получить в **обозревателе решений**. В противном случае имя файла конфигурации — это имя сборки с расширением .config, а расположен он в том же каталоге, что и сборка.  
+1.  Найдите файл конфигурации сборки. Во время разработки сборки доступ к файлу app.config в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] можно получить в **обозревателе решений**. В противном случае имя файла конфигурации — это имя сборки с расширением .config, а расположен он в том же каталоге, что и сборка.  
   
     > [!NOTE]
     >  Не каждая сборка имеет файл конфигурации.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/22/2017
   
      Если эти разделы не существуют, то настройка прослушивателей журнала `My.Application.Log` может быть задана в файле конфигурации компьютера. Далее описано, как выяснить, что определяется в файле конфигурации компьютера.  
   
-    1.  Найдите файл machine.config компьютера. Как правило, он находится в каталоге *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , где `SystemRoot` — каталог операционной системы, а `frameworkVersion` — версия [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+    1.  Найдите файл machine.config компьютера. Как правило, он находится в каталоге *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , где `SystemRoot` — каталог операционной системы, а `frameworkVersion` — версия [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
          Параметры в файле machine.config могут быть переопределены файлом конфигурации приложения.  
   
@@ -79,11 +79,11 @@ ms.lasthandoff: 05/22/2017
   
 5.  Данные инициализации для многих типов общих прослушивателей включают описание того, куда прослушиватель направляет данные.  
   
-    -   Прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> записывает данные в файловый журнал, как описано во введении.  
+    -   Прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> записывает данные в журнал файлов, как описано во введении.  
   
-    -   Прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> записывает данные в журнал событий компьютера, указанный в параметре `initializeData`. Для просмотра журнала событий можно использовать **обозреватель сервера** или **средство просмотра событий Windows**. Дополнительные сведения см. в разделе [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   Прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> записывает данные в журнал событий компьютера, определяемый параметром `initializeData` . Для просмотра журнала событий можно использовать **обозреватель сервера** или **средство просмотра событий Windows**. Для получения дополнительной информации см. [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
   
-    -   Прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> записывают данные в файл, указанный в параметре `initializeData`.  
+    -   Прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> записывают данные в файл, указанный в параметре `initializeData` .  
   
     -   Прослушиватель <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> выводит данные в консоль командной строки.  
   
@@ -103,3 +103,4 @@ ms.lasthandoff: 05/22/2017
  [Пошаговое руководство. Изменение места записи сведений для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [События трассировки событий Windows в .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)   
  [Устранение неполадок, связанных с прослушивателями журнала](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

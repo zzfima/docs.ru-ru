@@ -1,5 +1,5 @@
 ---
-title: "-subsystemversion (параметры компилятора C#) | Документы Майкрософт"
+title: "-subsystemversion (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -25,10 +25,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8766904cad739b29c7dfe80b29305ea2b3bd2e6f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c7992086eb33577d795496025820ed8f7bb51c24
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (параметры компилятора C#)
@@ -39,7 +40,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /subsystemversion:major.minor  
 ```  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/13/2017
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
+|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Значения по умолчанию  
  Значение по умолчанию параметра компилятора **/subsystemversion** зависит от условий в следующем списке.  
@@ -73,12 +74,13 @@ ms.lasthandoff: 03/13/2017
   
     -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
--   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
+-   Значение по умолчанию — 6.00, если используется средство MSBuild, приложение предназначено для [!INCLUDE[net_v45](~/includes/net-v45-md.md)], и не установлены параметры компилятора, определенные ранее в этом списке.  
   
 -   Если ни одно из предыдущих условий не верно, значение по умолчанию — 4.00.  
   
 ## <a name="setting-this-option"></a>Задание этого параметра  
- Чтобы задать параметр компилятора **/subsystemversion** в Visual Studio, необходимо открыть CSPROJ-файл и указать значение для свойства `SubsystemVersion` в XML MSBuild. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. выше в подразделе "Значения по умолчанию" или в разделе [Общие свойства проектов MSBuild](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties).  
+ Чтобы задать параметр компилятора **/subsystemversion** в Visual Studio, необходимо открыть CSPROJ-файл и указать значение для свойства `SubsystemVersion` в XML MSBuild. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. выше в подразделе "Значения по умолчанию" или в разделе [Общие свойства проектов MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+

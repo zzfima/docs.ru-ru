@@ -1,5 +1,5 @@
 ---
-title: "Исключения, создаваемые компилятором (руководство по программированию в C#) | Документы Майкрософт"
+title: "Исключения, создаваемые компилятором (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4015551ac983610afc8bf1f08e73a33c1ac338ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d8fbae9272b34dd4d010199470c930c846cd1b74
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Исключения, создаваемые компилятором (Руководство по программированию в C#)
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/13/2017
   
 |Исключение|Описание|  
 |---------------|-----------------|  
-|<xref:System.ArithmeticException>|Базовый класс для исключений, возникающих во время арифметических операций, таких как <xref:System.DivideByZeroException> и <xref:System.OverflowException>.|  
+|<xref:System.ArithmeticException>|Базовый класс для исключений, которые возникают при выполнении арифметических операций, таких как <xref:System.DivideByZeroException> и <xref:System.OverflowException>.|  
 |<xref:System.ArrayTypeMismatchException>|Возникает, если массив не может сохранить данный элемент, поскольку фактический тип элемента несовместим с фактическим типом массива.|  
 |<xref:System.DivideByZeroException>|Возникает при попытке деления целого значения на ноль.|  
 |<xref:System.IndexOutOfRangeException>|Возникает при попытке индексирования массива, если индекс меньше нуля или выходит за границы массива.|  
@@ -56,3 +57,4 @@ ms.lasthandoff: 03/13/2017
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+
