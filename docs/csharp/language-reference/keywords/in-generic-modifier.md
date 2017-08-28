@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2c20a74b48fad8eb7021e23002d06e78a1fd624
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (универсальный модификатор) (Справочник по C#)
@@ -46,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  Контравариантный делегат может быть назначен другому делегату того же типа, но с производным параметром универсального типа меньшей степени.  
   
- Дополнительные сведения см. в разделе [Ковариация и контравариантность](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8).  
+ Дополнительные сведения см. в разделе [Ковариация и контравариантность](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как объявить, расширить и реализовать контравариантный универсальный интерфейс. В нем также показано, как можно использовать неявное преобразование для классов, реализующих этот интерфейс.  
@@ -63,6 +63,6 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>См. также  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [Ковариация и контравариантность](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
+ [Ковариация и контравариантность](../../programming-guide/concepts/covariance-contravariance/index.md)   
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
 

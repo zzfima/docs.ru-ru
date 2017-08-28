@@ -1,10 +1,7 @@
 ---
 title: "Удаление элементов, атрибутов и узлов из дерева XML (C#)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
@@ -15,10 +12,10 @@ caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Удаление элементов, атрибутов и узлов из дерева XML (C#)
@@ -32,8 +29,8 @@ ms.lasthandoff: 07/28/2017
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|Удаляет <xref:System.Xml.Linq.XAttribute> из его родительского элемента.|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|Удаляет дочерние узлы из <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|Удаляет <xref:System.Xml.Linq.XAttribute> из его родительского элемента.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|Удаляет дочерние узлы из <xref:System.Xml.Linq.XContainer>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|Удаляет содержимое и атрибуты из <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|Удаляет атрибуты <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|Передача `null` в качестве значения приводит к удалению атрибута.|  

@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5a4b84756be7d33c478d8115b812795dba182cdf
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 069a6411e3d89fa1c2dba57f0b83badff1342763
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="local-functions-c-programming-guide"></a>Локальные функции (руководство по программированию на C#)
@@ -54,7 +54,7 @@ ms.lasthandoff: 07/28/2017
 
 - Модификатор доступа элемента. Поскольку все локальные функции являются частными, при использовании модификатора доступа (например, ключевого слова `private`) возникает ошибка компилятора CS0106, "Модификатор "private" недопустим для этого элемента".
  
-- Ключевое слово [static](..\..\language-reference\keywords\static.md). При использовании ключевого слова `static` возникает ошибка компилятора CS0106, "Модификатор "static" недопустим для этого элемента".
+- Ключевое слово [static](../../language-reference/keywords/static.md). При использовании ключевого слова `static` возникает ошибка компилятора CS0106, "Модификатор "static" недопустим для этого элемента".
 
 Кроме того, к локальной функции, а также ее параметрам и параметрам типа, нельзя применять атрибуты. 
  
