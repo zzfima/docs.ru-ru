@@ -1,24 +1,28 @@
 ---
-title: "Основные сведения о приложениях .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "разработка для .NET Framework"
+title: "Основные сведения о приложениях .NET Framework"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Основные сведения о приложениях .NET Framework
+# <a name="net-framework-application-essentials"></a>Основные сведения о приложениях .NET Framework
 В этом разделе документации по платформе .NET Framework представлены сведения о базовых задачах разработки приложений с использованием .NET Framework.  
   
 ## <a name="in-this-section"></a>Содержание  
@@ -31,7 +35,7 @@ caps.handback.revision: 19
  [Универсальные шаблоны](../../docs/standard/generics/index.md)  
  Описание возможности Generics, в том числе универсальных коллекций, делегатов и интерфейсов, предоставляемых платформой .NET Framework. Ссылки на документацию для C#, Visual Basic и Visual C++, а также вспомогательных технологий, таких как Reflection.  
   
- [Числовые значения](../../docs/standard/numerics.md)  
+ [Числовые типы](../../docs/standard/numerics.md)  
  Описание числовых типов в .NET Framework.  
   
  [События](../../docs/standard/events/index.md)  
@@ -40,8 +44,8 @@ caps.handback.revision: 19
  [Исключения](../../docs/standard/exceptions/index.md)  
  Описание обработки ошибок платформы .NET Framework и основных сведений об обработке исключений.  
   
- [Файл и поток с вводом выводом](../../docs/standard/io/index.md)  
- Описание способов выполнения синхронного и асинхронного доступа к файлам, доступа к данным потока и использования изолированного хранилища.  
+ [Файловый и потоковый ввод-вывод](../../docs/standard/io/index.md)  
+ Описание способов выполнения синхронного и асинхронного доступа к файлам и потоку данных и использования изолированного хранилища.  
   
  [Даты, время и часовые пояса](../../docs/standard/datetime/index.md)  
  Описание работы с часовыми поясами и преобразования часовых поясов.  
@@ -49,7 +53,7 @@ caps.handback.revision: 19
  [Домены приложений и сборки](../../docs/framework/app-domains/index.md)  
  Описание создания сборок и доменов приложений и работы с ними.  
   
- [Сериализация](../../docs/framework/serialization/index.md)  
+ [Сериализация](../../docs/standard/serialization/index.md)  
  Описание процесса преобразования состояния объекта в форму, которую можно сохранять или передавать.  
   
  [Ресурсы в приложениях для настольных систем](../../docs/framework/resources/index.md)  
@@ -64,7 +68,7 @@ caps.handback.revision: 19
  [Атрибуты](../../docs/standard/attributes/index.md)  
  Описание использования атрибутов для настройки метаданных.  
   
- [64-разрядных приложений](../../docs/framework/64-bit-apps.md)  
+ [64-разрядные приложения](../../docs/framework/64-bit-apps.md)  
  Описание проблем, связанных с разработкой приложений, которые будут работать в 64-разрядной операционной системе Windows.  
   
 ## <a name="related-sections"></a>Связанные разделы  
@@ -73,3 +77,4 @@ caps.handback.revision: 19
   
  [Безопасность](../../docs/standard/security/index.md)  
  Здесь сведения о классах и службах среды CLR и .NET Framework, предназначенных для упрощения разработки безопасных приложений.
+
