@@ -1,27 +1,23 @@
 ---
 title: "Рефакторинг в чистые функции (C#)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e3bb704cab77d4ad9895624bf7f721920000378
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 2bce781df80a777203ed8e713bedf83f1c7779a8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Рефакторинг в чистые функции (C#)
+
 Важным аспектом чисто функциональных преобразований является освоение способов оптимизации существующего кода для получения чистых функций.  
   
 > [!NOTE]
@@ -95,7 +91,7 @@ public class Program
 >  Передача параметров по значению для ссылочных типов приводит к созданию копии ссылки на передаваемый объект. Эта копия все еще связана с теми же данными экземпляра, что и первоначальная ссылка (пока ссылочная переменная не будет присвоена новому объекту). Вызов по значению необязательно требуется функции для изменения параметра.  
   
 ### <a name="pure-function"></a>Чистая функция  
- Следующая версия этой программы реализует функцию `HypenatedConcat` в виде чистой функции.  
+Следующая версия этой программы реализует функцию `HypenatedConcat` в виде чистой функции.  
   
 ```csharp  
 class Program  

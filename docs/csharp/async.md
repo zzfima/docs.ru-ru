@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -128,7 +128,7 @@ calculateButton.Clicked += async (o, e) =>
 Этот фрагмент кода скачивает код HTML с сайта www.dotnetfoundation.org и подсчитывает число вхождений в него строки ".NET".  С помощью ASP.NET MVC определяется метод веб-контроллера, который выполняет эту задачу, и возвращается число.
 
 > [!NOTE]
-> Если вы планируете выполнять анализ HTML, никогда не следует использовать регулярные выражения.  Если такая задача стоит перед рабочим кодом, используйте библиотеку анализа.
+> Если вы планируете проанализировать HTML в рабочем коде, не используйте регулярные выражения. Используйте библиотеку анализа.
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
