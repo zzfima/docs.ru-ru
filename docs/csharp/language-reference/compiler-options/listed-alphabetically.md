@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 291c35f73b47167289a88f0b7655c26699fdc009
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
@@ -85,6 +85,8 @@ ms.lasthandoff: 07/28/2017
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Задает язык, используемый для вывода компилятора.|  
 |[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|Включает все файлы в текущем каталоге и подкаталогах в соответствии с заданным шаблоном.|  
 |[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|Ссылается на метаданные из указанных файлов сборки.|  
+|[/refout](refout-compiler-option.md)|Создание ссылочной сборки в дополнение к основной.|  
+|[/refonly](refonly-compiler-option.md)|Создание ссылочной сборки вместо основной.|  
 |[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|Внедряет указанный ресурс.|  
 |/ruleset:\<файл>|Укажите файл набора правил, который отключает определенные диагностики.|  
 |[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|Задает минимальную версию подсистемы, которую может использовать исполняемый файл.|  

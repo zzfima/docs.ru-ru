@@ -1,5 +1,6 @@
 ---
-title: "Таблица значений по умолчанию (Справочник по C#)"
+title: "Таблица значений по умолчанию (справочник по C#)"
+descripton: Learn what are the default values of value types returned by the default constructors.
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,46 +37,46 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d609403269a5cbfe6715647a240c44b254a4d8f9
+ms.sourcegitcommit: f8cf12317f1f0163028db003ff31604480da5d1c
+ms.openlocfilehash: 975d416259778e0741347829d8a9c79aaa6cfc8c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/12/2017
 
 ---
-# <a name="default-values-table-c-reference"></a>Таблица значений по умолчанию (Справочник по C#)
-В следующей таблице показаны значения по умолчанию для типов значений, возвращаемых конструкторами по умолчанию. Конструкторы по умолчанию вызываются с помощью оператора `new`, как показано ниже:  
-  
-```  
-int myInt = new int();  
-```  
-  
- Приведенная выше инструкция приводит к тому же результату, что и следующая:  
-  
-```  
-int myInt = 0;  
-```  
-  
- Обратите внимание, что в C# не допускается использование неинициализированных переменных.  
-  
-|Тип значения|Значение по умолчанию|  
-|----------------|-------------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|`false`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|0|  
-|[char](../../../csharp/language-reference/keywords/char.md)|'\0'|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|0,0M|  
-|[double](../../../csharp/language-reference/keywords/double.md)|0,0D|  
-|[enum](../../../csharp/language-reference/keywords/enum.md)|Значение, создаваемое выражением (E)0, где E — это идентификатор перечисления.|  
-|[float](../../../csharp/language-reference/keywords/float.md)|0,0F|  
-|[int](../../../csharp/language-reference/keywords/int.md)|0|  
-|[long](../../../csharp/language-reference/keywords/long.md)|0L|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|0|  
-|[short](../../../csharp/language-reference/keywords/short.md)|0|  
-|[struct](../../../csharp/language-reference/keywords/struct.md)|Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|0|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|0|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|0|  
-  
-## <a name="see-also"></a>См. также  
+# <a name="default-values-table-c-reference"></a>Таблица значений по умолчанию (справочник по C#)
+В следующей таблице показаны значения по умолчанию для типов значений, возвращаемых конструкторами по умолчанию. Конструкторы по умолчанию вызываются с помощью оператора `new`, как показано ниже:
+
+```csharp
+int myInt = new int();
+```
+
+Приведенная выше инструкция приводит к тому же результату, что и следующая:
+
+```csharp
+int myInt = 0;
+```
+
+Обратите внимание, что в C# не допускается использование неинициализированных переменных.
+
+|Тип значения|Значение по умолчанию|
+|----------------|-------------------|
+|[bool](../../../csharp/language-reference/keywords/bool.md)|`false`|
+|[byte](../../../csharp/language-reference/keywords/byte.md)|0|
+|[char](../../../csharp/language-reference/keywords/char.md)|'\0'|
+|[decimal](../../../csharp/language-reference/keywords/decimal.md)|0,0M|
+|[double](../../../csharp/language-reference/keywords/double.md)|0,0D|
+|[enum](../../../csharp/language-reference/keywords/enum.md)|Значение, создаваемое выражением (E)0, где E — это идентификатор перечисления.|
+|[float](../../../csharp/language-reference/keywords/float.md)|0,0F|
+|[int](../../../csharp/language-reference/keywords/int.md)|0|
+|[long](../../../csharp/language-reference/keywords/long.md)|0L|
+|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|0|
+|[short](../../../csharp/language-reference/keywords/short.md)|0|
+|[struct](../../../csharp/language-reference/keywords/struct.md)|Значение, создаваемое путем установки значений по умолчанию для всех полей с типами значений и значений `null` для всех полей ссылочного типа.|
+|[uint](../../../csharp/language-reference/keywords/uint.md)|0|
+|[ulong](../../../csharp/language-reference/keywords/ulong.md)|0|
+|[ushort](../../../csharp/language-reference/keywords/ushort.md)|0|
+
+## <a name="see-also"></a>См. также
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Таблица типов значений](../../../csharp/language-reference/keywords/value-types-table.md)   

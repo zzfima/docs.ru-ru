@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bf0b4a4130fe69a15e6db438ac1d58b676c9ee8b
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Параметры компилятора C#, упорядоченные по категориям
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/28/2017
   
 ### <a name="optimization"></a>Оптимизация  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |------------|-------------|  
 |[/filealign](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|Задает размер разделов в выходном файле.|  
 |[/optimize](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|Включает или отключает оптимизацию.|  
@@ -55,12 +55,14 @@ ms.lasthandoff: 07/28/2017
 |[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|Указывает имя и расположение PDB-файла.|  
 |[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|Укажите выходную платформу.|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Укажите язык для выходных данных компилятора.|  
+|[/refout](refout-compiler-option.md)|Создание ссылочной сборки в дополнение к основной.|  
+|[/refonly](refonly-compiler-option.md)|Создание ссылочной сборки вместо основной.|  
 |[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Задает формат выходного файла, используя один из пяти параметров: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) или [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
 |/modulename:\<строка>|Укажите имя исходного модуля.|  
   
 ### <a name="net-framework-assemblies"></a>Сборки .NET Framework  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |------------|-------------|  
 |[/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Задает один или несколько модулей, которые должны быть частью этой сборки.|  
 |[/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|Указывает компилятору добавить открытый ключ, но оставить сборку без подписи.|  
@@ -74,7 +76,7 @@ ms.lasthandoff: 07/28/2017
   
 ### <a name="debuggingerror-checking"></a>Отладка и проверка на ошибки  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |------------|-------------|  
 |[/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Создает файл, содержащий сведения, позволяющие легко создать отчет об ошибке.|  
 |[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Указывает, будут ли целочисленные арифметические операции, переполняющие границы типа данных, вызывать исключение во время выполнения.|  
@@ -88,13 +90,13 @@ ms.lasthandoff: 07/28/2017
   
 ### <a name="preprocessor"></a>Препроцессор  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |------------|-------------|  
 |[/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|Определяет символы препроцессора.|  
   
 ### <a name="resources"></a>Ресурсы  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |------------|-------------|  
 |[/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|Делает сведения о типах COM в указанных сборках доступными для проекта.|  
 |[/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|Создает ссылку на управляемый ресурс.|  
@@ -125,7 +127,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="obsolete-options"></a>Устаревшие параметры  
   
-|Параметр|Цель|  
+|Параметр|Назначение|  
 |---|---|  
 |/incremental|Включает инкрементную компиляцию.|  
   
