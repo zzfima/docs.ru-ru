@@ -55,6 +55,11 @@
 <!-- .NET Core Content -->
 # [Руководство по .NET Core](core/index.md)
 ## [Начало работы](core/get-started.md)
+### [Начало работы с C# и Visual Studio Code](core/tutorials/with-visual-studio-code.md)
+### [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017](core/tutorials/with-visual-studio.md)
+### [Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017](core/tutorials/vb-with-visual-studio.md)
+### [Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017](core/tutorials/library-with-visual-studio.md)
+### [Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](core/tutorials/vb-library-with-visual-studio.md)
 ## [Новые возможности .NET Core](core/whats-new/index.md)
 ## [Необходимые компоненты для Windows](core/windows-prerequisites.md)
 ## [Предварительные требования для macOS](core/macos-prerequisites.md)
@@ -187,6 +192,7 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [Новые возможности C#](csharp/whats-new/index.md) 
+### [Новые возможности C# 7.1](csharp/whats-new/csharp-7-1.md)
 ### [Новые возможности C# 7](csharp/whats-new/csharp-7.md)
 ### [Новые возможности C# 6](csharp/whats-new/csharp-6.md)
 ### [Связи между языком и платформой](csharp/whats-new/relationships-between-language-and-library.md)

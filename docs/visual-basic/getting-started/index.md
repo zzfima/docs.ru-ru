@@ -30,16 +30,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
-ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: fe0c7b1e523cd36bae1dd02e43c5ff568f282f2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
   
-## <a name="in-this-section"></a>Содержание раздела  
+## <a name="get-started-with-visual-basic-and-net-core"></a>Начало работы с Visual Basic и .NET Core
+
+[Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
+
+[Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>Дополнительные сведения
 
 [Новые возможности Visual Basic](whats-new.md)   
 В этом разделе перечислены новые возможности для каждой из версий Visual Basic .NET.
@@ -49,7 +55,13 @@ ms.lasthandoff: 08/11/2017
   
 [Дополнительные ресурсы для программистов, использующих Visual Basic](additional-resources.md)  
 Список веб-узлов и групп новостей, которые помогут найти ответы на общие вопросы.  
-  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>Разработка приложений .NET Core на Visual Basic
+
+[Создание приложения Hello World на Visual Basic с помощью .NET Core в Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md) 
+
+[Создание библиотеки классов с помощью Visual Basic и .NET Core в Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
+
 ## <a name="see-also"></a>См. также
  [Получить Visual Basic](https://www.visualstudio.com/downloads/)  
  Предоставляет ссылки для скачивания версий Visual Studio, включая поддержку Visual Basic и бесплатные версии.  
