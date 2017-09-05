@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d71be02173bfcfeace5412e22e51f4fc0b247a5f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Динамическое программирование в .NET Framework
