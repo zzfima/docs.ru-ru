@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee13c7dec733dcc8e3067ea2bf9421177a284d54
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 2ec2f07dda8979ca6def0648aae1ef23a8df6369
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="c-operators"></a>Операторы C#
@@ -80,7 +80,7 @@ C# предоставляет множество операторов, кото�
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md) — отключает проверку на переполнение при выполнении операций с целыми числами.  Это поведение установлено для компилятора по умолчанию.  
   
- [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) — возвращает инициализированное значение по умолчанию типа T, значение `null` для ссылочных типов, нуль для числовых типов и члены, или заполняет нулями/значениями `null` члены типа структуры.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) — возвращает значение по умолчанию типа T, значение `null` для ссылочных типов, нуль для числовых типов или заполняет нулями либо значениями `null` члены типов-структур.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) — объявляет и возвращает экземпляр делегата.  
   
