@@ -26,14 +26,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 969e02ea7a560a18f8c0f79ada089fd791362808
+ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
+ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Разработка клиентских приложений с использованием .NET Framework
-Существует несколько способов разработки приложений Windows с помощью платформы .NET Framework, которые будут выполняться на пользовательских компьютерах и устройствах. В этом разделе поясняются способы создания приложений Windows с помощью Windows Presentation Foundation (WPF) и Windows Forms. Однако с помощью .NET Framework вы также можете создавать клиентские приложения и предоставлять их пользователям через Магазин Windows и Магазин Windows Phone для компьютеров и устройств, а также веб-приложения, с которыми можно работать через браузер.  
+Существует несколько способов разработки приложений Windows с помощью платформы .NET Framework, которые будут выполняться на пользовательских компьютерах и устройствах. В этом разделе поясняются способы создания приложений Windows с помощью Windows Presentation Foundation (WPF) и Windows Forms. Однако с помощью .NET Framework вы можете создавать и веб-приложения, а также клиентские приложения для компьютеров и устройств, которые можно предоставлять пользователям через Магазин Windows и Магазин Windows Phone.  
   
 ## <a name="in-this-section"></a>Содержание  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
