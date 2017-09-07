@@ -30,14 +30,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bfc0c0af620f7ec8b6b8a8352bf4253b85cc682c
+ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
+ms.openlocfilehash: 657f9ebfba5d6f49d3a88cb1cf790e4a0134a007
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>Методы расширения (Руководство по программированию в C#)
-Методы расширения позволяют "добавлять" методы в существующие типы без создания нового производного типа, перекомпиляции и иного изменения первоначального типа. Методы расширения представляют собой особую разновидность статического метода, но вызываются так же, как методы экземпляра в расширенном типе. Для клиентского кода, написанного на языках C# и Visual Basic, нет видимого различия между вызовом метода расширения и вызовом методов, фактически определенных в типе.  
+Методы расширения позволяют "добавлять" методы в существующие типы без создания нового производного типа, перекомпиляции и иного изменения первоначального типа. Методы расширения представляют собой особую разновидность статического метода, но вызываются так же, как методы экземпляра в расширенном типе. Для клиентского кода, написанного на языках C#, F# и Visual Basic, нет видимого различия между вызовом метода расширения и вызовом методов, фактически определенных в типе.  
   
  Самые обычные методы расширения — стандартные операторы запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], которые добавляют функции запросов в существующие типы <xref:System.Collections.IEnumerable?displayProperty=fullName> и <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Для использования стандартных операторов запросов их необходимо ввести в область действия с помощью директивы `using System.Linq`. Тогда каждый тип, реализующий тип <xref:System.Collections.Generic.IEnumerable%601>, будет иметь методы экземпляра, в частности <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> и т. д. Эти дополнительные методы можно видеть в завершении операторов IntelliSense при вводе точки после экземпляра типа <xref:System.Collections.Generic.IEnumerable%601>, например <xref:System.Collections.Generic.List%601> или <xref:System.Array>.  
   
