@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 77a44af571554728620999bbe612227fff498823
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: a67832641e3665dcabee6312d356c9d9488f3489
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="inside-a-c-program"></a>Структура программы C#
@@ -46,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="related-sections"></a>Связанные разделы  
   
--   [Начало работы с C#](../../../csharp/getting-started/getting-started-with-csharp.md)  
+-   [Начало работы с C#](../../../csharp/getting-started/index.md)  
   
 -   [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
   

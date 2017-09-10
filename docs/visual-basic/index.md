@@ -30,13 +30,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
+ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
+ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-basic"></a>Visual Basic
+# <a name="visual-basic-guide"></a>Руководство по Visual Basic
+
 Visual Basic предназначен для эффективного создания типобезопасных и объектно-ориентированных приложений. Visual Basic позволяет разработчикам создавать приложения Windows, веб-приложения и приложения для мобильных устройств. Программы, написанные на языке Visual Basic, как и на других языках, предназначенных для платформы Microsoft .NET Framework, отличаются безопасностью и поддержкой взаимодействия.  
   
  Современное поколение Visual Basic поддерживает традиции, предоставляя возможность легко и быстро создавать приложения на основе платформы .NET Framework.  
