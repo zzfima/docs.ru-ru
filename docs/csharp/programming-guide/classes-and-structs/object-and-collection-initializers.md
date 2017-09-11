@@ -1,5 +1,5 @@
 ---
-title: "Инициализаторы объектов и коллекций (руководство по программированию на C#) | Документы Майкрософт"
+title: "Инициализаторы объектов и коллекций (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,65 +28,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 66045a6902e64db394a1f5812658e25a11692027
-ms.openlocfilehash: a4d0e8f348afdf1793804a4062be45d2fb4e7e2b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4144f383d539129b4e03d5cad262e5a7b9e6b34
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/21/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="object-and-collection-initializers-c-programming-guide"></a>Инициализаторы объектов и коллекций (Руководство по программированию в C#)
-Инициализаторы объектов позволяют присваивать значения всем доступным полям и свойствам объекта во время создания без вызова конструктора, за которым следуют строки операторов присваивания. Синтаксис инициализатора объекта позволяет задавать аргументы конструктора или опускать их (и синтаксис в скобках).  В следующем примере показаны использование инициализатора объекта с именованным типом `Cat` и вызов конструктора по умолчанию. Обратите внимание на использование в классе `Cat` автоматически внедренных свойств. Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
+# <a name="object-and-collection-initializers-c-programming-guide"></a><span data-ttu-id="5c61b-102">Инициализаторы объектов и коллекций (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="5c61b-102">Object and Collection Initializers (C# Programming Guide)</span></span>
+<span data-ttu-id="5c61b-103">Инициализаторы объектов позволяют присваивать значения всем доступным полям и свойствам объекта во время создания без вызова конструктора, за которым следуют строки операторов присваивания.</span><span class="sxs-lookup"><span data-stu-id="5c61b-103">Object initializers let you assign values to any accessible fields or properties of an object at creation time without having to invoke a constructor followed by lines of assignment statements.</span></span> <span data-ttu-id="5c61b-104">Синтаксис инициализатора объекта позволяет задавать аргументы конструктора или опускать их (и синтаксис в скобках).</span><span class="sxs-lookup"><span data-stu-id="5c61b-104">The object initializer syntax enables you to specify arguments for a constructor or omit the arguments (and parentheses syntax).</span></span>  <span data-ttu-id="5c61b-105">В следующем примере показаны использование инициализатора объекта с именованным типом `Cat` и вызов конструктора по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5c61b-105">The following example shows how to use an object initializer with a named type, `Cat` and how to invoke the default constructor.</span></span> <span data-ttu-id="5c61b-106">Обратите внимание на использование в классе `Cat` автоматически внедренных свойств.</span><span class="sxs-lookup"><span data-stu-id="5c61b-106">Note the use of auto-implemented properties in the `Cat` class.</span></span> <span data-ttu-id="5c61b-107">Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="5c61b-107">For more information, see [Auto-Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).</span></span>  
   
- [!code-cs[csProgGuideLINQ#39](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_1.cs)]  
+ <span data-ttu-id="5c61b-108">[!code-cs[csProgGuideLINQ#39](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="5c61b-108">[!code-cs[csProgGuideLINQ#39](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_1.cs)]</span></span>  
   
- [!code-cs[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)]  
+ <span data-ttu-id="5c61b-109">[!code-cs[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="5c61b-109">[!code-cs[csProgGuideLINQ#45](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_2.cs)]</span></span>  
   
-## <a name="object-initializers-with-anonymous-types"></a>Инициализаторы объектов с анонимными типами  
- Хотя инициализаторы объектов можно использовать в любом контексте, они особенно полезны в выражениях запросов [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]. В выражениях запросов часто используются [анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), которые можно инициализировать только с помощью инициализаторов объектов, как показано в приведенном ниже объявлении.  
+## <a name="object-initializers-with-anonymous-types"></a><span data-ttu-id="5c61b-110">Инициализаторы объектов с анонимными типами</span><span class="sxs-lookup"><span data-stu-id="5c61b-110">Object Initializers with anonymous types</span></span>  
+ <span data-ttu-id="5c61b-111">Хотя инициализаторы объектов можно использовать в любом контексте, они особенно полезны в выражениях запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5c61b-111">Although object initializers can be used in any context, they are especially useful in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span> <span data-ttu-id="5c61b-112">В выражениях запросов часто используются [анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), которые можно инициализировать только с помощью инициализаторов объектов, как показано в приведенном ниже объявлении.</span><span class="sxs-lookup"><span data-stu-id="5c61b-112">Query expressions make frequent use of [anonymous types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), which can only be initialized by using an object initializer, as shown in the following declaration.</span></span>  
   
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```  
   
- Анонимные типы позволяют предложению `select` в выражении запроса [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] преобразовывать объекты исходной последовательности в объекты, значение и форма которых могут отличаться от исходных. Это бывает полезно, если требуется сохранить лишь часть информации от каждого объекта последовательности. В приведенном ниже примере предполагается, что у объекта продукта (`p`) имеется множество полей и методов, и требуется создать последовательность объектов, содержащую только имя продукта и его цену.  
+ <span data-ttu-id="5c61b-113">Анонимные типы позволяют предложению `select` в выражении запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] преобразовывать объекты исходной последовательности в объекты, значение и форма которых могут отличаться от исходных.</span><span class="sxs-lookup"><span data-stu-id="5c61b-113">Anonymous types enable the `select` clause in a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expression to transform objects of the original sequence into objects whose value and shape may differ from the original.</span></span> <span data-ttu-id="5c61b-114">Это бывает полезно, если требуется сохранить лишь часть информации от каждого объекта последовательности.</span><span class="sxs-lookup"><span data-stu-id="5c61b-114">This is useful if you want to store only a part of the information from each object in a sequence.</span></span> <span data-ttu-id="5c61b-115">В приведенном ниже примере предполагается, что у объекта продукта (`p`) имеется множество полей и методов, и требуется создать последовательность объектов, содержащую только имя продукта и его цену.</span><span class="sxs-lookup"><span data-stu-id="5c61b-115">In the following example, assume that a product object (`p`) contains many fields and methods, and that you are only interested in creating a sequence of objects that contain the product name and the unit price.</span></span>  
   
- [!code-cs[csProgGuideLINQ#40](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_3.cs)]  
+ <span data-ttu-id="5c61b-116">[!code-cs[csProgGuideLINQ#40](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="5c61b-116">[!code-cs[csProgGuideLINQ#40](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_3.cs)]</span></span>  
   
- При выполнении этого запроса переменная `productInfos` будет содержать последовательность объектов, доступных в операторе `foreach`, как показано в следующем примере.  
+ <span data-ttu-id="5c61b-117">При выполнении этого запроса переменная `productInfos` будет содержать последовательность объектов, доступных в операторе `foreach`, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="5c61b-117">When this query is executed, the `productInfos` variable will contain a sequence of objects that can be accessed in a `foreach` statement as shown in this example:</span></span>  
   
 ```csharp
 foreach(var p in productInfos){...}  
 ```  
   
- Каждый объект нового анонимного типа содержит два общедоступных свойства, имеющих те же имена, что и у свойств или полей исходного объекта. Кроме того, при создании анонимного типа можно переименовать поле; в следующем примере выполняется переименование поля `UnitPrice` в `Price`.  
+ <span data-ttu-id="5c61b-118">Каждый объект нового анонимного типа содержит два общедоступных свойства, имеющих те же имена, что и у свойств или полей исходного объекта.</span><span class="sxs-lookup"><span data-stu-id="5c61b-118">Each object in the new anonymous type has two public properties which receive the same names as the properties or fields in the original object.</span></span> <span data-ttu-id="5c61b-119">Кроме того, при создании анонимного типа можно переименовать поле; в следующем примере выполняется переименование поля `UnitPrice` в `Price`.</span><span class="sxs-lookup"><span data-stu-id="5c61b-119">You can also rename a field when you are creating an anonymous type; the following example renames the `UnitPrice` field to `Price`.</span></span>  
   
 ```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
   
-## <a name="object-initializers-with-nullable-types"></a>Инициализаторы объектов с типами, допускающими значение NULL  
- При попытке использовать инициализатор объекта со структурой, допускающей значение NULL, произойдет ошибка компиляции.  
+## <a name="object-initializers-with-nullable-types"></a><span data-ttu-id="5c61b-120">Инициализаторы объектов с типами, допускающими значение NULL</span><span class="sxs-lookup"><span data-stu-id="5c61b-120">Object initializers with nullable types</span></span>  
+ <span data-ttu-id="5c61b-121">При попытке использовать инициализатор объекта со структурой, допускающей значение NULL, произойдет ошибка компиляции.</span><span class="sxs-lookup"><span data-stu-id="5c61b-121">It is a compile-time error to use an object initializer with a nullable struct.</span></span>  
   
-## <a name="collection-initializers"></a>Инициализаторы коллекций  
- Инициализаторы коллекций позволяют задавать один или несколько инициализаторов элементов при инициализации типа коллекции, который реализует интерфейс <xref:System.Collections.IEnumerable> и включает `Add` с соответствующей сигнатурой как метод экземпляра или метод расширения. Инициализаторами элементов могут быть простые значения, выражения и инициализаторы объектов. При использовании инициализатора коллекции не требуется указывать в исходном коде несколько вызовов метода `Add` класса; эти вызовы добавляет компилятор.  
+## <a name="collection-initializers"></a><span data-ttu-id="5c61b-122">Инициализаторы коллекций</span><span class="sxs-lookup"><span data-stu-id="5c61b-122">Collection initializers</span></span>  
+ <span data-ttu-id="5c61b-123">Инициализаторы коллекций позволяют задавать один или несколько инициализаторов элементов при инициализации типа коллекции, который реализует интерфейс <xref:System.Collections.IEnumerable> и включает `Add` с соответствующей сигнатурой как метод экземпляра или метод расширения.</span><span class="sxs-lookup"><span data-stu-id="5c61b-123">Collection initializers let you specify one or more element initializers when you initialize a collection type that implements <xref:System.Collections.IEnumerable> and has `Add` with the appropriate signature as an instance method or an extension method.</span></span> <span data-ttu-id="5c61b-124">Инициализаторами элементов могут быть простые значения, выражения и инициализаторы объектов.</span><span class="sxs-lookup"><span data-stu-id="5c61b-124">The element initializers can be a simple value, an expression or an object initializer.</span></span> <span data-ttu-id="5c61b-125">При использовании инициализатора коллекции не требуется указывать в исходном коде несколько вызовов метода `Add` класса; эти вызовы добавляет компилятор.</span><span class="sxs-lookup"><span data-stu-id="5c61b-125">By using a collection initializer you do not have to specify multiple calls to the `Add` method of the class in your source code; the compiler adds the calls.</span></span>  
   
- Ниже приведены два примера простых инициализаторов коллекций.  
+ <span data-ttu-id="5c61b-126">Ниже приведены два примера простых инициализаторов коллекций.</span><span class="sxs-lookup"><span data-stu-id="5c61b-126">The following examples shows two simple collection initializers:</span></span>  
   
 ```csharp
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
 ```  
   
- В следующем инициализаторе коллекции используются инициализаторы объектов класса `Cat`, определенного в предыдущем примере. Обратите внимание, что инициализаторы отдельных объектов заключены в скобки и разделены запятыми.  
+ <span data-ttu-id="5c61b-127">В следующем инициализаторе коллекции используются инициализаторы объектов класса `Cat`, определенного в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="5c61b-127">The following collection initializer uses object initializers to initialize objects of the `Cat` class defined in a previous example.</span></span> <span data-ttu-id="5c61b-128">Обратите внимание, что инициализаторы отдельных объектов заключены в скобки и разделены запятыми.</span><span class="sxs-lookup"><span data-stu-id="5c61b-128">Note that the individual object initializers are enclosed in braces and separated by commas.</span></span>  
   
- [!code-cs[csProgGuideLINQ#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_4.cs)]  
+ <span data-ttu-id="5c61b-129">[!code-cs[csProgGuideLINQ#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="5c61b-129">[!code-cs[csProgGuideLINQ#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_4.cs)]</span></span>  
   
- В качестве элемента инициализатора коллекции можно указать значение [null](../../../csharp/language-reference/keywords/null.md), если метод `Add` коллекции допускает это.  
+ <span data-ttu-id="5c61b-130">В качестве элемента инициализатора коллекции можно указать значение [null](../../../csharp/language-reference/keywords/null.md), если метод `Add` коллекции допускает это.</span><span class="sxs-lookup"><span data-stu-id="5c61b-130">You can specify [null](../../../csharp/language-reference/keywords/null.md) as an element in a collection initializer if the collection's `Add` method allows it.</span></span>  
   
- [!code-cs[csProgGuideLINQ#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_5.cs)]  
+ <span data-ttu-id="5c61b-131">[!code-cs[csProgGuideLINQ#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="5c61b-131">[!code-cs[csProgGuideLINQ#42](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_5.cs)]</span></span>  
   
- Можно указать индексированные элементы, если коллекция поддерживает индексирование.  
+ <span data-ttu-id="5c61b-132">Можно указать индексированные элементы, если коллекция поддерживает индексирование.</span><span class="sxs-lookup"><span data-stu-id="5c61b-132">You can specify indexed elements if the collection supports indexing.</span></span>  
   
 ```csharp
 var numbers = new Dictionary<int, string> {   
@@ -96,11 +96,11 @@ var numbers = new Dictionary<int, string> {
 };  
 ```  
   
-## <a name="example"></a>Пример  
- [!code-cs[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
+## <a name="example"></a><span data-ttu-id="5c61b-133">Пример</span><span class="sxs-lookup"><span data-stu-id="5c61b-133">Example</span></span>  
+ <span data-ttu-id="5c61b-134">[!code-cs[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="5c61b-134">[!code-cs[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+## <a name="see-also"></a><span data-ttu-id="5c61b-135">См. также</span><span class="sxs-lookup"><span data-stu-id="5c61b-135">See Also</span></span>  
+ <span data-ttu-id="5c61b-136">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="5c61b-136">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="5c61b-137">[Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="5c61b-137">[LINQ Query Expressions](../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ [<span data-ttu-id="5c61b-138">Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="5c61b-138">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 

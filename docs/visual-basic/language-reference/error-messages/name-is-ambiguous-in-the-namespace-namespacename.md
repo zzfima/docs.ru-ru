@@ -32,21 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a0995925847368a875f185ce761d626674a5d8a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3e48522da908990b9b7230aedc3ab91c205509f9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a>"&lt;имя&gt;«является неоднозначным в пространстве имен»&lt;Имя_пространства_имен&gt;"
-Вы указали неоднозначное имя, которое конфликтует с другим именем. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Компилятора нет правила разрешения конфликтов, необходимо устранить неоднозначность имен самостоятельно.  
+# <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a><span data-ttu-id="c883e-102">"&lt;имя&gt;«является неоднозначным в пространстве имен»&lt;Имя_пространства_имен&gt;"</span><span class="sxs-lookup"><span data-stu-id="c883e-102">&#39;&lt;name&gt;&#39; is ambiguous in the namespace &#39;&lt;namespacename&gt;&#39;</span></span>
+<span data-ttu-id="c883e-103">Вы указали неоднозначное имя, которое конфликтует с другим именем.</span><span class="sxs-lookup"><span data-stu-id="c883e-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="c883e-104">[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Компилятора нет правила разрешения конфликтов, необходимо устранить неоднозначность имен самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="c883e-104">The [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- **Идентификатор ошибки:** BC30560  
+ <span data-ttu-id="c883e-105">**Идентификатор ошибки:** BC30560</span><span class="sxs-lookup"><span data-stu-id="c883e-105">**Error ID:** BC30560</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c883e-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="c883e-106">To correct this error</span></span>  
   
--   Укажите полное имя.  
+-   <span data-ttu-id="c883e-107">Укажите полное имя.</span><span class="sxs-lookup"><span data-stu-id="c883e-107">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Оператор Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+## <a name="see-also"></a><span data-ttu-id="c883e-108">См. также</span><span class="sxs-lookup"><span data-stu-id="c883e-108">See Also</span></span>  
+ <span data-ttu-id="c883e-109">[Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span><span class="sxs-lookup"><span data-stu-id="c883e-109">[Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span></span>  
+<span data-ttu-id="c883e-110"> [Оператор Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)</span><span class="sxs-lookup"><span data-stu-id="c883e-110"> [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)</span></span>

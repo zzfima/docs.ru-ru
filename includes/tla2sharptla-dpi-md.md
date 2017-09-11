@@ -1,1 +1,1 @@
-точек на дюйм
+<span data-ttu-id="110ef-101">точек на дюйм</span><span class="sxs-lookup"><span data-stu-id="110ef-101">dpi</span></span>

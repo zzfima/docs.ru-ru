@@ -1,1 +1,1 @@
-Microsoft Annotations Framework
+<span data-ttu-id="a6e62-101">Microsoft Annotations Framework</span><span class="sxs-lookup"><span data-stu-id="a6e62-101">Microsoft Annotations Framework</span></span>

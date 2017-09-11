@@ -1,84 +1,104 @@
 ---
-title: "Ограничения параметров типа (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "универсальные шаблоны [C#], ограничения типа"
-  - "ограничения типа [C#]"
-  - "параметры типа [C#], ограничения"
-  - "параметр универсального типа [C#]"
+title: "Ограничения параметров типа (Руководство по программированию на C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- generics [C#], type constraints
+- type constraints [C#]
+- type parameters [C#], constraints
+- unbound type parameter [C#]
 ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: 41
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 41
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e91ae026bd89a6dd30b4c9233da4dd897928291e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Ограничения параметров типа (Руководство по программированию на C#)
-При определении универсального типа можно ограничить виды типов, которые могут использоваться клиентским кодом в качестве аргументов типа при инициализации соответствующего класса.  При попытке клиентского кода создать экземпляр класса с помощью типа, который не допускается ограничением, в результате возникает ошибка компиляции.  Это называется ограничениями.  Ограничения определяются с помощью контекстно\-зависимого ключевого слова `where`.  В следующей таблице приведены шесть типов ограничений.  
+# <a name="constraints-on-type-parameters-c-programming-guide"></a><span data-ttu-id="ea4c9-102">Ограничения параметров типа (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="ea4c9-102">Constraints on Type Parameters (C# Programming Guide)</span></span>
+<span data-ttu-id="ea4c9-103">При определении универсального класса можно применить ограничения на типы, которые могут использоваться в клиентском коде для аргументов типа при создании экземпляра класса.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-103">When you define a generic class, you can apply restrictions to the kinds of types that client code can use for type arguments when it instantiates your class.</span></span> <span data-ttu-id="ea4c9-104">Если в клиентском коде для создания экземпляра класса используется недопустимый тип, возникает ошибка времени компиляции.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-104">If client code tries to instantiate your class by using a type that is not allowed by a constraint, the result is a compile-time error.</span></span> <span data-ttu-id="ea4c9-105">Таким образом, устанавливаются ограничения.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-105">These restrictions are called constraints.</span></span> <span data-ttu-id="ea4c9-106">Ограничения задаются с помощью контекстного ключевого слова `where`.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-106">Constraints are specified by using the `where` contextual keyword.</span></span> <span data-ttu-id="ea4c9-107">В следующей таблице описываются шесть типов ограничений:</span><span class="sxs-lookup"><span data-stu-id="ea4c9-107">The following table lists the six types of constraints:</span></span>  
   
-|Ограничение|Описание|  
-|-----------------|--------------|  
-|where T: struct|Аргумент типа должен иметь тип значения.  Допускается указание любого типа значения, кроме <xref:System.Nullable>.  Дополнительные сведения см. в разделе [Использование допускающих значение NULL типов](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
-|where T : class|Аргумент типа должен иметь ссылочный тип; это также распространяется на тип любого класса, интерфейса, делегата или массива.|  
-|where T : new\(\)|Аргумент типа должен иметь открытый конструктор без параметров.  При использовании с другими ограничениями ограничение `new()` должно устанавливаться последним.|  
-|where T : \<base class name\>|Аргумент типа должен являться или быть производным от указанного базового класса.|  
-|where T : \<interface name\>|Аргумент типа должен являться или реализовывать указанный интерфейс.  Можно установить несколько ограничений интерфейса.  Ограничивающий интерфейс также может быть универсальным.|  
-|where T : U|Аргумент типа, предоставляемый в качестве T, должен совпадать с аргументом, предоставляемым в качестве U, или быть производным от него.|  
+|<span data-ttu-id="ea4c9-108">Ограничение</span><span class="sxs-lookup"><span data-stu-id="ea4c9-108">Constraint</span></span>|<span data-ttu-id="ea4c9-109">Описание</span><span class="sxs-lookup"><span data-stu-id="ea4c9-109">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="ea4c9-110">where T: struct</span><span class="sxs-lookup"><span data-stu-id="ea4c9-110">where T: struct</span></span>|<span data-ttu-id="ea4c9-111">Аргумент типа должен быть типом значения.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-111">The type argument must be a value type.</span></span> <span data-ttu-id="ea4c9-112">Допускается задание любого типа значения, кроме <xref:System.Nullable>.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-112">Any value type except <xref:System.Nullable> can be specified.</span></span> <span data-ttu-id="ea4c9-113">Дополнительные сведения см. в разделе [Использование допускающих значение NULL типов](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).</span><span class="sxs-lookup"><span data-stu-id="ea4c9-113">See [Using Nullable Types](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) for more information.</span></span>|  
+|<span data-ttu-id="ea4c9-114">where T : class</span><span class="sxs-lookup"><span data-stu-id="ea4c9-114">where T : class</span></span>|<span data-ttu-id="ea4c9-115">Аргумент типа должен быть ссылочным типом; это также касается любого типа массива, класса, интерфейса или делегата.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-115">The type argument must be a reference type; this applies also to any class, interface, delegate, or array type.</span></span>|  
+|<span data-ttu-id="ea4c9-116">where T : new()</span><span class="sxs-lookup"><span data-stu-id="ea4c9-116">where T : new()</span></span>|<span data-ttu-id="ea4c9-117">Аргумент типа должен иметь общий конструктор без параметров.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-117">The type argument must have a public parameterless constructor.</span></span> <span data-ttu-id="ea4c9-118">При одновременном использовании нескольких ограничений последним должно указываться ограничение `new()`.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-118">When used together with other constraints, the `new()` constraint must be specified last.</span></span>|  
+|<span data-ttu-id="ea4c9-119">where T : \<имя базового класса></span><span class="sxs-lookup"><span data-stu-id="ea4c9-119">where T : \<base class name></span></span>|<span data-ttu-id="ea4c9-120">Аргумент типа должен иметь базовый класс или производный от него класс.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-120">The type argument must be or derive from the specified base class.</span></span>|  
+|<span data-ttu-id="ea4c9-121">where T : \<имя интерфейса></span><span class="sxs-lookup"><span data-stu-id="ea4c9-121">where T : \<interface name></span></span>|<span data-ttu-id="ea4c9-122">Аргумент типа должен являться заданным интерфейсом или реализовывать его.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-122">The type argument must be or implement the specified interface.</span></span> <span data-ttu-id="ea4c9-123">Можно указать несколько ограничений интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-123">Multiple interface constraints can be specified.</span></span> <span data-ttu-id="ea4c9-124">Заданный в ограничении интерфейс также может быть универсальным.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-124">The constraining interface can also be generic.</span></span>|  
+|<span data-ttu-id="ea4c9-125">where T : U</span><span class="sxs-lookup"><span data-stu-id="ea4c9-125">where T : U</span></span>|<span data-ttu-id="ea4c9-126">Аргумент типа, указанный для T, должен быть аргументом, указанным для U, или производным от него.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-126">The type argument supplied for T must be or derive from the argument supplied for U.</span></span>|  
   
-## Применение ограничений  
- При необходимости проверить какой\-либо элемент универсального списка, чтобы определить, является ли он допустимым, или сравнить его с другим элементом, компилятор должен иметь гарантию, что оператор или вызываемый им метод будет поддерживаться любым аргументом типа, который может определяться клиентским кодом.  Такая гарантия обеспечивается применением одного или более ограничений к определению универсального класса.  Например, ограничение базового класса сообщает компилятору, что в качестве аргументов типа будут использоваться только объекты определенного типа или являющиеся производными от этого типа.  Получив такую гарантию, компилятор может разрешить вызов методов этого типа в универсальном классе.  Ограничения накладываются с помощью контекстно\-зависимого ключевого слова `where`.  В следующем примере кода показаны функции, которые можно добавить к классу `GenericList<T>` \(в разделе [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)\) путем применения ограничения базового класса.  
+## <a name="why-use-constraints"></a><span data-ttu-id="ea4c9-127">Зачем использовать ограничения</span><span class="sxs-lookup"><span data-stu-id="ea4c9-127">Why Use Constraints</span></span>  
+ <span data-ttu-id="ea4c9-128">Чтобы проверить допустимость элемента универсального списка или сравнить его с каким-либо другим элементом, компилятору нужны гарантии того, что вызываемый для этого оператор или метод будет поддерживаться любым аргументом типа, который может быть указан в клиентском коде.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-128">If you want to examine an item in a generic list to determine whether it is valid or to compare it to some other item, the compiler must have some guarantee that the operator or method it has to call will be supported by any type argument that might be specified by client code.</span></span> <span data-ttu-id="ea4c9-129">Это достигается путем применения одного или нескольких ограничений к определению универсального класса.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-129">This guarantee is obtained by applying one or more constraints to your generic class definition.</span></span> <span data-ttu-id="ea4c9-130">Например, на основе ограничения базового класса компилятор определяет, что в качестве аргументов типа будут использоваться только объекты указанного типа или производных от него.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-130">For example, the base class constraint tells the compiler that only objects of this type or derived from this type will be used as type arguments.</span></span> <span data-ttu-id="ea4c9-131">Имея такую гарантию, компилятор может вызывать методы указанного типа в универсальном классе.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-131">Once the compiler has this guarantee, it can allow methods of that type to be called in the generic class.</span></span> <span data-ttu-id="ea4c9-132">Ограничения задаются с помощью контекстного ключевого слова `where`.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-132">Constraints are applied by using the contextual keyword `where`.</span></span> <span data-ttu-id="ea4c9-133">В следующем примере кода показаны функциональные возможности, которые можно добавить в класс `GenericList<T>` (см. раздел [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)), применив ограничения базового класса.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-133">The following code example demonstrates the functionality we can add to the `GenericList<T>` class (in [Introduction to Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)) by applying a base class constraint.</span></span>  
   
- [!code-cs[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]  
+ <span data-ttu-id="ea4c9-134">[!code-cs[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea4c9-134">[!code-cs[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]</span></span>  
   
- Это ограничение позволяет универсальному классу использовать свойство `Employee.Name`, потому что все элементы типа T гарантированно являются объектом `Employee` или объектом, наследующим от `Employee`.  
+ <span data-ttu-id="ea4c9-135">Это ограничение позволяет универсальному классу использовать свойство `Employee.Name`, поскольку все элементы типа T гарантированно будут являться объектами `Employee` или объектами, унаследованными от `Employee`.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-135">The constraint enables the generic class to use the `Employee.Name` property because all items of type T are guaranteed to be either an `Employee` object or an object that inherits from `Employee`.</span></span>  
   
- К одному параметру типа может применяться несколько ограничений, при этом сами ограничения могут быть универсального типа, как показано ниже.  
+ <span data-ttu-id="ea4c9-136">К одному параметру типа можно применять несколько ограничений, которые сами по себе могут быть универсальными типами, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="ea4c9-136">Multiple constraints can be applied to the same type parameter, and the constraints themselves can be generic types, as follows:</span></span>  
   
- [!code-cs[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]  
+ <span data-ttu-id="ea4c9-137">[!code-cs[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea4c9-137">[!code-cs[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]</span></span>  
   
- При наложении ограничений на параметр типа увеличивается число допустимых операций и вызовов методов, поддерживаемых ограничивающим типом и всеми типами в его иерархии наследования.  Поэтому при разработке универсальных классов или методов, в случае выполнения какой\-либо операции с универсальными членами помимо простого назначения или в случае вызова каких\-либо методов, не поддерживаемых объектом `System.Object`, необходимо будет применить ограничения к параметру типа.  
+ <span data-ttu-id="ea4c9-138">Ограничивая параметр типа, вы расширяете выбор разрешенных операций и вызовов метода до поддерживаемых ограничивающим типом и всеми типами в его иерархии наследования.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-138">By constraining the type parameter, you increase the number of allowable operations and method calls to those supported by the constraining type and all types in its inheritance hierarchy.</span></span> <span data-ttu-id="ea4c9-139">Таким образом, если при разработке универсальных классов или методов планируется выполнение любых других операций с универсальными элементами, помимо простого присвоения или вызова методов, не поддерживаемых `System.Object`, вам необходимо применить ограничения к параметру типа.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-139">Therefore, when you design generic classes or methods, if you will be performing any operation on the generic members beyond simple assignment or calling any methods not supported by `System.Object`, you will have to apply constraints to the type parameter.</span></span>  
   
- В случае применения ограничения `where T : class` следует избегать использования операторов `==` и `!=` с параметром типа, потому что эти операторы выполняют только проверку удостоверения ссылки, но не проверяют равенство величины.  Это верно даже в том случае, если эти операторы перегружаются в тип, который используется в качестве аргумента.  В следующим коде иллюстрируется эта особенность; выдается результат false, несмотря на то что класс <xref:System.String> используется для перегрузки оператора `==`.  
+ <span data-ttu-id="ea4c9-140">При применении ограничения `where T : class` не рекомендуется использовать операторы `==` и `!=` для параметра типа, поскольку в этом случае будет проверяться только удостоверение ссылки, а не равенство значений.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-140">When applying the `where T : class` constraint, avoid the `==` and `!=` operators on the type parameter because these operators will test for reference identity only, not for value equality.</span></span> <span data-ttu-id="ea4c9-141">Такое поведение будет наблюдаться даже в том случае, если эти операторы будут перегружены в типе, используемом в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-141">This is the case even if these operators are overloaded in a type that is used as an argument.</span></span> <span data-ttu-id="ea4c9-142">Эта особенность показана в следующем коде, который будет возвращать значение false даже в том случае, если класс <xref:System.String> перегружает оператор `==`.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-142">The following code illustrates this point; the output is false even though the <xref:System.String> class overloads the `==` operator.</span></span>  
   
- [!code-cs[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]  
+ <span data-ttu-id="ea4c9-143">[!code-cs[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea4c9-143">[!code-cs[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]</span></span>  
   
- Причиной такого поведения является то, что во время компиляции компилятор знает только, что T является ссылочным типом, и поэтому должен использовать операторы по умолчанию, которые действительны для всех ссылочных типов.  Если необходимо проверить равенство значения, рекомендуется также применить ограничение `where T : IComparable<T>` и реализовать этот интерфейс в любом классе, который используется для создания универсального класса.  
+ <span data-ttu-id="ea4c9-144">Такое поведение обусловлено тем, что во время компиляции компилятору известно только то, что тип T является ссылочным, и он вынужден использовать операторы по умолчанию, которые действительны для всех ссылочных типов.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-144">The reason for this behavior is that, at compile time, the compiler only knows that T is a reference type, and therefore must use the default operators that are valid for all reference types.</span></span> <span data-ttu-id="ea4c9-145">Чтобы проверить равенство значений, рекомендуется применить ограничение `where T : IComparable<T>` и реализовать соответствующий интерфейс в любом классе, который будет использоваться для создания универсального класса.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-145">If you must test for value equality, the recommended way is to also apply the `where T : IComparable<T>` constraint and implement that interface in any class that will be used to construct the generic class.</span></span>  
   
-## Ограничение нескольких параметров  
- Ограничение может применяться к нескольким параметрам, а несколько ограничений — к одному параметру, как показано в следующем примере:  
+## <a name="constraining-multiple-parameters"></a><span data-ttu-id="ea4c9-146">Ограничение нескольких параметров</span><span class="sxs-lookup"><span data-stu-id="ea4c9-146">Constraining Multiple Parameters</span></span>  
+ <span data-ttu-id="ea4c9-147">Ограничения можно применить к нескольким параметрам. Кроме того, к одному параметру можно применять несколько ограничений, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="ea4c9-147">You can apply constraints to multiple parameters, and multiple constraints to a single parameter, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]  
+ <span data-ttu-id="ea4c9-148">[!code-cs[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea4c9-148">[!code-cs[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]</span></span>  
   
-## Неограниченные параметры типа  
- Параметры типа, не имеющие ограничений, например T в открытом классе `SampleClass<T>{}`, называются неограниченными параметрами типа.  Неограниченные параметры типа подчиняются следующим правилам.  
+## <a name="unbounded-type-parameters"></a><span data-ttu-id="ea4c9-149">Несвязанные параметры типа</span><span class="sxs-lookup"><span data-stu-id="ea4c9-149">Unbounded Type Parameters</span></span>  
+ <span data-ttu-id="ea4c9-150">Не имеющие ограничений параметры типа (например, T в общем классе `SampleClass<T>{}`) называются несвязанными.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-150">Type parameters that have no constraints, such as T in public class `SampleClass<T>{}`, are called unbounded type parameters.</span></span> <span data-ttu-id="ea4c9-151">В отношении несвязанных параметров типа применяются следующие правила:</span><span class="sxs-lookup"><span data-stu-id="ea4c9-151">Unbounded type parameters have the following rules:</span></span>  
   
--   Операторы `!=` и `==` не могут использоваться из\-за отсутствия гарантии того, что конкретный аргумент типа будет поддерживать эти операторы.  
+-   <span data-ttu-id="ea4c9-152">Не допускается использование операторов `!=` и `==`, поскольку нет гарантии, что они будут поддерживаться конкретным типом аргумента.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-152">The `!=` and `==` operators cannot be used because there is no guarantee that the concrete type argument will support these operators.</span></span>  
   
--   Их можно преобразовывать в и из объекта `System.Object` или явно преобразовывать в любой тип интерфейса.  
+-   <span data-ttu-id="ea4c9-153">Их можно преобразовать в `System.Object` или явно преобразовать в любой тип интерфейса.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-153">They can be converted to and from `System.Object` or explicitly converted to any interface type.</span></span>  
   
--   Допускается сравнение со значением [NULL](../../../csharp/language-reference/keywords/null.md).  При сравнении неограниченного параметра со значением `null` сравнение всегда возвращает результат false, если аргумент типа является типом значения.  
+-   <span data-ttu-id="ea4c9-154">Можно выполнять сравнение с [null](../../../csharp/language-reference/keywords/null.md).</span><span class="sxs-lookup"><span data-stu-id="ea4c9-154">You can compare to [null](../../../csharp/language-reference/keywords/null.md).</span></span> <span data-ttu-id="ea4c9-155">При сравнении несвязанного параметра с `null` для аргументов типа, являющихся типами значений, всегда возвращается значение false.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-155">If an unbounded parameter is compared to `null`, the comparison will always return false if the type argument is a value type.</span></span>  
   
-## Параметры типа как ограничения  
- Использование параметра универсального типа в качестве ограничителя полезно, если функция\-член с собственным параметром типа должна ограничивать этот параметр параметром содержащего типа, как показано в следующем примере.  
+## <a name="type-parameters-as-constraints"></a><span data-ttu-id="ea4c9-156">Параметры типа в качестве ограничений</span><span class="sxs-lookup"><span data-stu-id="ea4c9-156">Type Parameters as Constraints</span></span>  
+ <span data-ttu-id="ea4c9-157">Использование параметров универсального типа в качестве ограничений применимо, когда функция-член со своим параметром типа должна ограничивать этот параметр параметром содержащего типа, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="ea4c9-157">The use of a generic type parameter as a constraint is useful when a member function with its own type parameter has to constrain that parameter to the type parameter of the containing type, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]  
+ <span data-ttu-id="ea4c9-158">[!code-cs[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea4c9-158">[!code-cs[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]</span></span>  
   
- В предыдущем примере `T` является ограничением типа в контексте метода `Add` и неограниченным параметром типа в контексте класса `List`.  
+ <span data-ttu-id="ea4c9-159">В предыдущем примере `T` является ограничением типа в контексте метода `Add` и несвязанным параметром типа в контексте класса `List`.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-159">In the previous example, `T` is a type constraint in the context of the `Add` method, and an unbounded type parameter in the context of the `List` class.</span></span>  
   
- Параметры типа также могут использоваться как ограничители в определениях общих классов.  Обратите внимание, что ограничение типа должно объявляться в угловых скобках вместе со всеми другими параметрами типа.  
+ <span data-ttu-id="ea4c9-160">Параметры типа также можно использовать в определениях универсальных классов.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-160">Type parameters can also be used as constraints in generic class definitions.</span></span> <span data-ttu-id="ea4c9-161">Обратите внимание, что параметр типа необходимо объявлять в угловых скобках вместе с любыми другими параметрами типа:</span><span class="sxs-lookup"><span data-stu-id="ea4c9-161">Note that the type parameter must be declared within the angle brackets together with any other type parameters:</span></span>  
   
- [!code-cs[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]  
+ <span data-ttu-id="ea4c9-162">[!code-cs[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="ea4c9-162">[!code-cs[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]</span></span>  
   
- Применение параметров типа с универсальными классами очень ограничено, потому что компилятор может в отношении параметра типа допускать только, что он является производным от `System.Object`.  Параметры типа следует использовать как ограничения для универсальных классов в ситуациях, когда требуется обеспечить отношение наследования между двумя параметрами типа.  
+ <span data-ttu-id="ea4c9-163">Применение параметров типа в качестве ограничений для универсальных классов ограничено, поскольку в отношении таких параметров типа компилятор может предполагать только то, что они являются производными от `System.Object`.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-163">The usefulness of type parameters as constraints with generic classes is very limited because the compiler can assume nothing about the type parameter except that it derives from `System.Object`.</span></span> <span data-ttu-id="ea4c9-164">Параметры типа в качестве ограничений следует использовать в универсальных классах в тех случаях, когда необходимо обеспечить отношение наследования между двумя параметрами типа.</span><span class="sxs-lookup"><span data-stu-id="ea4c9-164">Use type parameters as constraints on generic classes in scenarios in which you want to enforce an inheritance relationship between two type parameters.</span></span>  
   
-## См. также  
- <xref:System.Collections.Generic>   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)   
- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)
+## <a name="see-also"></a><span data-ttu-id="ea4c9-165">См. также</span><span class="sxs-lookup"><span data-stu-id="ea4c9-165">See Also</span></span>  
+ <span data-ttu-id="ea4c9-166"><xref:System.Collections.Generic></span><span class="sxs-lookup"><span data-stu-id="ea4c9-166"><xref:System.Collections.Generic></span></span>   
+ <span data-ttu-id="ea4c9-167">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ea4c9-167">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="ea4c9-168">[Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md) </span><span class="sxs-lookup"><span data-stu-id="ea4c9-168">[Introduction to Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md) </span></span>  
+ <span data-ttu-id="ea4c9-169">[Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md) </span><span class="sxs-lookup"><span data-stu-id="ea4c9-169">[Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md) </span></span>  
+ [<span data-ttu-id="ea4c9-170">Ограничение new</span><span class="sxs-lookup"><span data-stu-id="ea4c9-170">new Constraint</span></span>](../../../csharp/language-reference/keywords/new-constraint.md)
+

@@ -1,39 +1,59 @@
 ---
-title: "Оператор — (справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "-_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "- - оператор [C#]"
-  - "оператор вычитания (-) [C#]"
+title: "- Оператор (ссылка C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- -_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '- operator [C#]'
+- subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7fabdab8593ff4d721b352b59a45f51721f53eb4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Оператор — (справочник по C#)
-Оператор `-` может функционировать как унарный или как бинарный оператор.  
+# <a name="--operator-c-reference"></a><span data-ttu-id="8bef3-102">Оператор — (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8bef3-102">- Operator (C# Reference)</span></span>
+<span data-ttu-id="8bef3-103">Оператор `-` может функционировать как унарный или как бинарный оператор.</span><span class="sxs-lookup"><span data-stu-id="8bef3-103">The `-` operator can function as either a unary or a binary operator.</span></span>  
   
-## Заметки  
- Унарные операторы `-` предопределены для всех числовых типов.  Результатом использования унарного оператора `-` для числового типа является арифметическое отрицательное значение операнда.  
+## <a name="remarks"></a><span data-ttu-id="8bef3-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="8bef3-104">Remarks</span></span>  
+ <span data-ttu-id="8bef3-105">Унарные операторы `-` предварительно определены для всех числовых типов.</span><span class="sxs-lookup"><span data-stu-id="8bef3-105">Unary `-` operators are predefined for all numeric types.</span></span> <span data-ttu-id="8bef3-106">Результатом использования унарного оператора `-` для числового типа является числовое отрицание операнда.</span><span class="sxs-lookup"><span data-stu-id="8bef3-106">The result of a unary `-` operation on a numeric type is the numeric negation of the operand.</span></span>  
   
- Бинарные операторы `-` предопределены для всех числовых типов и типов перечислений для вычитания второго операнда из первого.  
+ <span data-ttu-id="8bef3-107">Бинарные операторы `-`, предопределенные для всех числовых типов и типов перечисления, обеспечивают вычитание второго операнда из первого.</span><span class="sxs-lookup"><span data-stu-id="8bef3-107">Binary `-` operators are predefined for all numeric and enumeration types to subtract the second operand from the first.</span></span>  
   
- Для типов делегатов также используется бинарный оператор `-`, который выполняет удаление делегатов.  
+ <span data-ttu-id="8bef3-108">Для типов делегатов также используется бинарный оператор `-`, который выполняет удаление делегатов.</span><span class="sxs-lookup"><span data-stu-id="8bef3-108">Delegate types also provide a binary `-` operator, which performs delegate removal.</span></span>  
   
- Пользовательские типы могут вызвать перегрузку унарного оператора `-` и бинарного `-` операторов.  Дополнительные сведения см. в разделе [оператор](../../../csharp/language-reference/keywords/operator.md).  
+ <span data-ttu-id="8bef3-109">Пользовательские типы могут перегружать унарный оператор `-` и бинарный оператор `-`.</span><span class="sxs-lookup"><span data-stu-id="8bef3-109">User-defined types can overload the unary `-` and binary `-` operators.</span></span> <span data-ttu-id="8bef3-110">Дополнительные сведения см. в разделе [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="8bef3-110">For more information, see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md).</span></span>  
   
-## Пример  
- [!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="8bef3-111">Пример</span><span class="sxs-lookup"><span data-stu-id="8bef3-111">Example</span></span>  
+ <span data-ttu-id="8bef3-112">[!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="8bef3-112">[!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-operator_1.cs)]</span></span>  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Операторы C\#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="8bef3-113">См. также</span><span class="sxs-lookup"><span data-stu-id="8bef3-113">See Also</span></span>  
+ <span data-ttu-id="8bef3-114">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="8bef3-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="8bef3-115">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="8bef3-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="8bef3-116">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="8bef3-116">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+

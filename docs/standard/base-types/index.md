@@ -1,5 +1,5 @@
 ---
-title: "Работа с базовыми типами в .NET | Документация Майкрософт"
+title: "Работа с базовыми типами в .NET"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -17,32 +17,33 @@ caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e1451f41b463e28a5fa305f23f3790bcfc066c30
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
-# <a name="working-with-base-types-in-net"></a>Работа с базовыми типами в .NET
-В этом разделе описаны операции с базовыми типами платформы .NET, включая форматирование, преобразование и общие операции.  
+# <a name="working-with-base-types-in-net"></a><span data-ttu-id="e9ed3-102">Работа с базовыми типами в .NET</span><span class="sxs-lookup"><span data-stu-id="e9ed3-102">Working with Base Types in .NET</span></span>
+<span data-ttu-id="e9ed3-103">В этом разделе описаны операции с базовыми типами платформы .NET, включая форматирование, преобразование и общие операции.</span><span class="sxs-lookup"><span data-stu-id="e9ed3-103">This section describes .NET base type operations, including formatting, conversion, and common operations.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Преобразование типов в .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
- Описание порядка преобразования одного типа в другой.  
+## <a name="in-this-section"></a><span data-ttu-id="e9ed3-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="e9ed3-104">In This Section</span></span>  
+ [<span data-ttu-id="e9ed3-105">Преобразование типов в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e9ed3-105">Type Conversion in the .NET Framework</span></span>](../../../docs/standard/base-types/type-conversion.md)  
+ <span data-ttu-id="e9ed3-106">Описание порядка преобразования одного типа в другой.</span><span class="sxs-lookup"><span data-stu-id="e9ed3-106">Describes how to convert from one type to another.</span></span>  
   
- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
- Описание форматирования строк с использованием описателей формата.  
+ [<span data-ttu-id="e9ed3-107">Типы форматирования</span><span class="sxs-lookup"><span data-stu-id="e9ed3-107">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ <span data-ttu-id="e9ed3-108">Описание форматирования строк с использованием описателей формата.</span><span class="sxs-lookup"><span data-stu-id="e9ed3-108">Describes how to format strings using the string format specifiers.</span></span>  
   
- [Операции со строками](../../../docs/standard/base-types/manipulating-strings.md)  
- Описание способов обработки и форматирования строк.  
+ [<span data-ttu-id="e9ed3-109">Операции со строками</span><span class="sxs-lookup"><span data-stu-id="e9ed3-109">Manipulating Strings</span></span>](../../../docs/standard/base-types/manipulating-strings.md)  
+ <span data-ttu-id="e9ed3-110">Описание способов обработки и форматирования строк.</span><span class="sxs-lookup"><span data-stu-id="e9ed3-110">Describes how to manipulate and format strings.</span></span>  
   
- [Анализ строк в .NET Framework](../../../docs/standard/base-types/parsing-strings.md)  
- Описание преобразования строк в типы.  
+ [<span data-ttu-id="e9ed3-111">Анализ строк в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e9ed3-111">Parsing Strings</span></span>](../../../docs/standard/base-types/parsing-strings.md)  
+ <span data-ttu-id="e9ed3-112">Описание преобразования строк в типы.</span><span class="sxs-lookup"><span data-stu-id="e9ed3-112">Describes how to convert strings into .NET Framework types.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Система общих типов CTS](../../../docs/standard/base-types/common-type-system.md)  
- Описание типов, используемых в .NET Framework.  
+## <a name="related-sections"></a><span data-ttu-id="e9ed3-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e9ed3-113">Related Sections</span></span>  
+ [<span data-ttu-id="e9ed3-114">Система общих типов CTS</span><span class="sxs-lookup"><span data-stu-id="e9ed3-114">Common Type System</span></span>](../../../docs/standard/base-types/common-type-system.md)  
+ <span data-ttu-id="e9ed3-115">Описание типов, используемых в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e9ed3-115">Describes types used by the .NET Framework.</span></span>  
   
- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)  
- Описание работы с часовыми поясами и преобразования часовых поясов.
+ [<span data-ttu-id="e9ed3-116">Даты, время и часовые пояса</span><span class="sxs-lookup"><span data-stu-id="e9ed3-116">Dates, Times, and Time Zones</span></span>](../../../docs/standard/datetime/index.md)  
+ <span data-ttu-id="e9ed3-117">Описание работы с часовыми поясами и преобразования часовых поясов.</span><span class="sxs-lookup"><span data-stu-id="e9ed3-117">Describes how to work with time zones and time zone conversions in time zone-aware applications.</span></span>
+

@@ -1,6 +1,6 @@
 ---
 title: "Неявно типизированные лямбда-выражения"
-description: "Неявно типизированные лямбда-выражения"
+description: "Сведения о том, почему объявление неявно типизированной переменной нельзя использовать для объявления лямбда-выражения."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,21 +10,22 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3621f6feb29929d3681b6ed66cc12c5d8018ba1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 663613af001f9727c48bd48553540305e47a6bab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="implicitly-typed-lambda-expressions"></a>Неявно типизированные лямбда-выражения
+# <a name="implicitly-typed-lambda-expressions"></a><span data-ttu-id="d57f8-104">Неявно типизированные лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="d57f8-104">Implicitly typed lambda expressions</span></span>
 
-Для объявления этого дерева выражения не используется `var`. Объявление неявно типизированной переменной нельзя использовать для объявления лямбда-выражения.
-В этом случае компилятор сталкивается с проблемой замкнутого цикла. Объявление `var` предписывает компилятору определить тип переменной на основе типа выражения в правой части оператора присваивания. Лямбда-выражение не имеет типа во время компиляции, но может быть преобразовано в любой соответствующий тип делегата или выражения. Когда вы присваиваете лямбда-выражение переменной, имеющей тип делегата или выражения, вы предписываете компилятору выполнить попытку преобразовать лямбда-выражение в выражение или делегат, которые соответствуют сигнатуре этой переменной. Компилятор должен попытаться сделать так, чтобы правая часть присваивания соответствовала типу левой части. 
+<span data-ttu-id="d57f8-105">Для объявления этого дерева выражения не используется `var`.</span><span class="sxs-lookup"><span data-stu-id="d57f8-105">I'm not using `var` to declare this expression tree.</span></span> <span data-ttu-id="d57f8-106">Объявление неявно типизированной переменной нельзя использовать для объявления лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="d57f8-106">You can't use an implicitly typed variable declaration to declare a lambda expression.</span></span>
+<span data-ttu-id="d57f8-107">В этом случае компилятор сталкивается с проблемой замкнутого цикла.</span><span class="sxs-lookup"><span data-stu-id="d57f8-107">It creates a circular logic problem for the compiler.</span></span> <span data-ttu-id="d57f8-108">Объявление `var` предписывает компилятору определить тип переменной на основе типа выражения в правой части оператора присваивания.</span><span class="sxs-lookup"><span data-stu-id="d57f8-108">The `var` declaration tells the compiler to figure out the type of the variable from the type of expression on the right hand side of the assignment operator.</span></span> <span data-ttu-id="d57f8-109">Лямбда-выражение не имеет типа во время компиляции, но может быть преобразовано в любой соответствующий тип делегата или выражения.</span><span class="sxs-lookup"><span data-stu-id="d57f8-109">A lambda expression does not have a compile time type, but is convertible to any matching delegate or expression type.</span></span> <span data-ttu-id="d57f8-110">Когда вы присваиваете лямбда-выражение переменной, имеющей тип делегата или выражения, вы предписываете компилятору выполнить попытку преобразовать лямбда-выражение в выражение или делегат, которые соответствуют сигнатуре этой переменной.</span><span class="sxs-lookup"><span data-stu-id="d57f8-110">When you assign a lambda expression to a variable of a delegate or expression type, you tell the compiler to try and convert the lambda expression into an expression or delegate that matches the signature of the 'assigned to' variable.</span></span> <span data-ttu-id="d57f8-111">Компилятор должен попытаться сделать так, чтобы правая часть присваивания соответствовала типу левой части.</span><span class="sxs-lookup"><span data-stu-id="d57f8-111">The compiler must try to make the thing on the right hand side of the assignment match the type on the left hand side of the assignment.</span></span> 
 
-Обе части оператора присваивания не могут одновременно предписывать компилятору выполнить проверку объекта в другой части на предмет соответствия типа.
+<span data-ttu-id="d57f8-112">Обе части оператора присваивания не могут одновременно предписывать компилятору выполнить проверку объекта в другой части на предмет соответствия типа.</span><span class="sxs-lookup"><span data-stu-id="d57f8-112">Both sides of the assignment can't be telling the compiler to look at the object on the other side of the assignment operator and see if my type matches.</span></span>
 
-Чтобы получить дополнительные сведения о том, почему в языке C# принято такое поведение, прочитайте [эту статью](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (скачиваемый PDF-файл).
+<span data-ttu-id="d57f8-113">Чтобы получить дополнительные сведения о том, почему в языке C# принято такое поведение, прочитайте [эту статью](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (скачиваемый PDF-файл).</span><span class="sxs-lookup"><span data-stu-id="d57f8-113">You can get even more details on why the C# language specifies that behavior by reading [this article](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (PDF Download)</span></span>
 
 
 

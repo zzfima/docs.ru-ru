@@ -34,18 +34,18 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="true-literal-c-reference"></a>Литерал true (Справочник по C#)
-Представляет логическое значение true.  
+# <a name="true-literal-c-reference"></a><span data-ttu-id="8b7a8-102">Литерал true (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8b7a8-102">true Literal (C# Reference)</span></span>
+<span data-ttu-id="8b7a8-103">Представляет логическое значение true.</span><span class="sxs-lookup"><span data-stu-id="8b7a8-103">Represents the boolean value true.</span></span>  
   
-## <a name="example"></a>Пример  
- [!code-cs[csrefKeywordsOperator#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-literal_1.cs)]  
+## <a name="example"></a><span data-ttu-id="8b7a8-104">Пример</span><span class="sxs-lookup"><span data-stu-id="8b7a8-104">Example</span></span>  
+ <span data-ttu-id="8b7a8-105">[!code-cs[csrefKeywordsOperator#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-literal_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="8b7a8-105">[!code-cs[csrefKeywordsOperator#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-literal_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="8b7a8-106">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="8b7a8-106">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [false](../../../csharp/language-reference/keywords/false.md)
+## <a name="see-also"></a><span data-ttu-id="8b7a8-107">См. также</span><span class="sxs-lookup"><span data-stu-id="8b7a8-107">See Also</span></span>  
+ <span data-ttu-id="8b7a8-108">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="8b7a8-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="8b7a8-109">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="8b7a8-109">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="8b7a8-110">[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="8b7a8-110">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="8b7a8-111">false</span><span class="sxs-lookup"><span data-stu-id="8b7a8-111">false</span></span>](../../../csharp/language-reference/keywords/false.md)
 

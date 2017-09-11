@@ -1,5 +1,5 @@
 ---
-title: "Специальные символы | Документация Майкрософт"
+title: "Специальные символы (справочник по C#)"
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -33,23 +33,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 03242440226552c5e4125446c453cf657137e403
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 50a6fd688ff86936ceee410e4aa7440d5a6900c9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="c-special-characters"></a>Специальные символы в C#
+# <a name="c-special-characters"></a><span data-ttu-id="d83e1-102">Специальные символы в C#</span><span class="sxs-lookup"><span data-stu-id="d83e1-102">C# Special Characters</span></span>
 
-Специальные символы — это стандартные контекстно-зависимые символы, которые изменяют элемент программы (строковый литерал, идентификатор или имя атрибута), к которому они добавляются. C# поддерживает следующие специальные символы: 
+<span data-ttu-id="d83e1-103">Специальные символы — это стандартные контекстно-зависимые символы, которые изменяют элемент программы (строковый литерал, идентификатор или имя атрибута), к которому они добавляются.</span><span class="sxs-lookup"><span data-stu-id="d83e1-103">Special characters are predefined, contextual characters that modifies the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="d83e1-104">C# поддерживает следующие специальные символы:</span><span class="sxs-lookup"><span data-stu-id="d83e1-104">C# supports the following special characters:</span></span> 
 
-- [@](../../../csharp/language-reference/tokens/verbatim.md), символ буквального идентификатора. 
+- <span data-ttu-id="d83e1-105">[@](../../../csharp/language-reference/tokens/verbatim.md), символ буквального идентификатора.</span><span class="sxs-lookup"><span data-stu-id="d83e1-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
 
-- [$](../../../csharp/language-reference/tokens/interpolated.md), символ интерполируемой строки.
+- <span data-ttu-id="d83e1-106">[$](../../../csharp/language-reference/tokens/interpolated.md), символ интерполируемой строки.</span><span class="sxs-lookup"><span data-stu-id="d83e1-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="d83e1-107">См. также</span><span class="sxs-lookup"><span data-stu-id="d83e1-107">See Also</span></span>  
+ <span data-ttu-id="d83e1-108">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="d83e1-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="d83e1-109">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="d83e1-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
 
 

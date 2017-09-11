@@ -1,13 +1,9 @@
 ---
-title: "Устранение неполадок установки платформы .NET Framework 3.5 в Windows 8, Windows 8.1 и Windows 10 | Документы Майкрософт"
-ms.custom: 
-ms.date: 04/20/2017
+title: "Установка платформы .NET Framework 3.5 в Windows 8, Windows 8.1 и Windows 10"
+ms.date: 05/26/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 3.5, installing on Windows 8
@@ -16,62 +12,61 @@ ms.assetid: 3eab3eb4-4573-42ac-98f8-36fb2c22c7d5
 caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: d935648da22db51b004a2f209070bde737a6908d
+ms.translationtype: HT
+ms.sourcegitcommit: 93f77dd5c3ca61935ae98ddef15f9c5cf7644bbb
+ms.openlocfilehash: e9c8dcfacff689761d9ec891db8a1a4756acece0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
-# <a name="installing-the-net-framework-35-on-windows-8-windows-81-and-windows-10"></a>Установка платформы .NET Framework 3.5 в Windows 8, Windows 8.1 и Windows 10
-Платформа .NET Framework является неотъемлемой частью многих приложений, запущенных на Windows и предоставляет общие функциональные возможности для запуска этих приложений. Платформа.NET Framework предоставляет разработчикам согласованную модель программирования для создания приложений. Если используется операционная система Windows,то платформа .NET Framework, возможно, уже установлена на компьютере. В частности, версия [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] входит в состав [!INCLUDE[win8](../../../includes/win8-md.md)], версия [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] входит в состав [!INCLUDE[win81](../../../includes/win81-md.md)] и версия [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] входит в состав Windows 10.  
+# <a name="install-the-net-framework-35-on-windows-8-windows-81-and-windows-10"></a><span data-ttu-id="a16ca-102">Установка платформы .NET Framework 3.5 в Windows 8, Windows 8.1 и Windows 10</span><span class="sxs-lookup"><span data-stu-id="a16ca-102">Install the .NET Framework 3.5 on Windows 8, Windows 8.1, and Windows 10</span></span>
+
+<span data-ttu-id="a16ca-103">Платформа .NET Framework является неотъемлемой частью многих приложений, работающих в операционной системе Windows, и предоставляет общие функциональные возможности для выполнения этих приложений.</span><span class="sxs-lookup"><span data-stu-id="a16ca-103">The .NET Framework is an integral part of many apps running on Windows and provides common functionality for those apps to run.</span></span> <span data-ttu-id="a16ca-104">Платформа .NET Framework предоставляет разработчикам согласованную модель программирования для разработки приложений.</span><span class="sxs-lookup"><span data-stu-id="a16ca-104">For developers, the .NET Framework provides a consistent programming model for building apps.</span></span> <span data-ttu-id="a16ca-105">Если используется операционная система Windows, платформа .NET Framework, возможно, уже установлена на компьютере.</span><span class="sxs-lookup"><span data-stu-id="a16ca-105">If you're using the Windows operating system, the .NET Framework may already be installed on your computer.</span></span> <span data-ttu-id="a16ca-106">В частности, версия [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] входит в состав [!INCLUDE[win8](../../../includes/win8-md.md)], версия [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] входит в состав [!INCLUDE[win81](../../../includes/win81-md.md)], а версия [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] входит в состав Windows 10.</span><span class="sxs-lookup"><span data-stu-id="a16ca-106">Specifically, the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] is included with [!INCLUDE[win8](../../../includes/win8-md.md)], the [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] is included with [!INCLUDE[win81](../../../includes/win81-md.md)], and the [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] is included with Windows 10.</span></span>  
   
- Однако платформа .NET Framework 3.5 не устанавливается автоматически вместе с [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)] или Windows 10, и ее необходимо включить отдельно, чтобы зависящие от нее приложения работали. Для этого следует использовать Центр обновления Windows, который можно открыть одним из трех способов. Во всех случаях требуется подключение к Интернету.  
+<span data-ttu-id="a16ca-107">Но платформа .NET Framework 3.5 не устанавливается автоматически вместе с [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)] или Windows 10, и ее необходимо добавить отдельно, чтобы зависящие от нее приложения могли работать.</span><span class="sxs-lookup"><span data-stu-id="a16ca-107">The .NET Framework 3.5, however, is not automatically installed with [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], or Windows 10, and must be separately enabled to run apps that depend on it.</span></span> <span data-ttu-id="a16ca-108">Для этого следует использовать Центр обновления Windows, который можно открыть одним из трех способов.</span><span class="sxs-lookup"><span data-stu-id="a16ca-108">This must happen through Windows Update, which is invoked in one of three ways.</span></span> <span data-ttu-id="a16ca-109">Во всех случаях требуется подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="a16ca-109">All of these require an Internet connection:</span></span>  
   
--   [Установка платформы .NET Framework 3.5 по запросу](#OnDemand)  
+- [<span data-ttu-id="a16ca-110">Установка платформы .NET Framework 3.5 по запросу</span><span class="sxs-lookup"><span data-stu-id="a16ca-110">Install the .NET Framework 3.5 on Demand</span></span>](#OnDemand)  
   
--   [Включение платформы .NET Framework 3.5 в панели управления](#ControlPanel)  
+- [<span data-ttu-id="a16ca-111">Включение платформы .NET Framework 3.5 в панели управления</span><span class="sxs-lookup"><span data-stu-id="a16ca-111">Enable the .NET Framework 3.5 in Control Panel</span></span>](#ControlPanel)  
   
--   [Загрузка установщика .NET Framework 3.5](http://www.microsoft.com/en-us/download/details.aspx?id=21) (Примечание. В этом случае не происходит непосредственная загрузка .NET Framework. Это установщик, который вызывает Центр обновления Windows.)  
+- <span data-ttu-id="a16ca-112">[Скачивание установщика .NET Framework 3.5](http://www.microsoft.com/en-us/download/details.aspx?id=21) (Примечание. Во время скачивания установщика не выполняется загрузка самой платформы .NET Framework; этот установщик обращается к Центру обновления Windows.)</span><span class="sxs-lookup"><span data-stu-id="a16ca-112">[Download the .NET Framework 3.5 installer](http://www.microsoft.com/en-us/download/details.aspx?id=21) (Note: This does not download the .NET Framework directly; it is an installer that invokes Windows Update.)</span></span>  
   
- Во время установки могут возникнуть ошибки 0x800f0906, 0x800f0907 или 0x800f081f. В этом случае см. статью [Ошибка установки .NET Framework 3.5: 0x800f0906, 0x800f0907 или 0x800f081f](https://support.microsoft.com/en-us/kb/2734782). Обратите внимание, что их можно устранить, установив [обновление системы безопасности 3005628](https://support.microsoft.com/kb/3005628).  
+<span data-ttu-id="a16ca-113">Во время установки могут возникнуть ошибки 0x800f0906, 0x800f0907 или 0x800f081f. В этом случае обратитесь к разделу [Ошибка установки .NET Framework 3.5: 0x800f0906, 0x800f0907 или 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09).</span><span class="sxs-lookup"><span data-stu-id="a16ca-113">During installation, you may encounter error 0x800f0906, 0x800f0907, or 0x800f081f, in which case refer to [.NET Framework 3.5 installation error: 0x800f0906, 0x800f0907, or 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09).</span></span> <span data-ttu-id="a16ca-114">Обратите внимание, что их можно устранить, установив [обновление системы безопасности 3005628](https://support.microsoft.com/kb/3005628).</span><span class="sxs-lookup"><span data-stu-id="a16ca-114">Note that these are possibly resolved by installing [security update 3005628](https://support.microsoft.com/kb/3005628).</span></span>  
   
- Если ни один из указанных способов не подходит или у вас нет подключения к Интернету, необходимо использовать установочный носитель Windows. Подробные сведения о разрешении для кода ошибки 0x800f0906 см. в разделе "Метод 3" в [статье об ошибках установки .NET Framework 3.5](https://support.microsoft.com/en-us/kb/2734782). Если нет установочного носителя, см. раздел [Создание установочного носителя Windows 8.1](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0).  
+<span data-ttu-id="a16ca-115">Если ни один из указанных способов не подходит или у вас нет подключения к Интернету, необходимо использовать установочный носитель Windows.</span><span class="sxs-lookup"><span data-stu-id="a16ca-115">If any of the above methods fail or if you do not have an Internet connection, it's necessary to use your Windows installation media.</span></span> <span data-ttu-id="a16ca-116">Подробные сведения о разрешении для кода ошибки 0x800f0906 см. в разделе "Метод 3" в [статье об ошибках установки .NET Framework 3.5](https://support.microsoft.com/en-us/kb/2734782).</span><span class="sxs-lookup"><span data-stu-id="a16ca-116">For details, see Method 3 for error 0x800f0906 in the [.NET Framework 3.5 installation error article](https://support.microsoft.com/en-us/kb/2734782).</span></span> <span data-ttu-id="a16ca-117">Если у вас нет установочного носителя, обратитесь к разделу [Создание установочного носителя Windows 8.1](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0).</span><span class="sxs-lookup"><span data-stu-id="a16ca-117">If you don't have installation media, see [Create Installation media for Windows 8.1](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0).</span></span>  
   
- Важные примечания:  
+<span data-ttu-id="a16ca-118">**Важные замечания:**</span><span class="sxs-lookup"><span data-stu-id="a16ca-118">**Important notes:**</span></span>
   
--   В общем случае не рекомендуется удалять какие-либо версии платформы .NET Framework, установленные на компьютере. Различные приложения зависят от разных версий платформы, при этом на один компьютер можно загрузить несколько версий платформы .NET Framework одновременно.  
+- <span data-ttu-id="a16ca-119">В общем случае не рекомендуется удалять какие-либо версии платформы .NET Framework, установленные на компьютере.</span><span class="sxs-lookup"><span data-stu-id="a16ca-119">In general, don't uninstall any versions of the .NET Framework from your computer.</span></span> <span data-ttu-id="a16ca-120">Различные приложения зависят от разных версий платформы, при этом на одном компьютере может одновременно использоваться несколько версий платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a16ca-120">Different apps depend on different versions of the framework, and multiple versions of the .NET Framework can coexist on a single computer at the same time.</span></span>  
   
--   Платформа .NET Framework 3.5 также используется приложениями, созданными для версий 2.0 и 3.0.  
+- <span data-ttu-id="a16ca-121">Платформа .NET Framework 3.5 также используется приложениями, созданными для версий 2.0 и 3.0.</span><span class="sxs-lookup"><span data-stu-id="a16ca-121">The .NET Framework 3.5 is also used by apps built for versions 2.0 and 3.0.</span></span>  
   
--   Установка языкового пакета Windows до установки .NET Framework 3.5 может вызвать сбой установки .NET Framework 3.5. При установке .NET Framework 3.5 после языкового пакета Windows возникает ошибка.  
+- <span data-ttu-id="a16ca-122">Установка языкового пакета Windows до установки .NET Framework 3.5 может вызвать сбой установки .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="a16ca-122">Installing a Windows language pack before installing the .NET Framework 3.5 may cause the .NET Framework 3.5 installation to fail.</span></span> <span data-ttu-id="a16ca-123">При установке .NET Framework 3.5 после языкового пакета Windows возникает ошибка.</span><span class="sxs-lookup"><span data-stu-id="a16ca-123">Install the .NET Framework 3.5 before installing any Windows language packs.</span></span>  
   
--   Компонент Windows CardSpace не поддерживается .NET Framework 3.5 в [!INCLUDE[win8](../../../includes/win8-md.md)].  
+- <span data-ttu-id="a16ca-124">Компонент Windows CardSpace не поддерживается .NET Framework 3.5 в [!INCLUDE[win8](../../../includes/win8-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a16ca-124">Windows CardSpace is not available with the .NET Framework 3.5 on [!INCLUDE[win8](../../../includes/win8-md.md)].</span></span>  
   
--   К сожалению, сложности, связанные с установкой платформы .NET Framework 3.5, не позволяют применять отдельный автономный установщик, который может выполняться независимо от Центра обновления Windows. Если все остальные способы завершаются ошибкой, необходимо использовать установочный носитель, как описано выше.  
+- <span data-ttu-id="a16ca-125">К сожалению, сложности, связанные с установкой платформы .NET Framework 3.5, не позволяют использовать отдельный автономный установщик, который может работать независимо от Центра обновления Windows.</span><span class="sxs-lookup"><span data-stu-id="a16ca-125">Because of complications around how the .NET Framework 3.5 must be installed, it's unfortunately not possible to provide a separate, standalone installer that can run independently of Windows Update.</span></span> <span data-ttu-id="a16ca-126">Если все остальные способы завершаются неудачно, необходимо использовать установочный носитель, как описано выше.</span><span class="sxs-lookup"><span data-stu-id="a16ca-126">If all other methods fail, you must resort to installation media as described earlier.</span></span>  
   
 <a name="OnDemand"></a>   
-## <a name="install-the-net-framework-35-on-demand"></a>Установка платформы .NET Framework 3.5 по запросу  
- Если приложению требуется .NET Framework 3.5 и оно не находит эту версию на компьютере, во время установки или при первом запуске приложения отображается следующее диалоговое окно. Выберите в окне **Установить этот компонент** , чтобы включить .NET Framework 3.5. Для использования этого варианта требуется подключение к Интернету.  
+## <a name="install-the-net-framework-35-on-demand"></a><span data-ttu-id="a16ca-127">Установка платформы .NET Framework 3.5 по запросу</span><span class="sxs-lookup"><span data-stu-id="a16ca-127">Install the .NET Framework 3.5 on Demand</span></span>
+
+<span data-ttu-id="a16ca-128">Если приложению требуется .NET Framework 3.5 и оно не находит эту версию на компьютере, то во время установки или при первом запуске приложения отображается следующее диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="a16ca-128">If an app requires the .NET Framework 3.5 but doesn't find that version enabled on your computer, it displays the following message box, either during installation or when you run the app for the first time.</span></span> <span data-ttu-id="a16ca-129">Выберите в окне **Установить этот компонент** , чтобы включить .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="a16ca-129">In the message box, choose **Install this feature** to enable the .NET Framework 3.5.</span></span> <span data-ttu-id="a16ca-130">Для использования этого варианта требуется подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="a16ca-130">This option requires an Internet connection.</span></span>  
   
- ![Диалоговое окно установки версии 3.5 в Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog")  
+<span data-ttu-id="a16ca-131">![Диалоговое окно установки версии 3.5 в Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog")</span><span class="sxs-lookup"><span data-stu-id="a16ca-131">![Dialog box for 3.5 install on Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog")</span></span>  
   
 <a name="ControlPanel"></a>   
-## <a name="enable-the-net-framework-35-in-control-panel"></a>Включение платформы .NET Framework 3.5 в панели управления  
- Вы можете самостоятельно включить .NET Framework 3.5 через панель управления. Для использования этого варианта требуется подключение к Интернету.  
+## <a name="enable-the-net-framework-35-in-control-panel"></a><span data-ttu-id="a16ca-132">Включение платформы .NET Framework 3.5 в панели управления</span><span class="sxs-lookup"><span data-stu-id="a16ca-132">Enable the .NET Framework 3.5 in Control Panel</span></span>
+
+<span data-ttu-id="a16ca-133">Вы можете самостоятельно включить .NET Framework 3.5 с помощью панели управления.</span><span class="sxs-lookup"><span data-stu-id="a16ca-133">You can enable the .NET Framework 3.5 through Control Panel.</span></span> <span data-ttu-id="a16ca-134">Для использования этого варианта требуется подключение к Интернету.</span><span class="sxs-lookup"><span data-stu-id="a16ca-134">This option requires an Internet connection.</span></span>  
   
-1.  Нажмите клавишу ![с логотипом Windows](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") на клавиатуре, введите "Компоненты Windows" и нажмите клавишу ВВОД. Появится диалоговое окно **Включение или отключение компонентов Windows** . Или откройте панель управления, щелкните элемент "Программы", а затем в разделе "Программы и компоненты" щелкните ссылку "Включение или отключение компонентов Windows".  
+1. <span data-ttu-id="a16ca-135">Нажмите клавишу ![с логотипом Windows](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") на клавиатуре.</span><span class="sxs-lookup"><span data-stu-id="a16ca-135">Press the Windows key ![Windows logo](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") on your keyboard.</span></span> <span data-ttu-id="a16ca-136">Введите "Компоненты Windows" и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="a16ca-136">Type "Windows Features" and press Enter.</span></span> <span data-ttu-id="a16ca-137">Появится диалоговое окно **Включение или отключение компонентов Windows** .</span><span class="sxs-lookup"><span data-stu-id="a16ca-137">This brings up the **Turn Windows features on or off** dialog box.</span></span> <span data-ttu-id="a16ca-138">Другой вариант: откройте панель управления, щелкните элемент **Программы**, а затем в разделе **Программы и компоненты** выберите **Включение или отключение компонентов Windows**.</span><span class="sxs-lookup"><span data-stu-id="a16ca-138">Alternately, open Control Panel, click on the **Programs** items, and then select **Turn Windows features on or off** under **Programs and Features**.</span></span>  
   
-2.  Установите флажок **.NET Framework 3.5 (включает .NET 2.0 и 3.0)** , нажмите кнопку "OK" и перезагрузите компьютер при появлении соответствующего запроса.  
+2. <span data-ttu-id="a16ca-139">Установите флажок **.NET Framework 3.5 (включает .NET 2.0 и 3.0)**, нажмите кнопку **OK** и перезагрузите компьютер при появлении соответствующего запроса.</span><span class="sxs-lookup"><span data-stu-id="a16ca-139">Select the **.NET Framework 3.5 (includes .NET 2.0 and 3.0)** check box, select **OK**, and reboot your computer if prompted.</span></span>  
   
- Дочерние элементы, активирующие Windows Communication Foundation (WCF) HTTP, предназначены для разработчиков, которым необходимы функции сопоставления обработчика и скриптов WCF. В других случаях их выбирать не требуется.  
+<span data-ttu-id="a16ca-140">Дочерние элементы, активирующие **Windows Communication Foundation (WCF) HTTP**, предназначены для разработчиков, которым необходимы функции сопоставления обработчика и скриптов WCF. В других случаях их выбирать не требуется.</span><span class="sxs-lookup"><span data-stu-id="a16ca-140">You don't need to select the child items for **Windows Communication Foundation (WCF) HTTP activation** unless you're a developer who requires WCF script and handler mapping functionality.</span></span>
   
- В следующем видео показано, как это сделать:  
-  
- ![Установка платформы .NET Framework в Windows 8 или 8.1](../../../docs/framework/get-started/media/clr-net35-win8.png "CLR_NET35_Win8")  
-  
-## <a name="see-also"></a>См. также  
- [Руководство по установке](../../../docs/framework/get-started/index.md)
+## <a name="see-also"></a><span data-ttu-id="a16ca-141">См. также</span><span class="sxs-lookup"><span data-stu-id="a16ca-141">See also</span></span>
+
+[<span data-ttu-id="a16ca-142">Руководство по установке</span><span class="sxs-lookup"><span data-stu-id="a16ca-142">Installation Guide</span></span>](../../../docs/framework/get-started/index.md)
 

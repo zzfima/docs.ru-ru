@@ -1,5 +1,5 @@
 ---
-title: "Сохранение пробелов при загрузке и анализе XML | Документы Майкрософт"
+title: "Сохранение пробелов при загрузке и анализе XML1"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,23 +19,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1b2ec9b5b1bbc343fde5c9527c1e4f4ad7f14796
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dce6d2afc6c146c346dadeb9d7e4af6fcca1b987
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Сохранение пробелов при загрузке и анализе XML
-В этом разделе показан способ управления тем, как обрабатываются пробелы в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+# <a name="preserving-white-space-while-loading-or-parsing-xml"></a><span data-ttu-id="d895e-102">Сохранение пробелов при загрузке и анализе XML</span><span class="sxs-lookup"><span data-stu-id="d895e-102">Preserving White Space while Loading or Parsing XML</span></span>
+<span data-ttu-id="d895e-103">В этом разделе показан способ управления тем, как обрабатываются пробелы в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d895e-103">This topic describes how to control the white space behavior of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- Типичный сценарий состоит в чтении XML с отступами, создании XML-дерева в памяти без текстовых узлов с пробелами (то есть без сохранения пробелов), выполнении определенных операций над XML и сохранении XML с отступами. При сериализации XML с форматированием сохраняются только значимые пробелы XML-дерева. Это поведение [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] по умолчанию.  
+ <span data-ttu-id="d895e-104">Типичный сценарий состоит в чтении XML с отступами, создании XML-дерева в памяти без текстовых узлов с пробелами (то есть без сохранения пробелов), выполнении определенных операций над XML и сохранении XML с отступами.</span><span class="sxs-lookup"><span data-stu-id="d895e-104">A common scenario is to read indented XML, create an in-memory XML tree without any white space text nodes (that is, not preserving white space), perform some operations on the XML, and then save the XML with indentation.</span></span> <span data-ttu-id="d895e-105">При сериализации XML с форматированием сохраняются только значимые пробелы XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="d895e-105">When you serialize the XML with formatting, only significant white space in the XML tree is preserved.</span></span> <span data-ttu-id="d895e-106">Это поведение [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d895e-106">This is the default behavior for [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- Другой типичный сценарий заключается в чтении и изменении XML с уже существующими преднамеренными отступами. Эти отступы ни в коем случае изменять нельзя. Для этого в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] можно сохранить пробелы при загрузке или синтаксическом анализе XML и отключить форматирование при сериализации XML.  
+ <span data-ttu-id="d895e-107">Другой типичный сценарий заключается в чтении и изменении XML с уже существующими преднамеренными отступами.</span><span class="sxs-lookup"><span data-stu-id="d895e-107">Another common scenario is to read and modify XML that has already been intentionally indented.</span></span> <span data-ttu-id="d895e-108">Эти отступы ни в коем случае изменять нельзя.</span><span class="sxs-lookup"><span data-stu-id="d895e-108">You might not want to change this indentation in any way.</span></span> <span data-ttu-id="d895e-109">Для этого в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] можно сохранить пробелы при загрузке или синтаксическом анализе XML и отключить форматирование при сериализации XML.</span><span class="sxs-lookup"><span data-stu-id="d895e-109">To do this in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you preserve white space when you load or parse the XML and disable formatting when you serialize the XML.</span></span>  
   
- В этом разделе описывается, как методы, заполняющие XML-деревья, обрабатывают пробелы. Сведения об управлении пробелами при сериализации деревьев XML см. в разделе [Сохранение пробелов при сериализации](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ <span data-ttu-id="d895e-110">В этом разделе описывается, как методы, заполняющие XML-деревья, обрабатывают пробелы.</span><span class="sxs-lookup"><span data-stu-id="d895e-110">This topic describes the white space behavior of methods that populate XML trees.</span></span> <span data-ttu-id="d895e-111">Сведения об управлении пробелами при сериализации деревьев XML см. в разделе [Сохранение пробелов при сериализации](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).</span><span class="sxs-lookup"><span data-stu-id="d895e-111">For information about controlling white space when you serialize XML trees, see [Preserving White Space While Serializing](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).</span></span>  
   
-## <a name="behavior-of-methods-that-populate-xml-trees"></a>Поведение методов, заполняющих XML-деревья  
- Перечисленные ниже методы в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument> заполняют дерево XML. Дерево XML можно заполнить из файла, объекта <xref:System.IO.TextReader>, объекта <xref:System.Xml.XmlReader> или строки:  
+## <a name="behavior-of-methods-that-populate-xml-trees"></a><span data-ttu-id="d895e-112">Поведение методов, заполняющих XML-деревья</span><span class="sxs-lookup"><span data-stu-id="d895e-112">Behavior of Methods that Populate XML Trees</span></span>  
+ <span data-ttu-id="d895e-113">Следующие методы в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument> заполняют XML-дерево.</span><span class="sxs-lookup"><span data-stu-id="d895e-113">The following methods in the <xref:System.Xml.Linq.XElement> and <xref:System.Xml.Linq.XDocument> classes populate an XML tree.</span></span> <span data-ttu-id="d895e-114">XML-дерево можно заполнить из файла, объекта <xref:System.IO.TextReader>, объекта <xref:System.Xml.XmlReader> или строки:</span><span class="sxs-lookup"><span data-stu-id="d895e-114">You can populate an XML tree from a file, a <xref:System.IO.TextReader>, an <xref:System.Xml.XmlReader>, or a string:</span></span>  
   
 -   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>  
   
@@ -45,13 +46,14 @@ ms.lasthandoff: 03/13/2017
   
 -   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>  
   
- Если метод не принимает объект <xref:System.Xml.Linq.LoadOptions> в качестве аргумента, то он не будет сохранять незначащие пробелы.  
+ <span data-ttu-id="d895e-115">Если метод не принимает объект <xref:System.Xml.Linq.LoadOptions> в качестве аргумента, то не будет сохранять незначащие пробелы.</span><span class="sxs-lookup"><span data-stu-id="d895e-115">If the method does not take <xref:System.Xml.Linq.LoadOptions> as an argument, the method will not preserve insignificant white space.</span></span>  
   
- В большинстве случаев, если метод принимает объект <xref:System.Xml.Linq.LoadOptions> в качестве аргумента, то при необходимости можно сохранять незначащие пробелы в дереве XML как текстовые узлы. Однако если метод загружает XML из объекта <xref:System.Xml.XmlReader>, то объект <xref:System.Xml.XmlReader> определяет, будут сохраняться пробелы или нет. Задание параметра <xref:System.Xml.Linq.LoadOptions> не оказывает никакого воздействия.  
+ <span data-ttu-id="d895e-116">В большинстве случаев, если метод принимает объект <xref:System.Xml.Linq.LoadOptions> в качестве аргумента, позволяет сохранять незначащие пробелы в XML-дереве как текстовые узлы.</span><span class="sxs-lookup"><span data-stu-id="d895e-116">In most cases, if the method takes <xref:System.Xml.Linq.LoadOptions> as an argument, you can optionally preserve insignificant white space as text nodes in the XML tree.</span></span> <span data-ttu-id="d895e-117">Однако если метод загружает XML из объекта <xref:System.Xml.XmlReader>, то объект <xref:System.Xml.XmlReader> определяет, будут ли сохраняться пробелы или нет.</span><span class="sxs-lookup"><span data-stu-id="d895e-117">However, if the method is loading the XML from an <xref:System.Xml.XmlReader>, then the <xref:System.Xml.XmlReader> determines whether white space will be preserved or not.</span></span> <span data-ttu-id="d895e-118">Задание параметра <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> не оказывает никакого воздействия.</span><span class="sxs-lookup"><span data-stu-id="d895e-118">Setting <xref:System.Xml.Linq.LoadOptions.PreserveWhitespace> will have no effect.</span></span>  
   
- Если при использовании этих методов незначащие пробелы сохраняются, то они вставляются в дерево XML как узлы <xref:System.Xml.Linq.XText>. Если же пробелы не сохраняются, то вставка текстовых узлов не происходит.  
+ <span data-ttu-id="d895e-119">Если при использовании этих методов сохраняются незначащие пробелы, то вставляются в XML-дерево как узлы <xref:System.Xml.Linq.XText>.</span><span class="sxs-lookup"><span data-stu-id="d895e-119">With these methods, if white space is preserved, insignificant white space is inserted into the XML tree as <xref:System.Xml.Linq.XText> nodes.</span></span> <span data-ttu-id="d895e-120">Если же пробелы не сохраняются, то вставка текстовых узлов не происходит.</span><span class="sxs-lookup"><span data-stu-id="d895e-120">If white space is not preserved, text nodes are not inserted.</span></span>  
   
- Дерево XML можно создать с помощью объекта <xref:System.Xml.XmlWriter>. Узлы, которые записываются в <xref:System.Xml.XmlWriter>, вставляются в дерево. Однако при построении XML-дерева при помощи этого метода сохраняются все методы, независимо от того, содержит ли узел пробел или нет, является ли пробел значащим или нет.  
+ <span data-ttu-id="d895e-121">XML-дерево можно создать при помощи объекта <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="d895e-121">You can create an XML tree by using an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="d895e-122">Узлы, которые записываются в <xref:System.Xml.XmlWriter>, вставляются в дерево.</span><span class="sxs-lookup"><span data-stu-id="d895e-122">Nodes that are written to the <xref:System.Xml.XmlWriter> are populated in the tree.</span></span> <span data-ttu-id="d895e-123">Однако при построении XML-дерева при помощи этого метода сохраняются все методы, независимо от того, содержит ли узел пробел или нет, является ли пробел значащим или нет.</span><span class="sxs-lookup"><span data-stu-id="d895e-123">However, when you build an XML tree using this method, all nodes are preserved, regardless of whether the node is white space or not, or whether the white space is significant or not.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d895e-124">См. также</span><span class="sxs-lookup"><span data-stu-id="d895e-124">See Also</span></span>  
+ [<span data-ttu-id="d895e-125">Анализ XML (C#)</span><span class="sxs-lookup"><span data-stu-id="d895e-125">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

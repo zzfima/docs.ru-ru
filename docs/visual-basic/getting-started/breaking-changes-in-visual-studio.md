@@ -35,16 +35,16 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-breaking-changes-in-visual-studio"></a>Критические изменения Visual Basic в Visual Studio
-Самая актуальная документация по Visual Studio 2017: [Документация по Visual Studio 2017](http://docs.microsoft.com/visualstudio/).
+# <a name="visual-basic-breaking-changes-in-visual-studio"></a><span data-ttu-id="360a1-102">Критические изменения Visual Basic в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="360a1-102">Visual Basic Breaking Changes in Visual Studio</span></span>
+<span data-ttu-id="360a1-103">Самая актуальная документация по Visual Studio 2017: [Документация по Visual Studio 2017](http://docs.microsoft.com/visualstudio/).</span><span class="sxs-lookup"><span data-stu-id="360a1-103">For the latest documentation on Visual Studio 2017, see [Visual Studio 2017 Documentation](http://docs.microsoft.com/visualstudio/).</span></span>
 
-В Visual Basic в Visual Studio 2015 нет изменений, которые могут заблокировать компиляцию для приложения, созданного на Visual Basic в Visual Studio 2013, или могут изменить его поведение во время выполнения.  
+<span data-ttu-id="360a1-104">В Visual Basic в Visual Studio 2015 нет изменений, которые могут заблокировать компиляцию для приложения, созданного на Visual Basic в Visual Studio 2013, или могут изменить его поведение во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="360a1-104">No changes in Visual Basic in Visual Studio 2015 will prevent an application that was created in Visual Basic in Visual Studio 2013 from compiling or change the run-time behavior of such an application.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Массивы](../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Лямбда-выражения](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Оператор For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Начало работы](../../visual-basic/getting-started/index.md)   
- [Когда останавливается неостанавливающее исправление языка?](http://go.microsoft.com/fwlink/?LinkId=259542)
+## <a name="see-also"></a><span data-ttu-id="360a1-105">См. также</span><span class="sxs-lookup"><span data-stu-id="360a1-105">See Also</span></span>  
+ <span data-ttu-id="360a1-106">[Массивы](../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="360a1-106">[Arrays](../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+ <span data-ttu-id="360a1-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span><span class="sxs-lookup"><span data-stu-id="360a1-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span></span>  
+ <span data-ttu-id="360a1-108">[Лямбда-выражения](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="360a1-108">[Lambda Expressions](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="360a1-109">[Оператор For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span><span class="sxs-lookup"><span data-stu-id="360a1-109">[For Each...Next Statement](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span></span>  
+ <span data-ttu-id="360a1-110">[Начало работы](../../visual-basic/getting-started/index.md) </span><span class="sxs-lookup"><span data-stu-id="360a1-110">[Getting Started](../../visual-basic/getting-started/index.md) </span></span>  
+ [<span data-ttu-id="360a1-111">Когда останавливается неостанавливающее исправление языка?</span><span class="sxs-lookup"><span data-stu-id="360a1-111">When is a non-breaking language fix breaking?</span></span>](http://go.microsoft.com/fwlink/?LinkId=259542)
 

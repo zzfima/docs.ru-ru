@@ -16,28 +16,28 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c71f4af829a395204bc17161547aa5fdd06cbb1
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 9c535a06e70ebd299d7f6646576e703d7a0dda84
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Практическое руководство: преобразование формы дерева XML (Visual Basic)
-*Фигуры* XML-документу обозначает совокупность имен элементов, именами атрибутов и характеристик его иерархии.  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a><span data-ttu-id="b966d-102">Практическое руководство: преобразование формы дерева XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b966d-102">How to: Transform the Shape of an XML Tree (Visual Basic)</span></span>
+<span data-ttu-id="b966d-103">*Фигуры* XML-документу обозначает совокупность имен элементов, именами атрибутов и характеристик его иерархии.</span><span class="sxs-lookup"><span data-stu-id="b966d-103">The *shape* of an XML document refers to its element names, attribute names, and the characteristics of its hierarchy.</span></span>  
   
- Иногда может потребоваться изменить форму XML-документа. Например, может потребоваться передать существующий XML-документ в другую систему, которая использует другие названия элементов и атрибутов. Можно пройти по документу, удаляя и переименовывая элементы согласно требованиям, однако использование результатов функциональных построений дает более читаемый код и просто код для обработки. Дополнительные сведения о функциональном построении см. в разделе [функциональное построение (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ <span data-ttu-id="b966d-104">Иногда может потребоваться изменить форму XML-документа.</span><span class="sxs-lookup"><span data-stu-id="b966d-104">Sometimes you will have to change the shape of an XML document.</span></span> <span data-ttu-id="b966d-105">Например, может потребоваться передать существующий XML-документ в другую систему, которая использует другие названия элементов и атрибутов.</span><span class="sxs-lookup"><span data-stu-id="b966d-105">For example, you might have to send an existing XML document to another system that requires different element and attribute names.</span></span> <span data-ttu-id="b966d-106">Можно пройти по документу, удаляя и переименовывая элементы согласно требованиям, однако использование результатов функциональных построений дает более читаемый код и просто код для обработки.</span><span class="sxs-lookup"><span data-stu-id="b966d-106">You could go through the document, deleting and renaming elements as required, but using functional construction results in more readable and maintainable code.</span></span> <span data-ttu-id="b966d-107">Дополнительные сведения о функциональном построении см. в разделе [функциональное построение (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b966d-107">For more information about functional construction, see [Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).</span></span>  
   
- В первом примере выполнится изменение организации всего XML-документа. Происходит перемещение сложных элементов из одного места дерева в другое.  
+ <span data-ttu-id="b966d-108">В первом примере выполнится изменение организации всего XML-документа.</span><span class="sxs-lookup"><span data-stu-id="b966d-108">The first example changes the organization of the XML document.</span></span> <span data-ttu-id="b966d-109">Происходит перемещение сложных элементов из одного места дерева в другое.</span><span class="sxs-lookup"><span data-stu-id="b966d-109">It moves complex elements from one location in the tree to another.</span></span>  
   
- Во втором примере, приведенном в этом разделе, создается XML-документ, форма которого отлична от формы исходного документа. Выполняется изменение тегов имен элементов, переименование некоторых элементов и опущение некоторых элементов, присутствующих в исходном дереве.  
+ <span data-ttu-id="b966d-110">Во втором примере, приведенном в этом разделе, создается XML-документ, форма которого отлична от формы исходного документа.</span><span class="sxs-lookup"><span data-stu-id="b966d-110">The second example in this topic creates an XML document with a different shape than the source document.</span></span> <span data-ttu-id="b966d-111">Выполняется изменение тегов имен элементов, переименование некоторых элементов и опущение некоторых элементов, присутствующих в исходном дереве.</span><span class="sxs-lookup"><span data-stu-id="b966d-111">It changes the casing of the element names, renames some elements, and leaves some elements from the source tree out of the transformed tree.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий код позволяет изменить форму XML-файла при помощи внедренного выражения запроса.  
+## <a name="example"></a><span data-ttu-id="b966d-112">Пример</span><span class="sxs-lookup"><span data-stu-id="b966d-112">Example</span></span>  
+ <span data-ttu-id="b966d-113">Следующий код позволяет изменить форму XML-файла при помощи внедренного выражения запроса.</span><span class="sxs-lookup"><span data-stu-id="b966d-113">The following code changes the shape of an XML file using embedded query expressions.</span></span>  
   
- Исходный XML-документ в этом примере содержит `Customers` элемент `Root`, в котором содержится список всех клиентов. Он также содержит элемент `Orders` под элементом `Root`, который содержит все заказы. В этом примере создается новое XML-дерево, в котором заказы каждого клиента содержатся в элементе `Orders`, который является дочерним по отношению к элементу `Customer`. Оригинальный документ также содержит элемент `CustomerID` внутри элемента `Order`. Этот элемент будет удален из преобразованного документа.  
+ <span data-ttu-id="b966d-114">Исходный XML-документ в этом примере содержит `Customers` элемент `Root`, в котором содержится список всех клиентов.</span><span class="sxs-lookup"><span data-stu-id="b966d-114">The source XML document in this example contains a `Customers` element under the `Root` element that contains all customers.</span></span> <span data-ttu-id="b966d-115">Он также содержит элемент `Orders` под элементом `Root`, который содержит все заказы.</span><span class="sxs-lookup"><span data-stu-id="b966d-115">It also contains an `Orders` element under the `Root` element that contains all orders.</span></span> <span data-ttu-id="b966d-116">В этом примере создается новое XML-дерево, в котором заказы каждого клиента содержатся в элементе `Orders`, который является дочерним по отношению к элементу `Customer`.</span><span class="sxs-lookup"><span data-stu-id="b966d-116">This example creates a new XML tree in which the orders for each customer are contained in an `Orders` element within the `Customer` element.</span></span> <span data-ttu-id="b966d-117">Оригинальный документ также содержит элемент `CustomerID` внутри элемента `Order`. Этот элемент будет удален из преобразованного документа.</span><span class="sxs-lookup"><span data-stu-id="b966d-117">The original document also contains a `CustomerID` element in the `Order` element; this element will be removed from the re-shaped document.</span></span>  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: Customers и Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ <span data-ttu-id="b966d-118">В этом примере используется следующий XML-документ: [пример XML-файла: Customers и Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b966d-118">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -67,7 +67,7 @@ Dim newCustOrd = _
 Console.WriteLine(newCustOrd)  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="b966d-119">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="b966d-119">This code produces the following output:</span></span>  
   
 ```xml  
         <Root>  
@@ -103,12 +103,12 @@ Console.WriteLine(newCustOrd)
 . . .  
 ```  
   
-## <a name="example"></a>Пример  
- В этом примере выполняется переименование некоторых элементов и преобразование некоторых атрибутов в элементы.  
+## <a name="example"></a><span data-ttu-id="b966d-120">Пример</span><span class="sxs-lookup"><span data-stu-id="b966d-120">Example</span></span>  
+ <span data-ttu-id="b966d-121">В этом примере выполняется переименование некоторых элементов и преобразование некоторых атрибутов в элементы.</span><span class="sxs-lookup"><span data-stu-id="b966d-121">This example renames some elements and converts some attributes to elements.</span></span>  
   
- Этот код вызывает `ConvertAddress`, который возвращает список <xref:System.Xml.Linq.XElement>объектов.</xref:System.Xml.Linq.XElement> По отношению к методу аргументом является запрос, который определяет сложный элемент `Address`, в котором атрибут `Type` обладает значением `"Shipping"`.  
+ <span data-ttu-id="b966d-122">Этот код вызывает `ConvertAddress`, который возвращает список <xref:System.Xml.Linq.XElement>объектов.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="b966d-122">The code calls `ConvertAddress`, which returns a list of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="b966d-123">По отношению к методу аргументом является запрос, который определяет сложный элемент `Address`, в котором атрибут `Type` обладает значением `"Shipping"`.</span><span class="sxs-lookup"><span data-stu-id="b966d-123">The argument to the method is a query that determines the `Address` complex element where the `Type` attribute has a value of `"Shipping"`.</span></span>  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ <span data-ttu-id="b966d-124">В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b966d-124">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).</span></span>  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -141,7 +141,7 @@ Sub Main()
 End Sub  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="b966d-125">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="b966d-125">This code produces the following output:</span></span>  
   
 ```xml  
 <PO>  
@@ -156,6 +156,6 @@ End Sub
 </PO>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b966d-126">См. также</span><span class="sxs-lookup"><span data-stu-id="b966d-126">See Also</span></span>  
+ [<span data-ttu-id="b966d-127">Проекции и преобразования (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b966d-127">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
 

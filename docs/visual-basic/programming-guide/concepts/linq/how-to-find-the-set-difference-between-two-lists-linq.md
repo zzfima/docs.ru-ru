@@ -20,20 +20,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2e67a03d5826d7d93e04b6c20a09cbbcabc8629
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9c00a66c79e080211c92457c0194462698fee98f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Практическое руководство: нахождение разности наборов между двумя списками (LINQ) (Visual Basic)
-В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в names2.txt.  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a><span data-ttu-id="e9c1d-102">Практическое руководство: нахождение разности наборов между двумя списками (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9c1d-102">How to: Find the Set Difference Between Two Lists (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="e9c1d-103">В этом примере показано, как использовать LINQ для сравнения двух списков строк и вывода тех строк, которые содержатся в файле names1.txt, но не в names2.txt.</span><span class="sxs-lookup"><span data-stu-id="e9c1d-103">This example shows how to use LINQ to compare two lists of strings and output those lines that are in names1.txt but not in names2.txt.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Для создания файлов данных  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="e9c1d-104">Для создания файлов данных</span><span class="sxs-lookup"><span data-stu-id="e9c1d-104">To create the data files</span></span>  
   
-1.  Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в [как: объединение и сравнение строки коллекций (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1.  <span data-ttu-id="e9c1d-105">Скопируйте файлы names1.txt и names2.txt в папку решения, как показано в [как: объединение и сравнение строки коллекций (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span><span class="sxs-lookup"><span data-stu-id="e9c1d-105">Copy names1.txt and names2.txt to your solution folder as shown in [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="e9c1d-106">Пример</span><span class="sxs-lookup"><span data-stu-id="e9c1d-106">Example</span></span>  
   
 ```vb  
 Class CompareLists  
@@ -68,10 +69,10 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Некоторые типы запросов операций в Visual Basic, например <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, и <xref:System.Linq.Enumerable.Concat%2A>, можно выразить в синтаксисе на основе методов.</xref:System.Linq.Enumerable.Concat%2A> </xref:System.Linq.Enumerable.Union%2A> </xref:System.Linq.Enumerable.Distinct%2A> </xref:System.Linq.Enumerable.Except%2A>  
+ <span data-ttu-id="e9c1d-107">Некоторые типы запросов операций в Visual Basic, например <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, и <xref:System.Linq.Enumerable.Concat%2A>, можно выразить в синтаксисе на основе методов.</xref:System.Linq.Enumerable.Concat%2A> </xref:System.Linq.Enumerable.Union%2A> </xref:System.Linq.Enumerable.Distinct%2A> </xref:System.Linq.Enumerable.Except%2A></span><span class="sxs-lookup"><span data-stu-id="e9c1d-107">Some types of query operations in Visual Basic, such as <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, and <xref:System.Linq.Enumerable.Concat%2A>, can only be expressed in method-based syntax.</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="e9c1d-108">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="e9c1d-108">Compiling the Code</span></span>  
+ <span data-ttu-id="e9c1d-109">Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="e9c1d-109">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="e9c1d-110">См. также</span><span class="sxs-lookup"><span data-stu-id="e9c1d-110">See Also</span></span>  
+ [<span data-ttu-id="e9c1d-111">LINQ и строки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e9c1d-111">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

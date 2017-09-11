@@ -27,22 +27,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5a23e083cec1d7a8fa8ca923ca35eee506f2c9cf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d12b9e587d7b57998edff1559d24d0e7d4bda6ce
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="attributes-visual-basic"></a>Атрибуты (Visual Basic)
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет несколько атрибутов, которые позволяют объектам взаимодействовать с неуправляемым кодом и один атрибут, который позволяет членам модуля должен осуществляться без использования имени модуля. В следующей таблице перечислены атрибуты, используемые [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="attributes-visual-basic"></a><span data-ttu-id="475d6-102">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="475d6-102">Attributes (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="475d6-103">предоставляет несколько атрибутов, которые позволяют объектам взаимодействовать с неуправляемым кодом и один атрибут, который позволяет членам модуля должен осуществляться без использования имени модуля.</span><span class="sxs-lookup"><span data-stu-id="475d6-103"> provides several attributes that allow objects interoperate with unmanaged code, and one attribute that enables module members to be accessed without the module name.</span></span> <span data-ttu-id="475d6-104">В следующей таблице перечислены атрибуты, используемые [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="475d6-104">The following table lists the attributes used by [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute></xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору на необходимость добавления метаданных, позволяющих использовать класс должен быть предоставлен как COM-объект.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute></xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Позволяет членам модуля должен осуществляться с использованием только квалификации, необходимой для модуля.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute></xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает, что массив в структуре или внешней переменной следует считать массив фиксированной длины.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute></xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Указывает, что строка должна считаться фиксированной длины.|  
+|<span data-ttu-id="475d6-105"><xref:Microsoft.VisualBasic.ComClassAttribute></xref:Microsoft.VisualBasic.ComClassAttribute></span><span class="sxs-lookup"><span data-stu-id="475d6-105"><xref:Microsoft.VisualBasic.ComClassAttribute></span></span>|<span data-ttu-id="475d6-106">Указывает компилятору на необходимость добавления метаданных, позволяющих использовать класс должен быть предоставлен как COM-объект.</span><span class="sxs-lookup"><span data-stu-id="475d6-106">Instructs the compiler to add metadata that allows a class to be exposed as a COM object.</span></span>|  
+|<span data-ttu-id="475d6-107"><xref:Microsoft.VisualBasic.HideModuleNameAttribute></xref:Microsoft.VisualBasic.HideModuleNameAttribute></span><span class="sxs-lookup"><span data-stu-id="475d6-107"><xref:Microsoft.VisualBasic.HideModuleNameAttribute></span></span>|<span data-ttu-id="475d6-108">Позволяет членам модуля должен осуществляться с использованием только квалификации, необходимой для модуля.</span><span class="sxs-lookup"><span data-stu-id="475d6-108">Allows the module members to be accessed using only the qualification needed for the module.</span></span>|  
+|<span data-ttu-id="475d6-109"><xref:Microsoft.VisualBasic.VBFixedArrayAttribute></xref:Microsoft.VisualBasic.VBFixedArrayAttribute></span><span class="sxs-lookup"><span data-stu-id="475d6-109"><xref:Microsoft.VisualBasic.VBFixedArrayAttribute></span></span>|<span data-ttu-id="475d6-110">Указывает, что массив в структуре или внешней переменной следует считать массив фиксированной длины.</span><span class="sxs-lookup"><span data-stu-id="475d6-110">Indicates that an array in a structure or non-local variable should be treated as a fixed-length array.</span></span>|  
+|<span data-ttu-id="475d6-111"><xref:Microsoft.VisualBasic.VBFixedStringAttribute></xref:Microsoft.VisualBasic.VBFixedStringAttribute></span><span class="sxs-lookup"><span data-stu-id="475d6-111"><xref:Microsoft.VisualBasic.VBFixedStringAttribute></span></span>|<span data-ttu-id="475d6-112">Указывает, что строка должна считаться фиксированной длины.</span><span class="sxs-lookup"><span data-stu-id="475d6-112">Indicates that a string should be treated as if it were fixed length.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Обзор атрибутов](../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="475d6-113">См. также</span><span class="sxs-lookup"><span data-stu-id="475d6-113">See Also</span></span>  
+ [<span data-ttu-id="475d6-114">Обзор атрибутов</span><span class="sxs-lookup"><span data-stu-id="475d6-114">Attributes overview</span></span>](../../visual-basic/programming-guide/concepts/attributes/index.md)
 

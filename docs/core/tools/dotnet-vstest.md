@@ -1,81 +1,80 @@
 ---
-title: "Команда dotnet-vstest | Документы Майкрософт"
-description: "Команда dotnet-vstest выполняет сборку проекта и всех его зависимостей."
-keywords: "dotnet-vstest, CLI, команда CLI, .NET Core"
+title: "Команда dotnet vstest — CLI .NET Core"
+description: "Команда dotnet vstest выполняет сборку проекта и всех его зависимостей."
 author: guardrex
 ms.author: mairaw
-ms.date: 03/09/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0e36c070-2242-41d3-96f1-aea0aca48d4d
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 27b96e74ae1abc83ba527cb799db33bec7af35bf
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: c5a7ee0ba306cea641b0ff34f0b521c92bd03719
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-vstest"></a><span data-ttu-id="73e73-103">dotnet vstest</span><span class="sxs-lookup"><span data-stu-id="73e73-103">dotnet vstest</span></span>
 
-# <a name="dotnet-vstest"></a>dotnet-vstest
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a><span data-ttu-id="73e73-104">Имя</span><span class="sxs-lookup"><span data-stu-id="73e73-104">Name</span></span>
 
-`dotnet-vstest` — запускает тесты из указанных файлов.
+<span data-ttu-id="73e73-105">`dotnet-vstest` — запускает тесты из указанных файлов.</span><span class="sxs-lookup"><span data-stu-id="73e73-105">`dotnet-vstest` - Runs tests from the specified files.</span></span>
 
-## <a name="synopsis"></a>Краткий обзор
+## <a name="synopsis"></a><span data-ttu-id="73e73-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="73e73-106">Synopsis</span></span>
 
 `dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a><span data-ttu-id="73e73-107">Описание</span><span class="sxs-lookup"><span data-stu-id="73e73-107">Description</span></span>
 
-Команда `dotnet-vstest` запускает приложение командной строки `VSTest.Console` для выполнения автоматического модульного тестирования и закодированных тестов пользовательского интерфейса.
+<span data-ttu-id="73e73-108">Команда `dotnet-vstest` запускает приложение командной строки `VSTest.Console` для выполнения автоматического модульного тестирования и закодированных тестов пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="73e73-108">The `dotnet-vstest` command runs the `VSTest.Console` command-line application to run automated unit and coded UI application tests.</span></span>
 
-## <a name="arguments"></a>Аргументы
+## <a name="arguments"></a><span data-ttu-id="73e73-109">Аргументы</span><span class="sxs-lookup"><span data-stu-id="73e73-109">Arguments</span></span>
 
 `TEST_FILE_NAMES`
 
-Запустите тесты из указанных сборок. Для разделения имен тестовых сборок используйте пробелы.
+<span data-ttu-id="73e73-110">Запустите тесты из указанных сборок.</span><span class="sxs-lookup"><span data-stu-id="73e73-110">Run tests from the specified assemblies.</span></span> <span data-ttu-id="73e73-111">Для разделения имен тестовых сборок используйте пробелы.</span><span class="sxs-lookup"><span data-stu-id="73e73-111">Separate multiple test assembly names with spaces.</span></span>
 
-## <a name="options"></a>Параметры
+## <a name="options"></a><span data-ttu-id="73e73-112">Параметры</span><span class="sxs-lookup"><span data-stu-id="73e73-112">Options</span></span>
 
 `--Settings|/Settings:<Settings File>`
 
-Параметры, используемые при выполнении тестов.
+<span data-ttu-id="73e73-113">Параметры, используемые при выполнении тестов.</span><span class="sxs-lookup"><span data-stu-id="73e73-113">Settings to use when running tests.</span></span>
 
 `--Tests|/Tests:<Test Names>`
 
-Выполните тесты с именами, которые соответствуют предусмотренным значениям. Для разделения значений используйте запятые.
+<span data-ttu-id="73e73-114">Выполните тесты с именами, которые соответствуют предусмотренным значениям.</span><span class="sxs-lookup"><span data-stu-id="73e73-114">Run tests with names that match the provided values.</span></span> <span data-ttu-id="73e73-115">Для разделения значений используйте запятые.</span><span class="sxs-lookup"><span data-stu-id="73e73-115">Separate multiple values with commas.</span></span>
 
 `--TestAdapterPath|/TestAdapterPath`
 
-Используйте пользовательские адаптеры теста из указанного пути (при наличии) в тестовом запуске.
+<span data-ttu-id="73e73-116">Используйте пользовательские адаптеры теста из указанного пути (при наличии) в тестовом запуске.</span><span class="sxs-lookup"><span data-stu-id="73e73-116">Use custom test adapters from a given path (if any) in the test run.</span></span>
 
 `--Platform|/Platform:<Platform type>`
 
-Архитектура целевой платформы, используемая для выполнения тестов. Допустимые значения: `x86`, `x64` и `ARM`.
+<span data-ttu-id="73e73-117">Архитектура целевой платформы, используемая для выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="73e73-117">Target platform architecture used for test execution.</span></span> <span data-ttu-id="73e73-118">Допустимые значения: `x86`, `x64` и `ARM`.</span><span class="sxs-lookup"><span data-stu-id="73e73-118">Valid values are `x86`, `x64`, and `ARM`.</span></span>
 
 `--Framework|/Framework:<Framework Version>`
 
-Целевая версия платформы .NET Framework, используемая для выполнения тестов. Примеры допустимых значений: `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0` и т. п. Другие поддерживаемые значения: `Framework35`, `Framework40`, `Framework45` и `FrameworkCore10`.
+<span data-ttu-id="73e73-119">Целевая версия платформы .NET Framework, используемая для выполнения тестов.</span><span class="sxs-lookup"><span data-stu-id="73e73-119">Target .NET Framework version used for test execution.</span></span> <span data-ttu-id="73e73-120">Примеры допустимых значений: `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0` и т. п. Другие поддерживаемые значения: `Framework35`, `Framework40`, `Framework45` и `FrameworkCore10`.</span><span class="sxs-lookup"><span data-stu-id="73e73-120">Examples of valid values are `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0`, etc. Other supported values are `Framework35`, `Framework40`, `Framework45`, and `FrameworkCore10`.</span></span>
 
 `--Parallel|/Parallel`
 
-Выполняйте тесты в параллельном режиме. По умолчанию для использования все доступные на компьютере ядра. Задайте явное число ядер с помощью файла параметров.
+<span data-ttu-id="73e73-121">Выполняйте тесты в параллельном режиме.</span><span class="sxs-lookup"><span data-stu-id="73e73-121">Execute tests in parallel.</span></span> <span data-ttu-id="73e73-122">По умолчанию для использования все доступные на компьютере ядра.</span><span class="sxs-lookup"><span data-stu-id="73e73-122">By default, all available cores on the machine are available for use.</span></span> <span data-ttu-id="73e73-123">Задайте явное число ядер с помощью файла параметров.</span><span class="sxs-lookup"><span data-stu-id="73e73-123">Set an explicit number of cores with a settings file.</span></span>
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Запуск тестов, соответствующих заданному выражению. `<Expression>` имеет формат `<property>Operator<value>[|&<Expression>]`, где Operator принимает одно из следующих значений: `=`, `!=` или `~`.  Оператор `~` имеет семантику "содержит" и применяется для строковых свойств, таких как `DisplayName`. Скобки `()` используются для группировки частей выражений.
+<span data-ttu-id="73e73-124">Запуск тестов, соответствующих заданному выражению.</span><span class="sxs-lookup"><span data-stu-id="73e73-124">Run tests that match the given expression.</span></span> <span data-ttu-id="73e73-125">`<Expression>` имеет формат `<property>Operator<value>[|&<Expression>]`, где Operator принимает одно из следующих значений: `=`, `!=` или `~`.</span><span class="sxs-lookup"><span data-stu-id="73e73-125">`<Expression>` is of the format `<property>Operator<value>[|&<Expression>]`, where Operator is one of `=`, `!=`, or `~`.</span></span>  <span data-ttu-id="73e73-126">Оператор `~` имеет семантику "содержит" и применяется для строковых свойств, таких как `DisplayName`.</span><span class="sxs-lookup"><span data-stu-id="73e73-126">Operator `~` has 'contains' semantics and is applicable for string properties like `DisplayName`.</span></span> <span data-ttu-id="73e73-127">Скобки `()` используются для группировки частей выражений.</span><span class="sxs-lookup"><span data-stu-id="73e73-127">Parenthesis `()` are used to group sub-expressions.</span></span>
 
 `-?|--Help|/?|/Help`
 
-Выводит краткую справку по команде.
+<span data-ttu-id="73e73-128">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="73e73-128">Prints out a short help for the command.</span></span>
 
 `--logger|/logger:<Logger Uri/FriendlyName>`
 
-Укажите средство ведения журнала результатов тестирования.  
+<span data-ttu-id="73e73-129">Укажите средство ведения журнала результатов тестирования.</span><span class="sxs-lookup"><span data-stu-id="73e73-129">Specify a logger for test results.</span></span>  
 
-* Чтобы опубликовать результаты теста в Team Foundation Server, используйте поставщик средства ведения журнала `TfsPublisher`:
+* <span data-ttu-id="73e73-130">Чтобы опубликовать результаты теста в Team Foundation Server, используйте поставщик средства ведения журнала `TfsPublisher`:</span><span class="sxs-lookup"><span data-stu-id="73e73-130">To publish test results to Team Foundation Server, use the `TfsPublisher` logger provider:</span></span>
 
   ```
   /logger:TfsPublisher;
@@ -87,7 +86,7 @@ ms.lasthandoff: 03/22/2017
       [;RunTitle=<title>]
   ```
 
-* Чтобы записать результаты в файл результатов теста Visual Studio (TRX), используйте поставщик средства ведения журнала `trx`. Этот параметр создает файл журнала с заданным именем в каталоге результатов теста. Если `LogFileName` не указан, для хранения результатов теста создается уникальное имя файла.
+* <span data-ttu-id="73e73-131">Чтобы записать результаты в файл результатов теста Visual Studio (TRX), используйте поставщик средства ведения журнала `trx`.</span><span class="sxs-lookup"><span data-stu-id="73e73-131">To log results to a Visual Studio Test Results File (TRX), use the `trx` logger provider.</span></span> <span data-ttu-id="73e73-132">Этот параметр создает файл журнала с заданным именем в каталоге результатов теста.</span><span class="sxs-lookup"><span data-stu-id="73e73-132">This switch creates a file in the test results directory with given log file name.</span></span> <span data-ttu-id="73e73-133">Если `LogFileName` не указан, для хранения результатов теста создается уникальное имя файла.</span><span class="sxs-lookup"><span data-stu-id="73e73-133">If `LogFileName` isn't provided, a unique file name is created to hold the test results.</span></span>
 
   ```
   /logger:trx [;LogFileName=<Defaults to unique file name>]
@@ -95,39 +94,39 @@ ms.lasthandoff: 03/22/2017
 
 `-lt|--ListTests|/lt|/ListTests:<File Name>`
 
-Перечисление обнаруженных тестов из указанного контейнера тестов.
+<span data-ttu-id="73e73-134">Перечисление обнаруженных тестов из указанного контейнера тестов.</span><span class="sxs-lookup"><span data-stu-id="73e73-134">Lists discovered tests from the given test container.</span></span>
 
 `--ParentProcessId|/ParentProcessId:<ParentProcessId>`
 
-Идентификатор родительского процесса, отвечающего за запуск текущего процесса.
+<span data-ttu-id="73e73-135">Идентификатор родительского процесса, отвечающего за запуск текущего процесса.</span><span class="sxs-lookup"><span data-stu-id="73e73-135">Process Id of the parent process responsible for launching the current process.</span></span>
 
 `--Port|/Port:<Port>`
 
-Указывает порт для подключения сокета и получения сообщений о событиях.
+<span data-ttu-id="73e73-136">Указывает порт для подключения сокета и получения сообщений о событиях.</span><span class="sxs-lookup"><span data-stu-id="73e73-136">Specifies the port for the socket connection and receiving the event messages.</span></span>
 
 `--Diag|/Diag:<Path to log file>`
 
-Включает ведение подробных журналов для платформы тестирования. Журналы записываются в указанный файл.
+<span data-ttu-id="73e73-137">Включает ведение подробных журналов для платформы тестирования.</span><span class="sxs-lookup"><span data-stu-id="73e73-137">Enables verbose logs for the test platform.</span></span> <span data-ttu-id="73e73-138">Журналы записываются в указанный файл.</span><span class="sxs-lookup"><span data-stu-id="73e73-138">Logs are written to the provided file.</span></span>
 
 `args`
 
-Задает дополнительные аргументы, передаваемые адаптеру. Аргументы указываются как пары имя-значение в формате `<n>=<v>`, где `<n>` является именем аргумента, а `<v>` — значением аргумента. Для разделения аргументов используйте пробел.
+<span data-ttu-id="73e73-139">Задает дополнительные аргументы, передаваемые адаптеру.</span><span class="sxs-lookup"><span data-stu-id="73e73-139">Specifies extra arguments to pass to the adapter.</span></span> <span data-ttu-id="73e73-140">Аргументы указываются как пары имя-значение в формате `<n>=<v>`, где `<n>` является именем аргумента, а `<v>` — значением аргумента.</span><span class="sxs-lookup"><span data-stu-id="73e73-140">Arguments are specified as name-value pairs of the form `<n>=<v>`, where `<n>` is the argument name and `<v>` is the argument value.</span></span> <span data-ttu-id="73e73-141">Для разделения аргументов используйте пробел.</span><span class="sxs-lookup"><span data-stu-id="73e73-141">Use a space to separate multiple arguments.</span></span>
 
-## <a name="examples"></a>Примеры
+## <a name="examples"></a><span data-ttu-id="73e73-142">Примеры</span><span class="sxs-lookup"><span data-stu-id="73e73-142">Examples</span></span>
 
-Запуск тестов в `mytestproject.dll`:
+<span data-ttu-id="73e73-143">Запуск тестов в `mytestproject.dll`:</span><span class="sxs-lookup"><span data-stu-id="73e73-143">Run tests in `mytestproject.dll`:</span></span>
 
 `dotnet vstest mytestproject.dll`
 
-Запуск тестов в `mytestproject.dll` и `myothertestproject.exe`:
+<span data-ttu-id="73e73-144">Запуск тестов в `mytestproject.dll` и `myothertestproject.exe`:</span><span class="sxs-lookup"><span data-stu-id="73e73-144">Run tests in `mytestproject.dll` and `myothertestproject.exe`:</span></span>
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
 
-Запуск тестов `TestMethod1`:
+<span data-ttu-id="73e73-145">Запуск тестов `TestMethod1`:</span><span class="sxs-lookup"><span data-stu-id="73e73-145">Run `TestMethod1` tests:</span></span>
 
 `dotnet vstest /Tests:TestMethod1`
 
-Запуск тестов `TestMethod1` и `TestMethod2`:
+<span data-ttu-id="73e73-146">Запуск тестов `TestMethod1` и `TestMethod2`:</span><span class="sxs-lookup"><span data-stu-id="73e73-146">Run `TestMethod1` and `TestMethod2` tests:</span></span>
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
 

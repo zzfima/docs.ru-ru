@@ -17,16 +17,16 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="-using-c-interactive-to-explore-and-experiment"></a>🔧 Использование окна "Интерактивный C#" для исследования и экспериментов
+# <a name="-using-c-interactive-to-explore-and-experiment"></a><span data-ttu-id="4016f-105">🔧 Использование окна "Интерактивный C#" для исследования и экспериментов</span><span class="sxs-lookup"><span data-stu-id="4016f-105">🔧 Using C# Interactive to explore and experiment</span></span>
 
-> **Примечание**
+> <span data-ttu-id="4016f-106">**Примечание**</span><span class="sxs-lookup"><span data-stu-id="4016f-106">**Note**</span></span>
 > 
-> Этот раздел еще не написан! 
+> <span data-ttu-id="4016f-107">Этот раздел еще не написан!</span><span class="sxs-lookup"><span data-stu-id="4016f-107">This topic hasn’t been written yet!</span></span> 
 >
-> Мы будем рады получить ваши предложения, которые помогут нам определить вопросы, требующие рассмотрения, и подход. Вы можете отслеживать состояние и оставлять предложения по этой [теме](https://github.com/dotnet/docs/issues/949) на сайте GitHub.
+> <span data-ttu-id="4016f-108">Мы будем рады получить ваши предложения, которые помогут нам определить вопросы, требующие рассмотрения, и подход.</span><span class="sxs-lookup"><span data-stu-id="4016f-108">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="4016f-109">Вы можете отслеживать состояние и оставлять предложения по этой [теме](https://github.com/dotnet/docs/issues/949) на сайте GitHub.</span><span class="sxs-lookup"><span data-stu-id="4016f-109">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/949) at GitHub.</span></span>
 > 
-> Чтобы просмотреть черновые варианты и наброски этого раздела, оставьте сообщение со своими контактными данными в соответствующей теме.
+> <span data-ttu-id="4016f-110">Чтобы просмотреть черновые варианты и наброски этого раздела, оставьте сообщение со своими контактными данными в соответствующей теме.</span><span class="sxs-lookup"><span data-stu-id="4016f-110">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> Узнать больше о том, как вы можете посодействовать, можно на сайте [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
+> <span data-ttu-id="4016f-111">Узнать больше о том, как вы можете посодействовать, можно на сайте [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="4016f-111">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 

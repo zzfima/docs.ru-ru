@@ -1,5 +1,5 @@
 ---
-title: "Исключения, создаваемые компилятором (руководство по программированию в C#) | Документы Майкрософт"
+title: "Исключения, создаваемые компилятором (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,32 +27,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4015551ac983610afc8bf1f08e73a33c1ac338ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d8fbae9272b34dd4d010199470c930c846cd1b74
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="compiler-generated-exceptions-c-programming-guide"></a>Исключения, создаваемые компилятором (Руководство по программированию в C#)
-Некоторые исключения создаются средой .NET Framework CLR (CLR) автоматически, когда происходит сбой основной операции. В следующей таблице перечислены эти исключения и условия возникновения ошибок.  
+# <a name="compiler-generated-exceptions-c-programming-guide"></a><span data-ttu-id="517e6-102">Исключения, создаваемые компилятором (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="517e6-102">Compiler-Generated Exceptions (C# Programming Guide)</span></span>
+<span data-ttu-id="517e6-103">Некоторые исключения создаются средой .NET Framework CLR (CLR) автоматически, когда происходит сбой основной операции.</span><span class="sxs-lookup"><span data-stu-id="517e6-103">Some exceptions are thrown automatically by the .NET Framework's common language runtime (CLR) when basic operations fail.</span></span> <span data-ttu-id="517e6-104">В следующей таблице перечислены эти исключения и условия возникновения ошибок.</span><span class="sxs-lookup"><span data-stu-id="517e6-104">These exceptions and their error conditions are listed in the following table.</span></span>  
   
-|Исключение|Описание|  
+|<span data-ttu-id="517e6-105">Исключение</span><span class="sxs-lookup"><span data-stu-id="517e6-105">Exception</span></span>|<span data-ttu-id="517e6-106">Описание</span><span class="sxs-lookup"><span data-stu-id="517e6-106">Description</span></span>|  
 |---------------|-----------------|  
-|<xref:System.ArithmeticException>|Базовый класс для исключений, возникающих во время арифметических операций, таких как <xref:System.DivideByZeroException> и <xref:System.OverflowException>.|  
-|<xref:System.ArrayTypeMismatchException>|Возникает, если массив не может сохранить данный элемент, поскольку фактический тип элемента несовместим с фактическим типом массива.|  
-|<xref:System.DivideByZeroException>|Возникает при попытке деления целого значения на ноль.|  
-|<xref:System.IndexOutOfRangeException>|Возникает при попытке индексирования массива, если индекс меньше нуля или выходит за границы массива.|  
-|<xref:System.InvalidCastException>|Возникает, если явное преобразование из базового типа в интерфейс или в производный тип завершается ошибкой во время выполнения.|  
-|<xref:System.NullReferenceException>|Возникает при попытке сослаться на объект, имеющий значение [null](../../../csharp/language-reference/keywords/null.md).|  
-|<xref:System.OutOfMemoryException>|Возникает, если попытка распределения памяти с помощью оператора [new](../../../csharp/language-reference/keywords/new-operator.md) завершается ошибкой. Это означает, что ресурсы памяти, доступные для среды CLR, исчерпаны.|  
-|<xref:System.OverflowException>|Возникает при переполнении арифметической операции в контексте `checked`.|  
-|<xref:System.StackOverflowException>|Возникает, когда чрезмерное количество ожидающих вызовов метода истощает стек выполнения; обычно это указывает на крайне глубокую или бесконечную рекурсию.|  
-|<xref:System.TypeInitializationException>|Возникает, когда статический конструктор создает исключение, а совместимого предложения `catch` для его захвата нет.|  
+|<xref:System.ArithmeticException>|<span data-ttu-id="517e6-107">Базовый класс для исключений, которые возникают при выполнении арифметических операций, таких как <xref:System.DivideByZeroException> и <xref:System.OverflowException>.</span><span class="sxs-lookup"><span data-stu-id="517e6-107">A base class for exceptions that occur during arithmetic operations, such as <xref:System.DivideByZeroException> and <xref:System.OverflowException>.</span></span>|  
+|<xref:System.ArrayTypeMismatchException>|<span data-ttu-id="517e6-108">Возникает, если массив не может сохранить данный элемент, поскольку фактический тип элемента несовместим с фактическим типом массива.</span><span class="sxs-lookup"><span data-stu-id="517e6-108">Thrown when an array cannot store a given element because the actual type of the element is incompatible with the actual type of the array.</span></span>|  
+|<xref:System.DivideByZeroException>|<span data-ttu-id="517e6-109">Возникает при попытке деления целого значения на ноль.</span><span class="sxs-lookup"><span data-stu-id="517e6-109">Thrown when an attempt is made to divide an integral value by zero.</span></span>|  
+|<xref:System.IndexOutOfRangeException>|<span data-ttu-id="517e6-110">Возникает при попытке индексирования массива, если индекс меньше нуля или выходит за границы массива.</span><span class="sxs-lookup"><span data-stu-id="517e6-110">Thrown when an attempt is made to index an array when the index is less than zero or outside the bounds of the array.</span></span>|  
+|<xref:System.InvalidCastException>|<span data-ttu-id="517e6-111">Возникает, если явное преобразование из базового типа в интерфейс или в производный тип завершается ошибкой во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="517e6-111">Thrown when an explicit conversion from a base type to an interface or to a derived type fails at runtime.</span></span>|  
+|<xref:System.NullReferenceException>|<span data-ttu-id="517e6-112">Возникает при попытке сослаться на объект, имеющий значение [null](../../../csharp/language-reference/keywords/null.md).</span><span class="sxs-lookup"><span data-stu-id="517e6-112">Thrown when you attempt to reference an object whose value is [null](../../../csharp/language-reference/keywords/null.md).</span></span>|  
+|<xref:System.OutOfMemoryException>|<span data-ttu-id="517e6-113">Возникает, если попытка распределения памяти с помощью оператора [new](../../../csharp/language-reference/keywords/new-operator.md) завершается ошибкой.</span><span class="sxs-lookup"><span data-stu-id="517e6-113">Thrown when an attempt to allocate memory using the [new](../../../csharp/language-reference/keywords/new-operator.md) operator fails.</span></span> <span data-ttu-id="517e6-114">Это означает, что ресурсы памяти, доступные для среды CLR, исчерпаны.</span><span class="sxs-lookup"><span data-stu-id="517e6-114">This indicates that the memory available to the common language runtime has been exhausted.</span></span>|  
+|<xref:System.OverflowException>|<span data-ttu-id="517e6-115">Возникает при переполнении арифметической операции в контексте `checked`.</span><span class="sxs-lookup"><span data-stu-id="517e6-115">Thrown when an arithmetic operation in a `checked` context overflows.</span></span>|  
+|<xref:System.StackOverflowException>|<span data-ttu-id="517e6-116">Возникает, когда чрезмерное количество ожидающих вызовов метода истощает стек выполнения; обычно это указывает на крайне глубокую или бесконечную рекурсию.</span><span class="sxs-lookup"><span data-stu-id="517e6-116">Thrown when the execution stack is exhausted by having too many pending method calls; usually indicates a very deep or infinite recursion.</span></span>|  
+|<xref:System.TypeInitializationException>|<span data-ttu-id="517e6-117">Возникает, когда статический конструктор создает исключение, а совместимого предложения `catch` для его захвата нет.</span><span class="sxs-lookup"><span data-stu-id="517e6-117">Thrown when a static constructor throws an exception and no compatible `catch` clause exists to catch it.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)   
- [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+## <a name="see-also"></a><span data-ttu-id="517e6-118">См. также</span><span class="sxs-lookup"><span data-stu-id="517e6-118">See Also</span></span>  
+ <span data-ttu-id="517e6-119">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="517e6-119">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="517e6-120">[Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md) </span><span class="sxs-lookup"><span data-stu-id="517e6-120">[Exceptions and Exception Handling](../../../csharp/programming-guide/exceptions/index.md) </span></span>  
+ <span data-ttu-id="517e6-121">[Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md) </span><span class="sxs-lookup"><span data-stu-id="517e6-121">[Exception Handling](../../../csharp/programming-guide/exceptions/exception-handling.md) </span></span>  
+ <span data-ttu-id="517e6-122">[try-catch](../../../csharp/language-reference/keywords/try-catch.md) </span><span class="sxs-lookup"><span data-stu-id="517e6-122">[try-catch](../../../csharp/language-reference/keywords/try-catch.md) </span></span>  
+ <span data-ttu-id="517e6-123">[try-finally](../../../csharp/language-reference/keywords/try-finally.md) </span><span class="sxs-lookup"><span data-stu-id="517e6-123">[try-finally](../../../csharp/language-reference/keywords/try-finally.md) </span></span>  
+ [<span data-ttu-id="517e6-124">try-catch-finally</span><span class="sxs-lookup"><span data-stu-id="517e6-124">try-catch-finally</span></span>](../../../csharp/language-reference/keywords/try-catch-finally.md)
+

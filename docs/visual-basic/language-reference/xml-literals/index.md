@@ -41,19 +41,19 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="xml-literals-visual-basic"></a>XML-литералы (Visual Basic)
-В темах этого раздела описывается синтаксис XML-литералов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Синтаксис XML-литералов позволяет внедрять XML непосредственно в код.  
+# <a name="xml-literals-visual-basic"></a><span data-ttu-id="ff598-102">XML-литералы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff598-102">XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="ff598-103">В темах этого раздела описывается синтаксис XML-литералов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ff598-103">The topics in this section document the syntax of XML literals in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span> <span data-ttu-id="ff598-104">Синтаксис XML-литералов позволяет внедрять XML непосредственно в код.</span><span class="sxs-lookup"><span data-stu-id="ff598-104">The XML literal syntax enables you to incorporate XML directly in your code.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a><span data-ttu-id="ff598-105">Содержание</span><span class="sxs-lookup"><span data-stu-id="ff598-105">In This Section</span></span>  
   
-|Раздел|Описание|  
+|<span data-ttu-id="ff598-106">Раздел</span><span class="sxs-lookup"><span data-stu-id="ff598-106">Topic</span></span>|<span data-ttu-id="ff598-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ff598-107">Description</span></span>|  
 |-----------|-----------------|  
-|[XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XElement>.|  
-|[XML-литерал документа](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XDocument>.|  
-|[XML-литерал CDATA](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XCData>.|  
-|[XML-литерал комментария](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XComment>.|  
-|[XML-литерал инструкции обработки](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XProcessingInstruction>.|  
+|[<span data-ttu-id="ff598-108">XML-литерал элемента</span><span class="sxs-lookup"><span data-stu-id="ff598-108">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|<span data-ttu-id="ff598-109">Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="ff598-109">Describes the syntax for literals that represent <xref:System.Xml.Linq.XElement> objects.</span></span>|  
+|[<span data-ttu-id="ff598-110">XML-литерал документа</span><span class="sxs-lookup"><span data-stu-id="ff598-110">XML Document Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|<span data-ttu-id="ff598-111">Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="ff598-111">Describes the syntax for literals that represent <xref:System.Xml.Linq.XDocument> objects.</span></span>|  
+|[<span data-ttu-id="ff598-112">XML-литерал CDATA</span><span class="sxs-lookup"><span data-stu-id="ff598-112">XML CDATA Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|<span data-ttu-id="ff598-113">Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XCData>.</span><span class="sxs-lookup"><span data-stu-id="ff598-113">Describes the syntax for literals that represent <xref:System.Xml.Linq.XCData> objects.</span></span>|  
+|[<span data-ttu-id="ff598-114">XML-литерал комментария</span><span class="sxs-lookup"><span data-stu-id="ff598-114">XML Comment Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<span data-ttu-id="ff598-115">Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XComment>.</span><span class="sxs-lookup"><span data-stu-id="ff598-115">Describes the syntax for literals that represent <xref:System.Xml.Linq.XComment> objects.</span></span>|  
+|[<span data-ttu-id="ff598-116">XML-литерал инструкции обработки</span><span class="sxs-lookup"><span data-stu-id="ff598-116">XML Processing Instruction Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<span data-ttu-id="ff598-117">Описание синтаксиса для литералов, представляющих объекты <xref:System.Xml.Linq.XProcessingInstruction>.</span><span class="sxs-lookup"><span data-stu-id="ff598-117">Describes the syntax for literals that represent <xref:System.Xml.Linq.XProcessingInstruction> objects.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="ff598-118">См. также</span><span class="sxs-lookup"><span data-stu-id="ff598-118">See Also</span></span>  
+ [<span data-ttu-id="ff598-119">XML</span><span class="sxs-lookup"><span data-stu-id="ff598-119">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
 

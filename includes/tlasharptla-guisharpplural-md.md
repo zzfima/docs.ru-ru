@@ -1,1 +1,1 @@
-графические пользовательские интерфейсы (GUI)
+<span data-ttu-id="ec503-101">графические пользовательские интерфейсы (GUI)</span><span class="sxs-lookup"><span data-stu-id="ec503-101">graphical user interfaces (GUIs)</span></span>

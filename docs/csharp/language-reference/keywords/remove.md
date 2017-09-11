@@ -1,31 +1,51 @@
 ---
-title: "remove (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "remove_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "remove - метод доступа события [C#]"
+title: "remove (Справочник по C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- remove_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
 caps.latest.revision: 8
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 8
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b34d653a40e1309e281235416c0399abc6dd9a0d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# remove (Справочник по C#)
-Контекстно\-зависимое ключевое слово `remove` используется для определения пользовательского метода доступа к событию, вызываемому при отмене подписки клиентского кода от [события](../../../csharp/language-reference/keywords/event.md).  Если указан пользовательский метод доступа `remove`, то необходимо также указать метод доступа [add](../../../csharp/language-reference/keywords/add.md).  
+# <a name="remove-c-reference"></a><span data-ttu-id="a5a72-102">remove (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="a5a72-102">remove (C# Reference)</span></span>
+<span data-ttu-id="a5a72-103">Контекстное ключевое слово `remove` определяет метод доступа настраиваемого события, который вызывается, когда клиентский код отменяет подписку на [событие](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="a5a72-103">The `remove` contextual keyword is used to define a custom event accessor that is invoked when client code unsubscribes from your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="a5a72-104">Если указан настраиваемый метод доступа `remove`, также необходимо указать метод доступа [add](../../../csharp/language-reference/keywords/add.md).</span><span class="sxs-lookup"><span data-stu-id="a5a72-104">If you supply a custom `remove` accessor, you must also supply an [add](../../../csharp/language-reference/keywords/add.md) accessor.</span></span>  
   
-## Пример  
- В следующем примере показано событие с пользовательскими методами доступа [add](../../../csharp/language-reference/keywords/add.md) и `remove`.  Полный пример см. в разделе [Практическое руководство. Реализация событий интерфейса](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
+## <a name="example"></a><span data-ttu-id="a5a72-105">Пример</span><span class="sxs-lookup"><span data-stu-id="a5a72-105">Example</span></span>  
+ <span data-ttu-id="a5a72-106">В следующем примере показано событие с настраиваемыми методами доступа [add](../../../csharp/language-reference/keywords/add.md) и `remove`.</span><span class="sxs-lookup"><span data-stu-id="a5a72-106">The following example shows an event with custom [add](../../../csharp/language-reference/keywords/add.md) and `remove` accessors.</span></span> <span data-ttu-id="a5a72-107">Полный пример см. в разделе [Практическое руководство. Реализация событий интерфейса](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="a5a72-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
   
- [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]  
+ <span data-ttu-id="a5a72-108">[!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="a5a72-108">[!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/remove_1.cs)]</span></span>  
   
- Обычно не требуется предоставлять свои собственные пользовательские методы доступа к событиям.  Для большинства сценариев достаточны методы доступа, которые автоматически создаются компилятором при объявлении события.  
+ <span data-ttu-id="a5a72-109">Как правило, настраиваемые методы доступа к событиям не используются.</span><span class="sxs-lookup"><span data-stu-id="a5a72-109">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="a5a72-110">В большинстве сценариев достаточно методов доступа, которые автоматически создаются компилятором при объявлении события.</span><span class="sxs-lookup"><span data-stu-id="a5a72-110">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
   
-## См. также  
- [События](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="a5a72-111">См. также</span><span class="sxs-lookup"><span data-stu-id="a5a72-111">See Also</span></span>  
+ [<span data-ttu-id="a5a72-112">События</span><span class="sxs-lookup"><span data-stu-id="a5a72-112">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+

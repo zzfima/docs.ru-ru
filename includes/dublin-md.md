@@ -1,1 +1,1 @@
-функции размещения Windows Server AppFabric
+<span data-ttu-id="03f78-101">функции размещения Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="03f78-101">hosting features of Windows Server AppFabric</span></span>

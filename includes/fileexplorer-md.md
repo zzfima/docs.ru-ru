@@ -1,1 +1,1 @@
-Проводник
+<span data-ttu-id="abc90-101">Проводник</span><span class="sxs-lookup"><span data-stu-id="abc90-101">File Explorer</span></span>

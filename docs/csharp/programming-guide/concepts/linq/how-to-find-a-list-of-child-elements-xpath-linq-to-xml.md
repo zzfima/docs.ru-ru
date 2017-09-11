@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Поиск списка дочерних элементов (XPath-LINQ to XML) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Поиск списка дочерних элементов (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,22 +14,22 @@ ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 99d3c0c166f53cd0609a9d6e0641d7faa9cde14b
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa9a222f7fc32f278968461b30ba7ed8c7f40f9a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск списка дочерних элементов (XPath-LINQ to XML) (C#)
-В этом разделе сравнивается ось дочернего элемента XPath с осью <xref:System.Xml.Linq.XContainer.Elements%2A> [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="75ff8-102">Практическое руководство. Поиск списка дочерних элементов (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="75ff8-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="75ff8-103">В этом разделе проводится сравнение оси дочерних элементов XPath с осью [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="75ff8-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- Выражение XPath: `./*`.  
+ <span data-ttu-id="75ff8-104">Выражение XPath: `./*`.</span><span class="sxs-lookup"><span data-stu-id="75ff8-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере осуществляется поиск всех дочерних элементов элемента `Address`.  
+## <a name="example"></a><span data-ttu-id="75ff8-105">Пример</span><span class="sxs-lookup"><span data-stu-id="75ff8-105">Example</span></span>  
+ <span data-ttu-id="75ff8-106">В этом примере осуществляется поиск всех дочерних элементов элемента `Address`.</span><span class="sxs-lookup"><span data-stu-id="75ff8-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ <span data-ttu-id="75ff8-107">В этом примере используется следующий XML-документ: [Пример XML-файла. Несколько заказов на покупку (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="75ff8-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -50,7 +50,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="75ff8-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="75ff8-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -62,5 +62,6 @@ Results are identical
 <Country>USA</Country>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML для пользователей XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="75ff8-109">См. также</span><span class="sxs-lookup"><span data-stu-id="75ff8-109">See Also</span></span>  
+ [<span data-ttu-id="75ff8-110">LINQ to XML для пользователей XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="75ff8-110">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

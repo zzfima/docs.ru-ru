@@ -1,5 +1,5 @@
 ---
-title: "Развертывание приложений на .NET Core | Microsoft Docs"
+title: "Разработка приложений .NET Core"
 description: "Развертывание приложения .NET Core."
 keywords: ".NET, .NET Core, разработка .NET Core"
 author: rpetrusha
@@ -9,89 +9,77 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
-ms.openlocfilehash: 5e2b03d0731e13e1d5261679a65b1e01cd1d3fe4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-application-deployment" class="xliff"></a>
+# <a name="net-core-application-deployment"></a><span data-ttu-id="5a44f-104">Развертывание приложений .NET Core</span><span class="sxs-lookup"><span data-stu-id="5a44f-104">.NET Core application deployment</span></span>
 
-# Развертывание приложений .NET Core
+<span data-ttu-id="5a44f-105">Для приложений .NET Core можно создавать два типа развертываний.</span><span class="sxs-lookup"><span data-stu-id="5a44f-105">You can create two types of deployments for .NET Core applications:</span></span>
 
-Для приложений .NET Core можно создавать два типа развертываний.
+- <span data-ttu-id="5a44f-106">Развертывание, зависящее от платформы.</span><span class="sxs-lookup"><span data-stu-id="5a44f-106">Framework-dependent deployment.</span></span> <span data-ttu-id="5a44f-107">Как понятно из названия, зависящее от платформы развертывание (FDD) требует наличия в целевой системе общей для всей системы версии .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-107">As the name implies, framework-dependent deployment (FDD) relies on the presence of a shared system-wide version of .NET Core on the target system.</span></span> <span data-ttu-id="5a44f-108">Так как платформа .NET Core уже имеется, приложение можно переносить между установками .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-108">Because .NET Core is already present, your app is also portable between installations of .NET Core.</span></span> <span data-ttu-id="5a44f-109">Приложение содержит только собственный код и зависимости сторонних разработчиков, которые не входят в библиотеки .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-109">Your app contains only its own code and any third-party dependencies that are outside of the .NET Core libraries.</span></span> <span data-ttu-id="5a44f-110">Зависящие от платформы развертывания содержат *DLL*-файлы, которые можно запускать с помощью [служебной программы dotnet](../tools/dotnet.md) из командной строки.</span><span class="sxs-lookup"><span data-stu-id="5a44f-110">FDDs contain *.dll* files that can be launched by using the [dotnet utility](../tools/dotnet.md) from the command line.</span></span> <span data-ttu-id="5a44f-111">Например, команда `dotnet app.dll` запускает приложение с именем `app`.</span><span class="sxs-lookup"><span data-stu-id="5a44f-111">For example, `dotnet app.dll` runs an application named `app`.</span></span>
 
-- Развертывание, зависящее от платформы. Как понятно из названия, зависящее от платформы развертывание (FDD) требует наличия в целевой системе общей для всей системы версии .NET Core. Так как платформа .NET Core уже имеется, приложение можно переносить между установками .NET Core. Приложение содержит только собственный код и зависимости сторонних разработчиков, которые не входят в библиотеки .NET Core. Зависящие от платформы развертывания содержат *DLL*-файлы, которые можно запускать с помощью [служебной программы dotnet](../tools/dotnet.md) из командной строки. Например, команда `dotnet app.dll` запускает приложение с именем `app`.
+- <span data-ttu-id="5a44f-112">Автономные развертывания.</span><span class="sxs-lookup"><span data-stu-id="5a44f-112">Self-contained deployment.</span></span> <span data-ttu-id="5a44f-113">В отличие от зависящих от платформы развертываний автономное развертывание (SCD) не требует наличия в целевой системе каких-либо общих компонентов.</span><span class="sxs-lookup"><span data-stu-id="5a44f-113">Unlike FDD, a self-contained deployment (SCD) doesn't rely on the presence of shared components on the target system.</span></span> <span data-ttu-id="5a44f-114">Все компоненты, включая библиотеки .NET Core и среду выполнения .NET Core, включены в приложение и изолированы от других приложений .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-114">All components, including both the .NET Core libraries and the .NET Core runtime, are included with the application and are isolated from other .NET Core applications.</span></span> <span data-ttu-id="5a44f-115">Автономное развертывание включает в себя исполняемый файл (например, *app.exe* на платформах Windows для приложения с именем `app`), который является переименованной версией связанного с платформой узла .NET Core, и *DLL*-файл (например *app.dll*), представляющий собственно приложение.</span><span class="sxs-lookup"><span data-stu-id="5a44f-115">SCDs include an executable (such as *app.exe* on Windows platforms for an application named `app`), which is  a renamed version of the platform-specific .NET Core host, and a *.dll* file (such as *app.dll*), which is the actual application.</span></span>
 
-- Автономные развертывания. В отличие от зависящих от платформы развертываний автономное развертывание (SCD) не требует наличия в целевой системе каких-либо общих компонентов. Все компоненты, включая библиотеки .NET Core и среду выполнения .NET Core, включены в приложение и изолированы от других приложений .NET Core. Автономное развертывание включает в себя исполняемый файл (например, *app.exe* на платформах Windows для приложения с именем `app`), который является переименованной версией связанного с платформой узла .NET Core, и *DLL*-файл (например *app.dll*), представляющий собственно приложение.
+## <a name="framework-dependent-deployments-fdd"></a><span data-ttu-id="5a44f-116">Развертывания, зависящие от платформы</span><span class="sxs-lookup"><span data-stu-id="5a44f-116">Framework-dependent deployments (FDD)</span></span>
 
-<a id="framework-dependent-deployments-fdd" class="xliff"></a>
+<span data-ttu-id="5a44f-117">В случае с зависящим от платформы развертыванием вы развертываете только приложение и зависимости сторонних разработчиков.</span><span class="sxs-lookup"><span data-stu-id="5a44f-117">For an FDD, you deploy only your app and any third-party dependencies.</span></span> <span data-ttu-id="5a44f-118">Платформу .NET Core развертывать не нужно, так как приложение будет использовать версию .NET Core, имеющуюся в целевой системе.</span><span class="sxs-lookup"><span data-stu-id="5a44f-118">You don't have to deploy .NET Core, since your app will use the version of .NET Core that's present on the target system.</span></span> <span data-ttu-id="5a44f-119">Это модель развертывания приложений .NET Core по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5a44f-119">This is the default deployment model for .NET Core apps.</span></span>
 
-## Развертывания, зависящие от платформы
+### <a name="why-create-a-framework-dependent-deployment"></a><span data-ttu-id="5a44f-120">Зачем использовать развертывание, зависящее от платформы</span><span class="sxs-lookup"><span data-stu-id="5a44f-120">Why create a framework-dependent deployment?</span></span>
 
-В случае с зависящим от платформы развертыванием вы развертываете только приложение и зависимости сторонних разработчиков. Платформу .NET Core развертывать не нужно, так как приложение будет использовать версию .NET Core, имеющуюся в целевой системе. Это модель развертывания приложений .NET Core по умолчанию.
+<span data-ttu-id="5a44f-121">Развертывание, зависящее от платформы, имеет ряд преимуществ.</span><span class="sxs-lookup"><span data-stu-id="5a44f-121">Deploying an FDD has a number of advantages:</span></span>
 
-<a id="why-create-a-framework-dependent-deployment" class="xliff"></a>
+- <span data-ttu-id="5a44f-122">Вам не нужно предварительно определять целевые операционные системы, в которых будет выполняться приложение .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-122">You don't have to define the target operating systems that your .NET Core app will run on in advance.</span></span> <span data-ttu-id="5a44f-123">Так как .NET Core использует общий формат файлов PE для исполняемых файлов и библиотек вне зависимости от операционной системы, ваше приложение может выполняться вне зависимости от базовой операционной системы.</span><span class="sxs-lookup"><span data-stu-id="5a44f-123">Because .NET Core uses a common PE file format for executables and libraries regardless of operating system, .NET Core can execute your app regardless of the underlying operating system.</span></span> <span data-ttu-id="5a44f-124">Дополнительные сведения о формате файлов PE см. в разделе [Формат файла сборки .NET](../../standard/assembly-format.md).</span><span class="sxs-lookup"><span data-stu-id="5a44f-124">For more information on the PE file format, see [.NET Assembly File Format](../../standard/assembly-format.md).</span></span>
 
-### Зачем использовать развертывание, зависящее от платформы
+- <span data-ttu-id="5a44f-125">Пакет развертывания имеет небольшой размер.</span><span class="sxs-lookup"><span data-stu-id="5a44f-125">The size of your deployment package is small.</span></span> <span data-ttu-id="5a44f-126">Нужно развернуть только приложение и его зависимости, но не саму платформу .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-126">You only deploy your app and its dependencies, not .NET Core itself.</span></span>
 
-Развертывание, зависящее от платформы, имеет ряд преимуществ.
+- <span data-ttu-id="5a44f-127">Несколько приложений используют одну и ту же установку .NET Core, что сокращает использование дискового пространства и памяти в системе.</span><span class="sxs-lookup"><span data-stu-id="5a44f-127">Multiple apps use the same .NET Core installation, which reduces both disk space and memory usage on host systems.</span></span>
 
-- Вам не нужно предварительно определять целевые операционные системы, в которых будет выполняться приложение .NET Core. Так как .NET Core использует общий формат файлов PE для исполняемых файлов и библиотек вне зависимости от операционной системы, ваше приложение может выполняться вне зависимости от базовой операционной системы. Дополнительные сведения о формате файлов PE см. в разделе [Формат файла сборки .NET](../../standard/assembly-format.md).
+<span data-ttu-id="5a44f-128">Имеется и ряд недостатков.</span><span class="sxs-lookup"><span data-stu-id="5a44f-128">There are also a few disadvantages:</span></span>
 
-- Пакет развертывания имеет небольшой размер. Нужно развернуть только приложение и его зависимости, но не саму платформу .NET Core.
+- <span data-ttu-id="5a44f-129">Приложение может выполняться, только если в системе уже установлена целевая или более поздняя версия .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-129">Your app can run only if the version of .NET Core that you target, or a later version, is already installed on the host system.</span></span>
 
-- Несколько приложений используют одну и ту же установку .NET Core, что сокращает использование дискового пространства и памяти в системе.
+- <span data-ttu-id="5a44f-130">Среда выполнения и библиотеки .NET Core могут изменяться в будущих выпусках, о чем вы можете не знать.</span><span class="sxs-lookup"><span data-stu-id="5a44f-130">It's possible for the .NET Core runtime and libraries to change without your knowledge in future releases.</span></span> <span data-ttu-id="5a44f-131">В редких случаях это может повлиять на работу вашего приложения.</span><span class="sxs-lookup"><span data-stu-id="5a44f-131">In rare cases, this may change the behavior of your app.</span></span>
 
-Имеется и ряд недостатков.
+## <a name="self-contained-deployments-scd"></a><span data-ttu-id="5a44f-132">Автономные развертывания</span><span class="sxs-lookup"><span data-stu-id="5a44f-132">Self-contained deployments (SCD)</span></span>
 
-- Приложение может выполняться, только если в системе уже установлена целевая или более поздняя версия .NET Core.
+<span data-ttu-id="5a44f-133">В случае с автономным развертыванием приложение и зависимости сторонних разработчиков развертываются вместе с версией .NET Core, с помощью которой создавалось приложение.</span><span class="sxs-lookup"><span data-stu-id="5a44f-133">For a self-contained deployment, you deploy your app and any required third-party dependencies along with the version of .NET Core that you used to build the app.</span></span> <span data-ttu-id="5a44f-134">Процесс создания автономного развертывания не включает [собственные зависимости .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) для различных платформ, поэтому их нужно установить перед запуском приложения.</span><span class="sxs-lookup"><span data-stu-id="5a44f-134">Creating an SCD doesn't include the [native dependencies of .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) on various platforms, so these must be present before the app runs.</span></span>
 
-- Среда выполнения и библиотеки .NET Core могут изменяться в будущих выпусках, о чем вы можете не знать. В редких случаях это может повлиять на работу вашего приложения.
+<span data-ttu-id="5a44f-135">Для автономного и зависимого от платформы развертываний создаются разные исполняемые файлы. Поэтому вы можете подписать исполняемый файл, созданный для автономного развертывания, своей подписью издателя.</span><span class="sxs-lookup"><span data-stu-id="5a44f-135">FDD and SCD deployments use separate host executables, so you can sign a host executable for an SCD with your publisher signature.</span></span>
 
-<a id="self-contained-deployments-scd" class="xliff"></a>
+### <a name="why-deploy-a-self-contained-deployment"></a><span data-ttu-id="5a44f-136">Зачем использовать автономное развертывание</span><span class="sxs-lookup"><span data-stu-id="5a44f-136">Why deploy a self-contained deployment?</span></span>
 
-## Автономные развертывания
+<span data-ttu-id="5a44f-137">Автономное развертывание имеет два основных преимущества.</span><span class="sxs-lookup"><span data-stu-id="5a44f-137">Deploying a Self-contained deployment has two major advantages:</span></span>
 
-В случае с автономным развертыванием приложение и зависимости сторонних разработчиков развертываются вместе с версией .NET Core, с помощью которой создавалось приложение. Процесс создания автономного развертывания не включает [собственные зависимости .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) для различных платформ, поэтому их нужно установить перед запуском приложения.
+- <span data-ttu-id="5a44f-138">Вы единолично контролируете версию .NET Core, которая развертывается вместе с приложением.</span><span class="sxs-lookup"><span data-stu-id="5a44f-138">You have sole control of the version of .NET Core that is deployed with your app.</span></span> <span data-ttu-id="5a44f-139">Платформа .NET Core может предоставляться только вами.</span><span class="sxs-lookup"><span data-stu-id="5a44f-139">.NET Core can be serviced only by you.</span></span>
 
-<a id="why-deploy-a-self-contained-deployment" class="xliff"></a>
+- <span data-ttu-id="5a44f-140">Вы можете быть уверены в том, что приложение .NET Core может выполняться в целевой системе, так как вы предоставили соответствующую версию .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-140">You can be assured that the target system can run your .NET Core app, since you're providing the version of .NET Core that it will run on.</span></span>
 
-### Зачем использовать автономное развертывание
+<span data-ttu-id="5a44f-141">Есть также ряд недостатков.</span><span class="sxs-lookup"><span data-stu-id="5a44f-141">It also has a number of disadvantages:</span></span>
 
-Автономное развертывание имеет два основных преимущества.
+- <span data-ttu-id="5a44f-142">Так как платформа .NET Core включается в пакет развертывания, необходимо заранее выбрать целевые платформы, для которых вы создаете пакеты развертывания.</span><span class="sxs-lookup"><span data-stu-id="5a44f-142">Because .NET Core is included in your deployment package, you must select the target platforms for which you build deployment packages in advance.</span></span>
 
-- Вы единолично контролируете версию .NET Core, которая развертывается вместе с приложением. Платформа .NET Core может предоставляться только вами.
+- <span data-ttu-id="5a44f-143">Пакет развертывания имеет относительно большой размер, так как в него необходимо включить платформу .NET Core в дополнение к приложению и зависимостям сторонних разработчиков.</span><span class="sxs-lookup"><span data-stu-id="5a44f-143">The size of your deployment package is relatively large, since you have to include .NET Core as well as your app and its third-party dependencies.</span></span>
 
-- Вы можете быть уверены в том, что приложение .NET Core может выполняться в целевой системе, так как вы предоставили соответствующую версию .NET Core.
+- <span data-ttu-id="5a44f-144">При развертывании множества автономных приложений .NET Core в системе может использоваться значительный объем дискового пространства, так как каждое приложение создает копии файлов .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5a44f-144">Deploying numerous self-contained .NET Core apps to a system can consume significant amounts of disk space, since each app duplicates .NET Core files.</span></span>
 
-Есть также ряд недостатков.
+## <a name="step-by-step-examples"></a><span data-ttu-id="5a44f-145">Примеры с пошаговыми инструкциями</span><span class="sxs-lookup"><span data-stu-id="5a44f-145">Step-by-step examples</span></span>
 
-- Так как платформа .NET Core включается в пакет развертывания, необходимо заранее выбрать целевые платформы, для которых вы создаете пакеты развертывания.
+<span data-ttu-id="5a44f-146">Пошаговые примеры развертывания приложений .NET Core с помощью средств командной строки см. в [этой статье](deploy-with-cli.md).</span><span class="sxs-lookup"><span data-stu-id="5a44f-146">For step-by-step examples of deploying .NET Core apps with CLI tools, see [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md).</span></span> <span data-ttu-id="5a44f-147">Пошаговые примеры развертывания приложений .NET Core с помощью Visual Studio см. в [этой статье](deploy-with-vs.md).</span><span class="sxs-lookup"><span data-stu-id="5a44f-147">For step-by-step examples of deploying .NET Core apps with Visual Studio, see [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md).</span></span> <span data-ttu-id="5a44f-148">Каждая из статей содержит примеры следующих развертываний:</span><span class="sxs-lookup"><span data-stu-id="5a44f-148">Each topic includes examples of the following deployments:</span></span>
 
-- Пакет развертывания имеет относительно большой размер, так как в него необходимо включить платформу .NET Core в дополнение к приложению и зависимостям сторонних разработчиков.
+- <span data-ttu-id="5a44f-149">развертывание, зависящее от платформы;</span><span class="sxs-lookup"><span data-stu-id="5a44f-149">Framework-dependent deployment</span></span>
+- <span data-ttu-id="5a44f-150">развертывание, зависящее от платформы, с зависимостями сторонних разработчиков;</span><span class="sxs-lookup"><span data-stu-id="5a44f-150">Framework-dependent deployment with third-party dependencies</span></span>
+- <span data-ttu-id="5a44f-151">автономное развертывание;</span><span class="sxs-lookup"><span data-stu-id="5a44f-151">Self-contained deployment</span></span>
+- <span data-ttu-id="5a44f-152">автономное развертывание с зависимостями сторонних разработчиков;</span><span class="sxs-lookup"><span data-stu-id="5a44f-152">Self-contained deployment with third-party dependencies</span></span>
 
-- При развертывании множества автономных приложений .NET Core в системе может использоваться значительный объем дискового пространства, так как каждое приложение создает копии файлов .NET Core.
+# <a name="see-also"></a><span data-ttu-id="5a44f-153">См. также</span><span class="sxs-lookup"><span data-stu-id="5a44f-153">See also</span></span>
 
-<a id="step-by-step-examples" class="xliff"></a>
-
-## Примеры с пошаговыми инструкциями
-
-Пошаговые примеры развертывания приложений .NET Core с помощью средств командной строки см. в [этой статье](deploy-with-cli.md). Пошаговые примеры развертывания приложений .NET Core с помощью Visual Studio см. в [этой статье](deploy-with-vs.md). Каждая из статей содержит примеры следующих развертываний:
-
-- развертывание, зависящее от платформы;
-- развертывание, зависящее от платформы, с зависимостями сторонних разработчиков;
-- автономное развертывание;
-- автономное развертывание с зависимостями сторонних разработчиков;
-
-<a id="see-also" class="xliff"></a>
-
-# См. также
-
-[Deploying .NET Core apps with command-line interface (CLI) tools](deploy-with-cli.md)  (Развертывание приложений .NET Core с помощью средств командной строки)  
-[Deploying .NET Core apps with Visual Studio](deploy-with-vs.md)  (Развертывание приложений .NET Core с помощью Visual Studio)  
-[Пакеты, метапакеты и платформы](../packages.md)   
-[Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
+<span data-ttu-id="5a44f-154">[Deploying .NET Core apps with command-line interface (CLI) tools](deploy-with-cli.md)  (Развертывание приложений .NET Core с помощью средств командной строки)</span><span class="sxs-lookup"><span data-stu-id="5a44f-154">[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) </span></span>  
+<span data-ttu-id="5a44f-155">[Deploying .NET Core apps with Visual Studio](deploy-with-vs.md)  (Развертывание приложений .NET Core с помощью Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="5a44f-155">[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) </span></span>  
+<span data-ttu-id="5a44f-156">[Пакеты, метапакеты и платформы](../packages.md) </span><span class="sxs-lookup"><span data-stu-id="5a44f-156">[Packages, Metapackages and Frameworks](../packages.md) </span></span>  
+[<span data-ttu-id="5a44f-157">Каталог идентификаторов сред выполнения (RID) в .NET Core</span><span class="sxs-lookup"><span data-stu-id="5a44f-157">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
 

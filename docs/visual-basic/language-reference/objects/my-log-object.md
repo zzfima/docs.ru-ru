@@ -28,23 +28,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5150568b9f57640adf3ad959362df6a4059f6bf9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ae8941c6c52ad707481d13085b1d514163ad238
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="mylog-object"></a>Объект My.Log
-Предоставляет свойства и методы для записи информации о событиях и исключениях в журнал приложения.  
+# <a name="mylog-object"></a><span data-ttu-id="29452-102">Объект My.Log</span><span class="sxs-lookup"><span data-stu-id="29452-102">My.Log Object</span></span>
+<span data-ttu-id="29452-103">Предоставляет свойства и методы для записи информации о событиях и исключениях в журнал приложения.</span><span class="sxs-lookup"><span data-stu-id="29452-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения о методах и свойствах `My.Log` объекта см. в разделе <xref:Microsoft.VisualBasic.Logging.AspLog>.</xref:Microsoft.VisualBasic.Logging.AspLog>  
+## <a name="remarks"></a><span data-ttu-id="29452-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="29452-104">Remarks</span></span>  
+ <span data-ttu-id="29452-105">Дополнительные сведения о методах и свойствах `My.Log` объекта см. в разделе <xref:Microsoft.VisualBasic.Logging.AspLog>.</xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="29452-105">For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.</span></span>  
   
- `My.Log` Объект доступен только для приложений ASP.NET. Клиентские приложения, используйте [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ <span data-ttu-id="29452-106">`My.Log` Объект доступен только для приложений ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="29452-106">The `My.Log` object is available for ASP.NET applications only.</span></span> <span data-ttu-id="29452-107">Клиентские приложения, используйте [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span><span class="sxs-lookup"><span data-stu-id="29452-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span></span>  
   
-## <a name="requirements"></a>Требования  
- **Пространство имен:**<xref:Microsoft.VisualBasic.Logging></xref:Microsoft.VisualBasic.Logging>  
+## <a name="requirements"></a><span data-ttu-id="29452-108">Требования</span><span class="sxs-lookup"><span data-stu-id="29452-108">Requirements</span></span>  
+ <span data-ttu-id="29452-109">**Пространство имен:**<xref:Microsoft.VisualBasic.Logging></xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="29452-109">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
   
- **Класс:**<xref:Microsoft.VisualBasic.Logging.AspLog></xref:Microsoft.VisualBasic.Logging.AspLog>  
+ <span data-ttu-id="29452-110">**Класс:**<xref:Microsoft.VisualBasic.Logging.AspLog></xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="29452-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span></span>  
   
- **Сборка:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]
+ <span data-ttu-id="29452-111">**Сборка:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span><span class="sxs-lookup"><span data-stu-id="29452-111">**Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span></span>

@@ -26,10 +26,10 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Пример XML-файла. Несколько заказов на покупку (LINQ to XML)
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит несколько заказов на покупку.  
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="d6ff7-102">Пример XML-файла. Несколько заказов на покупку (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d6ff7-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
+<span data-ttu-id="d6ff7-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d6ff7-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d6ff7-104">Этот файл содержит несколько заказов на покупку.</span><span class="sxs-lookup"><span data-stu-id="d6ff7-104">This file contains several purchase orders.</span></span>  
   
-## <a name="purchaseordersxml"></a>PurchaseOrders.xml  
+## <a name="purchaseordersxml"></a><span data-ttu-id="d6ff7-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="d6ff7-105">PurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -126,6 +126,6 @@ ms.lasthandoff: 07/28/2017
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d6ff7-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d6ff7-106">See Also</span></span>  
+ [<span data-ttu-id="d6ff7-107">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d6ff7-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9829a0270d1969121f02bf6e46779b0e447cbb80
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c2606dd913e7c28c46a9667a6121d01810bebf08
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>События не могут быть объявлены с делегирующим типом, у которого есть тип возвращаемого значения
-Для процедуры функции указан делегат.  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="a01f8-102">События не могут быть объявлены с делегирующим типом, у которого есть тип возвращаемого значения</span><span class="sxs-lookup"><span data-stu-id="a01f8-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="a01f8-103">Для процедуры функции указан делегат.</span><span class="sxs-lookup"><span data-stu-id="a01f8-103">A delegate was specified for a function procedure.</span></span>  
   
- **Идентификатор ошибки:** BC31084  
+ <span data-ttu-id="a01f8-104">**Идентификатор ошибки:** BC31084</span><span class="sxs-lookup"><span data-stu-id="a01f8-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a01f8-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="a01f8-105">To correct this error</span></span>  
   
--   Укажите делегат для `Sub` процедуры.  
+-   <span data-ttu-id="a01f8-106">Укажите делегат для `Sub` процедуры.</span><span class="sxs-lookup"><span data-stu-id="a01f8-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [События](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="a01f8-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a01f8-107">See Also</span></span>  
+ [<span data-ttu-id="a01f8-108">События</span><span class="sxs-lookup"><span data-stu-id="a01f8-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

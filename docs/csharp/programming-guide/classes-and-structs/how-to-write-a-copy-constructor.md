@@ -35,18 +35,18 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Практическое руководство. Создание конструктора копии (Руководство по программированию в C#)
-В C# не предусмотрен конструктор копии для объектов, однако его можно написать самостоятельно.  
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a><span data-ttu-id="e63af-102">Практическое руководство. Создание конструктора копии (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="e63af-102">How to: Write a Copy Constructor (C# Programming Guide)</span></span>
+<span data-ttu-id="e63af-103">В C# не предусмотрен конструктор копии для объектов, однако его можно написать самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="e63af-103">C# doesn't provide a copy constructor for objects, but you can write one yourself.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере [класс](../../../csharp/language-reference/keywords/class.md) `Person` определяет конструктор копии, который использует экземпляр `Person`в качестве аргумента. Значения свойств аргумента присваиваются свойствам нового экземпляра `Person`. Код содержит дополнительный конструктор копии, который отправляет свойства `Name` и `Age` экземпляра, который необходимо скопировать конструктору экземпляра класса.  
+## <a name="example"></a><span data-ttu-id="e63af-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e63af-104">Example</span></span>  
+ <span data-ttu-id="e63af-105">В следующем примере [класс](../../../csharp/language-reference/keywords/class.md) `Person` определяет конструктор копии, который использует экземпляр `Person`в качестве аргумента.</span><span class="sxs-lookup"><span data-stu-id="e63af-105">In the following example, the `Person`[class](../../../csharp/language-reference/keywords/class.md) defines a copy constructor that takes, as its argument, an instance of `Person`.</span></span> <span data-ttu-id="e63af-106">Значения свойств аргумента присваиваются свойствам нового экземпляра `Person`.</span><span class="sxs-lookup"><span data-stu-id="e63af-106">The values of the properties of the argument are assigned to the properties of the new instance of `Person`.</span></span> <span data-ttu-id="e63af-107">Код содержит дополнительный конструктор копии, который отправляет свойства `Name` и `Age` экземпляра, который необходимо скопировать конструктору экземпляра класса.</span><span class="sxs-lookup"><span data-stu-id="e63af-107">The code contains an alternative copy constructor that sends the `Name` and `Age` properties of the instance that you want to copy to the instance constructor of the class.</span></span>  
   
- [!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
+ <span data-ttu-id="e63af-108">[!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="e63af-108">[!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ICloneable>   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a><span data-ttu-id="e63af-109">См. также</span><span class="sxs-lookup"><span data-stu-id="e63af-109">See Also</span></span>  
+ <span data-ttu-id="e63af-110"><xref:System.ICloneable></span><span class="sxs-lookup"><span data-stu-id="e63af-110"><xref:System.ICloneable></span></span>   
+ <span data-ttu-id="e63af-111">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="e63af-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="e63af-112">[Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md) </span><span class="sxs-lookup"><span data-stu-id="e63af-112">[Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md) </span></span>  
+ <span data-ttu-id="e63af-113">[Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md) </span><span class="sxs-lookup"><span data-stu-id="e63af-113">[Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md) </span></span>  
+ [<span data-ttu-id="e63af-114">Методы завершения</span><span class="sxs-lookup"><span data-stu-id="e63af-114">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "-nowin32manifest (параметры компилятора C#) | Документы Майкрософт"
+title: "-nowin32manifest (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,29 +31,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce96938ee00df7bfae742369673f75f8d39abd12
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8314fd661ccce968238b480b54847abf7cbece74
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="nowin32manifest-c-compiler-options"></a>/nowin32manifest (параметры компилятора C#)
-С помощью параметра **/nowin32manifest** можно указать компилятору не встраивать манифест приложения в исполняемый файл.  
+# <a name="nowin32manifest-c-compiler-options"></a><span data-ttu-id="13e99-102">/nowin32manifest (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="13e99-102">/nowin32manifest (C# Compiler Options)</span></span>
+<span data-ttu-id="13e99-103">С помощью параметра **/nowin32manifest** можно указать компилятору не встраивать манифест приложения в исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="13e99-103">Use the **/nowin32manifest** option to instruct the compiler not to embed any application manifest into the executable file.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="13e99-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="13e99-104">Syntax</span></span>  
   
 ```console  
 /nowin32manifest  
 ```  
   
-## <a name="remarks"></a>Примечания  
- При использовании этого параметра приложение будет подлежать виртуализации в Windows Vista, если манифест приложения не будет предоставлен в файле ресурсов Win32 или на более поздних этапах сборки.  
+## <a name="remarks"></a><span data-ttu-id="13e99-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="13e99-105">Remarks</span></span>  
+ <span data-ttu-id="13e99-106">При использовании этого параметра приложение будет подлежать виртуализации в Windows Vista, если манифест приложения не будет предоставлен в файле ресурсов Win32 или на более поздних этапах сборки.</span><span class="sxs-lookup"><span data-stu-id="13e99-106">When this option is used, the application will be subject to virtualization on Windows Vista unless you provide an application manifest in a Win32 Resource file or during a later build step.</span></span>  
   
- В Visual Studio этот параметр можно задать на странице **Свойство приложения**, выбрав в раскрывающемся списке **Манифест** пункт **Создать приложение без манифеста**. Дополнительные сведения см. в разделе [Страница "Приложение" в конструкторе проектов (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ <span data-ttu-id="13e99-107">В Visual Studio этот параметр можно задать на странице **Свойство приложения**, выбрав в раскрывающемся списке **Манифест** пункт **Создать приложение без манифеста**.</span><span class="sxs-lookup"><span data-stu-id="13e99-107">In Visual Studio, set this option in the **Application Property** page by selecting the **Create Application Without a Manifest** option in the **Manifest** drop down list.</span></span> <span data-ttu-id="13e99-108">Дополнительные сведения см. в разделе [Страница "Приложение" в конструкторе проектов (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="13e99-108">For more information, see [Application Page, Project Designer (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).</span></span>  
   
- Дополнительные сведения о создании манифестов см. в разделе [/win32manifest (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
+ <span data-ttu-id="13e99-109">Дополнительные сведения о создании манифестов см. в разделе [/win32manifest (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="13e99-109">For more information about manifest creation, see [/win32manifest (C# Compiler Options)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a><span data-ttu-id="13e99-110">См. также</span><span class="sxs-lookup"><span data-stu-id="13e99-110">See Also</span></span>  
+ <span data-ttu-id="13e99-111">[Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="13e99-111">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="13e99-112">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="13e99-112">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+

@@ -32,34 +32,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b28ae4ff4a4665040f3e97477d6197065762654a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a8d65568e862c941d5b927582833dff803219bf9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-lttypenamegt-is-not-cls-compliant"></a>Тип &lt;typename&gt; не является CLS-совместимым
-Переменная, свойство или возвращаемое функцией объявлен с типом данных, который не является CLS-совместимым.  
+# <a name="type-lttypenamegt-is-not-cls-compliant"></a><span data-ttu-id="bf76a-102">Тип &lt;typename&gt; не является CLS-совместимым</span><span class="sxs-lookup"><span data-stu-id="bf76a-102">Type &lt;typename&gt; is not CLS-compliant</span></span>
+<span data-ttu-id="bf76a-103">Переменная, свойство или возвращаемое функцией объявлен с типом данных, который не является CLS-совместимым.</span><span class="sxs-lookup"><span data-stu-id="bf76a-103">A variable, property, or function return is declared with a data type that is not CLS-compliant.</span></span>  
   
- Для приложения на соответствие стандарту [независимость от языка и независимые от языка компоненты](https://msdn.microsoft.com/library/12a7a7h3) (CLS), он должен использовать только CLS-совместимые типы.  
+ <span data-ttu-id="bf76a-104">Для приложения на соответствие стандарту [независимость от языка и независимые от языка компоненты](https://msdn.microsoft.com/library/12a7a7h3) (CLS), он должен использовать только CLS-совместимые типы.</span><span class="sxs-lookup"><span data-stu-id="bf76a-104">For an application to be compliant with the [Language Independence and Language-Independent Components](https://msdn.microsoft.com/library/12a7a7h3) (CLS), it must use only CLS-compliant types.</span></span>  
   
- Следующие типы данных [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] не соответствуют CLS:  
+ <span data-ttu-id="bf76a-105">Следующие типы данных [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] не соответствуют CLS:</span><span class="sxs-lookup"><span data-stu-id="bf76a-105">The following [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] data types are not CLS-compliant:</span></span>  
   
--   [Тип данных SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [<span data-ttu-id="bf76a-106">Тип данных SByte</span><span class="sxs-lookup"><span data-stu-id="bf76a-106">SByte Data Type</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [Тип данных UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [<span data-ttu-id="bf76a-107">Тип данных UInteger</span><span class="sxs-lookup"><span data-stu-id="bf76a-107">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [Тип данных ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [<span data-ttu-id="bf76a-108">Тип данных ULong</span><span class="sxs-lookup"><span data-stu-id="bf76a-108">ULong Data Type</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [Тип данных UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [<span data-ttu-id="bf76a-109">Тип данных UShort</span><span class="sxs-lookup"><span data-stu-id="bf76a-109">UShort Data Type</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- **Идентификатор ошибки:** BC40041  
+ <span data-ttu-id="bf76a-110">**Идентификатор ошибки:** BC40041</span><span class="sxs-lookup"><span data-stu-id="bf76a-110">**Error ID:** BC40041</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="bf76a-111">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="bf76a-111">To correct this error</span></span>  
   
--   Если приложение должно быть CLS-совместимыми, измените тип данных этого элемента на ближайший CLS-совместимый тип. Например, вместо `UInteger` вы можете использовать `Integer`, если вам не нужен диапазон значений, превышающий 2 147 483 647. Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.  
+-   <span data-ttu-id="bf76a-112">Если приложение должно быть CLS-совместимыми, измените тип данных этого элемента на ближайший CLS-совместимый тип.</span><span class="sxs-lookup"><span data-stu-id="bf76a-112">If your application needs to be CLS-compliant, change the data type of this element to the closest CLS-compliant type.</span></span> <span data-ttu-id="bf76a-113">Например, вместо `UInteger` вы можете использовать `Integer`, если вам не нужен диапазон значений, превышающий 2 147 483 647.</span><span class="sxs-lookup"><span data-stu-id="bf76a-113">For example, in place of `UInteger` you might be able to use `Integer` if you do not need the value range above 2,147,483,647.</span></span> <span data-ttu-id="bf76a-114">Если вам нужен расширенный диапазон, вы можете заменить `UInteger` на `Long`.</span><span class="sxs-lookup"><span data-stu-id="bf76a-114">If you do need the extended range, you can replace `UInteger` with `Long`.</span></span>  
   
--   Если приложения не должны быть CLS-совместимыми, ничего менять не нужно. Следует помнить о его несоответствия, однако.  
+-   <span data-ttu-id="bf76a-115">Если приложения не должны быть CLS-совместимыми, ничего менять не нужно.</span><span class="sxs-lookup"><span data-stu-id="bf76a-115">If your application does not need to be CLS-compliant, you do not need to change anything.</span></span> <span data-ttu-id="bf76a-116">Следует помнить о его несоответствия, однако.</span><span class="sxs-lookup"><span data-stu-id="bf76a-116">You should be aware of its noncompliance, however.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [\<PAVE НАД настроек написание CLS-совместимого кода](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+## <a name="see-also"></a><span data-ttu-id="bf76a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="bf76a-117">See Also</span></span>  
+ [<span data-ttu-id="bf76a-118">\<PAVE НАД настроек написание CLS-совместимого кода</span><span class="sxs-lookup"><span data-stu-id="bf76a-118">\<PAVE OVER> Writing CLS-Compliant Code</span></span>](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

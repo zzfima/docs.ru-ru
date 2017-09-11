@@ -1,1 +1,1 @@
-DIB
+<span data-ttu-id="5aa93-101">DIB</span><span class="sxs-lookup"><span data-stu-id="5aa93-101">DIB</span></span>

@@ -20,22 +20,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: dabd63e52707f3078c6cdc41db8c4f0e7dfbf70e
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Практическое руководство: запрос знаков в строке (LINQ) (Visual Basic)
-Поскольку <xref:System.String>класс реализует универсальный <xref:System.Collections.Generic.IEnumerable%601>интерфейс, любая строка может запрашиваться как последовательность знаков.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.String> Однако это не часто используются LINQ. Для операций соответствия сложному шаблону используйте <xref:System.Text.RegularExpressions.Regex>класс.</xref:System.Text.RegularExpressions.Regex>  
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="04e37-102">Практическое руководство: запрос знаков в строке (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="04e37-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="04e37-103">Поскольку <xref:System.String>класс реализует универсальный <xref:System.Collections.Generic.IEnumerable%601>интерфейс, любая строка может запрашиваться как последовательность знаков.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.String></span><span class="sxs-lookup"><span data-stu-id="04e37-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="04e37-104">Однако это не часто используются LINQ.</span><span class="sxs-lookup"><span data-stu-id="04e37-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="04e37-105">Для операций соответствия сложному шаблону используйте <xref:System.Text.RegularExpressions.Regex>класс.</xref:System.Text.RegularExpressions.Regex></span><span class="sxs-lookup"><span data-stu-id="04e37-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере запрашивается строки, чтобы определить количество цифр, содержащихся в нем. Обратите внимание, что запрос является «повторно» после выполнения первоначальной. Это возможно, поскольку сам запрос не хранит фактических результатов.  
+## <a name="example"></a><span data-ttu-id="04e37-106">Пример</span><span class="sxs-lookup"><span data-stu-id="04e37-106">Example</span></span>  
+ <span data-ttu-id="04e37-107">В следующем примере запрашивается строки, чтобы определить количество цифр, содержащихся в нем.</span><span class="sxs-lookup"><span data-stu-id="04e37-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="04e37-108">Обратите внимание, что запрос является «повторно» после выполнения первоначальной.</span><span class="sxs-lookup"><span data-stu-id="04e37-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="04e37-109">Это возможно, поскольку сам запрос не хранит фактических результатов.</span><span class="sxs-lookup"><span data-stu-id="04e37-109">This is possible because the query itself does not store any actual results.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+<span data-ttu-id="04e37-110"><CodeContentPlaceHolder>0</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="04e37-110"><CodeContentPlaceHolder>0</CodeContentPlaceHolder></span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="04e37-111">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="04e37-111">Compiling the Code</span></span>  
+ <span data-ttu-id="04e37-112">Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="04e37-112">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Практическое руководство: объединение запросов LINQ с регулярными выражениями (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="04e37-113">См. также</span><span class="sxs-lookup"><span data-stu-id="04e37-113">See Also</span></span>  
+ <span data-ttu-id="04e37-114">[LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="04e37-114">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="04e37-115"> [Практическое руководство: объединение запросов LINQ с регулярными выражениями (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)</span><span class="sxs-lookup"><span data-stu-id="04e37-115"> [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)</span></span>

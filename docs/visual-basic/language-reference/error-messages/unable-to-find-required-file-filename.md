@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30214b5ef1af2bc7298934c653463f1f3d416bbf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7e83b19fcd931b53b2dd8af10c92e2e14aa93e73
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-find-required-file-39ltfilenamegt39"></a>Не удалось найти необходимый файл "&lt;filename&gt;"
-Файл, необходимый для Visual Studio, отсутствует или поврежден.  
+# <a name="unable-to-find-required-file-39ltfilenamegt39"></a><span data-ttu-id="7e872-102">Не удалось найти необходимый файл "&lt;filename&gt;"</span><span class="sxs-lookup"><span data-stu-id="7e872-102">Unable to find required file &#39;&lt;filename&gt;&#39;</span></span>
+<span data-ttu-id="7e872-103">Файл, необходимый для Visual Studio, отсутствует или поврежден.</span><span class="sxs-lookup"><span data-stu-id="7e872-103">A file that is required by Visual Studio is missing or damaged.</span></span>  
   
- **Идентификатор ошибки:** BC30655  
+ <span data-ttu-id="7e872-104">**Идентификатор ошибки:** BC30655</span><span class="sxs-lookup"><span data-stu-id="7e872-104">**Error ID:** BC30655</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7e872-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="7e872-105">To correct this error</span></span>  
   
--   Переустановите Visual Studio.  
+-   <span data-ttu-id="7e872-106">Переустановите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="7e872-106">Reinstall Visual Studio.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="7e872-107">См. также</span><span class="sxs-lookup"><span data-stu-id="7e872-107">See Also</span></span>  
+ [<span data-ttu-id="7e872-108">Обращайтесь к нам</span><span class="sxs-lookup"><span data-stu-id="7e872-108">Talk to Us</span></span>](https://docs.microsoft.com/visualstudio/ide/talk-to-us)

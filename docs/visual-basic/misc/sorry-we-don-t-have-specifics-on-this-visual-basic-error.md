@@ -3069,33 +3069,34 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 406a53192e8ce2cd56280dad01ebce3165d7e377
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a2bd46f4dd217e4f61f875d8df9cc9d6f0ee5ceb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению у нас нет подробные сведения об этой ошибке Visual Basic
-Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="6205b-102">К сожалению у нас нет подробные сведения об этой ошибке Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6205b-102">Sorry, we don&#39;t have specifics on this Visual Basic error</span></span>
+<span data-ttu-id="6205b-103">Подробные сведения об этой ошибке отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="6205b-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="6205b-104">Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете.</span><span class="sxs-lookup"><span data-stu-id="6205b-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="6205b-105">Также можно обратиться с вопросом к другим разработчикам на следующих форумах:</span><span class="sxs-lookup"><span data-stu-id="6205b-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ [<span data-ttu-id="6205b-106">Язык Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6205b-106">Visual Basic Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ <span data-ttu-id="6205b-107">Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="6205b-107">Provides a forum for questions about and general discussions of the [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] language syntax and compiler.</span></span>  
   
- [Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Форум предназначен для вопросов по обновлению до [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и работе с функциями взаимодействия.  
+ [<span data-ttu-id="6205b-108">Взаимодействие и обновление Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6205b-108">Visual Basic Interop and Upgrade</span></span>](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ <span data-ttu-id="6205b-109">Форум предназначен для вопросов по обновлению до [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и работе с функциями взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="6205b-109">Provides a forum for questions about and issues with upgrading to [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] and working with interoperability features.</span></span>  
   
- [Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ [<span data-ttu-id="6205b-110">Среда IDE Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6205b-110">Visual Basic IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ <span data-ttu-id="6205b-111">Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="6205b-111">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] environment.</span></span>  
   
- [Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
+ [<span data-ttu-id="6205b-112">Общие вопросы Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6205b-112">Visual Basic General</span></span>](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ <span data-ttu-id="6205b-113">Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.</span><span class="sxs-lookup"><span data-stu-id="6205b-113">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] that are not discussed in other forums.</span></span>  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и соответствующим проблемам.  
+ [<span data-ttu-id="6205b-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="6205b-114">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="6205b-115">Форум предназначен для вопросов по работе [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] и соответствующим проблемам.</span><span class="sxs-lookup"><span data-stu-id="6205b-115">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
- См. также:  
- [Дополнительные ресурсы для программистов, использующих Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
+ <span data-ttu-id="6205b-116">См. также:</span><span class="sxs-lookup"><span data-stu-id="6205b-116">Also see:</span></span>  
+<span data-ttu-id="6205b-117"> [Дополнительные ресурсы для программистов, использующих Visual Basic](../../visual-basic/getting-started/additional-resources.md)</span><span class="sxs-lookup"><span data-stu-id="6205b-117"> [Additional Resources for Visual Basic Programmers](../../visual-basic/getting-started/additional-resources.md)</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)   
- [Справочник по Visual Basic](../../visual-basic/reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="6205b-118">См. также</span><span class="sxs-lookup"><span data-stu-id="6205b-118">See Also</span></span>  
+ <span data-ttu-id="6205b-119">[Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="6205b-119">[Visual Basic Programming Guide](../../visual-basic/programming-guide/index.md) </span></span>  
+<span data-ttu-id="6205b-120"> [Справочник по Visual Basic](../../visual-basic/reference/index.md)</span><span class="sxs-lookup"><span data-stu-id="6205b-120"> [Visual Basic Reference](../../visual-basic/reference/index.md)</span></span>

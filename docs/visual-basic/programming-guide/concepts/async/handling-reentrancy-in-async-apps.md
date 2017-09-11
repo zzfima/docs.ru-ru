@@ -21,36 +21,36 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 8c35f0b393f38ea32f456a60ebd520065d16c6eb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Обработка повторного входа в асинхронных приложениях (Visual Basic)
-При включении асинхронного кода в приложение следует учесть и по возможности избежать повторного входа, под которым подразумевается повторный ввод асинхронной операции до ее завершения. Если не определить и не обработать возможности повторного входа, это может привести к непредвиденным результатам.  
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a><span data-ttu-id="e6149-102">Обработка повторного входа в асинхронных приложениях (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6149-102">Handling Reentrancy in Async Apps (Visual Basic)</span></span>
+<span data-ttu-id="e6149-103">При включении асинхронного кода в приложение следует учесть и по возможности избежать повторного входа, под которым подразумевается повторный ввод асинхронной операции до ее завершения.</span><span class="sxs-lookup"><span data-stu-id="e6149-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="e6149-104">Если не определить и не обработать возможности повторного входа, это может привести к непредвиденным результатам.</span><span class="sxs-lookup"><span data-stu-id="e6149-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  
   
- **Содержание раздела**  
+ <span data-ttu-id="e6149-105">**Содержание раздела**</span><span class="sxs-lookup"><span data-stu-id="e6149-105">**In this topic**</span></span>  
   
--   [Распознавание поддержки повторного входа](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="e6149-106">Распознавание поддержки повторного входа</span><span class="sxs-lookup"><span data-stu-id="e6149-106">Recognizing Reentrancy</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [Обработка повторного входа](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="e6149-107">Обработка повторного входа</span><span class="sxs-lookup"><span data-stu-id="e6149-107">Handling Reentrancy</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Отключение кнопки запуска](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [<span data-ttu-id="e6149-108">Отключение кнопки запуска</span><span class="sxs-lookup"><span data-stu-id="e6149-108">Disable the Start Button</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Отмена и перезапуск операции](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [<span data-ttu-id="e6149-109">Отмена и перезапуск операции</span><span class="sxs-lookup"><span data-stu-id="e6149-109">Cancel and Restart the Operation</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Запуск нескольких операций и выходные данные в очередь](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [<span data-ttu-id="e6149-110">Запуск нескольких операций и выходные данные в очередь</span><span class="sxs-lookup"><span data-stu-id="e6149-110">Run Multiple Operations and Queue the Output</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [Проверка и выполнение примера приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="e6149-111">Проверка и выполнение примера приложения</span><span class="sxs-lookup"><span data-stu-id="e6149-111">Reviewing and Running the Example App</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
->  Чтобы выполнить этот пример, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.  
+>  <span data-ttu-id="e6149-112">Чтобы выполнить этот пример, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.</span><span class="sxs-lookup"><span data-stu-id="e6149-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <a name="BKMK_RecognizingReentrancy"></a>Распознавание поддержки повторного входа  
- В примере в этом разделе выбрать пользователей **запустить** для запуска асинхронного приложение, которое загружает ряд веб-сайтов и вычисляет общее число байтов, которые были загружены. Синхронная версия примера реагирует одинаково, независимо от того, сколько раз пользователь нажмет кнопку, поскольку после первого раза поток пользовательского интерфейса игнорирует эти события до завершения выполнения приложения. При этом в асинхронном приложении поток пользовательского интерфейса продолжает реагировать, и можно ввести асинхронную операцию повторно до ее завершения.  
+##  <span data-ttu-id="e6149-113"><a name="BKMK_RecognizingReentrancy"></a>Распознавание поддержки повторного входа</span><span class="sxs-lookup"><span data-stu-id="e6149-113"><a name="BKMK_RecognizingReentrancy"></a> Recognizing Reentrancy</span></span>  
+ <span data-ttu-id="e6149-114">В примере в этом разделе выбрать пользователей **запустить** для запуска асинхронного приложение, которое загружает ряд веб-сайтов и вычисляет общее число байтов, которые были загружены.</span><span class="sxs-lookup"><span data-stu-id="e6149-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="e6149-115">Синхронная версия примера реагирует одинаково, независимо от того, сколько раз пользователь нажмет кнопку, поскольку после первого раза поток пользовательского интерфейса игнорирует эти события до завершения выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="e6149-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="e6149-116">При этом в асинхронном приложении поток пользовательского интерфейса продолжает реагировать, и можно ввести асинхронную операцию повторно до ее завершения.</span><span class="sxs-lookup"><span data-stu-id="e6149-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>  
   
- В следующем примере показано ожидаемое вывода, если пользователь выбирает **запустить** кнопку только один раз. На экран выводится список загруженных веб-сайтов, размер которых указан в байтах. Общее число байтов отображается в конце списка.  
+ <span data-ttu-id="e6149-117">В следующем примере показано ожидаемое вывода, если пользователь выбирает **запустить** кнопку только один раз.</span><span class="sxs-lookup"><span data-stu-id="e6149-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="e6149-118">На экран выводится список загруженных веб-сайтов, размер которых указан в байтах.</span><span class="sxs-lookup"><span data-stu-id="e6149-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="e6149-119">Общее число байтов отображается в конце списка.</span><span class="sxs-lookup"><span data-stu-id="e6149-119">The total number of bytes appears at the end.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/13/2017
 TOTAL bytes returned:  890591  
 ```  
   
- Однако если пользователь нажимает кнопку больше одного раза, обработчик событий вызывается несколько раз и процесс загрузки будет каждый раз выполняться повторно. В результате одновременно запускается несколько асинхронных операций, получаемые выходные данные чередуются и счетчик общего числа байтов выдает неоднозначные результаты.  
+ <span data-ttu-id="e6149-120">Однако если пользователь нажимает кнопку больше одного раза, обработчик событий вызывается несколько раз и процесс загрузки будет каждый раз выполняться повторно.</span><span class="sxs-lookup"><span data-stu-id="e6149-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="e6149-121">В результате одновременно запускается несколько асинхронных операций, получаемые выходные данные чередуются и счетчик общего числа байтов выдает неоднозначные результаты.</span><span class="sxs-lookup"><span data-stu-id="e6149-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -102,27 +102,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Чтобы просмотреть код, создающий эти выходные данные, перейдите к концу раздела. Можно поэкспериментировать с кодом, загрузка решения на локальный компьютер и затем запустив WebsiteDownload проекта или с помощью кода в конце этого раздела для создания проекта Дополнительные сведения и инструкции, см. раздел [проверка и выполнение примера приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ <span data-ttu-id="e6149-122">Чтобы просмотреть код, создающий эти выходные данные, перейдите к концу раздела.</span><span class="sxs-lookup"><span data-stu-id="e6149-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="e6149-123">Можно поэкспериментировать с кодом, загрузка решения на локальный компьютер и затем запустив WebsiteDownload проекта или с помощью кода в конце этого раздела для создания проекта Дополнительные сведения и инструкции, см. раздел [проверка и выполнение примера приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span><span class="sxs-lookup"><span data-stu-id="e6149-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project For more information and instructions, see [Reviewing and Running the Example App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span></span>  
   
-##  <a name="BKMK_HandlingReentrancy"></a>Обработка повторного входа  
- Обрабатывать повторный вход можно разными способами в зависимости от того, что требуется от приложения. В этом разделе представлены следующие примеры.  
+##  <span data-ttu-id="e6149-124"><a name="BKMK_HandlingReentrancy"></a>Обработка повторного входа</span><span class="sxs-lookup"><span data-stu-id="e6149-124"><a name="BKMK_HandlingReentrancy"></a> Handling Reentrancy</span></span>  
+ <span data-ttu-id="e6149-125">Обрабатывать повторный вход можно разными способами в зависимости от того, что требуется от приложения.</span><span class="sxs-lookup"><span data-stu-id="e6149-125">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="e6149-126">В этом разделе представлены следующие примеры.</span><span class="sxs-lookup"><span data-stu-id="e6149-126">This topic presents the following examples:</span></span>  
   
--   [Отключение кнопки запуска](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="e6149-127">Отключение кнопки запуска</span><span class="sxs-lookup"><span data-stu-id="e6149-127">Disable the Start Button</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Отключить **запустить** кнопку во время операции, чтобы пользователь не может прерывать его.  
+     <span data-ttu-id="e6149-128">Отключить **запустить** кнопку во время операции, чтобы пользователь не может прерывать его.</span><span class="sxs-lookup"><span data-stu-id="e6149-128">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>  
   
--   [Отмена и перезапуск операции](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="e6149-129">Отмена и перезапуск операции</span><span class="sxs-lookup"><span data-stu-id="e6149-129">Cancel and Restart the Operation</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Отмена любой операции, которое все еще выполняется, когда пользователь выбирает **запустить** еще раз, а затем продолжить позволяют наиболее недавно запрошенной операции.  
+     <span data-ttu-id="e6149-130">Отмена любой операции, которое все еще выполняется, когда пользователь выбирает **запустить** еще раз, а затем продолжить позволяют наиболее недавно запрошенной операции.</span><span class="sxs-lookup"><span data-stu-id="e6149-130">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>  
   
--   [Запуск нескольких операций и выходные данные в очередь](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [<span data-ttu-id="e6149-131">Запуск нескольких операций и выходные данные в очередь</span><span class="sxs-lookup"><span data-stu-id="e6149-131">Run Multiple Operations and Queue the Output</span></span>](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-     Разрешение всем запрошенным операциям выполняться асинхронно и настройка согласования отображения выходных данных для вывода результатов каждой операции вместе и по порядку.  
+     <span data-ttu-id="e6149-132">Разрешение всем запрошенным операциям выполняться асинхронно и настройка согласования отображения выходных данных для вывода результатов каждой операции вместе и по порядку.</span><span class="sxs-lookup"><span data-stu-id="e6149-132">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>  
   
-###  <a name="BKMK_DisableTheStartButton"></a>Отключение кнопки запуска  
- Можно заблокировать **запустить** кнопку во время операции с отключения кнопки в верхней части `StartButton_Click` обработчика событий. Затем можно повторно включить кнопку из блока `Finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.  
+###  <span data-ttu-id="e6149-133"><a name="BKMK_DisableTheStartButton"></a>Отключение кнопки запуска</span><span class="sxs-lookup"><span data-stu-id="e6149-133"><a name="BKMK_DisableTheStartButton"></a> Disable the Start Button</span></span>  
+ <span data-ttu-id="e6149-134">Можно заблокировать **запустить** кнопку во время операции с отключения кнопки в верхней части `StartButton_Click` обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="e6149-134">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="e6149-135">Затем можно повторно включить кнопку из блока `Finally` по завершении операции, чтобы пользователь мог запустить приложение повторно.</span><span class="sxs-lookup"><span data-stu-id="e6149-135">You can then reenable the button from within a  `Finally` block when the operation finishes so that users can run the app again.</span></span>  
   
- В следующем коде показаны эти изменения, которые помечены звездочками. Изменения добавляются в код в конце этого раздела, или можно загрузить из завершенного приложения [образцы Async: повторного входа в приложениях рабочего стола .NET](http://go.microsoft.com/fwlink/?LinkId=266571). Имя проекта — DisableStartButton.  
+ <span data-ttu-id="e6149-136">В следующем коде показаны эти изменения, которые помечены звездочками.</span><span class="sxs-lookup"><span data-stu-id="e6149-136">The following code shows these changes, which are marked with asterisks.</span></span> <span data-ttu-id="e6149-137">Изменения добавляются в код в конце этого раздела, или можно загрузить из завершенного приложения [образцы Async: повторного входа в приложениях рабочего стола .NET](http://go.microsoft.com/fwlink/?LinkId=266571).</span><span class="sxs-lookup"><span data-stu-id="e6149-137">You can add the changes to the code at the end of this topic, or you can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571).</span></span> <span data-ttu-id="e6149-138">Имя проекта — DisableStartButton.</span><span class="sxs-lookup"><span data-stu-id="e6149-138">The project name is DisableStartButton.</span></span>  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -145,16 +145,16 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- В результате этих изменений кнопка не будет реагировать в течение загрузки веб-сайтов методом `AccessTheWebAsync`, поэтому повторный вход в процесс будет невозможен.  
+ <span data-ttu-id="e6149-139">В результате этих изменений кнопка не будет реагировать в течение загрузки веб-сайтов методом `AccessTheWebAsync`, поэтому повторный вход в процесс будет невозможен.</span><span class="sxs-lookup"><span data-stu-id="e6149-139">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>  
   
-###  <a name="BKMK_CancelAndRestart"></a>Отмена и перезапуск операции  
- Вместо отключения **запустить** кнопки, можно сохранять активность кнопки но, если пользователь нажимает эту кнопку еще раз, отменить операцию, которая уже выполняется и продолжения запущенная последней операции.  
+###  <span data-ttu-id="e6149-140"><a name="BKMK_CancelAndRestart"></a>Отмена и перезапуск операции</span><span class="sxs-lookup"><span data-stu-id="e6149-140"><a name="BKMK_CancelAndRestart"></a> Cancel and Restart the Operation</span></span>  
+ <span data-ttu-id="e6149-141">Вместо отключения **запустить** кнопки, можно сохранять активность кнопки но, если пользователь нажимает эту кнопку еще раз, отменить операцию, которая уже выполняется и продолжения запущенная последней операции.</span><span class="sxs-lookup"><span data-stu-id="e6149-141">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>  
   
- Дополнительные сведения об отмене см. в разделе [Fine-Tuning асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
+ <span data-ttu-id="e6149-142">Дополнительные сведения об отмене см. в разделе [Fine-Tuning асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="e6149-142">For more information about cancellation, see [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span></span>  
   
- Для настройки этого сценария, внесите следующие изменения в базовый код, который предоставляется в [проверка и выполнение примера приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Также можно загрузить из завершенного приложения [образцы Async: повторного входа в приложениях рабочего стола .NET](http://go.microsoft.com/fwlink/?LinkId=266571). Этот проект называется CancelAndRestart.  
+ <span data-ttu-id="e6149-143">Для настройки этого сценария, внесите следующие изменения в базовый код, который предоставляется в [проверка и выполнение примера приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span><span class="sxs-lookup"><span data-stu-id="e6149-143">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).</span></span> <span data-ttu-id="e6149-144">Также можно загрузить из завершенного приложения [образцы Async: повторного входа в приложениях рабочего стола .NET](http://go.microsoft.com/fwlink/?LinkId=266571).</span><span class="sxs-lookup"><span data-stu-id="e6149-144">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571).</span></span> <span data-ttu-id="e6149-145">Этот проект называется CancelAndRestart.</span><span class="sxs-lookup"><span data-stu-id="e6149-145">The name of this project is CancelAndRestart.</span></span>  
   
-1.  Объявите <xref:System.Threading.CancellationTokenSource>переменной, `cts`, который находится в области видимости для всех методов.</xref:System.Threading.CancellationTokenSource>  
+1.  <span data-ttu-id="e6149-146">Объявите <xref:System.Threading.CancellationTokenSource>переменной, `cts`, который находится в области видимости для всех методов.</xref:System.Threading.CancellationTokenSource></span><span class="sxs-lookup"><span data-stu-id="e6149-146">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -163,7 +163,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  В `StartButton_Click` определите, выполняется ли операция на данный момент. Если значение `cts` — `Nothing`, операция не активна. Если значение не `Nothing`, отменить операцию, которая уже выполняется.  
+2.  <span data-ttu-id="e6149-147">В `StartButton_Click` определите, выполняется ли операция на данный момент.</span><span class="sxs-lookup"><span data-stu-id="e6149-147">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="e6149-148">Если значение `cts` — `Nothing`, операция не активна.</span><span class="sxs-lookup"><span data-stu-id="e6149-148">If the value of `cts` is `Nothing`, no operation is already active.</span></span> <span data-ttu-id="e6149-149">Если значение не `Nothing`, отменить операцию, которая уже выполняется.</span><span class="sxs-lookup"><span data-stu-id="e6149-149">If the value isn't `Nothing`, the operation that is already running is canceled.</span></span>  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -172,7 +172,7 @@ End Sub
     End If  
     ```  
   
-3.  Задайте для `cts` другое значение, представляющее текущий процесс.  
+3.  <span data-ttu-id="e6149-150">Задайте для `cts` другое значение, представляющее текущий процесс.</span><span class="sxs-lookup"><span data-stu-id="e6149-150">Set `cts` to a different value that represents the current process.</span></span>  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -180,7 +180,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  В конце `StartButton_Click`, текущий процесс будет завершен, поэтому значение `cts` к `Nothing`.  
+4.  <span data-ttu-id="e6149-151">В конце `StartButton_Click`, текущий процесс будет завершен, поэтому значение `cts` к `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="e6149-151">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to `Nothing`.</span></span>  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -189,7 +189,7 @@ End Sub
     End If  
     ```  
   
- В следующем коде показаны все изменения в `StartButton_Click`. Добавления помечены звездочками.  
+ <span data-ttu-id="e6149-152">В следующем коде показаны все изменения в `StartButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="e6149-152">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="e6149-153">Добавления помечены звездочками.</span><span class="sxs-lookup"><span data-stu-id="e6149-153">The additions are marked with asterisks.</span></span>  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -224,15 +224,15 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- В `AccessTheWebAsync` внесите следующие изменения.  
+ <span data-ttu-id="e6149-154">В `AccessTheWebAsync` внесите следующие изменения.</span><span class="sxs-lookup"><span data-stu-id="e6149-154">In `AccessTheWebAsync`, make the following changes.</span></span>  
   
--   Добавьте параметр, чтобы принимать токен отмены из `StartButton_Click`.  
+-   <span data-ttu-id="e6149-155">Добавьте параметр, чтобы принимать токен отмены из `StartButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="e6149-155">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>  
   
--   Используйте <xref:System.Net.Http.HttpClient.GetAsync%2A>метод для загрузки на веб-сайтах, поскольку `GetAsync` принимает <xref:System.Threading.CancellationToken>аргумент.</xref:System.Threading.CancellationToken> </xref:System.Net.Http.HttpClient.GetAsync%2A>  
+-   <span data-ttu-id="e6149-156">Используйте <xref:System.Net.Http.HttpClient.GetAsync%2A>метод для загрузки на веб-сайтах, поскольку `GetAsync` принимает <xref:System.Threading.CancellationToken>аргумент.</xref:System.Threading.CancellationToken> </xref:System.Net.Http.HttpClient.GetAsync%2A></span><span class="sxs-lookup"><span data-stu-id="e6149-156">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>  
   
--   Перед вызовом метода `DisplayResults` для отображения результатов для каждого загруженного веб-сайта проверьте `ct`, чтобы убедиться, что текущая операция не отменена.  
+-   <span data-ttu-id="e6149-157">Перед вызовом метода `DisplayResults` для отображения результатов для каждого загруженного веб-сайта проверьте `ct`, чтобы убедиться, что текущая операция не отменена.</span><span class="sxs-lookup"><span data-stu-id="e6149-157">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>  
   
- В следующем коде показаны эти изменения, которые помечены звездочками.  
+ <span data-ttu-id="e6149-158">В следующем коде показаны эти изменения, которые помечены звездочками.</span><span class="sxs-lookup"><span data-stu-id="e6149-158">The following code shows these changes, which are marked with asterisks.</span></span>  
   
 ```vb  
 ' *** Provide a parameter for the CancellationToken from StartButton_Click.  
@@ -272,7 +272,7 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
 End Function  
 ```  
   
- При выборе **начать** несколько раз во время этого приложения, он должен создать результаты, которые похожи на следующие выходные данные.  
+ <span data-ttu-id="e6149-159">При выборе **начать** несколько раз во время этого приложения, он должен создать результаты, которые похожи на следующие выходные данные.</span><span class="sxs-lookup"><span data-stu-id="e6149-159">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -300,16 +300,16 @@ Download canceled.
 TOTAL bytes returned:  890591  
 ```  
   
- Чтобы исключить частичные списки, раскомментируйте первую строку кода в `StartButton_Click`, чтобы очищать текстовое поле при каждом перезапуске операции.  
+ <span data-ttu-id="e6149-160">Чтобы исключить частичные списки, раскомментируйте первую строку кода в `StartButton_Click`, чтобы очищать текстовое поле при каждом перезапуске операции.</span><span class="sxs-lookup"><span data-stu-id="e6149-160">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>  
   
-###  <a name="BKMK_RunMultipleOperations"></a>Запуск нескольких операций и выходные данные в очередь  
- Третий пример является и самым сложным в том, что другая асинхронная операция каждый раз, которое выбирает пользователь запускает приложение **запустить** кнопки и все операции выполняются до их завершения. Все запрошенные операции загружают веб-сайты из списка асинхронно, однако выходные данные операций представляются последовательно. То есть, чередуются Фактическое действие загрузки, как выходные данные в [распознавание повторный вход](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) показывает, но список результатов для каждой группы предоставляется отдельно.  
+###  <span data-ttu-id="e6149-161"><a name="BKMK_RunMultipleOperations"></a>Запуск нескольких операций и выходные данные в очередь</span><span class="sxs-lookup"><span data-stu-id="e6149-161"><a name="BKMK_RunMultipleOperations"></a> Run Multiple Operations and Queue the Output</span></span>  
+ <span data-ttu-id="e6149-162">Третий пример является и самым сложным в том, что другая асинхронная операция каждый раз, которое выбирает пользователь запускает приложение **запустить** кнопки и все операции выполняются до их завершения.</span><span class="sxs-lookup"><span data-stu-id="e6149-162">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="e6149-163">Все запрошенные операции загружают веб-сайты из списка асинхронно, однако выходные данные операций представляются последовательно.</span><span class="sxs-lookup"><span data-stu-id="e6149-163">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="e6149-164">То есть, чередуются Фактическое действие загрузки, как выходные данные в [распознавание повторный вход](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) показывает, но список результатов для каждой группы предоставляется отдельно.</span><span class="sxs-lookup"><span data-stu-id="e6149-164">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) shows, but the list of results for each group is presented separately.</span></span>  
   
- Операции совместно используют глобальный <xref:System.Threading.Tasks.Task>, `pendingWork`, который служит для отображения процесса привратника.</xref:System.Threading.Tasks.Task>  
+ <span data-ttu-id="e6149-165">Операции совместно используют глобальный <xref:System.Threading.Tasks.Task>, `pendingWork`, который служит для отображения процесса привратника.</xref:System.Threading.Tasks.Task></span><span class="sxs-lookup"><span data-stu-id="e6149-165">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>  
   
- Этот пример можно запустить, вставив изменения в код в [построение приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), или вы можете следовать указаниям в [загрузка приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) для загрузки образца и запуска проекта QueueResults.  
+ <span data-ttu-id="e6149-166">Этот пример можно запустить, вставив изменения в код в [построение приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), или вы можете следовать указаниям в [загрузка приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) для загрузки образца и запуска проекта QueueResults.</span><span class="sxs-lookup"><span data-stu-id="e6149-166">You can run this example by pasting the changes into the code in [Building the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), or you can follow the instructions in [Downloading the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) to download the sample and then run the QueueResults project.</span></span>  
   
- Следующий результат показан результат, если пользователь выбирает **запустить** кнопку только один раз. Указывает метку буквы A, что получается после первой **запустить** кнопка. Нумерация показывает порядок отображения URL-адресов в списке целевых объектов для загрузки.  
+ <span data-ttu-id="e6149-167">Следующий результат показан результат, если пользователь выбирает **запустить** кнопку только один раз.</span><span class="sxs-lookup"><span data-stu-id="e6149-167">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="e6149-168">Указывает метку буквы A, что получается после первой **запустить** кнопка.</span><span class="sxs-lookup"><span data-stu-id="e6149-168">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="e6149-169">Нумерация показывает порядок отображения URL-адресов в списке целевых объектов для загрузки.</span><span class="sxs-lookup"><span data-stu-id="e6149-169">The numbers show the order of the URLs in the list of download targets.</span></span>  
   
 ```  
 #Starting group A.  
@@ -329,7 +329,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.  
 ```  
   
- Если пользователь **запустить** три раза, приложение выдает результат, похожий на приведенный ниже. Информационные строки, начинающиеся с символа #, отслеживают ход выполнения приложения.  
+ <span data-ttu-id="e6149-170">Если пользователь **запустить** три раза, приложение выдает результат, похожий на приведенный ниже.</span><span class="sxs-lookup"><span data-stu-id="e6149-170">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="e6149-171">Информационные строки, начинающиеся с символа #, отслеживают ход выполнения приложения.</span><span class="sxs-lookup"><span data-stu-id="e6149-171">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>  
   
 ```  
 #Starting group A.  
@@ -385,12 +385,12 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- Группы B и C запускаются до завершения группы A, однако результаты для каждой группы отображаются отдельно. Все выходные данные для группы A отображается первой, затем все выходные данные для группы B, а затем все выходные данные для группы C. Приложение всегда отображаются группы в порядке и для каждой группы, всегда отображает сведения об отдельных веб-сайтов в порядке следования URL-адреса в список URL-адресов.  
+ <span data-ttu-id="e6149-172">Группы B и C запускаются до завершения группы A, однако результаты для каждой группы отображаются отдельно.</span><span class="sxs-lookup"><span data-stu-id="e6149-172">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="e6149-173">Все выходные данные для группы A отображается первой, затем все выходные данные для группы B, а затем все выходные данные для группы C. Приложение всегда отображаются группы в порядке и для каждой группы, всегда отображает сведения об отдельных веб-сайтов в порядке следования URL-адреса в список URL-адресов.</span><span class="sxs-lookup"><span data-stu-id="e6149-173">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>  
   
- Тем не менее невозможно предсказать порядок, в котором фактически происходит загрузка. После запуска нескольких групп все созданные ими задачи загрузки остаются активными. Не следует предполагать, что данные A-1 будут загружены до данных B-1, а данные A-1 будут загружены до данных A-2.  
+ <span data-ttu-id="e6149-174">Тем не менее невозможно предсказать порядок, в котором фактически происходит загрузка.</span><span class="sxs-lookup"><span data-stu-id="e6149-174">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="e6149-175">После запуска нескольких групп все созданные ими задачи загрузки остаются активными.</span><span class="sxs-lookup"><span data-stu-id="e6149-175">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="e6149-176">Не следует предполагать, что данные A-1 будут загружены до данных B-1, а данные A-1 будут загружены до данных A-2.</span><span class="sxs-lookup"><span data-stu-id="e6149-176">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>  
   
-#### <a name="global-definitions"></a>Глобальные определения  
- Пример кода содержит объявление двух следующих глобальных переменных, доступных для всех методов.  
+#### <a name="global-definitions"></a><span data-ttu-id="e6149-177">Глобальные определения</span><span class="sxs-lookup"><span data-stu-id="e6149-177">Global Definitions</span></span>  
+ <span data-ttu-id="e6149-178">Пример кода содержит объявление двух следующих глобальных переменных, доступных для всех методов.</span><span class="sxs-lookup"><span data-stu-id="e6149-178">The sample code contains the following two global declarations that are visible from all methods.</span></span>  
   
 ```vb  
 Class MainWindow    ' Class MainPage in Windows Store app.  
@@ -400,10 +400,10 @@ Class MainWindow    ' Class MainPage in Windows Store app.
     Private group As Char = ChrW(AscW("A") - 1)  
 ```  
   
- Переменная `Task`, `pendingWork`, отслеживает процесс отображения и предотвращает прерывание операции отображения одной группы другой группой. Символьная переменная, `group`, помечает выходные данные различных групп, чтобы гарантировать отображение результатов в ожидаемом порядке.  
+ <span data-ttu-id="e6149-179">Переменная `Task`, `pendingWork`, отслеживает процесс отображения и предотвращает прерывание операции отображения одной группы другой группой.</span><span class="sxs-lookup"><span data-stu-id="e6149-179">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="e6149-180">Символьная переменная, `group`, помечает выходные данные различных групп, чтобы гарантировать отображение результатов в ожидаемом порядке.</span><span class="sxs-lookup"><span data-stu-id="e6149-180">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>  
   
-#### <a name="the-click-event-handler"></a>Обработчик событий нажатия  
- Обработчик событий `StartButton_Click`, увеличивается каждый раз при выборе группы буква **запустить** кнопки. Затем обработчик вызывает метод `AccessTheWebAsync` для запуска операции загрузки.  
+#### <a name="the-click-event-handler"></a><span data-ttu-id="e6149-181">Обработчик событий нажатия</span><span class="sxs-lookup"><span data-stu-id="e6149-181">The Click Event Handler</span></span>  
+ <span data-ttu-id="e6149-182">Обработчик событий `StartButton_Click`, увеличивается каждый раз при выборе группы буква **запустить** кнопки.</span><span class="sxs-lookup"><span data-stu-id="e6149-182">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="e6149-183">Затем обработчик вызывает метод `AccessTheWebAsync` для запуска операции загрузки.</span><span class="sxs-lookup"><span data-stu-id="e6149-183">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -427,12 +427,12 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
-#### <a name="the-accessthewebasync-method"></a>Метод AccessTheWebAsync  
- В этом примере метод `AccessTheWebAsync` разбит на два метода. Первый метод, `AccessTheWebAsync`, запускает все задачи загрузки для группы и передает задаче `pendingWork` управление процессом отображения. Метод использует Language Integrated Query (запрос LINQ) и <xref:System.Linq.Enumerable.ToArray%2A>для запуска задач загрузки одновременно.</xref:System.Linq.Enumerable.ToArray%2A>  
+#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="e6149-184">Метод AccessTheWebAsync</span><span class="sxs-lookup"><span data-stu-id="e6149-184">The AccessTheWebAsync Method</span></span>  
+ <span data-ttu-id="e6149-185">В этом примере метод `AccessTheWebAsync` разбит на два метода.</span><span class="sxs-lookup"><span data-stu-id="e6149-185">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="e6149-186">Первый метод, `AccessTheWebAsync`, запускает все задачи загрузки для группы и передает задаче `pendingWork` управление процессом отображения.</span><span class="sxs-lookup"><span data-stu-id="e6149-186">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="e6149-187">Метод использует Language Integrated Query (запрос LINQ) и <xref:System.Linq.Enumerable.ToArray%2A>для запуска задач загрузки одновременно.</xref:System.Linq.Enumerable.ToArray%2A></span><span class="sxs-lookup"><span data-stu-id="e6149-187">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>  
   
- Затем метод `AccessTheWebAsync` вызывает метод `FinishOneGroupAsync` для ожидания завершения каждой загрузки и отображения ее длины.  
+ <span data-ttu-id="e6149-188">Затем метод `AccessTheWebAsync` вызывает метод `FinishOneGroupAsync` для ожидания завершения каждой загрузки и отображения ее длины.</span><span class="sxs-lookup"><span data-stu-id="e6149-188">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>  
   
- Метод `FinishOneGroupAsync` возвращает задачу, которая назначена `pendingWork`, в `AccessTheWebAsync`. Это значение предотвращает прерывание другой операцией до завершения выполнения задачи.  
+ <span data-ttu-id="e6149-189">Метод `FinishOneGroupAsync` возвращает задачу, которая назначена `pendingWork`, в `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="e6149-189">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="e6149-190">Это значение предотвращает прерывание другой операцией до завершения выполнения задачи.</span><span class="sxs-lookup"><span data-stu-id="e6149-190">That value prevents interruption by another operation before the task is complete.</span></span>  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -461,10 +461,10 @@ Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)
 End Function  
 ```  
   
-#### <a name="the-finishonegroupasync-method"></a>Метод FinishOneGroupAsync  
- Этот метод выполняет циклический переход по задачам загрузки в группе, ожидая каждую из них, отображая длину загруженного веб-сайта и добавляя длину в общую сумму.  
+#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="e6149-191">Метод FinishOneGroupAsync</span><span class="sxs-lookup"><span data-stu-id="e6149-191">The FinishOneGroupAsync Method</span></span>  
+ <span data-ttu-id="e6149-192">Этот метод выполняет циклический переход по задачам загрузки в группе, ожидая каждую из них, отображая длину загруженного веб-сайта и добавляя длину в общую сумму.</span><span class="sxs-lookup"><span data-stu-id="e6149-192">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>  
   
- Первый оператор в `FinishOneGroupAsync` использует `pendingWork` чтобы убедиться в том, что метод ввода не мешает операции уже находится в процессе отображения или который уже находится в состоянии ожидания. Если такая операция выполняется, новая операция должна дождаться своей очереди.  
+ <span data-ttu-id="e6149-193">Первый оператор в `FinishOneGroupAsync` использует `pendingWork` чтобы убедиться в том, что метод ввода не мешает операции уже находится в процессе отображения или который уже находится в состоянии ожидания.</span><span class="sxs-lookup"><span data-stu-id="e6149-193">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="e6149-194">Если такая операция выполняется, новая операция должна дождаться своей очереди.</span><span class="sxs-lookup"><span data-stu-id="e6149-194">If such an operation is in progress, the entering operation must wait its turn.</span></span>  
   
 ```vb  
 Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks As Task(Of Byte())(), grp As Char) As Task  
@@ -491,14 +491,14 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- Этот пример можно запустить, вставив изменения в код в [построение приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), или вы можете следовать указаниям в [загрузка приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) для загрузки образца и запуска проекта QueueResults.  
+ <span data-ttu-id="e6149-195">Этот пример можно запустить, вставив изменения в код в [построение приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), или вы можете следовать указаниям в [загрузка приложения](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) для загрузки образца и запуска проекта QueueResults.</span><span class="sxs-lookup"><span data-stu-id="e6149-195">You can run this example by pasting the changes into the code in [Building the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), or you can follow the instructions in [Downloading the App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) to download the sample, and then run the QueueResults project.</span></span>  
   
-#### <a name="points-of-interest"></a>Интересующие точки  
- Информационные строки, начинающиеся с символа # в выходных данных, поясняют, как работает этот пример.  
+#### <a name="points-of-interest"></a><span data-ttu-id="e6149-196">Интересующие точки</span><span class="sxs-lookup"><span data-stu-id="e6149-196">Points of Interest</span></span>  
+ <span data-ttu-id="e6149-197">Информационные строки, начинающиеся с символа # в выходных данных, поясняют, как работает этот пример.</span><span class="sxs-lookup"><span data-stu-id="e6149-197">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>  
   
- Выходные данные демонстрируют следующие схемы.  
+ <span data-ttu-id="e6149-198">Выходные данные демонстрируют следующие схемы.</span><span class="sxs-lookup"><span data-stu-id="e6149-198">The output shows the following patterns.</span></span>  
   
--   Группу можно запустить, когда предыдущая группа отображает свои выходные данные, но отображение выходных данных предыдущей группы не прерывается.  
+-   <span data-ttu-id="e6149-199">Группу можно запустить, когда предыдущая группа отображает свои выходные данные, но отображение выходных данных предыдущей группы не прерывается.</span><span class="sxs-lookup"><span data-stu-id="e6149-199">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>  
   
     ```  
     #Starting group A.  
@@ -534,61 +534,61 @@ End Function
     TOTAL bytes returned:  915908  
     ```  
   
--   `pendingWork` Задачи `Nothing` в начале `FinishOneGroupAsync` только для группы A, которая запущена первой. Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`. Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.  
+-   <span data-ttu-id="e6149-200">`pendingWork` Задачи `Nothing` в начале `FinishOneGroupAsync` только для группы A, которая запущена первой.</span><span class="sxs-lookup"><span data-stu-id="e6149-200">The `pendingWork` task is `Nothing` at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="e6149-201">Группа A еще не завершила выражение await, когда она достигает метода `FinishOneGroupAsync`.</span><span class="sxs-lookup"><span data-stu-id="e6149-201">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="e6149-202">Таким образом, управление не возвращается `AccessTheWebAsync`, а первое присваивание задаче `pendingWork` не возникает.</span><span class="sxs-lookup"><span data-stu-id="e6149-202">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>  
   
--   Следующие две строки всегда отображаются в выходных данных вместе. Код не прерывается нигде между запуском операции группы в обработчике `StartButton_Click` и назначением задачи для группы в `pendingWork`.  
+-   <span data-ttu-id="e6149-203">Следующие две строки всегда отображаются в выходных данных вместе.</span><span class="sxs-lookup"><span data-stu-id="e6149-203">The following two lines always appear together in the output.</span></span> <span data-ttu-id="e6149-204">Код не прерывается нигде между запуском операции группы в обработчике `StartButton_Click` и назначением задачи для группы в `pendingWork`.</span><span class="sxs-lookup"><span data-stu-id="e6149-204">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>  
   
     ```  
     #Starting group B.  
     #Task assigned for group B. Download tasks are active.  
     ```  
   
-     После входа группы в обработчик `StartButton_Click` операция не завершает выражение await до входа операции в метод `FinishOneGroupAsync`. Таким образом, другие операции не могут получить контроль во время выполнения этого фрагмента кода.  
+     <span data-ttu-id="e6149-205">После входа группы в обработчик `StartButton_Click` операция не завершает выражение await до входа операции в метод `FinishOneGroupAsync`.</span><span class="sxs-lookup"><span data-stu-id="e6149-205">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="e6149-206">Таким образом, другие операции не могут получить контроль во время выполнения этого фрагмента кода.</span><span class="sxs-lookup"><span data-stu-id="e6149-206">Therefore, no other operation can gain control during that segment of code.</span></span>  
   
-##  <a name="BKMD_SettingUpTheExample"></a>Проверка и выполнение примера приложения  
- Чтобы лучше понять пример приложения, его можно загрузить, построить самостоятельно или просмотреть код в конце этого раздела, не реализуя приложение.  
+##  <span data-ttu-id="e6149-207"><a name="BKMD_SettingUpTheExample"></a>Проверка и выполнение примера приложения</span><span class="sxs-lookup"><span data-stu-id="e6149-207"><a name="BKMD_SettingUpTheExample"></a> Reviewing and Running the Example App</span></span>  
+ <span data-ttu-id="e6149-208">Чтобы лучше понять пример приложения, его можно загрузить, построить самостоятельно или просмотреть код в конце этого раздела, не реализуя приложение.</span><span class="sxs-lookup"><span data-stu-id="e6149-208">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>  
   
 > [!NOTE]
->  Чтобы запустить пример как классического приложения Windows Presentation Foundation (WPF), необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.  
+>  <span data-ttu-id="e6149-209">Чтобы запустить пример как классического приложения Windows Presentation Foundation (WPF), необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.</span><span class="sxs-lookup"><span data-stu-id="e6149-209">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-###  <a name="BKMK_DownloadingTheApp"></a>Загрузка приложения  
+###  <span data-ttu-id="e6149-210"><a name="BKMK_DownloadingTheApp"></a>Загрузка приложения</span><span class="sxs-lookup"><span data-stu-id="e6149-210"><a name="BKMK_DownloadingTheApp"></a> Downloading the App</span></span>  
   
-1.  Загрузите сжатый файл с [образцы Async: повторного входа в приложениях рабочего стола .NET](http://go.microsoft.com/fwlink/?LinkId=266571).  
+1.  <span data-ttu-id="e6149-211">Загрузите сжатый файл с [образцы Async: повторного входа в приложениях рабочего стола .NET](http://go.microsoft.com/fwlink/?LinkId=266571).</span><span class="sxs-lookup"><span data-stu-id="e6149-211">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571).</span></span>  
   
-2.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
+2.  <span data-ttu-id="e6149-212">Распакуйте загруженный файл, а затем запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e6149-212">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-3.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
+3.  <span data-ttu-id="e6149-213">В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.</span><span class="sxs-lookup"><span data-stu-id="e6149-213">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-4.  Перейдите к папке, содержащей распакованный пример кода, а затем откройте файл решения (SLN-файл).  
+4.  <span data-ttu-id="e6149-214">Перейдите к папке, содержащей распакованный пример кода, а затем откройте файл решения (SLN-файл).</span><span class="sxs-lookup"><span data-stu-id="e6149-214">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>  
   
-5.  В **обозревателе решений**, откройте контекстное меню для проекта, который требуется запустить, а затем выберите **по StartUpProject**.  
+5.  <span data-ttu-id="e6149-215">В **обозревателе решений**, откройте контекстное меню для проекта, который требуется запустить, а затем выберите **по StartUpProject**.</span><span class="sxs-lookup"><span data-stu-id="e6149-215">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>  
   
-6.  Нажмите сочетание клавиш CTRL+F5, чтобы выполнить сборку и запуск проекта.  
+6.  <span data-ttu-id="e6149-216">Нажмите сочетание клавиш CTRL+F5, чтобы выполнить сборку и запуск проекта.</span><span class="sxs-lookup"><span data-stu-id="e6149-216">Choose the CTRL+F5 keys to build and run the project.</span></span>  
   
-###  <a name="BKMK_BuildingTheApp"></a>Построение приложения  
- Ниже приводится код для построения примера в качестве приложения WPF.  
+###  <span data-ttu-id="e6149-217"><a name="BKMK_BuildingTheApp"></a>Построение приложения</span><span class="sxs-lookup"><span data-stu-id="e6149-217"><a name="BKMK_BuildingTheApp"></a> Building the App</span></span>  
+ <span data-ttu-id="e6149-218">Ниже приводится код для построения примера в качестве приложения WPF.</span><span class="sxs-lookup"><span data-stu-id="e6149-218">The following section provides the code to build the example as a WPF app.</span></span>  
   
-##### <a name="to-build-a-wpf-app"></a>Построение приложения WPF  
+##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="e6149-219">Построение приложения WPF</span><span class="sxs-lookup"><span data-stu-id="e6149-219">To build a WPF app</span></span>  
   
-1.  Запустите Visual Studio.  
+1.  <span data-ttu-id="e6149-220">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e6149-220">Start Visual Studio.</span></span>  
   
-2.  В строке меню выберите **Файл**, **Создать**, **Проект**.  
+2.  <span data-ttu-id="e6149-221">В строке меню выберите **Файл**, **Создать**, **Проект**.</span><span class="sxs-lookup"><span data-stu-id="e6149-221">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     Откроется диалоговое окно **Новый проект** .  
+     <span data-ttu-id="e6149-222">Откроется диалоговое окно **Новый проект** .</span><span class="sxs-lookup"><span data-stu-id="e6149-222">The **New Project** dialog box opens.</span></span>  
   
-3.  В **установленные шаблоны** панели разверните **Visual Basic**, а затем разверните **Windows**.  
+3.  <span data-ttu-id="e6149-223">В **установленные шаблоны** панели разверните **Visual Basic**, а затем разверните **Windows**.</span><span class="sxs-lookup"><span data-stu-id="e6149-223">In the **Installed Templates** pane, expand **Visual Basic**, and then expand **Windows**.</span></span>  
   
-4.  В списке типов проекта выберите **приложение WPF**.  
+4.  <span data-ttu-id="e6149-224">В списке типов проекта выберите **приложение WPF**.</span><span class="sxs-lookup"><span data-stu-id="e6149-224">In the list of project types, choose **WPF Application**.</span></span>  
   
-5.  Назовите проект `WebsiteDownloadWPF`, а затем выберите **ОК** кнопки.  
+5.  <span data-ttu-id="e6149-225">Назовите проект `WebsiteDownloadWPF`, а затем выберите **ОК** кнопки.</span><span class="sxs-lookup"><span data-stu-id="e6149-225">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>  
   
-     Появится новый проект в **обозревателе решений**.  
+     <span data-ttu-id="e6149-226">Появится новый проект в **обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="e6149-226">The new project appears in **Solution Explorer**.</span></span>  
   
-6.  В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
+6.  <span data-ttu-id="e6149-227">В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .</span><span class="sxs-lookup"><span data-stu-id="e6149-227">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-     Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **обозревателе решений**, а затем выберите **Просмотр кода**.  
+     <span data-ttu-id="e6149-228">Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **обозревателе решений**, а затем выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="e6149-228">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-7.  В **XAML** Просмотр файла MainWindow.XAML, замените код следующим кодом.  
+7.  <span data-ttu-id="e6149-229">В **XAML** Просмотр файла MainWindow.XAML, замените код следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="e6149-229">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -606,13 +606,13 @@ End Function
     </Window>  
     ```  
   
-     Появится простое окно, содержащее текстовое поле и кнопку в **разработки** файла MainWindow.XAML.  
+     <span data-ttu-id="e6149-230">Появится простое окно, содержащее текстовое поле и кнопку в **разработки** файла MainWindow.XAML.</span><span class="sxs-lookup"><span data-stu-id="e6149-230">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
   
-8.  Добавить ссылку <xref:System.Net.Http>.</xref:System.Net.Http>  
+8.  <span data-ttu-id="e6149-231">Добавить ссылку <xref:System.Net.Http>.</xref:System.Net.Http></span><span class="sxs-lookup"><span data-stu-id="e6149-231">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-9. В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и выберите **Просмотр кода**.  
+9. <span data-ttu-id="e6149-232">В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="e6149-232">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
-10. В файл MainWindow.xaml.vb замените код следующим кодом.  
+10. <span data-ttu-id="e6149-233">В файл MainWindow.xaml.vb замените код следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="e6149-233">In MainWindow.xaml.vb , replace the code with the following code.</span></span>  
   
     ```vb  
     ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -690,11 +690,11 @@ End Function
     End Class  
     ```  
   
-11. Нажмите сочетание клавиш CTRL + F5, чтобы запустить программу, а затем выберите **начать** несколько раз.  
+11. <span data-ttu-id="e6149-234">Нажмите сочетание клавиш CTRL + F5, чтобы запустить программу, а затем выберите **начать** несколько раз.</span><span class="sxs-lookup"><span data-stu-id="e6149-234">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>  
   
-12. Внесите изменения в [отключить кнопку Пуск](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Отмена и перезапуск операции](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), или [выполнения нескольких операций и очереди вывода](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) обрабатывать повторный вход.  
+12. <span data-ttu-id="e6149-235">Внесите изменения в [отключить кнопку Пуск](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Отмена и перезапуск операции](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), или [выполнения нескольких операций и очереди вывода](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) обрабатывать повторный вход.</span><span class="sxs-lookup"><span data-stu-id="e6149-235">Make the changes from [Disable the Start Button](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancel and Restart the Operation](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), or [Run Multiple Operations and Queue the Output](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) to handle the reentrancy.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a><span data-ttu-id="e6149-236">См. также</span><span class="sxs-lookup"><span data-stu-id="e6149-236">See Also</span></span>  
+ <span data-ttu-id="e6149-237">[Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span><span class="sxs-lookup"><span data-stu-id="e6149-237">[Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span></span>  
+<span data-ttu-id="e6149-238"> [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)</span><span class="sxs-lookup"><span data-stu-id="e6149-238"> [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)</span></span>
 

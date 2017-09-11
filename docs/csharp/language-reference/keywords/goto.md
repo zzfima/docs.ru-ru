@@ -37,30 +37,30 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="goto-c-reference"></a>goto (Справочник по C#)
-Оператор `goto` передает управление программой непосредственно оператору с меткой.  
+# <a name="goto-c-reference"></a><span data-ttu-id="bd9ad-102">goto (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="bd9ad-102">goto (C# Reference)</span></span>
+<span data-ttu-id="bd9ad-103">Оператор `goto` передает управление программой непосредственно оператору с меткой.</span><span class="sxs-lookup"><span data-stu-id="bd9ad-103">The `goto` statement transfers the program control directly to a labeled statement.</span></span>  
   
- Оператор `goto` часто используется для передачи управления определенной метке смены регистра или метке по умолчанию в операторе `switch`.  
+ <span data-ttu-id="bd9ad-104">Оператор `goto` часто используется для передачи управления определенной метке смены регистра или метке по умолчанию в операторе `switch`.</span><span class="sxs-lookup"><span data-stu-id="bd9ad-104">A common use of `goto` is to transfer control to a specific switch-case label or the default label in a `switch` statement.</span></span>  
   
- `goto` Этот оператор также удобно использовать для выхода из глубоко вложенных циклов.  
+ <span data-ttu-id="bd9ad-105">`goto` Этот оператор также удобно использовать для выхода из глубоко вложенных циклов.</span><span class="sxs-lookup"><span data-stu-id="bd9ad-105">The `goto` statement is also useful to get out of deeply nested loops.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `goto` в операторе [switch](../../../csharp/language-reference/keywords/switch.md).  
+## <a name="example"></a><span data-ttu-id="bd9ad-106">Пример</span><span class="sxs-lookup"><span data-stu-id="bd9ad-106">Example</span></span>  
+ <span data-ttu-id="bd9ad-107">В следующем примере демонстрируется использование `goto` в операторе [switch](../../../csharp/language-reference/keywords/switch.md).</span><span class="sxs-lookup"><span data-stu-id="bd9ad-107">The following example demonstrates using `goto` in a [switch](../../../csharp/language-reference/keywords/switch.md) statement.</span></span>  
   
- [!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_1.cs)]  
+ <span data-ttu-id="bd9ad-108">[!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="bd9ad-108">[!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_1.cs)]</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `goto` для выхода из вложенных циклов.  
+## <a name="example"></a><span data-ttu-id="bd9ad-109">Пример</span><span class="sxs-lookup"><span data-stu-id="bd9ad-109">Example</span></span>  
+ <span data-ttu-id="bd9ad-110">В следующем примере демонстрируется использование `goto` для выхода из вложенных циклов.</span><span class="sxs-lookup"><span data-stu-id="bd9ad-110">The following example demonstrates using `goto` to break out from nested loops.</span></span>  
   
- [!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_2.cs)]  
+ <span data-ttu-id="bd9ad-111">[!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="bd9ad-111">[!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="bd9ad-112">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="bd9ad-112">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Оператор goto](/cpp/cpp/goto-statement-cpp)   
- [Операторы перехода](../../../csharp/language-reference/keywords/jump-statements.md)
+## <a name="see-also"></a><span data-ttu-id="bd9ad-113">См. также</span><span class="sxs-lookup"><span data-stu-id="bd9ad-113">See Also</span></span>  
+ <span data-ttu-id="bd9ad-114">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="bd9ad-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="bd9ad-115">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="bd9ad-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="bd9ad-116">[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="bd9ad-116">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="bd9ad-117">[Оператор goto](/cpp/cpp/goto-statement-cpp) </span><span class="sxs-lookup"><span data-stu-id="bd9ad-117">[goto Statement](/cpp/cpp/goto-statement-cpp) </span></span>  
+ [<span data-ttu-id="bd9ad-118">Операторы перехода</span><span class="sxs-lookup"><span data-stu-id="bd9ad-118">Jump Statements</span></span>](../../../csharp/language-reference/keywords/jump-statements.md)
 

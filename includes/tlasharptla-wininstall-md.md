@@ -1,1 +1,1 @@
-Установщик Microsoft Windows
+<span data-ttu-id="3f204-101">Установщик Microsoft Windows</span><span class="sxs-lookup"><span data-stu-id="3f204-101">Microsoft Windows Installer</span></span>

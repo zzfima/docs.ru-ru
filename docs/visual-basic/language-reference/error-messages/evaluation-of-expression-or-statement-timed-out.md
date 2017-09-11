@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf087a85710cbf19e490b3c8f335ea40dbc0d4f7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3ca2da6140dff3b1ef82c9546f4f1401ac1f1699
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="evaluation-of-expression-or-statement-timed-out"></a>Истекло время ожидания вычисления выражения или оператора
-Вычисление выражения не была выполнена вовремя.  
+# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="a4731-102">Истекло время ожидания вычисления выражения или оператора</span><span class="sxs-lookup"><span data-stu-id="a4731-102">Evaluation of expression or statement timed out</span></span>
+<span data-ttu-id="a4731-103">Вычисление выражения не была выполнена вовремя.</span><span class="sxs-lookup"><span data-stu-id="a4731-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
   
- **Идентификатор ошибки:** BC30722  
+ <span data-ttu-id="a4731-104">**Идентификатор ошибки:** BC30722</span><span class="sxs-lookup"><span data-stu-id="a4731-104">**Error ID:** BC30722</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a4731-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="a4731-105">To correct this error</span></span>  
   
-1.  Проверьте правильность введенного кода.  
+1.  <span data-ttu-id="a4731-106">Проверьте правильность введенного кода.</span><span class="sxs-lookup"><span data-stu-id="a4731-106">Verify that the entered code is correct.</span></span>  
   
-2.  Упростите выражение, чтобы оно требовало меньше времени для выполнения.  
+2.  <span data-ttu-id="a4731-107">Упростите выражение, чтобы оно требовало меньше времени для выполнения.</span><span class="sxs-lookup"><span data-stu-id="a4731-107">Simplify your expression so that it takes less time to execute.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Отладка в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a><span data-ttu-id="a4731-108">См. также</span><span class="sxs-lookup"><span data-stu-id="a4731-108">See Also</span></span>  
+ [<span data-ttu-id="a4731-109">Отладка в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a4731-109">Debugging in Visual Studio</span></span>](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)

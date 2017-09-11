@@ -30,24 +30,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 604aa2f91bb2a25ba59dc75d5d73314bc7bf2343
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 49f8be86d7ec86152b0d4cfc74dd9e13e6814d32
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="introduction-to-strings-in-visual-basic"></a>Знакомство со строками в Visual Basic
-В этом разделе описываются основные принципы использования строк в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="introduction-to-strings-in-visual-basic"></a><span data-ttu-id="6016f-102">Знакомство со строками в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6016f-102">Introduction to Strings in Visual Basic</span></span>
+<span data-ttu-id="6016f-103">В этом разделе описываются основные принципы использования строк в [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="6016f-103">This section describes the basic concepts behind using strings in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Основы работы со строками](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Представляет основные принципы использования строк и строковых переменных.  
+## <a name="in-this-section"></a><span data-ttu-id="6016f-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="6016f-104">In This Section</span></span>  
+ [<span data-ttu-id="6016f-105">Основы работы со строками</span><span class="sxs-lookup"><span data-stu-id="6016f-105">String Basics</span></span>](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+ <span data-ttu-id="6016f-106">Представляет основные принципы использования строк и строковых переменных.</span><span class="sxs-lookup"><span data-stu-id="6016f-106">Introduces the basic concepts behind using strings and string variables.</span></span>  
   
- [Типы методов для обработки в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Представляет несколько различных способов анализа и работы со строками.  
+ [<span data-ttu-id="6016f-107">Типы методов для обработки в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6016f-107">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ <span data-ttu-id="6016f-108">Представляет несколько различных способов анализа и работы со строками.</span><span class="sxs-lookup"><span data-stu-id="6016f-108">Introduces several different ways to analyze and manipulate strings.</span></span>  
   
- [Влияние языка и региональных параметров на строки в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Рассматриваются как [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] использует сведения для выполнения строковых преобразований и сравнений, язык и региональные параметры.  
+ [<span data-ttu-id="6016f-109">Влияние языка и региональных параметров на строки в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6016f-109">How Culture Affects Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ <span data-ttu-id="6016f-110">Рассматриваются как [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] использует сведения для выполнения строковых преобразований и сравнений, язык и региональные параметры.</span><span class="sxs-lookup"><span data-stu-id="6016f-110">Discusses how [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] uses culture information to perform string conversions and comparisons.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Строки](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a><span data-ttu-id="6016f-111">См. также</span><span class="sxs-lookup"><span data-stu-id="6016f-111">See Also</span></span>  
+ [<span data-ttu-id="6016f-112">Строки</span><span class="sxs-lookup"><span data-stu-id="6016f-112">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)

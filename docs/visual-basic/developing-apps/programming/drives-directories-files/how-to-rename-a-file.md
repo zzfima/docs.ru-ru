@@ -38,44 +38,44 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>Практическое руководство. Переименование файла в Visual Basic
-Метод `RenameFile` объекта `My.Computer.FileSystem` можно использовать, чтобы переименовать файл, указав текущее расположение, имя файла и новое имя файла. Этот метод нельзя использовать для перемещения файла. Для перемещения и переименования файла используется метод `MoveFile`.  
+# <a name="how-to-rename-a-file-in-visual-basic"></a><span data-ttu-id="76701-102">Практическое руководство. Переименование файла в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="76701-102">How to: Rename a File in Visual Basic</span></span>
+<span data-ttu-id="76701-103">Метод `RenameFile` объекта `My.Computer.FileSystem` можно использовать, чтобы переименовать файл, указав текущее расположение, имя файла и новое имя файла.</span><span class="sxs-lookup"><span data-stu-id="76701-103">Use the `RenameFile` method of the `My.Computer.FileSystem` object to rename a file by supplying the current location, file name, and the new file name.</span></span> <span data-ttu-id="76701-104">Этот метод нельзя использовать для перемещения файла. Для перемещения и переименования файла используется метод `MoveFile`.</span><span class="sxs-lookup"><span data-stu-id="76701-104">This method cannot be used to move a file; use the `MoveFile` method to move and rename the file.</span></span>  
   
-### <a name="to-rename-a-file"></a>Переименование файла  
+### <a name="to-rename-a-file"></a><span data-ttu-id="76701-105">Переименование файла</span><span class="sxs-lookup"><span data-stu-id="76701-105">To rename a file</span></span>  
   
--   Используйте метод `My.Computer.FileSystem.RenameFile`, чтобы переименовать файл. В этом примере переименовывается файл с именем `Test.txt` в `SecondTest.txt`.  
+-   <span data-ttu-id="76701-106">Используйте метод `My.Computer.FileSystem.RenameFile`, чтобы переименовать файл.</span><span class="sxs-lookup"><span data-stu-id="76701-106">Use the `My.Computer.FileSystem.RenameFile` method to rename a file.</span></span> <span data-ttu-id="76701-107">В этом примере переименовывается файл с именем `Test.txt` в `SecondTest.txt`.</span><span class="sxs-lookup"><span data-stu-id="76701-107">This example renames the file named `Test.txt` to `SecondTest.txt`.</span></span>  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
+     <span data-ttu-id="76701-108">[!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="76701-108">[!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]</span></span>  
   
- Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагментов кода фрагмент находится в разделе **файловая система: обработка дисков, папок и файлов**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
+ <span data-ttu-id="76701-109">Этот пример кода также доступен в качестве фрагмента кода IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="76701-109">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="76701-110">В средстве выбора фрагментов кода фрагмент находится в разделе **файловая система: обработка дисков, папок и файлов**.</span><span class="sxs-lookup"><span data-stu-id="76701-110">In the code snippet picker, the snippet is located in **File system - Processing Drives, Folders, and Files**.</span></span> <span data-ttu-id="76701-111">Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="76701-111">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="robust-programming"></a>Отказоустойчивость  
- При следующих условиях возможно возникновение исключения:  
+## <a name="robust-programming"></a><span data-ttu-id="76701-112">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="76701-112">Robust Programming</span></span>  
+ <span data-ttu-id="76701-113">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="76701-113">The following conditions may cause an exception:</span></span>  
   
--   Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="76701-114">Путь является недопустимым, так как он представляет собой строку нулевой длины (пустую строку), либо содержит только пробелы, либо содержит недопустимые знаки, либо представляет собой путь к устройству (начинается с символов \\\\.\\) (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="76701-114">The path is not valid for one of the following reasons: it is a zero-length string, it contains only white space, it contains invalid characters, or it is a device path (starts with \\\\.\\) (<xref:System.ArgumentException>).</span></span>  
   
--   `newName` содержит сведения о пути (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="76701-115">`newName` содержит сведения о пути (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="76701-115">`newName` contains path information (<xref:System.ArgumentException>).</span></span>  
   
--   Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="76701-116">Путь не является допустимым, поскольку он равен `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="76701-116">The path is not valid because it is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   Параметр`newName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="76701-117">Параметр`newName` имеет значение `Nothing` или является пустой строкой (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="76701-117">`newName` is `Nothing` or an empty string (<xref:System.ArgumentNullException>).</span></span>  
   
--   Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).  
+-   <span data-ttu-id="76701-118">Исходный файл является недопустимым или не существует (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="76701-118">The source file is not valid or does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   Имеется существующий файл или каталог с именем, указанным в `newName` (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="76701-119">Имеется существующий файл или каталог с именем, указанным в `newName` (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="76701-119">There is an existing file or directory with the name specified in `newName` (<xref:System.IO.IOException>).</span></span>  
   
--   Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="76701-120">Длина пути превышает максимальную длину, определенную в системе (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="76701-120">The path exceeds the system-defined maximum length (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).  
+-   <span data-ttu-id="76701-121">Имя файла или каталога в пути содержит двоеточие (:) или имеет недопустимый формат (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="76701-121">A file or directory name in the path contains a colon (:) or is in an invalid format (<xref:System.NotSupportedException>).</span></span>  
   
--   У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="76701-122">У пользователя отсутствуют необходимые разрешения на просмотр пути (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="76701-122">The user lacks necessary permissions to view the path (<xref:System.Security.SecurityException>).</span></span>  
   
--   У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).  
+-   <span data-ttu-id="76701-123">У пользователя отсутствует необходимое разрешение (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="76701-123">The user does not have the required permission (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>   
- [Практическое руководство. Перемещение файла](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)   
- [Создание, удаление и перемещение файлов и каталогов](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)   
- [Практическое руководство. Создание копии файла в том же каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
- [Практическое руководство. Создание копии файла в другом каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+## <a name="see-also"></a><span data-ttu-id="76701-124">См. также</span><span class="sxs-lookup"><span data-stu-id="76701-124">See Also</span></span>  
+ <span data-ttu-id="76701-125"><xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A></span><span class="sxs-lookup"><span data-stu-id="76701-125"><xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A></span></span>   
+ <span data-ttu-id="76701-126">[Практическое руководство. Перемещение файла](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md) </span><span class="sxs-lookup"><span data-stu-id="76701-126">[How to: Move a File](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md) </span></span>  
+ <span data-ttu-id="76701-127">[Создание, удаление и перемещение файлов и каталогов](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md) </span><span class="sxs-lookup"><span data-stu-id="76701-127">[Creating, Deleting, and Moving Files and Directories](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md) </span></span>  
+ <span data-ttu-id="76701-128">[Практическое руководство. Создание копии файла в том же каталоге](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md) </span><span class="sxs-lookup"><span data-stu-id="76701-128">[How to: Create a Copy of a File in the Same Directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md) </span></span>  
+ [<span data-ttu-id="76701-129">Практическое руководство. Создание копии файла в другом каталоге</span><span class="sxs-lookup"><span data-stu-id="76701-129">How to: Create a Copy of a File in a Different Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
 

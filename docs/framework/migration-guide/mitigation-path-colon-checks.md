@@ -1,5 +1,5 @@
 ---
-title: "Устранение рисков. Проверки двоеточий в путях | Документация Майкрософт"
+title: "Устранение рисков. Проверки двоеточий в путях"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,27 +15,27 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5e2426fc81c8fd38994a4124cf71af8ec445bfb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8eb6864213aa4420f7a4373b9abbf173880f035f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-path-colon-checks"></a>Устранение рисков. Проверки двоеточий в путях
-Начиная с приложений, ориентированных на [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], выполнен ряд изменений для поддержки ранее не поддерживаемых путей (с точки зрения и длины, и формата). В частности, усовершенствованы проверки правильности синтаксиса разделителя диска (двоеточия).  
+# <a name="mitigation-path-colon-checks"></a><span data-ttu-id="d0ed5-102">Устранение рисков. Проверки двоеточий в путях</span><span class="sxs-lookup"><span data-stu-id="d0ed5-102">Mitigation: Path Colon Checks</span></span>
+<span data-ttu-id="d0ed5-103">Начиная с приложений, ориентированных на [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], выполнен ряд изменений для поддержки ранее не поддерживаемых путей (с точки зрения и длины, и формата).</span><span class="sxs-lookup"><span data-stu-id="d0ed5-103">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a number of changes were made to support previously unsupported paths (both in terms of length and format).</span></span> <span data-ttu-id="d0ed5-104">В частности, усовершенствованы проверки правильности синтаксиса разделителя диска (двоеточия).</span><span class="sxs-lookup"><span data-stu-id="d0ed5-104">In particular, checks for the proper drive separator syntax (the colon) were made more correct.</span></span>  
   
-## <a name="impact"></a>Последствия  
- Эти изменения блокируют некоторые пути URI, которые ранее поддерживались методами <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>.  
+## <a name="impact"></a><span data-ttu-id="d0ed5-105">Последствия</span><span class="sxs-lookup"><span data-stu-id="d0ed5-105">Impact</span></span>  
+ <span data-ttu-id="d0ed5-106">Эти изменения блокируют некоторые пути URI, которые ранее поддерживались методами <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="d0ed5-106">These changes block some URI paths the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> methods previously supported.</span></span>  
   
-## <a name="mitigation"></a>Уменьшение  
- Чтобы обойти проблему ранее приемлемого пути, который больше не поддерживается методами <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>, можно сделать следующее:  
+## <a name="mitigation"></a><span data-ttu-id="d0ed5-107">Уменьшение</span><span class="sxs-lookup"><span data-stu-id="d0ed5-107">Mitigation</span></span>  
+ <span data-ttu-id="d0ed5-108">Чтобы обойти проблему с ранее допустимым путем, который больше не поддерживается методами <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>, можно сделать следующее:</span><span class="sxs-lookup"><span data-stu-id="d0ed5-108">To work around the problem of a previously acceptable path that is no longer supported by the <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> and <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> methods, you can do the following:</span></span>  
   
--   Вручную удалить схему из URL-адреса. Например, удалить `file://` из URL-адреса.  
+-   <span data-ttu-id="d0ed5-109">Вручную удалить схему из URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="d0ed5-109">Manually remove the scheme from a URL.</span></span> <span data-ttu-id="d0ed5-110">Например, удалить `file://` из URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="d0ed5-110">For example, remove `file://` from a URL.</span></span>  
   
--   Перейти в URI <xref:System.Uri> и извлечь значение свойства <xref:System.Uri.LocalPath%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="d0ed5-111">передать код URI в конструктор <xref:System.Uri> и получить значение свойства <xref:System.Uri.LocalPath%2A?displayProperty=fullName>;</span><span class="sxs-lookup"><span data-stu-id="d0ed5-111">Pass the URI to a <xref:System.Uri> constructor,  and retrieve the value of the <xref:System.Uri.LocalPath%2A?displayProperty=fullName> property.</span></span>  
   
--   Отказаться от новой нормализации путей, установив для переключателя `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> значение `true`.  
+-   <span data-ttu-id="d0ed5-112">отказаться от новой нормализации путей, установив для параметра `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> значение `true`.</span><span class="sxs-lookup"><span data-stu-id="d0ed5-112">Opt out of the new path normalization by setting the `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> switch to `true`.</span></span>  
   
     ```xml  
     <runtime>  
@@ -43,6 +43,6 @@ ms.lasthandoff: 04/18/2017
     </runtime>  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Изменение целевой платформы](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a><span data-ttu-id="d0ed5-113">См. также</span><span class="sxs-lookup"><span data-stu-id="d0ed5-113">See Also</span></span>  
+ [<span data-ttu-id="d0ed5-114">Изменение целевой платформы</span><span class="sxs-lookup"><span data-stu-id="d0ed5-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
 

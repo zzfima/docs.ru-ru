@@ -1,1 +1,1 @@
-Средство записи XPS-документов (Майкрософт)
+<span data-ttu-id="1b03f-101">Средство записи XPS-документов (Майкрософт)</span><span class="sxs-lookup"><span data-stu-id="1b03f-101">Microsoft XPS Document Writer</span></span>

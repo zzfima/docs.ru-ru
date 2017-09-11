@@ -35,36 +35,36 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="reference-visual-basic"></a>Справочник по Visual Basic
-В этом разделе приведены ссылки на сведения о различных аспектах программирования в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+# <a name="reference-visual-basic"></a><span data-ttu-id="48422-102">Справочник по Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48422-102">Reference (Visual Basic)</span></span>
+<span data-ttu-id="48422-103">В этом разделе приведены ссылки на сведения о различных аспектах программирования в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48422-103">This section provides links to reference information about various aspects of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programming.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
- Справочная информация о различных аспектах языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="48422-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="48422-104">In This Section</span></span>  
+ [<span data-ttu-id="48422-105">Справочник по языку Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48422-105">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ <span data-ttu-id="48422-106">Справочная информация о различных аспектах языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48422-106">Provides reference information for various aspects of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language.</span></span>  
   
- [Компилятор Visual Basic с интерфейсом командной строки](../../visual-basic/reference/command-line-compiler/index.md)  
- Ссылки на сведения о компиляторе командной строки, который служит альтернативой программам компиляции в составе интегрированной среды разработки Visual Studio.  
+ [<span data-ttu-id="48422-107">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="48422-107">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="48422-108">Ссылки на сведения о компиляторе командной строки, который служит альтернативой программам компиляции в составе интегрированной среды разработки Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="48422-108">Provides links to information about the command-line compiler, which provides an alternative to compiling programs from the Visual Studio IDE.</span></span>  
   
- [Справочная документация по .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
- Ссылки на сведения о работе с библиотекой класса [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ [<span data-ttu-id="48422-109">Справочная документация по .NET Framework</span><span class="sxs-lookup"><span data-stu-id="48422-109">.NET Framework Reference Information</span></span>](../../visual-basic/reference/net-framework-reference-information.md)  
+ <span data-ttu-id="48422-110">Ссылки на сведения о работе с библиотекой класса [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48422-110">Provides links to information on working with the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class library.</span></span>  
   
- [Спецификация языка Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Ссылки на полную спецификацию языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] с подробной информацией о всех аспектах этого языка.  
+ [<span data-ttu-id="48422-111">Спецификация языка Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48422-111">Visual Basic Language Specification</span></span>](../../visual-basic/reference/language-specification/index.md)  
+ <span data-ttu-id="48422-112">Ссылки на полную спецификацию языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] с подробной информацией о всех аспектах этого языка.</span><span class="sxs-lookup"><span data-stu-id="48422-112">Provides links to the complete [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language specification, which contains detailed information on all aspects of the language.</span></span>  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a><span data-ttu-id="48422-113">Ссылка</span><span class="sxs-lookup"><span data-stu-id="48422-113">Reference</span></span>  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
- Это пространство имен содержит классы элементов управления Visual Basic Power Packs. Элементы управления Visual Basic Power Packs представляют собой дополнительные элементы управления Windows Forms.  
+ <span data-ttu-id="48422-114">Это пространство имен содержит классы элементов управления Visual Basic Power Packs.</span><span class="sxs-lookup"><span data-stu-id="48422-114">This namespace contains classes for the Visual Basic Power Packs controls.</span></span> <span data-ttu-id="48422-115">Элементы управления Visual Basic Power Packs представляют собой дополнительные элементы управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="48422-115">Visual Basic Power Packs controls are additional Windows Forms controls.</span></span>  
   
  <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
- Это пространство имен предоставляет компонент, позволяющий напечатать факсимильное изображение формы в том виде, в каком она отображается на экране.  
+ <span data-ttu-id="48422-116">Это пространство имен предоставляет компонент, позволяющий напечатать факсимильное изображение формы в том виде, в каком она отображается на экране.</span><span class="sxs-lookup"><span data-stu-id="48422-116">This namespace provides a component that enables you to print a facsimile of the form as it appears on screen.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Общие элементы пользовательского интерфейса (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Содержит разделы, посвященные диалоговым окнам в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+## <a name="related-sections"></a><span data-ttu-id="48422-117">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="48422-117">Related Sections</span></span>  
+ [<span data-ttu-id="48422-118">Общие элементы пользовательского интерфейса (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="48422-118">General User Interface Elements (Visual Studio)</span></span>](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ <span data-ttu-id="48422-119">Содержит разделы, посвященные диалоговым окнам в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48422-119">Contains topics for dialog boxes and windows used in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
- [Средства XML в Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Содержит ссылки на разделы, посвященные разным средствам XML, доступным в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ [<span data-ttu-id="48422-120">Средства XML в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="48422-120">XML Tools in Visual Studio</span></span>](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ <span data-ttu-id="48422-121">Содержит ссылки на разделы, посвященные разным средствам XML, доступным в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48422-121">Provides links to topics on various XML tools available in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
- [Справочник по автоматизации и возможностям расширения среды](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- Содержит ссылки на разделы, посвященные автоматизации и возможностям расширения в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], как для общих, так и для зависимых от языка компонентов.
+ [<span data-ttu-id="48422-122">Справочник по автоматизации и возможностям расширения среды</span><span class="sxs-lookup"><span data-stu-id="48422-122">Automation and Extensibility Reference</span></span>](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
+ <span data-ttu-id="48422-123">Содержит ссылки на разделы, посвященные автоматизации и возможностям расширения в [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], как для общих, так и для зависимых от языка компонентов.</span><span class="sxs-lookup"><span data-stu-id="48422-123">Provides links to topics covering automation and extensibility in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], for both shared and language-specific components.</span></span>
 

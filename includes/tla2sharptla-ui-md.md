@@ -1,1 +1,1 @@
-ИП
+<span data-ttu-id="ef787-101">ИП</span><span class="sxs-lookup"><span data-stu-id="ef787-101">UI</span></span>

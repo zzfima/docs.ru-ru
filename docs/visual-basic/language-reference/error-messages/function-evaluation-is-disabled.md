@@ -32,29 +32,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b861b5c6c151c5d3aeec2810c7f2a228f22fdf6e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 127f89f4c7ddaf794f58707d8925731a511f3740
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Вычисление функции отключено, поскольку истекло время, выделенное на вычисление предыдущей функции
-Вычисление функции отключено, поскольку истекло время ожидания вычисление предыдущей функции. Чтобы снова включить вычисление функции, еще один шаг или перезапустите отладку.  
+# <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a><span data-ttu-id="9381f-102">Вычисление функции отключено, поскольку истекло время, выделенное на вычисление предыдущей функции</span><span class="sxs-lookup"><span data-stu-id="9381f-102">Function evaluation is disabled because a previous function evaluation timed out</span></span>
+<span data-ttu-id="9381f-103">Вычисление функции отключено, поскольку истекло время ожидания вычисление предыдущей функции.</span><span class="sxs-lookup"><span data-stu-id="9381f-103">Function evaluation is disabled because a previous function evaluation timed out.</span></span> <span data-ttu-id="9381f-104">Чтобы снова включить вычисление функции, еще один шаг или перезапустите отладку.</span><span class="sxs-lookup"><span data-stu-id="9381f-104">To re-enable function evaluation, step again or restart debugging.</span></span>  
   
- В отладчике Visual Studio выражение задает вызов процедуры, но другое вычисление истекло.  
+ <span data-ttu-id="9381f-105">В отладчике Visual Studio выражение задает вызов процедуры, но другое вычисление истекло.</span><span class="sxs-lookup"><span data-stu-id="9381f-105">In the Visual Studio debugger, an expression specifies a procedure call, but another evaluation has timed out.</span></span>  
   
- Среди возможных причин вызов процедуры тайм-аута бесконечный цикл или *бесконечный цикл*. Дополнительные сведения см. в разделе [для... Следующий оператор](../../../visual-basic/language-reference/statements/for-next-statement.md).  
+ <span data-ttu-id="9381f-106">Среди возможных причин вызов процедуры тайм-аута бесконечный цикл или *бесконечный цикл*.</span><span class="sxs-lookup"><span data-stu-id="9381f-106">Possible causes for a procedure call to time out include an infinite loop or *endless loop*.</span></span> <span data-ttu-id="9381f-107">Дополнительные сведения см. в разделе [для... Следующий оператор](../../../visual-basic/language-reference/statements/for-next-statement.md).</span><span class="sxs-lookup"><span data-stu-id="9381f-107">For more information, see [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md).</span></span>  
   
- Является особым случаем бесконечного цикла *рекурсии*. Дополнительные сведения см. в разделе [рекурсивные процедуры](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).  
+ <span data-ttu-id="9381f-108">Является особым случаем бесконечного цикла *рекурсии*.</span><span class="sxs-lookup"><span data-stu-id="9381f-108">A special case of an infinite loop is *recursion*.</span></span> <span data-ttu-id="9381f-109">Дополнительные сведения см. в разделе [рекурсивные процедуры](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="9381f-109">For more information, see [Recursive Procedures](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).</span></span>  
   
- **Идентификатор ошибки:** BC30957  
+ <span data-ttu-id="9381f-110">**Идентификатор ошибки:** BC30957</span><span class="sxs-lookup"><span data-stu-id="9381f-110">**Error ID:** BC30957</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9381f-111">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="9381f-111">To correct this error</span></span>  
   
-1.  Если возможно определите, каким было вычисление предыдущей функции и причину превышения его времени ожидания. В противном случае эта ошибка может возникнуть повторно.  
+1.  <span data-ttu-id="9381f-112">Если возможно определите, каким было вычисление предыдущей функции и причину превышения его времени ожидания.</span><span class="sxs-lookup"><span data-stu-id="9381f-112">If possible, determine what the previous function evaluation was and what caused it to time out.</span></span> <span data-ttu-id="9381f-113">В противном случае эта ошибка может возникнуть повторно.</span><span class="sxs-lookup"><span data-stu-id="9381f-113">Otherwise, you might encounter this error again.</span></span>  
   
-2.  Шаг, отладчик или завершить и снова запустите отладку.  
+2.  <span data-ttu-id="9381f-114">Шаг, отладчик или завершить и снова запустите отладку.</span><span class="sxs-lookup"><span data-stu-id="9381f-114">Either step the debugger again, or terminate and restart debugging.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Отладка в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Навигация по коду с помощью отладчика](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)
+## <a name="see-also"></a><span data-ttu-id="9381f-115">См. также</span><span class="sxs-lookup"><span data-stu-id="9381f-115">See Also</span></span>  
+ <span data-ttu-id="9381f-116">[Отладка в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio) </span><span class="sxs-lookup"><span data-stu-id="9381f-116">[Debugging in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio) </span></span>  
+<span data-ttu-id="9381f-117"> [Навигация по коду с помощью отладчика](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)</span><span class="sxs-lookup"><span data-stu-id="9381f-117"> [Navigating through Code with the Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)</span></span>

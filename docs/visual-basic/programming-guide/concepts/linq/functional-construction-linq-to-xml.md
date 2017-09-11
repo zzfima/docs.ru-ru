@@ -20,26 +20,27 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fa8cb3c97a1e23a863296c828c82b240e9ab5db
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b88b67aca337b893f9f276c8e4a6589b6946069b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>Функциональное построение (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]предоставляет эффективный способ создания элементов XML, который называется *функциональное построение*. Функциональное построение — это возможность создать XML-дерево одной инструкцией.  
+# <a name="functional-construction-linq-to-xml-visual-basic"></a><span data-ttu-id="0be8a-102">Функциональное построение (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0be8a-102">Functional Construction (LINQ to XML) (Visual Basic)</span></span>
+[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]<span data-ttu-id="0be8a-103">предоставляет эффективный способ создания элементов XML, который называется *функциональное построение*.</span><span class="sxs-lookup"><span data-stu-id="0be8a-103"> provides a powerful way to create XML elements called *functional construction*.</span></span> <span data-ttu-id="0be8a-104">Функциональное построение — это возможность создать XML-дерево одной инструкцией.</span><span class="sxs-lookup"><span data-stu-id="0be8a-104">Functional construction is the ability to create an XML tree in a single statement.</span></span>  
   
- Существует несколько основных функций интерфейса программирования [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], обеспечивающих функциональное построение.  
+ <span data-ttu-id="0be8a-105">Существует несколько основных функций интерфейса программирования [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], обеспечивающих функциональное построение.</span><span class="sxs-lookup"><span data-stu-id="0be8a-105">There are several key features of the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] programming interface that enable functional construction:</span></span>  
   
--   <xref:System.Xml.Linq.XElement>Конструктор принимает различные типы аргументов для содержимого.</xref:System.Xml.Linq.XElement> Например, можно передать другой <xref:System.Xml.Linq.XElement>объекта, который станет дочерним элементом.</xref:System.Xml.Linq.XElement> Можно передать <xref:System.Xml.Linq.XAttribute>объекта, который станет атрибутом элемента.</xref:System.Xml.Linq.XAttribute> Можно также передать любой другой тип объекта, который будет преобразован в строку и станет текстовым содержимым элемента.  
+-   <span data-ttu-id="0be8a-106"><xref:System.Xml.Linq.XElement>Конструктор принимает различные типы аргументов для содержимого.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="0be8a-106">The <xref:System.Xml.Linq.XElement> constructor takes various types of arguments for content.</span></span> <span data-ttu-id="0be8a-107">Например, можно передать другой <xref:System.Xml.Linq.XElement>объекта, который станет дочерним элементом.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="0be8a-107">For example, you can pass another <xref:System.Xml.Linq.XElement> object, which becomes a child element.</span></span> <span data-ttu-id="0be8a-108">Можно передать <xref:System.Xml.Linq.XAttribute>объекта, который станет атрибутом элемента.</xref:System.Xml.Linq.XAttribute></span><span class="sxs-lookup"><span data-stu-id="0be8a-108">You can pass an <xref:System.Xml.Linq.XAttribute> object, which becomes an attribute of the element.</span></span> <span data-ttu-id="0be8a-109">Можно также передать любой другой тип объекта, который будет преобразован в строку и станет текстовым содержимым элемента.</span><span class="sxs-lookup"><span data-stu-id="0be8a-109">Or you can pass any other type of object, which is converted to a string and becomes the text content of the element.</span></span>  
   
--   <xref:System.Xml.Linq.XElement>Конструктор принимает `params` массив типа <xref:System.Object>, так что можно передать любое количество объектов в конструктор.</xref:System.Object> </xref:System.Xml.Linq.XElement> Это позволяет создавать элементы со сложным содержимым.  
+-   <span data-ttu-id="0be8a-110"><xref:System.Xml.Linq.XElement>Конструктор принимает `params` массив типа <xref:System.Object>, так что можно передать любое количество объектов в конструктор.</xref:System.Object> </xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="0be8a-110">The <xref:System.Xml.Linq.XElement> constructor takes a `params` array of type <xref:System.Object>, so that you can pass any number of objects to the constructor.</span></span> <span data-ttu-id="0be8a-111">Это позволяет создавать элементы со сложным содержимым.</span><span class="sxs-lookup"><span data-stu-id="0be8a-111">This enables you to create an element that has complex content.</span></span>  
   
--   Если объект реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция в этом объекте перечисляется и добавляются все элементы в коллекции.</xref:System.Collections.Generic.IEnumerable%601> Если коллекция содержит <xref:System.Xml.Linq.XElement>или <xref:System.Xml.Linq.XAttribute>объектов, каждый элемент в коллекцию добавляется отдельно.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> Это важно, так как позволяет передавать результаты [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запрос в конструктор.  
+-   <span data-ttu-id="0be8a-112">Если объект реализует интерфейс <xref:System.Collections.Generic.IEnumerable%601>, коллекция в этом объекте перечисляется и добавляются все элементы в коллекции.</xref:System.Collections.Generic.IEnumerable%601></span><span class="sxs-lookup"><span data-stu-id="0be8a-112">If an object implements <xref:System.Collections.Generic.IEnumerable%601>, the collection in the object is enumerated, and all items in the collection are added.</span></span> <span data-ttu-id="0be8a-113">Если коллекция содержит <xref:System.Xml.Linq.XElement>или <xref:System.Xml.Linq.XAttribute>объектов, каждый элемент в коллекцию добавляется отдельно.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="0be8a-113">If the collection contains <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute> objects, each item in the collection is added separately.</span></span> <span data-ttu-id="0be8a-114">Это важно, так как позволяет передавать результаты [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запрос в конструктор.</span><span class="sxs-lookup"><span data-stu-id="0be8a-114">This is important because it lets you pass the results of a [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] query to the constructor.</span></span>  
   
- Ниже представлен пример такого кода.  
+ <span data-ttu-id="0be8a-115">Ниже представлен пример такого кода.</span><span class="sxs-lookup"><span data-stu-id="0be8a-115">The following is an example:</span></span>  
   
- Эти функции позволяют создавать код с помощью XML-литералов для создания XML-дерева, а также написать код, использующий результаты [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запросов при создании XML-дерева:  
+ <span data-ttu-id="0be8a-116">Эти функции позволяют создавать код с помощью XML-литералов для создания XML-дерева, а также написать код, использующий результаты [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запросов при создании XML-дерева:</span><span class="sxs-lookup"><span data-stu-id="0be8a-116">These features enable you to write code using XML literals to create an XML tree, and also to write code that uses the results of [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] queries when you create an XML tree:</span></span>  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -61,7 +62,7 @@ Dim xmlTree As XElement = _
 Console.WriteLine(xmlTree)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="0be8a-117">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="0be8a-117">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -73,5 +74,5 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="0be8a-118">См. также</span><span class="sxs-lookup"><span data-stu-id="0be8a-118">See Also</span></span>  
+ [<span data-ttu-id="0be8a-119">Создание деревьев XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0be8a-119">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

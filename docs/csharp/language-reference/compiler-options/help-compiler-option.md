@@ -1,43 +1,63 @@
 ---
-title: "/help, /? (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/?"
-  - "/help"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/? compiler option [C#]"
-  - "help compiler option [C#]"
-  - "? compiler option [C#]"
-  - "-help compiler option [C#]"
-  - "/help compiler option [C#]"
-  - "-? compiler option [C#]"
+title: "-help, -? (параметры компилятора C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /?
+- /help
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /? compiler option [C#]
+- help compiler option [C#]
+- '? compiler option [C#]'
+- -help compiler option [C#]
+- /help compiler option [C#]
+- -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 599578e2bb73b238f187027660208df099b4f794
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# /help, /? (C# Compiler Options)
-Этот параметр отправляет в поток stdout листинг параметров компилятора и краткое описание каждого из них.  
+# <a name="help--c-compiler-options"></a><span data-ttu-id="5804c-103">/help, /?</span><span class="sxs-lookup"><span data-stu-id="5804c-103">/help, /?</span></span> <span data-ttu-id="5804c-104">(параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="5804c-104">(C# Compiler Options)</span></span>
+<span data-ttu-id="5804c-105">Этот параметр отправляет список параметров компилятора и краткое описание каждого параметра в stdout.</span><span class="sxs-lookup"><span data-stu-id="5804c-105">This option sends a listing of compiler options, and a brief description of each option, to stdout.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="5804c-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5804c-106">Syntax</span></span>  
   
-```  
+```console  
 /help  
 /?  
 ```  
   
-## Заметки  
- Если этот параметр указывается при компиляции, выходной файл не создается и компиляция не выполняется.  
+## <a name="remarks"></a><span data-ttu-id="5804c-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="5804c-107">Remarks</span></span>  
+ <span data-ttu-id="5804c-108">Если этот параметр включен при компиляции, выходной файл не создается и компиляция не выполняется.</span><span class="sxs-lookup"><span data-stu-id="5804c-108">If this option is included in a compilation, no output file will be created and no compilation will take place.</span></span>  
   
- Этот параметр компилятора недоступен в среде разработки Visual Studio и не может быть изменен программным способом.  
+ <span data-ttu-id="5804c-109">Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.</span><span class="sxs-lookup"><span data-stu-id="5804c-109">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a><span data-ttu-id="5804c-110">См. также</span><span class="sxs-lookup"><span data-stu-id="5804c-110">See Also</span></span>  
+ <span data-ttu-id="5804c-111">[Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="5804c-111">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="5804c-112">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="5804c-112">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+

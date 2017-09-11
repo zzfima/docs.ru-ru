@@ -38,50 +38,50 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
-Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе освещаются некоторые вопросы, связанные с созданием и использованием COM-объектов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+# <a name="com-interop-visual-basic"></a><span data-ttu-id="52530-102">COM-взаимодействие (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52530-102">COM Interop (Visual Basic)</span></span>
+<span data-ttu-id="52530-103">Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям.</span><span class="sxs-lookup"><span data-stu-id="52530-103">The Component Object Model (COM) allows an object to expose its functionality to other components and to host applications.</span></span> <span data-ttu-id="52530-104">COM-объекты входят в состав большей части современного программного обеспечения.</span><span class="sxs-lookup"><span data-stu-id="52530-104">Most of today's software includes COM objects.</span></span> <span data-ttu-id="52530-105">Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов.</span><span class="sxs-lookup"><span data-stu-id="52530-105">Although .NET assemblies are the best choice for new applications, you may at times need to employ COM objects.</span></span> <span data-ttu-id="52530-106">В этом разделе освещаются некоторые вопросы, связанные с созданием и использованием COM-объектов в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="52530-106">This section covers some of the issues associated with creating and using COM objects with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- Общие сведения о COM-взаимодействии.  
+## <a name="in-this-section"></a><span data-ttu-id="52530-107">Содержание</span><span class="sxs-lookup"><span data-stu-id="52530-107">In This Section</span></span>  
+ [<span data-ttu-id="52530-108">Знакомство с COM-взаимодействием</span><span class="sxs-lookup"><span data-stu-id="52530-108">Introduction to COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+ <span data-ttu-id="52530-109">Общие сведения о COM-взаимодействии.</span><span class="sxs-lookup"><span data-stu-id="52530-109">Provides an overview of COM interoperability.</span></span>  
   
- [Практическое руководство. Ссылки на COM-объекты в Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
- Описывает, как добавлять ссылки на COM-объекты, имеющие библиотеки типов.  
+ [<span data-ttu-id="52530-110">Практическое руководство. Ссылки на COM-объекты в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="52530-110">How to: Reference COM Objects from Visual Basic</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ <span data-ttu-id="52530-111">Описывает, как добавлять ссылки на COM-объекты, имеющие библиотеки типов.</span><span class="sxs-lookup"><span data-stu-id="52530-111">Covers how to add references to COM objects that have type libraries.</span></span>  
   
- [Практическое руководство. Работа с элементами управления ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Показывает, как использовать существующие элементы управления ActiveX для добавления возможностей в панель элементов [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ [<span data-ttu-id="52530-112">Практическое руководство. Работа с элементами управления ActiveX</span><span class="sxs-lookup"><span data-stu-id="52530-112">How to: Work with ActiveX Controls</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
+ <span data-ttu-id="52530-113">Показывает, как использовать существующие элементы управления ActiveX для добавления возможностей в панель элементов [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="52530-113">Demonstrates how to use existing ActiveX controls to add features to the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Toolbox.</span></span>  
   
- [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- Пошаговое описание процесса вызова API-интерфейсов, входящих в операционную систему Windows.  
+ [<span data-ttu-id="52530-114">Пошаговое руководство. Вызов API-интерфейсов Windows</span><span class="sxs-lookup"><span data-stu-id="52530-114">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+ <span data-ttu-id="52530-115">Пошаговое описание процесса вызова API-интерфейсов, входящих в операционную систему Windows.</span><span class="sxs-lookup"><span data-stu-id="52530-115">Steps you through the process of calling the APIs that are part of the Windows operating system.</span></span>  
   
- [Практическое руководство. Вызов API Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
- Демонстрация определения и вызова функции `MessageBox` в библиотеке User32.dll.  
+ [<span data-ttu-id="52530-116">Практическое руководство. Вызов API Windows</span><span class="sxs-lookup"><span data-stu-id="52530-116">How to: Call Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ <span data-ttu-id="52530-117">Демонстрация определения и вызова функции `MessageBox` в библиотеке User32.dll.</span><span class="sxs-lookup"><span data-stu-id="52530-117">Demonstrates how to define and call the `MessageBox` function in User32.dll.</span></span>  
   
- [Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- Демонстрация вызова функции Windows, которая имеет параметр с типом без знака.  
+ [<span data-ttu-id="52530-118">Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа</span><span class="sxs-lookup"><span data-stu-id="52530-118">How to: Call a Windows Function that Takes Unsigned Types</span></span>](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ <span data-ttu-id="52530-119">Демонстрация вызова функции Windows, которая имеет параметр с типом без знака.</span><span class="sxs-lookup"><span data-stu-id="52530-119">Demonstrates how to call a Windows function that has a parameter of an unsigned type.</span></span>  
   
- [Пошаговое руководство. Создание объектов COM с помощью Visual Basic](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Пошаговое описание создания COM-объектов с использованием шаблона класса COM и без него.  
+ [<span data-ttu-id="52530-120">Пошаговое руководство. Создание объектов COM с помощью Visual Basic</span><span class="sxs-lookup"><span data-stu-id="52530-120">Walkthrough: Creating COM Objects with Visual Basic</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ <span data-ttu-id="52530-121">Пошаговое описание создания COM-объектов с использованием шаблона класса COM и без него.</span><span class="sxs-lookup"><span data-stu-id="52530-121">Steps you through the process of creating COM objects with and without the COM class template.</span></span>  
   
- [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- Описание некоторых проблем, которые могут возникнуть при использовании модели COM.  
+ [<span data-ttu-id="52530-122">Устранение неполадок взаимодействия</span><span class="sxs-lookup"><span data-stu-id="52530-122">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ <span data-ttu-id="52530-123">Описание некоторых проблем, которые могут возникнуть при использовании модели COM.</span><span class="sxs-lookup"><span data-stu-id="52530-123">Covers some of the problems you may encounter when using COM.</span></span>  
   
- [COM-взаимодействие в приложениях .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- Общие сведения об использовании объектов .NET Framework и COM в одном приложении.  
+ [<span data-ttu-id="52530-124">COM-взаимодействие в приложениях .NET Framework</span><span class="sxs-lookup"><span data-stu-id="52530-124">COM Interoperability in .NET Framework Applications</span></span>](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
+ <span data-ttu-id="52530-125">Общие сведения об использовании объектов .NET Framework и COM в одном приложении.</span><span class="sxs-lookup"><span data-stu-id="52530-125">Provides an overview of how to use COM objects and .NET Framework objects in the same application.</span></span>  
   
- [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Описание использования существующих COM-объектов в качестве основы для новых объектов.  
+ [<span data-ttu-id="52530-126">Пошаговое руководство. Реализация наследования с использованием COM-объектов</span><span class="sxs-lookup"><span data-stu-id="52530-126">Walkthrough: Implementing Inheritance with COM Objects</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ <span data-ttu-id="52530-127">Описание использования существующих COM-объектов в качестве основы для новых объектов.</span><span class="sxs-lookup"><span data-stu-id="52530-127">Describes using existing COM objects as the basis for new objects.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Взаимодействие с неуправляемым кодом](https://msdn.microsoft.com/library/sd10k43k)  
- Описываются службы взаимодействия, предоставляемые средой CLR.  
+## <a name="related-sections"></a><span data-ttu-id="52530-128">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="52530-128">Related Sections</span></span>  
+ [<span data-ttu-id="52530-129">Взаимодействие с неуправляемым кодом</span><span class="sxs-lookup"><span data-stu-id="52530-129">Interoperating with Unmanaged Code</span></span>](https://msdn.microsoft.com/library/sd10k43k)  
+ <span data-ttu-id="52530-130">Описываются службы взаимодействия, предоставляемые средой CLR.</span><span class="sxs-lookup"><span data-stu-id="52530-130">Describes interoperability services provided by the common language runtime.</span></span>  
   
- [Предоставление COM-компонентов платформе .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
- Описание процесса вызова типов COM через COM-взаимодействие.  
+ [<span data-ttu-id="52530-131">Предоставление COM-компонентов платформе .NET Framework</span><span class="sxs-lookup"><span data-stu-id="52530-131">Exposing COM Components to the .NET Framework</span></span>](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ <span data-ttu-id="52530-132">Описание процесса вызова типов COM через COM-взаимодействие.</span><span class="sxs-lookup"><span data-stu-id="52530-132">Describes the process of calling COM types through COM interop.</span></span>  
   
- [Предоставление компонентов .NET Framework клиентам COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
- Описание подготовки и использования управляемых типов из COM.  
+ [<span data-ttu-id="52530-133">Предоставление компонентов .NET Framework клиентам COM</span><span class="sxs-lookup"><span data-stu-id="52530-133">Exposing .NET Framework Components to COM</span></span>](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ <span data-ttu-id="52530-134">Описание подготовки и использования управляемых типов из COM.</span><span class="sxs-lookup"><span data-stu-id="52530-134">Describes the preparation and use of managed types from COM.</span></span>  
   
- [Применение атрибутов взаимодействия](https://msdn.microsoft.com/library/d4w8x20h)  
- Описание атрибутов, которые можно использовать при работе с неуправляемым кодом.
+ [<span data-ttu-id="52530-135">Применение атрибутов взаимодействия</span><span class="sxs-lookup"><span data-stu-id="52530-135">Applying Interop Attributes</span></span>](https://msdn.microsoft.com/library/d4w8x20h)  
+ <span data-ttu-id="52530-136">Описание атрибутов, которые можно использовать при работе с неуправляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="52530-136">Covers attributes you can use when working with unmanaged code.</span></span>
 

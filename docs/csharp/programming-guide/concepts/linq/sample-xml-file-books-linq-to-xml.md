@@ -26,10 +26,10 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>Пример XML-файла. Книги (LINQ to XML)
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит сведения о книгах.  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="f9eb0-102">Пример XML-файла. Книги (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f9eb0-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="f9eb0-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9eb0-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f9eb0-104">Этот файл содержит сведения о книгах.</span><span class="sxs-lookup"><span data-stu-id="f9eb0-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a>books.xml  
+## <a name="booksxml"></a><span data-ttu-id="f9eb0-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="f9eb0-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.lasthandoff: 07/28/2017
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f9eb0-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f9eb0-106">See Also</span></span>  
+ [<span data-ttu-id="f9eb0-107">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f9eb0-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

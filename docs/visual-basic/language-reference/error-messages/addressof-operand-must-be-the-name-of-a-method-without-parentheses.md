@@ -31,27 +31,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 04103fe23ee55bb751d9604ef74614edeead8886
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c4ee57896b70d8af1a7bc245bdb45521c2442fea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a>Операндом «AddressOf» должно быть именем метода (без скобок)
-Оператор `AddressOf` создает экземпляр делегата процедуры, ссылающийся на конкретную процедуру. Синтаксис выглядит следующим образом.  
+# <a name="39addressof39-operand-must-be-the-name-of-a-method-without-parentheses"></a><span data-ttu-id="2d05b-102">Операндом «AddressOf» должно быть именем метода (без скобок)</span><span class="sxs-lookup"><span data-stu-id="2d05b-102">&#39;AddressOf&#39; operand must be the name of a method (without parentheses)</span></span>
+<span data-ttu-id="2d05b-103">Оператор `AddressOf` создает экземпляр делегата процедуры, ссылающийся на конкретную процедуру.</span><span class="sxs-lookup"><span data-stu-id="2d05b-103">The `AddressOf` operator creates a procedure delegate instance that references a specific procedure.</span></span> <span data-ttu-id="2d05b-104">Синтаксис выглядит следующим образом.</span><span class="sxs-lookup"><span data-stu-id="2d05b-104">The syntax is as follows.</span></span>  
   
- `AddressOf` `procedurename`  
+ <span data-ttu-id="2d05b-105">`AddressOf` `procedurename`</span><span class="sxs-lookup"><span data-stu-id="2d05b-105">`AddressOf` `procedurename`</span></span>  
   
- Вы поставили скобки вокруг аргумента `AddressOf`, которые не нужны.  
+ <span data-ttu-id="2d05b-106">Вы поставили скобки вокруг аргумента `AddressOf`, которые не нужны.</span><span class="sxs-lookup"><span data-stu-id="2d05b-106">You inserted parentheses around the argument following `AddressOf`, where none are needed.</span></span>  
   
- **Идентификатор ошибки:** BC30577  
+ <span data-ttu-id="2d05b-107">**Идентификатор ошибки:** BC30577</span><span class="sxs-lookup"><span data-stu-id="2d05b-107">**Error ID:** BC30577</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2d05b-108">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="2d05b-108">To correct this error</span></span>  
   
-1.  Удалите скобки вокруг аргумента `AddressOf`.  
+1.  <span data-ttu-id="2d05b-109">Удалите скобки вокруг аргумента `AddressOf`.</span><span class="sxs-lookup"><span data-stu-id="2d05b-109">Remove the parentheses around the argument following `AddressOf`.</span></span>  
   
-2.  Убедитесь, что аргумент является именем метода.  
+2.  <span data-ttu-id="2d05b-110">Убедитесь, что аргумент является именем метода.</span><span class="sxs-lookup"><span data-stu-id="2d05b-110">Make sure the argument is a method name.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+## <a name="see-also"></a><span data-ttu-id="2d05b-111">См. также</span><span class="sxs-lookup"><span data-stu-id="2d05b-111">See Also</span></span>  
+ <span data-ttu-id="2d05b-112">[Оператор AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md) </span><span class="sxs-lookup"><span data-stu-id="2d05b-112">[AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md) </span></span>  
+<span data-ttu-id="2d05b-113"> [Делегаты](../../../visual-basic/programming-guide/language-features/delegates/index.md)</span><span class="sxs-lookup"><span data-stu-id="2d05b-113"> [Delegates](../../../visual-basic/programming-guide/language-features/delegates/index.md)</span></span>

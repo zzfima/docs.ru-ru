@@ -1,7 +1,7 @@
 ---
-title: "Асинхронные типы возвращаемых значений (C#) | Документы Майкрософт"
+title: "Асинхронные типы возвращаемых значений (C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 2075-05-29
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -19,322 +19,84 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: d974e93c3c50a61889a9ed37ad5f68f7a131a538
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e7f31d4160d44668f4ddea5e1ca0eaa3037c5a5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
-Асинхронный метод может иметь три типа возвращаемого значения: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, и void. В Visual Basic тип возвращаемого значения void записывается как процедура [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Дополнительные сведения об асинхронных методах см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
-  
- Каждый тип возвращаемого значения рассматривается в одном из следующих разделов, а полный пример, в котором используются все три типа, вы найдете в конце этого раздела.  
-  
-> [!NOTE]
->  Для выполнения этого примера на компьютере должны быть установлены Visual Studio 2012 или более поздней версии и .NET Framework 4.5 или более поздней версии.  
-  
-##  <a name="BKMK_TaskTReturnType"></a> Тип возвращаемого значения Task(T)  
- Тип возвращаемого значения <xref:System.Threading.Tasks.Task%601> используется для асинхронного метода, содержащего оператор [return](../../../../csharp/language-reference/keywords/return.md) (C#), в котором операнд имеет тип `TResult`.  
-  
- В следующем примере асинхронный метод `TaskOfT_MethodAsync` содержит оператор return, который возвращает целое число. Поэтому в объявлении метода должен указываться тип возвращаемого значения `Task<int>`.  
-  
-```csharp  
-// TASK<T> EXAMPLE  
-async Task<int> TaskOfT_MethodAsync()  
-{  
-    // The body of the method is expected to contain an awaited asynchronous  
-    // call.  
-    // Task.FromResult is a placeholder for actual work that returns a string.  
-    var today = await Task.FromResult<string>(DateTime.Now.DayOfWeek.ToString());  
-  
-    // The method then can process the result in some way.  
-    int leisureHours;  
-    if (today.First() == 'S')  
-        leisureHours = 16;  
-    else  
-        leisureHours = 5;  
-  
-    // Because the return statement specifies an operand of type int, the  
-    // method must have a return type of Task<int>.  
-    return leisureHours;  
-}  
-```  
-  
- При вызове `TaskOfT_MethodAsync` из выражения await это выражение await извлекает целочисленное значение (значение `leisureHours`), хранящееся в задаче, которая возвращается `TaskOfT_MethodAsync`. Дополнительные сведения о выражениях await см. в разделе [await](../../../../csharp/language-reference/keywords/await.md).  
-  
- В следующем коде вызывается и ожидается метод `TaskOfT_MethodAsync`. Результат назначается переменной `result1`.  
-  
-```csharp  
-// Call and await the Task<T>-returning async method in the same statement.  
-int result1 = await TaskOfT_MethodAsync();  
-```  
-  
- Чтобы лучше понять, как это происходит, отделите вызов метода `TaskOfT_MethodAsync` от применения `await`, как показано в следующем коде. Вызов метода `TaskOfT_MethodAsync`, который не ожидается немедленно, возвращает `Task<int>`, как и следовало ожидать из объявления метода. В данном примере эта задача назначается переменной `integerTask`. Поскольку `integerTask` является <xref:System.Threading.Tasks.Task%601>, он содержит свойство <xref:System.Threading.Tasks.Task%601.Result> типа `TResult`. В этом примере TResult представляет собой целочисленный тип. Когда `await` применяется к `integerTask`, выражение await вычисляет содержимое свойства <xref:System.Threading.Tasks.Task%601.Result%2A> переменной `integerTask`. Это значение присваивается переменной `result2`.  
-  
-> [!WARNING]
->  Свойство <xref:System.Threading.Tasks.Task%601.Result%2A> является свойством блокировки. При попытке доступа к нему до завершения его задачи поток, который в текущий момент активен, блокируется до того момента, пока задача не будет завершена, а ее значение не станет доступным. В большинстве случаев следует получать доступ к этому значению с помощью `await` вместо прямого обращения к свойству.  
-  
-```csharp  
-// Call and await in separate statements.  
-Task<int> integerTask = TaskOfT_MethodAsync();  
-  
-// You can do other work that does not rely on integerTask before awaiting.  
-textBox1.Text += String.Format("Application can continue working while the Task<T> runs. . . . \r\n");  
-  
-int result2 = await integerTask;  
-```  
-  
- Операторы отображения в следующем коде проверяют, одинаковы ли значения переменной `result1`, переменной `result2` и свойства `Result`. Помните, что свойство `Result` является блокирующим свойством, и к нему не стоит обращаться до того, как его задача закончит ожидание.  
-  
-```csharp  
-// Display the values of the result1 variable, the result2 variable, and  
-// the integerTask.Result property.  
-textBox1.Text += String.Format("\r\nValue of result1 variable:   {0}\r\n", result1);  
-textBox1.Text += String.Format("Value of result2 variable:   {0}\r\n", result2);  
-textBox1.Text += String.Format("Value of integerTask.Result: {0}\r\n", integerTask.Result);  
-```  
-  
-##  <a name="BKMK_TaskReturnType"></a> Тип возвращаемого значения Task  
- Асинхронные методы, не содержащие оператор return или содержащие оператор return, который не возвращает операнд, обычно имеют тип возврата <xref:System.Threading.Tasks.Task>. Это могут быть методы, возвращающие void, если они были написаны для синхронного выполнения. Если для асинхронного метода вы используете тип возвращаемого значения `Task`, вызывающий метод может использовать оператор await для приостановки выполнения вызывающего объекта до завершения вызванного асинхронного метода.  
-  
- В следующем примере асинхронный метод `Task_MethodAsync` не содержит оператор return. Следовательно, вы указываете для метода тип возвращаемого значения `Task`, который позволяет ожидать `Task_MethodAsync`. Определение типа `Task` не включает свойство `Result` для хранения возвращаемого значения.  
-  
-```csharp  
-// TASK EXAMPLE  
-async Task Task_MethodAsync()  
-{  
-    // The body of an async method is expected to contain an awaited   
-    // asynchronous call.  
-    // Task.Delay is a placeholder for actual work.  
-    await Task.Delay(2000);  
-    // Task.Delay delays the following line by two seconds.  
-    textBox1.Text += String.Format("\r\nSorry for the delay. . . .\r\n");  
-  
-    // This method has no return statement, so its return type is Task.    
-}  
-```  
-  
- `Task_MethodAsync` вызывается и ожидается с помощью оператора await (вместо выражения await), похожего на оператор вызова для синхронного метода, возвращающего значение void. Применение оператора await в этом случае не возвращает значение.  
-  
- В следующем коде вызывается и ожидается метод `Task_MethodAsync`.  
-  
-```csharp  
-// Call and await the Task-returning async method in the same statement.  
-await Task_MethodAsync();  
-```  
-  
- Как и в предыдущем примере <xref:System.Threading.Tasks.Task%601>, вы можете разделить вызов `Task_MethodAsync` от применения оператора await, как показывает следующий код. Однако следует помнить, что `Task` не содержит свойство `Result`, и при применении оператора await к `Task` никакое значение не создается.  
-  
- В следующем коде вызов `Task_MethodAsync` отделяется от ожидания задачи, которая возвращает `Task_MethodAsync`.  
-  
-```csharp  
-// Call and await in separate statements.  
-Task simpleTask = Task_MethodAsync();  
-  
-// You can do other work that does not rely on simpleTask before awaiting.  
-textBox1.Text += String.Format("\r\nApplication can continue working while the Task runs. . . .\r\n");  
-  
-await simpleTask;  
-```  
-  
-##  <a name="BKMK_VoidReturnType"></a> Тип возвращаемого значения Void  
- В основном тип возвращаемого значения void используется в обработчиках событий, где требуется тип возвращаемого значения void. Тип возврата void также можно использовать для переопределения методов, возвращающих void, или для методов, выполняющих действия, которые можно классифицировать как "запустить и забыть". Тем не менее вы должны возвращать `Task` везде, где это возможно, поскольку нельзя ожидать асинхронный метод, возвращающий void. Любой вызывающий объект такого метода должен иметь возможность завершить свою работу, не дожидаясь завершения вызванного асинхронного метода, и он не должен зависеть ни от каких значений и исключений, создаваемых асинхронным методом.  
-  
- Вызывающий объект асинхронного метода, возвращающего void, не может перехватывать исключения, создаваемые методом, и такие необработанные исключения могут привести к сбою приложения. Если исключение возникает в асинхронном методе, который возвращает <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, исключение хранится в возвращенной задаче и повторно вызывается при ожидании задачи. Поэтому убедитесь, что любой асинхронный метод, который может вызвать исключение, имеет тип возвращаемого значения <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> и что вызовы метода ожидаются.  
-  
- Дополнительные сведения о перехвате исключений в асинхронных методах см. в разделе [try-catch](../../../../csharp/language-reference/keywords/try-catch.md).  
-  
- Следующий код определяет асинхронный обработчик событий.  
-  
-```csharp  
-// VOID EXAMPLE  
-private async void button1_Click(object sender, RoutedEventArgs e)  
-{  
-    textBox1.Clear();  
-  
-    // Start the process and await its completion. DriverAsync is a   
-    // Task-returning async method.  
-    await DriverAsync();  
-  
-    // Say goodbye.  
-    textBox1.Text += "\r\nAll done, exiting button-click event handler.";  
-}  
-```  
-  
-##  <a name="BKMK_Example"></a> Полный пример  
- Следующий проект Windows Presentation Foundation (WPF) содержит примеры кода из этого раздела.  
-  
- Чтобы запустить проект, выполните следующие действия.  
-  
-1.  Запустите Visual Studio.  
-  
-2.  В строке меню выберите **Файл**, **Создать**, **Проект**.  
-  
-     Откроется диалоговое окно **Новый проект** .  
-  
-3.  В категории **Установленные**, **Шаблоны** выберите Visual C#, а затем **Windows**. В списке типов проектов выберите **Приложение WPF**.  
-  
-4.  Введите `AsyncReturnTypes` в качестве имени проекта и нажмите кнопку **ОК**.  
-  
-     В **обозревателе решений** появится новый проект.  
-  
-5.  В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
-  
-     Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **обозревателе решений** и выберите пункт **Открыть**.  
-  
-6.  В окне **XAML** MainWindow.xaml замените код на следующий.  
-  
-    ```csharp  
-    <Window x:Class="AsyncReturnTypes.MainWindow"  
-            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-            Title="MainWindow" Height="350" Width="525">  
-        <Grid>  
-            <Button x:Name="button1" Content="Start" HorizontalAlignment="Left" Margin="214,28,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Center" FontWeight="Bold" FontFamily="Aharoni" Click="button1_Click"/>  
-            <TextBox x:Name="textBox1" Margin="0,80,0,0" TextWrapping="Wrap" FontFamily="Lucida Console"/>  
-  
-        </Grid>  
-    </Window>  
-  
-    ```  
-  
-     Простое окно, содержащее текстовое поле и кнопку, отобразится в окне **конструктора** для MainWindow.xaml.  
-  
-7.  В **обозревателе решений** откройте контекстное меню для MainWindow.xaml.cs и выберите пункт **Просмотреть код**.  
-  
-8.  Замените код в MainWindow.xaml.cs на следующий.  
-  
-    ```csharp  
-    using System;  
-    using System.Collections.Generic;  
-    using System.Linq;  
-    using System.Text;  
-    using System.Threading.Tasks;  
-    using System.Windows;  
-    using System.Windows.Controls;  
-    using System.Windows.Data;  
-    using System.Windows.Documents;  
-    using System.Windows.Input;  
-    using System.Windows.Media;  
-    using System.Windows.Media.Imaging;  
-    using System.Windows.Navigation;  
-    using System.Windows.Shapes;  
-  
-    namespace AsyncReturnTypes  
-    {  
-        public partial class MainWindow : Window  
-        {  
-            public MainWindow()  
-            {  
-                InitializeComponent();  
-            }  
-  
-            // VOID EXAMPLE  
-            private async void button1_Click(object sender, RoutedEventArgs e)  
-            {  
-                textBox1.Clear();  
-  
-                // Start the process and await its completion. DriverAsync is a   
-                // Task-returning async method.  
-                await DriverAsync();  
-  
-                // Say goodbye.  
-                textBox1.Text += "\r\nAll done, exiting button-click event handler.";  
-            }  
-  
-            async Task DriverAsync()  
-            {  
-                // Task<T>   
-                // Call and await the Task<T>-returning async method in the same statement.  
-                int result1 = await TaskOfT_MethodAsync();  
-  
-                // Call and await in separate statements.  
-                Task<int> integerTask = TaskOfT_MethodAsync();  
-  
-                // You can do other work that does not rely on integerTask before awaiting.  
-                textBox1.Text += String.Format("Application can continue working while the Task<T> runs. . . . \r\n");  
-  
-                int result2 = await integerTask;  
-  
-                // Display the values of the result1 variable, the result2 variable, and  
-                // the integerTask.Result property.  
-                textBox1.Text += String.Format("\r\nValue of result1 variable:   {0}\r\n", result1);  
-                textBox1.Text += String.Format("Value of result2 variable:   {0}\r\n", result2);  
-                textBox1.Text += String.Format("Value of integerTask.Result: {0}\r\n", integerTask.Result);  
-  
-                // Task  
-                // Call and await the Task-returning async method in the same statement.  
-                await Task_MethodAsync();  
-  
-                // Call and await in separate statements.  
-                Task simpleTask = Task_MethodAsync();  
-  
-                // You can do other work that does not rely on simpleTask before awaiting.  
-                textBox1.Text += String.Format("\r\nApplication can continue working while the Task runs. . . .\r\n");  
-  
-                await simpleTask;  
-            }  
-  
-            // TASK<T> EXAMPLE  
-            async Task<int> TaskOfT_MethodAsync()  
-            {  
-                // The body of the method is expected to contain an awaited asynchronous  
-                // call.  
-                // Task.FromResult is a placeholder for actual work that returns a string.  
-                var today = await Task.FromResult<string>(DateTime.Now.DayOfWeek.ToString());  
-  
-                // The method then can process the result in some way.  
-                int leisureHours;  
-                if (today.First() == 'S')  
-                    leisureHours = 16;  
-                else  
-                    leisureHours = 5;  
-  
-                // Because the return statement specifies an operand of type int, the  
-                // method must have a return type of Task<int>.  
-                return leisureHours;  
-            }  
-  
-            // TASK EXAMPLE  
-            async Task Task_MethodAsync()  
-            {  
-                // The body of an async method is expected to contain an awaited   
-                // asynchronous call.  
-                // Task.Delay is a placeholder for actual work.  
-                await Task.Delay(2000);  
-                // Task.Delay delays the following line by two seconds.  
-                textBox1.Text += String.Format("\r\nSorry for the delay. . . .\r\n");  
-  
-                // This method has no return statement, so its return type is Task.    
-            }  
-        }  
-    }  
-    ```  
-  
-9. Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
-  
-     Должен появиться следующий результат.  
-  
-    ```  
-    Application can continue working while the Task<T> runs. . . .   
-  
-    Value of result1 variable:   5  
-    Value of result2 variable:   5  
-    Value of integerTask.Result: 5  
-  
-    Sorry for the delay. . . .  
-  
-    Application can continue working while the Task runs. . . .  
-  
-    Sorry for the delay. . . .  
-  
-    All done, exiting button-click event handler.  
-    ```  
-  
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Tasks.Task.FromResult%2A>   
- [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
- [async](../../../../csharp/language-reference/keywords/async.md)   
- [await](../../../../csharp/language-reference/keywords/await.md)
+# <a name="async-return-types-c"></a><span data-ttu-id="3be5f-102">Асинхронные типы возвращаемых значений (C#)</span><span class="sxs-lookup"><span data-stu-id="3be5f-102">Async Return Types (C#)</span></span>
+<span data-ttu-id="3be5f-103">Асинхронные методы могут иметь следующие типы возвращаемых значений:</span><span class="sxs-lookup"><span data-stu-id="3be5f-103">Async methods can have the following return types:</span></span>
+
+- <span data-ttu-id="3be5f-104"><xref:System.Threading.Tasks.Task%601> для асинхронного метода, возвращающего значение.</span><span class="sxs-lookup"><span data-stu-id="3be5f-104"><xref:System.Threading.Tasks.Task%601>, for an async method that returns a value.</span></span> 
+ 
+-  <span data-ttu-id="3be5f-105"><xref:System.Threading.Tasks.Task> для асинхронного метода, который выполняет операцию, но не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="3be5f-105"><xref:System.Threading.Tasks.Task>, for an async method that performs an operation but returns no value.</span></span>
+
+- <span data-ttu-id="3be5f-106">`void` для обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="3be5f-106">`void`, for an event handler.</span></span> 
+
+- <span data-ttu-id="3be5f-107">Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-107">Starting with C# 7, any type that has an accessible `GetAwaiter` method.</span></span> <span data-ttu-id="3be5f-108">Объект, возвращаемый методом `GetAwaiter`, должен реализовывать интерфейс <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="3be5f-108">The object returned by the `GetAwaiter` method must implement the <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=fullName> interface.</span></span>
+  
+<span data-ttu-id="3be5f-109">Дополнительные сведения об асинхронных методах см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="3be5f-109">For more information about async methods, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>  
+  
+<span data-ttu-id="3be5f-110">Каждый тип возвращаемого значения рассматривается в одном из следующих разделов, а полный пример, в котором используются все три типа, вы найдете в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="3be5f-110">Each return type is examined in one of the following sections, and you can find a full example that uses all three types at the end of the topic.</span></span>  
+  
+##  <span data-ttu-id="3be5f-111"><a name="BKMK_TaskTReturnType"></a> Тип возвращаемого значения Task(T)</span><span class="sxs-lookup"><span data-stu-id="3be5f-111"><a name="BKMK_TaskTReturnType"></a> Task(T) Return Type</span></span>  
+<span data-ttu-id="3be5f-112">Тип возвращаемого значения <xref:System.Threading.Tasks.Task%601> используется для асинхронного метода, содержащего инструкцию [return](../../../../csharp/language-reference/keywords/return.md) (C#), в которой операнд имеет тип `TResult`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-112">The <xref:System.Threading.Tasks.Task%601> return type is used for an async method that contains a [return](../../../../csharp/language-reference/keywords/return.md) (C#) statement in which the operand has type `TResult`.</span></span>  
+  
+<span data-ttu-id="3be5f-113">В следующем примере асинхронный метод `GetLeisureHours` содержит инструкцию `return`, которая возвращает целое число.</span><span class="sxs-lookup"><span data-stu-id="3be5f-113">In the following example, the `GetLeisureHours` async method contains a `return` statement that returns an integer.</span></span> <span data-ttu-id="3be5f-114">Поэтому в объявлении метода должен указываться тип возвращаемого значения `Task<int>`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-114">Therefore, the method declaration must specify a return type of `Task<int>`.</span></span>  <span data-ttu-id="3be5f-115">Асинхронный метод <xref:System.Threading.Tasks.Task.FromResult%2A> представляет собой заполнитель для операции, которая возвращает строку.</span><span class="sxs-lookup"><span data-stu-id="3be5f-115">The <xref:System.Threading.Tasks.Task.FromResult%2A> async method is a placeholder for an operation that returns a string.</span></span>
+  
+<span data-ttu-id="3be5f-116">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]</span><span class="sxs-lookup"><span data-stu-id="3be5f-116">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]</span></span>
+
+<span data-ttu-id="3be5f-117">При вызове `GetLeisureHours` из выражения await в методе `ShowTodaysInfo` это выражение await извлекает целочисленное значение (значение `leisureHours`), хранящееся в задаче, которая возвращается методом `GetLeisureHours`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-117">When `GetLeisureHours` is called from within an await expression in the `ShowTodaysInfo` method, the await expression retrieves the integer value (the value of `leisureHours`) that's stored in the task returned by the `GetLeisureHours` method.</span></span> <span data-ttu-id="3be5f-118">Дополнительные сведения о выражениях await см. в разделе [await](../../../../csharp/language-reference/keywords/await.md).</span><span class="sxs-lookup"><span data-stu-id="3be5f-118">For more information about await expressions, see [await](../../../../csharp/language-reference/keywords/await.md).</span></span>  
+  
+<span data-ttu-id="3be5f-119">Чтобы лучше понять, как это происходит, отделите вызов метода `GetLeisureHours` от применения `await`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="3be5f-119">You can better understand how this happens by separating the call to `GetLeisureHours` from the application of `await`, as the following code shows.</span></span> <span data-ttu-id="3be5f-120">Вызов метода `TaskOfT_MethodAsync`, который не ожидается немедленно, возвращает `Task<int>`, как и следовало ожидать из объявления метода.</span><span class="sxs-lookup"><span data-stu-id="3be5f-120">A call to method `TaskOfT_MethodAsync` that isn't immediately awaited returns a `Task<int>`, as you would expect from the declaration of the method.</span></span> <span data-ttu-id="3be5f-121">В данном примере эта задача назначается переменной `integerTask`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-121">The task is assigned to the `integerTask` variable in the example.</span></span> <span data-ttu-id="3be5f-122">Поскольку `integerTask` является <xref:System.Threading.Tasks.Task%601>, она содержит свойство <xref:System.Threading.Tasks.Task%601.Result> типа `TResult`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-122">Because `integerTask` is a <xref:System.Threading.Tasks.Task%601>, it contains a <xref:System.Threading.Tasks.Task%601.Result> property of type `TResult`.</span></span> <span data-ttu-id="3be5f-123">В этом примере TResult представляет собой целочисленный тип.</span><span class="sxs-lookup"><span data-stu-id="3be5f-123">In this case, TResult represents an integer type.</span></span> <span data-ttu-id="3be5f-124">Если выражение `await` применяется к `integerTask`, выражение await вычисляется как содержимое свойства <xref:System.Threading.Tasks.Task%601.Result%2A> объекта `integerTask`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-124">When `await` is applied to `integerTask`, the await expression evaluates to the contents of the <xref:System.Threading.Tasks.Task%601.Result%2A> property of `integerTask`.</span></span> <span data-ttu-id="3be5f-125">Это значение присваивается переменной `result2`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-125">The value is assigned to the `result2` variable.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="3be5f-126">Свойство <xref:System.Threading.Tasks.Task%601.Result%2A> является блокирующим свойством.</span><span class="sxs-lookup"><span data-stu-id="3be5f-126">The <xref:System.Threading.Tasks.Task%601.Result%2A> property is a blocking property.</span></span> <span data-ttu-id="3be5f-127">При попытке доступа к нему до завершения его задачи поток, который в текущий момент активен, блокируется до того момента, пока задача не будет завершена, а ее значение не станет доступным.</span><span class="sxs-lookup"><span data-stu-id="3be5f-127">If you try to access it before its task is finished, the thread that's currently active is blocked until the task completes and the value is available.</span></span> <span data-ttu-id="3be5f-128">В большинстве случаев следует получать доступ к этому значению с помощью `await` вместо прямого обращения к свойству.</span><span class="sxs-lookup"><span data-stu-id="3be5f-128">In most cases, you should access the value by using `await` instead of accessing the property directly.</span></span> <br/> <span data-ttu-id="3be5f-129">В предыдущем примере извлекалось значение свойства <xref:System.Threading.Tasks.Task%601.Result%2A> для блокировки основного потока. Это позволяет закончить выполнение метода `ShowTodaysInfo` до того, как завершится работа приложения.</span><span class="sxs-lookup"><span data-stu-id="3be5f-129">The previous example retrieved the value of the <xref:System.Threading.Tasks.Task%601.Result%2A> property to block the main thread so that the `ShowTodaysInfo` method could finish execution before the application ended.</span></span>  
+
+<span data-ttu-id="3be5f-130">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="3be5f-130">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]</span></span>
+  
+##  <span data-ttu-id="3be5f-131"><a name="BKMK_TaskReturnType"></a> Тип возвращаемого значения Task</span><span class="sxs-lookup"><span data-stu-id="3be5f-131"><a name="BKMK_TaskReturnType"></a> Task Return Type</span></span>  
+<span data-ttu-id="3be5f-132">Асинхронные методы, не содержащие инструкцию `return` или содержащие инструкцию `return`, которая не возвращает операнд, обычно имеют тип возвращаемого значения <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="3be5f-132">Async methods that don't contain a `return` statement or that contain a `return` statement that doesn't return an operand usually have a return type of <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="3be5f-133">При синхронном выполнении такие методы возвращают `void`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-133">Such methods return `void` if they run synchronously.</span></span> <span data-ttu-id="3be5f-134">Если для асинхронного метода вы используете тип возвращаемого значения <xref:System.Threading.Tasks.Task>, вызывающий метод может использовать оператор `await` для приостановки выполнения вызывающего объекта до завершения вызванного асинхронного метода.</span><span class="sxs-lookup"><span data-stu-id="3be5f-134">If you use a <xref:System.Threading.Tasks.Task> return type for an async method, a calling method can use an `await` operator to suspend the caller's completion until the called async method has finished.</span></span>  
+  
+<span data-ttu-id="3be5f-135">В следующем примере асинхронный метод `WaitAndApologize` не содержит инструкцию `return`, в связи с чем он возвращает объект <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="3be5f-135">In the following example, the `WaitAndApologize` async method doesn't contain a `return` statement, so the method returns a <xref:System.Threading.Tasks.Task> object.</span></span> <span data-ttu-id="3be5f-136">Это позволяет реализовать ожидание `WaitAndApologize`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-136">This enables `WaitAndApologize` to be awaited.</span></span> <span data-ttu-id="3be5f-137">Обратите внимание, что тип <xref:System.Threading.Tasks.Task> не имеет возвращаемого значения и, соответственно, не содержит свойство `Result`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-137">Note that the <xref:System.Threading.Tasks.Task> type doesn't include a `Result` property because it has no return value.</span></span>  
+
+<span data-ttu-id="3be5f-138">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]</span><span class="sxs-lookup"><span data-stu-id="3be5f-138">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]</span></span>  
+  
+<span data-ttu-id="3be5f-139">`WaitAndApologize` вызывается и ожидается с помощью инструкции await (вместо выражения await), похожей на инструкцию вызова для синхронного метода, возвращающего значение void.</span><span class="sxs-lookup"><span data-stu-id="3be5f-139">`WaitAndApologize` is awaited by using an await statement instead of an await expression, similar to the calling statement for a synchronous void-returning method.</span></span> <span data-ttu-id="3be5f-140">Применение оператора await в этом случае не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="3be5f-140">The application of an await operator in this case doesn't produce a value.</span></span>  
+  
+<span data-ttu-id="3be5f-141">Как и в предыдущем примере <xref:System.Threading.Tasks.Task%601>, вы можете отделить вызов `Task_MethodAsync` от применения инструкции await, как показывает следующий код.</span><span class="sxs-lookup"><span data-stu-id="3be5f-141">As in the previous <xref:System.Threading.Tasks.Task%601> example, you can separate the call to `Task_MethodAsync` from the application of an await operator, as the following code shows.</span></span> <span data-ttu-id="3be5f-142">Однако следует помнить, что `Task` не содержит свойство `Result`, и при применении оператора await к `Task` никакое значение не создается.</span><span class="sxs-lookup"><span data-stu-id="3be5f-142">However, remember that a `Task` doesn't have a `Result` property, and that no value is produced when an await operator is applied to a `Task`.</span></span>  
+  
+<span data-ttu-id="3be5f-143">В следующем коде вызов метода `WaitAndApologize` отделяется от ожидания задачи, которую возвращает этот метод.</span><span class="sxs-lookup"><span data-stu-id="3be5f-143">The following code separates calling the `WaitAndApologize` method from awaiting the task that the method returns.</span></span>  
+ 
+<span data-ttu-id="3be5f-144">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="3be5f-144">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]</span></span>  
+ 
+##  <span data-ttu-id="3be5f-145"><a name="BKMK_VoidReturnType"></a> Тип возвращаемого значения Void</span><span class="sxs-lookup"><span data-stu-id="3be5f-145"><a name="BKMK_VoidReturnType"></a> Void return type</span></span>  
+<span data-ttu-id="3be5f-146">Тип возвращаемого значения `void` используется в асинхронных обработчиках событий, для которых требуется тип возвращаемого значения `void`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-146">You use the `void` return type in asynchronous event handlers, which require a `void` return type.</span></span> <span data-ttu-id="3be5f-147">Поскольку методы, не являющиеся обработчиками событий, не возвращают значения, вместо этого необходимо вернуть <xref:System.Threading.Tasks.Task>. Это вызвано тем, что для асинхронных методов, возвращающих значение `void`, ожидание невозможно.</span><span class="sxs-lookup"><span data-stu-id="3be5f-147">For methods other than event handlers don't return a value, you should return a <xref:System.Threading.Tasks.Task> instead, because an async method that returns `void` can't be awaited.</span></span> <span data-ttu-id="3be5f-148">Любой вызывающий объект такого метода должен иметь возможность завершить свою работу, не дожидаясь завершения вызванного асинхронного метода, и он не должен зависеть ни от каких значений и исключений, создаваемых асинхронным методом.</span><span class="sxs-lookup"><span data-stu-id="3be5f-148">Any caller of such a method must be able to continue to completion without waiting for the called async method to finish, and the caller must be independent of any values or exceptions that the async method generates.</span></span>  
+  
+<span data-ttu-id="3be5f-149">Вызывающий объект асинхронного метода, возвращающего void, не может перехватывать исключения, создаваемые методом, и такие необработанные исключения могут привести к сбою приложения.</span><span class="sxs-lookup"><span data-stu-id="3be5f-149">The caller of a void-returning async method can't catch exceptions that are thrown from the method, and such unhandled exceptions are likely to cause your application to fail.</span></span> <span data-ttu-id="3be5f-150">Если исключение возникает в асинхронном методе, который возвращает <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, исключение хранится в возвращенной задаче и повторно вызывается при ожидании задачи.</span><span class="sxs-lookup"><span data-stu-id="3be5f-150">If an exception occurs in an async method that returns a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>, the exception is stored in the returned task and is rethrown when the task is awaited.</span></span> <span data-ttu-id="3be5f-151">Поэтому убедитесь, что любой асинхронный метод, который может вызвать исключение, имеет тип возвращаемого значения <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> и что вызовы метода являются ожидаемыми.</span><span class="sxs-lookup"><span data-stu-id="3be5f-151">Therefore, make sure that any async method that can produce an exception has a return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> and that calls to the method are awaited.</span></span>  
+  
+<span data-ttu-id="3be5f-152">Дополнительные сведения о перехвате исключений в асинхронных методах см. в разделе [try-catch](../../../../csharp/language-reference/keywords/try-catch.md).</span><span class="sxs-lookup"><span data-stu-id="3be5f-152">For more information about how to catch exceptions in async methods, see [try-catch](../../../../csharp/language-reference/keywords/try-catch.md) .</span></span>  
+  
+<span data-ttu-id="3be5f-153">Следующий фрагмент кода определяет асинхронный обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="3be5f-153">The following eample defines an async event handler.</span></span>  
+ 
+<span data-ttu-id="3be5f-154">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]</span><span class="sxs-lookup"><span data-stu-id="3be5f-154">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]</span></span>  
+ 
+## <a name="generalized-async-return-types-and-valuetaskt"></a><span data-ttu-id="3be5f-155">Обобщенные асинхронные типы возвращаемых значений и ValueTask<T></span><span class="sxs-lookup"><span data-stu-id="3be5f-155">Generalized async return types and ValueTask<T></span></span>
+
+<span data-ttu-id="3be5f-156">Начиная с версии 7, в языке C# асинхронные методы могут возвращать любой тип с доступным методом `GetAwaiter`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-156">Starting with C# 7, an async method can return any type that has an accessible `GetAwaiter` method.</span></span>
+ 
+<span data-ttu-id="3be5f-157">Поскольку <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> являются ссылочными типами, выделение памяти во влияющих на производительность сегментах (особенно при выделении памяти в ограниченных циклах) может серьезно снизить производительность.</span><span class="sxs-lookup"><span data-stu-id="3be5f-157">Because <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> are reference types, memory allocation in performance-critical paths, particularly when allocations occur in tight loops, can adversely affect performance.</span></span> <span data-ttu-id="3be5f-158">Поддержка обобщенных типов возвращаемых значений позволяет возвращать небольшой тип значения вместо ссылочного типа, благодаря чему удается предотвратить избыточное выделение памяти.</span><span class="sxs-lookup"><span data-stu-id="3be5f-158">Support for generalized return types means that you can return a lightweight value type instead of a reference type to avoid additional memory allocations.</span></span> 
+
+<span data-ttu-id="3be5f-159">На платформе .NET представлена структура <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName>, которая является упрощенной реализацией обобщенного значения, возвращающего задачу.</span><span class="sxs-lookup"><span data-stu-id="3be5f-159">.NET provides the <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName> structure as a light-weight implementation of a generalized task-returning value.</span></span> <span data-ttu-id="3be5f-160">Чтобы использовать тип <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName>, необходимо добавить в проект пакет NuGet `System.Threading.Tasks.Extensions`.</span><span class="sxs-lookup"><span data-stu-id="3be5f-160">To use the <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName> type, you must add the `System.Threading.Tasks.Extensions` NuGet package to your project.</span></span> <span data-ttu-id="3be5f-161">В следующем примере структура <xref:System.Threading.Tasks.ValueTask%601> используется для извлечения значений двух игральных костей.</span><span class="sxs-lookup"><span data-stu-id="3be5f-161">The following example uses the <xref:System.Threading.Tasks.ValueTask%601> structure to retrieve the value of two dice rolls.</span></span> 
+  
+<span data-ttu-id="3be5f-162">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]</span><span class="sxs-lookup"><span data-stu-id="3be5f-162">[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="3be5f-163">См. также</span><span class="sxs-lookup"><span data-stu-id="3be5f-163">See also</span></span>  
+<span data-ttu-id="3be5f-164"><xref:System.Threading.Tasks.Task.FromResult%2A></span><span class="sxs-lookup"><span data-stu-id="3be5f-164"><xref:System.Threading.Tasks.Task.FromResult%2A></span></span>   
+<span data-ttu-id="3be5f-165">[Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span><span class="sxs-lookup"><span data-stu-id="3be5f-165">[Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span></span>  
+<span data-ttu-id="3be5f-166">[Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) </span><span class="sxs-lookup"><span data-stu-id="3be5f-166">[Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) </span></span>  
+<span data-ttu-id="3be5f-167">[async](../../../../csharp/language-reference/keywords/async.md) </span><span class="sxs-lookup"><span data-stu-id="3be5f-167">[async](../../../../csharp/language-reference/keywords/async.md) </span></span>  
+[<span data-ttu-id="3be5f-168">await</span><span class="sxs-lookup"><span data-stu-id="3be5f-168">await</span></span>](../../../../csharp/language-reference/keywords/await.md)
+

@@ -1,270 +1,1507 @@
 ---
-title: "Кодировки в .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кодировка, выбор"
-  - "кодировка, стратегия перехода на запасные ресурсы"
-  - "кодировка, основные сведения"
-ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 33
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 33
+title: "Кодировка символов в .NET"
+description: "Кодировка символов в .NET"
+keywords: .NET, .NET Core
+author: stevehoag
+ms.author: shoag
+ms.date: 07/26/2016
+ms.topic: article
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.devlang: dotnet
+ms.assetid: bce54e41-e9dc-493a-8988-1cbadc340fe8
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: a8f42fa6a37f8de6f13186ea2ac17b2b2ced1601
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/02/2017
+
 ---
-# Кодировки в .NET Framework
-Символы — это абстрактные сущности, которые могут быть представлены различными способами. Кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставляется значение, представляющее этот символ. Например, азбука Морзе — это кодировка, в которой каждому символу латинского алфавита соответствует набор точек и тире, которые можно передавать с помощью телеграфа. Компьютерная кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставлено числовое значение, представляющее этот символ. Кодировка состоит из двух компонентов:  
-  
--   кодировщик, преобразующий последовательность символов в последовательность числовых значений \(байтов\);  
-  
--   декодер, преобразующий последовательность байтов в последовательность символов.  
-  
- Кодировка описывает правила, по которым работают кодировщик и декодер. Например, класс <xref:System.Text.UTF8Encoding> описывает правила кодирования и декодирования для формата UTF\-8, в котором используется от одного до четырех байтов для представления одного символа Юникода. В процессе кодирования и декодирования также может выполняться проверка. Например, класс <xref:System.Text.UnicodeEncoding> предназначен для проверки допустимости пар, составляемых всеми символами\-заместителями. \(Пара символов\-заместителей состоит из символа с кодовой точкой в диапазоне от U\+D800 до U\+DBFF и символа с кодовой точкой в диапазоне от U\+DC00 до U\+DFFF.\)  Резервная стратегия определяет, как кодировщик обрабатывает недопустимые символы или как декодер обрабатывает недопустимые байты.  
-  
+
+# <a name="character-encoding-in-net"></a><span data-ttu-id="d9e4c-104">Кодировка символов в .NET</span><span class="sxs-lookup"><span data-stu-id="d9e4c-104">Character encoding in .NET</span></span>
+
+<span data-ttu-id="d9e4c-105">Символы — это абстрактные сущности, которые могут быть представлены различными способами.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-105">Characters are abstract entities that can be represented in many different ways.</span></span> <span data-ttu-id="d9e4c-106">Кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставляется значение, представляющее этот символ.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-106">A character encoding is a system that pairs each character in a supported character set with some value that represents that character.</span></span> <span data-ttu-id="d9e4c-107">Например, азбука Морзе — это кодировка, в которой каждому символу латинского алфавита соответствует набор точек и тире, которые можно передавать с помощью телеграфа.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-107">For example, Morse code is a character encoding that pairs each character in the Roman alphabet with a pattern of dots and dashes that are suitable for transmission over telegraph lines.</span></span> <span data-ttu-id="d9e4c-108">Компьютерная кодировка — это система, где с каждым символом поддерживаемого набора символов сопоставлено числовое значение, представляющее этот символ.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-108">A character encoding for computers pairs each character in a supported character set with a numeric value that represents that character.</span></span> <span data-ttu-id="d9e4c-109">Кодировка состоит из двух компонентов:</span><span class="sxs-lookup"><span data-stu-id="d9e4c-109">A character encoding has two distinct components:</span></span>
+
+* <span data-ttu-id="d9e4c-110">кодировщик, преобразующий последовательность символов в последовательность числовых значений (байтов);</span><span class="sxs-lookup"><span data-stu-id="d9e4c-110">An encoder, which translates a sequence of characters into a sequence of numeric values (bytes).</span></span>
+
+* <span data-ttu-id="d9e4c-111">декодер, преобразующий последовательность байтов в последовательность символов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-111">A decoder, which translates a sequence of bytes into a sequence of characters.</span></span>
+
+<span data-ttu-id="d9e4c-112">Кодировка описывает правила, по которым работают кодировщик и декодер.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-112">Character encoding describes the rules by which an encoder and a decoder operate.</span></span> <span data-ttu-id="d9e4c-113">Например, класс [UTF8Encoding](xref:System.Text.UTF8Encoding) описывает правила кодирования и декодирования для формата UTF-8, в котором используется от одного до четырех байтов для представления одного символа Юникода.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-113">For example, the [UTF8Encoding](xref:System.Text.UTF8Encoding) class describes the rules for encoding to, and decoding from, 8-bit Unicode Transformation Format (UTF-8), which uses one to four bytes to represent a single Unicode character.</span></span> <span data-ttu-id="d9e4c-114">В процессе кодирования и декодирования также может выполняться проверка.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-114">Encoding and decoding can also include validation.</span></span> <span data-ttu-id="d9e4c-115">Например, класс [UnicodeEncoding](xref:System.Text.UnicodeEncoding) предназначен для проверки допустимости пар, составляемых всеми символами-заместителями.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-115">For example, the [UnicodeEncoding](xref:System.Text.UnicodeEncoding) class checks all surrogates to make sure they constitute valid surrogate pairs.</span></span> <span data-ttu-id="d9e4c-116">(Пара символов-заместителей состоит из символа с кодовой точкой в диапазоне от U+D800 до U+DBFF и символа с кодовой точкой в диапазоне от U+DC00 до U+DFFF.) Резервная стратегия определяет, как кодировщик обрабатывает недопустимые символы или как декодер обрабатывает недопустимые байты.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-116">(A surrogate pair consists of a character with a code point that ranges from U+D800 to U+DBFF followed by a character with a code point that ranges from U+DC00 to U+DFFF.) A fallback strategy determines how an encoder handles invalid characters or how a decoder handles invalid bytes.</span></span> 
+
 > [!WARNING]
->  Классы кодировок .NET Framework позволяют хранить и преобразовывать символьные данные. Их не следует использовать для хранения двоичных данных в строковом виде. В зависимости от используемой кодировки преобразование двоичных данных в строковый формат с использованием классов кодировок может привести к неожиданному результату и неточным или поврежденным данным. Для преобразования двоичных данных в строковый формат используйте метод <xref:System.Convert.ToBase64String%2A?displayProperty=fullName>.  
-  
- Платформа .NET Framework использует кодировку UTF\-16 \(представленную классом <xref:System.Text.UnicodeEncoding>\) для представления символов и строк. В приложениях, предназначенных для среды CLR, кодировщики используются для сопоставления представлений символов Юникода, поддерживаемых средой CLR, с другими схемами кодирования. Декодеры служат для сопоставления символов различных кодировок с Юникодом.  
-  
- В этом разделе:  
-  
--   [Кодировки в .NET Framework](../../../docs/standard/base-types/character-encoding.md#Encodings)  
-  
--   [Выбор класса кодировки](../../../docs/standard/base-types/character-encoding.md#Selecting)  
-  
--   [Использование объекта кодировки](../../../docs/standard/base-types/character-encoding.md#Using)  
-  
--   [Выбор резервной стратегии](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
-  
--   [Реализация пользовательской резервной стратегии](../../../docs/standard/base-types/character-encoding.md#Custom)  
-  
-<a name="Encodings"></a>   
-## Кодировки в .NET Framework  
- Все классы кодировок в .NET Framework наследуются от класса <xref:System.Text.Encoding?displayProperty=fullName> — абстрактного класса, определяющего общую для всех кодировок функциональность. Для доступа к отдельным объектам кодировок, реализованным в .NET Framework, можно сделать следующее:  
-  
--   Использовать статические свойства класса <xref:System.Text.Encoding>, возвращающие объекты, которые представляют стандартные кодировки, доступные в .NET Framework \(ASCII, UTF\-7, UTF\-8, UTF\-16 и UTF\-32\). Например, свойство <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> возвращает объект <xref:System.Text.UnicodeEncoding>. Каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые не может декодировать. \(Дополнительные сведения см. в разделе [Стратегия замены](../../../docs/standard/base-types/character-encoding.md#Replacement).\)  
-  
--   Вызвать конструктор класса кодировки. Таким образом могут быть созданы объекты для кодировок ASCII, UTF\-7, UTF\-8, UTF\-16 и UTF\-32. По умолчанию каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые он не может декодировать, но вы можете указать, чтобы вместо этого создавалось исключение. \(Дополнительные сведения см. в разделах [Стратегия замены](../../../docs/standard/base-types/character-encoding.md#Replacement) и [Стратегия исключения](../../../docs/standard/base-types/character-encoding.md#Exception).\)  
-  
--   Вызвать конструктор <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=fullName> и передать ему целое число, представляющее кодировку. Объекты стандартных кодировок используют резервные стратегии замены, а объекты кодовых страниц и двухбайтовых кодировок \(DBCS\) используют резервную стратегию наилучшего соответствия для обработки строк, которые не удается закодировать, или байтов, которые не удается декодировать. \(Дополнительные сведения см. в разделе [Стратегия наилучшего соответствия](../../../docs/standard/base-types/character-encoding.md#BestFit).\)  
-  
--   Вызвать метод <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=fullName>, возвращающий любую стандартную кодировку, кодовую страницу или кодировку DBCS, доступную в .NET Framework. Перегрузки позволяют задать резервный объект как для кодировщика, так и для декодера.  
-  
+> <span data-ttu-id="d9e4c-117">Классы кодировок .NET позволяют хранить и преобразовывать символьные данные.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-117">The .NET encoding classes provide a way to store and convert character data.</span></span> <span data-ttu-id="d9e4c-118">Их не следует использовать для хранения двоичных данных в строковом виде.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-118">They should not be used to store binary data in string form.</span></span> <span data-ttu-id="d9e4c-119">В зависимости от используемой кодировки преобразование двоичных данных в строковый формат с использованием классов кодировок может привести к неожиданному результату и неточным или поврежденным данным.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-119">Depending on the encoding used, converting binary data to string format with the encoding classes can introduce unexpected behavior and produce inaccurate or corrupted data.</span></span> <span data-ttu-id="d9e4c-120">Для преобразования двоичных данных в строковый формат используйте метод [Convert.ToBase64String](xref:System.Convert.ToBase64String(System.Byte[])).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-120">To convert binary data to a string form, use the [Convert.ToBase64String](xref:System.Convert.ToBase64String(System.Byte[])) method.</span></span> 
+ 
+<span data-ttu-id="d9e4c-121">Платформа .NET использует кодировку UTF-16 (представленную классом [UnicodeEncoding](xref:System.Text.UnicodeEncoding)) для представления символов и строк.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-121">.NET uses the UTF-16 encoding (represented by the [UnicodeEncoding](xref:System.Text.UnicodeEncoding) class) to represent characters and strings.</span></span> <span data-ttu-id="d9e4c-122">В приложениях, предназначенных для среды CLR, кодировщики используются для сопоставления представлений символов Юникода, поддерживаемых средой CLR, с другими схемами кодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-122">Applications that target the common language runtime use encoders to map Unicode character representations supported by the common language runtime to other encoding schemes.</span></span> <span data-ttu-id="d9e4c-123">Декодеры служат для сопоставления символов различных кодировок с Юникодом.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-123">They use decoders to map characters from non-Unicode encodings to Unicode.</span></span>
+
+<span data-ttu-id="d9e4c-124">В этом разделе:</span><span class="sxs-lookup"><span data-stu-id="d9e4c-124">This topic consists of the following sections:</span></span>
+
+* [<span data-ttu-id="d9e4c-125">Кодировки в .NET</span><span class="sxs-lookup"><span data-stu-id="d9e4c-125">Encodings in .NET</span></span>](#encodings-in-net)
+
+* [<span data-ttu-id="d9e4c-126">Выбор класса кодировки</span><span class="sxs-lookup"><span data-stu-id="d9e4c-126">Selecting an encoding class</span></span>](#selecting-an-encoding-class)
+
+* [<span data-ttu-id="d9e4c-127">Использование объекта кодировки</span><span class="sxs-lookup"><span data-stu-id="d9e4c-127">Using an encoding object</span></span>](#using-an-encoding-object)
+
+* [<span data-ttu-id="d9e4c-128">Выбор резервной стратегии</span><span class="sxs-lookup"><span data-stu-id="d9e4c-128">Choosing a fallback strategy</span></span>](#choosing-a-fallback-strategy)
+
+* [<span data-ttu-id="d9e4c-129">Реализация пользовательской резервной стратегии</span><span class="sxs-lookup"><span data-stu-id="d9e4c-129">Implementing a custom fallback strategy</span></span>](#implementing-a-custom-fallback-strategy)
+
+## <a name="encodings-in-net"></a><span data-ttu-id="d9e4c-130">Кодировки в .NET</span><span class="sxs-lookup"><span data-stu-id="d9e4c-130">Encodings in .NET</span></span>
+
+<span data-ttu-id="d9e4c-131">Все классы кодировок в .NET наследуют от класса [System.Text.Encoding](xref:System.Text.Encoding) — абстрактного класса, определяющего общую для всех кодировок функциональность.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-131">All character encoding classes in .NET inherit from the [System.Text.Encoding](xref:System.Text.Encoding) class, which is an abstract class that defines the functionality common to all character encodings.</span></span> <span data-ttu-id="d9e4c-132">Для доступа к отдельным объектам кодировок, реализованным в .NET, можно сделать следующее:</span><span class="sxs-lookup"><span data-stu-id="d9e4c-132">To access the individual encoding objects implemented in .NET, do the following:</span></span>
+
+* <span data-ttu-id="d9e4c-133">Использовать статические свойства класса [Encoding](xref:System.Text.Encoding), возвращающие объекты, которые представляют стандартные кодировки, доступные в .NET (ASCII, UTF-7, UTF-8, UTF-16 и UTF-32).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-133">Use the static properties of the [Encoding](xref:System.Text.Encoding) class, which return objects that represent the standard character encodings available in .NET (ASCII, UTF-7, UTF-8, UTF-16, and UTF-32).</span></span> <span data-ttu-id="d9e4c-134">Например, свойство [Encoding.Unicode](xref:System.Text.Encoding.Unicode) возвращает объект [UnicodeEncoding](xref:System.Text.UnicodeEncoding).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-134">For example, the [Encoding.Unicode](xref:System.Text.Encoding.Unicode) property returns a [UnicodeEncoding](xref:System.Text.UnicodeEncoding) object.</span></span> <span data-ttu-id="d9e4c-135">Каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые не может декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-135">Each object uses replacement fallback to handle strings that it cannot encode and bytes that it cannot decode.</span></span> <span data-ttu-id="d9e4c-136">(Подробнее см. в разделе [Стратегия замены](#replacement-fallback).)</span><span class="sxs-lookup"><span data-stu-id="d9e4c-136">(For more information, see the [Replacement fallback](#replacement-fallback) section.)</span></span>
+
+* <span data-ttu-id="d9e4c-137">Вызвать конструктор класса кодировки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-137">Call the encoding's class constructor.</span></span> <span data-ttu-id="d9e4c-138">Таким образом могут быть созданы объекты для кодировок ASCII, UTF-7, UTF-8, UTF-16 и UTF-32.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-138">Objects for the ASCII, UTF-7, UTF-8, UTF-16, and UTF-32 encodings can be instantiated in this way.</span></span> <span data-ttu-id="d9e4c-139">По умолчанию каждый объект использует резервную стратегию замены для обработки строк, которые он не может закодировать, и байтов, которые он не может декодировать, но вы можете указать, чтобы вместо этого создавалось исключение.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-139">By default, each object uses replacement fallback to handle strings that it cannot encode and bytes that it cannot decode, but you can specify that an exception should be thrown instead.</span></span> <span data-ttu-id="d9e4c-140">(Подробнее см. в разделах [Стратегия замены](#replacement-fallback) и [Стратегия исключения](#exception-fallback).)</span><span class="sxs-lookup"><span data-stu-id="d9e4c-140">(For more information, see the [Replacement fallback](#replacement-fallback) and [Exception fallback](#exception-fallback) sections.)</span></span>
+
+* <span data-ttu-id="d9e4c-141">Вызвать конструктор [Encoding.Encoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) и передать ему целое число, представляющее кодировку.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-141">Call the [Encoding.Encoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) constructor and pass it an integer that represents the encoding.</span></span> <span data-ttu-id="d9e4c-142">Объекты стандартных кодировок используют резервные стратегии замены, а объекты кодовых страниц и двухбайтовых кодировок (DBCS) используют резервную стратегию наилучшего соответствия для обработки строк, которые не удается закодировать, или байтов, которые не удается декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-142">Standard encoding objects use replacement fallback, and code page and double-byte character set (DBCS) encoding objects use best-fit fallback to handle strings that they cannot encode and bytes that they cannot decode.</span></span> <span data-ttu-id="d9e4c-143">(Подробнее см. в разделе [Стратегия наилучшего соответствия](#best-fit-fallback).)</span><span class="sxs-lookup"><span data-stu-id="d9e4c-143">(For more information, see the [Best-Fit fallback](#best-fit-fallback) section.)</span></span>
+
+* <span data-ttu-id="d9e4c-144">Вызвать метод [Encoding.GetEncoding](xref:System.Text.Encoding.GetEncoding(System.Int32)), возвращающий любую стандартную кодировку, кодовую страницу или кодировку DBCS, доступную в .NET.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-144">Call the [Encoding.GetEncoding](xref:System.Text.Encoding.GetEncoding(System.Int32)) method, which returns any standard, code page, or DBCS encoding available in .NET.</span></span> <span data-ttu-id="d9e4c-145">Перегрузки позволяют задать резервный объект как для кодировщика, так и для декодера.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-145">Overloads let you specify a fallback object for both the encoder and the decoder.</span></span>
+
 > [!NOTE]
->  В стандарте Юникода каждому символу в каждом поддерживаемом символьном наборе присваивается кодовая точка \(номер\) и имя. Например, символ "A" представляется кодовой точкой U\+0041 и именем LATIN CAPITAL LETTER A. Кодировки UTF определяют способы кодирования кодовой точки в виде последовательности из одного или нескольких байтов. Схема кодировки Юникод упрощает разработку международных приложений, так как позволяет представлять символы любых наборов символов в единой кодировке. Разработчикам приложений больше не нужно сохранять данные о схеме кодировки, которая использовалась для представления символов конкретного языка или системы письма. Передача данных между системами, использующими различные языки, может происходить без искажений.  
->   
->  Платформа .NET Framework поддерживает три кодировки, определенные стандартом Юникод: UTF\-8, UTF\-16 и UTF\-32. Дополнительные сведения см. в описании стандарта Юникод на [домашней странице Юникода](http://go.microsoft.com/fwlink/?LinkId=37123).  
-  
- Информацию обо всех доступных в .NET Framework кодировках можно получить, вызвав метод <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName>. Платформа .NET Framework поддерживает системы кодирования символов, перечисленные в таблице ниже.  
-  
-|кодировка|Класс|Описание|Преимущества и недостатки|  
-|---------------|-----------|--------------|-------------------------------|  
-|ASCII|<xref:System.Text.ASCIIEncoding>|Кодирует ограниченный диапазон символов, используя семь младших битов байта.|Так как эта кодировка поддерживает только значения символов от U\+0000 до U\+007F, то в большинстве случаев она не отвечает требованиям международных приложений.|  
-|UTF\-7|<xref:System.Text.UTF7Encoding>|Представляет символы в виде последовательностей 7\-разрядных символов ASCII. Символы Юникода, не относящиеся к ASCII, представляются в виде escape\-последовательности символов ASCII.|UTF\-7 поддерживает протоколы, например протоколы электронной почты и групп новостей. Однако формат UTF\-7 недостаточно безопасен и надежен. В некоторых случаях изменение одного бита может привести к существенному изменению интерпретации всей строки UTF\-7. В других случаях для кодировки одного и того же текста могут использоваться разные строки UTF\-7. В последовательностях, содержащих отличные от ASCII символы, формат UTF\-7 требует больше места, чем UTF\-8, а кодирование и декодирование выполняются медленнее. Поэтому по возможности лучше использовать UTF\-8 вместо UTF\-7.|  
-|UTF\-8|<xref:System.Text.UTF8Encoding>|Представляет каждую кодовую точку Юникода в виде последовательности от одного до четырех байтов.|UTF\-8 поддерживает 8\-разрядный размер данных и хорошо работает со многими операционными системами. Для диапазона символов ASCII кодировка UTF\-8 идентична кодировке ASCII и предоставляет более широкий набор символов. Однако для китайской, японской и корейской письменности UTF\-8 может потребовать три байта для каждого символа, что может привести к большему объему данных по сравнению с UTF\-16. Обратите внимание, что иногда увеличение размера данных для китайской, японской и корейской письменности объясняется объемом данных ASCII, например тегами HTML.|  
-|UTF\-16|<xref:System.Text.UnicodeEncoding>|Представляет каждую кодовую точку Юникода в виде последовательности одного или двух 16\-разрядных целых чисел. Наиболее распространенные символы Юникода требуют только одной кодовой точки UTF\-16, хотя дополнительные символы Юникода \(U\+10000 и далее\) требуют двух замещающих кодовых точек UTF\-16. Поддерживаются оба порядка байтов: прямой и обратный.|Кодировка UTF\-16 используется средой CLR для представления значений <xref:System.Char> и <xref:System.String>, а операционной системой Windows — для представления значений `WCHAR`.|  
-|UTF\-32|<xref:System.Text.UTF32Encoding>|Представляет каждую кодовую точку Юникода в виде 32\-разрядного целого числа. Поддерживаются оба порядка байтов: прямой и обратный.|Кодировка UTF\-32 используется в случае, когда приложению требуется избежать поведения замещающей кодовой точки кодировки UTF\-16 в операционных системах, в которых закодированное пространство имеет большое значение. Для кодирования отдельных отображаемых глифов может использоваться несколько символов UTF\-32.|  
-|Кодировки ANSI и ISO||Предоставляет поддержку ряда кодовых страниц. В операционных системах Windows кодовые страницы используются для поддержки конкретного языка или группы языков. Таблицу, в которой перечислены кодовые страницы, поддерживаемые платформой .NET Framework, см. в описании класса <xref:System.Text.Encoding>. Чтобы получить объект кодировки для конкретной кодовой страницы, можно вызвать метод <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=fullName>.|Кодовая страница содержит 256 кодовых точек с отсчетом от нуля. В большинстве кодовых страниц кодовые точки от 0 до 127 представляют набор символов ASCII, а кодовые точки от 128 до 255 существенно отличаются у разных кодовых страниц. Например, кодовая страница 1252 предоставляет символы для латинских систем письма, включая английский, немецкий и французский языки. Последние 128 кодовых точек на кодовой странице 1252 содержат диакритические знаки. Кодовая страница 1253 содержит коды символов, которые требуются в греческой системе письма. Последние 128 кодовых точек на кодовой странице 1253 содержат символы греческого языка. Таким образом, в приложении, использующем кодовые страницы ANSI, нельзя хранить греческий и немецкий тексты в одном потоке, если он не содержит идентификатор, указывающий соответствующую кодовую страницу.|  
-|Двухбайтовые кодировки \(DBCS\)||Поддерживают языки, такие как китайский, японский и корейский, содержащие более 256 символов. В кодировке DBCS каждый символ представлен парой кодовых точек \(два байта\). Свойство <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=fullName> возвращает значение `false` для двухбайтовых кодировок. Чтобы получить объект кодировки для конкретной кодировки DBCS, можно вызвать метод <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=fullName>.|В кодировке DBCS каждый символ представлен парой кодовых точек \(два байта\). Когда приложение обрабатывает данные DBCS, первый байт символа DBCS \(старший байт\) обрабатывается в сочетании со вторым байтом, следующим непосредственно за ним. Так как одна пара двухбайтовых кодовых точек может представлять различные символы в зависимости от кодовой страницы, эта схема также не позволяет использовать в одном потоке данных два языка, например японский и китайский.|  
-  
- Эти кодировки позволяют работать с символами Юникода, а также с кодировками, которые часто используются в приложениях прежних версий. Кроме того, можно создать настраиваемую кодировку, определив класс, производный от <xref:System.Text.Encoding>, и переопределив его члены.  
-  
-### Заметки о платформе: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- По умолчанию [!INCLUDE[net_core](../../../includes/net-core-md.md)] не предоставляет доступ к кодировкам кодовых страниц, кроме кодовой страницы 28591 и кодировок Юникода, например UTF\-8 и UTF\-16. Однако вы можете добавить в свое приложение кодировки кодовых страниц из стандартных приложений Windows, ориентированных на .NET Framework. Подробнее см. в разделе <xref:System.Text.CodePagesEncodingProvider>.  
-  
-<a name="Selecting"></a>   
-## Выбор класса кодировки  
- Если у вас есть возможность выбрать кодировку для использования в приложении, следует использовать Юникод, предпочтительно <xref:System.Text.UTF8Encoding> или <xref:System.Text.UnicodeEncoding>. \(Платформа .NET Framework также поддерживает третью кодировку Юникод, <xref:System.Text.UTF32Encoding>.\)  
-  
- Если вы планируете использовать кодировку ASCII \(<xref:System.Text.ASCIIEncoding>\), выберите вместо нее <xref:System.Text.UTF8Encoding>. Эти две кодировки идентичны для набора символов ASCII, но <xref:System.Text.UTF8Encoding> имеет указанные ниже преимущества.  
-  
--   Она может представлять любой символ Юникода, тогда как <xref:System.Text.ASCIIEncoding> поддерживает только символы Юникода в диапазоне от U\+0000 до U\+007F.  
-  
--   Она обеспечивает обнаружение ошибок и более высокий уровень безопасности.  
-  
--   Она настроена для максимально быстрой работы и должна быть быстрее любых других кодировок. Даже для содержимого, имеющего только формат ASCII, выполнение операций с помощью <xref:System.Text.UTF8Encoding> происходит быстрее, чем с помощью <xref:System.Text.ASCIIEncoding>.  
-  
- Кодировку <xref:System.Text.ASCIIEncoding> рекомендуется использовать только для приложений прежних версий. Однако даже для приложений прежних версий <xref:System.Text.UTF8Encoding> может быть предпочтительнее по указанным ниже причинам \(при параметрах по умолчанию\).  
-  
--   Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью <xref:System.Text.ASCIIEncoding> каждый символ, не относящийся к ASCII, кодируется как знак вопроса \(?\). При последующем декодировании эти данные утрачиваются.  
-  
--   Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью <xref:System.Text.UTF8Encoding> представление символов в формате ASCII дает непригодный для чтения результат. Однако при последующем декодировании данных с помощью декодера UTF\-8 обработка данных выполняется успешно.  
-  
- В веб\-приложении символы, отправленные клиенту в ответ на веб\-запрос, должны отражать кодировку, используемую в клиенте. Как правило, требуется задать для свойства <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=fullName> значение, возвращаемое свойством <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>, для отображения текста в той кодировке, которую ожидает пользователь.  
-  
-<a name="Using"></a>   
-## Использование объекта кодировки  
- Кодировщик преобразует строку символов \(чаще всего символов Юникода\) в их числовой \(байтовый\) эквивалент. Например, кодировщик ASCII можно использовать для преобразования символов Юникода в ASCII, чтобы они могли отображаться на консоли. Чтобы выполнить преобразование, вызовите метод <xref:System.Text.Encoding.GetBytes%2A?displayProperty=fullName>. Если перед выполнением кодирования нужно определить, сколько байтов потребуется для хранения закодированных символов, можно вызвать метод <xref:System.Text.Encoding.GetByteCount%2A>.  
-  
- В примере ниже один массив байтов используется для кодирования строк в двух отдельных операциях. Имеется индекс, указывающий начальную позицию в массиве байтов для следующего набора байтов, закодированных с использованием ASCII. Вызывается метод <xref:System.Text.ASCIIEncoding.GetByteCount%28System.String%29?displayProperty=fullName> для проверки того, что массив байтов достаточно велик для хранения закодированной строки. Затем вызывается метод [ASCIIEncoding.GetBytes\(String, Int32, Int32, Byte\<xref:System.Text.ASCIIEncoding.GetBytes%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Byte%5B%5D%2CSystem.Int32%29?displayProperty=fullName> для кодирования символов в строке.  
-  
- [!code-csharp[Conceptual.Encoding#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/getbytes1.cs#8)]
- [!code-vb[Conceptual.Encoding#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/getbytes1.vb#8)]  
-  
- Декодер преобразует массив байтов, отражающий конкретную кодировку символов, в набор символов в массиве символов или в строке. Чтобы декодировать массив байтов в массив символов, вызовите метод <xref:System.Text.Encoding.GetChars%2A?displayProperty=fullName>. Чтобы декодировать массив байтов в строку, вызовите метод <xref:System.Text.Encoding.GetString%2A>. Если перед декодированием нужно определить, сколько символов требуется для хранения раскодированных байтов, можно вызвать метод <xref:System.Text.Encoding.GetCharCount%2A>.  
-  
- В примере ниже три строки кодируются, а затем декодируются в один массив символов. Имеется индекс, указывающий начальную позицию в массиве символов для следующего набора декодированных символов. Вызывается метод <xref:System.Text.ASCIIEncoding.GetCharCount%2A> для проверки того, что массив символов достаточно велик для хранения всех декодированных символов. Затем вызывается метод [ASCIIEncoding.GetChars\(Byte\[\], Int32, Int32, Char\<xref:System.Text.ASCIIEncoding.GetChars%28System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%2CSystem.Char%5B%5D%2CSystem.Int32%29?displayProperty=fullName> для декодирования массива байтов.  
-  
- [!code-csharp[Conceptual.Encoding#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/getchars1.cs#9)]
- [!code-vb[Conceptual.Encoding#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/getchars1.vb#9)]  
-  
- Методы кодирования и декодирования класса, производного от класса <xref:System.Text.Encoding>, предназначены для работы с полным набором данных. Это значит, что все данные, подлежащие кодированию или декодированию, предоставляются в одном вызове метода. Однако в некоторых случаях данные предоставляются в потоке, тогда данные для кодирования и декодирования можно получить только с помощью нескольких операций чтения. В таком случае необходимо, чтобы операция кодирования или декодирования "помнила" сохраненное после предыдущего вызова состояние. Методы классов, производных от <xref:System.Text.Encoder> и <xref:System.Text.Decoder>, могут обрабатывать операции кодирования и декодирования, охватывающие несколько вызовов методов.  
-  
- Объект <xref:System.Text.Encoder> для конкретной кодировки доступен в ее свойстве <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=fullName>. Объект <xref:System.Text.Decoder> для конкретной кодировки доступен в ее свойстве <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=fullName>. Что касается операций декодирования, обратите внимание, что классы, производные от <xref:System.Text.Decoder>, включают метод <xref:System.Text.Decoder.GetChars%2A?displayProperty=fullName>, но не имеют метода, соответствующего <xref:System.Text.Encoding.GetString%2A?displayProperty=fullName>.  
-  
- В примере ниже показано различие между использованием методов <xref:System.Text.Encoding.GetChars%2A?displayProperty=fullName> и <xref:System.Text.Decoder.GetChars%2A?displayProperty=fullName> для декодирования массива байтов Юникода. В этом примере строка, содержащая несколько символов Юникода, кодируется в файл, а затем два метода декодирования используются для декодирования по десять байтов за раз. Так как замещающая пара оказывается в десятом и одиннадцатом байтах, она декодируется в отдельных вызовах метода. Как видно из выходных данных, метод <xref:System.Text.Encoding.GetChars%2A?displayProperty=fullName> не может правильно декодировать байты и заменяет их символом U\+FFFD \(замещающим символом\). С другой стороны, метод <xref:System.Text.Decoder.GetChars%2A?displayProperty=fullName> может успешно декодировать массив байтов для получения исходной строки.  
-  
- [!code-csharp[Conceptual.Encoding#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/stream1.cs#10)]
- [!code-vb[Conceptual.Encoding#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/stream1.vb#10)]  
-  
-<a name="FallbackStrategy"></a>   
-## Выбор резервной стратегии  
- Когда метод пытается закодировать или декодировать символ, но не находит сопоставления, он должен использовать резервную стратегию, определяющую, как должно обрабатываться отсутствие сопоставления. Существует три типа резервных стратегий:  
-  
--   стратегия наилучшего соответствия;  
-  
--   стратегия замены;  
-  
--   стратегия исключения.  
-  
+> <span data-ttu-id="d9e4c-146">В стандарте Юникода каждому символу в каждом поддерживаемом символьном наборе присваивается кодовая точка (номер) и имя.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-146">The Unicode Standard assigns a code point (a number) and a name to each character in every supported script.</span></span> <span data-ttu-id="d9e4c-147">Например, символ "A" представляется кодовой точкой U+0041 и именем LATIN CAPITAL LETTER A.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-147">For example, the character "A" is represented by the code point U+0041 and the name "LATIN CAPITAL LETTER A".</span></span> <span data-ttu-id="d9e4c-148">Кодировки UTF определяют способы кодирования кодовой точки в виде последовательности из одного или нескольких байтов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-148">The Unicode Transformation Format (UTF) encodings define ways to encode that code point into a sequence of one or more bytes.</span></span> <span data-ttu-id="d9e4c-149">Схема кодировки Юникод упрощает разработку международных приложений, так как позволяет представлять символы любых наборов символов в единой кодировке.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-149">A Unicode encoding scheme simplifies world-ready application development because it allows characters from any character set to be represented in a single encoding.</span></span> <span data-ttu-id="d9e4c-150">Разработчикам приложений больше не нужно сохранять данные о схеме кодировки, которая использовалась для представления символов конкретного языка или системы письма. Передача данных между системами, использующими различные языки, может происходить без искажений.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-150">Application developers no longer have to keep track of the encoding scheme that was used to produce characters for a specific language or writing system, and data can be shared among systems internationally without being corrupted.</span></span>
+>
+>  <span data-ttu-id="d9e4c-151">Платформа .NET поддерживает три кодировки, определенные стандартом Юникод: UTF-8, UTF-16 и UTF-32.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-151">.NET supports three encodings defined by the Unicode standard: UTF-8, UTF-16, and UTF-32.</span></span> <span data-ttu-id="d9e4c-152">Дополнительные сведения см. в описании стандарта Юникод на домашней странице [Юникода](http://www.unicode.org/).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-152">For more information, see The Unicode Standard at the [Unicode](http://www.unicode.org/) home page.</span></span>
+ 
+<span data-ttu-id="d9e4c-153">Платформа .NET поддерживает системы кодирования символов, перечисленные в таблице ниже.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-153">.NET supports the character encoding systems listed in the following table.</span></span>
+
+<span data-ttu-id="d9e4c-154">Кодировка</span><span class="sxs-lookup"><span data-stu-id="d9e4c-154">Encoding</span></span> | <span data-ttu-id="d9e4c-155">Класс</span><span class="sxs-lookup"><span data-stu-id="d9e4c-155">Class</span></span> | <span data-ttu-id="d9e4c-156">Описание</span><span class="sxs-lookup"><span data-stu-id="d9e4c-156">Description</span></span> | <span data-ttu-id="d9e4c-157">Преимущества и недостатки</span><span class="sxs-lookup"><span data-stu-id="d9e4c-157">Advantages/disadvantages</span></span>
+-------- | ----- | ----------- | ------------------------ 
+<span data-ttu-id="d9e4c-158">ASCII</span><span class="sxs-lookup"><span data-stu-id="d9e4c-158">ASCII</span></span> | [<span data-ttu-id="d9e4c-159">ASCIIEncoding</span><span class="sxs-lookup"><span data-stu-id="d9e4c-159">ASCIIEncoding</span></span>](xref:System.Text.ASCIIEncoding) | <span data-ttu-id="d9e4c-160">Кодирует ограниченный диапазон символов, используя семь младших битов байта.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-160">Encodes a limited range of characters by using the lower seven bits of a byte.</span></span> | <span data-ttu-id="d9e4c-161">Так как эта кодировка поддерживает только значения символов от U+0000 до U+007F, то в большинстве случаев она не отвечает требованиям международных приложений.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-161">Because this encoding only supports character values from U+0000 through U+007F, in most cases it is inadequate for internationalized applications.</span></span>
+<span data-ttu-id="d9e4c-162">UTF-7</span><span class="sxs-lookup"><span data-stu-id="d9e4c-162">UTF-7</span></span> | [<span data-ttu-id="d9e4c-163">UTF7Encoding</span><span class="sxs-lookup"><span data-stu-id="d9e4c-163">UTF7Encoding</span></span>](xref:System.Text.UTF7Encoding) | <span data-ttu-id="d9e4c-164">Представляет символы в виде последовательностей 7-разрядных символов ASCII.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-164">Represents characters as sequences of 7-bit ASCII characters.</span></span> <span data-ttu-id="d9e4c-165">Символы Юникода, не относящиеся к ASCII, представляются в виде escape-последовательности символов ASCII.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-165">Non-ASCII Unicode characters are represented by an escape sequence of ASCII characters.</span></span> | <span data-ttu-id="d9e4c-166">UTF-7 поддерживает протоколы, например протоколы электронной почты и групп новостей.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-166">UTF-7 supports protocols such as e-mail and newsgroup protocols.</span></span> <span data-ttu-id="d9e4c-167">Однако формат UTF-7 недостаточно безопасен и надежен.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-167">However, UTF-7 is not particularly secure or robust.</span></span> <span data-ttu-id="d9e4c-168">В некоторых случаях изменение одного бита может привести к существенному изменению интерпретации всей строки UTF-7.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-168">In some cases, changing one bit can radically alter the interpretation of an entire UTF-7 string.</span></span> <span data-ttu-id="d9e4c-169">В других случаях для кодировки одного и того же текста могут использоваться разные строки UTF-7.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-169">In other cases, different UTF-7 strings can encode the same text.</span></span> <span data-ttu-id="d9e4c-170">В последовательностях, содержащих отличные от ASCII символы, формат UTF-7 требует больше места, чем UTF-8, а кодирование и декодирование выполняются медленнее.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-170">For sequences that include non-ASCII characters, UTF-7 requires more space than UTF-8, and encoding/decoding is slower.</span></span> <span data-ttu-id="d9e4c-171">Поэтому по возможности лучше использовать UTF-8 вместо UTF-7.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-171">Consequently, you should use UTF-8 instead of UTF-7 if possible.</span></span>
+<span data-ttu-id="d9e4c-172">UTF-8</span><span class="sxs-lookup"><span data-stu-id="d9e4c-172">UTF-8</span></span> | [<span data-ttu-id="d9e4c-173">UTF8Encoding</span><span class="sxs-lookup"><span data-stu-id="d9e4c-173">UTF8Encoding</span></span>](xref:System.Text.UTF8Encoding) | <span data-ttu-id="d9e4c-174">Представляет каждую кодовую точку Юникода в виде последовательности от одного до четырех байтов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-174">Represents each Unicode code point as a sequence of one to four bytes.</span></span> | <span data-ttu-id="d9e4c-175">UTF-8 поддерживает 8-разрядный размер данных и хорошо работает со многими операционными системами.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-175">UTF-8 supports 8-bit data sizes and works well with many existing operating systems.</span></span> <span data-ttu-id="d9e4c-176">Для диапазона символов ASCII кодировка UTF-8 идентична кодировке ASCII и предоставляет более широкий набор символов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-176">For the ASCII range of characters, UTF-8 is identical to ASCII encoding and allows a broader set of characters.</span></span> <span data-ttu-id="d9e4c-177">Однако для китайской, японской и корейской письменности UTF-8 может потребовать три байта для каждого символа, что может привести к большему объему данных по сравнению с UTF-16.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-177">However, for Chinese-Japanese-Korean (CJK) scripts, UTF-8 can require three bytes for each character, and can potentially cause larger data sizes than UTF-16.</span></span> <span data-ttu-id="d9e4c-178">Обратите внимание, что иногда увеличение размера данных для китайской, японской и корейской письменности объясняется объемом данных ASCII, например тегами HTML.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-178">Note that sometimes the amount of ASCII data, such as HTML tags, justifies the increased size for the CJK range.</span></span>
+<span data-ttu-id="d9e4c-179">UTF-16</span><span class="sxs-lookup"><span data-stu-id="d9e4c-179">UTF-16</span></span> | [<span data-ttu-id="d9e4c-180">UnicodeEncoding</span><span class="sxs-lookup"><span data-stu-id="d9e4c-180">UnicodeEncoding</span></span>](xref:System.Text.UnicodeEncoding) | <span data-ttu-id="d9e4c-181">Представляет каждую кодовую точку Юникода в виде последовательности одного или двух 16-разрядных целых чисел.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-181">Represents each Unicode code point as a sequence of one or two 16-bit integers.</span></span> <span data-ttu-id="d9e4c-182">Наиболее распространенные символы Юникода требуют только одной кодовой точки UTF-16, хотя дополнительные символы Юникода (U+10000 и далее) требуют двух замещающих кодовых точек UTF-16.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-182">Most common Unicode characters require only one UTF-16 code point, although Unicode supplementary characters (U+10000 and greater) require two UTF-16 surrogate code points.</span></span> <span data-ttu-id="d9e4c-183">Поддерживаются оба порядка байтов: прямой и обратный.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-183">Both little-endian and big-endian byte orders are supported.</span></span> | <span data-ttu-id="d9e4c-184">Кодировка UTF-16 используется средой CLR для представления значений Char и String, а операционной системой Windows — для представления значений WCHAR.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-184">UTF-16 encoding is used by the common language runtime to represent Char and String values, and it is used by the Windows operating system to represent WCHAR values.</span></span>
+<span data-ttu-id="d9e4c-185">UTF-32</span><span class="sxs-lookup"><span data-stu-id="d9e4c-185">UTF-32</span></span> | [<span data-ttu-id="d9e4c-186">UTF32Encoding</span><span class="sxs-lookup"><span data-stu-id="d9e4c-186">UTF32Encoding</span></span>](xref:System.Text.UTF32Encoding) | <span data-ttu-id="d9e4c-187">Представляет каждую кодовую точку Юникода в виде 32-разрядного целого числа.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-187">Represents each Unicode code point as a 32-bit integer.</span></span> <span data-ttu-id="d9e4c-188">Поддерживаются оба порядка байтов: прямой и обратный.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-188">Both little-endian and big-endian byte orders are supported.</span></span> | <span data-ttu-id="d9e4c-189">Кодировка UTF-32 используется в случае, когда приложению требуется избежать поведения замещающей кодовой точки кодировки UTF-16 в операционных системах, в которых закодированное пространство имеет большое значение.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-189">UTF-32 encoding is used when applications want to avoid the surrogate code point behavior of UTF-16 encoding on operating systems for which encoded space is too important.</span></span> <span data-ttu-id="d9e4c-190">Для кодирования отдельных отображаемых глифов может использоваться несколько символов UTF-32.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-190">Single glyphs rendered on a display can still be encoded with more than one UTF-32 character.</span></span>
+
+<span data-ttu-id="d9e4c-191">Эти кодировки позволяют работать с символами Юникода, а также с кодировками, которые часто используются в приложениях прежних версий.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-191">These encodings enable you to work with Unicode characters as well as with encodings that are most commonly used in legacy applications.</span></span> <span data-ttu-id="d9e4c-192">Кроме того, можно создать настраиваемую кодировку, определив класс, производный от [Encoding](xref:System.Text.Encoding), и переопределив его члены.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-192">In addition, you can create a custom encoding by defining a class that derives from [Encoding](xref:System.Text.Encoding) and overriding its members.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="d9e4c-193">По умолчанию .NET Core не предоставляет доступ к кодировкам кодовых страниц, кроме кодовой страницы 28591 и кодировок Юникода, например UTF-8 и UTF-16.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-193">By default, .NET Core does not make available any code page encodings other than code page 28591 and the Unicode encodings, such as UTF-8 and UTF-16.</span></span> <span data-ttu-id="d9e4c-194">Однако вы можете добавить в свое приложение кодировки кодовых страниц из стандартных приложений Windows, ориентированных на .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-194">However, you can add the code page encodings found in standard Windows apps that target the .NET Framework to your app.</span></span> <span data-ttu-id="d9e4c-195">Подробнее см. в разделе [EncodingProvider](xref:System.Text.EncodingProvider).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-195">For complete information, see the [EncodingProvider](xref:System.Text.EncodingProvider) topic.</span></span> 
+
+## <a name="selecting-an-encoding-class"></a><span data-ttu-id="d9e4c-196">Выбор класса кодировки</span><span class="sxs-lookup"><span data-stu-id="d9e4c-196">Selecting an Encoding class</span></span>
+
+<span data-ttu-id="d9e4c-197">Если у вас есть возможность выбрать кодировку для использования в приложении, следует использовать Юникод, предпочтительно [UTF8Encoding](xref:System.Text.UTF8Encoding) или [UnicodeEncoding](xref:System.Text.UnicodeEncoding).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-197">If you have the opportunity to choose the encoding to be used by your application, you should use a Unicode encoding, preferably either [UTF8Encoding](xref:System.Text.UTF8Encoding) or [UnicodeEncoding](xref:System.Text.UnicodeEncoding).</span></span> <span data-ttu-id="d9e4c-198">(Платформа .NET также поддерживает третью кодировку — Юникод [UTF32Encoding](xref:System.Text.UTF32Encoding).)</span><span class="sxs-lookup"><span data-stu-id="d9e4c-198">(.NET also supports a third Unicode encoding, [UTF32Encoding](xref:System.Text.UTF32Encoding).)</span></span> 
+
+<span data-ttu-id="d9e4c-199">Если вы планируете использовать кодировку ASCII ([ASCIIEncoding](xref:System.Text.ASCIIEncoding)), выберите вместо нее [UTF8Encoding](xref:System.Text.UTF8Encoding).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-199">If you are planning to use an ASCII encoding ([ASCIIEncoding](xref:System.Text.ASCIIEncoding)), choose [UTF8Encoding](xref:System.Text.UTF8Encoding) instead.</span></span> <span data-ttu-id="d9e4c-200">Эти две кодировки идентичны для набора символов ASCII, но [UTF8Encoding](xref:System.Text.UTF8Encoding) имеет указанные ниже преимущества.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-200">The two encodings are identical for the ASCII character set, but [UTF8Encoding](xref:System.Text.UTF8Encoding) has the following advantages:</span></span> 
+
+* <span data-ttu-id="d9e4c-201">Она может представлять любой символ Юникода, тогда как [ASCIIEncoding](xref:System.Text.ASCIIEncoding) поддерживает только символы Юникода в диапазоне от U+0000 до U+007F.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-201">It can represent every Unicode character, whereas [ASCIIEncoding](xref:System.Text.ASCIIEncoding) supports only the Unicode character values between U+0000 and U+007F.</span></span>
+
+* <span data-ttu-id="d9e4c-202">Она обеспечивает обнаружение ошибок и более высокий уровень безопасности.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-202">It provides error detection and better security.</span></span>
+
+* <span data-ttu-id="d9e4c-203">Она настроена для максимально быстрой работы и должна быть быстрее любых других кодировок.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-203">It has been tuned to be as fast as possible and should be faster than any other encoding.</span></span> <span data-ttu-id="d9e4c-204">Даже для содержимого, имеющего только формат ASCII, выполнение операций с помощью [UTF8Encoding](xref:System.Text.UTF8Encoding) происходит быстрее, чем с помощью [ASCIIEncoding](xref:System.Text.ASCIIEncoding).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-204">Even for content that is entirely ASCII, operations performed with [UTF8Encoding](xref:System.Text.UTF8Encoding) are faster than operations performed with [ASCIIEncoding](xref:System.Text.ASCIIEncoding).</span></span>
+
+<span data-ttu-id="d9e4c-205">Кодировку [ASCIIEncoding](xref:System.Text.ASCIIEncoding) рекомендуется использовать только для приложений прежних версий.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-205">You should consider using [ASCIIEncoding](xref:System.Text.ASCIIEncoding) only for legacy applications.</span></span> <span data-ttu-id="d9e4c-206">Однако даже для приложений прежних версий [UTF8Encoding](xref:System.Text.UTF8Encoding) может быть предпочтительнее по указанным ниже причинам (при параметрах по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-206">However, even for legacy applications, [UTF8Encoding](xref:System.Text.UTF8Encoding) might be a better choice for the following reasons (assuming default settings):</span></span>
+
+* <span data-ttu-id="d9e4c-207">Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью [ASCIIEncoding](xref:System.Text.ASCIIEncoding) каждый символ, не относящийся к ASCII, кодируется как знак вопроса (?).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-207">If your application has content that is not strictly ASCII and encodes it with [ASCIIEncoding](xref:System.Text.ASCIIEncoding), each non-ASCII character encodes as a question mark (?).</span></span> <span data-ttu-id="d9e4c-208">При последующем декодировании эти данные утрачиваются.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-208">If the application then decodes this data, the information is lost.</span></span>
+
+
+* <span data-ttu-id="d9e4c-209">Если содержимое приложения включает символы не только в формате ASCII, при кодировании с помощью [UTF8Encoding](xref:System.Text.UTF8Encoding) представление символов в формате ASCII дает непригодный для чтения результат.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-209">If your application has content that is not strictly ASCII and encodes it with [UTF8Encoding](xref:System.Text.UTF8Encoding), the result seems unintelligible if interpreted as ASCII.</span></span> <span data-ttu-id="d9e4c-210">Однако при последующем декодировании данных с помощью декодера UTF-8 обработка данных выполняется успешно.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-210">However, if the application then uses a UTF-8 decoder to decode this data, the data performs a round trip successfully.</span></span>
+
+<span data-ttu-id="d9e4c-211">В веб-приложении символы, отправленные клиенту в ответ на веб-запрос, должны отражать кодировку, используемую в клиенте.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-211">In a web application, characters sent to the client in response to a web request should reflect the encoding used on the client.</span></span> <span data-ttu-id="d9e4c-212">Как правило, требуется задать для свойства [HttpResponse.ContentEncoding](xref:System.Net.HttpResponseHeader.ContentEncoding) значение, возвращаемое свойством [HttpRequestHeader.ContentEncoding](xref:System.Net.HttpRequestHeader.ContentEncoding), для отображения текста в той кодировке, которую ожидает пользователь.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-212">In most cases, you should set the [HttpResponse.ContentEncoding](xref:System.Net.HttpResponseHeader.ContentEncoding) property to the value returned by the [HttpRequestHeader.ContentEncoding](xref:System.Net.HttpRequestHeader.ContentEncoding) property to display text in the encoding that the user expects.</span></span>
+
+## <a name="using-an-encoding-object"></a><span data-ttu-id="d9e4c-213">Использование объекта кодировки</span><span class="sxs-lookup"><span data-stu-id="d9e4c-213">Using an encoding object</span></span>
+
+<span data-ttu-id="d9e4c-214">Кодировщик преобразует строку символов (чаще всего символов Юникода) в их числовой (байтовый) эквивалент.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-214">An encoder converts a string of characters (most commonly, Unicode characters) to its numeric (byte) equivalent.</span></span> <span data-ttu-id="d9e4c-215">Например, кодировщик ASCII можно использовать для преобразования символов Юникода в ASCII, чтобы они могли отображаться на консоли.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-215">For example, you might use an ASCII encoder to convert Unicode characters to ASCII so that they can be displayed at the console.</span></span> <span data-ttu-id="d9e4c-216">Чтобы выполнить преобразование, вызовите метод [Encoding.GetBytes](xref:System.Text.Encoding.GetBytes(System.Char[])).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-216">To perform the conversion, you call the [Encoding.GetBytes](xref:System.Text.Encoding.GetBytes(System.Char[])) method.</span></span> <span data-ttu-id="d9e4c-217">Если перед выполнением кодирования нужно определить, сколько байтов потребуется для хранения закодированных символов, можно вызвать метод [GetByteCount](xref:System.Text.Encoding.GetByteCount(System.Char[])).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-217">If you want to determine how many bytes are needed to store the encoded characters before performing the encoding, you can call the [GetByteCount](xref:System.Text.Encoding.GetByteCount(System.Char[])) method.</span></span>
+
+<span data-ttu-id="d9e4c-218">В примере ниже один массив байтов используется для кодирования строк в двух отдельных операциях.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-218">The following example uses a single byte array to encode strings in two separate operations.</span></span> <span data-ttu-id="d9e4c-219">Имеется индекс, указывающий начальную позицию в массиве байтов для следующего набора байтов, закодированных с использованием ASCII.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-219">It maintains an index that indicates the starting position in the byte array for the next set of ASCII-encoded bytes.</span></span> <span data-ttu-id="d9e4c-220">Вызывается метод [ASCIIEncoding.GetByteCount(String)](xref:System.Text.ASCIIEncoding.GetByteCount(System.String)) для проверки того, что массив байтов достаточно велик для хранения закодированной строки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-220">It calls the [ASCIIEncoding.GetByteCount(String)](xref:System.Text.ASCIIEncoding.GetByteCount(System.String)) method to ensure that the byte array is large enough to accommodate the encoded string.</span></span> <span data-ttu-id="d9e4c-221">Затем вызывается метод [ASCIIEncoding.GetBytes(String, Int32, Int32, Byte[], Int32)](xref:System.Text.ASCIIEncoding.GetBytes(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32)) для кодирования символов в строке.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-221">It then calls the [ASCIIEncoding.GetBytes(String, Int32, Int32, Byte[], Int32)](xref:System.Text.ASCIIEncoding.GetBytes(System.Char[],System.Int32,System.Int32,System.Byte[],System.Int32)) method to encode the characters in the string.</span></span>
+
+```csharp
+using System;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      string[] strings= { "This is the first sentence. ", 
+                          "This is the second sentence. " };
+      Encoding asciiEncoding = Encoding.ASCII;
+
+      // Create array of adequate size.
+      byte[] bytes = new byte[49];
+      // Create index for current position of array.
+      int index = 0;
+
+      Console.WriteLine("Strings to encode:");
+      foreach (var stringValue in strings) {
+         Console.WriteLine("   {0}", stringValue);
+
+         int count = asciiEncoding.GetByteCount(stringValue);
+         if (count + index >=  bytes.Length)
+            Array.Resize(ref bytes, bytes.Length + 50);
+
+         int written = asciiEncoding.GetBytes(stringValue, 0, 
+                                              stringValue.Length, 
+                                              bytes, index);    
+
+         index = index + written; 
+      } 
+      Console.WriteLine("\nEncoded bytes:");
+      Console.WriteLine("{0}", ShowByteValues(bytes, index));
+      Console.WriteLine();
+
+      // Decode Unicode byte array to a string.
+      string newString = asciiEncoding.GetString(bytes, 0, index);
+      Console.WriteLine("Decoded: {0}", newString);
+   }
+
+   private static string ShowByteValues(byte[] bytes, int last ) 
+   {
+      string returnString = "   ";
+      for (int ctr = 0; ctr <= last - 1; ctr++) {
+         if (ctr % 20 == 0)
+            returnString += "\n   ";
+         returnString += String.Format("{0:X2} ", bytes[ctr]);
+      }
+      return returnString;
+   }
+}
+// The example displays the following output:
+//       Strings to encode:
+//          This is the first sentence.
+//          This is the second sentence.
+//       
+//       Encoded bytes:
+//       
+//          54 68 69 73 20 69 73 20 74 68 65 20 66 69 72 73 74 20 73 65
+//          6E 74 65 6E 63 65 2E 20 54 68 69 73 20 69 73 20 74 68 65 20
+//          73 65 63 6F 6E 64 20 73 65 6E 74 65 6E 63 65 2E 20
+//       
+//       Decoded: This is the first sentence. This is the second sentence.
+```
+
+```vb
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      Dim strings() As String = { "This is the first sentence. ", 
+                                  "This is the second sentence. " }
+      Dim asciiEncoding As Encoding = Encoding.ASCII
+
+      ' Create array of adequate size.
+      Dim bytes(50) As Byte
+      ' Create index for current position of array.
+      Dim index As Integer = 0
+
+      Console.WriteLine("Strings to encode:")
+      For Each stringValue In strings
+         Console.WriteLine("   {0}", stringValue)
+
+         Dim count As Integer = asciiEncoding.GetByteCount(stringValue)
+         If count + index >=  bytes.Length Then
+            Array.Resize(bytes, bytes.Length + 50)
+         End If
+         Dim written As Integer = asciiEncoding.GetBytes(stringValue, 0, 
+                                                         stringValue.Length, 
+                                                         bytes, index)    
+
+         index = index + written 
+      Next 
+      Console.WriteLine()
+      Console.WriteLine("Encoded bytes:")
+      Console.WriteLine("{0}", ShowByteValues(bytes, index))
+      Console.WriteLine()
+
+      ' Decode Unicode byte array to a string.
+      Dim newString As String = asciiEncoding.GetString(bytes, 0, index)
+      Console.WriteLine("Decoded: {0}", newString)
+   End Sub
+
+   Private Function ShowByteValues(bytes As Byte(), last As Integer) As String
+      Dim returnString As String = "   "
+      For ctr As Integer = 0 To last - 1
+         If ctr Mod 20 = 0 Then returnString += vbCrLf + "   "
+         returnString += String.Format("{0:X2} ", bytes(ctr))
+      Next
+      Return returnString
+   End Function
+End Module
+' The example displays the following output:
+'       Strings to encode:
+'          This is the first sentence.
+'          This is the second sentence.
+'       
+'       Encoded bytes:
+'       
+'          54 68 69 73 20 69 73 20 74 68 65 20 66 69 72 73 74 20 73 65
+'          6E 74 65 6E 63 65 2E 20 54 68 69 73 20 69 73 20 74 68 65 20
+'          73 65 63 6F 6E 64 20 73 65 6E 74 65 6E 63 65 2E 20
+'       
+'       Decoded: This is the first sentence. This is the second sentence.
+```
+
+<span data-ttu-id="d9e4c-222">Декодер преобразует массив байтов, отражающий конкретную кодировку символов, в набор символов в массиве символов или в строке.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-222">A decoder converts a byte array that reflects a particular character encoding into a set of characters, either in a character array or in a string.</span></span> <span data-ttu-id="d9e4c-223">Чтобы декодировать массив байтов в массив символов, вызовите метод [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-223">To decode a byte array into a character array, you call the [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) method.</span></span> <span data-ttu-id="d9e4c-224">Чтобы декодировать массив байтов в строку, вызовите метод [GetString](xref:System.Text.Encoding.GetString(System.Byte[])).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-224">To decode a byte array into a string, you call the [GetString](xref:System.Text.Encoding.GetString(System.Byte[])) method.</span></span> <span data-ttu-id="d9e4c-225">Если перед декодированием нужно определить, сколько символов требуется для хранения раскодированных байтов, можно вызвать метод [GetCharCount](xref:System.Text.Encoding.GetCharCount(System.Byte[])).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-225">If you want to determine how many characters are needed to store the decoded bytes before performing the decoding, you can call the [GetCharCount](xref:System.Text.Encoding.GetCharCount(System.Byte[])) method.</span></span>
+
+<span data-ttu-id="d9e4c-226">В примере ниже три строки кодируются, а затем декодируются в один массив символов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-226">The following example encodes three strings and then decodes them into a single array of characters.</span></span> <span data-ttu-id="d9e4c-227">Имеется индекс, указывающий начальную позицию в массиве символов для следующего набора декодированных символов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-227">It maintains an index that indicates the starting position in the character array for the next set of decoded characters.</span></span> <span data-ttu-id="d9e4c-228">Вызывается метод [GetCharCount](xref:System.Text.Encoding.GetCharCount(System.Byte[])) для проверки того, что массив символов достаточно велик для хранения всех декодированных символов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-228">It calls the [GetCharCount](xref:System.Text.Encoding.GetCharCount(System.Byte[])) method to ensure that the character array is large enough to accommodate all the decoded characters.</span></span> <span data-ttu-id="d9e4c-229">Затем вызывается метод [ASCIIEncoding.GetChars(Byte[], Int32, Int32, Char[], Int32)](xref:System.Text.ASCIIEncoding.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) для декодирования массива байтов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-229">It then calls the [ASCIIEncoding.GetChars(Byte[], Int32, Int32, Char[], Int32)](xref:System.Text.ASCIIEncoding.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) method to decode the byte array.</span></span>
+
+```csharp
+using System;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      string[] strings = { "This is the first sentence. ", 
+                           "This is the second sentence. ",
+                           "This is the third sentence. " };
+      Encoding asciiEncoding = Encoding.ASCII;
+      // Array to hold encoded bytes.
+      byte[] bytes;
+      // Array to hold decoded characters.
+      char[] chars = new char[50];
+      // Create index for current position of character array.
+      int index = 0;     
+
+      foreach (var stringValue in strings) {
+         Console.WriteLine("String to Encode: {0}", stringValue);
+         // Encode the string to a byte array.
+         bytes = asciiEncoding.GetBytes(stringValue);
+         // Display the encoded bytes.
+         Console.Write("Encoded bytes: ");
+         for (int ctr = 0; ctr < bytes.Length; ctr++)
+            Console.Write(" {0}{1:X2}", 
+                          ctr % 20 == 0 ? Environment.NewLine : "", 
+                          bytes[ctr]);
+         Console.WriteLine();
+
+         // Decode the bytes to a single character array.
+         int count = asciiEncoding.GetCharCount(bytes);
+         if (count + index >=  chars.Length)
+            Array.Resize(ref chars, chars.Length + 50);
+
+         int written = asciiEncoding.GetChars(bytes, 0, 
+                                              bytes.Length, 
+                                              chars, index);              
+         index = index + written;
+         Console.WriteLine();       
+      }
+
+      // Instantiate a single string containing the characters.
+      string decodedString = new string(chars, 0, index - 1);
+      Console.WriteLine("Decoded string: ");
+      Console.WriteLine(decodedString);
+   }
+}
+// The example displays the following output:
+//    String to Encode: This is the first sentence.
+//    Encoded bytes:
+//    54 68 69 73 20 69 73 20 74 68 65 20 66 69 72 73 74 20 73 65
+//    6E 74 65 6E 63 65 2E 20
+//    
+//    String to Encode: This is the second sentence.
+//    Encoded bytes:
+//    54 68 69 73 20 69 73 20 74 68 65 20 73 65 63 6F 6E 64 20 73
+//    65 6E 74 65 6E 63 65 2E 20
+//    
+//    String to Encode: This is the third sentence.
+//    Encoded bytes:
+//    54 68 69 73 20 69 73 20 74 68 65 20 74 68 69 72 64 20 73 65
+//    6E 74 65 6E 63 65 2E 20
+//    
+//    Decoded string:
+//    This is the first sentence. This is the second sentence. This is the third sentence.
+```
+
+```vb
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      Dim strings() As String = { "This is the first sentence. ", 
+                                  "This is the second sentence. ",
+                                  "This is the third sentence. " }
+      Dim asciiEncoding As Encoding = Encoding.ASCII
+      ' Array to hold encoded bytes.
+      Dim bytes() As Byte
+      ' Array to hold decoded characters.
+      Dim chars(50) As Char
+      ' Create index for current position of character array.
+      Dim index As Integer     
+
+      For Each stringValue In strings
+         Console.WriteLine("String to Encode: {0}", stringValue)
+         ' Encode the string to a byte array.
+         bytes = asciiEncoding.GetBytes(stringValue)
+         ' Display the encoded bytes.
+         Console.Write("Encoded bytes: ")
+         For ctr As Integer = 0 To bytes.Length - 1
+            Console.Write(" {0}{1:X2}", If(ctr Mod 20 = 0, vbCrLf, ""), 
+                                        bytes(ctr))
+         Next         
+         Console.WriteLine()
+
+         ' Decode the bytes to a single character array.
+         Dim count As Integer = asciiEncoding.GetCharCount(bytes)
+         If count + index >=  chars.Length Then
+            Array.Resize(chars, chars.Length + 50)
+         End If
+         Dim written As Integer = asciiEncoding.GetChars(bytes, 0, 
+                                                         bytes.Length, 
+                                                         chars, index)              
+         index = index + written
+         Console.WriteLine()       
+      Next
+
+      ' Instantiate a single string containing the characters.
+      Dim decodedString As New String(chars, 0, index - 1)
+      Console.WriteLine("Decoded string: ")
+      Console.WriteLine(decodedString)
+   End Sub
+End Module
+' The example displays the following output:
+'    String to Encode: This is the first sentence.
+'    Encoded bytes:
+'    54 68 69 73 20 69 73 20 74 68 65 20 66 69 72 73 74 20 73 65
+'    6E 74 65 6E 63 65 2E 20
+'    
+'    String to Encode: This is the second sentence.
+'    Encoded bytes:
+'    54 68 69 73 20 69 73 20 74 68 65 20 73 65 63 6F 6E 64 20 73
+'    65 6E 74 65 6E 63 65 2E 20
+'    
+'    String to Encode: This is the third sentence.
+'    Encoded bytes:
+'    54 68 69 73 20 69 73 20 74 68 65 20 74 68 69 72 64 20 73 65
+'    6E 74 65 6E 63 65 2E 20
+'    
+'    Decoded string:
+'    This is the first sentence. This is the second sentence. This is the third sentence.
+```
+
+<span data-ttu-id="d9e4c-230">Методы кодирования и декодирования класса, производного от класса [Encoding](xref:System.Text.Encoding), предназначены для работы с полным набором данных. Это значит, что все данные, подлежащие кодированию или декодированию, предоставляются в одном вызове метода.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-230">The encoding and decoding methods of a class derived from [Encoding](xref:System.Text.Encoding) are designed to work on a complete set of data; that is, all the data to be encoded or decoded is supplied in a single method call.</span></span> <span data-ttu-id="d9e4c-231">Однако в некоторых случаях данные предоставляются в потоке, тогда данные для кодирования и декодирования можно получить только с помощью нескольких операций чтения.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-231">However, in some cases, data is available in a stream, and the data to be encoded or decoded may be available only from separate read operations.</span></span> <span data-ttu-id="d9e4c-232">В таком случае необходимо, чтобы операция кодирования или декодирования "помнила" сохраненное после предыдущего вызова состояние.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-232">This requires the encoding or decoding operation to remember any saved state from its previous invocation.</span></span> <span data-ttu-id="d9e4c-233">Методы классов, производных от [Encoder](xref:System.Text.Encoder) и [Decoder](xref:System.Text.Decoder), могут обрабатывать операции кодирования и декодирования, охватывающие несколько вызовов методов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-233">Methods of classes derived from [Encoder](xref:System.Text.Encoder) and [Decoder](xref:System.Text.Decoder) are able to handle encoding and decoding operations that span multiple method calls.</span></span>
+
+<span data-ttu-id="d9e4c-234">Объект [Encoder](xref:System.Text.Encoder) для конкретной кодировки доступен в ее свойстве [Encoding.GetEncoder](xref:System.Text.Encoding.GetEncoder).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-234">An [Encoder](xref:System.Text.Encoder) object for a particular encoding is available from that encoding's [Encoding.GetEncoder](xref:System.Text.Encoding.GetEncoder) property.</span></span> <span data-ttu-id="d9e4c-235">Объект [Decoder](xref:System.Text.Decoder) для конкретной кодировки доступен в ее свойстве [Encoding.GetDecoder](xref:System.Text.Encoding.GetDecoder).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-235">A [Decoder](xref:System.Text.Decoder) object for a particular encoding is available from that encoding's [Encoding.GetDecoder](xref:System.Text.Encoding.GetDecoder) property.</span></span> <span data-ttu-id="d9e4c-236">Что касается операций декодирования, обратите внимание, что классы, производные от [Decoder](xref:System.Text.Decoder), включают метод [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)), но не имеют метода, соответствующего [Encoding.GetString](xref:System.Text.Encoding.GetString(System.Byte[])).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-236">For decoding operations, note that classes derived from [Decoder](xref:System.Text.Decoder) include a [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) method, but they do not have a method that corresponds to [Encoding.GetString](xref:System.Text.Encoding.GetString(System.Byte[])).</span></span>
+
+<span data-ttu-id="d9e4c-237">В примере ниже показано различие между использованием методов [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) и [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) для декодирования массива байтов Юникода.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-237">The following example illustrates the difference between using the [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) and [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) methods for decoding a Unicode byte array.</span></span> <span data-ttu-id="d9e4c-238">В этом примере строка, содержащая несколько символов Юникода, кодируется в файл, а затем два метода декодирования используются для декодирования по десять байтов за раз.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-238">The example encodes a string that contains some Unicode characters to a file, and then uses the two decoding methods to decode them ten bytes at a time.</span></span> <span data-ttu-id="d9e4c-239">Так как замещающая пара оказывается в десятом и одиннадцатом байтах, она декодируется в отдельных вызовах метода.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-239">Because a surrogate pair occurs in the tenth and eleventh bytes, it is decoded in separate method calls.</span></span> <span data-ttu-id="d9e4c-240">Как видно из выходных данных, метод [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) не может правильно декодировать байты и заменяет их символом U+FFFD (замещающим символом).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-240">As the output shows, the [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) method is not able to correctly decode the bytes and instead replaces them with U+FFFD (REPLACEMENT CHARACTER).</span></span> <span data-ttu-id="d9e4c-241">С другой стороны, метод [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) может успешно декодировать массив байтов для получения исходной строки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-241">On the other hand, the [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) method is able to successfully decode the byte array to get the original string.</span></span>
+
+```csharp
+using System;
+using System.IO;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      // Use default replacement fallback for invalid encoding.
+      UnicodeEncoding enc = new UnicodeEncoding(true, false, false);
+
+      // Define a string with various Unicode characters.
+      string str1 = "AB YZ 19 \uD800\udc05 \u00e4"; 
+      str1 += "Unicode characters. \u00a9 \u010C s \u0062\u0308"; 
+      Console.WriteLine("Created original string...\n");
+
+      // Convert string to byte array.                     
+      byte[] bytes = enc.GetBytes(str1);
+
+      FileStream fs = File.Create(@".\characters.bin");
+      BinaryWriter bw = new BinaryWriter(fs);
+      bw.Write(bytes);
+      bw.Close();
+
+      // Read bytes from file.
+      FileStream fsIn = File.OpenRead(@".\characters.bin");
+      BinaryReader br = new BinaryReader(fsIn);
+
+      const int count = 10;            // Number of bytes to read at a time. 
+      byte[] bytesRead = new byte[10]; // Buffer (byte array).
+      int read;                        // Number of bytes actually read. 
+      string str2 = String.Empty;      // Decoded string.
+
+      // Try using Encoding object for all operations.
+      do { 
+         read = br.Read(bytesRead, 0, count);
+         str2 += enc.GetString(bytesRead, 0, read); 
+      } while (read == count);
+      br.Close();
+      Console.WriteLine("Decoded string using UnicodeEncoding.GetString()...");
+      CompareForEquality(str1, str2);
+      Console.WriteLine();
+
+      // Use Decoder for all operations.
+      fsIn = File.OpenRead(@".\characters.bin");
+      br = new BinaryReader(fsIn);
+      Decoder decoder = enc.GetDecoder();
+      char[] chars = new char[50];
+      int index = 0;                   // Next character to write in array.
+      int written = 0;                 // Number of chars written to array.
+      do { 
+         read = br.Read(bytesRead, 0, count);
+         if (index + decoder.GetCharCount(bytesRead, 0, read) - 1 >= chars.Length) 
+            Array.Resize(ref chars, chars.Length + 50);
+
+         written = decoder.GetChars(bytesRead, 0, read, chars, index);
+         index += written;                          
+      } while (read == count);
+      br.Close();            
+      // Instantiate a string with the decoded characters.
+      string str3 = new String(chars, 0, index); 
+      Console.WriteLine("Decoded string using UnicodeEncoding.Decoder.GetString()...");
+      CompareForEquality(str1, str3); 
+   }
+
+   private static void CompareForEquality(string original, string decoded)
+   {
+      bool result = original.Equals(decoded);
+      Console.WriteLine("original = decoded: {0}", 
+                        original.Equals(decoded, StringComparison.Ordinal));
+      if (! result) {
+         Console.WriteLine("Code points in original string:");
+         foreach (var ch in original)
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+         Console.WriteLine();
+
+         Console.WriteLine("Code points in decoded string:");
+         foreach (var ch in decoded)
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+         Console.WriteLine();
+      }
+   }
+}
+// The example displays the following output:
+//    Created original string...
+//    
+//    Decoded string using UnicodeEncoding.GetString()...
+//    original = decoded: False
+//    Code points in original string:
+//    0041 0042 0020 0059 005A 0020 0031 0039 0020 D800 DC05 0020 00E4 0055 006E 0069 0063 006F
+//    0064 0065 0020 0063 0068 0061 0072 0061 0063 0074 0065 0072 0073 002E 0020 00A9 0020 010C
+//    0020 0073 0020 0062 0308
+//    Code points in decoded string:
+//    0041 0042 0020 0059 005A 0020 0031 0039 0020 FFFD FFFD 0020 00E4 0055 006E 0069 0063 006F
+//    0064 0065 0020 0063 0068 0061 0072 0061 0063 0074 0065 0072 0073 002E 0020 00A9 0020 010C
+//    0020 0073 0020 0062 0308
+//    
+//    Decoded string using UnicodeEncoding.Decoder.GetString()...
+//    original = decoded: True
+```
+
+```vb
+Imports System.IO
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      ' Use default replacement fallback for invalid encoding.
+      Dim enc As New UnicodeEncoding(True, False, False)
+
+      ' Define a string with various Unicode characters.
+      Dim str1 As String = String.Format("AB YZ 19 {0}{1} {2}", 
+                                         ChrW(&hD800), ChrW(&hDC05), ChrW(&h00e4))
+      str1 += String.Format("Unicode characters. {0} {1} s {2}{3}", 
+                            ChrW(&h00a9), ChrW(&h010C), ChrW(&h0062), ChrW(&h0308))
+      Console.WriteLine("Created original string...")
+      Console.WriteLine()
+
+      ' Convert string to byte array.                     
+      Dim bytes() As Byte = enc.GetBytes(str1)
+
+      Dim fs As FileStream = File.Create(".\characters.bin")
+      Dim bw As New BinaryWriter(fs)
+      bw.Write(bytes)
+      bw.Close()
+
+      ' Read bytes from file.
+      Dim fsIn As FileStream = File.OpenRead(".\characters.bin")
+      Dim br As New BinaryReader(fsIn)
+
+      Const count As Integer = 10      ' Number of bytes to read at a time. 
+      Dim bytesRead(9) As Byte         ' Buffer (byte array).
+      Dim read As Integer              ' Number of bytes actually read. 
+      Dim str2 As String = ""          ' Decoded string.
+
+      ' Try using Encoding object for all operations.
+      Do 
+         read = br.Read(bytesRead, 0, count)
+         str2 += enc.GetString(bytesRead, 0, read) 
+      Loop While read = count
+      br.Close()
+      Console.WriteLine("Decoded string using UnicodeEncoding.GetString()...")
+      CompareForEquality(str1, str2)
+      Console.WriteLine()
+
+      ' Use Decoder for all operations.
+      fsIn = File.OpenRead(".\characters.bin")
+      br = New BinaryReader(fsIn)
+      Dim decoder As Decoder = enc.GetDecoder()
+      Dim chars(50) As Char
+      Dim index As Integer = 0         ' Next character to write in array.
+      Dim written As Integer = 0       ' Number of chars written to array.
+      Do 
+         read = br.Read(bytesRead, 0, count)
+         If index + decoder.GetCharCount(bytesRead, 0, read) - 1 >= chars.Length Then 
+            Array.Resize(chars, chars.Length + 50)
+         End If   
+         written = decoder.GetChars(bytesRead, 0, read, chars, index)
+         index += written                          
+      Loop While read = count
+      br.Close()            
+      ' Instantiate a string with the decoded characters.
+      Dim str3 As New String(chars, 0, index) 
+      Console.WriteLine("Decoded string using UnicodeEncoding.Decoder.GetString()...")
+      CompareForEquality(str1, str3) 
+   End Sub
+
+   Private Sub CompareForEquality(original As String, decoded As String)
+      Dim result As Boolean = original.Equals(decoded)
+      Console.WriteLine("original = decoded: {0}", 
+                        original.Equals(decoded, StringComparison.Ordinal))
+      If Not result Then
+         Console.WriteLine("Code points in original string:")
+         For Each ch In original
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+         Next
+         Console.WriteLine()
+
+         Console.WriteLine("Code points in decoded string:")
+         For Each ch In decoded
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+         Next
+         Console.WriteLine()
+      End If
+   End Sub
+End Module
+' The example displays the following output:
+'    Created original string...
+'    
+'    Decoded string using UnicodeEncoding.GetString()...
+'    original = decoded: False
+'    Code points in original string:
+'    0041 0042 0020 0059 005A 0020 0031 0039 0020 D800 DC05 0020 00E4 0055 006E 0069 0063 006F
+'    0064 0065 0020 0063 0068 0061 0072 0061 0063 0074 0065 0072 0073 002E 0020 00A9 0020 010C
+'    0020 0073 0020 0062 0308
+'    Code points in decoded string:
+'    0041 0042 0020 0059 005A 0020 0031 0039 0020 FFFD FFFD 0020 00E4 0055 006E 0069 0063 006F
+'    0064 0065 0020 0063 0068 0061 0072 0061 0063 0074 0065 0072 0073 002E 0020 00A9 0020 010C
+'    0020 0073 0020 0062 0308
+'    
+'    Decoded string using UnicodeEncoding.Decoder.GetString()...
+'    original = decoded: True
+```
+
+## <a name="choosing-a-fallback-strategy"></a><span data-ttu-id="d9e4c-242">Выбор резервной стратегии</span><span class="sxs-lookup"><span data-stu-id="d9e4c-242">Choosing a fallback strategy</span></span>
+
+<span data-ttu-id="d9e4c-243">Когда метод пытается закодировать или декодировать символ, но не находит сопоставления, он должен использовать резервную стратегию, определяющую, как должно обрабатываться отсутствие сопоставления.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-243">When a method tries to encode or decode a character but no mapping exists, it must implement a fallback strategy that determines how the failed mapping should be handled.</span></span> <span data-ttu-id="d9e4c-244">Существует три типа резервных стратегий:</span><span class="sxs-lookup"><span data-stu-id="d9e4c-244">There are three types of fallback strategies:</span></span> 
+
+* <span data-ttu-id="d9e4c-245">стратегия наилучшего соответствия;</span><span class="sxs-lookup"><span data-stu-id="d9e4c-245">Best-fit fallback</span></span>
+
+* <span data-ttu-id="d9e4c-246">стратегия замены;</span><span class="sxs-lookup"><span data-stu-id="d9e4c-246">Replacement fallback</span></span>
+
+* <span data-ttu-id="d9e4c-247">стратегия исключения.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-247">Exception fallback</span></span>
+
 > [!IMPORTANT]
->  При операциях кодирования наиболее часто проблемы возникают, когда символ Юникода не удается сопоставить с определенной кодировкой кодовой страницы. При операциях декодирования наиболее часто проблемы возникают, когда недопустимую последовательность байтов не удается преобразовать в допустимые символы Юникода. Поэтому необходимо знать, какую резервную стратегию использует определенный объект кодировки. По возможности при создании экземпляра объекта следует указывать резервную стратегию, используемую объектом кодировки.  
-  
-<a name="BestFit"></a>   
-### Стратегия наилучшего соответствия  
- Если символ не имеет точного соответствия в целевой кодировке, кодировщик может попытаться сопоставить его с похожим символом. \(Стратегия наилучшего соответствия связана с проблемами, возникающими скорее при кодировании, чем при декодировании. Существует лишь небольшое число кодовых страниц, символы которых нельзя сопоставить с Юникодом.\) Стратегия наилучшего соответствия является стратегией по умолчанию для кодовых страниц и двухбайтовых кодировок, извлекаемых перегрузками <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=fullName> и <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=fullName>.  
-  
+> <span data-ttu-id="d9e4c-248">При операциях кодирования наиболее часто проблемы возникают, когда символ Юникода не удается сопоставить с определенной кодировкой кодовой страницы.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-248">The most common problems in encoding operations occur when a Unicode character cannot be mapped to a particular code page encoding.</span></span> <span data-ttu-id="d9e4c-249">При операциях декодирования наиболее часто проблемы возникают, когда недопустимую последовательность байтов не удается преобразовать в допустимые символы Юникода.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-249">The most common problems in decoding operations occur when invalid byte sequences cannot be translated into valid Unicode characters.</span></span> <span data-ttu-id="d9e4c-250">Поэтому необходимо знать, какую резервную стратегию использует определенный объект кодировки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-250">For these reasons, you should know which fallback strategy a particular encoding object uses.</span></span> <span data-ttu-id="d9e4c-251">По возможности при создании экземпляра объекта следует указывать резервную стратегию, используемую объектом кодировки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-251">Whenever possible, you should specify the fallback strategy used by an encoding object when you instantiate the object.</span></span>
+ 
+### <a name="best-fit-fallback"></a><span data-ttu-id="d9e4c-252">стратегия наилучшего соответствия;</span><span class="sxs-lookup"><span data-stu-id="d9e4c-252">Best-fit fallback</span></span>
+
+<span data-ttu-id="d9e4c-253">Если символ не имеет точного соответствия в целевой кодировке, кодировщик может попытаться сопоставить его с похожим символом.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-253">When a character does not have an exact match in the target encoding, the encoder can try to map it to a similar character.</span></span> <span data-ttu-id="d9e4c-254">(Стратегия наилучшего соответствия связана с проблемами, возникающими скорее при кодировании, чем при декодировании.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-254">(Best-fit fallback is mostly an encoding rather than a decoding issue.</span></span> <span data-ttu-id="d9e4c-255">Существует лишь небольшое число кодовых страниц, символы которых нельзя сопоставить с Юникодом.) Стратегия наилучшего соответствия является стратегией по умолчанию для кодовых страниц и двухбайтовых кодировок, извлекаемых перегрузками [Encoding.GetEncoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) и [Encoding.GetEncoding(String)](xref:System.Text.Encoding.GetEncoding(System.String)).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-255">There are very few code pages that contain characters that cannot be successfully mapped to Unicode.) Best-fit fallback is the default for code page and double-byte character set encodings that are retrieved by the [Encoding.GetEncoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) and [Encoding.GetEncoding(String)](xref:System.Text.Encoding.GetEncoding(System.String)) overloads.</span></span>
+
 > [!NOTE]
->  Теоретически классы кодировок Юникода, доступные в .NET Framework \(<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding> и <xref:System.Text.UTF32Encoding>\), поддерживают все символы всех наборов символов, поэтому их можно использовать, чтобы избежать проблем со стратегией наилучшего соответствия.  
-  
- Стратегии наилучшего соответствия для разных кодовых страниц различаются. Не все стратегии подробно задокументированы. Например, для некоторых кодовых страниц полноширинные латинские символы сопоставляются с более распространенными полуширинными символами. Для других кодовых страниц такое сопоставление не выполняется. Даже в случае применения активной стратегии наилучшего соответствия для некоторых символов некоторых кодировок отсутствует возможное сопоставление. Например, для идеографических символов китайского алфавита отсутствуют корректные сопоставления с символами кодовой страницы 1252. В этом случае используются замещающие строки. По умолчанию в качестве замещающей строки используется знак вопроса \(U\+003F\).  
-  
- В примере ниже используется кодовая страница 1252 \(кодовая страница Windows для западноевропейских языков\) для иллюстрации стратегии наилучшего соответствия и ее недостатков. Метод <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=fullName> используется для получения объекта кодировки для кодовой страницы 1252. По умолчанию для неподдерживаемых символов Юникода используется стратегия наилучшего соответствия. В примере создается экземпляр строки, содержащий три символа, не относящихся к ASCII \(прописная латинская буква S в кружке \(U\+24C8\), надстрочный индекс 5 \(U\+2075\) и знак бесконечности \(U\+221E\)\), разделенные пробелами. Как видно из выходных данных примера, при кодировке строки три исходных отличных от пробела символа заменяются вопросительным знаком \(U\+003F\), цифрой пять \(U\+0035\) и цифрой восемь \(U\+0038\). Цифра восемь — особенно неудачная замена неподдерживаемого знака бесконечности, а вопросительный знак показывает, что для исходного символа сопоставление не найдено.  
-  
- [!code-csharp[Conceptual.Encoding#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/bestfit1.cs#1)]
- [!code-vb[Conceptual.Encoding#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1.vb#1)]  
-  
- По умолчанию для объекта <xref:System.Text.Encoding> применяется стратегия наилучшего соответствия, при которой данные в формате Юникод кодируются в формат кодовой страницы. Ряд приложений предыдущих версий построен с учетом этой стратегии. Однако в целях безопасности в большинстве новых приложений не рекомендуется применять эту стратегию. Например, приложениям не следует выполнять кодировку доменного имени в режиме наилучшего соответствия.  
-  
+> <span data-ttu-id="d9e4c-256">Теоретически классы кодировок Юникода, доступные в .NET ([UTF8Encoding](xref:System.Text.UTF8Encoding), [UnicodeEncoding](xref:System.Text.UnicodeEncoding) и [UTF32Encoding](xref:System.Text.UTF32Encoding)), поддерживают все символы всех наборов символов, поэтому их можно использовать, чтобы избежать проблем со стратегией наилучшего соответствия.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-256">In theory, the Unicode encoding classes provided in .NET ([UTF8Encoding](xref:System.Text.UTF8Encoding), [UnicodeEncoding](xref:System.Text.UnicodeEncoding), and [UTF32Encoding](xref:System.Text.UTF32Encoding)) support every character in every character set, so they can be used to eliminate best-fit fallback issues.</span></span> 
+ 
+
+<span data-ttu-id="d9e4c-257">Стратегии наилучшего соответствия для разных кодовых страниц различаются. Не все стратегии подробно задокументированы.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-257">Best-fit strategies vary for different code pages, and they are not documented in detail.</span></span> <span data-ttu-id="d9e4c-258">Например, для некоторых кодовых страниц полноширинные латинские символы сопоставляются с более распространенными полуширинными символами.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-258">For example, for some code pages, full-width Latin characters map to the more common half-width Latin characters.</span></span> <span data-ttu-id="d9e4c-259">Для других кодовых страниц такое сопоставление не выполняется.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-259">For other code pages, this mapping is not made.</span></span> <span data-ttu-id="d9e4c-260">Даже в случае применения активной стратегии наилучшего соответствия для некоторых символов некоторых кодировок отсутствует возможное сопоставление.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-260">Even under an aggressive best-fit strategy, there is no imaginable fit for some characters in some encodings.</span></span> <span data-ttu-id="d9e4c-261">Например, для идеографических символов китайского алфавита отсутствуют корректные сопоставления с символами кодовой страницы 1252.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-261">For example, a Chinese ideograph has no reasonable mapping to code page 1252.</span></span> <span data-ttu-id="d9e4c-262">В этом случае используются замещающие строки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-262">In this case, a replacement string is used.</span></span> <span data-ttu-id="d9e4c-263">По умолчанию в качестве замещающей строки используется знак вопроса (U+003F).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-263">By default, this string is just a single QUESTION MARK (U+003F).</span></span>
+
+<span data-ttu-id="d9e4c-264">В примере ниже используется кодовая страница 1252 (кодовая страница Windows для западноевропейских языков) для иллюстрации стратегии наилучшего соответствия и ее недостатков.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-264">The following example uses code page 1252 (the Windows code page for Western European languages) to illustrate best-fit mapping and its drawbacks.</span></span> <span data-ttu-id="d9e4c-265">Метод [Encoding.GetEncoding(Int32](xref:System.Text.Encoding.GetEncoding(System.Int32)) используется для получения объекта кодировки для кодовой страницы 1252.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-265">The [Encoding.GetEncoding(Int32](xref:System.Text.Encoding.GetEncoding(System.Int32)) method is used to retrieve an encoding object for code page 1252.</span></span> <span data-ttu-id="d9e4c-266">По умолчанию для неподдерживаемых символов Юникода используется стратегия наилучшего соответствия.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-266">By default, it uses a best-fit mapping for Unicode characters that it does not support.</span></span> <span data-ttu-id="d9e4c-267">В примере создается экземпляр строки, содержащий три символа, не относящихся к ASCII (прописная латинская буква S в кружке (U+24C8), надстрочный индекс&5; (U+2075) и знак бесконечности (U+221E)), разделенные пробелами.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-267">The example instantiates a string that contains three non-ASCII characters - CIRCLED LATIN CAPITAL LETTER S (U+24C8), SUPERSCRIPT FIVE (U+2075), and INFINITY (U+221E) - separated by spaces.</span></span> <span data-ttu-id="d9e4c-268">Как видно из выходных данных примера, при кодировке строки три исходных отличных от пробела символа заменяются вопросительным знаком (U+003F), цифрой пять (U+0035) и цифрой восемь (U+0038).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-268">As the output from the example shows, when the string is encoded, the three original non-space characters are replaced by QUESTION MARK (U+003F), DIGIT FIVE (U+0035), and DIGIT EIGHT (U+0038).</span></span> <span data-ttu-id="d9e4c-269">Цифра восемь — особенно неудачная замена неподдерживаемого знака бесконечности, а вопросительный знак показывает, что для исходного символа сопоставление не найдено.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-269">DIGIT EIGHT is a particularly poor replacement for the unsupported INFINITY character, and QUESTION MARK indicates that no mapping was available for the original character.</span></span>
+
+```csharp
+using System;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      // Get an encoding for code page 1252 (Western Europe character set).
+      Encoding cp1252 = Encoding.GetEncoding(1252);
+
+      // Define and display a string.
+      string str = "\u24c8 \u2075 \u221e";
+      Console.WriteLine("Original string: " + str);
+      Console.Write("Code points in string: ");
+      foreach (var ch in str)
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+      Console.WriteLine("\n");   
+
+      // Encode a Unicode string.
+      Byte[] bytes = cp1252.GetBytes(str);
+      Console.Write("Encoded bytes: ");
+      foreach (byte byt in bytes)
+         Console.Write("{0:X2} ", byt);
+      Console.WriteLine("\n");
+
+      // Decode the string.
+      string str2 = cp1252.GetString(bytes);
+      Console.WriteLine("String round-tripped: {0}", str.Equals(str2));
+      if (! str.Equals(str2)) {
+         Console.WriteLine(str2);
+         foreach (var ch in str2)
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+      }
+   }
+}
+// The example displays the following output:
+//       Original string: Ⓢ ⁵ ∞
+//       Code points in string: 24C8 0020 2075 0020 221E
+//       
+//       Encoded bytes: 3F 20 35 20 38
+//       
+//       String round-tripped: False
+//       ? 5 8
+//       003F 0020 0035 0020 0038
+```
+
+```vb
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      ' Get an encoding for code page 1252 (Western Europe character set).
+      Dim cp1252 As Encoding = Encoding.GetEncoding(1252)
+
+      ' Define and display a string.
+      Dim str As String = String.Format("{0} {1} {2}", ChrW(&h24c8), ChrW(&H2075), ChrW(&h221E))
+      Console.WriteLine("Original string: " + str)
+      Console.Write("Code points in string: ")
+      For Each ch In str
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+      Next
+      Console.WriteLine()   
+      Console.WriteLine()
+
+      ' Encode a Unicode string.
+      Dim bytes() As Byte = cp1252.GetBytes(str)
+      Console.Write("Encoded bytes: ")
+      For Each byt In bytes
+         Console.Write("{0:X2} ", byt)
+      Next
+      Console.WriteLine()
+      Console.WriteLine()
+
+      ' Decode the string.
+      Dim str2 As String = cp1252.GetString(bytes)
+      Console.WriteLine("String round-tripped: {0}", str.Equals(str2))
+      If Not str.Equals(str2) Then
+         Console.WriteLine(str2)
+         For Each ch In str2
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+         Next
+      End If
+   End Sub
+End Module
+' The example displays the following output:
+'       Original string: Ⓢ ⁵ ∞
+'       Code points in string: 24C8 0020 2075 0020 221E
+'       
+'       Encoded bytes: 3F 20 35 20 38
+'       
+'       String round-tripped: False
+'       ? 5 8
+'       003F 0020 0035 0020 0038
+```
+
+<span data-ttu-id="d9e4c-270">По умолчанию для объекта [Encoding](xref:System.Text.Encoding) применяется стратегия наилучшего соответствия, при которой данные в формате Юникод кодируются в формат кодовой страницы. Ряд приложений предыдущих версий построен с учетом этой стратегии.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-270">Best-fit mapping is the default behavior for an [Encoding](xref:System.Text.Encoding) object that encodes Unicode data into code page data, and there are legacy applications that rely on this behavior.</span></span> <span data-ttu-id="d9e4c-271">Однако в целях безопасности в большинстве новых приложений не рекомендуется применять эту стратегию.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-271">However, most new applications should avoid best-fit behavior for security reasons.</span></span> <span data-ttu-id="d9e4c-272">Например, приложениям не следует выполнять кодировку доменного имени в режиме наилучшего соответствия.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-272">For example, applications should not put a domain name through a best-fit encoding.</span></span>
+
+> [!Note]
+> <span data-ttu-id="d9e4c-273">Вы также можете реализовать пользовательскую стратегию наилучшего соответствия для кодировки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-273">You can also implement a custom best-fit fallback mapping for an encoding.</span></span> <span data-ttu-id="d9e4c-274">Подробнее см. в разделе [Реализация пользовательской резервной стратегии](#implementing-a-custom-fallback-strategy).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-274">For more information, see the [Implementing a custom fallback strategy](#implementing-a-custom-fallback-strategy) section.</span></span>
+ 
+<span data-ttu-id="d9e4c-275">Если стратегия наилучшего соответствия задана по умолчанию для объекта кодировки, вы можете выбрать другую резервную стратегию при извлечении объекта [Encoding](xref:System.Text.Encoding) путем вызова перегрузки [Encoding.GetEncoding(Int32, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)) или [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-275">If best-fit fallback is the default for an encoding object, you can choose another fallback strategy when you retrieve an [Encoding](xref:System.Text.Encoding) object by calling the [Encoding.GetEncoding(Int32, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)) or [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) overload.</span></span> <span data-ttu-id="d9e4c-276">В следующем разделе приводится пример, где каждый символ, который не удается сопоставить с кодовой страницей 1252, заменяется звездочкой (\*).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-276">The following section includes an example that replaces each character that cannot be mapped to code page 1252 with an asterisk (\*).</span></span>
+
+```csharp
+using System;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      Encoding cp1252r = Encoding.GetEncoding(1252, 
+                                  new EncoderReplacementFallback("*"),
+                                  new DecoderReplacementFallback("*"));
+
+      string str1 = "\u24C8 \u2075 \u221E";
+      Console.WriteLine(str1);
+      foreach (var ch in str1)
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+      Console.WriteLine();
+
+      byte[] bytes = cp1252r.GetBytes(str1);
+      string str2 = cp1252r.GetString(bytes);
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2));
+      if (! str1.Equals(str2)) {
+         Console.WriteLine(str2);
+         foreach (var ch in str2)
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+         Console.WriteLine();
+      } 
+   }
+}
+// The example displays the following output:
+//       Ⓢ ⁵ ∞
+//       24C8 0020 2075 0020 221E
+//       Round-trip: False
+//       * * *
+//       002A 0020 002A 0020 002A
+```
+
+```vb
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      Dim cp1252r As Encoding = Encoding.GetEncoding(1252, 
+                                         New EncoderReplacementFallback("*"),
+                                         New DecoderReplacementFallback("*"))
+
+      Dim str1 As String = String.Format("{0} {1} {2}", ChrW(&h24C8), ChrW(&h2075), ChrW(&h221E))
+      Console.WriteLine(str1)
+      For Each ch In str1
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+      Next    
+      Console.WriteLine()
+
+      Dim bytes() As Byte = cp1252r.GetBytes(str1)
+      Dim str2 As String = cp1252r.GetString(bytes)
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2))
+      If Not str1.Equals(str2) Then
+         Console.WriteLine(str2)
+         For Each ch In str2
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+         Next    
+         Console.WriteLine()
+      End If 
+   End Sub
+End Module
+' The example displays the following output:
+'       Ⓢ ⁵ ∞
+'       24C8 0020 2075 0020 221E
+'       Round-trip: False
+'       * * *
+'       002A 0020 002A 0020 002A
+```
+
+### <a name="replacement-fallback"></a><span data-ttu-id="d9e4c-277">стратегия замены;</span><span class="sxs-lookup"><span data-stu-id="d9e4c-277">Replacement fallback</span></span>
+
+<span data-ttu-id="d9e4c-278">Когда символ не имеет точного соответствия в целевой схеме и нет подходящего символа, с которым его можно сопоставить, приложение может использовать замещающий символ или строку.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-278">When a character does not have an exact match in the target scheme, but there is no appropriate character that it can be mapped to, the application can specify a replacement character or string.</span></span> <span data-ttu-id="d9e4c-279">Так по умолчанию поступает декодер Юникода, заменяющий любую двухбайтовую последовательность, которую он не может декодировать, замещающим символом (U+FFFD).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-279">This is the default behavior for the Unicode decoder, which replaces any two-byte sequence that it cannot decode with REPLACEMENT_CHARACTER (U+FFFD).</span></span> <span data-ttu-id="d9e4c-280">Кроме того, это поведение по умолчанию класса [ASCIIEncoding](xref:System.Text.ASCIIEncoding), заменяющего каждый символ, который не удается кодировать или декодировать, вопросительным знаком.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-280">It is also the default behavior of the [ASCIIEncoding](xref:System.Text.ASCIIEncoding) class, which replaces each character that it cannot encode or decode with a question mark.</span></span> <span data-ttu-id="d9e4c-281">В примере ниже показана замена символов для строки Юникода из предыдущего примера.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-281">The following example illustrates character replacement for the Unicode string from the previous example.</span></span> <span data-ttu-id="d9e4c-282">Как видно из выходных данных, каждый символ, который не удается декодировать в байтовое значение ASCII, заменяется 0x3F, то есть кодом ASCII для вопросительного знака.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-282">As the output shows, each character that cannot be decoded into an ASCII byte value is replaced by 0x3F, which is the ASCII code for a question mark.</span></span>
+
+```csharp
+using System;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      Encoding enc = Encoding.ASCII;
+
+      string str1 = "\u24C8 \u2075 \u221E";
+      Console.WriteLine(str1);
+      foreach (var ch in str1)
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+      Console.WriteLine("\n");
+
+      // Encode the original string using the ASCII encoder.
+      byte[] bytes = enc.GetBytes(str1);
+      Console.Write("Encoded bytes: ");
+      foreach (var byt in bytes)
+         Console.Write("{0:X2} ", byt);
+      Console.WriteLine("\n");
+
+      // Decode the ASCII bytes.
+      string str2 = enc.GetString(bytes);
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2));
+      if (! str1.Equals(str2)) {
+         Console.WriteLine(str2);
+         foreach (var ch in str2)
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+         Console.WriteLine();
+      } 
+   }
+}
+// The example displays the following output:
+//       Ⓢ ⁵ ∞
+//       24C8 0020 2075 0020 221E
+//       
+//       Encoded bytes: 3F 20 3F 20 3F
+//       
+//       Round-trip: False
+//       ? ? ?
+//       003F 0020 003F 0020 003F
+```
+
+```vb
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      Dim enc As Encoding = Encoding.Ascii
+
+      Dim str1 As String = String.Format("{0} {1} {2}", ChrW(&h24C8), ChrW(&h2075), ChrW(&h221E))
+      Console.WriteLine(str1)
+      For Each ch In str1
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+      Next    
+      Console.WriteLine()
+      Console.WriteLine() 
+
+      ' Encode the original string using the ASCII encoder.
+      Dim bytes() As Byte = enc.GetBytes(str1)
+      Console.Write("Encoded bytes: ")
+      For Each byt In bytes
+         Console.Write("{0:X2} ", byt)
+      Next
+      Console.WriteLine()
+      Console.WriteLine()
+
+      ' Decode the ASCII bytes.
+      Dim str2 As String = enc.GetString(bytes)
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2))
+      If Not str1.Equals(str2) Then
+         Console.WriteLine(str2)
+         For Each ch In str2
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+         Next    
+         Console.WriteLine()
+      End If 
+   End Sub
+End Module
+' The example displays the following output:
+'       Ⓢ ⁵ ∞
+'       24C8 0020 2075 0020 221E
+'       
+'       Encoded bytes: 3F 20 3F 20 3F
+'       
+'       Round-trip: False
+'       ? ? ?
+'       003F 0020 003F 0020 003F
+```
+
+<span data-ttu-id="d9e4c-283">В .NET есть классы [EncoderReplacementFallback](xref:System.Text.EncoderReplacementFallback) и [DecoderReplacementFallback](xref:System.Text.DecoderReplacementFallback), подставляющие замещающую строку, если не удается точно сопоставить символ при кодировании или декодировании.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-283">.NET includes the [EncoderReplacementFallback](xref:System.Text.EncoderReplacementFallback) and [DecoderReplacementFallback](xref:System.Text.DecoderReplacementFallback) classes, which substitute a replacement string if a character does not map exactly in an encoding or decoding operation.</span></span> <span data-ttu-id="d9e4c-284">По умолчанию эта замещающая строка — вопросительный знак, но вы можете вызвать перегрузку конструктора класса, чтобы выбрать другую строку.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-284">By default, this replacement string is a question mark, but you can call a class constructor overload to choose a different string.</span></span> <span data-ttu-id="d9e4c-285">Как правило, замещающая строка — это отдельный символ, хотя это необязательно.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-285">Typically, the replacement string is a single character, although this is not a requirement.</span></span> <span data-ttu-id="d9e4c-286">В примере ниже поведение кодировщика кодовой страницы 1252 изменяется путем создания экземпляра объекта [EncoderReplacementFallback](xref:System.Text.EncoderReplacementFallback), который использует символ звездочки (\*) в качестве замещающей строки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-286">The following example changes the behavior of the code page 1252 encoder by instantiating an [EncoderReplacementFallback](xref:System.Text.EncoderReplacementFallback) object that uses an asterisk (\*) as a replacement string.</span></span>
+
+```csharp
+using System;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      Encoding cp1252r = Encoding.GetEncoding(1252, 
+                                  new EncoderReplacementFallback("*"),
+                                  new DecoderReplacementFallback("*"));
+
+      string str1 = "\u24C8 \u2075 \u221E";
+      Console.WriteLine(str1);
+      foreach (var ch in str1)
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+      Console.WriteLine();
+
+      byte[] bytes = cp1252r.GetBytes(str1);
+      string str2 = cp1252r.GetString(bytes);
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2));
+      if (! str1.Equals(str2)) {
+         Console.WriteLine(str2);
+         foreach (var ch in str2)
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+         Console.WriteLine();
+      } 
+   }
+}
+// The example displays the following output:
+//       Ⓢ ⁵ ∞
+//       24C8 0020 2075 0020 221E
+//       Round-trip: False
+//       * * *
+//       002A 0020 002A 0020 002A
+```
+
+```vb
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      Dim cp1252r As Encoding = Encoding.GetEncoding(1252, 
+                                         New EncoderReplacementFallback("*"),
+                                         New DecoderReplacementFallback("*"))
+
+      Dim str1 As String = String.Format("{0} {1} {2}", ChrW(&h24C8), ChrW(&h2075), ChrW(&h221E))
+      Console.WriteLine(str1)
+      For Each ch In str1
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+      Next    
+      Console.WriteLine()
+
+      Dim bytes() As Byte = cp1252r.GetBytes(str1)
+      Dim str2 As String = cp1252r.GetString(bytes)
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2))
+      If Not str1.Equals(str2) Then
+         Console.WriteLine(str2)
+         For Each ch In str2
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+         Next    
+         Console.WriteLine()
+      End If 
+   End Sub
+End Module
+' The example displays the following output:
+'       Ⓢ ⁵ ∞
+'       24C8 0020 2075 0020 221E
+'       Round-trip: False
+'       * * *
+'       002A 0020 002A 0020 002A
+```
+
 > [!NOTE]
->  Вы также можете реализовать пользовательскую стратегию наилучшего соответствия для кодировки. Дополнительные сведения см. в разделе [Реализация пользовательской резервной стратегии](../../../docs/standard/base-types/character-encoding.md#Custom).  
-  
- Если стратегия наилучшего соответствия задана по умолчанию для объекта кодировки, вы можете выбрать другую резервную стратегию при извлечении объекта <xref:System.Text.Encoding> с помощью вызова перегрузки <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=fullName> или <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=fullName>. В следующем разделе приводится пример, в котором каждый символ, который не удается сопоставить с кодовой страницей 1252, заменяется звездочкой \(\*\).  
-  
- [!code-csharp[Conceptual.Encoding#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/bestfit1a.cs#3)]
- [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
-  
-<a name="Replacement"></a>   
-### Стратегия замены  
- Когда символ не имеет точного соответствия в целевой схеме и нет подходящего символа, с которым его можно сопоставить, приложение может использовать замещающий символ или строку. Так по умолчанию поступает декодер Юникода, заменяющий любую двухбайтовую последовательность, которую он не может декодировать, замещающим символом \(U\+FFFD\). Кроме того, это поведение по умолчанию класса <xref:System.Text.ASCIIEncoding>, который заменяет каждый символ, который не удается кодировать или декодировать, вопросительным знаком. В примере ниже показана замена символов для строки Юникода из предыдущего примера. Как видно из выходных данных, каждый символ, который не удается декодировать в байтовое значение ASCII, заменяется 0x3F, то есть кодом ASCII для вопросительного знака.  
-  
- [!code-csharp[Conceptual.Encoding#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/replacementascii.cs#2)]
- [!code-vb[Conceptual.Encoding#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/replacementascii.vb#2)]  
-  
- В .NET Framework есть классы <xref:System.Text.EncoderReplacementFallback> и <xref:System.Text.DecoderReplacementFallback>, подставляющие замещающую строку, если не удается точно сопоставить символ при кодировании или декодировании. По умолчанию эта замещающая строка — вопросительный знак, но вы можете вызвать перегрузку конструктора класса, чтобы выбрать другую строку. Как правило, замещающая строка — это отдельный символ, хотя это необязательно. В примере ниже поведение кодировщика кодовой страницы 1252 изменяется путем создания экземпляра объекта <xref:System.Text.EncoderReplacementFallback>, который использует символ звездочки \(\*\) в качестве замещающей строки.  
-  
- [!code-csharp[Conceptual.Encoding#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/bestfit1a.cs#3)]
- [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]  
-  
+> <span data-ttu-id="d9e4c-287">Также можно реализовать класс замены для кодировки.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-287">You can also implement a replacement class for an encoding.</span></span> <span data-ttu-id="d9e4c-288">Подробнее см. в разделе [Реализация пользовательской резервной стратегии](#implementing-a-custom-fallback-strategy).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-288">For more information, see the [Implementing a custom fallback strategy](#implementing-a-custom-fallback-strategy) section.</span></span>
+ 
+<span data-ttu-id="d9e4c-289">Помимо вопросительного знака (U+003F) в качестве замещающей строки часто используется замещающий символ Юникода (U+FFFD), особенно при декодировании последовательностей байтов, которые не удается преобразовать в символы Юникода.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-289">In addition to QUESTION MARK (U+003F), the Unicode REPLACEMENT CHARACTER (U+FFFD) is commonly used as a replacement string, particularly when decoding byte sequences that cannot be successfully translated into Unicode characters.</span></span> <span data-ttu-id="d9e4c-290">Однако вы можете выбрать любую замещающую строку, в том числе из нескольких символов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-290">However, you are free to choose any replacement string, and it can contain multiple characters.</span></span>
+
+### <a name="exception-fallback"></a><span data-ttu-id="d9e4c-291">стратегия исключения.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-291">Exception fallback</span></span>
+
+<span data-ttu-id="d9e4c-292">Вместо подстановки наиболее подходящей или замещающей строки кодировщик может создавать исключение [EncoderFallbackException](xref:System.Text.EncoderFallbackException), если не удается закодировать набор символов, а декодер — создавать исключение [DecoderFallbackException](xref:System.Text.DecoderFallbackException), если не удается декодировать массив байтов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-292">Instead of providing a best-fit fallback or a replacement string, an encoder can throw an [EncoderFallbackException](xref:System.Text.EncoderFallbackException) if it is unable to encode a set of characters, and a decoder can throw a [DecoderFallbackException](xref:System.Text.DecoderFallbackException) if it is unable to decode a byte array.</span></span> <span data-ttu-id="d9e4c-293">Для создания исключения в операциях кодирования и декодирования методу [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) необходимо предоставить объект [EncoderFallbackException](xref:System.Text.EncoderFallbackException) или [DecoderFallbackException](xref:System.Text.DecoderFallbackException), соответственно.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-293">To throw an exception in encoding and decoding operations, you supply an [EncoderFallbackException](xref:System.Text.EncoderFallbackException) object and a [DecoderFallbackException](xref:System.Text.DecoderFallbackException) object, respectively, to the [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) method.</span></span> <span data-ttu-id="d9e4c-294">В примере ниже иллюстрируется резервная стратегия исключения с классом ASCIIEncoding.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-294">The following example illustrates exception fallback with the ASCIIEncoding class.</span></span>
+
+```csharp
+using System;
+using System.Text;
+
+public class Example
+{
+   public static void Main()
+   {
+      Encoding enc = Encoding.GetEncoding("us-ascii", 
+                                          new EncoderExceptionFallback(), 
+                                          new DecoderExceptionFallback());
+
+      string str1 = "\u24C8 \u2075 \u221E";
+      Console.WriteLine(str1);
+      foreach (var ch in str1)
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+      Console.WriteLine("\n");
+
+      // Encode the original string using the ASCII encoder.
+      byte[] bytes = {};
+      try {
+         bytes = enc.GetBytes(str1);
+         Console.Write("Encoded bytes: ");
+         foreach (var byt in bytes)
+            Console.Write("{0:X2} ", byt);
+
+         Console.WriteLine();
+      }
+      catch (EncoderFallbackException e) {
+         Console.Write("Exception: ");
+         if (e.IsUnknownSurrogate())
+            Console.WriteLine("Unable to encode surrogate pair 0x{0:X4} 0x{1:X3} at index {2}.", 
+                              Convert.ToUInt16(e.CharUnknownHigh), 
+                              Convert.ToUInt16(e.CharUnknownLow), 
+                              e.Index);
+         else
+            Console.WriteLine("Unable to encode 0x{0:X4} at index {1}.", 
+                              Convert.ToUInt16(e.CharUnknown), 
+                              e.Index);
+         return;
+      }
+      Console.WriteLine();
+
+      // Decode the ASCII bytes.
+      try {
+         string str2 = enc.GetString(bytes);
+         Console.WriteLine("Round-trip: {0}", str1.Equals(str2));
+         if (! str1.Equals(str2)) {
+            Console.WriteLine(str2);
+            foreach (var ch in str2)
+               Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+            Console.WriteLine();
+         } 
+      }
+      catch (DecoderFallbackException e) {
+         Console.Write("Unable to decode byte(s) ");
+         foreach (byte unknown in e.BytesUnknown)
+            Console.Write("0x{0:X2} ");
+
+         Console.WriteLine("at index {0}", e.Index);
+      }
+   }
+}
+// The example displays the following output:
+//       Ⓢ ⁵ ∞
+//       24C8 0020 2075 0020 221E
+//       
+//       Exception: Unable to encode 0x24C8 at index 0.
+```
+
+```vb
+Imports System.Text
+
+Module Example
+   Public Sub Main()
+      Dim enc As Encoding = Encoding.GetEncoding("us-ascii", 
+                                                 New EncoderExceptionFallback(), 
+                                                 New DecoderExceptionFallback())
+
+      Dim str1 As String = String.Format("{0} {1} {2}", ChrW(&h24C8), ChrW(&h2075), ChrW(&h221E))
+      Console.WriteLine(str1)
+      For Each ch In str1
+         Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+      Next    
+      Console.WriteLine()
+      Console.WriteLine() 
+
+      ' Encode the original string using the ASCII encoder.
+      Dim bytes() As Byte = {}
+      Try
+         bytes = enc.GetBytes(str1)
+         Console.Write("Encoded bytes: ")
+         For Each byt In bytes
+            Console.Write("{0:X2} ", byt)
+         Next
+         Console.WriteLine()
+      Catch e As EncoderFallbackException
+         Console.Write("Exception: ")
+         If e.IsUnknownSurrogate() Then
+            Console.WriteLine("Unable to encode surrogate pair 0x{0:X4} 0x{1:X3} at index {2}.", 
+                              Convert.ToUInt16(e.CharUnknownHigh), 
+                              Convert.ToUInt16(e.CharUnknownLow), 
+                              e.Index)
+         Else
+            Console.WriteLine("Unable to encode 0x{0:X4} at index {1}.", 
+                              Convert.ToUInt16(e.CharUnknown), 
+                              e.Index)
+         End If                              
+         Exit Sub
+      End Try
+      Console.WriteLine()
+
+      ' Decode the ASCII bytes.
+      Try
+         Dim str2 As String = enc.GetString(bytes)
+         Console.WriteLine("Round-trip: {0}", str1.Equals(str2))
+         If Not str1.Equals(str2) Then
+            Console.WriteLine(str2)
+            For Each ch In str2
+               Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+            Next    
+            Console.WriteLine()
+         End If 
+      Catch e As DecoderFallbackException
+         Console.Write("Unable to decode byte(s) ")
+         For Each unknown As Byte In e.BytesUnknown
+            Console.Write("0x{0:X2} ")
+         Next
+         Console.WriteLine("at index {0}", e.Index)
+      End Try
+   End Sub
+End Module
+' The example displays the following output:
+'       Ⓢ ⁵ ∞
+'       24C8 0020 2075 0020 221E
+'       
+'       Exception: Unable to encode 0x24C8 at index 0.
+```
+
 > [!NOTE]
->  Также можно реализовать класс замены для кодировки. Дополнительные сведения см. в разделе [Реализация пользовательской резервной стратегии](../../../docs/standard/base-types/character-encoding.md#Custom).  
-  
- Помимо вопросительного знака \(U\+003F\) в качестве замещающей строки часто используется замещающий символ Юникода \(U\+FFFD\), особенно при декодировании последовательностей байтов, которые не удается преобразовать в символы Юникода. Однако вы можете выбрать любую замещающую строку, в том числе из нескольких символов.  
-  
-<a name="Exception"></a>   
-### Стратегия исключения  
- Вместо подстановки наиболее подходящей или замещающей строки кодировщик может создавать исключение <xref:System.Text.EncoderFallbackException>, если не удается закодировать набор символов, а декодер — создавать исключение <xref:System.Text.DecoderFallbackException>, если не удается декодировать массив байтов. Для создания исключения в операциях кодирования и декодирования методу <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=fullName>необходимо предоставить объект <xref:System.Text.EncoderExceptionFallback> или <xref:System.Text.DecoderExceptionFallback> соответственно. В примере ниже иллюстрируется резервная стратегия исключения с классом <xref:System.Text.ASCIIEncoding>.  
-  
- [!code-csharp[Conceptual.Encoding#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/exceptionascii.cs#4)]
- [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]  
-  
-> [!NOTE]
->  Вы также можете реализовать пользовательский обработчик исключений для операции кодирования. Дополнительные сведения см. в разделе [Реализация пользовательской резервной стратегии](../../../docs/standard/base-types/character-encoding.md#Custom).  
-  
- Объекты <xref:System.Text.EncoderFallbackException> и <xref:System.Text.DecoderFallbackException> предоставляют следующую информацию о состоянии, вызвавшем исключение:  
-  
--   Объект <xref:System.Text.EncoderFallbackException> включает метод <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A>, указывающий, представляют ли символы \(или символ\), которые не удается закодировать, неизвестную замещающую пару \(тогда метод возвращает значение `true`\) или неизвестный отдельный символ \(тогда метод возвращает значение `false`\). Символы замещающей пары доступны в свойствах <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=fullName> и <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=fullName>. Неизвестный отдельный символ доступен в свойстве <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=fullName>. Свойство <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=fullName> указывает позицию первого символа, который не удалось закодировать, в строке.  
-  
--   Объект <xref:System.Text.DecoderFallbackException> включает свойство <xref:System.Text.DecoderFallbackException.BytesUnknown%2A>, возвращающее массив байтов, которые не удается декодировать. Свойство <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=fullName> указывает начальную позицию неизвестных байтов.  
-  
- Несмотря на то что объекты <xref:System.Text.EncoderFallbackException> и <xref:System.Text.DecoderFallbackException> предоставляют достаточно подробную диагностическую информацию об исключении, они не предоставляют доступ к буферу кодирования или декодирования. Поэтому они не позволяют заменять или исправлять недопустимые данные в методе кодирования или декодирования.  
-  
-<a name="Custom"></a>   
-## Реализация пользовательской резервной стратегии  
- Помимо встроенной стратегии наилучшего соответствия, реализованной кодовыми страницами, платформа .NET Framework содержит следующие классы для реализации резервной стратегии:  
-  
--   — классы <xref:System.Text.EncoderReplacementFallback> и <xref:System.Text.EncoderReplacementFallbackBuffer> можно использовать для замены символов в операциях кодирования;  
-  
--   — классы <xref:System.Text.DecoderReplacementFallback> и <xref:System.Text.DecoderReplacementFallbackBuffer> можно использовать для замены символов в операциях декодирования;  
-  
--   — классы <xref:System.Text.EncoderExceptionFallback> и <xref:System.Text.EncoderExceptionFallbackBuffer> можно использовать для создания исключения <xref:System.Text.EncoderFallbackException>, когда символ не удается закодировать;  
-  
--   — классы <xref:System.Text.DecoderExceptionFallback> и <xref:System.Text.DecoderExceptionFallbackBuffer> можно использовать для создания исключения <xref:System.Text.DecoderFallbackException>, когда символ не удается декодировать.  
-  
- Кроме того, можно реализовать пользовательское решение, использующее резервную стратегию наилучшего соответствия или стратегию исключения, выполнив указанные ниже действия.  
-  
-1.  Создайте класс, производный от <xref:System.Text.EncoderFallback>, для операций кодирования и класс, производный от <xref:System.Text.DecoderFallback>, для операций декодирования.  
-  
-2.  Создайте класс, производный от <xref:System.Text.EncoderFallbackBuffer>, для операций кодирования и класс, производный от <xref:System.Text.DecoderFallbackBuffer>, для операций декодирования.  
-  
-3.  Для задания резервной стратегии исключения, если классы <xref:System.Text.EncoderFallbackException> и <xref:System.Text.DecoderFallbackException> не отвечают вашим требованиям, следует наследовать класс от объекта исключения, например <xref:System.Exception> или <xref:System.ArgumentException>.  
-  
-### Наследование от класса EncoderFallback или класса DecoderFallback  
- Для реализации пользовательской резервной стратегии необходимо создать класс, наследующий от <xref:System.Text.EncoderFallback> для операций кодирования и от класса <xref:System.Text.DecoderFallback> для операций декодирования. Экземпляры этих классов передаются в метод <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=fullName> и служат посредниками между классом кодировки и реализацией резервной стратегии.  
-  
- При создании пользовательской резервной стратегии для кодировщика или декодера необходимо реализовать следующие члены:  
-  
--   — свойство <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=fullName> или <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=fullName>, возвращающее максимально возможное число символов, которое может использоваться для замены одного символа в стратегиях наилучшего соответствия, замены или исключения. Для пользовательской резервной стратегии исключения его значение равно нулю.  
-  
--   Метод <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=fullName> или <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=fullName>, возвращающий пользовательскую реализацию <xref:System.Text.EncoderFallbackBuffer> или <xref:System.Text.DecoderFallbackBuffer>. Метод вызывается кодировщиком, когда он встречает первый символ, который не удается закодировать, или декодером, когда он встречает первый байт, который не удается декодировать.  
-  
-### Наследование от класса EncoderFallbackBuffer или класса DecoderFallbackBuffer  
- Для реализации пользовательской резервной стратегии необходимо также создать класс, наследующий от <xref:System.Text.EncoderFallbackBuffer> для операций кодирования и от класса <xref:System.Text.DecoderFallbackBuffer> для операций декодирования. Экземпляры этих классов возвращаются методом <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> классов <xref:System.Text.EncoderFallback> и <xref:System.Text.DecoderFallback>. Метод <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=fullName> вызывается кодировщиком, когда он встречает первый символ, который не удается закодировать, а метод <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=fullName> вызывается декодером, когда он встречает один или несколько байтов, которые не удается декодировать. Классы <xref:System.Text.EncoderFallbackBuffer> и <xref:System.Text.DecoderFallbackBuffer> предоставляют реализацию резервной стратегии. Каждый экземпляр представляет буфер, содержащий символы резервной стратегии, которые заменят символ, который не удалось закодировать, или последовательность байтов, которую не удалось декодировать.  
-  
- При создании пользовательской резервной стратегии для кодировщика или декодера необходимо реализовать следующие члены:  
-  
--   метод <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=fullName> или <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=fullName>. Метод <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=fullName> вызывается кодировщиком, чтобы предоставить резервный буфер со сведениями о символе, который не удается кодировать. Так как символ, который требуется закодировать, может быть замещающей парой, этот метод перегружается. Одной перегрузке передается символ, который нужно закодировать, и его индекс в строке. Второй перегрузке передаются верхний и нижний замещающий знаки и их индекс в строке. Метод <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=fullName> вызывается декодером, чтобы предоставить резервный буфер со сведениями о байтах, которые не удается декодировать. Этому методу передается массив байтов, которые не удалось декодировать, а также индекс первого байта. Метод резервной стратегии должен возвращать значение `true`, если резервный буфер может предоставить наилучшим образом соответствующий или замещающий символ \(или символы\); в противном случае он должен возвращать значение `false`. При использовании стратегии исключения метод резервной стратегии должен создавать исключение.  
-  
--   Метод <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=fullName> или <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=fullName>, который вызывается кодировщиком или декодером многократно для получения следующего символа из резервного буфера. После возврата всех резервных символов метод должен вернуть символ U\+0000.  
-  
--   Свойство <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=fullName> или <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=fullName>, которое возвращает количество символов, оставшихся в резервном буфере.  
-  
--   Метод <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=fullName> или <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=fullName>, который перемещает текущую позицию в резервном буфере к предыдущему символу.  
-  
--   Метод <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=fullName> или <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=fullName>, повторно инициализирующий резервный буфер.  
-  
- Если реализована резервная стратегия наилучшего соответствия или замены, классы, унаследованные от <xref:System.Text.EncoderFallbackBuffer> и <xref:System.Text.DecoderFallbackBuffer>, также имеют два закрытых поля экземпляра: точное число символов в буфере и индекс в буфере следующего символа, который нужно вернуть.  
-  
-### Пример EncoderFallback  
- В примере выше использовалась стратегия замены для замены символов Юникода, не соответствующих символам ASCII, звездочкой \(\*\). В примере ниже используется пользовательская резервная стратегия наилучшего соответствия для получения более удачного сопоставления символов, отсутствующих в ASCII.  
-  
- В приведенном коде определяется класс с именем `CustomMapper`, производный от <xref:System.Text.EncoderFallback>, для обработки наилучшего сопоставления символов, отсутствующих в ASCII. Его метод `CreateFallbackBuffer` возвращает объект `CustomMapperFallbackBuffer`, предоставляющий реализацию <xref:System.Text.EncoderFallbackBuffer>. Класс `CustomMapper` использует объект <xref:System.Collections.Generic.Dictionary%602> для хранения сопоставлений неподдерживаемых символов Юникода \(значение ключа\) и соответствующих им 8\-битных символов \(которые хранятся в двух последовательных байтах в виде 64\-разрядного целого числа\). Чтобы это сопоставление было доступно резервному буферу, экземпляр `CustomMapper` передается в качестве параметра конструктору класса `CustomMapperFallbackBuffer`. Так как самое длинное сопоставление — это строка INF для символа Юникода с кодом U\+221E, свойство `MaxCharCount` возвращает значение 3.  
-  
- [!code-csharp[Conceptual.Encoding#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#5)]
- [!code-vb[Conceptual.Encoding#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#5)]  
-  
- В примере кода ниже определяется класс `CustomMapperFallbackBuffer`, производный от <xref:System.Text.EncoderFallbackBuffer>. Словарь, содержащий сопоставления наилучшего соответствия и определенный в экземпляре класса `CustomMapper`, доступен из конструктора класса. Его метод `Fallback` возвращает значение `true`, если какие\-либо символы Юникода, которые не удается кодировать кодировщику ASCII, определены в словаре сопоставлений; в противном случае возвращается значение `false`. Для каждого резервного действия закрытая переменная `count` указывает число символов, которые осталось вернуть, а закрытая переменная `index` указывает позицию в буфере строк \(значение `charsToReturn`\) следующего символа, который нужно вернуть.  
-  
- [!code-csharp[Conceptual.Encoding#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#6)]
- [!code-vb[Conceptual.Encoding#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#6)]  
-  
- В приведенном ниже коде создается экземпляр объекта `CustomMapper`, который передается в метод <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=fullName>. Выходные данные показывают, что реализация стратегии наилучшего соответствия успешно обрабатывает три символа исходной строки, отсутствующие в ASCII.  
-  
- [!code-csharp[Conceptual.Encoding#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#7)]
- [!code-vb[Conceptual.Encoding#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#7)]  
-  
-## См. также  
- <xref:System.Text.Encoder>   
- <xref:System.Text.Decoder>   
- <xref:System.Text.DecoderFallback>   
- <xref:System.Text.Encoding>   
- <xref:System.Text.EncoderFallback>   
- [Глобализация и локализация](../../../ml/index.xml)
+> <span data-ttu-id="d9e4c-295">Вы также можете реализовать пользовательский обработчик исключений для операции кодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-295">You can also implement a custom exception handler for an encoding operation.</span></span> <span data-ttu-id="d9e4c-296">Подробнее см. в разделе [Реализация пользовательской резервной стратегии](#implementing-a-custom-fallback-strategy).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-296">For more information, see the [Implementing a custom fallback strategy](#implementing-a-custom-fallback-strategy) section.</span></span>
+ 
+<span data-ttu-id="d9e4c-297">Объекты [EncoderFallbackException](xref:System.Text.EncoderFallbackException) и [DecoderFallbackException](xref:System.Text.DecoderFallbackException) предоставляют следующую информацию о состоянии, вызвавшем исключение.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-297">The [EncoderFallbackException](xref:System.Text.EncoderFallbackException) and [DecoderFallbackException](xref:System.Text.DecoderFallbackException) objects provide the following information about the condition that caused the exception:</span></span> 
+
+* <span data-ttu-id="d9e4c-298">Объект [EncoderFallbackException](xref:System.Text.EncoderFallbackException) включает метод [IsUnknownSurrogate](xref:System.Text.EncoderFallbackException.IsUnknownSurrogate), указывающий, представляют ли символы (или символ), которые не удается закодировать, неизвестную замещающую пару (тогда метод возвращает значение `true`) или неизвестный отдельный символ (тогда метод возвращает значение `false`).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-298">The [EncoderFallbackException](xref:System.Text.EncoderFallbackException) object includes an [IsUnknownSurrogate](xref:System.Text.EncoderFallbackException.IsUnknownSurrogate) method, which indicates whether the character or characters that cannot be encoded represent an unknown surrogate pair (in which case, the method returns `true`) or an unknown single character (in which case, the method returns `false`).</span></span> <span data-ttu-id="d9e4c-299">Символы замещающей пары доступны в свойствах [EncoderFallbackException.CharUnknownHigh](xref:System.Text.EncoderFallbackException.CharUnknownHigh) и [EncoderFallbackException.CharUnknownLow](xref:System.Text.EncoderFallbackException.CharUnknownLow).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-299">The characters in the surrogate pair are available from the [EncoderFallbackException.CharUnknownHigh](xref:System.Text.EncoderFallbackException.CharUnknownHigh) and [EncoderFallbackException.CharUnknownLow](xref:System.Text.EncoderFallbackException.CharUnknownLow) properties.</span></span> <span data-ttu-id="d9e4c-300">Неизвестный отдельный символ доступен в свойстве [EncoderFallbackException.CharUnknown](xref:System.Text.EncoderFallbackException.CharUnknown).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-300">The unknown single character is available from the [EncoderFallbackException.CharUnknown](xref:System.Text.EncoderFallbackException.CharUnknown) property.</span></span> <span data-ttu-id="d9e4c-301">Свойство [EncoderFallbackException.Index](xref:System.Text.EncoderFallbackException.Index) указывает позицию первого символа, который не удалось закодировать, в строке.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-301">The [EncoderFallbackException.Index](xref:System.Text.EncoderFallbackException.Index) property indicates the position in the string at which the first character that could not be encoded was found.</span></span>
+
+* <span data-ttu-id="d9e4c-302">Объект [DecoderFallbackException](xref:System.Text.DecoderFallbackException) включает свойство [BytesUnknown](xref:System.Text.DecoderFallbackException.BytesUnknown), возвращающее массив байтов, которые не удается декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-302">The [DecoderFallbackException](xref:System.Text.DecoderFallbackException) object includes a [BytesUnknown](xref:System.Text.DecoderFallbackException.BytesUnknown) property that returns an array of bytes that cannot be decoded.</span></span> <span data-ttu-id="d9e4c-303">Свойство [DecoderFallbackException.Index](xref:System.Text.DecoderFallbackException.Index) указывает начальную позицию неизвестных байтов.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-303">The [DecoderFallbackException.Index](xref:System.Text.DecoderFallbackException.Index) property indicates the starting position of the unknown bytes.</span></span>
+
+<span data-ttu-id="d9e4c-304">Несмотря на то, что объекты [EncoderFallbackException](xref:System.Text.EncoderFallbackException) и [DecoderFallbackException](xref:System.Text.DecoderFallbackException) предоставляют достаточно подробную диагностическую информацию об исключении, они не предоставляют доступ к буферу кодирования или декодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-304">Although the [EncoderFallbackException](xref:System.Text.EncoderFallbackException) and [DecoderFallbackException](xref:System.Text.DecoderFallbackException) objects provide adequate diagnostic information about the exception, they do not provide access to the encoding or decoding buffer.</span></span> <span data-ttu-id="d9e4c-305">Поэтому они не позволяют заменять или исправлять недопустимые данные в методе кодирования или декодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-305">Therefore, they do not allow invalid data to be replaced or corrected within the encoding or decoding method.</span></span>
+
+## <a name="implementing-a-custom-fallback-strategy"></a><span data-ttu-id="d9e4c-306">Реализация пользовательской резервной стратегии</span><span class="sxs-lookup"><span data-stu-id="d9e4c-306">Implementing a custom fallback strategy</span></span>
+
+<span data-ttu-id="d9e4c-307">Помимо встроенной стратегии наилучшего соответствия, реализованной кодовыми страницами, платформа .NET содержит следующие классы для реализации резервной стратегии:</span><span class="sxs-lookup"><span data-stu-id="d9e4c-307">In addition to the best-fit mapping that is implemented internally by code pages, .NET includes the following classes for implementing a fallback strategy:</span></span>
+
+* <span data-ttu-id="d9e4c-308">классы [EncoderReplacementFallback](xref:System.Text.EncoderReplacementFallback) и [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) можно использовать для замены символов в операциях кодирования;</span><span class="sxs-lookup"><span data-stu-id="d9e4c-308">Use [EncoderReplacementFallback](xref:System.Text.EncoderReplacementFallback) and [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) to replace characters in encoding operations.</span></span>
+
+* <span data-ttu-id="d9e4c-309">классы [DecoderReplacementFallback](xref:System.Text.DecoderReplacementFallback) и [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) можно использовать для замены символов в операциях декодирования;</span><span class="sxs-lookup"><span data-stu-id="d9e4c-309">Use [DecoderReplacementFallback](xref:System.Text.DecoderReplacementFallback) and [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) to replace characters in decoding operations.</span></span>
+
+* <span data-ttu-id="d9e4c-310">классы [EncoderExceptionFallback](xref:System.Text.EncoderExceptionFallback) и [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) можно использовать для создания исключения [EncoderFallbackException](xref:System.Text.EncoderFallbackException), когда символ не удается закодировать;</span><span class="sxs-lookup"><span data-stu-id="d9e4c-310">Use [EncoderExceptionFallback](xref:System.Text.EncoderExceptionFallback) and [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) to throw an [EncoderFallbackException](xref:System.Text.EncoderFallbackException) when a character cannot be encoded.</span></span>
+
+* <span data-ttu-id="d9e4c-311">классы [DecoderExceptionFallback](xref:System.Text.DecoderExceptionFallback) и [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) можно использовать для создания исключения [DecoderFallbackException](xref:System.Text.DecoderFallbackException), когда символ не удается декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-311">Use [DecoderExceptionFallback](xref:System.Text.DecoderExceptionFallback) and [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) to throw a [DecoderFallbackException](xref:System.Text.DecoderFallbackException) when a character cannot be decoded.</span></span>
+
+<span data-ttu-id="d9e4c-312">Кроме того, можно реализовать пользовательское решение, использующее резервную стратегию наилучшего соответствия или стратегию исключения, выполнив указанные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-312">In addition, you can implement a custom solution that uses best-fit fallback, replacement fallback, or exception fallback, by following these steps:</span></span> 
+
+1. <span data-ttu-id="d9e4c-313">Создайте класс, производный от [EncoderFallback](xref:System.Text.EncoderFallback), для операций кодирования и класс, производный от [DecoderFallback](xref:System.Text.DecoderFallback), для операций декодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-313">Derive a class from [EncoderFallback](xref:System.Text.EncoderFallback) for encoding operations, and from [DecoderFallback](xref:System.Text.DecoderFallback) for decoding operations.</span></span>
+
+2. <span data-ttu-id="d9e4c-314">Создайте класс, производный от [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer), для операций кодирования и класс, производный от [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer), для операций декодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-314">Derive a class from [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) for encoding operations, and from [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) for decoding operations.</span></span>
+
+3. <span data-ttu-id="d9e4c-315">Для задания резервной стратегии исключения, если классы [EncoderFallbackException](xref:System.Text.EncoderFallbackException) и [DecoderFallbackException](xref:System.Text.DecoderFallbackException) не отвечают вашим требованиям, следует наследовать класс от объекта исключения, например [Exception](xref:System.Exception) или [ArgumentException](xref:System.ArgumentException).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-315">For exception fallback, if the predefined [EncoderFallbackException](xref:System.Text.EncoderFallbackException) and [DecoderFallbackException](xref:System.Text.DecoderFallbackException) classes do not meet your needs, derive a class from an exception object such as [Exception](xref:System.Exception) or [ArgumentException](xref:System.ArgumentException).</span></span>
+
+### <a name="deriving-from-encoderfallback-or-decoderfallback"></a><span data-ttu-id="d9e4c-316">Наследование от класса EncoderFallback или класса DecoderFallback</span><span class="sxs-lookup"><span data-stu-id="d9e4c-316">Deriving from EncoderFallback or DecoderFallback</span></span>
+
+<span data-ttu-id="d9e4c-317">Для реализации пользовательской резервной стратегии необходимо создать класс, наследующий от [EncoderFallback](xref:System.Text.EncoderFallback) для операций кодирования и от класса [DecoderFallback](xref:System.Text.DecoderFallback) для операций декодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-317">To implement a custom fallback solution, you must create a class that inherits from [EncoderFallback](xref:System.Text.EncoderFallback) for encoding operations, and from [DecoderFallback](xref:System.Text.DecoderFallback) for decoding operations.</span></span> <span data-ttu-id="d9e4c-318">Экземпляры этих классов передаются в метод [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) и служат посредниками между классом кодировки и реализацией резервной стратегии.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-318">Instances of these classes are passed to the [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) method and serve as the intermediary between the encoding class and the fallback implementation.</span></span>
+
+<span data-ttu-id="d9e4c-319">При создании пользовательской резервной стратегии для кодировщика или декодера необходимо реализовать следующие члены:</span><span class="sxs-lookup"><span data-stu-id="d9e4c-319">When you create a custom fallback solution for an encoder or decoder, you must implement the following members:</span></span>
+
+* <span data-ttu-id="d9e4c-320">Свойство [EncoderFallback.MaxCharCount](xref:System.Text.EncoderFallback.MaxCharCount) или [DecoderFallback.MaxCharCount](xref:System.Text.DecoderFallback.MaxCharCount), возвращающее максимально возможное число символов, которое может использоваться для замены одного символа в стратегиях наилучшего соответствия, замены или исключения.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-320">The [EncoderFallback.MaxCharCount](xref:System.Text.EncoderFallback.MaxCharCount) or [DecoderFallback.MaxCharCount](xref:System.Text.DecoderFallback.MaxCharCount) property, which returns the maximum possible number of characters that the best-fit, replacement, or exception fallback can return to replace a single character.</span></span> <span data-ttu-id="d9e4c-321">Для пользовательской резервной стратегии исключения его значение равно нулю.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-321">For a custom exception fallback, its value is zero.</span></span> 
+
+* <span data-ttu-id="d9e4c-322">Метод [EncoderFallback.CreateFallbackBuffer](xref:System.Text.EncoderFallback.CreateFallbackBuffer) или [DecoderFallback.CreateFallbackBuffer](xref:System.Text.DecoderFallback.CreateFallbackBuffer), возвращающий пользовательскую реализацию [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) или [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-322">The [EncoderFallback.CreateFallbackBuffer](xref:System.Text.EncoderFallback.CreateFallbackBuffer) or [DecoderFallback.CreateFallbackBuffer](xref:System.Text.DecoderFallback.CreateFallbackBuffer) method, which returns your custom [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) or [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) implementation.</span></span> <span data-ttu-id="d9e4c-323">Метод вызывается кодировщиком, когда он встречает первый символ, который не удается закодировать, или декодером, когда он встречает первый байт, который не удается декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-323">The method is called by the encoder when it encounters the first character that it is unable to successfully encode, or by the decoder when it encounters the first byte that it is unable to successfully decode.</span></span>
+
+### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a><span data-ttu-id="d9e4c-324">Наследование от класса EncoderFallbackBuffer или класса DecoderFallbackBuffer</span><span class="sxs-lookup"><span data-stu-id="d9e4c-324">Deriving from EncoderFallbackBuffer or DecoderFallbackBuffer</span></span>
+
+<span data-ttu-id="d9e4c-325">Для реализации пользовательской резервной стратегии необходимо также создать класс, наследующий от [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) для операций кодирования и от класса [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) для операций декодирования.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-325">To implement a custom fallback solution, you must also create a class that inherits from [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) for encoding operations, and from [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) for decoding operations.</span></span> <span data-ttu-id="d9e4c-326">Экземпляры этих классов возвращаются методом `CreateFallbackBuffer` классов [EncoderFallback](xref:System.Text.EncoderFallback) и [DecoderFallback](xref:System.Text.DecoderFallback).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-326">Instances of these classes are returned by the `CreateFallbackBuffer` method of the [EncoderFallback](xref:System.Text.EncoderFallback) and [DecoderFallback](xref:System.Text.DecoderFallback) classes.</span></span> <span data-ttu-id="d9e4c-327">Метод [EncoderFallback.CreateFallbackBuffer](xref:System.Text.EncoderFallback.CreateFallbackBuffer) вызывается кодировщиком, когда он встречает первый символ, который не удается закодировать, а метод [DecoderFallback.CreateFallbackBuffer](xref:System.Text.DecoderFallback.CreateFallbackBuffer) вызывается декодером, когда он встречает один или несколько байтов, которые не удается декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-327">The [EncoderFallback.CreateFallbackBuffer](xref:System.Text.EncoderFallback.CreateFallbackBuffer) method is called by the encoder when it encounters the first character that it is not able to encode, and the [DecoderFallback.CreateFallbackBuffer](xref:System.Text.DecoderFallback.CreateFallbackBuffer) method is called by the decoder when it encounters one or more bytes that it is not able to decode.</span></span> <span data-ttu-id="d9e4c-328">Классы [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) и [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) предоставляют реализацию резервной стратегии.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-328">The [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) and [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) classes provide the fallback implementation.</span></span> <span data-ttu-id="d9e4c-329">Каждый экземпляр представляет буфер, содержащий символы резервной стратегии, которые заменят символ, который не удалось закодировать, или последовательность байтов, которую не удалось декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-329">Each instance represents a buffer that contains the fallback characters that will replace the character that cannot be encoded or the byte sequence that cannot be decoded.</span></span>
+
+<span data-ttu-id="d9e4c-330">При создании пользовательской резервной стратегии для кодировщика или декодера необходимо реализовать следующие члены:</span><span class="sxs-lookup"><span data-stu-id="d9e4c-330">When you create a custom fallback solution for an encoder or decoder, you must implement the following members:</span></span>
+
+* <span data-ttu-id="d9e4c-331">Метод [EncoderFallbackBuffer.Fallback](xref:System.Text.EncoderFallbackBuffer.%23ctor) или [DecoderFallbackBuffer.Fallback](xref:System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-331">The [EncoderFallbackBuffer.Fallback](xref:System.Text.EncoderFallbackBuffer.%23ctor) or [DecoderFallbackBuffer.Fallback](xref:System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)) method.</span></span> <span data-ttu-id="d9e4c-332">Метод [EncoderFallbackBuffer.Fallback](xref:System.Text.EncoderFallbackBuffer.Fallback(System.Char,System.Char,System.Int32)) вызывается кодировщиком, чтобы предоставить резервный буфер со сведениями о символе, который не удается кодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-332">[EncoderFallbackBuffer.Fallback](xref:System.Text.EncoderFallbackBuffer.Fallback(System.Char,System.Char,System.Int32)) is called by the encoder to provide the fallback buffer with information about the character that it cannot encode.</span></span> <span data-ttu-id="d9e4c-333">Так как символ, который требуется закодировать, может быть замещающей парой, этот метод перегружается.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-333">Because the character to be encoded may be a surrogate pair, this method is overloaded.</span></span> <span data-ttu-id="d9e4c-334">Одной перегрузке передается символ, который нужно закодировать, и его индекс в строке.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-334">One overload is passed the character to be encoded and its index in the string.</span></span> <span data-ttu-id="d9e4c-335">Второй перегрузке передаются верхний и нижний замещающий знаки и их индекс в строке.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-335">The second overload is passed the high and low surrogate along with its index in the string.</span></span> <span data-ttu-id="d9e4c-336">Метод [DecoderFallbackBuffer.Fallback](xref:System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)) вызывается декодером, чтобы предоставить резервный буфер со сведениями о байтах, которые не удается декодировать.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-336">The [DecoderFallbackBuffer.Fallback](xref:System.Text.DecoderFallbackBuffer.Fallback(System.Byte[],System.Int32)) method is called by the decoder to provide the fallback buffer with information about the bytes that it cannot decode.</span></span> <span data-ttu-id="d9e4c-337">Этому методу передается массив байтов, которые не удалось декодировать, а также индекс первого байта.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-337">This method is passed an array of bytes that it cannot decode, along with the index of the first byte.</span></span> <span data-ttu-id="d9e4c-338">Метод резервной стратегии должен возвращать значение `true`, если резервный буфер может предоставить наилучшим образом соответствующий или замещающий символ (или символы); в противном случае он должен возвращать значение `false`.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-338">The fallback method should return `true` if the fallback buffer can supply a best-fit or replacement character or characters; otherwise, it should return `false`.</span></span> <span data-ttu-id="d9e4c-339">При использовании стратегии исключения метод резервной стратегии должен создавать исключение.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-339">For an exception fallback, the fallback method should throw an exception.</span></span>
+
+* <span data-ttu-id="d9e4c-340">Метод [EncoderFallbackBuffer.GetNextChar](xref:System.Text.EncoderFallbackBuffer.GetNextChar) или [DecoderFallbackBuffer.GetNextChar](xref:System.Text.DecoderFallbackBuffer.GetNextChar), который вызывается кодировщиком или декодером многократно для получения следующего символа из резервного буфера.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-340">The [EncoderFallbackBuffer.GetNextChar](xref:System.Text.EncoderFallbackBuffer.GetNextChar) or [DecoderFallbackBuffer.GetNextChar](xref:System.Text.DecoderFallbackBuffer.GetNextChar) method, which is called repeatedly by the encoder or decoder to get the next character from the fallback buffer.</span></span> <span data-ttu-id="d9e4c-341">После возврата всех резервных символов метод должен вернуть символ U+0000.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-341">When all fallback characters have been returned, the method should return U+0000.</span></span> 
+
+* <span data-ttu-id="d9e4c-342">Свойство [EncoderFallbackBuffer.Remaining](xref:System.Text.EncoderFallbackBuffer.Remaining) или [DecoderFallbackBuffer.Remaining](xref:System.Text.DecoderFallbackBuffer.Remaining), которое возвращает количество символов, оставшихся в резервном буфере.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-342">The [EncoderFallbackBuffer.Remaining](xref:System.Text.EncoderFallbackBuffer.Remaining) or [DecoderFallbackBuffer.Remaining](xref:System.Text.DecoderFallbackBuffer.Remaining) property, which returns the number of characters remaining in the fallback buffer.</span></span>
+
+* <span data-ttu-id="d9e4c-343">Метод [EncoderFallbackBuffer.MovePrevious](xref:System.Text.EncoderFallbackBuffer.MovePrevious) или [DecoderFallbackBuffer.MovePrevious](xref:System.Text.DecoderFallbackBuffer.MovePrevious), который перемещает текущую позицию в резервном буфере к предыдущему символу.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-343">The [EncoderFallbackBuffer.MovePrevious](xref:System.Text.EncoderFallbackBuffer.MovePrevious) or [DecoderFallbackBuffer.MovePrevious](xref:System.Text.DecoderFallbackBuffer.MovePrevious) method, which moves the current position in the fallback buffer to the previous character.</span></span>
+
+* <span data-ttu-id="d9e4c-344">Метод [EncoderFallbackBuffer.Reset](xref:System.Text.EncoderFallbackBuffer.Reset) или [DecoderFallbackBuffer.Reset](xref:System.Text.DecoderFallbackBuffer.Reset), повторно инициализирующий резервный буфер.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-344">The [EncoderFallbackBuffer.Reset](xref:System.Text.EncoderFallbackBuffer.Reset) or [DecoderFallbackBuffer.Reset](xref:System.Text.DecoderFallbackBuffer.Reset) method, which reinitializes the fallback buffer.</span></span>
+
+<span data-ttu-id="d9e4c-345">Если реализована резервная стратегия наилучшего соответствия или замены, классы, унаследованные от [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) и [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer), также имеют два закрытых поля экземпляра: точное число символов в буфере и индекс в буфере следующего символа, который нужно вернуть.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-345">If the fallback implementation is a best-fit fallback or a replacement fallback, the classes derived from [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) and [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) also maintain two private instance fields: the exact number of characters in the buffer; and the index of the next character in the buffer to return.</span></span>
+
+### <a name="an-encoderfallback-example"></a><span data-ttu-id="d9e4c-346">Пример EncoderFallback</span><span class="sxs-lookup"><span data-stu-id="d9e4c-346">An EncoderFallback example</span></span>
+
+<span data-ttu-id="d9e4c-347">В примере выше использовалась стратегия замены символов Юникода, не соответствующих символам ASCII, звездочкой (\*).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-347">An earlier example used replacement fallback to replace Unicode characters that did not correspond to ASCII characters with an asterisk (\*).</span></span> <span data-ttu-id="d9e4c-348">В примере ниже используется пользовательская резервная стратегия наилучшего соответствия для получения более удачного сопоставления символов, отсутствующих в ASCII.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-348">The following example uses a custom best-fit fallback implementation instead to provide a better mapping of non-ASCII characters.</span></span>
+
+<span data-ttu-id="d9e4c-349">В приведенном коде определяется класс с именем `CustomMapper`, производный от [EncoderFallback](xref:System.Text.EncoderFallback), для обработки наилучшего сопоставления символов, отсутствующих в ASCII.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-349">The following code defines a class named `CustomMapper` that is derived from [EncoderFallback](xref:System.Text.EncoderFallback) to handle the best-fit mapping of non-ASCII characters.</span></span> <span data-ttu-id="d9e4c-350">Его метод `CreateFallbackBuffer` возвращает объект `CustomMapperFallbackBuffer`, предоставляющий реализацию [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-350">Its `CreateFallbackBuffer` method returns a `CustomMapperFallbackBuffer` object, which provides the [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) implementation.</span></span> <span data-ttu-id="d9e4c-351">Класс `CustomMapper` использует объект [Dictionary&lt;TKey, TValue&gt;](xref:System.Collections.Generic.Dictionary%602) для хранения сопоставлений неподдерживаемых символов Юникода (значение ключа) и соответствующих им 8-битных символов (которые хранятся в двух последовательных байтах в виде 64-разрядного целого числа).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-351">The `CustomMapper` class uses a [Dictionary&lt;TKey, TValue&gt;](xref:System.Collections.Generic.Dictionary%602) object to store the mappings of unsupported Unicode characters (the key value) and their corresponding 8-bit characters (which are stored in two consecutive bytes in a 64-bit integer).</span></span> <span data-ttu-id="d9e4c-352">Чтобы это сопоставление было доступно резервному буферу, экземпляр `CustomMapper` передается в качестве параметра конструктору класса `CustomMapperFallbackBuffer`.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-352">To make this mapping available to the fallback buffer, the `CustomMapper` instance is passed as a parameter to the `CustomMapperFallbackBuffer` class constructor.</span></span> <span data-ttu-id="d9e4c-353">Так как самое длинное сопоставление — это строка INF для символа Юникода с кодом U+221E, свойство `MaxCharCount` возвращает значение 3.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-353">Because the longest mapping is the string "INF" for the Unicode character U+221E, the `MaxCharCount` property returns 3.</span></span> 
+
+```csharp
+public class CustomMapper : EncoderFallback
+{
+   public string DefaultString;
+   internal Dictionary<ushort, ulong> mapping;
+
+   public CustomMapper() : this("*")
+   {   
+   }
+
+   public CustomMapper(string defaultString)
+   {
+      this.DefaultString = defaultString;
+
+      // Create table of mappings
+      mapping = new Dictionary<ushort, ulong>();
+      mapping.Add(0x24C8, 0x53);
+      mapping.Add(0x2075, 0x35);
+      mapping.Add(0x221E, 0x49004E0046);
+   }
+
+   public override EncoderFallbackBuffer CreateFallbackBuffer()
+   {
+      return new CustomMapperFallbackBuffer(this);
+   }
+
+   public override int MaxCharCount
+   {
+      get { return 3; }
+   } 
+}
+```
+
+```vb
+Public Class CustomMapper : Inherits EncoderFallback
+   Public DefaultString As String
+   Friend mapping As Dictionary(Of UShort, ULong)
+
+   Public Sub New()
+      Me.New("?")
+   End Sub
+
+   Public Sub New(ByVal defaultString As String)
+      Me.DefaultString = defaultString
+
+      ' Create table of mappings
+      mapping = New Dictionary(Of UShort, ULong)
+      mapping.Add(&H24C8, &H53)
+      mapping.Add(&H2075, &H35)
+      mapping.Add(&H221E, &H49004E0046)
+   End Sub
+
+   Public Overrides Function CreateFallbackBuffer() As System.Text.EncoderFallbackBuffer
+      Return New CustomMapperFallbackBuffer(Me)
+   End Function
+
+   Public Overrides ReadOnly Property MaxCharCount As Integer
+      Get
+         Return 3
+      End Get
+   End Property
+End Class
+```
+
+<span data-ttu-id="d9e4c-354">В примере кода ниже определяется класс `CustomMapperFallbackBuffer`, производный от [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-354">The following code defines the `CustomMapperFallbackBuffer` class, which is derived from [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer).</span></span> <span data-ttu-id="d9e4c-355">Словарь, содержащий сопоставления наилучшего соответствия и определенный в экземпляре класса `CustomMapper`, доступен из конструктора класса.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-355">The dictionary that contains best-fit mappings and that is defined in the `CustomMapper` instance is available from its class constructor.</span></span> <span data-ttu-id="d9e4c-356">Его метод `Fallback` возвращает значение `true`, если какие-либо символы Юникода, которые не удается кодировать кодировщику ASCII, определены в словаре сопоставлений; в противном случае возвращается значение `false`.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-356">Its `Fallback` method returns `true` if any of the Unicode characters that the ASCII encoder cannot encode are defined in the mapping dictionary; otherwise, it returns `false`.</span></span> <span data-ttu-id="d9e4c-357">Для каждого резервного действия закрытая переменная `count` указывает число символов, которые осталось вернуть, а закрытая переменная `index` указывает позицию в буфере строк (значение `charsToReturn`) следующего символа, который нужно вернуть.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-357">For each fallback, the private `count` variable indicates the number of characters that remain to be returned, and the private `index` variable indicates the position in the string buffer, `charsToReturn`, of the next character to return.</span></span> 
+
+```csharp
+public class CustomMapperFallbackBuffer : EncoderFallbackBuffer
+{
+   int count = -1;                   // Number of characters to return
+   int index = -1;                   // Index of character to return
+   CustomMapper fb; 
+   string charsToReturn; 
+
+   public CustomMapperFallbackBuffer(CustomMapper fallback)
+   {
+      this.fb = fallback;
+   }
+
+   public override bool Fallback(char charUnknownHigh, char charUnknownLow, int index)
+   {
+      // Do not try to map surrogates to ASCII.
+      return false;
+   }
+
+   public override bool Fallback(char charUnknown, int index)
+   {
+      // Return false if there are already characters to map.
+      if (count >= 1) return false;
+
+      // Determine number of characters to return.
+      charsToReturn = String.Empty;
+
+      ushort key = Convert.ToUInt16(charUnknown);
+      if (fb.mapping.ContainsKey(key)) {
+         byte[] bytes = BitConverter.GetBytes(fb.mapping[key]);
+         int ctr = 0;
+         foreach (var byt in bytes) {
+            if (byt > 0) {
+               ctr++;
+               charsToReturn += (char) byt;
+            }
+         }
+         count = ctr;
+      }
+      else {
+         // Return default.
+         charsToReturn = fb.DefaultString;
+         count = 1;
+      }
+      this.index = charsToReturn.Length - 1;
+
+      return true;
+   }
+
+   public override char GetNextChar()
+   {
+      // We'll return a character if possible, so subtract from the count of chars to return.
+      count--;
+      // If count is less than zero, we've returned all characters.
+      if (count < 0) 
+         return '\u0000';
+
+      this.index--;
+      return charsToReturn[this.index + 1];
+   }
+
+   public override bool MovePrevious()
+   {
+      // Original: if count >= -1 and pos >= 0
+      if (count >= -1) {
+         count++;
+         return true;
+      }
+      else {
+         return false;
+      }
+   }
+
+   public override int Remaining 
+   {
+      get { return count < 0 ? 0 : count; }
+   }
+
+   public override void Reset()
+   {
+      count = -1;
+      index = -1;
+   }
+}
+```
+
+```vb
+Public Class CustomMapperFallbackBuffer : Inherits EncoderFallbackBuffer
+
+   Dim count As Integer = -1        ' Number of characters to return
+   Dim index As Integer = -1        ' Index of character to return
+   Dim fb As CustomMapper
+   Dim charsToReturn As String
+
+   Public Sub New(ByVal fallback As CustomMapper)
+      MyBase.New()
+      Me.fb = fallback
+   End Sub
+
+   Public Overloads Overrides Function Fallback(ByVal charUnknownHigh As Char, ByVal charUnknownLow As Char, ByVal index As Integer) As Boolean
+      ' Do not try to map surrogates to ASCII.
+      Return False
+   End Function
+
+   Public Overloads Overrides Function Fallback(ByVal charUnknown As Char, ByVal index As Integer) As Boolean
+      ' Return false if there are already characters to map.
+      If count >= 1 Then Return False
+
+      ' Determine number of characters to return.
+      charsToReturn = String.Empty
+
+      Dim key As UShort = Convert.ToUInt16(charUnknown)
+      If fb.mapping.ContainsKey(key) Then
+         Dim bytes() As Byte = BitConverter.GetBytes(fb.mapping.Item(key))
+         Dim ctr As Integer
+         For Each byt In bytes
+            If byt > 0 Then
+               ctr += 1
+               charsToReturn += Chr(byt)
+            End If
+         Next
+         count = ctr
+      Else
+         ' Return default.
+         charsToReturn = fb.DefaultString
+         count = 1
+      End If
+      Me.index = charsToReturn.Length - 1
+
+      Return True
+   End Function
+
+   Public Overrides Function GetNextChar() As Char
+      ' We'll return a character if possible, so subtract from the count of chars to return.
+      count -= 1
+      ' If count is less than zero, we've returned all characters.
+      If count < 0 Then Return ChrW(0)
+
+      Me.index -= 1
+      Return charsToReturn(Me.index + 1)
+   End Function
+
+   Public Overrides Function MovePrevious() As Boolean
+      ' Original: if count >= -1 and pos >= 0
+      If count >= -1 Then
+         count += 1
+         Return True
+      Else
+         Return False
+      End If
+   End Function
+
+   Public Overrides ReadOnly Property Remaining As Integer
+      Get
+         Return If(count < 0, 0, count)
+      End Get
+   End Property
+
+   Public Overrides Sub Reset()
+      count = -1
+      index = -1
+   End Sub
+End Class
+```
+
+<span data-ttu-id="d9e4c-358">В приведенном ниже коде создается экземпляр объекта `CustomMapper`, который передается в метод [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)).</span><span class="sxs-lookup"><span data-stu-id="d9e4c-358">The following code then instantiates the `CustomMapper` object and passes an instance of it to the [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) method.</span></span> <span data-ttu-id="d9e4c-359">Выходные данные показывают, что реализация стратегии наилучшего соответствия успешно обрабатывает три символа исходной строки, отсутствующие в ASCII.</span><span class="sxs-lookup"><span data-stu-id="d9e4c-359">The output indicates that the best-fit fallback implementation successfully handles the three non-ASCII characters in the original string.</span></span>
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+class Program
+{
+   static void Main()
+   {
+      Encoding enc = Encoding.GetEncoding("us-ascii", new CustomMapper(), new DecoderExceptionFallback());
+
+      string str1 = "\u24C8 \u2075 \u221E";
+      Console.WriteLine(str1);
+      for (int ctr = 0; ctr <= str1.Length - 1; ctr++) {
+         Console.Write("{0} ", Convert.ToUInt16(str1[ctr]).ToString("X4"));
+         if (ctr == str1.Length - 1) 
+            Console.WriteLine();
+      }
+      Console.WriteLine();
+
+      // Encode the original string using the ASCII encoder.
+      byte[] bytes = enc.GetBytes(str1);
+      Console.Write("Encoded bytes: ");
+      foreach (var byt in bytes)
+         Console.Write("{0:X2} ", byt);
+
+      Console.WriteLine("\n");
+
+      // Decode the ASCII bytes.
+      string str2 = enc.GetString(bytes);
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2));
+      if (! str1.Equals(str2)) {
+         Console.WriteLine(str2);
+         foreach (var ch in str2)
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"));
+
+         Console.WriteLine();
+      }
+   }
+}
+```
+
+```vb
+Imports System.Text
+Imports System.Collections.Generic
+
+Module Module1
+
+   Sub Main()
+      Dim enc As Encoding = Encoding.GetEncoding("us-ascii", New CustomMapper(), New DecoderExceptionFallback())
+
+      Dim str1 As String = String.Format("{0} {1} {2}", ChrW(&H24C8), ChrW(&H2075), ChrW(&H221E))
+      Console.WriteLine(str1)
+      For ctr As Integer = 0 To str1.Length - 1
+         Console.Write("{0} ", Convert.ToUInt16(str1(ctr)).ToString("X4"))
+         If ctr = str1.Length - 1 Then Console.WriteLine()
+      Next
+      Console.WriteLine()
+
+      ' Encode the original string using the ASCII encoder.
+      Dim bytes() As Byte = enc.GetBytes(str1)
+      Console.Write("Encoded bytes: ")
+      For Each byt In bytes
+         Console.Write("{0:X2} ", byt)
+      Next
+      Console.WriteLine()
+      Console.WriteLine()
+
+      ' Decode the ASCII bytes.
+      Dim str2 As String = enc.GetString(bytes)
+      Console.WriteLine("Round-trip: {0}", str1.Equals(str2))
+      If Not str1.Equals(str2) Then
+         Console.WriteLine(str2)
+         For Each ch In str2
+            Console.Write("{0} ", Convert.ToUInt16(ch).ToString("X4"))
+         Next
+         Console.WriteLine()
+      End If
+   End Sub
+End Module
+```
+
+## <a name="see-also"></a><span data-ttu-id="d9e4c-360">См. также</span><span class="sxs-lookup"><span data-stu-id="d9e4c-360">See also</span></span>
+
+[<span data-ttu-id="d9e4c-361">System.Text.Encoder</span><span class="sxs-lookup"><span data-stu-id="d9e4c-361">System.Text.Encoder</span></span>](xref:System.Text.Encoder)
+
+[<span data-ttu-id="d9e4c-362">System.Text.EncoderFallback</span><span class="sxs-lookup"><span data-stu-id="d9e4c-362">System.Text.EncoderFallback</span></span>](xref:System.Text.EncoderFallback)
+
+[<span data-ttu-id="d9e4c-363">System.Text.Decoder</span><span class="sxs-lookup"><span data-stu-id="d9e4c-363">System.Text.Decoder</span></span>](xref:System.Text.Decoder)
+
+[<span data-ttu-id="d9e4c-364">System.Text.DecoderFallback</span><span class="sxs-lookup"><span data-stu-id="d9e4c-364">System.Text.DecoderFallback</span></span>](xref:System.Text.DecoderFallback)
+
+[<span data-ttu-id="d9e4c-365">System.Text.Encoding</span><span class="sxs-lookup"><span data-stu-id="d9e4c-365">System.Text.Encoding</span></span>](xref:System.Text.Encoding)
+
+
+
+
+

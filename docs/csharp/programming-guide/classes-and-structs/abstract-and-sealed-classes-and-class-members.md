@@ -1,60 +1,81 @@
 ---
-title: "Абстрактные и запечатанные классы и члены классов (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "абстрактные классы [C#]"
-  - "запечатанные классы [C#]"
-  - "язык C#, абстрактные классы"
-  - "язык C#, запечатанные"
+title: "Абстрактные и запечатанные классы и члены классов (Руководство по программированию на C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- abstract classes [C#]
+- sealed classes [C#]
+- C# language, abstract classes
+- C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
 caps.latest.revision: 14
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0788ea0778b3f8b846231fc2408938b2236314c9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Абстрактные и запечатанные классы и члены классов (Руководство по программированию на C#)
-Ключевое слово [abstract](../../../csharp/language-reference/keywords/abstract.md) позволяет создавать классы и члены [классов](../../../csharp/language-reference/keywords/class.md), которые являются неполными и должны быть реализованы в производном классе.  
+# <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a><span data-ttu-id="5ee90-102">Абстрактные и запечатанные классы и члены классов (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="5ee90-102">Abstract and Sealed Classes and Class Members (C# Programming Guide)</span></span>
+<span data-ttu-id="5ee90-103">Ключевое слово [abstract](../../../csharp/language-reference/keywords/abstract.md) позволяет создавать классы и члены [классов](../../../csharp/language-reference/keywords/class.md), которые являются неполными и должны быть реализованы в производном классе.</span><span class="sxs-lookup"><span data-stu-id="5ee90-103">The [abstract](../../../csharp/language-reference/keywords/abstract.md) keyword enables you to create classes and [class](../../../csharp/language-reference/keywords/class.md) members that are incomplete and must be implemented in a derived class.</span></span>  
   
- Ключевое слово [sealed](../../../csharp/language-reference/keywords/sealed.md) позволяет предотвратить наследование класса или определенных членов класса, помеченных ранее как [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+ <span data-ttu-id="5ee90-104">Ключевое слово [sealed](../../../csharp/language-reference/keywords/sealed.md) позволяет предотвратить наследование класса или определенных членов класса, помеченных ранее как [virtual](../../../csharp/language-reference/keywords/virtual.md).</span><span class="sxs-lookup"><span data-stu-id="5ee90-104">The [sealed](../../../csharp/language-reference/keywords/sealed.md) keyword enables you to prevent the inheritance of a class or certain class members that were previously marked [virtual](../../../csharp/language-reference/keywords/virtual.md).</span></span>  
   
-## Абстрактные классы и члены классов  
- Классы могут быть объявлены абстрактными путем помещения ключевого слова `abstract` перед определением класса.  Например:  
+## <a name="abstract-classes-and-class-members"></a><span data-ttu-id="5ee90-105">Абстрактные классы и члены классов</span><span class="sxs-lookup"><span data-stu-id="5ee90-105">Abstract Classes and Class Members</span></span>  
+ <span data-ttu-id="5ee90-106">Классы могут быть объявлены абстрактными путем помещения ключевого слова `abstract` перед определением класса.</span><span class="sxs-lookup"><span data-stu-id="5ee90-106">Classes can be declared as abstract by putting the keyword `abstract` before the class definition.</span></span> <span data-ttu-id="5ee90-107">Пример:</span><span class="sxs-lookup"><span data-stu-id="5ee90-107">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]  
+ <span data-ttu-id="5ee90-108">[!code-cs[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="5ee90-108">[!code-cs[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]</span></span>  
   
- Создавать экземпляры абстрактного класса нельзя.  Назначение абстрактного класса заключается в предоставлении общего определения для базового класса, которое могут совместно использовать несколько производных классов.  Например, в библиотеке классов может быть определен абстрактный класс, используемый в качестве параметра для многих из ее функций, поэтому программисты, использующие эту библиотеку, должны задать свою реализацию этого класса, создав производный класс.  
+ <span data-ttu-id="5ee90-109">Создавать экземпляры абстрактного класса нельзя.</span><span class="sxs-lookup"><span data-stu-id="5ee90-109">An abstract class cannot be instantiated.</span></span> <span data-ttu-id="5ee90-110">Назначение абстрактного класса заключается в предоставлении общего определения для базового класса, которое могут совместно использовать несколько производных классов.</span><span class="sxs-lookup"><span data-stu-id="5ee90-110">The purpose of an abstract class is to provide a common definition of a base class that multiple derived classes can share.</span></span> <span data-ttu-id="5ee90-111">Например, в библиотеке классов может быть определен абстрактный класс, используемый в качестве параметра для многих из ее функций, поэтому программисты, использующие эту библиотеку, должны задать свою реализацию этого класса, создав производный класс.</span><span class="sxs-lookup"><span data-stu-id="5ee90-111">For example, a class library may define an abstract class that is used as a parameter to many of its functions, and require programmers using that library to provide their own implementation of the class by creating a derived class.</span></span>  
   
- Абстрактные классы могут определять абстрактные методы.  Для этого перед типом возвращаемого значения метода необходимо поместить ключевое слово `abstract`.  Например:  
+ <span data-ttu-id="5ee90-112">Абстрактные классы могут определять абстрактные методы.</span><span class="sxs-lookup"><span data-stu-id="5ee90-112">Abstract classes may also define abstract methods.</span></span> <span data-ttu-id="5ee90-113">Для этого перед типом возвращаемого значения метода необходимо поместить ключевое слово `abstract`.</span><span class="sxs-lookup"><span data-stu-id="5ee90-113">This is accomplished by adding the keyword `abstract` before the return type of the method.</span></span> <span data-ttu-id="5ee90-114">Пример:</span><span class="sxs-lookup"><span data-stu-id="5ee90-114">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
+ <span data-ttu-id="5ee90-115">[!code-cs[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="5ee90-115">[!code-cs[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]</span></span>  
   
- Абстрактные методы не имеют реализации, поэтому определение такого метода заканчивается точкой с запятой вместо обычного блока метода.  Классы, производные от абстрактного класса, должны реализовывать все абстрактные методы.  Если абстрактный класс наследует виртуальный метод из базового класса, абстрактный класс может переопределить виртуальный метод с помощью абстрактного метода.  Например:  
+ <span data-ttu-id="5ee90-116">Абстрактные методы не имеют реализации, поэтому определение такого метода заканчивается точкой с запятой вместо обычного блока метода.</span><span class="sxs-lookup"><span data-stu-id="5ee90-116">Abstract methods have no implementation, so the method definition is followed by a semicolon instead of a normal method block.</span></span> <span data-ttu-id="5ee90-117">Классы, производные от абстрактного класса, должны реализовывать все абстрактные методы.</span><span class="sxs-lookup"><span data-stu-id="5ee90-117">Derived classes of the abstract class must implement all abstract methods.</span></span> <span data-ttu-id="5ee90-118">Если абстрактный класс наследует виртуальный метод из базового класса, абстрактный класс может переопределить виртуальный метод с помощью абстрактного метода.</span><span class="sxs-lookup"><span data-stu-id="5ee90-118">When an abstract class inherits a virtual method from a base class, the abstract class can override the virtual method with an abstract method.</span></span> <span data-ttu-id="5ee90-119">Пример:</span><span class="sxs-lookup"><span data-stu-id="5ee90-119">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]  
+ <span data-ttu-id="5ee90-120">[!code-cs[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="5ee90-120">[!code-cs[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]</span></span>  
   
- Если метод `virtual` объявляется как `abstract`, он все равно считается виртуальным по отношению к любому классу, наследующему от абстрактного класса.  Класс, наследующий абстрактный метод, не может обращаться к исходной реализации метода — см. предыдущий пример, `DoWork` в классе F не может вызывать `DoWork` в классе D.  Таким образом абстрактный класс может "принуждать" производные классы предоставлять новые реализации для виртуальных методов.  
+ <span data-ttu-id="5ee90-121">Если метод `virtual` объявляется как `abstract`, он все равно считается виртуальным по отношению к любому классу, наследующему от абстрактного класса.</span><span class="sxs-lookup"><span data-stu-id="5ee90-121">If a `virtual` method is declared `abstract`, it is still virtual to any class inheriting from the abstract class.</span></span> <span data-ttu-id="5ee90-122">Класс, наследующий абстрактный метод, не может получать доступ к исходной реализации метода (так, в предыдущем примере `DoWork` для класса F не может вызывать `DoWork` для класса D). Таким образом, абстрактный класс может принудительно задавать необходимость предоставлять новые реализации виртуальных методов в производных классах.</span><span class="sxs-lookup"><span data-stu-id="5ee90-122">A class inheriting an abstract method cannot access the original implementation of the method—in the previous example, `DoWork` on class F cannot call `DoWork` on class D. In this way, an abstract class can force derived classes to provide new method implementations for virtual methods.</span></span>  
   
-## Запечатанные классы и члены классов  
- Классы могут быть объявлены как [запечатанные](../../../csharp/language-reference/keywords/sealed.md) путем помещения ключевого слова `sealed` перед определением класса.  Например:  
+## <a name="sealed-classes-and-class-members"></a><span data-ttu-id="5ee90-123">Запечатанные классы и члены классов</span><span class="sxs-lookup"><span data-stu-id="5ee90-123">Sealed Classes and Class Members</span></span>  
+ <span data-ttu-id="5ee90-124">Классы могут быть объявлены как [запечатанные](../../../csharp/language-reference/keywords/sealed.md) путем помещения ключевого слова `sealed` перед определением класса.</span><span class="sxs-lookup"><span data-stu-id="5ee90-124">Classes can be declared as [sealed](../../../csharp/language-reference/keywords/sealed.md) by putting the keyword `sealed` before the class definition.</span></span> <span data-ttu-id="5ee90-125">Пример:</span><span class="sxs-lookup"><span data-stu-id="5ee90-125">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]  
+ <span data-ttu-id="5ee90-126">[!code-cs[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="5ee90-126">[!code-cs[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]</span></span>  
   
- Запечатанный класс не может использоваться в качестве базового класса.  Поэтому он также не может быть абстрактным классом.  Запечатанные классы предотвращают наследование.  Поскольку их нельзя использовать в качестве базовых классов, определенная оптимизация во время выполнения позволяет несколько ускорить вызов членов запечатанных классов.  
+ <span data-ttu-id="5ee90-127">Запечатанный класс не может использоваться в качестве базового класса.</span><span class="sxs-lookup"><span data-stu-id="5ee90-127">A sealed class cannot be used as a base class.</span></span> <span data-ttu-id="5ee90-128">Поэтому он также не может быть абстрактным классом.</span><span class="sxs-lookup"><span data-stu-id="5ee90-128">For this reason, it cannot also be an abstract class.</span></span> <span data-ttu-id="5ee90-129">Запечатанные классы предотвращают наследование.</span><span class="sxs-lookup"><span data-stu-id="5ee90-129">Sealed classes prevent derivation.</span></span> <span data-ttu-id="5ee90-130">Поскольку их нельзя использовать в качестве базовых классов, определенная оптимизация во время выполнения позволяет несколько ускорить вызов членов запечатанных классов.</span><span class="sxs-lookup"><span data-stu-id="5ee90-130">Because they can never be used as a base class, some run-time optimizations can make calling sealed class members slightly faster.</span></span>  
   
- Метод, индексатор, свойство или событие для производного класса, переопределяющего виртуальный член базового класса, может объявлять этот член как запечатанный.  Это делает бесполезным виртуальный аспект члена для каждого последующего производного класса.  Для этого в объявлении члена класса необходимо перед ключевым словом [override](../../../csharp/language-reference/keywords/override.md) поместить ключевое слово `sealed`.  Например:  
+ <span data-ttu-id="5ee90-131">Метод, индексатор, свойство или событие для производного класса, переопределяющего виртуальный член базового класса, может объявлять этот член как запечатанный.</span><span class="sxs-lookup"><span data-stu-id="5ee90-131">A method, indexer, property, or event, on a derived class that is overriding a virtual member of the base class can declare that member as sealed.</span></span> <span data-ttu-id="5ee90-132">Это делает бесполезным виртуальный аспект члена для каждого последующего производного класса.</span><span class="sxs-lookup"><span data-stu-id="5ee90-132">This negates the virtual aspect of the member for any further derived class.</span></span> <span data-ttu-id="5ee90-133">Для этого в объявлении члена класса необходимо перед ключевым словом [override](../../../csharp/language-reference/keywords/override.md) поместить ключевое слово `sealed`.</span><span class="sxs-lookup"><span data-stu-id="5ee90-133">This is accomplished by putting the `sealed` keyword before the [override](../../../csharp/language-reference/keywords/override.md) keyword in the class member declaration.</span></span> <span data-ttu-id="5ee90-134">Пример:</span><span class="sxs-lookup"><span data-stu-id="5ee90-134">For example:</span></span>  
   
- [!code-cs[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
+ <span data-ttu-id="5ee90-135">[!code-cs[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="5ee90-135">[!code-cs[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]</span></span>  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [Практическое руководство. Определение абстрактных свойств](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+## <a name="see-also"></a><span data-ttu-id="5ee90-136">См. также</span><span class="sxs-lookup"><span data-stu-id="5ee90-136">See Also</span></span>  
+ <span data-ttu-id="5ee90-137">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="5ee90-137">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="5ee90-138">[Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md) </span><span class="sxs-lookup"><span data-stu-id="5ee90-138">[Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md) </span></span>  
+ <span data-ttu-id="5ee90-139">[Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md) </span><span class="sxs-lookup"><span data-stu-id="5ee90-139">[Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md) </span></span>  
+ <span data-ttu-id="5ee90-140">[Methods (C# Programming Guide)](../../../csharp/programming-guide/classes-and-structs/methods.md)  (Методы (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="5ee90-140">[Methods](../../../csharp/programming-guide/classes-and-structs/methods.md) </span></span>  
+ <span data-ttu-id="5ee90-141">[Поля](../../../csharp/programming-guide/classes-and-structs/fields.md) </span><span class="sxs-lookup"><span data-stu-id="5ee90-141">[Fields](../../../csharp/programming-guide/classes-and-structs/fields.md) </span></span>  
+ [<span data-ttu-id="5ee90-142">Практическое руководство. Определение абстрактных свойств</span><span class="sxs-lookup"><span data-stu-id="5ee90-142">How to: Define Abstract Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+

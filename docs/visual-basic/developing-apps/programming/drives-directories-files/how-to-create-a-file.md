@@ -38,42 +38,42 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>Практическое руководство. Создание файла в Visual Basic
-В этом примере создается пустой текстовый файл по указанному пути с использованием метода <xref:System.IO.File.Create%2A> класса <xref:System.IO.File>.  
+# <a name="how-to-create-a-file-in-visual-basic"></a><span data-ttu-id="1b146-102">Практическое руководство. Создание файла в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1b146-102">How to: Create a File in Visual Basic</span></span>
+<span data-ttu-id="1b146-103">В этом примере создается пустой текстовый файл по указанному пути с использованием метода <xref:System.IO.File.Create%2A> класса <xref:System.IO.File>.</span><span class="sxs-lookup"><span data-stu-id="1b146-103">This example creates an empty text file at the specified path using the <xref:System.IO.File.Create%2A> method in the <xref:System.IO.File> class.</span></span>  
   
-## <a name="example"></a>Пример  
- [!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]  
+## <a name="example"></a><span data-ttu-id="1b146-104">Пример</span><span class="sxs-lookup"><span data-stu-id="1b146-104">Example</span></span>  
+ <span data-ttu-id="1b146-105">[!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="1b146-105">[!code-vb[VbFileIOMisc#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-file_1.vb)]</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Для записи в файл используется переменная `file`.  
+## <a name="compiling-the-code"></a><span data-ttu-id="1b146-106">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="1b146-106">Compiling the Code</span></span>  
+ <span data-ttu-id="1b146-107">Для записи в файл используется переменная `file`.</span><span class="sxs-lookup"><span data-stu-id="1b146-107">Use the `file` variable to write to the file.</span></span>  
   
-## <a name="robust-programming"></a>Отказоустойчивость  
- Если файл уже существует, он заменяется.  
+## <a name="robust-programming"></a><span data-ttu-id="1b146-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="1b146-108">Robust Programming</span></span>  
+ <span data-ttu-id="1b146-109">Если файл уже существует, он заменяется.</span><span class="sxs-lookup"><span data-stu-id="1b146-109">If the file already exists, it is replaced.</span></span>  
   
- При следующих условиях возможно возникновение исключения:  
+ <span data-ttu-id="1b146-110">При следующих условиях возможно возникновение исключения:</span><span class="sxs-lookup"><span data-stu-id="1b146-110">The following conditions may cause an exception:</span></span>  
   
--   Недопустимое имя пути Например, оно содержит недопустимые символы или состоит из одних пробелов (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="1b146-111">Недопустимое имя пути</span><span class="sxs-lookup"><span data-stu-id="1b146-111">The path name is malformed.</span></span> <span data-ttu-id="1b146-112">Например, оно содержит недопустимые символы или состоит из одних пробелов (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="1b146-112">For example, it contains illegal characters or is only white space (<xref:System.ArgumentException>).</span></span>  
   
--   Путь доступен только для чтения (<xref:System.IO.IOException>).  
+-   <span data-ttu-id="1b146-113">Путь доступен только для чтения (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="1b146-113">The path is read-only (<xref:System.IO.IOException>).</span></span>  
   
--   Имя пути — `Nothing` (<xref:System.ArgumentNullException>).  
+-   <span data-ttu-id="1b146-114">Имя пути — `Nothing` (<xref:System.ArgumentNullException>).</span><span class="sxs-lookup"><span data-stu-id="1b146-114">The path name is `Nothing` (<xref:System.ArgumentNullException>).</span></span>  
   
--   Имя пути слишком длинное (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="1b146-115">Имя пути слишком длинное (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="1b146-115">The path name is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   Указан недопустимый путь (<xref:System.IO.DirectoryNotFoundException>).  
+-   <span data-ttu-id="1b146-116">Указан недопустимый путь (<xref:System.IO.DirectoryNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="1b146-116">The path is invalid (<xref:System.IO.DirectoryNotFoundException>).</span></span>  
   
--   Путь состоит только из двоеточия (":") (<xref:System.NotSupportedException>).  
+-   <span data-ttu-id="1b146-117">Путь состоит только из двоеточия (":") (<xref:System.NotSupportedException>).</span><span class="sxs-lookup"><span data-stu-id="1b146-117">The path is only a colon ":" (<xref:System.NotSupportedException>).</span></span>  
   
-## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Исключение <xref:System.Security.SecurityException> может быть создано в средах с частичным доверием.  
+## <a name="net-framework-security"></a><span data-ttu-id="1b146-118">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1b146-118">.NET Framework Security</span></span>  
+ <span data-ttu-id="1b146-119">Исключение <xref:System.Security.SecurityException> может быть создано в средах с частичным доверием.</span><span class="sxs-lookup"><span data-stu-id="1b146-119">A <xref:System.Security.SecurityException> may be thrown in partial-trust environments.</span></span>  
   
- Вызов метода <xref:System.IO.File.Create%2A> требует <xref:System.Security.Permissions.FileIOPermission>.  
+ <span data-ttu-id="1b146-120">Вызов метода <xref:System.IO.File.Create%2A> требует <xref:System.Security.Permissions.FileIOPermission>.</span><span class="sxs-lookup"><span data-stu-id="1b146-120">The call to the <xref:System.IO.File.Create%2A> method requires <xref:System.Security.Permissions.FileIOPermission>.</span></span>  
   
- Исключение <xref:System.UnauthorizedAccessException> возникает, если пользователь не имеет разрешения на создание файла.  
+ <span data-ttu-id="1b146-121">Исключение <xref:System.UnauthorizedAccessException> возникает, если пользователь не имеет разрешения на создание файла.</span><span class="sxs-lookup"><span data-stu-id="1b146-121">An <xref:System.UnauthorizedAccessException> is thrown if the user does not have permission to create the file.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO>   
- <xref:System.IO.File.Create%2A>   
- [Использование библиотек из не вполне надежного кода](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)   
- [Основы управления доступом для кода](https://msdn.microsoft.com/library/33tceax8)
+## <a name="see-also"></a><span data-ttu-id="1b146-122">См. также</span><span class="sxs-lookup"><span data-stu-id="1b146-122">See Also</span></span>  
+ <span data-ttu-id="1b146-123"><xref:System.IO></span><span class="sxs-lookup"><span data-stu-id="1b146-123"><xref:System.IO></span></span>   
+ <span data-ttu-id="1b146-124"><xref:System.IO.File.Create%2A></span><span class="sxs-lookup"><span data-stu-id="1b146-124"><xref:System.IO.File.Create%2A></span></span>   
+ <span data-ttu-id="1b146-125">[Использование библиотек из не вполне надежного кода](../../../../framework/misc/using-libraries-from-partially-trusted-code.md) </span><span class="sxs-lookup"><span data-stu-id="1b146-125">[Using Libraries from Partially Trusted Code](../../../../framework/misc/using-libraries-from-partially-trusted-code.md) </span></span>  
+ [<span data-ttu-id="1b146-126">Основы управления доступом для кода</span><span class="sxs-lookup"><span data-stu-id="1b146-126">Code Access Security Basics</span></span>](https://msdn.microsoft.com/library/33tceax8)
 

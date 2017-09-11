@@ -20,30 +20,31 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b46f3cb5e0d59105fbc31424a0408c3421d9cac
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 78a72effa021408943b9248546106c6fd655ac0b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="xelement-class-overview-visual-basic"></a>Общие сведения о классе XElement (Visual Basic)
-<xref:System.Xml.Linq.XElement>Класс является одним из фундаментальных классов в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</xref:System.Xml.Linq.XElement> Он обозначает элемент XML. Этот класс можно использовать для создания элементов, изменения содержимого элемента, добавления, изменения или удаления дочерних элементов, добавления к элементам атрибутов или сериализации содержимого элемента в текстовой форме. Можно также настроить взаимодействие с другими классами в <xref:System.Xml?displayProperty=fullName>, такие как <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>и <xref:System.Xml.Xsl.XslCompiledTransform>.</xref:System.Xml.Xsl.XslCompiledTransform> </xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> </xref:System.Xml?displayProperty=fullName>  
+# <a name="xelement-class-overview-visual-basic"></a><span data-ttu-id="eb546-102">Общие сведения о классе XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb546-102">XElement Class Overview (Visual Basic)</span></span>
+<span data-ttu-id="eb546-103"><xref:System.Xml.Linq.XElement>Класс является одним из фундаментальных классов в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="eb546-103">The <xref:System.Xml.Linq.XElement> class is one of the fundamental classes in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</span></span> <span data-ttu-id="eb546-104">Он обозначает элемент XML.</span><span class="sxs-lookup"><span data-stu-id="eb546-104">It represents an XML element.</span></span> <span data-ttu-id="eb546-105">Этот класс можно использовать для создания элементов, изменения содержимого элемента, добавления, изменения или удаления дочерних элементов, добавления к элементам атрибутов или сериализации содержимого элемента в текстовой форме.</span><span class="sxs-lookup"><span data-stu-id="eb546-105">You can use this class to create elements; change the content of the element; add, change, or delete child elements; add attributes to an element; or serialize the contents of an element in text form.</span></span> <span data-ttu-id="eb546-106">Можно также настроить взаимодействие с другими классами в <xref:System.Xml?displayProperty=fullName>, такие как <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>и <xref:System.Xml.Xsl.XslCompiledTransform>.</xref:System.Xml.Xsl.XslCompiledTransform> </xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> </xref:System.Xml?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="eb546-106">You can also interoperate with other classes in <xref:System.Xml?displayProperty=fullName>, such as <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, and <xref:System.Xml.Xsl.XslCompiledTransform>.</span></span>  
   
-## <a name="xelement-functionality"></a>Функциональные особенности класса XElement  
- В этом разделе описываются функциональные возможности, предоставляемые <xref:System.Xml.Linq.XElement>класса.</xref:System.Xml.Linq.XElement>  
+## <a name="xelement-functionality"></a><span data-ttu-id="eb546-107">Функциональные особенности класса XElement</span><span class="sxs-lookup"><span data-stu-id="eb546-107">XElement Functionality</span></span>  
+ <span data-ttu-id="eb546-108">В этом разделе описываются функциональные возможности, предоставляемые <xref:System.Xml.Linq.XElement>класса.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="eb546-108">This topic describes the functionality provided by the <xref:System.Xml.Linq.XElement> class.</span></span>  
   
-### <a name="constructing-xml-trees"></a>Создание XML-деревьев  
- Можно создавать XML-деревья несколькими способами.  
+### <a name="constructing-xml-trees"></a><span data-ttu-id="eb546-109">Создание XML-деревьев</span><span class="sxs-lookup"><span data-stu-id="eb546-109">Constructing XML Trees</span></span>  
+ <span data-ttu-id="eb546-110">Можно создавать XML-деревья несколькими способами.</span><span class="sxs-lookup"><span data-stu-id="eb546-110">You can construct XML trees in a variety of ways, including the following:</span></span>  
   
--   Можно создать XML-дерево при помощи кода. Дополнительные сведения см. в разделе [Создание XML-деревьев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
+-   <span data-ttu-id="eb546-111">Можно создать XML-дерево при помощи кода.</span><span class="sxs-lookup"><span data-stu-id="eb546-111">You can construct an XML tree in code.</span></span> <span data-ttu-id="eb546-112">Дополнительные сведения см. в разделе [Создание XML-деревьев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).</span><span class="sxs-lookup"><span data-stu-id="eb546-112">For more information, see [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).</span></span>  
   
--   Можно выполнить синтаксический анализ XML из различных источников, включая <xref:System.IO.TextReader>, текстовые файлы или веб-адрес (URL).</xref:System.IO.TextReader> Дополнительные сведения см. в разделе [синтаксического анализа XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).  
+-   <span data-ttu-id="eb546-113">Можно выполнить синтаксический анализ XML из различных источников, включая <xref:System.IO.TextReader>, текстовые файлы или веб-адрес (URL).</xref:System.IO.TextReader></span><span class="sxs-lookup"><span data-stu-id="eb546-113">You can parse XML from various sources, including a <xref:System.IO.TextReader>, text files, or a Web address (URL).</span></span> <span data-ttu-id="eb546-114">Дополнительные сведения см. в разделе [синтаксического анализа XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).</span><span class="sxs-lookup"><span data-stu-id="eb546-114">For more information, see [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md).</span></span>  
   
--   Можно использовать <xref:System.Xml.XmlReader>для заполнения дерева.</xref:System.Xml.XmlReader> Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XNode.ReadFrom%2A>.</xref:System.Xml.Linq.XNode.ReadFrom%2A>  
+-   <span data-ttu-id="eb546-115">Можно использовать <xref:System.Xml.XmlReader>для заполнения дерева.</xref:System.Xml.XmlReader></span><span class="sxs-lookup"><span data-stu-id="eb546-115">You can use an <xref:System.Xml.XmlReader> to populate the tree.</span></span> <span data-ttu-id="eb546-116">Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XNode.ReadFrom%2A>.</xref:System.Xml.Linq.XNode.ReadFrom%2A></span><span class="sxs-lookup"><span data-stu-id="eb546-116">For more information, see <xref:System.Xml.Linq.XNode.ReadFrom%2A>.</span></span>  
   
--   Если у вас есть модуль, который можно записать содержимое на <xref:System.Xml.XmlWriter>, можно использовать <xref:System.Xml.Linq.XContainer.CreateWriter%2A>способ создать модуль записи, передать в модуль записи, а затем использовать содержимое, которое записывается в <xref:System.Xml.XmlWriter>для заполнения дерева XML.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XContainer.CreateWriter%2A> </xref:System.Xml.XmlWriter>  
+-   <span data-ttu-id="eb546-117">Если у вас есть модуль, который можно записать содержимое на <xref:System.Xml.XmlWriter>, можно использовать <xref:System.Xml.Linq.XContainer.CreateWriter%2A>способ создать модуль записи, передать в модуль записи, а затем использовать содержимое, которое записывается в <xref:System.Xml.XmlWriter>для заполнения дерева XML.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XContainer.CreateWriter%2A> </xref:System.Xml.XmlWriter></span><span class="sxs-lookup"><span data-stu-id="eb546-117">If you have a module that can write content to an <xref:System.Xml.XmlWriter>, you can use the <xref:System.Xml.Linq.XContainer.CreateWriter%2A> method to create a writer, pass the writer to the module, and then use the content that is written to the <xref:System.Xml.XmlWriter> to populate the XML tree.</span></span>  
   
- Однако наиболее распространенным является такой метод создания XML-дерева:  
+ <span data-ttu-id="eb546-118">Однако наиболее распространенным является такой метод создания XML-дерева:</span><span class="sxs-lookup"><span data-stu-id="eb546-118">However, the most common way to create an XML tree is as follows:</span></span>  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -61,7 +62,7 @@ Dim contacts As XElement = _
     </Contacts>  
 ```  
   
- Другим распространенным способом для создания XML-дерева является использование результатов из [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запроса для заполнения дерева XML, как показано в следующем примере:  
+ <span data-ttu-id="eb546-119">Другим распространенным способом для создания XML-дерева является использование результатов из [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запроса для заполнения дерева XML, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="eb546-119">Another very common technique for creating an XML tree involves using the results of a [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] query to populate an XML tree, as shown in the following example:</span></span>  
   
 ```vb  
 Dim srcTree As XElement = _  
@@ -83,7 +84,7 @@ Dim xmlTree As XElement = _
 Console.WriteLine(xmlTree)  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="eb546-120">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="eb546-120">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -95,25 +96,25 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-### <a name="serializing-xml-trees"></a>Сериализация деревьев XML  
- Можно сериализовать XML-дерева <xref:System.IO.File>, <xref:System.IO.TextWriter>, или <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.IO.TextWriter> </xref:System.IO.File>  
+### <a name="serializing-xml-trees"></a><span data-ttu-id="eb546-121">Сериализация деревьев XML</span><span class="sxs-lookup"><span data-stu-id="eb546-121">Serializing XML Trees</span></span>  
+ <span data-ttu-id="eb546-122">Можно сериализовать XML-дерева <xref:System.IO.File>, <xref:System.IO.TextWriter>, или <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.IO.TextWriter> </xref:System.IO.File></span><span class="sxs-lookup"><span data-stu-id="eb546-122">You can serialize the XML tree to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.</span></span>  
   
- Дополнительные сведения см. в разделе [сериализации XML-деревьев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
+ <span data-ttu-id="eb546-123">Дополнительные сведения см. в разделе [сериализации XML-деревьев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).</span><span class="sxs-lookup"><span data-stu-id="eb546-123">For more information, see [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).</span></span>  
   
-### <a name="retrieving-xml-data-via-axis-methods"></a>Получение XML-данных через методы оси  
- Можно воспользоваться методами оси для получения свойств, дочерних элементов, элементов-потомков и элементов-предков. При выполнении запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] используются методы оси и обеспечиваются гибкие и эффективные способы навигации по XML-дереву, а также его обработки.  
+### <a name="retrieving-xml-data-via-axis-methods"></a><span data-ttu-id="eb546-124">Получение XML-данных через методы оси</span><span class="sxs-lookup"><span data-stu-id="eb546-124">Retrieving XML Data via Axis Methods</span></span>  
+ <span data-ttu-id="eb546-125">Можно воспользоваться методами оси для получения свойств, дочерних элементов, элементов-потомков и элементов-предков.</span><span class="sxs-lookup"><span data-stu-id="eb546-125">You can use axis methods to retrieve attributes, child elements, descendant elements, and ancestor elements.</span></span> <span data-ttu-id="eb546-126">При выполнении запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] используются методы оси и обеспечиваются гибкие и эффективные способы навигации по XML-дереву, а также его обработки.</span><span class="sxs-lookup"><span data-stu-id="eb546-126">[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] queries operate on axis methods, and provide several flexible and powerful ways to navigate through and process an XML tree.</span></span>  
   
- Дополнительные сведения см. в разделе [оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
+ <span data-ttu-id="eb546-127">Дополнительные сведения см. в разделе [оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).</span><span class="sxs-lookup"><span data-stu-id="eb546-127">For more information, see [LINQ to XML Axes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).</span></span>  
   
-### <a name="querying-xml-trees"></a>Выполнение запросов деревьям XML  
- Можно написать [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запросов, извлекающих данные из XML-дерева.  
+### <a name="querying-xml-trees"></a><span data-ttu-id="eb546-128">Выполнение запросов деревьям XML</span><span class="sxs-lookup"><span data-stu-id="eb546-128">Querying XML Trees</span></span>  
+ <span data-ttu-id="eb546-129">Можно написать [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запросов, извлекающих данные из XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="eb546-129">You can write [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] queries that extract data from an XML tree.</span></span>  
   
- Дополнительные сведения см. в разделе [запросы XML-деревьев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).  
+ <span data-ttu-id="eb546-130">Дополнительные сведения см. в разделе [запросы XML-деревьев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).</span><span class="sxs-lookup"><span data-stu-id="eb546-130">For more information, see [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).</span></span>  
   
-### <a name="modifying-xml-trees"></a>Изменение деревьев XML  
- Один и тот же элемент можно изменить несколькими способами, в том числе изменив содержимое или атрибуты. Можно также удалить элемент из родительской структуры.  
+### <a name="modifying-xml-trees"></a><span data-ttu-id="eb546-131">Изменение деревьев XML</span><span class="sxs-lookup"><span data-stu-id="eb546-131">Modifying XML Trees</span></span>  
+ <span data-ttu-id="eb546-132">Один и тот же элемент можно изменить несколькими способами, в том числе изменив содержимое или атрибуты.</span><span class="sxs-lookup"><span data-stu-id="eb546-132">You can modify an element in a variety of ways, including changing its content or attributes.</span></span> <span data-ttu-id="eb546-133">Можно также удалить элемент из родительской структуры.</span><span class="sxs-lookup"><span data-stu-id="eb546-133">You can also remove an element from its parent.</span></span>  
   
- Дополнительные сведения см. в разделе [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
+ <span data-ttu-id="eb546-134">Дополнительные сведения см. в разделе [изменение деревьев XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="eb546-134">For more information, see [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ to XML обзор программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="eb546-135">См. также</span><span class="sxs-lookup"><span data-stu-id="eb546-135">See Also</span></span>  
+ [<span data-ttu-id="eb546-136">LINQ to XML обзор программирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb546-136">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -1,1 +1,1 @@
-API - интерфейсы
+<span data-ttu-id="77fcf-101">API - интерфейсы</span><span class="sxs-lookup"><span data-stu-id="77fcf-101">APIs</span></span>

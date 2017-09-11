@@ -15,24 +15,25 @@ ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b05fbff86bcac06a3ce375c162c70dc308f4913
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c8f386ff7cb2d80cfa4cbe8fe525e527c655d67e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Проецирование XML в другую форму (Visual Basic)
-В этом разделе показан пример проецированного XML, который находится в форме, отличной от исходного XML.  
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="f1f57-102">Проецирование XML в другую форму (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1f57-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
+<span data-ttu-id="f1f57-103">В этом разделе показан пример проецированного XML, который находится в форме, отличной от исходного XML.</span><span class="sxs-lookup"><span data-stu-id="f1f57-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- Множество типичных преобразований XML состоят из цепочек запросов, как в примере. Принято начинать с XML в некой форме, проецировать промежуточные результаты как коллекции анонимных типов или именованных типов, затем опять проецировать результаты в XML, который совсем отличен от исходного XML.  
+ <span data-ttu-id="f1f57-104">Множество типичных преобразований XML состоят из цепочек запросов, как в примере.</span><span class="sxs-lookup"><span data-stu-id="f1f57-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="f1f57-105">Принято начинать с XML в некой форме, проецировать промежуточные результаты как коллекции анонимных типов или именованных типов, затем опять проецировать результаты в XML, который совсем отличен от исходного XML.</span><span class="sxs-lookup"><span data-stu-id="f1f57-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a>Пример  
- В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль и текст каждого абзаца. Наконец, в примере проецируется XML с другой формой. Этот пример основан на предыдущих примерах данного учебника. Новая инструкция, которая выполняет проекцию, выявляется в комментариях в нижеприведенном коде.  
+## <a name="example"></a><span data-ttu-id="f1f57-106">Пример</span><span class="sxs-lookup"><span data-stu-id="f1f57-106">Example</span></span>  
+ <span data-ttu-id="f1f57-107">В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев.</span><span class="sxs-lookup"><span data-stu-id="f1f57-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="f1f57-108">Также идентифицируется стиль и текст каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="f1f57-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="f1f57-109">Наконец, в примере проецируется XML с другой формой.</span><span class="sxs-lookup"><span data-stu-id="f1f57-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="f1f57-110">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="f1f57-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="f1f57-111">Новая инструкция, которая выполняет проекцию, выявляется в комментариях в нижеприведенном коде.</span><span class="sxs-lookup"><span data-stu-id="f1f57-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- Инструкции по созданию исходного документа для данного примера см. в разделе [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ <span data-ttu-id="f1f57-112">Инструкции по созданию исходного документа для данного примера см. в разделе [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="f1f57-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="f1f57-113">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="f1f57-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="f1f57-114">Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="f1f57-114">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -173,7 +174,7 @@ Module Module1
 End Module  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="f1f57-115">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="f1f57-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -240,10 +241,10 @@ End Module
 </Root>  
 ```  
   
-## <a name="next-steps"></a>Дальнейшие действия  
- В следующем примере будет запрос на выявление всего текста в документе Word:  
+## <a name="next-steps"></a><span data-ttu-id="f1f57-116">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="f1f57-116">Next Steps</span></span>  
+ <span data-ttu-id="f1f57-117">В следующем примере будет запрос на выявление всего текста в документе Word:</span><span class="sxs-lookup"><span data-stu-id="f1f57-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [Поиск текста в документах Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="f1f57-118">Поиск текста в документах Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1f57-118">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>См. также  
- [Учебное руководство: Управление содержимым в документе WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="f1f57-119">См. также</span><span class="sxs-lookup"><span data-stu-id="f1f57-119">See Also</span></span>  
+ [<span data-ttu-id="f1f57-120">Учебное руководство: Управление содержимым в документе WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f1f57-120">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

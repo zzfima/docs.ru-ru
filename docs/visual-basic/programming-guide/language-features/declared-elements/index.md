@@ -1,72 +1,90 @@
 ---
-title: "Объявленные элементы в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: "Объявленные элементы в Visual Basic"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# Объявленные элементы в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
-*Объявленный элемент* — это элемент программирования, который определяется в выражении объявления.  Объявленные элементы включают переменные, константы, перечисления, классы, структуры, модули, интерфейсы, процедуры, параметры процедур, возвращаемые функциями значения, ссылки на внешние процедуры, операторы, свойства, события и делегаты.  
+---
+# <a name="declared-elements-in-visual-basic"></a><span data-ttu-id="b9de2-102">Объявленные элементы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b9de2-102">Declared Elements in Visual Basic</span></span>
+<span data-ttu-id="b9de2-103">*Объявленный элемент* — это элемент в программировании, который задается в операторе объявления.</span><span class="sxs-lookup"><span data-stu-id="b9de2-103">A *declared element* is a programming element that is defined in a declaration statement.</span></span> <span data-ttu-id="b9de2-104">Объявленные элементы включают переменные, константы, перечисления, классы, структуры, модули, интерфейсы, процедуры, параметры процедур, возвращаемые значения функций, ссылки на внешние процедуры, операторы, свойства, события и делегаты.</span><span class="sxs-lookup"><span data-stu-id="b9de2-104">Declared elements include variables, constants, enumerations, classes, structures, modules, interfaces, procedures, procedure parameters, function returns, external procedure references, operators, properties, events, and delegates.</span></span>  
   
- К операторам объявления относятся следующие:  
+ <span data-ttu-id="b9de2-105">К операторам объявления принадлежат:</span><span class="sxs-lookup"><span data-stu-id="b9de2-105">Declaration statements include the following:</span></span>  
   
--   [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+-   [<span data-ttu-id="b9de2-106">Оператор Dim</span><span class="sxs-lookup"><span data-stu-id="b9de2-106">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
--   [Оператор Const](../../../../visual-basic/language-reference/statements/const-statement.md)  
+-   [<span data-ttu-id="b9de2-107">Оператор Const</span><span class="sxs-lookup"><span data-stu-id="b9de2-107">Const Statement</span></span>](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
--   [Оператор Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+-   [<span data-ttu-id="b9de2-108">Оператор Enum</span><span class="sxs-lookup"><span data-stu-id="b9de2-108">Enum Statement</span></span>](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
--   [Оператор Class](../../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [<span data-ttu-id="b9de2-109">Оператор Class</span><span class="sxs-lookup"><span data-stu-id="b9de2-109">Class Statement</span></span>](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [<span data-ttu-id="b9de2-110">Оператор Structure</span><span class="sxs-lookup"><span data-stu-id="b9de2-110">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Оператор Module](../../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [<span data-ttu-id="b9de2-111">Оператор Module</span><span class="sxs-lookup"><span data-stu-id="b9de2-111">Module Statement</span></span>](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Оператор Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   [<span data-ttu-id="b9de2-112">Оператор Interface</span><span class="sxs-lookup"><span data-stu-id="b9de2-112">Interface Statement</span></span>](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   [Оператор Function](../../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [<span data-ttu-id="b9de2-113">Оператор Function</span><span class="sxs-lookup"><span data-stu-id="b9de2-113">Function Statement</span></span>](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Оператор Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [<span data-ttu-id="b9de2-114">Оператор Sub</span><span class="sxs-lookup"><span data-stu-id="b9de2-114">Sub Statement</span></span>](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Оператор Declare](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [<span data-ttu-id="b9de2-115">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="b9de2-115">Declare Statement</span></span>](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Оператор Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [<span data-ttu-id="b9de2-116">Оператор Statement</span><span class="sxs-lookup"><span data-stu-id="b9de2-116">Operator Statement</span></span>](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [<span data-ttu-id="b9de2-117">Оператор Property</span><span class="sxs-lookup"><span data-stu-id="b9de2-117">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Оператор Event](../../../../visual-basic/language-reference/statements/event-statement.md)  
+-   [<span data-ttu-id="b9de2-118">Оператор Event</span><span class="sxs-lookup"><span data-stu-id="b9de2-118">Event Statement</span></span>](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
--   [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+-   [<span data-ttu-id="b9de2-119">Оператор Delegate</span><span class="sxs-lookup"><span data-stu-id="b9de2-119">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## В этом подразделе  
- [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- Описание способов именования элементов и использования буквенных символов.  
+## <a name="in-this-section"></a><span data-ttu-id="b9de2-120">Содержание</span><span class="sxs-lookup"><span data-stu-id="b9de2-120">In This Section</span></span>  
+ [<span data-ttu-id="b9de2-121">Имена объявленных элементов</span><span class="sxs-lookup"><span data-stu-id="b9de2-121">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ <span data-ttu-id="b9de2-122">Именование элементов и использование строчных и прописных букв.</span><span class="sxs-lookup"><span data-stu-id="b9de2-122">Describes how to name elements and use alphabetic case.</span></span>  
   
- [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- Обзор характеристик объявленных элементов, таких как область действия.  
+ [<span data-ttu-id="b9de2-123">Характеристики объявленных элементов</span><span class="sxs-lookup"><span data-stu-id="b9de2-123">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ <span data-ttu-id="b9de2-124">Описание характеристик, таких как область, которыми обладают объявленные элементы.</span><span class="sxs-lookup"><span data-stu-id="b9de2-124">Covers characteristics, such as scope, possessed by declared elements.</span></span>  
   
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- Сопоставление компилятором ссылок для объявления и уточнение имени.  
+ [<span data-ttu-id="b9de2-125">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="b9de2-125">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ <span data-ttu-id="b9de2-126">Сопоставление компилятором ссылок и объявлений; уточнение имен.</span><span class="sxs-lookup"><span data-stu-id="b9de2-126">Describes how the compiler matches a reference to a declaration and how to qualify a name.</span></span>  
   
-## Связанные подразделы  
- [Соглашения о структуре программы и коде](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Рекомендации на тему о том, как сделать код более удобным для чтения, понимания и сопровождения.  
+## <a name="related-sections"></a><span data-ttu-id="b9de2-127">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="b9de2-127">Related Sections</span></span>  
+ [<span data-ttu-id="b9de2-128">Соглашения о структуре программы и коде</span><span class="sxs-lookup"><span data-stu-id="b9de2-128">Program Structure and Code Conventions</span></span>](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ <span data-ttu-id="b9de2-129">Рекомендации, как сделать код более читаемым, понятным и простым в поддержке.</span><span class="sxs-lookup"><span data-stu-id="b9de2-129">Presents guidelines for making your code easier to read, understand, and maintain.</span></span>  
   
- [Операторы](../../../../visual-basic/language-reference/statements/index.md)  
- Описание операторов языка, именующих и определяющих процедуры, переменные, массивы и константы.  
+ [<span data-ttu-id="b9de2-130">Операторы</span><span class="sxs-lookup"><span data-stu-id="b9de2-130">Statements</span></span>](../../../../visual-basic/language-reference/statements/index.md)  
+ <span data-ttu-id="b9de2-131">Описание операторов для именования и назначения процедур, переменных, массивов и констант.</span><span class="sxs-lookup"><span data-stu-id="b9de2-131">Describes statements that name and define procedures, variables, arrays, and constants.</span></span>  
   
- [Контексты объявления и уровни доступа по умолчанию](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
- Описание типов объявленных элементов с указанием того, какой оператор объявления использовать для каждого из них, в каком контексте его объявить и каков его уровень доступа по умолчанию.
+ [<span data-ttu-id="b9de2-132">Контексты объявления и уровни доступа по умолчанию</span><span class="sxs-lookup"><span data-stu-id="b9de2-132">Declaration Contexts and Default Access Levels</span></span>](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ <span data-ttu-id="b9de2-133">В этом разделе перечислены типы объявленных элементов и для каждого из них приведены операторы объявления, контекст, где возможно объявление, и уровень доступа по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="b9de2-133">Lists the types of declared elements and shows for each one its declaration statement, in what context you can declare it, and its default access level.</span></span>
+

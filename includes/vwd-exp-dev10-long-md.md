@@ -1,1 +1,1 @@
-Visual Web Developer 2010, экспресс-выпуск
+<span data-ttu-id="60315-101">Visual Web Developer 2010, экспресс-выпуск</span><span class="sxs-lookup"><span data-stu-id="60315-101">Visual Web Developer 2010 Express</span></span>

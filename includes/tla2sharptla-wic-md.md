@@ -1,1 +1,1 @@
-Обработка изображений в WPF
+<span data-ttu-id="e4998-101">Обработка изображений в WPF</span><span class="sxs-lookup"><span data-stu-id="e4998-101">WPF Imaging</span></span>

@@ -16,18 +16,18 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3729a9494c3b7486555b01245036c3c8441bf7e0
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: a36818659adbeef13e2468170360aba090ecc1cb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Практическое руководство: Создание XML из CSV-файлов (Visual Basic)
-В этом примере показано, как [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] и [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="4ebf8-102">Практическое руководство: Создание XML из CSV-файлов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ebf8-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="4ebf8-103">В этом примере показано, как [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] и [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).</span><span class="sxs-lookup"><span data-stu-id="4ebf8-103">This example shows how to use [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] and [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем коде выполняется запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] по массиву строк.  
+## <a name="example"></a><span data-ttu-id="4ebf8-104">Пример</span><span class="sxs-lookup"><span data-stu-id="4ebf8-104">Example</span></span>  
+ <span data-ttu-id="4ebf8-105">В следующем коде выполняется запрос [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] по массиву строк.</span><span class="sxs-lookup"><span data-stu-id="4ebf8-105">The following code performs a [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -62,7 +62,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="4ebf8-106">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="4ebf8-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -121,6 +121,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Проекции и преобразования (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="4ebf8-107">См. также</span><span class="sxs-lookup"><span data-stu-id="4ebf8-107">See Also</span></span>  
+ [<span data-ttu-id="4ebf8-108">Проекции и преобразования (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ebf8-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
 

@@ -1,1 +1,1 @@
-Visual C#, экспресс-выпуск
+<span data-ttu-id="1c261-101">Visual C#, экспресс-выпуск</span><span class="sxs-lookup"><span data-stu-id="1c261-101">Visual C# Express</span></span>

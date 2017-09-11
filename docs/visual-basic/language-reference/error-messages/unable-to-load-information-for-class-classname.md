@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4472ceee783c2373de8cc4a0950363ed317d56ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0e95ba21e7ec751fe0276244dd1ce49552b178ab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a>Не удалось загрузить сведения для класса&lt;classname&gt;"
-Ссылка на класс, который недоступен.  
+# <a name="unable-to-load-information-for-class-39ltclassnamegt39"></a><span data-ttu-id="31532-102">Не удалось загрузить сведения для класса&lt;classname&gt;"</span><span class="sxs-lookup"><span data-stu-id="31532-102">Unable to load information for class &#39;&lt;classname&gt;&#39;</span></span>
+<span data-ttu-id="31532-103">Ссылка на класс, который недоступен.</span><span class="sxs-lookup"><span data-stu-id="31532-103">A reference was made to a class that is not available.</span></span>  
   
- **Идентификатор ошибки:** BC30712  
+ <span data-ttu-id="31532-104">**Идентификатор ошибки:** BC30712</span><span class="sxs-lookup"><span data-stu-id="31532-104">**Error ID:** BC30712</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="31532-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="31532-105">To correct this error</span></span>  
   
-1.  Убедитесь, что класс был определен и что его имя указано верно.  
+1.  <span data-ttu-id="31532-106">Убедитесь, что класс был определен и что его имя указано верно.</span><span class="sxs-lookup"><span data-stu-id="31532-106">Verify that the class is defined and that you spelled the name correctly.</span></span>  
   
-2.  Попробуйте обратиться к одному из членов, объявленных в модуле. В некоторых случаях среда отладки не может найти члены, потому что модули, в которых они объявлены, еще не были загружены.  
+2.  <span data-ttu-id="31532-107">Попробуйте обратиться к одному из членов, объявленных в модуле.</span><span class="sxs-lookup"><span data-stu-id="31532-107">Try accessing one of the members declared in the module.</span></span> <span data-ttu-id="31532-108">В некоторых случаях среда отладки не может найти члены, потому что модули, в которых они объявлены, еще не были загружены.</span><span class="sxs-lookup"><span data-stu-id="31532-108">In some cases, the debugging environment cannot locate members because the modules where they are declared have not been loaded yet.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Отладка в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a><span data-ttu-id="31532-109">См. также</span><span class="sxs-lookup"><span data-stu-id="31532-109">See Also</span></span>  
+ [<span data-ttu-id="31532-110">Отладка в Visual Studio</span><span class="sxs-lookup"><span data-stu-id="31532-110">Debugging in Visual Studio</span></span>](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)

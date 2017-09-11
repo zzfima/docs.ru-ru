@@ -34,24 +34,24 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="selection-statements-c-reference"></a>Инструкции выбора (Справочник по C#)
-Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.  
+# <a name="selection-statements-c-reference"></a><span data-ttu-id="250f9-102">Инструкции выбора (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="250f9-102">Selection Statements (C# Reference)</span></span>
+<span data-ttu-id="250f9-103">Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.</span><span class="sxs-lookup"><span data-stu-id="250f9-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
   
- В операторах выбора могут использоваться следующие ключевые слова:  
+ <span data-ttu-id="250f9-104">В операторах выбора могут использоваться следующие ключевые слова:</span><span class="sxs-lookup"><span data-stu-id="250f9-104">The following keywords are used in selection statements:</span></span>  
   
--   [if](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="250f9-105">if</span><span class="sxs-lookup"><span data-stu-id="250f9-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [else](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="250f9-106">else</span><span class="sxs-lookup"><span data-stu-id="250f9-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [switch](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="250f9-107">switch</span><span class="sxs-lookup"><span data-stu-id="250f9-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [case](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="250f9-108">case</span><span class="sxs-lookup"><span data-stu-id="250f9-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [default](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="250f9-109">default</span><span class="sxs-lookup"><span data-stu-id="250f9-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
 
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Ключевые слова операторов](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="250f9-110">См. также</span><span class="sxs-lookup"><span data-stu-id="250f9-110">See Also</span></span>  
+ <span data-ttu-id="250f9-111">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="250f9-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="250f9-112">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="250f9-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="250f9-113">[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="250f9-113">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="250f9-114">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="250f9-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
 

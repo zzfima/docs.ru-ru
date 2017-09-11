@@ -1,5 +1,5 @@
 ---
-title: "Fuslogvw.exe (средство просмотра журнала привязки сборок) | Документация Microsoft"
+title: "Fuslogvw.exe (средство просмотра журнала привязки сборок)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,59 +26,59 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 249e07461a0b96ba3a9afddbc812cabfe05c37c2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (средство просмотра журнала привязки сборок)
-Средство просмотра журнала привязки сборок выводит подробные сведения об ошибках привязки сборок. Эта информация поможет определить причину, по которой .NET Framework не находит сборку во время выполнения. Ошибки обычно вызваны развертыванием сборки в неверном расположении, использованием машинного образа, который более не является допустимым, а также несовпадением версий или языков и региональных параметров. Если среде CLR не удается найти сборку, обычно в приложении отображается исключение <xref:System.TypeLoadException>.  
+# <a name="fuslogvwexe-assembly-binding-log-viewer"></a><span data-ttu-id="29363-102">Fuslogvw.exe (средство просмотра журнала привязки сборок)</span><span class="sxs-lookup"><span data-stu-id="29363-102">Fuslogvw.exe (Assembly Binding Log Viewer)</span></span>
+<span data-ttu-id="29363-103">Средство просмотра журнала привязки сборок выводит подробные сведения об ошибках привязки сборок.</span><span class="sxs-lookup"><span data-stu-id="29363-103">The Assembly Binding Log Viewer displays details for assembly binds.</span></span> <span data-ttu-id="29363-104">Эта информация поможет определить причину, по которой .NET Framework не находит сборку во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="29363-104">This information helps you diagnose why the .NET Framework cannot locate an assembly at run time.</span></span> <span data-ttu-id="29363-105">Ошибки обычно вызваны развертыванием сборки в неверном расположении, использованием машинного образа, который более не является допустимым, а также несовпадением версий или языков и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="29363-105">These failures are usually the result of an assembly deployed to the wrong location, a native image that is no longer valid, or a mismatch in version numbers or cultures.</span></span> <span data-ttu-id="29363-106">Если среде CLR не удается найти сборку, обычно в приложении отображается исключение <xref:System.TypeLoadException>.</span><span class="sxs-lookup"><span data-stu-id="29363-106">The common language runtime's failure to locate an assembly typically shows up as a <xref:System.TypeLoadException> in your application.</span></span>  
   
 > [!IMPORTANT]
->  Средство просмотра Fuslogvw.exe необходимо запускать с правами администратора.  
+>  <span data-ttu-id="29363-107">Средство просмотра Fuslogvw.exe необходимо запускать с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="29363-107">You must run fuslogvw.exe with administrator privileges.</span></span>  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Запускайте его из командной строки разработчика (или командной строки Visual Studio в Windows 7), используя учетные данные администратора. Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="29363-108">Эта программа автоматически устанавливается вместе с Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="29363-108">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="29363-109">Запускайте его из командной строки разработчика (или командной строки Visual Studio в Windows 7), используя учетные данные администратора.</span><span class="sxs-lookup"><span data-stu-id="29363-109">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7) with administrator credentials.</span></span> <span data-ttu-id="29363-110">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="29363-110">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- В командной строке введите следующее.  
+ <span data-ttu-id="29363-111">В командной строке введите следующее.</span><span class="sxs-lookup"><span data-stu-id="29363-111">At the command prompt, type the following:</span></span>  
   
 ```  
 fuslogvw  
 ```  
   
- В средстве просмотра отображаются записи всех ошибок привязки сборок. Для каждой ошибки указывается: приложение, выполнявшее привязку; сборка, для которой выполнялась привязка, включая имя, версию, культуру и открытый ключ; дата и время ошибки.  
+ <span data-ttu-id="29363-112">В средстве просмотра отображаются записи всех ошибок привязки сборок.</span><span class="sxs-lookup"><span data-stu-id="29363-112">The viewer displays an entry for each failed assembly bind.</span></span> <span data-ttu-id="29363-113">Для каждой ошибки указывается: приложение, выполнявшее привязку; сборка, для которой выполнялась привязка, включая имя, версию, культуру и открытый ключ; дата и время ошибки.</span><span class="sxs-lookup"><span data-stu-id="29363-113">For each failure, the viewer describes the application that initiated the bind; the assembly the bind is for, including name, version, culture and public key; and the date and time of the failure.</span></span>  
   
-### <a name="to-change-the-log-location-view"></a>Изменение представления расположения журнала  
+### <a name="to-change-the-log-location-view"></a><span data-ttu-id="29363-114">Изменение представления расположения журнала</span><span class="sxs-lookup"><span data-stu-id="29363-114">To change the log location view</span></span>  
   
-1.  Чтобы просмотреть ошибки привязки для всех типов приложений, выберите параметр **По умолчанию**. Записи журнала по умолчанию хранятся в каталогах для отдельных пользователей на жестком диске в кэше WinINet.  
+1.  <span data-ttu-id="29363-115">Чтобы просмотреть ошибки привязки для всех типов приложений, выберите параметр **По умолчанию**.</span><span class="sxs-lookup"><span data-stu-id="29363-115">Select the **Default** option button to view bind failures for all application types.</span></span> <span data-ttu-id="29363-116">Записи журнала по умолчанию хранятся в каталогах для отдельных пользователей на жестком диске в кэше WinINet.</span><span class="sxs-lookup"><span data-stu-id="29363-116">By default, log entries are stored in per-user directories on disk in the wininet cache.</span></span>  
   
-2.  Чтобы просмотреть ошибки привязки в пользовательском каталоге, выберите параметр **Настраиваемый**. Необходимо указать расположение, в котором среда выполнения будет размещать журналы. Для этого задайте имя каталога в диалоговом окне **Параметры журнала**. Каталог должен быть пустым и содержать только создаваемые средой выполнения файлы. Если в этом каталоге находится исполняемый файл и он создает ошибку, которую требуется занести в журнал, ошибка не будет зарегистрирована, так как средство просмотра попытается создать каталог с именем исполняемого файла. Кроме того, попытка запустить исполняемый файл из местоположения журнала завершится сбоем.  
+2.  <span data-ttu-id="29363-117">Чтобы просмотреть ошибки привязки в пользовательском каталоге, выберите параметр **Настраиваемый**.</span><span class="sxs-lookup"><span data-stu-id="29363-117">Select the **Custom** option button to view bind failures in a custom directory that you specify.</span></span> <span data-ttu-id="29363-118">Необходимо указать расположение, в котором среда выполнения будет размещать журналы. Для этого задайте имя каталога в диалоговом окне **Параметры журнала**.</span><span class="sxs-lookup"><span data-stu-id="29363-118">You must specify the custom location where you want the runtime to store the logs by setting the custom log location in the **Log Settings** dialog to a valid directory name.</span></span> <span data-ttu-id="29363-119">Каталог должен быть пустым и содержать только создаваемые средой выполнения файлы.</span><span class="sxs-lookup"><span data-stu-id="29363-119">This directory should be clean, and only contain files that the runtime generates.</span></span> <span data-ttu-id="29363-120">Если в этом каталоге находится исполняемый файл и он создает ошибку, которую требуется занести в журнал, ошибка не будет зарегистрирована, так как средство просмотра попытается создать каталог с именем исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="29363-120">If it contains an executable that generates a failure to be logged, the failure will not be logged because the tool tries to create a directory with the same name as the executable.</span></span> <span data-ttu-id="29363-121">Кроме того, попытка запустить исполняемый файл из местоположения журнала завершится сбоем.</span><span class="sxs-lookup"><span data-stu-id="29363-121">In addition, an attempt to run an executable from the log location will fail.</span></span>  
   
     > [!NOTE]
-    >  Рекомендуется использовать расположение привязки по умолчанию, а не настраиваемое расположение. Среда выполнения хранит расположение привязки, используемое по умолчанию, в кэше WinINet и потому автоматически очищает его. Настраиваемое расположение привязки необходимо очищать вручную.  
+    >  <span data-ttu-id="29363-122">Рекомендуется использовать расположение привязки по умолчанию, а не настраиваемое расположение.</span><span class="sxs-lookup"><span data-stu-id="29363-122">The default bind location is preferable to the custom bind location.</span></span> <span data-ttu-id="29363-123">Среда выполнения хранит расположение привязки, используемое по умолчанию, в кэше WinINet и потому автоматически очищает его.</span><span class="sxs-lookup"><span data-stu-id="29363-123">The runtime stores the default bind location in the wininet cache, and therefore automatically cleans it out.</span></span> <span data-ttu-id="29363-124">Настраиваемое расположение привязки необходимо очищать вручную.</span><span class="sxs-lookup"><span data-stu-id="29363-124">If you specify a custom bind location, you are responsible for cleaning it out.</span></span>  
   
-### <a name="to-view-details-about-a-specific-failure"></a>Просмотр сведений о конкретной ошибке  
+### <a name="to-view-details-about-a-specific-failure"></a><span data-ttu-id="29363-125">Просмотр сведений о конкретной ошибке</span><span class="sxs-lookup"><span data-stu-id="29363-125">To view details about a specific failure</span></span>  
   
-1.  Выберите имя приложения нужной записи в средстве просмотра.  
+1.  <span data-ttu-id="29363-126">Выберите имя приложения нужной записи в средстве просмотра.</span><span class="sxs-lookup"><span data-stu-id="29363-126">Select the application name of the desired entry in the viewer.</span></span>  
   
-2.  Нажмите кнопку **Просмотреть журнал**. Также можно дважды щелкнуть выбранную запись.  
+2.  <span data-ttu-id="29363-127">Нажмите кнопку **Просмотреть журнал**.</span><span class="sxs-lookup"><span data-stu-id="29363-127">Click the **View Log** button.</span></span> <span data-ttu-id="29363-128">Также можно дважды щелкнуть выбранную запись.</span><span class="sxs-lookup"><span data-stu-id="29363-128">Alternately, you can double-click the selected entry.</span></span>  
   
-     Средство отобразит следующие сведения о выбранной ошибке привязки:  
+     <span data-ttu-id="29363-129">Средство отобразит следующие сведения о выбранной ошибке привязки:</span><span class="sxs-lookup"><span data-stu-id="29363-129">The tool displays the following details about the selected bind failure:</span></span>  
   
-    -   причина возникновения ошибки, например "файл не найден" или "несоответствие версий";  
+    -   <span data-ttu-id="29363-130">причина возникновения ошибки, например "файл не найден" или "несоответствие версий";</span><span class="sxs-lookup"><span data-stu-id="29363-130">The specific reason the bind failed, such as "file not found" or "version mismatch".</span></span>  
   
-    -   сведения о приложении, выполнявшем привязку, в том числе имя, корневой каталог приложения (AppBase) и описание закрытого пути поиска при его наличии;  
+    -   <span data-ttu-id="29363-131">сведения о приложении, выполнявшем привязку, в том числе имя, корневой каталог приложения (AppBase) и описание закрытого пути поиска при его наличии;</span><span class="sxs-lookup"><span data-stu-id="29363-131">Information about the application that initiated the bind, including its name, the application's root directory (AppBase), and a description of the private search path, if there is one.</span></span>  
   
-    -   идентификатор сборки, которую ищет средство;  
+    -   <span data-ttu-id="29363-132">идентификатор сборки, которую ищет средство;</span><span class="sxs-lookup"><span data-stu-id="29363-132">The identity of the assembly the tool is looking for.</span></span>  
   
-    -   описание любых примененных политик версий приложения, издателя и администратора;  
+    -   <span data-ttu-id="29363-133">описание любых примененных политик версий приложения, издателя и администратора;</span><span class="sxs-lookup"><span data-stu-id="29363-133">A description of any Application, Publisher, or Administrator version policies that have been applied.</span></span>  
   
-    -   сведения о том, была ли обнаружена сборка в [глобальном кэше сборок](../../../docs/framework/app-domains/gac.md);  
+    -   <span data-ttu-id="29363-134">сведения о том, была ли обнаружена сборка в [глобальном кэше сборок](../../../docs/framework/app-domains/gac.md);</span><span class="sxs-lookup"><span data-stu-id="29363-134">Whether the assembly was found in the [global assembly cache](../../../docs/framework/app-domains/gac.md).</span></span>  
   
-    -   список всех проверенных URL-адресов.  
+    -   <span data-ttu-id="29363-135">список всех проверенных URL-адресов.</span><span class="sxs-lookup"><span data-stu-id="29363-135">A list of all probing URLs.</span></span>  
   
- Приведенная ниже запись журнала содержит подробные сведения об ошибке привязки сборки.  
+ <span data-ttu-id="29363-136">Приведенная ниже запись журнала содержит подробные сведения об ошибке привязки сборки.</span><span class="sxs-lookup"><span data-stu-id="29363-136">The following sample log entry shows detailed information about a failed assembly bind.</span></span>  
   
 ```  
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***  
@@ -112,36 +112,36 @@ LOG: Attempting download of new URL file:///C:/Program Files/Microsoft.NET/Frame
 LOG: All probing URLs attempted and failed.  
 ```  
   
-### <a name="to-delete-a-single-entry-from-the-log"></a>Удаление записи из журнала  
+### <a name="to-delete-a-single-entry-from-the-log"></a><span data-ttu-id="29363-137">Удаление записи из журнала</span><span class="sxs-lookup"><span data-stu-id="29363-137">To delete a single entry from the log</span></span>  
   
-1.  Выберите запись в средстве просмотра.  
+1.  <span data-ttu-id="29363-138">Выберите запись в средстве просмотра.</span><span class="sxs-lookup"><span data-stu-id="29363-138">Select an entry in the viewer.</span></span>  
   
-2.  Нажмите кнопку **Удалить запись**.  
+2.  <span data-ttu-id="29363-139">Нажмите кнопку **Удалить запись**.</span><span class="sxs-lookup"><span data-stu-id="29363-139">Click the **Delete Entry** button.</span></span>  
   
-### <a name="to-delete-all-entries-from-the-log"></a>Удаление всех записей из журнала  
+### <a name="to-delete-all-entries-from-the-log"></a><span data-ttu-id="29363-140">Удаление всех записей из журнала</span><span class="sxs-lookup"><span data-stu-id="29363-140">To delete all entries from the log</span></span>  
   
--   Нажмите кнопку **Удалить все**.  
+-   <span data-ttu-id="29363-141">Нажмите кнопку **Удалить все**.</span><span class="sxs-lookup"><span data-stu-id="29363-141">Click the **Delete All** button.</span></span>  
   
-### <a name="to-refresh-the-user-interface"></a>Обновление пользовательского интерфейса  
+### <a name="to-refresh-the-user-interface"></a><span data-ttu-id="29363-142">Обновление пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="29363-142">To refresh the user interface</span></span>  
   
--   Нажмите кнопку **Обновить**. Средство просмотра не выявляет новые записи во время работы автоматически. Чтобы показать эти записи, нажмите кнопку **Обновить**.  
+-   <span data-ttu-id="29363-143">Нажмите кнопку **Обновить**.</span><span class="sxs-lookup"><span data-stu-id="29363-143">Click the **Refresh** button.</span></span> <span data-ttu-id="29363-144">Средство просмотра не выявляет новые записи во время работы автоматически.</span><span class="sxs-lookup"><span data-stu-id="29363-144">The viewer does not automatically detect new log entries while it is running.</span></span> <span data-ttu-id="29363-145">Чтобы показать эти записи, нажмите кнопку **Обновить**.</span><span class="sxs-lookup"><span data-stu-id="29363-145">You must use the **Refresh** button to display them.</span></span>  
   
-### <a name="to-change-the-log-settings"></a>Изменение параметров журнала  
+### <a name="to-change-the-log-settings"></a><span data-ttu-id="29363-146">Изменение параметров журнала</span><span class="sxs-lookup"><span data-stu-id="29363-146">To change the log settings</span></span>  
   
--   Нажмите кнопку **Параметры**, чтобы открыть диалоговое окно **Параметры журнала**.  
+-   <span data-ttu-id="29363-147">Нажмите кнопку **Параметры**, чтобы открыть диалоговое окно **Параметры журнала**.</span><span class="sxs-lookup"><span data-stu-id="29363-147">Click the **Settings** button to open the **Log Settings** dialog.</span></span>  
   
-### <a name="to-view-the-about-dialog"></a>Как открыть диалоговое окно сведений о программе  
+### <a name="to-view-the-about-dialog"></a><span data-ttu-id="29363-148">Как открыть диалоговое окно сведений о программе</span><span class="sxs-lookup"><span data-stu-id="29363-148">To view the About dialog</span></span>  
   
--   Нажмите кнопку **О программе**.  
+-   <span data-ttu-id="29363-149">Нажмите кнопку **О программе**.</span><span class="sxs-lookup"><span data-stu-id="29363-149">Click the **About** button.</span></span>  
   
-## <a name="binding-logs-for-native-images"></a>Журналы привязки машинных образов  
- По умолчанию средство Fuslogvw.exe записывает в журнал обычные запросы на привязку сборок. В журнал также можно включить привязки сборок для образов в машинном коде, созданных с помощью программы [Ngen.exe (генератор образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+## <a name="binding-logs-for-native-images"></a><span data-ttu-id="29363-150">Журналы привязки машинных образов</span><span class="sxs-lookup"><span data-stu-id="29363-150">Binding Logs for Native Images</span></span>  
+ <span data-ttu-id="29363-151">По умолчанию средство Fuslogvw.exe записывает в журнал обычные запросы на привязку сборок.</span><span class="sxs-lookup"><span data-stu-id="29363-151">By default, Fuslogvw.exe logs normal assembly bind requests.</span></span> <span data-ttu-id="29363-152">В журнал также можно включить привязки сборок для образов в машинном коде, созданных с помощью программы [Ngen.exe (генератор образов в машинном коде)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span><span class="sxs-lookup"><span data-stu-id="29363-152">Alternatively, you can log assembly binds for native images that were created using the [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span></span>  
   
-#### <a name="to-log-assembly-binds-for-native-images"></a>Запись в журнал привязок сборок машинных образов  
+#### <a name="to-log-assembly-binds-for-native-images"></a><span data-ttu-id="29363-153">Запись в журнал привязок сборок машинных образов</span><span class="sxs-lookup"><span data-stu-id="29363-153">To log assembly binds for native images</span></span>  
   
--   В группе **Категории журналов** выберите параметр **Образцы в машинном коде**.  
+-   <span data-ttu-id="29363-154">В группе **Категории журналов** выберите параметр **Образцы в машинном коде**.</span><span class="sxs-lookup"><span data-stu-id="29363-154">In the **Log Categories** group, select the **Native Images** option button.</span></span>  
   
- Следующий журнал иллюстрирует ошибку, вызванную зависимостью, которая не существовала в момент создания для приложения машинного образа. Если зависимости во время выполнения отличаются от зависимостей при выполнении Ngen.exe, привязка к машинному образу не допускается.  
+ <span data-ttu-id="29363-155">Следующий журнал иллюстрирует ошибку, вызванную зависимостью, которая не существовала в момент создания для приложения машинного образа.</span><span class="sxs-lookup"><span data-stu-id="29363-155">The following log shows a failure caused by a dependency that did not exist when the native image was created for the application.</span></span> <span data-ttu-id="29363-156">Если зависимости во время выполнения отличаются от зависимостей при выполнении Ngen.exe, привязка к машинному образу не допускается.</span><span class="sxs-lookup"><span data-stu-id="29363-156">If the dependencies at run time differ from the dependencies when Ngen.exe is run, binding to a native image is not allowed.</span></span>  
   
 ```  
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***  
@@ -165,7 +165,7 @@ WRN: No matching native image found.
 LOG: Bind to native image assembly did not succeed. Use IL image.  
 ```  
   
- Следующий журнал иллюстрирует ошибку привязки машинного образа, вызванную различиями в настройках параметров безопасности при выполнении приложения и при создании машинного образа.  
+ <span data-ttu-id="29363-157">Следующий журнал иллюстрирует ошибку привязки машинного образа, вызванную различиями в настройках параметров безопасности при выполнении приложения и при создании машинного образа.</span><span class="sxs-lookup"><span data-stu-id="29363-157">The following log shows a native image binding failure that occurred because the security settings on the computer when the application was run were different from the security settings at the time the native image was created.</span></span>  
   
 ```  
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***  
@@ -195,57 +195,58 @@ Rejecting native image because it failed the security check. The assembly's perm
 Discarding native image.  
 ```  
   
-## <a name="the-log-settings-dialog"></a>Диалоговое окно "Параметры журнала"  
- В диалоговом окне **Параметры журнала** можно выполнить следующие действия.  
+## <a name="the-log-settings-dialog"></a><span data-ttu-id="29363-158">Диалоговое окно "Параметры журнала"</span><span class="sxs-lookup"><span data-stu-id="29363-158">The Log Settings Dialog</span></span>  
+ <span data-ttu-id="29363-159">В диалоговом окне **Параметры журнала** можно выполнить следующие действия.</span><span class="sxs-lookup"><span data-stu-id="29363-159">You can use the **Log Settings** dialog to perform the following actions.</span></span>  
   
-#### <a name="to-disable-logging"></a>Отключение ведения журнала  
+#### <a name="to-disable-logging"></a><span data-ttu-id="29363-160">Отключение ведения журнала</span><span class="sxs-lookup"><span data-stu-id="29363-160">To disable logging</span></span>  
   
--   Выберите **Журнал отключен**.  Обратите внимание, что этот параметр выбран по умолчанию.  
+-   <span data-ttu-id="29363-161">Выберите **Журнал отключен**.</span><span class="sxs-lookup"><span data-stu-id="29363-161">Select the **Log disabled** option button.</span></span>  <span data-ttu-id="29363-162">Обратите внимание, что этот параметр выбран по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="29363-162">Note that this option is selected by default.</span></span>  
   
-#### <a name="to-log-assembly-binds-in-exceptions"></a>Запись привязок сборок в исключения  
+#### <a name="to-log-assembly-binds-in-exceptions"></a><span data-ttu-id="29363-163">Запись привязок сборок в исключения</span><span class="sxs-lookup"><span data-stu-id="29363-163">To log assembly binds in exceptions</span></span>  
   
--   Выберите **Запись текста исключения в журнал**. В тексте исключения указываются наиболее краткие сведения fusion-журнала. Чтобы просмотреть все сведения, используйте один из других параметров.  
+-   <span data-ttu-id="29363-164">Выберите **Запись текста исключения в журнал**.</span><span class="sxs-lookup"><span data-stu-id="29363-164">Select the **Log in exception text** option button.</span></span> <span data-ttu-id="29363-165">В тексте исключения указываются наиболее краткие сведения fusion-журнала.</span><span class="sxs-lookup"><span data-stu-id="29363-165">Only the least detailed fusion log information is logged in exception text.</span></span> <span data-ttu-id="29363-166">Чтобы просмотреть все сведения, используйте один из других параметров.</span><span class="sxs-lookup"><span data-stu-id="29363-166">To view full information, use one of the other settings.</span></span>  
   
-     См. важное примечание о сборках, которые загружаются как нейтральные к домену.  
+     <span data-ttu-id="29363-167">См. важное примечание о сборках, которые загружаются как нейтральные к домену.</span><span class="sxs-lookup"><span data-stu-id="29363-167">See the Important note regarding assemblies that are loaded as domain neutral.</span></span>  
   
-#### <a name="to-log-assembly-bind-failures"></a>Запись в журнал ошибок привязки сборок  
+#### <a name="to-log-assembly-bind-failures"></a><span data-ttu-id="29363-168">Запись в журнал ошибок привязки сборок</span><span class="sxs-lookup"><span data-stu-id="29363-168">To log assembly bind failures</span></span>  
   
--   Выберите **Запись ошибок привязки на диск**.  
+-   <span data-ttu-id="29363-169">Выберите **Запись ошибок привязки на диск**.</span><span class="sxs-lookup"><span data-stu-id="29363-169">Select the **Log bind failures to disk** option button.</span></span>  
   
-     См. важное примечание о сборках, которые загружаются как нейтральные к домену.  
+     <span data-ttu-id="29363-170">См. важное примечание о сборках, которые загружаются как нейтральные к домену.</span><span class="sxs-lookup"><span data-stu-id="29363-170">See the Important note regarding assemblies that are loaded as domain neutral.</span></span>  
   
-#### <a name="to-log-all-assembly-binds"></a>Запись в журнал всех привязок сборок  
+#### <a name="to-log-all-assembly-binds"></a><span data-ttu-id="29363-171">Запись в журнал всех привязок сборок</span><span class="sxs-lookup"><span data-stu-id="29363-171">To log all assembly binds</span></span>  
   
--   Выберите **Запись всех привязок на диск**.  
+-   <span data-ttu-id="29363-172">Выберите **Запись всех привязок на диск**.</span><span class="sxs-lookup"><span data-stu-id="29363-172">Select the **Log all binds to disk** option button.</span></span>  
   
-     См. важное примечание о сборках, которые загружаются как нейтральные к домену.  
+     <span data-ttu-id="29363-173">См. важное примечание о сборках, которые загружаются как нейтральные к домену.</span><span class="sxs-lookup"><span data-stu-id="29363-173">See the Important note regarding assemblies that are loaded as domain neutral.</span></span>  
   
 > [!IMPORTANT]
->  Если сборка загружается как нейтральная к домену, например если свойству <xref:System.AppDomainSetup.LoaderOptimization%2A> задано значение <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> или <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, в некоторых случаях ведение журнала может привести к утечке памяти. Это возможно, если запись вносится в журнал при загрузке нейтрального к домену модуля в домен приложения с последующей выгрузкой домена приложения. Запись журнала может не освобождаться до завершения данного процесса. Некоторые отладчики включают ведение журналов автоматически.  
+>  <span data-ttu-id="29363-174">Если сборка загружается как нейтральная к домену, например если свойству <xref:System.AppDomainSetup.LoaderOptimization%2A> задано значение <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> или <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, в некоторых случаях ведение журнала может привести к утечке памяти.</span><span class="sxs-lookup"><span data-stu-id="29363-174">When an assembly is loaded as domain neutral, for example by setting the <xref:System.AppDomainSetup.LoaderOptimization%2A> property to <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> or <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, turning on logging might leak memory in some cases.</span></span> <span data-ttu-id="29363-175">Это возможно, если запись вносится в журнал при загрузке нейтрального к домену модуля в домен приложения с последующей выгрузкой домена приложения.</span><span class="sxs-lookup"><span data-stu-id="29363-175">This can happen if a log entry is made when a domain-neutral module is loaded into an application domain, and later the application domain is unloaded.</span></span> <span data-ttu-id="29363-176">Запись журнала может не освобождаться до завершения данного процесса.</span><span class="sxs-lookup"><span data-stu-id="29363-176">The log entry might not be released until the process ends.</span></span> <span data-ttu-id="29363-177">Некоторые отладчики включают ведение журналов автоматически.</span><span class="sxs-lookup"><span data-stu-id="29363-177">Some debuggers automatically turn on logging.</span></span>  
   
-#### <a name="to-enable-a-custom-log-path"></a>Разрешение пользовательского пути к журналу  
+#### <a name="to-enable-a-custom-log-path"></a><span data-ttu-id="29363-178">Разрешение пользовательского пути к журналу</span><span class="sxs-lookup"><span data-stu-id="29363-178">To enable a custom log path</span></span>  
   
-1.  Выберите **Разрешить пользовательский путь к журналу**.  
+1.  <span data-ttu-id="29363-179">Выберите **Разрешить пользовательский путь к журналу**.</span><span class="sxs-lookup"><span data-stu-id="29363-179">Select the **Enable custom log path** option button.</span></span>  
   
-2.  Введите путь в текстовом поле **Пользовательский путь к журналу**.  
+2.  <span data-ttu-id="29363-180">Введите путь в текстовом поле **Пользовательский путь к журналу**.</span><span class="sxs-lookup"><span data-stu-id="29363-180">Enter the path into the **Custom log path** text box.</span></span>  
   
 > [!NOTE]
->  [Средство просмотра журнала привязки сборок (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) сохраняет журнал привязок в кэше Internet Explorer. Из-за возможных повреждений кэша Internet Explorer в окне [средства просмотра журнала привязок сборки (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) перестают отображаться новые журналы привязок. В результате таких сбоев инфраструктура привязки в платформе .NET (fusion) не может выполнять запись в журнал привязки и считывание из него. (Эта проблема не возникает при выборе пользовательского пути к журналу).  Чтобы fusion-журнал снова отображал привязки, очистите кэш IE. Для этого удалите временные файлы Интернета в диалоговом окне "Свойства обозревателя".  
+>  <span data-ttu-id="29363-181">[Средство просмотра журнала привязки сборок (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) сохраняет журнал привязок в кэше Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="29363-181">The [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) uses the Internet Explorer (IE) cache to store its binding log.</span></span> <span data-ttu-id="29363-182">Из-за возможных повреждений кэша Internet Explorer в окне [средства просмотра журнала привязок сборки (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) перестают отображаться новые журналы привязок.</span><span class="sxs-lookup"><span data-stu-id="29363-182">Due to occasional corruption in the IE cache, the [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) can sometimes stop showing new binding logs in the viewing window.</span></span> <span data-ttu-id="29363-183">В результате таких сбоев инфраструктура привязки в платформе .NET (fusion) не может выполнять запись в журнал привязки и считывание из него.</span><span class="sxs-lookup"><span data-stu-id="29363-183">As a result of this corruption, the .NET binding infrastructure (fusion) cannot write to or read from the binding log.</span></span> <span data-ttu-id="29363-184">(Эта проблема не возникает при выборе пользовательского пути к журналу).  Чтобы fusion-журнал снова отображал привязки, очистите кэш IE. Для этого удалите временные файлы Интернета в диалоговом окне "Свойства обозревателя".</span><span class="sxs-lookup"><span data-stu-id="29363-184">(This issue is not encountered if you use a custom log path.)  To fix the corruption and allow fusion to show binding logs again, clear the IE cache by deleting temporary internet files from within the IE Internet Options dialog.</span></span>  
 >   
->  Если неуправляемое приложение размещает среду CLR посредством реализации интерфейсов `IHostAssemblyManager` и `IHostAssemblyStore`, хранение записей журнала в кэше WinINet невозможно.  Чтобы просматривать записи журнала основных пользовательских приложений, которые реализуют эти интерфейсы, необходимо задать альтернативный путь к журналу.  
+>  <span data-ttu-id="29363-185">Если неуправляемое приложение размещает среду CLR посредством реализации интерфейсов `IHostAssemblyManager` и `IHostAssemblyStore`, хранение записей журнала в кэше WinINet невозможно.</span><span class="sxs-lookup"><span data-stu-id="29363-185">If your unmanaged application hosts the common language runtime by implementing the `IHostAssemblyManager` and `IHostAssemblyStore` interfaces, log entries can't be stored in the wininet cache.</span></span>  <span data-ttu-id="29363-186">Чтобы просматривать записи журнала основных пользовательских приложений, которые реализуют эти интерфейсы, необходимо задать альтернативный путь к журналу.</span><span class="sxs-lookup"><span data-stu-id="29363-186">To view log entries for custom hosts that implement these interfaces, you must specify an alternate log path.</span></span>  
   
-#### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Ведение журнала для приложений, выполняемых в контейнере приложений Windows  
+#### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a><span data-ttu-id="29363-187">Ведение журнала для приложений, выполняемых в контейнере приложений Windows</span><span class="sxs-lookup"><span data-stu-id="29363-187">To enable logging for apps running in the Windows app container</span></span>  
   
-1.  Укажите пользовательский путь к журналу, как описано в предыдущей процедуре. По умолчанию у приложений, выполняемых в контейнере приложений Windows, ограничен доступ к жесткому диску. Все приложения в контейнере приложений будут иметь право на чтение и запись в указанном каталоге.  
+1.  <span data-ttu-id="29363-188">Укажите пользовательский путь к журналу, как описано в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="29363-188">Enable a custom log path, as described in the previous procedure.</span></span> <span data-ttu-id="29363-189">По умолчанию у приложений, выполняемых в контейнере приложений Windows, ограничен доступ к жесткому диску.</span><span class="sxs-lookup"><span data-stu-id="29363-189">By default, apps that are running in the Windows app container have limited access to the hard disk.</span></span> <span data-ttu-id="29363-190">Все приложения в контейнере приложений будут иметь право на чтение и запись в указанном каталоге.</span><span class="sxs-lookup"><span data-stu-id="29363-190">The directory you specify will have read/write access for all apps in the app container.</span></span>  
   
-2.  Установите флажок **Включить иммерсивное ведение журнала**.  
+2.  <span data-ttu-id="29363-191">Установите флажок **Включить иммерсивное ведение журнала**.</span><span class="sxs-lookup"><span data-stu-id="29363-191">Select the **Enable immersive logging** check box.</span></span>  
   
     > [!NOTE]
-    >  Это поле активно только в Windows 8 или более поздней версии.  
+    >  <span data-ttu-id="29363-192">Это поле активно только в Windows 8 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="29363-192">This box is enabled only on Windows 8 or later.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.TypeLoadException>   
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)   
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="29363-193">См. также</span><span class="sxs-lookup"><span data-stu-id="29363-193">See Also</span></span>  
+ <span data-ttu-id="29363-194"><xref:System.TypeLoadException></span><span class="sxs-lookup"><span data-stu-id="29363-194"><xref:System.TypeLoadException></span></span>   
+ <span data-ttu-id="29363-195">[Инструменты](../../../docs/framework/tools/index.md) </span><span class="sxs-lookup"><span data-stu-id="29363-195">[Tools](../../../docs/framework/tools/index.md) </span></span>  
+ <span data-ttu-id="29363-196">[Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md) </span><span class="sxs-lookup"><span data-stu-id="29363-196">[Global Assembly Cache](../../../docs/framework/app-domains/gac.md) </span></span>  
+ <span data-ttu-id="29363-197">[Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) </span><span class="sxs-lookup"><span data-stu-id="29363-197">[How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) </span></span>  
+ [<span data-ttu-id="29363-198">Командные строки</span><span class="sxs-lookup"><span data-stu-id="29363-198">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

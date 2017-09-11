@@ -1,1 +1,1 @@
- Идентификатор GUID 
+ <span data-ttu-id="4dfb6-101">Идентификатор GUID</span><span class="sxs-lookup"><span data-stu-id="4dfb6-101">GUID</span></span> 

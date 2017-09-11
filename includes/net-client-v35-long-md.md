@@ -1,1 +1,1 @@
-.NET Framework (клиентский профиль)
+<span data-ttu-id="b26f8-101">.NET Framework (клиентский профиль)</span><span class="sxs-lookup"><span data-stu-id="b26f8-101">.NET Framework Client Profile</span></span>

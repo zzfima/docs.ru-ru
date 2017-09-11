@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"if-c-reference--microsoft-docs\"></a>If (Справочник по C#) | Документация Майкрософт"
+title: "#<a name=\"if-c-reference\"></a>#if (справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,15 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: 4fc51446d297015d9e492703c9b1868c3b513c53
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f70dac98d5731370ae961f795b08a71946867d9b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="if-c-reference"></a>#if (Справочник по C#)
-Когда компилятор C# встречает директиву `#if`, за которой следует директива [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), код между этими директивами он компилирует только в том случае, когда определен указанный символ.  В отличие от C и C++, здесь нельзя назначить символу числовое значение. Оператор #if языка C# является логическим и проверяет только одно условие — определен ли указанный символ. Например:  
+# <a name="if-c-reference"></a><span data-ttu-id="3c1af-102">#if (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="3c1af-102">#if (C# Reference)</span></span>
+<span data-ttu-id="3c1af-103">Когда компилятор C# встречает директиву `#if`, за которой следует директива [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), код между этими директивами он компилирует только в том случае, когда определен указанный символ.</span><span class="sxs-lookup"><span data-stu-id="3c1af-103">When the C# compiler encounters an `#if` directive, followed eventually by an [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) directive, it will compile the code between the directives only if the specified symbol is defined.</span></span>  <span data-ttu-id="3c1af-104">В отличие от C и C++, здесь нельзя назначить символу числовое значение. Оператор #if языка C# является логическим и проверяет только одно условие — определен ли указанный символ.</span><span class="sxs-lookup"><span data-stu-id="3c1af-104">Unlike C and C++, you cannot assign a numeric value to a symbol; the #if statement in C# is Boolean and only tests whether the symbol has been defined or not.</span></span> <span data-ttu-id="3c1af-105">Например:</span><span class="sxs-lookup"><span data-stu-id="3c1af-105">For example,</span></span>  
   
 ```csharp
 #define DEBUG  
@@ -47,22 +47,22 @@ ms.lasthandoff: 05/22/2017
 #endif  
 ```  
   
- Операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) (равенство) и [! =](../../../csharp/language-reference/operators/not-equal-operator.md) (неравенство) вы можете использовать только для проверки значений [true](../../../csharp/language-reference/keywords/true.md) или [false](../../../csharp/language-reference/keywords/false.md). Значение true означает, что символ определен. Инструкция `#if DEBUG` имеет то же значение, что и `#if (DEBUG == true)`. Вы можете использовать операторы [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) (логическое И), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) (логическое ИЛИ) и [!](../../../csharp/language-reference/operators/logical-negation-operator.md) (логическое НЕ) для проверки нескольких символов. Можно также группировать символы и операторы при помощи скобок.  
+ <span data-ttu-id="3c1af-106">Операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) (равенство) и [! =](../../../csharp/language-reference/operators/not-equal-operator.md) (неравенство) вы можете использовать только для проверки значений [true](../../../csharp/language-reference/keywords/true.md) или [false](../../../csharp/language-reference/keywords/false.md).</span><span class="sxs-lookup"><span data-stu-id="3c1af-106">You can use the operators [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) (equality), [!=](../../../csharp/language-reference/operators/not-equal-operator.md) (inequality) only to test for [true](../../../csharp/language-reference/keywords/true.md) or [false](../../../csharp/language-reference/keywords/false.md) .</span></span> <span data-ttu-id="3c1af-107">Значение true означает, что символ определен.</span><span class="sxs-lookup"><span data-stu-id="3c1af-107">True means the symbol is defined.</span></span> <span data-ttu-id="3c1af-108">Инструкция `#if DEBUG` имеет то же значение, что и `#if (DEBUG == true)`.</span><span class="sxs-lookup"><span data-stu-id="3c1af-108">The statement `#if DEBUG` has the same meaning as `#if (DEBUG == true)`.</span></span> <span data-ttu-id="3c1af-109">Вы можете использовать операторы [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) (логическое И), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) (логическое ИЛИ) и [!](../../../csharp/language-reference/operators/logical-negation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="3c1af-109">You can use the operators [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) (and), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) (or), and [!](../../../csharp/language-reference/operators/logical-negation-operator.md)</span></span> <span data-ttu-id="3c1af-110">(логическое НЕ) для проверки нескольких символов.</span><span class="sxs-lookup"><span data-stu-id="3c1af-110">(not) to evaluate whether multiple symbols have been defined.</span></span> <span data-ttu-id="3c1af-111">Можно также группировать символы и операторы при помощи скобок.</span><span class="sxs-lookup"><span data-stu-id="3c1af-111">You can also group symbols and operators with parentheses.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- `#if`, как и директивы [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) и [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md), позволяет включить или исключить код в зависимости от существования одного или нескольких символов. Это может быть полезно при компиляции кода для отладки или для определенной конфигурации.  
+## <a name="remarks"></a><span data-ttu-id="3c1af-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="3c1af-112">Remarks</span></span>  
+ <span data-ttu-id="3c1af-113">`#if`, как и директивы [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) и [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md), позволяет включить или исключить код в зависимости от существования одного или нескольких символов.</span><span class="sxs-lookup"><span data-stu-id="3c1af-113">`#if`, along with the [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), and [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) directives, lets you include or exclude code based on the existence of one or more symbols.</span></span> <span data-ttu-id="3c1af-114">Это может быть полезно при компиляции кода для отладки или для определенной конфигурации.</span><span class="sxs-lookup"><span data-stu-id="3c1af-114">This can be useful when compiling code for a debug build or when compiling for a specific configuration.</span></span>  
   
- Условные директивы, начинающиеся с директивы `#if`, должны явным образом завершаться директивой `#endif`.  
+ <span data-ttu-id="3c1af-115">Условные директивы, начинающиеся с директивы `#if`, должны явным образом завершаться директивой `#endif`.</span><span class="sxs-lookup"><span data-stu-id="3c1af-115">A conditional directive beginning with a `#if` directive must explicitly be terminated with a `#endif` directive.</span></span>  
   
- `#define` позволяет определить символ, чтобы директива `#if`, которой передается этот символ, возвращала значение `true`.  
+ <span data-ttu-id="3c1af-116">`#define` позволяет определить символ, чтобы директива `#if`, которой передается этот символ, возвращала значение `true`.</span><span class="sxs-lookup"><span data-stu-id="3c1af-116">`#define` lets you define a symbol, such that, by using the symbol as the expression passed to the `#if` directive, the expression will evaluate to `true`.</span></span>  
   
- Также символ можно определить с помощью параметра компилятора [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ <span data-ttu-id="3c1af-117">Также символ можно определить с помощью параметра компилятора [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="3c1af-117">You can also define a symbol with the [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="3c1af-118">Для отмены определения символа служит директива [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).</span><span class="sxs-lookup"><span data-stu-id="3c1af-118">You can undefine a symbol with [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).</span></span>  
   
- Символ, определенный с помощью `/define` или `#define`, не конфликтует с одноименной переменной. Соответственно, имя переменной не должно передаваться директиве препроцессора, а символ может использоваться только в директиве препроцессора.  
+ <span data-ttu-id="3c1af-119">Символ, определенный с помощью `/define` или `#define`, не конфликтует с одноименной переменной.</span><span class="sxs-lookup"><span data-stu-id="3c1af-119">A symbol that you define with `/define` or with `#define` does not conflict with a variable of the same name.</span></span> <span data-ttu-id="3c1af-120">Соответственно, имя переменной не должно передаваться директиве препроцессора, а символ может использоваться только в директиве препроцессора.</span><span class="sxs-lookup"><span data-stu-id="3c1af-120">That is, a variable name should not be passed to a preprocessor directive and a symbol can only be evaluated by a preprocessor directive.</span></span>  
   
- Символ, создаваемый с помощью `#define`, будет определен в пределах того файл, в котором он определен.  
+ <span data-ttu-id="3c1af-121">Символ, создаваемый с помощью `#define`, будет определен в пределах того файл, в котором он определен.</span><span class="sxs-lookup"><span data-stu-id="3c1af-121">The scope of a symbol created with `#define` is the file in which it was defined.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="3c1af-122">Пример</span><span class="sxs-lookup"><span data-stu-id="3c1af-122">Example</span></span>  
   
 ```csharp
 // preprocessor_if.cs  
@@ -85,9 +85,9 @@ public class MyClass
 }  
 ```  
   
- **Определение символов DEBUG и MYTEST**   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+ <span data-ttu-id="3c1af-123">**Определение символов DEBUG и MYTEST**</span><span class="sxs-lookup"><span data-stu-id="3c1af-123">**DEBUG and MYTEST are defined**</span></span>   
+## <a name="see-also"></a><span data-ttu-id="3c1af-124">См. также</span><span class="sxs-lookup"><span data-stu-id="3c1af-124">See Also</span></span>  
+ <span data-ttu-id="3c1af-125">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="3c1af-125">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="3c1af-126">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="3c1af-126">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="3c1af-127">Директивы препроцессора C#</span><span class="sxs-lookup"><span data-stu-id="3c1af-127">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

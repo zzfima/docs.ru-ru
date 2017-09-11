@@ -1,1 +1,1 @@
-Приложение браузера XAML (WPF)
+<span data-ttu-id="06c63-101">Приложение браузера XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="06c63-101">XAML Browser Application (WPF)</span></span>

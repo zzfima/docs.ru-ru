@@ -26,20 +26,21 @@ caps.latest.revision: 97
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d12492626a57fd4f09c25f97fb5a12c8bbf22ea1
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 47f68a3410eda53c2f5505b17aa319d516df335d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 05/02/2017
 
 ---
-# <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Windows Presentation Foundation (WPF) в Visual Studio 2015 предоставляет разработчикам унифицированную модель программирования для создания современных бизнес-приложений Windows для настольных систем.  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="f7378-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="f7378-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="f7378-103">Windows Presentation Foundation (WPF) в Visual Studio 2015 предоставляет разработчикам унифицированную модель программирования для создания современных бизнес-приложений Windows для настольных систем.</span><span class="sxs-lookup"><span data-stu-id="f7378-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
 > [!NOTE]
->  Браузер Mozilla Firefox отключает расширения Microsoft .NET Framework Assistant. Сведения о том, как удалить расширение из Firefox, см. в разделе [Удаление .NET Framework Assistant для Firefox](https://support.microsoft.com/en-us/kb/963707).  
+>  <span data-ttu-id="f7378-104">Браузер Mozilla Firefox отключает расширения Microsoft .NET Framework Assistant.</span><span class="sxs-lookup"><span data-stu-id="f7378-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="f7378-105">Сведения о том, как удалить расширение из Firefox, см. в разделе [Удаление .NET Framework Assistant для Firefox](https://support.microsoft.com/en-us/kb/963707).</span><span class="sxs-lookup"><span data-stu-id="f7378-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
   
- [Создание современных приложений для настольных систем с помощью Windows Presentation Foundation](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
+ [<span data-ttu-id="f7378-106">Создание современных приложений для настольных систем с помощью Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="f7378-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
   
- [Разработка XAML в Visual Studio и Blend для Visual Studio](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
+ [<span data-ttu-id="f7378-107">Разработка XAML в Visual Studio и Blend для Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f7378-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
   
- [Получить Visual Studio](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="f7378-108">Получить Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f7378-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

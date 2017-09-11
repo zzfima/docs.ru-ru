@@ -1,5 +1,5 @@
 ---
-title: "Peverify.exe (средство PEVerify) | Документы Майкрософт"
+title: "Peverify.exe (средство PEVerify)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,79 +27,79 @@ caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 0cde5d4daeac4990dd9d1641120b19ea2413a204
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01606ede139ef370817926df1dd82bcbfcbabafd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="peverifyexe-peverify-tool"></a>Peverify.exe (средство PEVerify)
-Средство PEVerify помогает разработчикам, создающим код на языке CIL — авторам компиляторов, обработчиков скриптов и т. д. — определить, соответствует ли этот код и связанные с ним метаданные требованиям безопасности типов. Некоторые компиляторы создают проверяемый типобезопасный код только в том случае, если разработчик не применяет определенные языковые конструкции. При работе с таким компилятором разработчику иногда требуется проверить, сохранена ли в коде безопасность типов. В этом случае для проверки CIL и метаданных в файлах можно использовать инструмент PEVerify.  
+# <a name="peverifyexe-peverify-tool"></a><span data-ttu-id="f46d5-102">Peverify.exe (средство PEVerify)</span><span class="sxs-lookup"><span data-stu-id="f46d5-102">Peverify.exe (PEVerify Tool)</span></span>
+<span data-ttu-id="f46d5-103">Средство PEVerify помогает разработчикам, создающим код на языке CIL — авторам компиляторов, обработчиков скриптов и т. д. — определить, соответствует ли этот код и связанные с ним метаданные требованиям безопасности типов.</span><span class="sxs-lookup"><span data-stu-id="f46d5-103">The PEVerify tool helps developers who generate Microsoft intermediate language (MSIL) (such as compiler writers, script engine developers, and so on) to determine whether their MSIL code and associated metadata meet type safety requirements.</span></span> <span data-ttu-id="f46d5-104">Некоторые компиляторы создают проверяемый типобезопасный код только в том случае, если разработчик не применяет определенные языковые конструкции.</span><span class="sxs-lookup"><span data-stu-id="f46d5-104">Some compilers generate verifiably type-safe code only if you avoid using certain language constructs.</span></span> <span data-ttu-id="f46d5-105">При работе с таким компилятором разработчику иногда требуется проверить, сохранена ли в коде безопасность типов.</span><span class="sxs-lookup"><span data-stu-id="f46d5-105">If, as a developer, you are using such a compiler, you may want to verify that you have not compromised the type safety of your code.</span></span> <span data-ttu-id="f46d5-106">В этом случае для проверки CIL и метаданных в файлах можно использовать инструмент PEVerify.</span><span class="sxs-lookup"><span data-stu-id="f46d5-106">In this situation, you can run the PEVerify tool on your files to check the MSIL and metadata.</span></span>  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="f46d5-107">Эта программа автоматически устанавливается вместе с Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f46d5-107">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="f46d5-108">Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7).</span><span class="sxs-lookup"><span data-stu-id="f46d5-108">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="f46d5-109">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="f46d5-109">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- В командной строке введите следующее.  
+ <span data-ttu-id="f46d5-110">В командной строке введите следующее.</span><span class="sxs-lookup"><span data-stu-id="f46d5-110">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="f46d5-111">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f46d5-111">Syntax</span></span>  
   
 ```  
 peverify filename [options]  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a><span data-ttu-id="f46d5-112">Параметры</span><span class="sxs-lookup"><span data-stu-id="f46d5-112">Parameters</span></span>  
   
-|Аргумент|Описание|  
+|<span data-ttu-id="f46d5-113">Аргумент</span><span class="sxs-lookup"><span data-stu-id="f46d5-113">Argument</span></span>|<span data-ttu-id="f46d5-114">Описание</span><span class="sxs-lookup"><span data-stu-id="f46d5-114">Description</span></span>|  
 |--------------|-----------------|  
-|*filename*|Переносимый исполняемый файл (PE-файл), который требуется проверить на корректность CIL и метаданных.|  
+|<span data-ttu-id="f46d5-115">*filename*</span><span class="sxs-lookup"><span data-stu-id="f46d5-115">*filename*</span></span>|<span data-ttu-id="f46d5-116">Переносимый исполняемый файл (PE-файл), который требуется проверить на корректность CIL и метаданных.</span><span class="sxs-lookup"><span data-stu-id="f46d5-116">The portable executable (PE) file for which to check the MSIL and metadata.</span></span>|  
   
-|Параметр|Описание|  
+|<span data-ttu-id="f46d5-117">Параметр</span><span class="sxs-lookup"><span data-stu-id="f46d5-117">Option</span></span>|<span data-ttu-id="f46d5-118">Описание</span><span class="sxs-lookup"><span data-stu-id="f46d5-118">Description</span></span>|  
 |------------|-----------------|  
-|**/break=** *maxErrorCount*|Прекращает проверку, если число ошибок в файле достигло значения параметра *maxErrorCount*.<br /><br /> Этот параметр не поддерживается в .NET Framework 2.0 и более поздних версий.|  
-|**/clock**|Измеряет и выводит значения времени следующих проверок (в миллисекундах):<br /><br /> **MD Val. cycle**<br /> Цикл проверки метаданных<br /><br /> **MD Val. pure**<br /> Чистое время проверки метаданных<br /><br /> **IL Ver. cycle**<br /> Цикл проверки языка CIL<br /><br /> **IL Ver pure**<br /> Чистое время проверки языка CIL<br /><br /> Значения **MD Val. cycle** и **IL Ver. cycle** включают время, затраченное на необходимые процедуры запуска и завершения проверки. Значения **MD Val. pure** и **IL Ver pure** отражают время, требуемое только для проверки.|  
-|**/help**|Отображает синтаксис команд и параметров программы.|  
-|**/hresult**|Отображает коды ошибок в шестнадцатеричном формате.|  
-|**/ignore=** *hex.code* [, *hex.code*]|Игнорирует ошибки с заданными кодами.|  
-|**/ignore=@** *responseFile*|Игнорирует ошибки с кодами, перечисленными в указанном файле ответов.|  
-|**/il**|Проверяет безопасность типов CIL для методов, реализованных в сборке, указанной в параметре *filename*. Если не задан параметр **/quiet**, средство выводит подробное описание всех обнаруженных проблем.|  
-|**/md**|Проверяет метаданные в сборке, указанной в параметре *filename*. Средство проверяет всю структуру метаданных в файле и выводит описание всех обнаруженных проблем.|  
-|**/nologo**|Отключает отображение сведений о версии продукта и авторских правах.|  
-|**/nosymbols**|В платформе .NET Framework версии 2.0 отключает номера строк для обеспечения обратной совместимости.|  
-|**/quiet**|Задает тихий режим. Отключает вывод сообщений об обнаруженных проблемах. Средство Peverify.exe все равно уведомляет, соблюдается ли безопасность типов в файле, однако не сообщает об обнаруженных проблемах.|  
-|`/transparent`|Ограничивает проверку только прозрачными методами.|  
-|**/unique**|Игнорирует повторяющиеся коды ошибок.|  
-|**/verbose**|В платформе .NET Framework версии 2.0 отображает дополнительные сведения в сообщениях проверки CIL.|  
-|**/?**|Отображает синтаксис команд и параметров программы.|  
+|<span data-ttu-id="f46d5-119">**/break=** *maxErrorCount*</span><span class="sxs-lookup"><span data-stu-id="f46d5-119">**/break=** *maxErrorCount*</span></span>|<span data-ttu-id="f46d5-120">Прекращает проверку, если число ошибок в файле достигло значения параметра *maxErrorCount*.</span><span class="sxs-lookup"><span data-stu-id="f46d5-120">Aborts verification after *maxErrorCount* errors.</span></span><br /><br /> <span data-ttu-id="f46d5-121">Этот параметр не поддерживается в .NET Framework 2.0 и более поздних версий.</span><span class="sxs-lookup"><span data-stu-id="f46d5-121">This parameter is not supported in .NET Framework version 2.0 or later.</span></span>|  
+|<span data-ttu-id="f46d5-122">**/clock**</span><span class="sxs-lookup"><span data-stu-id="f46d5-122">**/clock**</span></span>|<span data-ttu-id="f46d5-123">Измеряет и выводит значения времени следующих проверок (в миллисекундах):</span><span class="sxs-lookup"><span data-stu-id="f46d5-123">Measures and reports the following verification times in milliseconds:</span></span><br /><br /> <span data-ttu-id="f46d5-124">**MD Val. cycle**</span><span class="sxs-lookup"><span data-stu-id="f46d5-124">**MD Val. cycle**</span></span><br /> <span data-ttu-id="f46d5-125">Цикл проверки метаданных</span><span class="sxs-lookup"><span data-stu-id="f46d5-125">Metadata validation cycle</span></span><br /><br /> <span data-ttu-id="f46d5-126">**MD Val. pure**</span><span class="sxs-lookup"><span data-stu-id="f46d5-126">**MD Val. pure**</span></span><br /> <span data-ttu-id="f46d5-127">Чистое время проверки метаданных</span><span class="sxs-lookup"><span data-stu-id="f46d5-127">Metadata validation pure</span></span><br /><br /> <span data-ttu-id="f46d5-128">**IL Ver. cycle**</span><span class="sxs-lookup"><span data-stu-id="f46d5-128">**IL Ver. cycle**</span></span><br /> <span data-ttu-id="f46d5-129">Цикл проверки языка CIL</span><span class="sxs-lookup"><span data-stu-id="f46d5-129">Microsoft intermediate language (MSIL) verification cycle</span></span><br /><br /> <span data-ttu-id="f46d5-130">**IL Ver pure**</span><span class="sxs-lookup"><span data-stu-id="f46d5-130">**IL Ver pure**</span></span><br /> <span data-ttu-id="f46d5-131">Чистое время проверки языка CIL</span><span class="sxs-lookup"><span data-stu-id="f46d5-131">MSIL verification pure</span></span><br /><br /> <span data-ttu-id="f46d5-132">Значения **MD Val. cycle** и **IL Ver. cycle** включают время, затраченное на необходимые процедуры запуска и завершения проверки.</span><span class="sxs-lookup"><span data-stu-id="f46d5-132">The **MD Val. cycle** and **IL Ver. cycle** times include the time required to perform necessary startup and shutdown procedures.</span></span> <span data-ttu-id="f46d5-133">Значения **MD Val. pure** и **IL Ver pure** отражают время, требуемое только для проверки.</span><span class="sxs-lookup"><span data-stu-id="f46d5-133">The **MD Val. pure** and **IL Ver pure** times reflect the time required to perform the validation or verification only.</span></span>|  
+|<span data-ttu-id="f46d5-134">**/help**</span><span class="sxs-lookup"><span data-stu-id="f46d5-134">**/help**</span></span>|<span data-ttu-id="f46d5-135">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="f46d5-135">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="f46d5-136">**/hresult**</span><span class="sxs-lookup"><span data-stu-id="f46d5-136">**/hresult**</span></span>|<span data-ttu-id="f46d5-137">Отображает коды ошибок в шестнадцатеричном формате.</span><span class="sxs-lookup"><span data-stu-id="f46d5-137">Displays error codes in hexadecimal format.</span></span>|  
+|<span data-ttu-id="f46d5-138">**/ignore=** *hex.code* [, *hex.code*]</span><span class="sxs-lookup"><span data-stu-id="f46d5-138">**/ignore=** *hex.code* [, *hex.code*]</span></span>|<span data-ttu-id="f46d5-139">Игнорирует ошибки с заданными кодами.</span><span class="sxs-lookup"><span data-stu-id="f46d5-139">Ignores the specified error codes.</span></span>|  
+|<span data-ttu-id="f46d5-140">**/ignore=@** *responseFile*</span><span class="sxs-lookup"><span data-stu-id="f46d5-140">**/ignore=@** *responseFile*</span></span>|<span data-ttu-id="f46d5-141">Игнорирует ошибки с кодами, перечисленными в указанном файле ответов.</span><span class="sxs-lookup"><span data-stu-id="f46d5-141">Ignores the error codes listed in the specified response file.</span></span>|  
+|<span data-ttu-id="f46d5-142">**/il**</span><span class="sxs-lookup"><span data-stu-id="f46d5-142">**/il**</span></span>|<span data-ttu-id="f46d5-143">Проверяет безопасность типов CIL для методов, реализованных в сборке, указанной в параметре *filename*.</span><span class="sxs-lookup"><span data-stu-id="f46d5-143">Performs MSIL type safety verification checks for methods implemented in the assembly specified by *filename*.</span></span> <span data-ttu-id="f46d5-144">Если не задан параметр **/quiet**, средство выводит подробное описание всех обнаруженных проблем.</span><span class="sxs-lookup"><span data-stu-id="f46d5-144">The tool returns detailed descriptions for each problem found unless you specify the **/quiet** option.</span></span>|  
+|<span data-ttu-id="f46d5-145">**/md**</span><span class="sxs-lookup"><span data-stu-id="f46d5-145">**/md**</span></span>|<span data-ttu-id="f46d5-146">Проверяет метаданные в сборке, указанной в параметре *filename*.</span><span class="sxs-lookup"><span data-stu-id="f46d5-146">Performs metadata validation checks on the assembly specified by *filename*.</span></span> <span data-ttu-id="f46d5-147">Средство проверяет всю структуру метаданных в файле и выводит описание всех обнаруженных проблем.</span><span class="sxs-lookup"><span data-stu-id="f46d5-147">This walks the full metadata structure within the file and reports all validation problems encountered.</span></span>|  
+|<span data-ttu-id="f46d5-148">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="f46d5-148">**/nologo**</span></span>|<span data-ttu-id="f46d5-149">Отключает отображение сведений о версии продукта и авторских правах.</span><span class="sxs-lookup"><span data-stu-id="f46d5-149">Suppresses the display of product version and copyright information.</span></span>|  
+|<span data-ttu-id="f46d5-150">**/nosymbols**</span><span class="sxs-lookup"><span data-stu-id="f46d5-150">**/nosymbols**</span></span>|<span data-ttu-id="f46d5-151">В платформе .NET Framework версии 2.0 отключает номера строк для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="f46d5-151">In the .NET Framework version 2.0, suppresses line numbers for backward compatibility.</span></span>|  
+|<span data-ttu-id="f46d5-152">**/quiet**</span><span class="sxs-lookup"><span data-stu-id="f46d5-152">**/quiet**</span></span>|<span data-ttu-id="f46d5-153">Задает тихий режим. Отключает вывод сообщений об обнаруженных проблемах.</span><span class="sxs-lookup"><span data-stu-id="f46d5-153">Specifies quiet mode; suppresses output of the verification problem reports.</span></span> <span data-ttu-id="f46d5-154">Средство Peverify.exe все равно уведомляет, соблюдается ли безопасность типов в файле, однако не сообщает об обнаруженных проблемах.</span><span class="sxs-lookup"><span data-stu-id="f46d5-154">Peverify.exe still reports whether the file is type safe, but does not report information on problems preventing type safety verification.</span></span>|  
+|`/transparent`|<span data-ttu-id="f46d5-155">Ограничивает проверку только прозрачными методами.</span><span class="sxs-lookup"><span data-stu-id="f46d5-155">Verify only the transparent methods.</span></span>|  
+|<span data-ttu-id="f46d5-156">**/unique**</span><span class="sxs-lookup"><span data-stu-id="f46d5-156">**/unique**</span></span>|<span data-ttu-id="f46d5-157">Игнорирует повторяющиеся коды ошибок.</span><span class="sxs-lookup"><span data-stu-id="f46d5-157">Ignores repeating error codes.</span></span>|  
+|<span data-ttu-id="f46d5-158">**/verbose**</span><span class="sxs-lookup"><span data-stu-id="f46d5-158">**/verbose**</span></span>|<span data-ttu-id="f46d5-159">В платформе .NET Framework версии 2.0 отображает дополнительные сведения в сообщениях проверки CIL.</span><span class="sxs-lookup"><span data-stu-id="f46d5-159">In the .NET Framework version 2.0, displays additional information in MSIL verification messages.</span></span>|  
+|<span data-ttu-id="f46d5-160">**/?**</span><span class="sxs-lookup"><span data-stu-id="f46d5-160">**/?**</span></span>|<span data-ttu-id="f46d5-161">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="f46d5-161">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- В среде CLR реализация механизмов безопасности и изоляции основана на типобезопасном выполнении кода приложения. Обычно код, для которого невозможно [проверить типобезопасность](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc), не выполняется, хотя можно настроить политику безопасности таким образом, чтобы допускалось выполнение доверенного непроверяемого кода.  
+## <a name="remarks"></a><span data-ttu-id="f46d5-162">Примечания</span><span class="sxs-lookup"><span data-stu-id="f46d5-162">Remarks</span></span>  
+ <span data-ttu-id="f46d5-163">В среде CLR реализация механизмов безопасности и изоляции основана на типобезопасном выполнении кода приложения.</span><span class="sxs-lookup"><span data-stu-id="f46d5-163">The common language runtime relies on the type-safe execution of application code to help enforce security and isolation mechanisms.</span></span> <span data-ttu-id="f46d5-164">Обычно код, для которого невозможно [проверить типобезопасность](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc), не выполняется, хотя можно настроить политику безопасности таким образом, чтобы допускалось выполнение доверенного непроверяемого кода.</span><span class="sxs-lookup"><span data-stu-id="f46d5-164">Normally, code that is not [verifiably type safe](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) cannot run, although you can set security policy to allow the execution of trusted but unverifiable code.</span></span>  
   
- Если параметры **/md** и **/il** не заданы, Peverify.exe проверяет как CIL, так и метаданные. Сначала Peverify.exe проверяет метаданные (параметр **/md**). Если ошибок нет, выполняется проверка CIL (параметр **/il**). Если задан и параметр **/md**, и параметр **/il**, проверка по параметру **/il** производится даже при наличии ошибок в метаданных. Поэтому при отсутствии ошибок в метаданных команда **peverify** *имя_файла* эквивалентна команде **peverify** *имя_файла* **/md** **/il**.  
+ <span data-ttu-id="f46d5-165">Если параметры **/md** и **/il** не заданы, Peverify.exe проверяет как CIL, так и метаданные.</span><span class="sxs-lookup"><span data-stu-id="f46d5-165">If neither the **/md** nor **/il** options are specified, Peverify.exe performs both types of checks.</span></span> <span data-ttu-id="f46d5-166">Сначала Peverify.exe проверяет метаданные (параметр **/md**).</span><span class="sxs-lookup"><span data-stu-id="f46d5-166">Peverify.exe performs **/md** checks first.</span></span> <span data-ttu-id="f46d5-167">Если ошибок нет, выполняется проверка CIL (параметр **/il**).</span><span class="sxs-lookup"><span data-stu-id="f46d5-167">If there are no errors, **/il** checks are made.</span></span> <span data-ttu-id="f46d5-168">Если задан и параметр **/md**, и параметр **/il**, проверка по параметру **/il** производится даже при наличии ошибок в метаданных.</span><span class="sxs-lookup"><span data-stu-id="f46d5-168">If you specify both **/md** and **/il**, **/il** checks are made even if there are errors in the metadata.</span></span> <span data-ttu-id="f46d5-169">Поэтому при отсутствии ошибок в метаданных команда **peverify** *имя_файла* эквивалентна команде **peverify** *имя_файла* **/md** **/il**.</span><span class="sxs-lookup"><span data-stu-id="f46d5-169">Thus, if there are no metadata errors, **peverify** *filename* is equivalent to **peverify** *filename* **/md** **/il**.</span></span>  
   
- Средство Peverify.exe осуществляет полную проверку CIL на основе анализа потоков данных и проверяет правильность метаданных на основе списка из нескольких сотен правил. Дополнительные сведения о проверках, производимых Peverify.exe, см. в разделах, посвященных спецификации проверки метаданных и спецификации набора инструкций CIL в папке "Tools Developers Guide" в [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+ <span data-ttu-id="f46d5-170">Средство Peverify.exe осуществляет полную проверку CIL на основе анализа потоков данных и проверяет правильность метаданных на основе списка из нескольких сотен правил.</span><span class="sxs-lookup"><span data-stu-id="f46d5-170">Peverify.exe performs comprehensive MSIL verification checks based on dataflow analysis plus a list of several hundred rules on valid metadata.</span></span> <span data-ttu-id="f46d5-171">Дополнительные сведения о проверках, производимых Peverify.exe, см. в разделах, посвященных спецификации проверки метаданных и спецификации набора инструкций CIL в папке "Tools Developers Guide" в [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f46d5-171">For detailed information on the checks Peverify.exe performs, see the "Metadata Validation Specification" and the "MSIL Instruction Set Specification" in the Tools Developers Guide folder in the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span></span>  
   
- Обратите внимание, что в платформе .NET Framework 2.0 или более поздних версий поддерживается возврат проверяемых значений `byref`, заданных с использованием следующих инструкций CIL: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` и `unbox`.  
+ <span data-ttu-id="f46d5-172">Обратите внимание, что в платформе .NET Framework 2.0 или более поздних версий поддерживается возврат проверяемых значений `byref`, заданных с использованием следующих инструкций CIL: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` и `unbox`.</span><span class="sxs-lookup"><span data-stu-id="f46d5-172">Note that the .NET Framework version 2.0 or later supports verifiable `byref` returns specified using the following MSIL instructions: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` and `unbox`.</span></span>  
   
-## <a name="examples"></a>Примеры  
- Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`.  
+## <a name="examples"></a><span data-ttu-id="f46d5-173">Примеры</span><span class="sxs-lookup"><span data-stu-id="f46d5-173">Examples</span></span>  
+ <span data-ttu-id="f46d5-174">Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`.</span><span class="sxs-lookup"><span data-stu-id="f46d5-174">The following command performs metadata validation checks and MSIL type safety verification checks for methods implemented in the assembly `myAssembly.exe`.</span></span>  
   
 ```  
 peverify myAssembly.exe /md /il  
 ```  
   
- После успешного завершения обработки этого запроса Peverify.exe отображает следующее сообщение.  
+ <span data-ttu-id="f46d5-175">После успешного завершения обработки этого запроса Peverify.exe отображает следующее сообщение.</span><span class="sxs-lookup"><span data-stu-id="f46d5-175">Upon successful completion of the above request, Peverify.exe displays the following message.</span></span>  
   
 ```  
 All classes and methods in myAssembly.exe Verified  
 ```  
   
- Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`. Средство отображает затраченное на проверку время.  
+ <span data-ttu-id="f46d5-176">Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`.</span><span class="sxs-lookup"><span data-stu-id="f46d5-176">The following command performs metadata validation checks and MSIL type safety verification checks for methods implemented in the assembly `myAssembly.exe`.</span></span> <span data-ttu-id="f46d5-177">Средство отображает затраченное на проверку время.</span><span class="sxs-lookup"><span data-stu-id="f46d5-177">The tool displays the time required to perform these checks.</span></span>  
   
 ```  
 peverify myAssembly.exe /md /il /clock  
 ```  
   
- После успешного завершения обработки этого запроса Peverify.exe отображает следующее сообщение.  
+ <span data-ttu-id="f46d5-178">После успешного завершения обработки этого запроса Peverify.exe отображает следующее сообщение.</span><span class="sxs-lookup"><span data-stu-id="f46d5-178">Upon successful completion of the above request, Peverify.exe displays the following message.</span></span>  
   
 ```  
 All classes and methods in myAssembly.exe Verified  
@@ -110,34 +110,34 @@ Timing: Total run     320 msec
         IL Ver.pure   230 msec  
 ```  
   
- Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`. Однако Peverify.exe останавливается, если число ошибок достигло максимального — то есть 100. Средство также игнорирует ошибки с заданными кодами.  
+ <span data-ttu-id="f46d5-179">Следующая команда проверяет метаданные и безопасность типов CIL для методов, реализованных в сборке `myAssembly.exe`.</span><span class="sxs-lookup"><span data-stu-id="f46d5-179">The following command performs metadata validation checks and MSIL type safety verification checks for methods implemented in the assembly `myAssembly.exe`.</span></span> <span data-ttu-id="f46d5-180">Однако Peverify.exe останавливается, если число ошибок достигло максимального — то есть 100.</span><span class="sxs-lookup"><span data-stu-id="f46d5-180">Peverify.exe stops, however, when it reaches the maximum error count of 100.</span></span> <span data-ttu-id="f46d5-181">Средство также игнорирует ошибки с заданными кодами.</span><span class="sxs-lookup"><span data-stu-id="f46d5-181">The tool also ignores the specified error codes.</span></span>  
   
 ```  
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
- Следующая команда дает тот же результат, что и команда из предыдущего примера, но коды игнорируемых ошибок извлекаются из файла ответов `ignoreErrors.rsp`.  
+ <span data-ttu-id="f46d5-182">Следующая команда дает тот же результат, что и команда из предыдущего примера, но коды игнорируемых ошибок извлекаются из файла ответов `ignoreErrors.rsp`.</span><span class="sxs-lookup"><span data-stu-id="f46d5-182">The following command produces the same result as the above previous example, but specifies the error codes to ignore in the response file `ignoreErrors.rsp`.</span></span>  
   
 ```  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  
 ```  
   
- Файл ответов содержит список кодов ошибок, разделенных запятыми.  
+ <span data-ttu-id="f46d5-183">Файл ответов содержит список кодов ошибок, разделенных запятыми.</span><span class="sxs-lookup"><span data-stu-id="f46d5-183">The response file can contain a comma-separated list of error codes.</span></span>  
   
 ```  
 0x12345678, 0xABCD1234  
 ```  
   
- Ошибки в файле ответов можно также задавать по одной в строке.  
+ <span data-ttu-id="f46d5-184">Ошибки в файле ответов можно также задавать по одной в строке.</span><span class="sxs-lookup"><span data-stu-id="f46d5-184">Alternatively, the response file can be formatted with one error code per line.</span></span>  
   
 ```  
 0x12345678  
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструменты](../../../docs/framework/tools/index.md)   
- [NIB. Написание проверяемого типобезопасного кода](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)   
- [Безопасность типа и безопасность](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="f46d5-185">См. также</span><span class="sxs-lookup"><span data-stu-id="f46d5-185">See Also</span></span>  
+ <span data-ttu-id="f46d5-186">[Инструменты](../../../docs/framework/tools/index.md) </span><span class="sxs-lookup"><span data-stu-id="f46d5-186">[Tools](../../../docs/framework/tools/index.md) </span></span>  
+ <span data-ttu-id="f46d5-187">[NIB. Написание проверяемого типобезопасного кода](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b) </span><span class="sxs-lookup"><span data-stu-id="f46d5-187">[NIB: Writing Verifiably Type-Safe Code](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b) </span></span>  
+ <span data-ttu-id="f46d5-188">[Безопасность типа и безопасность](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) </span><span class="sxs-lookup"><span data-stu-id="f46d5-188">[Type Safety and Security](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) </span></span>  
+ [<span data-ttu-id="f46d5-189">Командные строки</span><span class="sxs-lookup"><span data-stu-id="f46d5-189">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

@@ -38,38 +38,38 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>. Оператор (ссылка C#)
-Оператор "точка" (`.`) используется для доступа к членам. Он определяет член типа или пространства имен. Например, оператор "точка" используется для доступа к определенным методам в библиотеках классов .NET Framework.  
+# <a name="-operator-c-reference"></a><span data-ttu-id="fae22-103">.</span><span class="sxs-lookup"><span data-stu-id="fae22-103">.</span></span> <span data-ttu-id="fae22-104">Оператор (ссылка C#)</span><span class="sxs-lookup"><span data-stu-id="fae22-104">Operator (C# Reference)</span></span>
+<span data-ttu-id="fae22-105">Оператор "точка" (`.`) используется для доступа к членам.</span><span class="sxs-lookup"><span data-stu-id="fae22-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="fae22-106">Он определяет член типа или пространства имен.</span><span class="sxs-lookup"><span data-stu-id="fae22-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="fae22-107">Например, оператор "точка" используется для доступа к определенным методам в библиотеках классов .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fae22-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
   
- [!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
+ <span data-ttu-id="fae22-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="fae22-108">[!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]</span></span>  
   
- Например, рассмотрим следующий класс.  
+ <span data-ttu-id="fae22-109">Например, рассмотрим следующий класс.</span><span class="sxs-lookup"><span data-stu-id="fae22-109">For example, consider the following class:</span></span>  
   
- [!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
+ <span data-ttu-id="fae22-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="fae22-110">[!code-cs[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]</span></span>  
   
- [!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
+ <span data-ttu-id="fae22-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="fae22-111">[!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]</span></span>  
   
- Переменная `s` имеет два члена: `a` и `b`. Чтобы получить к ним доступ, используйте оператор "точка".  
+ <span data-ttu-id="fae22-112">Переменная `s` имеет два члена: `a` и `b`. Чтобы получить к ним доступ, используйте оператор "точка".</span><span class="sxs-lookup"><span data-stu-id="fae22-112">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
   
- [!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
+ <span data-ttu-id="fae22-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="fae22-113">[!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]</span></span>  
   
- Точка также используется для формирования полных имен, указывающих пространство имен или интерфейс, к которым они принадлежат.  
+ <span data-ttu-id="fae22-114">Точка также используется для формирования полных имен, указывающих пространство имен или интерфейс, к которым они принадлежат.</span><span class="sxs-lookup"><span data-stu-id="fae22-114">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
   
- [!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
+ <span data-ttu-id="fae22-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="fae22-115">[!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]</span></span>  
   
- Директива using делает уточнение некоторых имен необязательным.  
+ <span data-ttu-id="fae22-116">Директива using делает уточнение некоторых имен необязательным.</span><span class="sxs-lookup"><span data-stu-id="fae22-116">The using directive makes some name qualification optional:</span></span>  
   
- [!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
+ <span data-ttu-id="fae22-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="fae22-117">[!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]</span></span>  
   
- Однако в случае неоднозначного идентификатора имя должно быть полным.  
+ <span data-ttu-id="fae22-118">Однако в случае неоднозначного идентификатора имя должно быть полным.</span><span class="sxs-lookup"><span data-stu-id="fae22-118">But when an identifier is ambiguous, it must be qualified:</span></span>  
   
- [!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
+ <span data-ttu-id="fae22-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="fae22-119">[!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="fae22-120">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="fae22-120">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="fae22-121">См. также</span><span class="sxs-lookup"><span data-stu-id="fae22-121">See Also</span></span>  
+ <span data-ttu-id="fae22-122">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="fae22-122">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="fae22-123">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="fae22-123">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="fae22-124">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="fae22-124">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

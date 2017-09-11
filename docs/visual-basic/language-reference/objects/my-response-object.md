@@ -31,25 +31,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2ae9a659bb7575023dfa1847c9d405d0f7d6ac3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b9b34c9df31536f6d553cda2e26677a2645768c2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="myresponse-object"></a>Объект My.Response
-Возвращает <xref:System.Web.HttpResponse>объект, связанный с <xref:System.Web.UI.Page>.</xref:System.Web.UI.Page> </xref:System.Web.HttpResponse> Этот объект позволяет отправить клиенту данные ответа HTTP и содержит сведения об этом ответе.  
+# <a name="myresponse-object"></a><span data-ttu-id="bffdd-102">Объект My.Response</span><span class="sxs-lookup"><span data-stu-id="bffdd-102">My.Response Object</span></span>
+<span data-ttu-id="bffdd-103">Возвращает <xref:System.Web.HttpResponse>объект, связанный с <xref:System.Web.UI.Page>.</xref:System.Web.UI.Page> </xref:System.Web.HttpResponse></span><span class="sxs-lookup"><span data-stu-id="bffdd-103">Gets the <xref:System.Web.HttpResponse> object associated with the <xref:System.Web.UI.Page>.</span></span> <span data-ttu-id="bffdd-104">Этот объект позволяет отправить клиенту данные ответа HTTP и содержит сведения об этом ответе.</span><span class="sxs-lookup"><span data-stu-id="bffdd-104">This object allows you to send HTTP response data to a client and contains information about that response.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- `My.Response` Содержит текущий объект <xref:System.Web.HttpResponse>объект, связанный со страницей.</xref:System.Web.HttpResponse>  
+## <a name="remarks"></a><span data-ttu-id="bffdd-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="bffdd-105">Remarks</span></span>  
+ <span data-ttu-id="bffdd-106">`My.Response` Содержит текущий объект <xref:System.Web.HttpResponse>объект, связанный со страницей.</xref:System.Web.HttpResponse></span><span class="sxs-lookup"><span data-stu-id="bffdd-106">The `My.Response` object contains the current <xref:System.Web.HttpResponse> object associated with the page.</span></span>  
   
- `My.Response` Объект доступен только для [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] приложений.  
+ <span data-ttu-id="bffdd-107">`My.Response` Объект доступен только для [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="bffdd-107">The `My.Response` object is only available for [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] applications.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий пример получает коллекцию заголовков из `My.Request` и использует `My.Response` объект для записи ее на страницу ASP.NET.  
+## <a name="example"></a><span data-ttu-id="bffdd-108">Пример</span><span class="sxs-lookup"><span data-stu-id="bffdd-108">Example</span></span>  
+ <span data-ttu-id="bffdd-109">Следующий пример получает коллекцию заголовков из `My.Request` и использует `My.Response` объект для записи ее на страницу ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="bffdd-109">The following example gets the header collection from the `My.Request` object and uses the `My.Response` object to write it to the ASP.NET page.</span></span>  
   
- [!code-vb[VbVbalrMyWeb&#1;](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
+ <span data-ttu-id="bffdd-110">[!code-vb[VbVbalrMyWeb&#1;](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]</span><span class="sxs-lookup"><span data-stu-id="bffdd-110">[!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Web.HttpResponse></xref:System.Web.HttpResponse>   
- [Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)
+## <a name="see-also"></a><span data-ttu-id="bffdd-111">См. также</span><span class="sxs-lookup"><span data-stu-id="bffdd-111">See Also</span></span>  
+ <span data-ttu-id="bffdd-112"><xref:System.Web.HttpResponse></xref:System.Web.HttpResponse></span><span class="sxs-lookup"><span data-stu-id="bffdd-112"><xref:System.Web.HttpResponse></span></span>   
+<span data-ttu-id="bffdd-113"> [Объект My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)</span><span class="sxs-lookup"><span data-stu-id="bffdd-113"> [My.Request Object](../../../visual-basic/language-reference/objects/my-request-object.md)</span></span>

@@ -1,1 +1,1 @@
-CAS (Code Access Security — безопасность доступа кода)
+<span data-ttu-id="712e4-101">CAS (Code Access Security — безопасность доступа кода)</span><span class="sxs-lookup"><span data-stu-id="712e4-101">Code Access Security (CAS)</span></span>

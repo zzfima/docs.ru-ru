@@ -1,5 +1,5 @@
 ---
-title: "Рекомендации по созданию компонентов для параллельного выполнения | Документы Майкрософт"
+title: "Рекомендации по созданию компонентов для параллельного выполнения"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,61 +22,62 @@ caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4e303fb9994b6cc3d53839dbbbe0433abd129eeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 246cd565cd9ab981a993fcbee588783ec4e4e8fb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Рекомендации по созданию компонентов для параллельного выполнения
-Выполните эти общие рекомендации для создания управляемых приложений или компонентов для параллельного выполнения.  
+# <a name="guidelines-for-creating-components-for-side-by-side-execution"></a><span data-ttu-id="9e138-102">Рекомендации по созданию компонентов для параллельного выполнения</span><span class="sxs-lookup"><span data-stu-id="9e138-102">Guidelines for Creating Components for Side-by-Side Execution</span></span>
+<span data-ttu-id="9e138-103">Выполните эти общие рекомендации для создания управляемых приложений или компонентов для параллельного выполнения.</span><span class="sxs-lookup"><span data-stu-id="9e138-103">Follow these general guidelines to create managed applications or components designed for side-by-side execution:</span></span>  
   
--   Удостоверение типа следует привязывать к определенной версии файла.  
+-   <span data-ttu-id="9e138-104">Удостоверение типа следует привязывать к определенной версии файла.</span><span class="sxs-lookup"><span data-stu-id="9e138-104">Bind type identity to a particular version of a file.</span></span>  
   
-     Среда CLR привязывает удостоверение типа к определенной версии файла с помощью сборок со строгими именами. Чтобы создать приложение или компонент для параллельного выполнения, необходимо присвоить всем сборкам строгие имена. Это позволит создать удостоверение точного типа и гарантирует направление разрешений любого типа в нужный файл. Сборка со строгим именем содержит версию, язык и региональные параметры и сведения об издателе, используемые средой выполнения для обнаружения необходимого файла для выполнения запроса привязки.  
+     <span data-ttu-id="9e138-105">Среда CLR привязывает удостоверение типа к определенной версии файла с помощью сборок со строгими именами.</span><span class="sxs-lookup"><span data-stu-id="9e138-105">The common language runtime binds type identity to a particular file version by using strong-named assemblies.</span></span> <span data-ttu-id="9e138-106">Чтобы создать приложение или компонент для параллельного выполнения, необходимо присвоить всем сборкам строгие имена.</span><span class="sxs-lookup"><span data-stu-id="9e138-106">To create an application or component for side-by-side execution, you must give all assemblies a strong name.</span></span> <span data-ttu-id="9e138-107">Это позволит создать удостоверение точного типа и гарантирует направление разрешений любого типа в нужный файл.</span><span class="sxs-lookup"><span data-stu-id="9e138-107">This creates precise type identity and ensures that any type resolution is directed to the correct file.</span></span> <span data-ttu-id="9e138-108">Сборка со строгим именем содержит версию, язык и региональные параметры и сведения об издателе, используемые средой выполнения для обнаружения необходимого файла для выполнения запроса привязки.</span><span class="sxs-lookup"><span data-stu-id="9e138-108">A strong-named assembly contains version, culture, and publisher information that the runtime uses to locate the correct file to fulfill a binding request.</span></span>  
   
--   Используйте хранилище с поддержкой версий.  
+-   <span data-ttu-id="9e138-109">Используйте хранилище с поддержкой версий.</span><span class="sxs-lookup"><span data-stu-id="9e138-109">Use version-aware storage.</span></span>  
   
-     Среда выполнения использует глобальный кэш сборок для обеспечения хранилища с поддержкой версий. Глобальный кэш сборок — это структура каталога с поддержкой версий, устанавливаемая на каждом компьютере, где используется.NET Framework. Сборки, установленные в глобальном кэше сборок, не перезаписываются при установке новой версии этой сборки.  
+     <span data-ttu-id="9e138-110">Среда выполнения использует глобальный кэш сборок для обеспечения хранилища с поддержкой версий.</span><span class="sxs-lookup"><span data-stu-id="9e138-110">The runtime uses the global assembly cache to provide version-aware storage.</span></span> <span data-ttu-id="9e138-111">Глобальный кэш сборок — это структура каталога с поддержкой версий, устанавливаемая на каждом компьютере, где используется.NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9e138-111">The global assembly cache is a version-aware directory structure installed on every computer that uses the .NET Framework.</span></span> <span data-ttu-id="9e138-112">Сборки, установленные в глобальном кэше сборок, не перезаписываются при установке новой версии этой сборки.</span><span class="sxs-lookup"><span data-stu-id="9e138-112">Assemblies installed in the global assembly cache are not overwritten when a new version of that assembly is installed.</span></span>  
   
--   Создайте приложение или компонент, работающий в изоляции.  
+-   <span data-ttu-id="9e138-113">Создайте приложение или компонент, работающий в изоляции.</span><span class="sxs-lookup"><span data-stu-id="9e138-113">Create an application or component that runs in isolation.</span></span>  
   
-     Приложение или компонент, работающий в изоляции, должен осуществлять управление ресурсами, чтобы избежать конфликтов, когда два экземпляра приложения или компонента выполняются одновременно. Приложение или компонент также должен использовать структуру файлов определенных версий.  
+     <span data-ttu-id="9e138-114">Приложение или компонент, работающий в изоляции, должен осуществлять управление ресурсами, чтобы избежать конфликтов, когда два экземпляра приложения или компонента выполняются одновременно.</span><span class="sxs-lookup"><span data-stu-id="9e138-114">An application or component that runs in isolation must manage resources to avoid conflicts when two instances of the application or component are running simultaneously.</span></span> <span data-ttu-id="9e138-115">Приложение или компонент также должен использовать структуру файлов определенных версий.</span><span class="sxs-lookup"><span data-stu-id="9e138-115">The application or component must also use a version-specific file structure.</span></span>  
   
-## <a name="application-and-component-isolation"></a>Изоляция приложений и компонентов  
- Одним из способов успешного создания приложения или компонента для параллельного выполнения является изоляция. Приложение или компонент должен осуществлять управление всеми ресурсами, в частности вводом-выводом файлов, в изолированном режиме. Соблюдайте следующие правила, чтобы гарантировать изолированную работу приложения или компонента.  
+## <a name="application-and-component-isolation"></a><span data-ttu-id="9e138-116">Изоляция приложений и компонентов</span><span class="sxs-lookup"><span data-stu-id="9e138-116">Application and Component Isolation</span></span>  
+ <span data-ttu-id="9e138-117">Одним из способов успешного создания приложения или компонента для параллельного выполнения является изоляция.</span><span class="sxs-lookup"><span data-stu-id="9e138-117">One key to successfully designing an application or component for side-by-side execution is isolation.</span></span> <span data-ttu-id="9e138-118">Приложение или компонент должен осуществлять управление всеми ресурсами, в частности вводом-выводом файлов, в изолированном режиме.</span><span class="sxs-lookup"><span data-stu-id="9e138-118">The application or component must manage all resources, particularly file I/O, in an isolated manner.</span></span> <span data-ttu-id="9e138-119">Соблюдайте следующие правила, чтобы гарантировать изолированную работу приложения или компонента.</span><span class="sxs-lookup"><span data-stu-id="9e138-119">Follow these guidelines to make sure your application or component runs in isolation:</span></span>  
   
--   Выполняйте запись в реестр с учетом версий. Храните значения в кустах или ключах с указанием версии, не осуществляйте совместное использование информации или сведений о состоянии в разных версиях компонента. В этом случае два приложения или компонента, работающие одновременно, не смогут перезаписывать информацию.  
+-   <span data-ttu-id="9e138-120">Выполняйте запись в реестр с учетом версий.</span><span class="sxs-lookup"><span data-stu-id="9e138-120">Write to the registry in a version-specific way.</span></span> <span data-ttu-id="9e138-121">Храните значения в кустах или ключах с указанием версии, не осуществляйте совместное использование информации или сведений о состоянии в разных версиях компонента.</span><span class="sxs-lookup"><span data-stu-id="9e138-121">Store values in hives or keys that indicate the version, and do not share information or state across versions of a component.</span></span> <span data-ttu-id="9e138-122">В этом случае два приложения или компонента, работающие одновременно, не смогут перезаписывать информацию.</span><span class="sxs-lookup"><span data-stu-id="9e138-122">This prevents two applications or components running at the same time from overwriting information.</span></span>  
   
--   Создавайте именованные объекты ядра с учетом версий, чтобы не возникало состояние гонки. Например, состояние гонки возникает, когда два семафора двух версий одного и того же приложения ждут друг друга.  
+-   <span data-ttu-id="9e138-123">Создавайте именованные объекты ядра с учетом версий, чтобы не возникало состояние гонки.</span><span class="sxs-lookup"><span data-stu-id="9e138-123">Make named kernel objects version-specific so that a race condition does not occur.</span></span> <span data-ttu-id="9e138-124">Например, состояние гонки возникает, когда два семафора двух версий одного и того же приложения ждут друг друга.</span><span class="sxs-lookup"><span data-stu-id="9e138-124">For example, a race condition occurs when two semaphores from two versions of the same application wait on each other.</span></span>  
   
--   Присваивайте файлам и каталогам имена с учетом версий. Это означает, что сведения о версии должны учитываться в файловых структурах.  
+-   <span data-ttu-id="9e138-125">Присваивайте файлам и каталогам имена с учетом версий.</span><span class="sxs-lookup"><span data-stu-id="9e138-125">Make file and directory names version-aware.</span></span> <span data-ttu-id="9e138-126">Это означает, что сведения о версии должны учитываться в файловых структурах.</span><span class="sxs-lookup"><span data-stu-id="9e138-126">This means that file structures should rely on version information.</span></span>  
   
--   Создавайте учетные записи пользователей и группы с учетом версий. Учетные записи пользователей и группы, созданные приложением, должны идентифицироваться по версии. Не осуществляйте совместное использование учетных записей пользователей и групп разными версиями приложения.  
+-   <span data-ttu-id="9e138-127">Создавайте учетные записи пользователей и группы с учетом версий.</span><span class="sxs-lookup"><span data-stu-id="9e138-127">Create user accounts and groups in a version-specific manner.</span></span> <span data-ttu-id="9e138-128">Учетные записи пользователей и группы, созданные приложением, должны идентифицироваться по версии.</span><span class="sxs-lookup"><span data-stu-id="9e138-128">User accounts and groups created by an application should be identified by version.</span></span> <span data-ttu-id="9e138-129">Не осуществляйте совместное использование учетных записей пользователей и групп разными версиями приложения.</span><span class="sxs-lookup"><span data-stu-id="9e138-129">Do not share user accounts and groups between versions of an application.</span></span>  
   
-## <a name="installing-and-uninstalling-versions"></a>Установка и удаление версий  
- При разработке приложения для параллельного выполнения следуйте этим инструкциям по установке и удалению версий.  
+## <a name="installing-and-uninstalling-versions"></a><span data-ttu-id="9e138-130">Установка и удаление версий</span><span class="sxs-lookup"><span data-stu-id="9e138-130">Installing and Uninstalling Versions</span></span>  
+ <span data-ttu-id="9e138-131">При разработке приложения для параллельного выполнения следуйте этим инструкциям по установке и удалению версий.</span><span class="sxs-lookup"><span data-stu-id="9e138-131">When designing an application for side-by-side execution, follow these guidelines concerning installing and uninstalling versions:</span></span>  
   
--   Не удаляйте из реестра сведения, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.  
+-   <span data-ttu-id="9e138-132">Не удаляйте из реестра сведения, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9e138-132">Do not delete information from the registry that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   Не заменяйте сведения, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.  
+-   <span data-ttu-id="9e138-133">Не заменяйте сведения, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9e138-133">Do not replace information in the registry that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   Не отменяйте регистрацию COM-компонентов, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.  
+-   <span data-ttu-id="9e138-134">Не отменяйте регистрацию COM-компонентов, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9e138-134">Do not unregister COM components that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   Не изменяйте **InprocServer32** или другие записи в реестре для уже зарегистрированного COM-сервера.  
+-   <span data-ttu-id="9e138-135">Не изменяйте **InprocServer32** или другие записи в реестре для уже зарегистрированного COM-сервера.</span><span class="sxs-lookup"><span data-stu-id="9e138-135">Do not change **InprocServer32** or other registry entries for a COM server that was already registered.</span></span>  
   
--   Не удаляйте учетные записи пользователей и группы, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.  
+-   <span data-ttu-id="9e138-136">Не удаляйте учетные записи пользователей и группы, которые могут потребоваться другим приложениям, выполняемым с другой версией .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9e138-136">Do not delete user accounts or groups that may be needed by other applications running under a different version of the .NET Framework.</span></span>  
   
--   Не следует добавлять в реестр что-либо, содержащее путь без версии.  
+-   <span data-ttu-id="9e138-137">Не следует добавлять в реестр что-либо, содержащее путь без версии.</span><span class="sxs-lookup"><span data-stu-id="9e138-137">Do not add anything to the registry that contains an unversioned path.</span></span>  
   
-## <a name="file-version-number-and-assembly-version-number"></a>Номер версии файла и номер версии сборки  
- Версия файла — это ресурс версии Win32, который не используется средой выполнения. Как правило, версия файла обновляется даже при локальном обновлении. Два идентичных файла могут иметь разные сведения о версии файла, а два разных файла могут иметь одни и те же сведения о версии файла.  
+## <a name="file-version-number-and-assembly-version-number"></a><span data-ttu-id="9e138-138">Номер версии файла и номер версии сборки</span><span class="sxs-lookup"><span data-stu-id="9e138-138">File Version Number and Assembly Version Number</span></span>  
+ <span data-ttu-id="9e138-139">Версия файла — это ресурс версии Win32, который не используется средой выполнения.</span><span class="sxs-lookup"><span data-stu-id="9e138-139">File version is a Win32 version resource that is not used by the runtime.</span></span> <span data-ttu-id="9e138-140">Как правило, версия файла обновляется даже при локальном обновлении.</span><span class="sxs-lookup"><span data-stu-id="9e138-140">In general, you update the file version even for an in-place update.</span></span> <span data-ttu-id="9e138-141">Два идентичных файла могут иметь разные сведения о версии файла, а два разных файла могут иметь одни и те же сведения о версии файла.</span><span class="sxs-lookup"><span data-stu-id="9e138-141">Two identical files can have different file version information, and two different files can have the same file version information.</span></span>  
   
- Версия сборки используется средой выполнения для привязки сборок. Две одинаковые сборки с разными номерами версий рассматриваются средой выполнения как две разные сборки.  
+ <span data-ttu-id="9e138-142">Версия сборки используется средой выполнения для привязки сборок.</span><span class="sxs-lookup"><span data-stu-id="9e138-142">The assembly version is used by the runtime for assembly binding.</span></span> <span data-ttu-id="9e138-143">Две одинаковые сборки с разными номерами версий рассматриваются средой выполнения как две разные сборки.</span><span class="sxs-lookup"><span data-stu-id="9e138-143">Two identical assemblies with different version numbers are treated as two different assemblies by the runtime.</span></span>  
   
- [Средство глобального кэша сборок (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) позволяет заменить сборку, если более новым является только номер версии файла. Установщик обычно переустанавливает сборку только в том случае, если номер версии сборки больше.   
+ <span data-ttu-id="9e138-144">[Средство глобального кэша сборок (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) позволяет заменить сборку, если более новым является только номер версии файла.</span><span class="sxs-lookup"><span data-stu-id="9e138-144">The [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) allows you to replace an assembly when only the file version number is newer.</span></span> <span data-ttu-id="9e138-145">Установщик обычно переустанавливает сборку только в том случае, если номер версии сборки больше. </span><span class="sxs-lookup"><span data-stu-id="9e138-145">The installer generally does not install over an assembly unless the assembly version number is greater.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md)   
- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+## <a name="see-also"></a><span data-ttu-id="9e138-146">См. также</span><span class="sxs-lookup"><span data-stu-id="9e138-146">See Also</span></span>  
+ <span data-ttu-id="9e138-147">[Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md) </span><span class="sxs-lookup"><span data-stu-id="9e138-147">[Side-by-Side Execution](../../../docs/framework/deployment/side-by-side-execution.md) </span></span>  
+ [<span data-ttu-id="9e138-148">Практическое руководство. Включение и отключение автоматического перенаправления привязки</span><span class="sxs-lookup"><span data-stu-id="9e138-148">How to: Enable and Disable Automatic Binding Redirection</span></span>](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+

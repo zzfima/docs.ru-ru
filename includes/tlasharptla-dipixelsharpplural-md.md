@@ -1,1 +1,1 @@
-аппаратно-независимые единицы (1/96 дюйма на единицу)
+<span data-ttu-id="8152f-101">аппаратно-независимые единицы (1/96 дюйма на единицу)</span><span class="sxs-lookup"><span data-stu-id="8152f-101">device-independent units (1/96th inch per unit)</span></span>

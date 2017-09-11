@@ -1,6 +1,6 @@
 ---
 title: "Делегаты и лямбда-выражения"
-description: "Делегаты и лямбда-выражения"
+description: "Сведения о том, как делегаты определяют тип, указывающий конкретную сигнатуру метода, которую можно вызывать напрямую или передать другому методу и вызвать."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 1dbe9c72999c14e45910310eb0bbc91ebe9f1e4a
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="delegates-and-lambdas"></a>Делегаты и лямбда-выражения
+# <a name="delegates-and-lambdas"></a><span data-ttu-id="8c183-104">Делегаты и лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="8c183-104">Delegates and lambdas</span></span>
 
-Делегаты определяют тип, указывающий конкретную сигнатуру метода. Метод (статический или экземпляр), удовлетворяющий сигнатуре, можно присвоить переменной этого типа и затем вызвать напрямую (с соответствующими аргументами) или передать в качестве аргумента другому методу и затем вызвать. В следующем примере показано использование делегата.
+<span data-ttu-id="8c183-105">Делегаты определяют тип, указывающий конкретную сигнатуру метода.</span><span class="sxs-lookup"><span data-stu-id="8c183-105">Delegates define a type, which specify a particular method signature.</span></span> <span data-ttu-id="8c183-106">Метод (статический или экземпляр), удовлетворяющий сигнатуре, можно присвоить переменной этого типа и затем вызвать напрямую (с соответствующими аргументами) или передать в качестве аргумента другому методу и затем вызвать.</span><span class="sxs-lookup"><span data-stu-id="8c183-106">A method (static or instance) that satisfies this signature can be assigned to a variable of that type, then called directly (with the appropriate arguments) or passed as an argument itself to another method and then called.</span></span> <span data-ttu-id="8c183-107">В следующем примере показано использование делегата.</span><span class="sxs-lookup"><span data-stu-id="8c183-107">The following example demonstrates delegate use.</span></span>
 
 ```csharp
 public class Program
@@ -39,21 +40,20 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
-*   В строке 4 мы создаем тип делегата для определенной сигнатуры. В данном случае это метод, принимающий и возвращающий строковый параметр.
-*   В строке 6 мы определяем реализацию делегата, указав метод с точно такой же сигнатурой.
-*   В строке 13 метод назначается типу, который соответствует делегату `Reverse`.
-*   Наконец, в строке 15 мы вызываем делегат, передав строку для обращения.
+*   <span data-ttu-id="8c183-108">В строке 4 мы создаем тип делегата для определенной сигнатуры. В данном случае это метод, принимающий и возвращающий строковый параметр.</span><span class="sxs-lookup"><span data-stu-id="8c183-108">On line 4 we create a delegate type of a certain signature, in this case a method that takes a string parameter and then returns a string parameter.</span></span>
+*   <span data-ttu-id="8c183-109">В строке 6 мы определяем реализацию делегата, указав метод с точно такой же сигнатурой.</span><span class="sxs-lookup"><span data-stu-id="8c183-109">On line 6, we define the implementation of the delegate by providing a method that has the exact same signature.</span></span>
+*   <span data-ttu-id="8c183-110">В строке 13 метод назначается типу, который соответствует делегату `Reverse`.</span><span class="sxs-lookup"><span data-stu-id="8c183-110">On line 13, the method is assigned to a type that conforms to the `Reverse` delegate.</span></span>
+*   <span data-ttu-id="8c183-111">Наконец, в строке 15 мы вызываем делегат, передав строку для обращения.</span><span class="sxs-lookup"><span data-stu-id="8c183-111">Finally, on line 15 we invoke the delegate passing a string to be reversed.</span></span>
 
-Чтобы упростить процесс разработки, платформа .NET содержит набор типов делегата, которые программисты могут повторно использовать, не создавая новые. Это `Func<>`, `Action<>` и `Predicate<>`, которые можно использовать в различных участках API-интерфейсов .NET без необходимости определения новых типов делегата. Безусловно между ними существуют некоторые различия, которые легко определить по сигнатурам. Это связано с их назначением:
+<span data-ttu-id="8c183-112">Чтобы упростить процесс разработки, платформа .NET содержит набор типов делегата, которые программисты могут повторно использовать, не создавая новые.</span><span class="sxs-lookup"><span data-stu-id="8c183-112">In order to streamline the development process, .NET includes a set of delegate types that programmers can reuse and not have to create new types.</span></span> <span data-ttu-id="8c183-113">Это `Func<>`, `Action<>` и `Predicate<>`, которые можно использовать в различных участках API-интерфейсов .NET без необходимости определения новых типов делегата.</span><span class="sxs-lookup"><span data-stu-id="8c183-113">These are `Func<>`, `Action<>` and `Predicate<>`, and they can be used in various places throughout the .NET APIs without the need to define new delegate types.</span></span> <span data-ttu-id="8c183-114">Безусловно между ними существуют некоторые различия, которые легко определить по сигнатурам. Это связано с их назначением:</span><span class="sxs-lookup"><span data-stu-id="8c183-114">Of course, there are some differences between the three as you will see in their signatures which mostly have to do with the way they were meant to be used:</span></span>
 
-*   `Action<>` применяется, когда требуется выполнить действие с использованием аргументов делегата.
-*   `Func<>` обычно используется при наличии преобразования, то есть когда требуется преобразовать аргументы делегата в другой результат. Хорошим примером этого являются проекции.
-*   `Predicate<>` используется, когда требуется определить, удовлетворяет ли аргумент условию делегата. Его также можно записать в виде `Func<T, bool>`.
+*   <span data-ttu-id="8c183-115">`Action<>` применяется, когда требуется выполнить действие с использованием аргументов делегата.</span><span class="sxs-lookup"><span data-stu-id="8c183-115">`Action<>` is used when there is a need to perform an action using the arguments of the delegate.</span></span>
+*   <span data-ttu-id="8c183-116">`Func<>` обычно используется при наличии преобразования, то есть когда требуется преобразовать аргументы делегата в другой результат.</span><span class="sxs-lookup"><span data-stu-id="8c183-116">`Func<>` is used usually when you have a transformation on hand, that is, you need to transform the arguments of the delegate into a different result.</span></span> <span data-ttu-id="8c183-117">Хорошим примером этого являются проекции.</span><span class="sxs-lookup"><span data-stu-id="8c183-117">Projections are a prime example of this.</span></span>
+*   <span data-ttu-id="8c183-118">`Predicate<>` используется, когда требуется определить, удовлетворяет ли аргумент условию делегата.</span><span class="sxs-lookup"><span data-stu-id="8c183-118">`Predicate<>` is used when you need to determine if the argument satisfies the condition of the delegate.</span></span> <span data-ttu-id="8c183-119">Его также можно записать в виде `Func<T, bool>`.</span><span class="sxs-lookup"><span data-stu-id="8c183-119">It can also be written as a `Func<T, bool>`.</span></span>
 
-Теперь можно обратиться к приведенному выше примеру и переписать его, используя делегат `Func<>` вместо пользовательского типа. При этом работа программы не изменится.
+<span data-ttu-id="8c183-120">Теперь можно обратиться к приведенному выше примеру и переписать его, используя делегат `Func<>` вместо пользовательского типа.</span><span class="sxs-lookup"><span data-stu-id="8c183-120">We can now take our example above and rewrite it using the `Func<>` delegate instead of a custom type.</span></span> <span data-ttu-id="8c183-121">При этом работа программы не изменится.</span><span class="sxs-lookup"><span data-stu-id="8c183-121">The program will continue running exactly the same.</span></span>
 
 ```csharp
 public class Program
@@ -71,12 +71,11 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
-В этом простом примере определение метода за пределами метода Main() может показаться излишним. Это вызвано тем, что в .NET Framework 2.0 введена концепция **анонимных делегатов**. С их помощью можно создавать "встроенные" делегаты без указания дополнительного типа или метода. Вы просто встраиваете определение делегата там, где это необходимо.
+<span data-ttu-id="8c183-122">В этом простом примере определение метода за пределами метода Main() может показаться излишним.</span><span class="sxs-lookup"><span data-stu-id="8c183-122">For this simple example, having a method defined outside of the Main() method seems a bit superfluous.</span></span> <span data-ttu-id="8c183-123">Это вызвано тем, что в .NET Framework 2.0 введена концепция **анонимных делегатов**.</span><span class="sxs-lookup"><span data-stu-id="8c183-123">It is because of this that .NET Framework 2.0 introduced the concept of **anonymous delegates**.</span></span> <span data-ttu-id="8c183-124">С их помощью можно создавать "встроенные" делегаты без указания дополнительного типа или метода.</span><span class="sxs-lookup"><span data-stu-id="8c183-124">With their support you are able to create "inline" delegates without having to specify any additional type or method.</span></span> <span data-ttu-id="8c183-125">Вы просто встраиваете определение делегата там, где это необходимо.</span><span class="sxs-lookup"><span data-stu-id="8c183-125">You simply inline the definition of the delegate where you need it.</span></span>
 
-Например, мы собираемся использовать анонимный делегат, чтобы отфильтровать только четные числа из списка и вывести их на консоль.
+<span data-ttu-id="8c183-126">Например, мы собираемся использовать анонимный делегат, чтобы отфильтровать только четные числа из списка и вывести их на консоль.</span><span class="sxs-lookup"><span data-stu-id="8c183-126">For an example, we are going to switch it up and use our anonymous delegate to filter out a list of only even numbers and then print them to the console.</span></span>
 
 ```csharp
 public class Program
@@ -104,16 +103,15 @@ public class Program
     }
   }
 }
-
 ```
 
-Обратите внимание на выделенные строки. Как видно, тело делегата представляет собой набор выражений, как в любом другом делегате. Но вместо использования отдельного определения мы описали его _напрямую_ в нашем вызове метода `FindAll()` с типом `List<T>`.
+<span data-ttu-id="8c183-127">Обратите внимание на выделенные строки.</span><span class="sxs-lookup"><span data-stu-id="8c183-127">Notice the highlighted lines.</span></span> <span data-ttu-id="8c183-128">Как видно, тело делегата представляет собой набор выражений, как в любом другом делегате.</span><span class="sxs-lookup"><span data-stu-id="8c183-128">As you can see, the body of the delegate is just a set of expressions, as any other delegate.</span></span> <span data-ttu-id="8c183-129">Но вместо использования отдельного определения мы описали его _напрямую_ в нашем вызове метода `FindAll()` с типом `List<T>`.</span><span class="sxs-lookup"><span data-stu-id="8c183-129">But instead of it being a separate definition, we’ve introduced it _ad hoc_ in our call to the `FindAll()` method of the `List<T>` type.</span></span>
 
-Однако даже при таком подходе остается довольно много кода, от которого можно избавиться. Как раз для этого и могут пригодиться **лямбда-выражения**.
+<span data-ttu-id="8c183-130">Однако даже при таком подходе остается довольно много кода, от которого можно избавиться.</span><span class="sxs-lookup"><span data-stu-id="8c183-130">However, even with this approach, there is still much code that we can throw away.</span></span> <span data-ttu-id="8c183-131">Как раз для этого и могут пригодиться **лямбда-выражения**.</span><span class="sxs-lookup"><span data-stu-id="8c183-131">This is where **lambda expressions** come into play.</span></span>
 
-Впервые лямбда-выражения были введены в C# 3.0 в качестве одного из стандартных блоков LINQ. Они предоставляют более удобный синтаксис для использования делегатов. Они объявляют сигнатуру и тела метода, но не имеют собственного формального удостоверения, пока не будут назначены делегату. В отличие от делегатов их можно напрямую назначать в левой части при регистрации событий, а также в различных предложениях и методах LINQ.
+<span data-ttu-id="8c183-132">Впервые лямбда-выражения были введены в C# 3.0 в качестве одного из стандартных блоков LINQ.</span><span class="sxs-lookup"><span data-stu-id="8c183-132">Lambda expressions, or just "lambdas" for short, were introduced first in C# 3.0, as one of the core building blocks of Language Integrated Query (LINQ).</span></span> <span data-ttu-id="8c183-133">Они предоставляют более удобный синтаксис для использования делегатов.</span><span class="sxs-lookup"><span data-stu-id="8c183-133">They are just a more convenient syntax for using delegates.</span></span> <span data-ttu-id="8c183-134">Они объявляют сигнатуру и тела метода, но не имеют собственного формального удостоверения, пока не будут назначены делегату.</span><span class="sxs-lookup"><span data-stu-id="8c183-134">They declare a signature and a method body, but don’t have an formal identity of their own, unless they are assigned to a delegate.</span></span> <span data-ttu-id="8c183-135">В отличие от делегатов их можно напрямую назначать в левой части при регистрации событий, а также в различных предложениях и методах LINQ.</span><span class="sxs-lookup"><span data-stu-id="8c183-135">Unlike delegates, they can be directly assigned as the left-hand side of event registration or in various Linq clauses and methods.</span></span>
 
-Поскольку лямбда-выражение представляет собой просто еще один способ указания делегата, можно переписать приведенный выше пример, чтобы использовать лямбда-выражение вместо анонимного делегата.
+<span data-ttu-id="8c183-136">Поскольку лямбда-выражение представляет собой просто еще один способ указания делегата, можно переписать приведенный выше пример, чтобы использовать лямбда-выражение вместо анонимного делегата.</span><span class="sxs-lookup"><span data-stu-id="8c183-136">Since a lambda expression is just another way of specifying a delegate, we should be able to rewrite the above sample to use a lambda expression instead of an anonymous delegate.</span></span>
 
 ```csharp
 public class Program
@@ -136,12 +134,11 @@ public class Program
     }
   }
 }
-
 ```
 
-Если взглянуть на выделенные строки, можно увидеть, как выглядит лямбда-выражение. Повторим, что это просто **очень** удобный синтаксис для использования делегатов, сам принцип действия аналогичен анонимному делегату.
+<span data-ttu-id="8c183-137">Если взглянуть на выделенные строки, можно увидеть, как выглядит лямбда-выражение.</span><span class="sxs-lookup"><span data-stu-id="8c183-137">If you take a look at the highlighted lines, you can see how a lambda expression looks like.</span></span> <span data-ttu-id="8c183-138">Повторим, что это просто **очень** удобный синтаксис для использования делегатов, сам принцип действия аналогичен анонимному делегату.</span><span class="sxs-lookup"><span data-stu-id="8c183-138">Again, it is just a **very** convenient syntax for using delegates, so what happens under the covers is similar to what happens with the anonymous delegate.</span></span>
 
-Лямбда-выражения — это обычные делегаты, поэтому их без проблем можно использовать в качестве обработчика событий, как показано в следующем фрагменте кода.
+<span data-ttu-id="8c183-139">Лямбда-выражения — это обычные делегаты, поэтому их без проблем можно использовать в качестве обработчика событий, как показано в следующем фрагменте кода.</span><span class="sxs-lookup"><span data-stu-id="8c183-139">Again, lambdas are just delegates, which means that they can be used as an event handler without any problems, as the following code snippet illustrates.</span></span>
 
 ```csharp
 public MainWindow()
@@ -153,12 +150,11 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
-## <a name="further-reading-and-resources"></a>Дополнительные сведения и ресурсы
+## <a name="further-reading-and-resources"></a><span data-ttu-id="8c183-140">Дополнительные сведения и ресурсы</span><span class="sxs-lookup"><span data-stu-id="8c183-140">Further reading and resources</span></span>
 
-*   [Делегаты](https://msdn.microsoft.com/library/ms173171.aspx)
-*   [Анонимные функции](https://msdn.microsoft.com/library/bb882516.aspx)
-*   [Лямбда-выражения](https://msdn.microsoft.com/library/bb397687.aspx)
+*   [<span data-ttu-id="8c183-141">Делегаты</span><span class="sxs-lookup"><span data-stu-id="8c183-141">Delegates</span></span>](https://msdn.microsoft.com/library/ms173171.aspx)
+*   [<span data-ttu-id="8c183-142">Анонимные функции</span><span class="sxs-lookup"><span data-stu-id="8c183-142">Anonymous Functions</span></span>](https://msdn.microsoft.com/library/bb882516.aspx)
+*   [<span data-ttu-id="8c183-143">Лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="8c183-143">Lambda expressions</span></span>](https://msdn.microsoft.com/library/bb397687.aspx)
 

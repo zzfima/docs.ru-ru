@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#) | Документы Майкрософт"
+title: "Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd6bc60dfd1c6146d8fa72abdcfc6a00006817aa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4532829080d994cf4cec92d64a12e3bf1890dc6a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#)
-С помощью атрибутов можно настраивать расположение структур в памяти. Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.  
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a><span data-ttu-id="35ac2-102">Практическое руководство. Создание объединения C/C++ с помощью атрибутов (C#)</span><span class="sxs-lookup"><span data-stu-id="35ac2-102">How to: Create a C/C++ Union by Using Attributes (C#)</span></span>
+<span data-ttu-id="35ac2-103">С помощью атрибутов можно настраивать расположение структур в памяти.</span><span class="sxs-lookup"><span data-stu-id="35ac2-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="35ac2-104">Например, можно создать так называемое объединение в C/C++ с помощью атрибутов `StructLayout(LayoutKind.Explicit)` и `FieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="35ac2-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом сегменте кода все поля объединения `TestUnion` начинаются с одного адреса в памяти.  
+## <a name="example"></a><span data-ttu-id="35ac2-105">Пример</span><span class="sxs-lookup"><span data-stu-id="35ac2-105">Example</span></span>  
+ <span data-ttu-id="35ac2-106">В этом сегменте кода все поля объединения `TestUnion` начинаются с одного адреса в памяти.</span><span class="sxs-lookup"><span data-stu-id="35ac2-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -51,8 +52,8 @@ ms.lasthandoff: 03/13/2017
        }  
 ```  
   
-## <a name="example"></a>Пример  
- Ниже приведен еще один пример, в котором поля начинаются с разных явно заданных адресов.  
+## <a name="example"></a><span data-ttu-id="35ac2-107">Пример</span><span class="sxs-lookup"><span data-stu-id="35ac2-107">Example</span></span>  
+ <span data-ttu-id="35ac2-108">Ниже приведен еще один пример, в котором поля начинаются с разных явно заданных адресов.</span><span class="sxs-lookup"><span data-stu-id="35ac2-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```csharp  
 // Add a using directive for System.Runtime.InteropServices.  
@@ -80,14 +81,15 @@ ms.lasthandoff: 03/13/2017
        }  
 ```  
   
- Два целочисленных поля `i1` и `i2` используют те же адреса памяти, что и `lg`. Такое управление расположением структуры полезно при использовании вызова неуправляемого кода.  
+ <span data-ttu-id="35ac2-109">Два целочисленных поля `i1` и `i2` используют те же адреса памяти, что и `lg`.</span><span class="sxs-lookup"><span data-stu-id="35ac2-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="35ac2-110">Такое управление расположением структуры полезно при использовании вызова неуправляемого кода.</span><span class="sxs-lookup"><span data-stu-id="35ac2-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)   
- [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a><span data-ttu-id="35ac2-111">См. также</span><span class="sxs-lookup"><span data-stu-id="35ac2-111">See Also</span></span>  
+ <span data-ttu-id="35ac2-112"><xref:System.Reflection></span><span class="sxs-lookup"><span data-stu-id="35ac2-112"><xref:System.Reflection></span></span>   
+ <span data-ttu-id="35ac2-113"><xref:System.Attribute></span><span class="sxs-lookup"><span data-stu-id="35ac2-113"><xref:System.Attribute></span></span>   
+ <span data-ttu-id="35ac2-114">[Руководство по программированию на C#](../../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="35ac2-114">[C# Programming Guide](../../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="35ac2-115">[Атрибуты](https://msdn.microsoft.com/library/5x6cd29c) </span><span class="sxs-lookup"><span data-stu-id="35ac2-115">[Attributes](https://msdn.microsoft.com/library/5x6cd29c) </span></span>  
+ <span data-ttu-id="35ac2-116">[Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span><span class="sxs-lookup"><span data-stu-id="35ac2-116">[Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span></span>  
+ <span data-ttu-id="35ac2-117">[Атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md) </span><span class="sxs-lookup"><span data-stu-id="35ac2-117">[Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md) </span></span>  
+ <span data-ttu-id="35ac2-118">[Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md) </span><span class="sxs-lookup"><span data-stu-id="35ac2-118">[Creating Custom Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md) </span></span>  
+ [<span data-ttu-id="35ac2-119">Обращение к атрибутам с помощью отражения (C#)</span><span class="sxs-lookup"><span data-stu-id="35ac2-119">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

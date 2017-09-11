@@ -1,1 +1,1 @@
-Пример
+<span data-ttu-id="59574-101">Пример</span><span class="sxs-lookup"><span data-stu-id="59574-101">For an example of</span></span>

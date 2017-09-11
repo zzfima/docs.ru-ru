@@ -38,24 +38,24 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="try-catch-finally-c-reference"></a>try-catch-finally (Справочник по C#)
-Чаще всего `catch` и `finally` применяются вместе для получения и использования ресурсов в блоке `try`, устранения исключительных обстоятельств в блоке `catch` и освобождения ресурсов в блоке `finally`.  
+# <a name="try-catch-finally-c-reference"></a><span data-ttu-id="3b1b7-102">try-catch-finally (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="3b1b7-102">try-catch-finally (C# Reference)</span></span>
+<span data-ttu-id="3b1b7-103">Чаще всего `catch` и `finally` применяются вместе для получения и использования ресурсов в блоке `try`, устранения исключительных обстоятельств в блоке `catch` и освобождения ресурсов в блоке `finally`.</span><span class="sxs-lookup"><span data-stu-id="3b1b7-103">A common usage of `catch` and `finally` together is to obtain and use resources in a `try` block, deal with exceptional circumstances in a `catch` block, and release the resources in the `finally` block.</span></span>  
   
- Дополнительные сведения и примеры повторного создания исключений см. в разделах [try-catch](../../../csharp/language-reference/keywords/try-catch.md) и [Порождение исключений](https://msdn.microsoft.com/library/xhcbs8fz). Дополнительные сведения о блоке `finally` см. в разделе [try-finally](../../../csharp/language-reference/keywords/try-finally.md).  
+ <span data-ttu-id="3b1b7-104">Дополнительные сведения и примеры повторного создания исключений см. в разделах [try-catch](../../../csharp/language-reference/keywords/try-catch.md) и [Порождение исключений](https://msdn.microsoft.com/library/xhcbs8fz).</span><span class="sxs-lookup"><span data-stu-id="3b1b7-104">For more information and examples on re-throwing exceptions, see [try-catch](../../../csharp/language-reference/keywords/try-catch.md) and [Throwing Exceptions](https://msdn.microsoft.com/library/xhcbs8fz).</span></span> <span data-ttu-id="3b1b7-105">Дополнительные сведения о блоке `finally` см. в разделе [try-finally](../../../csharp/language-reference/keywords/try-finally.md).</span><span class="sxs-lookup"><span data-stu-id="3b1b7-105">For more information about the `finally` block, see [try-finally](../../../csharp/language-reference/keywords/try-finally.md).</span></span>  
   
-## <a name="example"></a>Пример  
- [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]  
+## <a name="example"></a><span data-ttu-id="3b1b7-106">Пример</span><span class="sxs-lookup"><span data-stu-id="3b1b7-106">Example</span></span>  
+ <span data-ttu-id="3b1b7-107">[!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="3b1b7-107">[!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="3b1b7-108">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="3b1b7-108">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Операторы try, throw и catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
- [Операторы обработки исключений](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [Практическое руководство. Явное создание исключения](https://msdn.microsoft.com/library/xhcbs8fz)   
- [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a><span data-ttu-id="3b1b7-109">См. также</span><span class="sxs-lookup"><span data-stu-id="3b1b7-109">See Also</span></span>  
+ <span data-ttu-id="3b1b7-110">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="3b1b7-110">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="3b1b7-111">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="3b1b7-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="3b1b7-112">[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="3b1b7-112">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="3b1b7-113">[Операторы try, throw и catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp) </span><span class="sxs-lookup"><span data-stu-id="3b1b7-113">[try, throw, and catch Statements (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp) </span></span>  
+ <span data-ttu-id="3b1b7-114">[Операторы обработки исключений](../../../csharp/language-reference/keywords/exception-handling-statements.md) </span><span class="sxs-lookup"><span data-stu-id="3b1b7-114">[Exception Handling Statements](../../../csharp/language-reference/keywords/exception-handling-statements.md) </span></span>  
+ <span data-ttu-id="3b1b7-115">[throw](../../../csharp/language-reference/keywords/throw.md) </span><span class="sxs-lookup"><span data-stu-id="3b1b7-115">[throw](../../../csharp/language-reference/keywords/throw.md) </span></span>  
+ <span data-ttu-id="3b1b7-116">[Практическое руководство. Явное создание исключения](https://msdn.microsoft.com/library/xhcbs8fz) </span><span class="sxs-lookup"><span data-stu-id="3b1b7-116">[How to: Explicitly Throw Exceptions](https://msdn.microsoft.com/library/xhcbs8fz) </span></span>  
+ [<span data-ttu-id="3b1b7-117">Оператор using</span><span class="sxs-lookup"><span data-stu-id="3b1b7-117">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)
 

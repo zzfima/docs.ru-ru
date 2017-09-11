@@ -1,1 +1,1 @@
-Тип элемента в управляемой последовательности.
+<span data-ttu-id="fe3af-101">Тип элемента в управляемой последовательности.</span><span class="sxs-lookup"><span data-stu-id="fe3af-101">The type of an element in the controlled sequence.</span></span>

@@ -26,10 +26,10 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Пример XML-файла. Числовые данные (LINQ to XML)
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит числовые данные для суммирования, вычисления средних значений и группирования.  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="b5d6f-102">Пример XML-файла. Числовые данные (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b5d6f-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="b5d6f-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b5d6f-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b5d6f-104">Этот файл содержит числовые данные для суммирования, вычисления средних значений и группирования.</span><span class="sxs-lookup"><span data-stu-id="b5d6f-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a>Data.xml  
+## <a name="dataxml"></a><span data-ttu-id="b5d6f-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="b5d6f-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -72,6 +72,6 @@ ms.lasthandoff: 07/28/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b5d6f-106">См. также</span><span class="sxs-lookup"><span data-stu-id="b5d6f-106">See Also</span></span>  
+ [<span data-ttu-id="b5d6f-107">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b5d6f-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

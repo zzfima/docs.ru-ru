@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Переопределение метода ToString (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Переопределение метода ToString (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,50 +28,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 2dde281d439a07d7736949294772a57e926eb587
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 60cec855286a3bb572a0bacd08c0f7920a1fc912
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Практическое руководство. Переопределение метода ToString (Руководство по программированию на C#)
-Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>. Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта. Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:  
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a><span data-ttu-id="6f7d3-102">Практическое руководство. Переопределение метода ToString (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="6f7d3-102">How to: Override the ToString Method (C# Programming Guide)</span></span>
+<span data-ttu-id="6f7d3-103">Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-103">Every class or struct in C# implicitly inherits the <xref:System.Object> class.</span></span> <span data-ttu-id="6f7d3-104">Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-104">Therefore, every object in C# gets the <xref:System.Object.ToString%2A> method, which returns a string representation of that object.</span></span> <span data-ttu-id="6f7d3-105">Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:</span><span class="sxs-lookup"><span data-stu-id="6f7d3-105">For example, all variables of type `int` have a `ToString` method, which enables them to return their contents as a string:</span></span>  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
+ <span data-ttu-id="6f7d3-106">[!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="6f7d3-106">[!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]</span></span>  
   
- При создании пользовательского класса или структуры необходимо переопределить метод <xref:System.Object.ToString%2A>, чтобы передать информацию о типе клиентскому коду.  
+ <span data-ttu-id="6f7d3-107">При создании пользовательского класса или структуры необходимо переопределить метод <xref:System.Object.ToString%2A>, чтобы передать информацию о типе клиентскому коду.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-107">When you create a custom class or struct, you should override the <xref:System.Object.ToString%2A> method in order to provide information about your type to client code.</span></span>  
   
- Дополнительные сведения об использовании строк форматирования и других типов пользовательского форматирования с методом `ToString` см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).  
+ <span data-ttu-id="6f7d3-108">Дополнительные сведения об использовании строк форматирования и других типов пользовательского форматирования с методом `ToString` см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).</span><span class="sxs-lookup"><span data-stu-id="6f7d3-108">For information about how to use format strings and other types of custom formatting with the `ToString` method, see [Formatting Types](../../../standard/base-types/formatting-types.md).</span></span>  
   
 > [!IMPORTANT]
->  При принятии решения относительно того, какая информация должна будет предоставляться посредством этого метода, подумайте, будет ли создаваемый класс или структура когда-либо использоваться ненадежным кодом. Постарайтесь не предоставлять информацию, которая может быть использована вредоносным кодом.  
+>  <span data-ttu-id="6f7d3-109">При принятии решения относительно того, какая информация должна будет предоставляться посредством этого метода, подумайте, будет ли создаваемый класс или структура когда-либо использоваться ненадежным кодом.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-109">When you decide what information to provide through this method, consider whether your class or struct will ever be used by untrusted code.</span></span> <span data-ttu-id="6f7d3-110">Постарайтесь не предоставлять информацию, которая может быть использована вредоносным кодом.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-110">Be careful to ensure that you do not provide any information that could be exploited by malicious code.</span></span>  
   
-### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>Переопределение метода ToString в классе или структуре  
+### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a><span data-ttu-id="6f7d3-111">Переопределение метода ToString в классе или структуре</span><span class="sxs-lookup"><span data-stu-id="6f7d3-111">To override the ToString method in your class or struct</span></span>  
   
-1.  Объявите метод `ToString` со следующими модификаторами и типом возвращаемого значения:  
+1.  <span data-ttu-id="6f7d3-112">Объявите метод `ToString` со следующими модификаторами и типом возвращаемого значения:</span><span class="sxs-lookup"><span data-stu-id="6f7d3-112">Declare a `ToString` method with the following modifiers and return type:</span></span>  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2.  Реализуйте этот метод таким образом, чтобы он возвращал строку.  
+2.  <span data-ttu-id="6f7d3-113">Реализуйте этот метод таким образом, чтобы он возвращал строку.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-113">Implement the method so that it returns a string.</span></span>  
   
-     В приведенном ниже примере возвращается не только имя класса, но и специфические данные для конкретного экземпляра класса.  
+     <span data-ttu-id="6f7d3-114">В приведенном ниже примере возвращается не только имя класса, но и специфические данные для конкретного экземпляра класса.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-114">The following example returns the name of the class in addition to the data specific to a particular instance of the class.</span></span>  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
+     <span data-ttu-id="6f7d3-115">[!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="6f7d3-115">[!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]</span></span>  
   
-     Метод `ToString` можно проверить с помощью показанного ниже кода.  
+     <span data-ttu-id="6f7d3-116">Метод `ToString` можно проверить с помощью показанного ниже кода.</span><span class="sxs-lookup"><span data-stu-id="6f7d3-116">You can test the `ToString` method as shown in the following code example:</span></span>  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
+     <span data-ttu-id="6f7d3-117">[!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="6f7d3-117">[!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IFormattable>   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Строки](../../../csharp/programming-guide/strings/index.md)   
- [string](../../../csharp/language-reference/keywords/string.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [Типы форматирования](../../../standard/base-types/formatting-types.md)
+## <a name="see-also"></a><span data-ttu-id="6f7d3-118">См. также</span><span class="sxs-lookup"><span data-stu-id="6f7d3-118">See Also</span></span>  
+ <span data-ttu-id="6f7d3-119"><xref:System.IFormattable></span><span class="sxs-lookup"><span data-stu-id="6f7d3-119"><xref:System.IFormattable></span></span>   
+ <span data-ttu-id="6f7d3-120">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="6f7d3-120">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="6f7d3-121">[Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md) </span><span class="sxs-lookup"><span data-stu-id="6f7d3-121">[Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md) </span></span>  
+ <span data-ttu-id="6f7d3-122">[Строки](../../../csharp/programming-guide/strings/index.md) </span><span class="sxs-lookup"><span data-stu-id="6f7d3-122">[Strings](../../../csharp/programming-guide/strings/index.md) </span></span>  
+ <span data-ttu-id="6f7d3-123">[string](../../../csharp/language-reference/keywords/string.md) </span><span class="sxs-lookup"><span data-stu-id="6f7d3-123">[string](../../../csharp/language-reference/keywords/string.md) </span></span>  
+ <span data-ttu-id="6f7d3-124">[new](../../../csharp/language-reference/keywords/new.md) </span><span class="sxs-lookup"><span data-stu-id="6f7d3-124">[new](../../../csharp/language-reference/keywords/new.md) </span></span>  
+ <span data-ttu-id="6f7d3-125">[override](../../../csharp/language-reference/keywords/override.md) </span><span class="sxs-lookup"><span data-stu-id="6f7d3-125">[override](../../../csharp/language-reference/keywords/override.md) </span></span>  
+ <span data-ttu-id="6f7d3-126">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span><span class="sxs-lookup"><span data-stu-id="6f7d3-126">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span></span>  
+ [<span data-ttu-id="6f7d3-127">Типы форматирования</span><span class="sxs-lookup"><span data-stu-id="6f7d3-127">Formatting Types</span></span>](../../../standard/base-types/formatting-types.md)
+

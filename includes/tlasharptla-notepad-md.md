@@ -1,1 +1,1 @@
-Блокнот (Майкрософт)
+<span data-ttu-id="5f38d-101">Блокнот (Майкрософт)</span><span class="sxs-lookup"><span data-stu-id="5f38d-101">Microsoft Notepad</span></span>

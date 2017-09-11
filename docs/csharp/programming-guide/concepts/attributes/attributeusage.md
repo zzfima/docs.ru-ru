@@ -1,5 +1,5 @@
 ---
-title: "AttributeUsage (C#) | Документы Майкрософт"
+title: AttributeUsage (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f6c72c8152cc0f76085efbaa99ec63e50d1b676
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c008c1a696e93bc3b756a926a046aa5a6942bc10
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="attributeusage-c"></a>AttributeUsage (C#)
-Определяет, как можно использовать пользовательский класс атрибутов. Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута. При явном применении параметры по умолчанию выглядят следующим образом:  
+# <a name="attributeusage-c"></a><span data-ttu-id="38461-102">AttributeUsage (C#)</span><span class="sxs-lookup"><span data-stu-id="38461-102">AttributeUsage (C#)</span></span>
+<span data-ttu-id="38461-103">Определяет, как можно использовать пользовательский класс атрибутов.</span><span class="sxs-lookup"><span data-stu-id="38461-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="38461-104">Атрибут `AttributeUsage` можно применять к пользовательским определениям атрибутов, чтобы контролировать применение нового атрибута.</span><span class="sxs-lookup"><span data-stu-id="38461-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="38461-105">При явном применении параметры по умолчанию выглядят следующим образом:</span><span class="sxs-lookup"><span data-stu-id="38461-105">The default settings look like this when applied explicitly:</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.All,  
@@ -35,33 +36,29 @@ ms.lasthandoff: 03/13/2017
 class NewAttribute : System.Attribute { }  
 ```  
   
- В этом примере класс `NewAttribute` можно применить к любой сущности кода с атрибутами, но только один раз к каждой сущности. Он наследуется производными классами при применении к базовому классу.  
+ <span data-ttu-id="38461-106">В этом примере класс `NewAttribute` можно применить к любой сущности кода с атрибутами, но только один раз к каждой сущности.</span><span class="sxs-lookup"><span data-stu-id="38461-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="38461-107">Он наследуется производными классами при применении к базовому классу.</span><span class="sxs-lookup"><span data-stu-id="38461-107">It is inherited by derived classes when applied to a base class.</span></span>  
   
- Аргументы `AllowMultiple` и `Inherited` являются необязательными, так что этот код имеет тот же результат:  
+ <span data-ttu-id="38461-108">Аргументы `AllowMultiple` и `Inherited` являются необязательными, так что этот код имеет тот же результат:</span><span class="sxs-lookup"><span data-stu-id="38461-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.All)]  
 class NewAttribute : System.Attribute { }  
 ```  
   
- Первый аргумент `AttributeUsage` должен состоять из одного или нескольких элементов перечисления <xref:System.AttributeTargets>. Несколько целевых типов можно связать с помощью оператора OR следующим образом:  
+ <span data-ttu-id="38461-109">Первый аргумент `AttributeUsage` должен состоять из одного или нескольких элементов перечисления <xref:System.AttributeTargets>.</span><span class="sxs-lookup"><span data-stu-id="38461-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="38461-110">Несколько целевых типов можно связать с помощью оператора OR следующим образом:</span><span class="sxs-lookup"><span data-stu-id="38461-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]  
 class NewPropertyOrFieldAttribute : Attribute { }  
 ```  
   
- Если аргументу `AllowMultiple` присвоено значение `true`, то результирующий атрибут можно применить несколько раз к одной сущности следующим образом:  
+ <span data-ttu-id="38461-111">Если аргументу `AllowMultiple` присвоено значение `true`, то результирующий атрибут можно применить несколько раз к одной сущности следующим образом:</span><span class="sxs-lookup"><span data-stu-id="38461-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]  
 class MultiUseAttr : Attribute { }  
   
@@ -73,15 +70,13 @@ class Class1 { }
 class Class2 { }  
 ```  
   
- В этом случае `MultiUseAttr` можно применять несколько раз, так как `AllowMultiple` имеет значение `true`. Для применения нескольких атрибутов допускаются оба показанных формата.  
+ <span data-ttu-id="38461-112">В этом случае `MultiUseAttr` можно применять несколько раз, так как `AllowMultiple` имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="38461-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="38461-113">Для применения нескольких атрибутов допускаются оба показанных формата.</span><span class="sxs-lookup"><span data-stu-id="38461-113">Both formats shown for applying multiple attributes are valid.</span></span>  
   
- Если `Inherited` имеет значение `false`, то атрибут не наследуется классами, производными от класса с атрибутами. Пример:  
+ <span data-ttu-id="38461-114">Если `Inherited` имеет значение `false`, то атрибут не наследуется классами, производными от класса с атрибутами.</span><span class="sxs-lookup"><span data-stu-id="38461-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="38461-115">Пример:</span><span class="sxs-lookup"><span data-stu-id="38461-115">For example:</span></span>  
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]  
 class Attr1 : Attribute { }  
   
@@ -91,21 +86,19 @@ class BClass { }
 class DClass : BClass { }  
 ```  
   
- В этом случае `Attr1` не применяется к `DClass` путем наследования.  
+ <span data-ttu-id="38461-116">В этом случае `Attr1` не применяется к `DClass` путем наследования.</span><span class="sxs-lookup"><span data-stu-id="38461-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Атрибут `AttributeUsage` можно использовать только один раз — его нельзя повторно применять к одному и тому же классу. `AttributeUsage` — это псевдоним для <xref:System.AttributeUsageAttribute>.  
+## <a name="remarks"></a><span data-ttu-id="38461-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="38461-117">Remarks</span></span>  
+ <span data-ttu-id="38461-118">Атрибут `AttributeUsage` можно использовать только один раз — его нельзя повторно применять к одному и тому же классу.</span><span class="sxs-lookup"><span data-stu-id="38461-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="38461-119">`AttributeUsage` является псевдонимом для <xref:System.AttributeUsageAttribute>.</span><span class="sxs-lookup"><span data-stu-id="38461-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
   
- Дополнительные сведения см. в разделе [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+ <span data-ttu-id="38461-120">Дополнительные сведения см. в разделе [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span><span class="sxs-lookup"><span data-stu-id="38461-120">For more information, see [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="example"></a>Пример  
- В приведенном ниже примере демонстрируется действие аргументов `Inherited` и `AllowMultiple` по отношению к атрибуту `AttributeUsage`, а также способ перечисления настраиваемых атрибутов, примененных к классу.  
+## <a name="example"></a><span data-ttu-id="38461-121">Пример</span><span class="sxs-lookup"><span data-stu-id="38461-121">Example</span></span>  
+ <span data-ttu-id="38461-122">В приведенном ниже примере демонстрируется действие аргументов `Inherited` и `AllowMultiple` по отношению к атрибуту `AttributeUsage`, а также способ перечисления настраиваемых атрибутов, примененных к классу.</span><span class="sxs-lookup"><span data-stu-id="38461-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
   
 ```csharp  
 using System;  
-```  
-  
-```csharp  
+
 // Create some custom attributes:  
 [AttributeUsage(System.AttributeTargets.Class, Inherited = false)]  
 class A1 : System.Attribute { }  
@@ -148,7 +141,7 @@ public class TestAttributeUsage
 }  
 ```  
   
-## <a name="sample-output"></a>Пример результатов выполнения  
+## <a name="sample-output"></a><span data-ttu-id="38461-123">Пример результатов выполнения</span><span class="sxs-lookup"><span data-stu-id="38461-123">Sample Output</span></span>  
   
 ```  
 Attributes on Base Class:  
@@ -160,12 +153,13 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Attribute>   
- <xref:System.Reflection>   
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)   
- [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)   
- [Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Атрибуты](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a><span data-ttu-id="38461-124">См. также</span><span class="sxs-lookup"><span data-stu-id="38461-124">See Also</span></span>  
+ <span data-ttu-id="38461-125"><xref:System.Attribute></span><span class="sxs-lookup"><span data-stu-id="38461-125"><xref:System.Attribute></span></span>   
+ <span data-ttu-id="38461-126"><xref:System.Reflection></span><span class="sxs-lookup"><span data-stu-id="38461-126"><xref:System.Reflection></span></span>   
+ <span data-ttu-id="38461-127">[Руководство по программированию на C#](../../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="38461-127">[C# Programming Guide](../../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="38461-128">[Атрибуты](https://msdn.microsoft.com/library/5x6cd29c) </span><span class="sxs-lookup"><span data-stu-id="38461-128">[Attributes](https://msdn.microsoft.com/library/5x6cd29c) </span></span>  
+ <span data-ttu-id="38461-129">[Отражение (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span><span class="sxs-lookup"><span data-stu-id="38461-129">[Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span></span>  
+ <span data-ttu-id="38461-130">[Атрибуты](../../../../csharp/programming-guide/concepts/attributes/index.md) </span><span class="sxs-lookup"><span data-stu-id="38461-130">[Attributes](../../../../csharp/programming-guide/concepts/attributes/index.md) </span></span>  
+ <span data-ttu-id="38461-131">[Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md) </span><span class="sxs-lookup"><span data-stu-id="38461-131">[Creating Custom Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md) </span></span>  
+ [<span data-ttu-id="38461-132">Обращение к атрибутам с помощью отражения (C#)</span><span class="sxs-lookup"><span data-stu-id="38461-132">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

@@ -30,29 +30,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b1a2d4d66c65f6f178ad5a5035baa98e8c01fe99
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ae7829a9b62917c7e307e7e91b77377e1547149d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="textfieldparser-object"></a>TextFieldParser Object
-Предоставляет методы и свойства для анализа структурированных текстовых файлов.  
+# <a name="textfieldparser-object"></a><span data-ttu-id="51f0c-102">TextFieldParser Object</span><span class="sxs-lookup"><span data-stu-id="51f0c-102">TextFieldParser Object</span></span>
+<span data-ttu-id="51f0c-103">Предоставляет методы и свойства для анализа структурированных текстовых файлов.</span><span class="sxs-lookup"><span data-stu-id="51f0c-103">Provides methods and properties for parsing structured text files.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="51f0c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="51f0c-104">Syntax</span></span>  
   
 ```  
 Public Class TextFieldParser  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Дополнительные сведения о методах и свойствах `TextFieldParser` объекта см. в разделе <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+## <a name="remarks"></a><span data-ttu-id="51f0c-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="51f0c-105">Remarks</span></span>  
+ <span data-ttu-id="51f0c-106">Дополнительные сведения о методах и свойствах `TextFieldParser` объекта см. в разделе <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span><span class="sxs-lookup"><span data-stu-id="51f0c-106">For information about the methods and properties of the `TextFieldParser` object, see <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>.</span></span>  
   
- Дополнительные сведения см. в разделе [чтение из файлов](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).  
+ <span data-ttu-id="51f0c-107">Дополнительные сведения см. в разделе [чтение из файлов](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span><span class="sxs-lookup"><span data-stu-id="51f0c-107">For more information, see [Reading from Files](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md).</span></span>  
   
-## <a name="requirements"></a>Требования  
- **Пространство имен:**<xref:Microsoft.VisualBasic.FileIO></xref:Microsoft.VisualBasic.FileIO>  
+## <a name="requirements"></a><span data-ttu-id="51f0c-108">Требования</span><span class="sxs-lookup"><span data-stu-id="51f0c-108">Requirements</span></span>  
+ <span data-ttu-id="51f0c-109">**Пространство имен:**<xref:Microsoft.VisualBasic.FileIO></xref:Microsoft.VisualBasic.FileIO></span><span class="sxs-lookup"><span data-stu-id="51f0c-109">**Namespace:** <xref:Microsoft.VisualBasic.FileIO></span></span>  
   
- **Класс:**<xref:Microsoft.VisualBasic.FileIO.TextFieldParser></xref:Microsoft.VisualBasic.FileIO.TextFieldParser>  
+ <span data-ttu-id="51f0c-110">**Класс:**<xref:Microsoft.VisualBasic.FileIO.TextFieldParser></xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span><span class="sxs-lookup"><span data-stu-id="51f0c-110">**Class:** <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span></span>  
   
- **Сборка:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]
+ <span data-ttu-id="51f0c-111">**Сборка:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span><span class="sxs-lookup"><span data-stu-id="51f0c-111">**Assembly:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]</span></span>

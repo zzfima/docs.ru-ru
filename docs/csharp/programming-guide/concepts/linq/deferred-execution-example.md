@@ -21,11 +21,11 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="deferred-execution-example-c"></a>Пример отложенного выполнения (C#)
-В данном разделе показано влияние отложенного выполнения и отложенного вычисления на запросы LINQ to XML.  
+# <a name="deferred-execution-example-c"></a><span data-ttu-id="d0cda-102">Пример отложенного выполнения (C#)</span><span class="sxs-lookup"><span data-stu-id="d0cda-102">Deferred Execution Example (C#)</span></span>
+<span data-ttu-id="d0cda-103">В данном разделе показано влияние отложенного выполнения и отложенного вычисления на запросы LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="d0cda-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере демонстрируется порядок выполнения при использовании метода расширения, в котором применяется отложенное выполнение. В этом примере объявляется массив из трех строк. Затем в нем производится итерация по коллекции, возвращенной `ConvertCollectionToUpperCase`.  
+## <a name="example"></a><span data-ttu-id="d0cda-104">Пример</span><span class="sxs-lookup"><span data-stu-id="d0cda-104">Example</span></span>  
+ <span data-ttu-id="d0cda-105">В следующем примере демонстрируется порядок выполнения при использовании метода расширения, в котором применяется отложенное выполнение.</span><span class="sxs-lookup"><span data-stu-id="d0cda-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="d0cda-106">В этом примере объявляется массив из трех строк.</span><span class="sxs-lookup"><span data-stu-id="d0cda-106">The example declares an array of three strings.</span></span> <span data-ttu-id="d0cda-107">Затем в нем производится итерация по коллекции, возвращенной `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="d0cda-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -56,7 +56,7 @@ class Program
 }  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="d0cda-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="d0cda-108">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source abc  
@@ -67,14 +67,14 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- Обратите внимание, что во время итерации по коллекции, возвращенной `ConvertCollectionToUpperCase`, происходит получение каждого элемента из исходного массива строк и преобразование символов в верхний регистр до получения следующего элемента из исходного массива строк.  
+ <span data-ttu-id="d0cda-109">Обратите внимание, что во время итерации по коллекции, возвращенной `ConvertCollectionToUpperCase`, происходит получение каждого элемента из исходного массива строк и преобразование символов в верхний регистр до получения следующего элемента из исходного массива строк.</span><span class="sxs-lookup"><span data-stu-id="d0cda-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- Видно, что весь массив строк не преобразуется в символы верхнего регистра, пока каждый элемент возвращенной коллекции не будет обработан циклом `foreach` в `Main`.  
+ <span data-ttu-id="d0cda-110">Видно, что весь массив строк не преобразуется в символы верхнего регистра, пока каждый элемент возвращенной коллекции не будет обработан циклом `foreach` в `Main`.</span><span class="sxs-lookup"><span data-stu-id="d0cda-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
- Следующий раздел учебника иллюстрирует объединение запросов в цепочки:  
+ <span data-ttu-id="d0cda-111">Следующий раздел учебника иллюстрирует объединение запросов в цепочки:</span><span class="sxs-lookup"><span data-stu-id="d0cda-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
   
--   [Пример связывания запросов (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+-   [<span data-ttu-id="d0cda-112">Пример связывания запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="d0cda-112">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
-## <a name="see-also"></a>См. также  
- [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a><span data-ttu-id="d0cda-113">См. также</span><span class="sxs-lookup"><span data-stu-id="d0cda-113">See Also</span></span>  
+ [<span data-ttu-id="d0cda-114">Учебник. Объединение запросов в цепочки (C#)</span><span class="sxs-lookup"><span data-stu-id="d0cda-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
 

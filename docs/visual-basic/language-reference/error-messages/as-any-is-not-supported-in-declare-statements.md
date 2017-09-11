@@ -31,29 +31,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb179ae938d4c132f61e2076248729f7ea15a13f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bed9beb0c34c1a918029cc7fac4f8c97950eee23
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>'As Any' не поддерживается в инструкциях 'Declare'
-`Any` Использовался тип данных с помощью `Declare` операторов в Visual Basic 6.0 и более ранних версиях, чтобы разрешить использование аргументов, которые могут содержать данные любого типа. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]поддерживает перегрузку, однако и это делает `Any` устаревший тип данных.  
+# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a><span data-ttu-id="66956-102">'As Any' не поддерживается в инструкциях 'Declare'</span><span class="sxs-lookup"><span data-stu-id="66956-102">&#39;As Any&#39; is not supported in &#39;Declare&#39; statements</span></span>
+<span data-ttu-id="66956-103">`Any` Использовался тип данных с помощью `Declare` операторов в Visual Basic 6.0 и более ранних версиях, чтобы разрешить использование аргументов, которые могут содержать данные любого типа.</span><span class="sxs-lookup"><span data-stu-id="66956-103">The `Any` data type was used with `Declare` statements in Visual Basic 6.0 and earlier versions to permit the use of arguments that could contain any type of data.</span></span> [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="66956-104">поддерживает перегрузку, однако и это делает `Any` устаревший тип данных.</span><span class="sxs-lookup"><span data-stu-id="66956-104"> supports overloading, however, and so makes the `Any` data type obsolete.</span></span>  
   
- **Идентификатор ошибки:** BC30828  
+ <span data-ttu-id="66956-105">**Идентификатор ошибки:** BC30828</span><span class="sxs-lookup"><span data-stu-id="66956-105">**Error ID:** BC30828</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="66956-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="66956-106">To correct this error</span></span>  
   
-1.  Объявления параметров определенного типа, который вы хотите использовать; Например.  
+1.  <span data-ttu-id="66956-107">Объявления параметров определенного типа, который вы хотите использовать; Например.</span><span class="sxs-lookup"><span data-stu-id="66956-107">Declare parameters of the specific type you want to use; for example.</span></span>  
   
-     [!code-vb[VbVbalrStatements&#95;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
+     <span data-ttu-id="66956-108">[!code-vb[VbVbalrStatements&#95;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="66956-108">[!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]</span></span>  
   
-2.  Используйте <xref:System.Runtime.InteropServices.MarshalAsAttribute>атрибут, чтобы указать `As Any` при `Void*` ожидается вызываемой процедуры.</xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+2.  <span data-ttu-id="66956-109">Используйте <xref:System.Runtime.InteropServices.MarshalAsAttribute>атрибут, чтобы указать `As Any` при `Void*` ожидается вызываемой процедуры.</xref:System.Runtime.InteropServices.MarshalAsAttribute></span><span class="sxs-lookup"><span data-stu-id="66956-109">Use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to specify `As Any` when `Void*` is expected by the procedure being called.</span></span>  
   
-     [!code-vb[VbVbalrStatements&#96;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
+     <span data-ttu-id="66956-110">[!code-vb[VbVbalrStatements&#96;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="66956-110">[!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute></xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Пошаговое руководство: Вызов Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)   
- [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Создание прототипов в управляемом коде](http://msdn.microsoft.com/library/ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d)
+## <a name="see-also"></a><span data-ttu-id="66956-111">См. также</span><span class="sxs-lookup"><span data-stu-id="66956-111">See Also</span></span>  
+ <span data-ttu-id="66956-112"><xref:System.Runtime.InteropServices.MarshalAsAttribute></xref:System.Runtime.InteropServices.MarshalAsAttribute></span><span class="sxs-lookup"><span data-stu-id="66956-112"><xref:System.Runtime.InteropServices.MarshalAsAttribute></span></span>   
+<span data-ttu-id="66956-113"> [Пошаговое руководство: Вызов Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md) </span><span class="sxs-lookup"><span data-stu-id="66956-113"> [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md) </span></span>  
+<span data-ttu-id="66956-114"> [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md) </span><span class="sxs-lookup"><span data-stu-id="66956-114"> [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) </span></span>  
+<span data-ttu-id="66956-115"> [Создание прототипов в управляемом коде](http://msdn.microsoft.com/library/ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d)</span><span class="sxs-lookup"><span data-stu-id="66956-115"> [Creating Prototypes in Managed Code](http://msdn.microsoft.com/library/ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d)</span></span>

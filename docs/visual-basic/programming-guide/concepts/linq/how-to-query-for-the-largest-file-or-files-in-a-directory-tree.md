@@ -20,27 +20,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 055cbdd5a5903417ab382d390e1215f0319c0b5a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 95c5197b2cb66745201ceac89b78fe67b95ecb75
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (Visual Basic)
-Этот пример показывает пять запросов, связанных с размером файла в байтах.  
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a><span data-ttu-id="b490a-102">Практическое руководство. Запрос самого большого файла или файлов в дереве папок (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b490a-102">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="b490a-103">Этот пример показывает пять запросов, связанных с размером файла в байтах.</span><span class="sxs-lookup"><span data-stu-id="b490a-103">This example shows five queries related to file size in bytes:</span></span>  
   
--   Как получить размер в байтах самого большого файла.  
+-   <span data-ttu-id="b490a-104">Как получить размер в байтах самого большого файла.</span><span class="sxs-lookup"><span data-stu-id="b490a-104">How to retrieve the size in bytes of the largest file.</span></span>  
   
--   Как получить размер в байтах наименьшего файла.  
+-   <span data-ttu-id="b490a-105">Как получить размер в байтах наименьшего файла.</span><span class="sxs-lookup"><span data-stu-id="b490a-105">How to retrieve the size in bytes of the smallest file.</span></span>  
   
--   Как получить <xref:System.IO.FileInfo>объекта наибольшего или наименьшего файла из одной или нескольких папок в указанной корневой папке.</xref:System.IO.FileInfo>  
+-   <span data-ttu-id="b490a-106">Как получить <xref:System.IO.FileInfo>объекта наибольшего или наименьшего файла из одной или нескольких папок в указанной корневой папке.</xref:System.IO.FileInfo></span><span class="sxs-lookup"><span data-stu-id="b490a-106">How to retrieve the <xref:System.IO.FileInfo> object largest or smallest file from one or more folders under a specified root folder.</span></span>  
   
--   Как получить последовательности, например 10 наибольших файлов.  
+-   <span data-ttu-id="b490a-107">Как получить последовательности, например 10 наибольших файлов.</span><span class="sxs-lookup"><span data-stu-id="b490a-107">How to retrieve a sequence such as the 10 largest files.</span></span>  
   
--   Как упорядочение файлов в группы на основании их размера в байтах, игнорируя файлы меньше заданного размера.  
+-   <span data-ttu-id="b490a-108">Как упорядочение файлов в группы на основании их размера в байтах, игнорируя файлы меньше заданного размера.</span><span class="sxs-lookup"><span data-stu-id="b490a-108">How to order files into groups based on their file size in bytes, ignoring files that are less than a specified size.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий пример содержит пять отдельных запросов, которые показывают, как запрашивать и группировать файлы на основании их размера в байтах. Эти примеры, чтобы создать запрос на основании других свойств объекта можно легко изменить <xref:System.IO.FileInfo>объекта.</xref:System.IO.FileInfo>  
+## <a name="example"></a><span data-ttu-id="b490a-109">Пример</span><span class="sxs-lookup"><span data-stu-id="b490a-109">Example</span></span>  
+ <span data-ttu-id="b490a-110">Следующий пример содержит пять отдельных запросов, которые показывают, как запрашивать и группировать файлы на основании их размера в байтах.</span><span class="sxs-lookup"><span data-stu-id="b490a-110">The following example contains five separate queries that show how to query and group files, depending on their file size in bytes.</span></span> <span data-ttu-id="b490a-111">Эти примеры, чтобы создать запрос на основании других свойств объекта можно легко изменить <xref:System.IO.FileInfo>объекта.</xref:System.IO.FileInfo></span><span class="sxs-lookup"><span data-stu-id="b490a-111">You can easily modify these examples to base the query on some other property of the <xref:System.IO.FileInfo> object.</span></span>  
   
 ```vb  
 Module QueryBySize  
@@ -130,13 +131,13 @@ Module QueryBySize
 End Module  
 ```  
   
- Чтобы вернуть один или несколько полных <xref:System.IO.FileInfo>объектов, запрос должен сначала проверить каждый из них в данных источника, а затем отсортировать их по значению свойства Length.</xref:System.IO.FileInfo> Затем он может вернуть один объект или последовательность объектов с максимальной длиной. Используйте <xref:System.Linq.Enumerable.First%2A>для возвращения первого элемента в списке.</xref:System.Linq.Enumerable.First%2A> Используйте <xref:System.Linq.Enumerable.Take%2A>для возврата n количество первых элементов.</xref:System.Linq.Enumerable.Take%2A> Укажите порядок сортировки по убыванию для размещения наименьших элементов в начале списка.  
+ <span data-ttu-id="b490a-112">Чтобы вернуть один или несколько полных <xref:System.IO.FileInfo>объектов, запрос должен сначала проверить каждый из них в данных источника, а затем отсортировать их по значению свойства Length.</xref:System.IO.FileInfo></span><span class="sxs-lookup"><span data-stu-id="b490a-112">To return one or more complete <xref:System.IO.FileInfo> objects, the query first must examine each one in the data source, and then sort them by the value of their Length property.</span></span> <span data-ttu-id="b490a-113">Затем он может вернуть один объект или последовательность объектов с максимальной длиной.</span><span class="sxs-lookup"><span data-stu-id="b490a-113">Then it can return the single one or the sequence with the greatest lengths.</span></span> <span data-ttu-id="b490a-114">Используйте <xref:System.Linq.Enumerable.First%2A>для возвращения первого элемента в списке.</xref:System.Linq.Enumerable.First%2A></span><span class="sxs-lookup"><span data-stu-id="b490a-114">Use <xref:System.Linq.Enumerable.First%2A> to return the first element in a list.</span></span> <span data-ttu-id="b490a-115">Используйте <xref:System.Linq.Enumerable.Take%2A>для возврата n количество первых элементов.</xref:System.Linq.Enumerable.Take%2A></span><span class="sxs-lookup"><span data-stu-id="b490a-115">Use <xref:System.Linq.Enumerable.Take%2A> to return the first n number of elements.</span></span> <span data-ttu-id="b490a-116">Укажите порядок сортировки по убыванию для размещения наименьших элементов в начале списка.</span><span class="sxs-lookup"><span data-stu-id="b490a-116">Specify a descending sort order to put the smallest elements at the start of the list.</span></span>  
   
- Запрос вызывает отдельный метод, чтобы получить размер файла в байтах для обработки возможных исключений, которые могут возникнуть в случае, когда файл был удален в другом потоке за период времени с момента <xref:System.IO.FileInfo>объект был создан в вызове `GetFiles`.</xref:System.IO.FileInfo> Вплоть до <xref:System.IO.FileInfo>объект уже создан, исключение может возникнуть из-за <xref:System.IO.FileInfo>будет пытаться обновить его <xref:System.IO.FileInfo.Length%2A>используя самый последний размер в байтах при первом обращении к свойству.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Поместив эту операцию в блок try-catch вне запроса, будет выполнено правило исключения использования операций в запросах, которые могут вызвать побочные эффекты. В общем случае отлично необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться в том, что приложение не остается в неизвестном состоянии.  
+ <span data-ttu-id="b490a-117">Запрос вызывает отдельный метод, чтобы получить размер файла в байтах для обработки возможных исключений, которые могут возникнуть в случае, когда файл был удален в другом потоке за период времени с момента <xref:System.IO.FileInfo>объект был создан в вызове `GetFiles`.</xref:System.IO.FileInfo></span><span class="sxs-lookup"><span data-stu-id="b490a-117">The query calls out to a separate method to obtain the file size in bytes in order to consume the possible exception that will be raised in the case where a file was deleted on another thread in the time period since the <xref:System.IO.FileInfo> object was created in the call to `GetFiles`.</span></span> <span data-ttu-id="b490a-118">Вплоть до <xref:System.IO.FileInfo>объект уже создан, исключение может возникнуть из-за <xref:System.IO.FileInfo>будет пытаться обновить его <xref:System.IO.FileInfo.Length%2A>используя самый последний размер в байтах при первом обращении к свойству.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo></span><span class="sxs-lookup"><span data-stu-id="b490a-118">Even through the <xref:System.IO.FileInfo> object has already been created, the exception can occur because a <xref:System.IO.FileInfo> object will try to refresh its <xref:System.IO.FileInfo.Length%2A> property by using the most current size in bytes the first time the property is accessed.</span></span> <span data-ttu-id="b490a-119">Поместив эту операцию в блок try-catch вне запроса, будет выполнено правило исключения использования операций в запросах, которые могут вызвать побочные эффекты.</span><span class="sxs-lookup"><span data-stu-id="b490a-119">By putting this operation in a try-catch block outside the query, we follow the rule of avoiding operations in queries that can cause side-effects.</span></span> <span data-ttu-id="b490a-120">В общем случае отлично необходимо соблюдать осторожность при перехвате исключений, чтобы убедиться в том, что приложение не остается в неизвестном состоянии.</span><span class="sxs-lookup"><span data-stu-id="b490a-120">In general, great care must be taken when consuming exceptions, to make sure that an application is not left in an unknown state.</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="b490a-121">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b490a-121">Compiling the Code</span></span>  
+ <span data-ttu-id="b490a-122">Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="b490a-122">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="b490a-123">См. также</span><span class="sxs-lookup"><span data-stu-id="b490a-123">See Also</span></span>  
+ <span data-ttu-id="b490a-124">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="b490a-124">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="b490a-125"> [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="b490a-125"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

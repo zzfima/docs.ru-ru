@@ -1,58 +1,77 @@
 ---
-title: "/moduleassemblyname (C# Compiler Option) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/moduleassemblyname"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "moduleassemblyname compiler option [C#]"
-  - "/moduleassemblyname compiler option [C#]"
-  - ".moduleassemblyname compiler option [C#]"
+title: "-moduleassemblyname (параметры компилятора C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /moduleassemblyname
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- moduleassemblyname compiler option [C#]
+- /moduleassemblyname compiler option [C#]
+- .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# /moduleassemblyname (C# Compiler Option)
-Задает сборку, к неоткрытым типам которой может получить доступ netmodule.  
+# <a name="moduleassemblyname-c-compiler-option"></a><span data-ttu-id="8e24d-102">/moduleassemblyname (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="8e24d-102">/moduleassemblyname (C# Compiler Option)</span></span>
+<span data-ttu-id="8e24d-103">Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.</span><span class="sxs-lookup"><span data-stu-id="8e24d-103">Specifies an assembly whose non-public types a .netmodule can access.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="8e24d-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8e24d-104">Syntax</span></span>  
   
-```  
+```console  
 /moduleassemblyname:assembly_name  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a><span data-ttu-id="8e24d-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="8e24d-105">Arguments</span></span>  
  `assembly_name`  
- Имя сборки, к чьим неоткрытым типам может обращаться файл с расширением .netmodule.  
+ <span data-ttu-id="8e24d-106">Имя сборки, к неоткрытым типам которой может обращаться .netmodule.</span><span class="sxs-lookup"><span data-stu-id="8e24d-106">The name of the assembly whose non-public types the .netmodule can access.</span></span>  
   
-## Заметки  
- **\/moduleassemblyname** должен использоваться при построении файла .netmodule и, когда выполняются следующие условия:  
+## <a name="remarks"></a><span data-ttu-id="8e24d-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="8e24d-107">Remarks</span></span>  
+ <span data-ttu-id="8e24d-108">Параметр **/moduleassemblyname** должен использоваться при построении .netmodule и выполнении следующий условий:</span><span class="sxs-lookup"><span data-stu-id="8e24d-108">**/moduleassemblyname** should be used when building a .netmodule, and where the following conditions are true:</span></span>  
   
--   Для файла .netmodule требуется доступ к неоткрытым типам в существующей сборке.  
+-   <span data-ttu-id="8e24d-109">.netmodule требуется доступ к неоткрытым типам в существующей сборке.</span><span class="sxs-lookup"><span data-stu-id="8e24d-109">The .netmodule needs access to non-public types in an existing assembly.</span></span>  
   
--   Известно имя сборки, в которой будет создан .netmodule.  
+-   <span data-ttu-id="8e24d-110">Известно имя сборки, в которой будет создан .netmodule.</span><span class="sxs-lookup"><span data-stu-id="8e24d-110">You know the name of the assembly into which the .netmodule will be built.</span></span>  
   
--   Существующая сборка предоставила дружественной сборке доступ к сборке, в которую будет встроен .netmodule.  
+-   <span data-ttu-id="8e24d-111">Существующая сборка предоставила дружественной сборке доступ к сборке, в которую будет встроен .netmodule.</span><span class="sxs-lookup"><span data-stu-id="8e24d-111">The existing assembly has granted friend assembly access to the assembly into which the .netmodule will be built.</span></span>  
   
- Дополнительные сведения о построении .netmodule содержатся в [\/target:module \(Create Module to Add to Assembly\)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ <span data-ttu-id="8e24d-112">Дополнительные сведения о построении файлов .netmodule см. в разделе [/target:module (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="8e24d-112">For more information on building a .netmodule, see [/target:module (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).</span></span>  
   
- Дополнительные сведения о дружественных сборках см. в разделе [Дружественные сборки](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md).  
+ <span data-ttu-id="8e24d-113">Дополнительные сведения см. в разделе [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span><span class="sxs-lookup"><span data-stu-id="8e24d-113">For more information on friend assemblies, see [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span></span>  
   
- Этот параметр недоступен из среды разработки; он доступен только при компиляции из командной строки.  
+ <span data-ttu-id="8e24d-114">Этот параметр недоступен в среде разработки и может использоваться только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="8e24d-114">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- Этот параметр компилятора недоступен в среде разработки Visual Studio и не может быть изменен программным способом.  
+ <span data-ttu-id="8e24d-115">Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.</span><span class="sxs-lookup"><span data-stu-id="8e24d-115">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## Пример  
- Следующий пример выполняет построение сборки с закрытым типом и предоставляем дружественной сборке доступ к сборке с именем csman\_an\_assembly.  
+## <a name="example"></a><span data-ttu-id="8e24d-116">Пример</span><span class="sxs-lookup"><span data-stu-id="8e24d-116">Example</span></span>  
+ <span data-ttu-id="8e24d-117">В этом примере выполняется построение сборки частного типа, которой предоставляется дружественный доступ к сборке csman_an_assembly.</span><span class="sxs-lookup"><span data-stu-id="8e24d-117">This sample builds an assembly with a private type, and that gives friend assembly access to an assembly called csman_an_assembly.</span></span>  
   
-```  
+```csharp  
 // moduleassemblyname_1.cs  
 // compile with: /target:library  
 using System;  
@@ -69,10 +88,10 @@ class An_Internal_Class
 }  
 ```  
   
-## Пример  
- Этот пример строит .netmodule, который обращается к неоткрытому типу в сборке moduleassemblyname\_1.dll.  Узнав, что этот .netmodule будет встроен в сборку под названием csman\_an\_assembly, можно указать **\/moduleassemblyname**, позволяя .netmodule обращаться к неоткрытым типам в сборке, которой предоставлен доступ к дружественной сборке csman\_an\_assembly.  
+## <a name="example"></a><span data-ttu-id="8e24d-118">Пример</span><span class="sxs-lookup"><span data-stu-id="8e24d-118">Example</span></span>  
+ <span data-ttu-id="8e24d-119">Этот пример строит .netmodule, который обращается к неоткрытому типу в сборке moduleassemblyname_1.dll.</span><span class="sxs-lookup"><span data-stu-id="8e24d-119">This sample builds a .netmodule that accesses a non-public type in the assembly moduleassemblyname_1.dll.</span></span> <span data-ttu-id="8e24d-120">Мы знаем, что .netmodule будет встроен в сборку csman_an_assembly, поэтому можем задать **/moduleassemblyname**, чтобы позволить .netmodule обращаться к неоткрытым типам в сборке, которой предоставлен доступ к дружественной сборке csman_an_assembly.</span><span class="sxs-lookup"><span data-stu-id="8e24d-120">By knowing that this .netmodule will be built into an assembly called csman_an_assembly, we can specify **/moduleassemblyname**, allowing the .netmodule to access non-public types in an assembly that has granted friend assembly access to csman_an_assembly.</span></span>  
   
-```  
+```csharp  
 // moduleassemblyname_2.cs  
 // compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
 class B {  
@@ -83,10 +102,10 @@ class B {
 }  
 ```  
   
-## Пример  
- Следующий код выполняет построение сборки csman\_an\_assembly, ссылаясь на ранее построенную сборку и .netmodule.  
+## <a name="example"></a><span data-ttu-id="8e24d-121">Пример</span><span class="sxs-lookup"><span data-stu-id="8e24d-121">Example</span></span>  
+ <span data-ttu-id="8e24d-122">В следующем примере кода выполнено построение сборки csman_an_assembly со ссылками на ранее построенную сборку и .netmodule.</span><span class="sxs-lookup"><span data-stu-id="8e24d-122">This code sample builds the assembly csman_an_assembly, referencing the previously-built assembly and .netmodule.</span></span>  
   
-```  
+```csharp  
 // csman_an_assembly.cs  
 // compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
 class A {  
@@ -97,7 +116,8 @@ class A {
 }  
 ```  
   
-  **An\_Internal\_Class.Test под названием**   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ <span data-ttu-id="8e24d-123">**Вызывается An_Internal_Class.Test**</span><span class="sxs-lookup"><span data-stu-id="8e24d-123">**An_Internal_Class.Test called**</span></span>   
+## <a name="see-also"></a><span data-ttu-id="8e24d-124">См. также</span><span class="sxs-lookup"><span data-stu-id="8e24d-124">See Also</span></span>  
+ <span data-ttu-id="8e24d-125">[Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="8e24d-125">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="8e24d-126">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="8e24d-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+

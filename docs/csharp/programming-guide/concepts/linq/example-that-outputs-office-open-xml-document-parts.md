@@ -21,13 +21,13 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Пример, выводящий части документа в формате Office Open XML (C#)
-В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="0ac22-102">Пример, выводящий части документа в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="0ac22-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
+<span data-ttu-id="0ac22-103">В этом разделе разъясняется, как открывать документ Office Open XML и как обращаться к частям этого документа.</span><span class="sxs-lookup"><span data-stu-id="0ac22-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере открывается документ Office Open XML, после чего часть, содержащая сам документ, и часть, содержащая стиль, выводятся на консоль.  
+## <a name="example"></a><span data-ttu-id="0ac22-104">Пример</span><span class="sxs-lookup"><span data-stu-id="0ac22-104">Example</span></span>  
+ <span data-ttu-id="0ac22-105">В следующем примере открывается документ Office Open XML, после чего часть, содержащая сам документ, и часть, содержащая стиль, выводятся на консоль.</span><span class="sxs-lookup"><span data-stu-id="0ac22-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=fullName>.  
+ <span data-ttu-id="0ac22-106">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="0ac22-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="0ac22-107">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="0ac22-107">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -78,6 +78,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сведения о документах WordprocessingML в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="0ac22-108">См. также</span><span class="sxs-lookup"><span data-stu-id="0ac22-108">See Also</span></span>  
+ [<span data-ttu-id="0ac22-109">Сведения о документах WordprocessingML в формате Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="0ac22-109">Details of Office Open XML WordprocessingML Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
 

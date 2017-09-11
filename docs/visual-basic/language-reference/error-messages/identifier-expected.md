@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 795b1d47c2fef7246d23260b5a866ede8f4cadb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 01152cdbce5db3379f25b58cb39e6c9c8446562b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="identifier-expected"></a>Требуется идентификатор
-Элемент программирования, который не является распознаваемым именем объявленного элемента происходит, где контекст требует имя элемента. Одной из возможных причин — что атрибут был указан не в начале инструкции.  
+# <a name="identifier-expected"></a><span data-ttu-id="4f66e-102">Требуется идентификатор</span><span class="sxs-lookup"><span data-stu-id="4f66e-102">Identifier expected</span></span>
+<span data-ttu-id="4f66e-103">Элемент программирования, который не является распознаваемым именем объявленного элемента происходит, где контекст требует имя элемента.</span><span class="sxs-lookup"><span data-stu-id="4f66e-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="4f66e-104">Одной из возможных причин — что атрибут был указан не в начале инструкции.</span><span class="sxs-lookup"><span data-stu-id="4f66e-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
   
- **Идентификатор ошибки:** BC30203  
+ <span data-ttu-id="4f66e-105">**Идентификатор ошибки:** BC30203</span><span class="sxs-lookup"><span data-stu-id="4f66e-105">**Error ID:** BC30203</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4f66e-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="4f66e-106">To correct this error</span></span>  
   
--   Убедитесь, что все атрибуты в операторе помещены в начале.  
+-   <span data-ttu-id="4f66e-107">Убедитесь, что все атрибуты в операторе помещены в начале.</span><span class="sxs-lookup"><span data-stu-id="4f66e-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
   
--   Проверьте правильность написания имен элементов в операторе.  
+-   <span data-ttu-id="4f66e-108">Проверьте правильность написания имен элементов в операторе.</span><span class="sxs-lookup"><span data-stu-id="4f66e-108">Verify that all element names in the statement are spelled correctly.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="4f66e-109">См. также</span><span class="sxs-lookup"><span data-stu-id="4f66e-109">See Also</span></span>  
+ <span data-ttu-id="4f66e-110">[Имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span><span class="sxs-lookup"><span data-stu-id="4f66e-110">[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span></span>  
+<span data-ttu-id="4f66e-111"> [Обзор атрибутов](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span><span class="sxs-lookup"><span data-stu-id="4f66e-111"> [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span></span>
  

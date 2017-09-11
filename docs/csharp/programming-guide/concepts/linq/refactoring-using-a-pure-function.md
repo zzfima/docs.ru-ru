@@ -21,15 +21,15 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="refactoring-using-a-pure-function-c"></a>Рефакторинг с использованием чистых функций (C#)
-В приведенном ниже примере выполняется оптимизация кода предыдущего примера [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) для использования чистой функции. При этом код, предназначенный для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.  
+# <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="e3ce5-102">Рефакторинг с использованием чистых функций (C#)</span><span class="sxs-lookup"><span data-stu-id="e3ce5-102">Refactoring Using a Pure Function (C#)</span></span>
+<span data-ttu-id="e3ce5-103">В приведенном ниже примере выполняется оптимизация кода предыдущего примера [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) для использования чистой функции. При этом код, предназначенный для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="e3ce5-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a>Пример  
- В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев. Также идентифицируется стиль каждого абзаца. Этот пример основан на предыдущих примерах данного учебника. Оптимизированный код поясняется в комментариях кода ниже.  
+## <a name="example"></a><span data-ttu-id="e3ce5-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e3ce5-104">Example</span></span>  
+ <span data-ttu-id="e3ce5-105">В данном примере обрабатывается документ WordprocessingML, из которого извлекаются узлы абзацев.</span><span class="sxs-lookup"><span data-stu-id="e3ce5-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="e3ce5-106">Также идентифицируется стиль каждого абзаца.</span><span class="sxs-lookup"><span data-stu-id="e3ce5-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="e3ce5-107">Этот пример основан на предыдущих примерах данного учебника.</span><span class="sxs-lookup"><span data-stu-id="e3ce5-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="e3ce5-108">Оптимизированный код поясняется в комментариях кода ниже.</span><span class="sxs-lookup"><span data-stu-id="e3ce5-108">The refactored code is called out in comments in the code below.</span></span>  
   
- Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ <span data-ttu-id="e3ce5-109">Инструкции по созданию исходного документа для этого примера см. в разделе [Создание исходного документа в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span><span class="sxs-lookup"><span data-stu-id="e3ce5-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- В этом примере используются классы из сборки WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=fullName>.  
+ <span data-ttu-id="e3ce5-110">В этом примере используются классы из сборки WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="e3ce5-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="e3ce5-111">Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="e3ce5-111">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -166,7 +166,7 @@ class Program
 }  
 ```  
   
- В этом примере выводятся те же результаты, что и после оптимизации кода:  
+ <span data-ttu-id="e3ce5-112">В этом примере выводятся те же результаты, что и после оптимизации кода:</span><span class="sxs-lookup"><span data-stu-id="e3ce5-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -186,13 +186,13 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a>Следующие шаги  
- В следующем примере показано, как выполнить проекцию XML в другую форму:  
+### <a name="next-steps"></a><span data-ttu-id="e3ce5-113">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="e3ce5-113">Next Steps</span></span>  
+ <span data-ttu-id="e3ce5-114">В следующем примере показано, как выполнить проекцию XML в другую форму:</span><span class="sxs-lookup"><span data-stu-id="e3ce5-114">The next example shows how to project XML into a different shape:</span></span>  
   
--   [Проецирование XML в другую форму (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [<span data-ttu-id="e3ce5-115">Проецирование XML в другую форму (C#)</span><span class="sxs-lookup"><span data-stu-id="e3ce5-115">Projecting XML in a Different Shape (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>См. также  
- [Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
- [Рефакторинг в чистые функции (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="e3ce5-116">См. также</span><span class="sxs-lookup"><span data-stu-id="e3ce5-116">See Also</span></span>  
+ <span data-ttu-id="e3ce5-117">[Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) </span><span class="sxs-lookup"><span data-stu-id="e3ce5-117">[Tutorial: Manipulating Content in a WordprocessingML Document (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) </span></span>  
+ <span data-ttu-id="e3ce5-118">[Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) </span><span class="sxs-lookup"><span data-stu-id="e3ce5-118">[Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) </span></span>  
+ [<span data-ttu-id="e3ce5-119">Рефакторинг в чистые функции (C#)</span><span class="sxs-lookup"><span data-stu-id="e3ce5-119">Refactoring Into Pure Functions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
 

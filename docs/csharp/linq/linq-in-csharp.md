@@ -18,33 +18,33 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="linq-in-c"></a>LINQ в C#
-Этот раздел включает ссылки на разделы, содержащие более подробные сведения о LINQ.  
+# <a name="linq-in-c"></a><span data-ttu-id="82a19-104">LINQ в C#</span><span class="sxs-lookup"><span data-stu-id="82a19-104">LINQ in C#</span></span>
+<span data-ttu-id="82a19-105">Этот раздел включает ссылки на разделы, содержащие более подробные сведения о LINQ.</span><span class="sxs-lookup"><span data-stu-id="82a19-105">This section contains links to topics that provide more detailed information about LINQ.</span></span>  
   
-## <a name="in-this-section"></a>Содержание раздела  
- [Введение в запросы LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Описание трех составляющих основной операции запроса LINQ, которые являются общими для всех языков и источников данных.  
+## <a name="in-this-section"></a><span data-ttu-id="82a19-106">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="82a19-106">In this section</span></span>  
+ [<span data-ttu-id="82a19-107">Введение в запросы LINQ</span><span class="sxs-lookup"><span data-stu-id="82a19-107">Introduction to LINQ queries</span></span>](../programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ <span data-ttu-id="82a19-108">Описание трех составляющих основной операции запроса LINQ, которые являются общими для всех языков и источников данных.</span><span class="sxs-lookup"><span data-stu-id="82a19-108">Describes the three parts of the basic LINQ query operation that are common across all languages and data sources.</span></span>  
   
- [LINQ и универсальные типы](../programming-guide/concepts/linq/linq-and-generic-types.md)  
- Краткое введение в универсальные типы и принципы их использования в запросах LINQ.  
+ [<span data-ttu-id="82a19-109">LINQ и универсальные типы</span><span class="sxs-lookup"><span data-stu-id="82a19-109">LINQ and generic types</span></span>](../programming-guide/concepts/linq/linq-and-generic-types.md)  
+ <span data-ttu-id="82a19-110">Краткое введение в универсальные типы и принципы их использования в запросах LINQ.</span><span class="sxs-lookup"><span data-stu-id="82a19-110">Provides a brief introduction to generic types as they are used in LINQ.</span></span>  
   
- [Преобразование данных с помощью LINQ](../programming-guide/concepts/linq/data-transformations-with-linq.md)  
- Описание различных способов преобразования данных, полученных в результате запросов.  
+ [<span data-ttu-id="82a19-111">Преобразование данных с помощью LINQ</span><span class="sxs-lookup"><span data-stu-id="82a19-111">Data transformations with LINQ</span></span>](../programming-guide/concepts/linq/data-transformations-with-linq.md)  
+ <span data-ttu-id="82a19-112">Описание различных способов преобразования данных, полученных в результате запросов.</span><span class="sxs-lookup"><span data-stu-id="82a19-112">Describes the various ways that you can transform data retrieved in queries.</span></span>  
   
- [Связи типов в операциях запросов LINQ](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
- Сведения о сохранении и преобразовании типов в трех составляющих операции запроса LINQ.  
+ [<span data-ttu-id="82a19-113">Связи типов в операциях запросов LINQ</span><span class="sxs-lookup"><span data-stu-id="82a19-113">Type relationships in LINQ query operations</span></span>](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+ <span data-ttu-id="82a19-114">Сведения о сохранении и преобразовании типов в трех составляющих операции запроса LINQ.</span><span class="sxs-lookup"><span data-stu-id="82a19-114">Describes how types are preserved and/or transformed in the three parts of a LINQ query operation</span></span>  
   
- [Синтаксис запросов и синтаксис методов в LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
- Сравнение синтаксиса методов и синтаксиса запросов как двух способов выражения запроса LINQ.  
+ [<span data-ttu-id="82a19-115">Синтаксис запросов и синтаксис методов в LINQ</span><span class="sxs-lookup"><span data-stu-id="82a19-115">Query syntax and method syntax in LINQ</span></span>](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
+ <span data-ttu-id="82a19-116">Сравнение синтаксиса методов и синтаксиса запросов как двух способов выражения запроса LINQ.</span><span class="sxs-lookup"><span data-stu-id="82a19-116">Compares method syntax and query syntax as two ways to express a LINQ query.</span></span>  
   
- [Возможности C#, поддерживающие LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)  
- Описание языковых конструкций в C#, которые поддерживают LINQ.  
+ [<span data-ttu-id="82a19-117">Возможности C#, поддерживающие LINQ</span><span class="sxs-lookup"><span data-stu-id="82a19-117">C# features that support LINQ</span></span>](../programming-guide/concepts/linq/features-that-support-linq.md)  
+ <span data-ttu-id="82a19-118">Описание языковых конструкций в C#, которые поддерживают LINQ.</span><span class="sxs-lookup"><span data-stu-id="82a19-118">Describes the language constructs in C# that support LINQ.</span></span>  
    
-## <a name="related-sections"></a>Связанные разделы  
- [Выражения запросов LINQ](../programming-guide/linq-query-expressions/index.md)  
- Общие сведения о запросах в LINQ и ссылки на дополнительные ресурсы.  
+## <a name="related-sections"></a><span data-ttu-id="82a19-119">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="82a19-119">Related sections</span></span>  
+ [<span data-ttu-id="82a19-120">Выражения запросов LINQ</span><span class="sxs-lookup"><span data-stu-id="82a19-120">LINQ query expressions</span></span>](../programming-guide/linq-query-expressions/index.md)  
+ <span data-ttu-id="82a19-121">Общие сведения о запросах в LINQ и ссылки на дополнительные ресурсы.</span><span class="sxs-lookup"><span data-stu-id="82a19-121">Includes an overview of queries in LINQ and provides links to additional resources.</span></span>  
   
- [Общие сведения о стандартных операторах запросов](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Представление стандартных методов, используемых в запросах LINQ.  
+ [<span data-ttu-id="82a19-122">Общие сведения о стандартных операторах запросов</span><span class="sxs-lookup"><span data-stu-id="82a19-122">Standard query operators overview</span></span>](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ <span data-ttu-id="82a19-123">Представление стандартных методов, используемых в запросах LINQ.</span><span class="sxs-lookup"><span data-stu-id="82a19-123">Introduces the standard methods used in LINQ.</span></span>  
   
 

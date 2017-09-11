@@ -1,5 +1,5 @@
 ---
-title: "-target:appcontainerexe (параметры компилятора C#) | Документы Майкрософт"
+title: "-target:appcontainerexe (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,46 +26,48 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 168771506692308bc9b031df5c059e58e8d190b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77016d094ec7e82729a46208c17e2a77fe733103
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe (параметры компилятора C#)
-Если используется параметр компилятора **/target:appcontainerexe**, компилятор создает исполняемый файл Windows (EXE-файл), который должен запускаться в контейнере приложения. Этот параметр аналогичен [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), но предназначен для приложений [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+# <a name="targetappcontainerexe-c-compiler-options"></a><span data-ttu-id="1eee0-102">/target:appcontainerexe (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="1eee0-102">/target:appcontainerexe (C# Compiler Options)</span></span>
+<span data-ttu-id="1eee0-103">Если используется параметр компилятора **/target:appcontainerexe**, компилятор создает исполняемый файл Windows (EXE-файл), который должен запускаться в контейнере приложения.</span><span class="sxs-lookup"><span data-stu-id="1eee0-103">If you use the **/target:appcontainerexe** compiler option, the compiler creates a Windows executable (.exe) file that must be run in an app container.</span></span> <span data-ttu-id="1eee0-104">Этот параметр аналогичен [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), но предназначен для приложений [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1eee0-104">This option is equivalent to [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) but is designed for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] apps.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="1eee0-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1eee0-105">Syntax</span></span>  
   
-```  
+```console  
 /target:appcontainerexe  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Этот параметр устанавливает бит в [переносимом исполняемом](http://go.microsoft.com/fwlink/p/?LinkId=236960) файле (PE), чтобы обеспечить запуск приложения в контейнере. Если он установлен, при попытке запустить исполняемый файл вне контейнера приложения методом CreateProcess будет возникать ошибка.  
+## <a name="remarks"></a><span data-ttu-id="1eee0-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="1eee0-106">Remarks</span></span>  
+ <span data-ttu-id="1eee0-107">Этот параметр устанавливает бит в [переносимом исполняемом](http://go.microsoft.com/fwlink/p/?LinkId=236960) файле (PE), чтобы обеспечить запуск приложения в контейнере.</span><span class="sxs-lookup"><span data-stu-id="1eee0-107">To require the app to run in an app container, this option sets a bit in the [Portable Executable](http://go.microsoft.com/fwlink/p/?LinkId=236960) (PE) file.</span></span> <span data-ttu-id="1eee0-108">Если он установлен, при попытке запустить исполняемый файл вне контейнера приложения методом CreateProcess будет возникать ошибка.</span><span class="sxs-lookup"><span data-stu-id="1eee0-108">When that bit is set, an error occurs if the CreateProcess method tries to launch the executable file outside an app container.</span></span>  
   
- Выходной файл получает имя входного файла, содержащего метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md), если только с помощью параметра [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) не указано иное.  
+ <span data-ttu-id="1eee0-109">Выходной файл получает имя входного файла, содержащего метод [Main](../../../csharp/programming-guide/main-and-command-args/index.md), если только с помощью параметра [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) не указано иное.</span><span class="sxs-lookup"><span data-stu-id="1eee0-109">Unless you use the [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the input file that contains the [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method.</span></span>  
   
- Если этот параметр указан в командной строке, все файлы до следующего параметра **/out** или **/target** будут использоваться для создания исполняемого файла.  
+ <span data-ttu-id="1eee0-110">Если этот параметр указан в командной строке, все файлы до следующего параметра **/out** или **/target** будут использоваться для создания исполняемого файла.</span><span class="sxs-lookup"><span data-stu-id="1eee0-110">When you specify this option at a command prompt, all files until the next **/out** or **/target** option are used to create the executable file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-ide"></a>Установка данного параметра компилятора в интегрированной среде разработки  
+### <a name="to-set-this-compiler-option-in-the-ide"></a><span data-ttu-id="1eee0-111">Установка данного параметра компилятора в интегрированной среде разработки</span><span class="sxs-lookup"><span data-stu-id="1eee0-111">To set this compiler option in the IDE</span></span>  
   
-1.  В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.  
+1.  <span data-ttu-id="1eee0-112">В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="1eee0-112">In **Solution Explorer**, open the shortcut menu for your project, and then choose **Properties**.</span></span>  
   
-2.  На вкладке **Приложение** в списке **Тип выходных данных** выберите **Приложение для Магазина Windows**.  
+2.  <span data-ttu-id="1eee0-113">На вкладке **Приложение** в списке **Тип выходных данных** выберите **Приложение для Магазина Windows**.</span><span class="sxs-lookup"><span data-stu-id="1eee0-113">On the **Application** tab, in the **Output type** list, choose **Windows Store App**.</span></span>  
   
-     Этот параметр доступен только для шаблонов приложений под [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+     <span data-ttu-id="1eee0-114">Этот параметр доступен только для шаблонов приложений под [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1eee0-114">This option is available only for [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app templates.</span></span>  
   
- Сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ <span data-ttu-id="1eee0-115">Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="1eee0-115">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующая команда компилирует `filename.cs` в исполняемый файл Windows, который может быть запущен только в контейнере приложения.  
+## <a name="example"></a><span data-ttu-id="1eee0-116">Пример</span><span class="sxs-lookup"><span data-stu-id="1eee0-116">Example</span></span>  
+ <span data-ttu-id="1eee0-117">Следующая команда компилирует `filename.cs` в исполняемый файл Windows, который может быть запущен только в контейнере приложения.</span><span class="sxs-lookup"><span data-stu-id="1eee0-117">The following command compiles `filename.cs` into a Windows executable file that can be run only in an app container.</span></span>  
   
-```  
+```console  
 csc /target:appcontainerexe filename.cs  
 ```  
   
-## <a name="see-also"></a>См. также  
- [/target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
- [/target:winexe (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)   
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="1eee0-118">См. также</span><span class="sxs-lookup"><span data-stu-id="1eee0-118">See Also</span></span>  
+ <span data-ttu-id="1eee0-119">[/target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md) </span><span class="sxs-lookup"><span data-stu-id="1eee0-119">[/target (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-compiler-option.md) </span></span>  
+ <span data-ttu-id="1eee0-120">[/target:winexe (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) </span><span class="sxs-lookup"><span data-stu-id="1eee0-120">[/target:winexe (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) </span></span>  
+ [<span data-ttu-id="1eee0-121">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="1eee0-121">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+

@@ -1,106 +1,100 @@
 ---
-title: "Команда dotnet-add package — CLI .NET Core | Документы Майкрософт"
-description: "Команду dotnet-add package удобно использовать для добавления ссылки на пакет NuGet в проект."
-keywords: "dotnet-add, CLI, команда CLI, .NET Core"
-author: spboyer
+title: "Команда dotnet add package — CLI .NET Core"
+description: "Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 88e0da69-a5ea-46cc-8b46-5493242b7af9
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 41b46e879056d385ceb3abaec27db974cab812e3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-add-package"></a><span data-ttu-id="d2afc-103">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="d2afc-103">dotnet add package</span></span>
 
-# <a name="dotnet-add-package"></a>dotnet-add package
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a><span data-ttu-id="d2afc-104">Имя</span><span class="sxs-lookup"><span data-stu-id="d2afc-104">Name</span></span>
 
-`dotnet-add package` — добавляет ссылку на пакет в файл проекта.
+<span data-ttu-id="d2afc-105">`dotnet add package` — добавляет ссылку на пакет в файл проекта.</span><span class="sxs-lookup"><span data-stu-id="d2afc-105">`dotnet add package` - Adds a package reference to a project file.</span></span>
 
-## <a name="synopsis"></a>Краткий обзор
+## <a name="synopsis"></a><span data-ttu-id="d2afc-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="d2afc-106">Synopsis</span></span>
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory] [-h|--help]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a><span data-ttu-id="d2afc-107">Описание</span><span class="sxs-lookup"><span data-stu-id="d2afc-107">Description</span></span>
 
-Команда `dotnet add package` предоставляет удобный способ для добавления ссылки на пакет в файл проекта. После запуска этой команды выполняется проверка совместимости, чтобы убедиться, что пакет совместим со всеми платформами в проекте. Если проверка проходит успешно, в файл проекта добавляется элемент `<PackageReference>` и выполняется команда [dotnet restore](dotnet-restore.md).
+<span data-ttu-id="d2afc-108">Команда `dotnet add package` предоставляет удобный способ для добавления ссылки на пакет в файл проекта.</span><span class="sxs-lookup"><span data-stu-id="d2afc-108">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="d2afc-109">После запуска этой команды выполняется проверка совместимости, чтобы убедиться, что пакет совместим со всеми платформами в проекте.</span><span class="sxs-lookup"><span data-stu-id="d2afc-109">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="d2afc-110">Если проверка проходит успешно, в файл проекта добавляется элемент `<PackageReference>` и выполняется команда [dotnet restore](dotnet-restore.md).</span><span class="sxs-lookup"><span data-stu-id="d2afc-110">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
 
-Например, при добавлении `Newtonsoft.Json` в *ToDo.csproj* создаются выходные данные примерно следующего вида:
+<span data-ttu-id="d2afc-111">Например, при добавлении `Newtonsoft.Json` в *ToDo.csproj* создаются выходные данные примерно следующего вида:</span><span class="sxs-lookup"><span data-stu-id="d2afc-111">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following example:</span></span>
 
 ```
-Microsoft (R) Build Engine version 15.1.545.13942
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
-info : Adding PackageReference for package 'Newtonsoft.Json' into project 'ToDo.csproj'.
-log  : Restoring packages for ToDo.csproj...
+  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
+log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 119ms
-info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg 27ms
-info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'ToDo.csproj'.
-info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to file 'ToDo.csproj'.
+info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 235ms
+info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\projects\ToDo\ToDo.csproj'.
+info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-Файл *ToDo.csproj* теперь содержит элемент [`<PackageReference>`](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) для пакета, на который указывает ссылка.
+<span data-ttu-id="d2afc-112">Файл *ToDo.csproj* теперь содержит элемент [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) для пакета, на который указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="d2afc-112">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
-## <a name="arguments"></a>Аргументы
+## <a name="arguments"></a><span data-ttu-id="d2afc-113">Аргументы</span><span class="sxs-lookup"><span data-stu-id="d2afc-113">Arguments</span></span>
 
 `PROJECT`
 
-Указывает файл проекта. Если он не указан, команда ищет текущий каталог для него.
+<span data-ttu-id="d2afc-114">Указывает файл проекта.</span><span class="sxs-lookup"><span data-stu-id="d2afc-114">Specifies the project file.</span></span> <span data-ttu-id="d2afc-115">Если он не указан, команда ищет текущий каталог для него.</span><span class="sxs-lookup"><span data-stu-id="d2afc-115">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-Добавляемая ссылка на пакет.
+<span data-ttu-id="d2afc-116">Добавляемая ссылка на пакет.</span><span class="sxs-lookup"><span data-stu-id="d2afc-116">The package reference to add.</span></span>
 
-## <a name="options"></a>Параметры
+## <a name="options"></a><span data-ttu-id="d2afc-117">Параметры</span><span class="sxs-lookup"><span data-stu-id="d2afc-117">Options</span></span>
 
 `-h|--help`
 
-Выводит краткую справку по команде.
+<span data-ttu-id="d2afc-118">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="d2afc-118">Prints out a short help for the command.</span></span>
 
 `-v|--version <VERSION>`
 
-Версия пакета.
+<span data-ttu-id="d2afc-119">Версия пакета.</span><span class="sxs-lookup"><span data-stu-id="d2afc-119">Version of the package.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-Добавляет ссылку на пакет только при ориентации на конкретную [платформу](../../standard/frameworks.md).
+<span data-ttu-id="d2afc-120">Добавляет ссылку на пакет только при ориентации на конкретную [платформу](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="d2afc-120">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
 `-n|--no-restore`
 
-Добавляет ссылку на пакет без предварительного просмотра восстановления и проверки совместимости.
+<span data-ttu-id="d2afc-121">Добавляет ссылку на пакет без предварительного просмотра восстановления и проверки совместимости.</span><span class="sxs-lookup"><span data-stu-id="d2afc-121">Adds a package reference without performing a restore preview and compatibility check.</span></span>
 
 `-s|--source <SOURCE>`
 
-Указывает конкретный источник пакета NuGet во время операции восстановления.
+<span data-ttu-id="d2afc-122">Указывает конкретный источник пакета NuGet во время операции восстановления.</span><span class="sxs-lookup"><span data-stu-id="d2afc-122">Uses a specific NuGet package source during the restore operation.</span></span>
 
 `--package-directory <PACKAGE_DIRECTORY>`
 
-Восстанавливает пакет в указанный каталог.
+<span data-ttu-id="d2afc-123">Восстанавливает пакет в указанный каталог.</span><span class="sxs-lookup"><span data-stu-id="d2afc-123">Restores the package to the specified directory.</span></span>
 
-## <a name="examples"></a>Примеры
+## <a name="examples"></a><span data-ttu-id="d2afc-124">Примеры</span><span class="sxs-lookup"><span data-stu-id="d2afc-124">Examples</span></span>
 
-Добавление пакета NuGet `Newtonsoft.Json` в проект:
+<span data-ttu-id="d2afc-125">Добавление пакета NuGet `Newtonsoft.Json` в проект:</span><span class="sxs-lookup"><span data-stu-id="d2afc-125">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
 
 `dotnet add package Newtonsoft.Json`
 
-Добавление определенной версии пакета в проект:
+<span data-ttu-id="d2afc-126">Добавление определенной версии пакета в проект:</span><span class="sxs-lookup"><span data-stu-id="d2afc-126">Add a specific version of a package to a project:</span></span>
 
 `dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0`
 
-Добавление пакета с помощью определенного источника NuGet:
+<span data-ttu-id="d2afc-127">Добавление пакета с помощью определенного источника NuGet:</span><span class="sxs-lookup"><span data-stu-id="d2afc-127">Add a package using a specific NuGet source:</span></span>
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
 

@@ -36,37 +36,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b671fe0ded9bad75dbe6ecf98ccfdf8bc9fd8d87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 61606572dd1f10dc5df4ed4baec02f230a23c8d6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-conversions-in-visual-basic"></a>Преобразование типов в Visual Basic
-Процесс приведения значения одного типа данных к другому типу называется *преобразование*. Преобразования, либо *расширяющие* или *сужающие*, в зависимости от диапазонов данных типов. Они также *неявное* или *явных*в зависимости от синтаксиса в исходном коде.  
+# <a name="type-conversions-in-visual-basic"></a><span data-ttu-id="c9c56-102">Преобразование типов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c9c56-102">Type Conversions in Visual Basic</span></span>
+<span data-ttu-id="c9c56-103">Процесс приведения значения одного типа данных к другому типу называется *преобразование*.</span><span class="sxs-lookup"><span data-stu-id="c9c56-103">The process of changing a value from one data type to another type is called *conversion*.</span></span> <span data-ttu-id="c9c56-104">Преобразования, либо *расширяющие* или *сужающие*, в зависимости от диапазонов данных типов.</span><span class="sxs-lookup"><span data-stu-id="c9c56-104">Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved.</span></span> <span data-ttu-id="c9c56-105">Они также *неявное* или *явных*в зависимости от синтаксиса в исходном коде.</span><span class="sxs-lookup"><span data-stu-id="c9c56-105">They are also *implicit* or *explicit*, depending on the syntax in the source code.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Расширяющие и сужающие преобразования](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- Описание преобразований, различающихся по ли целевой тип может содержать данные.  
+## <a name="in-this-section"></a><span data-ttu-id="c9c56-106">Содержание</span><span class="sxs-lookup"><span data-stu-id="c9c56-106">In This Section</span></span>  
+ [<span data-ttu-id="c9c56-107">Расширяющие и сужающие преобразования</span><span class="sxs-lookup"><span data-stu-id="c9c56-107">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ <span data-ttu-id="c9c56-108">Описание преобразований, различающихся по ли целевой тип может содержать данные.</span><span class="sxs-lookup"><span data-stu-id="c9c56-108">Explains conversions classified by whether the destination type can hold the data.</span></span>  
   
- [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Описываются преобразования, классифицируется ли [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] их автоматического выполнения.  
+ [<span data-ttu-id="c9c56-109">Явные и неявные преобразования</span><span class="sxs-lookup"><span data-stu-id="c9c56-109">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ <span data-ttu-id="c9c56-110">Описываются преобразования, классифицируется ли [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] их автоматического выполнения.</span><span class="sxs-lookup"><span data-stu-id="c9c56-110">Discusses conversions classified by whether [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] performs them automatically.</span></span>  
   
- [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- Описываются преобразования между строками и числовыми, `Boolean`, или значения даты и времени.  
+ [<span data-ttu-id="c9c56-111">Преобразования значений между строковыми и другими типами</span><span class="sxs-lookup"><span data-stu-id="c9c56-111">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ <span data-ttu-id="c9c56-112">Описываются преобразования между строками и числовыми, `Boolean`, или значения даты и времени.</span><span class="sxs-lookup"><span data-stu-id="c9c56-112">Illustrates converting between strings and numeric, `Boolean`, or date/time values.</span></span>  
   
- [Практическое руководство: преобразование объекта к другому типу в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Показано, как преобразовать `Object` переменной другого типа данных.  
+ [<span data-ttu-id="c9c56-113">Практическое руководство: преобразование объекта к другому типу в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c9c56-113">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ <span data-ttu-id="c9c56-114">Показано, как преобразовать `Object` переменной другого типа данных.</span><span class="sxs-lookup"><span data-stu-id="c9c56-114">Shows how to convert an `Object` variable to any other data type.</span></span>  
   
- [Преобразования массивов](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Этапы процесса преобразования между массивами различных типов данных.  
+ [<span data-ttu-id="c9c56-115">Преобразования массивов</span><span class="sxs-lookup"><span data-stu-id="c9c56-115">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
+ <span data-ttu-id="c9c56-116">Этапы процесса преобразования между массивами различных типов данных.</span><span class="sxs-lookup"><span data-stu-id="c9c56-116">Steps you through the process of converting between arrays of different data types.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Представляет [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] типы данных и инструкции по их использованию.  
+## <a name="related-sections"></a><span data-ttu-id="c9c56-117">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="c9c56-117">Related Sections</span></span>  
+ [<span data-ttu-id="c9c56-118">Типы данных</span><span class="sxs-lookup"><span data-stu-id="c9c56-118">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ <span data-ttu-id="c9c56-119">Представляет [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] типы данных и инструкции по их использованию.</span><span class="sxs-lookup"><span data-stu-id="c9c56-119">Introduces the [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] data types and describes how to use them.</span></span>  
   
- [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Список простых типов данных предоставляемые [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ [<span data-ttu-id="c9c56-120">Типы данных</span><span class="sxs-lookup"><span data-stu-id="c9c56-120">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ <span data-ttu-id="c9c56-121">Список простых типов данных предоставляемые [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="c9c56-121">Lists the elementary data types supplied by [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- Рассматриваются некоторые общие проблемы, которые могут возникнуть при работе с типами данных.
+ [<span data-ttu-id="c9c56-122">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="c9c56-122">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ <span data-ttu-id="c9c56-123">Рассматриваются некоторые общие проблемы, которые могут возникнуть при работе с типами данных.</span><span class="sxs-lookup"><span data-stu-id="c9c56-123">Discusses some common problems that can arise when working with data types.</span></span>

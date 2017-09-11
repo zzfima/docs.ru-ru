@@ -1,64 +1,84 @@
 ---
-title: "Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "абстрактные свойства [C#]"
-  - "свойства [C#], абстрактный"
+title: "Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- properties [C#], abstract
+- abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c6decaae138a21c24e94e2ed74111c860777f64b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)
-В следующем примере показано, как определить [абстрактные](../../../csharp/language-reference/keywords/abstract.md) свойства.  Если объявление абстрактного свойства не предоставляет реализацию методов доступа к свойствам, оно объявляет, что класс поддерживает свойства, но оставляет реализацию метода доступа производному классу.  В следующем примере показано, как реализовать абстрактные свойства, унаследованные от базового класса.  
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a><span data-ttu-id="d650f-102">Практическое руководство. Определение абстрактных свойств (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="d650f-102">How to: Define Abstract Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="d650f-103">В следующем примере показано, как определять [абстрактные](../../../csharp/language-reference/keywords/abstract.md) свойства.</span><span class="sxs-lookup"><span data-stu-id="d650f-103">The following example shows how to define [abstract](../../../csharp/language-reference/keywords/abstract.md) properties.</span></span> <span data-ttu-id="d650f-104">В объявлении абстрактного свойства не предоставляется реализация методов доступа к свойству. В нем объявляется, что класс поддерживает свойства, однако реализация методов доступа к ним передается в производные классы.</span><span class="sxs-lookup"><span data-stu-id="d650f-104">An abstract property declaration does not provide an implementation of the property accessors -- it declares that the class supports properties, but leaves the accessor implementation to derived classes.</span></span> <span data-ttu-id="d650f-105">В следующем примере показано, как реализовать абстрактные свойства, наследуемые от базового класса.</span><span class="sxs-lookup"><span data-stu-id="d650f-105">The following example demonstrates how to implement the abstract properties inherited from a base class.</span></span>  
   
- Этот пример состоит из трех файлов, каждый из которых компилируется отдельно, и на результирующую сборку которого ссылается следующая компиляция.  
+ <span data-ttu-id="d650f-106">Этот пример включает три файла, каждый из которых компилируется отдельно в сборку, на которую задаются ссылки при последующей компиляции:</span><span class="sxs-lookup"><span data-stu-id="d650f-106">This sample consists of three files, each of which is compiled individually and its resulting assembly is referenced by the next compilation:</span></span>  
   
--   abstractshape.cs: класс `Shape`, содержащий абстрактное свойство `Area`.  
+-   <span data-ttu-id="d650f-107">abstractshape.cs: класс `Shape`, который содержит абстрактное свойство `Area`.</span><span class="sxs-lookup"><span data-stu-id="d650f-107">abstractshape.cs: the `Shape` class that contains an abstract `Area` property.</span></span>  
   
--   shapes.cs: вложенные классы класса `Shape`.  
+-   <span data-ttu-id="d650f-108">shapes.cs: подклассы класса `Shape`.</span><span class="sxs-lookup"><span data-stu-id="d650f-108">shapes.cs: The subclasses of the `Shape` class.</span></span>  
   
--   shapetest.cs: Тестовая программа для отображения областей некоторых производных от `Shape` объектов.  
+-   <span data-ttu-id="d650f-109">shapetest.cs: тестовая программа для отображения областей некоторых объектов, производных от `Shape`.</span><span class="sxs-lookup"><span data-stu-id="d650f-109">shapetest.cs: A test program to display the areas of some `Shape`-derived objects.</span></span>  
   
- Для компиляции примера используйте следующую команду:  
+ <span data-ttu-id="d650f-110">Чтобы скомпилировать этот пример, используйте следующую команду:</span><span class="sxs-lookup"><span data-stu-id="d650f-110">To compile the example, use the following command:</span></span>  
   
  `csc abstractshape.cs shapes.cs shapetest.cs`  
   
- Будет создан исполняемый файл shapetest.exe.  
+ <span data-ttu-id="d650f-111">При этом будет создан исполняемый файл shapetest.exe.</span><span class="sxs-lookup"><span data-stu-id="d650f-111">This will create the executable file shapetest.exe.</span></span>  
   
-## Пример  
- Этот файл объявляет класс `Shape`, содержащий свойство `Area` типа `double`.  
+## <a name="example"></a><span data-ttu-id="d650f-112">Пример</span><span class="sxs-lookup"><span data-stu-id="d650f-112">Example</span></span>  
+ <span data-ttu-id="d650f-113">В этом файле объявляется класс `Shape`, который содержит свойство `Area` типа `double`.</span><span class="sxs-lookup"><span data-stu-id="d650f-113">This file declares the `Shape` class that contains the `Area` property of the type `double`.</span></span>  
   
- [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
+ <span data-ttu-id="d650f-114">[!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="d650f-114">[!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]</span></span>  
   
--   Модификаторы свойства помещаются в самом объявлении свойства.  Примеры.  
+-   <span data-ttu-id="d650f-115">Модификаторы свойства помещаются в само объявление свойства.</span><span class="sxs-lookup"><span data-stu-id="d650f-115">Modifiers on the property are placed on the property declaration itself.</span></span> <span data-ttu-id="d650f-116">Например:</span><span class="sxs-lookup"><span data-stu-id="d650f-116">For example:</span></span>  
   
     ```  
     public abstract double Area  
     ```  
   
--   При объявлении абстрактного свойства \(такого как `Area` в этом примере\) просто указываются имеющиеся методы доступа к свойствам, и их реализация не выполняется.  В этом примере имеется только метод доступа [get](../../../csharp/language-reference/keywords/get.md), поэтому свойство доступно только для чтения.  
+-   <span data-ttu-id="d650f-117">При объявлении абстрактного свойства, такого как `Area` в этом примере, вы просто указываете используемые методы доступа, но не реализуете их.</span><span class="sxs-lookup"><span data-stu-id="d650f-117">When declaring an abstract property (such as `Area` in this example), you simply indicate what property accessors are available, but do not implement them.</span></span> <span data-ttu-id="d650f-118">В этом примере используется только метод доступа [get](../../../csharp/language-reference/keywords/get.md), поэтому свойство будет доступно только для чтения.</span><span class="sxs-lookup"><span data-stu-id="d650f-118">In this example, only a [get](../../../csharp/language-reference/keywords/get.md) accessor is available, so the property is read-only.</span></span>  
   
-## Пример  
- В следующем коде показано три вложенных класса `Shape` и переопределение или свойства `Area` для предоставления собственной реализации.  
+## <a name="example"></a><span data-ttu-id="d650f-119">Пример</span><span class="sxs-lookup"><span data-stu-id="d650f-119">Example</span></span>  
+ <span data-ttu-id="d650f-120">В следующем коде представлены три подкласса класса `Shape` и демонстрируется, как они переопределяют свойство `Area` для получения его собственной реализации.</span><span class="sxs-lookup"><span data-stu-id="d650f-120">The following code shows three subclasses of `Shape` and how they override the `Area` property to provide their own implementation.</span></span>  
   
- [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
+ <span data-ttu-id="d650f-121">[!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="d650f-121">[!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]</span></span>  
   
-## Пример  
- В следующем коде показана тестовая программа, создающая ряд производных от `Shape` объектов и печатающая их области.  
+## <a name="example"></a><span data-ttu-id="d650f-122">Пример</span><span class="sxs-lookup"><span data-stu-id="d650f-122">Example</span></span>  
+ <span data-ttu-id="d650f-123">В следующем коде показана тестовая программа, которая создает несколько производных от `Shape` объектов и печатает их области.</span><span class="sxs-lookup"><span data-stu-id="d650f-123">The following code shows a test program that creates a number of `Shape`-derived objects and prints out their areas.</span></span>  
   
- [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
+ <span data-ttu-id="d650f-124">[!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="d650f-124">[!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]</span></span>  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Практическое руководство. Создание и использование сборок с помощью командной строки](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="d650f-125">См. также</span><span class="sxs-lookup"><span data-stu-id="d650f-125">See Also</span></span>  
+ <span data-ttu-id="d650f-126">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="d650f-126">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="d650f-127">[Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md) </span><span class="sxs-lookup"><span data-stu-id="d650f-127">[Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md) </span></span>  
+ <span data-ttu-id="d650f-128">[Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md) </span><span class="sxs-lookup"><span data-stu-id="d650f-128">[Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md) </span></span>  
+ <span data-ttu-id="d650f-129">[Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md) </span><span class="sxs-lookup"><span data-stu-id="d650f-129">[Properties](../../../csharp/programming-guide/classes-and-structs/properties.md) </span></span>  
+ [<span data-ttu-id="d650f-130">Практическое руководство. Создание и использование сборок с помощью командной строки</span><span class="sxs-lookup"><span data-stu-id="d650f-130">How to: Create and Use Assemblies Using the Command Line</span></span>](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
+

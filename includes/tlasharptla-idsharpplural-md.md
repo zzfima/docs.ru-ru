@@ -1,1 +1,1 @@
-идентификаторы (ID)
+<span data-ttu-id="cca25-101">идентификаторы (ID)</span><span class="sxs-lookup"><span data-stu-id="cca25-101">identifiers (IDs)</span></span>

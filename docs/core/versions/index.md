@@ -1,180 +1,258 @@
 ---
-title: "Управление версиями .NET Core | Документы Майкрософт"
-description: "Управление версиями .NET Core"
-keywords: .NET, .NET Core
-author: richlander
+title: "Управление версиями .NET Core"
+description: "Сведения о принципах работы управления версиями в .NET Core."
+author: bleroy
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 9ee687feebdd96022ca5a59443fb8118714e3fa4
+ms.translationtype: HT
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 08/28/2017
 
 ---
+# <a name="net-core-versioning"></a><span data-ttu-id="ed0ae-103">Управление версиями .NET Core</span><span class="sxs-lookup"><span data-stu-id="ed0ae-103">.NET Core versioning</span></span>
 
-<a id="net-core-versioning" class="xliff"></a>
+<span data-ttu-id="ed0ae-104">.NET Core состоит из [пакетов NuGet](../packages.md), инструментов и платформ, которые распространяются как единое целое.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-104">.NET Core is made of [NuGet packages](../packages.md), tools, and frameworks that are distributed as a unit.</span></span> <span data-ttu-id="ed0ae-105">Управление версиями для каждого из этих уровней платформы может осуществляться отдельно для повышения гибкости.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-105">Each of these platform layers can be versioned separately, enabling better agility.</span></span> <span data-ttu-id="ed0ae-106">Несмотря на высокую гибкость управления версиями, желательно согласованно управлять версиями платформы, чтобы сделать работу с продуктом понятнее.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-106">While there is significant versioning flexibility in that regard, there's also a desire to version the platform as a unit to make the product easier to understand.</span></span>
 
-# Управление версиями .NET Core
+<span data-ttu-id="ed0ae-107">Эта статья призвана прояснить, как именно осуществляется управление версиями для пакета SDK .NET Core и среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-107">This article aims at clarifying how the .NET Core SDK and runtime are versioned.</span></span>
 
-.NET Core состоит из [пакетов NuGet](../packages.md) (платформ) и распространяется как единое целое. Управление версиями для каждого уровня платформы может осуществляться отдельно для обеспечения гибкости продукта и точного описания изменений в нем. Несмотря на высокую гибкость управления версиями, желательно согласованно управлять версиями платформы, чтобы сделать работу с продуктом понятнее.
+<span data-ttu-id="ed0ae-108">Существует множество разных частей, управление версиями для которых в .NET Core осуществляется раздельно.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-108">There are lots of moving parts that version independently in .NET Core.</span></span> <span data-ttu-id="ed0ae-109">Однако, начиная с .NET Core 2.0, появляется удобный и понятный высокоуровневый номер версии, который все воспринимают как *версию* всего продукта .NET Core в целом.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-109">However, starting with .NET Core 2.0, there is an easy to understand top-level version number that everybody understands to be *the* version of ".NET Core" as a whole.</span></span> <span data-ttu-id="ed0ae-110">Остальная часть этого документа посвящена управлению версиями для всех этих компонентов.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-110">The rest of this document goes into the details of the versioning of all those parts.</span></span> <span data-ttu-id="ed0ae-111">Эти сведения могут оказаться полезными, если вы являетесь, например, диспетчером пакетов.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-111">These details can be important if you're a package manager, for example.</span></span>
 
-В некоторых отношениях этот продукт уникален, так как он описывается и предоставляется в виде пакетов посредством диспетчера пакетов (NuGet). Хотя обычно вы получаете платформу .NET Core в виде отдельного пакета SDK, пакет SDK в основном служит для удобства работы и неразрывно связан с пакетами NuGet. Таким образом, управление версиями в первую очередь осуществляется для пакетов, а все другие возможности управления версиями являются производными.
+## <a name="versioning-details"></a><span data-ttu-id="ed0ae-112">Сведения об управлении версиями</span><span class="sxs-lookup"><span data-stu-id="ed0ae-112">Versioning details</span></span>
 
-<a id="semantic-versioning" class="xliff"></a>
+<span data-ttu-id="ed0ae-113">Начиная с .NET Core 2.0, в имени файла скачиваемых материалов указывается номер версии.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-113">Starting with .NET Core 2.0, downloads show a single version number in their file name.</span></span> <span data-ttu-id="ed0ae-114">Были объединены следующие номера версии:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-114">The following version numbers were unified:</span></span>
 
-## Семантическое управление версиями
+* <span data-ttu-id="ed0ae-115">Общая платформа и соответствующая среда выполнения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-115">The shared framework and associated runtime.</span></span>
+* <span data-ttu-id="ed0ae-116">Пакет SDK для .NET Core и соответствующий CLI .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-116">The .NET Core SDK and associated .NET Core CLI.</span></span>
+* <span data-ttu-id="ed0ae-117">Метапакет `Microsoft.NETCore.App`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-117">The `Microsoft.NETCore.App` metapackage.</span></span>
 
-В .NET Core используется [Семантическое версионирование (SemVer)](http://semver.org/) с шаблоном номера версии основной_номер.дополнительный_номер.исправление, различные части которого служат для описания степени и типа изменения.
+<span data-ttu-id="ed0ae-118">Использование отдельного номера версии позволяет пользователям проще понять, какую версию пакета SDK требуется установить на компьютерах разработчиков и какая версия общей платформы потребуется при подготовке рабочей среды.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-118">The use of a single version number makes it easier for users to know what version of the SDK to install on their dev machines, and what the corresponding version of the shared framework should be when time comes to provision a production environment.</span></span> <span data-ttu-id="ed0ae-119">При скачивании пакета SDK или среды выполнения отображаемый номер версии будет совпадать.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-119">When downloading an SDK or runtime, the version number you see is going to be the same.</span></span>
 
-Ниже описывается шаблон управления версиями, как правило применяемый в .NET Core. В некоторых случаях он был адаптирован в соответствии с текущей схемой управления версиями. Эти случаи описаны далее в этом документе. Например, платформы предназначены только для представления возможностей продукта и API, что соответствует управлению версиями с использованием основного и дополнительного номеров.
+### <a name="installers"></a><span data-ttu-id="ed0ae-120">Установщики</span><span class="sxs-lookup"><span data-stu-id="ed0ae-120">Installers</span></span>
 
-<a id="versioning-form" class="xliff"></a>
+<span data-ttu-id="ed0ae-121">Начиная с .NET Core 2.0, скачиваемые файлы для [ежедневных сборок](https://github.com/dotnet/core-setup#daily-builds) и [выпусков](https://www.microsoft.com/net/download/core) соответствуют новой схеме именования, которая проще для понимания.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-121">Starting with .NET Core 2.0, downloads for our [daily builds](https://github.com/dotnet/core-setup#daily-builds) and [our releases](https://www.microsoft.com/net/download/core) adhere to a new naming scheme that is easier to understand.</span></span>
+<span data-ttu-id="ed0ae-122">Пользовательский интерфейс установщика в этих скачиваемых материалах также был изменен, чтобы четко обозначить имена и версии устанавливаемых компонентов.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-122">The installer UI in those downloads were also modified to clearly present the names and versions of the components being installed.</span></span> <span data-ttu-id="ed0ae-123">В частности, названия теперь содержат тот же номер версии, что и имя скачиваемого файла.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-123">In particular, titles now show the same version number that is in the download's file name.</span></span>
 
-### Форма управления версиями
+#### <a name="file-name-format"></a><span data-ttu-id="ed0ae-124">Формат имени файла</span><span class="sxs-lookup"><span data-stu-id="ed0ae-124">File name format</span></span>
 
-ОСНОВНОЙ_НОМЕР.ДОПОЛНИТЕЛЬНЫЙ_НОМЕР.ИСПРАВЛЕНИЕ[-ПРЕДВАРИТЕЛЬНЫЙ_ВЫПУСК-НОМЕР_СБОРКИ]
+`[product]-[component]-[major].[minor].[patch]-[previewN]-[optional build #]-[rid].[file ext]`
 
-<a id="decision-tree" class="xliff"></a>
+<span data-ttu-id="ed0ae-125">Ниже приведено несколько примеров этого формата:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-125">Here are some examples of this format:</span></span>
 
-### Дерево принятия решений
+```
+dotnet-runtime-2.0.4-macos.10.12-x64.pkg            # Mac runtime installer
+dotnet-sdk-2.0.4-win10-x64.exe                      # Windows SDK installer
+dotnet-sdk-2.0.4-fedora.24-x64.tar.gz               # Fedora 24 binary archive
 
-Условия изменения основного номера:
-  - отмена поддержки платформы;
-  - присвоение нового основного номера версии существующей зависимости; 
-  - отключение совместимости по умолчанию.
+#Ubuntu file set needed for the SDK
+dotnet-host-2.0.4-ubuntu.16.04-x64.deb              # Host / muxer and host policy
+dotnet-runtime-2.0.4-ubuntu.16.04-x64.deb           # runtime
+dotnet-sdk-2.0.4-ubuntu.16.04-x64.deb               # SDK tools
+```
 
-Условия изменения дополнительного номера:
-  - добавление контактной зоны общедоступного интерфейса API; 
-  - добавление нового поведения;
-  - присвоение нового дополнительного номера версии существующей зависимости;
-  - добавление новой зависимости. 
+<span data-ttu-id="ed0ae-126">Такой формат удобен для восприятия и четко указывает на то, какая это версия и где ее можно применять.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-126">The format is readable and clearly shows what you're downloading, what version it is, and where you can use it.</span></span> <span data-ttu-id="ed0ae-127">Имя пакета среды выполнения включает `runtime`, а пакет SDK включает `SDK`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-127">The runtime package name includes `runtime`, and the SDK includes `SDK`.</span></span>
+
+#### <a name="ui-string-format"></a><span data-ttu-id="ed0ae-128">Формат строки пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="ed0ae-128">UI string format</span></span>
+
+<span data-ttu-id="ed0ae-129">Все описания веб-сайтов и строки пользовательского интерфейса в установщиках сделаны согласованными, точными и простыми.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-129">All web site descriptions and UI strings in the installers are kept consistent, accurate, and simple.</span></span> <span data-ttu-id="ed0ae-130">В следующей таблице приведено несколько примеров:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-130">The following table shows some examples:</span></span>
+
+| <span data-ttu-id="ed0ae-131">Installer</span><span class="sxs-lookup"><span data-stu-id="ed0ae-131">Installer</span></span> | <span data-ttu-id="ed0ae-132">Заголовок окна</span><span class="sxs-lookup"><span data-stu-id="ed0ae-132">Window Title</span></span>                          | <span data-ttu-id="ed0ae-133">Остальное содержимое установщика</span><span class="sxs-lookup"><span data-stu-id="ed0ae-133">Other content in installer</span></span> | <span data-ttu-id="ed0ae-134">Что устанавливается</span><span class="sxs-lookup"><span data-stu-id="ed0ae-134">What is installed</span></span>                               |
+| :--       | :--                                   | :--                        | :--                                             |
+| <span data-ttu-id="ed0ae-135">SDK</span><span class="sxs-lookup"><span data-stu-id="ed0ae-135">SDK</span></span>       | <span data-ttu-id="ed0ae-136">Установщик пакета SDK для .NET Core 2.0 (x64)</span><span class="sxs-lookup"><span data-stu-id="ed0ae-136">.NET Core 2.0 SDK (x64) Installer</span></span>     | <span data-ttu-id="ed0ae-137">Пакет SDK для .NET Core 2.0.4</span><span class="sxs-lookup"><span data-stu-id="ed0ae-137">.NET Core 2.0.4 SDK</span></span>        | <span data-ttu-id="ed0ae-138">Инструменты .NET Core 2.0.4 + среда выполнения .NET Core 2.0.4</span><span class="sxs-lookup"><span data-stu-id="ed0ae-138">.NET Core 2.0.4 Tools + .NET Core 2.0.4 Runtime</span></span> |
+| <span data-ttu-id="ed0ae-139">Среда выполнения</span><span class="sxs-lookup"><span data-stu-id="ed0ae-139">Runtime</span></span>   | <span data-ttu-id="ed0ae-140">Установщик среды выполнения для .NET Core 2.0 (x64)</span><span class="sxs-lookup"><span data-stu-id="ed0ae-140">.NET Core 2.0 Runtime (x64) Installer</span></span> | <span data-ttu-id="ed0ae-141">Среда выполнения для .NET Core 2.0.4</span><span class="sxs-lookup"><span data-stu-id="ed0ae-141">.NET Core 2.0.4 Runtime</span></span>    | <span data-ttu-id="ed0ae-142">Среда выполнения для .NET Core 2.0.4</span><span class="sxs-lookup"><span data-stu-id="ed0ae-142">.NET Core 2.0.4 Runtime</span></span>                         |
+
+<span data-ttu-id="ed0ae-143">Предварительные версии отличаются лишь немного:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-143">Preview releases differ only slightly:</span></span>
+
+| <span data-ttu-id="ed0ae-144">Installer</span><span class="sxs-lookup"><span data-stu-id="ed0ae-144">Installer</span></span> | <span data-ttu-id="ed0ae-145">Заголовок окна</span><span class="sxs-lookup"><span data-stu-id="ed0ae-145">Window Title</span></span>                                    | <span data-ttu-id="ed0ae-146">Остальное содержимое установщика</span><span class="sxs-lookup"><span data-stu-id="ed0ae-146">Other content in installer</span></span>        | <span data-ttu-id="ed0ae-147">Что устанавливается</span><span class="sxs-lookup"><span data-stu-id="ed0ae-147">What is installed</span></span>                                                   |
+| :--       | :--                                             | :--                               | :--                                                                 |
+| <span data-ttu-id="ed0ae-148">SDK</span><span class="sxs-lookup"><span data-stu-id="ed0ae-148">SDK</span></span>       | <span data-ttu-id="ed0ae-149">Установщик пакета SDK для предварительной версии 1 .NET Core 2.0 (x64)</span><span class="sxs-lookup"><span data-stu-id="ed0ae-149">.NET Core 2.0 Preview 1 SDK (x64) Installer</span></span>     | <span data-ttu-id="ed0ae-150">Пакет SDK для предварительной версии 1 .NET Core 2.0.0</span><span class="sxs-lookup"><span data-stu-id="ed0ae-150">.NET Core 2.0.0 Preview 1 SDK</span></span>     | <span data-ttu-id="ed0ae-151">Инструменты для предварительной версии 1 .NET Core 2.0.0 + среда выполнения для предварительной версии 1 .NET Core 2.0.0</span><span class="sxs-lookup"><span data-stu-id="ed0ae-151">.NET Core 2.0.0 Preview 1 Tools + .NET Core 2.0.0 Preview 1 Runtime</span></span> |
+| <span data-ttu-id="ed0ae-152">Среда выполнения</span><span class="sxs-lookup"><span data-stu-id="ed0ae-152">Runtime</span></span>   | <span data-ttu-id="ed0ae-153">Установщик среды выполнения для предварительной версии 1 .NET Core 2.0 (x64)</span><span class="sxs-lookup"><span data-stu-id="ed0ae-153">.NET Core 2.0 Preview 1 Runtime (x64) Installer</span></span> | <span data-ttu-id="ed0ae-154">Среда выполнения для предварительной версии 1 .NET Core 2.0.0</span><span class="sxs-lookup"><span data-stu-id="ed0ae-154">.NET Core 2.0.0 Preview 1 Runtime</span></span> | <span data-ttu-id="ed0ae-155">Среда выполнения для предварительной версии 1 .NET Core 2.0.0</span><span class="sxs-lookup"><span data-stu-id="ed0ae-155">.NET Core 2.0.0 Preview 1 Runtime</span></span>                                   |
+
+<span data-ttu-id="ed0ae-156">Выпуск пакета SDK может содержать несколько версий среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-156">It may happen that an SDK release contains more than one version of the runtime.</span></span> <span data-ttu-id="ed0ae-157">В этом случае установщик UX выглядит следующим образом (отображается только версия пакета SDK, а установленные версии среды выполнения отображаются на странице сводки в конце процедуры установки в Windows и Mac):</span><span class="sxs-lookup"><span data-stu-id="ed0ae-157">When that happens, the installer UX looks like the following (only the SDK version is shown and the installed Runtime versions are shown on a summary page at the end of the installation process on Windows and Mac):</span></span>
+
+| <span data-ttu-id="ed0ae-158">Installer</span><span class="sxs-lookup"><span data-stu-id="ed0ae-158">Installer</span></span> | <span data-ttu-id="ed0ae-159">Заголовок окна</span><span class="sxs-lookup"><span data-stu-id="ed0ae-159">Window Title</span></span>                      | <span data-ttu-id="ed0ae-160">Остальное содержимое установщика</span><span class="sxs-lookup"><span data-stu-id="ed0ae-160">Other content in installer</span></span>                                   | <span data-ttu-id="ed0ae-161">Что устанавливается</span><span class="sxs-lookup"><span data-stu-id="ed0ae-161">What is installed</span></span>                                                         |
+| :--       | :--                               | :--                                                          | :--                                                                       |
+| <span data-ttu-id="ed0ae-162">SDK</span><span class="sxs-lookup"><span data-stu-id="ed0ae-162">SDK</span></span>       | <span data-ttu-id="ed0ae-163">Установщик пакета SDK для .NET Core 2.1 (x64)</span><span class="sxs-lookup"><span data-stu-id="ed0ae-163">.NET Core 2.1 SDK (x64) Installer</span></span> | <span data-ttu-id="ed0ae-164">Пакет SDK для .NET Core 2.1.1</span><span class="sxs-lookup"><span data-stu-id="ed0ae-164">.NET Core 2.1.1 SDK</span></span> <br> <span data-ttu-id="ed0ae-165">Среда выполнения для .NET Core 2.1.1</span><span class="sxs-lookup"><span data-stu-id="ed0ae-165">.NET Core 2.1.1 Runtime</span></span> <br> <span data-ttu-id="ed0ae-166">Среда выполнения для .NET Core 2.0.6</span><span class="sxs-lookup"><span data-stu-id="ed0ae-166">.NET Core 2.0.6 Runtime</span></span> | <span data-ttu-id="ed0ae-167">Инструменты .NET Core 2.1.1 + среда выполнения .NET Core 2.1.1 + среда выполнения .NET Core 2.0.6</span><span class="sxs-lookup"><span data-stu-id="ed0ae-167">.NET Core 2.1.1 Tools + .NET Core 2.1.1 Runtime + .NET Core 2.0.6 Runtime</span></span> |
+
+<span data-ttu-id="ed0ae-168">Также может возникнуть необходимость обновить инструменты .NET Core без изменения среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-168">It's also possible that .NET Core Tools need to be updated, without runtime changes.</span></span> <span data-ttu-id="ed0ae-169">В этом случае версия пакета SDK увеличивается (например, до 2.1.2), а среда выполнения учитывает это изменение при последующей поставке (например, в следующий раз среда выполнения и пакет SDK поставляются как 2.1.3).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-169">In that case, the SDK version is increased (for example, to 2.1.2) and then the Runtime catches up the next time it ships (for example, both the Runtime and SDK ship the next time as 2.1.3).</span></span>
+
+### <a name="package-managers"></a><span data-ttu-id="ed0ae-170">Диспетчеры пакетов</span><span class="sxs-lookup"><span data-stu-id="ed0ae-170">Package managers</span></span>
+
+<span data-ttu-id="ed0ae-171">.NET Core может распространяться не только корпорацией Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-171">.NET Core can be distributed by other entities than Microsoft.</span></span> <span data-ttu-id="ed0ae-172">В частности, разработчики пакетов и владельцы дистрибутивов Linux могут добавлять пакеты .NET Core в свои диспетчеры пакетов.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-172">In particular, Linux distribution owners and package maintainers may add .NET Core packages to their package managers.</span></span> <span data-ttu-id="ed0ae-173">Рекомендации по именованию и управлению версиями таких пакетов см. в разделе [Упаковка дистрибутивов .NET Core](../build/distribution-packaging.md).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-173">For recommendations on how those packages should be named and versioned, see [.NET Core distribution packaging](../build/distribution-packaging.md).</span></span>
+
+#### <a name="minimum-package-set"></a><span data-ttu-id="ed0ae-174">Минимальный набор пакетов</span><span class="sxs-lookup"><span data-stu-id="ed0ae-174">Minimum package set</span></span>
+
+* <span data-ttu-id="ed0ae-175">`dotnet-runtime-[major].[minor]` — среда выполнения с указанной версией (в диспетчере пакетов должна быть доступна только версия с последними исправлениями для этого сочетания основного и дополнительного номеров версий).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-175">`dotnet-runtime-[major].[minor]`: a runtime with the specified version (only the latest patch version for a given major+minor combination should be available in the package manager).</span></span> <span data-ttu-id="ed0ae-176">Пакет обновляется до новых версий исправлений, но для основного и дополнительного номеров версий создаются отдельные пакеты.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-176">New patch versions update the package, but new minor or major versions are separate packages.</span></span>
+ 
+  <span data-ttu-id="ed0ae-177">**Зависимости**: `dotnet-host`</span><span class="sxs-lookup"><span data-stu-id="ed0ae-177">**Dependencies**: `dotnet-host`</span></span>
+
+* <span data-ttu-id="ed0ae-178">`dotnet-sdk` — пакет SDK последней версии.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-178">`dotnet-sdk`: the latest SDK.</span></span> <span data-ttu-id="ed0ae-179">Команда `update` выполняет накат основного и дополнительного номеров версий, а также версий исправлений.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-179">`update` rolls forward major, minor, and patch versions.</span></span>
+
+  <span data-ttu-id="ed0ae-180">**Зависимости** — последняя версия пакета `dotnet-sdk-[major].[minor]`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-180">**Dependencies**: the latest `dotnet-sdk-[major].[minor]`.</span></span>
+
+* <span data-ttu-id="ed0ae-181">`dotnet-sdk-[major].[minor]` — пакет SDK с указанной версией.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-181">`dotnet-sdk-[major].[minor]`: the SDK with the specified version.</span></span> <span data-ttu-id="ed0ae-182">Указывается последняя включенная версия добавленных общих платформ, что позволит пользователям легко связать пакет SDK с общей платформой.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-182">The version specified is the highest included version of included shared frameworks, so that users can easily relate an SDK to a shared framework.</span></span> <span data-ttu-id="ed0ae-183">Пакет обновляется до новых версий исправлений, но для основного и дополнительного номеров версий создаются отдельные пакеты.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-183">New patch versions update the package, but new minor or major versions are separate packages.</span></span>
+
+  <span data-ttu-id="ed0ae-184">**Зависимости** — `dotnet-host`, одна или несколько сред выполнения `dotnet-runtime-[major].[minor]` (одна из них используется в коде пакета SDK, а остальные предназначены для сборки и запуска приложений пользователями).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-184">**Dependencies**: `dotnet-host`, one or more `dotnet-runtime-[major].[minor]` (one of those is used by the SDK code itself, the others are here for users to build and run against).</span></span>
+
+* <span data-ttu-id="ed0ae-185">`dotnet-host` — основное приложение последней версии.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-185">`dotnet-host`: the latest host.</span></span>
+
+##### <a name="preview-versions"></a><span data-ttu-id="ed0ae-186">Предварительные версии</span><span class="sxs-lookup"><span data-stu-id="ed0ae-186">Preview versions</span></span>
+
+<span data-ttu-id="ed0ae-187">Издатели пакетов могут посчитать нужным включить предварительные версии среды выполнения и пакета SDK.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-187">Package maintainers may decide to include preview versions of the runtime and SDK.</span></span> <span data-ttu-id="ed0ae-188">Эти предварительные версии не следует включать в пакет `dotnet-sdk` без управления версиями, но можно выпустить их в виде пакетов с управлением версиями. В именах таких пакетов к фрагменту основного и дополнительного номеров версий добавляется дополнительный маркер предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-188">Don't include those preview versions in the unversioned `dotnet-sdk` package, but you can release them as versioned packages with an additional preview marker appended to the major and minor version sections of the name.</span></span> <span data-ttu-id="ed0ae-189">Например, это может быть пакет `dotnet-sdk-2.0-preview1-final`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-189">For example, there may be a `dotnet-sdk-2.0-preview1-final` package.</span></span>
+
+### <a name="docker"></a><span data-ttu-id="ed0ae-190">Docker</span><span class="sxs-lookup"><span data-stu-id="ed0ae-190">Docker</span></span>
+
+<span data-ttu-id="ed0ae-191">Общее соглашение об именовании тегов Docker заключается в размещении номера версии перед именем компонента.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-191">A general Docker tag naming convention is to place the version number before the component name.</span></span> <span data-ttu-id="ed0ae-192">Это соглашение может продолжать использоваться.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-192">This convention may continue to be utilized.</span></span> <span data-ttu-id="ed0ae-193">Текущие теги содержат только версию среды выполнения, как показано ниже.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-193">The current tags include only the Runtime version as follows.</span></span>
+
+* <span data-ttu-id="ed0ae-194">1.0.8-runtime</span><span class="sxs-lookup"><span data-stu-id="ed0ae-194">1.0.8-runtime</span></span>
+* <span data-ttu-id="ed0ae-195">1.0.8-sdk</span><span class="sxs-lookup"><span data-stu-id="ed0ae-195">1.0.8-sdk</span></span>
+* <span data-ttu-id="ed0ae-196">2.0.4-runtime</span><span class="sxs-lookup"><span data-stu-id="ed0ae-196">2.0.4-runtime</span></span>
+* <span data-ttu-id="ed0ae-197">2.0.4-sdk</span><span class="sxs-lookup"><span data-stu-id="ed0ae-197">2.0.4-sdk</span></span>
+* <span data-ttu-id="ed0ae-198">2.1.1-runtime</span><span class="sxs-lookup"><span data-stu-id="ed0ae-198">2.1.1-runtime</span></span>
+* <span data-ttu-id="ed0ae-199">2.1.1-sdk</span><span class="sxs-lookup"><span data-stu-id="ed0ae-199">2.1.1-sdk</span></span>
+
+<span data-ttu-id="ed0ae-200">Теги SDK должны обновляться, чтобы представлять версию пакета SDK, а не среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-200">The SDK tags should be updated to represent the SDK version rather than Runtime.</span></span>
+
+<span data-ttu-id="ed0ae-201">Может возникнуть и ситуация, когда требуется исправить инструменты .NET Core и повторно поставить уже существующую среду выполнения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-201">It's also possible that we need to fix the .NET Core Tools but reship an existing runtime.</span></span> <span data-ttu-id="ed0ae-202">В этом случае версия пакета SDK увеличивается (например, до 2.1.2), а среда выполнения учитывает это изменение при последующей поставке (например, в следующий раз среда выполнения и пакет SDK поставляются как 2.1.3).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-202">In that case, the SDK version is increased (for example, to 2.1.2) and then the Runtime catches up the next time it ships (for example, both the Runtime and SDK ship the following time as 2.1.3).</span></span>
+
+## <a name="semantic-versioning"></a><span data-ttu-id="ed0ae-203">Семантическое управление версиями</span><span class="sxs-lookup"><span data-stu-id="ed0ae-203">Semantic Versioning</span></span>
+
+<span data-ttu-id="ed0ae-204">В .NET Core используется [Семантическое версионирование (SemVer)](http://semver.org/) с шаблоном номера версии `MAJOR.MINOR.PATCH`, различные части которого служат для описания степени и типа изменения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-204">.NET Core uses [Semantic Versioning (SemVer)](http://semver.org/), adopting the use of `MAJOR.MINOR.PATCH` versioning, using the various parts of the version number to describe the degree and type of change.</span></span>
+
+```
+MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
+```
+
+<span data-ttu-id="ed0ae-205">Необязательные части `PRERELEASE` и `BUILDNUMBER` никогда не будут входить в поддерживаемые выпуски и существуют только для ночных сборок, которые локально создаются из исходных целевых объектов, и неподдерживаемых выпусков предварительной версии.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-205">The optional `PRERELEASE` and `BUILDNUMBER` parts will never be part of supported releases, and only exist on nightly builds, locally built from source targets, and unsupported preview releases.</span></span>
+
+### <a name="how-version-numbers-are-incremented"></a><span data-ttu-id="ed0ae-206">Как увеличиваются номера версии?</span><span class="sxs-lookup"><span data-stu-id="ed0ae-206">How version numbers are incremented?</span></span>
+
+<span data-ttu-id="ed0ae-207">`MAJOR` увеличивается в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-207">`MAJOR` is incremented when:</span></span>
+  - <span data-ttu-id="ed0ae-208">Старая версия больше не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-208">An old version is no longer supported.</span></span>
+  - <span data-ttu-id="ed0ae-209">Присваивается более новая версия `MAJOR` существующей зависимости.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-209">A newer `MAJOR` version of an existing dependency is adopted.</span></span>
+  - <span data-ttu-id="ed0ae-210">Значение параметра по умолчанию для совместимости изменяется на "off".</span><span class="sxs-lookup"><span data-stu-id="ed0ae-210">The default setting of a compatibility quirk is changed to "off."</span></span>
+
+<span data-ttu-id="ed0ae-211">`MINOR` увеличивается в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-211">`MINOR` is incremented when:</span></span>
+  - <span data-ttu-id="ed0ae-212">Добавляется контактная зона общедоступного API.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-212">Public API surface area is added.</span></span>
+  - <span data-ttu-id="ed0ae-213">Добавляется новое поведение.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-213">A new behavior is added.</span></span>
+  - <span data-ttu-id="ed0ae-214">Присваивается более новая версия `MINOR` существующей зависимости.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-214">A newer `MINOR` version of an existing dependency is adopted.</span></span>
+  - <span data-ttu-id="ed0ae-215">Добавляется новая зависимость.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-215">A new dependency is introduced.</span></span>
   
-Условия изменения номера исправления:
-  - исправление ошибок;
-  - добавление поддержки новой платформы;
-  - присвоение нового номера исправления существующей зависимости;
-  - любые другие изменения.
+<span data-ttu-id="ed0ae-216">`PATCH` увеличивается в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-216">`PATCH` is incremented when:</span></span>
+  - <span data-ttu-id="ed0ae-217">Вносятся исправления ошибок.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-217">Bug fixes are made.</span></span>
+  - <span data-ttu-id="ed0ae-218">Добавляется поддержка новой платформы.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-218">Support for a newer platform is added.</span></span>
+  - <span data-ttu-id="ed0ae-219">Присваивается более новая версия `PATCH` существующей зависимости.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-219">A newer `PATCH` version of an existing dependency is adopted.</span></span>
+  - <span data-ttu-id="ed0ae-220">Любое другое изменение, которое не относится к описанным выше случаям.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-220">Any other change that doesn't fit one of the previous cases.</span></span>
 
-Чтобы определить, какой номер следует увеличить, если изменений несколько, ориентируйтесь на изменение самого высокого уровня.
+<span data-ttu-id="ed0ae-221">При наличии нескольких изменений увеличивается самый высокий элемент, затронутый отдельными изменениями, а следующие за ним сбрасываются до нуля.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-221">When there are multiple changes, the highest element affected by individual changes is incremented, and the following ones are reset to zero.</span></span> <span data-ttu-id="ed0ae-222">Например, когда `MAJOR` увеличивается, `MINOR` и `PATCH` сбрасываются в нуль.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-222">For example, when `MAJOR` is incremented, `MINOR` and `PATCH` are reset to zero.</span></span> <span data-ttu-id="ed0ae-223">Когда `MINOR` увеличивается, `PATCH` сбрасываются в нуль, а `MAJOR` остается без изменений.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-223">When `MINOR` is incremented, `PATCH` is reset to zero while `MAJOR` is left untouched.</span></span>
 
-<a id="versioning-scheme" class="xliff"></a>
+### <a name="preview-versions"></a><span data-ttu-id="ed0ae-224">Предварительные версии</span><span class="sxs-lookup"><span data-stu-id="ed0ae-224">Preview versions</span></span>
 
-## Схема управления версиями
+<span data-ttu-id="ed0ae-225">Для предварительных версий к номеру версии добавляется `-preview[number]-([build]|"final")`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-225">Preview versions have a `-preview[number]-([build]|"final")` appended to the version.</span></span> <span data-ttu-id="ed0ae-226">Например, `2.0.0-preview1-final`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-226">For example, `2.0.0-preview1-final`.</span></span>
 
-Ниже приведено определение платформы .NET Core и способ управления версиями для нее:
+### <a name="servicing-versions"></a><span data-ttu-id="ed0ae-227">Сервисные версии</span><span class="sxs-lookup"><span data-stu-id="ed0ae-227">Servicing versions</span></span>
 
-- Реализация сред выполнения и платформ, распространяемая в виде пакетов. Управление версиями каждого пакета производится отдельно. Особенно это касается версий исправлений.
-- Набор метапакетов, которые ссылаются на мелкомодульные пакеты как на единую сущность с управлением версиями. Управление версиями метапакетов осуществляется отдельно от управления версиями пакетов.
-- Набор платформ (например, `netstandard`), которые представляют более широкий набор интерфейсов API, описываемый как набор моментальных снимков с управлением версиями.
+<span data-ttu-id="ed0ae-228">После выхода выпуска его ветви обычно перестают создавать ежедневные сборки и вместо них начинают формировать сервисные сборки.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-228">After a release goes out, the release branches generally stop producing daily builds and instead start producing servicing builds.</span></span> <span data-ttu-id="ed0ae-229">Для сервисных версий к номеру версии добавляется `-servicing-[number]`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-229">Servicing versions have a `-servicing-[number]` appended to the version.</span></span> <span data-ttu-id="ed0ae-230">Например, `2.0.1-servicing-006924`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-230">For example, `2.0.1-servicing-006924`.</span></span>
 
-<a id="packages" class="xliff"></a>
+### <a name="lts-vs-current"></a><span data-ttu-id="ed0ae-231">Сравнение LTS и Current</span><span class="sxs-lookup"><span data-stu-id="ed0ae-231">LTS vs. current</span></span>
 
-### Пакеты
+<span data-ttu-id="ed0ae-232">Для .NET Core существует две цепочки выпусков: Long Term Support (LTS) и Current.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-232">There are two trains of releases for .NET Core: Long Term Support (LTS) and Current.</span></span> <span data-ttu-id="ed0ae-233">Это позволяет пользователям выбрать требуемый уровень стабильности и новых возможностей с сохранением поддержки.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-233">That enables users to pick the level of stability and new features they want, while still being supported.</span></span>
 
-Для пакетов библиотек характерно независимое управление версиями. Пакеты, которые пересекаются со сборками .NET Framework System.\*, обычно используют версии 4.x, что соответствует схеме управления версиями .NET Framework 4.x (так сложилось исторически). Версии пакетов, которые не пересекаются с библиотеками .NET Framework (например, [System.Reflection.Metadata](https://www.nuget.org/packages/System.Reflection.Metadata)), обычно начинаются с 1.0 и увеличиваются с этого номера.
+- <span data-ttu-id="ed0ae-234">При LTS вы реже получаете новые возможности, но используете более зрелую платформу.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-234">LTS means you get new features less frequently, but you have a more mature platform.</span></span> <span data-ttu-id="ed0ae-235">Кроме того, LTS имеет более длительный период поддержки.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-235">LTS also has a longer period of support.</span></span>
+- <span data-ttu-id="ed0ae-236">При Current вы чаще получаете новые возможности и API, но вам предоставляется сокращенный срок для установки обновлений, а самих обновлений выпускается больше.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-236">Current means you get new features and APIs more frequently, but the disadvantage is that you have a shorter window of time to install updates, and those updates happen more frequently.</span></span> <span data-ttu-id="ed0ae-237">Current также полностью поддерживается, но период поддержки короче, чем для LTS.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-237">Current is also fully supported but the support period is shorter than LTS.</span></span>
 
-Пакеты, описываемые библиотекой [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), представляют собой особый случай, так как являются основой платформы.
+<span data-ttu-id="ed0ae-238">Версию "Current" можно повысить до LTS.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-238">A "Current" version may get promoted to LTS.</span></span>
 
-- Пакетам NETStandard.Library номера версий присваиваются как единому набору, так как между ними имеются зависимости на уровне реализации.
-- Интерфейсы API добавляются в пакеты NETStandard.Library только в рамках основных или дополнительных выпусков .NET Core, так как их добавление требует назначения нового номера версии `netstandard`. Это дополнение к требованиям SemVer.
+<span data-ttu-id="ed0ae-239">"LTS" и "Current" следует рассматривать как метки, которые мы размещаем для определенных выпусков, чтобы обозначить соответствующий уровень поддержки.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-239">"LTS" and "Current" should be considered as labels that we put on specific releases to make a statement about the associated level of support.</span></span>
 
-<a id="metapackages" class="xliff"></a>
+<span data-ttu-id="ed0ae-240">Дополнительные сведения см. в разделе [Справочные материалы по жизненному циклу поддержки .NET Core](https://www.microsoft.com/net/core/support).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-240">For more information, see [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support).</span></span>
 
-### Метапакеты
+## <a name="versioning-scheme-details"></a><span data-ttu-id="ed0ae-241">Сведения о схеме управления версиями</span><span class="sxs-lookup"><span data-stu-id="ed0ae-241">Versioning scheme details</span></span>
 
-Управление версиями метапакетов .NET Core основано на версиях платформ, с которыми они сопоставлены. Метапакету присваивается самый старший номер версии платформы (например, netstandard1.6), с которой он сопоставлен в оболочке пакета. 
+<span data-ttu-id="ed0ae-242">.NET Core состоит из следующих компонентов:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-242">.NET Core is made of the following parts:</span></span>
 
-Версия исправления метапакета представляет изменения, которые внесены в ссылки на пакеты в метапакете. Версия исправления никогда не включает обновленную версию платформы. Поэтому метапакеты не соответствуют строго правилам SemVer, так как их схема управления версиями не представляет степень изменений в базовых пакетах, а связана в первую очередь с уровнем API. 
+- <span data-ttu-id="ed0ae-243">Основное приложение (также называется "мультиплексор"): `dotnet.exe` с библиотеками политики `hostfxr`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-243">A host (also known as muxer): `dotnet.exe` with `hostfxr` policy libraries.</span></span>
+- <span data-ttu-id="ed0ae-244">Пакет SDK (набор инструментов, который нужен на компьютере разработчика, но не в рабочей среде).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-244">An SDK (the set of tools necessary on a developer's machine, but not in production).</span></span>
+- <span data-ttu-id="ed0ae-245">Среда выполнения.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-245">A runtime.</span></span>
+- <span data-ttu-id="ed0ae-246">Реализация общей платформы, распространяемая в виде пакетов.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-246">A shared framework implementation, distributed as packages.</span></span> <span data-ttu-id="ed0ae-247">Управление версиями каждого пакета производится отдельно. Особенно это касается версий исправлений.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-247">Each package is versioned independently, particularly for patch versioning.</span></span>
+- <span data-ttu-id="ed0ae-248">Необязательный набор [метапакетов](../packages.md), которые ссылаются на мелкомодульные пакеты как на единую сущность с управлением версиями.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-248">Optionally, a set of [metapackages](../packages.md) that reference fine-grained packages as a versioned unit.</span></span> <span data-ttu-id="ed0ae-249">Управление версиями метапакетов может осуществляться отдельно от управления версиями пакетов.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-249">Metapackages can be versioned separately from packages.</span></span>
 
-Существуют два основных метапакета для .NET Core.
+<span data-ttu-id="ed0ae-250">.NET Core также включает набор требуемых версий .NET Framework (например, `netstandard` или `netcoreapp`), представляющих расширяющийся набор интерфейсов API по мере увеличения номеров версии.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-250">.NET Core also includes a set of target frameworks (for example, `netstandard` or `netcoreapp`) that represent a progressively larger API set, as version numbers are incremented.</span></span>
 
-**NETStandard.Library**
+### <a name="net-standard"></a><span data-ttu-id="ed0ae-251">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="ed0ae-251">.NET Standard</span></span>
 
-- Версия 1.6 для .NET Core 1.0 (соответствие этих версий не является преднамеренным).
-- Сопоставлен с платформой `netstandard`. 
-- Описывает пакеты, которые считаются необходимыми для разработки современных приложений и которые платформы .NET должны реализовывать, чтобы считаться платформами [.NET Standard](../../standard/net-standard.md).
+<span data-ttu-id="ed0ae-252">.NET Standard использует схему управления версиями `MAJOR.MINOR`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-252">.NET Standard has been using a `MAJOR.MINOR` versioning scheme.</span></span> <span data-ttu-id="ed0ae-253">Уровень `PATCH` бесполезен для .NET Standard, так как он содержит набор контрактов, итерация по которым осуществляется реже, и не представляет те же требования к управлению версиями, что и фактическая реализация.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-253">`PATCH` level isn't useful for .NET Standard because it expresses a set of contracts that are iterated on less often and doesn't present the same requirements for versioning as an actual implementation.</span></span>
 
-**Microsoft.NETCore.App**
+<span data-ttu-id="ed0ae-254">Нет никакой реальной связи между версиями .NET Standard и версиями .NET Core: .NET Core 2.0 реализует .NET Standard 2.0, но нет никакой гарантии, что будущие версии .NET Core будут соответствовать той же версии .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-254">There is no real coupling between .NET Standard versions and .NET Core versions: .NET Core 2.0 happens to implement .NET Standard 2.0, but there is no guarantee that future versions of .NET Core will map to the same .NET Standard version.</span></span> <span data-ttu-id="ed0ae-255">.NET Core может предоставлять API, которые не определяются .NET Standard, и поэтому может предоставлять новые версии без потребности в новом .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-255">.NET Core can ship APIs that aren't defined by .NET Standard, and, as such, may ship new versions without requiring a new .NET Standard.</span></span> <span data-ttu-id="ed0ae-256">Концепция .NET Standard также применяется к другим целевым объектам, таким как .NET Framework или Mono, даже если она появилась одновременно с .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-256">.NET Standard is also a concept that applies to other targets, such as .NET Framework or Mono, even if its inception happened to coincide with that of .NET Core.</span></span>
 
-- Версия 1.0 для .NET Core 1.0 (эти версии сопоставлены).
-- Сопоставлен с платформой `netcoreapp`.
-- Описывает платформы в распространяемом пакете .NET Core.
+### <a name="packages"></a><span data-ttu-id="ed0ae-257">Пакеты</span><span class="sxs-lookup"><span data-stu-id="ed0ae-257">Packages</span></span>
 
-Примечание. Есть еще один метапакет .NET Core — [`Microsoft.NETCore.Portable.Compatibility`](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility). Он не сопоставлен с определенной платформой, поэтому управление версиями для него осуществляется как для пакета.
+<span data-ttu-id="ed0ae-258">Для пакетов библиотек характерно независимое управление версиями.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-258">Library packages evolve and version independently.</span></span> <span data-ttu-id="ed0ae-259">Пакеты, которые пересекаются со сборками .NET Framework System.\*, обычно используют версии 4.x, что соответствует схеме управления версиями .NET Framework 4.x (так сложилось исторически).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-259">Packages that overlap with .NET Framework System.\* assemblies typically use 4.x versions, aligning with the .NET Framework 4.x versioning (a historical choice).</span></span> <span data-ttu-id="ed0ae-260">Версии пакетов, которые не пересекаются с библиотеками .NET Framework (например, [`System.Reflection.Metadata`](https://www.nuget.org/packages/System.Reflection.Metadata)), обычно начинаются с 1.0 и увеличиваются с этого номера.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-260">Packages that do not overlap with the .NET Framework libraries (for example, [`System.Reflection.Metadata`](https://www.nuget.org/packages/System.Reflection.Metadata)) typically start at 1.0 and increment from there.</span></span>
 
-<a id="frameworks" class="xliff"></a>
+<span data-ttu-id="ed0ae-261">Пакеты, описываемые [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library), представляют собой особый случай, так как являются основой платформы.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-261">The packages described by [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) are treated specially due to being at the base of the platform.</span></span>
 
-### Инфраструктуры
+<span data-ttu-id="ed0ae-262">Пакетам `NETStandard.Library` номера версий присваиваются как единому набору, так как между ними имеются зависимости на уровне реализации.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-262">`NETStandard.Library` packages will typically version as a set, since they have implementation-level dependencies between them.</span></span>
 
-Версии платформ меняются при добавлении новых интерфейсов API. Версии исправлений для них не применяются, так как они представляют уровень API и не связаны с реализацией. Основные и дополнительные номера версий следуют правилам SemVer, описанным выше.
+### <a name="metapackages"></a><span data-ttu-id="ed0ae-263">Метапакеты</span><span class="sxs-lookup"><span data-stu-id="ed0ae-263">Metapackages</span></span>
 
-Платформа `netcoreapp` связана с распространяемым пакетом .NET Core. Ее номера версий соответствуют версиям .NET Core. Например, когда будет выпущена версия .NET Core 2.0, она будет предназначена для `netcoreapp2.0`. Для платформы `netstandard` не используется схема управления версиями какой-либо среды выполнения .NET, так как она в равной степени применяется ко всем средам.
+<span data-ttu-id="ed0ae-264">Управление версиями метапакетов .NET Core основано на версии .NET Core, к которой они относятся.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-264">Versioning for .NET Core metapackages is based on the .NET Core version they are a part of.</span></span>
 
-<a id="versioning-in-practice" class="xliff"></a>
+<span data-ttu-id="ed0ae-265">Например, метапакеты в .NET Core 2.1.3 должны иметь номера версии `MAJOR` и `MINOR`, равные 2.1.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-265">For instance, the metapackages in .NET Core 2.1.3 should all have 2.1 as their `MAJOR` and `MINOR` version numbers.</span></span>
 
-## Управление версиями на практике
+<span data-ttu-id="ed0ae-266">Версия исправления для метапакета увеличивается при каждом обновлении какого-либо пакета, на который указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-266">The patch version for the metapackage is incremented every time any referenced package is updated.</span></span> <span data-ttu-id="ed0ae-267">Версии исправлений не включают обновленную версию платформы.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-267">Patch versions don't include an updated framework version.</span></span> <span data-ttu-id="ed0ae-268">Поэтому метапакеты не соответствуют строго правилам SemVer, так как их схема управления версиями не представляет степень изменений в базовых пакетах, а связана в первую очередь с уровнем API.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-268">As a result, the metapackages aren't strictly SemVer-compliant because their versioning scheme doesn't represent the degree of change in the underlying packages, but primarily the API level.</span></span> 
 
-В репозиториях .NET Core в GitHub ежедневно публикуются исправления и общедоступные выпуски, вследствие чего появляется множество новых сборок библиотек. Создавать новые общедоступные версии .NET Core для каждого изменения нецелесообразно. Вместо этого изменения накапливаются в течение некоторого не определенного строго периода времени (например, нескольких недель или месяцев), после чего выпускается новая общедоступная стабильная версия .NET Core.
+<span data-ttu-id="ed0ae-269">Сейчас существует два основных метапакета для .NET Core:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-269">There are currently two primary metapackages for .NET Core:</span></span>
 
-Новая версия .NET Core может означать следующее:
+<span data-ttu-id="ed0ae-270">**Microsoft.NETCore.App**</span><span class="sxs-lookup"><span data-stu-id="ed0ae-270">**Microsoft.NETCore.App**</span></span>
 
-- новые версии пакетов и метапакетов;
-- новые версии различных платформ с добавлением новых интерфейсов API;
-- новая версия распространяемого пакета .NET Core.
+- <span data-ttu-id="ed0ae-271">Версия 1.0 для .NET Core 1.0 (эти версии совпадают).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-271">v1.0 as of .NET Core 1.0 (these versions match).</span></span>
+- <span data-ttu-id="ed0ae-272">Сопоставлен с платформой `netcoreapp`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-272">Maps to the `netcoreapp` framework.</span></span>
+- <span data-ttu-id="ed0ae-273">Описывает платформы в распространяемом пакете .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-273">Describes the packages in the .NET Core distribution.</span></span>
 
-<a id="shipping-a-patch-release" class="xliff"></a>
+<span data-ttu-id="ed0ae-274">Примечание. [`Microsoft.NETCore.Portable.Compatibility`](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — это другой метапакет .NET Core, обеспечивающий совместимость с реализацией платформы .NET, предшествующей .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-274">Note: [`Microsoft.NETCore.Portable.Compatibility`](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) is another .NET Core metapackage that exists to enable compatibility with pre-.NET Standard implementation of .NET.</span></span> <span data-ttu-id="ed0ae-275">Он не сопоставлен с определенной платформой, поэтому управление версиями для него осуществляется как для пакета.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-275">It doesn't map to a particular framework, so it versions like a package.</span></span>
 
-### Выпуск исправления
+<span data-ttu-id="ed0ae-276">**NETStandard.Library**</span><span class="sxs-lookup"><span data-stu-id="ed0ae-276">**NETStandard.Library**</span></span>
 
-После выпуска стабильной версии .NET Core 1.0.0 в библиотеки .NET Core вносятся изменения (без добавления новых интерфейсов API) для исправления ошибок, а также повышения производительности и надежности. Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core. Версии метапакетов изменяются на уровне номера исправления (x.y.z). Платформы не обновляются. Выпускается новый распространяемый пакет .NET Core, номер версии которого соответствует версии метапакета `Microsoft.NETCore.App`.
+<span data-ttu-id="ed0ae-277">[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) описывает библиотеки, входящие в [.NET Standard](../../standard/library.md).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-277">[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) describes the libraries that are part of the [.NET Standard](../../standard/library.md).</span></span> <span data-ttu-id="ed0ae-278">Применяется ко всем реализациям .NET, которые поддерживают .NET Standard, например .NET Framework, .NET Core и Mono.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-278">Applies to all .NET implementations that support .NET Standard, such as .NET Framework, .NET Core, and Mono.</span></span>
 
-Выпуск исправлений демонстрируется в приведенных ниже примерах файла project.json.
+### <a name="target-frameworks"></a><span data-ttu-id="ed0ae-279">Требуемые версии .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ed0ae-279">Target frameworks</span></span>
 
-```json
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.1"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {}
-  }
-}
-```
+<span data-ttu-id="ed0ae-280">Версии требуемых версий .NET Framework меняются при добавлении новых API.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-280">Target framework versions are updated when new APIs are added.</span></span> <span data-ttu-id="ed0ae-281">Версии исправлений для них не применяются, так как они представляют уровень API и не связаны с реализацией.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-281">They have no concept of patch version, since they represent API shape and not implementation concerns.</span></span> <span data-ttu-id="ed0ae-282">Управление основным и дополнительным номером версии осуществляется согласно указанным выше правилам SemVer и в соответствии с номерами версий `MAJOR` и `MINOR` для реализующих их дистрибутивов .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-282">Major and minor versioning follows the SemVer rules specified earlier, and coincides with the `MAJOR` and `MINOR` numbers of the .NET Core distributions that implement them.</span></span>
 
-<a id="shipping-a-minor-release" class="xliff"></a>
+## <a name="versioning-in-practice"></a><span data-ttu-id="ed0ae-283">Управление версиями на практике</span><span class="sxs-lookup"><span data-stu-id="ed0ae-283">Versioning in practice</span></span>
 
-### Выпуск дополнительной версии
+<span data-ttu-id="ed0ae-284">Имя скачиваемого файла .NET Core содержит версию, например `dotnet-sdk-2.0.4-win10-x64.exe`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-284">When you download .NET Core, the name of the file you download carries the version, for example, `dotnet-sdk-2.0.4-win10-x64.exe`.</span></span>
 
-После выпуска стабильной версии .NET Core 1.0.0 в библиотеки .NET Core добавляются новые интерфейсы API для поддержки новых сценариев. Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core. Версии метапакетов изменяются на уровне дополнительного номера (x.y) в соответствии со старшим номером версии платформы. Различные платформы обновляются для описания новых интерфейсов API. Выпускается новый распространяемый пакет .NET Core, номер версии которого соответствует версии метапакета `Microsoft.NETCore.App`.
+<span data-ttu-id="ed0ae-285">В репозиториях .NET Core в GitHub ежедневно публикуются фиксации и запросы на вытягивание, вследствие чего появляется множество новых сборок библиотек.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-285">There are commits and pull requests on .NET Core repos on GitHub on a daily basis, resulting in new builds of many libraries.</span></span> <span data-ttu-id="ed0ae-286">Создавать новые общедоступные версии .NET Core для каждого изменения нецелесообразно.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-286">It isn't practical to create new public versions of .NET Core for every change.</span></span> <span data-ttu-id="ed0ae-287">Вместо этого изменения накапливаются в течение неопределенного периода времени (например, нескольких недель или месяцев), после чего выпускается новая общедоступная стабильная версия .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-287">Instead, changes are aggregated over an undetermined period of time (for example, weeks or months) before making a new public stable .NET Core version.</span></span>
 
-Вы можете увидеть небольшие изменения в следующем файле проекта:
+<span data-ttu-id="ed0ae-288">Новая версия .NET Core может означать следующее:</span><span class="sxs-lookup"><span data-stu-id="ed0ae-288">A new version of .NET Core could mean several things:</span></span>
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-  </PropertyGroup>
-</Project>
-```
+- <span data-ttu-id="ed0ae-289">новые версии пакетов и метапакетов;</span><span class="sxs-lookup"><span data-stu-id="ed0ae-289">New versions of packages and metapackages.</span></span>
+- <span data-ttu-id="ed0ae-290">новые версии различных платформ с добавлением новых интерфейсов API;</span><span class="sxs-lookup"><span data-stu-id="ed0ae-290">New versions of various frameworks, assuming the addition of new APIs.</span></span>
+- <span data-ttu-id="ed0ae-291">новая версия распространяемого пакета .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-291">New version of the .NET Core distribution.</span></span>
 
-<a id="shipping-a-major-release" class="xliff"></a>
+### <a name="shipping-a-patch-release"></a><span data-ttu-id="ed0ae-292">Выпуск исправления</span><span class="sxs-lookup"><span data-stu-id="ed0ae-292">Shipping a patch release</span></span>
 
-### Выпуск основной версии
+<span data-ttu-id="ed0ae-293">После выпуска основной версии .NET Core, например 2.0.0, в библиотеки .NET Core вносятся изменения для исправления ошибок, а также повышения производительности и надежности.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-293">After shipping a major release of .NET Core, such as version 2.0.0, patch-level changes are made to .NET Core libraries to fix bugs and improve performance and reliability.</span></span> <span data-ttu-id="ed0ae-294">Это означает, что новые API не добавляются.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-294">That means that no new APIs are introduced.</span></span> <span data-ttu-id="ed0ae-295">Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-295">The various metapackages are updated to reference the updated .NET Core library packages.</span></span> <span data-ttu-id="ed0ae-296">Версии метапакетов изменяются на уровне номера исправления (`MAJOR.MINOR.PATCH`).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-296">The metapackages are versioned as patch updates (`MAJOR.MINOR.PATCH`).</span></span> <span data-ttu-id="ed0ae-297">Требуемые версии .NET Framework никогда не обновляются в рамках выпусков исправлений.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-297">Target frameworks are never updated as part of patch releases.</span></span> <span data-ttu-id="ed0ae-298">Выпускается новый распространяемый пакет .NET Core, номер версии которого соответствует версии метапакета `Microsoft.NETCore.App`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-298">A new .NET Core distribution is released with a version number that matches that of the `Microsoft.NETCore.App` metapackage.</span></span>
 
-После выпуска стабильной версии .NET Core 1.y.z в библиотеки .NET Core добавляются новые интерфейсы API для поддержки новых базовых сценариев. Может быть отменена поддержка платформы. Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core. Версии метапакета `Microsoft.NETCore.App` и платформы `netcore` изменяются на уровне основного номера (x.). Версии метапакета `NETStandard.Library`, вероятно, будут изменяться на уровне дополнительного номера (x.y), так как он связан с несколькими реализациями .NET. Будет выпущен новый распространяемый пакет .NET Core, номер версии которого соответствует версии метапакета `Microsoft.NETCore.App`.
+### <a name="shipping-a-minor-release"></a><span data-ttu-id="ed0ae-299">Выпуск дополнительной версии</span><span class="sxs-lookup"><span data-stu-id="ed0ae-299">Shipping a minor release</span></span>
 
-Вы можете увидеть значительные изменения в следующем файле проекта. (Обратите внимание, что `netcoreapp2.0` не был выпущен.)
+<span data-ttu-id="ed0ae-300">После выпуска версии .NET Core c увеличенным номером версии `MAJOR` в библиотеки .NET Core добавляются новые интерфейсы API для поддержки новых сценариев.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-300">After shipping a .NET Core version with an incremented `MAJOR` version number, new APIs are added to .NET Core libraries to enable new scenarios.</span></span> <span data-ttu-id="ed0ae-301">Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-301">The various metapackages are updated to reference the updated .NET Core library packages.</span></span> <span data-ttu-id="ed0ae-302">Версии метапакетов изменяются на уровне исправлений, при этом номера версии `MAJOR` и `MINOR` соответствуют новой версии платформы.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-302">The metapackages are versioned as patch updates with `MAJOR` and `MINOR` version numbers matching the new framework version.</span></span> <span data-ttu-id="ed0ae-303">Добавляются имена новых требуемых версий .NET Framework с новой версией `MAJOR.MINOR`, чтобы описать новые API (например, `netcoreapp2.1`).</span><span class="sxs-lookup"><span data-stu-id="ed0ae-303">New target framework names with the new `MAJOR.MINOR` version are added to describe the new APIs (for example, `netcoreapp2.1`).</span></span> <span data-ttu-id="ed0ae-304">Выпускается новый распространяемый пакет .NET Core, номер версии которого соответствует версии метапакета `Microsoft.NETCore.App`.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-304">A new .NET Core distribution is released with a matching version number to the `Microsoft.NETCore.App` metapackage.</span></span>
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-  </PropertyGroup>
-</Project>
-```
+### <a name="shipping-a-major-release"></a><span data-ttu-id="ed0ae-305">Выпуск основной версии</span><span class="sxs-lookup"><span data-stu-id="ed0ae-305">Shipping a major release</span></span>
+
+<span data-ttu-id="ed0ae-306">При каждом выпуске новой основной версии .NET Core номер версии `MAJOR` увеличивается, а номер версии `MINOR` сбрасывается в нуль.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-306">Every time a new major version of .NET Core ships, the `MAJOR` version number gets incremented, and the `MINOR` version number gets reset to zero.</span></span> <span data-ttu-id="ed0ae-307">Новая основная версия содержит по меньшей мере все API, добавленные в дополнительную версию после предыдущей основной версии.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-307">The new major version contains at least all the APIs that were added by minor releases after the previous major version.</span></span> <span data-ttu-id="ed0ae-308">Новая основная версия должна поддерживать новые важные сценарии, а также может прекращать поддержку более старых платформ.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-308">A new major version should enable important new scenarios, and it may also drop support for an older platform.</span></span>
+
+<span data-ttu-id="ed0ae-309">Различные метапакеты обновляются так, чтобы ссылаться на обновленные пакеты библиотек .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-309">The various metapackages are updated to reference the updated .NET Core library packages.</span></span> <span data-ttu-id="ed0ae-310">Версии метапакета [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) и платформы `netcore` изменяются на уровне основного номера, соответствующего номеру версии `MAJOR` нового выпуска.</span><span class="sxs-lookup"><span data-stu-id="ed0ae-310">The [`Microsoft.NETCore.App`](https://www.nuget.org/packages/Microsoft.NETCore.App) metapackage and the `netcore` target framework are versioned as a major update matching the `MAJOR` version number of the new release.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ed0ae-311">См. также</span><span class="sxs-lookup"><span data-stu-id="ed0ae-311">See also</span></span>
+<span data-ttu-id="ed0ae-312">[Требуемые версии .NET Framework](../../standard/frameworks.md) </span><span class="sxs-lookup"><span data-stu-id="ed0ae-312">[Target frameworks](../../standard/frameworks.md) </span></span>  
+<span data-ttu-id="ed0ae-313">[Упаковка дистрибутивов .NET Core](../build/distribution-packaging.md) </span><span class="sxs-lookup"><span data-stu-id="ed0ae-313">[.NET Core distribution packaging](../build/distribution-packaging.md) </span></span>  
+<span data-ttu-id="ed0ae-314">[Справочные материалы по жизненному циклу поддержки .NET Core](https://www.microsoft.com/net/core/support) </span><span class="sxs-lookup"><span data-stu-id="ed0ae-314">[.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support) </span></span>  
+[<span data-ttu-id="ed0ae-315">Привязка версий .NET Core 2+</span><span class="sxs-lookup"><span data-stu-id="ed0ae-315">.NET Core 2+ Version Binding</span></span>](https://github.com/dotnet/designs/issues/3)   
 

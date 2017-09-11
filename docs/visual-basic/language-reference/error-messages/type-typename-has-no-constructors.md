@@ -32,27 +32,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 505e3bbdfa830394efcea7226897ec0d3e6d2b02
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6348f774971ebbe8657910989e021f7c01cdf867
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>Тип "&lt;typename&gt;" не имеет конструкторов
-Тип не поддерживает вызов в `Sub New()`. Одной из возможных причин является повреждение компилятора или двоичного файла.  
+# <a name="type-39lttypenamegt39-has-no-constructors"></a><span data-ttu-id="978f1-102">Тип "&lt;typename&gt;" не имеет конструкторов</span><span class="sxs-lookup"><span data-stu-id="978f1-102">Type &#39;&lt;typename&gt;&#39; has no constructors</span></span>
+<span data-ttu-id="978f1-103">Тип не поддерживает вызов в `Sub New()`.</span><span class="sxs-lookup"><span data-stu-id="978f1-103">A type does not support a call to `Sub New()`.</span></span> <span data-ttu-id="978f1-104">Одной из возможных причин является повреждение компилятора или двоичного файла.</span><span class="sxs-lookup"><span data-stu-id="978f1-104">One possible cause is a corrupted compiler or binary file.</span></span>  
   
- **Идентификатор ошибки:** BC30251  
+ <span data-ttu-id="978f1-105">**Идентификатор ошибки:** BC30251</span><span class="sxs-lookup"><span data-stu-id="978f1-105">**Error ID:** BC30251</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="978f1-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="978f1-106">To correct this error</span></span>  
   
-1.  Если тип находится в другом проекте или в заданном ссылкой файле, переустановите этот проект или файл.  
+1.  <span data-ttu-id="978f1-107">Если тип находится в другом проекте или в заданном ссылкой файле, переустановите этот проект или файл.</span><span class="sxs-lookup"><span data-stu-id="978f1-107">If the type is in a different project or in a referenced file, reinstall the project or file.</span></span>  
   
-2.  Если тип находится в том же самом проекте, перекомпилируйте сборку, содержащую тип.  
+2.  <span data-ttu-id="978f1-108">Если тип находится в том же самом проекте, перекомпилируйте сборку, содержащую тип.</span><span class="sxs-lookup"><span data-stu-id="978f1-108">If the type is in the same project, recompile the assembly containing the type.</span></span>  
   
-3.  Если устранить ошибку не удается, переустановите компилятор [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+3.  <span data-ttu-id="978f1-109">Если устранить ошибку не удается, переустановите компилятор [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="978f1-109">If the error recurs, reinstall the [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler.</span></span>  
   
-4.  Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.  
+4.  <span data-ttu-id="978f1-110">Если ошибка не устранена, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="978f1-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="978f1-111">См. также</span><span class="sxs-lookup"><span data-stu-id="978f1-111">See Also</span></span>  
+ <span data-ttu-id="978f1-112">[Объекты и классы](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) </span><span class="sxs-lookup"><span data-stu-id="978f1-112">[Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) </span></span>  
+<span data-ttu-id="978f1-113"> [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="978f1-113"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

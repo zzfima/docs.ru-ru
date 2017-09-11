@@ -39,10 +39,10 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (Руководство по программированию в C#)
-Лямбда-выражение — это [анонимная функция](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , с помощью которой можно создавать типы [делегатов](../../../csharp/programming-guide/delegates/using-delegates.md) или [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций. Лямбда-выражения особенно полезны при написании выражений запросов LINQ.  
+# <a name="lambda-expressions-c-programming-guide"></a><span data-ttu-id="70424-102">Лямбда-выражения (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="70424-102">Lambda Expressions (C# Programming Guide)</span></span>
+<span data-ttu-id="70424-103">Лямбда-выражение — это [анонимная функция](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , с помощью которой можно создавать типы [делегатов](../../../csharp/programming-guide/delegates/using-delegates.md) или [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) .</span><span class="sxs-lookup"><span data-stu-id="70424-103">A lambda expression is an [anonymous function](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) that you can use to create [delegates](../../../csharp/programming-guide/delegates/using-delegates.md) or [expression tree](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) types.</span></span> <span data-ttu-id="70424-104">С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций.</span><span class="sxs-lookup"><span data-stu-id="70424-104">By using lambda expressions, you can write local functions that can be passed as arguments or returned as the value of function calls.</span></span> <span data-ttu-id="70424-105">Лямбда-выражения особенно полезны при написании выражений запросов LINQ.</span><span class="sxs-lookup"><span data-stu-id="70424-105">Lambda expressions are particularly helpful for writing LINQ query expressions.</span></span>  
   
- Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора [=>](../../../csharp/language-reference/operators/lambda-operator.md), и поместить блок выражений или операторов с другой стороны. Например, лямбда-выражение `x => x * x` задает параметр с именем `x` и возвращает значение `x` . Можно назначить это выражение типу делегата, как показано в следующем примере:  
+ <span data-ttu-id="70424-106">Чтобы создать лямбда-выражение, необходимо указать входные параметры (если они есть) с левой стороны лямбда-оператора [=>](../../../csharp/language-reference/operators/lambda-operator.md), и поместить блок выражений или операторов с другой стороны.</span><span class="sxs-lookup"><span data-stu-id="70424-106">To create a lambda expression, you specify input parameters (if any) on the left side of the lambda operator [=>](../../../csharp/language-reference/operators/lambda-operator.md), and you put the expression or statement block on the other side.</span></span> <span data-ttu-id="70424-107">Например, лямбда-выражение `x => x * x` задает параметр с именем `x` и возвращает значение `x` .</span><span class="sxs-lookup"><span data-stu-id="70424-107">For example, the lambda expression `x => x * x` specifies a parameter that’s named `x` and returns the value of `x` squared.</span></span> <span data-ttu-id="70424-108">Можно назначить это выражение типу делегата, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="70424-108">You can assign this expression to a delegate type, as the following example shows:</span></span>  
   
 ```csharp  
 delegate int del(int i);  
@@ -53,7 +53,7 @@ static void Main(string[] args)
 }  
 ```  
   
- Создание типа дерева выражений:  
+ <span data-ttu-id="70424-109">Создание типа дерева выражений:</span><span class="sxs-lookup"><span data-stu-id="70424-109">To create an expression tree type:</span></span>  
   
 ```csharp  
 using System.Linq.Expressions;  
@@ -70,60 +70,60 @@ namespace ConsoleApplication1
 }  
 ```  
   
- Оператор `=>` имеет такой же приоритет, как и присваивание (`=`), и является [правоассоциативным](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (см. раздел "Ассоциативность" статьи об операторах).  
+ <span data-ttu-id="70424-110">Оператор `=>` имеет такой же приоритет, как и присваивание (`=`), и является [правоассоциативным](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (см. раздел "Ассоциативность" статьи об операторах).</span><span class="sxs-lookup"><span data-stu-id="70424-110">The `=>` operator has the same precedence as assignment (`=`) and is [right associative](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (see "Associativity" section of the Operators article).</span></span>  
   
- Лямбда-операторы используются в запросах [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на основе методов в качестве аргументов стандартных методов операторов запроса, таких как <xref:System.Linq.Enumerable.Where%2A>.  
+ <span data-ttu-id="70424-111">Лямбда-операторы используются в запросах [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на основе методов в качестве аргументов стандартных методов операторов запроса, таких как <xref:System.Linq.Enumerable.Where%2A>.</span><span class="sxs-lookup"><span data-stu-id="70424-111">Lambdas are used in method-based [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries as arguments to standard query operator methods such as <xref:System.Linq.Enumerable.Where%2A>.</span></span>  
   
- При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Where%2A> в классе <xref:System.Linq.Enumerable> (как это делается в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на объекты и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) параметром является тип делегата <xref:System.Func%602?displayProperty=fullName>. Лямбда-выражение — это наиболее удобный способ создания делегата. При вызове того же метода, к примеру, в классе <xref:System.Linq.Queryable?displayProperty=fullName> (как это делается в [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) типом параметра будет <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, где Func — это любые делегаты Func с числом входных параметров не более шестнадцати. Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений. Лямбда-выражения позволяют вызовам `Where` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.  
+ <span data-ttu-id="70424-112">При использовании синтаксиса на основе методов для вызова метода <xref:System.Linq.Enumerable.Where%2A> в классе <xref:System.Linq.Enumerable> (как это делается в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] на объекты и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) параметром является тип делегата <xref:System.Func%602?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="70424-112">When you use method-based syntax to call the <xref:System.Linq.Enumerable.Where%2A> method in the <xref:System.Linq.Enumerable> class (as you do in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) the parameter is a delegate type <xref:System.Func%602?displayProperty=fullName>.</span></span> <span data-ttu-id="70424-113">Лямбда-выражение — это наиболее удобный способ создания делегата.</span><span class="sxs-lookup"><span data-stu-id="70424-113">A lambda expression is the most convenient way to create that delegate.</span></span> <span data-ttu-id="70424-114">При вызове того же метода, к примеру, в классе <xref:System.Linq.Queryable?displayProperty=fullName> (как это делается в [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) типом параметра будет <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, где Func — это любые делегаты Func с числом входных параметров не более шестнадцати.</span><span class="sxs-lookup"><span data-stu-id="70424-114">When you call the same method in, for example, the <xref:System.Linq.Queryable?displayProperty=fullName> class (as you do in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) then the parameter type is an <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\> where Func is any of the Func delegates with up to sixteen input parameters.</span></span> <span data-ttu-id="70424-115">Опять же, лямбда-выражения представляют собой самый быстрый способ построения дерева выражений.</span><span class="sxs-lookup"><span data-stu-id="70424-115">Again, a lambda expression is just a very concise way to construct that expression tree.</span></span> <span data-ttu-id="70424-116">Лямбда-выражения позволяют вызовам `Where` выглядеть одинаково, хотя на самом деле объект, созданный из лямбда-выражения, имеет другой тип.</span><span class="sxs-lookup"><span data-stu-id="70424-116">The lambdas allow the `Where` calls to look similar although in fact the type of object created from the lambda is different.</span></span>  
   
- Обратите внимание: в приведенном выше примере сигнатура делегата имеет один неявный входной параметр типа `int`и возвращает значение типа `int`. Лямбда-выражение можно преобразовать в делегат соответствующего типа, поскольку он также имеет один входной параметр (`x`) и возвращает значение, которое компилятор может неявно преобразовать в тип `int`. (Вывод типов более подробно рассматривается в следующих разделах.) Делегат, вызываемый посредством входного параметра 5, возвращает результат 25.  
+ <span data-ttu-id="70424-117">Обратите внимание: в приведенном выше примере сигнатура делегата имеет один неявный входной параметр типа `int`и возвращает значение типа `int`.</span><span class="sxs-lookup"><span data-stu-id="70424-117">In the previous example, notice that the delegate signature has one implicitly-typed input parameter of type `int`, and returns an `int`.</span></span> <span data-ttu-id="70424-118">Лямбда-выражение можно преобразовать в делегат соответствующего типа, поскольку он также имеет один входной параметр (`x`) и возвращает значение, которое компилятор может неявно преобразовать в тип `int`.</span><span class="sxs-lookup"><span data-stu-id="70424-118">The lambda expression can be converted to a delegate of that type because it also has one input parameter (`x`) and a return value that the compiler can implicitly convert to type `int`.</span></span> <span data-ttu-id="70424-119">(Вывод типов более подробно рассматривается в следующих разделах.) Делегат, вызываемый посредством входного параметра 5, возвращает результат 25.</span><span class="sxs-lookup"><span data-stu-id="70424-119">(Type inference is discussed in more detail in the following sections.) When the delegate is invoked by using an input parameter of 5, it returns a result of 25.</span></span>  
   
- Лямбда-выражения нельзя использовать с левой стороны оператора [is](../../../csharp/language-reference/keywords/is.md) или [as](../../../csharp/language-reference/keywords/as.md).  
+ <span data-ttu-id="70424-120">Лямбда-выражения нельзя использовать с левой стороны оператора [is](../../../csharp/language-reference/keywords/is.md) или [as](../../../csharp/language-reference/keywords/as.md).</span><span class="sxs-lookup"><span data-stu-id="70424-120">Lambdas are not allowed on the left side of the [is](../../../csharp/language-reference/keywords/is.md) or [as](../../../csharp/language-reference/keywords/as.md) operator.</span></span>  
   
- Все ограничения, применяемые к анонимным методам, применяются также к лямбда-выражениям. Дополнительные сведения см. в разделе [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+ <span data-ttu-id="70424-121">Все ограничения, применяемые к анонимным методам, применяются также к лямбда-выражениям.</span><span class="sxs-lookup"><span data-stu-id="70424-121">All restrictions that apply to anonymous methods also apply to lambda expressions.</span></span> <span data-ttu-id="70424-122">Дополнительные сведения см. в разделе [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span><span class="sxs-lookup"><span data-stu-id="70424-122">For more information, see [Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span></span>  
   
-## <a name="expression-lambdas"></a>Выражения-лямбды  
- Лямбда-выражение с выражением с правой стороны оператора => называется *выражением-лямбдой*. Выражения-лямбды широко используются при конструировании [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b). Выражения-лямбды возвращают результат выражения и принимают следующую основную форму.  
+## <a name="expression-lambdas"></a><span data-ttu-id="70424-123">Выражения-лямбды</span><span class="sxs-lookup"><span data-stu-id="70424-123">Expression Lambdas</span></span>  
+ <span data-ttu-id="70424-124">Лямбда-выражение с выражением с правой стороны оператора => называется *выражением-лямбдой*.</span><span class="sxs-lookup"><span data-stu-id="70424-124">A lambda expression with an expression on the right side of the => operator is called an *expression lambda*.</span></span> <span data-ttu-id="70424-125">Выражения-лямбды широко используются при конструировании [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).</span><span class="sxs-lookup"><span data-stu-id="70424-125">Expression lambdas are used extensively in the construction of [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).</span></span> <span data-ttu-id="70424-126">Выражения-лямбды возвращают результат выражения и принимают следующую основную форму.</span><span class="sxs-lookup"><span data-stu-id="70424-126">An expression lambda returns the result of the expression and takes the following basic form:</span></span>  
   
 ```csharp
 (input-parameters) => expression
 ```
 
- Если лямбда-выражение имеет только один входной параметр, скобки можно не ставить; во всех остальных случаях они обязательны. Два и более входных параметра разделяются запятыми и заключаются в скобки:  
+ <span data-ttu-id="70424-127">Если лямбда-выражение имеет только один входной параметр, скобки можно не ставить; во всех остальных случаях они обязательны.</span><span class="sxs-lookup"><span data-stu-id="70424-127">The parentheses are optional only if the lambda has one input parameter; otherwise they are required.</span></span> <span data-ttu-id="70424-128">Два и более входных параметра разделяются запятыми и заключаются в скобки:</span><span class="sxs-lookup"><span data-stu-id="70424-128">Two or more input parameters are separated by commas enclosed in parentheses:</span></span>  
   
 ```csharp
 (x, y) => x == y
 ```
 
- Иногда компилятору бывает трудно или даже невозможно определить входные типы. В этом случае типы можно указать в явном виде, как показано в следующем примере.  
+ <span data-ttu-id="70424-129">Иногда компилятору бывает трудно или даже невозможно определить входные типы.</span><span class="sxs-lookup"><span data-stu-id="70424-129">Sometimes it is difficult or impossible for the compiler to infer the input types.</span></span> <span data-ttu-id="70424-130">В этом случае типы можно указать в явном виде, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="70424-130">When this occurs, you can specify the types explicitly as shown in the following example:</span></span>  
   
 ```csharp
 (int x, string s) => s.Length > x
 ```
 
- Нулевое количество входных параметры задается пустыми скобками:  
+ <span data-ttu-id="70424-131">Нулевое количество входных параметры задается пустыми скобками:</span><span class="sxs-lookup"><span data-stu-id="70424-131">Specify zero input parameters with empty parentheses:</span></span>  
   
 ```csharp
 () => SomeMethod()
 ```
 
- Обратите внимание, что тело выражения-лямбды может состоять из вызова метода, как было показано в предыдущем примере. Однако при создании деревьев выражений, которые вычисляются вне .NET Framework, например в SQL Server, не следует использовать вызовы методов в лямбда-выражениях. Эти методы не имеют смысла вне контекста среды CLR .NET.  
+ <span data-ttu-id="70424-132">Обратите внимание, что тело выражения-лямбды может состоять из вызова метода, как было показано в предыдущем примере.</span><span class="sxs-lookup"><span data-stu-id="70424-132">Note in the previous example that the body of an expression lambda can consist of a method call.</span></span> <span data-ttu-id="70424-133">Однако при создании деревьев выражений, которые вычисляются вне .NET Framework, например в SQL Server, не следует использовать вызовы методов в лямбда-выражениях.</span><span class="sxs-lookup"><span data-stu-id="70424-133">However, if you are creating expression trees that are evaluated outside of the .NET Framework, such as in SQL Server, you should not use method calls in lambda expressions.</span></span> <span data-ttu-id="70424-134">Эти методы не имеют смысла вне контекста среды CLR .NET.</span><span class="sxs-lookup"><span data-stu-id="70424-134">The methods will have no meaning outside the context of the .NET common language runtime.</span></span>  
   
-## <a name="statement-lambdas"></a>Лямбды операторов  
- Лямбда оператора напоминает выражение-лямбду, за исключением того, что оператор (или операторы) заключается в фигурные скобки:  
+## <a name="statement-lambdas"></a><span data-ttu-id="70424-135">Лямбды операторов</span><span class="sxs-lookup"><span data-stu-id="70424-135">Statement Lambdas</span></span>  
+ <span data-ttu-id="70424-136">Лямбда оператора напоминает выражение-лямбду, за исключением того, что оператор (или операторы) заключается в фигурные скобки:</span><span class="sxs-lookup"><span data-stu-id="70424-136">A statement lambda resembles an expression lambda except that the statement(s) is enclosed in braces:</span></span>  
   
-(входные-параметры) => { оператор; }
+<span data-ttu-id="70424-137">(входные-параметры) => { оператор; }</span><span class="sxs-lookup"><span data-stu-id="70424-137">(input-parameters) => { statement; }</span></span>
 
- Тело лямбды оператора может состоять из любого количества операторов; однако на практике обычно используется не более двух-трех.  
+ <span data-ttu-id="70424-138">Тело лямбды оператора может состоять из любого количества операторов; однако на практике обычно используется не более двух-трех.</span><span class="sxs-lookup"><span data-stu-id="70424-138">The body of a statement lambda can consist of any number of statements; however, in practice there are typically no more than two or three.</span></span>  
   
-[!code-csharp[StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
+<span data-ttu-id="70424-139">[!code-csharp[StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="70424-139">[!code-csharp[StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]</span></span>
 
-[!code-csharp[StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
+<span data-ttu-id="70424-140">[!code-csharp[StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]</span><span class="sxs-lookup"><span data-stu-id="70424-140">[!code-csharp[StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]</span></span>
 
- Лямбды операторов, как и анонимные методы, не могут использоваться для создания деревьев выражений.  
+ <span data-ttu-id="70424-141">Лямбды операторов, как и анонимные методы, не могут использоваться для создания деревьев выражений.</span><span class="sxs-lookup"><span data-stu-id="70424-141">Statement lambdas, like anonymous methods, cannot be used to create expression trees.</span></span>  
   
-## <a name="async-lambdas"></a>Асинхронные лямбда-выражения  
- С помощью ключевых слов [async](../../../csharp/language-reference/keywords/async.md) и [await](../../../csharp/language-reference/keywords/await.md) можно легко создавать лямбда-выражения и операторы, включающие асинхронную обработку. Например, в следующем примере Windows Forms содержится обработчик событий, который вызывает асинхронный метод `ExampleMethodAsync`и ожидает его.  
+## <a name="async-lambdas"></a><span data-ttu-id="70424-142">Асинхронные лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="70424-142">Async Lambdas</span></span>  
+ <span data-ttu-id="70424-143">С помощью ключевых слов [async](../../../csharp/language-reference/keywords/async.md) и [await](../../../csharp/language-reference/keywords/await.md) можно легко создавать лямбда-выражения и операторы, включающие асинхронную обработку.</span><span class="sxs-lookup"><span data-stu-id="70424-143">You can easily create lambda expressions and statements that incorporate asynchronous processing by using the [async](../../../csharp/language-reference/keywords/async.md) and [await](../../../csharp/language-reference/keywords/await.md) keywords.</span></span> <span data-ttu-id="70424-144">Например, в следующем примере Windows Forms содержится обработчик событий, который вызывает асинхронный метод `ExampleMethodAsync`и ожидает его.</span><span class="sxs-lookup"><span data-stu-id="70424-144">For example, the following Windows Forms example contains an event handler that calls and awaits an async method, `ExampleMethodAsync`.</span></span>  
   
 ```csharp
 public partial class Form1 : Form  
@@ -148,7 +148,7 @@ public partial class Form1 : Form
 }  
 ```
 
- Такой же обработчик событий можно добавить с помощью асинхронного лямбда-выражения. Чтобы добавить этот обработчик, поставьте модификатор `async` перед списком параметров лямбда-выражения, как показано в следующем примере.  
+ <span data-ttu-id="70424-145">Такой же обработчик событий можно добавить с помощью асинхронного лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="70424-145">You can add the same event handler by using an async lambda.</span></span> <span data-ttu-id="70424-146">Чтобы добавить этот обработчик, поставьте модификатор `async` перед списком параметров лямбда-выражения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="70424-146">To add this handler, add an `async` modifier before the lambda parameter list, as the following example shows.</span></span>  
   
 ```csharp  
 public partial class Form1 : Form  
@@ -172,64 +172,64 @@ public partial class Form1 : Form
 }  
 ```  
 
- Дополнительные сведения о создании и использовании асинхронных методов см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md).  
+ <span data-ttu-id="70424-147">Дополнительные сведения о создании и использовании асинхронных методов см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="70424-147">For more information about how to create and use async methods, see [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md).</span></span>  
   
-## <a name="lambdas-with-the-standard-query-operators"></a>Лямбды со стандартными операторами запросов  
- Многие стандартные операторы запросов имеют входной параметр, тип которого принадлежит к семейству <xref:System.Func%602> универсальных делегатов. Эти делегаты используют параметры типа для определения количества и типов входных параметров, а также тип возвращаемого значения делегата. Делегаты`Func` очень полезны для инкапсуляции пользовательских выражений, которые применяются к каждому элементу в наборе исходных данных. В качестве примера рассмотрим следующий тип делегата.  
+## <a name="lambdas-with-the-standard-query-operators"></a><span data-ttu-id="70424-148">Лямбды со стандартными операторами запросов</span><span class="sxs-lookup"><span data-stu-id="70424-148">Lambdas with the Standard Query Operators</span></span>  
+ <span data-ttu-id="70424-149">Многие стандартные операторы запросов имеют входной параметр, тип которого принадлежит к семейству <xref:System.Func%602> универсальных делегатов.</span><span class="sxs-lookup"><span data-stu-id="70424-149">Many Standard query operators have an input parameter whose type is one of the <xref:System.Func%602> family of generic delegates.</span></span> <span data-ttu-id="70424-150">Эти делегаты используют параметры типа для определения количества и типов входных параметров, а также тип возвращаемого значения делегата.</span><span class="sxs-lookup"><span data-stu-id="70424-150">These delegates use type parameters to define the number and types of input parameters, and the return type of the delegate.</span></span> <span data-ttu-id="70424-151">Делегаты`Func` очень полезны для инкапсуляции пользовательских выражений, которые применяются к каждому элементу в наборе исходных данных.</span><span class="sxs-lookup"><span data-stu-id="70424-151">`Func` delegates are very useful for encapsulating user-defined expressions that are applied to each element in a set of source data.</span></span> <span data-ttu-id="70424-152">В качестве примера рассмотрим следующий тип делегата.</span><span class="sxs-lookup"><span data-stu-id="70424-152">For example, consider the following delegate type:</span></span>  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
 ```  
   
- Экземпляр этого делегата можно создать как `Func<int,bool> myFunc` , где `int` — входной параметр, а `bool` — возвращаемое значение. Возвращаемое значение всегда указывается в последнем параметре типа. `Func<int, string, bool>` определяет делегат с двумя входными параметрами, `int` и `string`, и типом возвращаемого значения `bool`. Следующий делегат `Func` при вызове возвращает значение true или false, которое показывает, равен ли входной параметр 5.  
+ <span data-ttu-id="70424-153">Экземпляр этого делегата можно создать как `Func<int,bool> myFunc` , где `int` — входной параметр, а `bool` — возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="70424-153">The delegate can be instantiated as `Func<int,bool> myFunc` where `int` is an input parameter and `bool` is the return value.</span></span> <span data-ttu-id="70424-154">Возвращаемое значение всегда указывается в последнем параметре типа.</span><span class="sxs-lookup"><span data-stu-id="70424-154">The return value is always specified in the last type parameter.</span></span> <span data-ttu-id="70424-155">`Func<int, string, bool>` определяет делегат с двумя входными параметрами, `int` и `string`, и типом возвращаемого значения `bool`.</span><span class="sxs-lookup"><span data-stu-id="70424-155">`Func<int, string, bool>` defines a delegate with two input parameters, `int` and `string`, and a return type of `bool`.</span></span> <span data-ttu-id="70424-156">Следующий делегат `Func` при вызове возвращает значение true или false, которое показывает, равен ли входной параметр 5.</span><span class="sxs-lookup"><span data-stu-id="70424-156">The following `Func` delegate, when it is invoked, will return true or false to indicate whether the input parameter is equal to 5:</span></span>  
   
 ```csharp  
 Func<int, bool> myFunc = x => x == 5;  
 bool result = myFunc(4); // returns false of course  
 ```  
   
- Также лямбда-выражения можно использовать, когда аргумент имеет тип `Expression<Func>`, например в стандартных операторах запросов, как указано в System.Linq.Queryable. При определении аргумента `Expression<Func>` лямбда компилируется в дерево выражений.  
+ <span data-ttu-id="70424-157">Также лямбда-выражения можно использовать, когда аргумент имеет тип `Expression<Func>`, например в стандартных операторах запросов, как указано в System.Linq.Queryable.</span><span class="sxs-lookup"><span data-stu-id="70424-157">You can also supply a lambda expression when the argument type is an `Expression<Func>`, for example in the standard query operators that are defined in System.Linq.Queryable.</span></span> <span data-ttu-id="70424-158">При определении аргумента `Expression<Func>` лямбда компилируется в дерево выражений.</span><span class="sxs-lookup"><span data-stu-id="70424-158">When you specify an `Expression<Func>` argument, the lambda will be compiled to an expression tree.</span></span>  
   
- Ниже показан метод <xref:System.Linq.Enumerable.Count%2A> , являющийся стандартным оператором запроса.  
+ <span data-ttu-id="70424-159">Ниже показан метод <xref:System.Linq.Enumerable.Count%2A> , являющийся стандартным оператором запроса.</span><span class="sxs-lookup"><span data-stu-id="70424-159">A standard query operator, the <xref:System.Linq.Enumerable.Count%2A> method, is shown here:</span></span>  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
 int oddNumbers = numbers.Count(n => n % 2 == 1);  
 ```  
   
- Компилятор может вывести тип входного параметра ввода; но его также можно определить явным образом. Данное лямбда-выражение подсчитывает указанные целые значения (`n`), которые при делении на два дают остаток 1.  
+ <span data-ttu-id="70424-160">Компилятор может вывести тип входного параметра ввода; но его также можно определить явным образом.</span><span class="sxs-lookup"><span data-stu-id="70424-160">The compiler can infer the type of the input parameter, or you can also specify it explicitly.</span></span> <span data-ttu-id="70424-161">Данное лямбда-выражение подсчитывает указанные целые значения (`n`), которые при делении на два дают остаток 1.</span><span class="sxs-lookup"><span data-stu-id="70424-161">This particular lambda expression counts those integers (`n`) which when divided by two have a remainder of 1.</span></span>  
   
- Следующая строка кода создает последовательность, которая содержит все элементы массива `numbers` , расположенные слева от 9, поскольку это первое число последовательности, не удовлетворяющее условию:  
+ <span data-ttu-id="70424-162">Следующая строка кода создает последовательность, которая содержит все элементы массива `numbers` , расположенные слева от 9, поскольку это первое число последовательности, не удовлетворяющее условию:</span><span class="sxs-lookup"><span data-stu-id="70424-162">The following line of code produces a sequence that contains all elements in the `numbers` array that are to the left side of the 9 because that's the first number in the sequence that doesn't meet the condition:</span></span>  
   
 ```csharp  
 var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);  
 ```  
   
- В этом примере показано, как определить несколько входных параметров путем их заключения в скобки. Этот метод возвращает все элементы в массиве чисел до того числа, величина которого меньше номера его позиции. Не следует путать лямбда-оператор (`=>`) с оператором "больше или равно" (`>=`).  
+ <span data-ttu-id="70424-163">В этом примере показано, как определить несколько входных параметров путем их заключения в скобки.</span><span class="sxs-lookup"><span data-stu-id="70424-163">This example shows how to specify multiple input parameters by enclosing them in parentheses.</span></span> <span data-ttu-id="70424-164">Этот метод возвращает все элементы в массиве чисел до того числа, величина которого меньше номера его позиции.</span><span class="sxs-lookup"><span data-stu-id="70424-164">The method returns all the elements in the numbers array until a number is encountered whose value is less than its position.</span></span> <span data-ttu-id="70424-165">Не следует путать лямбда-оператор (`=>`) с оператором "больше или равно" (`>=`).</span><span class="sxs-lookup"><span data-stu-id="70424-165">Do not confuse the lambda operator (`=>`) with the greater than or equal operator (`>=`).</span></span>  
   
 ```csharp  
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
-## <a name="type-inference-in-lambdas"></a>Вывод типа в лямбда-выражениях  
- При написании лямбда-выражений обычно не требуется указывать тип входных параметров, поскольку компилятор может выводить этот тип на основе тела лямбда-выражения, типа делегата параметра и других факторов, как описано в спецификации языка C#. Для большинства стандартных операторов запросов первой входное значение имеет тип элементов в исходной последовательности. Поэтому при запросе `IEnumerable<Customer>`входная переменная считается объектом `Customer` , а это означает, что у вас есть доступ к его методам и свойствам.  
+## <a name="type-inference-in-lambdas"></a><span data-ttu-id="70424-166">Вывод типа в лямбда-выражениях</span><span class="sxs-lookup"><span data-stu-id="70424-166">Type Inference in Lambdas</span></span>  
+ <span data-ttu-id="70424-167">При написании лямбда-выражений обычно не требуется указывать тип входных параметров, поскольку компилятор может выводить этот тип на основе тела лямбда-выражения, типа делегата параметра и других факторов, как описано в спецификации языка C#.</span><span class="sxs-lookup"><span data-stu-id="70424-167">When writing lambdas, you often do not have to specify a type for the input parameters because the compiler can infer the type based on the lambda body, the parameter’s delegate type, and other factors as described in the C# Language Specification.</span></span> <span data-ttu-id="70424-168">Для большинства стандартных операторов запросов первой входное значение имеет тип элементов в исходной последовательности.</span><span class="sxs-lookup"><span data-stu-id="70424-168">For most of the standard query operators, the first input is the type of the elements in the source sequence.</span></span> <span data-ttu-id="70424-169">Поэтому при запросе `IEnumerable<Customer>`входная переменная считается объектом `Customer` , а это означает, что у вас есть доступ к его методам и свойствам.</span><span class="sxs-lookup"><span data-stu-id="70424-169">So if you are querying an `IEnumerable<Customer>`, then the input variable is inferred to be a `Customer` object, which means you have access to its methods and properties:</span></span>  
   
 ```csharp  
 customers.Where(c => c.City == "London");  
 ```  
   
- Общие правила для лямбда-выражений формулируются следующим образом:  
+ <span data-ttu-id="70424-170">Общие правила для лямбда-выражений формулируются следующим образом:</span><span class="sxs-lookup"><span data-stu-id="70424-170">The general rules for lambdas are as follows:</span></span>  
   
--   лямбда-выражение должно содержать то же число параметров, что и тип делегата;  
+-   <span data-ttu-id="70424-171">лямбда-выражение должно содержать то же число параметров, что и тип делегата;</span><span class="sxs-lookup"><span data-stu-id="70424-171">The lambda must contain the same number of parameters as the delegate type.</span></span>  
   
--   каждый входной параметр в лямбда-выражении должен быть неявно преобразуемым в соответствующий параметр делегата;  
+-   <span data-ttu-id="70424-172">каждый входной параметр в лямбда-выражении должен быть неявно преобразуемым в соответствующий параметр делегата;</span><span class="sxs-lookup"><span data-stu-id="70424-172">Each input parameter in the lambda must be implicitly convertible to its corresponding delegate parameter.</span></span>  
   
--   возвращаемое значение лямбда-выражения (если таковое имеется) должно быть неявно преобразуемым в возвращаемый тип делегата.  
+-   <span data-ttu-id="70424-173">возвращаемое значение лямбда-выражения (если таковое имеется) должно быть неявно преобразуемым в возвращаемый тип делегата.</span><span class="sxs-lookup"><span data-stu-id="70424-173">The return value of the lambda (if any) must be implicitly convertible to the delegate's return type.</span></span>  
   
- Обратите внимание: лямбда-выражения сами по себе не имеют типа, поскольку в системе общих типов изначально отсутствует понятие "лямбда-выражения". Однако иногда бывает удобно оперировать понятием "типа" применительно к лямбда-выражениям. При этом под типом понимается тип делегата или тип <xref:System.Linq.Expressions.Expression> , в который преобразуется лямбда-выражение.  
+ <span data-ttu-id="70424-174">Обратите внимание: лямбда-выражения сами по себе не имеют типа, поскольку в системе общих типов изначально отсутствует понятие "лямбда-выражения".</span><span class="sxs-lookup"><span data-stu-id="70424-174">Note that lambda expressions in themselves do not have a type because the common type system has no intrinsic concept of "lambda expression."</span></span> <span data-ttu-id="70424-175">Однако иногда бывает удобно оперировать понятием "типа" применительно к лямбда-выражениям.</span><span class="sxs-lookup"><span data-stu-id="70424-175">However, it is sometimes convenient to speak informally of the "type" of a lambda expression.</span></span> <span data-ttu-id="70424-176">При этом под типом понимается тип делегата или тип <xref:System.Linq.Expressions.Expression> , в который преобразуется лямбда-выражение.</span><span class="sxs-lookup"><span data-stu-id="70424-176">In these cases the type refers to the delegate type or <xref:System.Linq.Expressions.Expression> type to which the lambda expression is converted.</span></span>  
   
-## <a name="variable-scope-in-lambda-expressions"></a>Область действия переменной в лямбда-выражениях  
- Лямбда-выражения могут ссылаться на *внешние переменные* (см. раздел [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)), находящиеся в области метода, в котором определена лямбда-функция, или в области типа, который содержит лямбда-выражение. Переменные, полученные таким способом, сохраняются для использования в лямбда-выражениях, даже если бы в ином случае они оказались за границами области действия и уничтожились сборщиком мусора. Внешняя переменная должна быть определенным образом присвоена, прежде чем она сможет использоваться в лямбда-выражениях. В следующем примере демонстрируются эти правила.  
+## <a name="variable-scope-in-lambda-expressions"></a><span data-ttu-id="70424-177">Область действия переменной в лямбда-выражениях</span><span class="sxs-lookup"><span data-stu-id="70424-177">Variable Scope in Lambda Expressions</span></span>  
+ <span data-ttu-id="70424-178">Лямбда-выражения могут ссылаться на *внешние переменные* (см. раздел [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)), находящиеся в области метода, в котором определена лямбда-функция, или в области типа, который содержит лямбда-выражение.</span><span class="sxs-lookup"><span data-stu-id="70424-178">Lambdas can refer to *outer variables* (see [Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)) that are in scope in the method that defines the lambda function, or in scope in the type that contains the lambda expression.</span></span> <span data-ttu-id="70424-179">Переменные, полученные таким способом, сохраняются для использования в лямбда-выражениях, даже если бы в ином случае они оказались за границами области действия и уничтожились сборщиком мусора.</span><span class="sxs-lookup"><span data-stu-id="70424-179">Variables that are captured in this manner are stored for use in the lambda expression even if the variables would otherwise go out of scope and be garbage collected.</span></span> <span data-ttu-id="70424-180">Внешняя переменная должна быть определенным образом присвоена, прежде чем она сможет использоваться в лямбда-выражениях.</span><span class="sxs-lookup"><span data-stu-id="70424-180">An outer variable must be definitely assigned before it can be consumed in a lambda expression.</span></span> <span data-ttu-id="70424-181">В следующем примере демонстрируются эти правила.</span><span class="sxs-lookup"><span data-stu-id="70424-181">The following example demonstrates these rules:</span></span>  
   
 ```csharp  
 delegate bool D();  
@@ -277,30 +277,30 @@ class Test
 }  
 ```  
   
- Следующие правила применимы к области действия переменной в лямбда-выражениях.  
+ <span data-ttu-id="70424-182">Следующие правила применимы к области действия переменной в лямбда-выражениях.</span><span class="sxs-lookup"><span data-stu-id="70424-182">The following rules apply to variable scope in lambda expressions:</span></span>  
   
--   Захваченная переменная не будет уничтожена сборщиком мусора до тех пор, пока делегат, который на нее ссылается, не перейдет в статус подлежащего уничтожению при сборке мусора.  
+-   <span data-ttu-id="70424-183">Захваченная переменная не будет уничтожена сборщиком мусора до тех пор, пока делегат, который на нее ссылается, не перейдет в статус подлежащего уничтожению при сборке мусора.</span><span class="sxs-lookup"><span data-stu-id="70424-183">A variable that is captured will not be garbage-collected until the delegate that references it becomes eligible for garbage collection.</span></span>  
   
--   Переменные, вводимые в лямбда-выражении, невидимы во внешнем методе.  
+-   <span data-ttu-id="70424-184">Переменные, вводимые в лямбда-выражении, невидимы во внешнем методе.</span><span class="sxs-lookup"><span data-stu-id="70424-184">Variables introduced within a lambda expression are not visible in the outer method.</span></span>  
   
--   Лямбда-выражение не может непосредственно захватывать параметры `ref` или `out` из метода, в котором они находятся.  
+-   <span data-ttu-id="70424-185">Лямбда-выражение не может непосредственно захватывать параметры `ref` или `out` из метода, в котором они находятся.</span><span class="sxs-lookup"><span data-stu-id="70424-185">A lambda expression cannot directly capture a `ref` or `out` parameter from an enclosing method.</span></span>  
   
--   Оператор return в лямбда-выражении не вызывает возвращение значения внешним методом.  
+-   <span data-ttu-id="70424-186">Оператор return в лямбда-выражении не вызывает возвращение значения внешним методом.</span><span class="sxs-lookup"><span data-stu-id="70424-186">A return statement in a lambda expression does not cause the enclosing method to return.</span></span>  
   
--   Лямбда-выражение не может содержать оператора `goto` , оператора `break` или оператора `continue` внутри лямбда-функции, если целевой объект перехода находится вне блока. Если целевой объект находится внутри блока, то наличие оператора перехода за пределами лямбда-функции также будет ошибкой.  
+-   <span data-ttu-id="70424-187">Лямбда-выражение не может содержать оператора `goto` , оператора `break` или оператора `continue` внутри лямбда-функции, если целевой объект перехода находится вне блока.</span><span class="sxs-lookup"><span data-stu-id="70424-187">A lambda expression cannot contain a `goto` statement, `break` statement, or `continue` statement that is inside the lambda function if the jump statement’s target is outside the block.</span></span> <span data-ttu-id="70424-188">Если целевой объект находится внутри блока, то наличие оператора перехода за пределами лямбда-функции также будет ошибкой.</span><span class="sxs-lookup"><span data-stu-id="70424-188">It is also an error to have a jump statement outside the lambda function block if the target is inside the block.</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="70424-189">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="70424-189">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="featured-book-chapter"></a>Важная глава книги  
- [Делегаты, события и лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=195395) в [справочном руководстве по C# 3.0, третье издание: более 250 решений для программистов на C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195369)  
+## <a name="featured-book-chapter"></a><span data-ttu-id="70424-190">Важная глава книги</span><span class="sxs-lookup"><span data-stu-id="70424-190">Featured Book Chapter</span></span>  
+ <span data-ttu-id="70424-191">[Делегаты, события и лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=195395) в [справочном руководстве по C# 3.0, третье издание: более 250 решений для программистов на C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195369)</span><span class="sxs-lookup"><span data-stu-id="70424-191">[Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) in [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
- [is](../../../csharp/language-reference/keywords/is.md)   
- [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
- [Примеры C# в Visual Studio 2008 (см. файлы примеров запросов LINQ и программу XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
- [Рекурсивные лямбда-выражения](http://go.microsoft.com/fwlink/?LinkId=112395)
+## <a name="see-also"></a><span data-ttu-id="70424-192">См. также</span><span class="sxs-lookup"><span data-stu-id="70424-192">See Also</span></span>  
+ <span data-ttu-id="70424-193">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="70424-193">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="70424-194">[Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) </span><span class="sxs-lookup"><span data-stu-id="70424-194">[LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) </span></span>  
+ <span data-ttu-id="70424-195">[Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) </span><span class="sxs-lookup"><span data-stu-id="70424-195">[Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) </span></span>  
+ <span data-ttu-id="70424-196">[is](../../../csharp/language-reference/keywords/is.md) </span><span class="sxs-lookup"><span data-stu-id="70424-196">[is](../../../csharp/language-reference/keywords/is.md) </span></span>  
+ <span data-ttu-id="70424-197">[Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) </span><span class="sxs-lookup"><span data-stu-id="70424-197">[Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) </span></span>  
+ <span data-ttu-id="70424-198">[Примеры C# в Visual Studio 2008 (см. файлы примеров запросов LINQ и программу XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba) </span><span class="sxs-lookup"><span data-stu-id="70424-198">[Visual Studio 2008 C# Samples (see LINQ Sample Queries files and XQuery program)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba) </span></span>  
+ [<span data-ttu-id="70424-199">Рекурсивные лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="70424-199">Recursive lambda expressions</span></span>](http://go.microsoft.com/fwlink/?LinkId=112395)
 

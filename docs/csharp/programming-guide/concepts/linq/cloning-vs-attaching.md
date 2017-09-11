@@ -26,11 +26,11 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cloning-vs-attaching-c"></a>Сравнение клонирования и Присоединение (C#)
-При добавлении объекта <xref:System.Xml.Linq.XNode> (включая <xref:System.Xml.Linq.XElement>) или объекта <xref:System.Xml.Linq.XAttribute> в новое дерево, если новое содержимое не имеет родителя, объекты просто добавляются к XML-дереву. Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется. Затем клонированное содержимое присоединяется к XML-дереву.  
+# <a name="cloning-vs-attaching-c"></a><span data-ttu-id="d4774-102">Сравнение клонирования и Присоединение (C#)</span><span class="sxs-lookup"><span data-stu-id="d4774-102">Cloning vs. Attaching (C#)</span></span>
+<span data-ttu-id="d4774-103">При добавлении объекта <xref:System.Xml.Linq.XNode> (включая <xref:System.Xml.Linq.XElement>) или объекта <xref:System.Xml.Linq.XAttribute> в новое дерево, если новое содержимое не имеет родителя, объекты просто добавляются к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="d4774-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="d4774-104">Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется.</span><span class="sxs-lookup"><span data-stu-id="d4774-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="d4774-105">Затем клонированное содержимое присоединяется к XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="d4774-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий код демонстрирует поведение при добавлении к дереву элемента с родителем и при добавлении к дереву элемента без родителей.  
+## <a name="example"></a><span data-ttu-id="d4774-106">Пример</span><span class="sxs-lookup"><span data-stu-id="d4774-106">Example</span></span>  
+ <span data-ttu-id="d4774-107">Следующий код демонстрирует поведение при добавлении к дереву элемента с родителем и при добавлении к дереву элемента без родителей.</span><span class="sxs-lookup"><span data-stu-id="d4774-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -58,13 +58,13 @@ Console.WriteLine("Child2 was {0}",
     "attached" : "cloned");  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="d4774-108">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="d4774-108">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="d4774-109">См. также</span><span class="sxs-lookup"><span data-stu-id="d4774-109">See Also</span></span>  
+ [<span data-ttu-id="d4774-110">Создание деревьев XML (C#)</span><span class="sxs-lookup"><span data-stu-id="d4774-110">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
 

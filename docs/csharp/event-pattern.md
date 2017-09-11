@@ -1,6 +1,6 @@
 ---
-title: "Стандартный шаблон событий .NET"
-description: "Стандартный шаблон событий .NET"
+title: "Стандартные шаблоны событий .NET"
+description: "Сведения о шаблонах событий .NET, а также о создании источников стандартных событий, подписке на такие события и их обработке в коде."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,41 +10,42 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8a72fd817270412da38ce89b456f263f931c400c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 703b7b13a2175fb9c40ff707f333a1bf1530df8c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="the-standard-net-event-pattern"></a>Стандартный шаблон событий .NET
+# <a name="standard-net-event-patterns"></a><span data-ttu-id="585e1-104">Стандартные шаблоны событий .NET</span><span class="sxs-lookup"><span data-stu-id="585e1-104">Standard .NET event patterns</span></span>
 
-[Назад](events-overview.md)
+[<span data-ttu-id="585e1-105">Назад</span><span class="sxs-lookup"><span data-stu-id="585e1-105">Previous</span></span>](events-overview.md)
 
-События .NET обычно следуют нескольким известным шаблонам. Стандартизация на основе этих шаблонов означает, что разработчики могут использовать знание таких стандартных шаблонов, применяя их к любой программе событий .NET.
+<span data-ttu-id="585e1-106">События .NET обычно следуют нескольким известным шаблонам.</span><span class="sxs-lookup"><span data-stu-id="585e1-106">.NET events generally follow a few known patterns.</span></span> <span data-ttu-id="585e1-107">Стандартизация на основе этих шаблонов означает, что разработчики могут использовать знание таких стандартных шаблонов, применяя их к любой программе событий .NET.</span><span class="sxs-lookup"><span data-stu-id="585e1-107">Standardizing on these patterns means that developers can leverage knowledge of those standard patterns, which can be applied to any .NET event program.</span></span>
 
-Мы разберем эти стандартные шаблоны, чтобы снабдить вас знаниями, необходимыми для создания источников стандартных событий, подписки и обработки стандартных событий в коде.
+<span data-ttu-id="585e1-108">Мы разберем эти стандартные шаблоны, чтобы снабдить вас знаниями, необходимыми для создания источников стандартных событий, подписки и обработки стандартных событий в коде.</span><span class="sxs-lookup"><span data-stu-id="585e1-108">Let's go through these standard patterns so you will have all the knowledge you need to create standard event sources, and subscribe and process standard events in your code.</span></span>
 
-## <a name="event-delegate-signatures"></a>Сигнатуры делегатов событий
+## <a name="event-delegate-signatures"></a><span data-ttu-id="585e1-109">Сигнатуры делегатов событий</span><span class="sxs-lookup"><span data-stu-id="585e1-109">Event Delegate Signatures</span></span>
 
-Стандартной сигнатурой делегата события .NET является:
+<span data-ttu-id="585e1-110">Стандартной сигнатурой делегата события .NET является:</span><span class="sxs-lookup"><span data-stu-id="585e1-110">The standard signature for a .NET event delegate is:</span></span>
 
 ```csharp
 void OnEventRaised(object sender, EventArgs args);
 ```
 
-Тип возвращаемого значения — void. События основаны на делегатах и являются делегатами многоадресной рассылки. Это обеспечивает поддержку нескольких подписчиков для любого источника событий. Одно значение, возвращаемое из метода, не масштабируется на несколько подписчиков событий. Какое возвращаемое значение доступно источнику события после возникновения события? Далее в этой статье будет показано, как создавать протоколы событий, которые поддерживают подписчики на события, передающие данные в источник событий.
+<span data-ttu-id="585e1-111">Тип возвращаемого значения — void.</span><span class="sxs-lookup"><span data-stu-id="585e1-111">The return type is void.</span></span> <span data-ttu-id="585e1-112">События основаны на делегатах и являются делегатами многоадресной рассылки.</span><span class="sxs-lookup"><span data-stu-id="585e1-112">Events are based on delegates and are multicast delegates.</span></span> <span data-ttu-id="585e1-113">Это обеспечивает поддержку нескольких подписчиков для любого источника событий.</span><span class="sxs-lookup"><span data-stu-id="585e1-113">That supports multiple subscribers for any event source.</span></span> <span data-ttu-id="585e1-114">Одно значение, возвращаемое из метода, не масштабируется на несколько подписчиков событий.</span><span class="sxs-lookup"><span data-stu-id="585e1-114">The single return value from a method doesn't scale to multiple event subscribers.</span></span> <span data-ttu-id="585e1-115">Какое возвращаемое значение доступно источнику события после возникновения события?</span><span class="sxs-lookup"><span data-stu-id="585e1-115">Which return value does the event source see after raising an event?</span></span> <span data-ttu-id="585e1-116">Далее в этой статье будет показано, как создавать протоколы событий, которые поддерживают подписчики на события, передающие данные в источник событий.</span><span class="sxs-lookup"><span data-stu-id="585e1-116">Later in this article you'll see how to create event protocols that support event subscribers that report information to the event source.</span></span>
 
-Список аргументов содержит два аргумента: отправителя и аргументы события. Тип времени компиляции `sender` — `System.Object`, даже если вам, вероятно, известен более производный тип, который всегда является правильным. По соглашению используйте `object`.
+<span data-ttu-id="585e1-117">Список аргументов содержит два аргумента: отправителя и аргументы события.</span><span class="sxs-lookup"><span data-stu-id="585e1-117">The argument list contains two arguments: the sender, and the event arguments.</span></span> <span data-ttu-id="585e1-118">Тип времени компиляции `sender` — `System.Object`, даже если вам, вероятно, известен более производный тип, который всегда является правильным.</span><span class="sxs-lookup"><span data-stu-id="585e1-118">The compile time type of `sender` is `System.Object`, even though you likely know a more derived type that would always be correct.</span></span> <span data-ttu-id="585e1-119">По соглашению используйте `object`.</span><span class="sxs-lookup"><span data-stu-id="585e1-119">By convention, use `object`.</span></span>
 
-Второй аргумент обычно являлся типом, производным от `System.EventArgs`. (В [следующем разделе](modern-events.md) вы увидите, что это соглашение больше не является обязательным.) Даже если тип события не требует дополнительных аргументов, необходимо предоставить оба аргумента.
-Существует специальное значение `EventArgs.Empty`, которое следует использовать для обозначения того, что событие не содержит никаких дополнительных сведений.
+<span data-ttu-id="585e1-120">Второй аргумент обычно являлся типом, производным от `System.EventArgs`.</span><span class="sxs-lookup"><span data-stu-id="585e1-120">The second argument has typically been a type that is derived from `System.EventArgs`.</span></span> <span data-ttu-id="585e1-121">(В [следующем разделе](modern-events.md) вы увидите, что это соглашение больше не является обязательным.) Даже если тип события не требует дополнительных аргументов, необходимо предоставить оба аргумента.</span><span class="sxs-lookup"><span data-stu-id="585e1-121">(You'll see in the [next section](modern-events.md) that this convention is no longer enforced.) If your event type does not need any additional arguments, you will still provide both arguments.</span></span>
+<span data-ttu-id="585e1-122">Существует специальное значение `EventArgs.Empty`, которое следует использовать для обозначения того, что событие не содержит никаких дополнительных сведений.</span><span class="sxs-lookup"><span data-stu-id="585e1-122">There is a special value, `EventArgs.Empty` that you should use to denote that your event does not contain any additional information.</span></span>
 
-Создадим класс, который перечисляет соответствующие шаблону файлы в каталоге или любом из его подкаталогов. Этот компонент создает событие для каждого найденного файла, который соответствует шаблону.
+<span data-ttu-id="585e1-123">Создадим класс, который перечисляет соответствующие шаблону файлы в каталоге или любом из его подкаталогов.</span><span class="sxs-lookup"><span data-stu-id="585e1-123">Let's build a class that lists files in a directory, or any of its subdirectories that follow a pattern.</span></span> <span data-ttu-id="585e1-124">Этот компонент создает событие для каждого найденного файла, который соответствует шаблону.</span><span class="sxs-lookup"><span data-stu-id="585e1-124">This component raises an event for each file found that matches the pattern.</span></span>
 
-Использование модели событий обеспечивает некоторые преимущества разработки. Можно создать несколько прослушивателей событий, которые выполняют разные действия при нахождении искомого файла. Сочетание разных прослушивателей позволяет создавать более надежные алгоритмы.
+<span data-ttu-id="585e1-125">Использование модели событий обеспечивает некоторые преимущества разработки.</span><span class="sxs-lookup"><span data-stu-id="585e1-125">Using an event model provides some design advantages.</span></span> <span data-ttu-id="585e1-126">Можно создать несколько прослушивателей событий, которые выполняют разные действия при нахождении искомого файла.</span><span class="sxs-lookup"><span data-stu-id="585e1-126">You can create multiple event listeners that perform different actions when a sought file is found.</span></span> <span data-ttu-id="585e1-127">Сочетание разных прослушивателей позволяет создавать более надежные алгоритмы.</span><span class="sxs-lookup"><span data-stu-id="585e1-127">Combining the different listeners can create more robust algorithms.</span></span>
 
-Ниже показано объявление аргумента исходного события для поиска искомого файла: 
+<span data-ttu-id="585e1-128">Ниже показано объявление аргумента исходного события для поиска искомого файла:</span><span class="sxs-lookup"><span data-stu-id="585e1-128">Here is the initial event argument declaration for finding a sought file:</span></span> 
 
 ```csharp
 public class FileFoundArgs : EventArgs
@@ -58,11 +59,11 @@ public class FileFoundArgs : EventArgs
 }
 ```
 
-Несмотря на то, что этот тип выглядит как небольшой тип, содержащий только данные, вы должны выполнить соглашение и назначить его ссылочным типом (`class`). Это означает, что объект аргумента будет передаваться по ссылке, а любые обновления данных будут доступны всем подписчикам. Первая версия является неизменяемым объектом. Рекомендуется сделать свойства в типе аргумента события неизменяемыми. Таким образом, один подписчик не сможет изменить значения до того, как их увидит другой подписчик. (Существуют исключения, как можно будет увидеть ниже.)  
+<span data-ttu-id="585e1-129">Несмотря на то, что этот тип выглядит как небольшой тип, содержащий только данные, вы должны выполнить соглашение и назначить его ссылочным типом (`class`).</span><span class="sxs-lookup"><span data-stu-id="585e1-129">Even though this type looks like a small, data-only type, you should follow the convention and make it a reference (`class`) type.</span></span> <span data-ttu-id="585e1-130">Это означает, что объект аргумента будет передаваться по ссылке, а любые обновления данных будут доступны всем подписчикам.</span><span class="sxs-lookup"><span data-stu-id="585e1-130">That means the argument object will be passed by reference, and any updates to the data will be viewed by all subscribers.</span></span> <span data-ttu-id="585e1-131">Первая версия является неизменяемым объектом.</span><span class="sxs-lookup"><span data-stu-id="585e1-131">The first version is an immutable object.</span></span> <span data-ttu-id="585e1-132">Рекомендуется сделать свойства в типе аргумента события неизменяемыми.</span><span class="sxs-lookup"><span data-stu-id="585e1-132">You should prefer to make the properties in your event argument type immutable.</span></span> <span data-ttu-id="585e1-133">Таким образом, один подписчик не сможет изменить значения до того, как их увидит другой подписчик.</span><span class="sxs-lookup"><span data-stu-id="585e1-133">That way, one subscriber cannot change the values before another subscriber sees them.</span></span> <span data-ttu-id="585e1-134">(Существуют исключения, как можно будет увидеть ниже.)</span><span class="sxs-lookup"><span data-stu-id="585e1-134">(There are exceptions to this, as you'll see below.)</span></span>  
 
-Затем нужно создать объявление события в классе FileSearcher. Использование типа `EventHandler<T>` означает, что вам не требуется создавать еще одно определение типа. Вы просто используете универсальную специализацию.
+<span data-ttu-id="585e1-135">Затем нужно создать объявление события в классе FileSearcher.</span><span class="sxs-lookup"><span data-stu-id="585e1-135">Next, we need to create the event declaration in the FileSearcher class.</span></span> <span data-ttu-id="585e1-136">Использование типа `EventHandler<T>` означает, что вам не требуется создавать еще одно определение типа.</span><span class="sxs-lookup"><span data-stu-id="585e1-136">Leveraging the `EventHandler<T>` type means that you don't need to create yet another type definition.</span></span> <span data-ttu-id="585e1-137">Вы просто используете универсальную специализацию.</span><span class="sxs-lookup"><span data-stu-id="585e1-137">You simply use a generic specialization.</span></span>
 
-Заполним класс FileSearcher для поиска файлов, соответствующих шаблону, и вызова правильного события при обнаружении совпадения.
+<span data-ttu-id="585e1-138">Заполним класс FileSearcher для поиска файлов, соответствующих шаблону, и вызова правильного события при обнаружении совпадения.</span><span class="sxs-lookup"><span data-stu-id="585e1-138">Let's fill out the FileSearcher class to search for files that match a pattern, and raise the correct event when a match is discovered.</span></span>
 
 ```csharp
 public class FileSearcher
@@ -79,15 +80,15 @@ public class FileSearcher
 }
 ```
 
-## <a name="definining-and-raising-field-like-events"></a>Определение и вызов событий, подобных полям
+## <a name="definining-and-raising-field-like-events"></a><span data-ttu-id="585e1-139">Определение и вызов событий, подобных полям</span><span class="sxs-lookup"><span data-stu-id="585e1-139">Definining and Raising Field-Like Events</span></span>
 
-Самый простой способ добавить событие в класс — объявить это событие как открытое поле, как показано в приведенном выше примере.
+<span data-ttu-id="585e1-140">Самый простой способ добавить событие в класс — объявить это событие как открытое поле, как показано в приведенном выше примере.</span><span class="sxs-lookup"><span data-stu-id="585e1-140">The simplest way to add an event to your class is to declare that event as a public field, as in the above example:</span></span>
 
 ```csharp
 public event EventHandler<FileFoundArgs> FileFound;
 ```
 
-Создание открытых полей не рекомендуется в объектно-ориентированном программировании, поскольку необходимо обеспечить защиту доступа к данным с помощью свойств и методов. Хотя это выглядит нарушением рекомендаций, код, созданный компилятором, создает программы-оболочки, чтобы доступ к объектам событий мог осуществляться только безопасным образом. Единственные операции, доступные для событий, подобных полям, — обработчик add:
+<span data-ttu-id="585e1-141">Создание открытых полей не рекомендуется в объектно-ориентированном программировании,</span><span class="sxs-lookup"><span data-stu-id="585e1-141">This looks like it's declaring a public field, which would appear to be bad object oriented practice.</span></span> <span data-ttu-id="585e1-142">поскольку необходимо обеспечить защиту доступа к данным с помощью свойств и методов.</span><span class="sxs-lookup"><span data-stu-id="585e1-142">You want to protect data access through properties, or methods.</span></span> <span data-ttu-id="585e1-143">Хотя это выглядит нарушением рекомендаций, код, созданный компилятором, создает программы-оболочки, чтобы доступ к объектам событий мог осуществляться только безопасным образом.</span><span class="sxs-lookup"><span data-stu-id="585e1-143">While this make look like a bad practice, the code generated by the compiler does create wrappers so that the event objects can only be accessed in safe ways.</span></span> <span data-ttu-id="585e1-144">Единственные операции, доступные для событий, подобных полям, — обработчик add:</span><span class="sxs-lookup"><span data-stu-id="585e1-144">The only operations available on a field-like event are add handler:</span></span>
 
 ```csharp
 EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
@@ -95,33 +96,33 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 lister.FileFound += onFIleFound;
 ```
 
-и обработчик remove:
+<span data-ttu-id="585e1-145">и обработчик remove:</span><span class="sxs-lookup"><span data-stu-id="585e1-145">and remove handler:</span></span>
 
 ```csharp
 lister.FileFound -= onFileFound;
 ```
 
-Обратите внимание, что для обработчика используется локальная переменная. Если вы используете тело лямбда-выражения, удаление не будет работать корректно. Будет существовать другой экземпляр делегата, не выполняющий никаких действий.
+<span data-ttu-id="585e1-146">Обратите внимание, что для обработчика используется локальная переменная.</span><span class="sxs-lookup"><span data-stu-id="585e1-146">Note that there's a local variable for the handler.</span></span> <span data-ttu-id="585e1-147">Если вы используете тело лямбда-выражения, удаление не будет работать корректно.</span><span class="sxs-lookup"><span data-stu-id="585e1-147">If you used the body of the lambda, the remove would not work correctly.</span></span> <span data-ttu-id="585e1-148">Будет существовать другой экземпляр делегата, не выполняющий никаких действий.</span><span class="sxs-lookup"><span data-stu-id="585e1-148">It would be a different instance of the delegate, and silently do nothing.</span></span>
 
-Код вне класса не может вызывать события, а также выполнять другие операции.
+<span data-ttu-id="585e1-149">Код вне класса не может вызывать события, а также выполнять другие операции.</span><span class="sxs-lookup"><span data-stu-id="585e1-149">Code outside the class cannot raise the event, nor can it perform any other operations.</span></span>
 
-## <a name="returning-values-from-event-subscribers"></a>Получение возвращаемых значений от подписчиков на событие
+## <a name="returning-values-from-event-subscribers"></a><span data-ttu-id="585e1-150">Получение возвращаемых значений от подписчиков на событие</span><span class="sxs-lookup"><span data-stu-id="585e1-150">Returning Values from Event Subscribers</span></span>
 
-Простая версия работает нормально. Давайте добавим еще одну возможность — отмену.
+<span data-ttu-id="585e1-151">Простая версия работает нормально.</span><span class="sxs-lookup"><span data-stu-id="585e1-151">Your simple version is working fine.</span></span> <span data-ttu-id="585e1-152">Давайте добавим еще одну возможность — отмену.</span><span class="sxs-lookup"><span data-stu-id="585e1-152">Let's add another feature: Cancellation.</span></span>
 
-При вызове события нахождения прослушиватели должны иметь возможность остановить дальнейшую обработку, если этот файл является последним искомым.
+<span data-ttu-id="585e1-153">При вызове события нахождения прослушиватели должны иметь возможность остановить дальнейшую обработку, если этот файл является последним искомым.</span><span class="sxs-lookup"><span data-stu-id="585e1-153">When you raise the found event, listeners should be able to stop further processing, if this file is that last one sought.</span></span>
 
-Обработчики событий не возвращают значение, поэтому вам нужно выполнить это другим способом. Стандартный шаблон события использует объект EventArgs для включения полей, которые подписчики на события могут использовать для передачи сообщения об отмене.
+<span data-ttu-id="585e1-154">Обработчики событий не возвращают значение, поэтому вам нужно выполнить это другим способом.</span><span class="sxs-lookup"><span data-stu-id="585e1-154">The event handlers do not return a value, so you need to communicate that in another way.</span></span> <span data-ttu-id="585e1-155">Стандартный шаблон события использует объект EventArgs для включения полей, которые подписчики на события могут использовать для передачи сообщения об отмене.</span><span class="sxs-lookup"><span data-stu-id="585e1-155">The standard event pattern uses the EventArgs object to include fields that event subscribers can use to communicate cancel.</span></span>
 
-Для этого случая предусмотрено два разных шаблона, которые можно использовать в зависимости от семантики контракта "Отмена". В обоих случаях в EventArguments добавляется логическое поле для события найденного файла. 
+<span data-ttu-id="585e1-156">Для этого случая предусмотрено два разных шаблона, которые можно использовать в зависимости от семантики контракта "Отмена".</span><span class="sxs-lookup"><span data-stu-id="585e1-156">There are two different patterns that could be used, based on the semantics of the Cancel contract.</span></span> <span data-ttu-id="585e1-157">В обоих случаях в EventArguments добавляется логическое поле для события найденного файла.</span><span class="sxs-lookup"><span data-stu-id="585e1-157">In both cases, you'll add a boolean field to the EventArguments for the found file event.</span></span> 
 
-Один шаблон позволяет любому одному подписчику отменить операцию.
-Для этого шаблона новое поле инициализируется значением `false`. Любой подписчик можно изменить его на `true`. После того как все подписчики увидят событие, компонент FileSearcher проверяет логическое значение и выполняет действие.
+<span data-ttu-id="585e1-158">Один шаблон позволяет любому одному подписчику отменить операцию.</span><span class="sxs-lookup"><span data-stu-id="585e1-158">One pattern would allow any one subscriber to cancel the operation.</span></span>
+<span data-ttu-id="585e1-159">Для этого шаблона новое поле инициализируется значением `false`.</span><span class="sxs-lookup"><span data-stu-id="585e1-159">For this pattern, the new field is initialized to `false`.</span></span> <span data-ttu-id="585e1-160">Любой подписчик можно изменить его на `true`.</span><span class="sxs-lookup"><span data-stu-id="585e1-160">Any subscriber can change it to `true`.</span></span> <span data-ttu-id="585e1-161">После того как все подписчики увидят событие, компонент FileSearcher проверяет логическое значение и выполняет действие.</span><span class="sxs-lookup"><span data-stu-id="585e1-161">After all subscribers have seen the event raised, the FileSearcher component examines the boolean value and takes action.</span></span>
 
-Второй шаблон отменяет операцию, только если все подписчики подтвердили ее отмену. В этом шаблоне новое поле инициализируется для указания того, что операцию следует отменить, и любой подписчик может изменить его, чтобы указать, что следует продолжить операцию.
-После того как все подписчики увидят событие, компонент FileSearcher проверяет логическое значение и выполняет действие. В этом шаблоне есть еще один дополнительный шаг: компонент должен знать, все ли подписчики видели событие. Если подписчики отсутствуют, поле неверно сообщит об отмене.
+<span data-ttu-id="585e1-162">Второй шаблон отменяет операцию, только если все подписчики подтвердили ее отмену.</span><span class="sxs-lookup"><span data-stu-id="585e1-162">The second pattern would only cancel the operation if all subscribers wanted the operation cancelled.</span></span> <span data-ttu-id="585e1-163">В этом шаблоне новое поле инициализируется для указания того, что операцию следует отменить, и любой подписчик может изменить его, чтобы указать, что следует продолжить операцию.</span><span class="sxs-lookup"><span data-stu-id="585e1-163">In this pattern, the new field is initialized to indicate the operation should cancel, and any subscriber could change it to indicate the operation should continue.</span></span>
+<span data-ttu-id="585e1-164">После того как все подписчики увидят событие, компонент FileSearcher проверяет логическое значение и выполняет действие.</span><span class="sxs-lookup"><span data-stu-id="585e1-164">After all subscribers have seen the event raised, the FileSearcher component examines the boolean and takes action.</span></span> <span data-ttu-id="585e1-165">В этом шаблоне есть еще один дополнительный шаг: компонент должен знать, все ли подписчики видели событие.</span><span class="sxs-lookup"><span data-stu-id="585e1-165">There is one extra step in this pattern: the component needs to know if any subscribers have seen the event.</span></span> <span data-ttu-id="585e1-166">Если подписчики отсутствуют, поле неверно сообщит об отмене.</span><span class="sxs-lookup"><span data-stu-id="585e1-166">If there are no subscribers, the field would indicate a cancel incorrectly.</span></span>
 
-Реализуем первую версию для этого примера. Вам потребуется добавить логическое поле типа FileFoundEventArgs:
+<span data-ttu-id="585e1-167">Реализуем первую версию для этого примера.</span><span class="sxs-lookup"><span data-stu-id="585e1-167">Let's implement the first version for this sample.</span></span> <span data-ttu-id="585e1-168">Вам потребуется добавить логическое поле типа FileFoundEventArgs:</span><span class="sxs-lookup"><span data-stu-id="585e1-168">You need to add a boolean field to the FileFoundEventArgs type:</span></span>
 
 ```csharp
 public class FileFoundArgs : EventArgs
@@ -136,7 +137,7 @@ public class FileFoundArgs : EventArgs
 }
 ```
 
-Это новое поле должно быть инициализировано значением false, чтобы не выполнять отмену без причины. Это значение по умолчанию для логического поля, поэтому оно задается автоматически. Единственным другим изменением в компоненте является установка флага после вызова события для просмотра, если любой из подписчиков запросил отмену:
+<span data-ttu-id="585e1-169">Это новое поле должно быть инициализировано значением false, чтобы не выполнять отмену без причины.</span><span class="sxs-lookup"><span data-stu-id="585e1-169">This new Field should be initialized to false, so you don't cancel for no reason.</span></span> <span data-ttu-id="585e1-170">Это значение по умолчанию для логического поля, поэтому оно задается автоматически.</span><span class="sxs-lookup"><span data-stu-id="585e1-170">That is the default value for a boolean field, so that happens automatically.</span></span> <span data-ttu-id="585e1-171">Единственным другим изменением в компоненте является установка флага после вызова события для просмотра, если любой из подписчиков запросил отмену:</span><span class="sxs-lookup"><span data-stu-id="585e1-171">The only other change to the component is to check the flag after raising the event to see if any of the subscribers have requested a cancellation:</span></span>
 
 ```csharp
 public void List(string directory, string searchPattern)
@@ -151,10 +152,10 @@ public void List(string directory, string searchPattern)
 }
 ```
 
-Одно из преимуществ этого шаблона заключается в том, что это не является критическим изменением.
-Ни один из подписчиков не запросил отмену и не запрашивает до сих пор. Код подписчиков не требует обновления, если не требуется поддержка нового протокола отмены. Они очень слабо связаны.
+<span data-ttu-id="585e1-172">Одно из преимуществ этого шаблона заключается в том, что это не является критическим изменением.</span><span class="sxs-lookup"><span data-stu-id="585e1-172">One advantage of this pattern is that it isn't a breaking change.</span></span>
+<span data-ttu-id="585e1-173">Ни один из подписчиков не запросил отмену и не запрашивает до сих пор.</span><span class="sxs-lookup"><span data-stu-id="585e1-173">None of the subscribers requested a cancel before, and they still are not.</span></span> <span data-ttu-id="585e1-174">Код подписчиков не требует обновления, если не требуется поддержка нового протокола отмены.</span><span class="sxs-lookup"><span data-stu-id="585e1-174">None of the subscriber code needs updating unless they want to support the new cancel protocol.</span></span> <span data-ttu-id="585e1-175">Они очень слабо связаны.</span><span class="sxs-lookup"><span data-stu-id="585e1-175">It's very loosely coupled.</span></span>
 
-Изменим подписчик, чтобы он запрашивал отмену, когда обнаруживает первый исполняемый файл:
+<span data-ttu-id="585e1-176">Изменим подписчик, чтобы он запрашивал отмену, когда обнаруживает первый исполняемый файл:</span><span class="sxs-lookup"><span data-stu-id="585e1-176">Let's update the subscriber so that it requests a cancellation once it finds the first executable:</span></span>
 
 ```csharp
 EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
@@ -164,13 +165,13 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 };
 ```
 
-## <a name="adding-another-event-declaration"></a>Добавление другого объявления события
+## <a name="adding-another-event-declaration"></a><span data-ttu-id="585e1-177">Добавление другого объявления события</span><span class="sxs-lookup"><span data-stu-id="585e1-177">Adding Another Event Declaration</span></span>
 
-Добавим еще одну возможность и продемонстрируем другие выражения языка для событий. Добавим перегрузку метода `Search()`, который проходит через все подкаталоги в поиске файлов.
+<span data-ttu-id="585e1-178">Добавим еще одну возможность и продемонстрируем другие выражения языка для событий.</span><span class="sxs-lookup"><span data-stu-id="585e1-178">Let's add one more feature, and demonstrate other language idioms for events.</span></span> <span data-ttu-id="585e1-179">Добавим перегрузку метода `Search()`, который проходит через все подкаталоги в поиске файлов.</span><span class="sxs-lookup"><span data-stu-id="585e1-179">Let's add an overload of the `Search()` method that traverses all subdirectories in search of files.</span></span>
 
-Эта операция может выполняться длительное время в каталоге с большим числом вложенных каталогов. Добавим событие, которое вызывается в начале каждого нового поиска в каталоге. Это позволяет подписчикам отслеживать ход выполнения и сообщать о нем пользователю. Все примеры, которые мы создали до сих пор, являются открытыми. Сделаем это событие внутренним. Это означает, что типы, используемые для аргументов, также можно сделать внутренними.
+<span data-ttu-id="585e1-180">Эта операция может выполняться длительное время в каталоге с большим числом вложенных каталогов.</span><span class="sxs-lookup"><span data-stu-id="585e1-180">This could get to be a lengthy operation in a directory with many sub-directories.</span></span> <span data-ttu-id="585e1-181">Добавим событие, которое вызывается в начале каждого нового поиска в каталоге.</span><span class="sxs-lookup"><span data-stu-id="585e1-181">Let's add an event that gets raised when each new directory search begins.</span></span> <span data-ttu-id="585e1-182">Это позволяет подписчикам отслеживать ход выполнения и сообщать о нем пользователю.</span><span class="sxs-lookup"><span data-stu-id="585e1-182">This enables subscribers to track progress, and update the user as to progress.</span></span> <span data-ttu-id="585e1-183">Все примеры, которые мы создали до сих пор, являются открытыми.</span><span class="sxs-lookup"><span data-stu-id="585e1-183">All the samples you've created so far are public.</span></span> <span data-ttu-id="585e1-184">Сделаем это событие внутренним.</span><span class="sxs-lookup"><span data-stu-id="585e1-184">Let's make this one an internal event.</span></span> <span data-ttu-id="585e1-185">Это означает, что типы, используемые для аргументов, также можно сделать внутренними.</span><span class="sxs-lookup"><span data-stu-id="585e1-185">That means you can also make the types used for the arguments internal as well.</span></span>
 
-Вы начнете с создания нового производного класса EventArgs для передачи сведений о новом каталоге и ходе выполнения. 
+<span data-ttu-id="585e1-186">Вы начнете с создания нового производного класса EventArgs для передачи сведений о новом каталоге и ходе выполнения.</span><span class="sxs-lookup"><span data-stu-id="585e1-186">You'll start by creating the new EventArgs derived class for reporting the new directory and progress.</span></span> 
 
 ```csharp
 internal class SearchDirectoryArgs : EventArgs
@@ -188,9 +189,9 @@ internal class SearchDirectoryArgs : EventArgs
 }
 ``` 
 
-Опять же, вы можете следовать рекомендациям по созданию неизменяемого ссылочного типа для аргументов событий.
+<span data-ttu-id="585e1-187">Опять же, вы можете следовать рекомендациям по созданию неизменяемого ссылочного типа для аргументов событий.</span><span class="sxs-lookup"><span data-stu-id="585e1-187">Again, you can follow the recommendations to make an immutable reference type for the event arguments.</span></span>
 
-Теперь определим событие. На этот раз будет использоваться другой синтаксис. Помимо синтаксиса полей можно явно создать свойство c помощью обработчиков add и remove. В этом примере вам не потребуется дополнительный код в этих обработчиках в данном проекте, тем не менее здесь демонстрируется их создание.
+<span data-ttu-id="585e1-188">Теперь определим событие.</span><span class="sxs-lookup"><span data-stu-id="585e1-188">Next, define the event.</span></span> <span data-ttu-id="585e1-189">На этот раз будет использоваться другой синтаксис.</span><span class="sxs-lookup"><span data-stu-id="585e1-189">This time, you'll use a different syntax.</span></span> <span data-ttu-id="585e1-190">Помимо синтаксиса полей можно явно создать свойство c помощью обработчиков add и remove.</span><span class="sxs-lookup"><span data-stu-id="585e1-190">In addition to using the field syntax, you can explicitly create the property, with add and remove handlers.</span></span> <span data-ttu-id="585e1-191">В этом примере вам не потребуется дополнительный код в этих обработчиках в данном проекте, тем не менее здесь демонстрируется их создание.</span><span class="sxs-lookup"><span data-stu-id="585e1-191">In this sample, you won't need extra code in those handlers in this project, but this shows how you would create them.</span></span>
 
 ```csharp
 internal event EventHandler<SearchDirectoryArgs> DirectoryChanged
@@ -201,9 +202,9 @@ internal event EventHandler<SearchDirectoryArgs> DirectoryChanged
 private EventHandler<SearchDirectoryArgs> directoryChanged;
 ```
 
-По большей части код, созданный здесь, отражает код, создаваемый компилятором для определения полей событий, как было показано ранее. Для создания события используется синтаксис, очень похожий на используемый для [свойств](properties.md). Обратите внимание, что обработчики имеют разные имена: `add` и `remove`. Они вызываются для подписки на событие или отмены подписки на событие. Учтите, что вы также должны объявить закрытое резервное поле для хранения переменной событий. Оно инициализируется значением NULL.
+<span data-ttu-id="585e1-192">По большей части код, созданный здесь, отражает код, создаваемый компилятором для определения полей событий, как было показано ранее.</span><span class="sxs-lookup"><span data-stu-id="585e1-192">In may ways, the code you write here mirrors the code the compiler generates for the field event definitions you've seen earlier.</span></span> <span data-ttu-id="585e1-193">Для создания события используется синтаксис, очень похожий на используемый для [свойств](properties.md).</span><span class="sxs-lookup"><span data-stu-id="585e1-193">You create the event using syntax very similar to that used for [properties](properties.md).</span></span> <span data-ttu-id="585e1-194">Обратите внимание, что обработчики имеют разные имена: `add` и `remove`.</span><span class="sxs-lookup"><span data-stu-id="585e1-194">Notice that the handlers have different names: `add` and `remove`.</span></span> <span data-ttu-id="585e1-195">Они вызываются для подписки на событие или отмены подписки на событие.</span><span class="sxs-lookup"><span data-stu-id="585e1-195">These are called to subscribe to the event, or unsubscribe from the event.</span></span> <span data-ttu-id="585e1-196">Учтите, что вы также должны объявить закрытое резервное поле для хранения переменной событий.</span><span class="sxs-lookup"><span data-stu-id="585e1-196">Notice that you also must declare a private backing field to store the event variable.</span></span> <span data-ttu-id="585e1-197">Оно инициализируется значением NULL.</span><span class="sxs-lookup"><span data-stu-id="585e1-197">It is initialized to null.</span></span>
 
-Теперь добавим перегрузку метода Search(), который проходит по подкаталогам и вызывает оба события. Для этого проще всего использовать аргумент по умолчанию для задания поиска по всем каталогам:
+<span data-ttu-id="585e1-198">Теперь добавим перегрузку метода Search(), который проходит по подкаталогам и вызывает оба события.</span><span class="sxs-lookup"><span data-stu-id="585e1-198">Next, let's add the overload of the Search() method that traverses subdirectories and raises both events.</span></span> <span data-ttu-id="585e1-199">Для этого проще всего использовать аргумент по умолчанию для задания поиска по всем каталогам:</span><span class="sxs-lookup"><span data-stu-id="585e1-199">The easiest way to accomplish this is to use a default argument to specify that you want to search all directories:</span></span>
 
 ```csharp
 public void Search(string directory, string searchPattern, bool searchSubDirs = false)
@@ -243,9 +244,9 @@ private void SearchDirectory(string directory, string searchPattern)
 }
 ```
 
-На этом этапе можно запустить приложение, вызывающее перегруженный метод для поиска всех вложенных каталогов. Для нового события `ChangeDirectory` нет подписчиков, однако благодаря использованию идиомы `?.Invoke()` мы можем гарантировать правильную работу метода.
+<span data-ttu-id="585e1-200">На этом этапе можно запустить приложение, вызывающее перегруженный метод для поиска всех вложенных каталогов.</span><span class="sxs-lookup"><span data-stu-id="585e1-200">At this point, you can run the application calling the overload for searching all sub-directories.</span></span> <span data-ttu-id="585e1-201">Для нового события `ChangeDirectory` нет подписчиков, однако благодаря использованию идиомы `?.Invoke()` мы можем гарантировать правильную работу метода.</span><span class="sxs-lookup"><span data-stu-id="585e1-201">There are no subscribers on the new `ChangeDirectory` event, but using the `?.Invoke()` idiom ensures that this works correctly.</span></span>
 
- Добавим обработчик для написания строки, показывающей ход выполнения в окне консоли. 
+ <span data-ttu-id="585e1-202">Добавим обработчик для написания строки, показывающей ход выполнения в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="585e1-202">Let's add a handler to write a line that shows the progress in the console window.</span></span> 
 
 ```csharp
 lister.DirectoryChanged += (sender, eventArgs) =>
@@ -255,10 +256,10 @@ lister.DirectoryChanged += (sender, eventArgs) =>
 };
 ```
 
-Мы познакомились с шаблонами, которые используются во всей экосистеме .NET.
-Научившись использовать эти шаблоны и соглашения, вы сможете быстро создавать код C# и .NET на основе идиом.
+<span data-ttu-id="585e1-203">Мы познакомились с шаблонами, которые используются во всей экосистеме .NET.</span><span class="sxs-lookup"><span data-stu-id="585e1-203">You've seen patterns that are followed throughout the .NET ecosystem.</span></span>
+<span data-ttu-id="585e1-204">Научившись использовать эти шаблоны и соглашения, вы сможете быстро создавать код C# и .NET на основе идиом.</span><span class="sxs-lookup"><span data-stu-id="585e1-204">By learning these patterns and conventions, you'll be writing idiomatic C# and .NET quickly.</span></span>
 
-Далее мы рассмотрим некоторые изменения в этих шаблонах в самой последней версии .NET.
+<span data-ttu-id="585e1-205">Далее мы рассмотрим некоторые изменения в этих шаблонах в самой последней версии .NET.</span><span class="sxs-lookup"><span data-stu-id="585e1-205">Next, you'll see some changes in these patterns in the most recent release of .NET.</span></span>
 
-[Далее](modern-events.md)
+[<span data-ttu-id="585e1-206">Далее</span><span class="sxs-lookup"><span data-stu-id="585e1-206">Next</span></span>](modern-events.md)
 

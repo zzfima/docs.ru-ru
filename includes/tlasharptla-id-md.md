@@ -1,1 +1,1 @@
-идентификатор (ID)
+<span data-ttu-id="ea248-101">идентификатор (ID)</span><span class="sxs-lookup"><span data-stu-id="ea248-101">identifier (ID)</span></span>

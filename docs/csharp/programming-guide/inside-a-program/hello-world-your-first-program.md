@@ -32,129 +32,129 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Создаем первую программу (Руководство по программированию на C#)
-В следующей процедуре создается версия традиционной программы "Hello World!" в C#. Программа отображает строку `Hello World!`  
+# <a name="hello-world----your-first-program-c-programming-guide"></a><span data-ttu-id="f1cd3-102">Hello World – Создаем первую программу (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="f1cd3-102">Hello World -- Your First Program (C# Programming Guide)</span></span>
+<span data-ttu-id="f1cd3-103">В следующей процедуре создается версия традиционной программы "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="f1cd3-103">The following procedure creates a C# version of the traditional "Hello World!"</span></span> <span data-ttu-id="f1cd3-104">в C#.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-104">program.</span></span> <span data-ttu-id="f1cd3-105">Программа отображает строку `Hello World!`</span><span class="sxs-lookup"><span data-stu-id="f1cd3-105">The program displays the string `Hello World!`</span></span>  
   
- Дополнительные примеры основных понятий см. в разделе [Приступая к работе с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
+ <span data-ttu-id="f1cd3-106">Дополнительные примеры основных понятий см. в разделе [Приступая к работе с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="f1cd3-106">For more examples of introductory concepts, see [Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-and-run-a-console-application"></a>Создание и запуск консольного приложения  
+### <a name="to-create-and-run-a-console-application"></a><span data-ttu-id="f1cd3-107">Создание и запуск консольного приложения</span><span class="sxs-lookup"><span data-stu-id="f1cd3-107">To create and run a console application</span></span>  
   
-1.  Запустите Visual Studio.  
+1.  <span data-ttu-id="f1cd3-108">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-108">Start Visual Studio.</span></span>  
   
-2.  В строке меню выберите **Файл**, **Создать**, **Проект**.  
+2.  <span data-ttu-id="f1cd3-109">В строке меню выберите **Файл**, **Создать**, **Проект**.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-109">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     Откроется диалоговое окно **Новый проект** .  
+     <span data-ttu-id="f1cd3-110">Откроется диалоговое окно **Новый проект** .</span><span class="sxs-lookup"><span data-stu-id="f1cd3-110">The **New Project** dialog box opens.</span></span>  
   
-3.  Последовательно разверните узлы **Установленные**, **Шаблоны** и **Visual C#**, а затем выберите **Консольное приложение**.  
+3.  <span data-ttu-id="f1cd3-111">Последовательно разверните узлы **Установленные**, **Шаблоны** и **Visual C#**, а затем выберите **Консольное приложение**.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-111">Expand **Installed**, expand **Templates**, expand **Visual C#**, and then choose **Console Application**.</span></span>  
   
-4.  В текстовом поле **Имя** введите имя проекта и нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="f1cd3-112">В текстовом поле **Имя** введите имя проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-112">In the **Name** box, specify a name for your project, and then choose the **OK** button.</span></span>  
   
-     В **обозревателе решений** появится новый проект.  
+     <span data-ttu-id="f1cd3-113">В **обозревателе решений** появится новый проект.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-113">The new project appears in **Solution Explorer**.</span></span>  
   
-5.  Если файл Program.cs не открыт в **редакторе кода**, откройте контекстное меню для **Program.cs** в **обозревателе решений** и нажмите кнопку **Просмотреть код**.  
+5.  <span data-ttu-id="f1cd3-114">Если файл Program.cs не открыт в **редакторе кода**, откройте контекстное меню для **Program.cs** в **обозревателе решений** и нажмите кнопку **Просмотреть код**.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-114">If Program.cs isn't open in the **Code Editor**, open the shortcut menu for **Program.cs** in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-6.  Замените содержимое Program.cs кодом из этого примера.  
+6.  <span data-ttu-id="f1cd3-115">Замените содержимое Program.cs кодом из этого примера.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-115">Replace the contents of Program.cs with the following code.</span></span>  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
+     <span data-ttu-id="f1cd3-116">[!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-116">[!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]</span></span>  
   
-7.  Нажмите клавишу F5, чтобы запустить проект. Откроется окно командной строки, содержащее строку `Hello World!`  
+7.  <span data-ttu-id="f1cd3-117">Нажмите клавишу F5, чтобы запустить проект.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-117">Choose the F5 key to run the project.</span></span> <span data-ttu-id="f1cd3-118">Откроется окно командной строки, содержащее строку `Hello World!`</span><span class="sxs-lookup"><span data-stu-id="f1cd3-118">A Command Prompt window appears that contains the line `Hello World!`</span></span>  
   
- Далее рассматриваются важные части этой программы.  
+ <span data-ttu-id="f1cd3-119">Далее рассматриваются важные части этой программы.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-119">Next, the important parts of this program are examined.</span></span>  
   
-## <a name="comments"></a>Комментарии  
- Первая строка содержит комментарий. Символы `//` преобразуют остальную часть строки в комментарий.  
+## <a name="comments"></a><span data-ttu-id="f1cd3-120">Комментарии</span><span class="sxs-lookup"><span data-stu-id="f1cd3-120">Comments</span></span>  
+ <span data-ttu-id="f1cd3-121">Первая строка содержит комментарий.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-121">The first line contains a comment.</span></span> <span data-ttu-id="f1cd3-122">Символы `//` преобразуют остальную часть строки в комментарий.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-122">The characters `//` convert the rest of the line to a comment.</span></span>  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
+ <span data-ttu-id="f1cd3-123">[!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-123">[!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]</span></span>  
   
- Вы можете также закомментировать блок текста, заключив его между символами `/*` и `*/`. Эти действия показаны в следующем примере.  
+ <span data-ttu-id="f1cd3-124">Вы можете также закомментировать блок текста, заключив его между символами `/*` и `*/`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-124">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="f1cd3-125">Эти действия показаны в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-125">This is shown in the following example.</span></span>  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
+ <span data-ttu-id="f1cd3-126">[!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-126">[!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]</span></span>  
   
-## <a name="main-method"></a>Метод Main  
- Консольное приложение C# должно содержать метод `Main`, в котором начинается и заканчивается управление. В методе `Main` создаются объекты и выполняются другие методы.  
+## <a name="main-method"></a><span data-ttu-id="f1cd3-127">Метод Main</span><span class="sxs-lookup"><span data-stu-id="f1cd3-127">Main Method</span></span>  
+ <span data-ttu-id="f1cd3-128">Консольное приложение C# должно содержать метод `Main`, в котором начинается и заканчивается управление.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-128">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="f1cd3-129">В методе `Main` создаются объекты и выполняются другие методы.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-129">The `Main` method is where you create objects and execute other methods.</span></span>  
   
- Метод `Main` является [статическим](../../../csharp/language-reference/keywords/static.md) методом, расположенным внутри класса или структуры. В предыдущем примере "Hello World!" он размещается в классе с именем `Hello`. Вы можете объявить метод `Main` одним из следующих способов.  
+ <span data-ttu-id="f1cd3-130">Метод `Main` является [статическим](../../../csharp/language-reference/keywords/static.md) методом, расположенным внутри класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-130">The `Main` method is a [static](../../../csharp/language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="f1cd3-131">В предыдущем примере "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="f1cd3-131">In the previous "Hello World!"</span></span> <span data-ttu-id="f1cd3-132">он размещается в классе с именем `Hello`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-132">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="f1cd3-133">Вы можете объявить метод `Main` одним из следующих способов.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-133">You can declare the `Main` method in one of the following ways:</span></span>  
   
--   Он может возвращать значение `void`.  
+-   <span data-ttu-id="f1cd3-134">Он может возвращать значение `void`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-134">It can return `void`.</span></span>  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
+     <span data-ttu-id="f1cd3-135">[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-135">[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]</span></span>  
   
--   Он также может возвращать целое число.  
+-   <span data-ttu-id="f1cd3-136">Он также может возвращать целое число.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-136">It can also return an integer.</span></span>  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
+     <span data-ttu-id="f1cd3-137">[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-137">[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]</span></span>  
   
--   С любым из типов возвращаемых значений он может принимать аргументы.  
+-   <span data-ttu-id="f1cd3-138">С любым из типов возвращаемых значений он может принимать аргументы.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-138">With either of the return types, it can take arguments.</span></span>  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
+     <span data-ttu-id="f1cd3-139">[!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-139">[!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]</span></span>  
   
-     -или-  
+     <span data-ttu-id="f1cd3-140">-или-</span><span class="sxs-lookup"><span data-stu-id="f1cd3-140">-or-</span></span>  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
+     <span data-ttu-id="f1cd3-141">[!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-141">[!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]</span></span>  
   
- Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы. В отличие от C++, массив не содержит имя исполняемого файла (EXE).  
+ <span data-ttu-id="f1cd3-142">Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-142">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span> <span data-ttu-id="f1cd3-143">В отличие от C++, массив не содержит имя исполняемого файла (EXE).</span><span class="sxs-lookup"><span data-stu-id="f1cd3-143">Unlike in C++, the array does not include the name of the executable (exe) file.</span></span>  
   
- Дополнительные сведения об использовании командной строки см. в примерах в разделах [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) и [Практическое руководство. Создание и использование сборок с помощью командной строки](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ <span data-ttu-id="f1cd3-144">Дополнительные сведения об использовании командной строки см. в примерах в разделах [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) и [Практическое руководство. Создание и использование сборок с помощью командной строки](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).</span><span class="sxs-lookup"><span data-stu-id="f1cd3-144">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../../../csharp/programming-guide/main-and-command-args/index.md) and [How to: Create and Use Assemblies Using the Command Line](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).</span></span>  
   
- Вызов <xref:System.Console.ReadKey%2A> в конце метода `Main` предотвращает закрытие окна консоли, чтобы вы успели прочитать выходные данные, когда запускаете программу в режиме отладки с помощью клавиши F5.  
+ <span data-ttu-id="f1cd3-145">Вызов <xref:System.Console.ReadKey%2A> в конце метода `Main` предотвращает закрытие окна консоли, чтобы вы успели прочитать выходные данные, когда запускаете программу в режиме отладки с помощью клавиши F5.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-145">The call to <xref:System.Console.ReadKey%2A> at the end of the `Main` method prevents the console window from closing before you have a chance to read the output when you run your program in debug mode, by pressing F5.</span></span>  
   
-## <a name="input-and-output"></a>Ввод и вывод  
- Программы на C#, как правило, используют службы ввода-вывода, предоставляемые библиотекой времени выполнения в .NET Framework. Инструкция `System.Console.WriteLine("Hello World!");` использует метод <xref:System.Console.WriteLine%2A>. Это один из методов вывода класса <xref:System.Console> в библиотеке времени выполнения. Он отображает свой строковый параметр в стандартном потоке вывода, за которым следует новая строка. Существуют и другие методы <xref:System.Console> для разных операций ввода и вывода. Если вы добавите в начало программы директиву `using System;`, классы и методы <xref:System> можно использовать напрямую, не указывая их полные имена. Например, можно вызвать `Console.WriteLine` вместо `System.Console.WriteLine`:  
+## <a name="input-and-output"></a><span data-ttu-id="f1cd3-146">Ввод и вывод</span><span class="sxs-lookup"><span data-stu-id="f1cd3-146">Input and Output</span></span>  
+ <span data-ttu-id="f1cd3-147">Программы на C#, как правило, используют службы ввода-вывода, предоставляемые библиотекой времени выполнения в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-147">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="f1cd3-148">Инструкция `System.Console.WriteLine("Hello World!");` использует метод <xref:System.Console.WriteLine%2A>.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-148">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="f1cd3-149">Это один из методов вывода класса <xref:System.Console> в библиотеке времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-149">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="f1cd3-150">Он отображает свой строковый параметр в стандартном потоке вывода, за которым следует новая строка.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-150">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="f1cd3-151">Существуют и другие методы <xref:System.Console> для разных операций ввода и вывода.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-151">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="f1cd3-152">Если вы добавите в начало программы директиву `using System;`, классы и методы <xref:System> можно использовать напрямую, не указывая их полные имена.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-152">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="f1cd3-153">Например, можно вызвать `Console.WriteLine` вместо `System.Console.WriteLine`:</span><span class="sxs-lookup"><span data-stu-id="f1cd3-153">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
+ <span data-ttu-id="f1cd3-154">[!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-154">[!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]</span></span>  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
+ <span data-ttu-id="f1cd3-155">[!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]</span><span class="sxs-lookup"><span data-stu-id="f1cd3-155">[!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]</span></span>  
   
- Дополнительные сведения о методах ввода-вывода см. в описании <xref:System.IO>.  
+ <span data-ttu-id="f1cd3-156">Дополнительные сведения о методах ввода-вывода см. в описании <xref:System.IO>.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-156">For more information about input/output methods, see <xref:System.IO>.</span></span>  
   
-## <a name="command-line-compilation-and-execution"></a>Компиляция и выполнение из командной строки  
- Программу "Hello World!" можно скомпилировать, используя командную строку вместо интегрированной среды разработки Visual Studio.  
+## <a name="command-line-compilation-and-execution"></a><span data-ttu-id="f1cd3-157">Компиляция и выполнение из командной строки</span><span class="sxs-lookup"><span data-stu-id="f1cd3-157">Command-Line Compilation and Execution</span></span>  
+ <span data-ttu-id="f1cd3-158">Программу "Hello World!" можно скомпилировать,</span><span class="sxs-lookup"><span data-stu-id="f1cd3-158">You can compile the "Hello World!"</span></span> <span data-ttu-id="f1cd3-159">используя командную строку вместо интегрированной среды разработки Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-159">program by using the command line instead of the Visual Studio Integrated Development Environment (IDE).</span></span>  
   
-#### <a name="to-compile-and-run-from-a-command-prompt"></a>Компиляция и выполнение программы из командной строки  
+#### <a name="to-compile-and-run-from-a-command-prompt"></a><span data-ttu-id="f1cd3-160">Компиляция и выполнение программы из командной строки</span><span class="sxs-lookup"><span data-stu-id="f1cd3-160">To compile and run from a command prompt</span></span>  
   
-1.  Вставьте код из предыдущей процедуры в любой текстовый редактор и сохраните файл как текстовый файл. Назовите файл `Hello.cs`. Для файлов исходного кода C# используется расширение `.cs`.  
+1.  <span data-ttu-id="f1cd3-161">Вставьте код из предыдущей процедуры в любой текстовый редактор и сохраните файл как текстовый файл.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-161">Paste the code from the preceding procedure into any text editor, and then save the file as a text file.</span></span> <span data-ttu-id="f1cd3-162">Назовите файл `Hello.cs`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-162">Name the file `Hello.cs`.</span></span> <span data-ttu-id="f1cd3-163">Для файлов исходного кода C# используется расширение `.cs`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-163">C# source code files use the extension `.cs`.</span></span>  
   
-2.  Выполните одно из следующих действий, чтобы открыть окно командной строки.  
+2.  <span data-ttu-id="f1cd3-164">Выполните одно из следующих действий, чтобы открыть окно командной строки.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-164">Perform one of the following steps to open a command-prompt window:</span></span>  
   
-    -   В Windows 8 на **начальном** экране выполните поиск по термину `Developer Command Prompt`, а затем выберите **Командная строка разработчика для VS2012**.  
+    -   <span data-ttu-id="f1cd3-165">В меню **Пуск** Windows 10 введите `Developer Command Prompt` в строке поиска, а затем выберите пункт **Командная строка разработчика для VS 2017**.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-165">In Windows 10, on the **Start** menu, search for `Developer Command Prompt`, and then tap or choose **Developer Command Prompt for VS 2017**.</span></span>  
   
-         Откроется окно "Командная строка разработчика".  
+         <span data-ttu-id="f1cd3-166">Откроется окно "Командная строка разработчика".</span><span class="sxs-lookup"><span data-stu-id="f1cd3-166">A Developer Command Prompt window appears.</span></span>  
   
-    -   В Windows 7 откройте меню **Пуск**, разверните папку для текущей версии Visual Studio, откройте контекстное меню для **Инструменты Visual Studio** и выберите **Командная строка разработчика для VS2012**.  
+    -   <span data-ttu-id="f1cd3-167">В Windows 7 откройте меню **Пуск**, разверните папку текущей версии Visual Studio, откройте контекстное меню **Инструменты Visual Studio** и выберите пункт **Командная строка разработчика для VS 2017**.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-167">In Windows 7, open the **Start** menu, expand the folder for the current version of Visual Studio, open the shortcut menu for **Visual Studio Tools**, and then choose **Developer Command Prompt for VS 2017**.</span></span>  
   
-         Откроется окно "Командная строка разработчика".  
+         <span data-ttu-id="f1cd3-168">Откроется окно "Командная строка разработчика".</span><span class="sxs-lookup"><span data-stu-id="f1cd3-168">A Developer Command Prompt window appears.</span></span>  
   
-    -   Включите сборки из командной строки из стандартного окна командной строки.  
+    -   <span data-ttu-id="f1cd3-169">Включите сборки из командной строки из стандартного окна командной строки.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-169">Enable command-line builds from a standard Command Prompt window.</span></span>  
   
-         См. раздел [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+         <span data-ttu-id="f1cd3-170">См. раздел [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).</span><span class="sxs-lookup"><span data-stu-id="f1cd3-170">See [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).</span></span>  
   
-3.  В окне командной строки перейдите к папке, содержащей файл `Hello.cs`.  
+3.  <span data-ttu-id="f1cd3-171">В окне командной строки перейдите к папке, содержащей файл `Hello.cs`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-171">In the command-prompt window, navigate to the folder that contains your `Hello.cs` file.</span></span>  
   
-4.  Введите следующую команду для компиляции `Hello.cs`.  
+4.  <span data-ttu-id="f1cd3-172">Введите следующую команду для компиляции `Hello.cs`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-172">Enter the following command to compile `Hello.cs`.</span></span>  
   
      `csc Hello.cs`  
   
-     Если для программы не выдаются ошибки компиляции, создается исполняемый файл с именем `Hello.exe`.  
+     <span data-ttu-id="f1cd3-173">Если для программы не выдаются ошибки компиляции, создается исполняемый файл с именем `Hello.exe`.</span><span class="sxs-lookup"><span data-stu-id="f1cd3-173">If your program has no compilation errors, an executable file that is named `Hello.exe` is created.</span></span>  
   
-5.  В окне командной строки введите следующую команду, чтобы запустить программу:  
+5.  <span data-ttu-id="f1cd3-174">В окне командной строки введите следующую команду, чтобы запустить программу:</span><span class="sxs-lookup"><span data-stu-id="f1cd3-174">In the command-prompt window, enter the following command to run the program:</span></span>  
   
      `Hello`  
   
- Дополнительные сведения о компиляторе C# и его параметрах см. в разделе [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md).
+ <span data-ttu-id="f1cd3-175">Дополнительные сведения о компиляторе C# и его параметрах см. в разделе [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md).</span><span class="sxs-lookup"><span data-stu-id="f1cd3-175">For more information about the C# compiler and its options, see [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md).</span></span>
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md)   
- [Строки](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover>Примеры приложений Visual C++](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+## <a name="see-also"></a><span data-ttu-id="f1cd3-176">См. также</span><span class="sxs-lookup"><span data-stu-id="f1cd3-176">See Also</span></span>  
+ <span data-ttu-id="f1cd3-177">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1cd3-177">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="f1cd3-178">[Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1cd3-178">[Inside a C# Program](../../../csharp/programming-guide/inside-a-program/index.md) </span></span>  
+ <span data-ttu-id="f1cd3-179">[Строки](../../../csharp/programming-guide/strings/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1cd3-179">[Strings](../../../csharp/programming-guide/strings/index.md) </span></span>  
+ <span data-ttu-id="f1cd3-180">[\<paveover>Примеры приложений Visual C++](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15) </span><span class="sxs-lookup"><span data-stu-id="f1cd3-180">[\<paveover>C# Sample Applications](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15) </span></span>  
+ <span data-ttu-id="f1cd3-181">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1cd3-181">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="f1cd3-182">[Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) </span><span class="sxs-lookup"><span data-stu-id="f1cd3-182">[Main() and Command-Line Arguments](../../../csharp/programming-guide/main-and-command-args/index.md) </span></span>  
+ [<span data-ttu-id="f1cd3-183">Начало работы с Visual C# и Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f1cd3-183">Getting Started with Visual C# and Visual Basic</span></span>](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
 

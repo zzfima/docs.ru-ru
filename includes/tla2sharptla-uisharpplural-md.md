@@ -1,1 +1,1 @@
-Пользовательские интерфейсы
+<span data-ttu-id="20a1d-101">Пользовательские интерфейсы</span><span class="sxs-lookup"><span data-stu-id="20a1d-101">UIs</span></span>

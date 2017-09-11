@@ -20,21 +20,21 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a3ab3b62b20d6e4992421ac4fd98b73bded04c9
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 83bef688a9d40c08f7a8280309ea5b607a9b06f0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/07/2017
 
 ---
-# <a name="using-variance-in-delegates-c"></a>Использование вариативности в делегатах (C#)
-При назначении метода делегату *ковариация* и *контравариантость* обеспечивают гибкость сопоставления типа делегата с сигнатурой метода. Ковариация позволяет методу иметь тип возвращаемого значения, степень наследования которого больше, чем указано в делегате. Контравариантность позволяет использовать метод с типами параметров, степень наследования которых меньше, чем у типа делегата.  
+# <a name="using-variance-in-delegates-c"></a><span data-ttu-id="a04e4-102">Использование вариативности в делегатах (C#)</span><span class="sxs-lookup"><span data-stu-id="a04e4-102">Using Variance in Delegates (C#)</span></span>
+<span data-ttu-id="a04e4-103">При назначении метода делегату *ковариация* и *контравариантость* обеспечивают гибкость сопоставления типа делегата с сигнатурой метода.</span><span class="sxs-lookup"><span data-stu-id="a04e4-103">When you assign a method to a delegate, *covariance* and *contravariance* provide flexibility for matching a delegate type with a method signature.</span></span> <span data-ttu-id="a04e4-104">Ковариация позволяет методу иметь тип возвращаемого значения, степень наследования которого больше, чем указано в делегате.</span><span class="sxs-lookup"><span data-stu-id="a04e4-104">Covariance permits a method to have return type that is more derived than that defined in the delegate.</span></span> <span data-ttu-id="a04e4-105">Контравариантность позволяет использовать метод с типами параметров, степень наследования которых меньше, чем у типа делегата.</span><span class="sxs-lookup"><span data-stu-id="a04e4-105">Contravariance permits a method that has parameter types that are less derived than those in the delegate type.</span></span>  
   
-## <a name="example-1-covariance"></a>Пример 1. Ковариация  
+## <a name="example-1-covariance"></a><span data-ttu-id="a04e4-106">Пример 1. Ковариация</span><span class="sxs-lookup"><span data-stu-id="a04e4-106">Example 1: Covariance</span></span>  
   
-### <a name="description"></a>Описание  
- В этом примере демонстрируется использование делегатов с методами, типы возвращаемых значений которых являются производными от типа возвращаемого значения в сигнатуре делегата. Тип данных, возвращаемый `DogsHandler`, является типом `Dogs`, производным от определенного в делегате типа `Mammals`.  
+### <a name="description"></a><span data-ttu-id="a04e4-107">Описание</span><span class="sxs-lookup"><span data-stu-id="a04e4-107">Description</span></span>  
+ <span data-ttu-id="a04e4-108">В этом примере демонстрируется использование делегатов с методами, типы возвращаемых значений которых являются производными от типа возвращаемого значения в сигнатуре делегата.</span><span class="sxs-lookup"><span data-stu-id="a04e4-108">This example demonstrates how delegates can be used with methods that have return types that are derived from the return type in the delegate signature.</span></span> <span data-ttu-id="a04e4-109">Тип данных, возвращаемый `DogsHandler`, является типом `Dogs`, производным от определенного в делегате типа `Mammals`.</span><span class="sxs-lookup"><span data-stu-id="a04e4-109">The data type returned by `DogsHandler` is of type `Dogs`, which derives from the `Mammals` type that is defined in the delegate.</span></span>  
   
-### <a name="code"></a>Код  
+### <a name="code"></a><span data-ttu-id="a04e4-110">Код</span><span class="sxs-lookup"><span data-stu-id="a04e4-110">Code</span></span>  
   
 ```csharp  
 class Mammals{}  
@@ -65,15 +65,15 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a>Пример 2. Контравариантность  
+## <a name="example-2-contravariance"></a><span data-ttu-id="a04e4-111">Пример 2. Контравариантность</span><span class="sxs-lookup"><span data-stu-id="a04e4-111">Example 2: Contravariance</span></span>  
   
-### <a name="description"></a>Описание  
- В этом примере демонстрируется использование делегатов с методами, параметры типа которых являются базовыми типами типа параметра сигнатуры делегата. Контравариантность позволяет использовать один обработчик событий вместо нескольких. Например, можно создать обработчик событий, принимающих входной параметр `EventArgs`, и использовать его с событием `Button.MouseClick`, которое отправляет тип `MouseEventArgs` в качестве параметра, а также с событием `TextBox.KeyDown`, которое отправляет параметр `KeyEventArgs`.  
+### <a name="description"></a><span data-ttu-id="a04e4-112">Описание</span><span class="sxs-lookup"><span data-stu-id="a04e4-112">Description</span></span>  
+ <span data-ttu-id="a04e4-113">В этом примере демонстрируется использование делегатов с методами, параметры типа которых являются базовыми типами типа параметра сигнатуры делегата.</span><span class="sxs-lookup"><span data-stu-id="a04e4-113">This example demonstrates how delegates can be used with methods that have parameters of a type that are base types of the delegate signature parameter type.</span></span> <span data-ttu-id="a04e4-114">Контравариантность позволяет использовать один обработчик событий вместо нескольких.</span><span class="sxs-lookup"><span data-stu-id="a04e4-114">With contravariance, you can use one event handler instead of separate handlers.</span></span> <span data-ttu-id="a04e4-115">Например, можно создать обработчик событий, принимающих входной параметр `EventArgs`, и использовать его с событием `Button.MouseClick`, которое отправляет тип `MouseEventArgs` в качестве параметра, а также с событием `TextBox.KeyDown`, которое отправляет параметр `KeyEventArgs`.</span><span class="sxs-lookup"><span data-stu-id="a04e4-115">For example, you can create an event handler that accepts an `EventArgs` input parameter and use it with a `Button.MouseClick` event that sends a `MouseEventArgs` type as a parameter, and also with a `TextBox.KeyDown` event that sends a `KeyEventArgs` parameter.</span></span>  
   
-### <a name="code"></a>Код  
+### <a name="code"></a><span data-ttu-id="a04e4-116">Код</span><span class="sxs-lookup"><span data-stu-id="a04e4-116">Code</span></span>  
   
 ```csharp  
-// Event hander that accepts a parameter of the EventArgs type.  
+// Event handler that accepts a parameter of the EventArgs type.  
 private void MultiHandler(object sender, System.EventArgs e)  
 {  
     label1.Text = System.DateTime.Now.ToString();  
@@ -94,7 +94,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Вариативность в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)   
- [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a><span data-ttu-id="a04e4-117">См. также</span><span class="sxs-lookup"><span data-stu-id="a04e4-117">See Also</span></span>  
+ <span data-ttu-id="a04e4-118">[Вариативность в делегатах (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) </span><span class="sxs-lookup"><span data-stu-id="a04e4-118">[Variance in Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) </span></span>  
+ [<span data-ttu-id="a04e4-119">Использование вариативности в универсальных методах-делегатах Func и Action (C#)</span><span class="sxs-lookup"><span data-stu-id="a04e4-119">Using Variance for Func and Action Generic Delegates (C#)</span></span>](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
 

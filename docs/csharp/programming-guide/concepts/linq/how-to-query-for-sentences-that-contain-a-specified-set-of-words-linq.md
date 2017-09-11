@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c445a70d2f461ea60b575f58e6d57c1edcda922b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8bc90e9919d620127c305c9a2c857968e2c799af
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#)
-В этом примере показан поиск предложений, содержащих совпадения для каждого из указанного набора слов в текстовом файле. Хотя массив терминов для поиска в этом примере жестко закодирован, его можно заполнять динамически во время выполнения. В этом примере запрос возвращает предложения, которые содержат слова "Historically", "data" и "integrated".  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a><span data-ttu-id="af01e-102">Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="af01e-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#)</span></span>
+<span data-ttu-id="af01e-103">В этом примере показан поиск предложений, содержащих совпадения для каждого из указанного набора слов в текстовом файле.</span><span class="sxs-lookup"><span data-stu-id="af01e-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="af01e-104">Хотя массив терминов для поиска в этом примере жестко закодирован, его можно заполнять динамически во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="af01e-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="af01e-105">В этом примере запрос возвращает предложения, которые содержат слова "Historically", "data" и "integrated".</span><span class="sxs-lookup"><span data-stu-id="af01e-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="af01e-106">Пример</span><span class="sxs-lookup"><span data-stu-id="af01e-106">Example</span></span>  
   
 ```csharp  
 class FindSentences  
@@ -78,12 +79,13 @@ Historically, the world of data and the world of objects have not been well inte
 */  
 ```  
   
- Запрос сначала разделяет текст на предложения, а затем разделяет предложения на массив строк, содержащих слова. Для каждого из этих массивов метод <xref:System.Linq.Enumerable.Distinct%2A> удаляет все повторяющиеся слова, а затем запрос выполняет операцию <xref:System.Linq.Enumerable.Intersect%2A> в массиве слов и массиве `wordsToMatch`. Если число пересечений совпадает с размером массива `wordsToMatch`, все слова были найдены и возвращается исходное предложение.  
+ <span data-ttu-id="af01e-107">Запрос сначала разделяет текст на предложения, а затем разделяет предложения на массив строк, содержащих слова.</span><span class="sxs-lookup"><span data-stu-id="af01e-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="af01e-108">Для каждого из этих массивов метод <xref:System.Linq.Enumerable.Distinct%2A> удаляет все повторяющиеся слова, после чего выполняет операцию <xref:System.Linq.Enumerable.Intersect%2A> в отношении массива слов и массива `wordsToMatch`.</span><span class="sxs-lookup"><span data-stu-id="af01e-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="af01e-109">Если число пересечений совпадает с размером массива `wordsToMatch`, все слова были найдены и возвращается исходное предложение.</span><span class="sxs-lookup"><span data-stu-id="af01e-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
   
- В вызове <xref:System.String.Split%2A> знаки пунктуации используются как разделители для того, чтобы удалить их из строки. Если этого не сделать, то, например, можно получить строку "Historically," которая не будет совпадать с "Historically" в массиве `wordsToMatch`. В зависимости от знаков препинания в исходном тексте может потребоваться использовать дополнительные разделители.  
+ <span data-ttu-id="af01e-110">В вызове <xref:System.String.Split%2A> знаки пунктуации используются как разделители для того, чтобы удалить их из строки.</span><span class="sxs-lookup"><span data-stu-id="af01e-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="af01e-111">Если этого не сделать, то, например, можно получить строку "Historically," которая не будет совпадать с "Historically" в массиве `wordsToMatch`.</span><span class="sxs-lookup"><span data-stu-id="af01e-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="af01e-112">В зависимости от знаков препинания в исходном тексте может потребоваться использовать дополнительные разделители.</span><span class="sxs-lookup"><span data-stu-id="af01e-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="af01e-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="af01e-113">Compiling the Code</span></span>  
+ <span data-ttu-id="af01e-114">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="af01e-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="af01e-115">См. также</span><span class="sxs-lookup"><span data-stu-id="af01e-115">See Also</span></span>  
+ [<span data-ttu-id="af01e-116">LINQ и строки (C#)</span><span class="sxs-lookup"><span data-stu-id="af01e-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+

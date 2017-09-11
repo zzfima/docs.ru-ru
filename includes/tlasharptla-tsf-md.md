@@ -1,1 +1,1 @@
-Инфраструктура текстовых служб (TSF)
+<span data-ttu-id="b7aae-101">Инфраструктура текстовых служб (TSF)</span><span class="sxs-lookup"><span data-stu-id="b7aae-101">Text Services Framework (TSF)</span></span>

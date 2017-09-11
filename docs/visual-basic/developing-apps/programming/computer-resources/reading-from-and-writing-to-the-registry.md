@@ -39,31 +39,31 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Чтение данных из реестра и запись в реестр (Visual Basic)
-В этом разделе описываются задачи и приводятся основные разделы, связанные с реестром.  
+# <a name="reading-from-and-writing-to-the-registry-visual-basic"></a><span data-ttu-id="e1308-102">Чтение данных из реестра и запись в реестр (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e1308-102">Reading from and Writing to the Registry (Visual Basic)</span></span>
+<span data-ttu-id="e1308-103">В этом разделе описываются задачи и приводятся основные разделы, связанные с реестром.</span><span class="sxs-lookup"><span data-stu-id="e1308-103">This topic describes task and conceptual topics that are associated with the registry.</span></span>  
   
- При программировании в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] можно получить доступ к реестру с помощью функций, предоставляемых [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], классов платформы .NET Framework для работы с реестром. Реестр содержит данные, исходящие как от операционной системы, так и от приложений, установленных на компьютере. Работа с реестром может привести к нарушению безопасности, допуская несанкционированный доступ к системным ресурсам или защищенной информации.  
+ <span data-ttu-id="e1308-104">При программировании в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] можно получить доступ к реестру с помощью функций, предоставляемых [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], классов платформы .NET Framework для работы с реестром.</span><span class="sxs-lookup"><span data-stu-id="e1308-104">When programming in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], you can choose to access the registry by means of either the functions provided by [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] or the registry classes of the .NET Framework.</span></span> <span data-ttu-id="e1308-105">Реестр содержит данные, исходящие как от операционной системы, так и от приложений, установленных на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e1308-105">The registry hosts information from the operating system as well as information from applications hosted on the machine.</span></span> <span data-ttu-id="e1308-106">Работа с реестром может привести к нарушению безопасности, допуская несанкционированный доступ к системным ресурсам или защищенной информации.</span><span class="sxs-lookup"><span data-stu-id="e1308-106">Working with the registry may compromise security by allowing inappropriate access to system resources or protected information.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Практическое руководство. Создание раздела реестра и задание его значения](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- Описывает использование методов `CreateSubKey` и `SetValue` объекта `My.Computer.Registry` для создания раздела реестра и присвоения ему значения.  
+## <a name="in-this-section"></a><span data-ttu-id="e1308-107">Содержание</span><span class="sxs-lookup"><span data-stu-id="e1308-107">In This Section</span></span>  
+ [<span data-ttu-id="e1308-108">Практическое руководство. Создание раздела реестра и задание его значения</span><span class="sxs-lookup"><span data-stu-id="e1308-108">How to: Create a Registry Key and Set Its Value</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
+ <span data-ttu-id="e1308-109">Описывает использование методов `CreateSubKey` и `SetValue` объекта `My.Computer.Registry` для создания раздела реестра и присвоения ему значения.</span><span class="sxs-lookup"><span data-stu-id="e1308-109">Describes how to use the `CreateSubKey` and `SetValue` methods of the `My.Computer.Registry` object to create a registry key and set its value.</span></span>  
   
- [Практическое руководство. Чтение значения из раздела реестра](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
- Описывает использование метода `GetValue` объекта `My.Computer.Registry` для чтения значения из раздела реестра.  
+ [<span data-ttu-id="e1308-110">Практическое руководство. Чтение значения из раздела реестра</span><span class="sxs-lookup"><span data-stu-id="e1308-110">How to: Read a Value from a Registry Key</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
+ <span data-ttu-id="e1308-111">Описывает использование метода `GetValue` объекта `My.Computer.Registry` для чтения значения из раздела реестра.</span><span class="sxs-lookup"><span data-stu-id="e1308-111">Describes how to use the `GetValue` method of the `My.Computer.Registry` object to read a value from a registry key.</span></span>  
   
- [Практическое руководство. Удаление раздела реестра](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- Описывает использование метода `DeleteSubKey` свойства `My.Computer.Registry.CurrentUser` для удаления раздела реестра.  
+ [<span data-ttu-id="e1308-112">Практическое руководство. Удаление раздела реестра</span><span class="sxs-lookup"><span data-stu-id="e1308-112">How to: Delete a Registry Key</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ <span data-ttu-id="e1308-113">Описывает использование метода `DeleteSubKey` свойства `My.Computer.Registry.CurrentUser` для удаления раздела реестра.</span><span class="sxs-lookup"><span data-stu-id="e1308-113">Describes how to use the `DeleteSubKey` method of the `My.Computer.Registry.CurrentUser` property to delete a registry key.</span></span>  
   
- [Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Описывает использование классов `Registry` и `RegistryKey` объекта [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для доступа к реестру.  
+ [<span data-ttu-id="e1308-114">Чтение реестра и запись в него с использованием пространства имен Microsoft.Win32</span><span class="sxs-lookup"><span data-stu-id="e1308-114">Reading from and Writing to the Registry Using the Microsoft.Win32 Namespace</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
+ <span data-ttu-id="e1308-115">Описывает использование классов `Registry` и `RegistryKey` объекта [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для доступа к реестру.</span><span class="sxs-lookup"><span data-stu-id="e1308-115">Describes how to use the `Registry` and `RegistryKey` classes of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] to access the registry.</span></span>  
   
- [Безопасность и реестр](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
- Описывает вопросы безопасности, связанные с реестром.  
+ [<span data-ttu-id="e1308-116">Безопасность и реестр</span><span class="sxs-lookup"><span data-stu-id="e1308-116">Security and the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
+ <span data-ttu-id="e1308-117">Описывает вопросы безопасности, связанные с реестром.</span><span class="sxs-lookup"><span data-stu-id="e1308-117">Discusses security issues involving the registry.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a><span data-ttu-id="e1308-118">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e1308-118">Related Sections</span></span>  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- Список и описание членов объекта `My.Computer.Registry`.  
+ <span data-ttu-id="e1308-119">Список и описание членов объекта `My.Computer.Registry`.</span><span class="sxs-lookup"><span data-stu-id="e1308-119">Lists and explains members of the `My.Computer.Registry` object.</span></span>  
   
  <xref:Microsoft.Win32.Registry>  
- Обзор класса `Registry` со ссылками на отдельные разделы и члены.
+ <span data-ttu-id="e1308-120">Обзор класса `Registry` со ссылками на отдельные разделы и члены.</span><span class="sxs-lookup"><span data-stu-id="e1308-120">Presents an overview of the `Registry` class, along with links to individual keys and members.</span></span>
 

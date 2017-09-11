@@ -1,50 +1,56 @@
 ---
-title: "Руководство по языку C# | Документы Майкрософт"
-description: "Руководство по языку C#"
+title: "Руководство по языку C#"
+description: "Руководство по C# поможет и новым разработчикам, и опытным специалистам получить обширные знания о языке C#."
 keywords: .NET, .NET Core
 author: BillWagner
-ms.date: 08/03/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: b87601e339a73b7d9f3132d80496742317439ffa
+helpviewer_keywords:
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.author: wiwagn
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 
-# <a name="c-guide"></a>Руководство по языку C#
+# <a name="c-guide"></a><span data-ttu-id="0d889-104">Руководство по языку C#</span><span class="sxs-lookup"><span data-stu-id="0d889-104">C# Guide</span></span>
 
-Руководство по C# предоставляет массу полезной информации о языке C#. Этот сайт будет полезен самым разным читателям. В зависимости от того, какой у вас опыт программирования или работы с языком C# и платформой .NET, вам будут более интересны разные разделы этого руководства.
+<span data-ttu-id="0d889-105">Руководство по C# предоставляет массу полезной информации о языке C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-105">The C# guide provides a wealth of information about the C# language.</span></span> <span data-ttu-id="0d889-106">Этот сайт будет полезен самым разным читателям.</span><span class="sxs-lookup"><span data-stu-id="0d889-106">This site has many different audiences.</span></span> <span data-ttu-id="0d889-107">В зависимости от того, какой у вас опыт программирования или работы с языком C# и платформой .NET, вам будут более интересны разные разделы этого руководства.</span><span class="sxs-lookup"><span data-stu-id="0d889-107">Depending on your experience with programming, or with the C# language and .NET, you may wish to explore different sections of this guide.</span></span>
 
-* Для тех, кто делает первые шаги в разработке.
-    - Начните с раздела [Учебники](tutorials/index.md). Они расскажут вам, как создавать простые программы на C#. Процесс разработки иллюстрируется здесь на примере пошаговых инструкций. Вы узнаете основные понятия языка и освоите процесс самостоятельной сборки программ C#. Если вы предпочитаете сначала получить общие сведения, рекомендуем [обзор языка C#](tour-of-csharp/index.md). Здесь внимание уделяется основным понятиям языка C#. Изучив его, вы получите базовое понимание языка и будете готовы перейти к учебникам или самостоятельно что-нибудь создать.
+* <span data-ttu-id="0d889-108">Для тех, кто делает первые шаги в разработке.</span><span class="sxs-lookup"><span data-stu-id="0d889-108">For brand-new developers:</span></span>
+    - <span data-ttu-id="0d889-109">Начните с раздела [Учебники](tutorials/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-109">Start with our [tutorials](tutorials/index.md) section.</span></span> <span data-ttu-id="0d889-110">Они расскажут вам, как создавать простые программы на C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-110">These tutorials show you how to create C# programs from scratch.</span></span> <span data-ttu-id="0d889-111">Процесс разработки иллюстрируется здесь на примере пошаговых инструкций.</span><span class="sxs-lookup"><span data-stu-id="0d889-111">The tutorials provide a step-by-step process to create programs.</span></span> <span data-ttu-id="0d889-112">Вы узнаете основные понятия языка и освоите процесс самостоятельной сборки программ C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-112">You'll learn the language concepts, and how to build C# programs on your own.</span></span> <span data-ttu-id="0d889-113">Если вы предпочитаете сначала получить общие сведения, рекомендуем [обзор языка C#](tour-of-csharp/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-113">If you prefer reading overview information first, try our [tour of the C# language](tour-of-csharp/index.md).</span></span> <span data-ttu-id="0d889-114">Здесь внимание уделяется основным понятиям языка C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-114">It explains the concepts of the C# language.</span></span> <span data-ttu-id="0d889-115">Изучив его, вы получите базовое понимание языка и будете готовы перейти к учебникам или самостоятельно что-нибудь создать.</span><span class="sxs-lookup"><span data-stu-id="0d889-115">After reading this, you'll have a basic understanding of the language, and be ready to try the tutorials, or build something on your own.</span></span>
 
-* Для разработчиков, плохо знакомых с C#. 
-    - Если вы уже занимались разработкой, но пока новичок в C#, переходите к [обзору языка C#](tour-of-csharp/index.md). Вы изучите основы синтаксиса и структуры языка, а также сможете сравнить C# с другими языками, с которыми вы работали. Также вы можете просмотреть [учебники](tutorials/index.md), чтобы потренироваться на простых программах C#.
+* <span data-ttu-id="0d889-116">Для разработчиков, плохо знакомых с C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-116">For developers new to C#:</span></span> 
+    - <span data-ttu-id="0d889-117">Если вы уже занимались разработкой, но пока новичок в C#, переходите к [обзору языка C#](tour-of-csharp/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-117">If you've done development before, but are new to C#, read the [tour of the C# language](tour-of-csharp/index.md).</span></span> <span data-ttu-id="0d889-118">Вы изучите основы синтаксиса и структуры языка, а также сможете сравнить C# с другими языками, с которыми вы работали.</span><span class="sxs-lookup"><span data-stu-id="0d889-118">You will learn the basic syntax and structure for the language, and you can use the language tour to contrast C# with other languages you've used.</span></span> <span data-ttu-id="0d889-119">Также вы можете просмотреть [учебники](tutorials/index.md), чтобы потренироваться на простых программах C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-119">You can also browse the [tutorials](tutorials/index.md) to try basic C# programs.</span></span>
 
-* Для опытных разработчиков на C#.
-    - Если вы уже использовали язык C#, прежде всего ознакомьтесь с обновлениями в последней версии языка. Статья [Новые возможности C#](whats-new/index.md) представит вам все новые функции текущей версии.
+* <span data-ttu-id="0d889-120">Для опытных разработчиков на C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-120">Experienced C# developers:</span></span>
+    - <span data-ttu-id="0d889-121">Если вы уже использовали язык C#, прежде всего ознакомьтесь с обновлениями в последней версии языка.</span><span class="sxs-lookup"><span data-stu-id="0d889-121">If you've used C# before, you should start by reading what's in the latest version of the language.</span></span> <span data-ttu-id="0d889-122">Статья [Новые возможности C#](whats-new/index.md) представит вам все новые функции текущей версии.</span><span class="sxs-lookup"><span data-stu-id="0d889-122">Check out [What's new in C#](whats-new/index.md) for the new features in the current version.</span></span>
  
-## <a name="how-the-c-guide-is-organized"></a>Структура руководства по C#
+## <a name="how-the-c-guide-is-organized"></a><span data-ttu-id="0d889-123">Структура руководства по C#</span><span class="sxs-lookup"><span data-stu-id="0d889-123">How the C# guide is organized</span></span>
 
-Руководство по C# состоит из семи разделов. Вы можете читать их по порядку или переходить сразу к тому, что вас больше интересует. Некоторые разделы посвящены языку программирования. Другие описывают комплексные сценарии и демонстрируют разные типы программ, которые можно создать с помощью C# и .NET Framework.
+<span data-ttu-id="0d889-124">Руководство по C# состоит из семи разделов.</span><span class="sxs-lookup"><span data-stu-id="0d889-124">There are several sections in the C# Guide.</span></span> <span data-ttu-id="0d889-125">Вы можете читать их по порядку или переходить сразу к тому, что вас больше интересует.</span><span class="sxs-lookup"><span data-stu-id="0d889-125">You can read them in order, or jump directly to what interests you the most.</span></span> <span data-ttu-id="0d889-126">Некоторые разделы посвящены языку программирования.</span><span class="sxs-lookup"><span data-stu-id="0d889-126">Some of the sections are heavily focused on the language.</span></span> <span data-ttu-id="0d889-127">Другие описывают комплексные сценарии и демонстрируют разные типы программ, которые можно создать с помощью C# и .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0d889-127">Others provide end-to-end scenarios that demonstrate a few of the types of programs you can create using C# and the .NET Framework.</span></span>
 
-* [Начало работы](getting-started/index.md).
-    - В этом разделе описано, что вам нужно установить для создания среды разработки C# на вашей платформе. Несколько статей в этом разделе описывают процесс создания первой программы на C# в разных поддерживаемых средах.
+* <span data-ttu-id="0d889-128">[Начало работы](getting-started/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-128">[Getting Started](getting-started/index.md):</span></span>
+    - <span data-ttu-id="0d889-129">В этом разделе описано, что вам нужно установить для создания среды разработки C# на вашей платформе.</span><span class="sxs-lookup"><span data-stu-id="0d889-129">This section covers what you need to install for a C# development environment on your preferred platform.</span></span> <span data-ttu-id="0d889-130">Несколько статей в этом разделе описывают процесс создания первой программы на C# в разных поддерживаемых средах.</span><span class="sxs-lookup"><span data-stu-id="0d889-130">The different topics under this section explain how to create your first C# program in different supported environments.</span></span>
 
-* [Учебники](tutorials/index.md).
-    - В этом разделе представлен широкий спектр комплексных сценариев с подробным описанием и готовым кодом. Вы узнаете, какие средства лучше использовать и почему, какие возможности C# лучше подходят для разных сценариев. Также вы ознакомитесь с шаблонами решений для распространенных задач. Если вы предпочитаете учиться по готовому коду, то этот раздел как раз для вас. Вы можете скачать любой из примеров кода и испытать его в собственной среде.
+* <span data-ttu-id="0d889-131">[Учебники](tutorials/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-131">[Tutorials](tutorials/index.md):</span></span>
+    - <span data-ttu-id="0d889-132">В этом разделе представлен широкий спектр комплексных сценариев с подробным описанием и готовым кодом.</span><span class="sxs-lookup"><span data-stu-id="0d889-132">This section provides a variety of end to end scenarios, including descriptions and code.</span></span> <span data-ttu-id="0d889-133">Вы узнаете, какие средства лучше использовать и почему, какие возможности C# лучше подходят для разных сценариев. Также вы ознакомитесь с шаблонами решений для распространенных задач.</span><span class="sxs-lookup"><span data-stu-id="0d889-133">You'll learn why certain idioms are preferred, what C# features work best in different situations, and see reference implemetntaions for common tasks.</span></span> <span data-ttu-id="0d889-134">Если вы предпочитаете учиться по готовому коду, то этот раздел как раз для вас.</span><span class="sxs-lookup"><span data-stu-id="0d889-134">If you learn best by seeing code, start in this section.</span></span> <span data-ttu-id="0d889-135">Вы можете скачать любой из примеров кода и испытать его в собственной среде.</span><span class="sxs-lookup"><span data-stu-id="0d889-135">You can also download all the code and experiment in your own environment.</span></span>
 
-* [Обзор языка C#](tour-of-csharp/index.md). 
-    - В этом разделе приведено краткое описание языка программирования. Вы узнаете, какие элементы входят в программы на C# и какие возможности дает вам этот язык. Вы увидите небольшие примеры для всех элементов синтаксиса C#, а также обсуждение основных концепций языка C#. 
+* <span data-ttu-id="0d889-136">[Обзор языка C#](tour-of-csharp/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-136">[A Tour of C#](tour-of-csharp/index.md):</span></span> 
+    - <span data-ttu-id="0d889-137">В этом разделе приведено краткое описание языка программирования.</span><span class="sxs-lookup"><span data-stu-id="0d889-137">This section provides an overview of the language.</span></span> <span data-ttu-id="0d889-138">Вы узнаете, какие элементы входят в программы на C# и какие возможности дает вам этот язык.</span><span class="sxs-lookup"><span data-stu-id="0d889-138">You'll learn the elements that make up C# programs and the capabilities of the language.</span></span> <span data-ttu-id="0d889-139">Вы увидите небольшие примеры для всех элементов синтаксиса C#, а также обсуждение основных концепций языка C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-139">You'll see small samples of all the syntax elements of C# and discussions of the major C# language topics.</span></span> 
 
-* [Новые возможности](whats-new/index.md).
-    - Изучите новые функции, реализованные в языке. Например, узнайте о новых средствах: C# Interactive (REPL для C#) и пакет SDK для платформы компилятора .NET. Вы узнаете, в каком направлении развивается язык. Вы увидите, как новые средства помогут повысить эффективность при изучении языка и автоматизации задач. 
+* <span data-ttu-id="0d889-140">[Новые возможности](whats-new/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-140">[Latest Features](whats-new/index.md):</span></span>
+    - <span data-ttu-id="0d889-141">Изучите новые функции, реализованные в языке.</span><span class="sxs-lookup"><span data-stu-id="0d889-141">Learn about new features in the language.</span></span> <span data-ttu-id="0d889-142">Например, узнайте о новых средствах: C# Interactive (REPL для C#) и пакет SDK для платформы компилятора .NET.</span><span class="sxs-lookup"><span data-stu-id="0d889-142">Learn about new tools like C# Interactive (C#'s REPL), and the .NET Compiler Platform SDK.</span></span> <span data-ttu-id="0d889-143">Вы узнаете, в каком направлении развивается язык.</span><span class="sxs-lookup"><span data-stu-id="0d889-143">You'll learn how the language is evolving.</span></span> <span data-ttu-id="0d889-144">Вы увидите, как новые средства помогут повысить эффективность при изучении языка и автоматизации задач.</span><span class="sxs-lookup"><span data-stu-id="0d889-144">You'll see how the new tools can make you more productive in exploring the language, and automating tasks.</span></span> 
 
 <!--* [C# Interactive](interactive/index.md):
     - C# Interactive is a Read-Eval-Print Loop (REPL) that you can use to interactively explore the language. It can also be used to explore different libraries and frameworks by trying different actions using an interactive approach. In this section you'll learn how to install and start C# interactive, and how to explore APIs with it. You'll also learn how to use C# interactive to export tested classes for later use.  
@@ -52,6 +58,25 @@ ms.lasthandoff: 05/23/2017
 <!--* [.NET Compiler Platform SDK](roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
 -->
-* [Справочник по языку](language-reference/index.md).
-    - Этот раздел содержит справочные материалы по языку C#. Этот материал поможет вам разобраться в синтаксисе и семантике C#. 
+* [<span data-ttu-id="0d889-145">Использование среды разработки Visual Studio для C#</span><span class="sxs-lookup"><span data-stu-id="0d889-145">Using the Visual Studio Development Environment for C#</span></span>](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+    - <span data-ttu-id="0d889-146">В этом разделе представлена среда разработки [!INCLUDE[csprcs](~/includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0d889-146">Introduces the [!INCLUDE[csprcs](~/includes/csprcs-md.md)] development environment.</span></span>  
+
+* [<span data-ttu-id="0d889-147">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="0d889-147">C# Programming Guide</span></span>](../csharp/programming-guide/index.md)  
+    - <span data-ttu-id="0d889-148">Сведения и практические примеры способов использования конструкций языка C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-148">Provides information and practical examples about how to use C# language constructs.</span></span>  
+
+* [<span data-ttu-id="0d889-149">Примеры C#</span><span class="sxs-lookup"><span data-stu-id="0d889-149">C# Samples</span></span>](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+    - <span data-ttu-id="0d889-150">Коллекция кода MSDN, отфильтрованная для C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-150">MSDN Code Gallery filtered for C#.</span></span>  
+  
+* [<span data-ttu-id="0d889-151">Пошаговые руководства</span><span class="sxs-lookup"><span data-stu-id="0d889-151">Walkthroughs</span></span>](../csharp/walkthroughs.md)  
+    - <span data-ttu-id="0d889-152">Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="0d889-152">Provides links to programming walkthroughs that use C# and a brief description of each walkthrough.</span></span>  
+
+* <span data-ttu-id="0d889-153">[Справочник по языку](language-reference/index.md).</span><span class="sxs-lookup"><span data-stu-id="0d889-153">[Language Reference](language-reference/index.md):</span></span>
+    - <span data-ttu-id="0d889-154">Этот раздел содержит справочные материалы по языку C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-154">This section contains the reference material on the C# language.</span></span> <span data-ttu-id="0d889-155">Этот материал поможет вам разобраться в синтаксисе и семантике C#.</span><span class="sxs-lookup"><span data-stu-id="0d889-155">This material will help you understand the syntax and semantics of C#.</span></span> <span data-ttu-id="0d889-156">Здесь также приведены справочные сведения о типах, операторах, атрибутах, директивах препроцессора, а также о параметрах, ошибках и предупреждениях компилятора.</span><span class="sxs-lookup"><span data-stu-id="0d889-156">It also includes reference material on types, operators, attributes, preprocessor directives, compiler switches, compiler errors, and compiler warnings.</span></span>
+  
+* [<span data-ttu-id="0d889-157">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="0d889-157">C# Language Specification</span></span>](../csharp/language-reference/language-specification/index.md)  
+    - <span data-ttu-id="0d889-158">Ссылки на последнюю версию спецификации C# в формате Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="0d889-158">Links to the latest version of the C# Specifications in Microsoft Word format.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0d889-159">См. также</span><span class="sxs-lookup"><span data-stu-id="0d889-159">See Also</span></span>  
+ <span data-ttu-id="0d889-160">[Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) </span><span class="sxs-lookup"><span data-stu-id="0d889-160">[Getting Started with Visual C# and Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) </span></span>  
+ [<span data-ttu-id="0d889-161">Разработка .NET</span><span class="sxs-lookup"><span data-stu-id="0d889-161">.NET Development</span></span>](https://msdn.microsoft.com/library/ff361664)
 

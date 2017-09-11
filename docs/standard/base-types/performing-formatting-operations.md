@@ -1,46 +1,40 @@
 ---
-title: "Выполнение операций форматирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "форматирование дат [платформа .NET Framework]"
-  - "форматирование [платформа .NET Framework], базовые типы"
-  - "форматирование [платформа .NET Framework], разделы практического руководства"
-  - "форматирование строк [платформа .NET Framework], разделы практического руководства"
-  - "строки [платформа .NET Framework], форматирование"
-  - "форматирование времени [платформа .NET Framework]"
-ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+title: "Выполнение операций форматирования"
+description: "Выполнение операций форматирования"
+keywords: .NET, .NET Core
+author: stevehoag
+ms.author: shoag
+ms.date: 07/25/2016
+ms.topic: article
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.devlang: dotnet
+ms.assetid: 982f0b64-7e69-4bbe-a688-0117f86a603c
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e464c4014ce315c88d5c281f6fd0d0299b640716
+ms.contentlocale: ru-ru
+ms.lasthandoff: 03/02/2017
+
 ---
-# Выполнение операций форматирования
-В следующих разделах приведены пошаговые инструкции для выполнения определенных операций форматирования.  
-  
--   [Практическое руководство. Добавление к числу начальных нулей.](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
-  
--   [Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
-  
--   [Практическое руководство. Преобразование числовых данных, введенных пользователем в веб\-элементах управления, в числа](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
-  
--   [Практическое руководство. Извлечение дня недели из конкретной даты](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
-  
--   [Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
-  
--   [Практическое руководство. Отображение сведений о локализованной дате и времени для веб\-пользователей](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
-  
--   [Практическое руководство. Отображение миллисекунд в значениях даты и времени](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
-  
--   [Практическое руководство. Отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
-  
-## См. также  
- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)
+
+# <a name="performing-formatting-operations"></a><span data-ttu-id="12531-104">Выполнение операций форматирования</span><span class="sxs-lookup"><span data-stu-id="12531-104">Performing formatting operations</span></span>
+
+<span data-ttu-id="12531-105">В перечисленных далее разделах содержатся пошаговые инструкции для выполнения конкретных операций форматирования.</span><span class="sxs-lookup"><span data-stu-id="12531-105">The following topics provide step-by-step instructions for performing specific formatting operations.</span></span>
+
+* [<span data-ttu-id="12531-106">Практическое руководство. Добавление начальных нулей к числу</span><span class="sxs-lookup"><span data-stu-id="12531-106">How to: pad a number with leading zeros</span></span>](pad-number.md)
+
+* [<span data-ttu-id="12531-107">Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов</span><span class="sxs-lookup"><span data-stu-id="12531-107">How to: define and use custom numeric format providers</span></span>](define-custom.md)
+
+* [<span data-ttu-id="12531-108">Практическое руководство. Извлечение дня недели из конкретной даты</span><span class="sxs-lookup"><span data-stu-id="12531-108">How to: extract the day of the week from a specific date</span></span>](extract-day.md)
+
+* [<span data-ttu-id="12531-109">Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени</span><span class="sxs-lookup"><span data-stu-id="12531-109">How to: round-trip date and time values</span></span>](roundtrip.md)
+
+* [<span data-ttu-id="12531-110">Практическое руководство. Отображение миллисекунд в значениях даты и времени</span><span class="sxs-lookup"><span data-stu-id="12531-110">How to: display milliseconds in date and time values</span></span>](display-milliseconds.md)
+
+* [<span data-ttu-id="12531-111">Практическое руководство. Отображение дат в календарях, отличных от григорианского</span><span class="sxs-lookup"><span data-stu-id="12531-111">How to: display dates in non-gregorian calendars</span></span>](display-dates.md)
+
+## <a name="see-also"></a><span data-ttu-id="12531-112">См. также</span><span class="sxs-lookup"><span data-stu-id="12531-112">See Also</span></span>
+
+[<span data-ttu-id="12531-113">Типы форматирования</span><span class="sxs-lookup"><span data-stu-id="12531-113">Formatting types</span></span>](formatting-types.md)
+

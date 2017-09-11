@@ -1,5 +1,5 @@
 ---
-title: "Сообщений об ошибках Winmdexp.exe | Документация Microsoft"
+title: "Сообщения об ошибках Winmdexp.exe"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -174,20 +174,21 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 62745b203ec5c9db121c3c84578f16ba9c35738d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3797621322fd88d57133602b1cb3c3173fedbe6e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="winmdexpexe-error-messages"></a>Сообщения об ошибках Winmdexp.exe
-Процесс сборки вызывает программу [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) при использовании шаблона **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Компонент** в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], поэтому сообщения об ошибках Winmdexp.exe отображаются в **Списке ошибок**. Программа Winmdexp.exe работает в модуле, который компилируется с параметром `/target:winmdobj`. Поскольку в качестве входных данных этой программе требуется скомпилированный модуль, в случае сбоя компиляции сообщения об ошибках Winmdexp.exe не отображаются.  
+# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="eee34-102">Сообщения об ошибках Winmdexp.exe</span><span class="sxs-lookup"><span data-stu-id="eee34-102">Winmdexp.exe Error Messages</span></span>
+<span data-ttu-id="eee34-103">Процесс сборки вызывает программу [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) при использовании шаблона **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Компонент** в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], поэтому сообщения об ошибках Winmdexp.exe отображаются в **Списке ошибок**.</span><span class="sxs-lookup"><span data-stu-id="eee34-103">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component** template in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="eee34-104">Программа Winmdexp.exe работает в модуле, который компилируется с параметром `/target:winmdobj`.</span><span class="sxs-lookup"><span data-stu-id="eee34-104">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="eee34-105">Поскольку в качестве входных данных этой программе требуется скомпилированный модуль, в случае сбоя компиляции сообщения об ошибках Winmdexp.exe не отображаются.</span><span class="sxs-lookup"><span data-stu-id="eee34-105">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
   
- Сообщения об ошибках предназначены для размещения в них всех сведений, необходимых для диагностики состояний ошибок, о которых они сообщают. Но для решения некоторых проблем требуется больше информации, чем может содержать сообщение. Дополнительные сведения см. в статье [Диагностика состояний ошибки компонентов среды выполнения Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127) в Центре разработки для Windows.  
+ <span data-ttu-id="eee34-106">Сообщения об ошибках предназначены для размещения в них всех сведений, необходимых для диагностики состояний ошибок, о которых они сообщают. Но для решения некоторых проблем требуется больше информации, чем может содержать сообщение.</span><span class="sxs-lookup"><span data-stu-id="eee34-106">The error messages are designed to contain all the information you need to address the error conditions they report.However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="eee34-107">Дополнительные сведения см. в статье [Диагностика состояний ошибки компонентов среды выполнения Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127) в Центре разработки для Windows.</span><span class="sxs-lookup"><span data-stu-id="eee34-107">You can find additional information in [Diagnosing Windows Runtime component error conditions](http://go.microsoft.com/fwlink/p/?LinkId=251127) in the Windows Dev Center.</span></span>  
   
- Если ваша ошибка в этой статье не рассматривается и вам кажется, что сообщение об ошибке не содержит всей необходимой информации для решения проблемы, сообщите нам об этом, используя приведенную в статье ссылку. Кроме того, вы можете зарегистрировать ошибку на [веб-сайте Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130). Также можно найти дополнительные сведения на [форумах Майкрософт](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ <span data-ttu-id="eee34-108">Если ваша ошибка в этой статье не рассматривается и вам кажется, что сообщение об ошибке не содержит всей необходимой информации для решения проблемы, сообщите нам об этом, используя приведенную в статье ссылку.</span><span class="sxs-lookup"><span data-stu-id="eee34-108">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="eee34-109">Кроме того, вы можете зарегистрировать ошибку на [веб-сайте Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span><span class="sxs-lookup"><span data-stu-id="eee34-109">Alternatively, you can file a bug at the [Microsoft Connect website](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span></span> <span data-ttu-id="eee34-110">Также можно найти дополнительные сведения на [форумах Майкрософт](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span><span class="sxs-lookup"><span data-stu-id="eee34-110">You can also look for more information on the [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
- [Диагностика состояний ошибки компонентов среды выполнения Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+## <a name="see-also"></a><span data-ttu-id="eee34-111">См. также</span><span class="sxs-lookup"><span data-stu-id="eee34-111">See Also</span></span>  
+ <span data-ttu-id="eee34-112">[Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) </span><span class="sxs-lookup"><span data-stu-id="eee34-112">[Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) </span></span>  
+ [<span data-ttu-id="eee34-113">Диагностика состояний ошибки компонентов среды выполнения Windows</span><span class="sxs-lookup"><span data-stu-id="eee34-113">Diagnosing Windows Runtime component error conditions</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+

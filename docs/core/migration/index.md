@@ -1,104 +1,93 @@
 ---
-title: "Перенос проектов .NET Core в формат csproj | Документация Майкрософт"
+title: "Миграция .NET Core в формат csproj"
 description: "Перенос проекта .NET Core project.json в формат csproj"
 keywords: ".NET, .NET Core, перенос .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/13/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: ac870aa302c3e56b59cbfdfd0fc88e06bbaad5fb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d972489536e929c8694bd6a4cab31c9f2d624a8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="migrating-net-core-projects-to-the-csproj-format" class="xliff"></a>
+# <a name="migrating-net-core-projects-to-the-csproj-format"></a><span data-ttu-id="9fe3c-104">Перенос проектов .NET Core в формат .csproj</span><span class="sxs-lookup"><span data-stu-id="9fe3c-104">Migrating .NET Core projects to the .csproj format</span></span>
 
-# Перенос проектов .NET Core в формат .csproj
+<span data-ttu-id="9fe3c-105">В этом документе рассматриваются сценарии переноса для проектов .NET Core. В частности, три следующие сценарии переноса:</span><span class="sxs-lookup"><span data-stu-id="9fe3c-105">This document will cover migration scenarios for .NET Core projects and will go over the following three migration scenarios:</span></span>
 
-В этом документе рассматриваются сценарии переноса для проектов .NET Core. В частности, три следующие сценарии переноса:
+1. [<span data-ttu-id="9fe3c-106">Перенос последней действительной схемы проекта *project.json* в формат *csproj*</span><span class="sxs-lookup"><span data-stu-id="9fe3c-106">Migration from a valid latest schema of *project.json* to *csproj*</span></span>](#migration-from-projectjson-to-csproj)
+2. [<span data-ttu-id="9fe3c-107">Перенос проекта DNX в формат csproj</span><span class="sxs-lookup"><span data-stu-id="9fe3c-107">Migration from DNX to csproj</span></span>](#migration-from-dnx-to-csproj)
+3. [<span data-ttu-id="9fe3c-108">Перенос проектов RC3 и проектов .NET Core csproj предыдущих версий в окончательный формат</span><span class="sxs-lookup"><span data-stu-id="9fe3c-108">Migration from RC3 and previous .NET Core csproj projects to the final format</span></span>](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-1. [Перенос последней действительной схемы проекта *project.json* в формат *csproj*](#migration-from-projectjson-to-csproj)
-2. [Перенос проекта DNX в формат csproj](#migration-from-dnx-to-csproj)
-3. [Перенос проектов RC3 и проектов .NET Core csproj предыдущих версий в окончательный формат](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+## <a name="migration-from-projectjson-to-csproj"></a><span data-ttu-id="9fe3c-109">Перенос проекта project.json в формат csproj</span><span class="sxs-lookup"><span data-stu-id="9fe3c-109">Migration from project.json to csproj</span></span>
+<span data-ttu-id="9fe3c-110">Перенос проекта *project.json* в формат *.csproj* можно выполнить с помощью одного из следующих методов:</span><span class="sxs-lookup"><span data-stu-id="9fe3c-110">Migration from *project.json* to *.csproj* can be done using one of the following methods:</span></span>
 
-<a id="migration-from-projectjson-to-csproj" class="xliff"></a>
-
-## Перенос проекта project.json в формат csproj
-Перенос проекта *project.json* в формат *.csproj* можно выполнить с помощью одного из следующих методов:
-
-- [Visual Studio 2017](#visual-studio-2017)
-- [Команда dotnet migrate](#dotnet-migrate)
+- [<span data-ttu-id="9fe3c-111">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9fe3c-111">Visual Studio 2017</span></span>](#visual-studio-2017)
+- [<span data-ttu-id="9fe3c-112">Команда dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="9fe3c-112">dotnet migrate command-line tool</span></span>](#dotnet-migrate)
  
-В обоих методах используется один и тот же базовый механизм переноса, поэтому результаты будут одинаковыми. В большинстве случаев достаточно использовать один из методов переноса проекта *project.json* в формат *csproj*. Никакого дальнейшего редактирования файла проекта вручную не требуется. Имя полученного файла *.csproj* будет совпадать с именем каталога, в котором находится проект.
+<span data-ttu-id="9fe3c-113">В обоих методах используется один и тот же базовый механизм переноса, поэтому результаты будут одинаковыми.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-113">Both methods use the same underlying engine to migrate the projects, so the results will be the same for both.</span></span> <span data-ttu-id="9fe3c-114">В большинстве случаев достаточно использовать один из методов переноса проекта *project.json* в формат *csproj*. Никакого дальнейшего редактирования файла проекта вручную не требуется.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-114">In most cases, using one of these two ways to migrate the *project.json* to *csproj* is the only thing that is needed and no further manual editing of the project file is necessary.</span></span> <span data-ttu-id="9fe3c-115">Имя полученного файла *.csproj* будет совпадать с именем каталога, в котором находится проект.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-115">The resulting *.csproj* file will be named the same as the containing directory name.</span></span>
 
-<a id="visual-studio-2017" class="xliff"></a>
+### <a name="visual-studio-2017"></a><span data-ttu-id="9fe3c-116">Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="9fe3c-116">Visual Studio 2017</span></span>
 
-### Visual Studio 2017
-
-При открытии файла *.xproj* или файла решения, который ссылается на файлы *.xproj*, появится диалоговое окно **Одностороннее обновление**. В диалоговом окне отображаются проекты для переноса. Если открыть файл решения, будут показаны все проекты, содержащиеся в файле решения. Просмотрите список проектов для переноса и нажмите кнопку **OK**.
+<span data-ttu-id="9fe3c-117">При открытии файла *.xproj* или файла решения, который ссылается на файлы *.xproj*, появится диалоговое окно **Одностороннее обновление**.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-117">When you open a *.xproj* file or a solution file which references *.xproj* files, the **One-way upgrade** dialog appears.</span></span> <span data-ttu-id="9fe3c-118">В диалоговом окне отображаются проекты для переноса.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-118">The dialog displays the projects to be migrated.</span></span> <span data-ttu-id="9fe3c-119">Если открыть файл решения, будут показаны все проекты, содержащиеся в файле решения.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-119">If you open a solution file, all the projects specified in the solution file will be listed.</span></span> <span data-ttu-id="9fe3c-120">Просмотрите список проектов для переноса и нажмите кнопку **OK**.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-120">Review the list of projects to be migrated and select **OK**.</span></span>
 
 ![Диалоговое окно "Одностороннее обновление" со списком проектов для переноса](media/one-way-upgrade.jpg)
 
-Visual Studio выполнит перенос для выбранных проектов автоматически. Если при переносе решений не выбрать все проекты, откроется то же диалоговое окно с предложением обновить остальные проекты для этого решения.
+<span data-ttu-id="9fe3c-122">Visual Studio выполнит перенос для выбранных проектов автоматически.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-122">Visual Studio will migrate the projects chosen automatically.</span></span> <span data-ttu-id="9fe3c-123">Если при переносе решений не выбрать все проекты, откроется то же диалоговое окно с предложением обновить остальные проекты для этого решения.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-123">When migrating a solution, if you don't choose all projects, the same dialog will appear asking you to upgrade the remaining projects from that solution.</span></span> <span data-ttu-id="9fe3c-124">После миграции проекта вы можете просматривать и изменять его содержимое, щелкнув проект правой кнопкой мыши в окне **Обозреватель решений** и выбрав **Изменить \<имя_проекта>.csproj**.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-124">After the project is migrated, you can see and modify its contents by right-clicking the project in the **Solution Explorer** window and selecting **Edit \<project name>.csproj**.</span></span>
 
-Перенесенные файлы (*project.json*, *global.json*, *.xproj* и файл решения) будут перемещены в папку *Backup*. Перенесенный файл решения будет обновлен до Visual Studio 2017, и вы не сможете открыть этот файл решения в предыдущих версиях Visual Studio. Также будет сохранен и автоматически открыт файл *UpgradeLog.htm*, содержащий отчет о переносе.
+<span data-ttu-id="9fe3c-125">Перенесенные файлы (*project.json*, *global.json*, *.xproj* и файл решения) будут перемещены в папку *Backup*.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-125">Files that were migrated (*project.json*, *global.json*, *.xproj* and solution file) will be moved to a *Backup* folder.</span></span> <span data-ttu-id="9fe3c-126">Перенесенный файл решения будет обновлен до Visual Studio 2017, и вы не сможете открыть этот файл решения в предыдущих версиях Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-126">The solution file that is migrated will be upgraded to Visual Studio 2017 and you won't be able to open that solution file in previous versions of Visual Studio.</span></span> <span data-ttu-id="9fe3c-127">Также будет сохранен и автоматически открыт файл *UpgradeLog.htm*, содержащий отчет о переносе.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-127">A file named *UpgradeLog.htm* is also saved and automatically opened that contains a migration report.</span></span>
 
 > [!IMPORTANT]
-> Новые средства недоступны в Visual Studio 2015, поэтому вы не сможете выполнить перенос проектов с помощью этой версии Visual Studio.
+> <span data-ttu-id="9fe3c-128">Новые средства недоступны в Visual Studio 2015, поэтому вы не сможете выполнить перенос проектов с помощью этой версии Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-128">The new tooling is not available in Visual Studio 2015, so you cannot migrate your projects using that version of Visual Studio.</span></span>
 
-<a id="dotnet-migrate" class="xliff"></a>
+### <a name="dotnet-migrate"></a><span data-ttu-id="9fe3c-129">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="9fe3c-129">dotnet migrate</span></span>
 
-### dotnet migrate
+<span data-ttu-id="9fe3c-130">В сценарии для командной строки можно использовать команду [`dotnet migrate`](../tools/dotnet-migrate.md).</span><span class="sxs-lookup"><span data-stu-id="9fe3c-130">In the command-line scenario, you can use the [`dotnet migrate`](../tools/dotnet-migrate.md) command.</span></span> <span data-ttu-id="9fe3c-131">Она переносит проект, решение или набор папок в указанном порядке, в зависимости от того, какие объекты были найдены.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-131">It will migrate a project, a solution or a set of folders in that order, depending on which ones were found.</span></span> <span data-ttu-id="9fe3c-132">При переносе проекта переносятся сам проект и его зависимости.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-132">When you migrate a project, the project and all its dependencies are migrated.</span></span>
 
-В сценарии для командной строки можно использовать команду [`dotnet migrate`](../tools/dotnet-migrate.md). Она переносит проект, решение или набор папок в указанном порядке, в зависимости от того, какие объекты были найдены. При переносе проекта переносятся сам проект и его зависимости.
-
-Перенесенные файлы (*project.json*, *global.json* и *.xproj*) будут перемещены в папку *backup*.
+<span data-ttu-id="9fe3c-133">Перенесенные файлы (*project.json*, *global.json* и *.xproj*) будут перемещены в папку *backup*.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-133">Files that were migrated (*project.json*, *global.json* and *.xproj*) will be moved to a *backup* folder.</span></span>
 
 > [!NOTE]
-> Если вы используете Visual Studio Code, команда `dotnet migrate` не будет изменять файлы, относящиеся к Visual Studio Code, такие как `tasks.json`. Эти файлы нужно будет изменить вручную. Это также справедливо, если используется проект Райдер, другой редактор или интегрированная среда разработки (IDE), отличные от Visual Studio. 
+> <span data-ttu-id="9fe3c-134">Если вы используете Visual Studio Code, команда `dotnet migrate` не будет изменять файлы, относящиеся к Visual Studio Code, такие как `tasks.json`.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-134">If you are using Visual Studio Code, the `dotnet migrate` command will not modify Visual Studio Code-specific files such as `tasks.json`.</span></span> <span data-ttu-id="9fe3c-135">Эти файлы нужно будет изменить вручную.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-135">These files need to be changed manually.</span></span> <span data-ttu-id="9fe3c-136">Это также справедливо, если используется проект Райдер, другой редактор или интегрированная среда разработки (IDE), отличные от Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-136">This is also true if you are using Project Ryder or any editor or Integrated Development Environment (IDE) other than Visual Studio.</span></span> 
 
-Сравнение форматов project.json и CSPROJ см. в разделе [Сопоставление между свойствами project.json и CSPROJ](../tools/project-json-to-csproj.md).
+<span data-ttu-id="9fe3c-137">Сравнение форматов project.json и CSPROJ см. в разделе [Сопоставление между свойствами project.json и CSPROJ](../tools/project-json-to-csproj.md).</span><span class="sxs-lookup"><span data-stu-id="9fe3c-137">See [A mapping between project.json and csproj properties](../tools/project-json-to-csproj.md) for a comparison of project.json and csproj formats.</span></span>
 
-<a id="common-issues" class="xliff"></a>
+### <a name="common-issues"></a><span data-ttu-id="9fe3c-138">Распространенные проблемы</span><span class="sxs-lookup"><span data-stu-id="9fe3c-138">Common issues</span></span>
 
-### Распространенные проблемы
+- <span data-ttu-id="9fe3c-139">Если вы получили сообщение об ошибке: "Исполняемый файл, соответствующий команде dotnet-migrate, не найден", выполните следующие действия:</span><span class="sxs-lookup"><span data-stu-id="9fe3c-139">If you get an error: "No executable found matching command dotnet-migrate":</span></span>
 
-- Если вы получили сообщение об ошибке: "Исполняемый файл, соответствующий команде dotnet-migrate, не найден", выполните следующие действия:
+<span data-ttu-id="9fe3c-140">Выполните команду `dotnet --version`, чтобы просмотреть используемую версию интерфейса.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-140">Run `dotnet --version` to see which version you are using.</span></span> <span data-ttu-id="9fe3c-141">[`dotnet migrate`](../tools/dotnet-migrate.md) требует использования интерфейса командной строки .NET Core версии RC3 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-141">[`dotnet migrate`](../tools/dotnet-migrate.md) requires .NET Core CLI RC3 or higher.</span></span>
+<span data-ttu-id="9fe3c-142">Вы также получите эту ошибку, если в текущем или родительском каталоге есть файл *global.json* и версия `sdk` установлена в более раннюю.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-142">You’ll get this error if you have a *global.json* file in the current or parent directory and the `sdk` version is set to an older version.</span></span>
 
-Выполните команду `dotnet --version`, чтобы просмотреть используемую версию интерфейса. [`dotnet migrate`](../tools/dotnet-migrate.md) требует использования интерфейса командной строки .NET Core версии RC3 или более поздней версии.
-Вы также получите эту ошибку, если в текущем или родительском каталоге есть файл *global.json* и версия `sdk` установлена в более раннюю.
+## <a name="migration-from-dnx-to-csproj"></a><span data-ttu-id="9fe3c-143">Перенос проекта DNX в формат csproj</span><span class="sxs-lookup"><span data-stu-id="9fe3c-143">Migration from DNX to csproj</span></span>
+<span data-ttu-id="9fe3c-144">Если все еще используете DNX для разработки .NET Core, перенос необходимо выполнять в два этапа:</span><span class="sxs-lookup"><span data-stu-id="9fe3c-144">If you are still using DNX for .NET Core development, your migration process should be done in two stages:</span></span>
 
-<a id="migration-from-dnx-to-csproj" class="xliff"></a>
-
-## Перенос проекта DNX в формат csproj
-Если все еще используете DNX для разработки .NET Core, перенос необходимо выполнять в два этапа:
-
-1. Используйте [существующие руководства по переносу DNX](from-dnx.md) для переноса проекта из DNX в проект project-json с активированным интерфейсом командной строки.
-2. Выполните действия, описанные в предыдущем разделе, для переноса проекта из формата *project.json* в формат *.csproj*.  
+1. <span data-ttu-id="9fe3c-145">Используйте [существующие руководства по переносу DNX](from-dnx.md) для переноса проекта из DNX в проект project-json с активированным интерфейсом командной строки.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-145">Use the [existing DNX migration guidance](from-dnx.md) to migrate from DNX to project-json enabled CLI.</span></span>
+2. <span data-ttu-id="9fe3c-146">Выполните действия, описанные в предыдущем разделе, для переноса проекта из формата *project.json* в формат *.csproj*.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-146">Follow the steps from the previous section to migrate from *project.json* to *.csproj*.</span></span>  
 
 > [!NOTE]
-> Формат DNX официально признан устаревшим при выпуске предварительной версии 1 интерфейса командной строки .NET Core. 
+> <span data-ttu-id="9fe3c-147">Формат DNX официально признан устаревшим при выпуске предварительной версии 1 интерфейса командной строки .NET Core.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-147">DNX has become officially deprecated during the Preview 1 release of the .NET Core CLI.</span></span> 
 
-<a id="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj" class="xliff"></a>
+## <a name="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj"></a><span data-ttu-id="9fe3c-148">Перенос из более ранних форматов csproj NET Core в формат csproj RTM</span><span class="sxs-lookup"><span data-stu-id="9fe3c-148">Migration from earlier .NET Core csproj formats to RTM csproj</span></span>
+<span data-ttu-id="9fe3c-149">Формат csproj .NET Core изменяется и развивается с выпуском каждой новой предварительной версии инструментов.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-149">The .NET Core csproj format has been changing and evolving with each new pre-release version of the tooling.</span></span> <span data-ttu-id="9fe3c-150">Инструмента, с помощью которого можно перенести файл проекта из ранних версий csproj до последней версии, не существует, поэтому вам придется вручную изменить файл проекта.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-150">There is no tool that will migrate your project file from earlier versions of csproj to the latest, so you need to manually edit the project file.</span></span> <span data-ttu-id="9fe3c-151">Фактические действия зависят от версии файла проекта, который вы переносите.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-151">The actual steps depend on the version of the project file you are migrating.</span></span> <span data-ttu-id="9fe3c-152">Вот некоторые рекомендации, которые следует учитывать. Они основаны на изменениях, произошедших между версиями:</span><span class="sxs-lookup"><span data-stu-id="9fe3c-152">The following is some guidance to consider based on the changes that happened between versions:</span></span>
 
-## Перенос из более ранних форматов csproj NET Core в формат csproj RTM
-Формат csproj .NET Core изменяется и развивается с выпуском каждой новой предварительной версии инструментов. Инструмента, с помощью которого можно перенести файл проекта из ранних версий csproj до последней версии, не существует, поэтому вам придется вручную изменить файл проекта. Фактические действия зависят от версии файла проекта, который вы переносите. Вот некоторые рекомендации, которые следует учитывать. Они основаны на изменениях, произошедших между версиями:
+* <span data-ttu-id="9fe3c-153">Удалите свойство версии инструмента из элемента `<Project>`, если оно задано.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-153">Remove the tools version property from the `<Project>` element, if it exists.</span></span> 
+* <span data-ttu-id="9fe3c-154">Удалите пространство имен XML (`xmlns`) из элемента `<Project>`.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-154">Remove the XML namespace (`xmlns`) from the `<Project>` element.</span></span>
+* <span data-ttu-id="9fe3c-155">Если атрибут `Sdk` не существует, добавьте этот атрибут к элементу `<Project>` и установите значение атрибута в `Microsoft.NET.Sdk` или `Microsoft.NET.Sdk.Web`.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-155">If it doesn't exist, add the `Sdk` attribute to the `<Project>` element and set it to `Microsoft.NET.Sdk` or `Microsoft.NET.Sdk.Web`.</span></span> <span data-ttu-id="9fe3c-156">Этот атрибут означает, что в проекте используется указанный пакет SDK.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-156">This attribute specifies that the project uses the SDK to be used.</span></span> <span data-ttu-id="9fe3c-157">`Microsoft.NET.Sdk.Web` используется для веб-приложений.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-157">`Microsoft.NET.Sdk.Web` is used for web apps.</span></span>
+* <span data-ttu-id="9fe3c-158">Удалите инструкции `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` и `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` в верхней и нижней частях проекта.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-158">Remove the `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` and `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` statements from the top and bottom of the project.</span></span> <span data-ttu-id="9fe3c-159">Эти инструкции импорта выполняются пакетом SDK, поэтому включать их в проект не нужно.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-159">These import statements are implied by the SDK, so there is no need for them to be in the project.</span></span> 
+* <span data-ttu-id="9fe3c-160">Если в проекте есть элементы `Microsoft.NETCore.App` или `NETStandard.Library` `<PackageReference>`, их следует удалить.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-160">If you have `Microsoft.NETCore.App` or `NETStandard.Library` `<PackageReference>` items in your project, you should remove them.</span></span> <span data-ttu-id="9fe3c-161">Эти ссылки на пакет [содержатся в пакете SDK](https://aka.ms/sdkimplicitrefs).</span><span class="sxs-lookup"><span data-stu-id="9fe3c-161">These package references are [implied by the SDK](https://aka.ms/sdkimplicitrefs).</span></span> 
+* <span data-ttu-id="9fe3c-162">Удалите элемент `Microsoft.NET.Sdk` `<PackageReference>`, если он существует.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-162">Remove the `Microsoft.NET.Sdk` `<PackageReference>` element, if it exists.</span></span> <span data-ttu-id="9fe3c-163">Пакет SDK ссылается на атрибут `Sdk` элемента `<Project>`.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-163">The SDK reference comes through the `Sdk` attribute on the `<Project>` element.</span></span> 
+* <span data-ttu-id="9fe3c-164">Удалите [стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)), [подразумеваемые пакетом SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects).</span><span class="sxs-lookup"><span data-stu-id="9fe3c-164">Remove the [globs](https://en.wikipedia.org/wiki/Glob_(programming)) that are [implied by the SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects).</span></span> <span data-ttu-id="9fe3c-165">Если оставить эти объекты glob в проекте, это приведет к ошибке сборки из-за дублирования элементов компиляции.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-165">Leaving these globs in your project will cause an error on build because compile items will be duplicated.</span></span> 
 
-* Удалите свойство версии инструмента из элемента `<Project>`, если оно задано. 
-* Удалите пространство имен XML (`xmlns`) из элемента `<Project>`.
-* Если атрибут `Sdk` не существует, добавьте этот атрибут к элементу `<Project>` и установите значение атрибута в `Microsoft.NET.Sdk` или `Microsoft.NET.Sdk.Web`. Этот атрибут означает, что в проекте используется указанный пакет SDK. `Microsoft.NET.Sdk.Web` используется для веб-приложений.
-* Удалите инструкции `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` и `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` в верхней и нижней частях проекта. Эти инструкции импорта выполняются пакетом SDK, поэтому включать их в проект не нужно. 
-* Если в проекте есть элементы `Microsoft.NETCore.App` или `NETStandard.Library` `<PackageReference>`, их следует удалить. Эти ссылки на пакет [содержатся в пакете SDK](https://aka.ms/sdkimplicitrefs). 
-* Удалите элемент `Microsoft.NET.Sdk` `<PackageReference>`, если он существует. Пакет SDK ссылается на атрибут `Sdk` элемента `<Project>`. 
-* Удалите [стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)), [подразумеваемые пакетом SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Если оставить эти объекты glob в проекте, это приведет к ошибке сборки из-за дублирования элементов компиляции. 
+<span data-ttu-id="9fe3c-166">После выполнения этих действий ваш проект должен быть полностью совместим с форматом csproj RTM .NET Core.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-166">After these steps your project should be fully compatible with the RTM .NET Core csproj format.</span></span> 
 
-После выполнения этих действий ваш проект должен быть полностью совместим с форматом csproj RTM .NET Core. 
+<span data-ttu-id="9fe3c-167">Примеры проектов до и после перехода от старого формата csproj к новому см. в статье [Обновление версии-кандидата Visual Studio 2017 — улучшение инструментов .NET Core](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) в блоге .NET.</span><span class="sxs-lookup"><span data-stu-id="9fe3c-167">For examples of before and after the migration from old csproj format to the new one, see the [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) article on the .NET blog.</span></span>
 
-Примеры проектов до и после перехода от старого формата csproj к новому см. в статье [Обновление версии-кандидата Visual Studio 2017 — улучшение инструментов .NET Core](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) в блоге .NET.
+## <a name="see-also"></a><span data-ttu-id="9fe3c-168">См. также</span><span class="sxs-lookup"><span data-stu-id="9fe3c-168">See also</span></span>
+[<span data-ttu-id="9fe3c-169">Перенос кода, миграция и обновление проектов Visual Studio</span><span class="sxs-lookup"><span data-stu-id="9fe3c-169">Port, Migrate, and Upgrade Visual Studio Projects</span></span>](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
 

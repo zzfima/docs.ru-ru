@@ -1,5 +1,5 @@
 ---
-title: "Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков | Документация Майкрософт"
+title: "Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков"
 description: "Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,39 +9,36 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков
-<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a><span data-ttu-id="e1c5a-104">Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков</span><span class="sxs-lookup"><span data-stu-id="e1c5a-104">Porting to .NET Core - Analyzing your Third-Party Party Dependencies</span></span>
 
-Первый этап процесса переноса — анализ зависимостей сторонних разработчиков.  Необходимо выяснить, есть ли среди них такие, которые не выполняются в .NET Core, и разработать для них план на непредвиденные случаи.
+<span data-ttu-id="e1c5a-105">Первый этап процесса переноса — анализ зависимостей сторонних разработчиков.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-105">The first step in the porting process is to understand your third party dependencies.</span></span>  <span data-ttu-id="e1c5a-106">Необходимо выяснить, есть ли среди них такие, которые не выполняются в .NET Core, и разработать для них план на непредвиденные случаи.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-106">You need to figure out which of them, if any, don't yet run on .NET Core, and develop a contingency plan for those which don't run on .NET Core.</span></span>
 
-## Предварительные требования
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a><span data-ttu-id="e1c5a-107">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="e1c5a-107">Prerequisites</span></span>
 
-В этой статье предполагается, что вы используете Windows и Visual Studio и что у вас есть код, который в настоящее время выполняется в .NET Framework.
+<span data-ttu-id="e1c5a-108">В этой статье предполагается, что вы используете Windows и Visual Studio и что у вас есть код, который в настоящее время выполняется в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-108">This article will assume you are using Windows and Visual Studio, and that you have code which runs on the .NET Framework today.</span></span>
 
-## Анализ пакетов NuGet
-<a id="analyzing-nuget-packages" class="xliff"></a>
+## <a name="analyzing-nuget-packages"></a><span data-ttu-id="e1c5a-109">Анализ пакетов NuGet</span><span class="sxs-lookup"><span data-stu-id="e1c5a-109">Analyzing NuGet Packages</span></span>
 
-Проанализировать переносимость пакетов NuGet легко.  Так как пакет NuGet представляет собой набор папок, которые содержат сборки для конкретных платформ, вам нужно всего лишь проверить, есть ли папка, содержащая сборку .NET Core.
+<span data-ttu-id="e1c5a-110">Проанализировать переносимость пакетов NuGet легко.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-110">Analyzing NuGet packages for portability is very easy.</span></span>  <span data-ttu-id="e1c5a-111">Так как пакет NuGet представляет собой набор папок, которые содержат сборки для конкретных платформ, вам нужно всего лишь проверить, есть ли папка, содержащая сборку .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-111">Because a NuGet package is itself a set of folders which contain platform-specific assemblies, all you have to do is check to see if there is a folder which contains a .NET Core assembly.</span></span>
 
-Просматривать папки пакета NuGet проще всего с помощью средства [Обозреватель пакетов NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer).  Вот как это делается.
+<span data-ttu-id="e1c5a-112">Просматривать папки пакета NuGet проще всего с помощью средства [Обозреватель пакетов NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer).</span><span class="sxs-lookup"><span data-stu-id="e1c5a-112">Inspecting NuGet Package folders is easiest with the [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) tool.</span></span>  <span data-ttu-id="e1c5a-113">Вот как это делается.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-113">Here's how to do it.</span></span>
 
-1. Скачайте и откройте обозреватель пакетов NuGet.
-2. Щелкните "Открыть пакет из веб-канала".
-3. Выполните поиск по имени пакета.
-4. Разверните папку lib в правой части окна и просмотрите имена папок.
+1. <span data-ttu-id="e1c5a-114">Скачайте и откройте обозреватель пакетов NuGet.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-114">Download and open the NuGet Package Explorer.</span></span>
+2. <span data-ttu-id="e1c5a-115">Щелкните "Открыть пакет из веб-канала".</span><span class="sxs-lookup"><span data-stu-id="e1c5a-115">Click "Open package from online feed".</span></span>
+3. <span data-ttu-id="e1c5a-116">Выполните поиск по имени пакета.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-116">Search for the name of the package.</span></span>
+4. <span data-ttu-id="e1c5a-117">Разверните папку lib в правой части окна и просмотрите имена папок.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-117">Expand the "lib" folder on the right-hand side and look at folder names.</span></span>
 
-Поддерживаемые пакетом платформы можно также просмотреть на сайте [nuget.org](https://www.nuget.org/) в разделе **Dependencies** на странице этого пакета.
+<span data-ttu-id="e1c5a-118">Поддерживаемые пакетом платформы можно также просмотреть на сайте [nuget.org](https://www.nuget.org/) в разделе **Dependencies** на странице этого пакета.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-118">You can also see what a package supports on [nuget.org](https://www.nuget.org/) under the **Dependencies** section of the page for that package.</span></span>
 
-В любом случае вам нужно найти папку или запись на сайте [nuget.org](https://www.nuget.org/) с любым из следующих имен:
+<span data-ttu-id="e1c5a-119">В любом случае вам нужно найти папку или запись на сайте [nuget.org](https://www.nuget.org/) с любым из следующих имен:</span><span class="sxs-lookup"><span data-stu-id="e1c5a-119">In either case, you'll need to look for a folder or entry on [nuget.org](https://www.nuget.org/) with any of the following names:</span></span>
 
 ```
 netstandard1.0
@@ -58,9 +55,9 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-Это моникеры целевых платформ (TFM), которые соответствуют версиям [библиотеки .NET Standard](../../standard/net-standard.md) и традиционным профилям переносимой библиотеки классов (PCL), совместимым с .NET Core.  Имейте в виду, что, хотя платформа `netcoreapp1.0` совместима, она предназначена для приложений, а не библиотек.  Хотя вы вполне можете использовать библиотеку на основе `netcoreapp1.0`, она будет предназначена *только* для использования другими приложениями `netcoreapp1.0`.
+<span data-ttu-id="e1c5a-120">Это моникеры целевых платформ (TFM), которые соответствуют версиям [.NET Standard](../../standard/net-standard.md) и традиционным профилям переносимой библиотеки классов (PCL), совместимым с .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-120">These are the Target Framework Monikers (TFM) which map to versions of the [.NET Standard](../../standard/net-standard.md) and traditional Portable Class Library (PCL) profiles which are compatible with .NET Core.</span></span>  <span data-ttu-id="e1c5a-121">Имейте в виду, что, хотя платформа `netcoreapp1.0` совместима, она предназначена для приложений, а не библиотек.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-121">Note that `netcoreapp1.0`, while compatible, is for applications and not libraries.</span></span>  <span data-ttu-id="e1c5a-122">Хотя вы вполне можете использовать библиотеку на основе `netcoreapp1.0`, она будет предназначена *только* для использования другими приложениями `netcoreapp1.0`.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-122">Although there's nothing wrong with using a library which is `netcoreapp1.0`-based, that library may not be intended for anything *other* than consumption by other `netcoreapp1.0` applications.</span></span>
 
-Есть также ряд устаревших моникеров TFM из предварительных версий .NET Core, которые также могут быть совместимыми:
+<span data-ttu-id="e1c5a-123">Есть также ряд устаревших моникеров TFM из предварительных версий .NET Core, которые также могут быть совместимыми:</span><span class="sxs-lookup"><span data-stu-id="e1c5a-123">There are also some legacy TFMs used in pre-release versions of .NET Core that may also be compatible:</span></span>
 
 ```
 dnxcore50
@@ -72,35 +69,32 @@ dotnet5.4
 dotnet5.5
 ```
 
-**Хотя они, скорее всего, будут работать с кодом, гарантии совместимости нет**.  Пакеты с этими моникерами TFM были созданы с использованием предварительных версий пакетов .NET Core.  Обратите внимание на то, когда подобные пакеты будут обновлены до версии `netstandard` (если будут ли вообще).
+<span data-ttu-id="e1c5a-124">**Хотя они, скорее всего, будут работать с кодом, гарантии совместимости нет**.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-124">**While these will likely work with your code, there is no guarantee of compatibility**.</span></span>  <span data-ttu-id="e1c5a-125">Пакеты с этими моникерами TFM были созданы с использованием предварительных версий пакетов .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-125">Packages with these TFMs were built with pre-release .NET Core packages.</span></span>  <span data-ttu-id="e1c5a-126">Обратите внимание на то, когда подобные пакеты будут обновлены до версии `netstandard` (если будут ли вообще).</span><span class="sxs-lookup"><span data-stu-id="e1c5a-126">Take note of when (or if) packages like this are updated to be `netstandard`-based.</span></span>
 
 > [!NOTE]
-> Чтобы использовать пакет, предназначенный для традиционной библиотеки PCL или предварительной версии .NET Core, необходимо использовать директиву `imports` в файле `project.json`.
+> <span data-ttu-id="e1c5a-127">Чтобы использовать пакет, предназначенный для традиционной библиотеки PCL или предварительной версии .NET Core, необходимо использовать директиву `imports` в файле `project.json`.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-127">To use a package targeting a traditional PCL or pre-release .NET Core target, you must use the `imports` directive in your `project.json` file.</span></span>
 
-### Что делать, если зависимость пакета NuGet не работает в .NET Core
-<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
+### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a><span data-ttu-id="e1c5a-128">Что делать, если зависимость пакета NuGet не работает в .NET Core</span><span class="sxs-lookup"><span data-stu-id="e1c5a-128">What to do when your NuGet package dependency doesn't run on .NET Core</span></span>
 
-Если пакет NuGet, от которого зависит ваш проект, не работает в .NET Core, можно предпринять ряд мер.
+<span data-ttu-id="e1c5a-129">Если пакет NuGet, от которого зависит ваш проект, не работает в .NET Core, можно предпринять ряд мер.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-129">There are a few things you can do if a NuGet package you depend on won't run on .NET Core.</span></span>
 
-1. Если проект имеет открытый исходный код и размещается на каком либо ресурсе, наподобие GitHub, вы можете обратиться к разработчикам напрямую.
-2. Вы можете связаться с автором непосредственно на сайте [nuget.org](https://www.nuget.org/), найдя пакет и щелкнув "Связаться с владельцами" в левой части его страницы.
-3. Вы можете поискать другой пакет, работающий в .NET Core и выполняющий ту же задачу, что и используемый вами пакет.
-4. Вы можете попытаться создать пакет с аналогичным кодом самостоятельно.
-5. Вы можете устранить зависимость от пакета, изменив функциональность приложения, по крайней мере до тех пор пока не станет доступна совместимая версия пакета.
+1. <span data-ttu-id="e1c5a-130">Если проект имеет открытый исходный код и размещается на каком либо ресурсе, наподобие GitHub, вы можете обратиться к разработчикам напрямую.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-130">If the project is open source and hosted somewhere like GitHub, you can engage the developer(s) directly.</span></span>
+2. <span data-ttu-id="e1c5a-131">Вы можете связаться с автором непосредственно на сайте [nuget.org](https://www.nuget.org/), найдя пакет и щелкнув "Связаться с владельцами" в левой части его страницы.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-131">You can contact the author directly on [nuget.org](https://www.nuget.org/) by searching for the package and clicking "Contact Owners" on the left hand side of the package's page.</span></span>
+3. <span data-ttu-id="e1c5a-132">Вы можете поискать другой пакет, работающий в .NET Core и выполняющий ту же задачу, что и используемый вами пакет.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-132">You can look for another package that runs on .NET Core which accomplishes the same task as the package you were using.</span></span>
+4. <span data-ttu-id="e1c5a-133">Вы можете попытаться создать пакет с аналогичным кодом самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-133">You can attempt to write the code the package was doing yourself.</span></span>
+5. <span data-ttu-id="e1c5a-134">Вы можете устранить зависимость от пакета, изменив функциональность приложения, по крайней мере до тех пор пока не станет доступна совместимая версия пакета.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-134">You could eliminate the dependency on the package by changing the functionality of your app, at least until a compatible version of the package becomes available.</span></span>
 
-Помните, что участники проектов с открытым исходным кодом и издатели пакетов NuGet зачастую являются добровольцами, которые тратят свои усилия, потому что им интересна эта область деятельности, делают это бесплатно и часто имеют другую постоянную работу. Начиная общение с ними, вы можете сделать одобрительное замечание о библиотеке, прежде чем просить о поддержке платформы .NET Core.
+<span data-ttu-id="e1c5a-135">Помните, что участники проектов с открытым исходным кодом и издатели пакетов NuGet зачастую являются добровольцами, которые тратят свои усилия, потому что им интересна эта область деятельности, делают это бесплатно и часто имеют другую постоянную работу.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-135">Please remember that open source project maintainers and NuGet package publishers are often volunteers who contribute because they care about a given domain, do it for free, and often have a different daytime job.</span></span> <span data-ttu-id="e1c5a-136">Начиная общение с ними, вы можете сделать одобрительное замечание о библиотеке, прежде чем просить о поддержке платформы .NET Core.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-136">If you do reach out, you might start with a positive statement about the library before asking about .NET Core support.</span></span>
 
-Если ни один из описанных выше способов не помог решить проблему, возможно, придется отложить перенос кода в .NET Core на более позднюю дату.
+<span data-ttu-id="e1c5a-137">Если ни один из описанных выше способов не помог решить проблему, возможно, придется отложить перенос кода в .NET Core на более позднюю дату.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-137">If you're unable to resolve your issue with any of the above, you may have to port to .NET Core at a later date.</span></span>
 
-Команда разработчиков .NET хотела бы узнать, поддержку каких библиотек в .NET Core следует реализовать в первую очередь. Вы можете написать нам на адрес dotnet@microsoft.com, чтобы сообщить о библиотеках, которые хотели бы использовать.
+<span data-ttu-id="e1c5a-138">Команда разработчиков .NET хотела бы узнать, поддержку каких библиотек в .NET Core следует реализовать в первую очередь.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-138">The .NET Team would like to know which libraries are the most important to support next with .NET Core.</span></span> <span data-ttu-id="e1c5a-139">Вы можете написать нам на адрес dotnet@microsoft.com, чтобы сообщить о библиотеках, которые хотели бы использовать.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-139">You can also send us mail at dotnet@microsoft.com about the libraries you'd like to use.</span></span>
 
-## Анализ зависимостей, которые не являются пакетами NuGet
-<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
+## <a name="analyzing-dependencies-which-arent-nuget-packages"></a><span data-ttu-id="e1c5a-140">Анализ зависимостей, которые не являются пакетами NuGet</span><span class="sxs-lookup"><span data-stu-id="e1c5a-140">Analyzing Dependencies which aren't NuGet Packages</span></span>
 
-У вас может быть зависимость, которая не является пакетом NuGet, например библиотека DLL в файловой системе.  Единственный способ определить переносимость такой зависимости — запустить [средство ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
+<span data-ttu-id="e1c5a-141">У вас может быть зависимость, которая не является пакетом NuGet, например библиотека DLL в файловой системе.</span><span class="sxs-lookup"><span data-stu-id="e1c5a-141">You may have a dependency that isn't a NuGet package, such as a DLL in the filesystem.</span></span>  <span data-ttu-id="e1c5a-142">Единственный способ определить переносимость такой зависимости — запустить [средство ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).</span><span class="sxs-lookup"><span data-stu-id="e1c5a-142">The only way to determine the portability of that dependency is to run the [ApiPort tool](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).</span></span>
 
-## Следующие шаги
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a><span data-ttu-id="e1c5a-143">Следующие шаги</span><span class="sxs-lookup"><span data-stu-id="e1c5a-143">Next steps</span></span>
 
-Если вы переносите библиотеку, обратитесь к разделу о [переносе библиотек](libraries.md).
+<span data-ttu-id="e1c5a-144">Если вы переносите библиотеку, обратитесь к разделу о [переносе библиотек](libraries.md).</span><span class="sxs-lookup"><span data-stu-id="e1c5a-144">If you're porting a library, check out [Porting your Libraries](libraries.md).</span></span>
 

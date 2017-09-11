@@ -15,18 +15,19 @@ ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3733b66fbe22bb4835f9bb100b8300dd6d061e3e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 696cb1c41d38cfc7f3d739265bf79af62ff456fe
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Практическое руководство: извлечение коллекции атрибутов (LINQ to XML) (Visual Basic)
-В этом разделе представлены <xref:System.Xml.Linq.XElement.Attributes%2A>метод.</xref:System.Xml.Linq.XElement.Attributes%2A> Этот метод извлекает атрибуты того или иного элемента.  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a><span data-ttu-id="f50d9-102">Практическое руководство: извлечение коллекции атрибутов (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f50d9-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="f50d9-103">В этом разделе представлены <xref:System.Xml.Linq.XElement.Attributes%2A>метод.</xref:System.Xml.Linq.XElement.Attributes%2A></span><span class="sxs-lookup"><span data-stu-id="f50d9-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="f50d9-104">Этот метод извлекает атрибуты того или иного элемента.</span><span class="sxs-lookup"><span data-stu-id="f50d9-104">This method retrieves the attributes of an element.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере показано, как просматривать коллекцию атрибутов элемента.  
+## <a name="example"></a><span data-ttu-id="f50d9-105">Пример</span><span class="sxs-lookup"><span data-stu-id="f50d9-105">Example</span></span>  
+ <span data-ttu-id="f50d9-106">В следующем примере показано, как просматривать коллекцию атрибутов элемента.</span><span class="sxs-lookup"><span data-stu-id="f50d9-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
   
 ```vb  
 Dim val = _  
@@ -39,7 +40,7 @@ For Each att As XAttribute In listOfAttributes
 Next  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="f50d9-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="f50d9-107">This code produces the following output:</span></span>  
   
 ```  
 ID="1243"  
@@ -47,5 +48,5 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оси LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="f50d9-108">См. также</span><span class="sxs-lookup"><span data-stu-id="f50d9-108">See Also</span></span>  
+ [<span data-ttu-id="f50d9-109">Оси LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f50d9-109">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

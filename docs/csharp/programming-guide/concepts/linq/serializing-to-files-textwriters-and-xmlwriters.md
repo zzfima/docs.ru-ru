@@ -1,5 +1,5 @@
 ---
-title: "Сериализация в файлы и объекты TextWriter и XmlWriter | Документы Майкрософт"
+title: "Сериализация в файлы и объекты TextWriters и XmlWriters1"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,32 +19,34 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f61324395e81509e5800e99b654a8c669d4397f0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 94a2b3e16703496d2e59b08677395db30d944d56
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Сериализация в файлы и объекты TextWriters и XmlWriters
-XML-деревья можно сериализовать в <xref:System.IO.File>, <xref:System.IO.TextWriter> или <xref:System.Xml.XmlWriter>.  
+# <a name="serializing-to-files-textwriters-and-xmlwriters"></a><span data-ttu-id="5ff34-102">Сериализация в файлы и объекты TextWriters и XmlWriters</span><span class="sxs-lookup"><span data-stu-id="5ff34-102">Serializing to Files, TextWriters, and XmlWriters</span></span>
+<span data-ttu-id="5ff34-103">XML-деревья можно сериализовать для <xref:System.IO.File>, <xref:System.IO.TextWriter> или для <xref:System.Xml.XmlWriter>.</span><span class="sxs-lookup"><span data-stu-id="5ff34-103">You can serialize XML trees to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.</span></span>  
   
- Любой XML-компонент, включая <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement>, можно сериализовать в строку с помощью метода `ToString`.  
+ <span data-ttu-id="5ff34-104">Любой компонент XML, включая <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement>, можно сериализовать для строки с помощью метода `ToString`.</span><span class="sxs-lookup"><span data-stu-id="5ff34-104">You can serialize any XML component, including <xref:System.Xml.Linq.XDocument> and <xref:System.Xml.Linq.XElement>, to a string by using the `ToString` method.</span></span>  
   
- Если при сериализации в строку необходимо отключить форматирование, можно использовать метод <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=fullName>.  
+ <span data-ttu-id="5ff34-105">Если в процессе сериализации в строку необходимо подавить форматирование, эту задачу можно решить с помощью метода <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="5ff34-105">If you want to suppress formatting when serializing to a string, you can use the <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=fullName> method.</span></span>  
   
- При выполнении сериализации для файла характер действий по умолчанию состоит в форматировании результирующего XML-документа посредством создания отступов. При создании отступов не имеющие значения пробелы в XML-дереве не сохраняются. Для выполнения сериализации с форматированием нужно использовать одну из перегрузок следующих методов, не принимающих <xref:System.Xml.Linq.SaveOptions> в качестве аргумента:  
-  
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
-  
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
-  
- Если необходимо воздержаться от создания отступов и сохранить не имеющие значения пробелы в XML-дереве, нужно использовать одну из перегрузок следующих методов, принимающих <xref:System.Xml.Linq.SaveOptions> как аргумент:  
+ <span data-ttu-id="5ff34-106">При выполнении сериализации для файла характер действий по умолчанию состоит в форматировании результирующего XML-документа посредством создания отступов.</span><span class="sxs-lookup"><span data-stu-id="5ff34-106">Thedefault behavior when serializing to a file is to format (indent) the resulting XML document.</span></span> <span data-ttu-id="5ff34-107">При создании отступов не имеющие значения пробелы в XML-дереве не сохраняются.</span><span class="sxs-lookup"><span data-stu-id="5ff34-107">When you indent, the insignificant white space in the XML tree is not preserved.</span></span> <span data-ttu-id="5ff34-108">Для выполнения сериализации с форматированием нужно использовать одну из перегрузок следующих методов, не принимающих <xref:System.Xml.Linq.SaveOptions> в качестве аргумента:</span><span class="sxs-lookup"><span data-stu-id="5ff34-108">To serialize with formatting, use one of the overloads of the following methods that do not take <xref:System.Xml.Linq.SaveOptions> as an argument:</span></span>  
   
 -   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
   
 -   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
   
- Примеры см. в следующем разделе справки.  
+ <span data-ttu-id="5ff34-109">Если необходимо воздержаться от создания отступов и сохранить не имеющие значения пробелы в XML-дереве, нужно использовать одну из перегрузок следующих методов, принимающих <xref:System.Xml.Linq.SaveOptions> в качестве аргумента:</span><span class="sxs-lookup"><span data-stu-id="5ff34-109">If you want the option not to indent and to preserve the insignificant white space in the XML tree, use one of the overloads of the following methods that takes <xref:System.Xml.Linq.SaveOptions> as an argument:</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Сериализация XML-деревьев (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+-   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
+  
+-   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
+  
+ <span data-ttu-id="5ff34-110">Примеры см. в следующем разделе справки.</span><span class="sxs-lookup"><span data-stu-id="5ff34-110">For examples, see the appropriate reference topic.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="5ff34-111">См. также</span><span class="sxs-lookup"><span data-stu-id="5ff34-111">See Also</span></span>  
+ [<span data-ttu-id="5ff34-112">Сериализация XML-деревьев (C#)</span><span class="sxs-lookup"><span data-stu-id="5ff34-112">Serializing XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Преобразование массива байтов в значение типа int (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Преобразование массива байтов в значение типа int (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,46 +29,47 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d26bb4821e09c6633d1c5a4dd40e132e57acf94
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 86ecfe95ab6fb5ce60e7568050cdf974d0dc3d88
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Практическое руководство. Преобразование массива байтов в значение типа int (Руководство по программированию на C#)
-В этом примере демонстрируется использование класса <xref:System.BitConverter> для преобразования массива байтов в значение типа [int](../../../csharp/language-reference/keywords/int.md) и обратно в массив байтов. Например, может потребоваться преобразование из байтов во встроенный тип данных после чтения байтов из сети. В дополнение к методу [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)), показанному в примере, для преобразования байтов (из массива байтов) в другие встроенные типы данных можно использовать и другие методы класса <xref:System.BitConverter>, представленные в таблице ниже.  
+# <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a><span data-ttu-id="534bd-102">Практическое руководство. Преобразование массива байтов в значение типа int (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="534bd-102">How to: Convert a byte Array to an int (C# Programming Guide)</span></span>
+<span data-ttu-id="534bd-103">В этом примере демонстрируется использование класса <xref:System.BitConverter> для преобразования массива байтов в значение типа [int](../../../csharp/language-reference/keywords/int.md) и обратно в массив байтов.</span><span class="sxs-lookup"><span data-stu-id="534bd-103">This example shows you how to use the <xref:System.BitConverter> class to convert an array of bytes to an [int](../../../csharp/language-reference/keywords/int.md) and back to an array of bytes.</span></span> <span data-ttu-id="534bd-104">Например, может потребоваться преобразование из байтов во встроенный тип данных после чтения байтов из сети.</span><span class="sxs-lookup"><span data-stu-id="534bd-104">You may have to convert from bytes to a built-in data type after you read bytes off the network, for example.</span></span> <span data-ttu-id="534bd-105">В дополнение к методу [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)), показанному в примере, для преобразования байтов (из массива байтов) в другие встроенные типы данных можно использовать и другие методы класса <xref:System.BitConverter>, представленные в таблице ниже.</span><span class="sxs-lookup"><span data-stu-id="534bd-105">In addition to the [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) method in the example, the following table lists methods in the <xref:System.BitConverter> class that convert bytes (from an array of bytes) to other built-in types.</span></span>  
   
-|Возвращаемый тип|Метод|  
+|<span data-ttu-id="534bd-106">Возвращаемый тип</span><span class="sxs-lookup"><span data-stu-id="534bd-106">Type returned</span></span>|<span data-ttu-id="534bd-107">Метод</span><span class="sxs-lookup"><span data-stu-id="534bd-107">Method</span></span>|  
 |-------------------|------------|  
-|`bool`|[ToBoolean(Byte\[\], Int32)](xref:System.BitConverter.ToBoolean(System.Byte[],System.Int32))|  
-|`char`|[ToChar(Byte\[\], Int32)](xref:System.BitConverter.ToChar(System.Byte[],System.Int32))|  
-|`double`|[ToDouble(Byte\[\], Int32)](xref:System.BitConverter.ToDouble(System.Byte[],System.Int32))|  
-|`short`|[ToInt16(Byte\[\], Int32)](xref:System.BitConverter.ToInt16(System.Byte[],System.Int32))|  
-|`int`|[ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32))|  
-|`long`|[ToInt64(Byte\[\], Int32)](xref:System.BitConverter.ToInt64(System.Byte[],System.Int32))|  
-|`float`|[ToSingle(Byte\[\], Int32)](xref:System.BitConverter.ToSingle(System.Byte[],System.Int32))|  
-|`ushort`|[ToUInt16(Byte\[\], Int32)](xref:System.BitConverter.ToUInt16(System.Byte[],System.Int32))|  
-|`uint`|[ToUInt32(Byte\[\], Int32)](xref:System.BitConverter.ToUInt32(System.Byte[],System.Int32))|  
-|`ulong`|[ToUInt64(Byte\[\], Int32)](xref:System.BitConverter.ToUInt64(System.Byte[],System.Int32))|  
+|`bool`|<span data-ttu-id="534bd-108">[ToBoolean(Byte\[\], Int32)](xref:System.BitConverter.ToBoolean(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-108">[ToBoolean(Byte\[\], Int32)](xref:System.BitConverter.ToBoolean(System.Byte[],System.Int32))</span></span>|  
+|`char`|<span data-ttu-id="534bd-109">[ToChar(Byte\[\], Int32)](xref:System.BitConverter.ToChar(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-109">[ToChar(Byte\[\], Int32)](xref:System.BitConverter.ToChar(System.Byte[],System.Int32))</span></span>|  
+|`double`|<span data-ttu-id="534bd-110">[ToDouble(Byte\[\], Int32)](xref:System.BitConverter.ToDouble(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-110">[ToDouble(Byte\[\], Int32)](xref:System.BitConverter.ToDouble(System.Byte[],System.Int32))</span></span>|  
+|`short`|<span data-ttu-id="534bd-111">[ToInt16(Byte\[\], Int32)](xref:System.BitConverter.ToInt16(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-111">[ToInt16(Byte\[\], Int32)](xref:System.BitConverter.ToInt16(System.Byte[],System.Int32))</span></span>|  
+|`int`|<span data-ttu-id="534bd-112">[ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-112">[ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32))</span></span>|  
+|`long`|<span data-ttu-id="534bd-113">[ToInt64(Byte\[\], Int32)](xref:System.BitConverter.ToInt64(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-113">[ToInt64(Byte\[\], Int32)](xref:System.BitConverter.ToInt64(System.Byte[],System.Int32))</span></span>|  
+|`float`|<span data-ttu-id="534bd-114">[ToSingle(Byte\[\], Int32)](xref:System.BitConverter.ToSingle(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-114">[ToSingle(Byte\[\], Int32)](xref:System.BitConverter.ToSingle(System.Byte[],System.Int32))</span></span>|  
+|`ushort`|<span data-ttu-id="534bd-115">[ToUInt16(Byte\[\], Int32)](xref:System.BitConverter.ToUInt16(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-115">[ToUInt16(Byte\[\], Int32)](xref:System.BitConverter.ToUInt16(System.Byte[],System.Int32))</span></span>|  
+|`uint`|<span data-ttu-id="534bd-116">[ToUInt32(Byte\[\], Int32)](xref:System.BitConverter.ToUInt32(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-116">[ToUInt32(Byte\[\], Int32)](xref:System.BitConverter.ToUInt32(System.Byte[],System.Int32))</span></span>|  
+|`ulong`|<span data-ttu-id="534bd-117">[ToUInt64(Byte\[\], Int32)](xref:System.BitConverter.ToUInt64(System.Byte[],System.Int32))</span><span class="sxs-lookup"><span data-stu-id="534bd-117">[ToUInt64(Byte\[\], Int32)](xref:System.BitConverter.ToUInt64(System.Byte[],System.Int32))</span></span>|  
   
-## <a name="example"></a>Пример  
- Этот пример инициализирует массив байтов, обращает порядок расположения элементов в массиве, если в архитектуре компьютера используется прямой порядок байтов (т. е. первым сохраняется наименее значащий байт), и затем вызывает метод [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) для преобразования четырех байтов массива в значение типа `int`. Второй аргумент [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) указывает начальный индекс массива байтов.  
-  
-> [!NOTE]
->  Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
-  
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
-  
-## <a name="example"></a>Пример  
- В этом примере метод <xref:System.BitConverter.GetBytes%28System.Int32%29> класса <xref:System.BitConverter> вызывается для преобразования значения типа `int` в массив байтов.  
+## <a name="example"></a><span data-ttu-id="534bd-118">Пример</span><span class="sxs-lookup"><span data-stu-id="534bd-118">Example</span></span>  
+ <span data-ttu-id="534bd-119">Этот пример инициализирует массив байтов, обращает порядок расположения элементов в массиве, если в архитектуре компьютера используется прямой порядок байтов (т. е. первым сохраняется наименее значащий байт), и затем вызывает метод [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) для преобразования четырех байтов массива в значение типа `int`.</span><span class="sxs-lookup"><span data-stu-id="534bd-119">This example initializes an array of bytes, reverses the array if the computer architecture is little-endian (that is, the least significant byte is stored first), and then calls the [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) method to convert four bytes in the array to an `int`.</span></span> <span data-ttu-id="534bd-120">Второй аргумент [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) указывает начальный индекс массива байтов.</span><span class="sxs-lookup"><span data-stu-id="534bd-120">The second argument to [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) specifies the start index of the array of bytes.</span></span>  
   
 > [!NOTE]
->  Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.  
+>  <span data-ttu-id="534bd-121">Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.</span><span class="sxs-lookup"><span data-stu-id="534bd-121">The output may differ depending on the endianess of your computer's architecture.</span></span>  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
+ <span data-ttu-id="534bd-122">[!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="534bd-122">[!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.BitConverter>   
- <xref:System.BitConverter.IsLittleEndian>   
- [Типы](../../../csharp/programming-guide/types/index.md)
+## <a name="example"></a><span data-ttu-id="534bd-123">Пример</span><span class="sxs-lookup"><span data-stu-id="534bd-123">Example</span></span>  
+ <span data-ttu-id="534bd-124">В этом примере вызывается метод <xref:System.BitConverter.GetBytes%28System.Int32%29> класса <xref:System.BitConverter> для преобразования значения `int` в массив байтов.</span><span class="sxs-lookup"><span data-stu-id="534bd-124">In this example, the <xref:System.BitConverter.GetBytes%28System.Int32%29> method of the <xref:System.BitConverter> class is called to convert an `int` to an array of bytes.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="534bd-125">Результат может отличаться в зависимости от порядка следования байтов в архитектуре компьютера.</span><span class="sxs-lookup"><span data-stu-id="534bd-125">The output may differ depending on the endianess of your computer's architecture.</span></span>  
+  
+ <span data-ttu-id="534bd-126">[!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="534bd-126">[!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="534bd-127">См. также</span><span class="sxs-lookup"><span data-stu-id="534bd-127">See Also</span></span>  
+ <span data-ttu-id="534bd-128"><xref:System.BitConverter></span><span class="sxs-lookup"><span data-stu-id="534bd-128"><xref:System.BitConverter></span></span>   
+ <span data-ttu-id="534bd-129"><xref:System.BitConverter.IsLittleEndian></span><span class="sxs-lookup"><span data-stu-id="534bd-129"><xref:System.BitConverter.IsLittleEndian></span></span>   
+ [<span data-ttu-id="534bd-130">Типы</span><span class="sxs-lookup"><span data-stu-id="534bd-130">Types</span></span>](../../../csharp/programming-guide/types/index.md)
 

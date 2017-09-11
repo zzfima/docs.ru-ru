@@ -1,156 +1,146 @@
 ---
-title: "Целевые платформы | Документация Майкрософт"
-description: "Сведения о целевых платформах для приложений и библиотек .NET Core."
+title: "Требуемые версии .NET Framework"
+description: "Сведения о целевых версиях платформы для приложений и библиотек .NET Core."
 keywords: .NET, .NET Core, framework, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 04/27/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 45835eb80642253f80ea630ae9db1ac766b72b9c
-ms.openlocfilehash: 11c1f11e4f8354b7573d03e680cf4a8a16fa26d9
+ms.translationtype: HT
+ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
+ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
-# <a name="target-frameworks"></a>Требуемые версии .NET Framework
+# <a name="target-frameworks"></a><span data-ttu-id="1d90c-104">Требуемые версии .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1d90c-104">Target frameworks</span></span>
 
-*Платформы* определяют объекты, методы и средства, которые можно использовать для создания приложений и библиотек. Платформа .NET Framework используется для создания приложений и библиотек, в первую очередь для выполнения на компьютерах с операционной системой Windows. .NET Core включает платформу, которая позволяет создавать приложения и библиотеки, которые выполняются на разных операционных системах.
+<span data-ttu-id="1d90c-105">При выборе целевой платформы для приложения или библиотеки вы указываете набор API-интерфейсов, которые вы хотите сделать доступными для приложения или библиотеки.</span><span class="sxs-lookup"><span data-stu-id="1d90c-105">When you target a framework in an app or library, you're specifying the set of APIs that you'd like to make available to the app or library.</span></span> <span data-ttu-id="1d90c-106">Целевая платформа указывается в файле проекта с помощью моникеров целевой платформы (TFM).</span><span class="sxs-lookup"><span data-stu-id="1d90c-106">You specify the target framework in your project file using Target Framework Monikers (TFMs).</span></span>
 
-Термин *платформа* может имеет разные значения в зависимости от контекста. Например, .NET Core может упоминаться как "платформа .NET Core" в контексте создания приложений и библиотек или в контексте среды, в которой выполняется код приложения и библиотеки. Термин *вычислительная платформа* описывает *где и как* выполняется приложение. Поскольку .NET Core выполняет код в среде [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr), то также может именоваться платформой. Это же справедливо и для .NET Framework, которая имеет среду CLR ([Common Language Runtime](clr.md)) для выполнения кода приложений и библиотек, разработанных с использованием объектов, методов и средств платформы .NET Framework. В документации вы будете часто встречать термин "кросс-платформенный", который следует трактовать как "предназначенный для разных операционных систем и архитектур (x86, x64, arm)". Обычно автор использует его именно в этом значении.
+<span data-ttu-id="1d90c-107">Приложение или библиотека могут быть предназначены для версии [.NET Standard](~/docs/standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="1d90c-107">An app or library can target a version of [.NET Standard](~/docs/standard/net-standard.md).</span></span> <span data-ttu-id="1d90c-108">Версии .NET Standard представляют стандартные наборы API-интерфейсов во всех реализациях .NET.</span><span class="sxs-lookup"><span data-stu-id="1d90c-108">.NET Standard versions represent standardized sets of APIs across all .NET implementations.</span></span> <span data-ttu-id="1d90c-109">Например, библиотека может быть предназначена для .NET Standard 1.6 и получить доступ к API-интерфейсам, которые работают в .NET Core и .NET Framework с одной и той же базой кода.</span><span class="sxs-lookup"><span data-stu-id="1d90c-109">For example, a library can target .NET Standard 1.6 and gain access to APIs that function across .NET Core and .NET Framework using the same codebase.</span></span>
 
-Объекты и методы платформ именуются прикладными программными интерфейсами (API). Интерфейсы API используются в [Visual Studio](https://www.visualstudio.com/), [Visual Studio для Mac](https://www.visualstudio.com/vs/visual-studio-mac/), [Visual Studio Code](https://code.visualstudio.com/) и других интегрированных средах разработки (IDE) и редакторах, предоставляя вам правильные наборы объектов и методы для разработки. Также платформы используются [NuGet](https://www.nuget.org/) для создания и применения пакетов NuGet. Это позволяет создавать и использовать подходящие пакеты для целевой платформы вашего приложения или библиотеки.
+<span data-ttu-id="1d90c-110">Приложение или библиотека могут также работать в конкретной реализации .NET. В этом случае они получают доступ к API-интерфейсам конкретной реализации.</span><span class="sxs-lookup"><span data-stu-id="1d90c-110">An app or library can also target a specific .NET implementation to gain access to implementation-specific APIs.</span></span> <span data-ttu-id="1d90c-111">Например, приложение, предназначенное для Xamarin.iOS (например, `Xamarin.iOS10`), получает доступ к предоставленным Xamarin iOS программам-оболочкам API для iOS 10 или приложение, ориентированное на универсальную платформу Windows (UWP, `uap10.0`) имеет доступ к API-интерфейсам, которые компилируется для устройств под управлением Windows 10.</span><span class="sxs-lookup"><span data-stu-id="1d90c-111">For example, an app that targets Xamarin.iOS (for example, `Xamarin.iOS10`) gets access to Xamarin-provided iOS API wrappers for iOS 10, or an app that targets the Universal Windows Platform (UWP, `uap10.0`) has access to APIs that compile for devices that run Windows 10.</span></span>
 
-*Нацеливание на платформу* или на несколько платформ обозначает выбор интерфейсов API и конкретных версий, которые вы будете использовать. Существует несколько способов указывать платформы: по имени продукта, по короткому или длинному имени платформы или по имени семейства.
+<span data-ttu-id="1d90c-112">Для некоторых целевых платформ (например, .NET Framework) API-интерфейсы определяются сборками, устанавливаемыми платформой в системе, в число которых могут входить API-интерфейсы платформы приложений (например, ASP.NET).</span><span class="sxs-lookup"><span data-stu-id="1d90c-112">For some target frameworks (for example, the .NET Framework), the APIs are defined by the assemblies that the framework installs on a system and may include application framework APIs (for example, ASP.NET).</span></span>
 
-## <a name="referring-to-frameworks"></a>Ссылки на платформы
+<span data-ttu-id="1d90c-113">Для целевых платформ на основе пакетов (например, .NET Standard и .NET Core) API-интерфейсы определяются пакетами в составе приложения или библиотеки.</span><span class="sxs-lookup"><span data-stu-id="1d90c-113">For package-based target frameworks (for example, .NET Standard and .NET Core), the APIs are defined by the packages included in the app or library.</span></span> <span data-ttu-id="1d90c-114">*Метапакет* — это пакет NuGet, не имеющий собственного содержимого, но имеющий список зависимостей (другие пакеты).</span><span class="sxs-lookup"><span data-stu-id="1d90c-114">A *metapackage* is a NuGet package that has no content of its own but is a list of dependencies (other packages).</span></span> <span data-ttu-id="1d90c-115">В этом случае целевая платформа на основе пакетов NuGet неявно задает метапакет, который ссылается на все пакеты, составляющие платформу.</span><span class="sxs-lookup"><span data-stu-id="1d90c-115">A NuGet package-based target framework implicitly specifies a metapackage that references all the packages that together make up the framework.</span></span>
 
-Есть несколько способов указывать ссылки на платформы, и большинство из них используются в документации по .NET Core. Например, платформу .NET Framework 4.6.2 можно указывать в следующих форматах:
+## <a name="latest-target-framework-versions"></a><span data-ttu-id="1d90c-116">Последние версии целевой платформы</span><span class="sxs-lookup"><span data-stu-id="1d90c-116">Latest target framework versions</span></span>
 
-**Ссылка на продукт**
+<span data-ttu-id="1d90c-117">В приведенной ниже таблице определены наиболее распространенные целевые платформы, способы их указания и реализованные в них версии [.NET Standard](~/docs/standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="1d90c-117">The following table defines the most common target frameworks, how they're referenced, and which version of the [.NET Standard](~/docs/standard/net-standard.md) they implement.</span></span> <span data-ttu-id="1d90c-118">Эти версии целевой платформ являются последними стабильными версиями.</span><span class="sxs-lookup"><span data-stu-id="1d90c-118">These target framework versions are the latest stable versions.</span></span> <span data-ttu-id="1d90c-119">Предварительные версии здесь не упоминаются.</span><span class="sxs-lookup"><span data-stu-id="1d90c-119">Pre-release versions aren't shown.</span></span> <span data-ttu-id="1d90c-120">Моникер целевой платформы (TFM) является стандартизированный форматом маркера для указания целевой платформы приложения или библиотеки .NET.</span><span class="sxs-lookup"><span data-stu-id="1d90c-120">A Target Framework Moniker (TFM) is a standardized token format for specifying the target framework of a .NET app or library.</span></span> 
 
-Можно ссылаться на среду выполнения или платформу .NET. Оба являются одинаково допустимыми.
+| <span data-ttu-id="1d90c-121">Требуемая версия .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1d90c-121">Target Framework</span></span>      | <span data-ttu-id="1d90c-122">Последняя версия</span><span class="sxs-lookup"><span data-stu-id="1d90c-122">Latest Version</span></span> | <span data-ttu-id="1d90c-123">Моникер целевой платформы (TFM)</span><span class="sxs-lookup"><span data-stu-id="1d90c-123">Target Framework Moniker (TFM)</span></span> | <span data-ttu-id="1d90c-124">Версия .NET Standard</span><span class="sxs-lookup"><span data-stu-id="1d90c-124">.NET Standard Version</span></span> | <span data-ttu-id="1d90c-125">Метапакет</span><span class="sxs-lookup"><span data-stu-id="1d90c-125">Metapackage</span></span> |
+| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
+| <span data-ttu-id="1d90c-126">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="1d90c-126">.NET Standard</span></span>         | <span data-ttu-id="1d90c-127">2.0.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-127">2.0.0</span></span>          | <span data-ttu-id="1d90c-128">netstandard2.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-128">netstandard2.0</span></span>                 | <span data-ttu-id="1d90c-129">Н/Д</span><span class="sxs-lookup"><span data-stu-id="1d90c-129">N/A</span></span>                   | [<span data-ttu-id="1d90c-130">NETStandard.Library</span><span class="sxs-lookup"><span data-stu-id="1d90c-130">NETStandard.Library</span></span>](https://www.nuget.org/packages/NETStandard.Library) |
+| <span data-ttu-id="1d90c-131">Приложение .NET Core</span><span class="sxs-lookup"><span data-stu-id="1d90c-131">.NET Core Application</span></span> | <span data-ttu-id="1d90c-132">2.0.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-132">2.0.0</span></span>          | <span data-ttu-id="1d90c-133">netcoreapp2.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-133">netcoreapp2.0</span></span>                  | <span data-ttu-id="1d90c-134">2.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-134">2.0</span></span>                   | [<span data-ttu-id="1d90c-135">Microsoft.NETCore.App</span><span class="sxs-lookup"><span data-stu-id="1d90c-135">Microsoft.NETCore.App</span></span>](https://www.nuget.org/packages/Microsoft.NETCore.App) |
+| <span data-ttu-id="1d90c-136">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="1d90c-136">.NET Framework</span></span>        | <span data-ttu-id="1d90c-137">4.7</span><span class="sxs-lookup"><span data-stu-id="1d90c-137">4.7</span></span>            | <span data-ttu-id="1d90c-138">net47</span><span class="sxs-lookup"><span data-stu-id="1d90c-138">net47</span></span>                          | <span data-ttu-id="1d90c-139">1.5</span><span class="sxs-lookup"><span data-stu-id="1d90c-139">1.5</span></span>                   | <span data-ttu-id="1d90c-140">Н/Д</span><span class="sxs-lookup"><span data-stu-id="1d90c-140">N/A</span></span> |
 
-* .NET Framework 4.6.2
-* .NET 4.6.2
+## <a name="supported-target-framework-versions"></a><span data-ttu-id="1d90c-141">Поддерживаемые версии целевой платформы</span><span class="sxs-lookup"><span data-stu-id="1d90c-141">Supported target framework versions</span></span>
 
-**Ссылка на платформу**
+<span data-ttu-id="1d90c-142">Целевая платформа обычно называется по TFM.</span><span class="sxs-lookup"><span data-stu-id="1d90c-142">A target framework is typically referenced by a TFM.</span></span> <span data-ttu-id="1d90c-143">В следующей таблице показаны целевые платформы, поддерживаемые пакетом SDK для .NET Core и клиентом NuGet.</span><span class="sxs-lookup"><span data-stu-id="1d90c-143">The following table shows the target frameworks supported by the .NET Core SDK and the NuGet client.</span></span> <span data-ttu-id="1d90c-144">Эквивалентные обозначения отображаются в скобках.</span><span class="sxs-lookup"><span data-stu-id="1d90c-144">Equivalents are shown within brackets.</span></span> <span data-ttu-id="1d90c-145">Например, `win81` является эквивалентом TFM для `netcore451`.</span><span class="sxs-lookup"><span data-stu-id="1d90c-145">For example, `win81` is an equivalent TFM to `netcore451`.</span></span>
 
-Можно ссылаться на платформу или ориентацию на нее с помощью длинных или коротких форм моникера целевой платформы. Оба являются одинаково допустимыми.
+| <span data-ttu-id="1d90c-146">Требуемая версия .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1d90c-146">Target Framework</span></span>           | <span data-ttu-id="1d90c-147">TFM</span><span class="sxs-lookup"><span data-stu-id="1d90c-147">TFM</span></span> |
+| -------------------------- | --- |
+| <span data-ttu-id="1d90c-148">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="1d90c-148">.NET Standard</span></span>              | <span data-ttu-id="1d90c-149">netstandard1.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-149">netstandard1.0</span></span><br><span data-ttu-id="1d90c-150">netstandard1.1</span><span class="sxs-lookup"><span data-stu-id="1d90c-150">netstandard1.1</span></span><br><span data-ttu-id="1d90c-151">netstandard1.2</span><span class="sxs-lookup"><span data-stu-id="1d90c-151">netstandard1.2</span></span><br><span data-ttu-id="1d90c-152">netstandard1.3</span><span class="sxs-lookup"><span data-stu-id="1d90c-152">netstandard1.3</span></span><br><span data-ttu-id="1d90c-153">netstandard1.4</span><span class="sxs-lookup"><span data-stu-id="1d90c-153">netstandard1.4</span></span><br><span data-ttu-id="1d90c-154">netstandard1.5</span><span class="sxs-lookup"><span data-stu-id="1d90c-154">netstandard1.5</span></span><br><span data-ttu-id="1d90c-155">netstandard1.6</span><span class="sxs-lookup"><span data-stu-id="1d90c-155">netstandard1.6</span></span><br><span data-ttu-id="1d90c-156">netstandard2.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-156">netstandard2.0</span></span> |
+| <span data-ttu-id="1d90c-157">.NET Core</span><span class="sxs-lookup"><span data-stu-id="1d90c-157">.NET Core</span></span>                  | <span data-ttu-id="1d90c-158">netcoreapp1.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-158">netcoreapp1.0</span></span><br><span data-ttu-id="1d90c-159">netcoreapp1.1</span><span class="sxs-lookup"><span data-stu-id="1d90c-159">netcoreapp1.1</span></span><br><span data-ttu-id="1d90c-160">netcoreapp2.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-160">netcoreapp2.0</span></span> |
+| <span data-ttu-id="1d90c-161">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="1d90c-161">.NET Framework</span></span>             | <span data-ttu-id="1d90c-162">net11</span><span class="sxs-lookup"><span data-stu-id="1d90c-162">net11</span></span><br><span data-ttu-id="1d90c-163">net20</span><span class="sxs-lookup"><span data-stu-id="1d90c-163">net20</span></span><br><span data-ttu-id="1d90c-164">net35</span><span class="sxs-lookup"><span data-stu-id="1d90c-164">net35</span></span><br><span data-ttu-id="1d90c-165">net40</span><span class="sxs-lookup"><span data-stu-id="1d90c-165">net40</span></span><br><span data-ttu-id="1d90c-166">net403</span><span class="sxs-lookup"><span data-stu-id="1d90c-166">net403</span></span><br><span data-ttu-id="1d90c-167">net45</span><span class="sxs-lookup"><span data-stu-id="1d90c-167">net45</span></span><br><span data-ttu-id="1d90c-168">net451</span><span class="sxs-lookup"><span data-stu-id="1d90c-168">net451</span></span><br><span data-ttu-id="1d90c-169">net452</span><span class="sxs-lookup"><span data-stu-id="1d90c-169">net452</span></span><br><span data-ttu-id="1d90c-170">net46</span><span class="sxs-lookup"><span data-stu-id="1d90c-170">net46</span></span><br><span data-ttu-id="1d90c-171">net461</span><span class="sxs-lookup"><span data-stu-id="1d90c-171">net461</span></span><br><span data-ttu-id="1d90c-172">net462</span><span class="sxs-lookup"><span data-stu-id="1d90c-172">net462</span></span><br><span data-ttu-id="1d90c-173">net47</span><span class="sxs-lookup"><span data-stu-id="1d90c-173">net47</span></span> |
+| <span data-ttu-id="1d90c-174">Магазин Windows</span><span class="sxs-lookup"><span data-stu-id="1d90c-174">Windows Store</span></span>              | <span data-ttu-id="1d90c-175">netcore [netcore45]</span><span class="sxs-lookup"><span data-stu-id="1d90c-175">netcore [netcore45]</span></span><br><span data-ttu-id="1d90c-176">netcore45 [win] [win8]</span><span class="sxs-lookup"><span data-stu-id="1d90c-176">netcore45 [win] [win8]</span></span><br><span data-ttu-id="1d90c-177">netcore451 [win81]</span><span class="sxs-lookup"><span data-stu-id="1d90c-177">netcore451 [win81]</span></span> |
+| <span data-ttu-id="1d90c-178">.NET Micro Framework</span><span class="sxs-lookup"><span data-stu-id="1d90c-178">.NET Micro Framework</span></span>       | <span data-ttu-id="1d90c-179">netmf</span><span class="sxs-lookup"><span data-stu-id="1d90c-179">netmf</span></span> |
+| <span data-ttu-id="1d90c-180">Silverlight</span><span class="sxs-lookup"><span data-stu-id="1d90c-180">Silverlight</span></span>                | <span data-ttu-id="1d90c-181">sl4</span><span class="sxs-lookup"><span data-stu-id="1d90c-181">sl4</span></span><br><span data-ttu-id="1d90c-182">sl5</span><span class="sxs-lookup"><span data-stu-id="1d90c-182">sl5</span></span> |
+| <span data-ttu-id="1d90c-183">Windows Phone</span><span class="sxs-lookup"><span data-stu-id="1d90c-183">Windows Phone</span></span>              | <span data-ttu-id="1d90c-184">wp [wp7]</span><span class="sxs-lookup"><span data-stu-id="1d90c-184">wp [wp7]</span></span><br><span data-ttu-id="1d90c-185">wp7</span><span class="sxs-lookup"><span data-stu-id="1d90c-185">wp7</span></span><br><span data-ttu-id="1d90c-186">wp75</span><span class="sxs-lookup"><span data-stu-id="1d90c-186">wp75</span></span><br><span data-ttu-id="1d90c-187">wp8</span><span class="sxs-lookup"><span data-stu-id="1d90c-187">wp8</span></span><br><span data-ttu-id="1d90c-188">wp81</span><span class="sxs-lookup"><span data-stu-id="1d90c-188">wp81</span></span><br><span data-ttu-id="1d90c-189">wpa81</span><span class="sxs-lookup"><span data-stu-id="1d90c-189">wpa81</span></span> |
+| <span data-ttu-id="1d90c-190">Универсальная платформа Windows </span><span class="sxs-lookup"><span data-stu-id="1d90c-190">Universal Windows Platform</span></span> | <span data-ttu-id="1d90c-191">uap [uap10.0]</span><span class="sxs-lookup"><span data-stu-id="1d90c-191">uap [uap10.0]</span></span><br><span data-ttu-id="1d90c-192">uap10.0 [win10] [netcore50]</span><span class="sxs-lookup"><span data-stu-id="1d90c-192">uap10.0 [win10] [netcore50]</span></span> |
 
-* `.NETFramework,Version=4.6.2`
-* `net462`
+## <a name="how-to-specify-target-frameworks"></a><span data-ttu-id="1d90c-193">Как указать целевые платформы</span><span class="sxs-lookup"><span data-stu-id="1d90c-193">How to specify target frameworks</span></span>
 
-**Ссылка на семейство платформ**
+<span data-ttu-id="1d90c-194">Целевые платформы указываются в файле проекта.</span><span class="sxs-lookup"><span data-stu-id="1d90c-194">Target frameworks are specified in your project file.</span></span> <span data-ttu-id="1d90c-195">Если указана одна целевая платформа, используйте элемент **TargetFramework**.</span><span class="sxs-lookup"><span data-stu-id="1d90c-195">When a single target framework is specified, use the **TargetFramework** element.</span></span> <span data-ttu-id="1d90c-196">В следующем файле проекта консольного приложения показано, как указать целевую платформу .NET Core 2.0.</span><span class="sxs-lookup"><span data-stu-id="1d90c-196">The following console app project file demonstrates how to target .NET Core 2.0:</span></span>
 
-Можно ссылаться на семейство платформ с помощью длинных или коротких форм идентификатора платформы. Оба являются одинаково допустимыми.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-* `.NETFramework`
-* `net`
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
 
-## <a name="latest-framework-versions"></a>Последние версии платформ
+</Project>
+```
 
-Приведенная ниже таблица описывает набор платформ, которые можно использовать, способы их указания и реализованные в них версии [библиотеки .NET Standard](library.md). Эти версии платформ являются последними стабильными версиями. Предварительные версии здесь не упоминаются.
+<span data-ttu-id="1d90c-197">При указании нескольких целевых платформ можно условно ссылаться на сборки для каждой целевой платформы.</span><span class="sxs-lookup"><span data-stu-id="1d90c-197">When you specify multiple target frameworks, you may conditionally reference assemblies for each target framework.</span></span> <span data-ttu-id="1d90c-198">В коде можно условно компилировать эти сборки с использованием символов препроцессора с логикой *if-then-else*.</span><span class="sxs-lookup"><span data-stu-id="1d90c-198">In your code, you can conditionally compile against those assemblies by using preprocessor symbols with *if-then-else* logic.</span></span>
 
-| Платформа             | Последняя версия | Моникер целевой платформы (TFM) | Компактный моникер целевой платформы (TFM) | Версия .NET Standard | Метапакет |
-| :-------------------: | :------------: | :----------------------------: | :------------------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 1.6.1          | .NETStandard,Version=1.6       | netstandard1.6                         | Н/Д                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| Приложение .NET Core | 1.1.1          | .NETCoreApp,Version=1.1        | netcoreapp1.1                          | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.6.2          | .NETFramework,Version=4.6.2    | net462                                 | 1.5                   | Н/Д |
+<span data-ttu-id="1d90c-199">Следующий файл проекта библиотеки предназначен для API-интерфейсов .NET Standard (`netstandard1.4`) и API-интерфейсов .NET Framework (`net40` и `net45`).</span><span class="sxs-lookup"><span data-stu-id="1d90c-199">The following library project file targets APIs of .NET Standard (`netstandard1.4`) and APIs of the .NET Framework (`net40` and `net45`).</span></span> <span data-ttu-id="1d90c-200">Используйте множественный элемент **TargetFrameworks** с несколькими целевыми платформами.</span><span class="sxs-lookup"><span data-stu-id="1d90c-200">Use the plural **TargetFrameworks** element with multiple target frameworks.</span></span> <span data-ttu-id="1d90c-201">Обратите внимание, каким образом атрибуты `Condition` включают пакеты, связанные с конкретной реализацией, при компиляции библиотеки для двух TFM .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1d90c-201">Note how the `Condition` attributes include implementation-specific packages when the library is compiled for the two .NET Framework TFMs:</span></span>
 
-## <a name="supported-frameworks"></a>Поддерживаемые платформы
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-Платформа обычно указывается коротким моникером целевой платформы (*TFM*). В .NET Standard этот метод можно обобщить как *TxM*, чтобы одной ссылкой описать сразу несколько платформ. Клиенты NuGet поддерживают следующие платформы. Эквивалентные обозначения отображаются в скобках (`[]`).
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+  </PropertyGroup>
 
-| Имя                       | Сокращение | TFM/TxM                                    |
-| -------------------------- | ------------ | -------------------------------------------- |
-| .NET Standard              | netstandard  | netstandard1.0                               |
-|                            |              | netstandard1.1                               |
-|                            |              | netstandard1.2                               |
-|                            |              | netstandard1.3                               |
-|                            |              | netstandard1.4                               |
-|                            |              | netstandard1.5                               |
-|                            |              | netstandard1.6                               |
-| .NET Core                  | netcoreapp   | netcoreapp1.0                                |
-|                            |              | netcoreapp1.1                                |
-| .NET Framework             | net          | net11                                        |
-|                            |              | net20                                        |
-|                            |              | net35                                        |
-|                            |              | net40                                        |
-|                            |              | net403                                       |
-|                            |              | net45                                        |
-|                            |              | net451                                       |
-|                            |              | net452                                       |
-|                            |              | net46                                        |
-|                            |              | net461                                       |
-|                            |              | net462                                       |
-| Магазин Windows              | netcore      | netcore [netcore45]                          |
-|                            |              | netcore45 [win, win8]                        |
-|                            |              | netcore451 [win81]                           |
-| .NET Micro Framework       | netmf        | netmf                                        |
-| Silverlight                | sl           | sl4                                          |
-|                            |              | sl5                                          |
-| Windows Phone              | wp           | wp [wp7]                                     |
-|                            |              | wp7                                          |
-|                            |              | wp75                                         |
-|                            |              | wp8                                          |
-|                            |              | wp81                                         |
-|                            |              | wpa81                                        |
-| Универсальная платформа Windows  | uap          | uap [uap10.0]                                |
-|                            |              | uap10.0 [win10] [netcore50]                  |
+  <!-- Conditionally obtain references for the .NET Framework 4.0 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System.Net" />
+  </ItemGroup>
 
-## <a name="deprecated-frameworks"></a>Устаревшие платформы
+  <!-- Conditionally obtain references for the .NET Framework 4.5 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
 
-Следующие среды являются устаревшими. Пакеты, предназначенные для этих платформ, следует перевести на предлагаемые для замены.
+</Project>
+```
 
-| Устаревшая платформа | Замена |
-| -------------------- | ----------- |
-| aspnet50             | netcoreapp  |
-| aspnetcore50         |             |
-| dnxcore50            |             |
-| dnx                  |             |
-| dnx45                |             |
-| dnx451               |             |
-| dnx452               |             |
-| dotnet               | netstandard |
-| dotnet50             |             |
-| dotnet51             |             |
-| dotnet52             |             |
-| dotnet53             |             |
-| dotnet54             |             |
-| dotnet55             |             |
-| dotnet56             |             |
-| netcore50            | uap10.0     |
-| win                  | netcore45   |
-| win8                 | netcore45   |
-| win81                | netcore451  |
-| win10                | uap10.0     |
-| winrt                | netcore45   |
+<span data-ttu-id="1d90c-202">В библиотеке или приложении следует написать условный код компиляции для каждой целевой платформы.</span><span class="sxs-lookup"><span data-stu-id="1d90c-202">Within your library or app, you write conditional code to compile for each target framework:</span></span>
 
-## <a name="precedence"></a>Приоритет
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        Console.WriteLine("Target framework: .NET Framework 4.0");
+#elif NET45  
+        Console.WriteLine("Target framework: .NET Framework 4.5");
+#else
+        Console.WriteLine("Target framework: .NET Standard 1.4");
+#endif
+    }
+}
+```
 
-Некоторые платформы являются родственными и совместимыми друг с другом, хотя и не полностью идентичными.
+<span data-ttu-id="1d90c-203">Система сборки учитывает символы препроцессора, представляющие целевые платформы, приведенные в таблице [Поддерживаемые версии целевой платформы](#supported-target-framework-versions).</span><span class="sxs-lookup"><span data-stu-id="1d90c-203">The build system is aware of preprocessor symbols representing the target frameworks shown in the [Supported target framework versions](#supported-target-framework-versions) table.</span></span> <span data-ttu-id="1d90c-204">При использовании символа, представляющего TFM .NET Standard или .NET Core, замените точку символом подчеркивания и измените строчные буквы на прописные (например, символ для `netstandard1.4` — `NETSTANDARD1_4`).</span><span class="sxs-lookup"><span data-stu-id="1d90c-204">When using a symbol that represents a .NET Standard or .NET Core TFM, replace the dot with an underscore and change lowercase letters to uppercase (for example, the symbol for `netstandard1.4` is `NETSTANDARD1_4`).</span></span>
 
-| Платформа                        | Можно использовать   |
-| -------------------------------- | --------- |
-| Универсальная платформа Windows (uap) | win81     |
-|                                  | wpa81     |
-|                                  | netcore50 |
-| Магазин Windows (win)              | winrt     |
-|                                  | winrt45   |
+<span data-ttu-id="1d90c-205">Полный список символов препроцессора для целевой платформы .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1d90c-205">The complete list of preprocessor symbols for .NET Core target frameworks is:</span></span>
 
-## <a name="net-standard"></a>.NET Standard
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-[.NET Standard](https://github.com/dotnet/standard) упрощает перекрестные ссылки между платформами, совместимыми на уровне двоичных файлов, позволяя в одной целевой платформе ссылаться на несколько других. Дополнительные сведения см. в статье [о библиотеках .NET Standard](library.md).
+## <a name="deprecated-target-frameworks"></a><span data-ttu-id="1d90c-206">Неподдерживаемые целевые платформы</span><span class="sxs-lookup"><span data-stu-id="1d90c-206">Deprecated target frameworks</span></span>
 
-[Средство получения ближайшей платформы из набора средств NuGet](http://nugettoolsdev.azurewebsites.net/) имитирует логику NuGet, которая используется для выбора конкретной платформы из нескольких доступных в пакете вариантов в зависимости от платформы проекта. Чтобы использовать это средство, укажите одну платформу для проекта, а также одну или несколько платформ для пакета. Выберите кнопку **Отправить**. Средство сообщит, совместимы ли указанные в списке платформы для пакета с платформой, указанной для проекта.
+<span data-ttu-id="1d90c-207">Следующие целевые платформы являются устаревшими.</span><span class="sxs-lookup"><span data-stu-id="1d90c-207">The following target frameworks are deprecated.</span></span> <span data-ttu-id="1d90c-208">Пакеты, предназначенные для этих целевых платформ, следует перевести на предлагаемые для замены.</span><span class="sxs-lookup"><span data-stu-id="1d90c-208">Packages targeting these target frameworks should migrate to the indicated replacements.</span></span>
 
-## <a name="portable-class-libraries"></a>Переносимые библиотеки классов
+| <span data-ttu-id="1d90c-209">Нерекомендуемый TFM</span><span class="sxs-lookup"><span data-stu-id="1d90c-209">Deprecated TFM</span></span>                                                                             | <span data-ttu-id="1d90c-210">Замена</span><span class="sxs-lookup"><span data-stu-id="1d90c-210">Replacement</span></span> |
+| ------------------------------------------------------------------------------------------ | ----------- |
+| <span data-ttu-id="1d90c-211">aspnet50</span><span class="sxs-lookup"><span data-stu-id="1d90c-211">aspnet50</span></span><br><span data-ttu-id="1d90c-212">aspnetcore50</span><span class="sxs-lookup"><span data-stu-id="1d90c-212">aspnetcore50</span></span><br><span data-ttu-id="1d90c-213">dnxcore50</span><span class="sxs-lookup"><span data-stu-id="1d90c-213">dnxcore50</span></span><br><span data-ttu-id="1d90c-214">dnx</span><span class="sxs-lookup"><span data-stu-id="1d90c-214">dnx</span></span><br><span data-ttu-id="1d90c-215">dnx45</span><span class="sxs-lookup"><span data-stu-id="1d90c-215">dnx45</span></span><br><span data-ttu-id="1d90c-216">dnx451</span><span class="sxs-lookup"><span data-stu-id="1d90c-216">dnx451</span></span><br><span data-ttu-id="1d90c-217">dnx452</span><span class="sxs-lookup"><span data-stu-id="1d90c-217">dnx452</span></span>                  | <span data-ttu-id="1d90c-218">netcoreapp</span><span class="sxs-lookup"><span data-stu-id="1d90c-218">netcoreapp</span></span>  |
+| <span data-ttu-id="1d90c-219">dotnet</span><span class="sxs-lookup"><span data-stu-id="1d90c-219">dotnet</span></span><br><span data-ttu-id="1d90c-220">dotnet50</span><span class="sxs-lookup"><span data-stu-id="1d90c-220">dotnet50</span></span><br><span data-ttu-id="1d90c-221">dotnet51</span><span class="sxs-lookup"><span data-stu-id="1d90c-221">dotnet51</span></span><br><span data-ttu-id="1d90c-222">dotnet52</span><span class="sxs-lookup"><span data-stu-id="1d90c-222">dotnet52</span></span><br><span data-ttu-id="1d90c-223">dotnet53</span><span class="sxs-lookup"><span data-stu-id="1d90c-223">dotnet53</span></span><br><span data-ttu-id="1d90c-224">dotnet54</span><span class="sxs-lookup"><span data-stu-id="1d90c-224">dotnet54</span></span><br><span data-ttu-id="1d90c-225">dotnet55</span><span class="sxs-lookup"><span data-stu-id="1d90c-225">dotnet55</span></span><br><span data-ttu-id="1d90c-226">dotnet56</span><span class="sxs-lookup"><span data-stu-id="1d90c-226">dotnet56</span></span> | <span data-ttu-id="1d90c-227">netstandard</span><span class="sxs-lookup"><span data-stu-id="1d90c-227">netstandard</span></span> |
+| <span data-ttu-id="1d90c-228">netcore50</span><span class="sxs-lookup"><span data-stu-id="1d90c-228">netcore50</span></span>                                                                                  | <span data-ttu-id="1d90c-229">uap10.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-229">uap10.0</span></span>     |
+| <span data-ttu-id="1d90c-230">win</span><span class="sxs-lookup"><span data-stu-id="1d90c-230">win</span></span>                                                                                        | <span data-ttu-id="1d90c-231">netcore45</span><span class="sxs-lookup"><span data-stu-id="1d90c-231">netcore45</span></span>   |
+| <span data-ttu-id="1d90c-232">win8</span><span class="sxs-lookup"><span data-stu-id="1d90c-232">win8</span></span>                                                                                       | <span data-ttu-id="1d90c-233">netcore45</span><span class="sxs-lookup"><span data-stu-id="1d90c-233">netcore45</span></span>   |
+| <span data-ttu-id="1d90c-234">win81</span><span class="sxs-lookup"><span data-stu-id="1d90c-234">win81</span></span>                                                                                      | <span data-ttu-id="1d90c-235">netcore451</span><span class="sxs-lookup"><span data-stu-id="1d90c-235">netcore451</span></span>  |
+| <span data-ttu-id="1d90c-236">win10</span><span class="sxs-lookup"><span data-stu-id="1d90c-236">win10</span></span>                                                                                      | <span data-ttu-id="1d90c-237">uap10.0</span><span class="sxs-lookup"><span data-stu-id="1d90c-237">uap10.0</span></span>     |
+| <span data-ttu-id="1d90c-238">winrt</span><span class="sxs-lookup"><span data-stu-id="1d90c-238">winrt</span></span>                                                                                      | <span data-ttu-id="1d90c-239">netcore45</span><span class="sxs-lookup"><span data-stu-id="1d90c-239">netcore45</span></span>   |
 
-Сведения о переносимых библиотеках классов см. в разделе [Переносимые библиотеки классов](https://docs.microsoft.com/nuget/schema/target-frameworks#portable-class-libraries) статьи *о требуемой версии .NET Framework* в документации по NuGet. Стивен Клиэри создал средство, которое перечисляет все поддерживаемые PCL. Дополнительные сведения см. в статье [о профилях платформ в среде .NET Framework](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html).
+## <a name="see-also"></a><span data-ttu-id="1d90c-240">См. также</span><span class="sxs-lookup"><span data-stu-id="1d90c-240">See also</span></span>
+
+[<span data-ttu-id="1d90c-241">Пакеты, метапакеты и платформы</span><span class="sxs-lookup"><span data-stu-id="1d90c-241">Packages, Metapackages and Frameworks</span></span>](~/docs/core/packages.md)  
+[<span data-ttu-id="1d90c-242">Разработка библиотек с помощью кроссплатформенных средств</span><span class="sxs-lookup"><span data-stu-id="1d90c-242">Developing Libraries with Cross Platform Tools</span></span>](~/docs/core/tutorials/libraries.md)  
+[<span data-ttu-id="1d90c-243">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="1d90c-243">.NET Standard</span></span>](~/docs/standard/net-standard.md)  
+[<span data-ttu-id="1d90c-244">Управление версиями .NET Core</span><span class="sxs-lookup"><span data-stu-id="1d90c-244">.NET Core Versioning</span></span>](~/docs/core/versions/index.md)  
+[<span data-ttu-id="1d90c-245">Репозиторий GitHub dotnet/standard</span><span class="sxs-lookup"><span data-stu-id="1d90c-245">dotnet/standard GitHub repository</span></span>](https://github.com/dotnet/standard)  
+[<span data-ttu-id="1d90c-246">Инструменты NuGet в репозитории GitHub</span><span class="sxs-lookup"><span data-stu-id="1d90c-246">NuGet Tools GitHub Repository</span></span>](https://github.com/joelverhagen/NuGetTools)  
+[<span data-ttu-id="1d90c-247">Профили платформы в .NET</span><span class="sxs-lookup"><span data-stu-id="1d90c-247">Framework Profiles in .NET</span></span>](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
 

@@ -1,1 +1,1 @@
-Дополнительные сведения см. в разделе .
+<span data-ttu-id="6d6b9-101">Дополнительные сведения см. в разделе .</span><span class="sxs-lookup"><span data-stu-id="6d6b9-101">For more information, see</span></span>

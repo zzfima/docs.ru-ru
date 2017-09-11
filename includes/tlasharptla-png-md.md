@@ -1,1 +1,1 @@
-Формат PNG (Portable Network Graphics)
+<span data-ttu-id="60c93-101">Формат PNG (Portable Network Graphics)</span><span class="sxs-lookup"><span data-stu-id="60c93-101">Portable Network Graphics (PNG)</span></span>

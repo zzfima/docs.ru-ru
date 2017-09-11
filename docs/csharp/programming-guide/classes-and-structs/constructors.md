@@ -1,5 +1,5 @@
 ---
-title: "Конструкторы (руководство по программированию на C#) | Документы Майкрософт"
+title: "Конструкторы (Руководство по программированию на C#)"
 ms.date: 2017-05-05
 ms.prod: .net
 ms.technology:
@@ -30,58 +30,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 064d8f8b3068596cd1d4fc2dd073f165f0ebadcb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 400afcda2fe30bf0e3621ee4c4247486e01d3ee4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="constructors-c-programming-guide"></a>Конструкторы (Руководство по программированию на C#)
-Каждый раз, когда создается [класс](../../../csharp/language-reference/keywords/class.md) или [структура](../../../csharp/language-reference/keywords/struct.md), вызывается конструктор. Класс или структура может иметь несколько конструкторов, принимающих различные аргументы. Конструкторы позволяют программисту задавать значения по умолчанию, ограничивать число установок и писать код, который является гибким и удобным для чтения. Дополнительные сведения и примеры см. в разделах [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) и [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+# <a name="constructors-c-programming-guide"></a><span data-ttu-id="7d351-102">Конструкторы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="7d351-102">Constructors (C# Programming Guide)</span></span>
+<span data-ttu-id="7d351-103">Каждый раз, когда создается [класс](../../../csharp/language-reference/keywords/class.md) или [структура](../../../csharp/language-reference/keywords/struct.md), вызывается конструктор.</span><span class="sxs-lookup"><span data-stu-id="7d351-103">Whenever a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is created, its constructor is called.</span></span> <span data-ttu-id="7d351-104">Класс или структура может иметь несколько конструкторов, принимающих различные аргументы.</span><span class="sxs-lookup"><span data-stu-id="7d351-104">A class or struct may have multiple constructors that take different arguments.</span></span> <span data-ttu-id="7d351-105">Конструкторы позволяют программисту задавать значения по умолчанию, ограничивать число установок и писать код, который является гибким и удобным для чтения.</span><span class="sxs-lookup"><span data-stu-id="7d351-105">Constructors enable the programmer to set default values, limit instantiation, and write code that is flexible and easy to read.</span></span> <span data-ttu-id="7d351-106">Дополнительные сведения и примеры см. в разделах [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) и [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="7d351-106">For more information and examples, see [Using Constructors](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) and [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span></span>  
 
-## <a name="default-constructors"></a>Конструкторы по умолчанию
+## <a name="default-constructors"></a><span data-ttu-id="7d351-107">Конструкторы по умолчанию</span><span class="sxs-lookup"><span data-stu-id="7d351-107">Default constructors</span></span>
   
-Если не предоставить конструктор для класса, C# создаст конструктор по умолчанию, который создает экземпляр объекта и задаст переменным-членам значения по умолчанию, как показано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md). Если не предоставить конструктор для структуры, C# будет использовать *неявный конструктор по умолчанию*, чтобы автоматически инициализировать каждое поле типа значения значением по умолчанию, как показано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md). Дополнительные сведения и примеры см. в разделе [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+<span data-ttu-id="7d351-108">Если не предоставить конструктор для класса, C# создаст конструктор по умолчанию, который создает экземпляр объекта и задаст переменным-членам значения по умолчанию, как показано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="7d351-108">If you don't provide a constructor for your class, C# creates one by default that instantiates the object and sets member variables to the default values as listed in the [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> <span data-ttu-id="7d351-109">Если не предоставить конструктор для структуры, C# будет использовать *неявный конструктор по умолчанию*, чтобы автоматически инициализировать каждое поле типа значения значением по умолчанию, как показано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="7d351-109">If you don't provide a constructor for your struct, C# relies on an *implicit default constructor* to automatically initialize each field of a value type to its default value as listed in the [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> <span data-ttu-id="7d351-110">Дополнительные сведения и примеры см. в разделе [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="7d351-110">For more information and examples, see [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).</span></span>  
 
-## <a name="constructor-syntax"></a>Синтаксис конструктора
+## <a name="constructor-syntax"></a><span data-ttu-id="7d351-111">Синтаксис конструктора</span><span class="sxs-lookup"><span data-stu-id="7d351-111">Constructor syntax</span></span>
 
-Конструктор — это метод, имя которого совпадает с именем его типа. Его сигнатура метода содержит только имя метода и список параметров. Она не содержит возвращаемый тип. В приведенном ниже примере демонстрируется конструктор для класса с именем `Person`.
+<span data-ttu-id="7d351-112">Конструктор — это метод, имя которого совпадает с именем его типа.</span><span class="sxs-lookup"><span data-stu-id="7d351-112">A constructor is a method whose name is the same as the name of its type.</span></span> <span data-ttu-id="7d351-113">Его сигнатура метода содержит только имя метода и список параметров. Она не содержит возвращаемый тип.</span><span class="sxs-lookup"><span data-stu-id="7d351-113">Its method signature includes only the method name and its parameter list; it does not include a return type.</span></span> <span data-ttu-id="7d351-114">В приведенном ниже примере демонстрируется конструктор для класса с именем `Person`.</span><span class="sxs-lookup"><span data-stu-id="7d351-114">The following example shows the constructor for a class named `Person`.</span></span>
 
-[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
+<span data-ttu-id="7d351-115">[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="7d351-115">[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]</span></span>  
 
-Если конструктор поддерживает реализацию в виде оператора, можно использовать [определение тела выражения](../statements-expressions-operators/expression-bodied-members.md). В следующем примере определяется класс `Location`, конструктор которого имеет один строковый параметр *name*. Определение тела выражения присваивает аргумент свойству `Name`.
+<span data-ttu-id="7d351-116">Если конструктор поддерживает реализацию в виде оператора, можно использовать [определение тела выражения](../statements-expressions-operators/expression-bodied-members.md).</span><span class="sxs-lookup"><span data-stu-id="7d351-116">If a constructor can be implemented as a single statement, you can use an [expression body definition](../statements-expressions-operators/expression-bodied-members.md).</span></span> <span data-ttu-id="7d351-117">В следующем примере определяется класс `Location`, конструктор которого имеет один строковый параметр *name*.</span><span class="sxs-lookup"><span data-stu-id="7d351-117">The following example defines a `Location` class whose constructor has a single string parameter named *name*.</span></span> <span data-ttu-id="7d351-118">Определение тела выражения присваивает аргумент полю `locationName`.</span><span class="sxs-lookup"><span data-stu-id="7d351-118">The expression body definition assigns the argument to the `locationName` field.</span></span>
 
-[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+<span data-ttu-id="7d351-119">[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="7d351-119">[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span></span>  
 
-## <a name="static-constructors"></a>Статические конструкторы
+## <a name="static-constructors"></a><span data-ttu-id="7d351-120">Статические конструкторы</span><span class="sxs-lookup"><span data-stu-id="7d351-120">Static constructors</span></span>
 
-В приведенных выше примерах показаны конструкторы экземпляров, которые создают новый объект. В классе или структуре также может быть статический конструктор, который инициализирует статические члены типа.  Статические конструкторы не имеют параметров. Если не предоставить статический конструктор для инициализации статических полей, компилятор C# будет использовать статический конструктор по умолчанию, который инициализирует поля значениями по умолчанию, как указано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md). 
+<span data-ttu-id="7d351-121">В приведенных выше примерах показаны конструкторы экземпляров, которые создают новый объект.</span><span class="sxs-lookup"><span data-stu-id="7d351-121">The previous examples have all shown instance constructors, which create a new object.</span></span> <span data-ttu-id="7d351-122">В классе или структуре также может быть статический конструктор, который инициализирует статические члены типа.</span><span class="sxs-lookup"><span data-stu-id="7d351-122">A class or struct can also have a static constructor, which initializes static members of the type.</span></span>  <span data-ttu-id="7d351-123">Статические конструкторы не имеют параметров.</span><span class="sxs-lookup"><span data-stu-id="7d351-123">Static constructors are parameterless.</span></span> <span data-ttu-id="7d351-124">Если не предоставить статический конструктор для инициализации статических полей, компилятор C# будет использовать статический конструктор по умолчанию, который инициализирует статические поля значениями по умолчанию, как указано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="7d351-124">If you don't provide a static constructor to initialize static fields, the C# compiler will supply a default static constructor that initializes static fields to their default value as listed in the [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span> 
 
-В следующем примере статический конструктор используется для инициализации статического поля.
+<span data-ttu-id="7d351-125">В следующем примере статический конструктор используется для инициализации статического поля.</span><span class="sxs-lookup"><span data-stu-id="7d351-125">The following example uses a static constructor to initialize a static field.</span></span>
 
-[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
+<span data-ttu-id="7d351-126">[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]</span><span class="sxs-lookup"><span data-stu-id="7d351-126">[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]</span></span>  
 
-Можно также определить статический конструктор с помощью определения тела выражения, как показано в следующем примере. 
+<span data-ttu-id="7d351-127">Можно также определить статический конструктор с помощью определения тела выражения, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="7d351-127">You can also define a static constructor with an expression body definition, as the following example shows.</span></span> 
 
-[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
+<span data-ttu-id="7d351-128">[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]</span><span class="sxs-lookup"><span data-stu-id="7d351-128">[!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]</span></span>  
 
-Дополнительные сведения и примеры см. в разделе [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
+<span data-ttu-id="7d351-129">Дополнительные сведения и примеры см. в разделе [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).</span><span class="sxs-lookup"><span data-stu-id="7d351-129">For more information and examples, see [Static Constructors](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7d351-130">Содержание</span><span class="sxs-lookup"><span data-stu-id="7d351-130">In This Section</span></span>  
+ [<span data-ttu-id="7d351-131">Использование конструкторов</span><span class="sxs-lookup"><span data-stu-id="7d351-131">Using Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
   
- [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
+ [<span data-ttu-id="7d351-132">Конструкторы экземпляров</span><span class="sxs-lookup"><span data-stu-id="7d351-132">Instance Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
   
- [Закрытые конструкторы](../../../csharp/programming-guide/classes-and-structs/private-constructors.md)  
+ [<span data-ttu-id="7d351-133">Закрытые конструкторы</span><span class="sxs-lookup"><span data-stu-id="7d351-133">Private Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/private-constructors.md)  
   
- [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+ [<span data-ttu-id="7d351-134">Статические конструкторы</span><span class="sxs-lookup"><span data-stu-id="7d351-134">Static Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
   
- [Практическое руководство. Создание конструктора копии](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
+ [<span data-ttu-id="7d351-135">Практическое руководство. Создание конструктора копии</span><span class="sxs-lookup"><span data-stu-id="7d351-135">How to: Write a Copy Constructor</span></span>](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
- [Why Do Initializers Run In The Opposite Order As Constructors? Part One](http://go.microsoft.com/fwlink/?LinkId=112374) (Почему инициализаторы выполняются в порядке, обратном действию конструкторов? Часть 1)
+## <a name="see-also"></a><span data-ttu-id="7d351-136">См. также</span><span class="sxs-lookup"><span data-stu-id="7d351-136">See Also</span></span>  
+ <span data-ttu-id="7d351-137">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="7d351-137">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="7d351-138">[Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md) </span><span class="sxs-lookup"><span data-stu-id="7d351-138">[Classes and Structs](../../../csharp/programming-guide/classes-and-structs/index.md) </span></span>  
+ <span data-ttu-id="7d351-139">[Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md) </span><span class="sxs-lookup"><span data-stu-id="7d351-139">[Finalizers](../../../csharp/programming-guide/classes-and-structs/destructors.md) </span></span>  
+ <span data-ttu-id="7d351-140">[static](../../../csharp/language-reference/keywords/static.md) </span><span class="sxs-lookup"><span data-stu-id="7d351-140">[static](../../../csharp/language-reference/keywords/static.md) </span></span>  
+ <span data-ttu-id="7d351-141">[Why Do Initializers Run In The Opposite Order As Constructors? Part One](http://go.microsoft.com/fwlink/?LinkId=112374) (Почему инициализаторы выполняются в порядке, обратном действию конструкторов? Часть 1)</span><span class="sxs-lookup"><span data-stu-id="7d351-141">[Why Do Initializers Run In The Opposite Order As Constructors? Part One](http://go.microsoft.com/fwlink/?LinkId=112374)</span></span>
+

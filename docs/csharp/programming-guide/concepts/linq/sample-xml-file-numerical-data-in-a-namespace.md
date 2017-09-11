@@ -1,5 +1,5 @@
 ---
-title: "Пример XML-файла. Числовые данные в пространстве имен | Документы Майкрософт"
+title: "Пример XML-файла. Числовые данные в пространстве имен3"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 62f46f216a08d9eba425adc60354cf6fa7325c96
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5b02c0990a73aa18b4ce7e7b6ff652ad485ed854
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Пример XML-файла. Числовые данные пространстве имен
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Этот файл содержит числовые данные для суммирования, вычисления средних значений и группирования. XML располагается в пространстве имен.  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="67b53-102">Пример XML-файла. Числовые данные пространстве имен</span><span class="sxs-lookup"><span data-stu-id="67b53-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="67b53-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="67b53-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="67b53-104">Этот файл содержит числовые данные для суммирования, вычисления средних значений и группирования.</span><span class="sxs-lookup"><span data-stu-id="67b53-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="67b53-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="67b53-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a>Данные  
+## <a name="data"></a><span data-ttu-id="67b53-106">Данные</span><span class="sxs-lookup"><span data-stu-id="67b53-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -71,5 +72,6 @@ ms.lasthandoff: 03/13/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="67b53-107">См. также</span><span class="sxs-lookup"><span data-stu-id="67b53-107">See Also</span></span>  
+ [<span data-ttu-id="67b53-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="67b53-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

@@ -1,1 +1,1 @@
-EDM (модель данных с использованием сущностей)
+<span data-ttu-id="16cf2-101">EDM (модель данных с использованием сущностей)</span><span class="sxs-lookup"><span data-stu-id="16cf2-101">Entity Data Model</span></span>

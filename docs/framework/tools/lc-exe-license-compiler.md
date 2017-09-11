@@ -1,5 +1,5 @@
 ---
-title: "Lc.exe (компилятор лицензий) | Документы Майкрософт"
+title: "Lc.exe (компилятор лицензий)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -29,25 +29,25 @@ caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 4b20c589622526fd973700ed5b8bdd6f86d9b2ff
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f65212d9f62d090cd0c16e15b6678e21b00f235
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="lcexe-license-compiler"></a>Lc.exe (компилятор лицензий)
-Компилятор лицензий считывает текстовые файлы, содержащие сведения о лицензиях, и создает двоичный файл, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.  
+# <a name="lcexe-license-compiler"></a><span data-ttu-id="069bc-102">Lc.exe (компилятор лицензий)</span><span class="sxs-lookup"><span data-stu-id="069bc-102">Lc.exe (License Compiler)</span></span>
+<span data-ttu-id="069bc-103">Компилятор лицензий считывает текстовые файлы, содержащие сведения о лицензиях, и создает двоичный файл, который может быть внедрен в исполняемый файл среды CLR в качестве ресурса.</span><span class="sxs-lookup"><span data-stu-id="069bc-103">The License Compiler reads text files that contain licensing information and produces a binary file that can be embedded in a common language runtime executable as a resource.</span></span>  
   
- Конструктор Windows Forms автоматически создает или обновляет текстовый LICX-файл при каждом добавлении лицензированного элемента управления в форму. В процессе компиляции система проектов преобразует текстовый LICX-файл в двоичный LICENSES-файл ресурсов, который обеспечивает лицензирование элементов управления .NET. Двоичный файл ресурсов будет затем внедрен в выходной файл проекта.  
+ <span data-ttu-id="069bc-104">Конструктор Windows Forms автоматически создает или обновляет текстовый LICX-файл при каждом добавлении лицензированного элемента управления в форму.</span><span class="sxs-lookup"><span data-stu-id="069bc-104">A .licx text file is automatically generated or updated by the Windows Forms Designer whenever a licensed control is added to the form.</span></span> <span data-ttu-id="069bc-105">В процессе компиляции система проектов преобразует текстовый LICX-файл в двоичный LICENSES-файл ресурсов, который обеспечивает лицензирование элементов управления .NET.</span><span class="sxs-lookup"><span data-stu-id="069bc-105">As part of compilation, the project system will transform the .licx text file into a .licenses binary resource that provides support for .NET control licensing.</span></span> <span data-ttu-id="069bc-106">Двоичный файл ресурсов будет затем внедрен в выходной файл проекта.</span><span class="sxs-lookup"><span data-stu-id="069bc-106">The binary resource will then be embedded in the project output.</span></span>  
   
- При использовании компилятора лицензий во время создания проекта перекрестная компиляция между 32-разрядными и 64-разрядными системами не поддерживается. Это происходит потому, что компилятор лицензий должен загружать сборки, а загрузка 64-разрядных сборок из 32-разрядного приложения и наоборот не допускается. В этом случае запускайте компилятор лицензий из командной строки, чтобы скомпилировать лицензии вручную, и укажите соответствующую архитектуру.  
+ <span data-ttu-id="069bc-107">При использовании компилятора лицензий во время создания проекта перекрестная компиляция между 32-разрядными и 64-разрядными системами не поддерживается.</span><span class="sxs-lookup"><span data-stu-id="069bc-107">Cross compilation between 32-bit and 64-bit is not supported when you use the License Compiler when building your project.</span></span> <span data-ttu-id="069bc-108">Это происходит потому, что компилятор лицензий должен загружать сборки, а загрузка 64-разрядных сборок из 32-разрядного приложения и наоборот не допускается.</span><span class="sxs-lookup"><span data-stu-id="069bc-108">This is because the License Compiler has to load assemblies, and loading 64-bit assemblies from a 32-bit application is not allowed, and vice versa.</span></span> <span data-ttu-id="069bc-109">В этом случае запускайте компилятор лицензий из командной строки, чтобы скомпилировать лицензии вручную, и укажите соответствующую архитектуру.</span><span class="sxs-lookup"><span data-stu-id="069bc-109">In this case, use the License Compiler from the command line to compile the license manually, and specify the corresponding architecture.</span></span>  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="069bc-110">Эта программа автоматически устанавливается вместе с Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="069bc-110">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="069bc-111">Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7).</span><span class="sxs-lookup"><span data-stu-id="069bc-111">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="069bc-112">Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="069bc-112">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- В командной строке введите следующее.  
+ <span data-ttu-id="069bc-113">В командной строке введите следующее.</span><span class="sxs-lookup"><span data-stu-id="069bc-113">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="069bc-114">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="069bc-114">Syntax</span></span>  
   
 ```  
       lc /target:  
@@ -55,46 +55,46 @@ ms.lasthandoff: 06/02/2017
 /i:modules [/nologo] [/v]  
 ```  
   
-|Параметр|Описание|  
+|<span data-ttu-id="069bc-115">Параметр</span><span class="sxs-lookup"><span data-stu-id="069bc-115">Option</span></span>|<span data-ttu-id="069bc-116">Описание</span><span class="sxs-lookup"><span data-stu-id="069bc-116">Description</span></span>|  
 |------------|-----------------|  
-|**/complist:** *имя_файла*|Задает имя файла, который содержит список лицензируемых компонентов, включаемых в LICENSES-файл. Для каждого компонента указывается его полное имя, в одной строке содержится только один компонент.<br /><br /> Пользователи, работающие с программой из командной строки, могут указать отдельный файл для каждой формы, входящей в проект. Программа Lc.exe принимает несколько входных файлов и создает один LICENSES-файл.|  
-|**/h**[**elp**]|Отображает синтаксис команд и параметров программы.|  
-|**/i:** *модуль*|Задает модули, в которых содержатся компоненты, перечисленные в файле **/complist**. Чтобы указать несколько модулей, используйте несколько флагов **/i**.|  
-|**/nologo**|Отключает отображение эмблемы Майкрософт при запуске.|  
-|**/outdir:** *путь*|Задает каталог, в котором следует разместить полученные LICENSES-файлы.|  
-|**/target:** *целевой_PE*|Задает исполняемый файл, для которого создается LICENSES-файл.|  
-|**/v**|Задает режим компиляции с выводом сведений о ходе процесса.|  
-|**@** *файл*|Задает файл ответов (RSP).|  
-|**/?**|Отображает синтаксис команд и параметров программы.|  
+|<span data-ttu-id="069bc-117">**/complist:** *имя_файла*</span><span class="sxs-lookup"><span data-stu-id="069bc-117">**/complist:** *filename*</span></span>|<span data-ttu-id="069bc-118">Задает имя файла, который содержит список лицензируемых компонентов, включаемых в LICENSES-файл.</span><span class="sxs-lookup"><span data-stu-id="069bc-118">Specifies the name of a file that contains the list of licensed components to include in the .licenses file.</span></span> <span data-ttu-id="069bc-119">Для каждого компонента указывается его полное имя, в одной строке содержится только один компонент.</span><span class="sxs-lookup"><span data-stu-id="069bc-119">Each component is referenced using its full name with only one component per line.</span></span><br /><br /> <span data-ttu-id="069bc-120">Пользователи, работающие с программой из командной строки, могут указать отдельный файл для каждой формы, входящей в проект.</span><span class="sxs-lookup"><span data-stu-id="069bc-120">Command-line users can specify a separate file for each form in the project.</span></span> <span data-ttu-id="069bc-121">Программа Lc.exe принимает несколько входных файлов и создает один LICENSES-файл.</span><span class="sxs-lookup"><span data-stu-id="069bc-121">Lc.exe accepts multiple input files and produces a single .licenses file.</span></span>|  
+|<span data-ttu-id="069bc-122">**/h**[**elp**]</span><span class="sxs-lookup"><span data-stu-id="069bc-122">**/h**[**elp**]</span></span>|<span data-ttu-id="069bc-123">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="069bc-123">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="069bc-124">**/i:** *модуль*</span><span class="sxs-lookup"><span data-stu-id="069bc-124">**/i:** *module*</span></span>|<span data-ttu-id="069bc-125">Задает модули, в которых содержатся компоненты, перечисленные в файле **/complist**.</span><span class="sxs-lookup"><span data-stu-id="069bc-125">Specifies the modules that contain the components listed in the **/complist** file.</span></span> <span data-ttu-id="069bc-126">Чтобы указать несколько модулей, используйте несколько флагов **/i**.</span><span class="sxs-lookup"><span data-stu-id="069bc-126">To specify more than one module, use multiple **/i** flags.</span></span>|  
+|<span data-ttu-id="069bc-127">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="069bc-127">**/nologo**</span></span>|<span data-ttu-id="069bc-128">Отключает отображение эмблемы Майкрософт при запуске.</span><span class="sxs-lookup"><span data-stu-id="069bc-128">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="069bc-129">**/outdir:** *путь*</span><span class="sxs-lookup"><span data-stu-id="069bc-129">**/outdir:** *path*</span></span>|<span data-ttu-id="069bc-130">Задает каталог, в котором следует разместить полученные LICENSES-файлы.</span><span class="sxs-lookup"><span data-stu-id="069bc-130">Specifies the directory in which to place the output .licenses file.</span></span>|  
+|<span data-ttu-id="069bc-131">**/target:** *целевой_PE*</span><span class="sxs-lookup"><span data-stu-id="069bc-131">**/target:** *targetPE*</span></span>|<span data-ttu-id="069bc-132">Задает исполняемый файл, для которого создается LICENSES-файл.</span><span class="sxs-lookup"><span data-stu-id="069bc-132">Specifies the executable for which the .licenses file is being generated.</span></span>|  
+|<span data-ttu-id="069bc-133">**/v**</span><span class="sxs-lookup"><span data-stu-id="069bc-133">**/v**</span></span>|<span data-ttu-id="069bc-134">Задает режим компиляции с выводом сведений о ходе процесса.</span><span class="sxs-lookup"><span data-stu-id="069bc-134">Specifies verbose mode; displays compilation progress information.</span></span>|  
+|<span data-ttu-id="069bc-135">**@** *файл*</span><span class="sxs-lookup"><span data-stu-id="069bc-135">**@** *file*</span></span>|<span data-ttu-id="069bc-136">Задает файл ответов (RSP).</span><span class="sxs-lookup"><span data-stu-id="069bc-136">Specifies the response (.rsp) file.</span></span>|  
+|<span data-ttu-id="069bc-137">**/?**</span><span class="sxs-lookup"><span data-stu-id="069bc-137">**/?**</span></span>|<span data-ttu-id="069bc-138">Отображает синтаксис команд и параметров программы.</span><span class="sxs-lookup"><span data-stu-id="069bc-138">Displays command syntax and options for the tool.</span></span>|  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="069bc-139">Пример</span><span class="sxs-lookup"><span data-stu-id="069bc-139">Example</span></span>  
   
-1.  Если применяется лицензированный элемент управления `MyCompany.Samples.LicControl1`, который содержится в библиотеке `Samples.DLL` приложения `HostApp.exe`*, `HostAppLic.txt` можно создать файл* , содержащий указанные ниже сведения.  
+1.  <span data-ttu-id="069bc-140">Если применяется лицензированный элемент управления `MyCompany.Samples.LicControl1`, который содержится в библиотеке `Samples.DLL` приложения `HostApp.exe`*, `HostAppLic.txt` можно создать файл* , содержащий указанные ниже сведения.</span><span class="sxs-lookup"><span data-stu-id="069bc-140">If you are using a licensed control `MyCompany.Samples.LicControl1` contained in `Samples.DLL` in an application called `HostApp.exe`*,* you can create `HostAppLic.txt` that contains the following.</span></span>  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Создайте LICENSES-файл с именем `HostApp.exe.licenses`, используя следующую команду.  
+2.  <span data-ttu-id="069bc-141">Создайте LICENSES-файл с именем `HostApp.exe.licenses`, используя следующую команду.</span><span class="sxs-lookup"><span data-stu-id="069bc-141">Create the .licenses file called `HostApp.exe.licenses` using the following command.</span></span>  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Создайте `HostApp.exe`, включив в него LICENSES-файл в качестве ресурса. Для создания приложения на языке C# используется следующая команда.  
+3.  <span data-ttu-id="069bc-142">Создайте `HostApp.exe`, включив в него LICENSES-файл в качестве ресурса.</span><span class="sxs-lookup"><span data-stu-id="069bc-142">Build `HostApp.exe` including the .licenses file as a resource.</span></span> <span data-ttu-id="069bc-143">Для создания приложения на языке C# используется следующая команда.</span><span class="sxs-lookup"><span data-stu-id="069bc-143">If you were building a C# application you would use the following command to build your application.</span></span>  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
- Следующая команда компилирует `myApp.licenses` из списков лицензированных компонентов, указанных файлами `hostapplic.txt` `hostapplic2.txt` и `hostapplic3.txt`. Аргумент `modulesList` задает модули, в которых содержатся лицензируемые компоненты.  
+ <span data-ttu-id="069bc-144">Следующая команда компилирует `myApp.licenses` из списков лицензированных компонентов, указанных файлами `hostapplic.txt` `hostapplic2.txt` и `hostapplic3.txt`.</span><span class="sxs-lookup"><span data-stu-id="069bc-144">The following command compiles `myApp.licenses` from the lists of licensed components specified by `hostapplic.txt`, `hostapplic2.txt` and `hostapplic3.txt`.</span></span> <span data-ttu-id="069bc-145">Аргумент `modulesList` задает модули, в которых содержатся лицензируемые компоненты.</span><span class="sxs-lookup"><span data-stu-id="069bc-145">The `modulesList` argument specifies the modules that contain the licensed components.</span></span>  
   
 ```  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
-## <a name="response-file-example"></a>Пример файла ответов  
- Ниже приведен пример файла ответов `response.rsp`. Подробнее о файлах ответов см. в разделе [Файлы ответов](/visualstudio/msbuild/msbuild-response-files).  
+## <a name="response-file-example"></a><span data-ttu-id="069bc-146">Пример файла ответов</span><span class="sxs-lookup"><span data-stu-id="069bc-146">Response File Example</span></span>  
+ <span data-ttu-id="069bc-147">Ниже приведен пример файла ответов `response.rsp`.</span><span class="sxs-lookup"><span data-stu-id="069bc-147">The following listing shows an example of a response file, `response.rsp`.</span></span> <span data-ttu-id="069bc-148">Подробнее о файлах ответов см. в разделе [Файлы ответов](/visualstudio/msbuild/msbuild-response-files).</span><span class="sxs-lookup"><span data-stu-id="069bc-148">For more information on response files, see [Response Files](/visualstudio/msbuild/msbuild-response-files).</span></span>  
   
 ```  
 /target:hostapp.exe  
@@ -103,14 +103,14 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 /outdir:"C:\My Folder"  
 ```  
   
- В приведенной ниже команде используется файл `response.rsp`.  
+ <span data-ttu-id="069bc-149">В приведенной ниже команде используется файл `response.rsp`.</span><span class="sxs-lookup"><span data-stu-id="069bc-149">The following command line uses the `response.rsp` file.</span></span>  
   
 ```  
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Инструменты](../../../docs/framework/tools/index.md)   
- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="069bc-150">См. также</span><span class="sxs-lookup"><span data-stu-id="069bc-150">See Also</span></span>  
+ <span data-ttu-id="069bc-151">[Инструменты](../../../docs/framework/tools/index.md) </span><span class="sxs-lookup"><span data-stu-id="069bc-151">[Tools](../../../docs/framework/tools/index.md) </span></span>  
+ <span data-ttu-id="069bc-152">[Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md) </span><span class="sxs-lookup"><span data-stu-id="069bc-152">[Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md) </span></span>  
+ [<span data-ttu-id="069bc-153">Командные строки</span><span class="sxs-lookup"><span data-stu-id="069bc-153">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

@@ -1,43 +1,63 @@
 ---
-title: "&lt;returns&gt; (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "returns"
-  - "<returns>"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<returns> - XML-тег C#"
-  - "returns - XML-тег C#"
+title: "&lt;returns&gt; (руководство по программированию на C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- returns
+- <returns>
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- <returns> C# XML tag
+- returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a4001894ab9af104173088ca0110270f76bda8d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# &lt;returns&gt; (Руководство по программированию на C#)
-## Синтаксис  
+# <a name="ltreturnsgt-c-programming-guide"></a><span data-ttu-id="f5b30-102">&lt;returns&gt; (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="f5b30-102">&lt;returns&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="f5b30-103">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f5b30-103">Syntax</span></span>  
   
-```  
+```xml  
 <returns>description</returns>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a><span data-ttu-id="f5b30-104">Параметры</span><span class="sxs-lookup"><span data-stu-id="f5b30-104">Parameters</span></span>  
  `description`  
- Описание возвращаемого значения.  
+ <span data-ttu-id="f5b30-105">Описание возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="f5b30-105">A description of the return value.</span></span>  
   
-## Заметки  
- Тег \<returns\> следует использовать в комментариях объявления метода для описания возвращаемого значения.  
+## <a name="remarks"></a><span data-ttu-id="f5b30-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="f5b30-106">Remarks</span></span>  
+ <span data-ttu-id="f5b30-107">Тег \<returns> следует использовать в комментариях к объявлению метода для описания возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="f5b30-107">The \<returns> tag should be used in the comment for a method declaration to describe the return value.</span></span>  
   
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).  
+ <span data-ttu-id="f5b30-108">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="f5b30-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## Пример  
- [!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+## <a name="example"></a><span data-ttu-id="f5b30-109">Пример</span><span class="sxs-lookup"><span data-stu-id="f5b30-109">Example</span></span>  
+ <span data-ttu-id="f5b30-110">[!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="f5b30-110">[!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]</span></span>  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="f5b30-111">См. также</span><span class="sxs-lookup"><span data-stu-id="f5b30-111">See Also</span></span>  
+ <span data-ttu-id="f5b30-112">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="f5b30-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="f5b30-113">Рекомендуемые теги для комментариев документации</span><span class="sxs-lookup"><span data-stu-id="f5b30-113">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

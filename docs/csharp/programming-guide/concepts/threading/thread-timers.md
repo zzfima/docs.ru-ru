@@ -1,5 +1,5 @@
 ---
-title: "Таймеры потоков (C#) | Документы Майкрософт"
+title: "Таймеры потоков (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="thread-timers-c"></a>Таймеры потоков (C#)
-Класс <xref:System.Threading.Timer?displayProperty=fullName> полезен для периодического выполнения задач в отдельном потоке. Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.  
+# <a name="thread-timers-c"></a><span data-ttu-id="97d99-102">Таймеры потоков (C#)</span><span class="sxs-lookup"><span data-stu-id="97d99-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="97d99-103">Класс <xref:System.Threading.Timer?displayProperty=fullName> полезно использовать для периодического выполнения задачи в отдельном потоке.</span><span class="sxs-lookup"><span data-stu-id="97d99-103">The <xref:System.Threading.Timer?displayProperty=fullName> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="97d99-104">Например, можно использовать таймер потока для проверки состояния и целостности базы данных или для создания резервных копий важных файлов.</span><span class="sxs-lookup"><span data-stu-id="97d99-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>Пример таймера потока  
- В следующем примере задача запускается каждые две секунды и использует флаг для инициализации метода <xref:System.IDisposable.Dispose%2A>, который останавливает таймер. В этом примере сведения о состояния отображаются в окне вывода.  
+## <a name="thread-timer-example"></a><span data-ttu-id="97d99-105">Пример таймера потока</span><span class="sxs-lookup"><span data-stu-id="97d99-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="97d99-106">В следующем примере задача запускается каждые две секунды и использует флаг для инициализации метода <xref:System.IDisposable.Dispose%2A>, который останавливает таймер.</span><span class="sxs-lookup"><span data-stu-id="97d99-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="97d99-107">В этом примере сведения о состояния отображаются в окне вывода.</span><span class="sxs-lookup"><span data-stu-id="97d99-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -83,8 +84,9 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- Таймеры потоков особенно полезны в случае отсутствия доступа к объекту <xref:System.Windows.Forms.Timer?displayProperty=fullName>, например при разработке консольных приложений.  
+ <span data-ttu-id="97d99-108">Таймеры потоков особенно полезны в случае отсутствия доступа к объекту <xref:System.Windows.Forms.Timer?displayProperty=fullName>, например при разработке консольных приложений.</span><span class="sxs-lookup"><span data-stu-id="97d99-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=fullName> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading>   
- [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+## <a name="see-also"></a><span data-ttu-id="97d99-109">См. также</span><span class="sxs-lookup"><span data-stu-id="97d99-109">See Also</span></span>  
+ <span data-ttu-id="97d99-110"><xref:System.Threading></span><span class="sxs-lookup"><span data-stu-id="97d99-110"><xref:System.Threading></span></span>   
+ [<span data-ttu-id="97d99-111">Многопоточные приложения(C#)</span><span class="sxs-lookup"><span data-stu-id="97d99-111">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+

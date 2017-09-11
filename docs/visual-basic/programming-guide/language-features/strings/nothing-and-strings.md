@@ -30,21 +30,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 56fc47ba2523825224aae3264e965d462cf4c3b6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2d7685c688e96b506cfc2ddddc44ce534625e3b7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="nothing-and-strings-in-visual-basic"></a>Nothing и строки в Visual Basic
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Среды выполнения и [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] оценки `Nothing` иначе, когда оно появляется в строках.  
+# <a name="nothing-and-strings-in-visual-basic"></a><span data-ttu-id="57f23-102">Nothing и строки в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="57f23-102">Nothing and Strings in Visual Basic</span></span>
+<span data-ttu-id="57f23-103">[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Среды выполнения и [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] оценки `Nothing` иначе, когда оно появляется в строках.</span><span class="sxs-lookup"><span data-stu-id="57f23-103">The [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] runtime and the [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] evaluate `Nothing` differently when it comes to strings.</span></span>  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Среда выполнения Visual Basic и .NET Framework  
- Рассмотрим следующий пример.  
+## <a name="visual-basic-runtime-and-the-net-framework"></a><span data-ttu-id="57f23-104">Среда выполнения Visual Basic и .NET Framework</span><span class="sxs-lookup"><span data-stu-id="57f23-104">Visual Basic Runtime and the .NET Framework</span></span>  
+ <span data-ttu-id="57f23-105">Рассмотрим следующий пример.</span><span class="sxs-lookup"><span data-stu-id="57f23-105">Consider the following example:</span></span>  
   
- [!code-vb[VbVbalrStrings&#47;](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
+ <span data-ttu-id="57f23-106">[!code-vb[VbVbalrStrings&#47;](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="57f23-106">[!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Выполнения обычно проверяет `Nothing` как пустая строка («»). [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] Нет, однако и создается исключение при попытке выполнить операцию строки на `Nothing`.  
+ <span data-ttu-id="57f23-107">[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Выполнения обычно проверяет `Nothing` как пустая строка («»).</span><span class="sxs-lookup"><span data-stu-id="57f23-107">The [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] runtime usually evaluates `Nothing` as an empty string ("").</span></span> <span data-ttu-id="57f23-108">[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] Нет, однако и создается исключение при попытке выполнить операцию строки на `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="57f23-108">The [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Знакомство со строками в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a><span data-ttu-id="57f23-109">См. также</span><span class="sxs-lookup"><span data-stu-id="57f23-109">See Also</span></span>  
+ [<span data-ttu-id="57f23-110">Знакомство со строками в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="57f23-110">Introduction to Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

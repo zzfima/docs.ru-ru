@@ -1,5 +1,5 @@
 ---
-title: "Атомарные объекты XName и XNamespace (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Атомарные объекты XName и XNamespace (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,26 +14,25 @@ ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89f5c2634e1deb196b121f2983b85f125927ae32
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1731be2847e5e118340b93cd35205fc13ff9f75a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>Атомарные объекты XName и XNamespace (LINQ to XML) (C#)
-Объекты <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> являются *атомарными*. Иными словами, если они имеют идентичное полное имя, они ссылаются на один и тот же объект. Это способствует повышению производительности при выполнении запросов: при сравнении двух атомарных имен для проверки их равенства соответствующий промежуточный язык должен определить, ссылаются ли они на один и тот же объект. Эта операция используется в промежуточном коде вместо более длительной операции сравнения строк.  
+# <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a><span data-ttu-id="bece5-102">Атомарные объекты XName и XNamespace (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bece5-102">Atomized XName and XNamespace Objects (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="bece5-103">Объекты <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> являются *атомарными*; иными словами, если они имеют идентичное полное имя, они ссылаются на один и тот же объект.</span><span class="sxs-lookup"><span data-stu-id="bece5-103"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> objects are *atomized*; that is, if they contain the same qualified name, they refer to the same object.</span></span> <span data-ttu-id="bece5-104">Это способствует повышению производительности при выполнении запросов: при сравнении двух атомарных имен для проверки их равенства соответствующий промежуточный язык должен определить, ссылаются ли они на один и тот же объект.</span><span class="sxs-lookup"><span data-stu-id="bece5-104">This yields performance benefits for queries: When you compare two atomized names for equality, the underlying intermediate language only has to determine whether the two references point to the same object.</span></span> <span data-ttu-id="bece5-105">Эта операция используется в промежуточном коде вместо более длительной операции сравнения строк.</span><span class="sxs-lookup"><span data-stu-id="bece5-105">The underlying code does not have to do string comparisons, which would be time consuming.</span></span>  
   
-## <a name="atomization-semantics"></a>Семантика атомизации  
- Атомизация означает, что два объекта <xref:System.Xml.Linq.XName>, имеющие идентичное локальное имя и находящиеся в одном пространстве имен, совместно используют один и тот же экземпляр. Аналогично, если два объекта <xref:System.Xml.Linq.XNamespace> имеют идентичный идентификатор URI пространства имен, то они совместно используют один и тот же экземпляр.  
+## <a name="atomization-semantics"></a><span data-ttu-id="bece5-106">Семантика атомизации</span><span class="sxs-lookup"><span data-stu-id="bece5-106">Atomization Semantics</span></span>  
+ <span data-ttu-id="bece5-107">Атомизация означает, что два объекта <xref:System.Xml.Linq.XName> имеющие идентичное локальное имя и находящиеся в одном пространстве имен, совместно используют один и тот же экземпляр.</span><span class="sxs-lookup"><span data-stu-id="bece5-107">Atomization means that if two <xref:System.Xml.Linq.XName> objects have the same local name, and they are in the same namespace, they share the same instance.</span></span> <span data-ttu-id="bece5-108">Аналогично, если два объекта <xref:System.Xml.Linq.XNamespace> имеют идентичный идентификатор URI пространства имен, то они совместно используют один и тот же экземпляр.</span><span class="sxs-lookup"><span data-stu-id="bece5-108">In the same way, if two <xref:System.Xml.Linq.XNamespace> objects have the same namespace URI, they share the same instance.</span></span>  
   
- Чтобы разрешить создание атомарных объектов класса, необходимо, чтобы конструктор класса был закрытым, а не открытым. Это требование основано на том, что если бы конструктор был открытым, можно было бы создавать неатомарные объекты. Классы <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> реализуют неявный оператор преобразования строки в объект <xref:System.Xml.Linq.XName> или <xref:System.Xml.Linq.XNamespace>. Экземпляры этих объектов могут быть получены только таким способом. Создание экземпляров с помощью конструктора невозможно, так как конструктор недоступен.  
+ <span data-ttu-id="bece5-109">Чтобы разрешить создание атомарных объектов класса, необходимо, чтобы конструктор класса был закрытым, а не открытым.</span><span class="sxs-lookup"><span data-stu-id="bece5-109">For a class to enable atomized objects, the constructor for the class must be private, not public.</span></span> <span data-ttu-id="bece5-110">Это требование основано на том, что если бы конструктор был открытым, можно было бы создавать неатомарные объекты.</span><span class="sxs-lookup"><span data-stu-id="bece5-110">This is because if the constructor were public, you could create a non-atomized object.</span></span> <span data-ttu-id="bece5-111">Классы <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> реализуют неявный оператор преобразования строки в объект <xref:System.Xml.Linq.XName> или <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="bece5-111">The <xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> classes implement an implicit conversion operator to convert a string into an <xref:System.Xml.Linq.XName> or <xref:System.Xml.Linq.XNamespace>.</span></span> <span data-ttu-id="bece5-112">Экземпляры этих объектов могут быть получены только таким способом.</span><span class="sxs-lookup"><span data-stu-id="bece5-112">This is how you get an instance of these objects.</span></span> <span data-ttu-id="bece5-113">Создание экземпляров с помощью конструктора невозможно, так как конструктор недоступен.</span><span class="sxs-lookup"><span data-stu-id="bece5-113">You cannot get an instance by using a constructor, because the constructor is inaccessible.</span></span>  
   
- Классы <xref:System.Xml.Linq.XName> и <xref:System.Xml.Linq.XNamespace> также реализуют операторы для проверки равенства и неравенства, определяющие, ссылаются ли два сравниваемых объекта на один и тот же экземпляр.  
+ <span data-ttu-id="bece5-114">Классы <xref:System.Xml.Linq.XName> и<xref:System.Xml.Linq.XNamespace> также реализуют операторы для проверки равенства и неравенства, определяющие, ссылаются ли два сравниваемых объекта на один и тот же экземпляр.</span><span class="sxs-lookup"><span data-stu-id="bece5-114"><xref:System.Xml.Linq.XName> and <xref:System.Xml.Linq.XNamespace> also implement the equality and inequality operators, to determine whether the two objects being compared are references to the same instance.</span></span>  
   
-## <a name="example"></a>Пример  
- Приведенный ниже код создает объекты <xref:System.Xml.Linq.XElement> и демонстрирует, что идентичные имена совместно используют один и тот же экземпляр.  
+## <a name="example"></a><span data-ttu-id="bece5-115">Пример</span><span class="sxs-lookup"><span data-stu-id="bece5-115">Example</span></span>  
+ <span data-ttu-id="bece5-116">Следующий код создает объекты <xref:System.Xml.Linq.XElement> и демонстрирует, что идентичные имена совместно используют один и тот же экземпляр.</span><span class="sxs-lookup"><span data-stu-id="bece5-116">The following code creates some <xref:System.Xml.Linq.XElement> objects and demonstrates that identical names share the same instance.</span></span>  
   
 ```csharp  
 XElement r1 = new XElement("Root", "data1");  
@@ -52,16 +51,16 @@ else
     Console.WriteLine("Different");  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="bece5-117">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="bece5-117">This example produces the following output:</span></span>  
   
 ```  
 r1 and r2 have names that refer to the same instance.  
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  
   
- Как отмечалось выше, преимущество атомарных объектов заключается в том, что при использовании одного из методов оси, принимающих в качестве параметра <xref:System.Xml.Linq.XName>, этому методу оси для выбора необходимых элементов достаточно определить, что два имени совместно используют один и тот же экземпляр.  
+ <span data-ttu-id="bece5-118">Как отмечалось выше, преимущество атомарных объектов заключается в том, что при использовании одного из методов оси, принимающих в качестве параметра <xref:System.Xml.Linq.XName>, этому методу оси для выбора необходимых элементов достаточно определить, что два имени совместно используют один и тот же экземпляр.</span><span class="sxs-lookup"><span data-stu-id="bece5-118">As mentioned earlier, the benefit of atomized objects is that when you use one of the axis methods that take an <xref:System.Xml.Linq.XName> as a parameter, the axis method only has to determine that two names reference the same instance to select the desired elements.</span></span>  
   
- В приведенном ниже примере объект <xref:System.Xml.Linq.XName> передается при вызове метода <xref:System.Xml.Linq.XContainer.Descendants%2A>, производительность которого выше за счет использования атомизации.  
+ <span data-ttu-id="bece5-119">В следующем примере объект <xref:System.Xml.Linq.XName> передается при вызове метода <xref:System.Xml.Linq.XContainer.Descendants%2A>, производительность которого выше за счет использования атомизации.</span><span class="sxs-lookup"><span data-stu-id="bece5-119">The following example passes an <xref:System.Xml.Linq.XName> to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method call, which then has better performance because of the atomization pattern.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -80,12 +79,13 @@ foreach (var z in query)
     Console.WriteLine(z);  
 ```  
   
- В этом примере выводятся следующие данные:  
+ <span data-ttu-id="bece5-120">В этом примере выводятся следующие данные:</span><span class="sxs-lookup"><span data-stu-id="bece5-120">This example produces the following output:</span></span>  
   
 ```xml  
 <C1>1</C1>  
 <C1>1</C1>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Производительность (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bece5-121">См. также</span><span class="sxs-lookup"><span data-stu-id="bece5-121">See Also</span></span>  
+ [<span data-ttu-id="bece5-122">Производительность (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bece5-122">Performance (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

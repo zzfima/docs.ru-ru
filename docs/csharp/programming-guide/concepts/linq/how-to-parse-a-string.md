@@ -26,11 +26,11 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-parse-a-string-c"></a>Практическое руководство. Анализ строки (C#)
-В этом разделе демонстрируется анализ строки для создания XML-дерева в C#.  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="d68bc-102">Практическое руководство. Анализ строки (C#)</span><span class="sxs-lookup"><span data-stu-id="d68bc-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="d68bc-103">В этом разделе демонстрируется анализ строки для создания XML-дерева в C#.</span><span class="sxs-lookup"><span data-stu-id="d68bc-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем коде C# показано, как выполнять синтаксический анализ строки.  
+## <a name="example"></a><span data-ttu-id="d68bc-104">Пример</span><span class="sxs-lookup"><span data-stu-id="d68bc-104">Example</span></span>  
+ <span data-ttu-id="d68bc-105">В следующем коде C# показано, как выполнять синтаксический анализ строки.</span><span class="sxs-lookup"><span data-stu-id="d68bc-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -62,6 +62,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d68bc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d68bc-106">See Also</span></span>  
+ [<span data-ttu-id="d68bc-107">Анализ XML (C#)</span><span class="sxs-lookup"><span data-stu-id="d68bc-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
 

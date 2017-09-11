@@ -29,19 +29,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51c762184ad52c76e36f6368c8e2320f4c8475ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4c3de353c65b7ffa6077d07e888bc2d477cb1a5e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="need-property-array-index"></a>Требуется индекс массива свойства
-Это значение свойства состоит из массива, а не из отдельного значения. Вы не указали индекс для массива свойств, к которому попытались получить доступ.  
+# <a name="need-property-array-index"></a><span data-ttu-id="b8561-102">Требуется индекс массива свойства</span><span class="sxs-lookup"><span data-stu-id="b8561-102">Need property array index</span></span>
+<span data-ttu-id="b8561-103">Это значение свойства состоит из массива, а не из отдельного значения.</span><span class="sxs-lookup"><span data-stu-id="b8561-103">This property value consists of an array rather than a single value.</span></span> <span data-ttu-id="b8561-104">Вы не указали индекс для массива свойств, к которому попытались получить доступ.</span><span class="sxs-lookup"><span data-stu-id="b8561-104">You did not specify the index for the property array you tried to access.</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b8561-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="b8561-105">To correct this error</span></span>  
   
--   Обратитесь к документации по компоненту, чтобы определить допустимый диапазон индексов для данного массива. Укажите подходящий индекс для своей инструкции доступа к свойству.  
+-   <span data-ttu-id="b8561-106">Обратитесь к документации по компоненту, чтобы определить допустимый диапазон индексов для данного массива.</span><span class="sxs-lookup"><span data-stu-id="b8561-106">Check the component's documentation to find the range for the indexes appropriate for the array.</span></span> <span data-ttu-id="b8561-107">Укажите подходящий индекс для своей инструкции доступа к свойству.</span><span class="sxs-lookup"><span data-stu-id="b8561-107">Specify an appropriate index in your property access statement.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="b8561-108">См. также</span><span class="sxs-lookup"><span data-stu-id="b8561-108">See Also</span></span>  
+ <span data-ttu-id="b8561-109">[Типы ошибок](../../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="b8561-109">[Error Types](../../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="b8561-110"> [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="b8561-110"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

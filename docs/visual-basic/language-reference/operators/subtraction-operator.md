@@ -43,16 +43,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7f45094da7bc61687d9c767d25858aa214bf1978
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: eb9b8e94877cce9aacde69c5f555f4a7f4a9ad7c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="--operator-visual-basic"></a>Оператор - (Visual Basic)
-Возвращает разность двух числовых выражений или отрицательное значение числового выражения.  
+# <a name="--operator-visual-basic"></a><span data-ttu-id="8f6fb-102">Оператор - (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f6fb-102">- Operator (Visual Basic)</span></span>
+<span data-ttu-id="8f6fb-103">Возвращает разность двух числовых выражений или отрицательное значение числового выражения.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-103">Returns the difference between two numeric expressions or the negative value of a numeric expression.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="8f6fb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8f6fb-104">Syntax</span></span>  
   
 ```  
       expression1 – expression2  
@@ -60,42 +60,43 @@ ms.lasthandoff: 03/13/2017
 – expression1  
 ```  
   
-## <a name="parts"></a>Части  
+## <a name="parts"></a><span data-ttu-id="8f6fb-105">Части</span><span class="sxs-lookup"><span data-stu-id="8f6fb-105">Parts</span></span>  
  `expression1`  
- Обязательный. Произвольное числовое выражение.  
+ <span data-ttu-id="8f6fb-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-106">Required.</span></span> <span data-ttu-id="8f6fb-107">Произвольное числовое выражение.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-107">Any numeric expression.</span></span>  
   
  `expression2`  
- Требуется, если `–` оператор вычисляет отрицательное значение. Произвольное числовое выражение.  
+ <span data-ttu-id="8f6fb-108">Требуется, если `–` оператор вычисляет отрицательное значение.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-108">Required unless the `–` operator is calculating a negative value.</span></span> <span data-ttu-id="8f6fb-109">Произвольное числовое выражение.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-109">Any numeric expression.</span></span>  
   
-## <a name="result"></a>Результат  
- Результат — это разница между `expression1` и `expression2`, или отрицательным значением `expression1`.  
+## <a name="result"></a><span data-ttu-id="8f6fb-110">Результат</span><span class="sxs-lookup"><span data-stu-id="8f6fb-110">Result</span></span>  
+ <span data-ttu-id="8f6fb-111">Результат — это разница между `expression1` и `expression2`, или отрицательным значением `expression1`.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-111">The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.</span></span>  
   
- Тип данных результата является числовым типом, соответствующим типам данных `expression1` и `expression2`. В таблице «Целочисленных арифметических операций» в [типы данных из результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ <span data-ttu-id="8f6fb-112">Тип данных результата является числовым типом, соответствующим типам данных `expression1` и `expression2`.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-112">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="8f6fb-113">В таблице «Целочисленных арифметических операций» в [типы данных из результатов оператора](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="8f6fb-113">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
   
-## <a name="supported-types"></a>Поддерживаемые типы  
- Все числовые типы. Сюда входят типы без знака и с плавающей запятой и `Decimal`.  
+## <a name="supported-types"></a><span data-ttu-id="8f6fb-114">Поддерживаемые типы</span><span class="sxs-lookup"><span data-stu-id="8f6fb-114">Supported Types</span></span>  
+ <span data-ttu-id="8f6fb-115">Все числовые типы.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-115">All numeric types.</span></span> <span data-ttu-id="8f6fb-116">Сюда входят типы без знака и с плавающей запятой и `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-116">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- При первом использовании показано в приведенном примере `–` оператор *двоичных* оператор арифметического вычитания для нахождения разности двух числовых выражений.  
+## <a name="remarks"></a><span data-ttu-id="8f6fb-117">Примечания</span><span class="sxs-lookup"><span data-stu-id="8f6fb-117">Remarks</span></span>  
+ <span data-ttu-id="8f6fb-118">При первом использовании показано в приведенном примере `–` оператор *двоичных* оператор арифметического вычитания для нахождения разности двух числовых выражений.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-118">In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.</span></span>  
   
- При втором использовании показано в приведенном примере `–` оператор *унарный* оператор отрицания отрицательного значения выражения. В этом смысле отрицание представляет собой замену знака `expression1` , чтобы результат был положительным, если `expression1` является отрицательным.  
+ <span data-ttu-id="8f6fb-119">При втором использовании показано в приведенном примере `–` оператор *унарный* оператор отрицания отрицательного значения выражения.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-119">In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression.</span></span> <span data-ttu-id="8f6fb-120">В этом смысле отрицание представляет собой замену знака `expression1` , чтобы результат был положительным, если `expression1` является отрицательным.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-120">In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.</span></span>  
   
- Если выражение [ничего](../../../visual-basic/language-reference/nothing.md), `–` оператор интерпретирует его как ноль.  
+ <span data-ttu-id="8f6fb-121">Если выражение [ничего](../../../visual-basic/language-reference/nothing.md), `–` оператор интерпретирует его как ноль.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-121">If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.</span></span>  
   
 > [!NOTE]
->  `–` Оператор может быть *перегруженные*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры. Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  <span data-ttu-id="8f6fb-122">`–` Оператор может быть *перегруженные*, что означает, что класс или структура может переопределить его поведение, если операнд имеет тип этого класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-122">The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="8f6fb-123">Если ваш код использует этот оператор для такого класса или структуры, убедитесь, что вы понимаете его переопределенное поведение.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-123">If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior.</span></span> <span data-ttu-id="8f6fb-124">Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="8f6fb-124">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере используется `–` оператор вычисляет и возвращает разность двух чисел, а затем меняет знак числа.  
+## <a name="example"></a><span data-ttu-id="8f6fb-125">Пример</span><span class="sxs-lookup"><span data-stu-id="8f6fb-125">Example</span></span>  
+ <span data-ttu-id="8f6fb-126">В следующем примере используется `–` оператор вычисляет и возвращает разность двух чисел, а затем меняет знак числа.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-126">The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.</span></span>  
   
- [!code-vb[VbVbalrOperators&#10;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
+ <span data-ttu-id="8f6fb-127">[!code-vb[VbVbalrOperators&#10;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="8f6fb-127">[!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]</span></span>  
   
- После выполнения этих инструкций `binaryResult` содержит значение 124,45 и `unaryResult` содержит значение – 334,90.  
+ <span data-ttu-id="8f6fb-128">После выполнения этих инструкций `binaryResult` содержит значение 124,45 и `unaryResult` содержит значение – 334,90.</span><span class="sxs-lookup"><span data-stu-id="8f6fb-128">Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [-= Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
- [арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Приоритет операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a><span data-ttu-id="8f6fb-129">См. также</span><span class="sxs-lookup"><span data-stu-id="8f6fb-129">See Also</span></span>  
+ <span data-ttu-id="8f6fb-130">[-= Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+ [арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md) </span><span class="sxs-lookup"><span data-stu-id="8f6fb-130">[-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+ [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md) </span></span>  
+<span data-ttu-id="8f6fb-131"> [Приоритет операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md) </span><span class="sxs-lookup"><span data-stu-id="8f6fb-131"> [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md) </span></span>  
+<span data-ttu-id="8f6fb-132"> [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span><span class="sxs-lookup"><span data-stu-id="8f6fb-132"> [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span></span>  
+<span data-ttu-id="8f6fb-133"> [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)</span><span class="sxs-lookup"><span data-stu-id="8f6fb-133"> [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)</span></span>
 

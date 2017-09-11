@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e01f3f93685916faf2348999b9a3d5c92c8e1d5a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8b1a1eca9f75725cc75e6138941b7991416a69b2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Невозможно привести начальное значение типа "&lt;type1&gt;и значение шага типа&lt;type2&gt;" в тип данных
-Указанные управляющие значения в `For...Next` имеют разные типы и, следовательно, не могут быть приведены к общему типу.  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="2f16d-102">Невозможно привести начальное значение типа "&lt;type1&gt;и значение шага типа&lt;type2&gt;" в тип данных</span><span class="sxs-lookup"><span data-stu-id="2f16d-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="2f16d-103">Указанные управляющие значения в `For...Next` имеют разные типы и, следовательно, не могут быть приведены к общему типу.</span><span class="sxs-lookup"><span data-stu-id="2f16d-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2f16d-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="2f16d-104">To correct this error</span></span>  
   
-1.  Измените тип одного или нескольких значений, чтобы все они могли быть приведены к общему типу.  
+1.  <span data-ttu-id="2f16d-105">Измените тип одного или нескольких значений, чтобы все они могли быть приведены к общему типу.</span><span class="sxs-lookup"><span data-stu-id="2f16d-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Навигация по коду в отладчике](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)   
- [Отладка изменений в Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [Оператор For...Next](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="2f16d-106">См. также</span><span class="sxs-lookup"><span data-stu-id="2f16d-106">See Also</span></span>  
+ <span data-ttu-id="2f16d-107">[Навигация по коду в отладчике](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span><span class="sxs-lookup"><span data-stu-id="2f16d-107">[Navigating through Code with the Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span></span>  
+<span data-ttu-id="2f16d-108"> [Отладка изменений в Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span><span class="sxs-lookup"><span data-stu-id="2f16d-108"> [Debugging Changes in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span></span>  
+<span data-ttu-id="2f16d-109"> [Оператор For...Next](../../visual-basic/language-reference/statements/for-next-statement.md)</span><span class="sxs-lookup"><span data-stu-id="2f16d-109"> [For...Next Statement](../../visual-basic/language-reference/statements/for-next-statement.md)</span></span>

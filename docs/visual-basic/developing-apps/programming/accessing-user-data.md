@@ -42,19 +42,19 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-user-data-visual-basic"></a>Доступ к пользователя (Visual Basic)
-В этом разделе рассматриваются вопросы, связанные с объектом `My.User` и задачами, которые можно выполнять с его помощью.  
+# <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="90edf-102">Доступ к пользователя (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="90edf-102">Accessing User Data (Visual Basic)</span></span>
+<span data-ttu-id="90edf-103">В этом разделе рассматриваются вопросы, связанные с объектом `My.User` и задачами, которые можно выполнять с его помощью.</span><span class="sxs-lookup"><span data-stu-id="90edf-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  
   
- Объект `My.User` предоставляет доступ к сведениям о вошедшем в систему пользователе, возвращая объект, реализующий интерфейс <xref:System.Security.Principal.IPrincipal>.  
+ <span data-ttu-id="90edf-104">Объект `My.User` предоставляет доступ к сведениям о вошедшем в систему пользователе, возвращая объект, реализующий интерфейс <xref:System.Security.Principal.IPrincipal>.</span><span class="sxs-lookup"><span data-stu-id="90edf-104">The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.</span></span>  
   
-## <a name="tasks"></a>Задачи  
+## <a name="tasks"></a><span data-ttu-id="90edf-105">Задачи</span><span class="sxs-lookup"><span data-stu-id="90edf-105">Tasks</span></span>  
   
-|Целевой тип|См.|  
+|<span data-ttu-id="90edf-106">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="90edf-106">To</span></span>|<span data-ttu-id="90edf-107">См.</span><span class="sxs-lookup"><span data-stu-id="90edf-107">See</span></span>|  
 |--------|---------|  
-|Получение имени входа пользователя|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|Получение имени домена пользователя, если приложение использует проверку подлинности Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
-|Определение роли пользователя|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
+|<span data-ttu-id="90edf-108">Получение имени входа пользователя</span><span class="sxs-lookup"><span data-stu-id="90edf-108">Get the user's login name</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|<span data-ttu-id="90edf-109">Получение имени домена пользователя, если приложение использует проверку подлинности Windows</span><span class="sxs-lookup"><span data-stu-id="90edf-109">Get the user's domain name, if the application uses Windows authentication</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|<span data-ttu-id="90edf-110">Определение роли пользователя</span><span class="sxs-lookup"><span data-stu-id="90edf-110">Determine the user's role</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a><span data-ttu-id="90edf-111">См. также</span><span class="sxs-lookup"><span data-stu-id="90edf-111">See Also</span></span>  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>
 

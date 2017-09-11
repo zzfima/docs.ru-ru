@@ -1,5 +1,5 @@
 ---
-title: "Управление зависимостями в средствах .NET Core | Документы Майкрософт"
+title: "Управление зависимостями в средствах .NET Core"
 description: "Сведения об управлении зависимостями с помощью средств .NET Core."
 keywords: "CLI, расширяемость, пользовательские команды, .NET Core"
 author: blackdwarf
@@ -10,53 +10,53 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 25847dd6921e547074f4501d34d865dfb1b98b59
-ms.openlocfilehash: de496d96120df1ec275bb4a69f01b6266b0b5a89
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b982d72b92cefb015c584ea6827dc60999ca9a00
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="managing-dependencies-with-net-core-sdk-10"></a>Управление зависимостями с помощью пакета SDK для .NET Core 1.0
+# <a name="managing-dependencies-with-net-core-sdk-10"></a><span data-ttu-id="1edb2-104">Управление зависимостями с помощью пакета SDK для .NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="1edb2-104">Managing dependencies with .NET Core SDK 1.0</span></span>
 
-Помимо переноса проектов .NET Core из файла project.json в CSPROJ-файл и на платформу MSBuild произошло еще одно значительное изменение, которое привело к унификации файла проекта и ресурсов, обеспечивающих отслеживание зависимостей. Для проектов .NET Core это аналогично тому, что раньше выполнял файл project.json. Не существует отдельного файла JSON или XML для отслеживания зависимостей NuGet. Вместе с этим изменением в синтаксис csproj также добавлен другой тип *ссылки* — `<PackageReference>`. 
+<span data-ttu-id="1edb2-105">Помимо переноса проектов .NET Core из файла project.json в CSPROJ-файл и на платформу MSBuild произошло еще одно значительное изменение, которое привело к унификации файла проекта и ресурсов, обеспечивающих отслеживание зависимостей.</span><span class="sxs-lookup"><span data-stu-id="1edb2-105">With the move of .NET Core projects from project.json to csproj and MSBuild, a significant investment also happened that resulted in unification of the project file and assets that allow tracking of dependencies.</span></span> <span data-ttu-id="1edb2-106">Для проектов .NET Core это аналогично тому, что раньше выполнял файл project.json.</span><span class="sxs-lookup"><span data-stu-id="1edb2-106">For .NET Core projects this is similar to what project.json did.</span></span> <span data-ttu-id="1edb2-107">Не существует отдельного файла JSON или XML для отслеживания зависимостей NuGet.</span><span class="sxs-lookup"><span data-stu-id="1edb2-107">There is no separate JSON or XML file that tracks NuGet dependencies.</span></span> <span data-ttu-id="1edb2-108">Вместе с этим изменением в синтаксис csproj также добавлен другой тип *ссылки* — `<PackageReference>`.</span><span class="sxs-lookup"><span data-stu-id="1edb2-108">With this change, we've also introduced another type of *reference* into the csproj syntax called the `<PackageReference>`.</span></span> 
 
-В этом документе описывается новый тип ссылки. Кроме того, в нем показано, как добавлять в проекты зависимость пакетов, используя этот новый тип ссылки. 
+<span data-ttu-id="1edb2-109">В этом документе описывается новый тип ссылки.</span><span class="sxs-lookup"><span data-stu-id="1edb2-109">This document describes the new reference type.</span></span> <span data-ttu-id="1edb2-110">Кроме того, в нем показано, как добавлять в проекты зависимость пакетов, используя этот новый тип ссылки.</span><span class="sxs-lookup"><span data-stu-id="1edb2-110">It also shows how to add a package dependency using this new reference type to your project.</span></span> 
 
-## <a name="the-new-packagereference-element"></a>Новый элемент \<PackageReference>
-Элемент `<PackageReference>` имеет следующую базовую структуру:
+## <a name="the-new-packagereference-element"></a><span data-ttu-id="1edb2-111">Новый элемент \<PackageReference></span><span class="sxs-lookup"><span data-stu-id="1edb2-111">The new \<PackageReference> element</span></span>
+<span data-ttu-id="1edb2-112">Элемент `<PackageReference>` имеет следующую базовую структуру:</span><span class="sxs-lookup"><span data-stu-id="1edb2-112">The `<PackageReference>` has the following basic structure:</span></span>
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-Если вы знакомы с платформой MSBuild, она покажется вам похожей на другие, уже существующие ссылочные типы. Ключевым является оператор `Include`, указывающий идентификатор пакета, который нужно добавить в проект. Дочерний элемент `<Version>` указывает версию, которую необходимо получить. Версии указываются в соответствии с [правилами версий NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions#version-ranges).
+<span data-ttu-id="1edb2-113">Если вы знакомы с платформой MSBuild, она покажется вам похожей на другие, уже существующие ссылочные типы.</span><span class="sxs-lookup"><span data-stu-id="1edb2-113">If you are familiar with MSBuild, it will look familiar to the other reference types that already exist.</span></span> <span data-ttu-id="1edb2-114">Ключевым является оператор `Include`, указывающий идентификатор пакета, который нужно добавить в проект.</span><span class="sxs-lookup"><span data-stu-id="1edb2-114">The key is the `Include` statement which specifies the package id that you wish to add to the project.</span></span> <span data-ttu-id="1edb2-115">Дочерний элемент `<Version>` указывает версию, которую необходимо получить.</span><span class="sxs-lookup"><span data-stu-id="1edb2-115">The `<Version>` child element specifies the version to get.</span></span> <span data-ttu-id="1edb2-116">Версии указываются в соответствии с [правилами версий NuGet](/nuget/create-packages/dependency-versions#version-ranges).</span><span class="sxs-lookup"><span data-stu-id="1edb2-116">The versions are specified as per [NuGet version rules](/nuget/create-packages/dependency-versions#version-ranges).</span></span>
 
 > [!NOTE]
-> Если вы не знакомы с общими понятиями синтаксиса `csproj`, используйте [справочную документацию по проекту MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference) для ознакомления с ними.  
+> <span data-ttu-id="1edb2-117">Если вы не знакомы с общими понятиями синтаксиса `csproj`, используйте [справочную документацию по проекту MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) для ознакомления с ними.</span><span class="sxs-lookup"><span data-stu-id="1edb2-117">If you are not familiar with the overall `csproj` syntax, see the [MSBuild project reference](/visualstudio/msbuild/msbuild-project-file-schema-reference) documentation for more information.</span></span>  
 
-Добавление зависимости, которая доступна только в конкретном целевом объекте, выполняется с использованием условий, аналогичных в приведенном далее примере.
+<span data-ttu-id="1edb2-118">Добавление зависимости, которая доступна только в конкретном целевом объекте, выполняется с использованием условий, аналогичных в приведенном далее примере.</span><span class="sxs-lookup"><span data-stu-id="1edb2-118">Adding a dependency that is available only in a specific target is done using conditions like in the following example:</span></span>
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
 ```
 
-Указанное выше означает, что зависимость будет действительной только в том случае, если для затронутого целевого объекта выполняется сборка. Элемент `$(TargetFramework)` в этом условии представляет собой заданное в проекте свойство MSBuild. Для наиболее распространенных приложений .NET Core это не требуется. 
+<span data-ttu-id="1edb2-119">Указанное выше означает, что зависимость будет действительной только в том случае, если для затронутого целевого объекта выполняется сборка.</span><span class="sxs-lookup"><span data-stu-id="1edb2-119">The above means that the dependency will only be valid if the build is happening for that given target.</span></span> <span data-ttu-id="1edb2-120">Элемент `$(TargetFramework)` в этом условии представляет собой заданное в проекте свойство MSBuild.</span><span class="sxs-lookup"><span data-stu-id="1edb2-120">The `$(TargetFramework)` in the condition is a MSBuild property that is being set in the project.</span></span> <span data-ttu-id="1edb2-121">Для наиболее распространенных приложений .NET Core это не требуется.</span><span class="sxs-lookup"><span data-stu-id="1edb2-121">For most common .NET Core applications, you will not need to do this.</span></span> 
 
-## <a name="adding-a-dependency-to-your-project"></a>Добавление зависимости в проект
-Добавить зависимость в проект очень просто. Ниже показано, как добавить в проект Json.NET версии `9.0.1`. Это применимо и к любой другой зависимости NuGet. 
+## <a name="adding-a-dependency-to-your-project"></a><span data-ttu-id="1edb2-122">Добавление зависимости в проект</span><span class="sxs-lookup"><span data-stu-id="1edb2-122">Adding a dependency to your project</span></span>
+<span data-ttu-id="1edb2-123">Добавить зависимость в проект очень просто.</span><span class="sxs-lookup"><span data-stu-id="1edb2-123">Adding a dependency to your project is straightforward.</span></span> <span data-ttu-id="1edb2-124">Ниже показано, как добавить в проект Json.NET версии `9.0.1`.</span><span class="sxs-lookup"><span data-stu-id="1edb2-124">Here is an example of how to add Json.NET version `9.0.1` to your project.</span></span> <span data-ttu-id="1edb2-125">Это применимо и к любой другой зависимости NuGet.</span><span class="sxs-lookup"><span data-stu-id="1edb2-125">Of course, it is applicable to any other NuGet dependency.</span></span> 
 
-При открытии файла проекта вы увидите не менее двух узлов `<ItemGroup>`. Можно заметить, что на одном из узлов уже есть элементы `<PackageReference>`. Вы можете добавить новую зависимость на этот узел или создать новый — поступайте по своему усмотрению, так как результат от этого не изменится. 
+<span data-ttu-id="1edb2-126">При открытии файла проекта вы увидите не менее двух узлов `<ItemGroup>`.</span><span class="sxs-lookup"><span data-stu-id="1edb2-126">When you open your project file, you will see two or more `<ItemGroup>` nodes.</span></span> <span data-ttu-id="1edb2-127">Можно заметить, что на одном из узлов уже есть элементы `<PackageReference>`.</span><span class="sxs-lookup"><span data-stu-id="1edb2-127">You will notice that one of the nodes already has `<PackageReference>` elements in it.</span></span> <span data-ttu-id="1edb2-128">Вы можете добавить новую зависимость на этот узел или создать новый — поступайте по своему усмотрению, так как результат от этого не изменится.</span><span class="sxs-lookup"><span data-stu-id="1edb2-128">You can add your new dependency to this node, or create a new one; it is completely up to you as the result will be the same.</span></span> 
 
-В этом примере мы будем использовать шаблон по умолчанию, добавленный `dotnet new console`. Это простое консольное приложение. При открытии проекта мы сначала видим узел `<ItemGroup>` и существующий на нем элемент `<PackageReference>`. Затем мы добавляем к нему следующее:
+<span data-ttu-id="1edb2-129">В этом примере мы будем использовать шаблон по умолчанию, добавленный `dotnet new console`.</span><span class="sxs-lookup"><span data-stu-id="1edb2-129">In this example we will use the default template that is dropped by `dotnet new console`.</span></span> <span data-ttu-id="1edb2-130">Это простое консольное приложение.</span><span class="sxs-lookup"><span data-stu-id="1edb2-130">This is a simple console application.</span></span> <span data-ttu-id="1edb2-131">При открытии проекта мы сначала видим узел `<ItemGroup>` и существующий на нем элемент `<PackageReference>`.</span><span class="sxs-lookup"><span data-stu-id="1edb2-131">When we open up the project, we first find the `<ItemGroup>` with already existing `<PackageReference>` in it.</span></span> <span data-ttu-id="1edb2-132">Затем мы добавляем к нему следующее:</span><span class="sxs-lookup"><span data-stu-id="1edb2-132">We then add the following to it:</span></span>
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
-После этого мы сохраняем проект и выполняем команду `dotnet restore` для установки зависимости. 
+<span data-ttu-id="1edb2-133">После этого мы сохраняем проект и выполняем команду `dotnet restore` для установки зависимости.</span><span class="sxs-lookup"><span data-stu-id="1edb2-133">After this, we save the project and run the `dotnet restore` command to install the dependency.</span></span> 
 
-Весь проект выглядит следующим образом:
+<span data-ttu-id="1edb2-134">Весь проект выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="1edb2-134">The full project looks like this:</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -71,6 +71,6 @@ ms.lasthandoff: 05/17/2017
 </Project>
 ```
 
-## <a name="removing-a-dependency-from-the-project"></a>Удаление зависимости из проекта
-Чтобы удалить зависимость из файла проекта, достаточно просто удалить `<PackageReference>` из файла проекта.
+## <a name="removing-a-dependency-from-the-project"></a><span data-ttu-id="1edb2-135">Удаление зависимости из проекта</span><span class="sxs-lookup"><span data-stu-id="1edb2-135">Removing a dependency from the project</span></span>
+<span data-ttu-id="1edb2-136">Чтобы удалить зависимость из файла проекта, достаточно просто удалить `<PackageReference>` из файла проекта.</span><span class="sxs-lookup"><span data-stu-id="1edb2-136">Removing a dependency from the project file involves simply removing the `<PackageReference>` from the project file.</span></span>
 

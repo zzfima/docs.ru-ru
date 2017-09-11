@@ -38,36 +38,36 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-the-computer39s-ports-visual-basic"></a>Доступ к портам компьютера (Visual Basic)
-Объект `My.Computer.Ports` предоставляет свойство и метод для доступа к последовательным портам компьютера.  
+# <a name="accessing-the-computer39s-ports-visual-basic"></a><span data-ttu-id="68e03-102">Доступ к портам компьютера (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68e03-102">Accessing the Computer&#39;s Ports (Visual Basic)</span></span>
+<span data-ttu-id="68e03-103">Объект `My.Computer.Ports` предоставляет свойство и метод для доступа к последовательным портам компьютера.</span><span class="sxs-lookup"><span data-stu-id="68e03-103">The `My.Computer.Ports` object provides a property and a method for accessing the computer's serial ports.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Практическое руководство. Отображение доступных последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
- Демонстрация отображения доступных последовательных портов.  
+## <a name="in-this-section"></a><span data-ttu-id="68e03-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="68e03-104">In This Section</span></span>  
+ [<span data-ttu-id="68e03-105">Практическое руководство. Отображение доступных последовательных портов</span><span class="sxs-lookup"><span data-stu-id="68e03-105">How to: Show Available Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ <span data-ttu-id="68e03-106">Демонстрация отображения доступных последовательных портов.</span><span class="sxs-lookup"><span data-stu-id="68e03-106">Demonstrates how to show available serial ports.</span></span>  
   
- [Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- Демонстрация использования модема, подключенного к последовательному порту компьютера.  
+ [<span data-ttu-id="68e03-107">Практическое руководство. Дозвон при помощи модема, подключенного к последовательному порту компьютера</span><span class="sxs-lookup"><span data-stu-id="68e03-107">How to: Dial Modems Attached to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ <span data-ttu-id="68e03-108">Демонстрация использования модема, подключенного к последовательному порту компьютера.</span><span class="sxs-lookup"><span data-stu-id="68e03-108">Demonstrates how to dial a modem attached to the serial port of a computer.</span></span>  
   
- [Практическое руководство. Отправка строк в последовательные порты](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- Демонстрация отправки строки в последовательный порт компьютера.  
+ [<span data-ttu-id="68e03-109">Практическое руководство. Отправка строк в последовательные порты</span><span class="sxs-lookup"><span data-stu-id="68e03-109">How to: Send Strings to Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ <span data-ttu-id="68e03-110">Демонстрация отправки строки в последовательный порт компьютера.</span><span class="sxs-lookup"><span data-stu-id="68e03-110">Demonstrates how to send a string to a computer's serial port.</span></span>  
   
- [Практическое руководство. Получение строк из последовательных портов](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- Демонстрация получения строки из последовательного порта компьютера.  
+ [<span data-ttu-id="68e03-111">Практическое руководство. Получение строк из последовательных портов</span><span class="sxs-lookup"><span data-stu-id="68e03-111">How to: Receive Strings From Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ <span data-ttu-id="68e03-112">Демонстрация получения строки из последовательного порта компьютера.</span><span class="sxs-lookup"><span data-stu-id="68e03-112">Demonstrates how to receive a string from a computer's serial port.</span></span>  
   
- [Операции с портами в .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Описание использования [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] при выполнении операций с портами.  
+ [<span data-ttu-id="68e03-113">Операции с портами в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="68e03-113">Port Operations in the .NET Framework</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
+ <span data-ttu-id="68e03-114">Описание использования [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] при выполнении операций с портами.</span><span class="sxs-lookup"><span data-stu-id="68e03-114">Describes how to use the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] when performing port operations.</span></span>  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a><span data-ttu-id="68e03-115">Ссылка</span><span class="sxs-lookup"><span data-stu-id="68e03-115">Reference</span></span>  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
- Описание объекта `My.Computer.Ports` и его членов.  
+ <span data-ttu-id="68e03-116">Описание объекта `My.Computer.Ports` и его членов.</span><span class="sxs-lookup"><span data-stu-id="68e03-116">Describes the `My.Computer.Ports` object and its members.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>  
- Описание свойства `SerialPortNames`, которое получает коллекцию имен последовательных портов на компьютере.  
+ <span data-ttu-id="68e03-117">Описание свойства `SerialPortNames`, которое получает коллекцию имен последовательных портов на компьютере.</span><span class="sxs-lookup"><span data-stu-id="68e03-117">Describes the `SerialPortNames` property, which gets a collection of the names of the serial ports on the computer.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- Описывает метод `OpenSerialPort`, который создает и открывает объект <xref:System.IO.Ports.SerialPort?displayProperty=fullName>.  
+ <span data-ttu-id="68e03-118">Описывает метод `OpenSerialPort`, который создает и открывает объект <xref:System.IO.Ports.SerialPort?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="68e03-118">Describes the `OpenSerialPort` method, which creates and opens a <xref:System.IO.Ports.SerialPort?displayProperty=fullName> object.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
+## <a name="related-sections"></a><span data-ttu-id="68e03-119">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="68e03-119">Related Sections</span></span>  
  <xref:System.IO.Ports.SerialPort>  
- Описывает класс <xref:System.IO.Ports.SerialPort> платформы .NET Framework.
+ <span data-ttu-id="68e03-120">Описывает класс <xref:System.IO.Ports.SerialPort> платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="68e03-120">Describes the .NET Framework <xref:System.IO.Ports.SerialPort> class.</span></span>
 

@@ -1,1 +1,1 @@
-установщик Windows
+<span data-ttu-id="1bd72-101">установщик Windows</span><span class="sxs-lookup"><span data-stu-id="1bd72-101">Windows Installer</span></span>

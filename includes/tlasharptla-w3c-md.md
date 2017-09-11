@@ -1,1 +1,1 @@
-Консорциум W3C
+<span data-ttu-id="011f0-101">Консорциум W3C</span><span class="sxs-lookup"><span data-stu-id="011f0-101">World Wide Web Consortium (W3C)</span></span>

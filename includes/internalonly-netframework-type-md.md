@@ -1,1 +1,1 @@
-Данный тип поддерживает платформу .NET Framework и не должен вызываться непосредственно из вашего кода.
+<span data-ttu-id="9e12d-101">Данный тип поддерживает платформу .NET Framework и не должен вызываться непосредственно из вашего кода.</span><span class="sxs-lookup"><span data-stu-id="9e12d-101">This type supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

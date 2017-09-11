@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d39f18d36b1884667d291e436015ebdffe703b19
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 78cbdb9f9156d8ebe98e6870e160ba6cee2751ec
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>Запись во временный файл невозможна, поскольку его каталог недоступен
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] не удается определить путь к временным файлам.  
+# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a><span data-ttu-id="9fd3c-102">Запись во временный файл невозможна, поскольку его каталог недоступен</span><span class="sxs-lookup"><span data-stu-id="9fd3c-102">Unable to write temporary file because temporary path is not available</span></span>
+[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="9fd3c-103"> не удается определить путь к временным файлам.</span><span class="sxs-lookup"><span data-stu-id="9fd3c-103"> could not determine the path where temporary files are stored.</span></span>  
   
- **Идентификатор ошибки:** BC30698  
+ <span data-ttu-id="9fd3c-104">**Идентификатор ошибки:** BC30698</span><span class="sxs-lookup"><span data-stu-id="9fd3c-104">**Error ID:** BC30698</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9fd3c-105">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="9fd3c-105">To correct this error</span></span>  
   
-1.  Перезапустите [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+1.  <span data-ttu-id="9fd3c-106">Перезапустите [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="9fd3c-106">Restart [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-2.  Если эта ошибка повторится, переустановите [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+2.  <span data-ttu-id="9fd3c-107">Если эта ошибка повторится, переустановите [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="9fd3c-107">If the problem persists, reinstall [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="9fd3c-108">См. также</span><span class="sxs-lookup"><span data-stu-id="9fd3c-108">See Also</span></span>  
+ [<span data-ttu-id="9fd3c-109">Обращайтесь к нам</span><span class="sxs-lookup"><span data-stu-id="9fd3c-109">Talk to Us</span></span>](https://docs.microsoft.com/visualstudio/ide/talk-to-us)

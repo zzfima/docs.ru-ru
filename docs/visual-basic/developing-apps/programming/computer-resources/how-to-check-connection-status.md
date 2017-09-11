@@ -40,20 +40,20 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a>Практическое руководство. Проверка состояния подключения в Visual Basic
-Свойство <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A> можно использовать, чтобы проверить наличие на компьютере подключения к действующей сети или Интернету.  
+# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="8bae1-102">Практическое руководство. Проверка состояния подключения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8bae1-102">How to: Check Connection Status in Visual Basic</span></span>
+<span data-ttu-id="8bae1-103">Свойство <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A> можно использовать, чтобы проверить наличие на компьютере подключения к действующей сети или Интернету.</span><span class="sxs-lookup"><span data-stu-id="8bae1-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a>Проверка наличия на компьютере рабочего подключения  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="8bae1-104">Проверка наличия на компьютере рабочего подключения</span><span class="sxs-lookup"><span data-stu-id="8bae1-104">To check whether a computer has a working connection</span></span>  
   
--   Определите, имеет ли свойство `IsAvailable` значение `True` или `False`. Следующий код проверяет состояние свойства и сообщает его:  
+-   <span data-ttu-id="8bae1-105">Определите, имеет ли свойство `IsAvailable` значение `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="8bae1-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="8bae1-106">Следующий код проверяет состояние свойства и сообщает его:</span><span class="sxs-lookup"><span data-stu-id="8bae1-106">The following code checks the property's status and reports it:</span></span>  
   
-     [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]  
+     <span data-ttu-id="8bae1-107">[!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="8bae1-107">[!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]</span></span>  
   
-     Этот пример кода также доступен в качестве фрагмента кода IntelliSense. В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**. Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).  
+     <span data-ttu-id="8bae1-108">Этот пример кода также доступен в качестве фрагмента кода IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="8bae1-108">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="8bae1-109">В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**.</span><span class="sxs-lookup"><span data-stu-id="8bae1-109">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="8bae1-110">Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="8bae1-110">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a><span data-ttu-id="8bae1-111">См. также</span><span class="sxs-lookup"><span data-stu-id="8bae1-111">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A>
 

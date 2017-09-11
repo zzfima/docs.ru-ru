@@ -31,48 +31,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f6b042b26ad866f177158562653c91f4f7527c04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6852b8a0d9874fd65e93cdd9507fe9b7119ce5b3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="moduleassemblyname"></a>/moduleassemblyname
-Задает имя сборки, частью которой будет этот модуль.  
+# <a name="moduleassemblyname"></a><span data-ttu-id="80f9c-102">/moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="80f9c-102">/moduleassemblyname</span></span>
+<span data-ttu-id="80f9c-103">Задает имя сборки, частью которой будет этот модуль.</span><span class="sxs-lookup"><span data-stu-id="80f9c-103">Specifies the name of the assembly that this module will be a part of.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="80f9c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80f9c-104">Syntax</span></span>  
   
 ```  
 /moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a><span data-ttu-id="80f9c-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="80f9c-105">Arguments</span></span>  
   
-|Термин|Определение|  
+|<span data-ttu-id="80f9c-106">Термин</span><span class="sxs-lookup"><span data-stu-id="80f9c-106">Term</span></span>|<span data-ttu-id="80f9c-107">Определение</span><span class="sxs-lookup"><span data-stu-id="80f9c-107">Definition</span></span>|  
 |---|---|  
-|`assembly_name`|Имя сборки, которая будет частью данный модуль.|  
+|`assembly_name`|<span data-ttu-id="80f9c-108">Имя сборки, которая будет частью данный модуль.</span><span class="sxs-lookup"><span data-stu-id="80f9c-108">The name of the assembly that this module will be a part of.</span></span>|  
   
-## <a name="remarks"></a>Примечания  
- Процессы компиляции `/moduleassemblyname` только если параметр `/target:module` был указан параметр. Это указывает компилятору создать модуль. Модуль, созданный компилятором допустим только для сборки, указанной в `/moduleassemblyname` параметр. Если вы поместите модуль в другой сборке, возникнут ошибки во время выполнения.  
+## <a name="remarks"></a><span data-ttu-id="80f9c-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="80f9c-109">Remarks</span></span>  
+ <span data-ttu-id="80f9c-110">Процессы компиляции `/moduleassemblyname` только если параметр `/target:module` был указан параметр.</span><span class="sxs-lookup"><span data-stu-id="80f9c-110">The compiler processes the `/moduleassemblyname` option only if the `/target:module` option has been specified.</span></span> <span data-ttu-id="80f9c-111">Это указывает компилятору создать модуль.</span><span class="sxs-lookup"><span data-stu-id="80f9c-111">This causes the compiler to create a module.</span></span> <span data-ttu-id="80f9c-112">Модуль, созданный компилятором допустим только для сборки, указанной в `/moduleassemblyname` параметр.</span><span class="sxs-lookup"><span data-stu-id="80f9c-112">The module created by the compiler is valid only for the assembly specified with the `/moduleassemblyname` option.</span></span> <span data-ttu-id="80f9c-113">Если вы поместите модуль в другой сборке, возникнут ошибки во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="80f9c-113">If you place the module in a different assembly, run-time errors will occur.</span></span>  
   
- `/moduleassemblyname` Настройка необходима только в том случае, если в следующих случаях:  
+ <span data-ttu-id="80f9c-114">`/moduleassemblyname` Настройка необходима только в том случае, если в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="80f9c-114">The `/moduleassemblyname` option is needed only when the following are true:</span></span>  
   
--   Тип данных в модуле необходим доступ к `Friend` тип в сборке, на которую указывает ссылка.  
+-   <span data-ttu-id="80f9c-115">Тип данных в модуле необходим доступ к `Friend` тип в сборке, на которую указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="80f9c-115">A data type in the module needs access to a `Friend` type in a referenced assembly.</span></span>  
   
--   Ссылочной сборки был предоставлен дружественной сборке доступ к сборке, в которую будет встроен модуль.  
+-   <span data-ttu-id="80f9c-116">Ссылочной сборки был предоставлен дружественной сборке доступ к сборке, в которую будет встроен модуль.</span><span class="sxs-lookup"><span data-stu-id="80f9c-116">The referenced assembly has granted friend assembly access to the assembly into which the module will be built.</span></span>  
   
- Дополнительные сведения о создании модуля см. в разделе [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Дополнительные сведения о дружественных сборок см. в разделе [дружественных сборок](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ <span data-ttu-id="80f9c-117">Дополнительные сведения о создании модуля см. в разделе [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span><span class="sxs-lookup"><span data-stu-id="80f9c-117">For more information about creating a module, see [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span></span> <span data-ttu-id="80f9c-118">Дополнительные сведения о дружественных сборок см. в разделе [дружественных сборок](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span><span class="sxs-lookup"><span data-stu-id="80f9c-118">For more information about friend assemblies, see [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span></span>  
   
 > [!NOTE]
->  `/moduleassemblyname` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.  
+>  <span data-ttu-id="80f9c-119">`/moduleassemblyname` Параметр недоступен из среды разработки Visual Studio; она доступна только при компиляции из командной строки.</span><span class="sxs-lookup"><span data-stu-id="80f9c-119">The `/moduleassemblyname` option is not available from within the Visual Studio development environment; it is available only when you compile from a command prompt.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство: Создание многофайловой сборки](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5)   
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [/ main](../../../visual-basic/reference/command-line-compiler/main.md)   
- [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [/ addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)   
- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)
+## <a name="see-also"></a><span data-ttu-id="80f9c-120">См. также</span><span class="sxs-lookup"><span data-stu-id="80f9c-120">See Also</span></span>  
+ <span data-ttu-id="80f9c-121">[Практическое руководство: Создание многофайловой сборки](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5) </span><span class="sxs-lookup"><span data-stu-id="80f9c-121">[How to: Build a Multifile Assembly](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5) </span></span>  
+<span data-ttu-id="80f9c-122"> [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="80f9c-122"> [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="80f9c-123"> [/ Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) </span><span class="sxs-lookup"><span data-stu-id="80f9c-123"> [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) </span></span>  
+<span data-ttu-id="80f9c-124"> [/ main](../../../visual-basic/reference/command-line-compiler/main.md) </span><span class="sxs-lookup"><span data-stu-id="80f9c-124"> [/main](../../../visual-basic/reference/command-line-compiler/main.md) </span></span>  
+<span data-ttu-id="80f9c-125"> [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) </span><span class="sxs-lookup"><span data-stu-id="80f9c-125"> [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) </span></span>  
+<span data-ttu-id="80f9c-126"> [/ addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) </span><span class="sxs-lookup"><span data-stu-id="80f9c-126"> [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) </span></span>  
+<span data-ttu-id="80f9c-127"> [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md) </span><span class="sxs-lookup"><span data-stu-id="80f9c-127"> [Assemblies and the Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md) </span></span>  
+<span data-ttu-id="80f9c-128"> [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) </span><span class="sxs-lookup"><span data-stu-id="80f9c-128"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) </span></span>  
+<span data-ttu-id="80f9c-129"> [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)</span><span class="sxs-lookup"><span data-stu-id="80f9c-129"> [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)</span></span>

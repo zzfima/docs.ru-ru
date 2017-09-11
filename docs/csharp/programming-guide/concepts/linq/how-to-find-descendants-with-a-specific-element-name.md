@@ -21,11 +21,11 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Практическое руководство. Поиск потомков с определенным именем элемента (C#)
-Иногда возникает необходимость найти всех потомков с определенным именем. В таких случаях можно написать код для просмотра всех потомков, но проще использовать ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a><span data-ttu-id="8e88f-102">Практическое руководство. Поиск потомков с определенным именем элемента (C#)</span><span class="sxs-lookup"><span data-stu-id="8e88f-102">How to: Find Descendants with a Specific Element Name (C#)</span></span>
+<span data-ttu-id="8e88f-103">Иногда возникает необходимость найти всех потомков с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="8e88f-103">Sometimes you want to find all descendants with a particular name.</span></span> <span data-ttu-id="8e88f-104">В таких случаях можно написать код для просмотра всех потомков, но проще использовать ось <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="8e88f-104">You could write code to iterate through all of the descendants, but it is easier to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере показано, как находить потомков на основе имени элемента.  
+## <a name="example"></a><span data-ttu-id="8e88f-105">Пример</span><span class="sxs-lookup"><span data-stu-id="8e88f-105">Example</span></span>  
+ <span data-ttu-id="8e88f-106">В следующем примере показано, как находить потомков на основе имени элемента.</span><span class="sxs-lookup"><span data-stu-id="8e88f-106">The following example shows how to find descendants based on the element name.</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<root>  
@@ -57,14 +57,14 @@ string str = textSegs.Aggregate(new StringBuilder(),
 Console.WriteLine(str);  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="8e88f-107">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="8e88f-107">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+## <a name="example"></a><span data-ttu-id="8e88f-108">Пример</span><span class="sxs-lookup"><span data-stu-id="8e88f-108">Example</span></span>  
+ <span data-ttu-id="8e88f-109">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="8e88f-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="8e88f-110">Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="8e88f-110">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Parse(@"<root xmlns='http://www.adatum.com'>  
@@ -97,13 +97,13 @@ string str = textSegs.Aggregate(new StringBuilder(),
 Console.WriteLine(str);  
 ```  
   
- Этот код выводит следующие результаты:  
+ <span data-ttu-id="8e88f-111">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="8e88f-111">This code produces the following output:</span></span>  
   
 ```  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>   
- [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8e88f-112">См. также</span><span class="sxs-lookup"><span data-stu-id="8e88f-112">See Also</span></span>  
+ <span data-ttu-id="8e88f-113"><xref:System.Xml.Linq.XContainer.Descendants%2A></span><span class="sxs-lookup"><span data-stu-id="8e88f-113"><xref:System.Xml.Linq.XContainer.Descendants%2A></span></span>   
+ [<span data-ttu-id="8e88f-114">Базовые запросы (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8e88f-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

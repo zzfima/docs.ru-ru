@@ -1,1 +1,1 @@
-Расширения компонентов Visual C++
+<span data-ttu-id="b86f2-101">Расширения компонентов Visual C++</span><span class="sxs-lookup"><span data-stu-id="b86f2-101">Visual C++ component extensions</span></span>

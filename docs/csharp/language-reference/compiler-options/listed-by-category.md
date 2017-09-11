@@ -1,116 +1,138 @@
 ---
-title: "C# Compiler Options Listed by Category | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "Visual C# compiler, options listed by category"
-  - "compiler options [C#], listed by category"
-  - "Visual C#, compiler options listed by category"
+title: "Параметры компилятора C#, упорядоченные по категориям"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- Visual C# compiler, options listed by category
+- compiler options [C#], listed by category
+- Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
+
 ---
-# C# Compiler Options Listed by Category
-Следующие параметры компилятора упорядочены по категории.  Алфавитный список см. в разделе [Параметры компилятора в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).  
+# <a name="c-compiler-options-listed-by-category"></a><span data-ttu-id="df61d-102">Параметры компилятора C#, упорядоченные по категориям</span><span class="sxs-lookup"><span data-stu-id="df61d-102">C# Compiler Options Listed by Category</span></span>
+<span data-ttu-id="df61d-103">Следующие параметры компилятора упорядочены по категории.</span><span class="sxs-lookup"><span data-stu-id="df61d-103">The following compiler options are sorted by category.</span></span> <span data-ttu-id="df61d-104">Алфавитный список см. в разделе [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).</span><span class="sxs-lookup"><span data-stu-id="df61d-104">For an alphabetical list, see [C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).</span></span>  
   
-### Оптимизация  
+### <a name="optimization"></a><span data-ttu-id="df61d-105">Оптимизация</span><span class="sxs-lookup"><span data-stu-id="df61d-105">Optimization</span></span>  
   
-|Параметр|Цель|  
-|--------------|----------|  
-|[\/filealign](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|Задает размер разделов в выходном файле.|  
-|[\/optimize](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|Включает или отключает оптимизацию.|  
+|<span data-ttu-id="df61d-106">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-106">Option</span></span>|<span data-ttu-id="df61d-107">Назначение</span><span class="sxs-lookup"><span data-stu-id="df61d-107">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="df61d-108">/filealign</span><span class="sxs-lookup"><span data-stu-id="df61d-108">/filealign</span></span>](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|<span data-ttu-id="df61d-109">Задает размер разделов в выходном файле.</span><span class="sxs-lookup"><span data-stu-id="df61d-109">Specifies the size of sections in the output file.</span></span>|  
+|[<span data-ttu-id="df61d-110">/optimize</span><span class="sxs-lookup"><span data-stu-id="df61d-110">/optimize</span></span>](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|<span data-ttu-id="df61d-111">Включает или отключает оптимизацию.</span><span class="sxs-lookup"><span data-stu-id="df61d-111">Enables/disables optimizations.</span></span>|  
   
-### Выходные файлы  
+### <a name="output-files"></a><span data-ttu-id="df61d-112">Выходные файлы</span><span class="sxs-lookup"><span data-stu-id="df61d-112">Output Files</span></span>  
   
-|Параметр|Цель|  
-|--------------|----------|  
-|[\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|Задает XML\-файл, куда должны записываться обработанные комментарии к документации.|  
-|[\/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|Задает выходной файл.|  
-|[\/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|Указывает имя и расположение PDB\-файла.|  
-|[\/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|Укажите выходную платформу.|  
-|[\/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Укажите язык для выходных данных компилятора.|  
-|[\/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Задает формат выходного файла, используя один из пяти параметров: [\/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [\/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [\/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [\/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [\/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) или [\/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
-|`/modulename:<string>`|Укажите имя исходного модуля.|  
+|<span data-ttu-id="df61d-113">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-113">Option</span></span>|<span data-ttu-id="df61d-114">Назначение</span><span class="sxs-lookup"><span data-stu-id="df61d-114">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="df61d-115">/doc</span><span class="sxs-lookup"><span data-stu-id="df61d-115">/doc</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|<span data-ttu-id="df61d-116">Задает XML-файл, куда должны записываться обработанные комментарии к документации.</span><span class="sxs-lookup"><span data-stu-id="df61d-116">Specifies an XML file where processed documentation comments are to be written.</span></span>|  
+|[<span data-ttu-id="df61d-117">/out</span><span class="sxs-lookup"><span data-stu-id="df61d-117">/out</span></span>](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|<span data-ttu-id="df61d-118">Задает выходной файл.</span><span class="sxs-lookup"><span data-stu-id="df61d-118">Specifies the output file.</span></span>|  
+|[<span data-ttu-id="df61d-119">/pdb</span><span class="sxs-lookup"><span data-stu-id="df61d-119">/pdb</span></span>](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|<span data-ttu-id="df61d-120">Указывает имя и расположение PDB-файла.</span><span class="sxs-lookup"><span data-stu-id="df61d-120">Specifies the file name and location of the .pdb file.</span></span>|  
+|[<span data-ttu-id="df61d-121">/platform</span><span class="sxs-lookup"><span data-stu-id="df61d-121">/platform</span></span>](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|<span data-ttu-id="df61d-122">Укажите выходную платформу.</span><span class="sxs-lookup"><span data-stu-id="df61d-122">Specify the output platform.</span></span>|  
+|[<span data-ttu-id="df61d-123">/preferreduilang</span><span class="sxs-lookup"><span data-stu-id="df61d-123">/preferreduilang</span></span>](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|<span data-ttu-id="df61d-124">Укажите язык для выходных данных компилятора.</span><span class="sxs-lookup"><span data-stu-id="df61d-124">Specify a language for compiler output.</span></span>|  
+|[<span data-ttu-id="df61d-125">/refout</span><span class="sxs-lookup"><span data-stu-id="df61d-125">/refout</span></span>](refout-compiler-option.md)|<span data-ttu-id="df61d-126">Создание ссылочной сборки в дополнение к основной.</span><span class="sxs-lookup"><span data-stu-id="df61d-126">Generate a reference assembly in addition to the primary assembly.</span></span>|  
+|[<span data-ttu-id="df61d-127">/refonly</span><span class="sxs-lookup"><span data-stu-id="df61d-127">/refonly</span></span>](refonly-compiler-option.md)|<span data-ttu-id="df61d-128">Создание ссылочной сборки вместо основной.</span><span class="sxs-lookup"><span data-stu-id="df61d-128">Generate a reference assembly instead of a primary assembly.</span></span>|  
+|[<span data-ttu-id="df61d-129">/target</span><span class="sxs-lookup"><span data-stu-id="df61d-129">/target</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|<span data-ttu-id="df61d-130">Задает формат выходного файла, используя один из пяти параметров: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) или [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="df61d-130">Specifies the format of the output file using one of five options: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), or [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).</span></span>|  
+|<span data-ttu-id="df61d-131">/modulename:\<строка></span><span class="sxs-lookup"><span data-stu-id="df61d-131">/modulename:\<string></span></span>|<span data-ttu-id="df61d-132">Укажите имя исходного модуля.</span><span class="sxs-lookup"><span data-stu-id="df61d-132">Specify the name of the source module</span></span>|  
   
-### Сборки .NET Framework  
+### <a name="net-framework-assemblies"></a><span data-ttu-id="df61d-133">Сборки .NET Framework</span><span class="sxs-lookup"><span data-stu-id="df61d-133">.NET Framework Assemblies</span></span>  
   
-|Параметр|Цель|  
-|--------------|----------|  
-|[\/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Задает один или несколько модулей, которые должны быть частью этой сборки.|  
-|[\/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|Указывает компилятору добавить открытый ключ, но оставить сборку без подписи.|  
-|[\/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|Задает имя контейнера криптографического ключа.|  
-|[\/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|Задает имя файла, содержащего криптографический ключ.|  
-|[\/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|Задает расположение сборок, указанных с помощью параметра [\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).|  
-|[\/nostdlib](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|Указывает компилятору не импортировать стандартную библиотеку \(mscorlib.dll\).|  
-|[\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|Импортирует метаданные из файла, содержащего сборку.|  
-|`/analyzer`|Запускает анализаторы из этой сборки \(краткая форма: \/a\)|  
-|`/additionalfile`|Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.|  
+|<span data-ttu-id="df61d-134">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-134">Option</span></span>|<span data-ttu-id="df61d-135">Назначение</span><span class="sxs-lookup"><span data-stu-id="df61d-135">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="df61d-136">/addmodule</span><span class="sxs-lookup"><span data-stu-id="df61d-136">/addmodule</span></span>](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|<span data-ttu-id="df61d-137">Задает один или несколько модулей, которые должны быть частью этой сборки.</span><span class="sxs-lookup"><span data-stu-id="df61d-137">Specifies one or more modules to be part of this assembly.</span></span>|  
+|[<span data-ttu-id="df61d-138">/delaysign</span><span class="sxs-lookup"><span data-stu-id="df61d-138">/delaysign</span></span>](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|<span data-ttu-id="df61d-139">Указывает компилятору добавить открытый ключ, но оставить сборку без подписи.</span><span class="sxs-lookup"><span data-stu-id="df61d-139">Instructs the compiler to add the public key but to leave the assembly unsigned.</span></span>|  
+|[<span data-ttu-id="df61d-140">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="df61d-140">/keycontainer</span></span>](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|<span data-ttu-id="df61d-141">Задает имя контейнера криптографического ключа.</span><span class="sxs-lookup"><span data-stu-id="df61d-141">Specifies the name of the cryptographic key container.</span></span>|  
+|[<span data-ttu-id="df61d-142">/keyfile</span><span class="sxs-lookup"><span data-stu-id="df61d-142">/keyfile</span></span>](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|<span data-ttu-id="df61d-143">Задает имя файла, содержащего криптографический ключ.</span><span class="sxs-lookup"><span data-stu-id="df61d-143">Specifies the filename containing the cryptographic key.</span></span>|  
+|[<span data-ttu-id="df61d-144">/lib</span><span class="sxs-lookup"><span data-stu-id="df61d-144">/lib</span></span>](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|<span data-ttu-id="df61d-145">Задает расположение сборок, указанных с помощью параметра [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="df61d-145">Specifies the location of assemblies referenced by means of [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span></span>|  
+|[<span data-ttu-id="df61d-146">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="df61d-146">/nostdlib</span></span>](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|<span data-ttu-id="df61d-147">Указывает компилятору не импортировать стандартную библиотеку (mscorlib.dll).</span><span class="sxs-lookup"><span data-stu-id="df61d-147">Instructs the compiler not to import the standard library (mscorlib.dll).</span></span>|  
+|[<span data-ttu-id="df61d-148">/reference</span><span class="sxs-lookup"><span data-stu-id="df61d-148">/reference</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|<span data-ttu-id="df61d-149">Импортирует метаданные из файла, содержащего сборку.</span><span class="sxs-lookup"><span data-stu-id="df61d-149">Imports metadata from a file that contains an assembly.</span></span>|  
+|<span data-ttu-id="df61d-150">/analyzer</span><span class="sxs-lookup"><span data-stu-id="df61d-150">/analyzer</span></span>|<span data-ttu-id="df61d-151">Запускает анализаторы из этой сборки (краткая форма: /a)</span><span class="sxs-lookup"><span data-stu-id="df61d-151">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|<span data-ttu-id="df61d-152">/additionalfile</span><span class="sxs-lookup"><span data-stu-id="df61d-152">/additionalfile</span></span>|<span data-ttu-id="df61d-153">Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.</span><span class="sxs-lookup"><span data-stu-id="df61d-153">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
   
-### Отладка и проверка на ошибки  
+### <a name="debuggingerror-checking"></a><span data-ttu-id="df61d-154">Отладка и проверка на ошибки</span><span class="sxs-lookup"><span data-stu-id="df61d-154">Debugging/Error Checking</span></span>  
   
-|Параметр|Цель|  
-|--------------|----------|  
-|[\/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Создает файл, содержащий сведения, позволяющие легко создать отчет об ошибке.|  
-|[\/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Указывает, будут ли целочисленные арифметические операции, переполняющие границы типа данных, вызывать исключение во время выполнения.|  
-|[\/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|Указывает компилятору выдавать отладочные сведения.|  
-|[\/errorreport](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|Устанавливает поведение отчетов об ошибках.|  
-|[\/fullpaths](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|Задает абсолютный путь к файлу в выходных данных компилятора.|  
-|[\/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|Подавляет создание компилятором указанных предупреждений.|  
-|[\/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|Устанавливает уровень предупреждений.|  
-|[\/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|Приравнивает предупреждения к ошибкам.|  
-|`/ruleset:<file>`|Укажите файл набора правил, который отключает определенные диагностики.|  
+|<span data-ttu-id="df61d-155">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-155">Option</span></span>|<span data-ttu-id="df61d-156">Назначение</span><span class="sxs-lookup"><span data-stu-id="df61d-156">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="df61d-157">/bugreport</span><span class="sxs-lookup"><span data-stu-id="df61d-157">/bugreport</span></span>](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|<span data-ttu-id="df61d-158">Создает файл, содержащий сведения, позволяющие легко создать отчет об ошибке.</span><span class="sxs-lookup"><span data-stu-id="df61d-158">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|[<span data-ttu-id="df61d-159">/checked</span><span class="sxs-lookup"><span data-stu-id="df61d-159">/checked</span></span>](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|<span data-ttu-id="df61d-160">Указывает, будут ли целочисленные арифметические операции, переполняющие границы типа данных, вызывать исключение во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="df61d-160">Specifies whether integer arithmetic that overflows the bounds of the data type will cause an exception at run time.</span></span>|  
+|[<span data-ttu-id="df61d-161">/debug</span><span class="sxs-lookup"><span data-stu-id="df61d-161">/debug</span></span>](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|<span data-ttu-id="df61d-162">Указывает компилятору выдавать отладочные сведения.</span><span class="sxs-lookup"><span data-stu-id="df61d-162">Instruct the compiler to emit debugging information.</span></span>|  
+|[<span data-ttu-id="df61d-163">/errorreport</span><span class="sxs-lookup"><span data-stu-id="df61d-163">/errorreport</span></span>](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|<span data-ttu-id="df61d-164">Устанавливает поведение отчетов об ошибках.</span><span class="sxs-lookup"><span data-stu-id="df61d-164">Sets error reporting behavior.</span></span>|  
+|[<span data-ttu-id="df61d-165">/fullpaths</span><span class="sxs-lookup"><span data-stu-id="df61d-165">/fullpaths</span></span>](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|<span data-ttu-id="df61d-166">Задает абсолютный путь к файлу в выходных данных компилятора.</span><span class="sxs-lookup"><span data-stu-id="df61d-166">Specifies the absolute path to the file in compiler output.</span></span>|  
+|[<span data-ttu-id="df61d-167">/nowarn</span><span class="sxs-lookup"><span data-stu-id="df61d-167">/nowarn</span></span>](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|<span data-ttu-id="df61d-168">Подавляет создание компилятором указанных предупреждений.</span><span class="sxs-lookup"><span data-stu-id="df61d-168">Suppresses the compiler's generation of specified warnings.</span></span>|  
+|[<span data-ttu-id="df61d-169">/warn</span><span class="sxs-lookup"><span data-stu-id="df61d-169">/warn</span></span>](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|<span data-ttu-id="df61d-170">Устанавливает уровень предупреждений.</span><span class="sxs-lookup"><span data-stu-id="df61d-170">Sets the warning level.</span></span>|  
+|[<span data-ttu-id="df61d-171">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="df61d-171">/warnaserror</span></span>](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|<span data-ttu-id="df61d-172">Приравнивает предупреждения к ошибкам.</span><span class="sxs-lookup"><span data-stu-id="df61d-172">Promotes warnings to errors.</span></span>|  
+|<span data-ttu-id="df61d-173">/ruleset:\<файл></span><span class="sxs-lookup"><span data-stu-id="df61d-173">/ruleset:\<file></span></span>|<span data-ttu-id="df61d-174">Укажите файл набора правил, который отключает определенные диагностики.</span><span class="sxs-lookup"><span data-stu-id="df61d-174">Specify a ruleset file that disables specific diagnostics.</span></span>|  
   
-### Препроцессор  
+### <a name="preprocessor"></a><span data-ttu-id="df61d-175">Препроцессор</span><span class="sxs-lookup"><span data-stu-id="df61d-175">Preprocessor</span></span>  
   
-|Параметр|Цель|  
-|--------------|----------|  
-|[\/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|Определяет символы препроцессора.|  
+|<span data-ttu-id="df61d-176">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-176">Option</span></span>|<span data-ttu-id="df61d-177">Назначение</span><span class="sxs-lookup"><span data-stu-id="df61d-177">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="df61d-178">/define</span><span class="sxs-lookup"><span data-stu-id="df61d-178">/define</span></span>](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|<span data-ttu-id="df61d-179">Определяет символы препроцессора.</span><span class="sxs-lookup"><span data-stu-id="df61d-179">Defines preprocessor symbols.</span></span>|  
   
-### Ресурсы  
+### <a name="resources"></a><span data-ttu-id="df61d-180">Ресурсы</span><span class="sxs-lookup"><span data-stu-id="df61d-180">Resources</span></span>  
   
-|Параметр|Цель|  
-|--------------|----------|  
-|[\/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|Делает сведения о типах COM в указанных сборках доступными для проекта.|  
-|[\/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|Создает ссылку на управляемый ресурс.|  
-|[\/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|Внедряет ресурс .NET Framework в выходной файл.|  
-|[\/win32icon](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|Указывает ICO\-файл для вставки в выходной файл.|  
-|[\/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|Задает ресурс Win32 для вставки в выходной файл.|  
+|<span data-ttu-id="df61d-181">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-181">Option</span></span>|<span data-ttu-id="df61d-182">Назначение</span><span class="sxs-lookup"><span data-stu-id="df61d-182">Purpose</span></span>|  
+|------------|-------------|  
+|[<span data-ttu-id="df61d-183">/link</span><span class="sxs-lookup"><span data-stu-id="df61d-183">/link</span></span>](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|<span data-ttu-id="df61d-184">Делает сведения о типах COM в указанных сборках доступными для проекта.</span><span class="sxs-lookup"><span data-stu-id="df61d-184">Makes COM type information in specified assemblies available to the project.</span></span>|  
+|[<span data-ttu-id="df61d-185">/linkresource</span><span class="sxs-lookup"><span data-stu-id="df61d-185">/linkresource</span></span>](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|<span data-ttu-id="df61d-186">Создает ссылку на управляемый ресурс.</span><span class="sxs-lookup"><span data-stu-id="df61d-186">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="df61d-187">/resource</span><span class="sxs-lookup"><span data-stu-id="df61d-187">/resource</span></span>](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|<span data-ttu-id="df61d-188">Внедряет ресурс .NET Framework в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="df61d-188">Embeds a .NET Framework resource into the output file.</span></span>|  
+|[<span data-ttu-id="df61d-189">/win32icon</span><span class="sxs-lookup"><span data-stu-id="df61d-189">/win32icon</span></span>](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|<span data-ttu-id="df61d-190">Указывает ICO-файл для вставки в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="df61d-190">Specifies an .ico file to insert into the output file.</span></span>|  
+|[<span data-ttu-id="df61d-191">/win32res</span><span class="sxs-lookup"><span data-stu-id="df61d-191">/win32res</span></span>](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|<span data-ttu-id="df61d-192">Задает ресурс Win32 для вставки в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="df61d-192">Specifies a Win32 resource to insert into the output file.</span></span>|  
   
-### Прочее  
+### <a name="miscellaneous"></a><span data-ttu-id="df61d-193">Прочее</span><span class="sxs-lookup"><span data-stu-id="df61d-193">Miscellaneous</span></span>  
   
-|Параметр|Цель|  
-|--------------|----------|  
-|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|Указывает файл ответа.|  
-|[\/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Перечисляет параметры компилятора в stdout.|  
-|[\/baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Указывает предпочтительный базовый адрес для загрузки DLL.|  
-|[\/codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Задает кодовую страницу, которая должна использоваться для всех файлов исходного кода при компиляции.|  
-|[\/help](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Перечисляет параметры компилятора в stdout.|  
-|[\/highentropyva](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|Указывает, что исполняемый файл поддерживает технологию Address Space Layout Randomization \(ASLR\).|  
-|[\/langversion](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|Укажите режим языковой версии: ISO\-1, ISO\-2, 3, 4, 5, 6 или Default|  
-|[\/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|Указывает местоположение метода **Main**.|  
-|[\/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|Предписывает компилятору не компилировать csc.rsp.|  
-|[\/nologo](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|Подавляет сведения баннера компилятора.|  
-|[\/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|Выполняет поиск в подкаталогах исходных файлов для компиляции.|  
-|[\/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|Задает минимальную версию подсистемы, которую может использовать исполняемый файл.|  
-|[\/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|Разрешает компиляцию кода, использующего ключевое слово [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|  
-|[\/utf8output](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|Отображает выходные данные компилятора в кодировке UTF\-8.|  
-|`/parallel[+&#124;-]`|Указывает, следует ли использовать параллельную сборку \(\+\).|  
-|`/checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 \(по умолчанию\) или SHA256.|  
+|<span data-ttu-id="df61d-194">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-194">Option</span></span>|<span data-ttu-id="df61d-195">Цель</span><span class="sxs-lookup"><span data-stu-id="df61d-195">Purpose</span></span>|  
+|------------|-------------|  
+|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|<span data-ttu-id="df61d-196">Указывает файл ответа.</span><span class="sxs-lookup"><span data-stu-id="df61d-196">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="df61d-197">/?</span><span class="sxs-lookup"><span data-stu-id="df61d-197">/?</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="df61d-198">Перечисляет параметры компилятора в stdout.</span><span class="sxs-lookup"><span data-stu-id="df61d-198">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="df61d-199">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="df61d-199">/baseaddress</span></span>](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|<span data-ttu-id="df61d-200">Указывает предпочтительный базовый адрес для загрузки DLL.</span><span class="sxs-lookup"><span data-stu-id="df61d-200">Specifies the preferred base address at which to load a DLL.</span></span>|  
+|[<span data-ttu-id="df61d-201">/codepage</span><span class="sxs-lookup"><span data-stu-id="df61d-201">/codepage</span></span>](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|<span data-ttu-id="df61d-202">Задает кодовую страницу, которая будет использоваться для всех файлов исходного кода при компиляции.</span><span class="sxs-lookup"><span data-stu-id="df61d-202">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="df61d-203">/help</span><span class="sxs-lookup"><span data-stu-id="df61d-203">/help</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="df61d-204">Перечисляет параметры компилятора в stdout.</span><span class="sxs-lookup"><span data-stu-id="df61d-204">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="df61d-205">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="df61d-205">/highentropyva</span></span>](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|<span data-ttu-id="df61d-206">Указывает, что исполняемый файл поддерживает технологию Address Space Layout Randomization (ASLR).</span><span class="sxs-lookup"><span data-stu-id="df61d-206">Specifies that the executable file supports address space layout randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="df61d-207">/langversion</span><span class="sxs-lookup"><span data-stu-id="df61d-207">/langversion</span></span>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|<span data-ttu-id="df61d-208">Укажите режим языковой версии: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 или Latest</span><span class="sxs-lookup"><span data-stu-id="df61d-208">Specify language version mode: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, or Latest</span></span> |  
+|[<span data-ttu-id="df61d-209">/main</span><span class="sxs-lookup"><span data-stu-id="df61d-209">/main</span></span>](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|<span data-ttu-id="df61d-210">Указывает местоположение метода **Main**.</span><span class="sxs-lookup"><span data-stu-id="df61d-210">Specifies the location of the **Main** method.</span></span>|  
+|[<span data-ttu-id="df61d-211">/noconfig</span><span class="sxs-lookup"><span data-stu-id="df61d-211">/noconfig</span></span>](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|<span data-ttu-id="df61d-212">Предписывает компилятору не компилировать csc.rsp.</span><span class="sxs-lookup"><span data-stu-id="df61d-212">Instructs the compiler not to compile with csc.rsp.</span></span>|  
+|[<span data-ttu-id="df61d-213">/nologo</span><span class="sxs-lookup"><span data-stu-id="df61d-213">/nologo</span></span>](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|<span data-ttu-id="df61d-214">Подавляет сведения баннера компилятора.</span><span class="sxs-lookup"><span data-stu-id="df61d-214">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="df61d-215">/recurse</span><span class="sxs-lookup"><span data-stu-id="df61d-215">/recurse</span></span>](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|<span data-ttu-id="df61d-216">Выполняет поиск в подкаталогах исходных файлов для компиляции.</span><span class="sxs-lookup"><span data-stu-id="df61d-216">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="df61d-217">/subsystemversion</span><span class="sxs-lookup"><span data-stu-id="df61d-217">/subsystemversion</span></span>](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|<span data-ttu-id="df61d-218">Задает минимальную версию подсистемы, которую может использовать исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="df61d-218">Specifies the minimum version of the subsystem that the executable file can use.</span></span>|  
+|[<span data-ttu-id="df61d-219">/unsafe</span><span class="sxs-lookup"><span data-stu-id="df61d-219">/unsafe</span></span>](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|<span data-ttu-id="df61d-220">Разрешает компиляцию кода, использующего ключевое слово [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="df61d-220">Enables compilation of code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword.</span></span>|  
+|[<span data-ttu-id="df61d-221">/utf8output</span><span class="sxs-lookup"><span data-stu-id="df61d-221">/utf8output</span></span>](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|<span data-ttu-id="df61d-222">Отображает выходные данные компилятора в кодировке UTF-8.</span><span class="sxs-lookup"><span data-stu-id="df61d-222">Displays compiler output using UTF-8 encoding.</span></span>|  
+|<span data-ttu-id="df61d-223">/parallel[+&#124;-]</span><span class="sxs-lookup"><span data-stu-id="df61d-223">/parallel[+&#124;-]</span></span>|<span data-ttu-id="df61d-224">Указывает, следует ли использовать параллельную сборку (+).</span><span class="sxs-lookup"><span data-stu-id="df61d-224">Specifies whether to use concurrent build (+).</span></span>|  
+|<span data-ttu-id="df61d-225">/checksumalgorithm:\<алгоритм></span><span class="sxs-lookup"><span data-stu-id="df61d-225">/checksumalgorithm:\<alg></span></span>|<span data-ttu-id="df61d-226">Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.</span><span class="sxs-lookup"><span data-stu-id="df61d-226">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="df61d-227">Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.</span><span class="sxs-lookup"><span data-stu-id="df61d-227">Supported values are: SHA1 (default) or SHA256.</span></span>|  
   
-## Устаревшие параметры  
+## <a name="obsolete-options"></a><span data-ttu-id="df61d-228">Устаревшие параметры</span><span class="sxs-lookup"><span data-stu-id="df61d-228">Obsolete Options</span></span>  
   
-|||  
-|-|-|  
-|**\/incremental**|Включает инкрементную компиляцию.|  
+|<span data-ttu-id="df61d-229">Параметр</span><span class="sxs-lookup"><span data-stu-id="df61d-229">Option</span></span>|<span data-ttu-id="df61d-230">Назначение</span><span class="sxs-lookup"><span data-stu-id="df61d-230">Purpose</span></span>|  
+|---|---|  
+|<span data-ttu-id="df61d-231">/incremental</span><span class="sxs-lookup"><span data-stu-id="df61d-231">/incremental</span></span>|<span data-ttu-id="df61d-232">Включает инкрементную компиляцию.</span><span class="sxs-lookup"><span data-stu-id="df61d-232">Enables incremental compilation.</span></span>|  
   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [C\# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+## <a name="see-also"></a><span data-ttu-id="df61d-233">См. также</span><span class="sxs-lookup"><span data-stu-id="df61d-233">See Also</span></span>  
+ <span data-ttu-id="df61d-234">[Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="df61d-234">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ <span data-ttu-id="df61d-235">[Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span><span class="sxs-lookup"><span data-stu-id="df61d-235">[C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span></span>  
+ [<span data-ttu-id="df61d-236">Практическое руководство. Настройка переменных среды для командной строки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="df61d-236">How to: Set Environment Variables for the Visual Studio Command Line</span></span>](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+

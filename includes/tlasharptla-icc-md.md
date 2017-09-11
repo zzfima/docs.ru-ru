@@ -1,1 +1,1 @@
-Международный консорциум по цвету (ICC)
+<span data-ttu-id="2edeb-101">Международный консорциум по цвету (ICC)</span><span class="sxs-lookup"><span data-stu-id="2edeb-101">International Color Consortium (ICC)</span></span>

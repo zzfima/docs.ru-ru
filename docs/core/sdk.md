@@ -1,6 +1,6 @@
 ---
-title: "Обзор пакета SDK для .NET Core | Документация Майкрософт"
-description: "Обзор пакета SDK для .NET Core"
+title: "Обзор пакета SDK для .NET Core"
+description: "Сведения о пакете SDK для .NET Core, который является набором библиотек и средств, используемых для создания проектов .NET Core."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,35 +10,32 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1b05b7e1a2d274f02cd1222c0a90a59583d37e92
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Обзор пакета SDK для .NET Core
-<a id="net-core-sdk-overview" class="xliff"></a> 
+# <a name="net-core-sdk-overview"></a><span data-ttu-id="5ea30-104">Обзор пакета SDK для .NET Core</span><span class="sxs-lookup"><span data-stu-id="5ea30-104">.NET Core SDK Overview</span></span> 
 
-## Вступление
-<a id="introduction" class="xliff"></a>
-Пакет средств разработки (SDK) для .NET Core — это набор библиотек и средств, которые позволяют разработчикам создавать приложения и библиотеки .NET Core. Он почти наверняка потребуется каждому разработчику. 
+## <a name="introduction"></a><span data-ttu-id="5ea30-105">Вступление</span><span class="sxs-lookup"><span data-stu-id="5ea30-105">Introduction</span></span>
+<span data-ttu-id="5ea30-106">Пакет средств разработки (SDK) для .NET Core — это набор библиотек и средств, которые позволяют разработчикам создавать приложения и библиотеки .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5ea30-106">.NET Core Software Development Kit (SDK) is a set of libraries and tools that allow developers to create .NET Core applications and libraries.</span></span> <span data-ttu-id="5ea30-107">Он почти наверняка потребуется каждому разработчику.</span><span class="sxs-lookup"><span data-stu-id="5ea30-107">This is the package that developers will most likely acquire.</span></span> 
 
-Пакет содержит следующие компоненты:
+<span data-ttu-id="5ea30-108">Пакет содержит следующие компоненты:</span><span class="sxs-lookup"><span data-stu-id="5ea30-108">It contains the following components:</span></span>
 
-1. программы командной строки .NET Core, используемые для создания приложений;
-2. платформа .NET Core (библиотеки и среда выполнения), обеспечивающая сборку и выполнение приложений;
-3. драйвер `dotnet` для выполнения [команд интерфейса командной строки (CLI)](tools/index.md), а также приложений.
+1. <span data-ttu-id="5ea30-109">программы командной строки .NET Core, используемые для создания приложений;</span><span class="sxs-lookup"><span data-stu-id="5ea30-109">The .NET Core Command Line Tools that are used to build applications</span></span>
+2. <span data-ttu-id="5ea30-110">платформа .NET Core (библиотеки и среда выполнения), обеспечивающая сборку и выполнение приложений;</span><span class="sxs-lookup"><span data-stu-id="5ea30-110">.NET Core (libraries and runtime) that allow applications to both be built and run</span></span>
+3. <span data-ttu-id="5ea30-111">драйвер `dotnet` для выполнения [команд интерфейса командной строки (CLI)](tools/index.md), а также приложений.</span><span class="sxs-lookup"><span data-stu-id="5ea30-111">The `dotnet` driver for running the [CLI commands](tools/index.md) as well as running applications</span></span>
 
 
-## Получение пакета SDK для .NET Core
-<a id="acquiring-the-net-core-sdk" class="xliff"></a>
-Так же как и в случае с любыми другими средствами, этот пакет нужно установить на компьютере. В зависимости от сценария можно использовать либо собственные установщики пакета SDK, либо скрипт оболочки для установки.
+## <a name="acquiring-the-net-core-sdk"></a><span data-ttu-id="5ea30-112">Получение пакета SDK для .NET Core</span><span class="sxs-lookup"><span data-stu-id="5ea30-112">Acquiring the .NET Core SDK</span></span>
+<span data-ttu-id="5ea30-113">Так же как и в случае с любыми другими средствами, этот пакет нужно установить на компьютере.</span><span class="sxs-lookup"><span data-stu-id="5ea30-113">As with any tooling, the first thing is to get the tools to your machine.</span></span> <span data-ttu-id="5ea30-114">В зависимости от сценария можно использовать либо собственные установщики пакета SDK, либо скрипт оболочки для установки.</span><span class="sxs-lookup"><span data-stu-id="5ea30-114">Depending on your scenario, you can either use the native installers to install the SDK or use the installation shell script.</span></span>
 
-Собственные установщики предназначены в первую очередь для компьютеров разработчиков. Пакет SDK распространяется посредством собственных механизмов установки каждой поддерживаемой платформы, например пакетов DEB в Ubuntu или пакетов MSI в Windows. Эти установщики установят и настроят среду необходимым образом, чтобы пользователь мог сразу приступить к работе с пакетом SDK. Однако они требуют прав администратора на компьютере. Инструкции по установке см. в [руководстве по установке .NET Core](https://aka.ms/dotnetcoregs).
+<span data-ttu-id="5ea30-115">Собственные установщики предназначены в первую очередь для компьютеров разработчиков.</span><span class="sxs-lookup"><span data-stu-id="5ea30-115">The native installers are primarily meant for developer's machines.</span></span> <span data-ttu-id="5ea30-116">Пакет SDK распространяется посредством собственных механизмов установки каждой поддерживаемой платформы, например пакетов DEB в Ubuntu или пакетов MSI в Windows.</span><span class="sxs-lookup"><span data-stu-id="5ea30-116">The SDK is distributed using each supported platform's native install mechanism, for instance DEB packages on Ubuntu or MSI bundles on Windows.</span></span> <span data-ttu-id="5ea30-117">Эти установщики установят и настроят среду необходимым образом, чтобы пользователь мог сразу приступить к работе с пакетом SDK.</span><span class="sxs-lookup"><span data-stu-id="5ea30-117">These installers will install and set up the environment as needed for the user to use the SDK immediately after the install.</span></span> <span data-ttu-id="5ea30-118">Однако они требуют прав администратора на компьютере.</span><span class="sxs-lookup"><span data-stu-id="5ea30-118">However, they also require administrative privileges on the machine.</span></span> <span data-ttu-id="5ea30-119">Инструкции по установке см. в [руководстве по установке .NET Core](https://aka.ms/dotnetcoregs).</span><span class="sxs-lookup"><span data-stu-id="5ea30-119">You can view the installation instructions on the [.NET Core installation guide](https://aka.ms/dotnetcoregs).</span></span>
 
-Скрипты установки, в свою очередь, не требуют прав администратора. Однако они не устанавливают на компьютере необходимые компоненты; вам потребуется установить их вручную. Скрипты предназначены в первую очередь для настройки серверов сборки или установки средств без прав администратора (не забывайте об особенности, касающейся необходимых компонентов). Дополнительные сведения см. в [справочном разделе по скриптам установки](tools/dotnet-install-script.md). Если вас интересует, как настроить пакет SDK на сервере сборки с непрерывной интеграцией (CI), обратитесь к документу [Пакет SDK с серверами CI](tools/using-ci-with-cli.md). 
+<span data-ttu-id="5ea30-120">Скрипты установки, в свою очередь, не требуют прав администратора.</span><span class="sxs-lookup"><span data-stu-id="5ea30-120">Install scripts, on the other hand, do not require administrative privileges.</span></span> <span data-ttu-id="5ea30-121">Однако они не устанавливают на компьютере необходимые компоненты; вам потребуется установить их вручную.</span><span class="sxs-lookup"><span data-stu-id="5ea30-121">However, they will also not install any prerequisites on the machine; you need to install all of the prerequisites manually.</span></span> <span data-ttu-id="5ea30-122">Скрипты предназначены в первую очередь для настройки серверов сборки или установки средств без прав администратора (не забывайте об особенности, касающейся необходимых компонентов).</span><span class="sxs-lookup"><span data-stu-id="5ea30-122">The scripts are meant mostly for setting up build servers or when you wish to install the tools without admin privileges (do note the prerequisites caveat above).</span></span> <span data-ttu-id="5ea30-123">Дополнительные сведения см. в [справочном разделе по скриптам установки](tools/dotnet-install-script.md).</span><span class="sxs-lookup"><span data-stu-id="5ea30-123">You can find more information on the [install script reference topic](tools/dotnet-install-script.md).</span></span> <span data-ttu-id="5ea30-124">Если вас интересует, как настроить пакет SDK на сервере сборки с непрерывной интеграцией (CI), обратитесь к документу [Пакет SDK с серверами CI](tools/using-ci-with-cli.md).</span><span class="sxs-lookup"><span data-stu-id="5ea30-124">If you are interested in how to set up SDK on your CI build server you can take a look at the [SDK with CI servers](tools/using-ci-with-cli.md) document.</span></span> 
 
-По умолчанию пакет SDK устанавливается в параллельном режиме (SxS). Это означает, что на одном компьютере в любой момент времени могут сосуществовать разные версии средств CLI. То, как использовать правильную версию, более подробно описывается в подразделе, посвященном [драйверу](tools/index.md#driver), в разделе "Программы командной строки .NET Core".
+<span data-ttu-id="5ea30-125">По умолчанию пакет SDK устанавливается в параллельном режиме (SxS).</span><span class="sxs-lookup"><span data-stu-id="5ea30-125">By default, the SDK will install in a "side-by-side" (SxS) manner.</span></span> <span data-ttu-id="5ea30-126">Это означает, что на одном компьютере в любой момент времени могут сосуществовать разные версии средств CLI.</span><span class="sxs-lookup"><span data-stu-id="5ea30-126">This means that multiple versions of the CLI tools can coexist at any given time on a single machine.</span></span> <span data-ttu-id="5ea30-127">То, как использовать правильную версию, более подробно описывается в подразделе, посвященном [драйверу](tools/index.md#driver), в разделе "Программы командной строки .NET Core".</span><span class="sxs-lookup"><span data-stu-id="5ea30-127">How the correct version gets used is explained in more detail in the [driver section](tools/index.md#driver) of .NET Core Command Line Tools topic.</span></span>
 

@@ -1,1 +1,1 @@
-Для списка
+<span data-ttu-id="f1964-101">Для списка</span><span class="sxs-lookup"><span data-stu-id="f1964-101">For a list of</span></span>

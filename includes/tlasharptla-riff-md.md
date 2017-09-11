@@ -1,1 +1,1 @@
-Формат RIFF (Resource Interchange File Format)
+<span data-ttu-id="6cbca-101">Формат RIFF (Resource Interchange File Format)</span><span class="sxs-lookup"><span data-stu-id="6cbca-101">Resource Interchange File Format (RIFF)</span></span>

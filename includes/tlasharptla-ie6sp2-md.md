@@ -1,1 +1,1 @@
-Microsoft Internet Explorer 6 с пакетом обновления 2 (SP2)
+<span data-ttu-id="c8438-101">Microsoft Internet Explorer 6 с пакетом обновления 2 (SP2)</span><span class="sxs-lookup"><span data-stu-id="c8438-101">Microsoft Internet Explorer 6 (SP2)</span></span>

@@ -18,112 +18,113 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="types-and-variables"></a>Типы и переменные
+# <a name="types-and-variables"></a><span data-ttu-id="f5b15-104">Типы и переменные</span><span class="sxs-lookup"><span data-stu-id="f5b15-104">Types and variables</span></span>
 
-В C# существуют две разновидности типов: *ссылочные типы* и *типы значений*. Переменные типа значений содержат непосредственно данные, а в переменных ссылочных типов хранятся ссылки на нужные данные, которые именуются объектами. Две переменные ссылочного типа могут ссылаться на один и тот же объект, поэтому может случиться так, что операции над одной переменной затронут объект, на который ссылается другая переменная. Каждая переменная типа значения имеет собственную копию данных, и операции над одной переменной не могут затрагивать другую (за исключением переменных параметров `ref` и `out`).
+<span data-ttu-id="f5b15-105">В C# существуют две разновидности типов: *ссылочные типы* и *типы значений*.</span><span class="sxs-lookup"><span data-stu-id="f5b15-105">There are two kinds of types in C#: *value types* and *reference types*.</span></span> <span data-ttu-id="f5b15-106">Переменные типа значений содержат непосредственно данные, а в переменных ссылочных типов хранятся ссылки на нужные данные, которые именуются объектами.</span><span class="sxs-lookup"><span data-stu-id="f5b15-106">Variables of value types directly contain their data whereas variables of reference types store references to their data, the latter being known as objects.</span></span> <span data-ttu-id="f5b15-107">Две переменные ссылочного типа могут ссылаться на один и тот же объект, поэтому может случиться так, что операции над одной переменной затронут объект, на который ссылается другая переменная.</span><span class="sxs-lookup"><span data-stu-id="f5b15-107">With reference types, it is possible for two variables to reference the same object and thus possible for operations on one variable to affect the object referenced by the other variable.</span></span> <span data-ttu-id="f5b15-108">Каждая переменная типа значения имеет собственную копию данных, и операции над одной переменной не могут затрагивать другую (за исключением переменных параметров `ref` и `out`).</span><span class="sxs-lookup"><span data-stu-id="f5b15-108">With value types, the variables each have their own copy of the data, and it is not possible for operations on one to affect the other (except in the case of `ref` and `out` parameter variables).</span></span>
 
-Типы значений в C# подразделяются на *простые типы*, *типы перечисления*, *типы структур* и *типы, допускающие значение Null*. Ссылочные типы в C# подразделяются на *типы классов*, *типы интерфейсов*, *типы массивов* и *типы делегатов*.
+<span data-ttu-id="f5b15-109">Типы значений в C# подразделяются на *простые типы*, *типы перечисления*, *типы структур* и *типы, допускающие значение Null*.</span><span class="sxs-lookup"><span data-stu-id="f5b15-109">C#’s value types are further divided into *simple types*, *enum types*, *struct types*, and *nullable value types*.</span></span> <span data-ttu-id="f5b15-110">Ссылочные типы в C# подразделяются на *типы классов*, *типы интерфейсов*, *типы массивов* и *типы делегатов*.</span><span class="sxs-lookup"><span data-stu-id="f5b15-110">C#’s reference types are further divided into *class types*, *interface types*, *array types*, and *delegate types*.</span></span>
 
-Далее представлены общие сведения о системе типов в C#.
+<span data-ttu-id="f5b15-111">Далее представлены общие сведения о системе типов в C#.</span><span class="sxs-lookup"><span data-stu-id="f5b15-111">The following provides an overview of C#’s type system.</span></span>
 
-* Типы значений
-    - Простые типы
-        * Целочисленный со знаком: `sbyte`, `short`, `int`,`long`
-        * Целочисленный без знака: `byte`, `ushort`, `uint`,`ulong`
-        * Символы Юникода: `char`
-        * IEEE-представление с плавающей запятой: `float`, `double`
-        * Десятичный с повышенной точностью: `decimal`
-        * Логическое значение: `bool`
-    - Типы перечисления
-        * Пользовательские типы в формате `enum E {...}`
-    - Типы структур
-        * Пользовательские типы в формате `struct S {...}`
-    - Типы значений, допускающие значение NULL
-        * Расширения других типов значений, допускающие значение `null`
-* Ссылочные типы
-    - Типы классов
-        * Исходный базовым классом для всех типов: `object`
-        * Строки Юникода: `string`
-        * Пользовательские типы в формате `class C {...}`
-    - Типы интерфейса
-        * Пользовательские типы в формате `interface I {...}`
-    - Типы массивов
-        * Одно- и многомерные, например, `int[]` и `int[,]`
-    - Тип делегатов
-        * Пользовательские типы в формате `delegate int D(...)`
+* <span data-ttu-id="f5b15-112">Типы значений</span><span class="sxs-lookup"><span data-stu-id="f5b15-112">Value types</span></span>
+    - <span data-ttu-id="f5b15-113">Простые типы</span><span class="sxs-lookup"><span data-stu-id="f5b15-113">Simple Types</span></span>
+        * <span data-ttu-id="f5b15-114">Целочисленный со знаком: `sbyte`, `short`, `int`,`long`</span><span class="sxs-lookup"><span data-stu-id="f5b15-114">Signed integral: `sbyte`, `short`, `int`, `long`</span></span>
+        * <span data-ttu-id="f5b15-115">Целочисленный без знака: `byte`, `ushort`, `uint`,`ulong`</span><span class="sxs-lookup"><span data-stu-id="f5b15-115">Unsigned integral: `byte`, `ushort`, `uint`, `ulong`</span></span>
+        * <span data-ttu-id="f5b15-116">Символы Юникода: `char`</span><span class="sxs-lookup"><span data-stu-id="f5b15-116">Unicode characters: `char`</span></span>
+        * <span data-ttu-id="f5b15-117">IEEE-представление с плавающей запятой: `float`, `double`</span><span class="sxs-lookup"><span data-stu-id="f5b15-117">IEEE floating point: `float`, `double`</span></span>
+        * <span data-ttu-id="f5b15-118">Десятичный с повышенной точностью: `decimal`</span><span class="sxs-lookup"><span data-stu-id="f5b15-118">High-precision decimal: `decimal`</span></span>
+        * <span data-ttu-id="f5b15-119">Логическое значение: `bool`</span><span class="sxs-lookup"><span data-stu-id="f5b15-119">Boolean: `bool`</span></span>
+    - <span data-ttu-id="f5b15-120">Типы перечисления</span><span class="sxs-lookup"><span data-stu-id="f5b15-120">Enum types</span></span>
+        * <span data-ttu-id="f5b15-121">Пользовательские типы в формате `enum E {...}`</span><span class="sxs-lookup"><span data-stu-id="f5b15-121">User-defined types of the form `enum E {...}`</span></span>
+    - <span data-ttu-id="f5b15-122">Типы структур</span><span class="sxs-lookup"><span data-stu-id="f5b15-122">Struct types</span></span>
+        * <span data-ttu-id="f5b15-123">Пользовательские типы в формате `struct S {...}`</span><span class="sxs-lookup"><span data-stu-id="f5b15-123">User-defined types of the form `struct S {...}`</span></span>
+    - <span data-ttu-id="f5b15-124">Типы значений, допускающие значение NULL</span><span class="sxs-lookup"><span data-stu-id="f5b15-124">Nullable value types</span></span>
+        * <span data-ttu-id="f5b15-125">Расширения других типов значений, допускающие значение `null`</span><span class="sxs-lookup"><span data-stu-id="f5b15-125">Extensions of all other value types with a `null` value</span></span>
+* <span data-ttu-id="f5b15-126">Ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="f5b15-126">Reference types</span></span>
+    - <span data-ttu-id="f5b15-127">Типы классов</span><span class="sxs-lookup"><span data-stu-id="f5b15-127">Class types</span></span>
+        * <span data-ttu-id="f5b15-128">Исходный базовым классом для всех типов: `object`</span><span class="sxs-lookup"><span data-stu-id="f5b15-128">Ultimate base class of all other types: `object`</span></span>
+        * <span data-ttu-id="f5b15-129">Строки Юникода: `string`</span><span class="sxs-lookup"><span data-stu-id="f5b15-129">Unicode strings: `string`</span></span>
+        * <span data-ttu-id="f5b15-130">Пользовательские типы в формате `class C {...}`</span><span class="sxs-lookup"><span data-stu-id="f5b15-130">User-defined types of the form `class C {...}`</span></span>
+    - <span data-ttu-id="f5b15-131">Типы интерфейса</span><span class="sxs-lookup"><span data-stu-id="f5b15-131">Interface types</span></span>
+        * <span data-ttu-id="f5b15-132">Пользовательские типы в формате `interface I {...}`</span><span class="sxs-lookup"><span data-stu-id="f5b15-132">User-defined types of the form `interface I {...}`</span></span>
+    - <span data-ttu-id="f5b15-133">Типы массивов</span><span class="sxs-lookup"><span data-stu-id="f5b15-133">Array types</span></span>
+        * <span data-ttu-id="f5b15-134">Одно- и многомерные, например, `int[]` и `int[,]`</span><span class="sxs-lookup"><span data-stu-id="f5b15-134">Single- and multi-dimensional, for example, `int[]` and `int[,]`</span></span>
+    - <span data-ttu-id="f5b15-135">Тип делегатов</span><span class="sxs-lookup"><span data-stu-id="f5b15-135">Delegate types</span></span>
+        * <span data-ttu-id="f5b15-136">Пользовательские типы в формате `delegate int D(...)`</span><span class="sxs-lookup"><span data-stu-id="f5b15-136">User-defined types of the form `delegate int D(...)`</span></span>
 
-Восемь целочисленных типов обеспечивают поддержку 8-разрядных, 16-разрядных, 32-разрядных и 64-разрядных значений со знаком или без знака.
+<span data-ttu-id="f5b15-137">Восемь целочисленных типов обеспечивают поддержку 8-разрядных, 16-разрядных, 32-разрядных и 64-разрядных значений со знаком или без знака.</span><span class="sxs-lookup"><span data-stu-id="f5b15-137">The eight integral types provide support for 8-bit, 16-bit, 32-bit, and 64-bit values in signed or unsigned form.</span></span>
 
-Два типа чисел с плавающей запятой, `float` и `double`, представляются в следующих форматах IEC 60559: 32-разрядный одиночной точности и 64-разрядный двойной точности.
+<span data-ttu-id="f5b15-138">Два типа чисел с плавающей запятой, `float` и `double`, представляются в следующих форматах IEC 60559: 32-разрядный одиночной точности и 64-разрядный двойной точности.</span><span class="sxs-lookup"><span data-stu-id="f5b15-138">The two floating-point types, `float` and `double`, are represented using the 32-bit single-precision and 64-bit double-precision IEC-60559 formats, respectively.</span></span>
 
-Тип `decimal` — это 128-разрядный тип данных для финансовых и денежных расчетов.
+<span data-ttu-id="f5b15-139">Тип `decimal` — это 128-разрядный тип данных для финансовых и денежных расчетов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-139">The `decimal` type is a 128-bit data type suitable for financial and monetary calculations.</span></span>
 
-Тип `bool` в C# используется для представления логических значений, которые могут иметь значение `true` или `false`.
+<span data-ttu-id="f5b15-140">Тип `bool` в C# используется для представления логических значений, которые могут иметь значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="f5b15-140">C#’s `bool` type is used to represent Boolean values—values that are either `true` or `false`.</span></span>
 
-Обработка знаков и строк в C# выполняется в кодировке Юникода. Тип `char` представляет элемент в кодировке UTF-16, а тип `string` представляет последовательность элементов в кодировке UTF-16.
+<span data-ttu-id="f5b15-141">Обработка знаков и строк в C# выполняется в кодировке Юникода.</span><span class="sxs-lookup"><span data-stu-id="f5b15-141">Character and string processing in C# uses Unicode encoding.</span></span> <span data-ttu-id="f5b15-142">Тип `char` представляет элемент в кодировке UTF-16, а тип `string` представляет последовательность элементов в кодировке UTF-16.</span><span class="sxs-lookup"><span data-stu-id="f5b15-142">The `char` type represents a UTF-16 code unit, and the `string` type represents a sequence of UTF-16 code units.</span></span>
 
-Полный список числовых типов в C#.
+<span data-ttu-id="f5b15-143">Полный список числовых типов в C#.</span><span class="sxs-lookup"><span data-stu-id="f5b15-143">This summarizes C#’s numeric types.</span></span>
 
-* Целочисленный со знаком
-    - `sbyte`: 8 бит, в диапазоне от –128 до 127
-    - `short`: 16 бит, в диапазоне от –32 768 до 32 767
-    - `int`: 32 бита, в диапазоне от –2 147 483 648 до 2 147 483 647
-    - `long`: 64 бита, в диапазоне от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807
-* Целочисленный без знака
-    - `byte`: 8 бит, в диапазоне от 0 до 255
-    - `ushort`: 16 бит, в диапазоне от 0 до 65 535
-    - `uint`: 32 бита, в диапазоне от 0 до 4 294 967 295
-    - `ulong`: 64 бит, в диапазоне от 0 до 18 446 744 073 709 551 615
-* С плавающей запятой
-    - `float`: 32 бита, в диапазоне от 1,5 × 10<sup>–45</sup> до 3,4 × 10<sup>38</sup>, с точностью до 7 цифр
-    - `double`: 64 бита, в диапазоне от 5,0 × 10<sup>–324</sup> до 1,7 × 10<sup>308</sup>, с точностью до 15 цифр
-* Десятичное число
-    - `decimal`: 128 бит, в диапазоне по крайней мере от –7,9 × 10<sup>−28</sup> до 7,9 × 10<sup>28</sup>, с точностью не менее 28 цифр
+* <span data-ttu-id="f5b15-144">Целочисленный со знаком</span><span class="sxs-lookup"><span data-stu-id="f5b15-144">Signed Integral</span></span>
+    - <span data-ttu-id="f5b15-145">`sbyte`: 8 бит, в диапазоне от –128 до 127</span><span class="sxs-lookup"><span data-stu-id="f5b15-145">`sbyte`:  8 bits, range from -128 - 127</span></span>
+    - <span data-ttu-id="f5b15-146">`short`: 16 бит, в диапазоне от –32 768 до 32 767</span><span class="sxs-lookup"><span data-stu-id="f5b15-146">`short`: 16 bits, range from -32,768 - 32,767</span></span>
+    - <span data-ttu-id="f5b15-147">`int`: 32 бита, в диапазоне от –2 147 483 648 до 2 147 483 647</span><span class="sxs-lookup"><span data-stu-id="f5b15-147">`int`  : 32 bits, range from -2,147,483,648 - 2,147,483,647</span></span>
+    - <span data-ttu-id="f5b15-148">`long`: 64 бита, в диапазоне от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807</span><span class="sxs-lookup"><span data-stu-id="f5b15-148">`long` : 64 bits, range from –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</span></span>
+* <span data-ttu-id="f5b15-149">Целочисленный без знака</span><span class="sxs-lookup"><span data-stu-id="f5b15-149">Unsigned integral</span></span>
+    - <span data-ttu-id="f5b15-150">`byte`: 8 бит, в диапазоне от 0 до 255</span><span class="sxs-lookup"><span data-stu-id="f5b15-150">`byte`   :  8 bits, range from 0 - 255</span></span>
+    - <span data-ttu-id="f5b15-151">`ushort`: 16 бит, в диапазоне от 0 до 65 535</span><span class="sxs-lookup"><span data-stu-id="f5b15-151">`ushort` : 16 bits, range from 0 - 65,535</span></span>
+    - <span data-ttu-id="f5b15-152">`uint`: 32 бита, в диапазоне от 0 до 4 294 967 295</span><span class="sxs-lookup"><span data-stu-id="f5b15-152">`uint`   : 32 bits, range from 0 - 4,294,967,295</span></span>
+    - <span data-ttu-id="f5b15-153">`ulong`: 64 бит, в диапазоне от 0 до 18 446 744 073 709 551 615</span><span class="sxs-lookup"><span data-stu-id="f5b15-153">`ulong`  : 64 bits, range from 0 - 18,446,744,073,709,551,615</span></span>
+* <span data-ttu-id="f5b15-154">С плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="f5b15-154">Floating point</span></span>
+    - <span data-ttu-id="f5b15-155">`float`: 32 бита, в диапазоне от 1,5 × 10<sup>–45</sup> до 3,4 × 10<sup>38</sup>, с точностью до 7 цифр</span><span class="sxs-lookup"><span data-stu-id="f5b15-155">`float`  : 32 bits, range from 1.5 × 10<sup>−45</sup> - 3.4 × 10<sup>38</sup>,    7-digit precision</span></span>
+    - <span data-ttu-id="f5b15-156">`double`: 64 бита, в диапазоне от 5,0 × 10<sup>–324</sup> до 1,7 × 10<sup>308</sup>, с точностью до 15 цифр</span><span class="sxs-lookup"><span data-stu-id="f5b15-156">`double` : 64 bits, range from 5.0 × 10<sup>−324</sup> - 1.7 × 10<sup>308</sup>, 15-digit precision</span></span>
+* <span data-ttu-id="f5b15-157">Десятичное число</span><span class="sxs-lookup"><span data-stu-id="f5b15-157">Decimal</span></span>
+    - <span data-ttu-id="f5b15-158">`decimal`: 128 бит, в диапазоне по крайней мере от –7,9 × 10<sup>−28</sup> до 7,9 × 10<sup>28</sup>, с точностью не менее 28 цифр</span><span class="sxs-lookup"><span data-stu-id="f5b15-158">`decimal` : 128 bits, range is at least –7.9 × 10<sup>−28</sup> -  7.9 × 10<sup>28</sup>, with at least 28-digit precision</span></span>
     
-Программы C# используют *объявления типов* для создания новых типов. В объявлении типа указываются имя и члены нового типа. Пять категорий типов в C# определяются пользователем: типы классов, типы структур, типы интерфейсов, типы перечисления и типы делегатов.
+<span data-ttu-id="f5b15-159">Программы C# используют *объявления типов* для создания новых типов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-159">C# programs use *type declarations* to create new types.</span></span> <span data-ttu-id="f5b15-160">В объявлении типа указываются имя и члены нового типа.</span><span class="sxs-lookup"><span data-stu-id="f5b15-160">A type declaration specifies the name and the members of the new type.</span></span> <span data-ttu-id="f5b15-161">Пять категорий типов в C# определяются пользователем: типы классов, типы структур, типы интерфейсов, типы перечисления и типы делегатов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-161">Five of C#’s categories of types are user-definable: class types, struct types, interface types, enum types, and delegate types.</span></span>
 
-Тип `class` определяет структуру данных, которая содержит данные-члены (поля) и функции-члены (методы, свойства и т. д.). Классы поддерживают механизмы одиночного наследования и полиморфизма, которые позволяют создавать производные классы, расширяющие и уточняющие определения базовых классов.
+<span data-ttu-id="f5b15-162">Тип `class` определяет структуру данных, которая содержит данные-члены (поля) и функции-члены (методы, свойства и т. д.).</span><span class="sxs-lookup"><span data-stu-id="f5b15-162">A `class` type defines a data structure that contains data members (fields) and function members (methods, properties, and others).</span></span> <span data-ttu-id="f5b15-163">Классы поддерживают механизмы одиночного наследования и полиморфизма, которые позволяют создавать производные классы, расширяющие и уточняющие определения базовых классов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-163">Class types support single inheritance and polymorphism, mechanisms whereby derived classes can extend and specialize base classes.</span></span>
 
-Тип `struct` похож на тип класса тем, что он представляет структуру с данными-членами и функциями-членами. Но в отличие от классов, структуры являются типами значений и обычно не требуют выделения памяти из кучи. Типы структуры не поддерживают определяемое пользователем наследование, и все типы структуры неявно наследуют от типа `object`.
+<span data-ttu-id="f5b15-164">Тип `struct` похож на тип класса тем, что он представляет структуру с данными-членами и функциями-членами.</span><span class="sxs-lookup"><span data-stu-id="f5b15-164">A `struct` type is similar to a class type in that it represents a structure with data members and function members.</span></span> <span data-ttu-id="f5b15-165">Но в отличие от классов, структуры являются типами значений и обычно не требуют выделения памяти из кучи.</span><span class="sxs-lookup"><span data-stu-id="f5b15-165">However, unlike classes, structs are value types and do not typically require heap allocation.</span></span> <span data-ttu-id="f5b15-166">Типы структуры не поддерживают определяемое пользователем наследование, и все типы структуры неявно наследуют от типа `object`.</span><span class="sxs-lookup"><span data-stu-id="f5b15-166">Struct types do not support user-specified inheritance, and all struct types implicitly inherit from type `object`.</span></span>
 
-Тип `interface` (интерфейс) определяет контракт в виде именованного набора открытых функций-членов. Объект типа `class` или `struct`, реализующий `interface`, должен предоставить реализации для всех функций-членов интерфейса. Тип `interface` может наследовать от нескольких базовых интерфейсов, а `class` или `struct` могут реализовывать несколько интерфейсов.
+<span data-ttu-id="f5b15-167">Тип `interface` (интерфейс) определяет контракт в виде именованного набора открытых функций-членов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-167">An `interface` type defines a contract as a named set of public function members.</span></span> <span data-ttu-id="f5b15-168">Объект типа `class` или `struct`, реализующий `interface`, должен предоставить реализации для всех функций-членов интерфейса.</span><span class="sxs-lookup"><span data-stu-id="f5b15-168">A `class` or `struct` that implements an `interface` must provide implementations of the interface’s function members.</span></span> <span data-ttu-id="f5b15-169">Тип `interface` может наследовать от нескольких базовых интерфейсов, а `class` или `struct` могут реализовывать несколько интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-169">An `interface` may inherit from multiple base interfaces, and a `class` or `struct` may implement multiple interfaces.</span></span>
 
-Тип `delegate` (делегат) представляющий ссылки на методы с конкретным списком параметров и типом возвращаемого значения. Делегаты позволяют использовать методы как сущности, сохраняя их в переменные и передавая в качестве параметров. Делегаты аналогичны типам функций, которые используются в функциональных языках. Также принцип их работы близок к указателям функций из некоторых языков, но в отличие от указателей функций делегаты являются объектно-ориентированными и строго типизированными.
+<span data-ttu-id="f5b15-170">Тип `delegate` (делегат) представляющий ссылки на методы с конкретным списком параметров и типом возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="f5b15-170">A `delegate` type represents references to methods with a particular parameter list and return type.</span></span> <span data-ttu-id="f5b15-171">Делегаты позволяют использовать методы как сущности, сохраняя их в переменные и передавая в качестве параметров.</span><span class="sxs-lookup"><span data-stu-id="f5b15-171">Delegates make it possible to treat methods as entities that can be assigned to variables and passed as parameters.</span></span> <span data-ttu-id="f5b15-172">Делегаты аналогичны типам функций, которые используются в функциональных языках.</span><span class="sxs-lookup"><span data-stu-id="f5b15-172">Delegates are analogous to function types provided by functional languages.</span></span> <span data-ttu-id="f5b15-173">Также принцип их работы близок к указателям функций из некоторых языков, но в отличие от указателей функций делегаты являются объектно-ориентированными и строго типизированными.</span><span class="sxs-lookup"><span data-stu-id="f5b15-173">They are also similar to the concept of function pointers found in some other languages, but unlike function pointers, delegates are object-oriented and type-safe.</span></span>
 
-Типы `class`, `struct`, `interface` и `delegate` поддерживают универсальные шаблоны, которые позволяют передавать им другие типы в качестве параметров.
+<span data-ttu-id="f5b15-174">Типы `class`, `struct`, `interface` и `delegate` поддерживают универсальные шаблоны, которые позволяют передавать им другие типы в качестве параметров.</span><span class="sxs-lookup"><span data-stu-id="f5b15-174">The `class`, `struct`, `interface` and `delegate` types all support generics, whereby they can be parameterized with other types.</span></span>
 
-Тип `enum` является отдельным типом со списком именованных констант. Каждый тип `enum` имеет базовый тип, в роли которого выступает одним из восьми целочисленных типов. Набор значений типа `enum` аналогичен набору значений его базового типа.
+<span data-ttu-id="f5b15-175">Тип `enum` является отдельным типом со списком именованных констант.</span><span class="sxs-lookup"><span data-stu-id="f5b15-175">An `enum` type is a distinct type with named constants.</span></span> <span data-ttu-id="f5b15-176">Каждый тип `enum` имеет базовый тип, в роли которого выступает одним из восьми целочисленных типов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-176">Every `enum` type has an underlying type, which must be one of the eight integral types.</span></span> <span data-ttu-id="f5b15-177">Набор значений типа `enum` аналогичен набору значений его базового типа.</span><span class="sxs-lookup"><span data-stu-id="f5b15-177">The set of values of an `enum` type is the same as the set of values of the underlying type.</span></span>
 
-C# поддерживает одно- и многомерные массивы любого типа. В отличие от перечисленных выше типов, типы массивов не требуется объявлять перед использованием. Типы массивов можно сформировать, просто введя квадратные скобки после имени типа. Например, `int[]` является одномерным массивом значений типа `int`, а `int[,]` — двумерным массивом значений типа `int`, тогда как `int[][]` представляет собой одномерный массив одномерных массивов значений типа `int`.
+<span data-ttu-id="f5b15-178">C# поддерживает одно- и многомерные массивы любого типа.</span><span class="sxs-lookup"><span data-stu-id="f5b15-178">C# supports single- and multi-dimensional arrays of any type.</span></span> <span data-ttu-id="f5b15-179">В отличие от перечисленных выше типов, типы массивов не требуется объявлять перед использованием.</span><span class="sxs-lookup"><span data-stu-id="f5b15-179">Unlike the types listed above, array types do not have to be declared before they can be used.</span></span> <span data-ttu-id="f5b15-180">Типы массивов можно сформировать, просто введя квадратные скобки после имени типа.</span><span class="sxs-lookup"><span data-stu-id="f5b15-180">Instead, array types are constructed by following a type name with square brackets.</span></span> <span data-ttu-id="f5b15-181">Например, `int[]` является одномерным массивом значений типа `int`, а `int[,]` — двумерным массивом значений типа `int`, тогда как `int[][]` представляет собой одномерный массив одномерных массивов значений типа `int`.</span><span class="sxs-lookup"><span data-stu-id="f5b15-181">For example, `int[]` is a single-dimensional array of `int`, `int[,]` is a two-dimensional array of `int`, and `int[][]` is a single-dimensional array of single-dimensional array of `int`.</span></span>
 
-Типы значений, допускающие значение Null, также не нужно отдельно объявлять перед использованием. Для каждого обычного типа значений `T`, который не допускает значение Null, существует идентичный тип `T?`, который отличается только тем, что может содержать значение `null`. Например `int?` — это тип, который может содержать любое 32-разрядное целое число или значение `null`.
+<span data-ttu-id="f5b15-182">Типы значений, допускающие значение Null, также не нужно отдельно объявлять перед использованием.</span><span class="sxs-lookup"><span data-stu-id="f5b15-182">Nullable value types also do not have to be declared before they can be used.</span></span> <span data-ttu-id="f5b15-183">Для каждого обычного типа значений `T`, который не допускает значение Null, существует идентичный тип `T?`, который отличается только тем, что может содержать значение `null`.</span><span class="sxs-lookup"><span data-stu-id="f5b15-183">For each non-nullable value type `T` there is a corresponding nullable value type `T?`, which can hold an additional value, `null`.</span></span> <span data-ttu-id="f5b15-184">Например `int?` — это тип, который может содержать любое 32-разрядное целое число или значение `null`.</span><span class="sxs-lookup"><span data-stu-id="f5b15-184">For instance, `int?` is a type that can hold any 32-bit integer or the value `null`.</span></span>
 
-Система типов в C# унифицирована таким образом, что значение любого типа можно рассматривать как `object` (объект). Каждый тип в C# является прямо или косвенно производным от типа класса `object`, и этот тип `object` является исходным базовым классом для всех типов. Чтобы значения ссылочного типа обрабатывались как объекты, им просто присваивается тип `object`. Чтобы значения типов значений обрабатывались как объекты, выполняются операции *упаковки-преобразования* и *распаковки-преобразования*. В следующем примере значение `int` преобразуется в `object`, а затем обратно в `int`.
+<span data-ttu-id="f5b15-185">Система типов в C# унифицирована таким образом, что значение любого типа можно рассматривать как `object` (объект).</span><span class="sxs-lookup"><span data-stu-id="f5b15-185">C#’s type system is unified such that a value of any type can be treated as an `object`.</span></span> <span data-ttu-id="f5b15-186">Каждый тип в C# является прямо или косвенно производным от типа класса `object`, и этот тип `object` является исходным базовым классом для всех типов.</span><span class="sxs-lookup"><span data-stu-id="f5b15-186">Every type in C# directly or indirectly derives from the `object` class type, and `object` is the ultimate base class of all types.</span></span> <span data-ttu-id="f5b15-187">Чтобы значения ссылочного типа обрабатывались как объекты, им просто присваивается тип `object`.</span><span class="sxs-lookup"><span data-stu-id="f5b15-187">Values of reference types are treated as objects simply by viewing the values as type `object`.</span></span> <span data-ttu-id="f5b15-188">Чтобы значения типов значений обрабатывались как объекты, выполняются операции *упаковки-преобразования* и *распаковки-преобразования*.</span><span class="sxs-lookup"><span data-stu-id="f5b15-188">Values of value types are treated as objects by performing *boxing* and *unboxing operations*.</span></span> <span data-ttu-id="f5b15-189">В следующем примере значение `int` преобразуется в `object`, а затем обратно в `int`.</span><span class="sxs-lookup"><span data-stu-id="f5b15-189">In the following example, an `int` value is converted to `object` and back again to `int`.</span></span>
 
-[!code-csharp[Упаковка-преобразование](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
+<span data-ttu-id="f5b15-190">[!code-csharp[Упаковка-преобразование](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]</span><span class="sxs-lookup"><span data-stu-id="f5b15-190">[!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]</span></span>
 
-Если значение для типа значения преобразуется в тип `object`, то для хранения этого значения выделяется экземпляр `object`, который также называется "упаковкой", и значение копируется в эту упаковку. И наоборот, если ссылка типа `object` используется для типа значения, для соответствующего `object` выполняется проверка, является ли он упаковкой правильного типа. Если эта проверка завершается успешно, копируется значение этой упаковки.
+<span data-ttu-id="f5b15-191">Если значение для типа значения преобразуется в тип `object`, то для хранения этого значения выделяется экземпляр `object`, который также называется "упаковкой", и значение копируется в эту упаковку.</span><span class="sxs-lookup"><span data-stu-id="f5b15-191">When a value of a value type is converted to type `object`, an `object` instance, also called a "box", is allocated to hold the value, and the value is copied into that box.</span></span> <span data-ttu-id="f5b15-192">И наоборот, если ссылка типа `object` используется для типа значения, для соответствующего `object` выполняется проверка, является ли он упаковкой правильного типа. Если эта проверка завершается успешно, копируется значение этой упаковки.</span><span class="sxs-lookup"><span data-stu-id="f5b15-192">Conversely, when an `object` reference is cast to a value type, a check is made that the referenced `object` is a box of the correct value type, and, if the check succeeds, the value in the box is copied out.</span></span>
 
-Унифицированная система типов C# фактически позволяет преобразовывать типы значений в объекты "по требованию". Такая унификация позволяет применять универсальные библиотеки, использующие тип `object`, как со ссылочными типами, так и с типами значений.
+<span data-ttu-id="f5b15-193">Унифицированная система типов C# фактически позволяет преобразовывать типы значений в объекты "по требованию".</span><span class="sxs-lookup"><span data-stu-id="f5b15-193">C#’s unified type system effectively means that value types can become objects "on demand."</span></span> <span data-ttu-id="f5b15-194">Такая унификация позволяет применять универсальные библиотеки, использующие тип `object`, как со ссылочными типами, так и с типами значений.</span><span class="sxs-lookup"><span data-stu-id="f5b15-194">Because of the unification, general-purpose libraries that use type `object` can be used with both reference types and value types.</span></span>
 
-В C# существует несколько типов *переменных*, в том числе поля, элементы массива, локальные переменные и параметры. Переменные представляют места хранения, и каждая переменная имеет тип, который определяет допустимые значения для хранения в этой переменной. Примеры представлены ниже.
+<span data-ttu-id="f5b15-195">В C# существует несколько типов *переменных*, в том числе поля, элементы массива, локальные переменные и параметры.</span><span class="sxs-lookup"><span data-stu-id="f5b15-195">There are several kinds of *variables* in C#, including fields, array elements, local variables, and parameters.</span></span> <span data-ttu-id="f5b15-196">Переменные представляют места хранения, и каждая переменная имеет тип, который определяет допустимые значения для хранения в этой переменной. Примеры представлены ниже.</span><span class="sxs-lookup"><span data-stu-id="f5b15-196">Variables represent storage locations, and every variable has a type that determines what values can be stored in the variable, as shown below.</span></span>
 
-* Тип значения, не допускающий значения Null
-    - Значение такого типа
-* Тип значения, допускающий значение Null
-    - Значение `null` или значение такого типа
-* object
-    - Ссылка `null`, ссылка на объект любого ссылочного типа или ссылка на упакованное значение любого типа значения
-* Тип класса
-    - Ссылка `null`, ссылка на экземпляр такого типа класса или ссылка на экземпляр любого класса, производного от такого типа класса
-* Тип интерфейса
-    - Ссылка `null`, ссылка на экземпляр типа класса, который реализует такой тип интерфейса, или ссылка на упакованное значение типа значения, которое реализует такой тип интерфейса
-* Тип массива
-    - Ссылка `null`, ссылка на экземпляр такого типа массива или ссылка на экземпляр любого совместимого типа массива
-* Тип делегата
-    - Ссылка `null` или ссылка на экземпляр совместимого типа делегата
+* <span data-ttu-id="f5b15-197">Тип значения, не допускающий значения Null</span><span class="sxs-lookup"><span data-stu-id="f5b15-197">Non-nullable value type</span></span>
+    - <span data-ttu-id="f5b15-198">Значение такого типа</span><span class="sxs-lookup"><span data-stu-id="f5b15-198">A value of that exact type</span></span>
+* <span data-ttu-id="f5b15-199">Тип значения, допускающий значение Null</span><span class="sxs-lookup"><span data-stu-id="f5b15-199">Nullable value type</span></span>
+    - <span data-ttu-id="f5b15-200">Значение `null` или значение такого типа</span><span class="sxs-lookup"><span data-stu-id="f5b15-200">A `null` value or a value of that exact type</span></span>
+* <span data-ttu-id="f5b15-201">object</span><span class="sxs-lookup"><span data-stu-id="f5b15-201">object</span></span>
+    - <span data-ttu-id="f5b15-202">Ссылка `null`, ссылка на объект любого ссылочного типа или ссылка на упакованное значение любого типа значения</span><span class="sxs-lookup"><span data-stu-id="f5b15-202">A `null` reference, a reference to an object of any reference type, or a reference to a boxed value of any value type</span></span>
+* <span data-ttu-id="f5b15-203">Тип класса</span><span class="sxs-lookup"><span data-stu-id="f5b15-203">Class type</span></span>
+    - <span data-ttu-id="f5b15-204">Ссылка `null`, ссылка на экземпляр такого типа класса или ссылка на экземпляр любого класса, производного от такого типа класса</span><span class="sxs-lookup"><span data-stu-id="f5b15-204">A `null` reference, a reference to an instance of that class type, or a reference to an instance of a class derived from that class type</span></span>
+* <span data-ttu-id="f5b15-205">Тип интерфейса</span><span class="sxs-lookup"><span data-stu-id="f5b15-205">Interface type</span></span>
+    - <span data-ttu-id="f5b15-206">Ссылка `null`, ссылка на экземпляр типа класса, который реализует такой тип интерфейса, или ссылка на упакованное значение типа значения, которое реализует такой тип интерфейса</span><span class="sxs-lookup"><span data-stu-id="f5b15-206">A `null` reference, a reference to an instance of a class type that implements that interface type, or a reference to a boxed value of a value type that implements that interface type</span></span>
+* <span data-ttu-id="f5b15-207">Тип массива</span><span class="sxs-lookup"><span data-stu-id="f5b15-207">Array type</span></span>
+    - <span data-ttu-id="f5b15-208">Ссылка `null`, ссылка на экземпляр такого типа массива или ссылка на экземпляр любого совместимого типа массива</span><span class="sxs-lookup"><span data-stu-id="f5b15-208">A `null` reference, a reference to an instance of that array type, or a reference to an instance of a compatible array type</span></span>
+* <span data-ttu-id="f5b15-209">Тип делегата</span><span class="sxs-lookup"><span data-stu-id="f5b15-209">Delegate type</span></span>
+    - <span data-ttu-id="f5b15-210">Ссылка `null` или ссылка на экземпляр совместимого типа делегата</span><span class="sxs-lookup"><span data-stu-id="f5b15-210">A `null` reference or a reference to an instance of a compatible delegate type</span></span>
 
 >[!div class="step-by-step"]
-[Назад](program-structure.md)
-[Вперед](expressions.md)
+<span data-ttu-id="f5b15-211">[Назад](program-structure.md)
+[Вперед](expressions.md)</span><span class="sxs-lookup"><span data-stu-id="f5b15-211">[Previous](program-structure.md)
+[Next](expressions.md)</span></span>
 

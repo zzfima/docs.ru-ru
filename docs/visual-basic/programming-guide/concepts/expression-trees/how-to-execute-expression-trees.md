@@ -20,24 +20,25 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e12c45b417310f097d597561b2652ee793a4b2c0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4cc2c9890c1f5efbc4036d94eef1adb05094ae40
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-execute-expression-trees-visual-basic"></a>Практическое руководство: выполнение деревьев выражений (Visual Basic)
-В этом разделе показано, как выполнить дерево выражения. Выполнения дерева выражения может возвращаться значение или просто выполняться действие, например вызов метода.  
+# <a name="how-to-execute-expression-trees-visual-basic"></a><span data-ttu-id="b22bc-102">Практическое руководство: выполнение деревьев выражений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b22bc-102">How to: Execute Expression Trees (Visual Basic)</span></span>
+<span data-ttu-id="b22bc-103">В этом разделе показано, как выполнить дерево выражения.</span><span class="sxs-lookup"><span data-stu-id="b22bc-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="b22bc-104">Выполнения дерева выражения может возвращаться значение или просто выполняться действие, например вызов метода.</span><span class="sxs-lookup"><span data-stu-id="b22bc-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
   
- Могут быть выполнены только деревьев выражений, представляющих лямбда-выражения. Деревья выражений, представляющие лямбда-выражения имеют тип <xref:System.Linq.Expressions.LambdaExpression>или <xref:System.Linq.Expressions.Expression%601>.</xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression> Для выполнения таких деревьев выражений, вызовите <xref:System.Linq.Expressions.LambdaExpression.Compile%2A>метод, чтобы создать исполняемый делегат, а затем вызвать делегата.</xref:System.Linq.Expressions.LambdaExpression.Compile%2A>  
+ <span data-ttu-id="b22bc-105">Могут быть выполнены только деревьев выражений, представляющих лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="b22bc-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="b22bc-106">Деревья выражений, представляющие лямбда-выражения имеют тип <xref:System.Linq.Expressions.LambdaExpression>или <xref:System.Linq.Expressions.Expression%601>.</xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression></span><span class="sxs-lookup"><span data-stu-id="b22bc-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="b22bc-107">Для выполнения таких деревьев выражений, вызовите <xref:System.Linq.Expressions.LambdaExpression.Compile%2A>метод, чтобы создать исполняемый делегат, а затем вызвать делегата.</xref:System.Linq.Expressions.LambdaExpression.Compile%2A></span><span class="sxs-lookup"><span data-stu-id="b22bc-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
   
 > [!NOTE]
->  Если тип делегата неизвестен, то есть лямбда-выражение имеет тип <xref:System.Linq.Expressions.LambdaExpression>и не <xref:System.Linq.Expressions.Expression%601>, необходимо вызвать метод <xref:System.Delegate.DynamicInvoke%2A>метод делегата вместо вызова этого метода напрямую.</xref:System.Delegate.DynamicInvoke%2A> </xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression>  
+>  <span data-ttu-id="b22bc-108">Если тип делегата неизвестен, то есть лямбда-выражение имеет тип <xref:System.Linq.Expressions.LambdaExpression>и не <xref:System.Linq.Expressions.Expression%601>, необходимо вызвать метод <xref:System.Delegate.DynamicInvoke%2A>метод делегата вместо вызова этого метода напрямую.</xref:System.Delegate.DynamicInvoke%2A> </xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression></span><span class="sxs-lookup"><span data-stu-id="b22bc-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
   
- Если дерево выражения не представляет лямбда-выражение, можно создать новый лямбда-выражение, имеет исходное дерево выражения, что его тело, путем вызова <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>метод.</xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> Затем можно выполнить лямбда-выражение, как описано ранее в этом разделе.  
+ <span data-ttu-id="b22bc-109">Если дерево выражения не представляет лямбда-выражение, можно создать новый лямбда-выражение, имеет исходное дерево выражения, что его тело, путем вызова <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>метод.</xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29></span><span class="sxs-lookup"><span data-stu-id="b22bc-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="b22bc-110">Затем можно выполнить лямбда-выражение, как описано ранее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="b22bc-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
   
-## <a name="example"></a>Пример  
- В следующем примере кода показано, как выполнить дерево выражения, представляющий возведение числа в степень, создавая лямбда-выражения и его выполнением. Результат, представляющий число, возведенное в степень, отображается.  
+## <a name="example"></a><span data-ttu-id="b22bc-111">Пример</span><span class="sxs-lookup"><span data-stu-id="b22bc-111">Example</span></span>  
+ <span data-ttu-id="b22bc-112">В следующем примере кода показано, как выполнить дерево выражения, представляющий возведение числа в степень, создавая лямбда-выражения и его выполнением.</span><span class="sxs-lookup"><span data-stu-id="b22bc-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="b22bc-113">Результат, представляющий число, возведенное в степень, отображается.</span><span class="sxs-lookup"><span data-stu-id="b22bc-113">The result, which represents the number raised to the power, is displayed.</span></span>  
   
 ```vb  
 ' The expression tree to execute.  
@@ -59,12 +60,12 @@ MsgBox(result)
 ' 8  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
+## <a name="compiling-the-code"></a><span data-ttu-id="b22bc-114">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b22bc-114">Compiling the Code</span></span>  
   
--   Добавьте ссылку на библиотеку System.Core.dll, если нет ссылок.  
+-   <span data-ttu-id="b22bc-115">Добавьте ссылку на библиотеку System.Core.dll, если нет ссылок.</span><span class="sxs-lookup"><span data-stu-id="b22bc-115">Add a project reference to System.Core.dll if it is not already referenced.</span></span>  
   
--   Включите пространство имен System.Linq.Expressions.  
+-   <span data-ttu-id="b22bc-116">Включите пространство имен System.Linq.Expressions.</span><span class="sxs-lookup"><span data-stu-id="b22bc-116">Include the System.Linq.Expressions namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Деревья выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Практическое руководство: изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+## <a name="see-also"></a><span data-ttu-id="b22bc-117">См. также</span><span class="sxs-lookup"><span data-stu-id="b22bc-117">See Also</span></span>  
+ <span data-ttu-id="b22bc-118">[Деревья выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) </span><span class="sxs-lookup"><span data-stu-id="b22bc-118">[Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) </span></span>  
+<span data-ttu-id="b22bc-119"> [Практическое руководство: изменение деревьев выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)</span><span class="sxs-lookup"><span data-stu-id="b22bc-119"> [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)</span></span>

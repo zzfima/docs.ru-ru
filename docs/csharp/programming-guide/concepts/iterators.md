@@ -23,14 +23,14 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="iterators-c"></a>Итераторы (C#)
-*Итератор* можно использовать для прохода по коллекции, такой как список или массив.  
+# <a name="iterators-c"></a><span data-ttu-id="ab7a0-102">Итераторы (C#)</span><span class="sxs-lookup"><span data-stu-id="ab7a0-102">Iterators (C#)</span></span>
+<span data-ttu-id="ab7a0-103">*Итератор* можно использовать для прохода по коллекции, такой как список или массив.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-103">An *iterator* can be used to step through collections such as lists and arrays.</span></span>  
   
- Метод итератора или метод доступа `get` выполняет настраиваемую итерацию по коллекции. Метод итератора использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для поочередного возврата каждого элемента. При достижении оператора `yield return` текущее расположение в коде запоминается. При следующем вызове функции итератора выполнение возобновляется с этого места.  
+ <span data-ttu-id="ab7a0-104">Метод итератора или метод доступа `get` выполняет настраиваемую итерацию по коллекции.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-104">An iterator method or `get` accessor performs a custom iteration over a collection.</span></span> <span data-ttu-id="ab7a0-105">Метод итератора использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для поочередного возврата каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-105">An iterator method uses the [yield return](../../../csharp/language-reference/keywords/yield.md) statement to return each element one at a time.</span></span> <span data-ttu-id="ab7a0-106">При достижении оператора `yield return` текущее расположение в коде запоминается.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-106">When a `yield return` statement is reached, the current location in code is remembered.</span></span> <span data-ttu-id="ab7a0-107">При следующем вызове функции итератора выполнение возобновляется с этого места.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-107">Execution is restarted from that location the next time the iterator function is called.</span></span>  
   
- Итератор используется из клиентского кода с помощью оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md) или с помощью запроса LINQ.  
+ <span data-ttu-id="ab7a0-108">Итератор используется из клиентского кода с помощью оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md) или с помощью запроса LINQ.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-108">You consume an iterator from client code by using a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement or by using a LINQ query.</span></span>  
   
- В приведенном ниже примере первая итерация цикла `foreach` приводит к вызову метода итератора `SomeNumbers`, пока не будет достигнут первый оператор `yield return`. Эта итерация возвращает значение 3. Текущее расположение в методе итератора сохраняется. В следующей итерации цикла выполнение метода итератора возобновляется с того же места и снова приостанавливается при достижении оператора `yield return`. Эта итерация возвращает значение 5. Текущее расположение в методе итератора снова сохраняется. Цикл завершается при достижении конца метода итератора.  
+ <span data-ttu-id="ab7a0-109">В приведенном ниже примере первая итерация цикла `foreach` приводит к вызову метода итератора `SomeNumbers`, пока не будет достигнут первый оператор `yield return`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-109">In the following example, the first iteration of the `foreach` loop causes execution to proceed  in the `SomeNumbers` iterator method until the first `yield return` statement is reached.</span></span> <span data-ttu-id="ab7a0-110">Эта итерация возвращает значение 3. Текущее расположение в методе итератора сохраняется.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-110">This iteration returns a value of 3, and the current location in the iterator method is retained.</span></span> <span data-ttu-id="ab7a0-111">В следующей итерации цикла выполнение метода итератора возобновляется с того же места и снова приостанавливается при достижении оператора `yield return`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-111">On the next iteration of the loop, execution in the iterator method continues from where it left off, again stopping when it reaches a `yield return` statement.</span></span> <span data-ttu-id="ab7a0-112">Эта итерация возвращает значение 5. Текущее расположение в методе итератора снова сохраняется.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-112">This iteration returns a value of 5, and the current location in the iterator method is again retained.</span></span> <span data-ttu-id="ab7a0-113">Цикл завершается при достижении конца метода итератора.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-113">The loop completes when the end of the iterator method is reached.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -51,31 +51,31 @@ public static System.Collections.IEnumerable SomeNumbers()
 }  
 ```  
   
- Типом возвращаемого метода итератора или метода доступа `get` может быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.  
+ <span data-ttu-id="ab7a0-114">Типом возвращаемого метода итератора или метода доступа `get` может быть <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-114">The return type of an iterator method or `get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.</span></span>  
   
- Для завершения итерации можно использовать оператор `yield break`.  
+ <span data-ttu-id="ab7a0-115">Для завершения итерации можно использовать оператор `yield break`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-115">You can use a `yield break` statement to end the iteration.</span></span>  
   
- Итераторы были введены в C# в Visual Studio 2005.  
+ <span data-ttu-id="ab7a0-116">Итераторы были введены в C# в Visual Studio 2005.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-116">Iterators were introduced in C# in Visual Studio 2005.</span></span>  
   
- **Содержание раздела**  
+ <span data-ttu-id="ab7a0-117">**Содержание раздела**</span><span class="sxs-lookup"><span data-stu-id="ab7a0-117">**In this topic**</span></span>  
   
--   [Простой итератор](#BKMK_SimpleIterator)  
+-   [<span data-ttu-id="ab7a0-118">Простой итератор</span><span class="sxs-lookup"><span data-stu-id="ab7a0-118">Simple Iterator</span></span>](#BKMK_SimpleIterator)  
   
--   [Создание класса коллекции](#BKMK_CollectionClass)  
+-   [<span data-ttu-id="ab7a0-119">Создание класса коллекции</span><span class="sxs-lookup"><span data-stu-id="ab7a0-119">Creating a Collection Class</span></span>](#BKMK_CollectionClass)  
   
--   [Использование итераторов с универсальным списком](#BKMK_GenericList)  
+-   [<span data-ttu-id="ab7a0-120">Использование итераторов с универсальным списком</span><span class="sxs-lookup"><span data-stu-id="ab7a0-120">Using Iterators with a Generic List</span></span>](#BKMK_GenericList)  
   
--   [Сведения о синтаксисе](#BKMK_SyntaxInformation)  
+-   [<span data-ttu-id="ab7a0-121">Сведения о синтаксисе</span><span class="sxs-lookup"><span data-stu-id="ab7a0-121">Syntax Information</span></span>](#BKMK_SyntaxInformation)  
   
--   [Техническая реализация](#BKMK_Technical)  
+-   [<span data-ttu-id="ab7a0-122">Техническая реализация</span><span class="sxs-lookup"><span data-stu-id="ab7a0-122">Technical Implementation</span></span>](#BKMK_Technical)  
   
--   [Использование итераторов](#BKMK_UseOfIterators)  
+-   [<span data-ttu-id="ab7a0-123">Использование итераторов</span><span class="sxs-lookup"><span data-stu-id="ab7a0-123">Use of Iterators</span></span>](#BKMK_UseOfIterators)  
   
 > [!NOTE]
->  Все примеры в этом разделе, кроме примера простого итератора, включают директивы [using](../../../csharp/language-reference/keywords/using-directive.md) для пространств имен `System.Collections` и `System.Collections.Generic`.  
+>  <span data-ttu-id="ab7a0-124">Все примеры в этом разделе, кроме примера простого итератора, включают директивы [using](../../../csharp/language-reference/keywords/using-directive.md) для пространств имен `System.Collections` и `System.Collections.Generic`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-124">For all examples in this topic except the Simple Iterator example, include [using](../../../csharp/language-reference/keywords/using-directive.md) directives for the `System.Collections` and `System.Collections.Generic` namespaces.</span></span>  
   
-##  <a name="BKMK_SimpleIterator"></a> Простой итератор  
- В следующем примере имеется один оператор `yield return`, который находится внутри цикла [for](../../../csharp/language-reference/keywords/for.md). В методе `Main` каждая итерация оператора `foreach` создает вызов функции итератора, которая выполняет следующий оператор `yield return`.  
+##  <span data-ttu-id="ab7a0-125"><a name="BKMK_SimpleIterator"></a> Простой итератор</span><span class="sxs-lookup"><span data-stu-id="ab7a0-125"><a name="BKMK_SimpleIterator"></a> Simple Iterator</span></span>  
+ <span data-ttu-id="ab7a0-126">В следующем примере имеется один оператор `yield return`, который находится внутри цикла [for](../../../csharp/language-reference/keywords/for.md).</span><span class="sxs-lookup"><span data-stu-id="ab7a0-126">The following example has a single `yield return` statement that is inside a [for](../../../csharp/language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="ab7a0-127">В методе `Main` каждая итерация оператора `foreach` создает вызов функции итератора, которая выполняет следующий оператор `yield return`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-127">In `Main`, each iteration of the `foreach` statement body creates a call to the iterator function, which proceeds to the next `yield return` statement.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -102,10 +102,10 @@ public static System.Collections.Generic.IEnumerable<int>
 }  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a> Создание класса коллекции  
- В следующем примере класс `DaysOfTheWeek` реализует интерфейс <xref:System.Collections.IEnumerable>, которому требуется метод <xref:System.Collections.IEnumerable.GetEnumerator%2A>. Компилятор неявно вызывает метод `GetEnumerator`, который возвращает <xref:System.Collections.IEnumerator>.  
+##  <span data-ttu-id="ab7a0-128"><a name="BKMK_CollectionClass"></a> Создание класса коллекции</span><span class="sxs-lookup"><span data-stu-id="ab7a0-128"><a name="BKMK_CollectionClass"></a> Creating a Collection Class</span></span>  
+ <span data-ttu-id="ab7a0-129">В следующем примере класс `DaysOfTheWeek` реализует интерфейс <xref:System.Collections.IEnumerable>, которому требуется метод <xref:System.Collections.IEnumerable.GetEnumerator%2A>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-129">In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="ab7a0-130">Компилятор неявно вызывает метод `GetEnumerator`, который возвращает <xref:System.Collections.IEnumerator>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-130">The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.</span></span>  
   
- Метод `GetEnumerator` возвращает каждую строку поочередно с помощью оператора `yield return`.  
+ <span data-ttu-id="ab7a0-131">Метод `GetEnumerator` возвращает каждую строку поочередно с помощью оператора `yield return`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-131">The `GetEnumerator` method returns each string one at a time by using the `yield return` statement.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -135,9 +135,9 @@ public class DaysOfTheWeek : IEnumerable
 }  
 ```  
   
- В приведенном ниже примере создается класс `Zoo`, содержащий коллекцию животных.  
+ <span data-ttu-id="ab7a0-132">В приведенном ниже примере создается класс `Zoo`, содержащий коллекцию животных.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-132">The following example creates a `Zoo` class that contains a collection of animals.</span></span>  
   
- Оператор `foreach`, который обращается к экземпляру класса (`theZoo`), неявно вызывает метод `GetEnumerator`. Операторы `foreach`, которые обращаются к свойствам `Birds` и `Mammals`, используют метод итератора с именем `AnimalsForType`.  
+ <span data-ttu-id="ab7a0-133">Оператор `foreach`, который обращается к экземпляру класса (`theZoo`), неявно вызывает метод `GetEnumerator`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-133">The `foreach` statement that refers to the class instance (`theZoo`) implicitly calls the `GetEnumerator` method.</span></span> <span data-ttu-id="ab7a0-134">Операторы `foreach`, которые обращаются к свойствам `Birds` и `Mammals`, используют метод итератора с именем `AnimalsForType`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-134">The `foreach` statements that refer to the `Birds` and `Mammals` properties use the `AnimalsForType` named iterator method.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -231,14 +231,14 @@ public class Zoo : IEnumerable
 }  
 ```  
   
-##  <a name="BKMK_GenericList"></a> Использование итераторов с универсальным списком  
- В следующем примере универсальный класс `Stack(Of T)` также реализует универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Метод `Push` присваивает значения массиву типа `T`. Метод <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> возвращает массив значений с помощью оператора `yield return`.  
+##  <span data-ttu-id="ab7a0-135"><a name="BKMK_GenericList"></a> Использование итераторов с универсальным списком</span><span class="sxs-lookup"><span data-stu-id="ab7a0-135"><a name="BKMK_GenericList"></a> Using Iterators with a Generic List</span></span>  
+ <span data-ttu-id="ab7a0-136">В следующем примере универсальный класс `Stack(Of T)` также реализует универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-136">In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface.</span></span> <span data-ttu-id="ab7a0-137">Метод `Push` присваивает значения массиву типа `T`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-137">The `Push` method assigns values to an array of type `T`.</span></span> <span data-ttu-id="ab7a0-138">Метод <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> возвращает массив значений с помощью оператора `yield return`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-138">The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `yield return` statement.</span></span>  
   
- Помимо универсального метода <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> должен быть реализован и неуниверсальный метод <xref:System.Collections.IEnumerable.GetEnumerator%2A>. Это связано с тем, что <xref:System.Collections.Generic.IEnumerable%601> наследуется от <xref:System.Collections.IEnumerable>. Неуниверсальная реализация подчиняется универсальной реализации.  
+ <span data-ttu-id="ab7a0-139">Помимо универсального метода <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> должен быть реализован и неуниверсальный метод <xref:System.Collections.IEnumerable.GetEnumerator%2A>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-139">In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented.</span></span> <span data-ttu-id="ab7a0-140">Это связано с тем, что <xref:System.Collections.Generic.IEnumerable%601> наследуется от <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-140">This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="ab7a0-141">Неуниверсальная реализация подчиняется универсальной реализации.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-141">The non-generic implementation defers to the generic implementation.</span></span>  
   
- В этом примере используются именованные итераторы для поддержки различных способов итерации по одной и той же коллекции данных. Эти именованные итераторы являются свойствами `TopToBottom` и `BottomToTop` и методом `TopN`.  
+ <span data-ttu-id="ab7a0-142">В этом примере используются именованные итераторы для поддержки различных способов итерации по одной и той же коллекции данных.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-142">The example uses named iterators to support various ways of iterating through the same collection of data.</span></span> <span data-ttu-id="ab7a0-143">Эти именованные итераторы являются свойствами `TopToBottom` и `BottomToTop` и методом `TopN`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-143">These named iterators are the `TopToBottom` and `BottomToTop` properties, and the `TopN` method.</span></span>  
   
- Свойство `BottomToTop` использует итератор в методе доступа `get`.  
+ <span data-ttu-id="ab7a0-144">Свойство `BottomToTop` использует итератор в методе доступа `get`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-144">The `BottomToTop` property uses an iterator in a `get` accessor.</span></span>  
   
 ```csharp  
 static void Main()  
@@ -348,42 +348,42 @@ public class Stack<T> : IEnumerable<T>
 }  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a> Сведения о синтаксисе  
- Итератор может являться методом или методом доступа `get`. Итератор не может использоваться в событии, конструкторе экземпляра, статическом конструкторе или статическом методе завершения.  
+##  <span data-ttu-id="ab7a0-145"><a name="BKMK_SyntaxInformation"></a> Сведения о синтаксисе</span><span class="sxs-lookup"><span data-stu-id="ab7a0-145"><a name="BKMK_SyntaxInformation"></a> Syntax Information</span></span>  
+ <span data-ttu-id="ab7a0-146">Итератор может являться методом или методом доступа `get`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-146">An iterator can occur as a method or `get` accessor.</span></span> <span data-ttu-id="ab7a0-147">Итератор не может использоваться в событии, конструкторе экземпляра, статическом конструкторе или статическом методе завершения.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-147">An iterator cannot occur in an event, instance constructor, static constructor, or static finalizer.</span></span>  
   
- Должно существовать неявное преобразование выражения типа в операторе `yield return` в возвращаемый тип итератора.  
+ <span data-ttu-id="ab7a0-148">Должно существовать неявное преобразование выражения типа в операторе `yield return` в возвращаемый тип итератора.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-148">An implicit conversion must exist from the expression type in the `yield return` statement to the return type of the iterator.</span></span>  
   
- В C# методы итератора не могут иметь параметры `ref` или `out`.  
+ <span data-ttu-id="ab7a0-149">В C# методы итератора не могут иметь параметры `ref` или `out`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-149">In C#, an iterator method cannot have any `ref` or `out` parameters.</span></span>  
   
- В C# yield не является зарезервированным словом и имеет специальное значение, только если используется перед ключевым словом `return` или `break`.  
+ <span data-ttu-id="ab7a0-150">В C# yield не является зарезервированным словом и имеет специальное значение, только если используется перед ключевым словом `return` или `break`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-150">In C#, "yield" is not a reserved word and has special meaning only when it is used before a `return` or `break` keyword.</span></span>  
   
-##  <a name="BKMK_Technical"></a> Техническая реализация  
- Хотя итератор создается как метод, компилятор переводит его во вложенный класс, который фактически является конечным автоматом. Этот класс отслеживает положение итератора, пока в клиентском коде выполняется цикл `foreach`.  
+##  <span data-ttu-id="ab7a0-151"><a name="BKMK_Technical"></a> Техническая реализация</span><span class="sxs-lookup"><span data-stu-id="ab7a0-151"><a name="BKMK_Technical"></a> Technical Implementation</span></span>  
+ <span data-ttu-id="ab7a0-152">Хотя итератор создается как метод, компилятор переводит его во вложенный класс, который фактически является конечным автоматом.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-152">Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine.</span></span> <span data-ttu-id="ab7a0-153">Этот класс отслеживает положение итератора, пока в клиентском коде выполняется цикл `foreach`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-153">This class keeps track of the position of the iterator as long the `foreach` loop in the client code continues.</span></span>  
   
- Чтобы просмотреть операции компилятора, воспользуйтесь средством Ildasm.exe для отображения кода промежуточного языка Майкрософт, создаваемого для метода итератора.  
+ <span data-ttu-id="ab7a0-154">Чтобы просмотреть операции компилятора, воспользуйтесь средством Ildasm.exe для отображения кода промежуточного языка Майкрософт, создаваемого для метода итератора.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-154">To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.</span></span>  
   
- При создании итератора для [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md) реализация всего интерфейса <xref:System.Collections.IEnumerator> не требуется. Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.  
+ <span data-ttu-id="ab7a0-155">При создании итератора для [класса](../../../csharp/language-reference/keywords/class.md) или [структуры](../../../csharp/language-reference/keywords/struct.md) реализация всего интерфейса <xref:System.Collections.IEnumerator> не требуется.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-155">When you create an iterator for a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md), you don't have to implement the whole <xref:System.Collections.IEnumerator> interface.</span></span> <span data-ttu-id="ab7a0-156">Когда компилятор обнаруживает итератор, он автоматически создает методы `Current`, `MoveNext` и `Dispose` интерфейса <xref:System.Collections.IEnumerator> или <xref:System.Collections.Generic.IEnumerator%601>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-156">When the compiler detects the iterator, it automatically generates the `Current`, `MoveNext`, and `Dispose` methods of the <xref:System.Collections.IEnumerator> or <xref:System.Collections.Generic.IEnumerator%601> interface.</span></span>  
   
- В каждой последовательной итерации цикла `foreach` (или непосредственном вызове метода `IEnumerator.MoveNext`) код тела следующего итератора возобновляет выполнение после предыдущего оператора `yield return`. Затем он выполняется до следующего оператора `yield return` до тех пор, пока не будет достигнут конец тела итератора или пока не будет обнаружен оператор `yield break`.  
+ <span data-ttu-id="ab7a0-157">В каждой последовательной итерации цикла `foreach` (или непосредственном вызове метода `IEnumerator.MoveNext`) код тела следующего итератора возобновляет выполнение после предыдущего оператора `yield return`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-157">On each successive iteration of the `foreach` loop (or the direct call to `IEnumerator.MoveNext`), the next iterator code body resumes after the previous `yield return` statement.</span></span> <span data-ttu-id="ab7a0-158">Затем он выполняется до следующего оператора `yield return` до тех пор, пока не будет достигнут конец тела итератора или пока не будет обнаружен оператор `yield break`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-158">It then continues to the next `yield return` statement until the end of the iterator body is reached, or until a `yield break` statement is encountered.</span></span>  
   
- Итераторы не поддерживают метод <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>. Для повторной итерации сначала необходимо получить новый итератор.  
+ <span data-ttu-id="ab7a0-159">Итераторы не поддерживают метод <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-159">Iterators don't support the <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName> method.</span></span> <span data-ttu-id="ab7a0-160">Для повторной итерации сначала необходимо получить новый итератор.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-160">To re-iterate from the start, you must obtain a new iterator.</span></span>  
   
- Дополнительные сведения см. в [спецификации языка C#](../../../csharp/language-reference/language-specification/index.md).  
+ <span data-ttu-id="ab7a0-161">Дополнительные сведения см. в [спецификации языка C#](../../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="ab7a0-161">For additional information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-##  <a name="BKMK_UseOfIterators"></a> Использование итераторов  
- Итераторы позволяют поддерживать простоту цикла `foreach`, когда необходимо использовать сложный код для заполнения последовательности списков. Это может оказаться полезным в следующих случаях:  
+##  <span data-ttu-id="ab7a0-162"><a name="BKMK_UseOfIterators"></a> Использование итераторов</span><span class="sxs-lookup"><span data-stu-id="ab7a0-162"><a name="BKMK_UseOfIterators"></a> Use of Iterators</span></span>  
+ <span data-ttu-id="ab7a0-163">Итераторы позволяют поддерживать простоту цикла `foreach`, когда необходимо использовать сложный код для заполнения последовательности списков.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-163">Iterators enable you to maintain the simplicity of a `foreach` loop when you need to use complex code to populate a list sequence.</span></span> <span data-ttu-id="ab7a0-164">Это может оказаться полезным в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="ab7a0-164">This can be useful when you want to do the following:</span></span>  
   
--   Изменение последовательности списков после первой итерации цикла `foreach`.  
+-   <span data-ttu-id="ab7a0-165">Изменение последовательности списков после первой итерации цикла `foreach`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-165">Modify the list sequence after the first `foreach` loop iteration.</span></span>  
   
--   Если необходимо избежать полной загрузки большого списка перед первой итерацией цикла `foreach`. Пример: при постраничной загрузке пакета строк таблицы. Другой пример — метод <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, реализующий итераторы в .NET Framework.  
+-   <span data-ttu-id="ab7a0-166">Если необходимо избежать полной загрузки большого списка перед первой итерацией цикла `foreach`.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-166">Avoid fully loading a large list before the first iteration of a `foreach` loop.</span></span> <span data-ttu-id="ab7a0-167">Пример: при постраничной загрузке пакета строк таблицы.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-167">An example is a paged fetch to load a batch of table rows.</span></span> <span data-ttu-id="ab7a0-168">Другой пример — метод <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, реализующий итераторы в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-168">Another example is the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> method, which implements iterators within the .NET Framework.</span></span>  
   
--   Инкапсулирование построения списка в итераторе. В методе итератора можно построить список, а затем выдавать каждый результат в цикле.  
+-   <span data-ttu-id="ab7a0-169">Инкапсулирование построения списка в итераторе.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-169">Encapsulate building the list in the iterator.</span></span> <span data-ttu-id="ab7a0-170">В методе итератора можно построить список, а затем выдавать каждый результат в цикле.</span><span class="sxs-lookup"><span data-stu-id="ab7a0-170">In the iterator method, you can build the list and then yield each result in a loop.</span></span>  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [Использование оператора foreach с массивами](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
- [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a><span data-ttu-id="ab7a0-171">См. также</span><span class="sxs-lookup"><span data-stu-id="ab7a0-171">See Also</span></span>  
+ <span data-ttu-id="ab7a0-172"><xref:System.Collections.Generic></span><span class="sxs-lookup"><span data-stu-id="ab7a0-172"><xref:System.Collections.Generic></span></span>   
+ <span data-ttu-id="ab7a0-173"><xref:System.Collections.Generic.IEnumerable%601></span><span class="sxs-lookup"><span data-stu-id="ab7a0-173"><xref:System.Collections.Generic.IEnumerable%601></span></span>   
+ <span data-ttu-id="ab7a0-174">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span><span class="sxs-lookup"><span data-stu-id="ab7a0-174">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span></span>  
+ <span data-ttu-id="ab7a0-175">[yield](../../../csharp/language-reference/keywords/yield.md) </span><span class="sxs-lookup"><span data-stu-id="ab7a0-175">[yield](../../../csharp/language-reference/keywords/yield.md) </span></span>  
+ <span data-ttu-id="ab7a0-176">[Использование оператора foreach с массивами](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md) </span><span class="sxs-lookup"><span data-stu-id="ab7a0-176">[Using foreach with Arrays](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md) </span></span>  
+ [<span data-ttu-id="ab7a0-177">Универсальные шаблоны</span><span class="sxs-lookup"><span data-stu-id="ab7a0-177">Generics</span></span>](../../../csharp/programming-guide/generics/index.md)
 

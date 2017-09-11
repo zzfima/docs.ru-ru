@@ -41,54 +41,54 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="reading-from-files-in-visual-basic"></a>Чтение из файлов в Visual Basic
-В этом руководстве рассказывается, как выполнять задачи, связанные с чтением из файлов.  
+# <a name="reading-from-files-in-visual-basic"></a><span data-ttu-id="093c7-102">Чтение из файлов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="093c7-102">Reading from Files in Visual Basic</span></span>
+<span data-ttu-id="093c7-103">В этом руководстве рассказывается, как выполнять задачи, связанные с чтением из файлов.</span><span class="sxs-lookup"><span data-stu-id="093c7-103">This section explains how to perform tasks that are associated with reading from files.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Практическое руководство. Чтение из текстовых файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
- В этом руководстве рассказывается, как выполнять чтение из текстового файла.  
+## <a name="in-this-section"></a><span data-ttu-id="093c7-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="093c7-104">In This Section</span></span>  
+ [<span data-ttu-id="093c7-105">Практическое руководство. Чтение из текстовых файлов</span><span class="sxs-lookup"><span data-stu-id="093c7-105">How to: Read from Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ <span data-ttu-id="093c7-106">В этом руководстве рассказывается, как выполнять чтение из текстового файла.</span><span class="sxs-lookup"><span data-stu-id="093c7-106">Demonstrates how to read from a text file.</span></span>  
   
- [Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
- В этом руководстве рассказывается, как выполнять чтение из текстовых файлов с разделителями-запятыми.  
+ [<span data-ttu-id="093c7-107">Практическое руководство. Чтение из текстовых файлов с разделителями-запятыми</span><span class="sxs-lookup"><span data-stu-id="093c7-107">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ <span data-ttu-id="093c7-108">В этом руководстве рассказывается, как выполнять чтение из текстовых файлов с разделителями-запятыми.</span><span class="sxs-lookup"><span data-stu-id="093c7-108">Demonstrates how to read from a delimited text file.</span></span>  
   
- [Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
- В этом руководстве рассказывается, как выполнять чтение из файлов с полями фиксированного размера.  
+ [<span data-ttu-id="093c7-109">Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера</span><span class="sxs-lookup"><span data-stu-id="093c7-109">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ <span data-ttu-id="093c7-110">В этом руководстве рассказывается, как выполнять чтение из файлов с полями фиксированного размера.</span><span class="sxs-lookup"><span data-stu-id="093c7-110">Demonstrates how to read from a fixed-width text file.</span></span>  
   
- [Практическое руководство. Чтение из текстовых файлов различных форматов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- В этом руководстве рассказывается, как выполнять чтение из текстовых файлов различных форматов.  
+ [<span data-ttu-id="093c7-111">Практическое руководство. Чтение из текстовых файлов различных форматов</span><span class="sxs-lookup"><span data-stu-id="093c7-111">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ <span data-ttu-id="093c7-112">В этом руководстве рассказывается, как выполнять чтение из текстовых файлов различных форматов.</span><span class="sxs-lookup"><span data-stu-id="093c7-112">Demonstrates how to read from a text file with multiple formats.</span></span>  
   
- [Практическое руководство. Чтение из двоичных файлов](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
- В этом руководстве рассказывается, как выполнять чтение из двоичных файлов.  
+ [<span data-ttu-id="093c7-113">Практическое руководство. Чтение из двоичных файлов</span><span class="sxs-lookup"><span data-stu-id="093c7-113">How to: Read From Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ <span data-ttu-id="093c7-114">В этом руководстве рассказывается, как выполнять чтение из двоичных файлов.</span><span class="sxs-lookup"><span data-stu-id="093c7-114">Demonstrates how to read from a binary file.</span></span>  
   
- [Практическое руководство. Чтение текста из файлов с помощью StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
- Демонстрирует, как использовать <xref:System.IO.StreamReader> для чтения из двоичных файлов.  
+ [<span data-ttu-id="093c7-115">Практическое руководство. Чтение текста из файлов с помощью StreamReader</span><span class="sxs-lookup"><span data-stu-id="093c7-115">How to: Read Text from Files with a StreamReader</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ <span data-ttu-id="093c7-116">Демонстрирует, как использовать <xref:System.IO.StreamReader> для чтения из двоичных файлов.</span><span class="sxs-lookup"><span data-stu-id="093c7-116">Demonstrates how to use a <xref:System.IO.StreamReader> to read from a file.</span></span>  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a><span data-ttu-id="093c7-117">Ссылка</span><span class="sxs-lookup"><span data-stu-id="093c7-117">Reference</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Описание объекта `My.Computer.FileSystem` и его членов.  
+ <span data-ttu-id="093c7-118">Описание объекта `My.Computer.FileSystem` и его членов.</span><span class="sxs-lookup"><span data-stu-id="093c7-118">Describes the `My.Computer.FileSystem` object and its members.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>  
- Описывает метод `ReadAllText`.  
+ <span data-ttu-id="093c7-119">Описывает метод `ReadAllText`.</span><span class="sxs-lookup"><span data-stu-id="093c7-119">Describes the `ReadAllText` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>  
- Описывает метод `ReadAllBytes`.  
+ <span data-ttu-id="093c7-120">Описывает метод `ReadAllBytes`.</span><span class="sxs-lookup"><span data-stu-id="093c7-120">Describes the `ReadAllBytes` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>  
- Описывает метод `OpenTextFieldParser`.  
+ <span data-ttu-id="093c7-121">Описывает метод `OpenTextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="093c7-121">Describes the `OpenTextFieldParser` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
- Описывает метод `OpenTextFileReader`.  
+ <span data-ttu-id="093c7-122">Описывает метод `OpenTextFileReader`.</span><span class="sxs-lookup"><span data-stu-id="093c7-122">Describes the `OpenTextFileReader` method.</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Запись данных в буфер обмена и чтение их оттуда](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- Объясняет, как выполнять задачи, связанные с `My.Computer.Clipboard`, такие как чтение данных и запись данных в буфер обмена.  
+## <a name="related-sections"></a><span data-ttu-id="093c7-123">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="093c7-123">Related Sections</span></span>  
+ [<span data-ttu-id="093c7-124">Запись данных в буфер обмена и чтение их оттуда</span><span class="sxs-lookup"><span data-stu-id="093c7-124">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ <span data-ttu-id="093c7-125">Объясняет, как выполнять задачи, связанные с `My.Computer.Clipboard`, такие как чтение данных и запись данных в буфер обмена.</span><span class="sxs-lookup"><span data-stu-id="093c7-125">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
   
- [Анализ текстовых файлов с помощью объекта TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- Содержит общие сведения о чтении текстовых файлов с помощью объекта `TextFieldParser`.  
+ [<span data-ttu-id="093c7-126">Анализ текстовых файлов с помощью объекта TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="093c7-126">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ <span data-ttu-id="093c7-127">Содержит общие сведения о чтении текстовых файлов с помощью объекта `TextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="093c7-127">Provides an overview of reading text files with the `TextFieldParser` object.</span></span>  
   
- [Пошаговое руководство. Операции с файлами и каталогами в Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Объясняет, как использовать функцию `My` с файлами и каталогами.  
+ [<span data-ttu-id="093c7-128">Пошаговое руководство. Операции с файлами и каталогами в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="093c7-128">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ <span data-ttu-id="093c7-129">Объясняет, как использовать функцию `My` с файлами и каталогами.</span><span class="sxs-lookup"><span data-stu-id="093c7-129">Demonstrates how to use the `My` feature with files and directories.</span></span>  
   
- [Пошаговое руководство. Управление файлами с помощью методов .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Объясняет, как использовать методы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] с файлами и каталогами.
+ [<span data-ttu-id="093c7-130">Пошаговое руководство. Управление файлами с помощью методов .NET Framework</span><span class="sxs-lookup"><span data-stu-id="093c7-130">Walkthrough: Manipulating Files by Using .NET Framework Methods</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ <span data-ttu-id="093c7-131">Объясняет, как использовать методы [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] с файлами и каталогами.</span><span class="sxs-lookup"><span data-stu-id="093c7-131">Demonstrates how to use [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] methods with files and directories.</span></span>
 

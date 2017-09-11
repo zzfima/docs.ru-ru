@@ -20,45 +20,46 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 1b70822edd972ac33614ab49faad6ff50b0e80b7
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Отмена оставшихся асинхронных задач после один полный (Visual Basic)
-С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>метод вместе с <xref:System.Threading.CancellationToken>, можно отменить все остальные задачи, если одна задача завершена.</xref:System.Threading.CancellationToken> </xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> `WhenAny` Принимает в качестве аргумента, который представляет собой набор задач. Метод запускает все задачи и возвращает одну задачу. Задача завершается, когда все задачи в коллекции.  
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a><span data-ttu-id="238d1-102">Отмена оставшихся асинхронных задач после один полный (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="238d1-102">Cancel Remaining Async Tasks after One Is Complete (Visual Basic)</span></span>
+<span data-ttu-id="238d1-103">С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>метод вместе с <xref:System.Threading.CancellationToken>, можно отменить все остальные задачи, если одна задача завершена.</xref:System.Threading.CancellationToken> </xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="238d1-103">By using the <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> method together with a <xref:System.Threading.CancellationToken>, you can cancel all remaining tasks when one task is complete.</span></span> <span data-ttu-id="238d1-104">`WhenAny` Принимает в качестве аргумента, который представляет собой набор задач.</span><span class="sxs-lookup"><span data-stu-id="238d1-104">The `WhenAny` method takes an argument that’s a collection of tasks.</span></span> <span data-ttu-id="238d1-105">Метод запускает все задачи и возвращает одну задачу.</span><span class="sxs-lookup"><span data-stu-id="238d1-105">The method starts all the tasks and returns a single task.</span></span> <span data-ttu-id="238d1-106">Задача завершается, когда все задачи в коллекции.</span><span class="sxs-lookup"><span data-stu-id="238d1-106">The single task is complete when any task in the collection is complete.</span></span>  
   
- В этом примере показано, как использовать токен отмены в сочетании с `WhenAny` к удержанию первой задачи для завершения из коллекции задач и отменить оставшиеся задачи. Каждая задача загружает содержимое веб-сайта. Пример отображает длину содержимого для завершения первой загрузки и отменяет другие загружаемые файлы.  
+ <span data-ttu-id="238d1-107">В этом примере показано, как использовать токен отмены в сочетании с `WhenAny` к удержанию первой задачи для завершения из коллекции задач и отменить оставшиеся задачи.</span><span class="sxs-lookup"><span data-stu-id="238d1-107">This example demonstrates how to use a cancellation token in conjunction with `WhenAny` to hold onto the first task to finish from the collection of tasks and to cancel the remaining tasks.</span></span> <span data-ttu-id="238d1-108">Каждая задача загружает содержимое веб-сайта.</span><span class="sxs-lookup"><span data-stu-id="238d1-108">Each task downloads the contents of a website.</span></span> <span data-ttu-id="238d1-109">Пример отображает длину содержимого для завершения первой загрузки и отменяет другие загружаемые файлы.</span><span class="sxs-lookup"><span data-stu-id="238d1-109">The example displays the length of the contents of the first download to complete and cancels the other downloads.</span></span>  
   
 > [!NOTE]
->  Для выполнения примеров, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.  
+>  <span data-ttu-id="238d1-110">Для выполнения примеров, необходимо иметь Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более новая версия вашего компьютера.</span><span class="sxs-lookup"><span data-stu-id="238d1-110">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-## <a name="downloading-the-example"></a>Загрузка примера  
- Можно загрузить весь проект Windows Presentation Foundation (WPF) из [образец Async: нормально Настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046) и затем выполните следующие действия.  
+## <a name="downloading-the-example"></a><span data-ttu-id="238d1-111">Загрузка примера</span><span class="sxs-lookup"><span data-stu-id="238d1-111">Downloading the Example</span></span>  
+ <span data-ttu-id="238d1-112">Можно загрузить весь проект Windows Presentation Foundation (WPF) из [образец Async: нормально Настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046) и затем выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="238d1-112">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) and then follow these steps.</span></span>  
   
-1.  Распакуйте загруженный файл, а затем запустите Visual Studio.  
+1.  <span data-ttu-id="238d1-113">Распакуйте загруженный файл, а затем запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="238d1-113">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
+2.  <span data-ttu-id="238d1-114">В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.</span><span class="sxs-lookup"><span data-stu-id="238d1-114">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3.  В **открыть проект** диалоговом откройте папку, которая содержит пример кода, который можно распаковать и откройте файл решения (SLN) для AsyncFineTuningVB.  
+3.  <span data-ttu-id="238d1-115">В **открыть проект** диалоговом откройте папку, которая содержит пример кода, который можно распаковать и откройте файл решения (SLN) для AsyncFineTuningVB.</span><span class="sxs-lookup"><span data-stu-id="238d1-115">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
   
-4.  В **обозревателе решений**, откройте контекстное меню для **CancelAfterOneTask** проекта, а затем выберите **Назначить запускаемым проектом**.  
+4.  <span data-ttu-id="238d1-116">В **обозревателе решений**, откройте контекстное меню для **CancelAfterOneTask** проекта, а затем выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="238d1-116">In **Solution Explorer**, open the shortcut menu for the **CancelAfterOneTask** project, and then choose **Set as StartUp Project**.</span></span>  
   
-5.  Нажмите клавишу F5, чтобы запустить проект.  
+5.  <span data-ttu-id="238d1-117">Нажмите клавишу F5, чтобы запустить проект.</span><span class="sxs-lookup"><span data-stu-id="238d1-117">Choose the F5 key to run the project.</span></span>  
   
-     Нажмите сочетание клавиш Ctrl + F5 для запуска проекта без его отладки.  
+     <span data-ttu-id="238d1-118">Нажмите сочетание клавиш Ctrl + F5 для запуска проекта без его отладки.</span><span class="sxs-lookup"><span data-stu-id="238d1-118">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
   
-6.  Запустите программу несколько раз для проверки различных загрузки закончит первой.  
+6.  <span data-ttu-id="238d1-119">Запустите программу несколько раз для проверки различных загрузки закончит первой.</span><span class="sxs-lookup"><span data-stu-id="238d1-119">Run the program several times to verify that different downloads finish first.</span></span>  
   
- Если вы не хотите загрузить проект, можно просмотреть файл MainWindow.xaml.vb в конце этого раздела.  
+ <span data-ttu-id="238d1-120">Если вы не хотите загрузить проект, можно просмотреть файл MainWindow.xaml.vb в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="238d1-120">If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.</span></span>  
   
-## <a name="building-the-example"></a>Построение примера  
- В этом разделе добавляется в проект, который был разработан в [Отмена асинхронной задачи или списка задач](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) отменить список задач. В примере используется тот же пользовательский Интерфейс, хотя **отменить** кнопка не используется явно.  
+## <a name="building-the-example"></a><span data-ttu-id="238d1-121">Построение примера</span><span class="sxs-lookup"><span data-stu-id="238d1-121">Building the Example</span></span>  
+ <span data-ttu-id="238d1-122">В этом разделе добавляется в проект, который был разработан в [Отмена асинхронной задачи или списка задач](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) отменить список задач.</span><span class="sxs-lookup"><span data-stu-id="238d1-122">The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) to cancel a list of tasks.</span></span> <span data-ttu-id="238d1-123">В примере используется тот же пользовательский Интерфейс, хотя **отменить** кнопка не используется явно.</span><span class="sxs-lookup"><span data-stu-id="238d1-123">The example uses the same UI, although the **Cancel** button isn’t used explicitly.</span></span>  
   
- Для построения примера самостоятельно, шаг за шагом, следуйте инструкциям в разделе «Загрузка пример», но выбрать **CancelAListOfTasks** как **запускаемый проект**. К проекту, добавьте изменения в этом разделе.  
+ <span data-ttu-id="238d1-124">Для построения примера самостоятельно, шаг за шагом, следуйте инструкциям в разделе «Загрузка пример», но выбрать **CancelAListOfTasks** как **запускаемый проект**.</span><span class="sxs-lookup"><span data-stu-id="238d1-124">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAListOfTasks** as the **StartUp Project**.</span></span> <span data-ttu-id="238d1-125">К проекту, добавьте изменения в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="238d1-125">Add the changes in this topic to that project.</span></span>  
   
- В файле MainWindow.xaml.vb **CancelAListOfTasks** проект, запустите переход, перенос шагов обработки для каждого веб-сайта из цикла в `AccessTheWebAsync` следующие асинхронного метода.  
+ <span data-ttu-id="238d1-126">В файле MainWindow.xaml.vb **CancelAListOfTasks** проект, запустите переход, перенос шагов обработки для каждого веб-сайта из цикла в `AccessTheWebAsync` следующие асинхронного метода.</span><span class="sxs-lookup"><span data-stu-id="238d1-126">In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.</span></span>  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -74,19 +75,19 @@ Async Function ProcessURLAsync(url As String, client As HttpClient, ct As Cancel
 End Function  
 ```  
   
- В `AccessTheWebAsync`, в этом примере используется запрос, <xref:System.Linq.Enumerable.ToArray%2A>метода и `WhenAny` метод для создания и запуска массив задач.</xref:System.Linq.Enumerable.ToArray%2A> Применение `WhenAny` в массив возвращает одну задачу, когда ожидается, результатом которого является первой задачи до завершения задачи в массиве.  
+ <span data-ttu-id="238d1-127">В `AccessTheWebAsync`, в этом примере используется запрос, <xref:System.Linq.Enumerable.ToArray%2A>метода и `WhenAny` метод для создания и запуска массив задач.</xref:System.Linq.Enumerable.ToArray%2A></span><span class="sxs-lookup"><span data-stu-id="238d1-127">In `AccessTheWebAsync`, this example uses a query, the  <xref:System.Linq.Enumerable.ToArray%2A> method, and the `WhenAny` method to create and start an array of tasks.</span></span> <span data-ttu-id="238d1-128">Применение `WhenAny` в массив возвращает одну задачу, когда ожидается, результатом которого является первой задачи до завершения задачи в массиве.</span><span class="sxs-lookup"><span data-stu-id="238d1-128">The application of `WhenAny` to the array returns a single task that, when awaited, evaluates to the first task to reach completion in the array of tasks.</span></span>  
   
- Внесите следующие изменения в `AccessTheWebAsync`. Звездочки отметить изменения в файле кода.  
+ <span data-ttu-id="238d1-129">Внесите следующие изменения в `AccessTheWebAsync`.</span><span class="sxs-lookup"><span data-stu-id="238d1-129">Make the following changes in `AccessTheWebAsync`.</span></span> <span data-ttu-id="238d1-130">Звездочки отметить изменения в файле кода.</span><span class="sxs-lookup"><span data-stu-id="238d1-130">Asterisks mark the changes in the code file.</span></span>  
   
-1.  Закомментируйте или удалите цикла.  
+1.  <span data-ttu-id="238d1-131">Закомментируйте или удалите цикла.</span><span class="sxs-lookup"><span data-stu-id="238d1-131">Comment out or delete the loop.</span></span>  
   
-2.  Создать запрос, который во время выполнения создает коллекцию базовых заданий. Каждый вызов `ProcessURLAsync` возвращает <xref:System.Threading.Tasks.Task%601>где `TResult` является целым числом.</xref:System.Threading.Tasks.Task%601>  
+2.  <span data-ttu-id="238d1-132">Создать запрос, который во время выполнения создает коллекцию базовых заданий.</span><span class="sxs-lookup"><span data-stu-id="238d1-132">Create a query that, when executed, produces a collection of generic tasks.</span></span> <span data-ttu-id="238d1-133">Каждый вызов `ProcessURLAsync` возвращает <xref:System.Threading.Tasks.Task%601>где `TResult` является целым числом.</xref:System.Threading.Tasks.Task%601></span><span class="sxs-lookup"><span data-stu-id="238d1-133">Each call to `ProcessURLAsync` returns a <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-3.  Вызов `ToArray` для выполнения запроса и запуска задачи. Применение `WhenAny` метод на следующем шаге будет выполнить запрос и запустить задачи без использования `ToArray`, но другие методы не могут. Наиболее безопасным способом является явно принудительного выполнения запроса.  
+<span data-ttu-id="238d1-134"><CodeContentPlaceHolder>1</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="238d1-134"><CodeContentPlaceHolder>1</CodeContentPlaceHolder></span></span>  
+3.  <span data-ttu-id="238d1-135">Вызов `ToArray` для выполнения запроса и запуска задачи.</span><span class="sxs-lookup"><span data-stu-id="238d1-135">Call `ToArray` to execute the query and start the tasks.</span></span> <span data-ttu-id="238d1-136">Применение `WhenAny` метод на следующем шаге будет выполнить запрос и запустить задачи без использования `ToArray`, но другие методы не могут.</span><span class="sxs-lookup"><span data-stu-id="238d1-136">The application of the `WhenAny` method in the next step would execute the query and start the tasks without using `ToArray`, but other methods might not.</span></span> <span data-ttu-id="238d1-137">Наиболее безопасным способом является явно принудительного выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="238d1-137">The safest practice is to force execution of the query explicitly.</span></span>  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-4.  Вызов `WhenAny` на коллекцию задач. `WhenAny`Возвращает `Task(Of Task(Of Integer))` или `Task<Task<int>>`.  То есть `WhenAny` Возвращает задачу, которая вычисляет единое `Task(Of Integer)` или `Task<int>` при ее ожидать. Одна задача — первая задача в коллекции, чтобы завершить. Сначала завершенной задачи назначены `firstFinishedTask`. Тип `firstFinishedTask` — <xref:System.Threading.Tasks.Task%601>где `TResult` является целым числом, поскольку это возвращаемый тип `ProcessURLAsync`.</xref:System.Threading.Tasks.Task%601>  
+<span data-ttu-id="238d1-138"><CodeContentPlaceHolder>2</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="238d1-138"><CodeContentPlaceHolder>2</CodeContentPlaceHolder></span></span>  
+4.  <span data-ttu-id="238d1-139">Вызов `WhenAny` на коллекцию задач.</span><span class="sxs-lookup"><span data-stu-id="238d1-139">Call `WhenAny` on the collection of tasks.</span></span> <span data-ttu-id="238d1-140">`WhenAny`Возвращает `Task(Of Task(Of Integer))` или `Task<Task<int>>`.</span><span class="sxs-lookup"><span data-stu-id="238d1-140">`WhenAny` returns a `Task(Of Task(Of Integer))` or `Task<Task<int>>`.</span></span>  <span data-ttu-id="238d1-141">То есть `WhenAny` Возвращает задачу, которая вычисляет единое `Task(Of Integer)` или `Task<int>` при ее ожидать.</span><span class="sxs-lookup"><span data-stu-id="238d1-141">That is, `WhenAny` returns a task that evaluates to a single `Task(Of Integer)` or `Task<int>` when it’s awaited.</span></span> <span data-ttu-id="238d1-142">Одна задача — первая задача в коллекции, чтобы завершить.</span><span class="sxs-lookup"><span data-stu-id="238d1-142">That single task is the first task in the collection to finish.</span></span> <span data-ttu-id="238d1-143">Сначала завершенной задачи назначены `firstFinishedTask`.</span><span class="sxs-lookup"><span data-stu-id="238d1-143">The task that finished first is assigned to `firstFinishedTask`.</span></span> <span data-ttu-id="238d1-144">Тип `firstFinishedTask` — <xref:System.Threading.Tasks.Task%601>где `TResult` является целым числом, поскольку это возвращаемый тип `ProcessURLAsync`.</xref:System.Threading.Tasks.Task%601></span><span class="sxs-lookup"><span data-stu-id="238d1-144">The type of `firstFinishedTask` is <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer because that's the return type of `ProcessURLAsync`.</span></span>  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   
@@ -94,28 +95,28 @@ End Function
 Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
 ```  
   
-5.  В этом примере вы заинтересованы только в задачу, которая завершает сначала. Таким образом, использовать <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>Отменить оставшиеся задачи.</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>  
+5.  <span data-ttu-id="238d1-145">В этом примере вы заинтересованы только в задачу, которая завершает сначала.</span><span class="sxs-lookup"><span data-stu-id="238d1-145">In this example, you’re interested only in the task that finishes first.</span></span> <span data-ttu-id="238d1-146">Таким образом, использовать <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>Отменить оставшиеся задачи.</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="238d1-146">Therefore, use <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> to cancel the remaining tasks.</span></span>  
   
 ```vb  
 ' ***Cancel the rest of the downloads. You just want the first one.  
 cts.Cancel()  
 ```  
   
-6.  Наконец, await `firstFinishedTask` для получения длины загруженного содержимого.  
+6.  <span data-ttu-id="238d1-147">Наконец, await `firstFinishedTask` для получения длины загруженного содержимого.</span><span class="sxs-lookup"><span data-stu-id="238d1-147">Finally, await `firstFinishedTask` to retrieve the length of the downloaded content.</span></span>  
   
 ```vb  
 Dim length = Await firstFinishedTask  
 resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
 ```  
   
- Запустите программу несколько раз для проверки различных загрузки закончит первой.  
+ <span data-ttu-id="238d1-148">Запустите программу несколько раз для проверки различных загрузки закончит первой.</span><span class="sxs-lookup"><span data-stu-id="238d1-148">Run the program several times to verify that different downloads finish first.</span></span>  
   
-## <a name="complete-example"></a>Полный пример  
- Ниже приведен полный файл MainWindow.xaml.vb или MainWindow.xaml.cs для примера. Звездочки пометить элементы, которые были добавлены в этом примере.  
+## <a name="complete-example"></a><span data-ttu-id="238d1-149">Полный пример</span><span class="sxs-lookup"><span data-stu-id="238d1-149">Complete Example</span></span>  
+ <span data-ttu-id="238d1-150">Ниже приведен полный файл MainWindow.xaml.vb или MainWindow.xaml.cs для примера.</span><span class="sxs-lookup"><span data-stu-id="238d1-150">The following code is the complete MainWindow.xaml.vb or MainWindow.xaml.cs file for the example.</span></span> <span data-ttu-id="238d1-151">Звездочки пометить элементы, которые были добавлены в этом примере.</span><span class="sxs-lookup"><span data-stu-id="238d1-151">Asterisks mark the elements that were added for this example.</span></span>  
   
- Обратите внимание, что необходимо добавить ссылку <xref:System.Net.Http>.</xref:System.Net.Http>  
+ <span data-ttu-id="238d1-152">Обратите внимание, что необходимо добавить ссылку <xref:System.Net.Http>.</xref:System.Net.Http></span><span class="sxs-lookup"><span data-stu-id="238d1-152">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
- Можно загрузить проект из [образец Async: нормально Настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ <span data-ttu-id="238d1-153">Можно загрузить проект из [образец Async: нормально Настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046).</span><span class="sxs-lookup"><span data-stu-id="238d1-153">You can download the project from [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046).</span></span>  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -240,8 +241,8 @@ End Class
 ' Download complete.  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Tasks.Task.WhenAny%2A></xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Пример асинхронности: Точная настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)
+## <a name="see-also"></a><span data-ttu-id="238d1-154">См. также</span><span class="sxs-lookup"><span data-stu-id="238d1-154">See Also</span></span>  
+ <span data-ttu-id="238d1-155"><xref:System.Threading.Tasks.Task.WhenAny%2A></xref:System.Threading.Tasks.Task.WhenAny%2A></span><span class="sxs-lookup"><span data-stu-id="238d1-155"><xref:System.Threading.Tasks.Task.WhenAny%2A></span></span>   
+<span data-ttu-id="238d1-156"> [Настройка асинхронного приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) </span><span class="sxs-lookup"><span data-stu-id="238d1-156"> [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) </span></span>  
+<span data-ttu-id="238d1-157"> [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md) </span><span class="sxs-lookup"><span data-stu-id="238d1-157"> [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md) </span></span>  
+<span data-ttu-id="238d1-158"> [Пример асинхронности: Точная настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)</span><span class="sxs-lookup"><span data-stu-id="238d1-158"> [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046)</span></span>

@@ -37,26 +37,26 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma warning (Справочник по C#)
-`#pragma warning` может включать или отключать определенные предупреждения.  
+# <a name="pragma-warning-c-reference"></a><span data-ttu-id="9ee6a-102">#pragma warning (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="9ee6a-102">#pragma warning (C# Reference)</span></span>
+<span data-ttu-id="9ee6a-103">`#pragma warning` может включать или отключать определенные предупреждения.</span><span class="sxs-lookup"><span data-stu-id="9ee6a-103">`#pragma warning` can enable or disable certain warnings.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="9ee6a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9ee6a-104">Syntax</span></span>  
   
 ```csharp
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a><span data-ttu-id="9ee6a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="9ee6a-105">Parameters</span></span>  
  `warning-list`  
- Список номеров предупреждений с разделителем-запятой. Префикс CS является необязательным.  
+ <span data-ttu-id="9ee6a-106">Список номеров предупреждений с разделителем-запятой.</span><span class="sxs-lookup"><span data-stu-id="9ee6a-106">A comma-separated list of warning numbers.</span></span> <span data-ttu-id="9ee6a-107">Префикс CS является необязательным.</span><span class="sxs-lookup"><span data-stu-id="9ee6a-107">The "CS" prefix is optional.</span></span>  
   
- Если номера предупреждений не указаны, `disable` отключает все предупреждения, а `restore` включает все предупреждения.  
+ <span data-ttu-id="9ee6a-108">Если номера предупреждений не указаны, `disable` отключает все предупреждения, а `restore` включает все предупреждения.</span><span class="sxs-lookup"><span data-stu-id="9ee6a-108">When no warning numbers are specified, `disable` disables all warnings and `restore` enables all warnings.</span></span>  
   
 > [!NOTE]
->  Чтобы найти номера предупреждений в Visual Studio, выполните сборку проекта, а затем поиск номеров предупреждений в окне **Вывод**.  
+>  <span data-ttu-id="9ee6a-109">Чтобы найти номера предупреждений в Visual Studio, выполните сборку проекта, а затем поиск номеров предупреждений в окне **Вывод**.</span><span class="sxs-lookup"><span data-stu-id="9ee6a-109">To find warning numbers in Visual Studio, build your project and then look for the warning numbers in the **Output** window.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="9ee6a-110">Пример</span><span class="sxs-lookup"><span data-stu-id="9ee6a-110">Example</span></span>  
   
 ```csharp
 // pragma_warning.cs  
@@ -82,9 +82,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md)
+## <a name="see-also"></a><span data-ttu-id="9ee6a-111">См. также</span><span class="sxs-lookup"><span data-stu-id="9ee6a-111">See Also</span></span>  
+ <span data-ttu-id="9ee6a-112">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9ee6a-112">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="9ee6a-113">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9ee6a-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="9ee6a-114">[Директивы препроцессора C#](../../../csharp/language-reference/preprocessor-directives/index.md) </span><span class="sxs-lookup"><span data-stu-id="9ee6a-114">[C# Preprocessor Directives](../../../csharp/language-reference/preprocessor-directives/index.md) </span></span>  
+ [<span data-ttu-id="9ee6a-115">Ошибки компилятора C#</span><span class="sxs-lookup"><span data-stu-id="9ee6a-115">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)
 

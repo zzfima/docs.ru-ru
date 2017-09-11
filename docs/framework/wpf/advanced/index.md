@@ -28,20 +28,20 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="advanced-windows-presentation-foundation"></a>Дополнительные сведения (Windows Presentation Foundation)
-В этом разделе описываются некоторые из дополнительных областей в WPF.  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="41c3b-102">Дополнительные сведения (Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="41c3b-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="41c3b-103">В этом разделе описываются некоторые из дополнительных областей в WPF.</span><span class="sxs-lookup"><span data-stu-id="41c3b-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Архитектура WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [Дерево элементов и сериализация](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [Перетаскивание](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [Документы](../../../../docs/framework/wpf/advanced/documents.md)  
- [Глобализация и локализация](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Производительность](../../../../docs/framework/wpf/advanced/performance.md)  
- [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [Общие сведения о надстройках WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [Справочник по неуправляемым API WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
+## <a name="in-this-section"></a><span data-ttu-id="41c3b-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="41c3b-104">In This Section</span></span>  
+ [<span data-ttu-id="41c3b-105">Архитектура WPF</span><span class="sxs-lookup"><span data-stu-id="41c3b-105">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+<span data-ttu-id="41c3b-106"> [Базовые элементы](../../../../docs/framework/wpf/advanced/base-elements.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-106"> [Base Elements](../../../../docs/framework/wpf/advanced/base-elements.md)</span></span>  
+<span data-ttu-id="41c3b-107"> [Дерево элементов и сериализация](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-107"> [Element Tree and Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)</span></span>  
+<span data-ttu-id="41c3b-108"> [Перетаскивание](../../../../docs/framework/wpf/advanced/drag-and-drop.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-108"> [Drag and Drop](../../../../docs/framework/wpf/advanced/drag-and-drop.md)</span></span>  
+<span data-ttu-id="41c3b-109"> [Документы](../../../../docs/framework/wpf/advanced/documents.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-109"> [Documents](../../../../docs/framework/wpf/advanced/documents.md)</span></span>  
+<span data-ttu-id="41c3b-110"> [Глобализация и локализация](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-110"> [Globalization and Localization](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)</span></span>  
+<span data-ttu-id="41c3b-111"> [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-111"> [Migration and Interoperability](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)</span></span>  
+<span data-ttu-id="41c3b-112"> [Производительность](../../../../docs/framework/wpf/advanced/performance.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-112"> [Performance](../../../../docs/framework/wpf/advanced/performance.md)</span></span>  
+<span data-ttu-id="41c3b-113"> [Потоковая модель](../../../../docs/framework/wpf/advanced/threading-model.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-113"> [Threading Model](../../../../docs/framework/wpf/advanced/threading-model.md)</span></span>  
+<span data-ttu-id="41c3b-114"> [Общие сведения о надстройках WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-114"> [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)</span></span>  
+<span data-ttu-id="41c3b-115"> [Справочник по неуправляемым API WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)</span><span class="sxs-lookup"><span data-stu-id="41c3b-115"> [Unmanaged WPF API Reference](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)</span></span>  
   
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a><span data-ttu-id="41c3b-116">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="41c3b-116">Related Sections</span></span>

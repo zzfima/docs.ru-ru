@@ -28,30 +28,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34987930b3afd6d95d12190172a5a5e512106f8a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ef482f142e07e96eabf93bd2223b0d24f351553b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="highentropyva-visual-basic"></a>/highentropyva (Visual Basic)
-Указывает ли 64-битный исполняемый файл или исполняемый файл, помеченный атрибутом [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) параметр компилятора поддерживает высокую энтропию случайный выбор макета адресного пространства (ASLR).  
+# <a name="highentropyva-visual-basic"></a><span data-ttu-id="bcb41-102">/highentropyva (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bcb41-102">/highentropyva (Visual Basic)</span></span>
+<span data-ttu-id="bcb41-103">Указывает ли 64-битный исполняемый файл или исполняемый файл, помеченный атрибутом [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) параметр компилятора поддерживает высокую энтропию случайный выбор макета адресного пространства (ASLR).</span><span class="sxs-lookup"><span data-stu-id="bcb41-103">Indicates whether a 64-bit executable or an executable that's marked by the [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="bcb41-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bcb41-104">Syntax</span></span>  
   
 ```  
 /highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
- `+` &#124; `-`  
- Необязательный. Параметр отключен по умолчанию или если указать `/highentropyva-`. Параметр — Если указать `/highentropyva` или `/highentropyva+`.  
+## <a name="arguments"></a><span data-ttu-id="bcb41-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="bcb41-105">Arguments</span></span>  
+ <span data-ttu-id="bcb41-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="bcb41-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="bcb41-107">Необязательный.</span><span class="sxs-lookup"><span data-stu-id="bcb41-107">Optional.</span></span> <span data-ttu-id="bcb41-108">Параметр отключен по умолчанию или если указать `/highentropyva-`.</span><span class="sxs-lookup"><span data-stu-id="bcb41-108">The option is off by default or if you specify `/highentropyva-`.</span></span> <span data-ttu-id="bcb41-109">Параметр — Если указать `/highentropyva` или `/highentropyva+`.</span><span class="sxs-lookup"><span data-stu-id="bcb41-109">The option is on if you specify `/highentropyva` or `/highentropyva+`.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Если этот параметр задан, совместимым версиям ядра Windows можно использовать более высокие степени энтропии при ядра случайный выбор из своего структуры адресного пространства процесса в рамках ASLR. Если ядро использует более высокие степени энтропии, можно выделить больше адресов, областям памяти, как стеки и кучи. Из-за этого сложнее подобрать расположение определенной области памяти.  
+## <a name="remarks"></a><span data-ttu-id="bcb41-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="bcb41-110">Remarks</span></span>  
+ <span data-ttu-id="bcb41-111">Если этот параметр задан, совместимым версиям ядра Windows можно использовать более высокие степени энтропии при ядра случайный выбор из своего структуры адресного пространства процесса в рамках ASLR.</span><span class="sxs-lookup"><span data-stu-id="bcb41-111">If you specify this option, compatible versions of the Windows kernel can use higher degrees of entropy when the kernel randomizes the address space layout of a process as part of ASLR.</span></span> <span data-ttu-id="bcb41-112">Если ядро использует более высокие степени энтропии, можно выделить больше адресов, областям памяти, как стеки и кучи.</span><span class="sxs-lookup"><span data-stu-id="bcb41-112">If the kernel uses higher degrees of entropy, a larger number of addresses can be allocated to memory regions such as stacks and heaps.</span></span> <span data-ttu-id="bcb41-113">Из-за этого сложнее подобрать расположение определенной области памяти.</span><span class="sxs-lookup"><span data-stu-id="bcb41-113">As a result, it is more difficult to guess the location of a particular memory region.</span></span>  
   
- Когда параметр включен, целевой исполняемый файл и модули, на которых она зависит необходимо обработать значения указателя, размер которых превышает 4 гигабайта (ГБ) при выполнении этих модулей как 64-разрядные процессы.  
+ <span data-ttu-id="bcb41-114">Когда параметр включен, целевой исполняемый файл и модули, на которых она зависит необходимо обработать значения указателя, размер которых превышает 4 гигабайта (ГБ) при выполнении этих модулей как 64-разрядные процессы.</span><span class="sxs-lookup"><span data-stu-id="bcb41-114">When the option is on, the target executable and any modules on which it depends must be able to handle pointer values that are larger than 4 gigabytes (GB) when those modules are running as 64-bit processes.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="bcb41-115">См. также</span><span class="sxs-lookup"><span data-stu-id="bcb41-115">See Also</span></span>  
+ <span data-ttu-id="bcb41-116">[Компилятор командной строки Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="bcb41-116">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="bcb41-117"> [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span><span class="sxs-lookup"><span data-stu-id="bcb41-117"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span></span>

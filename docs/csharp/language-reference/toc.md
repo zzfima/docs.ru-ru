@@ -6,4 +6,4 @@
 ## [Директивы препроцессора C#](preprocessor-directives/)
 ## [Параметры компилятора C# ](compiler-options/)
 ## [Ошибки компилятора C#](compiler-messages/)
-## [Спецификация языка C#](language-specification.md)
+## [Предварительная спецификация языка C# 6.0](language-specification/)

@@ -37,56 +37,56 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="static-c-reference"></a>static (Справочник по C#)
-Модификатор `static` используется для объявления статического члена, принадлежащего собственно типу, а не конкретному объекту. Модификатор `static` можно использовать с классами, полями, методами, свойствами, операторами, событиями и конструкторами, но нельзя — с индексаторами, методами завершения или типами, отличными от классов. Дополнительные сведения см. в статье [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+# <a name="static-c-reference"></a><span data-ttu-id="15690-102">static (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="15690-102">static (C# Reference)</span></span>
+<span data-ttu-id="15690-103">Модификатор `static` используется для объявления статического члена, принадлежащего собственно типу, а не конкретному объекту.</span><span class="sxs-lookup"><span data-stu-id="15690-103">Use the `static` modifier to declare a static member, which belongs to the type itself rather than to a specific object.</span></span> <span data-ttu-id="15690-104">Модификатор `static` можно использовать с классами, полями, методами, свойствами, операторами, событиями и конструкторами, но нельзя — с индексаторами, методами завершения или типами, отличными от классов.</span><span class="sxs-lookup"><span data-stu-id="15690-104">The `static` modifier can be used with classes, fields, methods, properties, operators, events, and constructors, but it cannot be used with indexers, finalizers, or types other than classes.</span></span> <span data-ttu-id="15690-105">Дополнительные сведения см. в статье [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="15690-105">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий класс объявляется как `static` и содержит только методы `static`:  
+## <a name="example"></a><span data-ttu-id="15690-106">Пример</span><span class="sxs-lookup"><span data-stu-id="15690-106">Example</span></span>  
+ <span data-ttu-id="15690-107">Следующий класс объявляется как `static` и содержит только методы `static`:</span><span class="sxs-lookup"><span data-stu-id="15690-107">The following class is declared as `static` and contains only `static` methods:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
+ <span data-ttu-id="15690-108">[!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="15690-108">[!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]</span></span>  
   
- Объявление константы или типа неявно является статическим членом.  
+ <span data-ttu-id="15690-109">Объявление константы или типа неявно является статическим членом.</span><span class="sxs-lookup"><span data-stu-id="15690-109">A constant or type declaration is implicitly a static member.</span></span>  
   
- На статический член нельзя ссылаться через экземпляр, а можно только через имя типа. Например, рассмотрим следующий класс.  
+ <span data-ttu-id="15690-110">На статический член нельзя ссылаться через экземпляр,</span><span class="sxs-lookup"><span data-stu-id="15690-110">A static member cannot be referenced through an instance.</span></span> <span data-ttu-id="15690-111">а можно только через имя типа.</span><span class="sxs-lookup"><span data-stu-id="15690-111">Instead, it is referenced through the type name.</span></span> <span data-ttu-id="15690-112">Например, рассмотрим следующий класс.</span><span class="sxs-lookup"><span data-stu-id="15690-112">For example, consider the following class:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
+ <span data-ttu-id="15690-113">[!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="15690-113">[!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]</span></span>  
   
- Чтобы обратиться к статическому члену `x`, воспользуйтесь полным именем — `MyBaseC.MyStruct.x` (если только член не доступен из той же области действия):  
+ <span data-ttu-id="15690-114">Чтобы обратиться к статическому члену `x`, воспользуйтесь полным именем — `MyBaseC.MyStruct.x` (если только член не доступен из той же области действия):</span><span class="sxs-lookup"><span data-stu-id="15690-114">To refer to the static member `x`, use the fully qualified name, `MyBaseC.MyStruct.x`, unless the member is accessible from the same scope:</span></span>  
   
 ```csharp  
 Console.WriteLine(MyBaseC.MyStruct.x);  
 ```  
   
- Так как экземпляр класса содержит отдельную копию всех полей экземпляра класса, каждому статическому полю соответствует только одна копия.  
+ <span data-ttu-id="15690-115">Так как экземпляр класса содержит отдельную копию всех полей экземпляра класса, каждому статическому полю соответствует только одна копия.</span><span class="sxs-lookup"><span data-stu-id="15690-115">While an instance of a class contains a separate copy of all instance fields of the class, there is only one copy of each static field.</span></span>  
   
- Невозможно использовать [this](../../../csharp/language-reference/keywords/this.md) для ссылки на статические методы или методы доступа к свойствам.  
+ <span data-ttu-id="15690-116">Невозможно использовать [this](../../../csharp/language-reference/keywords/this.md) для ссылки на статические методы или методы доступа к свойствам.</span><span class="sxs-lookup"><span data-stu-id="15690-116">It is not possible to use [this](../../../csharp/language-reference/keywords/this.md) to reference static methods or property accessors.</span></span>  
   
- Если к классу применяется ключевое слово `static`, все члены этого класса должны быть статическими.  
+ <span data-ttu-id="15690-117">Если к классу применяется ключевое слово `static`, все члены этого класса должны быть статическими.</span><span class="sxs-lookup"><span data-stu-id="15690-117">If the `static` keyword is applied to a class, all the members of the class must be static.</span></span>  
   
- Классы и статические классы могут иметь статические конструкторы. Статические конструкторы вызываются на определенном этапе между запуском программы и созданием экземпляра класса.  
+ <span data-ttu-id="15690-118">Классы и статические классы могут иметь статические конструкторы.</span><span class="sxs-lookup"><span data-stu-id="15690-118">Classes and static classes may have static constructors.</span></span> <span data-ttu-id="15690-119">Статические конструкторы вызываются на определенном этапе между запуском программы и созданием экземпляра класса.</span><span class="sxs-lookup"><span data-stu-id="15690-119">Static constructors are called at some point between when the program starts and the class is instantiated.</span></span>  
   
 > [!NOTE]
->  Ключевое слово `static` имеет более ограниченное применение по сравнению с C++. Сведения о сравнении с ключевым словом С++ см. в статье [Классы хранения (C++)](/cpp/cpp/storage-classes-cpp#static).
+>  <span data-ttu-id="15690-120">Ключевое слово `static` имеет более ограниченное применение по сравнению с C++.</span><span class="sxs-lookup"><span data-stu-id="15690-120">The `static` keyword has more limited uses than in C++.</span></span> <span data-ttu-id="15690-121">Сведения о сравнении с ключевым словом С++ см. в статье [Классы хранения (C++)](/cpp/cpp/storage-classes-cpp#static).</span><span class="sxs-lookup"><span data-stu-id="15690-121">To compare with the C++ keyword, see [Storage classes (C++)](/cpp/cpp/storage-classes-cpp#static).</span></span>
   
- В качестве демонстрации статических членов рассмотрим класс, представляющий сотрудника компании. Предположим, что этот класс содержит метод для подсчета сотрудников и поле для хранения их числа. И метод, и поле не принадлежат никакому экземпляру сотрудника. Они принадлежат классу компании. В связи с этим они должны объявляться как статические члены класса.  
+ <span data-ttu-id="15690-122">В качестве демонстрации статических членов рассмотрим класс, представляющий сотрудника компании.</span><span class="sxs-lookup"><span data-stu-id="15690-122">To demonstrate static members, consider a class that represents a company employee.</span></span> <span data-ttu-id="15690-123">Предположим, что этот класс содержит метод для подсчета сотрудников и поле для хранения их числа.</span><span class="sxs-lookup"><span data-stu-id="15690-123">Assume that the class contains a method to count employees and a field to store the number of employees.</span></span> <span data-ttu-id="15690-124">И метод, и поле не принадлежат никакому экземпляру сотрудника.</span><span class="sxs-lookup"><span data-stu-id="15690-124">Both the method and the field do not belong to any instance employee.</span></span> <span data-ttu-id="15690-125">Они принадлежат классу компании.</span><span class="sxs-lookup"><span data-stu-id="15690-125">Instead they belong to the company class.</span></span> <span data-ttu-id="15690-126">В связи с этим они должны объявляться как статические члены класса.</span><span class="sxs-lookup"><span data-stu-id="15690-126">Therefore, they should be declared as static members of the class.</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере выполняется чтение имени и идентификатора нового сотрудника, увеличение счетчика сотрудников на единицу, а также отображение сведений о новом сотруднике и новом числе сотрудников. Для простоты эта программа считывает текущее число сотрудников с клавиатуры. В реальном приложении эта информация должна считываться из файла.  
+## <a name="example"></a><span data-ttu-id="15690-127">Пример</span><span class="sxs-lookup"><span data-stu-id="15690-127">Example</span></span>  
+ <span data-ttu-id="15690-128">В этом примере выполняется чтение имени и идентификатора нового сотрудника, увеличение счетчика сотрудников на единицу, а также отображение сведений о новом сотруднике и новом числе сотрудников.</span><span class="sxs-lookup"><span data-stu-id="15690-128">This example reads the name and ID of a new employee, increments the employee counter by one, and displays the information for the new employee and the new number of employees.</span></span> <span data-ttu-id="15690-129">Для простоты эта программа считывает текущее число сотрудников с клавиатуры.</span><span class="sxs-lookup"><span data-stu-id="15690-129">For simplicity, this program reads the current number of employees from the keyboard.</span></span> <span data-ttu-id="15690-130">В реальном приложении эта информация должна считываться из файла.</span><span class="sxs-lookup"><span data-stu-id="15690-130">In a real application, this information should be read from a file.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
+ <span data-ttu-id="15690-131">[!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="15690-131">[!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]</span></span>  
   
-## <a name="example"></a>Пример  
- Этот пример показывает, что несмотря на то, что вы можете инициализировать статическое поле посредством другого, еще не объявленного статического поля, результаты не будут определены до тех пор, пока статическому полю не будет явно присвоено значение.  
+## <a name="example"></a><span data-ttu-id="15690-132">Пример</span><span class="sxs-lookup"><span data-stu-id="15690-132">Example</span></span>  
+ <span data-ttu-id="15690-133">Этот пример показывает, что несмотря на то, что вы можете инициализировать статическое поле посредством другого, еще не объявленного статического поля, результаты не будут определены до тех пор, пока статическому полю не будет явно присвоено значение.</span><span class="sxs-lookup"><span data-stu-id="15690-133">This example shows that although you can initialize a static field by using another static field not yet declared, the results will be undefined until you explicitly assign a value to the static field.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
+ <span data-ttu-id="15690-134">[!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="15690-134">[!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="15690-135">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="15690-135">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
- [Статические классы и члены статических классов](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+## <a name="see-also"></a><span data-ttu-id="15690-136">См. также</span><span class="sxs-lookup"><span data-stu-id="15690-136">See Also</span></span>  
+ <span data-ttu-id="15690-137">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="15690-137">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="15690-138">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="15690-138">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="15690-139">[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="15690-139">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="15690-140">[Модификаторы](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="15690-140">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
+ [<span data-ttu-id="15690-141">Статические классы и члены статических классов</span><span class="sxs-lookup"><span data-stu-id="15690-141">Static Classes and Static Class Members</span></span>](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 

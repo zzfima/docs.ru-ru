@@ -26,10 +26,10 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Пример XML-файла. Конфигурация тестирования (LINQ to XML)
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Это тестовый файл конфигурации.  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="9277a-102">Пример XML-файла. Конфигурация тестирования (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9277a-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="9277a-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9277a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="9277a-104">Это тестовый файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="9277a-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="9277a-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="9277a-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,6 +73,6 @@ ms.lasthandoff: 07/28/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="9277a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="9277a-106">See Also</span></span>  
+ [<span data-ttu-id="9277a-107">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9277a-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

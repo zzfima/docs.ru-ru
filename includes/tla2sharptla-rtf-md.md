@@ -1,1 +1,1 @@
-Формат RTF
+<span data-ttu-id="b115a-101">Формат RTF</span><span class="sxs-lookup"><span data-stu-id="b115a-101">RTF</span></span>

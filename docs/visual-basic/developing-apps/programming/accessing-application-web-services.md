@@ -1,5 +1,5 @@
 ---
-title: "Доступ к веб-службам приложения (Visual Basic) | Документы Майкрософт"
+title: "Доступ к веб-службам приложения (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -30,23 +30,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b9e7bb7884da98f419d6de4a7463216a32bb0a5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1933167db4e42ae1a2d1634573bc824750a792da
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-application-web-services-visual-basic"></a>Доступ к веб-службам приложения (Visual Basic)
-Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект. Каждый экземпляр создается по запросу. Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`. Имя свойства совпадает с именем веб-службы, к которой обращается свойство. Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, — это веб-служба.  
+# <a name="accessing-application-web-services-visual-basic"></a><span data-ttu-id="a34b2-102">Доступ к веб-службам приложения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a34b2-102">Accessing Application Web Services (Visual Basic)</span></span>
+<span data-ttu-id="a34b2-103">Объект `My.WebServices` предоставляет экземпляр каждой веб-службы, на которую ссылается текущий проект.</span><span class="sxs-lookup"><span data-stu-id="a34b2-103">The `My.WebServices` object provides an instance of each Web service referenced by the current project.</span></span> <span data-ttu-id="a34b2-104">Каждый экземпляр создается по запросу.</span><span class="sxs-lookup"><span data-stu-id="a34b2-104">Each instance is instantiated on demand.</span></span> <span data-ttu-id="a34b2-105">Доступ к этим веб-службам можно получить через свойства объекта `My.WebServices`.</span><span class="sxs-lookup"><span data-stu-id="a34b2-105">You can access these Web services through the properties of the `My.WebServices` object.</span></span> <span data-ttu-id="a34b2-106">Имя свойства совпадает с именем веб-службы, к которой обращается свойство.</span><span class="sxs-lookup"><span data-stu-id="a34b2-106">The name of the property is the same as the name of the Web service that the property accesses.</span></span> <span data-ttu-id="a34b2-107">Любой класс, наследуемый от <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>, является веб-службой.</span><span class="sxs-lookup"><span data-stu-id="a34b2-107">Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service.</span></span>  
   
-## <a name="tasks"></a>Задачи  
- В следующей таблице перечислены возможные способы доступа к веб-службам, на которые ссылается приложение.  
+## <a name="tasks"></a><span data-ttu-id="a34b2-108">Задачи</span><span class="sxs-lookup"><span data-stu-id="a34b2-108">Tasks</span></span>  
+ <span data-ttu-id="a34b2-109">В следующей таблице перечислены возможные способы доступа к веб-службам, на которые ссылается приложение.</span><span class="sxs-lookup"><span data-stu-id="a34b2-109">The following table lists possible ways to access Web services referenced by an application.</span></span>  
   
-|Целевой тип|См.|  
+|<span data-ttu-id="a34b2-110">Целевой тип</span><span class="sxs-lookup"><span data-stu-id="a34b2-110">To</span></span>|<span data-ttu-id="a34b2-111">См.</span><span class="sxs-lookup"><span data-stu-id="a34b2-111">See</span></span>|  
 |---|---|   
-|Вызов веб-службы|[Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
-|Вызов веб-службы в асинхронном режиме и обработка события при его завершении|[Практическое руководство. Асинхронный вызов веб-службы](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|  
+|<span data-ttu-id="a34b2-112">Вызов веб-службы</span><span class="sxs-lookup"><span data-stu-id="a34b2-112">Call a Web service</span></span>|[<span data-ttu-id="a34b2-113">Объект My.WebServices</span><span class="sxs-lookup"><span data-stu-id="a34b2-113">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|<span data-ttu-id="a34b2-114">Вызов веб-службы в асинхронном режиме и обработка события при его завершении</span><span class="sxs-lookup"><span data-stu-id="a34b2-114">Call a Web service asynchronously and handle an event when it completes</span></span>|[<span data-ttu-id="a34b2-115">Практическое руководство. Асинхронный вызов веб-службы</span><span class="sxs-lookup"><span data-stu-id="a34b2-115">How to: Call a Web Service Asynchronously</span></span>](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|  
   
-## <a name="see-also"></a>См. также  
- [Объект My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="a34b2-116">См. также</span><span class="sxs-lookup"><span data-stu-id="a34b2-116">See Also</span></span>  
+ [<span data-ttu-id="a34b2-117">Объект My.WebServices</span><span class="sxs-lookup"><span data-stu-id="a34b2-117">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+

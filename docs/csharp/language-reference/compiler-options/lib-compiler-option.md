@@ -1,5 +1,5 @@
 ---
-title: "/lib (параметры компилятора C#) | Документы Майкрософт"
+title: "-lib (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,65 +31,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 27bcca456a7a5c884c33de6429e06c94afc9536a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e6d928c0ac1cbb4e65d9747ab2c9133aacdbea8e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="lib-c-compiler-options"></a>/lib (параметры компилятора C#)
-Параметр **/lib** указывает расположение сборок, на которые задаются ссылки с помощью параметра [/reference (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+# <a name="lib-c-compiler-options"></a><span data-ttu-id="d8846-102">/lib (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="d8846-102">/lib (C# Compiler Options)</span></span>
+<span data-ttu-id="d8846-103">Параметр **/lib** указывает расположение сборок, на которые задаются ссылки с помощью параметра [/reference (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="d8846-103">The **/lib** option specifies the location of assemblies referenced by means of the [/reference (C# Compiler Options)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) option.</span></span>  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="d8846-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d8846-104">Syntax</span></span>  
   
 ```console  
 /lib:dir1[,dir2]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a><span data-ttu-id="d8846-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="d8846-105">Arguments</span></span>  
  `dir1`  
- Каталог, в котором компилятор должен искать сборку, если она отсутствует в текущем рабочем каталоге (каталоге, из которого был вызван компилятор) и системном каталоге среды CLR.  
+ <span data-ttu-id="d8846-106">Каталог, в котором компилятор должен искать сборку, если она отсутствует в текущем рабочем каталоге (каталоге, из которого был вызван компилятор) и системном каталоге среды CLR.</span><span class="sxs-lookup"><span data-stu-id="d8846-106">A directory for the compiler to look in if a referenced assembly is not found in the current working directory (the directory from which you are invoking the compiler) or in the common language runtime's system directory.</span></span>  
   
  `dir2`  
- Один или несколько дополнительных каталогов для поиска связанных сборок. Имена дополнительных каталогов разделяются запятыми без пробелов.  
+ <span data-ttu-id="d8846-107">Один или несколько дополнительных каталогов для поиска связанных сборок.</span><span class="sxs-lookup"><span data-stu-id="d8846-107">One or more additional directories to search in for assembly references.</span></span> <span data-ttu-id="d8846-108">Имена дополнительных каталогов разделяются запятыми без пробелов.</span><span class="sxs-lookup"><span data-stu-id="d8846-108">Separate additional directory names with a comma, and without white space between them.</span></span>  
   
-## <a name="remarks"></a>Примечания  
- Компилятор выполняет поиск связанных сборок, для которых не указано полное имя, в следующем порядке:  
+## <a name="remarks"></a><span data-ttu-id="d8846-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="d8846-109">Remarks</span></span>  
+ <span data-ttu-id="d8846-110">Компилятор выполняет поиск связанных сборок, для которых не указано полное имя, в следующем порядке:</span><span class="sxs-lookup"><span data-stu-id="d8846-110">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1.  Текущая рабочая папка. Это папка, из которой был вызван компилятор.  
+1.  <span data-ttu-id="d8846-111">Текущая рабочая папка.</span><span class="sxs-lookup"><span data-stu-id="d8846-111">Current working directory.</span></span> <span data-ttu-id="d8846-112">Это папка, из которой был вызван компилятор.</span><span class="sxs-lookup"><span data-stu-id="d8846-112">This is the directory from which the compiler is invoked.</span></span>  
   
-2.  Системный каталог среды CLR.  
+2.  <span data-ttu-id="d8846-113">Системный каталог среды CLR.</span><span class="sxs-lookup"><span data-stu-id="d8846-113">The common language runtime system directory.</span></span>  
   
-3.  Каталоги, заданные параметром **/lib**.  
+3.  <span data-ttu-id="d8846-114">Каталоги, заданные параметром **/lib**.</span><span class="sxs-lookup"><span data-stu-id="d8846-114">Directories specified by **/lib**.</span></span>  
   
-4.  Каталоги, указанные переменной среды LIB.  
+4.  <span data-ttu-id="d8846-115">Каталоги, указанные переменной среды LIB.</span><span class="sxs-lookup"><span data-stu-id="d8846-115">Directories specified by the LIB environment variable.</span></span>  
   
- Для указания ссылки на сборку используется параметр **/reference**.  
+ <span data-ttu-id="d8846-116">Для указания ссылки на сборку используется параметр **/reference**.</span><span class="sxs-lookup"><span data-stu-id="d8846-116">Use **/reference** to specify an assembly reference.</span></span>  
   
- Параметры **/lib** можно добавлять; каждое следующее указание этого параметра присоединяется к предыдущим значениям.  
+ <span data-ttu-id="d8846-117">Параметры **/lib** можно добавлять; каждое следующее указание этого параметра присоединяется к предыдущим значениям.</span><span class="sxs-lookup"><span data-stu-id="d8846-117">**/lib** is additive; specifying it more than once appends to any prior values.</span></span>  
   
- Вместо использования параметра **/lib** можно скопировать в рабочий каталог все необходимые сборки; это позволит просто передать имя сборки с помощью параметра **/reference**. Затем сборки можно будет удалить из рабочего каталога. Поскольку путь к зависимой сборке не указывается в манифесте сборки, приложение может быть запущено на целевом компьютере, после чего оно найдет используемую сборку в глобальном кэше сборок.  
+ <span data-ttu-id="d8846-118">Вместо использования параметра **/lib** можно скопировать в рабочий каталог все необходимые сборки; это позволит просто передать имя сборки с помощью параметра **/reference**.</span><span class="sxs-lookup"><span data-stu-id="d8846-118">An alternative to using **/lib** is to copy into the working directory any required assemblies; this will allow you to simply pass the assembly name to **/reference**.</span></span> <span data-ttu-id="d8846-119">Затем сборки можно будет удалить из рабочего каталога.</span><span class="sxs-lookup"><span data-stu-id="d8846-119">You can then delete the assemblies from the working directory.</span></span> <span data-ttu-id="d8846-120">Поскольку путь к зависимой сборке не указывается в манифесте сборки, приложение может быть запущено на целевом компьютере, после чего оно найдет используемую сборку в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="d8846-120">Since the path to the dependent assembly is not specified in the assembly manifest, the application can be started on the target computer and will find and use the assembly in the global assembly cache.</span></span>  
   
- Несмотря на то, что компилятору удалось обнаружить сборку по ссылке, среда CLR может не найти и не загрузить данную сборку во время выполнения. Сведения о том, как среда выполнения выполняет поиск связанных сборок, см. в разделе [Обнаружение сборок в среде выполнения](../../../framework/deployment/how-the-runtime-locates-assemblies.md).  
+ <span data-ttu-id="d8846-121">Несмотря на то, что компилятору удалось обнаружить сборку по ссылке, среда CLR может не найти и не загрузить данную сборку во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="d8846-121">Because the compiler can reference the assembly does not imply the common language runtime will be able to find and load the assembly at runtime.</span></span> <span data-ttu-id="d8846-122">Сведения о том, как среда выполнения выполняет поиск связанных сборок, см. в разделе [Обнаружение сборок в среде выполнения](../../../framework/deployment/how-the-runtime-locates-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="d8846-122">See [How the Runtime Locates Assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) for details on how the runtime searches for referenced assemblies.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d8846-123">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d8846-123">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  
+1.  <span data-ttu-id="d8846-124">Откройте диалоговое окно **Страницы свойств** проекта.</span><span class="sxs-lookup"><span data-stu-id="d8846-124">Open the project's **Property Pages** dialog box.</span></span>  
   
-2.  Откройте страницу свойств **Путь ссылок**.  
+2.  <span data-ttu-id="d8846-125">Откройте страницу свойств **Путь ссылок**.</span><span class="sxs-lookup"><span data-stu-id="d8846-125">Click the **References Path** property page.</span></span>  
   
-3.  Измените содержимое поля со списком.  
+3.  <span data-ttu-id="d8846-126">Измените содержимое поля со списком.</span><span class="sxs-lookup"><span data-stu-id="d8846-126">Modify the contents of the list box.</span></span>  
   
- Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
+ <span data-ttu-id="d8846-127">Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span><span class="sxs-lookup"><span data-stu-id="d8846-127">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.</span></span>  
   
-## <a name="example"></a>Пример  
- Выполните компиляцию файла t2.cs для создания EXE-файла. Компилятор выполнит поиск ссылок на сборку в рабочем каталоге и корневом каталоге диска С.  
+## <a name="example"></a><span data-ttu-id="d8846-128">Пример</span><span class="sxs-lookup"><span data-stu-id="d8846-128">Example</span></span>  
+ <span data-ttu-id="d8846-129">Выполните компиляцию файла t2.cs для создания EXE-файла.</span><span class="sxs-lookup"><span data-stu-id="d8846-129">Compile t2.cs to create an .exe file.</span></span> <span data-ttu-id="d8846-130">Компилятор выполнит поиск ссылок на сборку в рабочем каталоге и корневом каталоге диска С.</span><span class="sxs-lookup"><span data-stu-id="d8846-130">The compiler will look in the working directory and in the root directory of the C drive for assembly references.</span></span>  
   
 ```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a><span data-ttu-id="d8846-131">См. также</span><span class="sxs-lookup"><span data-stu-id="d8846-131">See Also</span></span>  
+ <span data-ttu-id="d8846-132">[Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="d8846-132">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="d8846-133">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="d8846-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+

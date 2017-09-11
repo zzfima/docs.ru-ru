@@ -1,1 +1,1 @@
-Microsoft Visual Basic для приложений (VBA)
+<span data-ttu-id="0a6c3-101">Microsoft Visual Basic для приложений (VBA)</span><span class="sxs-lookup"><span data-stu-id="0a6c3-101">Microsoft Visual Basic for Applications (VBA)</span></span>

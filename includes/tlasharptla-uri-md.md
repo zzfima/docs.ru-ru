@@ -1,1 +1,1 @@
-универсальный идентификатор ресурса (URI)
+<span data-ttu-id="224da-101">универсальный идентификатор ресурса (URI)</span><span class="sxs-lookup"><span data-stu-id="224da-101">uniform resource identifier (URI)</span></span>

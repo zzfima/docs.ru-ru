@@ -1,1 +1,1 @@
-Файл формата EXIF (Exchangeable image file)
+<span data-ttu-id="5a3f4-101">Файл формата EXIF (Exchangeable image file)</span><span class="sxs-lookup"><span data-stu-id="5a3f4-101">Exchangeable image file (Exif)</span></span>

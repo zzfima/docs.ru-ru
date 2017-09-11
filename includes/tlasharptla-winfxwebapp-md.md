@@ -1,1 +1,1 @@
-Приложение обозревателя XAML (XBAP)
+<span data-ttu-id="200aa-101">Приложение обозревателя XAML (XBAP)</span><span class="sxs-lookup"><span data-stu-id="200aa-101">XAML browser application (XBAP)</span></span>

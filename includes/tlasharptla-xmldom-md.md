@@ -1,1 +1,1 @@
-Модель объектов XML-документов (DOM)
+<span data-ttu-id="2525f-101">Модель объектов XML-документов (DOM)</span><span class="sxs-lookup"><span data-stu-id="2525f-101">XML Document Object Model (DOM)</span></span>

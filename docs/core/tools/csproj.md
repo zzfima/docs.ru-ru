@@ -1,5 +1,5 @@
 ---
-title: "Справочник по CSPROJ-файлу | Microsoft Docs"
+title: "Справочник по CSPROJ"
 description: "Различия между существующими файлами и файлами CSPROJ .NET Core"
 keywords: "справочник, CSPROJ, .NET Core"
 author: blackdwarf
@@ -9,22 +9,20 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e47bec77aa3b87f7a46b1c60387cbf8c1193ff17
-ms.openlocfilehash: bbbf3616e7836d029116fe0b307b00001ecdd7da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63c7a6f0aa3a926c7ae01ad6c434ecf296c81811
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Дополнения к формату CSPROJ для .NET Core
-<a id="additions-to-the-csproj-format-for-net-core" class="xliff"></a>
+# <a name="additions-to-the-csproj-format-for-net-core"></a><span data-ttu-id="a6fca-104">Дополнения к формату CSPROJ для .NET Core</span><span class="sxs-lookup"><span data-stu-id="a6fca-104">Additions to the csproj format for .NET Core</span></span>
 
-В этом документе перечислены изменения, внесенные в файлы проекта при перемещении из *project.json* в *CSPROJ* и [MSBuild](https://github.com/Microsoft/MSBuild). Дополнительную информацию, которая касается синтаксиса файла проекта в общем, и справку см. в документации по [файлу проекта MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+<span data-ttu-id="a6fca-105">В этом документе перечислены изменения, внесенные в файлы проекта при перемещении из *project.json* в *CSPROJ* и [MSBuild](https://github.com/Microsoft/MSBuild).</span><span class="sxs-lookup"><span data-stu-id="a6fca-105">This document outlines the changes that were added to the project files as part of the move from *project.json* to *csproj* and [MSBuild](https://github.com/Microsoft/MSBuild).</span></span> <span data-ttu-id="a6fca-106">Дополнительную информацию, которая касается синтаксиса файла проекта в общем, и справку см. в документации по [файлу проекта MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference).</span><span class="sxs-lookup"><span data-stu-id="a6fca-106">For more information about general project file syntax and reference, see [the MSBuild project file](/visualstudio/msbuild/msbuild-project-file-schema-reference) documentation.</span></span>  
 
-## Неявные ссылки на пакет
-<a id="implicit-package-references" class="xliff"></a>
-Теперь неявные ссылки на метапакеты указываются в зависимости от целевой платформы, указанной в свойстве `<TargetFramework>` или `<TargetFrameworks>` файла проекта. Если свойство `<TargetFramework>` указано, свойство `<TargetFrameworks>` игнорируется независимо от порядка.
+## <a name="implicit-package-references"></a><span data-ttu-id="a6fca-107">Неявные ссылки на пакет</span><span class="sxs-lookup"><span data-stu-id="a6fca-107">Implicit package references</span></span>
+<span data-ttu-id="a6fca-108">Теперь неявные ссылки на метапакеты указываются в зависимости от целевой платформы, указанной в свойстве `<TargetFramework>` или `<TargetFrameworks>` файла проекта.</span><span class="sxs-lookup"><span data-stu-id="a6fca-108">Metapackages are implicitly referenced based on the target framework(s) specified in the `<TargetFramework>` or `<TargetFrameworks>` property of your project file.</span></span> <span data-ttu-id="a6fca-109">Если свойство `<TargetFramework>` указано, свойство `<TargetFrameworks>` игнорируется независимо от порядка.</span><span class="sxs-lookup"><span data-stu-id="a6fca-109">`<TargetFrameworks>` is ignored if `<TargetFramework>` is specified, independent of order.</span></span>
 
 ```xml
  <PropertyGroup>
@@ -38,143 +36,127 @@ ms.lasthandoff: 06/27/2017
  </PropertyGroup>
  ```
 
-### Рекомендации
-<a id="recommendations" class="xliff"></a>
-Так как теперь указываются неявные ссылки на метапакеты `Microsoft.NETCore.App` или `NetStandard.Library`, следует учитывать приведенные ниже рекомендации:
+### <a name="recommendations"></a><span data-ttu-id="a6fca-110">Рекомендации</span><span class="sxs-lookup"><span data-stu-id="a6fca-110">Recommendations</span></span>
+<span data-ttu-id="a6fca-111">Так как теперь указываются неявные ссылки на метапакеты `Microsoft.NETCore.App` или `NetStandard.Library`, следует учитывать приведенные ниже рекомендации:</span><span class="sxs-lookup"><span data-stu-id="a6fca-111">Since `Microsoft.NETCore.App` or `NetStandard.Library` metapackages are implicitly referenced, the following are our recommended best practices:</span></span>
 
-* Никогда не указывайте явную ссылку на метапакеты `Microsoft.NETCore.App` или `NetStandard.Library` через элемент `<PackageReference>` в файле проекта.
-* Если нужна определенная версия среды выполнения, вместо ссылки на метапакет следует использовать свойство `<RuntimeFrameworkVersion>` в проекте (например, `1.0.4`).
-    * Это может произойти, например, когда вы используете [автономные развертывания](../deploying/index.md#self-contained-deployments-scd) и нуждаетесь в определенной версии исправления 1.0.0 LTS для среды выполнения.
-* Если вам нужна конкретная версия метапакета `NetStandard.Library`, можно использовать свойство `<NetStandardImplicitPackageVersion>` и установите требуемую версию. 
+* <span data-ttu-id="a6fca-112">Никогда не указывайте явную ссылку на метапакеты `Microsoft.NETCore.App` или `NetStandard.Library` через элемент `<PackageReference>` в файле проекта.</span><span class="sxs-lookup"><span data-stu-id="a6fca-112">Never have an explicit reference to the `Microsoft.NETCore.App` or `NetStandard.Library` metapackages via a `<PackageReference>` item in your project file.</span></span>
+* <span data-ttu-id="a6fca-113">Если нужна определенная версия среды выполнения, вместо ссылки на метапакет следует использовать свойство `<RuntimeFrameworkVersion>` в проекте (например, `1.0.4`).</span><span class="sxs-lookup"><span data-stu-id="a6fca-113">If you need a specific version of the runtime, you should use the `<RuntimeFrameworkVersion>` property in your project (for example, `1.0.4`) instead of referencing the metapackage.</span></span>
+    * <span data-ttu-id="a6fca-114">Это может произойти, например, когда вы используете [автономные развертывания](../deploying/index.md#self-contained-deployments-scd) и нуждаетесь в определенной версии исправления 1.0.0 LTS для среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="a6fca-114">This might happen if you are using [self-contained deployments](../deploying/index.md#self-contained-deployments-scd) and you need a specific patch version of 1.0.0 LTS runtime, for example.</span></span>
+* <span data-ttu-id="a6fca-115">Если вам нужна конкретная версия метапакета `NetStandard.Library`, можно использовать свойство `<NetStandardImplicitPackageVersion>` и установите требуемую версию.</span><span class="sxs-lookup"><span data-stu-id="a6fca-115">If you need a specific version of the `NetStandard.Library` metapackage, you can use the `<NetStandardImplicitPackageVersion>` property and set the version you need.</span></span> 
 
-## Компиляция по умолчанию, включенная в проекты .NET Core
-<a id="default-compilation-includes-in-net-core-projects" class="xliff"></a>
-В рамках перехода на формат *CSPROJ* в последних версиях пакета SDK мы перенесли включения и исключения по умолчанию для элементов Compile и внедренные ресурсы в файлы свойств пакета SDK. Это означает, что вам больше не нужно указывать эти элементы в файле проекта. 
+## <a name="default-compilation-includes-in-net-core-projects"></a><span data-ttu-id="a6fca-116">Компиляция по умолчанию, включенная в проекты .NET Core</span><span class="sxs-lookup"><span data-stu-id="a6fca-116">Default compilation includes in .NET Core projects</span></span>
+<span data-ttu-id="a6fca-117">В рамках перехода на формат *CSPROJ* в последних версиях пакета SDK мы перенесли включения и исключения по умолчанию для элементов Compile и внедренные ресурсы в файлы свойств пакета SDK.</span><span class="sxs-lookup"><span data-stu-id="a6fca-117">With the move to the *csproj* format in the latest SDK versions, we've moved the default includes and excludes for compile items and embedded resources to the SDK properties files.</span></span> <span data-ttu-id="a6fca-118">Это означает, что вам больше не нужно указывать эти элементы в файле проекта.</span><span class="sxs-lookup"><span data-stu-id="a6fca-118">This means that you no longer need to specify these items in your project file.</span></span> 
 
-Основной причиной этого является стремление очистить ваш файл проекта от всего лишнего. Значения по умолчанию в пакете SDK должны охватывать наиболее распространенные варианты использования, поэтому нет необходимости повторять их в каждом создаваемом проекте. Это позволяет уменьшить файлы проекта и гораздо проще читать их, а также вносить правки вручную. 
+<span data-ttu-id="a6fca-119">Основной причиной этого является стремление очистить ваш файл проекта от всего лишнего.</span><span class="sxs-lookup"><span data-stu-id="a6fca-119">The main reason for doing this is to reduce the clutter in your project file.</span></span> <span data-ttu-id="a6fca-120">Значения по умолчанию в пакете SDK должны охватывать наиболее распространенные варианты использования, поэтому нет необходимости повторять их в каждом создаваемом проекте.</span><span class="sxs-lookup"><span data-stu-id="a6fca-120">The defaults that are present in the SDK should cover most common use cases, so there is no need to repeat them in every project that you create.</span></span> <span data-ttu-id="a6fca-121">Это позволяет уменьшить файлы проекта и гораздо проще читать их, а также вносить правки вручную.</span><span class="sxs-lookup"><span data-stu-id="a6fca-121">This leads to smaller project files that are much easier to understand as well as edit by hand, if needed.</span></span> 
 
-Следующая таблица показывает, какой элемент и какие [стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) включены и исключены в пакете SDK: 
+<span data-ttu-id="a6fca-122">Следующая таблица показывает, какой элемент и какие [стандартные маски](https://en.wikipedia.org/wiki/Glob_(programming)) включены и исключены в пакете SDK:</span><span class="sxs-lookup"><span data-stu-id="a6fca-122">The following table shows which element and which [globs](https://en.wikipedia.org/wiki/Glob_(programming)) are both included and excluded in the SDK:</span></span> 
 
-| Элемент           | Стандартная маска включения                              | Стандартная маска исключения                                                  | Стандартная маска удаления                |
+| <span data-ttu-id="a6fca-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="a6fca-123">Element</span></span>           | <span data-ttu-id="a6fca-124">Стандартная маска включения</span><span class="sxs-lookup"><span data-stu-id="a6fca-124">Include glob</span></span>                              | <span data-ttu-id="a6fca-125">Стандартная маска исключения</span><span class="sxs-lookup"><span data-stu-id="a6fca-125">Exclude glob</span></span>                                                  | <span data-ttu-id="a6fca-126">Стандартная маска удаления</span><span class="sxs-lookup"><span data-stu-id="a6fca-126">Remove glob</span></span>                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Компилятор           | \*\*/\*.cs (или другие расширения языка) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | Н/Д                        |
-| ВнедренныйРесурс  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Н/Д                        |
-| Нет              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| <span data-ttu-id="a6fca-127">Компилятор</span><span class="sxs-lookup"><span data-stu-id="a6fca-127">Compile</span></span>           | <span data-ttu-id="a6fca-128">\*\*/\*.cs (или другие расширения языка)</span><span class="sxs-lookup"><span data-stu-id="a6fca-128">\*\*/\*.cs (or other language extensions)</span></span> | <span data-ttu-id="a6fca-129">\*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="a6fca-129">\*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc</span></span>  | <span data-ttu-id="a6fca-130">Н/Д</span><span class="sxs-lookup"><span data-stu-id="a6fca-130">N/A</span></span>                        |
+| <span data-ttu-id="a6fca-131">ВнедренныйРесурс</span><span class="sxs-lookup"><span data-stu-id="a6fca-131">EmbeddedResource</span></span>  | <span data-ttu-id="a6fca-132">\*\*/\*.resx</span><span class="sxs-lookup"><span data-stu-id="a6fca-132">\*\*/\*.resx</span></span>                              | <span data-ttu-id="a6fca-133">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="a6fca-133">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span></span>     | <span data-ttu-id="a6fca-134">Н/Д</span><span class="sxs-lookup"><span data-stu-id="a6fca-134">N/A</span></span>                        |
+| <span data-ttu-id="a6fca-135">Нет</span><span class="sxs-lookup"><span data-stu-id="a6fca-135">None</span></span>              | \*\*/\*                                   | <span data-ttu-id="a6fca-136">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span><span class="sxs-lookup"><span data-stu-id="a6fca-136">\*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc</span></span>     | <span data-ttu-id="a6fca-137">- \*\*/\*.cs; \*\*/\*.resx</span><span class="sxs-lookup"><span data-stu-id="a6fca-137">- \*\*/\*.cs; \*\*/\*.resx</span></span> |
 
-Если в вашем проекте имеются стандартные маски и вы пытаетесь выполнить его сборку с помощью новейшего пакета SDK, появится следующая ошибка:
+<span data-ttu-id="a6fca-138">Если в вашем проекте имеются стандартные маски и вы пытаетесь выполнить его сборку с помощью новейшего пакета SDK, появится следующая ошибка:</span><span class="sxs-lookup"><span data-stu-id="a6fca-138">If you have globs in your project and you try to build it using the newest SDK, you'll get the following error:</span></span>
 
-> Duplicate Compile items were included. The .NET SDK includes Compile items from your project directory by default. You can either remove these items from your project file, or set the 'EnableDefaultCompileItems' property to 'false' if you want to explicitly include them in your project file. (Включены повторяющиеся элементы Compile. По умолчанию пакет SDK для .NET включает элементы Compile из каталога проекта. Можно удалить эти элементы из файла проекта или задать для свойства "EnableDefaultCompileItems" значение "false", чтобы явно включить их в файл проекта.) 
+> <span data-ttu-id="a6fca-139">Duplicate Compile items were included.</span><span class="sxs-lookup"><span data-stu-id="a6fca-139">Duplicate Compile items were included.</span></span> <span data-ttu-id="a6fca-140">The .NET SDK includes Compile items from your project directory by default.</span><span class="sxs-lookup"><span data-stu-id="a6fca-140">The .NET SDK includes Compile items from your project directory by default.</span></span> <span data-ttu-id="a6fca-141">You can either remove these items from your project file, or set the 'EnableDefaultCompileItems' property to 'false' if you want to explicitly include them in your project file. (Включены повторяющиеся элементы Compile. По умолчанию пакет SDK для .NET включает элементы Compile из каталога проекта. Можно удалить эти элементы из файла проекта или задать для свойства "EnableDefaultCompileItems" значение "false", чтобы явно включить их в файл проекта.)</span><span class="sxs-lookup"><span data-stu-id="a6fca-141">You can either remove these items from your project file, or set the 'EnableDefaultCompileItems' property to 'false' if you want to explicitly include them in your project file.</span></span> 
 
-Чтобы обойти эту ошибку, можно либо удалить явные элементы `Compile`, которые соответствуют указанным в предыдущей таблице, либо установить для свойства `<EnableDefaultCompileItems>` значение `false`, как показано ниже:
+<span data-ttu-id="a6fca-142">Чтобы обойти эту ошибку, можно либо удалить явные элементы `Compile`, которые соответствуют указанным в предыдущей таблице, либо установить для свойства `<EnableDefaultCompileItems>` значение `false`, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="a6fca-142">In order to get around this error, you can either remove the explicit `Compile` items that match the ones listed on the previous table, or you can set the `<EnableDefaultCompileItems>` property to `false`, like this:</span></span>
 
 ```xml
 <PropertyGroup>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 </PropertyGroup>
 ```
-Указание значения `false` для этого свойства переопределяет неявное включение, в результате чего возвращается поведение для предыдущих пакетов SDK, где требовалось задавать стандартные маски по умолчанию в проекте. 
+<span data-ttu-id="a6fca-143">Указание значения `false` для этого свойства переопределяет неявное включение, в результате чего возвращается поведение для предыдущих пакетов SDK, где требовалось задавать стандартные маски по умолчанию в проекте.</span><span class="sxs-lookup"><span data-stu-id="a6fca-143">Setting this property to `false` will override implicit inclusion and the behavior will revert back to the previous SDKs where you had to specify the default globs in your project.</span></span> 
 
-Это изменение не затрагивает основные механизмы других включений. Но если вы хотите указать, например, отдельные файлы для публикации вместе со своим приложением, для этого можно по-прежнему использовать привычные механизмы в *CSPROJ* (например, элемент `<Content>`).
+<span data-ttu-id="a6fca-144">Это изменение не затрагивает основные механизмы других включений.</span><span class="sxs-lookup"><span data-stu-id="a6fca-144">This change does not modify the main mechanics of other includes.</span></span> <span data-ttu-id="a6fca-145">Но если вы хотите указать, например, отдельные файлы для публикации вместе со своим приложением, для этого можно по-прежнему использовать привычные механизмы в *CSPROJ* (например, элемент `<Content>`).</span><span class="sxs-lookup"><span data-stu-id="a6fca-145">However, if you wish to specify, for example, some files to get published with your app, you can still use the known mechanisms in *csproj* for that (for example, the `<Content>` element).</span></span>
 
-### Рекомендация
-<a id="recommendation" class="xliff"></a>
-При использовании CSPROJ мы советуем удалить из проекта стандартные маски по умолчанию и добавить пути к файлам стандартных масок только для тех артефактов, которые нужны приложению или библиотеке в различных сценариях (например, среда выполнения и упаковка NuGet).
+### <a name="recommendation"></a><span data-ttu-id="a6fca-146">Рекомендация</span><span class="sxs-lookup"><span data-stu-id="a6fca-146">Recommendation</span></span>
+<span data-ttu-id="a6fca-147">При использовании CSPROJ мы советуем удалить из проекта стандартные маски по умолчанию и добавить пути к файлам стандартных масок только для тех артефактов, которые нужны приложению или библиотеке в различных сценариях (например, среда выполнения и упаковка NuGet).</span><span class="sxs-lookup"><span data-stu-id="a6fca-147">With csproj, we recommend that you remove the default globs from your project and only add file paths with globs for those artifacts that your app/library needs for various scenarios (for example, runtime and NuGet packaging).</span></span>
 
-## Как просмотреть весь проект в представлении MSBuild
-<a id="how-to-see-the-whole-project-as-msbuild-sees-it" class="xliff"></a>
+## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a><span data-ttu-id="a6fca-148">Как просмотреть весь проект в представлении MSBuild</span><span class="sxs-lookup"><span data-stu-id="a6fca-148">How to see the whole project as MSBuild sees it</span></span>
 
-Хотя эти изменения csproj значительно упростили файлы проекта, возможно, вы захотите просмотреть полностью развернутый пакет в представлении MSBuild после включения пакета SDK и его целевых объектов. Выполните предварительную обработку проекта, [включив](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference#preprocess) в команду [`dotnet msbuild`](dotnet-msbuild.md) параметр `/pp`. Это позволит просмотреть сведения об импортированных файлах, их источниках, вкладе в сборку без фактического создания проекта:
+<span data-ttu-id="a6fca-149">Хотя эти изменения csproj значительно упростили файлы проекта, возможно, вы захотите просмотреть полностью развернутый пакет в представлении MSBuild после включения пакета SDK и его целевых объектов.</span><span class="sxs-lookup"><span data-stu-id="a6fca-149">While those csproj changes greatly simplify project files, you might want to see the fully expanded project as MSBuild sees it once the SDK and its targets are included.</span></span> <span data-ttu-id="a6fca-150">Выполните предварительную обработку проекта, [включив](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) в команду [`dotnet msbuild`](dotnet-msbuild.md) параметр `/pp`. Это позволит просмотреть сведения об импортированных файлах, их источниках, вкладе в сборку без фактического создания проекта:</span><span class="sxs-lookup"><span data-stu-id="a6fca-150">Preprocess the project with [the `/pp` switch](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) of the [`dotnet msbuild`](dotnet-msbuild.md) command, which shows which files are imported, their sources, and their contributions to the build without actually building the project:</span></span>
 
 `dotnet msbuild /pp:fullproject.xml`
 
-Если проект имеет несколько требуемых версий .NET Framework, результаты выполнения команды должны касаться только одной из них. Эту версию следует указать в качестве свойства MSBuild:
+<span data-ttu-id="a6fca-151">Если проект имеет несколько требуемых версий .NET Framework, результаты выполнения команды должны касаться только одной из них. Эту версию следует указать в качестве свойства MSBuild:</span><span class="sxs-lookup"><span data-stu-id="a6fca-151">If the project has multiple target frameworks, the results of the command should be focused on only one of them by specifying it as an MSBuild property:</span></span>
 
 `dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
 
-## Добавления
-<a id="additions" class="xliff"></a>
+## <a name="additions"></a><span data-ttu-id="a6fca-152">Добавления</span><span class="sxs-lookup"><span data-stu-id="a6fca-152">Additions</span></span>
 
-### Атрибут Sdk
-<a id="sdk-attribute" class="xliff"></a> 
-Элемент `<Project>` файла *CSPROJ* имеет новый атрибут `Sdk`. `Sdk` определяет, какой пакет SDK будет использоваться проектом. Пакет SDK, согласно описанию в [документе о слоях](cli-msbuild-architecture.md), является набором [задач](https://docs.microsoft.com/visualstudio/msbuild/msbuild-tasks) и [целевых объектов](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets) MSBuild, способным выполнять сборку кода .NET Core. Мы предоставляем два основных пакета SDK с инструментами для .NET Core:
+### <a name="sdk-attribute"></a><span data-ttu-id="a6fca-153">Атрибут Sdk</span><span class="sxs-lookup"><span data-stu-id="a6fca-153">Sdk attribute</span></span> 
+<span data-ttu-id="a6fca-154">Элемент `<Project>` файла *CSPROJ* имеет новый атрибут `Sdk`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-154">The `<Project>` element of the *.csproj* file has a new attribute called `Sdk`.</span></span> <span data-ttu-id="a6fca-155">`Sdk` определяет, какой пакет SDK будет использоваться проектом.</span><span class="sxs-lookup"><span data-stu-id="a6fca-155">`Sdk` specifies which SDK will be used by the project.</span></span> <span data-ttu-id="a6fca-156">Пакет SDK, согласно описанию в [документе о слоях](cli-msbuild-architecture.md), является набором [задач](/visualstudio/msbuild/msbuild-tasks) и [целевых объектов](/visualstudio/msbuild/msbuild-targets) MSBuild, способным выполнять сборку кода .NET Core.</span><span class="sxs-lookup"><span data-stu-id="a6fca-156">The SDK, as the [layering document](cli-msbuild-architecture.md) describes, is a set of MSBuild [tasks](/visualstudio/msbuild/msbuild-tasks) and [targets](/visualstudio/msbuild/msbuild-targets) that can build .NET Core code.</span></span> <span data-ttu-id="a6fca-157">Мы предоставляем два основных пакета SDK с инструментами для .NET Core:</span><span class="sxs-lookup"><span data-stu-id="a6fca-157">We ship two main SDKs with the .NET Core tools:</span></span>
 
-1. пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk`;
-2. веб-пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk.Web`.
+1. <span data-ttu-id="a6fca-158">пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk`;</span><span class="sxs-lookup"><span data-stu-id="a6fca-158">The .NET Core SDK with the ID of `Microsoft.NET.Sdk`</span></span>
+2. <span data-ttu-id="a6fca-159">веб-пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk.Web`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-159">The .NET Core web SDK with the ID of `Microsoft.NET.Sdk.Web`</span></span>
 
-Чтобы использовать инструменты и выполнять сборку кода .NET Core, в качестве значения атрибута `Sdk` в элементе `<Project>` нужно задать один из этих идентификаторов. 
+<span data-ttu-id="a6fca-160">Чтобы использовать инструменты и выполнять сборку кода .NET Core, в качестве значения атрибута `Sdk` в элементе `<Project>` нужно задать один из этих идентификаторов.</span><span class="sxs-lookup"><span data-stu-id="a6fca-160">You need to have the `Sdk` attribute set to one of those IDs on the `<Project>` element in order to use the .NET Core tools and build your code.</span></span> 
 
-### PackageReference
-<a id="packagereference" class="xliff"></a>
-Элемент, определяющий зависимость NuGet в проекте. Атрибут `Include` указывает идентификатор пакета. 
+### <a name="packagereference"></a><span data-ttu-id="a6fca-161">PackageReference</span><span class="sxs-lookup"><span data-stu-id="a6fca-161">PackageReference</span></span>
+<span data-ttu-id="a6fca-162">Элемент, определяющий зависимость NuGet в проекте.</span><span class="sxs-lookup"><span data-stu-id="a6fca-162">Item that specifies a NuGet dependency in the project.</span></span> <span data-ttu-id="a6fca-163">Атрибут `Include` указывает идентификатор пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-163">The `Include` attribute specifies the package ID.</span></span> 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### Версия
-<a id="version" class="xliff"></a>
-`Version` указывает версию пакета для восстановления. Этот элемент подчиняется правилам схемы управления версиями NuGet.
+#### <a name="version"></a><span data-ttu-id="a6fca-164">Версия</span><span class="sxs-lookup"><span data-stu-id="a6fca-164">Version</span></span>
+<span data-ttu-id="a6fca-165">`Version` указывает версию пакета для восстановления.</span><span class="sxs-lookup"><span data-stu-id="a6fca-165">`Version` specifies the version of the package to restore.</span></span> <span data-ttu-id="a6fca-166">Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/create-packages/dependency-versions#version-ranges).</span><span class="sxs-lookup"><span data-stu-id="a6fca-166">The attribute respects the rules of the [NuGet versioning](/nuget/create-packages/dependency-versions#version-ranges) scheme.</span></span> <span data-ttu-id="a6fca-167">По умолчанию выбирается точное соответствие версии.</span><span class="sxs-lookup"><span data-stu-id="a6fca-167">The default behavior is an exact version match.</span></span> <span data-ttu-id="a6fca-168">Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3]` для точного указания версии 1.2.3 пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-168">For example, specifying `Version="1.2.3"` is equivalent to NuGet notation `[1.2.3]` for the exact 1.2.3 version of the package.</span></span>
 
-#### IncludeAssets, ExcludeAssets и PrivateAssets
-<a id="includeassets-excludeassets-and-privateassets" class="xliff"></a>
-Атрибут `IncludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать. 
+#### <a name="includeassets-excludeassets-and-privateassets"></a><span data-ttu-id="a6fca-169">IncludeAssets, ExcludeAssets и PrivateAssets</span><span class="sxs-lookup"><span data-stu-id="a6fca-169">IncludeAssets, ExcludeAssets and PrivateAssets</span></span>
+<span data-ttu-id="a6fca-170">Атрибут `IncludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать.</span><span class="sxs-lookup"><span data-stu-id="a6fca-170">`IncludeAssets` attribute specifies what assets belonging to the package specified by `<PackageReference>` should be consumed.</span></span> 
 
-Атрибут `ExcludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, не следует использовать.
+<span data-ttu-id="a6fca-171">Атрибут `ExcludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, не следует использовать.</span><span class="sxs-lookup"><span data-stu-id="a6fca-171">`ExcludeAssets` attribute specifies what assets belonging to the package specified by `<PackageReference>` should not be consumed.</span></span>
 
-Атрибут `PrivateAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать. Но они не должны передаваться в следующий проект. 
+<span data-ttu-id="a6fca-172">Атрибут `PrivateAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать. Но они не должны передаваться в следующий проект.</span><span class="sxs-lookup"><span data-stu-id="a6fca-172">`PrivateAssets` attribute specifies what assets belonging to the package specified by `<PackageReference>` should be consumed but that they should not flow to the next project.</span></span> 
 
 > [!NOTE]
-> `PrivateAssets` эквивалентен элементу *project.json*/*xproj* `SuppressParent`.
+> <span data-ttu-id="a6fca-173">`PrivateAssets` эквивалентен элементу *project.json*/*xproj* `SuppressParent`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-173">`PrivateAssets` is equivalent to the *project.json*/*xproj* `SuppressParent` element.</span></span>
 
-Эти атрибуты могут содержать по меньшей мере один из перечисленных ниже элементов.
+<span data-ttu-id="a6fca-174">Эти атрибуты могут содержать по меньшей мере один из перечисленных ниже элементов.</span><span class="sxs-lookup"><span data-stu-id="a6fca-174">These attributes can contain one or more of the following items:</span></span>
 
-* `Compile` — содержимое папки lib доступно для компиляции.
-* `Runtime` — содержимое папки среды выполнения распределяется.
-* `ContentFiles` — используется содержимое папки *contentfiles*.
-* `Build` — используются свойства и целевые объекты в папке сборки.
-* `Native` — содержимое копируется из основных ресурсов в папку выходных данных среды выполнения.
-* `Analyzers` — используются анализаторы.
+* <span data-ttu-id="a6fca-175">`Compile` — содержимое папки lib доступно для компиляции.</span><span class="sxs-lookup"><span data-stu-id="a6fca-175">`Compile` – the contents of the lib folder are available to compile against.</span></span>
+* <span data-ttu-id="a6fca-176">`Runtime` — содержимое папки среды выполнения распределяется.</span><span class="sxs-lookup"><span data-stu-id="a6fca-176">`Runtime` – the contents of the runtime folder are distributed.</span></span>
+* <span data-ttu-id="a6fca-177">`ContentFiles` — используется содержимое папки *contentfiles*.</span><span class="sxs-lookup"><span data-stu-id="a6fca-177">`ContentFiles` – the contents of the *contentfiles* folder are used.</span></span>
+* <span data-ttu-id="a6fca-178">`Build` — используются свойства и целевые объекты в папке сборки.</span><span class="sxs-lookup"><span data-stu-id="a6fca-178">`Build` – the props/targets in the build folder are used.</span></span>
+* <span data-ttu-id="a6fca-179">`Native` — содержимое копируется из основных ресурсов в папку выходных данных среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="a6fca-179">`Native` – the contents from native assets are copied to the output folder for runtime.</span></span>
+* <span data-ttu-id="a6fca-180">`Analyzers` — используются анализаторы.</span><span class="sxs-lookup"><span data-stu-id="a6fca-180">`Analyzers` – the analyzers are used.</span></span>
 
-Кроме того, атрибут может содержать следующие значения.
+<span data-ttu-id="a6fca-181">Кроме того, атрибут может содержать следующие значения.</span><span class="sxs-lookup"><span data-stu-id="a6fca-181">Alternatively, the attribute can contain:</span></span>
 
-* `None` — не используется ни один ресурс.
-* `All` — используются все ресурсы.
+* <span data-ttu-id="a6fca-182">`None` — не используется ни один ресурс.</span><span class="sxs-lookup"><span data-stu-id="a6fca-182">`None` – none of the assets are used.</span></span>
+* <span data-ttu-id="a6fca-183">`All` — используются все ресурсы.</span><span class="sxs-lookup"><span data-stu-id="a6fca-183">`All` – all assets are used.</span></span>
 
-### DotNetCliToolReference
-<a id="dotnetclitoolreference" class="xliff"></a>
-Элемент `<DotNetCliToolReference>` указывает средство интерфейса командной строки, которое пользователь хочет восстановить в контексте проекта. Этот элемент используется вместо узла `tools` в файле *project.json*. 
+### <a name="dotnetclitoolreference"></a><span data-ttu-id="a6fca-184">DotNetCliToolReference</span><span class="sxs-lookup"><span data-stu-id="a6fca-184">DotNetCliToolReference</span></span>
+<span data-ttu-id="a6fca-185">Элемент `<DotNetCliToolReference>` указывает средство интерфейса командной строки, которое пользователь хочет восстановить в контексте проекта.</span><span class="sxs-lookup"><span data-stu-id="a6fca-185">`<DotNetCliToolReference>` item element specifies the CLI tool that the user wants to restore in the context of the project.</span></span> <span data-ttu-id="a6fca-186">Этот элемент используется вместо узла `tools` в файле *project.json*.</span><span class="sxs-lookup"><span data-stu-id="a6fca-186">It's a replacement for the `tools` node in *project.json*.</span></span> 
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### Версия
-<a id="version" class="xliff"></a>
-`Version` указывает версию пакета для восстановления. Этот атрибут подчиняется правилам схемы управления версиями NuGet.
+#### <a name="version"></a><span data-ttu-id="a6fca-187">Версия</span><span class="sxs-lookup"><span data-stu-id="a6fca-187">Version</span></span>
+<span data-ttu-id="a6fca-188">`Version` указывает версию пакета для восстановления.</span><span class="sxs-lookup"><span data-stu-id="a6fca-188">`Version` specifies the version of the package to restore.</span></span> <span data-ttu-id="a6fca-189">Этот атрибут подчиняется правилам схемы [управления версиями NuGet](/nuget/create-packages/dependency-versions#version-ranges).</span><span class="sxs-lookup"><span data-stu-id="a6fca-189">The attribute respects the rules of the [NuGet versioning](/nuget/create-packages/dependency-versions#version-ranges) scheme.</span></span> <span data-ttu-id="a6fca-190">По умолчанию выбирается точное соответствие версии.</span><span class="sxs-lookup"><span data-stu-id="a6fca-190">The default behavior is an exact version match.</span></span> <span data-ttu-id="a6fca-191">Например, если указать `Version="1.2.3"`, это будет эквивалентно нотации NuGet `[1.2.3]` для точного указания версии 1.2.3 пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-191">For example, specifying `Version="1.2.3"` is equivalent to NuGet notation `[1.2.3]` for the exact 1.2.3 version of the package.</span></span>
 
-### RuntimeIdentifiers
-<a id="runtimeidentifiers" class="xliff"></a>
-Элемент `<RuntimeIdentifiers>` позволяет указать для проекта список [идентификаторов среды выполнения ((RID)](../rid-catalog.md) (в качестве разделителя используется точка с запятой). Идентификаторы среды выполнения позволяют публиковать автономные развертывания. 
+### <a name="runtimeidentifiers"></a><span data-ttu-id="a6fca-192">RuntimeIdentifiers</span><span class="sxs-lookup"><span data-stu-id="a6fca-192">RuntimeIdentifiers</span></span>
+<span data-ttu-id="a6fca-193">Элемент `<RuntimeIdentifiers>` позволяет указать для проекта список [идентификаторов среды выполнения ((RID)](../rid-catalog.md) (в качестве разделителя используется точка с запятой).</span><span class="sxs-lookup"><span data-stu-id="a6fca-193">The `<RuntimeIdentifiers>` element lets you specify a semicolon-delimited list of [Runtime Identifiers (RIDs)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="a6fca-194">Идентификаторы среды выполнения позволяют публиковать автономные развертывания.</span><span class="sxs-lookup"><span data-stu-id="a6fca-194">RIDs enable publishing a self-contained deployments.</span></span> 
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
-
-### RuntimeIdentifier
-<a id="runtimeidentifier" class="xliff"></a>
-Элемент `<RuntimeIdentifier>` позволяет указать для проекта только один [идентификатор среды выполнения](../rid-catalog.md). Идентификаторы среды выполнения позволяют опубликовать автономное развертывание. 
+### <a name="runtimeidentifier"></a><span data-ttu-id="a6fca-195">RuntimeIdentifier</span><span class="sxs-lookup"><span data-stu-id="a6fca-195">RuntimeIdentifier</span></span>
+<span data-ttu-id="a6fca-196">Элемент `<RuntimeIdentifier>` позволяет указать для проекта только один [идентификатор среды выполнения](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="a6fca-196">The `<RuntimeIdentifier>` element allows you to specify only one [Runtime Identifier (RID)](../rid-catalog.md) for the project.</span></span> <span data-ttu-id="a6fca-197">Идентификаторы среды выполнения позволяют опубликовать автономное развертывание.</span><span class="sxs-lookup"><span data-stu-id="a6fca-197">RIDs enable publishing a self-contained deployment.</span></span> 
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
+### <a name="packagetargetfallback"></a><span data-ttu-id="a6fca-198">PackageTargetFallback</span><span class="sxs-lookup"><span data-stu-id="a6fca-198">PackageTargetFallback</span></span> 
+<span data-ttu-id="a6fca-199">Элемент `<PackageTargetFallback>` позволяет указать набор совместимых целевых объектов, которые следует использовать при восстановлении пакетов.</span><span class="sxs-lookup"><span data-stu-id="a6fca-199">The `<PackageTargetFallback>` element allows you to specify a set of compatible targets to be used when restoring packages.</span></span> <span data-ttu-id="a6fca-200">Он разрешает пакетам, использующим dotnet [TxM (моникер целевой версии x)](/nuget/schema/target-frameworks), взаимодействовать с пакетами, которые не объявляют dotnet TxM.</span><span class="sxs-lookup"><span data-stu-id="a6fca-200">It's designed to allow packages that use the dotnet [TxM (Target x Moniker)](/nuget/schema/target-frameworks) to operate with packages that don't declare a dotnet TxM.</span></span> <span data-ttu-id="a6fca-201">Если в проекте используется dotnet TxM, все пакеты, от которых вы зависите, должны также содержать dotnet TxM. В противном случае нужно добавить `<PackageTargetFallback>` в проект, чтобы обеспечить совместимость с платформами, отличными от dotnet.</span><span class="sxs-lookup"><span data-stu-id="a6fca-201">If your project uses the dotnet TxM, then all the packages it depends on must also have a dotnet TxM, unless you add the `<PackageTargetFallback>` to your project in order to allow non-dotnet platforms to be compatible with dotnet.</span></span> 
 
-### PackageTargetFallback
-<a id="packagetargetfallback" class="xliff"></a> 
-Элемент `<PackageTargetFallback>` позволяет указать набор совместимых целевых объектов, которые следует использовать при восстановлении пакетов. Он разрешает пакетам, использующим dotnet [TxM (моникер целевой версии x)](https://docs.microsoft.com/nuget/schema/target-frameworks), взаимодействовать с пакетами, которые не объявляют dotnet TxM. Если в проекте используется dotnet TxM, все пакеты, от которых вы зависите, должны также содержать dotnet TxM. В противном случае нужно добавить `<PackageTargetFallback>` в проект, чтобы обеспечить совместимость с платформами, отличными от dotnet. 
-
-В следующем примере приводятся резервные варианты для всех целевых объектов в проекте: 
+<span data-ttu-id="a6fca-202">В следующем примере приводятся резервные варианты для всех целевых объектов в проекте:</span><span class="sxs-lookup"><span data-stu-id="a6fca-202">The following example provides the fallbacks for all targets in your project:</span></span> 
 
 ```xml
 <PackageTargetFallback>
@@ -182,7 +164,7 @@ ms.lasthandoff: 06/27/2017
 </PackageTargetFallback >
 ```
 
-В следующем примере приводятся резервные варианты только для целевого объекта `netcoreapp1.0`:
+<span data-ttu-id="a6fca-203">В следующем примере приводятся резервные варианты только для целевого объекта `netcoreapp1.0`:</span><span class="sxs-lookup"><span data-stu-id="a6fca-203">The following example specifies the fallbacks only for the `netcoreapp1.0` target:</span></span>
 
 ```xml
 <PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp1.0'">
@@ -190,122 +172,93 @@ ms.lasthandoff: 06/27/2017
 </PackageTargetFallback >
 ```
 
-## Свойства метаданных NuGet
-<a id="nuget-metadata-properties" class="xliff"></a>
-При переходе к MSbuild мы переместили входные метаданные, которые использовались при упаковке пакета NuGet из *project.json* в файлы *CSPROJ*. Входными данными являются свойства MSBuild, поэтому они должны входить в группу `<PropertyGroup>`. Ниже представлен список свойств, которые используются как входные данные в процессе упаковки при использовании команды `dotnet pack` или целевого объекта `Pack` MSBuild, входящего в SDK. 
+## <a name="nuget-metadata-properties"></a><span data-ttu-id="a6fca-204">Свойства метаданных NuGet</span><span class="sxs-lookup"><span data-stu-id="a6fca-204">NuGet metadata properties</span></span>
+<span data-ttu-id="a6fca-205">При переходе к MSbuild мы переместили входные метаданные, которые использовались при упаковке пакета NuGet из *project.json* в файлы *CSPROJ*.</span><span class="sxs-lookup"><span data-stu-id="a6fca-205">With the move to MSbuild, we have moved the input metadata that is used when packing a NuGet package from *project.json* to *.csproj* files.</span></span> <span data-ttu-id="a6fca-206">Входными данными являются свойства MSBuild, поэтому они должны входить в группу `<PropertyGroup>`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-206">The inputs are MSBuild properties so they have to go within a `<PropertyGroup>` group.</span></span> <span data-ttu-id="a6fca-207">Ниже представлен список свойств, которые используются как входные данные в процессе упаковки при использовании команды `dotnet pack` или целевого объекта `Pack` MSBuild, входящего в SDK.</span><span class="sxs-lookup"><span data-stu-id="a6fca-207">The following is the list of properties that are used as inputs to the packing process when using the `dotnet pack` command or the `Pack` MSBuild target that is part of the SDK.</span></span> 
 
-### IsPackable
-<a id="ispackable" class="xliff"></a>
-Логическое значение, которое указывает, можно ли упаковать проект. Значение по умолчанию — `true`. 
+### <a name="ispackable"></a><span data-ttu-id="a6fca-208">IsPackable</span><span class="sxs-lookup"><span data-stu-id="a6fca-208">IsPackable</span></span>
+<span data-ttu-id="a6fca-209">Логическое значение, которое указывает, можно ли упаковать проект.</span><span class="sxs-lookup"><span data-stu-id="a6fca-209">A Boolean value that specifies whether the project can be packed.</span></span> <span data-ttu-id="a6fca-210">Значение по умолчанию — `true`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-210">The default value is `true`.</span></span> 
 
-### PackageVersion
-<a id="packageversion" class="xliff"></a>
-Указывает версию, которую будет иметь итоговый пакет. Принимает все формы строки версии NuGet. По умолчанию используется значение `$(Version)`, то есть значение свойства `Version` в проекте. 
+### <a name="packageversion"></a><span data-ttu-id="a6fca-211">PackageVersion</span><span class="sxs-lookup"><span data-stu-id="a6fca-211">PackageVersion</span></span>
+<span data-ttu-id="a6fca-212">Указывает версию, которую будет иметь итоговый пакет.</span><span class="sxs-lookup"><span data-stu-id="a6fca-212">Specifies the version that the resulting package will have.</span></span> <span data-ttu-id="a6fca-213">Принимает все формы строки версии NuGet.</span><span class="sxs-lookup"><span data-stu-id="a6fca-213">Accepts all forms of NuGet version string.</span></span> <span data-ttu-id="a6fca-214">По умолчанию используется значение `$(Version)`, то есть значение свойства `Version` в проекте.</span><span class="sxs-lookup"><span data-stu-id="a6fca-214">Default is the value of `$(Version)`, that is, of the property `Version` in the project.</span></span> 
 
-### PackageId
-<a id="packageid" class="xliff"></a>
-Указывает имя для итогового пакета. Если значение не указано, операция `pack` по умолчанию использует в качестве имени пакета `AssemblyName` или имя каталога. 
+### <a name="packageid"></a><span data-ttu-id="a6fca-215">PackageId</span><span class="sxs-lookup"><span data-stu-id="a6fca-215">PackageId</span></span>
+<span data-ttu-id="a6fca-216">Указывает имя для итогового пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-216">Specifies the name for the resulting package.</span></span> <span data-ttu-id="a6fca-217">Если значение не указано, операция `pack` по умолчанию использует в качестве имени пакета `AssemblyName` или имя каталога.</span><span class="sxs-lookup"><span data-stu-id="a6fca-217">If not specified, the `pack` operation will default to using the `AssemblyName` or directory name as the name of the package.</span></span> 
 
-### Заголовок
-<a id="title" class="xliff"></a>
-Понятный заголовок пакета, обычно используемый при отображении пользовательского интерфейса, как на сайте nuget.org и в диспетчере пакетов Visual Studio. Если значение не указано, используется идентификатор пакета.
+### <a name="title"></a><span data-ttu-id="a6fca-218">Заголовок</span><span class="sxs-lookup"><span data-stu-id="a6fca-218">Title</span></span>
+<span data-ttu-id="a6fca-219">Понятный заголовок пакета, обычно используемый при отображении пользовательского интерфейса, как на сайте nuget.org и в диспетчере пакетов Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a6fca-219">A human-friendly title of the package, typically used in UI displays as on nuget.org and the Package Manager in Visual Studio.</span></span> <span data-ttu-id="a6fca-220">Если значение не указано, используется идентификатор пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-220">If not specified, the package ID is used instead.</span></span>
 
-### Authors
-<a id="authors" class="xliff"></a>
-Разделенный точками с запятой список авторов пакетов, совпадающих с именами профилей на сайте nuget.org. Они отображаются в коллекции NuGet на сайте nuget.org и используются для перекрестных ссылок на пакеты тех же авторов.
+### <a name="authors"></a><span data-ttu-id="a6fca-221">Authors</span><span class="sxs-lookup"><span data-stu-id="a6fca-221">Authors</span></span>
+<span data-ttu-id="a6fca-222">Разделенный точками с запятой список авторов пакетов, совпадающих с именами профилей на сайте nuget.org.</span><span class="sxs-lookup"><span data-stu-id="a6fca-222">A semicolon-separated list of packages authors, matching the profile names on nuget.org.</span></span> <span data-ttu-id="a6fca-223">Они отображаются в коллекции NuGet на сайте nuget.org и используются для перекрестных ссылок на пакеты тех же авторов.</span><span class="sxs-lookup"><span data-stu-id="a6fca-223">These are displayed in the NuGet Gallery on nuget.org and are used to cross-reference packages by the same authors.</span></span>
 
-### Описание
-<a id="description" class="xliff"></a>
-Подробное описание пакета для отображения пользовательского интерфейса.
+### <a name="description"></a><span data-ttu-id="a6fca-224">Описание</span><span class="sxs-lookup"><span data-stu-id="a6fca-224">Description</span></span>
+<span data-ttu-id="a6fca-225">Подробное описание пакета для отображения пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="a6fca-225">A long description of the package for UI display.</span></span>
 
-### Copyright
-<a id="copyright" class="xliff"></a>
-Сведения об авторских правах для пакета.
+### <a name="copyright"></a><span data-ttu-id="a6fca-226">Copyright</span><span class="sxs-lookup"><span data-stu-id="a6fca-226">Copyright</span></span>
+<span data-ttu-id="a6fca-227">Сведения об авторских правах для пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-227">Copyright details for the package.</span></span>
 
-### PackageRequireLicenseAcceptance
-<a id="packagerequirelicenseacceptance" class="xliff"></a>
-Логическое значение, указывающее, должен ли клиент просить потребителя принять условия лицензии перед установкой пакета. Значение по умолчанию — `false`.
+### <a name="packagerequirelicenseacceptance"></a><span data-ttu-id="a6fca-228">PackageRequireLicenseAcceptance</span><span class="sxs-lookup"><span data-stu-id="a6fca-228">PackageRequireLicenseAcceptance</span></span>
+<span data-ttu-id="a6fca-229">Логическое значение, указывающее, должен ли клиент просить потребителя принять условия лицензии перед установкой пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-229">A Boolean value that specifies whether the client must prompt the consumer to accept the package license before installing the package.</span></span> <span data-ttu-id="a6fca-230">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-230">The default is `false`.</span></span>
 
-### PackageLicenseUrl
-<a id="packagelicenseurl" class="xliff"></a>
-URL-адрес лицензии, применимой к пакету.
+### <a name="packagelicenseurl"></a><span data-ttu-id="a6fca-231">PackageLicenseUrl</span><span class="sxs-lookup"><span data-stu-id="a6fca-231">PackageLicenseUrl</span></span>
+<span data-ttu-id="a6fca-232">URL-адрес лицензии, применимой к пакету.</span><span class="sxs-lookup"><span data-stu-id="a6fca-232">An URL to the license that is applicable to the package.</span></span>
 
-### PackageProjectUrl
-<a id="packageprojecturl" class="xliff"></a>
-URL-адрес для домашней страницы пакета, часто указываемый при отображении пользовательского интерфейса, также как и nuget.org.
+### <a name="packageprojecturl"></a><span data-ttu-id="a6fca-233">PackageProjectUrl</span><span class="sxs-lookup"><span data-stu-id="a6fca-233">PackageProjectUrl</span></span>
+<span data-ttu-id="a6fca-234">URL-адрес для домашней страницы пакета, часто указываемый при отображении пользовательского интерфейса, также как и nuget.org.</span><span class="sxs-lookup"><span data-stu-id="a6fca-234">A URL for the package's home page, often shown in UI displays as well as nuget.org.</span></span>
 
-### PackageIconUrl
-<a id="packageiconurl" class="xliff"></a>
-URL-адрес для изображения размером 64x64 с прозрачным фоном, используемого в качестве значка для пакета при отображении пользовательского интерфейса.
+### <a name="packageiconurl"></a><span data-ttu-id="a6fca-235">PackageIconUrl</span><span class="sxs-lookup"><span data-stu-id="a6fca-235">PackageIconUrl</span></span>
+<span data-ttu-id="a6fca-236">URL-адрес для изображения размером 64x64 с прозрачным фоном, используемого в качестве значка для пакета при отображении пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="a6fca-236">A URL for a 64x64 image with transparent background to use as the icon for the package in UI display.</span></span>
 
-### PackageReleaseNotes
-<a id="packagereleasenotes" class="xliff"></a>
-Заметки о выпуске для пакета.
+### <a name="packagereleasenotes"></a><span data-ttu-id="a6fca-237">PackageReleaseNotes</span><span class="sxs-lookup"><span data-stu-id="a6fca-237">PackageReleaseNotes</span></span>
+<span data-ttu-id="a6fca-238">Заметки о выпуске для пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-238">Release notes for the package.</span></span>
 
-### PackageTags
-<a id="packagetags" class="xliff"></a>
-Разделенный точками с запятой список тегов, обозначающий пакет.
+### <a name="packagetags"></a><span data-ttu-id="a6fca-239">PackageTags</span><span class="sxs-lookup"><span data-stu-id="a6fca-239">PackageTags</span></span>
+<span data-ttu-id="a6fca-240">Разделенный точками с запятой список тегов, обозначающий пакет.</span><span class="sxs-lookup"><span data-stu-id="a6fca-240">A semicolon-delimited list of tags that designates the package.</span></span>
 
-### PackageOutputPath
-<a id="packageoutputpath" class="xliff"></a>
-Определяет выходной путь для размещения упакованного пакета. Значение по умолчанию — `$(OutputPath)`. 
+### <a name="packageoutputpath"></a><span data-ttu-id="a6fca-241">PackageOutputPath</span><span class="sxs-lookup"><span data-stu-id="a6fca-241">PackageOutputPath</span></span>
+<span data-ttu-id="a6fca-242">Определяет выходной путь для размещения упакованного пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-242">Determines the output path in which the packed package will be dropped.</span></span> <span data-ttu-id="a6fca-243">Значение по умолчанию — `$(OutputPath)`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-243">Default is `$(OutputPath)`.</span></span> 
 
-### IncludeSymbols
-<a id="includesymbols" class="xliff"></a>
-Это логическое значение указывает, должен ли пакет создавать дополнительный пакет символов при упаковке проекта. Этот пакет будет иметь расширение *.symbols.nupkg* и копировать PDB-файлы, а также библиотеки DLL и другие выходные файлы.
+### <a name="includesymbols"></a><span data-ttu-id="a6fca-244">IncludeSymbols</span><span class="sxs-lookup"><span data-stu-id="a6fca-244">IncludeSymbols</span></span>
+<span data-ttu-id="a6fca-245">Это логическое значение указывает, должен ли пакет создавать дополнительный пакет символов при упаковке проекта.</span><span class="sxs-lookup"><span data-stu-id="a6fca-245">This Boolean value indicates whether the package should create an additional symbols package when the project is packed.</span></span> <span data-ttu-id="a6fca-246">Этот пакет будет иметь расширение *.symbols.nupkg* и копировать PDB-файлы, а также библиотеки DLL и другие выходные файлы.</span><span class="sxs-lookup"><span data-stu-id="a6fca-246">This package will have a *.symbols.nupkg* extension and will copy the PDB files along with the DLL and other output files.</span></span>
 
-### IncludeSource
-<a id="includesource" class="xliff"></a>
-Это логическое значение указывает, должен ли процесс упаковки создавать исходный пакет. Исходный пакет содержит библиотеку исходного кода, а также файлы PDB. Исходные файлы помещаются в каталог `src/ProjectName` итогового файла пакета. 
+### <a name="includesource"></a><span data-ttu-id="a6fca-247">IncludeSource</span><span class="sxs-lookup"><span data-stu-id="a6fca-247">IncludeSource</span></span>
+<span data-ttu-id="a6fca-248">Это логическое значение указывает, должен ли процесс упаковки создавать исходный пакет.</span><span class="sxs-lookup"><span data-stu-id="a6fca-248">This Boolean value indicates whether the pack process should create a source package.</span></span> <span data-ttu-id="a6fca-249">Исходный пакет содержит библиотеку исходного кода, а также файлы PDB.</span><span class="sxs-lookup"><span data-stu-id="a6fca-249">The source package contains the library's source code as well as PDB files.</span></span> <span data-ttu-id="a6fca-250">Исходные файлы помещаются в каталог `src/ProjectName` итогового файла пакета.</span><span class="sxs-lookup"><span data-stu-id="a6fca-250">Source files are put under the `src/ProjectName` directory in the resulting package file.</span></span> 
 
-### IsTool
-<a id="istool" class="xliff"></a>
-Указывает, копируются ли все выходные файлы в папку *tools* вместо папки *lib*. Обратите внимание, что это свойство отличается от `DotNetCliTool`, которое указывается путем задания `PackageType` в файле *CSPROJ*.
+### <a name="istool"></a><span data-ttu-id="a6fca-251">IsTool</span><span class="sxs-lookup"><span data-stu-id="a6fca-251">IsTool</span></span>
+<span data-ttu-id="a6fca-252">Указывает, копируются ли все выходные файлы в папку *tools* вместо папки *lib*.</span><span class="sxs-lookup"><span data-stu-id="a6fca-252">Specifies whether all output files are copied to the *tools* folder instead of the *lib* folder.</span></span> <span data-ttu-id="a6fca-253">Обратите внимание, что это свойство отличается от `DotNetCliTool`, которое указывается путем задания `PackageType` в файле *CSPROJ*.</span><span class="sxs-lookup"><span data-stu-id="a6fca-253">Note that this is different from a `DotNetCliTool` which is specified by setting the `PackageType` in the *.csproj* file.</span></span>
 
-### RepositoryUrl
-<a id="repositoryurl" class="xliff"></a>
-Указывает URL-адрес репозитория, где находится исходный код для пакета или откуда выполняется его сборка. 
+### <a name="repositoryurl"></a><span data-ttu-id="a6fca-254">RepositoryUrl</span><span class="sxs-lookup"><span data-stu-id="a6fca-254">RepositoryUrl</span></span>
+<span data-ttu-id="a6fca-255">Указывает URL-адрес репозитория, где находится исходный код для пакета или откуда выполняется его сборка.</span><span class="sxs-lookup"><span data-stu-id="a6fca-255">Specifies the URL for the repository where the source code for the package resides and/or from which it's being built.</span></span> 
 
-### RepositoryType
-<a id="repositorytype" class="xliff"></a>
-Указывает тип репозитория. Значение по умолчанию — "git". 
+### <a name="repositorytype"></a><span data-ttu-id="a6fca-256">RepositoryType</span><span class="sxs-lookup"><span data-stu-id="a6fca-256">RepositoryType</span></span>
+<span data-ttu-id="a6fca-257">Указывает тип репозитория.</span><span class="sxs-lookup"><span data-stu-id="a6fca-257">Specifies the type of the repository.</span></span> <span data-ttu-id="a6fca-258">Значение по умолчанию — "git".</span><span class="sxs-lookup"><span data-stu-id="a6fca-258">Default is "git".</span></span> 
 
-### NoPackageAnalysis
-<a id="nopackageanalysis" class="xliff"></a>
-Указывает, что пакету не нужно запускать анализ пакета после его сборки.
+### <a name="nopackageanalysis"></a><span data-ttu-id="a6fca-259">NoPackageAnalysis</span><span class="sxs-lookup"><span data-stu-id="a6fca-259">NoPackageAnalysis</span></span>
+<span data-ttu-id="a6fca-260">Указывает, что пакету не нужно запускать анализ пакета после его сборки.</span><span class="sxs-lookup"><span data-stu-id="a6fca-260">Specifies that pack should not run package analysis after building the package.</span></span>
 
-### MinClientVersion
-<a id="minclientversion" class="xliff"></a>
-Указывает минимальную версию клиента NuGet, который может установить этот пакет с использованием nuget.exe и диспетчера пакетов Visual Studio.
+### <a name="minclientversion"></a><span data-ttu-id="a6fca-261">MinClientVersion</span><span class="sxs-lookup"><span data-stu-id="a6fca-261">MinClientVersion</span></span>
+<span data-ttu-id="a6fca-262">Указывает минимальную версию клиента NuGet, который может установить этот пакет с использованием nuget.exe и диспетчера пакетов Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a6fca-262">Specifies the minimum version of the NuGet client that can install this package, enforced by nuget.exe and the Visual Studio Package Manager.</span></span>
 
-### IncludeBuildOutput
-<a id="includebuildoutput" class="xliff"></a>
-Это логическое значение указывает, следует ли упаковывать выходные сборки в файл *NUPKG*.
+### <a name="includebuildoutput"></a><span data-ttu-id="a6fca-263">IncludeBuildOutput</span><span class="sxs-lookup"><span data-stu-id="a6fca-263">IncludeBuildOutput</span></span>
+<span data-ttu-id="a6fca-264">Это логическое значение указывает, следует ли упаковывать выходные сборки в файл *NUPKG*.</span><span class="sxs-lookup"><span data-stu-id="a6fca-264">This Boolean values specifies whether the build output assemblies should be packed into the *.nupkg* file or not.</span></span>
 
-### IncludeContentInPack
-<a id="includecontentinpack" class="xliff"></a>
-Это логическое значение указывает, будут ли все элементы, имеющие тип `Content`, автоматически включены в итоговый пакет. Значение по умолчанию — `true`. 
+### <a name="includecontentinpack"></a><span data-ttu-id="a6fca-265">IncludeContentInPack</span><span class="sxs-lookup"><span data-stu-id="a6fca-265">IncludeContentInPack</span></span>
+<span data-ttu-id="a6fca-266">Это логическое значение указывает, будут ли все элементы, имеющие тип `Content`, автоматически включены в итоговый пакет.</span><span class="sxs-lookup"><span data-stu-id="a6fca-266">This Boolean value specifies whether any items that have a type of `Content` will be included in the resulting package automatically.</span></span> <span data-ttu-id="a6fca-267">Значение по умолчанию — `true`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-267">The default is `true`.</span></span> 
 
-### BuildOutputTargetFolder
-<a id="buildoutputtargetfolder" class="xliff"></a>
-Указывает папку для размещения выходных сборок. Выходные сборки (и другие выходные файлы) копируются в соответствующие папки платформы.
+### <a name="buildoutputtargetfolder"></a><span data-ttu-id="a6fca-268">BuildOutputTargetFolder</span><span class="sxs-lookup"><span data-stu-id="a6fca-268">BuildOutputTargetFolder</span></span>
+<span data-ttu-id="a6fca-269">Указывает папку для размещения выходных сборок.</span><span class="sxs-lookup"><span data-stu-id="a6fca-269">Specifies the folder where to place the output assemblies..</span></span> <span data-ttu-id="a6fca-270">Выходные сборки (и другие выходные файлы) копируются в соответствующие папки платформы.</span><span class="sxs-lookup"><span data-stu-id="a6fca-270">The output assemblies (and other output files) are copied into their respective framework folders.</span></span>
 
-### ContentTargetFolders
-<a id="contenttargetfolders" class="xliff"></a>
-Это свойство указывает расположение по умолчанию, куда следует помещать все файлы содержимого, для которых не указан `PackagePath`. Значение по умолчанию — "content;contentFiles".
+### <a name="contenttargetfolders"></a><span data-ttu-id="a6fca-271">ContentTargetFolders</span><span class="sxs-lookup"><span data-stu-id="a6fca-271">ContentTargetFolders</span></span>
+<span data-ttu-id="a6fca-272">Это свойство указывает расположение по умолчанию, куда следует помещать все файлы содержимого, для которых не указан `PackagePath`.</span><span class="sxs-lookup"><span data-stu-id="a6fca-272">This property specifies the default location of where all the content files should go if `PackagePath` is not specified for them.</span></span> <span data-ttu-id="a6fca-273">Значение по умолчанию — "content;contentFiles".</span><span class="sxs-lookup"><span data-stu-id="a6fca-273">The default value is "content;contentFiles".</span></span>
 
-### NuspecFile
-<a id="nuspecfile" class="xliff"></a>
-Относительный или абсолютный путь к файлу *NUSPEC*, используемому для упаковки. 
+### <a name="nuspecfile"></a><span data-ttu-id="a6fca-274">NuspecFile</span><span class="sxs-lookup"><span data-stu-id="a6fca-274">NuspecFile</span></span>
+<span data-ttu-id="a6fca-275">Относительный или абсолютный путь к файлу *NUSPEC*, используемому для упаковки.</span><span class="sxs-lookup"><span data-stu-id="a6fca-275">Relative or absolute path to the *.nuspec* file being used for packing.</span></span> 
 
 > [!NOTE]
-> Если файл *NUSPEC* указан, он используется для упаковки в **монопольном порядке**, а любые сведения в проектах не используются. 
+> <span data-ttu-id="a6fca-276">Если файл *NUSPEC* указан, он используется для упаковки в **монопольном порядке**, а любые сведения в проектах не используются.</span><span class="sxs-lookup"><span data-stu-id="a6fca-276">If the *.nuspec* file is specified, it's used **exclusively** for packaging information and any information in the projects is not used.</span></span> 
 
-### NuspecBasePath
-<a id="nuspecbasepath" class="xliff"></a>
-Базовый путь для файла *NUSPEC*.
+### <a name="nuspecbasepath"></a><span data-ttu-id="a6fca-277">NuspecBasePath</span><span class="sxs-lookup"><span data-stu-id="a6fca-277">NuspecBasePath</span></span>
+<span data-ttu-id="a6fca-278">Базовый путь для файла *NUSPEC*.</span><span class="sxs-lookup"><span data-stu-id="a6fca-278">Base path for the *.nuspec* file.</span></span>
 
-### NuspecProperties
-<a id="nuspecproperties" class="xliff"></a>
-Список разделенных точками с запятой пар "ключ-значение".
+### <a name="nuspecproperties"></a><span data-ttu-id="a6fca-279">NuspecProperties</span><span class="sxs-lookup"><span data-stu-id="a6fca-279">NuspecProperties</span></span>
+<span data-ttu-id="a6fca-280">Список разделенных точками с запятой пар "ключ-значение".</span><span class="sxs-lookup"><span data-stu-id="a6fca-280">Semicolon separated list of key=value pairs.</span></span>
 

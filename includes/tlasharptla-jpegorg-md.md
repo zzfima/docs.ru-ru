@@ -1,1 +1,1 @@
-Формат JPEG (Joint Photographics Experts Group)
+<span data-ttu-id="aa81a-101">Формат JPEG (Joint Photographics Experts Group)</span><span class="sxs-lookup"><span data-stu-id="aa81a-101">Joint Photographics Experts Group (JPEG)</span></span>

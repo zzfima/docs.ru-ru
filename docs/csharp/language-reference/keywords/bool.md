@@ -1,5 +1,5 @@
 ---
-title: "bool (справочник по C#) | Документы Майкрософт"
+title: "bool (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,48 +30,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ef8cc9a0584829eeed06e7fc3c2227f0683ef413
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f3b7455ab6b0ec780afe7d81b2ff990d47a31d20
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="bool-c-reference"></a>bool (Справочник по C#)
-Ключевое слово `bool` является псевдонимом <xref:System.Boolean?displayProperty=fullName>. Оно используется для объявления переменных для хранения логических значений, [true](../../../csharp/language-reference/keywords/true.md) и [false](../../../csharp/language-reference/keywords/false.md).  
+# <a name="bool-c-reference"></a><span data-ttu-id="94f47-102">bool (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="94f47-102">bool (C# Reference)</span></span>
+<span data-ttu-id="94f47-103">Ключевое слово `bool` является псевдонимом для <xref:System.Boolean?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="94f47-103">The `bool` keyword is an alias of <xref:System.Boolean?displayProperty=fullName>.</span></span> <span data-ttu-id="94f47-104">Оно используется для объявления переменных для хранения логических значений, [true](../../../csharp/language-reference/keywords/true.md) и [false](../../../csharp/language-reference/keywords/false.md).</span><span class="sxs-lookup"><span data-stu-id="94f47-104">It is used to declare variables to store the Boolean values, [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md).</span></span>  
   
 > [!NOTE]
->  Если вам требуется логическая переменная, которая также может принимать значение `null`, используйте `bool?`. Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](../../../csharp/programming-guide/nullable-types/index.md).  
+>  <span data-ttu-id="94f47-105">Если вам требуется логическая переменная, которая также может принимать значение `null`, используйте `bool?`.</span><span class="sxs-lookup"><span data-stu-id="94f47-105">If you require a Boolean variable that can also have a value of `null`, use `bool?`.</span></span> <span data-ttu-id="94f47-106">Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](../../../csharp/programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="94f47-106">For more information, see [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>  
   
-## <a name="literals"></a>Литералы  
- Логическое значение можно назначить переменной `bool`. Переменной `bool` также может назначить выражение, результатом которого является `bool`.  
+## <a name="literals"></a><span data-ttu-id="94f47-107">Литералы</span><span class="sxs-lookup"><span data-stu-id="94f47-107">Literals</span></span>  
+ <span data-ttu-id="94f47-108">Логическое значение можно назначить переменной `bool`.</span><span class="sxs-lookup"><span data-stu-id="94f47-108">You can assign a Boolean value to a `bool` variable.</span></span> <span data-ttu-id="94f47-109">Переменной `bool` также может назначить выражение, результатом которого является `bool`.</span><span class="sxs-lookup"><span data-stu-id="94f47-109">You can also assign an expression that evaluates to `bool` to a `bool` variable.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_1.cs)]  
+ <span data-ttu-id="94f47-110">[!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="94f47-110">[!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_1.cs)]</span></span>  
   
- Значением переменной `bool` по умолчанию является `false`. Значением переменной `bool?` по умолчанию является `null`.  
+ <span data-ttu-id="94f47-111">Значением переменной `bool` по умолчанию является `false`.</span><span class="sxs-lookup"><span data-stu-id="94f47-111">The default value of a `bool` variable is `false`.</span></span> <span data-ttu-id="94f47-112">Значением переменной `bool?` по умолчанию является `null`.</span><span class="sxs-lookup"><span data-stu-id="94f47-112">The default value of a `bool?` variable is `null`.</span></span>  
   
-## <a name="conversions"></a>Преобразования  
- В C++ значение типа `bool` можно преобразовать в значение типа `int`; другими словами, `false` эквивалентно нулю, а `true` эквивалентно ненулевым значениям. В C# не предусмотрено преобразование между типом `bool` и другими типами. Например, следующий оператор `if` недопустим в C#:  
+## <a name="conversions"></a><span data-ttu-id="94f47-113">Преобразования</span><span class="sxs-lookup"><span data-stu-id="94f47-113">Conversions</span></span>  
+ <span data-ttu-id="94f47-114">В C++ значение типа `bool` можно преобразовать в значение типа `int`; другими словами, `false` эквивалентно нулю, а `true` эквивалентно ненулевым значениям.</span><span class="sxs-lookup"><span data-stu-id="94f47-114">In C++, a value of type `bool` can be converted to a value of type `int`; in other words, `false` is equivalent to zero and `true` is equivalent to nonzero values.</span></span> <span data-ttu-id="94f47-115">В C# не предусмотрено преобразование между типом `bool` и другими типами.</span><span class="sxs-lookup"><span data-stu-id="94f47-115">In C#, there is no conversion between the `bool` type and other types.</span></span> <span data-ttu-id="94f47-116">Например, следующий оператор `if` недопустим в C#:</span><span class="sxs-lookup"><span data-stu-id="94f47-116">For example, the following `if` statement is invalid in C#:</span></span>  
   
- [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_2.cs)]  
+ <span data-ttu-id="94f47-117">[!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="94f47-117">[!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_2.cs)]</span></span>  
   
- Чтобы проверить переменную типа `int`, нужно явно сравнить ее со значением, например с нулем, следующим образом:  
+ <span data-ttu-id="94f47-118">Чтобы проверить переменную типа `int`, нужно явно сравнить ее со значением, например с нулем, следующим образом:</span><span class="sxs-lookup"><span data-stu-id="94f47-118">To test a variable of the type `int`, you have to explicitly compare it to a value, such as zero, as follows:</span></span>  
   
- [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_3.cs)]  
+ <span data-ttu-id="94f47-119">[!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="94f47-119">[!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_3.cs)]</span></span>  
   
-## <a name="example"></a>Пример  
- В этом примере символ вводится с клавиатуры, и программа проверяет, является ли введенный символ буквой. Если это буква, проверяется ее регистр. Эти проверки выполняются с помощью <xref:System.Char.IsLetter%2A> и <xref:System.Char.IsLower%2A>, которые возвращают тип `bool`:  
+## <a name="example"></a><span data-ttu-id="94f47-120">Пример</span><span class="sxs-lookup"><span data-stu-id="94f47-120">Example</span></span>  
+ <span data-ttu-id="94f47-121">В этом примере символ вводится с клавиатуры, и программа проверяет, является ли введенный символ буквой.</span><span class="sxs-lookup"><span data-stu-id="94f47-121">In this example, you enter a character from the keyboard and the program checks if the input character is a letter.</span></span> <span data-ttu-id="94f47-122">Если это буква, проверяется ее регистр.</span><span class="sxs-lookup"><span data-stu-id="94f47-122">If it is a letter, it checks if it is lowercase or uppercase.</span></span> <span data-ttu-id="94f47-123">Эти проверки выполняются с использованием <xref:System.Char.IsLetter%2A> и <xref:System.Char.IsLower%2A>, которые возвращают значение типа `bool`:</span><span class="sxs-lookup"><span data-stu-id="94f47-123">These checks are performed with the <xref:System.Char.IsLetter%2A>, and <xref:System.Char.IsLower%2A>, both of which return the `bool` type:</span></span>  
   
- [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_4.cs)]  
+ <span data-ttu-id="94f47-124">[!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="94f47-124">[!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_4.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Спецификация языка C#  
+## <a name="c-language-specification"></a><span data-ttu-id="94f47-125">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="94f47-125">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a><span data-ttu-id="94f47-126">См. также</span><span class="sxs-lookup"><span data-stu-id="94f47-126">See Also</span></span>  
+ <span data-ttu-id="94f47-127">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="94f47-127">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="94f47-128">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="94f47-128">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="94f47-129">[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="94f47-129">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="94f47-130">[Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="94f47-130">[Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md) </span></span>  
+ <span data-ttu-id="94f47-131">[Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="94f47-131">[Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md) </span></span>  
+ <span data-ttu-id="94f47-132">[Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span><span class="sxs-lookup"><span data-stu-id="94f47-132">[Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span></span>  
+ [<span data-ttu-id="94f47-133">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="94f47-133">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

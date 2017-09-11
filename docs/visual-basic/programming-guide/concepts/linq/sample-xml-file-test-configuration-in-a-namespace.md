@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 176524376e10ab157c7d6bc33f254b1431fd6478
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 93a32c80e29d5b78bb4787f5528e3c9ed4bed20e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Пример XML-файла. Конфигурация тестирования в пространстве имен
-Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Это тестовый файл конфигурации. XML располагается в пространстве имен.  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="46a98-102">Пример XML-файла. Конфигурация тестирования в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="46a98-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="46a98-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</span><span class="sxs-lookup"><span data-stu-id="46a98-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="46a98-104">Это тестовый файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="46a98-104">This is a test configuration file.</span></span> <span data-ttu-id="46a98-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="46a98-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="46a98-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="46a98-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,5 +74,5 @@ ms.lasthandoff: 03/13/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="46a98-107">См. также</span><span class="sxs-lookup"><span data-stu-id="46a98-107">See Also</span></span>  
+ [<span data-ttu-id="46a98-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="46a98-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

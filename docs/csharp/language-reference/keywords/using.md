@@ -37,20 +37,20 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-c-reference"></a>using (справочник по C#)
-Ключевое слово `using` имеет два основных применения:  
+# <a name="using-c-reference"></a><span data-ttu-id="54517-102">using (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="54517-102">using (C# Reference)</span></span>
+<span data-ttu-id="54517-103">Ключевое слово `using` имеет два основных применения:</span><span class="sxs-lookup"><span data-stu-id="54517-103">The `using` keyword has two major uses:</span></span>  
   
--   В качестве директивы, если используется при создании псевдонима для пространства имен или при импорте типов, определенных в других пространствах имен. См. раздел [Директива using](../../../csharp/language-reference/keywords/using-directive.md).  
+-   <span data-ttu-id="54517-104">В качестве директивы, если используется при создании псевдонима для пространства имен или при импорте типов, определенных в других пространствах имен.</span><span class="sxs-lookup"><span data-stu-id="54517-104">As a directive, when it is used to create an alias for a namespace or to import types defined in other namespaces.</span></span> <span data-ttu-id="54517-105">См. раздел [Директива using](../../../csharp/language-reference/keywords/using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="54517-105">See [using Directive](../../../csharp/language-reference/keywords/using-directive.md).</span></span>  
   
--   В качестве оператора, если определяет область, по завершении которой объект удаляется. См. раздел [Оператор Using](../../../csharp/language-reference/keywords/using-statement.md).  
+-   <span data-ttu-id="54517-106">В качестве оператора, если определяет область, по завершении которой объект удаляется.</span><span class="sxs-lookup"><span data-stu-id="54517-106">As a statement, when it defines a scope at the end of which an object will be disposed.</span></span> <span data-ttu-id="54517-107">См. раздел [Оператор Using](../../../csharp/language-reference/keywords/using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="54517-107">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md).</span></span>  
   
-Кроме того, директива [using static](using-static.md) позволяет определить тип, доступ к статическим членам которого можно получить, не указывая имя типа.
+<span data-ttu-id="54517-108">Кроме того, директива [using static](using-static.md) позволяет определить тип, доступ к статическим членам которого можно получить, не указывая имя типа.</span><span class="sxs-lookup"><span data-stu-id="54517-108">In addition, the [using static](using-static.md) directive lets you define a type whose static members you can access without specifying a type name.</span></span>
 
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)   
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a><span data-ttu-id="54517-109">См. также</span><span class="sxs-lookup"><span data-stu-id="54517-109">See Also</span></span>  
+ <span data-ttu-id="54517-110">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="54517-110">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="54517-111">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="54517-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="54517-112">[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="54517-112">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="54517-113">[Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="54517-113">[Namespace Keywords](../../../csharp/language-reference/keywords/namespace-keywords.md) </span></span>  
+ <span data-ttu-id="54517-114">[Пространства имен](../../../csharp/programming-guide/namespaces/index.md) </span><span class="sxs-lookup"><span data-stu-id="54517-114">[Namespaces](../../../csharp/programming-guide/namespaces/index.md) </span></span>  
+ [<span data-ttu-id="54517-115">extern</span><span class="sxs-lookup"><span data-stu-id="54517-115">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)
 

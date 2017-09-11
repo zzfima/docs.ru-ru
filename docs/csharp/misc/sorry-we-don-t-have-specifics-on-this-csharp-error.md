@@ -897,32 +897,33 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: d1f8fb48a1f3b64d7e11a0ef57d1ef1d23ef9ae5
+ms.contentlocale: ru-ru
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>К сожалению у нас нет подробные сведения об этой ошибке C#
-Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="39541-102">К сожалению у нас нет подробные сведения об этой ошибке C#</span><span class="sxs-lookup"><span data-stu-id="39541-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
+<span data-ttu-id="39541-103">Подробные сведения об этой ошибке отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="39541-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="39541-104">Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете.</span><span class="sxs-lookup"><span data-stu-id="39541-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="39541-105">Также можно обратиться с вопросом к другим разработчикам на следующих форумах:</span><span class="sxs-lookup"><span data-stu-id="39541-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [Язык Visual C#](http://go.microsoft.com/fwlink/?LinkId=146921)  
- Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ [<span data-ttu-id="39541-106">Язык Visual C#</span><span class="sxs-lookup"><span data-stu-id="39541-106">Visual C# Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ <span data-ttu-id="39541-107">Форум для вопросов и общих обсуждений проблем, связанных с синтаксисом и компилятором языка [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="39541-107">Provides a forum for questions about and general discussions of the [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] language syntax and compiler.</span></span>  
   
- [Интегрированная среда разработки Visual C#](http://go.microsoft.com/fwlink/?LinkId=146922)  
- Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ [<span data-ttu-id="39541-108">Интегрированная среда разработки Visual C#</span><span class="sxs-lookup"><span data-stu-id="39541-108">Visual C# IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ <span data-ttu-id="39541-109">Форум предназначен для вопросов о работе в среде [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="39541-109">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] environment.</span></span>  
   
- [Visual C# Общие](http://go.microsoft.com/fwlink/?LinkId=146920)  
- Форум предназначен для вопросов по работе [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.  
+ [<span data-ttu-id="39541-110">Visual C# Общие</span><span class="sxs-lookup"><span data-stu-id="39541-110">Visual C# General</span></span>](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ <span data-ttu-id="39541-111">Форум предназначен для вопросов по работе [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] и соответствующим проблемам, которые не обсуждаются на других форумах.</span><span class="sxs-lookup"><span data-stu-id="39541-111">Provides a forum for questions about and issues with [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] that are not discussed in other forums.</span></span>  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Форум предназначен для вопросов по работе [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] и соответствующим проблемам.  
+ [<span data-ttu-id="39541-112">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="39541-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="39541-113">Форум предназначен для вопросов по работе [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] и соответствующим проблемам.</span><span class="sxs-lookup"><span data-stu-id="39541-113">Provides a forum for questions about and issues with [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].</span></span>  
   
- См. также:  
- [Дополнительные ресурсы для программистов Visual C#](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="39541-114">См. также:</span><span class="sxs-lookup"><span data-stu-id="39541-114">Also see:</span></span>  
+<span data-ttu-id="39541-115"> [Дополнительные ресурсы для программистов Visual C#](../../csharp/getting-started/additional-resources.md)</span><span class="sxs-lookup"><span data-stu-id="39541-115"> [Additional Resources for Visual C# Programmers](../../csharp/getting-started/additional-resources.md)</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../csharp/programming-guide/index.md)   
- [Справочник по C#](../../csharp/language-reference/index.md)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)   
- [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="39541-116">См. также</span><span class="sxs-lookup"><span data-stu-id="39541-116">See Also</span></span>  
+ <span data-ttu-id="39541-117">[Руководство по программированию на C#](../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="39541-117">[C# Programming Guide](../../csharp/programming-guide/index.md) </span></span>  
+<span data-ttu-id="39541-118"> [Справочник по C#](../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="39541-118"> [C# Reference](../../csharp/language-reference/index.md) </span></span>  
+<span data-ttu-id="39541-119"> [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us) </span><span class="sxs-lookup"><span data-stu-id="39541-119"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us) </span></span>  
+<span data-ttu-id="39541-120"> [Обращайтесь к нам](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="39541-120"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

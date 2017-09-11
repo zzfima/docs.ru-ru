@@ -27,11 +27,12 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1624c3a68bd721003aad8790f4cf86766f5c95fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3654a1aa88bd5e8fe84a21ac3b980b42fbf8fdf4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="visual-basic-compiler-messages"></a>Сообщения компилятора Visual Basic
-В этом разделе содержатся [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] сообщения об ошибках, возникающих во время компиляции.
+# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="702b2-102">Сообщения компилятора Visual Basic</span><span class="sxs-lookup"><span data-stu-id="702b2-102">Visual Basic Compiler Messages</span></span>
+<span data-ttu-id="702b2-103">В этом разделе содержатся [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] сообщения об ошибках, возникающих во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="702b2-103">This section contains the [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] error messages that occur at compile time.</span></span>

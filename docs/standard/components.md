@@ -1,86 +1,98 @@
 ---
 title: "Архитектурные компоненты .NET"
-description: "Описание ключевых компонентов архитектуры .NET, таких как библиотека .NET Standard, среды выполнения .NET и инструменты."
-keywords: ".NET, библиотека .NET Standard, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F #, VB и компиляторы"
+description: "Описание ключевых компонентов архитектуры .NET, таких как .NET Standard, реализации .NET, среды выполнения .NET и инструменты."
 author: cartermp
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: 7741df222250f3746abb1e3c359bd9e89e6a732c
-ms.openlocfilehash: e93764ff4d3391110c79f73a34512bd073ce0499
-ms.lasthandoff: 01/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/23/2017
 
 ---
+# <a name="net-architectural-components"></a><span data-ttu-id="20dc8-103">Архитектурные компоненты .NET</span><span class="sxs-lookup"><span data-stu-id="20dc8-103">.NET architectural components</span></span>
 
-# <a name="net-architectural-components"></a>Архитектурные компоненты .NET
+<span data-ttu-id="20dc8-104">Приложение .NET разрабатывается и выполняется в одной *реализации .NET* или нескольких.</span><span class="sxs-lookup"><span data-stu-id="20dc8-104">A .NET app is developed for and runs in one or more *implementations of .NET*.</span></span>  <span data-ttu-id="20dc8-105">К реализации .NET относятся .NET Framework, .NET Core и Mono.</span><span class="sxs-lookup"><span data-stu-id="20dc8-105">Implementations of .NET include the .NET Framework, .NET Core, and Mono.</span></span> <span data-ttu-id="20dc8-106">Существует спецификация API, общая для всех реализаций .NET, которая называется .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="20dc8-106">There is an API specification common to all implementations of .NET that's called the .NET Standard.</span></span> <span data-ttu-id="20dc8-107">В этой статье дается краткое описание каждого из этих понятий.</span><span class="sxs-lookup"><span data-stu-id="20dc8-107">This article gives a brief introduction to each of these concepts.</span></span>
 
-.NET состоит из множества ключевых компонентов.  Один из них — библиотека .NET Standard, которая содержит большой набор интерфейсов API, работающих на любых платформах.  Эту стандартную библиотеку реализуют три среды выполнения .NET: NET Framework, .NET Core и Mono для Xamarin.  Языки .NET также поддерживаются в любой среде выполнения .NET.  Кроме того, на каждой платформе есть инструменты, позволяющие выполнять сборку проектов.  Эти инструменты не отличаются в зависимости от среды выполнения.
+## <a name="net-standard"></a><span data-ttu-id="20dc8-108">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="20dc8-108">.NET Standard</span></span>
 
-Ниже представлен графический обзор всех упомянутых компонентов .NET и их места в общей архитектуре.
+<span data-ttu-id="20dc8-109">.NET Standard — это набор API-интерфейсов, которые реализуются библиотекой базовых классов реализации .NET.</span><span class="sxs-lookup"><span data-stu-id="20dc8-109">The .NET Standard is a set of APIs that are implemented by the Base Class Library of a .NET implementation.</span></span> <span data-ttu-id="20dc8-110">Фактически это спецификация API .NET, представляющая единый набор контрактов, на основе которых компилируется код.</span><span class="sxs-lookup"><span data-stu-id="20dc8-110">More formally, it's a specification of .NET APIs that make up a uniform set of contracts that you compile your code against.</span></span> <span data-ttu-id="20dc8-111">Эти контракты реализуются в каждой реализации .NET.</span><span class="sxs-lookup"><span data-stu-id="20dc8-111">These contracts are implemented in each .NET implementation.</span></span> <span data-ttu-id="20dc8-112">Благодаря этому возможен перенос между различными реализациями .NET, что обеспечивает эффективную работу кода везде.</span><span class="sxs-lookup"><span data-stu-id="20dc8-112">This enables portability across different .NET implementations, effectively allowing your code to run everywhere.</span></span>
 
-![Все архитектурные компоненты .NET](media/components.png)
+<span data-ttu-id="20dc8-113">.NET Standard также является [целевой платформой](glossary.md#target-framework).</span><span class="sxs-lookup"><span data-stu-id="20dc8-113">The .NET Standard is also a [target framework](glossary.md#target-framework).</span></span> <span data-ttu-id="20dc8-114">Если код предназначен для версии .NET Standard, он будет работать в любой реализации .NET, которая поддерживает эту версию .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="20dc8-114">If your code targets a version of the .NET Standard, it can run on any .NET implementation which supports that version of the .NET Standard.</span></span>
 
-Далее приводится краткое описание каждого из представленных выше ключевых компонентов.  
+<span data-ttu-id="20dc8-115">Дополнительные сведения о .NET Standard и о том, как сделать ее целевой версией, см. [здесь](net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="20dc8-115">To learn more about the .NET Standard and how to target it, see the [.NET Standard](net-standard.md) topic.</span></span>
 
-## <a name="net-standard-library"></a>Библиотека .NET Standard
+## <a name="net-implementations"></a><span data-ttu-id="20dc8-116">Реализации .NET</span><span class="sxs-lookup"><span data-stu-id="20dc8-116">.NET implementations</span></span>
 
-Библиотека .NET Standard — это набор интерфейсов API, которые реализуются в среде выполнения .NET.
+<span data-ttu-id="20dc8-117">Каждая реализация .NET включает в себя следующие компоненты.</span><span class="sxs-lookup"><span data-stu-id="20dc8-117">Each implementation of .NET includes the following components:</span></span>
 
-Фактически это спецификация API .NET, представляющая единый набор контрактов, на основе которых компилируется код.  Эти контракты имеют базовую реализацию для каждой среды выполнения .NET.  Благодаря этому возможен перенос между различными средами выполнения .NET. Таким образом, код может эффективно работать везде.
+- <span data-ttu-id="20dc8-118">Одна среда выполнения или несколько.</span><span class="sxs-lookup"><span data-stu-id="20dc8-118">One or more runtimes.</span></span> <span data-ttu-id="20dc8-119">Примеры: CLR для .NET Framework, CoreCLR и CoreRT для .NET Core.</span><span class="sxs-lookup"><span data-stu-id="20dc8-119">Examples: CLR for .NET Framework, CoreCLR and CoreRT for .NET Core.</span></span>
+- <span data-ttu-id="20dc8-120">Библиотека классов, которая реализует .NET Standard, а также может реализовывать дополнительные API-интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="20dc8-120">A class library that implements the .NET Standard and may implement additional APIs.</span></span> <span data-ttu-id="20dc8-121">Примеры: библиотека базовых классов .NET Framework, библиотека базовых классов .NET Core.</span><span class="sxs-lookup"><span data-stu-id="20dc8-121">Examples: .NET Framework Base Class Library, .NET Core Base Class Library.</span></span>
+- <span data-ttu-id="20dc8-122">(Необязательно) Одна платформа приложений или несколько.</span><span class="sxs-lookup"><span data-stu-id="20dc8-122">Optionally, one or more application frameworks.</span></span> <span data-ttu-id="20dc8-123">Примеры: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) и [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) входят в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="20dc8-123">Examples: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md), and [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) are included in the .NET Framework.</span></span>
+- <span data-ttu-id="20dc8-124">(Необязательно) Средства разработки.</span><span class="sxs-lookup"><span data-stu-id="20dc8-124">Optionally, development tools.</span></span> <span data-ttu-id="20dc8-125">Некоторые средства разработки, являются общими для нескольких реализаций.</span><span class="sxs-lookup"><span data-stu-id="20dc8-125">Some development tools are shared among multiple implementations.</span></span>
 
-Библиотека .NET Standard также является целевым объектом сборки. В этой роли она называется просто .NET Standard.  В настоящее время доступны версии .NET Standard 1.0–1.6.  Если код предназначен для версии .NET Standard, он будет работать в любой среде выполнения .NET, которая реализует эту версию.
+<span data-ttu-id="20dc8-126">Существуют четыре основные реализации .NET, которые корпорация Майкрософт активно разрабатывает и обслуживает: .NET Core, .NET Framework, Mono и UWP.</span><span class="sxs-lookup"><span data-stu-id="20dc8-126">There are four primary .NET implementations that Microsoft actively develops and maintains: .NET Core, .NET Framework, Mono, and UWP.</span></span>
 
-Дополнительные сведения о библиотеке .NET Standard и версиях .NET Standard см. [здесь](library.md).
+### <a name="net-core"></a><span data-ttu-id="20dc8-127">.NET Core</span><span class="sxs-lookup"><span data-stu-id="20dc8-127">.NET Core</span></span>
 
-## <a name="net-runtimes"></a>Среды выполнения .NET
+<span data-ttu-id="20dc8-128">.NET Core — это кроссплатформенная реализация .NET, предназначенная для обработки обширного ряда серверных и облачных рабочих нагрузок.</span><span class="sxs-lookup"><span data-stu-id="20dc8-128">.NET Core is a cross-platform implementation of .NET and designed to handle server and cloud workloads at scale.</span></span> <span data-ttu-id="20dc8-129">Она работает в Windows, macOS и Linux.</span><span class="sxs-lookup"><span data-stu-id="20dc8-129">It runs on Windows, macOS and Linux.</span></span> <span data-ttu-id="20dc8-130">Она реализует .NET Standard, а значит, любой код, предназначенный для .NET Standard, может работать на .NET Core.</span><span class="sxs-lookup"><span data-stu-id="20dc8-130">It implements the .NET Standard, so code that targets the .NET Standard can run on .NET Core.</span></span> <span data-ttu-id="20dc8-131">ASP.NET Core выполняется в .NET Core.</span><span class="sxs-lookup"><span data-stu-id="20dc8-131">ASP.NET Core runs on .NET Core.</span></span> 
 
-Существуют 3 основные среды выполнения .NET, которые корпорация Майкрософт активно разрабатывает и обслуживает: .NET Core, .NET Framework и Mono для Xamarin.
+<span data-ttu-id="20dc8-132">Дополнительные сведения о .NET Core см. в [руководстве по .NET Core](../core/index.md) и в разделе [Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md).</span><span class="sxs-lookup"><span data-stu-id="20dc8-132">To learn more about .NET Core, see the [.NET Core Guide](../core/index.md) and [Choosing between .NET Core and .NET Framework for server apps](choosing-core-framework-server.md).</span></span>
 
-### <a name="net-core"></a>.NET Core
+### <a name="net-framework"></a><span data-ttu-id="20dc8-133">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="20dc8-133">.NET Framework</span></span>
 
-.NET Core — это кроссплатформенная среда выполнения, оптимизированная для рабочих нагрузок серверов.  Она реализует библиотеку .NET Standard, а значит, любой код, предназначенный для .NET Standard, может работать на .NET Core.  Эта среда выполнения используется ASP.NET Core и универсальной платформой Windows (UWP).  Будучи современной и эффективной, она предназначена для обработки серверных и облачных рабочих нагрузок большого масштаба.
+<span data-ttu-id="20dc8-134">.NET Framework является исходной реализацией .NET, выпущенной в 2002 г.</span><span class="sxs-lookup"><span data-stu-id="20dc8-134">The.NET Framework is the original .NET implementation that has existed since 2002.</span></span> <span data-ttu-id="20dc8-135">Разработчики .NET всегда использовали эту платформу.</span><span class="sxs-lookup"><span data-stu-id="20dc8-135">It's the same .NET Framework that existing .NET developers have always used.</span></span> <span data-ttu-id="20dc8-136">Версии 4.5 и более поздние реализуют .NET Standard, а значит, любой код, предназначенный для .NET Standard, может работать в этих версиях .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="20dc8-136">Versions 4.5 and later implement the .NET Standard, so code that targets the .NET Standard can run on those versions of the .NET Framework.</span></span> <span data-ttu-id="20dc8-137">Она содержит дополнительные API для Windows, например API для разработки настольных приложений с помощью Windows Forms и WPF.</span><span class="sxs-lookup"><span data-stu-id="20dc8-137">It contains additional Windows-specific APIs, such as APIs for Windows desktop development with Windows Forms and WPF.</span></span> <span data-ttu-id="20dc8-138">.NET Framework оптимизирована для создания классических приложений Windows.</span><span class="sxs-lookup"><span data-stu-id="20dc8-138">The .NET Framework is optimized for building Windows desktop applications.</span></span>
 
-Дополнительные сведения о .NET Core см. в [руководстве по .NET Core](../core/index.md).
+<span data-ttu-id="20dc8-139">Дополнительные сведения о платформе .NET Framework см. в [руководстве по .NET Framework](../framework/index.md).</span><span class="sxs-lookup"><span data-stu-id="20dc8-139">To learn more about the .NET Framework, see the [.NET Framework Guide](../framework/index.md).</span></span>
 
-### <a name="net-framework"></a>.NET Framework
+### <a name="mono"></a><span data-ttu-id="20dc8-140">Mono</span><span class="sxs-lookup"><span data-stu-id="20dc8-140">Mono</span></span>
 
-.NET Framework — это среда выполнения .NET, выпущенная в 2002 году.  Разработчики .NET всегда использовали эту платформу.  Она реализует библиотеку .NET Standard, а значит, любой код, предназначенный для .NET Standard, может работать на .NET Framework.  Она содержит дополнительные API для Windows, например API для разработки настольных приложений с помощью Windows Forms и WPF.  .NET Framework оптимизирована для создания настольных приложений для Windows.
+<span data-ttu-id="20dc8-141">Mono является реализацией .NET, которая в основном используется, если требуется небольшая среда выполнения.</span><span class="sxs-lookup"><span data-stu-id="20dc8-141">Mono is a .NET implementation that is mainly used when a small runtime is required.</span></span> <span data-ttu-id="20dc8-142">Это среда выполнения, которая может работать в приложениях Xamarin на Android, Mac, iOS, tvOS и watchOS, и предназначена для небольших разработок.</span><span class="sxs-lookup"><span data-stu-id="20dc8-142">It is the runtime that powers Xamarin applications on Android, Mac, iOS, tvOS and watchOS and is focused primarily on a small footprint.</span></span>
 
-Дополнительные сведения о платформе .NET Framework см. в [руководстве по .NET Framework](../framework/index.md).
+<span data-ttu-id="20dc8-143">Она поддерживает все текущие опубликованные версии .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="20dc8-143">It supports all of the currently published .NET Standard versions.</span></span>
 
-### <a name="mono-for-xamarin"></a>Mono для Xamarin
+<span data-ttu-id="20dc8-144">Исторически Mono реализовывала крупный API .NET Framework и эмулировала некоторые из наиболее популярных возможностей в Unix.</span><span class="sxs-lookup"><span data-stu-id="20dc8-144">Historically, Mono implemented the larger API of the .NET Framework and emulated some of the most popular capabilities on Unix.</span></span> <span data-ttu-id="20dc8-145">Иногда она использовалась для запуска приложений .NET, которые применяют эти возможности в Unix.</span><span class="sxs-lookup"><span data-stu-id="20dc8-145">It is sometimes used to run .NET applications that rely on those capabilities on Unix.</span></span>
 
-Mono — это среда выполнения для приложений Xamarin.  Она реализует библиотеку .NET Standard, а значит, любой код, предназначенный для .NET Standard, может работать в приложениях Xamarin.  Mono содержит дополнительные API для iOS, Android, Xamarin.Forms и Xamarin.Mac.  Эта среда оптимизирована для разработки приложений для мобильных устройств на платформе iOS и Android.
+<span data-ttu-id="20dc8-146">Mono обычно используется с JIT-компилятором, но также располагает полным статическим компилятором (заблаговременная компиляция), который используется на таких платформах, как iOS.</span><span class="sxs-lookup"><span data-stu-id="20dc8-146">Mono is typically used with a just-in-time compiler, but it also features a full static compiler (ahead-of-time compilation) that is used on platforms like iOS.</span></span>
 
-Дополнительные сведения о Mono см. в [соответствующей документации](http://www.mono-project.com/docs/).
+<span data-ttu-id="20dc8-147">Дополнительные сведения о Mono см. в [соответствующей документации](http://www.mono-project.com/docs/).</span><span class="sxs-lookup"><span data-stu-id="20dc8-147">To learn more about Mono, see the [Mono documentation](http://www.mono-project.com/docs/).</span></span>
 
-## <a name="net-tooling-and-common-infrastructure"></a>Инструменты для .NET и общая инфраструктура
+### <a name="universal-windows-platform-uwp"></a><span data-ttu-id="20dc8-148">Универсальная платформа Windows (UWP)</span><span class="sxs-lookup"><span data-stu-id="20dc8-148">Universal Windows Platform (UWP)</span></span>
 
-Инструменты для .NET одинаковые в каждой реализации .NET.  Они включают в себя, помимо прочих средств, следующее:
+<span data-ttu-id="20dc8-149">UWP представляет собой реализацию .NET, которая используется для создания современных приложений Windows с поддержкой сенсорного ввода и программного обеспечения для Интернета вещей (IoT).</span><span class="sxs-lookup"><span data-stu-id="20dc8-149">UWP is an implementation of .NET that is used for building modern, touch-enabled Windows applications and software for the Internet of Things (IoT).</span></span> <span data-ttu-id="20dc8-150">Она предназначена для объединения различных типов устройств, которые могут потребоваться, включая ПК, планшеты, планшетофоны, телефоны и даже Xbox.</span><span class="sxs-lookup"><span data-stu-id="20dc8-150">It's designed to unify the different types of devices that you may want to target, including PCs, tablets, phablets, phones, and even the Xbox.</span></span> <span data-ttu-id="20dc8-151">UWP предоставляет много служб, таких как централизованный магазин приложений, среда выполнения (AppContainer) и набор API-интерфейсов Windows для использования вместо Win32 (WinRT).</span><span class="sxs-lookup"><span data-stu-id="20dc8-151">UWP provides many services, such as a centralized app store, an execution environment (AppContainer), and a set of Windows APIs to use instead of Win32 (WinRT).</span></span> <span data-ttu-id="20dc8-152">Приложения могут быть написаны на C++, C#, VB.NET и JavaScript.</span><span class="sxs-lookup"><span data-stu-id="20dc8-152">Apps can be written in C++, C#, VB.NET, and JavaScript.</span></span> <span data-ttu-id="20dc8-153">При использовании C# и VB.NET API-интерфейсы .NET предоставляются .NET Core.</span><span class="sxs-lookup"><span data-stu-id="20dc8-153">When using C# and VB.NET, the .NET APIs are provided by .NET Core.</span></span>
 
-* языки .NET и соответствующие компиляторы;
-* компоненты среды выполнения, такие как JIT и сборщик мусора;
-* система проектов .NET (иногда называемая CSPROJ, VBPROJ или FSPROJ);
-* MSBuild, обработчик для сборки проектов;
-* NuGet, диспетчер пакетов корпорации Майкрософт для .NET;
-* CLI .NET, кроссплатформенный интерфейс командной строки для создания проектов .NET;
-* инструменты для управления сборкой с открытым исходным кодом, например CAKE и FAKE.
+<span data-ttu-id="20dc8-154">Дополнительные сведения о UWP см. в разделе [Введение в работу с универсальной платформой Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).</span><span class="sxs-lookup"><span data-stu-id="20dc8-154">To learn more about UWP, see [Intro to the Universal Windows Platform](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).</span></span>
 
-Таким образом, существует огромное количество инструментов и компонентов инфраструктуры, которые являются общими для любой среды выполнения .NET, используемой для создания приложений.
+## <a name="net-runtimes"></a><span data-ttu-id="20dc8-155">Среды выполнения .NET</span><span class="sxs-lookup"><span data-stu-id="20dc8-155">.NET runtimes</span></span>
 
-## <a name="next-steps"></a>Дальнейшие действия
+<span data-ttu-id="20dc8-156">Среда выполнения — это среда выполнения для управляемой программы.</span><span class="sxs-lookup"><span data-stu-id="20dc8-156">A runtime is the execution environment for a managed program.</span></span> <span data-ttu-id="20dc8-157">Операционная система является частью среды выполнения, но не входит в среду выполнения .NET.</span><span class="sxs-lookup"><span data-stu-id="20dc8-157">The OS is part of the runtime environment but is not part of the .NET runtime.</span></span> <span data-ttu-id="20dc8-158">Ниже приведены несколько примеров сред выполнения .NET.</span><span class="sxs-lookup"><span data-stu-id="20dc8-158">Here are some examples of .NET runtimes:</span></span>
+ 
+ - <span data-ttu-id="20dc8-159">Среда CLR для .NET Framework</span><span class="sxs-lookup"><span data-stu-id="20dc8-159">Common Language Runtime (CLR) for the .NET Framework</span></span>
+ - <span data-ttu-id="20dc8-160">Среда CoreCLR для .NET Core</span><span class="sxs-lookup"><span data-stu-id="20dc8-160">Core Common Language Runtime (CoreCLR) for .NET Core</span></span>
+ - <span data-ttu-id="20dc8-161">.NET Native для универсальной платформы Windows</span><span class="sxs-lookup"><span data-stu-id="20dc8-161">.NET Native for Universal Windows Platform</span></span> 
+ - <span data-ttu-id="20dc8-162">Среда выполнения Mono для Xamarin.iOS, Xamarin.Android, Xamarin.Mac и платформы Mono для рабочего стола</span><span class="sxs-lookup"><span data-stu-id="20dc8-162">The Mono runtime for Xamarin.iOS, Xamarin.Android, Xamarin.Mac, and the Mono desktop framework</span></span>
 
-Дополнительные сведения см. в следующих источниках:
+## <a name="net-tooling-and-common-infrastructure"></a><span data-ttu-id="20dc8-163">Инструменты для .NET и общая инфраструктура</span><span class="sxs-lookup"><span data-stu-id="20dc8-163">.NET tooling and common infrastructure</span></span>
 
-* [Библиотека .NET Standard](library.md)
-* [Руководство по .NET Core](../core/index.md)
-* [Руководство по .NET Framework](../framework/index.md)
-* [Руководство по языку C#](../csharp/index.md)
-* [Руководство по языку F#](../fsharp/index.md)
-* [Руководство по VB .NET](../visual-basic/index.md)
+<span data-ttu-id="20dc8-164">Вы можете использовать широкий набор средств и компонентов инфраструктуры, которые работают в каждой реализации платформы .NET.</span><span class="sxs-lookup"><span data-stu-id="20dc8-164">You have access to an extensive set of tools and infrastructure components that work with every implementation of .NET.</span></span> <span data-ttu-id="20dc8-165">Они включают в себя, помимо прочих средств, следующее:</span><span class="sxs-lookup"><span data-stu-id="20dc8-165">These include, but are not limited to the following:</span></span>
+
+- <span data-ttu-id="20dc8-166">языки .NET и соответствующие компиляторы;</span><span class="sxs-lookup"><span data-stu-id="20dc8-166">The .NET languages and their compilers</span></span>
+- <span data-ttu-id="20dc8-167">систему проектов .NET (на основе файлов *CSPROJ*, *VBPROJ* и *FSPROJ*);</span><span class="sxs-lookup"><span data-stu-id="20dc8-167">The .NET project system (based on *.csproj*, *.vbproj*, and *.fsproj* files)</span></span>
+- <span data-ttu-id="20dc8-168">[MSBuild](/visualstudio/msbuild/msbuild), обработчик для сборки проектов;</span><span class="sxs-lookup"><span data-stu-id="20dc8-168">[MSBuild](/visualstudio/msbuild/msbuild), the build engine used to build projects</span></span>
+- <span data-ttu-id="20dc8-169">[NuGet](/nuget/), диспетчер пакетов корпорации Майкрософт для .NET;</span><span class="sxs-lookup"><span data-stu-id="20dc8-169">[NuGet](/nuget/), Microsoft's package manager for .NET</span></span>
+- <span data-ttu-id="20dc8-170">инструменты для управления сборкой с открытым исходным кодом, например [CAKE](http://cakebuild.net/) и [FAKE](https://fake.build/).</span><span class="sxs-lookup"><span data-stu-id="20dc8-170">Open-source build orchestration tools, such as [CAKE](http://cakebuild.net/) and [FAKE](https://fake.build/)</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="20dc8-171">См. также</span><span class="sxs-lookup"><span data-stu-id="20dc8-171">See also</span></span>
+<span data-ttu-id="20dc8-172">[Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md) </span><span class="sxs-lookup"><span data-stu-id="20dc8-172">[Choosing between .NET Core and .NET Framework for server apps](choosing-core-framework-server.md) </span></span>  
+[<span data-ttu-id="20dc8-173">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="20dc8-173">.NET Standard</span></span>](net-standard.md)  
+[<span data-ttu-id="20dc8-174">Руководство по .NET Core</span><span class="sxs-lookup"><span data-stu-id="20dc8-174">.NET Core Guide</span></span>](../core/index.md)  
+[<span data-ttu-id="20dc8-175">Руководство по .NET Framework</span><span class="sxs-lookup"><span data-stu-id="20dc8-175">.NET Framework Guide</span></span>](../framework/index.md)  
+[<span data-ttu-id="20dc8-176">Руководство по языку C#</span><span class="sxs-lookup"><span data-stu-id="20dc8-176">C# Guide</span></span>](../csharp/index.md)  
+[<span data-ttu-id="20dc8-177">Руководство по языку F#</span><span class="sxs-lookup"><span data-stu-id="20dc8-177">F# Guide</span></span>](../fsharp/index.md)  
+[<span data-ttu-id="20dc8-178">Руководство по VB .NET</span><span class="sxs-lookup"><span data-stu-id="20dc8-178">VB.NET Guide</span></span>](../visual-basic/index.md)  
+
 

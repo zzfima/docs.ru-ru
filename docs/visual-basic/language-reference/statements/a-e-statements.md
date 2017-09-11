@@ -27,24 +27,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 82c97eae0ba9a41182b857a799303c1ce4f8053f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b6148e97de23ef7be9b3c26f40b3db10caed18a0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="a-e-statements"></a>Операторы A-E
-Следующая таблица содержит перечень [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] инструкции языка.  
+# <a name="a-e-statements"></a><span data-ttu-id="c926b-102">Операторы A-E</span><span class="sxs-lookup"><span data-stu-id="c926b-102">A-E Statements</span></span>
+<span data-ttu-id="c926b-103">Следующая таблица содержит перечень [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] инструкции языка.</span><span class="sxs-lookup"><span data-stu-id="c926b-103">The following table contains a listing of [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] language statements.</span></span>  
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[Вызов](../../../visual-basic/language-reference/statements/call-statement.md)|[Класс](../../../visual-basic/language-reference/statements/class-statement.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|  
-|[Продолжить](../../../visual-basic/language-reference/statements/continue-statement.md)|[Объявления](../../../visual-basic/language-reference/statements/declare-statement.md)|[Делегат](../../../visual-basic/language-reference/statements/delegate-statement.md)|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|  
-|[Сделать... Цикл](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[Конец](../../../visual-basic/language-reference/statements/end-statement.md)|[Конец \<ключевое слово настроек](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
-|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Стирание](../../../visual-basic/language-reference/statements/erase-statement.md)|[Ошибка](../../../visual-basic/language-reference/statements/error-statement.md)|[Событие](../../../visual-basic/language-reference/statements/event-statement.md)|  
-|[Выход](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
+|[<span data-ttu-id="c926b-104">AddHandler</span><span class="sxs-lookup"><span data-stu-id="c926b-104">AddHandler</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[<span data-ttu-id="c926b-105">Вызов</span><span class="sxs-lookup"><span data-stu-id="c926b-105">Call</span></span>](../../../visual-basic/language-reference/statements/call-statement.md)|[<span data-ttu-id="c926b-106">Класс</span><span class="sxs-lookup"><span data-stu-id="c926b-106">Class</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)|[<span data-ttu-id="c926b-107">Const</span><span class="sxs-lookup"><span data-stu-id="c926b-107">Const</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)|  
+|[<span data-ttu-id="c926b-108">Продолжить</span><span class="sxs-lookup"><span data-stu-id="c926b-108">Continue</span></span>](../../../visual-basic/language-reference/statements/continue-statement.md)|[<span data-ttu-id="c926b-109">Объявления</span><span class="sxs-lookup"><span data-stu-id="c926b-109">Declare</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)|[<span data-ttu-id="c926b-110">Делегат</span><span class="sxs-lookup"><span data-stu-id="c926b-110">Delegate</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)|[<span data-ttu-id="c926b-111">Dim</span><span class="sxs-lookup"><span data-stu-id="c926b-111">Dim</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)|  
+|[<span data-ttu-id="c926b-112">Сделать... Цикл</span><span class="sxs-lookup"><span data-stu-id="c926b-112">Do...Loop</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[<span data-ttu-id="c926b-113">Else</span><span class="sxs-lookup"><span data-stu-id="c926b-113">Else</span></span>](../../../visual-basic/language-reference/statements/else-statement.md)|[<span data-ttu-id="c926b-114">Конец</span><span class="sxs-lookup"><span data-stu-id="c926b-114">End</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)|[<span data-ttu-id="c926b-115">Конец \<ключевое слово настроек</span><span class="sxs-lookup"><span data-stu-id="c926b-115">End \<keyword></span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
+|[<span data-ttu-id="c926b-116">Enum</span><span class="sxs-lookup"><span data-stu-id="c926b-116">Enum</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)|[<span data-ttu-id="c926b-117">Стирание</span><span class="sxs-lookup"><span data-stu-id="c926b-117">Erase</span></span>](../../../visual-basic/language-reference/statements/erase-statement.md)|[<span data-ttu-id="c926b-118">Ошибка</span><span class="sxs-lookup"><span data-stu-id="c926b-118">Error</span></span>](../../../visual-basic/language-reference/statements/error-statement.md)|[<span data-ttu-id="c926b-119">Событие</span><span class="sxs-lookup"><span data-stu-id="c926b-119">Event</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)|  
+|[<span data-ttu-id="c926b-120">Выход</span><span class="sxs-lookup"><span data-stu-id="c926b-120">Exit</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   
-## <a name="see-also"></a>См. также  
- [Операторы F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)   
- [Операторы Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)   
- [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="c926b-121">См. также</span><span class="sxs-lookup"><span data-stu-id="c926b-121">See Also</span></span>  
+ <span data-ttu-id="c926b-122">[Операторы F-P](../../../visual-basic/language-reference/statements/f-p-statements.md) </span><span class="sxs-lookup"><span data-stu-id="c926b-122">[F-P Statements](../../../visual-basic/language-reference/statements/f-p-statements.md) </span></span>  
+<span data-ttu-id="c926b-123"> [Операторы Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md) </span><span class="sxs-lookup"><span data-stu-id="c926b-123"> [Q-Z Statements](../../../visual-basic/language-reference/statements/q-z-statements.md) </span></span>  
+<span data-ttu-id="c926b-124"> [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)</span><span class="sxs-lookup"><span data-stu-id="c926b-124"> [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)</span></span>

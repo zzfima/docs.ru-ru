@@ -1,1 +1,1 @@
-Microsoft Windows Server 2003 с пакетом обновления 1 (SP1)
+<span data-ttu-id="7de2f-101">Microsoft Windows Server 2003 с пакетом обновления 1 (SP1)</span><span class="sxs-lookup"><span data-stu-id="7de2f-101">Microsoft Windows Server 2003 (SP1)</span></span>

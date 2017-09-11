@@ -1,1 +1,1 @@
-Дополнительные сведения о
+<span data-ttu-id="255f9-101">Дополнительные сведения о</span><span class="sxs-lookup"><span data-stu-id="255f9-101">For more information about</span></span>

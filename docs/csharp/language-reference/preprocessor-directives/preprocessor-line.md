@@ -1,26 +1,45 @@
 ---
-title: "#line (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#line"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#line - директива [C#]"
+title: "#<a name=\"line-c-reference\"></a>line (справочник по C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#line'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# #line (Справочник по C#)
-`#line` позволяет изменить номер строки компилятора и \(необязательно\) вывод имени файла для ошибок и предупреждений.  В этом примере показано как сообщить о двух предупреждениях, связанных с номерами строк.  Директива `#line 200` принудительно задает для номера строки значение 200 \(хотя по умолчанию это строка № 7\), до появления следующей директивы \#line имя файла во всех сообщениях будет указываться как "Special".  Директива \#line восстанавливает нумерацию строк по умолчанию, в которой учитываются строки, перенумерованные предыдущей директивой.  
+# <a name="line-c-reference"></a><span data-ttu-id="8bcb6-102">#line (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8bcb6-102">#line (C# Reference)</span></span>
+<span data-ttu-id="8bcb6-103">Директива `#line` позволяет изменять номер строки компилятора и при необходимости имя файла, в который будут выводиться ошибки и предупреждения.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-103">`#line` lets you modify the compiler's line number and (optionally) the file name output for errors and warnings.</span></span> <span data-ttu-id="8bcb6-104">В этом примере показано, как включить в отчет два предупреждения, связанные с номерами строк.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-104">This example shows how to report two warnings associated with line numbers.</span></span> <span data-ttu-id="8bcb6-105">Директива `#line 200` принудительно устанавливает номер строки 200 (по умолчанию используется номер 7). До выполнения следующей директивы #line в отчете будет указываться имя файла "Special".</span><span class="sxs-lookup"><span data-stu-id="8bcb6-105">The `#line 200` directive forces the line number to be 200 (although the default is #7) and until the next #line directive, the filename will be reported as "Special".</span></span> <span data-ttu-id="8bcb6-106">Директива #line по умолчанию восстанавливает нумерацию строк в исходное состояние с учетом строк, номера которых были изменены с помощью предшествующей директивы.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-106">The #line default directive returns the line numbering to its default numbering, which counts the lines that were renumbered by the previous directive.</span></span>  
   
-```  
+```csharp
 class MainClass  
 {  
     static void Main()  
@@ -38,21 +57,21 @@ class MainClass
 }  
 ```  
   
-## Заметки  
- Директиву `#line` можно использовать в автоматизированном, промежуточном шаге в процессе построения.  Например, если строки были удалены из первого файла с исходным кодом, но компилятор по\-прежнему должен выдавать результат на основе исходной нумерации строк в файле, строки можно удалить и затем смоделировать исходную нумерацию строк с помощью `#line`.  
+## <a name="remarks"></a><span data-ttu-id="8bcb6-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="8bcb6-107">Remarks</span></span>  
+ <span data-ttu-id="8bcb6-108">Директива `#line` может использоваться на автоматизированном промежуточном этапе процесса построения.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-108">The `#line` directive might be used in an automated, intermediate step in the build process.</span></span> <span data-ttu-id="8bcb6-109">Например, если строки были удалены из первоначального файла с исходным кодом, но вам по-прежнему требуется создавать выходные файлы компилятора на основе изначальной нумерации строк в файле, можно удалить строки и затем смоделировать их первичную нумерацию с помощью директивы `#line`.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-109">For example, if lines were removed from the original source code file, but you still wanted the compiler to generate output based on the original line numbering in the file, you could remove lines and then simulate the original line numbering with `#line`.</span></span>  
   
- Директива `#line hidden` скрывает последовательные строки от отладчика так, что когда разработчик переходит по коду, любые строки между `#line hidden` и следующей директивой `#line` \(если, конечно, это не другая директива `#line hidden`\) будут пропущены.  Эту возможность можно также использовать для того, чтобы ASP.NET различал пользовательский и созданный компьютером код.  Несмотря на то, что в основном эта возможность используется ASP.NET, существует вероятность, что она будет использоваться большим числом генераторов исходного кода.  
+ <span data-ttu-id="8bcb6-110">Директива `#line hidden` скрывает последующие строки для отладчика. В этом случае при пошаговой проверке кода разработчиком все строки между `#line hidden` и следующей директивой `#line` (кроме случаев, когда это также директива `#line hidden`) будут пропущены.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-110">The `#line hidden` directive hides the successive lines from the debugger, such that when the developer steps through the code, any lines between a `#line hidden` and the next `#line` directive (assuming that it is not another `#line hidden` directive) will be stepped over.</span></span> <span data-ttu-id="8bcb6-111">Этот параметр также можно использовать для того, чтобы дать ASP.NET возможность различать определяемый пользователем и создаваемый компьютером код.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-111">This option can also be used to allow ASP.NET to differentiate between user-defined and machine-generated code.</span></span> <span data-ttu-id="8bcb6-112">В основном эта функция используется в ASP.NET, но также может быть полезна и в других генераторах исходного кода.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-112">Although ASP.NET is the primary consumer of this feature, it is likely that more source generators will make use of it.</span></span>  
   
- Директива `#line hidden` не влияет на имена файлов или номера строк при создании сообщений об ошибках.  То есть, в случае ошибки в скрытом блоке компилятор сообщит имя текущего файла и номер строки с ошибкой.  
+ <span data-ttu-id="8bcb6-113">Директива `#line hidden` не влияет на имена файлов и номера строк в отчетах об ошибках.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-113">A `#line hidden` directive does not affect file names or line numbers in error reporting.</span></span> <span data-ttu-id="8bcb6-114">Это значит, что при обнаружении ошибки в скрытом блоке компилятор укажет в отчете текущие имя файла и номер строки, где найдена ошибка.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-114">That is, if an error is encountered in a hidden block, the compiler will report the current file name and line number of the error.</span></span>  
   
- Директива `#line filename` определяет имя файла, которое должно присутствовать в результатах компилятора.  По умолчанию используется фактическое имя файла с исходным кодом.  Имя файла необходимо заключить в двойные кавычки \(""\), и ему должен предшествовать номер строки.  
+ <span data-ttu-id="8bcb6-115">Директива `#line filename` задает имя файла, которое будет отображаться в выходных данных компилятора.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-115">The `#line filename` directive specifies the file name you want to appear in the compiler output.</span></span> <span data-ttu-id="8bcb6-116">По умолчанию используется фактическое имя файла с исходным кодом.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-116">By default, the actual name of the source code file is used.</span></span> <span data-ttu-id="8bcb6-117">Имя файла должно заключаться в двойные кавычки (" "). Перед ним должен указываться номер строки.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-117">The file name must be in double quotation marks ("") and must be preceded by a line number.</span></span>  
   
- В файле исходного кода может присутствовать любое число директив `#line`.  
+ <span data-ttu-id="8bcb6-118">Файл с исходным кодом может содержать любое количество директив `#line`.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-118">A source code file can have any number of `#line` directives.</span></span>  
   
-## Пример 1  
- Следующий пример демонстрирует как отладчик пропускает скрытые строки в коде.  При выполнении примера выводятся три строки текста.  Однако, если задать точку останова \(как показано в примере\) и нажать клавишу F10 для перехода по коду, то можно будет заметить, что отладчик пропускает скрытую строку.  Кроме того, обратите внимание, что даже если в скрытой строке установить точку останова, она все равно будет пропущена отладчиком.  
+## <a name="example-1"></a><span data-ttu-id="8bcb6-119">Пример 1</span><span class="sxs-lookup"><span data-stu-id="8bcb6-119">Example 1</span></span>  
+ <span data-ttu-id="8bcb6-120">В следующем примере демонстрируется, как отладчик игнорирует скрытые строки кода.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-120">The following example shows how the debugger ignores the hidden lines in the code.</span></span> <span data-ttu-id="8bcb6-121">При выполнении этого примера будут показаны три строки текста.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-121">When you run the example, it will display three lines of text.</span></span> <span data-ttu-id="8bcb6-122">Тем не менее, если задать точку останова, как показано в этом примере, и нажать клавишу F10 для пошаговой отладки кода, вы увидите, что отладчик игнорирует скрытую строку.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-122">However, when you set a break point, as shown in the example, and hit F10 to step through the code, you will notice that the debugger ignores the hidden line.</span></span> <span data-ttu-id="8bcb6-123">Обратите внимание, что даже если точка останова установлена на скрытой строке, отладчик по-прежнему будет игнорировать ее.</span><span class="sxs-lookup"><span data-stu-id="8bcb6-123">Notice also that even if you set a break point at the hidden line, the debugger will still ignore it.</span></span>  
   
-```  
+```csharp
 // preprocessor_linehidden.cs  
 using System;  
 class MainClass   
@@ -68,7 +87,8 @@ class MainClass
 }  
 ```  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Директивы препроцессора C\#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="8bcb6-124">См. также</span><span class="sxs-lookup"><span data-stu-id="8bcb6-124">See Also</span></span>  
+ <span data-ttu-id="8bcb6-125">[Справочник по C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="8bcb6-125">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="8bcb6-126">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="8bcb6-126">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="8bcb6-127">Директивы препроцессора C#</span><span class="sxs-lookup"><span data-stu-id="8bcb6-127">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+

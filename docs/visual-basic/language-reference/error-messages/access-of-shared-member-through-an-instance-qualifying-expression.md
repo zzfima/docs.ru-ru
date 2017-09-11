@@ -31,28 +31,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 39be3c95d5acc20afe3a33be9d4db48c09f99a9c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 49dc785131e257b19d0d1d57627ccb6cf8a3c63e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Доступ к общему члену через экземпляр; выражение уточнения не вычисляется
-Экземпляр переменной класса или структуры используется для доступа к `Shared` переменной, свойства, процедуры или события, определенного в классе или структуре. Это предупреждение может возникать, если переменная экземпляра используется для доступа к неявному общему члену класса или структуры, например, константа или перечисление, или вложенного класса или структуры.  
+# <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a><span data-ttu-id="edc2a-102">Доступ к общему члену через экземпляр; выражение уточнения не вычисляется</span><span class="sxs-lookup"><span data-stu-id="edc2a-102">Access of shared member through an instance; qualifying expression will not be evaluated</span></span>
+<span data-ttu-id="edc2a-103">Экземпляр переменной класса или структуры используется для доступа к `Shared` переменной, свойства, процедуры или события, определенного в классе или структуре.</span><span class="sxs-lookup"><span data-stu-id="edc2a-103">An instance variable of a class or structure is used to access a `Shared` variable, property, procedure, or event defined in that class or structure.</span></span> <span data-ttu-id="edc2a-104">Это предупреждение может возникать, если переменная экземпляра используется для доступа к неявному общему члену класса или структуры, например, константа или перечисление, или вложенного класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="edc2a-104">This warning can also occur if an instance variable is used to access an implicitly shared member of a class or structure, such as a constant or enumeration, or a nested class or structure.</span></span>  
   
- Совместное использование членов предназначен для создания только одной копии этого члена и доступность этой копии для каждого экземпляра класса или структуры, в котором она объявлена. Совместимо с этой целью для доступа к `Shared` член через имя класса или структуры, а не через переменную, содержащую отдельный экземпляр этого класса или структуры.  
+ <span data-ttu-id="edc2a-105">Совместное использование членов предназначен для создания только одной копии этого члена и доступность этой копии для каждого экземпляра класса или структуры, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="edc2a-105">The purpose of sharing a member is to create only a single copy of that member and make that single copy available to every instance of the class or structure in which it is declared.</span></span> <span data-ttu-id="edc2a-106">Совместимо с этой целью для доступа к `Shared` член через имя класса или структуры, а не через переменную, содержащую отдельный экземпляр этого класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="edc2a-106">It is consistent with this purpose to access a `Shared` member through the name of its class or structure, rather than through a variable that holds an individual instance of that class or structure.</span></span>  
   
- Доступ к `Shared` члену через экземпляр переменной делает код более трудным для понимания, поскольку этот член является `Shared`. Кроме того, если такой доступ является частью выражения, которое производит другие действия, такие как `Function` процедура, которая возвращает экземпляр общего члена [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] пропустит выражения и любые другие действия, в противном случае он будет выполнять.  
+ <span data-ttu-id="edc2a-107">Доступ к `Shared` члену через экземпляр переменной делает код более трудным для понимания, поскольку этот член является `Shared`.</span><span class="sxs-lookup"><span data-stu-id="edc2a-107">Accessing a `Shared` member through an instance variable can make your code more difficult to understand by obscuring the fact that the member is `Shared`.</span></span> <span data-ttu-id="edc2a-108">Кроме того, если такой доступ является частью выражения, которое производит другие действия, такие как `Function` процедура, которая возвращает экземпляр общего члена [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] пропустит выражения и любые другие действия, в противном случае он будет выполнять.</span><span class="sxs-lookup"><span data-stu-id="edc2a-108">Furthermore, if such access is part of an expression that performs other actions, such as a `Function` procedure that returns an instance of the shared member, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] bypasses the expression and any other actions it would otherwise perform.</span></span>  
   
- Дополнительные сведения и пример см. в разделе [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
+ <span data-ttu-id="edc2a-109">Дополнительные сведения и пример см. в разделе [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span><span class="sxs-lookup"><span data-stu-id="edc2a-109">For more information and an example, see [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span></span>  
   
- По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="edc2a-110">По умолчанию данное сообщение является предупреждением.</span><span class="sxs-lookup"><span data-stu-id="edc2a-110">By default, this message is a warning.</span></span> <span data-ttu-id="edc2a-111">Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="edc2a-111">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **Идентификатор ошибки:** BC42025  
+ <span data-ttu-id="edc2a-112">**Идентификатор ошибки:** BC42025</span><span class="sxs-lookup"><span data-stu-id="edc2a-112">**Error ID:** BC42025</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="edc2a-113">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="edc2a-113">To correct this error</span></span>  
   
--   Используйте имя класса или структуры, определяющей `Shared` элемента к нему доступ, как показано в следующем примере.  
+-   <span data-ttu-id="edc2a-114">Используйте имя класса или структуры, определяющей `Shared` элемента к нему доступ, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="edc2a-114">Use the name of the class or structure that defines the `Shared` member to access it, as shown in the following example.</span></span>  
   
 ```vb  
 Public Class testClass  
@@ -76,8 +77,8 @@ End Module
 ```  
   
 > [!NOTE]
->  Будьте внимательны эффектов области при двух элементы программирования могут иметь то же имя. В предыдущем примере, если объявить экземпляр с помощью `Dim testClass as testClass = Nothing`, компилятор обрабатывает вызов `testClass.sayHello()` как доступ метода посредством имени класса и предупреждение не возникает.  
+>  <span data-ttu-id="edc2a-115">Будьте внимательны эффектов области при двух элементы программирования могут иметь то же имя.</span><span class="sxs-lookup"><span data-stu-id="edc2a-115">Be alert for the effects of scope when two programming elements have the same name.</span></span> <span data-ttu-id="edc2a-116">В предыдущем примере, если объявить экземпляр с помощью `Dim testClass as testClass = Nothing`, компилятор обрабатывает вызов `testClass.sayHello()` как доступ метода посредством имени класса и предупреждение не возникает.</span><span class="sxs-lookup"><span data-stu-id="edc2a-116">In the previous example, if you declare an instance by using `Dim testClass as testClass = Nothing`, the compiler treats a call to `testClass.sayHello()` as an access of the method through the class name, and no warning occurs.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Общие](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Область видимости в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a><span data-ttu-id="edc2a-117">См. также</span><span class="sxs-lookup"><span data-stu-id="edc2a-117">See Also</span></span>  
+ <span data-ttu-id="edc2a-118">[Общие](../../../visual-basic/language-reference/modifiers/shared.md) </span><span class="sxs-lookup"><span data-stu-id="edc2a-118">[Shared](../../../visual-basic/language-reference/modifiers/shared.md) </span></span>  
+<span data-ttu-id="edc2a-119"> [Область видимости в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)</span><span class="sxs-lookup"><span data-stu-id="edc2a-119"> [Scope in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)</span></span>

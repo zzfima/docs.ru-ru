@@ -1,1 +1,1 @@
-Программа UI Spy
+<span data-ttu-id="95705-101">Программа UI Spy</span><span class="sxs-lookup"><span data-stu-id="95705-101">UI Spy</span></span>

@@ -1,1 +1,1 @@
-Документ формата XPS (XML Paper Specification)
+<span data-ttu-id="4d58a-101">Документ формата XPS (XML Paper Specification)</span><span class="sxs-lookup"><span data-stu-id="4d58a-101">XML Paper Specification (XPS) document</span></span>

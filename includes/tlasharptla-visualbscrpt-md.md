@@ -1,1 +1,1 @@
-Язык скриптов Microsoft VBScript (Microsoft Visual Basic Scripting Edition)
+<span data-ttu-id="379c6-101">Язык скриптов Microsoft VBScript (Microsoft Visual Basic Scripting Edition)</span><span class="sxs-lookup"><span data-stu-id="379c6-101">Microsoft Visual Basic Scripting Edition (VBScript)</span></span>

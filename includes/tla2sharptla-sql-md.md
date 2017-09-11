@@ -1,1 +1,1 @@
-SQL-код
+<span data-ttu-id="a9f7a-101">SQL-код</span><span class="sxs-lookup"><span data-stu-id="a9f7a-101">SQL</span></span>

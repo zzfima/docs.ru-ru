@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4763eccc5d1a6bdf3e89c1c4d825d5ff5c6caa3e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ac1e017ae13fc1291fd41e5747171160a9d70238
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Доступ к атрибутам с помощью отражения (Visual Basic)
-Тот факт, что можно определять настраиваемые атрибуты и поместить их в исходный код будет мало пользы, без какой-либо способ извлечения этих сведений и работы с ними. С помощью отражения, можно получить информацию, которая была определена с настраиваемыми атрибутами. Основной метод — `GetCustomAttributes`, который возвращает массив объектов, которые являются эквивалентами времени выполнения атрибутов исходного кода. Этот метод имеет несколько перегруженных версий. Дополнительные сведения см. в разделе <xref:System.Attribute>.</xref:System.Attribute>  
+# <a name="accessing-attributes-by-using-reflection-visual-basic"></a><span data-ttu-id="15b28-102">Доступ к атрибутам с помощью отражения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="15b28-102">Accessing Attributes by Using Reflection (Visual Basic)</span></span>
+<span data-ttu-id="15b28-103">Тот факт, что можно определять настраиваемые атрибуты и поместить их в исходный код будет мало пользы, без какой-либо способ извлечения этих сведений и работы с ними.</span><span class="sxs-lookup"><span data-stu-id="15b28-103">The fact that you can define custom attributes and place them in your source code would be of little value without some way of retrieving that information and acting on it.</span></span> <span data-ttu-id="15b28-104">С помощью отражения, можно получить информацию, которая была определена с настраиваемыми атрибутами.</span><span class="sxs-lookup"><span data-stu-id="15b28-104">By using reflection, you can retrieve the information that was defined with custom attributes.</span></span> <span data-ttu-id="15b28-105">Основной метод — `GetCustomAttributes`, который возвращает массив объектов, которые являются эквивалентами времени выполнения атрибутов исходного кода.</span><span class="sxs-lookup"><span data-stu-id="15b28-105">The key method is `GetCustomAttributes`, which returns an array of objects that are the run-time equivalents of the source code attributes.</span></span> <span data-ttu-id="15b28-106">Этот метод имеет несколько перегруженных версий.</span><span class="sxs-lookup"><span data-stu-id="15b28-106">This method has several overloaded versions.</span></span> <span data-ttu-id="15b28-107">Дополнительные сведения см. в разделе <xref:System.Attribute>.</xref:System.Attribute></span><span class="sxs-lookup"><span data-stu-id="15b28-107">For more information, see <xref:System.Attribute>.</span></span>  
   
- Спецификация атрибута, например:  
+ <span data-ttu-id="15b28-108">Спецификация атрибута, например:</span><span class="sxs-lookup"><span data-stu-id="15b28-108">An attribute specification such as:</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -38,17 +39,17 @@ Class SampleClass
 End Class  
 ```  
   
- эквивалентен концептуально это:  
+ <span data-ttu-id="15b28-109">эквивалентен концептуально это:</span><span class="sxs-lookup"><span data-stu-id="15b28-109">is conceptually equivalent to this:</span></span>  
   
 ```vb  
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")  
 anonymousAuthorObject.version = 1.1  
 ```  
   
- Тем не менее, код не выполняется до `SampleClass` запрос по атрибутам. Вызов `GetCustomAttributes` на `SampleClass` вызывает `Author` объект создается и инициализируется как описано выше. Если класс имеет другие атрибуты, другие объекты атрибута создаются аналогично. `GetCustomAttributes`Возвращает `Author` объектом и другими объектами атрибута в массив. Затем можно перейти по этому массиву, определить, какие атрибуты были применены на основе типа элемента массива и извлечь сведения из объектов.  
+ <span data-ttu-id="15b28-110">Тем не менее, код не выполняется до `SampleClass` запрос по атрибутам.</span><span class="sxs-lookup"><span data-stu-id="15b28-110">However, the code is not executed until `SampleClass` is queried for attributes.</span></span> <span data-ttu-id="15b28-111">Вызов `GetCustomAttributes` на `SampleClass` вызывает `Author` объект создается и инициализируется как описано выше.</span><span class="sxs-lookup"><span data-stu-id="15b28-111">Calling `GetCustomAttributes` on `SampleClass` causes an `Author` object to be constructed and initialized as above.</span></span> <span data-ttu-id="15b28-112">Если класс имеет другие атрибуты, другие объекты атрибута создаются аналогично.</span><span class="sxs-lookup"><span data-stu-id="15b28-112">If the class has other attributes, other attribute objects are constructed similarly.</span></span> <span data-ttu-id="15b28-113">`GetCustomAttributes`Возвращает `Author` объектом и другими объектами атрибута в массив.</span><span class="sxs-lookup"><span data-stu-id="15b28-113">`GetCustomAttributes` then returns the `Author` object and any other attribute objects in an array.</span></span> <span data-ttu-id="15b28-114">Затем можно перейти по этому массиву, определить, какие атрибуты были применены на основе типа элемента массива и извлечь сведения из объектов.</span><span class="sxs-lookup"><span data-stu-id="15b28-114">You can then iterate over this array, determine what attributes were applied based on the type of each array element, and extract information from the attribute objects.</span></span>  
   
-## <a name="example"></a>Пример  
- Ниже приведен полный пример. Настраиваемый атрибут определен, применяется к нескольким сущностям и извлекается через отражение.  
+## <a name="example"></a><span data-ttu-id="15b28-115">Пример</span><span class="sxs-lookup"><span data-stu-id="15b28-115">Example</span></span>  
+ <span data-ttu-id="15b28-116">Ниже приведен полный пример.</span><span class="sxs-lookup"><span data-stu-id="15b28-116">Here is a complete example.</span></span> <span data-ttu-id="15b28-117">Настраиваемый атрибут определен, применяется к нескольким сущностям и извлекается через отражение.</span><span class="sxs-lookup"><span data-stu-id="15b28-117">A custom attribute is defined, applied to several entities, and retrieved via reflection.</span></span>  
   
 ```vb  
 ' Multiuse attribute  
@@ -116,11 +117,11 @@ Class TestAuthorAttribute
 End Class  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Извлечение информации, сохраненной в атрибуте](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)   
- [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [Создание настраиваемых атрибутов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+## <a name="see-also"></a><span data-ttu-id="15b28-118">См. также</span><span class="sxs-lookup"><span data-stu-id="15b28-118">See Also</span></span>  
+ <span data-ttu-id="15b28-119"><xref:System.Reflection></xref:System.Reflection></span><span class="sxs-lookup"><span data-stu-id="15b28-119"><xref:System.Reflection></span></span>   
+ <span data-ttu-id="15b28-120"><xref:System.Attribute></xref:System.Attribute></span><span class="sxs-lookup"><span data-stu-id="15b28-120"><xref:System.Attribute></span></span>   
+<span data-ttu-id="15b28-121"> [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="15b28-121"> [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md) </span></span>  
+<span data-ttu-id="15b28-122"> [Извлечение информации, сохраненной в атрибуте](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c) </span><span class="sxs-lookup"><span data-stu-id="15b28-122"> [Retrieving Information Stored in Attributes](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c) </span></span>  
+<span data-ttu-id="15b28-123"> [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) </span><span class="sxs-lookup"><span data-stu-id="15b28-123"> [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) </span></span>  
+<span data-ttu-id="15b28-124"> [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md) </span><span class="sxs-lookup"><span data-stu-id="15b28-124"> [Attributes (Visual Basic)](../../../../visual-basic/language-reference/attributes.md) </span></span>  
+<span data-ttu-id="15b28-125"> [Создание настраиваемых атрибутов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)</span><span class="sxs-lookup"><span data-stu-id="15b28-125"> [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)</span></span>

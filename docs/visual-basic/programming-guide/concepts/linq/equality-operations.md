@@ -20,22 +20,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5736403a7486b2721dd0a3c68db9af213e0b1452
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 05770c86df22220507087f54c9db07dc7f7a74b3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="equality-operations-visual-basic"></a>Операции равенства (Visual Basic)
-Две последовательности, соответствующие элементы совпадают и имеют одинаковое количество элементов, считаются равными.  
+# <a name="equality-operations-visual-basic"></a><span data-ttu-id="18f9a-102">Операции равенства (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="18f9a-102">Equality Operations (Visual Basic)</span></span>
+<span data-ttu-id="18f9a-103">Две последовательности, соответствующие элементы совпадают и имеют одинаковое количество элементов, считаются равными.</span><span class="sxs-lookup"><span data-stu-id="18f9a-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  
   
-## <a name="methods"></a>Методы  
+## <a name="methods"></a><span data-ttu-id="18f9a-104">Методы</span><span class="sxs-lookup"><span data-stu-id="18f9a-104">Methods</span></span>  
   
-|Имя метода|Описание|Синтаксис выражения запроса для Visual Basic|Дополнительные сведения|  
+|<span data-ttu-id="18f9a-105">Имя метода</span><span class="sxs-lookup"><span data-stu-id="18f9a-105">Method Name</span></span>|<span data-ttu-id="18f9a-106">Описание</span><span class="sxs-lookup"><span data-stu-id="18f9a-106">Description</span></span>|<span data-ttu-id="18f9a-107">Синтаксис выражения запроса для Visual Basic</span><span class="sxs-lookup"><span data-stu-id="18f9a-107">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="18f9a-108">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="18f9a-108">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|SequenceEqual|Определяет, равны ли две последовательности, попарного сравнения элементов.|Неприменимо.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|<span data-ttu-id="18f9a-109">SequenceEqual</span><span class="sxs-lookup"><span data-stu-id="18f9a-109">SequenceEqual</span></span>|<span data-ttu-id="18f9a-110">Определяет, равны ли две последовательности, попарного сравнения элементов.</span><span class="sxs-lookup"><span data-stu-id="18f9a-110">Determines whether two sequences are equal by comparing elements in a pair-wise manner.</span></span>|<span data-ttu-id="18f9a-111">Неприменимо.</span><span class="sxs-lookup"><span data-stu-id="18f9a-111">Not applicable.</span></span>|<span data-ttu-id="18f9a-112"><xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="18f9a-112"><xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></span></span><br /><br /> <span data-ttu-id="18f9a-113"><xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="18f9a-113"><xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></span></span>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq></xref:System.Linq>   
- [Общие сведения о стандартных операторах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Практическое руководство: сравнение содержимого двух папок (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+## <a name="see-also"></a><span data-ttu-id="18f9a-114">См. также</span><span class="sxs-lookup"><span data-stu-id="18f9a-114">See Also</span></span>  
+ <span data-ttu-id="18f9a-115"><xref:System.Linq></xref:System.Linq></span><span class="sxs-lookup"><span data-stu-id="18f9a-115"><xref:System.Linq></span></span>   
+<span data-ttu-id="18f9a-116"> [Общие сведения о стандартных операторах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md) </span><span class="sxs-lookup"><span data-stu-id="18f9a-116"> [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md) </span></span>  
+<span data-ttu-id="18f9a-117"> [Практическое руководство: сравнение содержимого двух папок (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)</span><span class="sxs-lookup"><span data-stu-id="18f9a-117"> [How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)</span></span>

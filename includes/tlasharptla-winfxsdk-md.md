@@ -1,1 +1,1 @@
-Windows SDK
+<span data-ttu-id="56176-101">Windows SDK</span><span class="sxs-lookup"><span data-stu-id="56176-101">Windows Software Development Kit (SDK)</span></span>

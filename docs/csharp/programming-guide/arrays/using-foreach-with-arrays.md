@@ -1,36 +1,56 @@
 ---
-title: "Использование оператора foreach с массивами (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "массивы [C#], foreach"
-  - "foreach - оператор [C#], использование с массивами"
+title: "Использование оператора foreach с массивами (Руководство по программированию на C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- arrays [C#], foreach
+- foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
 caps.latest.revision: 14
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a1d0b704233b110b5f499b8186a4a901f9b5408f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Использование оператора foreach с массивами (Руководство по программированию на C#)
-В C\# также предусмотрен оператор [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  Этот оператор обеспечивает простой и понятный способ итерации по элементам массива или любой перечислимой коллекции.  Оператор `foreach` обрабатывает элементы в порядке, возвращенном массивом или перечислителем типа коллекции, обычно от нулевого до последнего элемента.  Например, следующий код создает массив `numbers` и осуществляет итерацию по нему с помощью оператора `foreach`.  
+# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="147e6-102">Использование оператора foreach с массивами (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="147e6-102">Using foreach with Arrays (C# Programming Guide)</span></span>
+<span data-ttu-id="147e6-103">В C# также предусмотрен оператор [foreach](../../../csharp/language-reference/keywords/foreach-in.md).</span><span class="sxs-lookup"><span data-stu-id="147e6-103">C# also provides the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="147e6-104">Этот оператор обеспечивает простой и понятный способ итерации по элементам массива или любой перечислимой коллекции.</span><span class="sxs-lookup"><span data-stu-id="147e6-104">This statement provides a simple, clean way to iterate through the elements of an array or any enumerable collection.</span></span> <span data-ttu-id="147e6-105">Оператор `foreach` обрабатывает элементы в порядке, возвращенном массивом или перечислителем типа коллекции, обычно от нулевого до последнего элемента.</span><span class="sxs-lookup"><span data-stu-id="147e6-105">The `foreach` statement processes elements in the order returned by the array or collection type’s enumerator, which is usually from the 0th element to the last.</span></span> <span data-ttu-id="147e6-106">Например, следующий код создает массив `numbers` и осуществляет итерацию по нему с помощью оператора `foreach`.</span><span class="sxs-lookup"><span data-stu-id="147e6-106">For example, the following code creates an array called `numbers` and iterates through it with the `foreach` statement:</span></span>  
   
- [!code-cs[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
+ <span data-ttu-id="147e6-107">[!code-cs[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="147e6-107">[!code-cs[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]</span></span>  
   
- Этот же метод можно использовать для итерации по элементам в многомерных массивах, например:  
+ <span data-ttu-id="147e6-108">Этот же метод можно использовать для итерации по элементам в многомерных массивах, например:</span><span class="sxs-lookup"><span data-stu-id="147e6-108">With multidimensional arrays, you can use the same method to iterate through the elements, for example:</span></span>  
   
- [!code-cs[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
+ <span data-ttu-id="147e6-109">[!code-cs[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="147e6-109">[!code-cs[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]</span></span>  
   
- Однако для лучшего управления элементами в многомерных массивах можно использовать вложенный цикл [for](../../../csharp/language-reference/keywords/for.md).  
+ <span data-ttu-id="147e6-110">Однако для лучшего управления элементами в многомерных массивах можно использовать вложенный цикл [for](../../../csharp/language-reference/keywords/for.md).</span><span class="sxs-lookup"><span data-stu-id="147e6-110">However, with multidimensional arrays, using a nested [for](../../../csharp/language-reference/keywords/for.md) loop gives you more control over the array elements.</span></span>  
   
-## См. также  
- <xref:System.Array>   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Массивы](../../../csharp/programming-guide/arrays/index.md)   
- [Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)   
- [Массивы массивов](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a><span data-ttu-id="147e6-111">См. также</span><span class="sxs-lookup"><span data-stu-id="147e6-111">See Also</span></span>  
+ <span data-ttu-id="147e6-112"><xref:System.Array></span><span class="sxs-lookup"><span data-stu-id="147e6-112"><xref:System.Array></span></span>   
+ <span data-ttu-id="147e6-113">[Руководство по программированию на C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="147e6-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="147e6-114">[Массивы](../../../csharp/programming-guide/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="147e6-114">[Arrays](../../../csharp/programming-guide/arrays/index.md) </span></span>  
+ <span data-ttu-id="147e6-115">[Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md) </span><span class="sxs-lookup"><span data-stu-id="147e6-115">[Single-Dimensional Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md) </span></span>  
+ <span data-ttu-id="147e6-116">[Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) </span><span class="sxs-lookup"><span data-stu-id="147e6-116">[Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) </span></span>  
+ [<span data-ttu-id="147e6-117">Массивы массивов</span><span class="sxs-lookup"><span data-stu-id="147e6-117">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+

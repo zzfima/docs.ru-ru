@@ -1,82 +1,71 @@
 ---
-title: "О платформе .NET"
+title: "Руководство по платформе .NET"
 description: "См. дополнительные сведения о платформе .NET Framework."
 keywords: .NET, .NET Core
-author: richlander
+author: cartermp
 ms.author: ronpet
-ms.date: 10/31/2016
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
-ms.sourcegitcommit: 7bbd8f5d94127b35697ad267b2661da2c757aa20
-ms.openlocfilehash: 0fbe1dda72ad666304f5c817f4bfd477c3e81d83
-ms.lasthandoff: 04/06/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/05/2017
 
 ---
 
-# <a name="net-platform-guide"></a>Руководство по платформе .NET
+# <a name="net-guide"></a><span data-ttu-id="c89ba-104">Руководство по .NET</span><span class="sxs-lookup"><span data-stu-id="c89ba-104">.NET Guide</span></span>
 
-> [!NOTE]
-> Ознакомьтесь с учебниками [Начало работы с .NET Core](../core/getting-started.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут.
+<span data-ttu-id="c89ba-105">Руководство по .NET содержит большой объем информации о .NET.</span><span class="sxs-lookup"><span data-stu-id="c89ba-105">The .NET Guide provides a large amount of information about .NET.</span></span>  <span data-ttu-id="c89ba-106">В зависимости от вашего уровня знаний в области .NET вы можете изучить различные разделы данного руководства, а также другие разделы документации по .NET.</span><span class="sxs-lookup"><span data-stu-id="c89ba-106">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other sections of the .NET documentation.</span></span>
 
-.NET — это платформа разработки общего назначения. Ее можно использовать для любых типов приложений и рабочих нагрузок, где применяются универсальные решения. В ней есть ряд ключевых особенностей, которые высоко ценятся многими разработчиками, включая автоматическое управление памятью и современные языки программирования, которые упрощают эффективное создание высококачественных приложений. .NET предлагает среду высокоуровневого программирования с множеством удобных функций, предоставляя при этом низкоуровневый доступ к API и внутренней памяти.
+## <a name="new-to-net"></a><span data-ttu-id="c89ba-107">Не знакомы с .NET?</span><span class="sxs-lookup"><span data-stu-id="c89ba-107">New to .NET</span></span>
 
-C#, F# и Visual Basic являются самыми популярными языками, которые ориентированы на платформу .NET и используют ее возможности. Ключевыми особенностями языков .NET являются поддержка модели асинхронного программирования, встроенные в язык запросы, универсальные типы и отражение системы типов. Языки также предлагают удобные возможности для объектно-ориентированного и функционального программирования.
+<span data-ttu-id="c89ba-108">Если вы не знакомы с .NET, прочтите статью [Начало работы](get-started.md).</span><span class="sxs-lookup"><span data-stu-id="c89ba-108">If you're new to .NET, check out the [Get Started](get-started.md) article.</span></span>
 
-Эти языки очень сильно отличаются как по концепции, так и по синтаксису, однако в них есть и общие черты, обусловленные использованием общей системы типов. Эта система типа предоставляется базовой средой выполнения. .NET разрабатывался в рамках концепции "общеязыковой среды выполнения" (CLR), которая способна поддерживать требования разных языков (например, с динамической и статической типизацией) и обеспечивать взаимодействие между ними. Например, коллекцию объектов `People` можно передать из одного языка в другой без потери смысла или возможностей.
+<span data-ttu-id="c89ba-109">Если вы хотите получить общие сведения об основных возможностях платформы .NET, изучите статью [Обзор .NET](tour.md).</span><span class="sxs-lookup"><span data-stu-id="c89ba-109">If you prefer to have a guided tour through major features of .NET, check out the [Tour of .NET](tour.md).</span></span>
 
-Существуют различные [реализации и продукты .NET](components.md), основанные на [стандартах .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md), в которых определяются базовые принципы платформы. Они оптимизированы для отдельных типов приложений (например, классических настольных, мобильных, игровых, облачных) и поддерживают многие процессоры (например, x86/x64, ARM) и операционные системы (например, Windows, Linux, iOS, Android, macOS). Не менее важной частью экосистемы .NET является сообщество открытого исходного кода, где имеется множество реализаций .NET и библиотек, доступных по утвержденным OSI лицензиям.
+<span data-ttu-id="c89ba-110">Чтобы получить представление о различных составляющих .NET и их взаимодействии, ознакомьтесь со статьей [Архитектурные компонентов .NET](components.md).</span><span class="sxs-lookup"><span data-stu-id="c89ba-110">You can also read about [.NET Architectural Components](components.md) to get an overview of the various "pieces" of .NET and how they fit together.</span></span>
 
-- Дополнительные сведения о [C#](../csharp/index.md)
-- Дополнительные сведения о [F#](../fsharp/index.md)
-- Обзор [библиотеки API .NET](../../api/index.md)
-- [Введение в среду CLR](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md)
+## <a name="new-to-net-core"></a><span data-ttu-id="c89ba-111">Не знакомы с .NET Core?</span><span class="sxs-lookup"><span data-stu-id="c89ba-111">New to .NET Core</span></span>
 
-<a name="fundamentals"></a>Основы
-------------
+<span data-ttu-id="c89ba-112">Если вы не знакомы с .NET Core, обратитесь к статье [Начало работы с .NET Core](../core/get-started.md).</span><span class="sxs-lookup"><span data-stu-id="c89ba-112">If you're new to .NET Core, check out [Get Started with .NET Core](../core/get-started.md).</span></span>
 
-**Многоязычность** — .NET предоставляет систему четко определенных типов, форматов файлов, среду выполнения, платформу программирования и средства, которые могут использоваться разными языками как для внутренних операций, так и для взаимодействия с другими языками, применяющими одинаковые компоненты .NET в качестве общей "валюты".
+## <a name="new-to-net-standard"></a><span data-ttu-id="c89ba-113">Не знакомы с .NET Standard?</span><span class="sxs-lookup"><span data-stu-id="c89ba-113">New to .NET Standard</span></span>
 
-**Управление памятью** — .NET автоматически управляет памятью с помощью сборщика мусора. Это гарантирует, что вы всегда ссылаетесь на действительные объекты, и устраняет неприятные проблемы, связанные с переполнением буфера и нарушением прав доступа. Сюда также входит проверка границ массивов.
+<span data-ttu-id="c89ba-114">Если вы не знакомы с .NET Standard, прочтите статью [.NET Standard](net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="c89ba-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
 
-**Безопасность типа** — основной конструкцией .NET для описания функциональности и представления в памяти является тип. Типы определяют форму и при необходимости поведение. Среда выполнения гарантирует, что вызывающий код может обращаться с типами только в соответствии с их определениями и заданной видимостью членов, обеспечивая согласованные, надежные и безопасные результаты.
+## <a name="porting-net-framework-code-to-net-core"></a><span data-ttu-id="c89ba-115">Перенос кода .NET Framework Code в .NET Core</span><span class="sxs-lookup"><span data-stu-id="c89ba-115">Porting .NET Framework Code to .NET Core</span></span>
 
-<a name="features"></a>Функции
---------
+<span data-ttu-id="c89ba-116">Если вы хотите перенести приложение, службу или компонент системы в .NET Core, см. сведения в статье [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md).</span><span class="sxs-lookup"><span data-stu-id="c89ba-116">If you're looking to port an application, service, or some component of a system to .NET Core, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>
 
-**Определяемые пользователем типы значений** — типы значений являются полезной категорией типов, так как они реализуют стратегию "передачи по значению" вместо "передачи по ссылке", как в случае для классов. Типы значений наиболее удобны для числовых данных. .NET имеет типы значений как для типов-примитивов, таких как целые числа, так и для определяемых пользователем типов.
+## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a><span data-ttu-id="c89ba-117">Перенос пакета NuGet из .NET Framework в .NET Standard или .NET Core</span><span class="sxs-lookup"><span data-stu-id="c89ba-117">Porting a NuGet package from .NET Framework to .NET Standard or .NET Core</span></span>
 
-**Универсальные типы** — универсальные типы имеют один или несколько параметров типа, которые могут задаваться для конкретных экземпляров. Это полезно для многих типов, которые в противном случае предоставляют содержимое в виде типа объекта или требуют нескольких определений типов. Например, тип коллекции может воплощаться в экземплярах для людей, расположений GPS или строк.
+<span data-ttu-id="c89ba-118">Если вы хотите перенести пакет NuGet в .NET Standard, прочите статью [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md).</span><span class="sxs-lookup"><span data-stu-id="c89ba-118">If you're looking to port a NuGet package to .NET Standard, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>  <span data-ttu-id="c89ba-119">В .NET Standard и .NET Core используются общие средства, поэтому содержимое применимо как к переносу в .NET Standard, так и в .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c89ba-119">Tooling for .NET Standard and .NET Core are shared, so the content will be relevant for porting to .NET Standard as well as .NET Core.</span></span>
 
-**Отражение** — в .NET определяется формат метаданных для описания типов в двоичном файле. Подсистема отражения использует эти данные, предоставляя API-интерфейсы для чтения и создания экземпляров типов во время выполнения. Это средство очень полезно для динамических сценариев, где неудобно заранее знать конкретную реализацию программы.
+## <a name="interested-in-major-net-concepts"></a><span data-ttu-id="c89ba-120">Заинтересовали основные понятия .NET?</span><span class="sxs-lookup"><span data-stu-id="c89ba-120">Interested in Major .NET Concepts</span></span>
 
-**Гибкое создание кода** — в .NET нет жестко определенного подхода к преобразованию двоичных файлов .NET в машинный код. В программировании давно и успешно используются различные подходы, включая интерпретацию, компиляцию "на лету" (JIT), предварительную компиляцию (AOT) с JIT-откатом и без JIT-отката. Каждая из этих стратегий может быть целесообразной, и существует возможность их совместного использования.
+<span data-ttu-id="c89ba-121">Если вас заинтересовали некоторые основные понятия .NET, изучите следующие статьи.</span><span class="sxs-lookup"><span data-stu-id="c89ba-121">If you're interested in some of the major concepts of .NET, check out:</span></span>
 
-**Кроссплатформенность** — платформа .NET с самого начала разрабатывалась как кроссплатформенная. Двоичный формат и набор инструкций не зависят от операционной системы, ЦП и размера указателя. Двоичный код .NET, созданный в 2000 г. для запуска на компьютере под управлением 32-разрядной ОС Windows, можно без изменений запустить на устройстве ARM64 под управлением iOS в 2016 г.
+* [<span data-ttu-id="c89ba-122">Архитектурные компоненты .NET</span><span class="sxs-lookup"><span data-stu-id="c89ba-122">.NET Architectural Components</span></span>](components.md)
+* [<span data-ttu-id="c89ba-123">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="c89ba-123">.NET Standard</span></span>](net-standard.md)
+* [<span data-ttu-id="c89ba-124">Взаимодействие на уровне машинного кода</span><span class="sxs-lookup"><span data-stu-id="c89ba-124">Native Interoperability</span></span>](native-interop.md)
+* [<span data-ttu-id="c89ba-125">Сборка мусора</span><span class="sxs-lookup"><span data-stu-id="c89ba-125">Garbage Collection</span></span>](garbagecollection/index.md)
+* [<span data-ttu-id="c89ba-126">Базовые типы в .NET</span><span class="sxs-lookup"><span data-stu-id="c89ba-126">Base Types in .NET</span></span>](base-types/index.md)
+* [<span data-ttu-id="c89ba-127">Коллекции</span><span class="sxs-lookup"><span data-stu-id="c89ba-127">Collections</span></span>](collections/index.md)
+* [<span data-ttu-id="c89ba-128">Даты, время и часовые пояса</span><span class="sxs-lookup"><span data-stu-id="c89ba-128">Dates, times, and time zones</span></span>](datetime/index.md)
+* [<span data-ttu-id="c89ba-129">Асинхронное программирование</span><span class="sxs-lookup"><span data-stu-id="c89ba-129">Asynchronous Programming</span></span>](async.md)
 
-<a name="open-source"></a>Открыть исходный код
------------
+<span data-ttu-id="c89ba-130">Кроме того, прочтите руководства по каждому языку, чтобы ознакомиться с тремя основными языками .NET.</span><span class="sxs-lookup"><span data-stu-id="c89ba-130">Additionally, check out each language guide to learn about the three major .NET languages:</span></span>
 
-[.NET Core](https://github.com/dotnet/core) и [Mono](https://github.com/mono/mono) являются реализациями .NET с открытым исходным кодом, которые распространяются по лицензии MIT. Документация распространяется по лицензии [Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/). .NET Core и Mono поддерживаются корпорацией Майкрософт, а в их разработке участвуют многие члены сообщества. 
+* [<span data-ttu-id="c89ba-131">Руководство по языку C#</span><span class="sxs-lookup"><span data-stu-id="c89ba-131">C# Guide</span></span>](../csharp/index.md)
+* [<span data-ttu-id="c89ba-132">Руководство по языку F#</span><span class="sxs-lookup"><span data-stu-id="c89ba-132">F# Guide</span></span>](../fsharp/index.md)
+* [<span data-ttu-id="c89ba-133">Руководство по Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c89ba-133">Visual Basic Guide</span></span>](../visual-basic/index.md)
 
-Эти среды выполнения общего назначения можно использовать в научных исследованиях, а также в учебно-образовательных и коммерческих продуктах. Открытый характер также означает, что любой пользователь может внести свой вклад в разработку платформ, если обнаружит ошибку или захочет включить в них новую функцию.
+## <a name="api-reference"></a><span data-ttu-id="c89ba-134">Справочник по интерфейсам API</span><span class="sxs-lookup"><span data-stu-id="c89ba-134">API Reference</span></span>
 
-<a name="projects"></a>Проекты
---------
-
-- [CoreCLR](https://github.com/dotnet/coreclr) — среда выполнения .NET, используемая в .NET Core.
-- [Mono](https://github.com/mono/mono) — среда выполнения .NET, используемая в Xamarin и других проектах.
-- [CoreFX](https://github.com/dotnet/coreclr) — библиотеки классов .NET, используемые .NET Core и, в некоторой степени, Mono через совместное использование исходного кода.
-- [Roslyn](https://github.com/dotnet/roslyn) — компиляторы C# и Visual Basic, используемые в большинстве средств и платформ .NET. Предоставляет API-интерфейсы для чтения, записи и анализа исходного кода.
-- [F#](https://github.com/microsoft/visualfsharp) — компилятор F#.
-- [Пакет SDK для Xamarin](http://open.xamarin.com) — средства и библиотеки, необходимые для написания кода C# и F# для Android, iOS и macOS.
-
-<a name="standardized"></a>Стандартизация
-------------
-
-.NET определяется в открытых [стандартах ECMA](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md), которые задают возможности платформы и могут использоваться для создания новых реализаций. Существуют и другие реализации .NET. В экосистеме Майкрософт самыми популярными являются Mono и Unity.
-
+<span data-ttu-id="c89ba-135">Просмотрите статью [Справочник по API .NET](../../api/index.md), где можно найти перечень доступных API-интерфейсов.</span><span class="sxs-lookup"><span data-stu-id="c89ba-135">Check out the [.NET API Reference](../../api/index.md) to see the breadth of APIs avaialable.</span></span>
 

@@ -1,1 +1,1 @@
-Переносимая библиотека классов
+<span data-ttu-id="e2028-101">Переносимая библиотека классов</span><span class="sxs-lookup"><span data-stu-id="e2028-101">Portable Class Library</span></span>

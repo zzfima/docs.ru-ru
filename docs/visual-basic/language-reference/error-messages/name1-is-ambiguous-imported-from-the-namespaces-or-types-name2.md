@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 90e1f77650845f9d0a49ba0b6c3b0b470dca5a9b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 435689c201452cff2cb9b9532cd70281f3061ec9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>"&lt;name1&gt;«является неоднозначным, импортированный из пространств имен или типов»&lt;name2&gt;"
-Вы указали неоднозначное имя, которое конфликтует с другим именем. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Компилятора нет правила разрешения конфликтов, необходимо устранить неоднозначность имен самостоятельно.  
+# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a><span data-ttu-id="d50f3-102">"&lt;name1&gt;«является неоднозначным, импортированный из пространств имен или типов»&lt;name2&gt;"</span><span class="sxs-lookup"><span data-stu-id="d50f3-102">&#39;&lt;name1&gt;&#39; is ambiguous, imported from the namespaces or types &#39;&lt;name2&gt;&#39;</span></span>
+<span data-ttu-id="d50f3-103">Вы указали неоднозначное имя, которое конфликтует с другим именем.</span><span class="sxs-lookup"><span data-stu-id="d50f3-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="d50f3-104">[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Компилятора нет правила разрешения конфликтов, необходимо устранить неоднозначность имен самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="d50f3-104">The [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- **Идентификатор ошибки:** BC30561  
+ <span data-ttu-id="d50f3-105">**Идентификатор ошибки:** BC30561</span><span class="sxs-lookup"><span data-stu-id="d50f3-105">**Error ID:** BC30561</span></span>  
   
-## <a name="to-correct-this-error"></a>Исправление ошибки  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d50f3-106">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="d50f3-106">To correct this error</span></span>  
   
-1.  Устраните неоднозначность имени, удалив импорта пространства имен.  
+1.  <span data-ttu-id="d50f3-107">Устраните неоднозначность имени, удалив импорта пространства имен.</span><span class="sxs-lookup"><span data-stu-id="d50f3-107">Disambiguate the name by removing namespace imports.</span></span>  
   
-2.  Укажите полное имя.  
+2.  <span data-ttu-id="d50f3-108">Укажите полное имя.</span><span class="sxs-lookup"><span data-stu-id="d50f3-108">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Оператор Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+## <a name="see-also"></a><span data-ttu-id="d50f3-109">См. также</span><span class="sxs-lookup"><span data-stu-id="d50f3-109">See Also</span></span>  
+ <span data-ttu-id="d50f3-110">[Оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) </span><span class="sxs-lookup"><span data-stu-id="d50f3-110">[Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) </span></span>  
+<span data-ttu-id="d50f3-111"> [Пространства имен в Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span><span class="sxs-lookup"><span data-stu-id="d50f3-111"> [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span></span>  
+<span data-ttu-id="d50f3-112"> [Оператор Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)</span><span class="sxs-lookup"><span data-stu-id="d50f3-112"> [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)</span></span>

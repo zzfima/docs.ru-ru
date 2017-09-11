@@ -193,7 +193,7 @@
 #### [Стили и шаблоны элемента ComboBox](combobox-styles-and-templates.md)
 #### [Стили и шаблоны элемента ContextMenu](contextmenu-styles-and-templates.md)
 #### [Стили и шаблоны элемента DataGrid](datagrid-styles-and-templates.md)
-#### [Стили и шаблоны элемента DatePicker](datepicker-syles-and-templates.md)
+#### [Стили и шаблоны элемента DatePicker](datepicker-styles-and-templates.md)
 #### [Стили и шаблоны элемента DocumentViewer](documentviewer-styles-and-templates.md)
 #### [Стили и шаблоны элемента Expander](expander-styles-and-templates.md)
 #### [Стили и шаблоны элемента Frame](frame-styles-and-templates.md)

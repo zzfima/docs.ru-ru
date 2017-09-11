@@ -1,108 +1,107 @@
 ---
-title: "Команда dotnet-migrate — CLI .NET Core | Документы Майкрософт"
-description: "Команда dotnet-migrate переносит проект и все его зависимости."
-keywords: "dotnet-migrate, интерфейс командной строки, команда CLI .NET Core"
-author: blackdwarf
+title: "Команда dotnet migrate — CLI .NET Core"
+description: "Команда dotnet migrate переносит проект и все его зависимости."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: bde4df1c9e84e103c75b0ccc32d7e970b7708b53
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 674b19f9fc546e057c7b7fa4b024a0b013eda7e5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-migrate"></a><span data-ttu-id="c003e-103">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="c003e-103">dotnet migrate</span></span>
 
-# <a name="dotnet-migrate"></a>dotnet-migrate
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a><span data-ttu-id="c003e-104">Имя</span><span class="sxs-lookup"><span data-stu-id="c003e-104">Name</span></span>
 
-`dotnet-migrate` — перемещает проект .NET Core предварительной версии 2 в проект пакета SDK для .NET Core 1.0.
+<span data-ttu-id="c003e-105">`dotnet migrate` — перемещает проект .NET Core предварительной версии 2 в проект пакета SDK для .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="c003e-105">`dotnet migrate` - Migrates a Preview 2 .NET Core project to a .NET Core SDK 1.0 project.</span></span>
 
-## <a name="synopsis"></a>Краткий обзор
+## <a name="synopsis"></a><span data-ttu-id="c003e-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="c003e-106">Synopsis</span></span>
 
 `dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file] [-s|--skip-project-references] [-r|--report-file] [--format-report-file-json] [--skip-backup] [-h|--help]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a><span data-ttu-id="c003e-107">Описание</span><span class="sxs-lookup"><span data-stu-id="c003e-107">Description</span></span>
 
-Команда `dotnet migrate` переносит действительный проект предварительной версии 2 на основе *project.json* в действительный проект *CSPROJ* пакета SDK для .NET Core 1.0. 
+<span data-ttu-id="c003e-108">Команда `dotnet migrate` переносит действительный проект предварительной версии 2 на основе *project.json* в действительный проект *CSPROJ* пакета SDK для .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="c003e-108">The `dotnet migrate` command migrates a valid Preview 2 *project.json*-based project to a valid .NET Core SDK 1.0 *csproj* project.</span></span> 
 
-По умолчанию команда переносит корневой проект и все ссылки, которые он содержит. Это поведение можно отключить в среде выполнения с помощью параметра `--skip-project-references`. 
+<span data-ttu-id="c003e-109">По умолчанию команда переносит корневой проект и все ссылки, которые он содержит.</span><span class="sxs-lookup"><span data-stu-id="c003e-109">By default, the command migrates the root project and any project references that the root project contains.</span></span> <span data-ttu-id="c003e-110">Это поведение можно отключить в среде выполнения с помощью параметра `--skip-project-references`.</span><span class="sxs-lookup"><span data-stu-id="c003e-110">This behavior is disabled using the `--skip-project-references` option at runtime.</span></span> 
 
-Миграция выполняется для следующих объектов:
+<span data-ttu-id="c003e-111">Миграция выполняется для следующих объектов:</span><span class="sxs-lookup"><span data-stu-id="c003e-111">Migration is performed on the following:</span></span>
 
-* Отдельный проект посредством указания нужного файла *project.json*.
-* Все каталоги, указанные в файле *global.json*, посредством передачи пути в файл *global.json*.
-* Файл *solution.sln*, куда переносятся проекты, на которые ссылается решение.
-* Рекурсивно все подкаталоги в этом каталоге.
+* <span data-ttu-id="c003e-112">Отдельный проект посредством указания нужного файла *project.json*.</span><span class="sxs-lookup"><span data-stu-id="c003e-112">A single project by specifying the *project.json* file to migrate.</span></span>
+* <span data-ttu-id="c003e-113">Все каталоги, указанные в файле *global.json*, посредством передачи пути в файл *global.json*.</span><span class="sxs-lookup"><span data-stu-id="c003e-113">All of the directories specified in the *global.json* file by passing in a path to the *global.json* file.</span></span>
+* <span data-ttu-id="c003e-114">Файл *solution.sln*, куда переносятся проекты, на которые ссылается решение.</span><span class="sxs-lookup"><span data-stu-id="c003e-114">A *solution.sln* file, where it migrates the projects referenced in the solution.</span></span>
+* <span data-ttu-id="c003e-115">Рекурсивно все подкаталоги в этом каталоге.</span><span class="sxs-lookup"><span data-stu-id="c003e-115">On all sub-directories of the given directory recursively.</span></span>
 
-Команда `dotnet migrate` сохраняет перенесенный файл *project.json* в каталоге `backup` (создается, если не существует). Это поведение можно переопределить с помощью параметра `--skip-backup`. 
+<span data-ttu-id="c003e-116">Команда `dotnet migrate` сохраняет перенесенный файл *project.json* в каталоге `backup` (создается, если не существует).</span><span class="sxs-lookup"><span data-stu-id="c003e-116">The `dotnet migrate` command keeps the migrated *project.json* file inside a `backup` directory, which it creates if the directory doesn't exist.</span></span> <span data-ttu-id="c003e-117">Это поведение можно переопределить с помощью параметра `--skip-backup`.</span><span class="sxs-lookup"><span data-stu-id="c003e-117">This behavior is overriden using the `--skip-backup` option.</span></span>
 
-По умолчанию операция миграции выводит состояние процесса миграции в стандартный вывод (STDOUT). Если вы используете параметр `--report-file <REPORT_FILE>`, выходные данные сохраняются в указанном файле. 
+<span data-ttu-id="c003e-118">По умолчанию операция миграции выводит состояние процесса миграции в стандартный вывод (STDOUT).</span><span class="sxs-lookup"><span data-stu-id="c003e-118">By default, the migration operation outputs the state of the migration process to standard output (STDOUT).</span></span> <span data-ttu-id="c003e-119">Если вы используете параметр `--report-file <REPORT_FILE>`, выходные данные сохраняются в указанном файле.</span><span class="sxs-lookup"><span data-stu-id="c003e-119">If you use the `--report-file <REPORT_FILE>` option, the output is saved to the file specify.</span></span> 
 
-Команда `dotnet migrate` поддерживает только допустимые проекты предварительной версии 2 на основе *project.json*. Это означает, что она не позволяет перенести проекты DNX или проекты предварительной версии 1 на базе *project.json* непосредственно в проекты MSBuild/CSPROJ. Сначала нужно вручную перенести проект в проект версии 2 на основе *project.json*, а затем воспользоваться командой `dotnet migrate` для переноса проекта.
+<span data-ttu-id="c003e-120">Команда `dotnet migrate` поддерживает только допустимые проекты предварительной версии 2 на основе *project.json*.</span><span class="sxs-lookup"><span data-stu-id="c003e-120">The `dotnet migrate` command only supports valid Preview 2 *project.json*-based projects.</span></span> <span data-ttu-id="c003e-121">Это означает, что она не позволяет перенести проекты DNX или проекты предварительной версии 1 на базе *project.json* непосредственно в проекты MSBuild/CSPROJ.</span><span class="sxs-lookup"><span data-stu-id="c003e-121">This means that you cannot use it to migrate DNX or Preview 1 *project.json*-based projects directly to MSBuild/csproj projects.</span></span> <span data-ttu-id="c003e-122">Сначала нужно вручную перенести проект в проект версии 2 на основе *project.json*, а затем воспользоваться командой `dotnet migrate` для переноса проекта.</span><span class="sxs-lookup"><span data-stu-id="c003e-122">You first need to manually migrate the project to a Preview 2 *project.json*-based project and then use the `dotnet migrate` command to migrate the project.</span></span>
 
-## <a name="arguments"></a>Аргументы
+## <a name="arguments"></a><span data-ttu-id="c003e-123">Аргументы</span><span class="sxs-lookup"><span data-stu-id="c003e-123">Arguments</span></span>
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 
-Путь к одному из следующих объектов:
+<span data-ttu-id="c003e-124">Путь к одному из следующих объектов:</span><span class="sxs-lookup"><span data-stu-id="c003e-124">The path to one of the following:</span></span>
 
-* переносимый файл *project.json*;
-* файл *global.json*, куда переносятся папки, указанные в *global.json*;
-* файл *solution.sln*, куда переносятся проекты, на которые ссылается решение;
-* каталог для миграции, где выполняется рекурсивный поиск переносимых файлов *project.json*.
+* <span data-ttu-id="c003e-125">переносимый файл *project.json*;</span><span class="sxs-lookup"><span data-stu-id="c003e-125">a *project.json* file to migrate.</span></span>
+* <span data-ttu-id="c003e-126">файл *global.json*, куда переносятся папки, указанные в *global.json*;</span><span class="sxs-lookup"><span data-stu-id="c003e-126">a *global.json* file, it will migrate the folders specified in *global.json*.</span></span>
+* <span data-ttu-id="c003e-127">файл *solution.sln*, куда переносятся проекты, на которые ссылается решение;</span><span class="sxs-lookup"><span data-stu-id="c003e-127">a *solution.sln* file, it will migrate the projects referenced in the solution.</span></span>
+* <span data-ttu-id="c003e-128">каталог для миграции, где выполняется рекурсивный поиск переносимых файлов *project.json*.</span><span class="sxs-lookup"><span data-stu-id="c003e-128">a directory to migrate, it will recursively search for *project.json* files to migrate.</span></span>
 
-Если значение не задано, по умолчанию используется текущий каталог.
+<span data-ttu-id="c003e-129">Если значение не задано, по умолчанию используется текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="c003e-129">Defaults to current directory if nothing is specified.</span></span>
 
-## <a name="options"></a>Параметры
+## <a name="options"></a><span data-ttu-id="c003e-130">Параметры</span><span class="sxs-lookup"><span data-stu-id="c003e-130">Options</span></span>
 
 `-h|--help`
 
-Выводит краткую справку по команде.  
+<span data-ttu-id="c003e-131">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="c003e-131">Prints out a short help for the command.</span></span>
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-Файл CSPROJ шаблона для переноса. По умолчанию используется тот же шаблон, что и проигнорированный в `dotnet new console`. 
+<span data-ttu-id="c003e-132">Файл CSPROJ шаблона для переноса.</span><span class="sxs-lookup"><span data-stu-id="c003e-132">Template csproj file to use for migration.</span></span> <span data-ttu-id="c003e-133">По умолчанию используется тот же шаблон, что и проигнорированный в `dotnet new console`.</span><span class="sxs-lookup"><span data-stu-id="c003e-133">By default, the same template as the one dropped by `dotnet new console` is used.</span></span>
 
 `-v|--sdk-package-version <VERSION>`
 
-Версия пакета SDK, на которую ссылается перенесенное приложение. По умолчанию используется версия пакета SDK в `dotnet new`.
+<span data-ttu-id="c003e-134">Версия пакета SDK, на которую ссылается перенесенное приложение.</span><span class="sxs-lookup"><span data-stu-id="c003e-134">The version of the sdk package that's referenced in the migrated app.</span></span> <span data-ttu-id="c003e-135">По умолчанию используется версия пакета SDK в `dotnet new`.</span><span class="sxs-lookup"><span data-stu-id="c003e-135">The default is the version of the SDK in `dotnet new`.</span></span>
 
 `-x|--xproj-file <FILE>`
 
-Путь к файлу XPROJ, который будет использоваться. Требуется, если в каталоге проекта несколько файлов XPROJ.
+<span data-ttu-id="c003e-136">Путь к файлу XPROJ, который будет использоваться.</span><span class="sxs-lookup"><span data-stu-id="c003e-136">The path to the xproj file to use.</span></span> <span data-ttu-id="c003e-137">Требуется, если в каталоге проекта несколько файлов XPROJ.</span><span class="sxs-lookup"><span data-stu-id="c003e-137">Required when there is more than one xproj in a project directory.</span></span>
 
 `-s|--skip-project-references [Debug|Release]`
 
-Пропуск ссылок проекта для миграции. По умолчанию ссылки проекта переносятся рекурсивно.
+<span data-ttu-id="c003e-138">Пропуск ссылок проекта для миграции.</span><span class="sxs-lookup"><span data-stu-id="c003e-138">Skip migrating project references.</span></span> <span data-ttu-id="c003e-139">По умолчанию ссылки проекта переносятся рекурсивно.</span><span class="sxs-lookup"><span data-stu-id="c003e-139">By default, project references are migrated recursively.</span></span>
 
 `-r|--report-file <REPORT_FILE>`
 
-Вывод отчета о миграции в файл наряду с выводом в консоль.
+<span data-ttu-id="c003e-140">Вывод отчета о миграции в файл наряду с выводом в консоль.</span><span class="sxs-lookup"><span data-stu-id="c003e-140">Output migration report to a file in addition to the console.</span></span>
 
 `--format-report-file-json <REPORT_FILE>`
 
-Вывод отчета о миграции в файл JSON вместо отправки сообщений пользователю.
+<span data-ttu-id="c003e-141">Вывод отчета о миграции в файл JSON вместо отправки сообщений пользователю.</span><span class="sxs-lookup"><span data-stu-id="c003e-141">Output migration report file as JSON rather than user messages.</span></span>
 
 `--skip-backup`
 
-Пропуск перемещения *project.json*, *global.json* и *\*.xproj* в каталог `backup` после успешной миграции.
+<span data-ttu-id="c003e-142">Пропуск перемещения *project.json*, *global.json* и *\*.xproj* в каталог `backup` после успешной миграции.</span><span class="sxs-lookup"><span data-stu-id="c003e-142">Skip moving *project.json*, *global.json*, and *\*.xproj* to a `backup` directory after successful migration.</span></span>
 
-## <a name="examples"></a>Примеры
+## <a name="examples"></a><span data-ttu-id="c003e-143">Примеры</span><span class="sxs-lookup"><span data-stu-id="c003e-143">Examples</span></span>
 
-Перенос проекта в текущем каталоге и всех взаимных зависимостей проектов.
+<span data-ttu-id="c003e-144">Перенос проекта в текущем каталоге и всех взаимных зависимостей проектов.</span><span class="sxs-lookup"><span data-stu-id="c003e-144">Migrate a project in the current directory and all of its project-to-project dependencies:</span></span>
 
 `dotnet migrate`
 
-Перенос всех проектов, включенных в файл *global.json*:
+<span data-ttu-id="c003e-145">Перенос всех проектов, включенных в файл *global.json*:</span><span class="sxs-lookup"><span data-stu-id="c003e-145">Migrate all projects that *global.json* file includes:</span></span>
 
 `dotnet migrate path/to/global.json`
 
-Перенос только текущего проекта без взаимных зависимостей проектов. Кроме того, используется определенная версия пакета SDK:
+<span data-ttu-id="c003e-146">Перенос только текущего проекта без взаимных зависимостей проектов.</span><span class="sxs-lookup"><span data-stu-id="c003e-146">Migrate only the current project and no project-to-project (P2P) dependencies.</span></span> <span data-ttu-id="c003e-147">Кроме того, используется определенная версия пакета SDK:</span><span class="sxs-lookup"><span data-stu-id="c003e-147">Also, use a specific SDK version:</span></span>
 
 `dotnet migrate -s -v 1.0.0-preview4`

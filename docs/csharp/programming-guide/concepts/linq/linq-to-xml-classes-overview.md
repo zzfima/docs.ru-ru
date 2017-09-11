@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения о классах LINQ to XML (C#) | Документы Майкрософт"
+title: "Общие сведения о классах LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,57 +19,58 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f75a7a2aa3f9fca867562807595c6387b0be23d4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: de9664f56a0ab075d2c74b45d0eebab541213d06
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="linq-to-xml-classes-overview-c"></a>Общие сведения о классах LINQ to XML (C#)
-В этом разделе приведен список классов [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] в пространстве имен <xref:System.Xml.Linq> с кратким описанием каждого из них.  
+# <a name="linq-to-xml-classes-overview-c"></a><span data-ttu-id="aaf2e-102">Общие сведения о классах LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="aaf2e-102">LINQ to XML Classes Overview (C#)</span></span>
+<span data-ttu-id="aaf2e-103">В этом разделе приведен список классов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] в пространстве имен <xref:System.Xml.Linq> с кратким описанием каждого из них.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-103">This topic provides a list of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes in the <xref:System.Xml.Linq> namespace, and a short description of each.</span></span>  
   
-## <a name="linq-to-xml-classes"></a>Классы LINQ to XML  
+## <a name="linq-to-xml-classes"></a><span data-ttu-id="aaf2e-104">Классы LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="aaf2e-104">LINQ to XML Classes</span></span>  
   
-### <a name="xattribute-class"></a>Класс XAttribute  
- Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибут. Подробные сведения и примеры см. в разделе [Общие сведения о классе XAttribute (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md).  
+### <a name="xattribute-class"></a><span data-ttu-id="aaf2e-105">Класс XAttribute</span><span class="sxs-lookup"><span data-stu-id="aaf2e-105">XAttribute Class</span></span>  
+ <span data-ttu-id="aaf2e-106">Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибут.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-106"><xref:System.Xml.Linq.XAttribute> represents an XML attribute.</span></span> <span data-ttu-id="aaf2e-107">Подробные сведения и примеры см. в разделе [Общие сведения о классе XAttribute (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="aaf2e-107">For detailed information and examples, see [XAttribute Class Overview (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md).</span></span>  
   
-### <a name="xcdata-class"></a>Класс XCData  
- Класс <xref:System.Xml.Linq.XCData> представляет текстовый узел CDATA.  
+### <a name="xcdata-class"></a><span data-ttu-id="aaf2e-108">Класс XCData</span><span class="sxs-lookup"><span data-stu-id="aaf2e-108">XCData Class</span></span>  
+ <span data-ttu-id="aaf2e-109">Класс <xref:System.Xml.Linq.XCData> представляет узел текста CDATA.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-109"><xref:System.Xml.Linq.XCData> represents a CDATA text node.</span></span>  
   
-### <a name="xcomment-class"></a>Класс XComment  
- Класс <xref:System.Xml.Linq.XComment> представляет XML-комментарий.  
+### <a name="xcomment-class"></a><span data-ttu-id="aaf2e-110">Класс XComment</span><span class="sxs-lookup"><span data-stu-id="aaf2e-110">XComment Class</span></span>  
+ <span data-ttu-id="aaf2e-111">Класс <xref:System.Xml.Linq.XComment> представляет XML-комментарий.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-111"><xref:System.Xml.Linq.XComment> represents an XML comment.</span></span>  
   
-### <a name="xcontainer-class"></a>Класс XContainer  
- Класс <xref:System.Xml.Linq.XContainer> является абстрактным базовым классом для всех узлов, которые могут иметь дочерние узлы. Следующие классы являются производными от класса <xref:System.Xml.Linq.XContainer>:  
+### <a name="xcontainer-class"></a><span data-ttu-id="aaf2e-112">Класс XContainer</span><span class="sxs-lookup"><span data-stu-id="aaf2e-112">XContainer Class</span></span>  
+ <span data-ttu-id="aaf2e-113">Класс <xref:System.Xml.Linq.XContainer> является абстрактным базовым классом для всех узлов, которые могут иметь дочерние узлы.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-113"><xref:System.Xml.Linq.XContainer> is an abstract base class for all nodes that can have child nodes.</span></span> <span data-ttu-id="aaf2e-114">Следующие классы происходят от класса <xref:System.Xml.Linq.XContainer>:</span><span class="sxs-lookup"><span data-stu-id="aaf2e-114">The following classes derive from the <xref:System.Xml.Linq.XContainer> class:</span></span>  
   
 -   <xref:System.Xml.Linq.XElement>  
   
 -   <xref:System.Xml.Linq.XDocument>  
   
-### <a name="xdeclaration-class"></a>Класс XDeclaration  
- Класс <xref:System.Xml.Linq.XDeclaration> представляет XML-декларацию. XML-декларация используется для объявления версии XML и кодировки документа. Кроме того, в XML-декларации указывается, является ли данный XML-документ изолированным. Если документ является изолированным, то внешние декларации разметки не используются ни во внешних DTD, ни во внешних сущностях параметров, ссылки на которые имеются во встроенном DTD.  
+### <a name="xdeclaration-class"></a><span data-ttu-id="aaf2e-115">Класс XDeclaration</span><span class="sxs-lookup"><span data-stu-id="aaf2e-115">XDeclaration Class</span></span>  
+ <span data-ttu-id="aaf2e-116">Класс <xref:System.Xml.Linq.XDeclaration> представляет XML-декларацию.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-116"><xref:System.Xml.Linq.XDeclaration> represents an XML declaration.</span></span> <span data-ttu-id="aaf2e-117">XML-декларация используется для объявления версии XML и кодировки документа.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-117">An XML declaration is used to declare the XML version and the encoding of a document.</span></span> <span data-ttu-id="aaf2e-118">Кроме того, в XML-декларации указывается, является ли данный XML-документ изолированным.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-118">In addition, an XML declaration specifies whether the XML document is stand-alone.</span></span> <span data-ttu-id="aaf2e-119">Если документ является изолированным, то внешние декларации разметки не используются ни во внешних DTD, ни во внешних сущностях параметров, ссылки на которые имеются во встроенном DTD.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-119">If a document is stand-alone, there are no external markup declarations, either in an external DTD, or in an external parameter entity referenced from the internal subset.</span></span>  
   
-### <a name="xdocument-class"></a>Класс XDocument  
- Класс <xref:System.Xml.Linq.XDocument> представляет XML-документ. Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+### <a name="xdocument-class"></a><span data-ttu-id="aaf2e-120">Класс XDocument</span><span class="sxs-lookup"><span data-stu-id="aaf2e-120">XDocument Class</span></span>  
+ <span data-ttu-id="aaf2e-121">Класс <xref:System.Xml.Linq.XDocument> представляет XML-документ.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-121"><xref:System.Xml.Linq.XDocument> represents an XML document.</span></span> <span data-ttu-id="aaf2e-122">Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="aaf2e-122">For detailed information and examples, see [XDocument Class Overview (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).</span></span>  
   
-### <a name="xdocumenttype-class"></a>Класс XDocumentType  
- Класс <xref:System.Xml.Linq.XDocumentType> представляет определение типа XML-документа (DTD).  
+### <a name="xdocumenttype-class"></a><span data-ttu-id="aaf2e-123">Класс XDocumentType</span><span class="sxs-lookup"><span data-stu-id="aaf2e-123">XDocumentType Class</span></span>  
+ <span data-ttu-id="aaf2e-124">Класс <xref:System.Xml.Linq.XDocumentType> представляет определения типа XML-документа (DTD).</span><span class="sxs-lookup"><span data-stu-id="aaf2e-124"><xref:System.Xml.Linq.XDocumentType> represents an XML Document Type Definition (DTD).</span></span>  
   
-### <a name="xelement-class"></a>Класс XElement  
- Класс <xref:System.Xml.Linq.XElement> представляет XML-элемент. Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md).  
+### <a name="xelement-class"></a><span data-ttu-id="aaf2e-125">Класс XElement</span><span class="sxs-lookup"><span data-stu-id="aaf2e-125">XElement Class</span></span>  
+ <span data-ttu-id="aaf2e-126">Класс <xref:System.Xml.Linq.XElement> представляет XML-элемент.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-126"><xref:System.Xml.Linq.XElement> represents an XML element.</span></span> <span data-ttu-id="aaf2e-127">Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="aaf2e-127">For detailed information and examples, see [XElement Class Overview (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md).</span></span>  
   
-### <a name="xname-class"></a>Класс XName  
- Класс <xref:System.Xml.Linq.XName> представляет имена элементов (<xref:System.Xml.Linq.XElement>) и атрибутов (<xref:System.Xml.Linq.XAttribute>). Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
+### <a name="xname-class"></a><span data-ttu-id="aaf2e-128">Класс XName</span><span class="sxs-lookup"><span data-stu-id="aaf2e-128">XName Class</span></span>  
+ <span data-ttu-id="aaf2e-129">Класс <xref:System.Xml.Linq.XName> представляет имена элементов (<xref:System.Xml.Linq.XElement>) и атрибутов (<xref:System.Xml.Linq.XAttribute>).</span><span class="sxs-lookup"><span data-stu-id="aaf2e-129"><xref:System.Xml.Linq.XName> represents names of elements (<xref:System.Xml.Linq.XElement>) and attributes (<xref:System.Xml.Linq.XAttribute>).</span></span> <span data-ttu-id="aaf2e-130">Дополнительные сведения и примеры см. в разделе [Общие сведения о классе XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).</span><span class="sxs-lookup"><span data-stu-id="aaf2e-130">For detailed information and examples, see [XDocument Class Overview (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).</span></span>  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] позволяет сделать XML-имена как можно более понятными. В силу их сложности XML-имена часто считаются затруднительной темой для изучения в XML. Возможно, эта сложность возникает не из-за пространств имен, которые разработчики часто используют при программировании, а из-за префиксов пространств имен. Префиксы пространств имен могут быть полезны для сокращения количества нажатий клавиш при вводе XML или для повышения удобства чтения XML. Но часто префиксы являются просто ярлыком, свидетельствующим об использовании полного пространства имен XML, в большинстве случаев они не нужны. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] упрощает XML-имена путем разрешения всех префиксов в соответствующее им пространство имен XML. Если они нужны, то префиксами можно воспользоваться с помощью метода <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="aaf2e-131"> позволяет сделать XML-имена как можно более понятными.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-131"> is designed to make XML names as straightforward as possible.</span></span> <span data-ttu-id="aaf2e-132">В силу их сложности XML-имена часто считаются затруднительной темой для изучения в XML.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-132">Due to their complexity, XML names are often considered to be an advanced topic in XML.</span></span> <span data-ttu-id="aaf2e-133">Возможно, эта сложность возникает не из-за пространств имен, которые разработчики часто используют при программировании, а из-за префиксов пространств имен.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-133">Arguably, this complexity comes not from namespaces, which developers use regularly in programming, but from namespace prefixes.</span></span> <span data-ttu-id="aaf2e-134">Префиксы пространств имен могут быть полезны для сокращения количества нажатий клавиш при вводе XML или для повышения удобства чтения XML.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-134">Namespace prefixes can be useful to reduce the keystrokes required when you input XML, or to make XML easier to read.</span></span> <span data-ttu-id="aaf2e-135">Но часто префиксы являются просто ярлыком, свидетельствующим об использовании полного пространства имен XML, в большинстве случаев они не нужны.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-135">However, prefixes are often just a shortcut for using the full XML namespace, and are not required in most cases.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="aaf2e-136"> упрощает XML-имена путем разрешения всех префиксов в соответствующее им пространство имен XML.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-136"> simplifies XML names by resolving all prefixes to their corresponding XML namespace.</span></span> <span data-ttu-id="aaf2e-137">Если они нужны, то префиксами можно воспользоваться при помощи метода <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-137">Prefixes are available, if they are required, through the <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> method.</span></span>  
   
- При необходимости можно управлять префиксами пространства имен. В некоторых ситуациях при работе с другими XML-системами, например XSLT или XAML, необходимо управлять префиксами пространства имен. Например, при наличии выражения XPath, в котором используются префиксы пространства имен и которое внедрено в таблицу стилей XSLT, необходимо сериализовать XML-документ с префиксами пространства имен, которые соответствуют используемым в выражении XPath.  
+ <span data-ttu-id="aaf2e-138">При необходимости можно управлять префиксами пространства имен.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-138">It is possible, if necessary, to control namespace prefixes.</span></span> <span data-ttu-id="aaf2e-139">В некоторых ситуациях при работе с другими XML-системами, например XSLT или XAML, необходимо управлять префиксами пространства имен.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-139">In some circumstances, if you are working with other XML systems, such as XSLT or XAML, you need to control namespace prefixes.</span></span> <span data-ttu-id="aaf2e-140">Например, при наличии выражения XPath, в котором используются префиксы пространства имен и которое внедрено в таблицу стилей XSLT, необходимо сериализовать XML-документ с префиксами пространства имен, которые соответствуют используемым в выражении XPath.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-140">For example, if you have an XPath expression that uses namespace prefixes and is embedded in an XSLT stylesheet, you must make sure that your XML document is serialized with namespace prefixes that match those used in the XPath expression.</span></span>  
   
-### <a name="xnamespace-class"></a>Класс XNamespace  
- Класс <xref:System.Xml.Linq.XNamespace> представляет пространство имен для объекта <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute>. Пространства имен являются компонентом объекта <xref:System.Xml.Linq.XName>.  
+### <a name="xnamespace-class"></a><span data-ttu-id="aaf2e-141">Класс XNamespace</span><span class="sxs-lookup"><span data-stu-id="aaf2e-141">XNamespace Class</span></span>  
+ <span data-ttu-id="aaf2e-142">Класс <xref:System.Xml.Linq.XNamespace> представляет пространство имен для объекта <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-142"><xref:System.Xml.Linq.XNamespace> represents a namespace for an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XAttribute>.</span></span> <span data-ttu-id="aaf2e-143">Пространства имен являются компонентом объекта <xref:System.Xml.Linq.XName>.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-143">Namespaces are a component of an <xref:System.Xml.Linq.XName>.</span></span>  
   
-### <a name="xnode-class"></a>Класс XNode  
- Класс <xref:System.Xml.Linq.XNode> является абстрактным классом, который представляет узлы XML-дерева. Следующие классы являются производными от класса <xref:System.Xml.Linq.XNode>:  
+### <a name="xnode-class"></a><span data-ttu-id="aaf2e-144">Класс XNode</span><span class="sxs-lookup"><span data-stu-id="aaf2e-144">XNode Class</span></span>  
+ <span data-ttu-id="aaf2e-145">Класс <xref:System.Xml.Linq.XNode> является абстрактным классом, который представляет узлы XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-145"><xref:System.Xml.Linq.XNode> is an abstract class that represents the nodes of an XML tree.</span></span> <span data-ttu-id="aaf2e-146">Следующие классы происходят от класса <xref:System.Xml.Linq.XNode>:</span><span class="sxs-lookup"><span data-stu-id="aaf2e-146">The following classes derive from the <xref:System.Xml.Linq.XNode> class:</span></span>  
   
 -   <xref:System.Xml.Linq.XText>  
   
@@ -81,26 +82,27 @@ ms.lasthandoff: 03/13/2017
   
 -   <xref:System.Xml.Linq.XDocumentType>  
   
-### <a name="xnodedocumentordercomparer-class"></a>Класс XNodeDocumentOrderComparer  
- Класс <xref:System.Xml.Linq.XNodeDocumentOrderComparer> предоставляет возможность сравнивать узлы по их порядку в документе.  
+### <a name="xnodedocumentordercomparer-class"></a><span data-ttu-id="aaf2e-147">Класс XNodeDocumentOrderComparer</span><span class="sxs-lookup"><span data-stu-id="aaf2e-147">XNodeDocumentOrderComparer Class</span></span>  
+ <span data-ttu-id="aaf2e-148">Класс <xref:System.Xml.Linq.XNodeDocumentOrderComparer> предоставляет возможность сравнивать узлы по их порядку в документе.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-148"><xref:System.Xml.Linq.XNodeDocumentOrderComparer> provides functionality to compare nodes for their document order.</span></span>  
   
-### <a name="xnodeequalitycomparer-class"></a>Класс XNodeEqualityComparer  
- Класс <xref:System.Xml.Linq.XNodeEqualityComparer> предоставляет возможность сравнивать узлы по равенству значений.  
+### <a name="xnodeequalitycomparer-class"></a><span data-ttu-id="aaf2e-149">Класс XNodeEqualityComparer</span><span class="sxs-lookup"><span data-stu-id="aaf2e-149">XNodeEqualityComparer Class</span></span>  
+ <span data-ttu-id="aaf2e-150">Класс <xref:System.Xml.Linq.XNodeEqualityComparer> предоставляет возможность сравнивать узлы по равенству значений.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-150"><xref:System.Xml.Linq.XNodeEqualityComparer> provides functionality to compare nodes for value equality.</span></span>  
   
-### <a name="xobject-class"></a>Класс XObject  
- Класс <xref:System.Xml.Linq.XObject> является абстрактным базовым классом объектов <xref:System.Xml.Linq.XNode> и <xref:System.Xml.Linq.XAttribute>. Он предоставляет функции обработки заметок и событий.  
+### <a name="xobject-class"></a><span data-ttu-id="aaf2e-151">Класс XObject</span><span class="sxs-lookup"><span data-stu-id="aaf2e-151">XObject Class</span></span>  
+ <span data-ttu-id="aaf2e-152">Класс <xref:System.Xml.Linq.XObject> является абстрактным базовым классом объектов <xref:System.Xml.Linq.XNode> и <xref:System.Xml.Linq.XAttribute>.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-152"><xref:System.Xml.Linq.XObject> is an abstract base class of <xref:System.Xml.Linq.XNode> and <xref:System.Xml.Linq.XAttribute>.</span></span> <span data-ttu-id="aaf2e-153">Он предоставляет функции обработки заметок и событий.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-153">It provides annotation and event functionality.</span></span>  
   
-### <a name="xobjectchange-class"></a>Класс XObjectChange  
- Класс <xref:System.Xml.Linq.XObjectChange> указывает тип события, когда событие возникает для объекта <xref:System.Xml.Linq.XObject>.  
+### <a name="xobjectchange-class"></a><span data-ttu-id="aaf2e-154">Класс XObjectChange</span><span class="sxs-lookup"><span data-stu-id="aaf2e-154">XObjectChange Class</span></span>  
+ <span data-ttu-id="aaf2e-155">Класс <xref:System.Xml.Linq.XObjectChange> указывает тип события, когда событие возникает для объекта <xref:System.Xml.Linq.XObject>.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-155"><xref:System.Xml.Linq.XObjectChange> specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.</span></span>  
   
-### <a name="xobjectchangeeventargs-class"></a>Класс XObjectChangeEventArgs  
- Класс <xref:System.Xml.Linq.XObjectChangeEventArgs> предоставляет данные для событий <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.  
+### <a name="xobjectchangeeventargs-class"></a><span data-ttu-id="aaf2e-156">Класс XObjectChangeEventArgs</span><span class="sxs-lookup"><span data-stu-id="aaf2e-156">XObjectChangeEventArgs Class</span></span>  
+ <span data-ttu-id="aaf2e-157">Класс <xref:System.Xml.Linq.XObjectChangeEventArgs> предоставляет данные для событий <xref:System.Xml.Linq.XObject.Changing> и <xref:System.Xml.Linq.XObject.Changed>.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-157"><xref:System.Xml.Linq.XObjectChangeEventArgs> provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.</span></span>  
   
-### <a name="xprocessinginstruction-class"></a>Класс XProcessingInstruction  
- Класс <xref:System.Xml.Linq.XProcessingInstruction> представляет инструкцию обработки XML-кода. Инструкция по обработке передает сведения в приложение, обрабатывающее XML-код.  
+### <a name="xprocessinginstruction-class"></a><span data-ttu-id="aaf2e-158">Класс XProcessingInstruction</span><span class="sxs-lookup"><span data-stu-id="aaf2e-158">XProcessingInstruction Class</span></span>  
+ <span data-ttu-id="aaf2e-159">Класс <xref:System.Xml.Linq.XProcessingInstruction> представляет инструкцию обработки XML-кода.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-159"><xref:System.Xml.Linq.XProcessingInstruction> represents an XML processing instruction.</span></span> <span data-ttu-id="aaf2e-160">Инструкция по обработке передает сведения в приложение, обрабатывающее XML-код.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-160">A processing instruction communicates information to an application that processes the XML.</span></span>  
   
-### <a name="xtext-class"></a>Класс XText  
- Класс <xref:System.Xml.Linq.XText> представляет текстовый узел. В большинстве случаев использование этого класса не требуется. Этот класс главным образом используется для смешанного содержимого.  
+### <a name="xtext-class"></a><span data-ttu-id="aaf2e-161">Класс XText</span><span class="sxs-lookup"><span data-stu-id="aaf2e-161">XText Class</span></span>  
+ <span data-ttu-id="aaf2e-162">Класс <xref:System.Xml.Linq.XText> представляет текстовый узел.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-162"><xref:System.Xml.Linq.XText> represents a text node.</span></span> <span data-ttu-id="aaf2e-163">В большинстве случаев использование этого класса не требуется.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-163">In most cases, you do not have to use this class.</span></span> <span data-ttu-id="aaf2e-164">Этот класс главным образом используется для смешанного содержимого.</span><span class="sxs-lookup"><span data-stu-id="aaf2e-164">This class is primarily used for mixed content.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения о программировании LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="aaf2e-165">См. также</span><span class="sxs-lookup"><span data-stu-id="aaf2e-165">See Also</span></span>  
+ [<span data-ttu-id="aaf2e-166">Общие сведения о программировании LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="aaf2e-166">LINQ to XML Programming Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

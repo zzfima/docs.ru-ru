@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Группировка файлов по расширению (LINQ) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Группировка файлов по расширению (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 67b3672ff7fa6c4d188c18f246f5e564ec3b0b29
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f60dc589ab6db8e7229ca1f276ac624e78d77327
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>Практическое руководство. Группировка файлов по расширению (LINQ) (C#)
-В этом примере показано, как можно использовать LINQ для выполнения расширенного группирования и сортировки списков файлов или папок. Также показано, как разбивать на страницы выходные данные в окне консоли с помощью методов <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A>.  
+# <a name="how-to-group-files-by-extension-linq-c"></a><span data-ttu-id="b0bc4-102">Практическое руководство. Группировка файлов по расширению (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b0bc4-102">How to: Group Files by Extension (LINQ) (C#)</span></span>
+<span data-ttu-id="b0bc4-103">В этом примере показано, как можно использовать LINQ для выполнения расширенного группирования и сортировки списков файлов или папок.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="b0bc4-104">Кроме того, здесь показывается, как разбить на страницы выходные данные в окне консоли с помощью методов <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Take%2A>.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
   
-## <a name="example"></a>Пример  
- Следующий запрос демонстрирует группирование содержимого указанного дерева каталогов по расширению файла.  
+## <a name="example"></a><span data-ttu-id="b0bc4-105">Пример</span><span class="sxs-lookup"><span data-stu-id="b0bc4-105">Example</span></span>  
+ <span data-ttu-id="b0bc4-106">Следующий запрос демонстрирует группирование содержимого указанного дерева каталогов по расширению файла.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
   
 ```csharp  
 class GroupByExtension  
@@ -118,11 +119,12 @@ class GroupByExtension
 }  
 ```  
   
- Вывод этой программы может быть длинным в зависимости от объема данных локальной файловой системы и значения `startFolder`. В этом примере демонстрируется постраничный просмотр, который позволяет просматривать все результаты. Те же методы могут применяться для приложений Windows и веб-приложений. Обратите внимание, что поскольку код разбивает элементы в группе на страницы, требуется вложенный цикл `foreach`. Также существует некоторая дополнительная логика для вычисления текущей позиции в списке и предоставления пользователю возможности остановить разбиение по страницам и выйти из программы. В данном конкретном случае запрос разбиения на страницы выполняется для кэшированных результатов исходного запроса. В других контекстах, например LINQ to SQL, подобное кэширование не требуется.  
+ <span data-ttu-id="b0bc4-107">Вывод этой программы может быть длинным в зависимости от объема данных локальной файловой системы и значения `startFolder`.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="b0bc4-108">В этом примере демонстрируется постраничный просмотр, который позволяет просматривать все результаты.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="b0bc4-109">Те же методы могут применяться для приложений Windows и веб-приложений.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="b0bc4-110">Обратите внимание, что поскольку код разбивает элементы в группе на страницы, требуется вложенный цикл `foreach`.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-110">Notice that because the code pages the items in a group, a nested `foreach` loop is required.</span></span> <span data-ttu-id="b0bc4-111">Также существует некоторая дополнительная логика для вычисления текущей позиции в списке и предоставления пользователю возможности остановить разбиение по страницам и выйти из программы.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="b0bc4-112">В данном конкретном случае запрос разбиения на страницы выполняется для кэшированных результатов исходного запроса.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="b0bc4-113">В других контекстах, например LINQ to SQL, подобное кэширование не требуется.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="b0bc4-114">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="b0bc4-114">Compiling the Code</span></span>  
+ <span data-ttu-id="b0bc4-115">Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-115">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="b0bc4-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b0bc4-116">See Also</span></span>  
+ <span data-ttu-id="b0bc4-117">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="b0bc4-117">[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+ [<span data-ttu-id="b0bc4-118">LINQ и каталоги файлов (C#)</span><span class="sxs-lookup"><span data-stu-id="b0bc4-118">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

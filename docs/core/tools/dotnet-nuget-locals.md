@@ -1,99 +1,86 @@
 ---
-title: "Команда dotnet-nuget-locals — CLI .NET Core | Документы Майкрософт"
-description: "Команда dotnet-nuget-locals очищает или перечисляет локальные ресурсы NuGet, например кэш HTTP-запросов, временный кэш или папку глобальных пакетов, используемую на уровне компьютера."
-keywords: "dotnet-nuget-locals, CLI, команда CLI, .NET Core"
+title: "Команда dotnet nuget locals — CLI .NET Core"
+description: "Команда dotnet nuget locals очищает или перечисляет локальные ресурсы NuGet, например кэш HTTP-запросов, временный кэш или папку глобальных пакетов, используемую на уровне компьютера."
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d0acfaa6ff1a11f49a0d3751b675ea94bd6ae3a3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-locals"></a><span data-ttu-id="ccbcc-103">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="ccbcc-103">dotnet nuget locals</span></span>
 
-# <a name="dotnet-nuget-locals"></a>dotnet-nuget locals
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Имя
+## <a name="name"></a><span data-ttu-id="ccbcc-104">Имя</span><span class="sxs-lookup"><span data-stu-id="ccbcc-104">Name</span></span>
 
-`dotnet-nuget locals` — очищает или перечисляет локальные ресурсы NuGet. 
+<span data-ttu-id="ccbcc-105">`dotnet nuget locals` — очищает или перечисляет локальные ресурсы NuGet.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-105">`dotnet nuget locals` - Clears or lists local NuGet resources.</span></span>
 
-## <a name="synopsis"></a>Краткий обзор
+## <a name="synopsis"></a><span data-ttu-id="ccbcc-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="ccbcc-106">Synopsis</span></span>
 
 `dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a>Описание
+## <a name="description"></a><span data-ttu-id="ccbcc-107">Описание</span><span class="sxs-lookup"><span data-stu-id="ccbcc-107">Description</span></span>
 
-Команда `dotnet nuget locals` очищает или перечисляет локальные ресурсы NuGet в кэше HTTP-запросов, временном кэше или папке пакетов, используемой на уровне компьютера.
+<span data-ttu-id="ccbcc-108">Команда `dotnet nuget locals` очищает или перечисляет локальные ресурсы NuGet в кэше HTTP-запросов, временном кэше или папке пакетов, используемой на уровне компьютера.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-108">The `dotnet nuget locals` command clears or lists local NuGet resources in the http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
 
-## <a name="arguments"></a>Аргументы
+## <a name="arguments"></a><span data-ttu-id="ccbcc-109">Аргументы</span><span class="sxs-lookup"><span data-stu-id="ccbcc-109">Arguments</span></span>
 
 `CACHE_LOCATION`
 
-Одно из следующих значений:
+<span data-ttu-id="ccbcc-110">Одно из следующих значений:</span><span class="sxs-lookup"><span data-stu-id="ccbcc-110">One of the following values:</span></span>
 
-`all`
+* <span data-ttu-id="ccbcc-111">`all` — указывает, что определенная операция применяется ко всем типам кэша, то есть к кэшу HTTP-запросов, глобальному кэшу пакетов и временному кэшу.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-111">`all` - Indicates that the specified operation is applied to all cache types: http-request cache, global packages cache, and the temporary cache.</span></span>
+* <span data-ttu-id="ccbcc-112">`http-cache` — указывает, что определенная операция применяется только к кэшу HTTP-запросов.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-112">`http-cache` - Indicates that the specified operation is applied only to the http-request cache.</span></span> <span data-ttu-id="ccbcc-113">Другие расположения кэша не затрагиваются.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-113">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="ccbcc-114">`global-packages` — указывает, что определенная операция применяется только к глобальному кэшу пакетов.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-114">`global-packages` - Indicates that the specified operation is applied only to the global packages cache.</span></span> <span data-ttu-id="ccbcc-115">Другие расположения кэша не затрагиваются.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-115">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="ccbcc-116">`temp` — указывает, что определенная операция применяется только к временному кэшу.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-116">`temp` - Indicates that the specified operation is applied only to the temporary cache.</span></span> <span data-ttu-id="ccbcc-117">Другие расположения кэша не затрагиваются.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-117">The other cache locations are not affected.</span></span>
 
-Указывает, что определенная операция применяется ко всем типам кэша, то есть к кэшу HTTP-запросов, глобальному кэшу пакетов и временному кэшу.
-
-`http-cache`
-
-Указывает, что определенная операция применяется только к кэшу HTTP-запросов. Другие расположения кэша не затрагиваются.
-
-`global-packages`
-
-Указывает, что определенная операция применяется только к глобальному кэшу пакетов. Другие расположения кэша не затрагиваются.
-
-`temp`
-
-Указывает, что определенная операция применяется только к временному кэшу. Другие расположения кэша не затрагиваются.
-
-## <a name="options"></a>Параметры
+## <a name="options"></a><span data-ttu-id="ccbcc-118">Параметры</span><span class="sxs-lookup"><span data-stu-id="ccbcc-118">Options</span></span>
 
 `-h|--help`
 
-Выводит краткую справку по команде.  
+<span data-ttu-id="ccbcc-119">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-119">Prints out a short help for the command.</span></span>
 
 `-c|--clear`
 
-Параметр clear очищает кэш указанного типа. Содержимое каталогов кэша удаляется рекурсивно. Пользователь или группа, совершающие выполнение, должны иметь разрешение на доступ к файлам в каталогах кэша. Если доступа нет, отображается ошибка, в которой указаны неочищенные файлы и папки.
+<span data-ttu-id="ccbcc-120">Параметр clear очищает кэш указанного типа.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-120">The clear option performs a clear operation on the specified cache type.</span></span> <span data-ttu-id="ccbcc-121">Содержимое каталогов кэша удаляется рекурсивно.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-121">The contents of the cache directories are deleted recursively.</span></span> <span data-ttu-id="ccbcc-122">Пользователь или группа, совершающие выполнение, должны иметь разрешение на доступ к файлам в каталогах кэша.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-122">The executing user/group must have permission to the files in the cache directories.</span></span> <span data-ttu-id="ccbcc-123">Если доступа нет, отображается ошибка, в которой указаны неочищенные файлы и папки.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-123">If not, an error is displayed indicating the files/folders which were not cleared.</span></span>
 
 `-l|--list`
 
-Параметр list используется для отображения расположения кэша указанного типа. 
+<span data-ttu-id="ccbcc-124">Параметр list используется для отображения расположения кэша указанного типа.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-124">The list option is used to display the location of the specified cache type.</span></span> 
 
 `--force-english-output`
 
-Принудительно отображает выходные данные командной строки на английском языке.
+<span data-ttu-id="ccbcc-125">Принудительно отображает выходные данные командной строки на английском языке.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-125">Forces command-line output in English.</span></span>
 
-## <a name="examples"></a>Примеры
+## <a name="examples"></a><span data-ttu-id="ccbcc-126">Примеры</span><span class="sxs-lookup"><span data-stu-id="ccbcc-126">Examples</span></span>
 
-Отображает пути ко всем локальным каталогам кэша (т. е. к каталогам кэша HTTP-запросов, кэша глобальных пакетов и временного кэша):
+<span data-ttu-id="ccbcc-127">Отображает пути ко всем локальным каталогам кэша (т. е. к каталогам кэша HTTP-запросов, кэша глобальных пакетов и временного кэша):</span><span class="sxs-lookup"><span data-stu-id="ccbcc-127">Displays the paths of all the local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals –l all`
 
-Отображает путь к локальному каталогу кэша HTTP-запросов.
+<span data-ttu-id="ccbcc-128">Отображает путь к локальному каталогу кэша HTTP-запросов.</span><span class="sxs-lookup"><span data-stu-id="ccbcc-128">Displays the path for the local http-cache directory:</span></span>
 
 `dotnet nuget locals --list http-cache`
 
-Очищает все файлы изо всех локальных каталогов кэша (т. е. каталогов кэша HTTP-запросов, кэша глобальных пакетов и временного кэша):
+<span data-ttu-id="ccbcc-129">Очищает все файлы изо всех локальных каталогов кэша (т. е. каталогов кэша HTTP-запросов, кэша глобальных пакетов и временного кэша):</span><span class="sxs-lookup"><span data-stu-id="ccbcc-129">Clears all files from all local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals --clear all`
 
-Очищает все файлы в локальном каталоге кэша глобальных пакетов:
+<span data-ttu-id="ccbcc-130">Очищает все файлы в локальном каталоге кэша глобальных пакетов:</span><span class="sxs-lookup"><span data-stu-id="ccbcc-130">Clears all files in local global-packages cache directory:</span></span>
 
 `dotnet nuget locals -c global-packages`
 
-Очищает все файлы в локальном каталоге временного кэша:
+<span data-ttu-id="ccbcc-131">Очищает все файлы в локальном каталоге временного кэша:</span><span class="sxs-lookup"><span data-stu-id="ccbcc-131">Clears all files in local temporary cache directory:</span></span>
 
 `dotnet nuget locals -c temp`
 
-## <a name="troubleshooting"></a>Устранение неполадок
+## <a name="troubleshooting"></a><span data-ttu-id="ccbcc-132">Устранение неполадок</span><span class="sxs-lookup"><span data-stu-id="ccbcc-132">Troubleshooting</span></span>
 
-Сведения о распространенных проблемах и ошибках при использовании команды `dotnet nuget locals` см. в статье об [управлении кэшем NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-nuget-cache).
-
+<span data-ttu-id="ccbcc-133">Сведения о распространенных проблемах и ошибках при использовании команды `dotnet nuget locals` см. в статье об [управлении кэшем NuGet](/nuget/consume-packages/managing-the-nuget-cache).</span><span class="sxs-lookup"><span data-stu-id="ccbcc-133">For information on common problems and errors while using the `dotnet nuget locals` command, see [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache).</span></span>

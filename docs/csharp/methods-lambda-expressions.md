@@ -9,24 +9,24 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
 redirect_url: /dotnet/csharp/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8510201536962235265463ee4771989656a22f4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 056eb71bb688ac79f89dfe9fc65740ea1124bda7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 
-# <a name="methods-and-lambda-expressions"></a>Методы и лямбда-выражения
+# <a name="methods-and-lambda-expressions"></a><span data-ttu-id="73b90-105">Методы и лямбда-выражения</span><span class="sxs-lookup"><span data-stu-id="73b90-105">Methods and Lambda Expressions</span></span>
 
-> **Примечание**
+> <span data-ttu-id="73b90-106">**Примечание**</span><span class="sxs-lookup"><span data-stu-id="73b90-106">**Note**</span></span>
 > 
-> Этот раздел еще не написан! 
+> <span data-ttu-id="73b90-107">Этот раздел еще не написан!</span><span class="sxs-lookup"><span data-stu-id="73b90-107">This topic hasn’t been written yet!</span></span> 
 >
-> Мы будем рады получить ваши предложения, которые помогут нам определить вопросы, требующие рассмотрения, и подход. Вы можете отслеживать состояние и оставлять предложения по этой [теме](https://github.com/dotnet/docs/issues/488) на сайте GitHub.
+> <span data-ttu-id="73b90-108">Мы будем рады получить ваши предложения, которые помогут нам определить вопросы, требующие рассмотрения, и подход.</span><span class="sxs-lookup"><span data-stu-id="73b90-108">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="73b90-109">Вы можете отслеживать состояние и оставлять предложения по этой [теме](https://github.com/dotnet/docs/issues/488) на сайте GitHub.</span><span class="sxs-lookup"><span data-stu-id="73b90-109">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/488) at GitHub.</span></span>
 > 
-> Чтобы просмотреть черновые варианты и наброски этого раздела, оставьте сообщение со своими контактными данными в соответствующей теме.
+> <span data-ttu-id="73b90-110">Чтобы просмотреть черновые варианты и наброски этого раздела, оставьте сообщение со своими контактными данными в соответствующей теме.</span><span class="sxs-lookup"><span data-stu-id="73b90-110">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> Узнать больше о том, как вы можете посодействовать, можно на сайте [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
+> <span data-ttu-id="73b90-111">Узнать больше о том, как вы можете посодействовать, можно на сайте [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="73b90-111">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 

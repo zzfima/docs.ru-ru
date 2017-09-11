@@ -1,1 +1,1 @@
-LINQ
+<span data-ttu-id="34d16-101">LINQ</span><span class="sxs-lookup"><span data-stu-id="34d16-101">Language-Integrated Query (LINQ)</span></span>

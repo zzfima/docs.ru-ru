@@ -20,27 +20,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce4f89c88fd856d3471e4f32c4f69d15e8ccb4c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 48571deff37bf4adfcbddbb1f4cc6630cb96303e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Практическое руководство: сравнение содержимого двух папок (LINQ) (Visual Basic)
-В этом примере показаны три способа сравнения двух списков файлов:  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a><span data-ttu-id="ac2ee-102">Практическое руководство: сравнение содержимого двух папок (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ac2ee-102">How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="ac2ee-103">В этом примере показаны три способа сравнения двух списков файлов:</span><span class="sxs-lookup"><span data-stu-id="ac2ee-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
--   Выполнив запрос на логическое значение, указывающее, является ли два списка файлов идентичны.  
+-   <span data-ttu-id="ac2ee-104">Выполнив запрос на логическое значение, указывающее, является ли два списка файлов идентичны.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
--   Путем запроса пересечения для извлечения файлов, находящихся в обеих папках.  
+-   <span data-ttu-id="ac2ee-105">Путем запроса пересечения для извлечения файлов, находящихся в обеих папках.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
--   Путем запроса разности наборов для извлечения файлов, которые находятся в одной папке, но отсутствующих в другой.  
+-   <span data-ttu-id="ac2ee-106">Путем запроса разности наборов для извлечения файлов, которые находятся в одной папке, но отсутствующих в другой.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    >  Методы, представленные здесь могут быть адаптированы для сравнения последовательностей объектов любого типа.  
+    >  <span data-ttu-id="ac2ee-107">Методы, представленные здесь могут быть адаптированы для сравнения последовательностей объектов любого типа.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- `FileComparer` Класс, показанный здесь показано, как использовать пользовательский класс сравнения вместе со стандартными операторами запросов. Класс не предназначен для использования в реальных сценариях. Она использует только имя и длину каждого файла в байтах для определения идентичности содержимого каждой папки или нет. В реальном сценарии следует изменить этой функции сравнения для выполнения более строгой проверки равенства.  
+ <span data-ttu-id="ac2ee-108">`FileComparer` Класс, показанный здесь показано, как использовать пользовательский класс сравнения вместе со стандартными операторами запросов.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="ac2ee-109">Класс не предназначен для использования в реальных сценариях.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="ac2ee-110">Она использует только имя и длину каждого файла в байтах для определения идентичности содержимого каждой папки или нет.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="ac2ee-111">В реальном сценарии следует изменить этой функции сравнения для выполнения более строгой проверки равенства.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a><span data-ttu-id="ac2ee-112">Пример</span><span class="sxs-lookup"><span data-stu-id="ac2ee-112">Example</span></span>  
   
 ```vb  
 Module CompareDirs  
@@ -130,9 +131,9 @@ Module CompareDirs
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="ac2ee-113">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="ac2ee-113">Compiling the Code</span></span>  
+ <span data-ttu-id="ac2ee-114">Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.</span><span class="sxs-lookup"><span data-stu-id="ac2ee-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="ac2ee-115">См. также</span><span class="sxs-lookup"><span data-stu-id="ac2ee-115">See Also</span></span>  
+ <span data-ttu-id="ac2ee-116">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="ac2ee-116">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="ac2ee-117"> [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="ac2ee-117"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>
