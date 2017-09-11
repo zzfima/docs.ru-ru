@@ -51,7 +51,7 @@ Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);
 Структура интерполированной строки выглядит следующим образом:  
   
 ```  
-$"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text> ..."  
+$"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."  
 ```  
 
 где: 
