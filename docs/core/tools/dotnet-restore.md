@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: e9f122c71330f93e02157e36f9fbbc92a0dddfce
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="dotnet-restore"></a>dotnet restore
@@ -89,7 +89,7 @@ dotnet restore [-h|--help]
 
 `--no-dependencies`
 
-Восстанавливая проект с перекрестными ссылками между проектами, не восстанавливайте ссылки, — только корневой проект.
+При восстановлении проекта с перекрестными ссылками между проектами восстанавливает только корневой проект, но не ссылки.
 
 `--packages <PACKAGES_DIRECTORY>`
 
@@ -107,7 +107,7 @@ dotnet restore [-h|--help]
 
 Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--configfile <FILE>`
 
@@ -131,7 +131,7 @@ dotnet restore [-h|--help]
 
 `--no-dependencies`
 
-Восстанавливая проект с перекрестными ссылками между проектами, не восстанавливайте ссылки, — только корневой проект.
+При восстановлении проекта с перекрестными ссылками между проектами восстанавливает только корневой проект, но не ссылки.
 
 `--packages <PACKAGES_DIRECTORY>`
 
@@ -170,3 +170,4 @@ dotnet restore [-h|--help]
 Восстановление зависимостей и средств для проекта в текущем каталоге с выводом минимального объема выходных данных:
 
 `dotnet restore --verbosity minimal`
+
