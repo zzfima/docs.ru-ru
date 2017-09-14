@@ -22,7 +22,7 @@
             - name: Расширение метаданных с помощью атрибутов
               tocHref: /dotnet/standard/attributes/
               topicHref: /dotnet/standard/attributes/index
-            - name: Работа с базовыми типами в .NET Framework
+            - name: Работа с базовыми типами в .NET
               tocHref: /dotnet/standard/base-types/
               topicHref: /dotnet/standard/base-types/index
             - name: Коллекции и структуры данных
@@ -32,7 +32,7 @@
                 - name: Потокобезопасные коллекции
                   tocHref: /dotnet/standard/collections/thread-safe/
                   topicHref: /dotnet/standard/collections/thread-safe/index
-            - name: Разработка для нескольких платформ с помощью .NET Framework
+            - name: "Разработка с помощью\_.NET для множества платформ"
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
             - name: XML-документы и данные
@@ -53,16 +53,16 @@
             - name: Сборка мусора
               tocHref: /dotnet/standard/garbage-collection/
               topicHref: /dotnet/standard/garbage-collection/index
-            - name: Универсальные шаблоны в .NET Framework
+            - name: "Универсальные шаблоны в\_.NET"
               tocHref: /dotnet/standard/generics/
               topicHref: /dotnet/standard/generics/index
-            - name: "Глобализация и локализация приложений .NET\_Framework"
+            - name: Глобализация и локализация
               tocHref: /dotnet/standard/globalization-localization/
               topicHref: /dotnet/standard/globalization-localization/index
             - name: Файловый и потоковый ввод-вывод
               tocHref: /dotnet/standard/io/
               topicHref: /dotnet/standard/io/index
-            - name: Параллельное программирование в .NET Framework
+            - name: "Параллельное программирование в\_.NET"
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
             - name: Безопасность в .NET
@@ -91,10 +91,10 @@
             - name: Дополнительные библиотеки классов и API-интерфейсы
               tocHref: /dotnet/framework/additional-steps/
               topicHref: /dotnet/framework/additional-steps/index
-            - name: Программирование с использованием доменов приложений и сборок
+            - name: Домены приложений и сборки
               tocHref: /dotnet/framework/app-domains/
               topicHref: /dotnet/framework/app-domains/index
-            - name: Общие клиентские технологии в .NET Framework
+            - name: Общие клиентские технологии
               tocHref: /dotnet/framework/common-client-technologies/
               topicHref: /dotnet/framework/common-client-technologies/index
             - name: Настройка приложений с использованием файлов конфигурации
@@ -169,7 +169,7 @@
                 - name: Обработка транзакций
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
-                - name: Службы WCF Data Services 4.5
+                - name: Службы данных WCF
                   tocHref: /dotnet/framework/data/wcf/
                   topicHref: /dotnet/framework/data/wcf/index
             - name: 'Отладка, трассировка и профилирование'
@@ -193,7 +193,7 @@
             - name: Managed Extensibility Framework (MEF)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: "Руководство по миграции на .NET Framework\_4.6 и 4.5"
+            - name: Руководства по миграции
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
             - name: Компиляция приложений с помощью машинного кода .NET
