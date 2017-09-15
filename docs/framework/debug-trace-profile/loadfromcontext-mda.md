@@ -1,60 +1,65 @@
 ---
-title: "loadFromContext MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), LoadFrom context"
-  - "managed debugging assistants (MDAs), LoadFrom context"
-  - "LoadFrom context"
-  - "LoadFromContext MDA"
+title: "Помощник по отладке управляемого кода loadFromContext"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), LoadFrom context
+- managed debugging assistants (MDAs), LoadFrom context
+- LoadFrom context
+- LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d693272adeb0b1bcfea196edb1a23e8b448516cb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# loadFromContext MDA
-Помощник по отладке управляемого кода \(MDA\) `loadFromContext` активируется при загрузке сборки в контекст `LoadFrom`.   Это может произойти в результате вызова метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> или других сходных методов.  
+# <a name="loadfromcontext-mda"></a>Помощник по отладке управляемого кода loadFromContext
+Помощник по отладке управляемого кода (MDA) `loadFromContext` активируется при загрузке сборки в контекст `LoadFrom`. Эта ситуация может возникнуть в результате вызова метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> или других аналогичных методов.  
   
-## Признаки  
- Использование некоторых методов загрузки может привести к тому, что сборки загружаются в контекст `LoadFrom`.  Использование данного контекста может привести к непредвиденному поведению при сериализации, приведении типов и разрешении зависимостей.  В целом, во избежание подобных проблем рекомендуется загружать сборки в контекст `Load`.  Трудно определить, в какой контекст загружается сборка, если данный помощник по отладке управляемого кода не включен.  
+## <a name="symptoms"></a>Признаки  
+ Использование некоторых методов загрузчика может привести к загрузке сборок в контекст `LoadFrom`. Использование этого контекста может привести к неожиданному поведению при сериализации, приведении типов и разрешении зависимостей. Чтобы избежать этих проблем, рекомендуется загружать сборки в контекст `Load`. Без этого помощника по отладке управляемого кода определить, в какой контекст загружена сборка, трудно.  
   
-## Причина  
- Как правило, сборка загружается в контекст `LoadFrom`, если она была загружена из пути вне контекста `Load`, например из глобального кэша сборки или из свойства <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName>.  
+## <a name="cause"></a>Причина  
+ Как правило, при использовании пути за пределами контекста `Load`, например глобального кэша сборок или свойства <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName>, сборка загружается в контекст `LoadFrom`.  
   
-## Решение  
- Необходимо настроить приложения таким образом, чтобы вызовы метода <xref:System.Reflection.Assembly.LoadFrom%2A> больше не требовались.  Можно использовать для этого следующие методы.  
+## <a name="resolution"></a>Решение  
+ Настройте приложения таким образом, чтобы вызовы <xref:System.Reflection.Assembly.LoadFrom%2A> больше не требовались. Это можно сделать следующими способами:  
   
--   Установка сборок в глобальный кэш сборок.  
+-   Установите сборки в глобальный кэш сборок.  
   
--   Помещение сборок в каталог <xref:System.AppDomainSetup.ApplicationBase%2A> для класса <xref:System.AppDomain>.  В случае с доменом по умолчанию именно в каталоге <xref:System.AppDomainSetup.ApplicationBase%2A> содержится исполняемый файл, который запускает процесс.  Для этого также требуется создание нового класса <xref:System.AppDomain>, если сборку перемещать нежелательно.  
+-   Поместите сборки в каталог <xref:System.AppDomainSetup.ApplicationBase%2A> для <xref:System.AppDomain>. Для домена по умолчанию каталог <xref:System.AppDomainSetup.ApplicationBase%2A> содержит исполняемый файл, который запустил процесс. Если перемещать сборку неудобно, также может потребоваться создать новый <xref:System.AppDomain>.  
   
--   Добавление проверочного пути к файлу конфигурации приложения \(CONFIG\-файлу\) или во второстепенным доменам приложения, если зависимые сборки находятся в дочерних каталогах, относящихся к исполняемому файлу.  
+-   Если зависимые сборки находятся в дочерних папках по отношению к исполняемому файлу, добавьте путь проверки в файл конфигурации приложения (.config) или во вторичные домены приложения.  
   
- В каждом конкретном случае код необходимо изменять, чтобы использовать метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ В каждом случае можно изменить код, включив в него метод <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
   
-## Влияние на среду выполнения  
- Данный помощник по отладке управляемого кода не оказывает влияния на среду выполнения CLR.  Он только выводит сведения о контексте, который используется в результате запроса загрузки.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Помощник по отладке управляемого кода не оказывает никакого воздействия на общеязыковую среду выполнения (CLR). В качестве результата запроса на загрузку он возвращает используемый контекст.  
   
-## Output  
- Помощник по отладке управляемого кода сообщает о том, что сборка была загружена в контекст `LoadFrom`.  Также помощник по отладке управляемого кода указывает простое имя сборки и путь.  Помощник по отладке управляемого кода также предлагает способы избежать использования контекста `LoadFrom`.  
+## <a name="output"></a>Вывод  
+ Помощник по отладке управляемого кода сообщает, что сборка была загружена в контекст `LoadFrom`. В выводе указаны простое имя сборки и путь к ней. В выводе также указаны рекомендации, позволяющие избежать использования контекста `LoadFrom`.  
   
-## Configuration  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <loadFromContext />  
@@ -62,8 +67,8 @@ caps.handback.revision: 8
 </mdaConfig>  
 ```  
   
-## Пример  
- В следующем примере кода демонстрируется ситуация, в которой может активироваться данный помощник по отладке управляемого кода:  
+## <a name="example"></a>Пример  
+ В следующем примере кода показана ситуация, которая может привести к запуску помощника по отладке управляемого кода:  
   
 ```  
 using System.Reflection;  
@@ -82,5 +87,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## См. также  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>См. также  
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

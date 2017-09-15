@@ -1,48 +1,53 @@
 ---
-title: "contextSwitchDeadlock MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "deadlocks [.NET Framework]"
-  - "pumping messages"
-  - "STA message pumping"
-  - "single-threaded COM components"
-  - "MDAs (managed debugging assistants), context switching deadlocks"
-  - "managed debugging assistants (MDAs), context switching deadlocks"
-  - "ContextSwitchDeadlock MDA"
-  - "message pumping"
-  - "context switching deadlocks"
+title: contextSwitchDeadlock MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- deadlocks [.NET Framework]
+- pumping messages
+- STA message pumping
+- single-threaded COM components
+- MDAs (managed debugging assistants), context switching deadlocks
+- managed debugging assistants (MDAs), context switching deadlocks
+- ContextSwitchDeadlock MDA
+- message pumping
+- context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 caps.latest.revision: 22
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 22
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cdb847c53f7aa4a38d67f55cae2f1df1eb638079
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# contextSwitchDeadlock MDA
-Помощник отладки управляемого кода `contextSwitchDeadlock` \(MDA\) активируется при обнаружении взаимоблокировки во время попытки перехода к контексту COM.  
+# <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
+Помощник отладки управляемого кода `contextSwitchDeadlock` (MDA) активируется при обнаружении взаимоблокировки во время попытки перехода к контексту COM.  
   
-## Признаки  
+## <a name="symptoms"></a>Признаки  
  Наиболее распространенный признак заключается в том, что вызов неуправляемого компонента COM из управляемого кода не возвращает данные.  Еще одним признаком является постепенное увеличение объема используемой памяти.  
   
-## Причина  
- Наиболее вероятная причина заключается в том, что поток однопотокового подразделения \(STA\) не выдает сообщения.  Поток однопотокового подразделения либо ожидает без выдачи сообщений, либо выполняет продолжительные операции и не позволяет очереди сообщений выдавать их.  
+## <a name="cause"></a>Причина  
+ Наиболее вероятная причина заключается в том, что поток однопотокового подразделения (STA) не выдает сообщения. Поток однопотокового подразделения либо ожидает без выдачи сообщений, либо выполняет продолжительные операции и не позволяет очереди сообщений выдавать их.  
   
  Постепенное увеличение объема используемой памяти вызвано тем, что поток метода завершения пытается вызвать `Release` для неуправляемого компонента COM, и этот компонент не возвращает данные.  Это не позволяет методу завершения освободить другие объекты.  
   
- По умолчанию потоковой моделью для основного потока консольных приложений Visual Basic является однопотоковое подразделение.  Помощник отладки управляемого кода активируется, если поток однопотокового подразделения использует взаимодействие с COM напрямую либо косвенно посредством среды CLR или стороннего элемента управления.  Чтобы предотвратить активацию помощника отладки управляемого кода в консольном приложении Visual Basic, примените атрибут <xref:System.MTAThreadAttribute> для основного метода или измените приложение, чтобы оно выдавало сообщения.  
+ По умолчанию потоковой моделью для основного потока консольных приложений Visual Basic является однопотоковое подразделение. Помощник отладки управляемого кода активируется, если поток однопотокового подразделения использует взаимодействие с COM напрямую либо косвенно посредством среды CLR или стороннего элемента управления.  Чтобы предотвратить активацию помощника отладки управляемого кода в консольном приложении Visual Basic, примените атрибут <xref:System.MTAThreadAttribute> для основного метода или измените приложение, чтобы оно выдавало сообщения.  
   
  Существует возможность ошибочной активации помощника отладки управляемого кода при соблюдении всех следующих условий:  
   
@@ -52,23 +57,23 @@ caps.handback.revision: 22
   
 -   Отладка неуправляемого кода выключена.  
   
- Чтобы определить, происходит ли ошибочная активация помощника отладки управляемого кода, отключите все точки останова, перезапустите приложение и позвольте ему выполняться без остановок.  Если помощник отладки управляемого кода не активируется, вероятно, первоначальная активация была ошибочной.  В этом случае отключите помощник отладки управляемого кода, чтобы не нарушать работу сеанса отладки.  
+ Чтобы определить, происходит ли ошибочная активация помощника отладки управляемого кода, отключите все точки останова, перезапустите приложение и позвольте ему выполняться без остановок. Если помощник отладки управляемого кода не активируется, вероятно, первоначальная активация была ошибочной. В этом случае отключите помощник отладки управляемого кода, чтобы не нарушать работу сеанса отладки.  
   
 > [!NOTE]
->  Этот помощник отладки управляемого кода входит в стандартный набор для [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] и последующих версий.  При включении ведущего процесса в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] вы не можете отключить помощники отладки управляемого кода, входящие в стандартный набор.  Ведущий процесс включен по умолчанию, поэтому его необходимо отключить явным образом.  Сведения о том, как отключить MDA, см. в подразделе «Включение и отключение помощников отладки управляемого кода» раздела [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  Этот помощник отладки управляемого кода входит в стандартный набор для [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] и последующих версий. При включении ведущего процесса в [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] вы не можете отключить помощники отладки управляемого кода, входящие в стандартный набор. Ведущий процесс включен по умолчанию, поэтому его необходимо отключить явным образом. Сведения о том, как отключить MDA, см. в подразделе "Включение и отключение помощников отладки управляемого кода" раздела [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
-## Решение  
+## <a name="resolution"></a>Решение  
  Соблюдайте правила COM в отношении выдачи сообщений однопотокового подразделения.  
   
-## Влияние на среду выполнения  
- Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  Он только выводит данные о контекстах COM.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR. Он только выводит данные о контекстах COM.  
   
-## Вывод  
+## <a name="output"></a>Вывод  
  Сообщение с описанием текущего контекста и целевого контекста.  
   
-## Конфигурация  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <contextSwitchDeadlock />  
@@ -76,7 +81,8 @@ caps.handback.revision: 22
 </mdaConfig>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+

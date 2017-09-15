@@ -1,46 +1,52 @@
 ---
-title: "ETW Events in the Common Language Runtime | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CLR ETW events"
-  - "ETW, common language runtime"
-  - "ETW, CLR events"
+title: "События в среде CLR (трассировка событий Windows)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CLR ETW events
+- ETW, common language runtime
+- ETW, CLR events
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a6b97bf8ce9075ee5fc8877fed65bd4a23f1ce5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# ETW Events in the Common Language Runtime
-Среда CLR предоставляет полезные диагностические данные трассировки событий для Windows \(ETW\) благодаря большому количеству событий отладки и профилирования.  События ETW среды CLR используют систему трассировки Windows ETW, чтобы дополнить существующую поддержку профилирования и отладки, поддерживаемую средой CLR.  
+# <a name="etw-events-in-the-common-language-runtime"></a>События в среде CLR (трассировка событий Windows)
+В общеязыковой среде выполнения (CLR) реализован полезный механизм трассировки событий (ETW), который позволяет получать диагностические сведения для широкого спектра событий отладки и профилирования. События трассировки событий Windows в среде CLR используют систему трассировки Windows ETW, дополняя существующие средства профилирования и отладки, реализованные в общеязыковой среде выполнения.  
   
- Дополнительные сведения о ETW см. в статье об [улучшении отладки и настройки быстродействия с помощью ETW \(на английском языке\)](http://go.microsoft.com/fwlink/?LinkID=161142) библиотеки MSDN.  Сведения о программе Xperf можно найти в записи [Windows Performance Toolkit \- Xperf \(на английском языке\)](http://go.microsoft.com/fwlink/?LinkID=161144) блога NTDebugging.  
+ Дополнительные сведения о трассировке событий Windows см. в статье [Улучшение отладки и настройки производительности с помощью ETW](http://go.microsoft.com/fwlink/?LinkID=161142) библиотеки MSDN. Сведения о программе Xperf можно найти в записи [Windows Performance Toolkit — Xperf](http://go.microsoft.com/fwlink/?LinkID=161144) блога NTDebugging.  
   
- Дополнительные инструменты среды CLR для трассировки событий Windows будут представлены в [CodePlex](http://go.microsoft.com/fwlink/?LinkID=111138), как только станут доступны.  
+ Дополнительные инструменты трассировки событий Windows в среде CLR будут представлены на [веб-сайте CodePlex](http://go.microsoft.com/fwlink/?LinkID=111138), как только станут доступны.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] или более поздней версии необходим для всех событий, описанных в статьях про события.  Операционная система Windows Vista \- минимальный поддерживаемый клиент, а Windows Server 2008 \- минимальный поддерживаемый сервер.  
+ Для всех событий, описанных в разделах, посвященных событиям, требуется [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] или более поздней версии. Минимальный поддерживаемый клиент — операционная система Windows Vista; минимальный поддерживаемый сервер — Windows Server 2008.  
   
-## В этом подразделе  
- [Controlling .NET Framework Logging](../../../docs/framework/performance/controlling-logging.md)  
- Описание средств и команд захвата и просмотра событий ETW.  
+## <a name="in-this-section"></a>Содержание  
+ [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
+ Описывает средства и команды для захвата и просмотра событий трассировки событий Windows.  
   
- [CLR ETW Providers](../../../docs/framework/performance/clr-etw-providers.md)  
- Сведения о поставщиках среды выполнения и очистки и способах их использования для сбора данных ETW.  
+ [Поставщики трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-providers.md)  
+ Содержит сведения о поставщиках среды выполнения и очистки, а также о том, как использовать их для сбора данных трассировки событий Windows.  
   
- [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- Описание ключевых слов для поставщиков среды выполнения и очистки, включающих фильтрацию событий по категории.  
+ [Ключевые слова и уровни среды CLR (трассировка событий Windows)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
+ Описывает ключевые слова для поставщиков среды выполнения и очистки, которые обеспечивают фильтрацию событий по категориям.  
   
- [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md)  
- Подробные сведения о событиях ETW среды CLR, их ключевых словах, уровнях и сведения о событиях.  
+ [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)  
+ Содержит подробные сведения о событиях трассировки событий Windows в среде CLR, а также соответствующих ключевых словах, уровнях и данных событий.  
   
-## См. также  
- [ETW Events in the .NET Framework](../../../docs/framework/performance/etw-events.md)
+## <a name="see-also"></a>См. также  
+ [События трассировки событий Windows в .NET Framework](../../../docs/framework/performance/etw-events.md)
+

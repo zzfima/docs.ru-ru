@@ -1,47 +1,52 @@
 ---
-title: "fatalExecutionEngineError MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "corrupted CLR"
-  - "fatal execution error"
-  - "terminated processes"
-  - "unexpected terminations"
-  - "fatal errors"
-  - "MDAs (managed debugging assistants), fatal errors"
-  - "process termination"
-  - "FatalExecutionEngineError MDA"
-  - "managed debugging assistants (MDAs), fatal errors"
+title: "Помощник по отладке управляемого кода fatalExecutionEngineError"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- corrupted CLR
+- fatal execution error
+- terminated processes
+- unexpected terminations
+- fatal errors
+- MDAs (managed debugging assistants), fatal errors
+- process termination
+- FatalExecutionEngineError MDA
+- managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e437f45e6d6ef6d7397c507667426e4dd9860620
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# fatalExecutionEngineError MDA
-Помощник по отладке управляемого кода \(MDA\) `fatalExecutionEngine``Error` активируется при обнаружении неустранимой ошибки в среде CLR.  Процесс будет завершен.  
+# <a name="fatalexecutionengineerror-mda"></a>Помощник по отладке управляемого кода fatalExecutionEngineError
+Помощник по отладке управляемого кода `fatalExecutionEngine``Error` (MDA) активируется при обнаружении неустранимой ошибки в общеязыковой среде выполнения (CLR). В этом случае процесс завершается.  
   
-## Признаки  
- Неожиданное завершение процесса.  Остальные признаки определить не удается, поскольку сбой в работе среды CLR может произойти в силу множества различных причин.  
+## <a name="symptoms"></a>Признаки  
+ Непредвиденное завершение процесса. Другие признаки определить невозможно, поскольку сбой среды CLR может происходить по самым разным причинам.  
   
-## Причина  
- Произошло неустранимое повреждение среды выполнения CLR.  Чаще всего причиной является повреждение данных, которое может быть вызвано рядом таких проблем, как вызов неправильных функций вызова неуправляемого кода или передача недопустимых данных в среду выполнения CLR.  
+## <a name="cause"></a>Причина  
+ Неустранимое повреждение среды CLR. Чаще всего это вызвано повреждением данных, которое может быть связано с целым рядом проблем, таких как вызовы некорректных функций вызова неуправляемого кода и передача недопустимых данных в среду CLR.  
   
-## Решение  
- Выявить проблему поможет активация дополнительных помощников по отладке управляемого кода.  При диагностике проблемы могут помочь следующие помощники по отладке управляемого кода:  
+## <a name="resolution"></a>Решение  
+ Чтобы определить причины проблемы, попробуйте включить другие помощники по отладке управляемого кода. При диагностике вам могут помочь следующие помощники по отладке управляемого кода:  
   
 -   [invalidOverlappedToPinvoke](../../../docs/framework/debug-trace-profile/invalidoverlappedtopinvoke-mda.md)  
   
@@ -67,15 +72,15 @@ caps.handback.revision: 11
   
 -   [invalidGCHandleCookie](../../../docs/framework/debug-trace-profile/invalidgchandlecookie-mda.md)  
   
-## Влияние на среду выполнения  
- Данный помощник по отладке управляемого кода не оказывает влияния на функционирование среды выполнения.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Этот помощник по отладке управляемого кода не оказывает влияния на поведение среды выполнения.  
   
-## Output  
- Адрес функции среды CLR, которая явилась причиной возникновения неустранимой ошибки, идентификатор потока, в котором возникла ошибка, и код ошибки.  
+## <a name="output"></a>Вывод  
+ Адрес функции среды CLR, которая стала причиной неустранимой ошибки, идентификатор потока, в котором произошла ошибка, а также код самой ошибки.  
   
-## Configuration  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <fatalExecutionEngineError />  
@@ -83,7 +88,8 @@ caps.handback.revision: 11
 </mdaConfig>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
  <xref:System.Runtime.ConstrainedExecution.Cer>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

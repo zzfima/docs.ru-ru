@@ -1,71 +1,76 @@
 ---
-title: "Примеры сетевого программирования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Примеры сетевого программирования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eedeb700adc6c010677959831de8c3ad59c43ea3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Примеры сетевого программирования
-Этот раздел содержит описание и ссылки на загружаемый образцы программирования сети, использующие классы в <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> и связанных пространствах имен.  
+# <a name="network-programming-samples"></a>Примеры сетевого программирования
+В этом разделе приводятся описание и ссылки для скачивания примеров сетевого программирования, в которых используются классы из <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> и связанных с ними пространств имен.  
   
-## В этом подразделе  
- [Образец технологии индикатора хода выполнения загрузки](http://go.microsoft.com/fwlink/?LinkID=179556)  
- Указывает способ отображения хода выполнения загрузки файлов.  
+## <a name="in-this-section"></a>Содержание  
+ [Пример технологии индикатора хода скачивания](http://go.microsoft.com/fwlink/?LinkID=179556)  
+ Демонстрирует, как отобразить состояние процесса скачивания файла.  
   
- [Образец технологии клиента FTP](http://go.microsoft.com/fwlink/?LinkID=179557)  
- Показано, как передать и загрузить файлы с ftp\-сервера.  
+ [Пример клиентской технологии FTP](http://go.microsoft.com/fwlink/?LinkID=179557)  
+ Демонстрирует, как загружать файлы на FTP-сервер и скачивать с него.  
   
- [Образец технологии HttpListener](http://go.microsoft.com/fwlink/?LinkID=179558)  
- Показывает способ обработки HTTP\-запросов из приложения.  
+ [Пример технологии HttpListener](http://go.microsoft.com/fwlink/?LinkID=179558)  
+ Демонстрирует, как обрабатывать HTTP-запросы в приложении.  
   
  [Образец ведущего приложения ASPX HttpListener](http://go.microsoft.com/fwlink/?LinkID=179560)  
- Демонстрируется использование функций класса <xref:System.Net.HttpListener> для создания HTTP\-сервера, которое перенаправляет вызовы к приложению ASP.NET.  
+ Демонстрирует, как использовать функции класса <xref:System.Net.HttpListener> для создания HTTP-сервера, который перенаправляет вызовы в размещенное приложение ASP.NET.  
   
- [Образец технологии почтоотправителя](http://go.microsoft.com/fwlink/?LinkID=179561)  
- Указывает, как отправлять почтовые сообщения из клиентского приложения.  
+ [Пример технологии системы рассылки почты](http://go.microsoft.com/fwlink/?LinkID=179561)  
+ Демонстрирует, как отправлять сообщения электронной почты из клиентского приложения.  
   
- [Образец технологии средства NetStat](http://go.microsoft.com/fwlink/?LinkID=179562)  
- Демонстрируется средство сведениям о сети NCLNetStat.  
+ [Пример технологии средства NetStat](http://go.microsoft.com/fwlink/?LinkID=179562)  
+ Демонстрирует использование средства для работы со сведениями о сети NCLNetStat.  
   
- [Образец отдела информационных технологий сети](http://go.microsoft.com/fwlink/?LinkID=179564)  
- Показывает, как контролировать и отображения данных по сети.  
+ [Пример сетевых информационных технологий](http://go.microsoft.com/fwlink/?LinkID=179564)  
+ Демонстрирует, как отслеживать и отображать сведения о сети.  
   
- [Образец технологии клиента проверки связи](http://go.microsoft.com/fwlink/?LinkID=179565)  
- Демонстрация клиентского приложения, чтобы проверить связь с удаленного узла.  
+ [Пример клиентской технологии проверки связи](http://go.microsoft.com/fwlink/?LinkID=179565)  
+ Демонстрирует клиентское приложение, которое может проверять наличие связи с удаленным узлом.  
   
- [Образец технологии WebClient](http://go.microsoft.com/fwlink/?LinkID=179566)  
- Демонстрирует выполнение общих операций, таких как передача или загрузка файлов или данных.  
+ [Пример технологии веб-клиента](http://go.microsoft.com/fwlink/?LinkID=179566)  
+ Демонстрирует, как выполнять общие операции, например загружать и скачивать файлы или данные.  
   
- [Безопасная образец потоков](http://go.microsoft.com/fwlink/?LinkID=179567)  
- Показывает, как использовать безопасный поток для обмена данными между клиентом и сервером.  
+ [Пример безопасных потоков](http://go.microsoft.com/fwlink/?LinkID=179567)  
+ Демонстрирует способ использования безопасного потока для соединения между клиентом и сервером.  
   
- [Образец сокетов IP версии 6](http://go.microsoft.com/fwlink/?LinkID=179568)  
- Демонстрирует использование сокета, когда IP версии 6.  
+ [Пример сокетов IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ Демонстрирует, как использовать сокеты при включенном протоколе IPv6.  
   
- [Образец технологии обозревателя FTP](http://go.microsoft.com/fwlink/?LinkID=179569)  
- Показывает, как перечислять содержимое ftp\-сервере.  
+ [Пример технологии FTP Explorer](http://go.microsoft.com/fwlink/?LinkID=179569)  
+ Демонстрирует, как вывести список содержимого FTP-сервера.  
   
- [Образец технологии производительности сокетов](http://go.microsoft.com/fwlink/?LinkID=179570)  
- Показывает, как использовать улучшения в классе <xref:System.Net.Sockets.Socket> для построения серверное приложение, которое использует асинхронный ВВОД\-ВЫВОД сети для достижения высокого класса производительности.  
+ [Образец технологии производительности сокета](http://go.microsoft.com/fwlink/?LinkID=179570)  
+ Демонстрирует, как использовать улучшения в классе <xref:System.Net.Sockets.Socket> для оптимизации производительности серверного приложения на основе механизма асинхронного сетевого ввода-вывода.  
   
- [Образец технологии PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)  
- Показывает, как использовать новые классы в пространстве имен <xref:System.Net.PeerToPeer>, чтобы зарегистрировать и публиковать имя однорангового узла, а затем выполнить разрешение имени однорангового узла.  
+ [Пример технологии PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)  
+ Демонстрирует, как использовать новые классы в пространстве имен <xref:System.Net.PeerToPeer> для регистрации, публикации и последующего разрешения имен одноранговых узлов.  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
@@ -74,7 +79,8 @@ caps.handback.revision: 7
   
  <xref:System.Net.Sockets>  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)   
  [Практические руководства по сетевому программированию](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
- [Образцы сети .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Примеры работы в сети для .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+

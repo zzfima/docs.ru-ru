@@ -1,31 +1,36 @@
 ---
-title: "Практическое руководство. Задание политики кэширования для запроса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "политики кэширования запроса"
+title: "Практическое руководство. Задание политики кэширования для запроса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4acef4b118422a8276260d083a5c31c41472eb68
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Практическое руководство. Задание политики кэширования для запроса
-В следующем примере показано, как устанавливать политику кэша для запроса.  Входные данные примера универсальный код ресурса \(uri\) как http:\/\/www.contoso.com\/.  
+# <a name="how-to-set-cache-policy-for-a-request"></a>Практическое руководство. Задание политики кэширования для запроса
+В следующем примере показана установка политики кэширования для запроса. В качестве входных данных для этого примера используется URI, например "http://www.contoso.com/".  
   
-## Пример  
- В следующем примере кода создается политика кэша, которая позволяет запрошенный ресурс, который необходимо использовать из кэша, если он не находится в кэше на длиннее один день.  Пример отображает сообщение о том, использовался ли ресурс из кэш\- пример `"The response was retrieved from the cache : False."`—, а затем отображает ресурс.  Запрос может выполняться любым кэшем между клиентом и сервером.  
+## <a name="example"></a>Пример  
+ В следующем примере кода создается политика кэширования, которая разрешает использовать запрашиваемый ресурс из кэша, если ресурс находился в кэше не более одного дня. В примере выводится сообщение, которое указывает, использовался ли ресурс из кэша, например `"The response was retrieved from the cache : False."`, а затем выводится название ресурса. Для выполнения запроса может использоваться любой кэш между клиентом и сервером.  
   
 ```csharp  
 using System;  
@@ -110,12 +115,12 @@ Namespace Examples.System.Net.Cache
         End Sub  
     End Class  
 End Namespace  
-  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)   
  [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Элемент \<requestCaching\> \(параметры сети\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

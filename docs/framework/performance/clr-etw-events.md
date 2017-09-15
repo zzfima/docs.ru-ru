@@ -1,75 +1,81 @@
 ---
-title: "CLR ETW Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CLR ETW events"
-  - "ETW, common language runtime"
-  - "ETW, CLR events"
+title: "События трассировки событий Windows в среде CLR"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CLR ETW events
+- ETW, common language runtime
+- ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 caps.latest.revision: 45
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 45
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 57253982ec28b022cea102867f7b49788e10d422
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# CLR ETW Events
-В подразделах этого раздела представлено описание событий трассировки событий Windows.  У каждого события имеется связанное ключевое слово и уровень, описание которых представлено в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  В CLR существуют два поставщика для событий.  
+# <a name="clr-etw-events"></a>События трассировки событий Windows в среде CLR
+В этом разделе описываются события трассировки событий Windows (ETW). С каждым событием связаны ключевое слово и уровень, которые описываются в разделе [Ключевые слова и уровни среды CLR (трассировка событий Windows)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). В среде CLR предусмотрены два поставщика событий:  
   
--   Поставщик среды выполнения вызывает события в зависимости от включенных ключевых слов \(категорий событий\).  GUID поставщика времени выполнения среды CLR — e13c0d23\-ccbc\-4e12\-931b\-d9cc2eee27e4.  
+-   Поставщик среды выполнения вызывает события в зависимости от того, какие ключевые слова (категории событий) активированы. Поставщик среды выполнения CLR имеет GUID e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
--   Поставщик очистки со специализированными вариантами использования.  GUID поставщика очистки среды CLR — a669021c\-c450\-4609\-a035\-5af59af4df18.  
+-   Поставщик очистки используется в особых случаях. Поставщик очистки среды CLR имеет GUID a669021c-c450-4609-a035-5af59af4df18.  
   
- Дополнительные сведения о поставщиках см. в разделе [CLR ETW Providers](../../../docs/framework/performance/clr-etw-providers.md).  
+ Дополнительные сведения см. в разделе [Поставщики трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-providers.md).  
   
-## В этом подразделе  
- [Runtime Information Events](../../../docs/framework/performance/runtime-information-etw-events.md)  
- Сбор сведений о среде выполнения, включая SKU, номер версии, способ активации среды выполнения, параметры командной строки, с которыми она запущена, GUID \(при наличии\) и другие соответствующие данные.  
+## <a name="in-this-section"></a>Содержание  
+ [События сведений времени выполнения](../../../docs/framework/performance/runtime-information-etw-events.md)  
+ Захватывают информацию о среде выполнения, включая SKU, номер версии, способ активизации среды выполнения, параметры командной строки при ее запуске, GUID (если применимо) и другие релевантные данные.  
   
- [Exception Thrown\_V1 Event](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
- Сбор сведений о возникающих исключениях.  
+ [Событие ExceptionThrown_V1](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
+ Захватывает информацию о сгенерированных исключениях.  
   
- [Contention Events](../../../docs/framework/performance/contention-etw-events.md)  
- Сбор сведений о конфликте блокировок monitor или блокировок машинного кода, используемых средой выполнения.  
+ [События конфликтов](../../../docs/framework/performance/contention-etw-events.md)  
+ Захватывают информацию о конкуренции за блокировки мониторинга или неуправляемые блокировки, используемые исполняющей средой.  
   
- [Thread Pool Events](../../../docs/framework/performance/thread-pool-etw-events.md)  
- Сбор сведений о пулах рабочих потоков и пулах потоков ввода\-вывода.  
+ [События пула потоков](../../../docs/framework/performance/thread-pool-etw-events.md)  
+ Захватывают информацию о пулах рабочих потоков и пулах потоков ввода-вывода.  
   
- [Loader Events](../../../docs/framework/performance/loader-etw-events.md)  
- Сбор сведений о загрузке и выгрузке доменов приложений, сборок и модулей.  
+ [События загрузчика](../../../docs/framework/performance/loader-etw-events.md)  
+ Захватывают информацию о загрузке и выгрузке доменов приложения, сборок и модулей.  
   
- [Method Events](../../../docs/framework/performance/method-etw-events.md)  
- Сбор сведений о методах среды CLR для разрешения символов.  
+ [События методов](../../../docs/framework/performance/method-etw-events.md)  
+ Захватывают информацию о методах среды CLR для разрешения символов.  
   
- [Garbage Collection Events](../../../docs/framework/performance/garbage-collection-etw-events.md)  
- Сбор сведений, относящихся к сборке мусора, для упрощения диагностики и отладки.  
+ [События сборки мусора](../../../docs/framework/performance/garbage-collection-etw-events.md)  
+ Захватывают сведения, относящиеся к сборке мусора, в целях диагностики и отладки.  
   
- [JIT Tracing Events](../../../docs/framework/performance/jit-tracing-etw-events.md)  
- Сбор сведений о встраивании кода JIT и вызовах метода с префиксом tail.  
+ [События трассировки JIT-компилятора](../../../docs/framework/performance/jit-tracing-etw-events.md)  
+ Захватывают информацию о JIT-подстановке (inlining) и концевых вызовах (tail calls).  
   
- [Interop Events](../../../docs/framework/performance/interop-etw-events.md)  
- Сбор сведений о создании ловушек и кэшировании MSIL.  
+ [События взаимодействия](../../../docs/framework/performance/interop-etw-events.md)  
+ Захватывают информацию о генерации и кэшировании заглушек MSIL.  
   
- [ARM Events](../../../docs/framework/performance/application-domain-resource-monitoring-arm-etw-events.md)  
- Сбор подробных диагностических сведений о состоянии домена приложения.  
+ [События ARM](../../../docs/framework/performance/application-domain-resource-monitoring-arm-etw-events.md)  
+ Захватывают детализированную диагностическую информацию о состоянии домена приложения.  
   
- [Security Events](../../../docs/framework/performance/security-etw-events.md)  
- Сбор сведений о строгом имени и проверке Authenticode.  
+ [События безопасности](../../../docs/framework/performance/security-etw-events.md)  
+ Захватывают информацию о строгом имени и проверке Authenticode.  
   
- [Stack Event](../../../docs/framework/performance/stack-etw-event.md)  
- Сбор сведений, используемых с другими событиями для создания трассировок стека после вызова события.  
+ [События стека](../../../docs/framework/performance/stack-etw-event.md)  
+ Захватывают информацию, которая используется совместно с другими событиями для генерации трассировок стека после возникновения какого-либо события.  
   
-## См. также  
- [Улучшение производительности в ходе отладки и трассировки событий Windows](http://go.microsoft.com/fwlink/?LinkId=179696)   
- [Блог производительности Windows](http://go.microsoft.com/fwlink/?LinkId=179509)   
- [Controlling .NET Framework Logging](../../../docs/framework/performance/controlling-logging.md)   
- [CLR ETW Providers](../../../docs/framework/performance/clr-etw-providers.md)   
- [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)   
- [ETW Events in the Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>См. также  
+ [Улучшение отладки и настройки производительности с помощью ETW](http://go.microsoft.com/fwlink/?LinkId=179696)   
+ [Блог, посвященный производительности Windows](http://go.microsoft.com/fwlink/?LinkId=179509)   
+ [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md)   
+ [Поставщики трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-providers.md)   
+ [Ключевые слова и уровни среды CLR (трассировка событий Windows)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)   
+ [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+

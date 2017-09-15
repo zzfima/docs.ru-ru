@@ -1,30 +1,35 @@
 ---
-title: "Практическое руководство. Проверка связи с узлом | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Проверка связи"
+title: "Практическое руководство. Проверка связи с узлом"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Практическое руководство. Проверка связи с узлом
-В этом образце показано, как проверить связь с удаленного узла.  
+# <a name="how-to-ping-a-host"></a>Практическое руководство. Проверка связи с узлом
+В этом примере показано, как проверить связь с удаленным узлом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 using System;  
@@ -130,7 +135,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
 -   Ссылки на пространство имен **System.Net**.
+

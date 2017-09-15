@@ -1,76 +1,82 @@
 ---
-title: "Обзор модуля аутентификации WSFederation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Обзор модуля аутентификации WSFederation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a53900d8305352a1122efda1abc75ce2b1626fe6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Обзор модуля аутентификации WSFederation
-Основой \(WIF\) идентификатора Windows включает поддержку федеративной проверки подлинности в приложениях ASP.NET через WS\- федеративный модуль проверки подлинности \(WS\-FAM\).  В этом разделе, позволяет понять, как работает федеративная проверки подлинности и его использования.  
+# <a name="wsfederation-authentication-module-overview"></a>Обзор модуля аутентификации WSFederation
+Windows Identity Foundation (WIF) поддерживает федеративную проверку подлинности в приложениях ASP.NET с помощью модуля проверки подлинности WS-Federated (WS-FAM). В этом разделе объясняются принципы работы федеративной проверки подлинности и способы ее применения.  
   
-### Общие сведения о федеративной проверки подлинности  
- Федеративная проверка подлинности позволяет службе маркеров безопасности \(STS\) в одном домене доверия, чтобы предоставить сведения о проверке подлинности в службе маркеров безопасности в другом домене доверия при отношение доверия между доменами 2.  Пример этого показан на следующем рисунке.  
+### <a name="overview-of-federated-authentication"></a>Общие сведения о федеративной проверке подлинности  
+ Федеративная проверка подлинности позволяет службе маркеров безопасности (STS), находящейся в одном домене доверия, предоставлять сведения о проверке подлинности службе STS, находящейся в другом домене доверия, если между этими доменами установлено отношение доверия. Пример представлен на приведенном ниже рисунке.  
   
- ![Сценарий аутентификации федерации](../../../docs/framework/security/media/federatedauthentication.png "FederatedAuthentication")  
+ ![Сценарий федеративной проверки подлинности](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Клиент в домене доверия Fabrikam отправляет запрос в приложение \(RP\) проверяющей стороны в домене доверия Contoso.  
+1.  Клиент в домене доверия Fabrikam отправляет запрос приложению проверяющей стороны в домене доверия Contoso.  
   
-2.  Категория еще не присвоена перенаправляется к службе маркеров безопасности в домене доверия Contoso.  Эта служба маркеров безопасности не имеет статью клиента.  
+2.  Проверяющая сторона перенаправляет клиент в службу STS в домене доверия Contoso. Эта служба не имеет сведений о клиенте.  
   
-3.  Служба маркеров безопасности Contoso перенаправляется к службе маркеров безопасности в домене доверия Fabrikam, с помощью которого домен доверия Contoso имеет отношение доверия.  
+3.  Служба STS Contoso перенаправляет клиент в службу STS в домене доверия Fabrikam, с которым у домена Contoso установлено отношение доверия.  
   
-4.  Служба маркеров безопасности проверяет Fabrikam идентификатор клиента и выдает маркер безопасности в службе маркеров безопасности Contoso.  
+4.  Служба STS Fabrikam проверяет удостоверение клиента и выпускает токен безопасности для службы STS Contoso.  
   
-5.  Служба маркеров безопасности Contoso использует токен Fabrikam, чтобы создать собственный токен, который может использоваться категорией еще не присвоена и отправляет его в категории еще не присвоена.  
+5.  Служба STS Contoso создает на основе токена Fabrikam собственный токен, распознаваемый проверяющей стороной, и отправляет его проверяющей стороне.  
   
-6.  Категория еще не присвоена извлекает выдачи клиента из маркера безопасности и принимает решение авторизации.  
+6.  Проверяющая сторона извлекает из токена безопасности утверждения клиента и принимает решение об авторизации.  
   
-### Использование федеративный модуль проверки подлинности в ASP.NET  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(\), WS\-FAM HTTP\-модуля позволяет добавлять федеративная проверки подлинности в приложение [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  Федеративная проверка подлинности позволяет логики проверки подлинности обрабатываемые службой маркеров безопасности и позволяет сосредоточиться на бизнес\-логике материала.  
+### <a name="using-the-federated-authentication-module-with-aspnet"></a>Использование модуля федеративной проверки подлинности с ASP.NET  
+ Модуль <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) представляет собой HTTP-модуль, позволяющий добавить в приложение [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] поддержку федеративной проверки подлинности. Федеративная проверка подлинности позволяет делегировать обработку логики проверки подлинности службе STS, чтобы вы могли сосредоточиться на написании бизнес-логики.  
   
- При настройке WS\-FAM для определения службы маркеров безопасности, которой не удостоверил запросов быть перенаправлено.  WIF позволяет проверить подлинность пользователя в 2 вариантах.  
+ При настройке модуля WS-FAM необходимо указать службу STS, в которую будут перенаправляться запросы, не прошедшие проверку подлинности. WIF позволяет проверять подлинность пользователя двумя способами.  
   
-1.  Passive перенаправляет: Пользователям, не прошедшим проверку, когда пользователь пытается получить доступ к защищенному ресурсу, и нужно просто перенаправить их в службу маркеров безопасности без необходимости страницы входа, то это правой подход.  Служба маркеров безопасности проверяет идентификатор пользователя, и выдает маркер безопасности, который содержит соответствующие, для этого пользователя.  Этот параметр требует WS\-FAM добавляется в конвейере HTTP\-модулей.  Можно использовать средство идентификатора и доступа для Visual Studio 2012 изменение файла конфигурации приложения для использования WS\-FAM и для слияния в федерацию со службой маркеров безопасности.  Для получения дополнительной информации см. [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1.  Пассивное перенаправление: такой подход используется, когда не прошедший проверку пользователь пытается получить доступ к защищенному ресурсу и этого пользователя необходимо просто перенаправить в службу STS, минуя страницу входа. Служба STS проверяет удостоверение пользователя и выпускает токен безопасности, содержащий необходимые утверждения для этого пользователя. Для реализации этого подхода необходимо добавить в конвейер модулей HTTP модуль WS-FAM. Чтобы настроить использование модуля WS-FAM и федерацию со службой STS, можно изменить файл конфигурации с помощью средства Identity and Access Tool для Visual Studio 2012. Дополнительные сведения см. в разделе [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Можно вызвать метод <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=fullName> или метод <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> из файла кода программной части для страницы данных для входа в приложении категории еще не присвоена.  
+2.  Можно вызвать метод <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=fullName> или <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> из кода программной части страницы входа в приложении проверяющей стороны.  
   
- В passive перенаправление, все сообщение в ответ и выполняет перенаправление из клиента \(обычно браузера\).  Можно добавить WS\-FAM в конвейере HTTP приложения, где он проверяет, не прошедших проверку подлинности пользовательских запросов и перенаправляет пользователей к службе маркеров безопасности при определении.  
+ При пассивном перенаправлении обмен данными происходит посредством ответа или перенаправления из клиента (как правило, браузера). Вы можете добавить модуль WS-FAM в конвейер HTTP приложения, где этот модуль будет отслеживать запросы не прошедших проверку пользователей и перенаправлять таких пользователей в указанную службу STS.  
   
- WS\-FAM также создает несколько событий, которые позволяют настраивать его возможности в приложении [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ Модуль WS-FAM также создает несколько событий, позволяющих настроить его функции в приложении [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
-### Как работает WS\-FAM  
- WS\-FAM реализован в классе <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>.  Обычно добавляются WS\-FAM в конвейере HTTP приложения категории еще не присвоена [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  Пользователям, не прошедшим проверку, когда пользователь пытается получить доступ к защищенному ресурсу, категория еще не присвоена возвращает ответ «HTTP 401 авторизацией запрещен».  WS\-FAM перехватывает этот ответ вместо разрешить клиент для получения сборкой, он перенаправляет пользователя к определенной службе маркеров безопасности.  Проблемы службы маркеров безопасности маркер безопасности, который перехватывает WS\-FAM снова.  WS\-FAM использует токен для создания экземпляра <xref:System.Security.Claims.ClaimsPrincipal> для пользователей, прошедших проверку подлинности, включая обычные механизмы авторизации [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] функции.  
+### <a name="how-the-ws-fam-works"></a>Принципы работы модуля WS-FAM  
+ Модуль WS-FAM реализован в классе <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. Как правило, модуль WS-FAM добавляется в конвейер HTTP приложения проверяющей стороны [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Когда не прошедший проверку пользователь пытается получить доступ к защищенному ресурсу, проверяющая сторона возвращает ответ HTTP "401 в авторизации отказано". Модуль WS-FAM перехватывает этот ответ, не позволяя клиенту получить его, и перенаправляет пользователя в указанную службу STS. Служба STS выпускает токен безопасности, который опять перехватывается модулем WS-FAM. На основе этого токена модуль WS-FAM создает для прошедшего проверку пользователя экземпляр класса <xref:System.Security.Claims.ClaimsPrincipal>, который позволяет применить обычные механизмы авторизации [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Поскольку HTTP не имеет состояний, необходимо каким\-то образом избежать повторить этот весь процесс каждый раз, когда пользователь пытается получить доступ к защищенному ресурсу другой.  На этом этапе возникает <xref:System.IdentityModel.Services.SessionAuthenticationModule> поступает в.  При возникновении службы маркеров безопасности маркер безопасности пользователя, <xref:System.IdentityModel.Services.SessionAuthenticationModule> также создают маркер безопасности сеанса для пользователя и его лежат в COOKIE\-файле.  При последующих запросах, <xref:System.IdentityModel.Services.SessionAuthenticationModule> перехватывает это COOKIE\-файл и использует его для этой <xref:System.Security.Claims.ClaimsPrincipal> пользователя.  
+ Так как протокол HTTP не отслеживает состояние, необходимо предусмотреть механизм, позволяющий избежать повторения этого процесса при каждой попытке доступа пользователя к защищенному ресурсу. Для этого используется модуль <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Когда служба STS выпускает для пользователя токен безопасности, модуль <xref:System.IdentityModel.Services.SessionAuthenticationModule> создает для пользователя токен безопасности сеанса и сохраняет этот токен в файле cookie. При последующих запросах модуль <xref:System.IdentityModel.Services.SessionAuthenticationModule> перехватывает этот файл cookie и восстанавливает с его помощью объект <xref:System.Security.Claims.ClaimsPrincipal> пользователя.  
   
- На следующей схеме показано, что общий поток сведений в passive перенаправляет регистр.  Запрос перенаправляется автоматически с помощью службы маркеров безопасности задать учетные данные без страницы входа в систему:  
+ На приведенной ниже схеме показан поток данных при пассивном перенаправлении. Запрос автоматически перенаправляется через службу STS для установления учетных данных без использования страницы входа.  
   
- ![Временная схема для входа с помощью пассивного перенаправления](../../../docs/framework/security/media/signinusingpassiveredirect.png "SignInUsingPassiveRedirect")  
+ ![Временная диаграмма входа с использованием пассивного перенаправления](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
   
- На следующей схеме показаны подробные сведения о, что происходит, когда пользователь проверку подлинности в службе маркеров безопасности и их маркеры безопасности обрабатываются <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>:  
+ На приведенной ниже схеме подробно показано, что происходит при проверке подлинности пользователя в службе STS и обработке маркеров безопасности модулем <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>.  
   
- ![Временной интервал для обработки токена с помощью пассивного перенаправления](../../../docs/framework/security/media/signinusingpassiveredirect-tokenprocessing.png "SignInUsingPassiveRedirect\_TokenProcessing")  
+ ![Временная диаграмма обработки токенов с использованием пассивного перенаправления](../../../docs/framework/security/media/signinusingpassiveredirect-tokenprocessing.gif "SignInUsingPassiveRedirect_TokenProcessing")  
   
- На следующей схеме показаны подробные сведения о том, что произойдет при маркеры безопасности пользователя были сериализованы в COOKIE\-файл и перехвачены <xref:System.IdentityModel.Services.SessionAuthenticationModule>:  
+ На приведенной ниже схеме подробно показано, что происходит при сериализации маркеров безопасности пользователя в файлы cookie, перехватываемые модулем <xref:System.IdentityModel.Services.SessionAuthenticationModule>.  
   
- ![Временная схема SAM, показывающая вход с помощью элементов управления](../../../docs/framework/security/media/signinusingconrols-sam.png "SignInUsingConrols\_SAM")  
+ ![Временная диаграмма SAM, отражающая вход с использованием элементов управления](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
-### События  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> и их родительский класс, <xref:System.IdentityModel.Services.HttpModuleBase>, создание событий на различных этапах обработки HTTP\-запроса.  Можно обработать эти события в файле `global.asax` приложения [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+### <a name="events"></a>События  
+ Классы <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> и <xref:System.IdentityModel.Services.SessionAuthenticationModule> и их родительский класс <xref:System.IdentityModel.Services.HttpModuleBase> создают события на разных этапах обработки HTTP-запроса. Эти события обрабатываются в файле `global.asax` приложения [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
--   Инфраструктура ASP.NET вызывает метод <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> модуля для инициализации модуля.  
+-   Инфраструктура ASP.NET вызывает метод <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> модуля для его инициализации.  
   
--   Событие <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=fullName> возникает, когда инфраструктура ASP.NET вызывает метод <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> в первый раз в одном из модулей приложения, производные от <xref:System.IdentityModel.Services.HttpModuleBase>.  Этот метод доступ к статическому свойству <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>, что приведет конфигурацию загружается из файла web.config.  Это событие возникает только при первом это свойство доступно.  Объект <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>, инициализируется из конфигурации можно получить с помощью свойства <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=fullName> в обработчике событий.  Это событие можно использовать для изменения конфигурации, прежде чем она будет применяться к любым модули.  Можно добавить обработчик для этого события в методе Application\_Start:  
+-   Событие <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=fullName> создается, когда инфраструктура ASP.NET впервые вызывает метод <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> для одного из модулей приложения, производных от <xref:System.IdentityModel.Services.HttpModuleBase>. Этот метод обращается к статическому свойству <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>, что приводит к загрузке конфигурации из файла Web.config. Это событие создается только при первом обращении к свойству. Доступ к объекту <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>, который инициализируется на основе конфигурации, возможен посредством свойства <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=fullName> в обработчике событий. С помощью этого события можно изменить конфигурацию, прежде чем она будет применена к каким-либо модулям. Обработчик для этого события можно добавить в методе Application_Start:  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -79,34 +85,34 @@ caps.handback.revision: 6
     }  
     ```  
   
-     Каждый модуль переопределяет методы допустимы <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=fullName> и <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=fullName>.  Первый из этих методов добавляет обработчики событий конвейера ASP.NET, представляющие интерес в модуль.  В большинстве случаев реализация по умолчанию модуля является достаточным.  Второй из этих методов инициализирует свойства модуля из свойства <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=fullName>. \(Эта копия конфигурации, которая ранее была загружена\). Можно переопределить этот второй метод, если требуется поддерживать инициализацию из новых свойств конфигурации, в классах, производных от <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> или <xref:System.IdentityModel.Services.SessionAuthenticationModule>.  В таких случаях требуется также будет требуется наследовать соответствующих объектов конфигурации для поддержки добавленные свойства конфигурации; например, в <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> или <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
+     Каждый модуль переопределяет абстрактные методы <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=fullName> и <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=fullName>. Первый из этих методов добавляет обработчики для событий конвейера ASP.NET, которые важны для модуля. В большинстве случаев достаточно реализации модуля по умолчанию. Второй метод инициализирует свойства модуля на основе его свойства <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=fullName>. (Это ранее загруженная копия конфигурации.) Если в классах, производных от <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> или <xref:System.IdentityModel.Services.SessionAuthenticationModule>, должна поддерживаться инициализация новых свойств на основе конфигурации, может потребоваться переопределить этот второй метод. В таких случаях для поддержки дополнительных свойств конфигурации также необходимо обеспечить наследование от соответствующих объектов конфигурации, например от <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> или <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
   
--   WS\-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> при его перехватывает маркер безопасности, который был выпущен службой маркеров безопасности.  
+-   При перехвате токена безопасности, выпущенного службой STS, модуль WS-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived>.  
   
--   WS\-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> после его проверило токен.  
+-   После проверки токена модуль WS-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated>.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> создает событие <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> при создании сеанса маркер безопасности для пользователя.  
+-   При создании для пользователя токена безопасности сеанса модуль <xref:System.IdentityModel.Services.SessionAuthenticationModule> создает событие <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated>.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> создает событие <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> при его перехватывает последующие запросы с COOKIE\-файл, который содержит маркер безопасности сеанса.  
+-   При перехвате последующих запросов с файлом cookie, который содержит токен безопасности сеанса, модуль <xref:System.IdentityModel.Services.SessionAuthenticationModule> создает событие <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived>.  
   
--   Прежде чем WS\-FAM перенаправление пользователя на эмитенту, он создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>.  Запрос данных для входа WS\-Federation доступен через свойство <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A><xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> передаваемого в обработчике событий.  Можно также изменить запрос перед отправкой это, в эмитенту.  
+-   Перед тем как перенаправить пользователя издателю, модуль WS-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>. Запрос входа WS-Federation доступен посредством свойства <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> объекта <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs>, переданного в событии. Перед отправкой издателю запрос можно изменить.  
   
--   WS\-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> когда COOKIE\-файл успешно записан, а пользователь подписан недопустимо.  
+-   При успешной записи файла cookie и входе пользователя в систему модуль WS-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn>.  
   
--   WS\-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> один раз для каждого сеанса, как закрыть сеанс вниз для каждого пользователя.  Это событие не вызывается при закрытии сеанса вниз на клиентском, \(например, путем удаления COOKIE\-файла сеанса\).  В этой среде единого входа, IP\-STS может запрашивать у каждой категории еще не присвоена выходила, слишком.  Это также вызывает это событие, с <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> устанавливается в значение `true`.  
+-   Модуль WS-FAM создает событие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> один раз за сеанс при закрытии сеанса для каждого пользователя. Это событие не создается, если сеанс закрывается на стороне клиента (например, при удалении файла cookie сеанса). В среде с единым входом служба STS поставщика удостоверений также может отправить каждой проверяющей стороне запрос на выход из системы. В этом случае также создается это событие, в котором свойству <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> присвоено значение `true`.  
   
 > [!NOTE]
->  Не следует использовать свойство <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> во время любого события, вызванного объектом <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> или <xref:System.IdentityModel.Services.SessionAuthenticationModule>.  Это происходит потому, что <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> установлено после процесса проверки подлинности, а события вызываются в процессе проверки подлинности.  
+>  Свойство <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> не следует использовать во время событий, создаваемых модулями <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> и <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Связано это с тем, что значение свойства <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> задается после проверки подлинности, а события вызываются во время этого процесса.  
   
-### Конфигурация федеративной проверки подлинности  
- WS\-FAM и SAM настраивается с помощью элемента [\<federationConfiguration\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md).  Дочерний элемент [\<wsFederation\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) настраивает значения по умолчанию для свойств WS\-FAM; например свойства <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> и свойство <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A>. \(Эти значения можно изменить на " на основе запроса, обеспечивая обработчиков для некоторых событий WS\-FAM; например, <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>\). Обработчик COOKIE\-файл, который используется элементом управления лицензиями настраивается с помощью дочернего элемента [\<cookieHandler\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md).  WIF предоставляет обработчик COOKIE\-файл равен реализован в классе <xref:System.IdentityModel.Services.ChunkedCookieHandler>, может иметь его размер блока, с помощью элемента [\<chunkedCookieHandler\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md).  Справочники по элементам `<federationConfiguration>`<xref:System.IdentityModel.Configuration.IdentityConfiguration>, которая предоставляет конфигурацию для других компонентов WIF используется в приложении, например <xref:System.Security.Claims.ClaimsAuthenticationManager> и <xref:System.Security.Claims.ClaimsAuthorizationManager>.  Конфигурация идентификатора может ссылаться из явно определяя именованный элемент [\<identityConfiguration\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) в атрибуте `identityConfigurationName` элемента `<federationConfiguration>`.  Если конфигурация идентификатора не используется явно, то конфигурация идентификатора по умолчанию будет использоваться.  
+### <a name="configuration-of-federated-authentication"></a>Настройка федеративной проверки подлинности  
+ Модули WS-FAM и SAM настраиваются с помощью элемента [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md). Дочерний элемент [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) настраивает значения по умолчанию для свойств WS-FAM, таких как <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A> и <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A>. (Эти значения можно изменять для каждого отдельного запроса, предоставляя обработчики для некоторых событий WS-FAM, например <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>.) Обработчик файлов cookie, используемый SAM, настраивается с помощью дочернего элемента [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md). WIF предоставляет обработчик файлов cookie по умолчанию, реализованный в классе <xref:System.IdentityModel.Services.ChunkedCookieHandler>, размер блоков которого можно задать с помощью элемента [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md). Элемент `<federationConfiguration>` ссылается на объект <xref:System.IdentityModel.Configuration.IdentityConfiguration>, который предоставляет конфигурацию для других компонентов WIF, используемых в приложении, таких как <xref:System.Security.Claims.ClaimsAuthenticationManager> и <xref:System.Security.Claims.ClaimsAuthorizationManager>. На конфигурацию удостоверения можно ссылаться явно, указывая именованный элемент [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) в атрибуте `identityConfigurationName` элемента `<federationConfiguration>`. Если на конфигурацию удостоверения нет явной ссылки, используется конфигурация по умолчанию.  
   
- Следующий код XML показывает конфигурацию приложения \(RP\) проверяющей стороны ASP.NET.  Разделы конфигурации <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> и <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> добавляются в элемент `<configSections>`.  SAM и WS\-FAM добавляются в HTTP\-модуля в элементе `<system.webServer>`\/`<modules>`.  Наконец WIF компоненты настраиваются в `<system.identityModel>`\/`<identityConfiguration>` и `<system.identityModel.services>`\/элементами `<federationConfiguration>`.  Эта конфигурация указывает chunked обработчик COOKIE\-файл, как это обработчик COOKIE\-файл по умолчанию и не является типом обработчика COOKIE\-файла, определенного в элементе `<cookieHandler>`.  
+ Ниже приведен код XML для конфигурации приложения проверяющей стороны ASP.NET. Разделы конфигурации <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> и <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> добавляются в элемент `<configSections>`. SAM и WS-FAM добавляются в список модулей HTTP в элементе `<system.webServer>`/`<modules>`. Наконец, компоненты WIF настраиваются в элементах `<system.identityModel>`/`<identityConfiguration>` и `<system.identityModel.services>`/`<federationConfiguration>`. Эта конфигурация задает поблочный обработчик файлов cookie, так как это обработчик файлов cookie по умолчанию, а в элементе `<cookieHandler>` не указан тип обработчика файлов cookie.  
   
 > [!WARNING]
->  В следующем примере, а атрибут `requireHttps` элемента `<wsFederation>` и атрибут `requireSsl` элемента `<cookieHandler>``false`.  Это представляет потенциальную угрозу безопасности.  В рабочей среде, оба этих значения должны быть предоставлена `true`.  
+>  В приведенном ниже примере атрибут `requireHttps` элемента `<wsFederation>` и атрибут `requireSsl` элемента `<cookieHandler>` имеют значение `false`. Это может представлять угрозу безопасности. В рабочей среде обоим этим аргументам следует присваивать значение `true`.  
   
-```  
+```xml  
 <configuration>  
   <configSections>  
     <section name="system.identityModel" type="System.IdentityModel.Configuration.SystemIdentityModelSection, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />  
@@ -144,7 +150,8 @@ caps.handback.revision: 6
 </configuration>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.IdentityModel.Services.SessionAuthenticationModule>   
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
- [\<federationConfiguration\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+ [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+

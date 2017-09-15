@@ -1,33 +1,39 @@
 ---
-title: "PNRP в разработке приложений | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "PNRP в разработке приложений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f20dd62b5b872b932639a10df1e1636798ba963
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# PNRP в разработке приложений
-В Windows Vista, приложения сети могут получить доступ к функциям публикации и разрешения имени через протокол PNRP упрощенный программный интерфейс \(API\).  
+# <a name="pnrp-in-application-development"></a>PNRP в разработке приложений
+В ОС Windows Vista сетевые приложения могут получать доступ к функциям публикации и разрешения имен через упрощенный программный интерфейс (API) PNRP.  
   
-## Реализация протокола PNRP  
- С упрощенным API PNRP, не определены, что регистрируют облака явно имя и адрес. компонент автоматически определяет соответствующие облака PNRP для соединения и адреса публиковать в облаке.  
+## <a name="implementing-the-peer-name-resolution-protocol"></a>Реализация протокола PNRP  
+ С помощью упрощенного API PNRP не задаются явно облака для регистрации имен и адресов. Компонент PNRP автоматически определяет соответствующие облака, к которым требуется присоединиться, и адреса для публикации в них.  
   
- Для строго упрощенного разрешения имен протокола PNRP в Windows Vista, имена PNRP теперь интегрированы в функцию Windows sockets getaddrinfo\(\).  Для использования протокола PNRP разрешить имя адреса IP версии 6 приложения могут использовать функцию getaddrinfo\(\), чтобы дать полное имя домена \(полное доменное имя\) name.prnp.  net, в котором имя, разрешенным имя однорангового узла.  Pnrp.  net домен является зарезервированным домен, в Windows Vista для разрешения имен протокола PNRP.  
+ В оптимально упрощенном разрешении имен PNRP в системе Windows Vista PNRP-имена теперь интегрированы в функцию Windows Sockets getaddrinfo(). При использовании PNRP для преобразования имени в IPv6-адрес приложения могут пользоваться функцией getaddrinfo() для преобразования полного доменного имени (FQDN) name.prnp.net, в котором name — это имя однорангового узла, которое преобразуется. Домен pnrp.net — это зарезервированный домен в Windows Vista для разрешения имен PNRP.  
   
- PeerToPeer передачи сообщений между приложениями по\-прежнему изменяется основными архитектурами и как PeerChannel WCF [большие данные и потоковая передача](http://go.microsoft.com/fwlink/?LinkID=179652).  
+ Передача сообщений между одноранговыми приложениями по-прежнему осуществляется с применением базовых архитектур, таких как PeerChannel и [Большие наборы данных и потоковая передача](http://go.microsoft.com/fwlink/?LinkID=179652) WCF.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Net.PeerToPeer>
+

@@ -1,74 +1,79 @@
 ---
-title: "dateTimeInvalidLocalFormat MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "dates [.NET Framework], formatting"
-  - "invalid date time local format"
-  - "invalid local formats"
-  - "MDAs (managed debugging assistants), invalid local formats"
-  - "managed debugging assistants (MDAs), invalid local formats"
-  - "dateTimeInvalidLocalFormat MDA"
-  - "date formatting"
-  - "time formatting"
-  - "UTC formatting"
+title: dateTimeInvalidLocalFormat MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- dates [.NET Framework], formatting
+- invalid date time local format
+- invalid local formats
+- MDAs (managed debugging assistants), invalid local formats
+- managed debugging assistants (MDAs), invalid local formats
+- dateTimeInvalidLocalFormat MDA
+- date formatting
+- time formatting
+- UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43155bb2eebfd2cd379d245715c100878fb9fb73
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# dateTimeInvalidLocalFormat MDA
-Помощник по отладке управляемого кода \(MDA\) `dateTimeInvalidLocalFormat` активируется в случае, когда экземпляр <xref:System.DateTime>, который хранится в формате UTC, форматируется с применением формата, который должен использоваться только для экземпляров <xref:System.DateTime> в локальном времени.  Данный помощник по отладке управляемого кода не активируется для экземпляров <xref:System.DateTime>, для которых не заданы дата и время, или экземпляров этого объекта по умолчанию.  
+# <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
+Помощник по отладке управляемого кода `dateTimeInvalidLocalFormat` активируется в том случае, если экземпляр <xref:System.DateTime>, который хранится в формате времени UTC, форматируется с использованием формата, предназначенного только для локальных экземпляров <xref:System.DateTime>. Этот помощник не активируется в том случае, если экземпляры <xref:System.DateTime> не заданы или заданы по умолчанию.  
   
-## Признаки  
- Приложение выполняет сериализацию экземпляра <xref:System.DateTime> в формате UTC вручную с применением локального формата:  
+## <a name="symptom"></a>Признаки  
+ Приложение вручную сериализует экземпляр <xref:System.DateTime> в формате UTC с использованием локального формата:  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
   
-### Причина  
- Формат "z" для метода <xref:System.DateTime.ToString%2A?displayProperty=fullName> включает смещение местного часового пояса, например "\+10:00" для времени Сиднея.  При этом результат применения данного формата будет значимым только в том случае, если значение <xref:System.DateTime> является локальным.  Если в качестве значения выступает время в формате UTC, метод <xref:System.DateTime.ToString%2A?displayProperty=fullName> включает смещение местного часового пояса, но не отображает и не регулирует спецификатор часового пояса.  
+### <a name="cause"></a>Причина  
+ Формат "z" для метода <xref:System.DateTime.ToString%2A?displayProperty=fullName> включает сдвиг местного часового пояса, например "+03:00" для московского времени. Таким образом, значащий результат будет получен только в том случае, если экземпляр <xref:System.DateTime> содержит значение местного времени. Если время указано в формате UTC, <xref:System.DateTime.ToString%2A?displayProperty=fullName> содержит сдвиг местного часового пояса, однако не отображает и не позволяет изменять описатель часового пояса.  
   
-### Решение  
- Для форматирования экземпляров <xref:System.DateTime> в формате UTC необходимо выбрать способ, указывающий на то, что данные экземпляры являются экземплярами UTC.  Рекомендуется при форматировании времени UTC использовать "Z" для обозначения времени UTC:  
+### <a name="resolution"></a>Решение  
+ Экземпляры <xref:System.DateTime> в формате UTC должны иметь форматирование, явно указывающее на это. Для работы со временем в формате UTC рекомендуется использовать формат "Z":  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
- Можно также использовать формат "o", который сериализует объект <xref:System.DateTime> с помощью свойства <xref:System.DateTime.Kind%2A>, правильно выполняющего сериализацию независимо от того, как указывается дата и время в экземпляре: в локальном времени, в формате UTC или они вовсе не заданы:  
+ Также доступен формат "o", который сериализует <xref:System.DateTime> с использованием свойства <xref:System.DateTime.Kind%2A> и обеспечивает корректную сериализацию независимо от того, содержит экземпляр местное время, время в формате UTC или формат не указан:  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
   
-## Влияние на среду выполнения  
- Данный помощник по отладке управляемого кода не оказывает влияния на среду выполнения.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Этот помощник по отладке управляемого кода не влияет на среду выполнения.  
   
-## Output  
- В результате активации данного помощника по отладке управляемого кода не возникает каких\-либо особых выходных данных. Тем не менее, для определения местоположения вызова метода <xref:System.DateTime.ToString%2A>, активирующего данный помощник по отладке управляемого кода, можно использовать стек вызовов.  
+## <a name="output"></a>Вывод  
+ В результате его активации не возвращаются какие-либо конкретные выходные данные. Тем не менее с помощью стека вызовов можно определить расположение вызова <xref:System.DateTime.ToString%2A>, который стал причиной активации этого помощника.  
   
-## Configuration  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <dateTimeInvalidLocalFormat />  
@@ -76,19 +81,19 @@ Serialize(myDateTime.ToString("o"));
 </mdaConfig>  
 ```  
   
-## Пример  
- Можно использовать приложение, которое опосредованно выполняет сериализацию объекта <xref:System.DateTime> в формате UTC, с помощью класса <xref:System.Xml.XmlConvert> или <xref:System.Data.DataSet>.  
+## <a name="example"></a>Пример  
+ Рассмотрите возможность косвенной сериализации значений <xref:System.DateTime> в формате UTC с использованием класса <xref:System.Xml.XmlConvert> или <xref:System.Data.DataSet>, как показано ниже.  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
   
- Классы <xref:System.Xml.XmlConvert> и <xref:System.Data.DataSet> используют локальные форматы для сериализации по умолчанию.  Для сериализации других типов значений <xref:System.DateTime>, например UTC, необходимы дополнительные параметры.  
+ В сериализациях <xref:System.Xml.XmlConvert> и <xref:System.Data.DataSet> по умолчанию используется локальный формат. Для сериализации значений <xref:System.DateTime> другого вида, например в формате UTC, требуется указать дополнительные параметры.  
   
- В данном конкретном примере при вызове метода `ToString` в классе `XmlConvert` передается значение `XmlDateTimeSerializationMode.RoundtripKind`.  В результате выполняется сериализация значения времени в формате UTC.  
+ Конкретно в этом примере необходимо передать `XmlDateTimeSerializationMode.RoundtripKind` в вызов `ToString` для `XmlConvert`. В этом случае данные сериализуются как время в формате UTC.  
   
- При использовании метода <xref:System.Data.DataSet> следует присвоить свойству <xref:System.Data.DataColumn.DateTimeMode%2A> объекта <xref:System.Data.DataColumn> значение <xref:System.Data.DataSetDateTime>.  
+ При использовании <xref:System.Data.DataSet> присвойте свойству <xref:System.Data.DataColumn.DateTimeMode%2A> объекта <xref:System.Data.DataColumn> значение <xref:System.Data.DataSetDateTime.Utc>.  
   
 ```  
 DateTime myDateTime = DateTime.UtcNow;  
@@ -96,6 +101,7 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Globalization.DateTimeFormatInfo>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

@@ -1,31 +1,36 @@
 ---
-title: "Изменения пространства имен System.Uri в версии 2.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Изменения пространства имен System.Uri в версии 2.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Изменения пространства имен System.Uri в версии 2.0
-Были внесены некоторые изменения в класс <xref:System.Uri?displayProperty=fullName>.  Эти изменения зафиксировали неправильную расширения функциональности, удобство использования и усиленную безопасность.  
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Изменения пространства имен System.Uri в версии 2.0
+В класс <xref:System.Uri?displayProperty=fullName> были внесены некоторые изменения. Эти изменения были направлены на исправление некорректного поведения, повышение удобства использования и улучшение безопасности.  
   
-## Устаревшие члены и нерекомендуемые  
- Конструкторы.  
+## <a name="obsolete-and-deprecated-members"></a>Устаревшие и нерекомендуемые члены  
+ Конструкторы:  
   
--   Все конструкторы, которые имеют параметр `dontEscape` .  
+-   все конструкторы с параметром `dontEscape`.  
   
  Методы:  
   
@@ -45,39 +50,40 @@ caps.handback.revision: 9
   
 -   <xref:System.Uri.EscapeString%2A>  
   
-## Изменения  
+## <a name="changes"></a>Изменения  
   
--   Для схем uri, известно, что имеется часть запроса \(файл, ftp и др.\), "?" символ всегда избегается и не считается началом части <xref:System.Uri.Query%2A>.  
+-   Для схем URI, которые заведомо не содержат части запроса (file, ftp и другие), символ "?" всегда экранируется и не обрабатывается как начало части <xref:System.Uri.Query%2A>.  
   
--   Для неявного файла \(Uri @name.txt формы "c:\\directory\\file"\), \(" \# "\) символов избегается фрагмента всегда полностью unescaping если не спрошен или <xref:System.Uri.LocalPath%2A>`true`.  
+-   Для неявных файловых URI (имеют форму "c:\directory\file@name.txt") символ фрагмента ("#") всегда экранируется, за исключением случаев, когда запрашивается полная отмена экранирования или <xref:System.Uri.LocalPath%2A> имеет значение `true`.  
   
--   Поддержка hostname UNC, была удалена; спецификация IDN для представления международные именена узла.  
+-   Прекращена поддержка имен узлов UNC. Принята спецификация IDN, определяющая представление международных имен узлов.  
   
--   <xref:System.Uri.LocalPath%2A> всегда возвращает полностью unescaped строку.  
+-   <xref:System.Uri.LocalPath%2A> всегда возвращает строку с полной отменой экранирования.  
   
--   <xref:System.Uri.ToString%2A> не делает unescape преобразованное в escape\-последовательность "%", "? " или "&#124;".  
+-   <xref:System.Uri.ToString%2A> не отменяет экранирование экранированного символа "%", "?" или "#".  
   
--   <xref:System.Uri.Equals%2A> теперь включает часть <xref:System.Uri.Query%2A> в обновлений равенства.  
+-   <xref:System.Uri.Equals%2A> теперь включает часть <xref:System.Uri.Query%2A> в проверку равенства.  
   
--   "\=\=" Операторов и "\! \=" можно выполнить переопределение и ссылка на <xref:System.Uri.Equals%2A> метод.  
+-   Операторы "==" и "!=" переопределены и связаны с методом <xref:System.Uri.Equals%2A>.  
   
--   <xref:System.Uri.IsLoopback%2A> теперь содержит последовательные.  
+-   <xref:System.Uri.IsLoopback%2A> теперь дает согласованные результаты.  
   
--   Универсальный код ресурса \(uri\) "`file:///path`" больше не преобразуется в "file:\/\/path".  
+-   URI "`file:///path`" больше не преобразуется как "file://path".  
   
--   "&#124;" теперь распознает как признак имени узла.  То есть "http:\/\/consoto.com\#fragment" теперь преобразован значение "http:\/\/contoso.com\/\#fragment".  
+-   "#" теперь распознается как признак конца имени узла. Таким образом, "http://consoto.com#fragment" теперь преобразуется в "http://contoso.com/#fragment".  
   
--   Ошибка при комбинировании будет зафиксирован базовый универсальный код ресурса \(uri\) с фрагментом.  
+-   Исправлена ошибка, возникающая при объединении базового URI с фрагментом.  
   
--   Ошибка в <xref:System.Uri.HostNameType%2A> исправить.  
+-   Исправлена ошибка в <xref:System.Uri.HostNameType%2A>.  
   
--   Ошибка при анализе протокол NNTP исправить.  
+-   Исправлена ошибка при синтаксическом анализе NNTP.  
   
--   Универсальный код ресурса \(uri\) HTTP формы: теперь выдает исключение contoso.com синтаксического анализа.  
+-   URI формата HTTP:contoso.com теперь приводят к возникновению исключения синтаксического анализа.  
   
--   .NET Framework правильно обрабатывает userinfo в универсальный код ресурса \(uri\).  
+-   Платформа правильно обрабатывает сведения о пользователях в URI.  
   
--   Сжатие пути универсального кода ресурса \(uri\) исправлена, чтобы сломленное универсальный код ресурса \(uri\) не сможет просматривать файловую систему на корень.  
+-   Сжатие пути URI фиксировано таким образом, чтобы неработающий URI не мог выполнять обход файловой системы на уровне выше корневого.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Uri?displayProperty=fullName>
+

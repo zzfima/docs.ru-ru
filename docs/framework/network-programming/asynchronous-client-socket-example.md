@@ -1,30 +1,35 @@
 ---
-title: "Примеры асинхронных сокетов клиента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "асинхронные сокеты клиента"
-  - "сокеты, примеры кода"
-  - "сокеты, асинхронные сокеты клиента"
+title: "Примеры асинхронных сокетов клиента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- asynchronous client sockets
+- sockets, code examples
+- sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 42ef1745942f5c91a979e352d66c111cf7e52973
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Примеры асинхронных сокетов клиента
-Следующий пример создает программу клиента, который подключается к серверу.  Клиент создан с помощью асинхронного гнездом, поэтому не приостановитьо выполнение клиентского приложения, когда сервер возвращает ответ.  Приложение отправляет строку на сервер, а затем отображает строку, возвращаемую сервером на консоль.  
+# <a name="asynchronous-client-socket-example"></a>Примеры асинхронных сокетов клиента
+Приведенная ниже программа создает клиент, который подключается к серверу. Клиент создается с использованием асинхронного сокета, поэтому выполнение клиентского приложения не приостанавливается до тех пор, пока сервер возвращает ответ. Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.  
   
 ```vb  
 Imports System  
@@ -328,7 +333,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пример асинхронного сокета сервера](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
  [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)
+

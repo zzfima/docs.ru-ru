@@ -1,41 +1,46 @@
 ---
-title: "Практическое руководство. Создание сокета | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "протоколы приложений, сокеты"
-  - "Сеть"
-  - "отправка данных, сокеты"
-  - "запросы данных, сокеты"
-  - "запрос данных из Интернета, сокеты"
-  - "класс Socket, создание сокетов"
-  - "Сетевые ресурсы"
-  - "получение данных, сокеты"
-  - "протоколы, сокеты"
-  - "Интернет, сокеты"
-  - "сокеты, создание"
+title: "Практическое руководство. Создание сокета"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- Networking
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- Socket class, creating sockets
+- Network Resources
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 02b02b2fbc5398d7afda8884a04eafdaee12aef4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Практическое руководство. Создание сокета
-Прежде чем можно будет использовать, когда сокет для обмена данными с удаленными устройствами, когда сокет должна быть инициализирована с данными и протокола сетевого адреса.  Конструктор для класса <xref:System.Net.Sockets.Socket> имеющий параметры, определяющие семейство адресов, типом сокета, а типом протокола, который используется, когда сокет для этого соединения.  
+# <a name="how-to-create-a-socket"></a>Практическое руководство. Создание сокета
+Перед использованием сокета для связи с удаленными устройствами необходимо инициализировать сокет, указав протокол и сведения о сетевом адресе. Конструктор класса <xref:System.Net.Sockets.Socket> имеет параметры, которые определяют семейство адресов, тип сокета и тип протокола, которые сокет использует для подключения.  
   
-## Пример  
- Следующий пример создает сокет, который может использоваться для взаимодействия по сети TCP\/IP\-based, например Интернет.  
+## <a name="example"></a>Пример  
+ В следующем примере создается объект Socket, который может использоваться для обмена данными в сетях на основе TCP/IP (например, в Интернете).  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -45,10 +50,9 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Stream, ProtocolType.Tcp)  
-  
 ```  
   
- Для использования протокола UDP вместо TCP, измените тип протокола, например в следующем примере:  
+ Чтобы использовать UDP вместо TCP, измените тип протокола, как показано в следующем примере:  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -58,17 +62,17 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Dgram, ProtocolType.Udp)  
-  
 ```  
   
- Перечисление <xref:System.Net.Sockets.AddressFamily> определяет стандартные семейства адресов, используемые классом **Сокет** для предоставления сетевого адреса \(например, элемент **AddressFamily.InterNetwork** указывает семейство адресов версии 4 протокола IP\).  
+ В перечислении <xref:System.Net.Sockets.AddressFamily> указаны стандартные семейства адресов, которые используются классом **Socket** для разрешения сетевых адресов (например, элемент **AddressFamily.InterNetwork** задает семейство адресов протокола IP версии 4).  
   
- Перечисление <xref:System.Net.Sockets.SocketType> указывает тип сокета \(например, элемент **SocketType.Stream** отображает стандартное сокет для отправки и получения данных с элементом управления потоком\).  
+ В перечислении <xref:System.Net.Sockets.SocketType> указан тип сокета (например, элемент **SocketType.Stream** указывает стандартный сокет для отправки и получения данных с помощью управления потоком).  
   
- Перечисление <xref:System.Net.Sockets.ProtocolType> указывающее сетевой протокол, используемый для связи на **Сокет** \(например, **ProtocolType.Tcp** указывает, что используется, когда сокет TCP; **ProtocolType.Udp** указывает, что когда сокет использует протокол UDP\).  
+ В перечислении <xref:System.Net.Sockets.ProtocolType> указан сетевой протокол, который используется для связи с объектом **Socket** (например, **ProtocolType.Tcp** означает, что сокет использует TCP; **ProtocolType.Udp** означает, что сокет использует UDP).  
   
- После **Сокет** создано, он может инициировать подключение к удаленной конечной точке получить из удаленных соединений или устройств.  
+ После создания объекта **Socket** он может создать подключение к удаленной конечной точке или принимать подключения от удаленных устройств.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование сокетов клиента](../../../docs/framework/network-programming/using-client-sockets.md)   
  [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
+

@@ -1,69 +1,74 @@
 ---
-title: "releaseHandleFailed MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed debugging assistants (MDAs), handles"
-  - "release handle failed"
-  - "CriticalHandle class, run-time errors"
-  - "releaseHandleFailed MDA"
-  - "ReleaseHandle method"
-  - "SafeHandle class, run-time errors"
-  - "MDAs (managed debugging assistants), handles"
+title: releaseHandleFailed MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- managed debugging assistants (MDAs), handles
+- release handle failed
+- CriticalHandle class, run-time errors
+- releaseHandleFailed MDA
+- ReleaseHandle method
+- SafeHandle class, run-time errors
+- MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 caps.latest.revision: 14
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 14
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8270c69ae6d38c0ab9493cfed4f4b376191aaac0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# releaseHandleFailed MDA
-Помощник по отладке управляемого кода \(MDA\) `releaseHandleFailed` активируется для уведомления разработчиков, когда метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> класса, производного от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>, возвращает значение `false`.  
+# <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
+Помощник по отладке управляемого кода (MDA) `releaseHandleFailed` активируется для уведомления разработчиков, когда метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> класса, производного от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>, возвращает значение `false`.  
   
-## Признаки  
+## <a name="symptoms"></a>Признаки  
  Утечки памяти или ресурсов  Если метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> класса, производного от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> завершается с ошибкой, то ресурс, инкапсулированный этим классом, может быть не освобожден или не очищен.  
   
-## Причина  
- Пользователи должны предоставить реализацию метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, если они создают классы, производные от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>; таким образом, эти обстоятельства характерны для отдельных ресурсов.  Однако действуют следующие требования.  
+## <a name="cause"></a>Причина  
+ Пользователи должны предоставить реализацию метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, если они создают классы, производные от <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>; таким образом, эти обстоятельства характерны для отдельных ресурсов. Однако действуют следующие требования.  
   
--   Типы <xref:System.Runtime.InteropServices.SafeHandle> и <xref:System.Runtime.InteropServices.CriticalHandle> представляют оболочки важных ресурсов процессов.  Утечка памяти может со временем сделать процесс непригодным для использования.  
+-   Типы <xref:System.Runtime.InteropServices.SafeHandle> и <xref:System.Runtime.InteropServices.CriticalHandle> представляют оболочки важных ресурсов процессов. Утечка памяти может со временем сделать процесс непригодным для использования.  
   
--   Метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> должен работать без сбоев для выполнения своих функций.  Когда процесс запрашивает такой ресурс, метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> является единственным способом для его освобождения.  Таким образом, ошибка подразумевает утечку ресурсов.  
+-   Метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> должен работать без сбоев для выполнения своих функций. Когда процесс запрашивает такой ресурс, метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> является единственным способом для его освобождения. Таким образом, ошибка подразумевает утечку ресурсов.  
   
--   Все ошибки, возникающие при выполнении метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> и препятствующие освобождению ресурса, представляют ошибку в реализации самого метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>.  Программист должен убедиться, что контракт будет выполнен, даже если этот код вызывает код, созданный другим разработчиком для выполнения своих функций.  
+-   Все ошибки, возникающие при выполнении метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> и препятствующие освобождению ресурса, представляют ошибку в реализации самого метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Программист должен убедиться, что контракт будет выполнен, даже если этот код вызывает код, созданный другим разработчиком для выполнения своих функций.  
   
-## Решение  
- Код, использующий конкретный тип <xref:System.Runtime.InteropServices.SafeHandle> \(или <xref:System.Runtime.InteropServices.CriticalHandle>\), вызвавший уведомление MDA, следует пересмотреть, найти места, где необработанное значение дескриптора извлекается из <xref:System.Runtime.InteropServices.SafeHandle> и копируется в другом месте.  Это обычная причина сбоев в реализации <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>, так как использование необработанного значения дескриптора далее не отслеживается средой выполнения.  Если копия необработанного дескриптора впоследствии закрывается, это может привести к сбою последующего вызова метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, поскольку попытка закрытия выполняется в том же дескрипторе, который теперь является недопустимым.  
+## <a name="resolution"></a>Решение  
+ Код, использующий конкретный тип <xref:System.Runtime.InteropServices.SafeHandle> (или <xref:System.Runtime.InteropServices.CriticalHandle>), вызвавший уведомление MDA, следует пересмотреть, найти места, где необработанное значение дескриптора извлекается из <xref:System.Runtime.InteropServices.SafeHandle> и копируется в другом месте. Это обычная причина сбоев в реализации <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle>, так как использование необработанного значения дескриптора далее не отслеживается средой выполнения. Если копия необработанного дескриптора впоследствии закрывается, это может привести к сбою последующего вызова метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, поскольку попытка закрытия выполняется в том же дескрипторе, который теперь является недопустимым.  
   
  Существует несколько путей, в которых может возникнуть дублирование неверного дескриптора.  
   
--   Поиск вызовов метода <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A>.  Вызовы этого метода должны быть крайне редки, и любой такой найденный вызов должны быть окружен вызовами методов <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> и <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A>.  Эти последующие методы определяют участок кода, в котором можно безопасно использовать необработанное значение дескриптора.  Вне этой области или в случае если число ссылок вообще никогда не увеличивается, значение дескриптора может стать недействительным в любое время путем вызова метода <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> или <xref:System.Runtime.InteropServices.SafeHandle.Close%2A> в другом потоке.  Если все случаи использования метода <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> отслеживаются, необходимо следовать пути, к которому прибегает необработанный дескриптор, чтобы гарантировать, что он не передан в компонент, который в конечном итоге вызывает `CloseHandle` или другой низкоуровневый собственный метод, который будет освобождать этот дескриптор.  
+-   Поиск вызовов метода <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A>. Вызовы этого метода должны быть крайне редки, и любой такой найденный вызов должны быть окружен вызовами методов <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> и <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A>. Эти последующие методы определяют участок кода, в котором можно безопасно использовать необработанное значение дескриптора. Вне этой области или в случае если число ссылок вообще никогда не увеличивается, значение дескриптора может стать недействительным в любое время путем вызова метода <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> или <xref:System.Runtime.InteropServices.SafeHandle.Close%2A> в другом потоке. Если все случаи использования метода <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> отслеживаются, необходимо следовать пути, к которому прибегает необработанный дескриптор, чтобы гарантировать, что он не передан в компонент, который в конечном итоге вызывает `CloseHandle` или другой низкоуровневый собственный метод, который будет освобождать этот дескриптор.  
   
--   Убедитесь, что код, который используется для инициализации <xref:System.Runtime.InteropServices.SafeHandle> с использованием допустимого необработанного значения дескриптора, владеет этим дескриптором.  При создании <xref:System.Runtime.InteropServices.SafeHandle> вокруг дескриптора, который не принадлежит коду без установки параметра `ownsHandle` в значение `false` в конструкторе базового класса, и <xref:System.Runtime.InteropServices.SafeHandle>, и реальный владелец дескриптора могут пытаться закрыть этот дескриптор, что приводит к ошибке в методе <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, если <xref:System.Runtime.InteropServices.SafeHandle> теряет состояние гонки.  
+-   Убедитесь, что код, который используется для инициализации <xref:System.Runtime.InteropServices.SafeHandle> с использованием допустимого необработанного значения дескриптора, владеет этим дескриптором. При создании <xref:System.Runtime.InteropServices.SafeHandle> вокруг дескриптора, который не принадлежит коду без установки параметра `ownsHandle` в значение `false` в конструкторе базового класса, и <xref:System.Runtime.InteropServices.SafeHandle>, и реальный владелец дескриптора могут пытаться закрыть этот дескриптор, что приводит к ошибке в методе <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, если <xref:System.Runtime.InteropServices.SafeHandle> теряет состояние гонки.  
   
--   Когда <xref:System.Runtime.InteropServices.SafeHandle> маршалируется между доменами приложений, подтвердите, что используемый вывод <xref:System.Runtime.InteropServices.SafeHandle> был помечен как сериализуемый.  В редких случаях, когда класс, производный от <xref:System.Runtime.InteropServices.SafeHandle>, был сделан сериализуемым, он должен реализовывать интерфейс <xref:System.Runtime.Serialization.ISerializable> или использовать один из других методов для управления процессом сериализации и десериализации вручную.  Это необходимо, поскольку действие сериализации по умолчанию заключается в создании побитового клона включенного необработанного значения дескриптора, в результате чего два экземпляра <xref:System.Runtime.InteropServices.SafeHandle> думают, что они владеют одним и тем же дескриптором.  Оба будут пытаться вызвать метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> в том же дескрипторе в определенный момент.  Второму <xref:System.Runtime.InteropServices.SafeHandle> это сделать не удастся.  Правильный способ действий при сериализации <xref:System.Runtime.InteropServices.SafeHandle> заключается в вызове функции `DuplicateHandle` или аналогичной функции для вашего собственного типа дескриптора, чтобы создать другую копию действительного дескриптора.  Если ваш тип дескриптора не поддерживает такое действие, то обертывающий его тип <xref:System.Runtime.InteropServices.SafeHandle> нельзя сделать сериализуемым.  
+-   Когда <xref:System.Runtime.InteropServices.SafeHandle> маршалируется между доменами приложений, подтвердите, что используемый вывод <xref:System.Runtime.InteropServices.SafeHandle> был помечен как сериализуемый. В редких случаях, когда класс, производный от <xref:System.Runtime.InteropServices.SafeHandle>, был сделан сериализуемым, он должен реализовывать интерфейс <xref:System.Runtime.Serialization.ISerializable> или использовать один из других методов для управления процессом сериализации и десериализации вручную. Это необходимо, поскольку действие сериализации по умолчанию заключается в создании побитового клона включенного необработанного значения дескриптора, в результате чего два экземпляра <xref:System.Runtime.InteropServices.SafeHandle> думают, что они владеют одним и тем же дескриптором. Оба будут пытаться вызвать метод <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> в том же дескрипторе в определенный момент. Второму <xref:System.Runtime.InteropServices.SafeHandle> это сделать не удастся. Правильный способ действий при сериализации <xref:System.Runtime.InteropServices.SafeHandle> заключается в вызове функции `DuplicateHandle` или аналогичной функции для вашего собственного типа дескриптора, чтобы создать другую копию действительного дескриптора. Если ваш тип дескриптора не поддерживает такое действие, то обертывающий его тип <xref:System.Runtime.InteropServices.SafeHandle> нельзя сделать сериализуемым.  
   
--   Можно отслеживать, где дескриптор закрывается раньше, что приводит к возникновению ошибки при последнем вызове метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, установив точку останова отладчика в исходной программе, используемой для освобождения дескриптора, например в функции `CloseHandle`.  Это может оказаться невозможным в сценариях нагрузочных тестов или даже в функциональных тестах среднего размера из\-за большого объема трафика, с которым часто сталкиваются подобные программы.  Может помочь инструментирование кода, который вызывает собственный метод освобождения, чтобы записывать удостоверение вызывающего объекта или возможно полную трассировку стека и значение дескриптора.  Значение дескриптора можно сравнивать со значением, предоставленным MDA.  
+-   Можно отслеживать, где дескриптор закрывается раньше, что приводит к возникновению ошибки при последнем вызове метода <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, установив точку останова отладчика в исходной программе, используемой для освобождения дескриптора, например в функции `CloseHandle`. Это может оказаться невозможным в сценариях нагрузочных тестов или даже в функциональных тестах среднего размера из-за большого объема трафика, с которым часто сталкиваются подобные программы. Может помочь инструментирование кода, который вызывает собственный метод освобождения, чтобы записывать удостоверение вызывающего объекта или возможно полную трассировку стека и значение дескриптора.  Значение дескриптора можно сравнивать со значением, предоставленным MDA.  
   
--   Обратите внимание, что некоторые типы собственных дескрипторов, например все дескрипторы Win32, которые могут быть освобождены с помощью функции `CloseHandle`, совместно используют одно пространство имен дескрипторов.  Ошибочное освобождение одного типа дескриптора может вызвать проблемы с другим.  Например, случайное закрытие дескриптора события Win32 дважды может привести к вероятному преждевременному закрытию несвязанного дескриптора файла.  Это происходит, когда дескриптор освобождается и значение дескриптора становится доступным для использования в целях отслеживания другого ресурса, возможно другого типа.  Если это происходит и приводит к ошибочному повторному освобождению, дескриптор несвязанного потока может стать недействительным.  
+-   Обратите внимание, что некоторые типы собственных дескрипторов, например все дескрипторы Win32, которые могут быть освобождены с помощью функции `CloseHandle`, совместно используют одно пространство имен дескрипторов. Ошибочное освобождение одного типа дескриптора может вызвать проблемы с другим. Например, случайное закрытие дескриптора события Win32 дважды может привести к вероятному преждевременному закрытию несвязанного дескриптора файла. Это происходит, когда дескриптор освобождается и значение дескриптора становится доступным для использования в целях отслеживания другого ресурса, возможно другого типа. Если это происходит и приводит к ошибочному повторному освобождению, дескриптор несвязанного потока может стать недействительным.  
   
-## Влияние на среду выполнения  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
  Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  
   
-## Вывод  
- Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор.  Например:  
+## <a name="output"></a>Вывод  
+ Сообщение, указывающее, что <xref:System.Runtime.InteropServices.SafeHandle> или <xref:System.Runtime.InteropServices.CriticalHandle> не удалось должным образом освободить дескриптор. Например:  
   
 ```  
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
@@ -73,9 +78,9 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## Конфигурация  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <releaseHandleFailed/>  
@@ -83,7 +88,7 @@ and closing it directly or building another SafeHandle around it."
 </mdaConfig>  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  Ниже приведен пример кода, который может активировать MDA `releaseHandleFailed`.  
   
 ```  
@@ -100,7 +105,8 @@ bool ReleaseHandle()
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+

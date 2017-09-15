@@ -1,28 +1,32 @@
 ---
-title: "Элемент &lt;Parameter&gt; (машинный код .NET) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Элемент &lt;Parameter&gt; (машинный код .NET)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 87d2e08ece2f3a2f6f366d5b93fa75e2330d854d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Элемент &lt;Parameter&gt; (машинный код .NET)
+# <a name="ltparametergt-element-net-native"></a>Элемент &lt;Parameter&gt; (машинный код .NET)
 Применяет политику отражения к типу аргумента, переданного методу.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-  
 <Parameter Name="parameter_name"  
            Activate="policy_type"  
            Browse="policy_type"  
@@ -34,7 +38,6 @@ caps.handback.revision: 14
            MarshalObject="policy_type"  
            MarshalDelegate="policy_type"  
            MarshalStructure="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -49,9 +52,9 @@ caps.handback.revision: 14
 |`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
 |`Serialize`|Сериализация|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек, как, например, сериализатор Newtonsoft JSON.|  
-|`DataContractSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации, который использует <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> класса.|  
-|`DataContractJsonSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации JSON, который использует <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> класса.|  
-|`XmlSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации XML, который использует <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> класса.|  
+|`DataContractSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
+|`DataContractJsonSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
+|`XmlSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
 |`MarshalObject`|Interop|Необязательный атрибут. Определяет политику для маршалинга ссылочных типов в WinRT и COM.|  
 |`MarshalDelegate`|Interop|Необязательный атрибут. Определяет политики для маршалинга типов делегатов как указателей функции на машинный код.|  
 |`MarshalStructure`|Interop|Необязательный атрибут. Определяет политики для маршалинга типов значений в машинный код.|  
@@ -60,13 +63,13 @@ caps.handback.revision: 14
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*имя_параметра*|Имя параметра метода, к которому применяется политика. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
+|*parameter_name*|Имя параметра метода, к которому применяется политика. Например, сигнатура метода `String.CompareTo(Object value)`, значение `Name` — атрибут «value».|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -75,13 +78,14 @@ caps.handback.revision: 14
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
   
 ## <a name="remarks"></a>Примечания  
- `<Parameter>` Является дочерним элементом [ <> \> ](../../../docs/framework/net-native/method-element-net-native.md) элемента и используется для применения политики к конкретному параметру метода. Конкретный параметр метода указывается по имени, а не по типу. По крайней мере один атрибут, который представляет тип политики, такие как `Activate` или `Dynamic`, должен присутствовать.  
+ Элемент `<Parameter>` является дочерним по отношению к элементу [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) и используется для применения политики к конкретному параметру метода. Конкретный параметр метода указывается по имени, а не по типу. По крайней мере один атрибут, который представляет тип политики, такие как `Activate` или `Dynamic`, должен присутствовать.  
   
 ## <a name="see-also"></a>См. также  
- [<>\>Элемент](../../../docs/framework/net-native/method-element-net-native.md)   
- [Ссылка на файл конфигурации директив (rd.xml) среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)   
+ [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
  [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+

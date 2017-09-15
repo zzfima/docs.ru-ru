@@ -1,55 +1,61 @@
 ---
-title: "Примеры кода сокетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "протоколы приложений, сокеты"
-  - "отправка данных, сокеты"
-  - "класс Socket, асинхронные сокеты сервера"
-  - "запросы данных, сокеты"
-  - "запрос данных из Интернета, сокеты"
-  - "сокеты сервера"
-  - "сокеты, примеры кода"
-  - "получение данных, сокеты"
-  - "протоколы, сокеты"
-  - "Интернет, сокеты"
-  - "сокеты клиента"
+title: "Примеры кода сокетов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- Socket class, asynchronous server sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- server sockets
+- sockets, code examples
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c3f84310486e61cf294539955600c3b399d3fff9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Примеры кода сокетов
-Следующие примеры кода демонстрируют, как использовать класс <xref:System.Net.Sockets.Socket> в качестве клиента для подключения к удаленной службы и сетевым как сервер для прослушивания для соединений от удаленных клиентов.  
+# <a name="socket-code-examples"></a>Примеры кода сокетов
+В следующем примере кода демонстрируется использование класса <xref:System.Net.Sockets.Socket> в качестве клиента для подключения к удаленным сетевым службам и в качестве сервера для прослушивания подключений удаленных клиентов.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Пример синхронного сокета клиента](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- Показывает, как реализовать синхронный клиента <xref:System.Net.Sockets.Socket>, который подключается к серверу и отображает данные, возвращаемые с сервера.  
+ Показывает, как реализовать синхронный клиент <xref:System.Net.Sockets.Socket>, который подключается к серверу и отображает возвращаемые сервером данные.  
   
  [Пример синхронного сокета сервера](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- Показывает, как реализовать синхронный сервер <xref:System.Net.Sockets.Socket>, который принимает соединения от клиента и вывод на экран подпирают данных, полученных от клиента.  
+ Показывает, как реализовать синхронный сервер <xref:System.Net.Sockets.Socket>, который принимает подключения клиента и возвращает обратно полученные от клиента данные.  
   
  [Примеры асинхронных сокетов клиента](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- Показывает, как реализовать асинхронного клиента <xref:System.Net.Sockets.Socket>, который подключается к серверу и отображает данные, возвращаемые с сервера.  
+ Показывает, как реализовать асинхронный клиент <xref:System.Net.Sockets.Socket>, который подключается к серверу и отображает возвращаемые сервером данные.  
   
  [Пример асинхронного сокета сервера](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- Показывает, как реализовать асинхронный сервер <xref:System.Net.Sockets.Socket>, который принимает соединения от клиента и вывод на экран подпирают данных, полученных от клиента.  
+ Показывает, как реализовать асинхронный сервер <xref:System.Net.Sockets.Socket>, который принимает подключения клиента и возвращает обратно полученные от клиента данные.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Сокеты](../../../docs/framework/network-programming/sockets.md)  
- Предоставляет основные сведения о пространстве имен <xref:System.Net.Sockets> и классе <xref:System.Net.Sockets.Socket>.  
+ Основные сведения о пространстве имен <xref:System.Net.Sockets> и классе <xref:System.Net.Sockets.Socket>.  
   
  [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)  
- Описывает, как использовать стандартные методы обеспечения безопасности и проверки подлинности через интернет.
+ Описание использования стандартных методов безопасности и аутентификации в Интернете.
+

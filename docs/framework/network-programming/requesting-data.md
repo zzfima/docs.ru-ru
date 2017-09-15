@@ -1,58 +1,62 @@
 ---
-title: "Запрос данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "отправка данных"
-  - "класс WebRequest, отправка и получение данных"
-  - "запрос данных из Интернета, сведения о запросе данных"
-  - "класс WebClient, отправка и получение данных"
-  - "сеть, запрос данных"
-  - "получение данных"
-  - "отправка данных, сведения об отправке данных"
-  - "ответ на интернет-запрос, сведения об ответах на интернет-запросы"
-  - "запросы данных"
-  - "получение данных, сведения о получении данных"
-  - "Интернет, запрос данных"
+title: "Запрос данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sending data
+- WebRequest class, sending and receiving data
+- requesting data from Internet, about requesting data
+- WebClient class, sending and receiving data
+- network, requesting data
+- receiving data
+- sending data, about sending data
+- response to Internet request, about responding to Internet requests
+- data requests
+- receiving data, about receiving data
+- Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c492390eb4cb27973652cc6d62f8c1da2bd1121e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Запрос данных
-Разработка приложений, которые выполняются в распределенной среде сегодняшнего для эффективного операционной Интернета, что при использовании метода для получения данных из ресурсов всех типов.  Подключаемые протоколы позволяют разрабатывать приложения, которые используют один интерфейс для получения данных из нескольких протоколов Интернета.  
+# <a name="requesting-data"></a>Запрос данных
+Для разработки современных интернет-приложений, выполняющихся в распределенной операционной среде, требуется простой и эффективный способ извлечения данных из ресурсов любого типа. Благодаря подключаемым протоколам можно разрабатывать приложения, использующие единый интерфейс для извлечения данных из нескольких интернет-протоколов.  
   
-## Передача и загрузка данные с сервера через интернет  
- Для простых транзакций запроса и ответа, класс <xref:System.Net.WebClient> предоставляет простейший способ передачи данных или загрузить данные с сервера через интернет.  **Веб\-клиент** предоставляет методы для передачи и загрузить файлы, отправлять и получать потоки, а также буфер данных на сервер и получение ответа.  **Веб\-клиент** использует классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> чтобы установить действительные ссылки к интернет\-ресурсу, поэтому любой зарегистрированный подключаемый протокол доступен для использования.  
+## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Загрузка и скачивание данных с интернет-сервера  
+ Для реализации простых операций запроса и ответа класс <xref:System.Net.WebClient> предоставляет простейший способ загрузки данных на интернет-сервер или скачивания с него. В классе **WebClient** представлены методы для скачивания и загрузки файлов, отправки и получения потоков, а также отправки буфера данных на сервер и получения ответа от него. Класс **WebClient** использует классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> для установления фактических подключений к интернет-ресурсу, что позволяет использовать любой зарегистрированный подключаемый протокол.  
   
- Клиентские приложения, которым требуется сделать более сложные транзакции запрашивают данные из серверов с помощью класса **WebRequest** и его потомков.  **WebRequest** инкапсулирует сведения для подключения к серверу, отправить запрос и получение ответа.  **WebRequest** абстрактный класс, который определяет набор свойств и методов, которые доступны все приложения, использующие pluggable protocols.  Потомки **WebRequest**, как <xref:System.Net.HttpWebRequest>, реализующие методы и свойства, определенные **WebRequest**, согласованным с основным протоколом.  
+ Клиентские приложения, которые выполняют более сложные транзакции, используют для запроса данных с серверов класс **WebRequest** и его потомки. Класс **WebRequest** инкапсулирует сведения о подключении к серверу, отправке запроса и получении ответа. **WebRequest** — это абстрактный класс, в котором определяется набор свойств и методов, доступных всем приложениям, использующим подключаемые протоколы. Потомки класса **WebRequest**, такие как <xref:System.Net.HttpWebRequest>, реализуют свойства и методы, определенные в **WebRequest**, в соответствии с особенностями базового протокола.  
   
- Класс **WebRequest**  создает экземпляры определенных протокол\- потомков **WebRequest**, используя значение универсального кода ресурса \(uri\), передаваемого в метод <xref:System.Net.WebRequest.Create%2A>, чтобы определить конкретный экземпляр производного класса, для которого необходимо создать.  Приложения указывают, который является потомком **WebRequest** должен использоваться для обработки запроса путем регистрации конструктор потомка с методом <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  
+ Класс **WebRequest** создает экземпляры потомков **WebRequest** для определенных протоколов, используя значение URI, которое передано в его метод <xref:System.Net.WebRequest.Create%2A> и определяет конкретный создаваемый экземпляр производного класса. Приложения указывают, какой потомок класса **WebRequest** необходимо использовать для обработки запроса, регистрируя конструктор такого потомка с помощью метода <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  
   
- Запрос выполняется к интернет\-ресурсу путем вызова метода <xref:System.Net.WebRequest.GetResponse%2A> на **WebRequest**.  Метод **GetResponse** создает запрос протокол\- определенной из свойств **WebRequest**, устанавливает соединение протокол TCP или UDP\-сокет к серверу и отправляет запрос.  Для запросов, которые отправляют данные на сервер, такие как запросы **Put** HTTP или FTP **Отправить** метод <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=fullName> предоставляет сетевой поток, в котором отправлять данные.  
+ Запрос к интернет-ресурсу выполняется посредством вызова метода <xref:System.Net.WebRequest.GetResponse%2A> для **WebRequest**. Метод **GetResponse** создает запрос для определенного протокола на основании свойств **WebRequest**, устанавливает подключение TCP или UDP к сокету сервера и отправляет запрос. Для запросов, которые отправляют данные на сервер, таких как HTTP-запрос **Post** или FTP-запрос **Put**, метод <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=fullName> предоставляет сетевой поток для отправки данных.  
   
- Метод **GetResponse** возвращает протокол\- специфичные **WebResponse**, соответствующий **WebRequest.**  
+ Метод **GetResponse** возвращает **WebResponse** для определенного протокола, соответствующий **WebRequest.**  
   
- Класс **WebResponse** также является абстрактным классом, который определяет свойства и методы, которые доступны для всех приложений, использующих pluggable protocols.  Потомки **WebResponse** реализуют эти методы и свойства для основного протокола.  Класс <xref:System.Net.HttpWebResponse>, например, реализующий класс **WebResponse** для протокола HTTP.  
+ **WebResponse** — это также абстрактный класс, в котором определяются свойства и методы, доступные всем приложениям, использующим подключаемые протоколы. Потомки класса **WebResponse** реализуют эти свойства и методы для соответствующих базовых протоколов. Например, класс <xref:System.Net.HttpWebResponse> реализует класс **WebResponse** для протокола HTTP.  
   
- Данные, возвращаемые сервером в приложение в потоке, возвращенного методом <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>.  Можно использовать этот поток как любое другое, как показано в следующем примере.  
+ Возвращаемые сервером данные предоставляются приложению в потоке, который возвращается методом <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>. Этот поток используется так же, как и любые другие, что показано в следующем примере.  
   
 ```csharp  
 StreamReader sr =  
    new StreamReader(resp.GetResponseStream(), Encoding.ASCII);  
-  
 ```  
   
 ```vb  
@@ -60,7 +64,8 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Практическое руководство. Запрос веб\-страницы и получение результатов в виде потока](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)   
+ [Практическое руководство. Запрос веб-страницы и получение результатов в виде потока](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)   
  [Практическое руководство. Получение объекта WebResponse, соответствующего объекту WebRequest, для определенного протокола](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+

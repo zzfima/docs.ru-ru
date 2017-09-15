@@ -1,68 +1,73 @@
 ---
-title: "invalidApartmentStateChange MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), invalid apartment state"
-  - "managed debugging assistants (MDAs), invalid apartment state"
-  - "InvalidApartmentStateChange MDA"
-  - "invalid apartment state changes"
-  - "threading [.NET Framework], apartment states"
-  - "apartment states"
-  - "threading [.NET Framework], managed debugging assistants"
-  - "COM apartment states"
+title: "Помощник по отладке управляемого кода invalidApartmentStateChange"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), invalid apartment state
+- managed debugging assistants (MDAs), invalid apartment state
+- InvalidApartmentStateChange MDA
+- invalid apartment state changes
+- threading [.NET Framework], apartment states
+- apartment states
+- threading [.NET Framework], managed debugging assistants
+- COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f42a2b840a0cf678cfc2a06be0e9ed252c355a2a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# invalidApartmentStateChange MDA
-Помощник по отладке управляемого кода \(MDA\) `invalidApartmentStateChange` активируется в случае возникновения одной из следующих проблем.  
+# <a name="invalidapartmentstatechange-mda"></a>Помощник по отладке управляемого кода invalidApartmentStateChange
+Помощник по отладке управляемого кода (MDA) `invalidApartmentStateChange` активируется при возникновении одной из двух следующих проблем.  
   
--   Попытка изменить состояние контейнера СОМ в потоке, который уже был инициализирован моделью СОМ для другого состояния контейнера.  
+-   Предпринята попытка изменить состояние подразделения COM потока, который уже был инициализирован COM в другом состоянии подразделения.  
   
--   Непредвиденное изменение состояния контейнера СОМ в потоке.  
+-   Неожиданное изменение состояния подразделения COM потока.  
   
-## Признаки  
+## <a name="symptoms"></a>Признаки  
   
--   Состояние контейнера СОМ в потоке отличается от требуемого.  Вследствие этого прокси могут использоваться компонентами СОМ, потоковая модель которых отличается от текущей.  В свою очередь, это может стать причиной возникновения исключения <xref:System.InvalidCastException> при вызове объекта СОМ посредством интерфейсов, не настроенных для маршалинга между контейнерами.  
+-   Состояние подразделения COM отличается от запрошенного. Это может привести к использованию прокси-серверов для COM-компонентов, имеющих потоковую модель, отличную от текущей. Это, в свою очередь, может привести к возникновению исключения <xref:System.InvalidCastException> при вызове COM-объекта через интерфейсы, которые не настроены для маршалинга между подразделениями.  
   
--   Состояние контейнера СОМ в потоке отличается от ожидаемого.  Это может стать причиной возникновения исключения <xref:System.Runtime.InteropServices.COMException> со значением RPC\_E\_WRONG\_THREAD для HRESULT, а также исключения <xref:System.InvalidCastException> при вызове [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) \(RCW\).  Это также может привести к тому, что несколько потоков будут иметь одновременный доступ к некоторым однопотоковым компонентам СОМ, что может стать причиной повреждения или потери данных.  
+-   Состояние подразделения COM потока отличается от ожидаемого. Это может привести к <xref:System.Runtime.InteropServices.COMException> с HRESULT RPC_E_WRONG_THREAD, а также <xref:System.InvalidCastException> при вызовах [вызываемой оболочки времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Кроме того, сразу несколько потоков могут одновременно осуществлять доступ к некоторым однопоточным COM-компонентам, что может привести к повреждению или потере данных.  
   
-## Причина  
+## <a name="cause"></a>Причина  
   
--   Поток был изначально инициализирован для другого состояния контейнера СОМ.  Следует отметить, что установить состояние контейнера для потока можно явным или неявным образом.  Чтобы определить состояние контейнера для потока явным образом, можно использовать свойство <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> и методы <xref:System.Threading.Thread.SetApartmentState%2A> и <xref:System.Threading.Thread.TrySetApartmentState%2A>.  Для потока, созданного неявным образом с помощью метода <xref:System.Threading.Thread.Start%2A>, устанавливается значение <xref:System.Threading.ApartmentState>, если только метод <xref:System.Threading.Thread.SetApartmentState%2A> не вызван до запуска потока.  Главный поток приложения также инициализируется неявным образом со значением <xref:System.Threading.ApartmentState>, если только для основного метода не определен атрибут <xref:System.STAThreadAttribute>.  
+-   Поток ранее был инициализирован в другом состоянии подразделения СОМ. Обратите внимание, что состояние потока подразделения может быть задано явным или неявным образом. Явные операции содержат свойство <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> и методы <xref:System.Threading.Thread.SetApartmentState%2A> и <xref:System.Threading.Thread.TrySetApartmentState%2A>. Поток, созданный с помощью метода <xref:System.Threading.Thread.Start%2A>, неявно задан как <xref:System.Threading.ApartmentState.MTA> до тех пор, пока <xref:System.Threading.Thread.SetApartmentState%2A> не будет вызван до запуска потока. Основной поток приложения также неявно инициализирован как <xref:System.Threading.ApartmentState.MTA> до тех пор, пока в основном методе не будет указан атрибут <xref:System.STAThreadAttribute>.  
   
--   В потоке вызывается метод `CoUninitialize` \(или метод `CoInitializeEx`\) с другой моделью параллелизма.  
+-   В потоке вызван метод `CoUninitialize` (или метод `CoInitializeEx`) с другой моделью параллелизма.  
   
-## Решение  
- Следует настроить состояние контейнера потока до его запуска или применить к основному методу приложения атрибут <xref:System.STAThreadAttribute> или <xref:System.MTAThreadAttribute>.  
+## <a name="resolution"></a>Решение  
+ Задайте состояние подразделения потока перед началом его выполнения либо примените атрибут <xref:System.STAThreadAttribute> или <xref:System.MTAThreadAttribute> атрибут к основному методу приложения.  
   
- Во втором случае следует изменить код, вызывающий метод `CoUninitialize`, чтобы вызов был отложен до завершения работы потока и прекращения использования в потоке оболочек RCW и базовых компонентов СОМ.  Тем не менее, если невозможно изменить код, который вызывает метод `CoUninitialize`, то в этом случае не допускается использование оболочек RCW из потоков, которые не инициализированы таким образом.  
+ Во втором случае в идеале код, вызывающий метод `CoUninitialize`, следует изменить для задержки вызова до тех пор, пока поток не будет завершен и не перестанет использовать RCW и базовые СОМ-компоненты. Однако если не удается изменить код, который вызывает метод`CoUninitialize`, то нельзя использовать RCW из потоков, для которых выполнена отмена инициализации.  
   
-## Влияние на среду выполнения  
- Данный помощник по отладке управляемого кода не оказывает влияния на среду CLR.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  
   
-## Output  
- Состояние контейнера СОМ текущего потока, а также состояние, которое пытался применить код.  
+## <a name="output"></a>Вывод  
+ Состояние контейнера СОМ текущего потока и состояние, которое пытался применить код.  
   
-## Configuration  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <invalidApartmentStateChange />  
@@ -70,8 +75,8 @@ caps.handback.revision: 12
 </mdaConfig>  
 ```  
   
-## Пример  
- В следующем примере кода демонстрируется ситуация, в которой может активироваться данный помощник по отладке управляемого кода.  
+## <a name="example"></a>Пример  
+ Следующий пример кода демонстрирует ситуацию, которая может активировать данный MDA.  
   
 ```  
 using System.Threading;  
@@ -87,7 +92,8 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+

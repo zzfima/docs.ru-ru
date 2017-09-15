@@ -1,87 +1,93 @@
 ---
-title: "How to: Create COM Wrappers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM,wrappers creating"
-  - "COM,wrappers Visual Studio"
+title: "Практическое руководство. Создание оболочек COM"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- COM,wrappers creating
+- COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e99b084ddb565a8ae00ee917eaf7fca2c659ab64
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Create COM Wrappers
-Для создания оболочек модели COM можно использовать возможности [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или программы Tlbimp.exe и Regasm.exe платформы .NET Framework.  Оба метода создают два типа оболочек COM:  
+# <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
+Программы-оболочки модели COM можно создавать с использованием функций [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или средств платформы .NET Framework (Tlbimp.exe и Regasm.exe). Оба метода позволяют создать два типа программ-оболочек COM:  
   
--   [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) из библиотеки типов для выполнения COM\-объекта в управляемом коде.  
+-   [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md) из библиотеки типов для выполнения COM-объектов в управляемом коде.  
   
--   [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) с необходимыми настройками реестра для выполнения управляемого объекта в собственном приложении платформы.  
+-   [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md) с соответствующими параметрами реестра для выполнения управляемого объекта в собственном приложении.  
   
- В [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] разработчик может добавить оболочку COM в качестве ссылки в свой проект.  
+ В [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] оболочку COM можно добавить в проект в виде ссылки.  
   
-## Инкапсуляция COM\-объектов в управляемом приложении  
+## <a name="wrapping-com-objects-in-a-managed-application"></a>Создание оболочек для COM-объектов в управляемом приложении  
   
-#### Создание вызываемой оболочки времени выполнения с помощью Visual Studio  
+#### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Создание вызываемой оболочки времени выполнения с использованием Visual Studio  
   
-1.  Откройте проект в своем управляемом приложении.  
+1.  Откройте проект управляемого приложения.  
   
-2.  В меню **Проект** выберите команду **Показать все файлы**.  
+2.  В меню **Проект** выберите пункт **Показать все файлы**.  
   
 3.  В меню **Проект** щелкните команду **Добавить ссылку**.  
   
-4.  В диалоговом окне "Добавление ссылки" щелкните вкладку **COM**, выберите нужный компонент и нажмите кнопку **OK**.  
+4.  В диалоговом окне "Добавление ссылки" перейдите на вкладку **COM**, выберите нужный компонент и нажмите кнопку **ОК**.  
   
-     В окне **Обозреватель решения** обратите внимание, что COM\-компонент добавляется в папку "Ссылки" текущего проекта.  
+     Обратите внимание, что в **обозревателе решений** в папку ссылок проекта добавляется COM-компонент.  
   
- Теперь разработчик может создать код для доступа к COM\-объекту.  Можно начать с объявления объекта, например с помощью инструкции `Imports` для [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] или инструкции `Using` для [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
+ Теперь можно написать код для доступа к COM-объекту. Сначала можно объявить объект, например с помощью оператора `Imports` для [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] или `Using` для [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
   
 > [!NOTE]
->  Если нужно запрограммировать компоненты Microsoft Office сначала установите [Основные сборки взаимодействия Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) из Центра загрузки Майкрософт.  На этапе 4 выберите самую новую версию библиотеки объектов, доступную для нужного продукта Office, например библиотеку **Microsoft Word 11.0 Object Library**.  [](http://msdn.microsoft.com/ru-ru/c9d2a8b9-69df-4c0b-90ca-4d85bae063c4)  
+>  При программировании компонентов Microsoft Office сначала необходимо установить [основные сборки взаимодействия Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) из Центра загрузки Майкрософт. На шаге 4 выберите последнюю доступную версию библиотеки объектов для нужного продукта Office, например **библиотеку объектов Microsoft Word 11.0**.  
   
-#### Создание вызываемой оболочки времени выполнения с помощью программ .NET Framework  
+#### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Создание вызываемой оболочки времени выполнения с использованием средств платформы .NET Framework  
   
--   Запустите программу [Tlbimp.exe \(Type Library Importer\)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+-   Запустите средство [Tlbimp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
   
- Эта программа создает сборку, содержащую метаданные времени выполнения для типов, определенных в исходной библиотеке типов.  
+ Это средство создает сборку, которая содержит метаданные времени выполнения для типов, определенных в исходной библиотеке типов.  
   
-## Инкапсуляция управляемых объектов в собственное представление платформы  
+## <a name="wrapping-managed-objects-in-a-native-application"></a>Создание оболочек для управляемых объектов в собственном приложении  
   
-#### Создание вызываемой оболочки COM с помощью Visual Studio  
+#### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Создание вызываемой оболочки COM с использованием Visual Studio  
   
-1.  Создайте проект библиотеки классов для управляемого класса, который нужно использовать в собственном коде платформы.  У класса должен быть конструктор по умолчанию.  
+1.  Создайте проект библиотеки классов для управляемого класса, который требуется выполнять в машинном коде. Этот класс должен иметь конструктор по умолчанию.  
   
-     Убедитесь, что файл AssemblyInfo содержит полный номер версии создаваемой сборки, состоящий из четырех частей.  Это число необходимо для управления версиями в реестре Windows.  Дополнительные сведения о номерах версий см. в разделе [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md).  
+     Убедитесь, что в файле AssemblyInfo присутствует полный номер версии сборки, состоящий из четырех частей. Этот номер необходим для управления версиями в реестре Windows. Дополнительные сведения о номерах версий см. в разделе [Управление версиями сборки](../../../docs/framework/app-domains/assembly-versioning.md).  
   
 2.  В меню **Проект** выберите пункт **Свойства**.  
   
-3.  Перейдите на вкладку **Compile**.  
+3.  Откройте вкладку **Компиляция**.  
   
-4.  Установите флажок **Регистрация для COM\-взаимодействия**.  
+4.  Установите флажок **Регистрация для COM-взаимодействия**.  
   
- При построении проекта сборка автоматически регистрируется для COM\-взаимодействия.  При построении собственного приложения платформы в [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] разработчик может использовать сборку, выбрав **Добавить ссылку** в меню **Проект**.  
+ При построении проекта сборка автоматически регистрируется для COM-взаимодействия. При создании собственного приложения в [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] можно использовать сборку, щелкнув команду **Добавить ссылку** в меню **Проект**.  
   
-#### Создание вызываемой оболочки COM с помощью программ .NET Framework  
+#### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Создание вызываемой оболочки COM с использованием средств платформы .NET Framework  
   
--   Запустите программу [Regasm.exe \(Assembly Registration Tool\)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+-   Запустите программу [Regasm.exe (средство регистрации сборок)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
   
- Эта программа читает метаданные сборки и добавляет в реестр необходимые записи.  В результате COM\-клиенты могут прозрачно создавать классы .NET Framework.  Сборку можно использовать, как если бы это был собственный COM\-класс.  
+ Это средство считывает метаданные сборки и добавляет в реестр необходимые записи. В результате этого клиенты COM получают возможность прозрачно создавать классы .NET Framework. Сборку можно использовать так, как если бы она была собственным COM-классом.  
   
- Программу Regasm.exe можно выполнить для сборки, находящейся в любом каталоге, а затем выполнить [Gacutil.exe \(Global Assembly Cache Tool\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), чтобы переместить сборку в глобальный кэш сборок.  Перемещение сборки не делает недействительными записи о местонахождении в реестре, так как глобальный кэш сборок всегда проверяет, не находится ли сборка где\-нибудь еще.  
+ Программу Regasm.exe можно запускать для сборки, расположенной в любом каталоге. После этого необходимо запустить [Gacutil.exe (программу глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), чтобы перенести ее в глобальный кэш сборок. При переносе сборки записи расположения в реестре сохраняют силу, поскольку во всех случаях, когда сборка не найдена, проверяется глобальный кэш сборок.  
   
-## См. также  
- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)   
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
+## <a name="see-also"></a>См. также  
+ [Вызываемая оболочка времени выполнения](../../../docs/framework/interop/runtime-callable-wrapper.md)   
+ [Вызываемая оболочка COM](../../../docs/framework/interop/com-callable-wrapper.md)
+
