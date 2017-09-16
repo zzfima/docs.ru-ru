@@ -10,10 +10,10 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: HT
-ms.sourcegitcommit: 6500a14839b14d75d09d8d807c943553dbe09b47
-ms.openlocfilehash: 991a5f4419e6aadc2580f34c97dc74a42dc8cbe6
+ms.sourcegitcommit: 03d1e3f0897713e25be7d7f893861a3eb4dac211
+ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/11/2017
 
 ---
 # <a name="welcome-to-net"></a>Добро пожаловать в .NET
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/15/2017
 
 ## <a name="open-source"></a>Открыть исходный код
 
-В этой документации используется полностью [открытый код](https://github.com/dotnet/docs). Вы можете внести свой вклад в проект любым удобным способом — сообщив о проблеме или приняв участие в создании документации.  Кроме того, большая часть самой платформы .NET имеет открытый исходный код.
+В этой документации используется полностью [открытый исходный код](https://github.com/dotnet/docs). Вы можете внести свой вклад в проект любым удобным способом — сообщив о проблеме или приняв участие в создании документации.  Кроме того, большая часть самой платформы .NET имеет открытый исходный код.
 
 - [Домашняя страница .NET Core](https://github.com/dotnet/core)
 - [Библиотеки .NET](https://github.com/dotnet/corefx)
