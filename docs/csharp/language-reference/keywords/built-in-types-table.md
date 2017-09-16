@@ -28,7 +28,7 @@ caps.handback.revision: 12
 |[decimal](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
 |[double](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
-|[Целочисленное значение.](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
+|[int](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
