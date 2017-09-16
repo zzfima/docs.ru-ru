@@ -28,7 +28,7 @@ caps.handback.revision: 9
 |[char](../../../csharp/language-reference/keywords/char.md)|от U\+0000 до U\+ffff|16\-разрядный символ Юникода|  
 |[short](../../../csharp/language-reference/keywords/short.md)|От \-32768 до 32767|16\-разрядное знаковое целое число|  
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|От 0 до 65535|16\-разрядное целое число без знака|  
-|[Целочисленное значение.](../../../csharp/language-reference/keywords/int.md)|От \-2 147 483 648 до 2 147 483 647|32\-разрядное знаковое целое число|  
+|[int](../../../csharp/language-reference/keywords/int.md)|От \-2 147 483 648 до 2 147 483 647|32\-разрядное знаковое целое число|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|От 0 до 4 294 967 295|32\-разрядное целое число без знака|  
 |[long](../../../csharp/language-reference/keywords/long.md)|От \-9,223,372,036,854,775,808 до 9,223,372,036,854,775,807|64\-разрядное целое число со знаком|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|От 0 до 18,446,744,073,709,551,615|64\-разрядное целое число без знака|  

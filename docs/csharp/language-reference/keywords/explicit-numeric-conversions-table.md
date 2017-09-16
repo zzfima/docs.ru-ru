@@ -31,7 +31,7 @@ caps.handback.revision: 14
 |[byte](../../../csharp/language-reference/keywords/byte.md)|`sbyte` или `char`|  
 |[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`,  `byte`,  `ushort`,  `uint`,  `ulong` или  `char`|  
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short` или `char`|  
-|[Целочисленное значение.](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` или `char`|  
+|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` или `char`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` или `char`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` или `char`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` или `char`|  
