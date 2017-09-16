@@ -1,12 +1,10 @@
 ---
 title: "Типы перечислений (Руководство по программированию в C#)"
-ms.date: 2015-07-20
+ms.date: 09/10/2017
 ms.prod: .net
 ms.technology:
 - devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - enumerations [C#]
 - enums [C#]
@@ -16,98 +14,87 @@ ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
 caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 677de7c6e0c0f72b600ce8ee5a8bad265725f6d3
+ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
+ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Типы перечислений (Руководство по программированию в C#)
-Тип перечисления (называемый также перечислением) предоставляет эффективный способ определения набора именованных целочисленных констант, который можно назначить переменной. Например, предположим, что нужно определить переменную, значение которого должно представлять день недели. Имеется только семь имеющих смысл значений, которые может принимать переменная. Для определения этих значений можно использовать тип перечисления, который объявлен с помощью ключевого слова [enum](../../csharp/language-reference/keywords/enum.md).  
-  
- [!code-cs[csProgGuideEnums#1](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_1.cs)]  
-  
- По умолчанию базовым типом каждого элемента перечисления является [int](../../csharp/language-reference/keywords/int.md). Можно задать другой целочисленный тип, используя двоеточие, как показано в предыдущем примере. Полный список возможных типов см. в разделе [enum (справочник по C#)](../../csharp/language-reference/keywords/enum.md).  
-  
- Чтобы проверить основные числовые значения путем приведения в базовый тип, как показано в следующем примере.  
-  
-```csharp  
-Days today = Days.Monday;  
-int dayNumber =(int)today;  
-Console.WriteLine("{0} is day number #{1}.", today, dayNumber);  
-  
-Months thisMonth = Months.Dec;  
-byte monthNumber = (byte)thisMonth;  
-Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);  
-  
-// Output:  
-// Monday is day number #1.  
-// Dec is month number #11.  
-```  
-  
- Далее указаны преимущества использования enum вместо числового типа.  
-  
--   Для клиентского кода ясно задается, какие значения допустимы для переменной.  
-  
--   В [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IntelliSense выводит список определенных значений.  
-  
- Если не указать значения этих элементов в списке перечислителя, значения будут автоматически увеличиваться на 1. В предыдущем примере `Days.Sunday` имеет значение 0, `Days.Monday` имеет значение 1 и т. д. Когда создается новый объект `Days`, он будет иметь значение по умолчанию `Days.Sunday` (0), только ему явно не присвоить значение. При создании перечисления выберите наиболее логичное используемое по умолчанию значение и присвойте ему значение нуль. В результате этого все перечисления, если при их создании им явно не задать значение, будут иметь по умолчанию это значение.  
-  
- Если переменная `meetingDay` имеет тип `Days`, ей можно (без явного приведения) присвоить только одно из значений, определенных в `Days`. И если день встречи изменяется, можно назначить новое значение из `Days` переменной `meetingDay`:  
-  
- [!code-cs[csProgGuideEnums#4](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_2.cs)]  
-  
-> [!NOTE]
->  Переменной `meetingDay` можно присвоить любое произвольное целое значение. Например, эта строка кода не создает ошибку: `meetingDay = (Days) 42`. Но этого делать нельзя, поскольку неявно ожидается, что переменная перечисления принимает одно из значений, определяемых перечислением. Присвоение переменной типа перечисления произвольного значения связано с большим риском возникновения ошибок.  
-  
- Элементам списка перечислителя типа перечисления можно присвоить любые значения, и можно также использовать вычисленные значения:  
-  
- [!code-cs[csProgGuideEnums#3](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_3.cs)]  
-  
-## <a name="enumeration-types-as-bit-flags"></a>Типы перечислений как битовые флаги  
- Тип перечисления можно использовать для определения битовых флагов, благодаря чему экземпляр типа перечисления может хранить любую комбинацию значений, определенных в списке перечислителя. (Конечно, некоторые комбинации могут не иметь смысла или быть недопустимы в коде программы.)  
-  
- Чтобы создать перечисление битовых флагов, нужно применить атрибут <xref:System.FlagsAttribute?displayProperty=fullName> и определить значения так, чтобы для них могли выполняться битовые операции `AND`, `OR`, `NOT` и `XOR`. В перечисление битовых флагов включите именованную константу с нулевым значением, что означает "флаги не установлены". Не придавайте флагу нулевое значение, если оно не означает "флаги не установлены".  
-  
- В следующем примере определена другая версия перечисления `Days`, которая называется `Days2`. У `Days2` имеется атрибут `Flags`, и каждому значению присваивается следующая степень числа 2. Это позволяет создать переменную `Days2` со значением `Days2.Tuesday` и `Days2.Thursday`.  
-  
- [!code-cs[csProgGuideEnums#2](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_4.cs)]  
-  
- Чтобы установить флаг на перечислении, используйте побитовый оператор `OR`, как показано в следующем примере:  
-  
- [!code-cs[csProgGuideEnums#6](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_5.cs)]  
-  
- Чтобы определить, установлен ли конкретный флаг, используйте побитовый оператор `AND`, как показано в следующем примере:  
-  
- [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
-  
- Дополнительные сведения о том, что необходимо учитывать при определении типов перечислений при помощи атрибута <xref:System.FlagsAttribute?displayProperty=fullName>, см. в статье <xref:System.Enum?displayProperty=fullName>.  
-  
-## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Использование методов System.Enum для получения и обработки значений перечисления  
- Все перечисления являются экземплярами типа <xref:System.Enum?displayProperty=fullName>. Нельзя унаследовать новые классы от класса <xref:System.Enum?displayProperty=fullName>, но можно использовать его методы для получения и изменения данных об экземпляре перечисления.  
-  
- [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
-  
- Для получения дополнительной информации см. <xref:System.Enum?displayProperty=fullName>.  
-  
- Можно также создать для перечисления новый метод, используя метод расширения. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).  
 
-## <a name="see-also"></a>См. также  
+Тип перечисления (называемый также перечислением) предоставляет эффективный способ определения набора именованных целочисленных констант, который можно назначить переменной. Например, предположим, что нужно определить переменную, значение которого должно представлять день недели. Имеется только семь имеющих смысл значений, которые может принимать переменная. Для определения этих значений можно использовать тип перечисления, который объявлен с помощью ключевого слова [enum](../../csharp/language-reference/keywords/enum.md).
+
+[!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
+
+По умолчанию базовым типом каждого элемента перечисления является [int](../../csharp/language-reference/keywords/int.md). Можно задать другой целочисленный тип, используя двоеточие, как показано в предыдущем примере. Полный список возможных типов см. в разделе [enum (справочник по C#)](../../csharp/language-reference/keywords/enum.md).
+
+Чтобы проверить основные числовые значения путем приведения в базовый тип, как показано в следующем примере.
+
+```csharp
+Day today = Day.Monday;
+int dayNumber =(int)today;
+Console.WriteLine("{0} is day number #{1}.", today, dayNumber);
+
+Month thisMonth = Month.Dec;
+byte monthNumber = (byte)thisMonth;
+Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
+
+// Output:
+// Monday is day number #1.
+// Dec is month number #11.
+```
+
+Далее указаны преимущества использования enum вместо числового типа.
+
+- Для клиентского кода ясно задается, какие значения допустимы для переменной.
+
+- В [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IntelliSense выводит список определенных значений.
+
+Если не указать значения этих элементов в списке перечислителя, значения будут автоматически увеличиваться на 1. В предыдущем примере `Day.Sunday` имеет значение 0, `Day.Monday` имеет значение 1 и т. д. Когда создается новый объект `Day`, он будет иметь значение по умолчанию `Day.Sunday` (0), только ему явно не присвоить значение. При создании перечисления выберите наиболее логичное используемое по умолчанию значение и присвойте ему значение нуль. В результате этого все перечисления, если при их создании им явно не задать значение, будут иметь по умолчанию это значение.
+
+Если переменная `meetingDay` имеет тип `Day`, ей можно (без явного приведения) присвоить только одно из значений, определенных в `Day`. И если день встречи изменяется, можно назначить новое значение из `Day` переменной `meetingDay`:
+
+[!code-csharp[csProgGuideEnums#4](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#4)]
+
+> [!NOTE]
+> Переменной `meetingDay` можно присвоить любое произвольное целое значение. Например, эта строка кода не создает ошибку: `meetingDay = (Day) 42`. Но этого делать нельзя, поскольку неявно ожидается, что переменная перечисления принимает одно из значений, определяемых перечислением. Присвоение переменной типа перечисления произвольного значения связано с большим риском возникновения ошибок.
+
+Элементам списка перечислителя типа перечисления можно присвоить любые значения, и можно также использовать вычисленные значения:
+
+[!code-csharp[csProgGuideEnums#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#3)]
+
+## <a name="enumeration-types-as-bit-flags"></a>Типы перечислений как битовые флаги
+
+Тип перечисления можно использовать для определения битовых флагов, благодаря чему экземпляр типа перечисления может хранить любую комбинацию значений, определенных в списке перечислителя. (Конечно, некоторые комбинации могут не иметь смысла или быть недопустимы в коде программы.)
+
+Чтобы создать перечисление битовых флагов, нужно применить атрибут <xref:System.FlagsAttribute?displayProperty=fullName> и определить значения так, чтобы для них могли выполняться битовые операции `AND`, `OR`, `NOT` и `XOR`. В перечисление битовых флагов включите именованную константу с нулевым значением, что означает "флаги не установлены". Не придавайте флагу нулевое значение, если оно не означает "флаги не установлены".
+
+В следующем примере определена другая версия перечисления `Day`, которая называется `Days`. У `Days` имеется атрибут `Flags`, и каждому значению присваивается следующая степень числа 2. Это позволяет создать переменную `Days` со значением `Days.Tuesday | Days.Thursday`.
+
+[!code-csharp[csProgGuideEnums#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#2)]
+
+Чтобы установить флаг на перечислении, используйте побитовый оператор `OR`, как показано в следующем примере:
+
+[!code-csharp[csProgGuideEnums#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#6)]
+
+Чтобы определить, установлен ли конкретный флаг, используйте побитовый оператор `AND`, как показано в следующем примере:
+
+[!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
+
+Дополнительные сведения о том, что необходимо учитывать при определении типов перечислений при помощи атрибута <xref:System.FlagsAttribute?displayProperty=fullName>, см. в статье <xref:System.Enum?displayProperty=fullName>.
+
+## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Использование методов System.Enum для получения и обработки значений перечисления
+
+Все перечисления являются экземплярами типа <xref:System.Enum?displayProperty=fullName>. Нельзя унаследовать новые классы от класса <xref:System.Enum?displayProperty=fullName>, но можно использовать его методы для получения и изменения данных об экземпляре перечисления.
+
+[!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
+
+Для получения дополнительной информации см. <xref:System.Enum?displayProperty=fullName>.
+
+Можно также создать для перечисления новый метод, используя метод расширения. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового метода для перечисления](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+
+## <a name="see-also"></a>См. также
  <xref:System.Enum?displayProperty=fullName>   
  [Руководство по программированию на C#](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)
