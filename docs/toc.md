@@ -66,7 +66,6 @@
 ## [Новые возможности .NET Core](core/whats-new/index.md)
 ## [Учебники](core/tutorials/index.md)
 ### [Создание полного решения .NET Core в Windows с помощью Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
-### [Начало работы с C# и Visual Studio Code](core/tutorials/with-visual-studio-code.md)
 ### [Начало работы с .NET Core в Mac OS](core/tutorials/using-on-macos.md)
 ### [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs.md)
 ### [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -96,7 +95,10 @@
 ## [Модульное тестирование](core/testing/index.md)
 ### [Модульное тестирование с помощью команды dotnet test и xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Модульное тестирование с помощью команды dotnet test и MSTest](core/testing/unit-testing-with-mstest.md)
+### [Модульное тестирование в F# с помощью команды dotnet test и xUnit]()
+### [Модульное тестирование в F# с помощью команды dotnet test и MSTest]()
 ### [Выполнение выборочных модульных тестов](core/testing/selective-unit-tests.md)
+### [Live Unit Testing в проектах .NET Core с использованием Visual Studio]()
 ## [Управление версиями](core/versions/index.md)
 ### [Поддержка .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
