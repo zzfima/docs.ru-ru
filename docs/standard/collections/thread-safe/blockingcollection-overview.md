@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="blockingcollection-overview"></a>Общие сведения о коллекции BlockingCollection
@@ -50,7 +50,8 @@ ms.lasthandoff: 07/28/2017
   
  Элементы коллекции могут параллельно добавляться из нескольких задач или потоков. Если коллекция достигает максимальной емкости, то потоки-создатели перейдут в состояние блокировки, пока не будет удален хотя бы один элемент. Элементы коллекции могут параллельно удаляться несколькими потребителями. Если коллекция становится пустой, то потоки-потребители перейдут в состояние блокировки, пока поток-создатель не добавит хотя бы один элемент. Поток-создатель может вызвать метод <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>, чтобы указать, что он больше не будет добавлять элементы. Потребители могут отслеживать свойство <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A>, позволяющее определить, что коллекция опустела, а новые элементы добавляться не будут. В следующем примере демонстрируется простая коллекция BlockingCollection с максимальной емкостью в 100 элементов. Задача-создатель добавляет элементы в коллекцию на протяжении всего времени сохранения истинности некоторого внешнего условия, а после этого вызывает метод <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>. Задача-потребитель извлекает элементы, пока свойство <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> не примет логическое значение "true".  
   
- [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)] [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
+ [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
+ [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
  Полный пример см. в разделе [Практическое руководство. Добавление и удаление отдельных элементов коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
   
@@ -60,7 +61,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="cancelling-add-and-take-operations"></a>Отмена операций Add и Take  
  Операции Add и Take обычно выполняются в цикле. Отменить цикл можно, передав в метод <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> или <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> токен <xref:System.Threading.CancellationToken> и проверяя значение его свойства <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> на каждой итерации. Если значение равно true, за обработку запроса отмены отвечает разработчик, которому следует освободить ресурсы и завершить цикл. В следующем примере показана перегрузка метода <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>, которая принимает токен отмены, а также код, использующий эту перегрузку:  
   
- [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)] [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
+ [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
+ [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
  Пример добавления поддержки отмены см. во втором примере из статьи [Практическое руководство. Добавление и удаление отдельных элементов коллекции BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
   
