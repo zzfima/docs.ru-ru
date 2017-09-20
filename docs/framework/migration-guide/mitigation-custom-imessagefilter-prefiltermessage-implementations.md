@@ -56,4 +56,4 @@ ms.lasthandoff: 09/06/2017
   
 ## <a name="see-also"></a><span data-ttu-id="0472b-115">См. также</span><span class="sxs-lookup"><span data-stu-id="0472b-115">See Also</span></span>  
  [<span data-ttu-id="0472b-116">Изменение целевой платформы</span><span class="sxs-lookup"><span data-stu-id="0472b-116">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
-
+<!--aaa-->
