@@ -87,4 +87,3 @@ ms.lasthandoff: 07/28/2017
  [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-

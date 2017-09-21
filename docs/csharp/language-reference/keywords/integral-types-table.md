@@ -63,4 +63,3 @@ ms.lasthandoff: 07/28/2017
  [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)   
  [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
  [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

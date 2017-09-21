@@ -83,4 +83,3 @@ int myInt = 0;
  [Типы значений](../../../csharp/language-reference/keywords/value-types.md)   
  [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

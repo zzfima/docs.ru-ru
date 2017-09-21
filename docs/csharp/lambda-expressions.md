@@ -15,9 +15,7 @@ ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
 ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
 ms.contentlocale: ru-ru
 ms.lasthandoff: 08/04/2017
-
 ---
-
 # <a name="lambda-expressions"></a>Лямбда-выражения #
 
 *Лямбда-выражение* представляет собой блок кода (выражение или блок оператора), который рассматривается как объект. Оно может передаваться в качестве аргумента в методы, а также возвращаться вызовами метода. Лямбда-выражения широко используются для:
@@ -163,4 +161,5 @@ ms.lasthandoff: 08/04/2017
 [Встроенный язык запросов LINQ](../standard/using-linq.md)   
 [Анонимные методы](programming-guide/statements-expressions-operators/anonymous-methods.md)   
 [Деревья выражений](expression-trees.md)
+
 

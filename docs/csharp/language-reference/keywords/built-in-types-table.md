@@ -83,4 +83,3 @@ Console.WriteLine(myVariable.GetType());
  [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
  [Динамический](../../../csharp/language-reference/keywords/dynamic.md)   
  [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

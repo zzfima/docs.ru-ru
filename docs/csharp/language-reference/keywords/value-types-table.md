@@ -66,4 +66,3 @@ ms.lasthandoff: 07/28/2017
  [Типы значений](../../../csharp/language-reference/keywords/value-types.md)   
  [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
  [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-
