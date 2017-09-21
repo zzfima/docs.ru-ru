@@ -1,6 +1,6 @@
 ---
-title: "nameof (справочник по C# и Visual Basic) | Документы Майкрософт"
-ms.date: 2017-03-03
+title: "nameof (справочник по C#)"
+ms.date: 2017-06-16
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -28,14 +28,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: da3fef282ac71de07057131069bf58d4f761ad2d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db79af5f38439b881863cf3e03aa0e684ec5cd39
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="nameof-c-and-visual-basic-reference"></a>nameof (Справочник по C# и Visual Basic)
+# <a name="nameof-c-reference"></a>nameof (справочник по C#)
 
 Используется для получения простого (неполного) строкового имени переменной, типа или члена.  
 
@@ -122,19 +122,6 @@ nameof(f<>) -> syntax error
 nameof(Method2()) -> error "This expression does not have a name"  
 ```  
   
- Многие из примеров выше применимы к Visual Basic.  Ниже приведены несколько примеров для Visual Basic:  
-  
-```vb  
-NameOf(a!Foo) -> ' error  "This expression does not have a name"  
-NameOf(dict("Foo")) -> ' error  "This expression does not have a name": default property access  
-NameOf(dict.Item("Foo")) -> ' error  "This expression does not have a name"  
-NameOf(arr(2)) -> ' error  "This expression does not have a name": array element index  
-Dim x = Nothing   
-NameOf(x.ToString(2)) -> ' error  "This expression does not have a name"  
-Dim o = Nothing  
-NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of instance; instance will not be evaluated"  
-```  
-  
 ## <a name="remarks"></a>Примечания  
  Аргументом для `nameof` должно быть простое имя, полное имя, доступ к членам, базовый доступ с заданным членом или доступ к this с указанным членом.  Выражение аргумента идентифицирует определение кода, но никогда не вычисляется.  
   
@@ -165,12 +152,9 @@ class C {
 ## <a name="language-specifications"></a>Спецификации языков  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
- Дополнительные сведения см. в разделе [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md).  
-  
 ## <a name="see-also"></a>См. также  
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)   
- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)
+ 
 

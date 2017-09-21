@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Извлечение одного атрибута (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Извлечение одного атрибута (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,17 +14,17 @@ ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c48c8e96996a1e6eb5d44f847058b401cc91c277
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 655ed12b1a5efc0034c4f4ff7cd1bd8d374d2182
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Практическое руководство. Извлечение одного атрибута (LINQ to XML) (C#)
 В этом разделе приведены объяснения способа получения одного атрибута элемента при условии, что название атрибута известно. Это полезно для составления выражений запросов, при которых требуется найти элемент с определенным атрибутом.  
   
- Метод <xref:System.Xml.Linq.XElement.Attribute%2A> класса <xref:System.Xml.Linq.XElement> возвращает <xref:System.Xml.Linq.XAttribute> с указанным именем.  
+ Метод <xref:System.Xml.Linq.XElement.Attribute%2A> класса <xref:System.Xml.Linq.XElement> возвращает значение <xref:System.Xml.Linq.XAttribute> с указанным именем.  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется метод <xref:System.Xml.Linq.XElement.Attribute%2A>.  
@@ -80,7 +80,7 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] предоставляет операторы явного приведения для класса <xref:System.Xml.Linq.XAttribute> в значения `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` и `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предоставляет явные операторы приведения класса <xref:System.Xml.Linq.XAttribute> к `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` и `GUID?`.  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же код атрибута, что и в пространстве имен. Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
@@ -111,3 +111,4 @@ work
   
 ## <a name="see-also"></a>См. также  
  [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

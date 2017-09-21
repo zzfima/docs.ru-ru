@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 1ad08fd188e901f49e01803816407870af37729d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-reference"></a>Справочник по C#
@@ -72,8 +72,7 @@ ms.lasthandoff: 07/28/2017
  [Статьи базы знаний по C# в базе знаний Майкрософт](http://go.microsoft.com/fwlink/?LinkId=70368)  
  Открывается страница поиска Майкрософт для статей базы знаний, доступных на сайте MSDN.  
   
- [C#](../../csharp/csharp.md)  
- Портал для документации по Visual C#.  
+ [C#](../../csharp/index.md) Портал для документации по Visual C#  
   
  [Использование среды разработки Visual Studio для C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Ссылки на концептуальные разделы и разделы задач, описывающие интегрированную среду разработки и редактор.  

@@ -1,6 +1,6 @@
 ---
 title: "Библиотеки платформы"
-description: "Библиотеки платформы"
+description: "Сведения о том, как библиотеки предоставляют реализации для многих общих и зависящих от приложений типов, алгоритмы, а также функциональные возможности."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: ronpet
@@ -10,9 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-translationtype: Human Translation
-ms.sourcegitcommit: 9df468c7225dbf1e3317ea34bd8b2285361a69f4
-ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 9c38237a8e729155c443298814f4c98bec61016b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -30,42 +32,37 @@ ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
 
 .NET включает набор типов-примитивов, которые (в разной степени) используются во всех приложениях. Эти типы содержат данные, например числа, строки, байты и произвольные объекты. Язык C# содержит ключевые слова для таких типов. Ниже приведен некоторый набор этих типов с соответствующими ключевыми словами C#.
 
-* [System.Object](https://msdn.microsoft.com/library/system.object.aspx) ([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx))  — исходный базовый класс в системе типов CLR. Это корень иерархии типов.
-* [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx) ([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)) — 16-разрядный целочисленный тип со знаком. Также имеется и [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx) без знака.
-* [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx) ([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx) без знака.
-* [System.Single](https://msdn.microsoft.com/library/system.single.aspx) ([float](https://msdn.microsoft.com/library/b1e65aza.aspx)) — 32-разрядный тип с плавающей запятой.
-* [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx) ([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)) — 128-разрядный десятичный тип.
-* [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx) ([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)) — 8-разрядное целое число без знака, которое представляет байт памяти.
-* [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx) ([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)) — логический тип, который представляет значение "true" или "false".
-* [System.Char](https://msdn.microsoft.com/library/system.char.aspx) ([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
-* [System.String](https://msdn.microsoft.com/library/system.string.aspx) ([string](https://msdn.microsoft.com/library/362314fe.aspx)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.
+* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)) — исходный базовый класс в системе типов CLR. Это корень иерархии типов.
+* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)) — 16-разрядный целочисленный тип со знаком. Также имеется и <xref:System.UInt16> без знака.
+* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)) — 32-разрядный целочисленный тип со знаком. Также имеется и [UInt32](../csharp/language-reference/keywords/uint.md) без знака.
+* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)) — 32-разрядный тип с плавающей запятой.
+* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)) — 128-разрядный десятичный тип.
+* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)) — 8-разрядное целое число без знака, которое представляет байт памяти.
+* <xref:System.Boolean?displayProperty=fullName> ([bool](../csharp/language-reference/keywords/bool.md)) — логический тип, представляющий `true` или `false`.
+* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)) — 16-разрядный числовой тип, который представляет символ в Юникоде.
+* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)) — представляет набор символов. Отличается от `char[]`, но позволяет индексировать по каждому отдельному `char` в `string`.
 
 ## <a name="data-structures"></a>Структуры данных
 
 .NET содержит набор структур данных, которые пригодятся практически в любом приложении .NET. В основном это коллекции, но присутствуют и другие типы.
 
-*   [Array](https://msdn.microsoft.com/library/system.array.aspx) — представляет массив строго типизированных объектов, доступных по индексу. Имеет фиксированный размер, соответствующий конструкции.
-*   [List](https://msdn.microsoft.com/library/6sh2ey19.aspx) — представляет строго типизированный список объектов, доступных по индексу. Его размер изменяется автоматически по мере надобности.
-*   [Dictionary](https://msdn.microsoft.com/library/xfhwa508.aspx) — представляет коллекцию значений, которые индексируются по ключу. Обратиться к значениям можно с помощью ключа. Его размер изменяется автоматически по мере надобности.
-*   [Uri](https://msdn.microsoft.com/library/system.uri.aspx) — обеспечивает объектное представление универсального кода ресурсов (URI), а также простой доступ к его частям.
-*   [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) — представляет текущее время, обычно выраженное как дата и время суток.
+*   <xref:System.Array> — представляет массив строго типизированных объектов, доступных по индексу. Имеет фиксированный размер, соответствующий конструкции.
+*   <xref:System.Collections.Generic.List%601> — представляет строго типизированный список объектов, доступных по индексу. Его размер изменяется автоматически по мере надобности.
+*   <xref:System.Collections.Generic.Dictionary%602> — представляет коллекцию значений, которые индексируются по ключу. Обратиться к значениям можно с помощью ключа. Его размер изменяется автоматически по мере надобности.
+*   <xref:System.Uri> — обеспечивает объектное представление универсального кода ресурсов (URI), а также простой доступ к его частям.
+*   <xref:System.DateTime> — представляет текущее время, обычно выраженное как дата и время суток.
 
 ## <a name="utility-apis"></a>Служебные API
 
 .NET содержит набор служебных API, которые предоставляют функциональные возможности для множества важных задач.
 
-*   [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx) — API для отправки HTTP-запросов и получения HTTP-ответов от ресурса с заданным URI.
-*   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) — API для загрузки и запроса XML-документов с помощью LINQ.
-*   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx) — API для чтения файлов ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx)), который может использоваться и для их записи.
+*   <xref:System.Net.Http.HttpClient> — API для отправки HTTP-запросов и получения HTTP-ответов от ресурса с заданным URI.
+*   <xref:System.Xml.Linq.XDocument> — API для загрузки и запроса XML-документов с помощью LINQ.
+*   <xref:System.IO.StreamReader> — API для чтения файлов (<xref:System.IO.StringWriter>), который может использоваться и для их записи.
 
 ## <a name="app-model-apis"></a>API моделей приложений
 
 Существует множество моделей приложений от разных компаний, которые можно использовать с платформой .NET.
 
 *   [ASP.NET](http://asp.net) — предоставляет веб-платформу для создания веб-сайтов и служб. Поддерживается в Windows, Linux и macOS (зависит от версии ASP.NET).
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

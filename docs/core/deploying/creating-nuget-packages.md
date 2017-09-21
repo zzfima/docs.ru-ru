@@ -1,6 +1,6 @@
 ---
-title: "Создание пакета NuGet с помощью кроссплатформенных средств | Документация Майкрософт"
-description: "Создание пакета NuGet с помощью кроссплатформенных средств"
+title: "Создание пакета NuGet с помощью кроссплатформенных средств"
+description: "Узнайте, как создать пакет NuGet с помощью команды dotnet pack."
 keywords: .NET, .NET Core, NuGet
 author: cartermp
 ms.author: mairaw
@@ -10,16 +10,15 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 2b2081bce1725fb4a019881521604e4171b85028
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Создание пакета NuGet с помощью кроссплатформенных средств
-<a id="how-to-create-a-nuget-package-with-cross-platform-tools" class="xliff"></a>
+# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Создание пакета NuGet с помощью кроссплатформенных средств
 
 > [!NOTE]
 > Ниже приведены примеры команд командной строки для Unix.  Показанная здесь команда `dotnet pack` точно так же работает в Windows.
@@ -64,8 +63,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 теперь у вас есть все необходимые файлы для публикации пакета NuGet.
 
-## Не путайте команду `dotnet pack` с командой `dotnet publish`.
-<a id="dont-confuse-dotnet-pack-with-dotnet-publish" class="xliff"></a>
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Не путайте команду `dotnet pack` с командой `dotnet publish`.
 
 Важно заметить, что команда `dotnet publish` в этом процессе не применяется.  Команда `dotnet publish` предназначена для развертывания приложений со всеми зависимостями в одном пакете, а не для создания пакета NuGet, который будет распространяться и использоваться посредством NuGet.
 

@@ -1,27 +1,27 @@
 ---
-title: "Команда dotnet-remove reference — CLI .NET Core | Документы Майкрософт"
-description: "Команду dotnet-remove reference удобно использовать для удаления ссылок между проектами."
+title: "Команда dotnet remove reference — CLI .NET Core"
+description: "Команду dotnet remove reference удобно использовать для удаления ссылок между проектами."
 keywords: "dotnet-remove, CLI, команда CLI, .NET Core"
-author: spboyer
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 889c6b7e-a313-40b1-9fd3-6a6f4c52f1d0
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 22db4037195afa2c49ef038832e09a99c6a0d54e
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 7cb84c2dc7fc4d16b00bd6459132390ab80131f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-remove-reference"></a>dotnet remove reference
 
-# <a name="dotnet-remove-reference"></a>dotnet-remove reference
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Имя
 
-`dotnet-remove reference` — удаляет перекрестные ссылки между проектами.
+`dotnet remove reference` — удаляет перекрестные ссылки между проектами.
 
 ## <a name="synopsis"></a>Краткий обзор
 

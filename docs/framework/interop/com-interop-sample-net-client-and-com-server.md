@@ -1,36 +1,41 @@
 ---
-title: "COM Interop Sample: .NET Client and COM Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, samples"
-  - "COM interop, samples"
+title: "Пример COM-взаимодействия. Клиент .NET и COM-сервер"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop Sample: .NET Client and COM Server
-В этом примере показывается, как [клиент .NET](#cpconcominteropsamplenetclientcomserveranchor1), созданный для доступа к [COM\-серверу](#cpconcominteropsamplenetclientcomserveranchor2), создает экземпляр компонентного COM\-класса и вызывает члены класса для выполнения вычислений по закладной.  
+# <a name="com-interop-sample-net-client-and-com-server"></a>Пример COM-взаимодействия. Клиент .NET и COM-сервер
+В этом примере демонстрируется, как [клиент .NET](#cpconcominteropsamplenetclientcomserveranchor1), построенный для доступа к [COM-серверу](#cpconcominteropsamplenetclientcomserveranchor2), создает экземпляр кокласса COM и вызывает члены класса для расчета выплат по ипотечному кредиту.  
   
- В примере клиент создает и вызывает экземпляр компонентного класса **Loan**, передает экземпляру четыре аргумента \(один из которых равен нулю\) и отображает результаты вычислений.  Фрагменты кода из этого примера неоднократно приводятся в данном разделе.  
+ В этом примере клиент создает и вызывает экземпляр кокласса **Loan**, передает в экземпляр четыре аргумента (один из этих аргументов равен нулю) и отображает результаты вычислений. Фрагменты кода из этого образца используются в рамках всего этого раздела.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## Клиент .NET  
+## <a name="net-client"></a>Клиент .NET  
   
 ```vb  
 Imports System  
@@ -101,7 +106,6 @@ Public Class LoanApp
         End While  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -161,7 +165,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## COM Server  
+## <a name="com-server"></a>COM-сервер  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -306,5 +310,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## См. также  
- [Exposing COM Components to the .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>См. также  
+ [Предоставление COM-компонентов платформе .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+

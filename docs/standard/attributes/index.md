@@ -1,5 +1,5 @@
 ---
-title: "Расширение метаданных с помощью атрибутов | Документация Майкрософт"
+title: "Расширение метаданных с помощью атрибутов"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -22,11 +22,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 10ad4fe315283bfc76b24de537574ee8ef2ba979
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2c8db8b200e38c87d5b79ba3bf6a870bf6640c7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="extending-metadata-using-attributes"></a>Расширение метаданных с помощью атрибутов
@@ -46,3 +46,4 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Attribute?displayProperty=fullName>
+

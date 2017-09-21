@@ -1,5 +1,5 @@
 ---
-title: "Запуск нескольких асинхронных задач и их обработка по мере завершения (C#) | Документы Майкрософт"
+title: "Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 0ab1c8d117327c9f5805d184b263a0932ab0bc3f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)
-С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> можно запускать несколько задач одновременно и обрабатывать их по одной по мере их завершения, а не в порядке их запуска.  
+С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> можно запускать несколько задач одновременно и обрабатывать их по одной по мере завершения, а не в порядке их запуска.  
   
  В следующем примере используется запрос для создания коллекции задач. Каждая задача загружает содержимое указанного веб-сайта. В каждой итерации цикла while ожидаемый вызов `WhenAny` возвращает задачу из коллекции задач, которая первой завершает свою загрузку. Эта задача удаляется из коллекции и обрабатывается. Цикл выполняется до тех пор, пока в коллекции еще есть задачи.  
   
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
         downloadTasks.Remove(firstFinishedTask);  
         ```  
   
-    3.  Ожидает `firstFinishedTask`, возвращаемый при вызове `ProcessURLAsync`. Переменная `firstFinishedTask` — это <xref:System.Threading.Tasks.Task%601>, где `TReturn` — целое число. Задача уже завершена, но она ожидается для получения размера загруженного веб-сайта, как показано в следующем примере.  
+    3.  Ожидает `firstFinishedTask`, возвращаемый при вызове `ProcessURLAsync`. Переменная `firstFinishedTask` представляет собой <xref:System.Threading.Tasks.Task%601>, где `TReturn` — целое число. Задача уже завершена, но она ожидается для получения размера загруженного веб-сайта, как показано в следующем примере.  
   
         ```csharp  
         int length = await firstFinishedTask;  
@@ -247,3 +247,4 @@ namespace ProcessTasksAsTheyFinish
  [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)
+

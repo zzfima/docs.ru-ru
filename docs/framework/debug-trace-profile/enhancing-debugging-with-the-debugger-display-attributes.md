@@ -1,81 +1,85 @@
 ---
-title: "Enhancing Debugging with the Debugger Display Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "debugger, display attributes"
-  - "DebuggerTypeProxyAttribute attribute"
-  - "debugging [.NET Framework], debugger display attributes"
-  - "DebuggerDisplayAttribute attribute"
-  - "display attributes for debugger"
-  - "DebuggerBrowsableAttribute attribute"
+title: "Повышение эффективности отладки с помощью атрибутов просмотра отладчика"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- debugger, display attributes
+- DebuggerTypeProxyAttribute attribute
+- debugging [.NET Framework], debugger display attributes
+- DebuggerDisplayAttribute attribute
+- display attributes for debugger
+- DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dbc4c9a7e0c0fb43802c594934a683546f87a5b8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Enhancing Debugging with the Debugger Display Attributes
-Атрибуты просмотра отладчика позволяют разработчику типа, который задает и хорошо понимает поведение среды выполнения данного типа, также определять, как будет выглядеть тип при отображении в отладчике.   Помимо этого, атрибуты просмотра отладчика, которые предоставляют свойство `Target`, могут применяться на уровне сборки пользователями, незнакомыми с исходным кодом.   Атрибут <xref:System.Diagnostics.DebuggerDisplayAttribute> управляет тем, как тип или член отображаются в окнах переменных отладчика.  Атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute> определяет, будет ли поле или свойство отображаться в окнах переменных отладчика, и каким образом.  Атрибут <xref:System.Diagnostics.DebuggerTypeProxyAttribute> указывает заменяющий тип или прокси для типа и изменяет способ его отображения в окнах отладчика.  При просмотре переменной, у которой есть прокси или заменяющий тип, прокси заменяет исходный тип в окне отладчика**.** Окно переменных отладчика отображает толькооткрытые члены прокси\-типа.  Закрытые члены не отображаются.  
+# <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Повышение эффективности отладки с помощью атрибутов просмотра отладчика
+С помощью атрибутов просмотра отладчика разработчик типа может определить параметры отображения типа в отладчике, что позволяет лучше описать его поведение во время выполнения. Кроме того, пользователи, не знакомые с соответствующим исходным кодом, могут применить на уровне сборки атрибуты просмотра отладчика, предоставляющие свойство `Target`. Атрибут <xref:System.Diagnostics.DebuggerDisplayAttribute> определяет, как тип или член отображается в окнах переменных отладчика. Атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute> определяет, отображается ли поле или свойство в окнах переменных отладчика, и каким образом это реализуется. Атрибут <xref:System.Diagnostics.DebuggerTypeProxyAttribute> указывает прокси (заменяющий тип) для типа и меняет способ отображения типа в окнах отладчика. При просмотре переменной, у которой есть прокси (заменяющий тип), прокси заменяет исходный тип в окне просмотра отладчика**.** Окно переменных отладчика отображает только открытые члены прокси-типа. Закрытые члены не отображаются.  
   
-## Использование атрибута DebuggerDisplay  
- У конструктора <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> есть один аргумент: строка, отображаемая в столбце значений для экземпляров типа.  Эта строка может содержать фигурные скобки \({ и }\).  Текст внутри пары фигурных скобок интерпретируется как выражение.  Например, выполнение следующего кода на языке C\# приводит к отображению строки "Count \= 4" при выборе знака плюс \(\+\) с целью развертывания отображения отладчика для экземпляра `MyHashtable`:  
+## <a name="using-the-debuggerdisplayattribute"></a>Использование атрибута DebuggerDisplayAttribute  
+ Конструктор <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> имеет один аргумент, определяющий строку, которая должна отображаться в столбце "Значение" для экземпляров типа. Эта строка может содержать фигурные скобки ({ и }). Текст, заключенный в фигурные скобки, вычисляется как выражение. Например, при нажатии на значок плюса (+) для развертывания окна просмотра отладчика для экземпляра `MyHashtable` следующий код C# отображает "Count = 4".  
   
-```  
+```csharp
 [DebuggerDisplay("Count = {count}")]  
 class MyHashtable  
 {  
     public int count = 4;  
 }  
-```  
+```
   
- Атрибуты, применяемые для свойств, на которые ссылается выражение, не обрабатываются.  Для компилятора С\# разрешены общие выражения, которые обращаются к этой ссылке на текущий экземпляр целевого типа только неявным образом.  Такое выражение ограничено, у него нет доступа к псевдонимам, локальным переменным или указателям.  В коде С\# можно использовать общие выражения, заключенные в фигурные скобки, которые обращаются к указателю `this` на текущий экземпляр целевого типа только неявным образом.  
+ Атрибуты, применяемые к свойствам, на которые есть ссылки в выражении, не обрабатываются. Компилятор C# поддерживает только общие выражения с неявным доступом к этой ссылке для текущего экземпляра конечного типа. Выражение ограничено и не имеет доступа к псевдонимам, локальным переменным или указателям. В C# можно использовать общее выражение в скобках, которое имеет неявный доступ к указателю `this` только для текущего экземпляра конечного типа.  
   
- Например, если в C\# объект был переопределен `ToString()`, то отладчик вызовет переопределение и отобразит его результат вместо стандартного `{<typeName>}.`. Таким образом, если переопределить `ToString()`, нет необходимости использовать <xref:System.Diagnostics.DebuggerDisplayAttribute>.   Если используется и то и другое, то атрибут <xref:System.Diagnostics.DebuggerDisplayAttribute> будет иметь более высокий приоритет по отношению к переопределению `ToString()`.  
+ Например, если в объекте C# имеется переопределенный метод `ToString()`, отладчик будет вызывать переопределенный метод и отображать возвращаемый им результат, а не имя типа `{<typeName>}.`. Таким образом, если метод `ToString()` переопределен, нет необходимости использовать <xref:System.Diagnostics.DebuggerDisplayAttribute>. Если используется и то и другое, то атрибут <xref:System.Diagnostics.DebuggerDisplayAttribute> будет иметь более высокий приоритет по отношению к переопределению `ToString()`.  
   
-## Использование атрибута DebuggerBrowsable  
- Атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute> применяется к полю или свойству, чтобы определить, каким образом поле или свойство должно отображаться в отладчике.   Конструктор для этого атрибута принимает одно из значений перечисления <xref:System.Diagnostics.DebuggerBrowsableState>, которое задает одно из приведенных ниже состояний:  
+## <a name="using-the-debuggerbrowsableattribute"></a>Использование атрибута DebuggerBrowsableAttribute  
+ Применяя атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute> к полю или свойству, можно указать, как они будут отображаться в окне отладчика. Конструктор этого атрибута принимает одно из значений перечисления <xref:System.Diagnostics.DebuggerBrowsableState>, которое задает одно из следующих состояний:  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState>. Свидетельствует о том, что член в окне данных не отображается.  Например, использование этого значения для атрибута <xref:System.Diagnostics.DebuggerBrowsableAttribute> в каком\-либо поле приводит к удалению этого поля из иерархии; при развертывании включающего типа щелчком по знаку плюс \(\+\) рядом с экземпляром типа это поле не отображается.  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Never> указывает, что член не отображается в окне данных.  Например, если применить это значение к полю <xref:System.Diagnostics.DebuggerBrowsableAttribute>, это поле будет удалено из иерархии и не будет отображаться при развертывании включающего типа путем нажатия кнопки плюса (+) для экземпляра типа.  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState>. Свидетельствует о том, что член отображается, но по умолчанию не развернут.  Это поведение установлено по умолчанию.  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> указывает, что член отображается, но по умолчанию не развернут.  Это поведение установлено по умолчанию.  
   
--   <xref:System.Diagnostics.DebuggerBrowsableState> указывает на то, что член сам по себе не отображается, однако отображаются составляющие его объекты, если он находится в массиве или коллекции.  
+-   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> указывает, что сам член не отображается, однако если это массив или коллекция, то выводятся составляющие его объекты.  
   
 > [!NOTE]
->  Visual Basic в .NET Framework версии 2.0 не поддерживает <xref:System.Diagnostics.DebuggerBrowsableAttribute>.  
+>  Атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute> не поддерживается в Visual Basic на платформе .NET Framework версии 2.0.  
   
- Следующий пример кода демонстрирует использование <xref:System.Diagnostics.DebuggerBrowsableAttribute>, чтобы предотвратить отображение свойства, следующего за ним, в окне отладчика для класса:  
+ В следующем примере кода показано, как использовать атрибут <xref:System.Diagnostics.DebuggerBrowsableAttribute>, чтобы отключить отображение следующего за ним свойства в окне отладки для класса.  
   
-```  
+```csharp
 [DebuggerBrowsable(DebuggerBrowsableState.Never)]  
 public static string y = "Test String";  
 ```  
   
-## Использование атрибута DebuggerTypeProxy  
- Атрибут <xref:System.Diagnostics.DebuggerTypeProxyAttribute> следует использовать в тех случаях, когда необходимо внести существенные и принципиальные изменения в отладочное представление типа, сохранив сам тип неизменным.  С помощью атрибута <xref:System.Diagnostics.DebuggerTypeProxyAttribute> можно задать прокси отображения для типа, который позволит разработчикам настраивать представление типа.  Этот атрибут, как и <xref:System.Diagnostics.DebuggerDisplayAttribute>, можно использовать на уровне сборки; в этом случае свойство <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> устанавливает тип, для которого будет использоваться прокси.   Рекомендуется использовать данный атрибут для указания закрытого вложенного типа, который образуется внутри типа, к которому применен данный атрибут.  При отображении типа вычислитель выражений, поддерживающий средства просмотра типов, выполняет проверку на наличие этого атрибута.  Если атрибут найден, вычислитель выражений подставляет прокси\-тип отображения в тип, к которому был применен данный атрибут.  
+## <a name="using-the-debuggertypeproxy"></a>Использование атрибута DebuggerTypeProxy  
+ Атрибут <xref:System.Diagnostics.DebuggerTypeProxyAttribute> позволяет существенным образом изменить представление отладки для типа, не изменяя при этом сам тип. Атрибут <xref:System.Diagnostics.DebuggerTypeProxyAttribute> задает прокси-тип отображения для типа, позволяя разработчику настроить представление этого типа.  Как и <xref:System.Diagnostics.DebuggerDisplayAttribute>, этот атрибут можно использовать на уровне сборки. В этом случае свойство <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> задает тип, для которого будет использоваться прокси. Этот атрибут рекомендуется использовать для частного вложенного типа, входящего в тип, к которому применен этот атрибут.  При отображении типа вычислитель выражений, поддерживающий средства просмотра типов, проверяет наличие этого атрибута. Если он найден, вычислитель выражений заменяет прокси-тип отображения на тип, к которому применен этот атрибут.  
   
- При наличии атрибута <xref:System.Diagnostics.DebuggerTypeProxyAttribute> в окне переменной отладчика отображаются только открытые элементы прокси\-типа.  Закрытые члены не отображаются.  Поведение окна данных не меняется при использовании представлений с расширенными атрибутами.  
+ Если атрибут <xref:System.Diagnostics.DebuggerTypeProxyAttribute> задан, окно переменных отладчика отображает только открытые члены прокси-типа. Закрытые члены не отображаются. При использовании атрибутов просмотра поведение окна данных не изменяется.  
   
- Чтобы уменьшить потери производительности, атрибуты для прокси отображения не обрабатываются до тех пор, пока объект не будет развернут. Пользователь может его развернуть, щелкнув знак плюс \(\+\) рядом с типом в окне данных, или с помощью приложения, заданного атрибутом <xref:System.Diagnostics.DebuggerBrowsableAttribute>.  Поэтому рекомендуется не применять атрибуты к типам отображения.  Атрибуты можно и нужно применять в основной части типа отображения.  
+ Чтобы исключить потери производительности, атрибуты прокси-типа отображения обрабатываются только тогда, когда объект развертывается с помощью значка плюса (+) рядом с типом в окне данных или посредством атрибута <xref:System.Diagnostics.DebuggerBrowsableAttribute> в приложении. В связи с этим не рекомендуется применять атрибуты к типам отображения. Атрибуты можно и нужно применять в основной части типа отображения.  
   
- В следующем примере кода показано, как с помощью атрибута <xref:System.Diagnostics.DebuggerTypeProxyAttribute> задать тип, который будет использоваться для отладчика в качестве прокси отображения:  
+ В следующем примере кода показано использование атрибута <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, указывающего тип, который будет использоваться в качестве прокси-типа отображения для отладчика.  
   
-```  
-  
+```csharp
 [DebuggerTypeProxy(typeof(HashtableDebugView))]  
 class MyHashtable : Hashtable  
 {  
@@ -98,17 +102,16 @@ class MyHashtable : Hashtable
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
- Следующий пример кода можно просмотреть в [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] для ознакомления с результатами применения атрибутов <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute> и <xref:System.Diagnostics.DebuggerTypeProxyAttribute>.  
+### <a name="description"></a>Описание  
+ Следующий пример кода можно просмотреть в [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], чтобы ознакомиться с результатами применения атрибутов <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute> и <xref:System.Diagnostics.DebuggerTypeProxyAttribute>.  
   
-### Код  
- [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#1)]
- [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
- [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
+### <a name="code"></a>Код  
+ [!code-cpp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/cpp/program.cpp#1)] [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)] [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Diagnostics.DebuggerDisplayAttribute>   
  <xref:System.Diagnostics.DebuggerBrowsableAttribute>   
  <xref:System.Diagnostics.DebuggerTypeProxyAttribute>
+

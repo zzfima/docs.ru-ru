@@ -1,5 +1,5 @@
 ---
-title: "/nowarn (параметры компилятора C#) | Документы Майкрософт"
+title: "-nowarn (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34152b6e7247ac112bcc9c725402b8c9a5d631ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3bae7e6d16c044b8f1aeba26de434cdf17479e82
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="nowarn-c-compiler-options"></a>/nowarn (параметры компилятора C#)
@@ -66,15 +66,16 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте страницу **свойств** для проекта. Дополнительные сведения см. в разделе [Страница "Сборка", конструктор проектов (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  Откройте страницу **свойств** для проекта. Дополнительные сведения см. в разделе [Страница "Сборка", конструктор проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
 2.  Щелкните страницу свойств **Сборка**.  
   
 3.  Измените свойство **Отключить предупреждения**.  
   
- Сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
+ Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)   
  [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md)
+

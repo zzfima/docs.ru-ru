@@ -1,5 +1,5 @@
 ---
-title: "Основные операции запросов LINQ (C#) | Документы Майкрософт"
+title: "Основные операции запросов LINQ (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -44,14 +44,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 48624d608c3eb8d1118a2492454595d46025cb3e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5dbebb7950678a0f40ec774d23b42dfe89cff49
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basic-linq-query-operations-c"></a>Основные операции запросов LINQ (C#)
-В этом разделе содержится краткое описание выражений запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] и некоторые типичные операции, выполняемые в запросе. Более подробные сведения приводятся в следующих разделах:  
+В этом разделе содержится краткое описание выражений запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] и некоторые типичные операции, выполняемые в запросе. Более подробные сведения приводятся в следующих разделах:  
   
  [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
   
@@ -60,10 +61,10 @@ ms.lasthandoff: 03/13/2017
  [Пошаговое руководство. Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
->  Если вы уже знакомы с языком запросов, таким как SQL или XQuery, можно пропустить большую часть этого раздела. Чтобы изучить порядок предложений в выражениях запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], прочитайте о предложении `from` в следующем разделе.  
+>  Если вы уже знакомы с языком запросов, таким как SQL или XQuery, можно пропустить большую часть этого раздела. Чтобы изучить порядок предложений в выражениях запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], прочитайте о предложении `from` в следующем разделе.  
   
 ## <a name="obtaining-a-data-source"></a>Получение источника данных  
- В первую очередь в запросе [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] нужно указать источник данных. В C#, как и в большинстве языков программирования, переменная должна быть объявлена до ее использования. В запросе [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] первым идет предложение `from` для указания источника данных (`customers`) и *переменная диапазона* (`cust`).  
+ В первую очередь в запросе [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] нужно указать источник данных. В C#, как и в большинстве языков программирования, переменная должна быть объявлена до ее использования. В запросе [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] первым идет предложение `from` для указания источника данных (`customers`) и *переменная диапазона* (`cust`).  
   
  [!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
   
@@ -110,11 +111,11 @@ ms.lasthandoff: 03/13/2017
  Дополнительные сведения см. в разделе [Предложение group](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Соединение  
- Операции соединения создают связи между последовательностями, неявно смоделированными в источниках данных. Например, можно выполнить соединение для поиска всех клиентов и дистрибьюторов, которые находятся в одном месте. В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] предложение `join` всегда работает с коллекциями объектов, а не непосредственно с таблицами базы данных.  
+ Операции соединения создают связи между последовательностями, неявно смоделированными в источниках данных. Например, можно выполнить соединение для поиска всех клиентов и дистрибьюторов, которые находятся в одном месте. В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] предложение `join` всегда работает с коллекциями объектов, а не непосредственно с таблицами базы данных.  
   
  [!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
   
- В [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] нет необходимости использовать `join` так часто, как в SQL, так как внешние ключи в [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] представлены в объектной модели свойствами, содержащими коллекцию элементов. Например, объект `Customer` содержит коллекцию объектов `Order`. Вместо выполнения соединения доступ к заказам можно получить с помощью точечной нотации.  
+ В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] нет необходимости использовать `join` так часто, как в SQL, так как внешние ключи в [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] представлены в объектной модели свойствами, содержащими коллекцию элементов. Например, объект `Customer` содержит коллекцию объектов `Order`. Вместо выполнения соединения доступ к заказам можно получить с помощью точечной нотации.  
   
 ```  
 from order in Customer.Orders...  
@@ -123,7 +124,7 @@ from order in Customer.Orders...
  Дополнительные сведения см. в разделе [Предложение join](../../../../csharp/language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Выбор (проецирование)  
- Предложение `select` создает результаты запроса и задает форму или тип каждого возвращаемого элемента. Например, можно указать, будут ли результаты состоять из полных объектов `Customer`, только из одного члена, подмножества членов или некоторых совершенно других типов, на основе вычислений или создания новых объектов. Когда предложение `select` создает что-либо отличное от копии исходного элемента, операция называется *проекцией*. Использование проекций для преобразования данных является эффективной возможностью выражений запросов [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Дополнительные сведения см. в разделах [Преобразования данных с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) и [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md).  
+ Предложение `select` создает результаты запроса и задает форму или тип каждого возвращаемого элемента. Например, можно указать, будут ли результаты состоять из полных объектов `Customer`, только из одного члена, подмножества членов или некоторых совершенно других типов, на основе вычислений или создания новых объектов. Когда предложение `select` создает что-либо отличное от копии исходного элемента, операция называется *проекцией*. Использование проекций для преобразования данных является эффективной возможностью выражений запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Дополнительные сведения см. в разделах [Преобразования данных с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) и [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
 ## <a name="see-also"></a>См. также  
  [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
@@ -131,3 +132,4 @@ from order in Customer.Orders...
  [Пошаговое руководство. Написание запросов на C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [Ключевые слова запроса (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)   
  [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+

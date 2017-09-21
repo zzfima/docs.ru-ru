@@ -1,43 +1,48 @@
 ---
-title: "Использование служб TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "запрос данных из Интернета, TCP"
-  - "получение данных, TCP"
-  - "класс TcpClient, сведения о классе TcpClient"
-  - "запросы данных, TCP"
-  - "протоколы приложений, TCP"
-  - "сетевые ресурсы, TCP"
-  - "отправка данных, TCP"
-  - "TCP"
-  - "протоколы, TCP"
-  - "Интернет, TCP"
+title: "Использование служб TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, TCP
+- receiving data, TCP
+- TcpClient class, about TcpClient class
+- data requests, TCP
+- application protocols, TCP
+- network resources, TCP
+- sending data, TCP
+- TCP
+- protocols, TCP
+- Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462e99ecc78ddd6bcf3f231f712da8b04c71850
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Использование служб TCP
-Класс <xref:System.Net.Sockets.TcpClient> запрашивает данные из ресурса в интернете по протоколу TCP.  Методы и свойства **TcpClient** резюмируют сведения для создания <xref:System.Net.Sockets.Socket> для запроса и получения данных по протоколу TCP.  Поскольку подключение к удаленному устройство представлено в виде потока, данные можно считывать и записывать с платформой .NET Framework поток\- методы обработки.  
+# <a name="using-tcp-services"></a>Использование служб TCP
+Класс <xref:System.Net.Sockets.TcpClient> запрашивает данные из ресурса в Интернете по протоколу TCP. Методы и свойства **TcpClient** абстрагируют сведения для создания <xref:System.Net.Sockets.Socket> с целью запроса и получения данных по протоколу TCP. Так как подключение к удаленному устройству представлено в виде потока, данные можно считывать и записывать с помощью методов работы с потоками платформы .NET Framework.  
   
- Протокол TCP устанавливает соединение с удаленной конечной точкой, а затем пользами, соединение отправлять и получать пакеты данных.  Протокол TCP отвечает за обеспечение, что пакеты данных отправлены к конечной точке, и сборка, когда они поступают в правильном порядке.  
+ Протокол TCP устанавливает соединение с удаленной конечной точкой, а затем использует его для отправки и получения пакетов данных. Протокол TCP отвечает за отправку пакетов данных в конечную точку и их сборку в правильном порядке после доставки.  
   
- Чтобы установить подключение TCP, необходимо знать адрес устройства сети при размещении службы, и необходимо знать TCP\-порт, служба использует для обмена данными.  Internet Assigned Numbers Authority \(Iana\) определяет номер порта для общих служб \(см. раздел www.iana.org\/assignments\/port\-numbers\).  Службы не в списке Iana могут иметь номера портов в диапазоне от 1.024 до 65.535.  
+ Чтобы установить подключение TCP, необходимо знать адрес сетевого устройства, в котором размещается нужная служба, и порт TCP, который служба использует для обмена данными. Номера портов для основных служб определяются организацией IANA (Администрация адресного пространства Интернет). См. страницу www.iana.org/assignments/port-numbers. Службы, отсутствующие в списке IANA, могут иметь номера портов в диапазоне от 1024 до 65535.  
   
- В следующем примере показано, как настраивать **TcpClient** для подключения к серверу времени на TCP\-порт 13.  
+ В приведенном ниже примере показано, как настроить **TcpClient** для подключения к серверу времени через порт TCP 13.  
   
 ```vb  
 Imports System  
@@ -74,7 +79,6 @@ Public Class TcpTimeClient
         Return 0  
     End Function 'Main  
 End Class 'TcpTimeClient  
-  
 ```  
   
 ```csharp  
@@ -108,9 +112,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> используется для контроля портов для входящих запросов, а затем создать или **Сокет** или **TcpClient**, которое управляет подключением клиенту.  Метод <xref:System.Net.Sockets.TcpListener.Start%2A> входит прослушивание, а метод <xref:System.Net.Sockets.TcpListener.Stop%2A> отключить прослушивание порта.  Метод <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> принимает запросы входящего подключения и создает **TcpClient** для обработки запроса, а метод <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> принимает запросы входящего подключения и создает **Сокет** для обработки запроса.  
+ <xref:System.Net.Sockets.TcpListener> используется для отслеживания входящих запросов на порте и последующего создания объекта **Socket** или **TcpClient**, который управляет подключением к клиенту. Метод <xref:System.Net.Sockets.TcpListener.Start%2A> включает прослушивание порта, а метод <xref:System.Net.Sockets.TcpListener.Stop%2A> отключает его. Метод <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> принимает входящие запросы на подключение и создает **TcpClient** для их обработки, а метод <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> делает то же самое, но создает **Socket**.  
   
- В следующем примере показано создание сервер времени сети с помощью монитора **TcpListener** на TCP\-порт 13.  При получении запроса входящего подключения, сервер отвечает времени текущей датой и временем из хоста\-сервера.  
+ В приведенном ниже примере показано создание сервера времени в сети с использованием **TcpListener** для наблюдения за портом TCP 13. При получении входящего запроса на подключение сервер времени сообщает в ответ текущую дату и время с сервера узла.  
   
 ```vb  
 Imports System  
@@ -202,5 +206,6 @@ public class TcpTimeServer {
 }  
 ```  
   
-## См. также  
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+## <a name="see-also"></a>См. также  
+ 
+

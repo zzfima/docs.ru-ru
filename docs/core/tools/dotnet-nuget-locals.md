@@ -1,27 +1,26 @@
 ---
-title: "Команда dotnet-nuget-locals — CLI .NET Core | Документы Майкрософт"
-description: "Команда dotnet-nuget-locals очищает или перечисляет локальные ресурсы NuGet, например кэш HTTP-запросов, временный кэш или папку глобальных пакетов, используемую на уровне компьютера."
-keywords: "dotnet-nuget-locals, CLI, команда CLI, .NET Core"
+title: "Команда dotnet nuget locals — CLI .NET Core"
+description: "Команда dotnet nuget locals очищает или перечисляет локальные ресурсы NuGet, например кэш HTTP-запросов, временный кэш или папку глобальных пакетов, используемую на уровне компьютера."
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d0acfaa6ff1a11f49a0d3751b675ea94bd6ae3a3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-# <a name="dotnet-nuget-locals"></a>dotnet-nuget locals
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Имя
 
-`dotnet-nuget locals` — очищает или перечисляет локальные ресурсы NuGet. 
+`dotnet nuget locals` — очищает или перечисляет локальные ресурсы NuGet.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -37,27 +36,16 @@ ms.lasthandoff: 03/22/2017
 
 Одно из следующих значений:
 
-`all`
-
-Указывает, что определенная операция применяется ко всем типам кэша, то есть к кэшу HTTP-запросов, глобальному кэшу пакетов и временному кэшу.
-
-`http-cache`
-
-Указывает, что определенная операция применяется только к кэшу HTTP-запросов. Другие расположения кэша не затрагиваются.
-
-`global-packages`
-
-Указывает, что определенная операция применяется только к глобальному кэшу пакетов. Другие расположения кэша не затрагиваются.
-
-`temp`
-
-Указывает, что определенная операция применяется только к временному кэшу. Другие расположения кэша не затрагиваются.
+* `all` — указывает, что определенная операция применяется ко всем типам кэша, то есть к кэшу HTTP-запросов, глобальному кэшу пакетов и временному кэшу.
+* `http-cache` — указывает, что определенная операция применяется только к кэшу HTTP-запросов. Другие расположения кэша не затрагиваются.
+* `global-packages` — указывает, что определенная операция применяется только к глобальному кэшу пакетов. Другие расположения кэша не затрагиваются.
+* `temp` — указывает, что определенная операция применяется только к временному кэшу. Другие расположения кэша не затрагиваются.
 
 ## <a name="options"></a>Параметры
 
 `-h|--help`
 
-Выводит краткую справку по команде.  
+Выводит краткую справку по команде.
 
 `-c|--clear`
 
@@ -95,5 +83,4 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
-Сведения о распространенных проблемах и ошибках при использовании команды `dotnet nuget locals` см. в статье об [управлении кэшем NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-nuget-cache).
-
+Сведения о распространенных проблемах и ошибках при использовании команды `dotnet nuget locals` см. в статье об [управлении кэшем NuGet](/nuget/consume-packages/managing-the-nuget-cache).

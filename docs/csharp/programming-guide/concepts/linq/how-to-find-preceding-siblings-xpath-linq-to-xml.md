@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,21 +14,21 @@ ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 964a85548b7cf5fd7334c46f21e2d50a9ff17987
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c49dd8998b0ad1e2a579b44f07462fb1111f3094
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск предшествующих элементов того же уровня (XPath-LINQ to XML) (C#)
-В этом разделе ось XPath `preceding-sibling` сравнивается с дочерней осью [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>.  
+В этом разделе сравнивается ось XPath `preceding-sibling` с дочерней для [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] осью <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>.  
   
  Выражение XPath:  
   
  `preceding-sibling::*`  
   
- Обратите внимание на то, что результаты методов <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> и <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> отображаются в порядке следования документов.  
+ Обратите внимание, что результаты как <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>, так и <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> соответствуют структуре документа.  
   
 ## <a name="example"></a>Пример  
  В следующем примере находится элемент `FullAddress`, после чего при помощи оси `preceding-sibling` получаются предыдущие элементы.  
@@ -67,3 +67,4 @@ Results are identical
   
 ## <a name="see-also"></a>См. также  
  [LINQ to XML для пользователей XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

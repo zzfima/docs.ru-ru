@@ -1,28 +1,33 @@
 ---
-title: "Практическое руководство. Отправка файлов с использованием FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Практическое руководство. Отправка файлов с использованием FTP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b90049c11e8eb1113155a400b7af159f2b6938ca
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Практическое руководство. Отправка файлов с использованием FTP
-В этом образце показано, как передать файл на ftp\-сервере.  
+# <a name="how-to-upload-files-with-ftp"></a>Практическое руководство. Отправка файлов с использованием FTP
+В этом примере показано, как отправить файл на FTP-сервер.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```csharp  
 using System;  
@@ -64,11 +69,12 @@ namespace Examples.System.Net
 }  
 ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
 -   Ссылки на пространство имен **System.Net**.  
   
-## Отказоустойчивость  
+## <a name="robust-programming"></a>Отказоустойчивость  
   
-## Безопасность платформы .NET Framework
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework
+

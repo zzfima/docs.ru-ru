@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 8c1195289d70e111d5c3551d004708de7722c8e9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)
@@ -83,7 +83,9 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
 2.  В верхнюю часть файла с кодом добавьте следующие операторы `Imports` (Visual Basic) или директивы `using`, если это еще не сделано.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]  [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
+     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+
+     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>Создание списка банковских счетов  
   
@@ -91,17 +93,23 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
 2.  Замените определение класса `Account` следующим кодом. В определениях классов используются *автоматически реализуемые свойства*. Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]  [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+
+     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  Чтобы создать список `bankAccounts`, содержащий два счета, добавьте в метод `ThisAddIn_Startup` в файле *ThisAddIn.vb* или *ThisAddIn.cs* следующий код. В объявлениях списков используются *инициализаторы коллекций*. Дополнительные сведения см. в разделе [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]  [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+
+     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
 ### <a name="to-export-data-to-excel"></a>Экспорт данных в Excel  
   
 1.  В том же самом файле добавьте в класс `ThisAddIn` следующий метод. Этот метод служит для настройки книги Excel и экспорта данных в нее.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]  [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+
+     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
      В этом методе используются две новые возможности C#. Оба эти возможности уже существуют в Visual Basic.  
   
@@ -123,7 +131,9 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
 2.  Добавьте в конец метода `DisplayInExcel` следующий код, чтобы ширина столбца изменялась в соответствии с содержимым.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]  [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+
+     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
      Эти дополнения демонстрируют еще одну возможность C#: значения `Object`, возвращаемые главными приложениями COM, например приложениями Office, и обрабатываются так, как если бы они имели тип [dynamic](../../../csharp/language-reference/keywords/dynamic.md). Это происходит автоматически, если параметр **Внедрить типы взаимодействия** имеет значение по умолчанию (`True`), или, что эквивалентно, если ссылка на сборку задается с помощью параметра компилятора [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md). Тип `dynamic` делает возможным позднее связывание, уже доступное в Visual Basic, и не допускает явного приведения, которое требовалось бы в Visual C# 2008 и более ранних версиях языка.  
   
@@ -137,7 +147,9 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
 1.  Добавьте следующий код в конец метода `ThisAddIn_StartUp`. Вызов метода `DisplayInExcel` содержит два аргумента. Первый аргумент представляет собой имя списка счетов, которые требуется обработать. Второй аргумент — это состоящее из нескольких строк лямбда-выражение, которое определяет, каким образом следует обрабатывать данные. Значения `ID` и `balance` для каждого из счетов отображаются в соседних ячейках, а если баланс имеет отрицательное значение, строка отображается красным. Дополнительные сведения см. в разделе [Лямбда-выражения](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]  [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+
+     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
 2.  Чтобы запустить программу, нажмите клавишу F5. Появится книга Excel, содержащая данные о счетах.  
   
@@ -145,7 +157,9 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
 1.  Добавьте в конец метода `ThisAddIn_StartUp` следующий код, чтобы создать документ Word, содержащий ссылку на книгу Excel.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]  [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+
+     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
      В этом коде демонстрируются некоторые новые функции C#: возможность опускать ключевое слово `ref` при программировании в модели COM, именованные аргументы и необязательные аргументы. Эти возможности уже существовали в Visual Basic. Метод [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) имеет семь параметров, которые определены как необязательные ссылочные параметры. Именованные и необязательные аргументы позволяют определять параметры, к которым требуется обращаться по имени, и передавать аргументы только для этих параметров. В этом примере аргументы передаются, чтобы показать, что необходимо создать ссылку на книгу в буфере (параметр `Link`) и что эта ссылка должна отображаться в документе Word в виде значка (параметр `DisplayAsIcon`). Кроме того, Visual C# позволяет опускать ключевое слово `ref` для таких аргументов.
   

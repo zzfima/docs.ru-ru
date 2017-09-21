@@ -1,48 +1,54 @@
 ---
-title: "Программирование подключаемых протоколов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "загрузка интернет-ресурсов, подключаемые протоколы"
-  - "класс WebRequest, подключаемые протоколы"
-  - "ответ на интернет-запрос, подключаемые протоколы"
-  - "класс WebRequest, подключаемые протоколы"
-  - "отправка данных, подключаемые протоколы"
-  - "сетевые ресурсы, подключаемые протоколы"
-  - "Интернет, подключаемые протоколы"
-  - "программирование подключаемых протоколов"
-  - "подключаемые протоколы, программирование"
-  - "запрос данных из Интернета, подключаемые протоколы"
-  - "получение данных, подключаемые протоколы"
-  - "протоколы, подключаемые"
+title: "программирование подключаемых протоколов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- downloading Internet resources, pluggable protocols
+- WebRequest class, pluggable protocols
+- response to Internet request, pluggable protocols
+- WebResponse class, pluggable protocols
+- sending data, pluggable protocols
+- network resources, pluggable protocols
+- Internet, pluggable protocols
+- programming pluggable protocols
+- pluggable protocols, programming
+- requesting data from Internet, pluggable protocols
+- receiving data, pluggable protocols
+- protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b422012004d164cf8a84ddeb53b6c0bf9fd1fb92
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Программирование подключаемых протоколов
-Абстрактные классы предоставляют <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> основой для подключаемые протоколы.  Производными классами протокол\- от конкретного <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, приложение может запросить данные из интернет\-ресурса и чтения ответа без указания используемого протокола.  
+# программирование подключаемых протоколов
+Абстрактные классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> реализуют основу для подключаемых протоколов. Создавая производные классы для определенных протоколов на основе классов <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>, приложение может запрашивать данные интернет-ресурса и считывать ответ, не указывая используемый протокол.  
   
- Перед созданием протокол\- специфичные <xref:System.Net.WebRequest> необходимо зарегистрировать его создать метод.  Используйте статический метод <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29><xref:System.Net.WebRequest> для регистрации является потомком <xref:System.Net.WebRequest> для обработки набор запросов к указанной схеме через интернет к схеме и к серверу или к схеме сервер и пути.  
+ Прежде чем создавать класс <xref:System.Net.WebRequest> для определенного протокола, необходимо зарегистрировать его метод Create. Используйте статический метод <xref:System.Net.WebRequest.RegisterPrefix%28System.String%2CSystem.Net.IWebRequestCreate%29> класса <xref:System.Net.WebRequest> для регистрации потомка <xref:System.Net.WebRequest>, который будет обрабатывать набор запросов к конкретной интернет-схеме, к схеме и серверу либо к схеме, серверу и пути.  
   
- В большинстве случаев вы будете отправлять и получать данные, используя методы и свойства <xref:System.Net.WebRequest> классифицируют.  Однако при необходимости доступа к свойствам определенного протокол\-, то можно предоставить подходящую роль <xref:System.Net.WebRequest> в конкретный экземпляр производного класса.  
+ В большинстве случаев можно отправлять и получать данные с помощью методов и свойств класса <xref:System.Net.WebRequest>. Однако если нужно получить доступ к свойствам определенного протокола, можно выполнить приведение типа <xref:System.Net.WebRequest> к конкретному экземпляру производного класса.  
   
- Чтобы воспользоваться преимуществами подключаемые протоколы, потомки <xref:System.Net.WebRequest> должны быть заданы по умолчанию транзакцию запрос\-и\- ответа, которая не требует определенного свойства протокол\- установлены.  Например, класс <xref:System.Net.HttpWebRequest>, который реализует класс <xref:System.Net.WebRequest> для HTTP предоставляет используемый по умолчанию `GET` запроса и возвращает <xref:System.Net.HttpWebResponse>, содержащий поток, возвращенный из веб\-сервере.  
+ Чтобы использовать преимущества подключаемых протоколов, потомки класса <xref:System.Net.WebRequest> должны предоставлять применяемую по умолчанию операцию "запрос-ответ", для которой не требуется задавать свойства определенного протокола. Например, класс <xref:System.Net.HttpWebRequest>, который реализует класс <xref:System.Net.WebRequest> для HTTP, предоставляет запрос `GET` по умолчанию и возвращает <xref:System.Net.HttpWebResponse>, который содержит поток, возвращенный веб-сервером.  
   
 ## См. также  
- [Наследование от WebResponse](../../../docs/framework/network-programming/deriving-from-webrequest.md)   
+ [Наследование от класса WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)   
  [Наследование от класса WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)   
  [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)   
  [Практическое руководство. Приведение типа объекта WebRequest для доступа к свойствам, связанным с определенным протоколом](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)
+

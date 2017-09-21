@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5c4d478d42f395cefdd38c796b19a1f875c4ef2e
+ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
+ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -162,7 +162,7 @@ echo "Hello World!"
 echo "Hello World"
 ```
 
-В Mac OS можно сохранить этот скрипт как `dotnet-hello` и задать его бит выполнения с помощью `chmod +x dotnet-hello`. Затем можно создать символьную ссылку на него в `/usr/local/bin` с помощью команды `ln -s dotnet-hello /usr/local/bin/`. Это позволит вызывать команду с использованием синтаксиса `dotnet hello`.
+В Mac OS можно сохранить этот скрипт как `dotnet-hello` и задать его бит выполнения с помощью `chmod +x dotnet-hello`. Затем можно создать символьную ссылку на него в `/usr/local/bin` с помощью команды `ln -s <full_path>/dotnet-hello /usr/local/bin/`. Это позволит вызывать команду с использованием синтаксиса `dotnet hello`.
 
 В Windows можно сохранить этот сценарий как `dotnet-hello.cmd` и поместить его в расположение, которое находится в системном пути (или добавить в папку, которая уже находится в системном пути). После этого для запуска этого примера достаточно использовать команду `dotnet hello`.
 

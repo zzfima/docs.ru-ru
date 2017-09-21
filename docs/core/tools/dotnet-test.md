@@ -1,42 +1,46 @@
 ---
-title: "Команда dotnet-test — CLI .NET Core | Документы Майкрософт"
+title: "Команда dotnet test — CLI .NET Core"
 description: "Команда dotnet test служит для выполнения модульных тестов в проекте."
-keywords: "dotnet-test, CLI, команда CLI, .NET Core"
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 03/25/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-test"></a>dotnet test
 
-<a id="dotnet-test" class="xliff"></a>
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-#dotnet-test
+## <a name="name"></a>Имя
 
-<a id="name" class="xliff"></a>
+`dotnet test` — драйвер тестов .NET, используемый для проведения модульных тестов.
 
-## Имя
+## <a name="synopsis"></a>Краткий обзор
 
-`dotnet-test` — драйвер тестов .NET, используемый для проведения модульных тестов.
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-<a id="synopsis" class="xliff"></a>
 
-## Краткий обзор
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
 
-`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-<a id="description" class="xliff"></a>
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
+dotnet test [-h|--help]
+```
+---
 
-## Описание
+## <a name="description"></a>Описание
 
 Команда `dotnet test` служит для выполнения модульных тестов в проекте. Модульные тесты — это проекты консольных приложений, у которых есть зависимости от среды модульного тестирования (например, MSTest, NUnit или xUnit) и от средства запуска тестов dotnet для этой среды. Они упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
 
@@ -44,77 +48,139 @@ ms.lasthandoff: 06/20/2017
 
 [!code-xml[Базовый шаблон XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-<a id="options" class="xliff"></a>
-
-## Параметры
+## <a name="arguments"></a>Аргументы
 
 `PROJECT`
-    
+
 Указывает путь к тестовому проекту. Если значение не задано, по умолчанию используется текущий каталог.
 
-`-h|--help`
+## <a name="options"></a>Параметры
 
-Выводит краткую справку по команде.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Параметры, используемые при выполнении тестов. 
-
-`-t|--list-tests`
-
-Отображение списка всех обнаруженных тестов в текущем проекте. 
-
-`--filter <EXPRESSION>`
-
-Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details). Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье о [выполнении выборочных модульных тестов](../testing/selective-unit-tests.md).
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске. 
+Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.
 
-`-l|--logger <LoggerUri/FriendlyName>`
+`-c|--configuration {Debug|Release}`
 
-Указывает средство ведения журнала для результатов тестирования. 
+Определяет конфигурацию сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
 
-`-c|--configuration <CONFIGURATION>`
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-Конфигурация для сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
+Включает сборщик данных для тестового запуска. Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.
 
 `-f|--framework <FRAMEWORK>`
 
 Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).
 
+`--filter <EXPRESSION>`
+
+Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details). Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье о [выполнении выборочных модульных тестов](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Выводит краткую справку по команде.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Указывает средство ведения журнала для результатов тестирования.
+
+`--no-build`
+
+Не выполняет сборку тестового проекта перед его запуском.
+
+`--no-restore`
+
+Не выполняет неявное восстановление при выполнении команды.
+
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Каталог, в котором выполняется поиск двоичных файлов для выполнения.
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+`-r|--results-directory <PATH>`
 
-Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл. 
+Каталог для сохранения результатов тестов. Если указанный каталог не существует, он будет создан.
 
-`--no-build` 
+`-s|--settings <SETTINGS_FILE>`
 
-Не выполняет сборку тестового проекта перед его запуском.
+Параметры, используемые при выполнении тестов.
+
+`-t|--list-tests`
+
+Отображение списка всех обнаруженных тестов в текущем проекте.
 
 `-v|--verbosity <LEVEL>`
 
 Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
-<a id="examples" class="xliff"></a>
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-## Примеры
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.
+
+`-c|--configuration {Debug|Release}`
+
+Определяет конфигурацию сборки. Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.
+
+`-f|--framework <FRAMEWORK>`
+
+Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).
+
+`--filter <EXPRESSION>`
+
+Фильтрует тесты в текущем проекте с помощью заданного выражения. Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details). Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье о [выполнении выборочных модульных тестов](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Выводит краткую справку по команде.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Указывает средство ведения журнала для результатов тестирования.
+
+`--no-build`
+
+Не выполняет сборку тестового проекта перед его запуском.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Каталог, в котором выполняется поиск двоичных файлов для выполнения.
+
+`-s|--settings <SETTINGS_FILE>`
+
+Параметры, используемые при выполнении тестов.
+
+`-t|--list-tests`
+
+Отображение списка всех обнаруженных тестов в текущем проекте.
+
+`-v|--verbosity <LEVEL>`
+
+Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+
+---
+
+## <a name="examples"></a>Примеры
 
 Выполнение тестов в проекте в текущем каталоге:
 
-`dotnet test` 
+`dotnet test`
 
 Выполнение тестов в проекте `test1`:
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-<a id="filter-option-details" class="xliff"></a>
-
-## Сведения о параметре "Фильтр"
+## <a name="filter-option-details"></a>Сведения о параметре "Фильтр"
 
 `--filter <EXPRESSION>`
 
@@ -150,10 +216,8 @@ ms.lasthandoff: 06/20/2017
 
 Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье о [выполнении выборочных модульных тестов](../testing/selective-unit-tests.md).
 
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>См. также
 
-## См. также
-
-[Платформы и целевые объекты](../../standard/frameworks.md)   
-[Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
+ [Платформы и целевые объекты](../../standard/frameworks.md)   
+ [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
 

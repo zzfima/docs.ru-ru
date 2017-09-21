@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Запрос символов в строке (LINQ) (C#) | Документы Майкрософт"
+title: "Практическое руководство. Запрос символов в строке (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 86c763d8f31a7021605d82ecab0664a290934e07
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e78ad4aa493a7f58c43e77772138900e2b20b18a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Практическое руководство. Запрос символов в строке (LINQ) (C#)
-Поскольку класс <xref:System.String> реализует универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, любую строку можно запросить как последовательность символов. Однако это не слишком распространенный пример использования LINQ. Для сложных операций сопоставления шаблонов используйте класс <xref:System.Text.RegularExpressions.Regex>.  
+Поскольку класс <xref:System.String> реализует универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, любая строка может запрашиваться как последовательность символов. Однако это не слишком распространенный пример использования LINQ. Для сложных операций сопоставления шаблонов используйте класс <xref:System.Text.RegularExpressions.Regex>.  
   
 ## <a name="example"></a>Пример  
  В следующем примере запрашивается строка, чтобы определить количество содержащихся в ней цифр. Обратите внимание, что запрос "используется повторно" после первоначального выполнения. Это становится возможным, поскольку сам запрос не хранит фактические результаты.  
@@ -77,3 +77,4 @@ class QueryAString
 ## <a name="see-also"></a>См. также  
  [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [Практическое руководство. Объединение запросов LINQ с помощью регулярных выражений (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+

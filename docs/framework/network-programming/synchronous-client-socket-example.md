@@ -1,30 +1,35 @@
 ---
-title: "Пример синхронного сокета клиента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "сокеты, примеры кода"
-  - "синхронные сокеты клиента"
-  - "сокеты, синхронные сокеты клиента"
+title: "Пример синхронного сокета клиента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, code examples
+- synchronous client sockets
+- sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 759585d1029742f6f45e9f7253282af05accc82e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Пример синхронного сокета клиента
-Следующий пример создает программу клиента, который подключается к серверу.  Клиент создан с синхронным гнездом, поэтому выполнение клиентского приложения приостановитьо до тех пор, пока сервер не возвращает ответа.  Приложение отправляет строку на сервер, а затем отображает строку, возвращаемую сервером на консоль.  
+# <a name="synchronous-client-socket-example"></a>Пример синхронного сокета клиента
+Приведенная ниже программа создает клиент, который подключается к серверу. Клиент создается с использованием синхронного сокета, поэтому выполнение клиентского приложения приостанавливается до тех пор, пока сервер не вернет ответ. Приложение отправляет строку на сервер, а затем выводит возвращенную им строку в консоли.  
   
 ```vb  
 Imports System  
@@ -92,7 +97,7 @@ public class SynchronousSocketClient {
         try {  
             // Establish the remote endpoint for the socket.  
             // This example uses port 11000 on the local computer.  
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName())  
+            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
@@ -142,7 +147,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пример синхронного сокета сервера](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
  [Использование синхронного сокета клиента](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
  [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Подписание сборки строгим именем | Документы Майкрософт"
+title: "Практическое руководство. Подписание сборки строгим именем"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 548cc4ffd0f894c4f522552c5f032be4c94d3585
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Практическое руководство. Подписание сборки строгим именем
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/02/2017
   
 -   С использованием [компоновщика сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) , который связывает модуль кода .NET Framework (NETMODULE-файл) с файлом ключа.  
   
--   С использованием атрибутов сборки, позволяющих вставить в код данные строгого имени. Можно использовать либо <xref:System.Reflection.AssemblyKeyFileAttribute>, либо <xref:System.Reflection.AssemblyKeyNameAttribute> в зависимости от того, где находится используемый файл ключа.  
+-   С использованием атрибутов сборки, позволяющих вставить в код данные строгого имени. Можно использовать либо <xref:System.Reflection.AssemblyKeyFileAttribute> , либо <xref:System.Reflection.AssemblyKeyNameAttribute> в зависимости от того, где находится используемый файл ключа.  
   
 -   С использованием параметров компилятора.  
   
@@ -81,7 +81,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2.  Компилируйте файл исходного кода в обычном режиме.  
   
 > [!NOTE]
->  Компиляторы C# и Visual Basic выдают предупреждения (CS1699 и BC41008, соответственно), если в исходном коде встречается <xref:System.Reflection.AssemblyKeyFileAttribute> или <xref:System.Reflection.AssemblyKeyNameAttribute>. Эти предупреждения можно игнорировать.  
+>  Компиляторы C# и Visual Basic выдают предупреждения (CS1699 и BC41008, соответственно), если в исходном коде встречается <xref:System.Reflection.AssemblyKeyFileAttribute> или <xref:System.Reflection.AssemblyKeyNameAttribute> . Эти предупреждения можно игнорировать.  
   
  В следующем примере кода используется атрибут <xref:System.Reflection.AssemblyKeyFileAttribute> с файлом ключей под названием `keyfile.snk`, который находится в том же каталоге, где компилируется сборка.  
   
@@ -108,3 +108,4 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
  [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md)   
  [Управление сборками и подписывание манифестов](/visualstudio/ide/managing-assembly-and-manifest-signing)   
  [Страница "Подписывание" в конструкторе проектов](https://msdn.microsoft.com/library/0k50fs3b)
+

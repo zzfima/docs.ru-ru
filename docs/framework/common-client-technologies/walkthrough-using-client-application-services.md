@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Использование служб клиентских приложений | Документы Майкрософт"
+title: "Пошаговое руководство. Использование служб клиентских приложений"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: c5c36c371c43e6cba8875c0b6bea98c228438218
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-using-client-application-services"></a>Пошаговое руководство. Использование служб клиентских приложений
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/02/2017
  На данном этапе приложение настроено для доступа ко всем трем службам с одного узла. В следующем разделе для тестирования конфигурации клиента вы создадите узел, выступающий в качестве простого приложения веб-служб.  
   
 ## <a name="creating-the-application-services-host"></a>Создание узла служб приложений  
- В этом разделе вы создадите простое приложение веб-служб для доступа к пользовательским данным, хранящимся в файле локальной базы данных SQL Server Compact. Затем нужно будет заполнить базу данных при помощи [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Выполнив простую настройку, вы сможете быстро протестировать ваше клиентское приложение. В качестве альтернативы можно настроить узел веб-служб для доступа к пользовательским данным из заполненной базы данных SQL Server или с помощью пользовательских классов <xref:System.Web.Security.MembershipProvider> и <xref:System.Web.Security.RoleProvider>. Для получения дополнительной информации см. [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ В этом разделе вы создадите простое приложение веб-служб для доступа к пользовательским данным, хранящимся в файле локальной базы данных SQL Server Compact. Затем нужно будет заполнить базу данных при помощи [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Выполнив простую настройку, вы сможете быстро протестировать ваше клиентское приложение. В качестве альтернативы можно настроить узел веб-служб для доступа к пользовательским данным из заполненной базы данных SQL Server или с помощью пользовательских классов <xref:System.Web.Security.MembershipProvider> и <xref:System.Web.Security.RoleProvider> . Для получения дополнительной информации см. [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  В следующей процедуре описывается создание и настройка веб-службы AppServices.  
   
@@ -256,7 +256,7 @@ ms.lasthandoff: 06/02/2017
   
 5.  В конструкторе дважды щелкните поверхность формы, чтобы создать обработчик событий <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> с названием `Form1_Load`.  
   
-     Откроется редактор кода, курсор окажется в области метода `Form1_Load`.  
+     Откроется редактор кода, курсор окажется в области метода `Form1_Load` .  
   
 6.  Добавьте следующий код в метод `Form1_Load` .  
   
@@ -271,12 +271,12 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  Если не удалось запустить приложение, попробуйте остановить ASP.NET Development Server. После перезапуска сервера убедитесь, что для параметра "Порт" задано значение "55555".  
   
- Чтобы отобразить сообщение об ошибке, измените параметры <xref:System.Web.Security.Membership.ValidateUser%2A>. Например, замените значение второго параметра (`"manager!"`) неправильным паролем (например, `"MANAGER"`).  
+ Чтобы отобразить сообщение об ошибке, измените параметры <xref:System.Web.Security.Membership.ValidateUser%2A> . Например, замените значение второго параметра ( `"manager!"` ) неправильным паролем (например, `"MANAGER"`).  
   
 ## <a name="adding-a-login-form-as-a-credentials-provider"></a>Добавление формы входа в качестве поставщика учетных данных  
- Вы можете получать учетные данные пользователей с помощью кода своего приложения и передавать их методу <xref:System.Web.Security.Membership.ValidateUser%2A>. Однако на случай, если вы решите изменить код получения учетных данных, бывает полезно держать его отдельно от остального кода приложения.  
+ Вы можете получать учетные данные пользователей с помощью кода своего приложения и передавать их методу <xref:System.Web.Security.Membership.ValidateUser%2A> . Однако на случай, если вы решите изменить код получения учетных данных, бывает полезно держать его отдельно от остального кода приложения.  
   
- В следующей процедуре описывается настройка приложения на использование поставщика учетных данных. При вызове метода <xref:System.Web.Security.Membership.ValidateUser%2A> обоим параметрам будет передаваться значение <xref:System.String.Empty>. Пустые строки отдают методу <xref:System.Web.Security.Membership.ValidateUser%2A> команду вызова метода <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> указанного поставщика учетных данных.  
+ В следующей процедуре описывается настройка приложения на использование поставщика учетных данных. При вызове метода <xref:System.Web.Security.Membership.ValidateUser%2A> обоим параметрам будет передаваться значение <xref:System.String.Empty> . Пустые строки отдают методу <xref:System.Web.Security.Membership.ValidateUser%2A> команду вызова метода <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> указанного поставщика учетных данных.  
   
 #### <a name="to-configure-your-application-to-use-a-credentials-provider"></a>Настройка приложения на использование поставщика учетных данных  
   
@@ -305,7 +305,7 @@ ms.lasthandoff: 06/02/2017
      [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]  [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
 ### <a name="creating-a-login-form"></a>Создание формы входа  
- Поставщик учетных данных — это класс, реализующий интерфейс <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>. Этот интерфейс содержит один метод с именем <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>, возвращающий объект <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>. В следующей процедуре описывается создание диалогового окна входа. Для отображения окна и возвращения указанных пользователем учетных данных используется метод <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>.  
+ Поставщик учетных данных — это класс, реализующий интерфейс <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> . Этот интерфейс содержит один метод с именем <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> , возвращающий объект <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> . В следующей процедуре описывается создание диалогового окна входа. Для отображения окна и возвращения указанных пользователем учетных данных используется метод <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> .  
   
  Для [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] и C# представлены отдельные инструкции, так как в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] доступен шаблон **Форма входа** . Это позволяет сократить время и затраты на кодирование.  
   
@@ -339,7 +339,7 @@ ms.lasthandoff: 06/02/2017
   
      [!code-vb[ClientApplicationServices#120](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Login.vb#120)]  
   
- В следующей процедуре для C# приводится полный код создания простого диалогового окна входа. Макет этого диалогового окна достаточно приблизителен, однако главный интерес здесь представляет реализация метода <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>.  
+ В следующей процедуре для C# приводится полный код создания простого диалогового окна входа. Макет этого диалогового окна достаточно приблизителен, однако главный интерес здесь представляет реализация метода <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> .  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-c"></a>Создание диалогового окна входа как поставщика учетных данных в C#  
   
@@ -383,12 +383,12 @@ ms.lasthandoff: 06/02/2017
   
 5.  В конце класса Form1 добавьте приведенный ниже метод.  
   
-     Этот метод вызывает метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> интерфейса <xref:System.Security.Principal.IPrincipal>, возвращенного свойством <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> (`static`). Для приложений, настроенных на использование служб клиентских приложений, это свойство возвращает класс <xref:System.Web.ClientServices.ClientRolePrincipal>. Поскольку этот класс реализует интерфейс <xref:System.Security.Principal.IPrincipal>, необязательно явно ссылаться на него.  
+     Этот метод вызывает метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> интерфейса <xref:System.Security.Principal.IPrincipal>, возвращенного свойством <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> (`static`). Для приложений, настроенных на использование служб клиентских приложений, это свойство возвращает класс <xref:System.Web.ClientServices.ClientRolePrincipal>. Поскольку этот класс реализует интерфейс <xref:System.Security.Principal.IPrincipal> , необязательно явно ссылаться на него.  
   
      Если пользователю назначена роль "manager", метод `DisplayButtonForManagerRole` присваивает свойству <xref:System.Windows.Forms.Control.Visible%2A> кнопки `managerOnlyButton` значение `true`. При вызове исключения <xref:System.Net.WebException> этот метод также отображает сообщение об ошибке, означающее, что служба ролей недоступна.  
   
     > [!NOTE]
-    >  При истечении допустимого времени в системе метод <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> всегда возвращает значение `false`. Этого не происходит, если приложение вызывает метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> один раз вскоре после проверки подлинности, как показано в примере кода, который используется в этом руководстве. Если необходимо, чтобы приложение извлекало роли пользователей в другое время, вы можете добавить код для повторной проверки пользователей, чье допустимое время в системе истекло. Если всем допустимым пользователям назначены роли, вы можете выявлять истечение допустимого времени, вызывая метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName>. Если роли не возвращаются, значит время истекло. Пример реализации этой возможности — метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A>. Данная функция необходима лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Для получения дополнительной информации см. [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+    >  При истечении допустимого времени в системе метод <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> всегда возвращает значение `false` . Этого не происходит, если приложение вызывает метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> один раз вскоре после проверки подлинности, как показано в примере кода, который используется в этом руководстве. Если необходимо, чтобы приложение извлекало роли пользователей в другое время, вы можете добавить код для повторной проверки пользователей, чье допустимое время в системе истекло. Если всем допустимым пользователям назначены роли, вы можете выявлять истечение допустимого времени, вызывая метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> . Если роли не возвращаются, значит время истекло. Пример реализации этой возможности — метод <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Данная функция необходима лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Для получения дополнительной информации см. [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]  [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
@@ -429,7 +429,7 @@ ms.lasthandoff: 06/02/2017
   
 9. В конце класса Form1 добавьте приведенный ниже метод.  
   
-     Этот метод привязывает свойство <xref:System.Windows.Forms.TextBox.Text%2A> метода `webSettingsTestTextBox` к свойству `WebSettingsTestText` класса `Settings`, создание которого описывалось ранее в этой процедуре. При вызове исключения <xref:System.Net.WebException> этот метод также отображает сообщение об ошибке, означающее, что служба веб-параметров недоступна.  
+     Этот метод привязывает свойство <xref:System.Windows.Forms.TextBox.Text%2A> метода `webSettingsTestTextBox` к свойству `WebSettingsTestText` класса `Settings` , создание которого описывалось ранее в этой процедуре. При вызове исключения <xref:System.Net.WebException> этот метод также отображает сообщение об ошибке, означающее, что служба веб-параметров недоступна.  
   
      [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]   [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
   
@@ -444,9 +444,9 @@ ms.lasthandoff: 06/02/2017
   
 12. Замените созданный метод приведенным ниже кодом.  
   
-     Обработчик события <xref:System.Windows.Forms.Form.FormClosing> вызывает метод `SaveSettings`, также используемый функцией выхода, которая будет добавлена в следующем разделе. Метод `SaveSettings` сначала проверяет, не вышел ли пользователь из системы. Это достигается путем проверки свойства <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> <xref:System.Security.Principal.IIdentity>, возвращенного текущим субъектом. Текущий субъект извлекается с помощью свойства <xref:System.Threading.Thread.CurrentPrincipal%2A> (`static`). Если пользователь прошел проверку подлинности служб клиентских приложений, используется проверка подлинности типа "ClientForms". Метод `SaveSettings` не может просто проверить свойство <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName>, поскольку после выхода у пользователя может иметься допустимое удостоверение Windows.  
+     Обработчик события <xref:System.Windows.Forms.Form.FormClosing> вызывает метод `SaveSettings` , также используемый функцией выхода, которая будет добавлена в следующем разделе. Метод `SaveSettings` сначала проверяет, не вышел ли пользователь из системы. Это достигается путем проверки свойства <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> <xref:System.Security.Principal.IIdentity>, возвращенного текущим субъектом. Текущий субъект извлекается с помощью свойства <xref:System.Threading.Thread.CurrentPrincipal%2A> (`static`). Если пользователь прошел проверку подлинности служб клиентских приложений, используется проверка подлинности типа "ClientForms". Метод `SaveSettings` не может просто проверить свойство <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> , поскольку после выхода у пользователя может иметься допустимое удостоверение Windows.  
   
-     Если пользователь не выходил из системы, метод `SaveSettings` вызывает метод <xref:System.Configuration.ApplicationSettingsBase.Save%2A>, принадлежащий классу `Settings`. Создание этого класса описывалось выше. При истечении срока действия файла cookie проверки подлинности этот метод может вызвать исключение <xref:System.Net.WebException>. Это возможно лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Для получения дополнительной информации см. [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). При истечении срока действия файлов cookie метод `SaveSettings` вызывает метод <xref:System.Web.Security.Membership.ValidateUser%2A> для отображения диалогового окна входа в систему. В случае успешного входа пользователя метод `SaveSettings` вызывает сам себя, предпринимая попытку повторного сохранения параметров.  
+     Если пользователь не выходил из системы, метод `SaveSettings` вызывает метод <xref:System.Configuration.ApplicationSettingsBase.Save%2A> , принадлежащий классу `Settings` . Создание этого класса описывалось выше. При истечении срока действия файла cookie проверки подлинности этот метод может вызвать исключение <xref:System.Net.WebException> . Это возможно лишь в случае, если в параметрах приложения вы выбрали пункт **Требовать, чтобы пользователи повторяли вход, если у файла cookie сервера истек срок действия** . Для получения дополнительной информации см. [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). При истечении срока действия файлов cookie метод `SaveSettings` вызывает метод <xref:System.Web.Security.Membership.ValidateUser%2A> для отображения диалогового окна входа в систему. В случае успешного входа пользователя метод `SaveSettings` вызывает сам себя, предпринимая попытку повторного сохранения параметров.  
   
      Как и в предшествующем коде, если удаленная служба недоступна, метод `SaveSettings` отображает сообщение об ошибке. Если поставщик параметров не может получить доступ к удаленной службе, параметры сохраняются в локальном кэше и перезагружаются при повторном запуске приложения.  
   
@@ -454,7 +454,7 @@ ms.lasthandoff: 06/02/2017
   
 13. В конце класса Form1 добавьте приведенный ниже метод.  
   
-     Этот код обрабатывает событие <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> и отображает предупреждение, если какие-либо параметры не удалось сохранить. Если служба параметров недоступна или истек срок действия файла cookie проверки подлинности, событие <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> не происходит. Событие <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> происходит, например, если пользователь уже вышел из системы. Вы можете проверить этот обработчик событий, непосредственно перед вызовом метода <xref:System.Configuration.ApplicationSettingsBase.Save%2A> добавив в метод `SaveSettings` код выхода. Код выхода, который можно при этом использовать, описывается в следующем разделе.  
+     Этот код обрабатывает событие <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> и отображает предупреждение, если какие-либо параметры не удалось сохранить. Если служба параметров недоступна или истек срок действия файла cookie проверки подлинности, событие <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> не происходит. Событие <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> происходит, например, если пользователь уже вышел из системы. Вы можете проверить этот обработчик событий, непосредственно перед вызовом метода `SaveSettings` добавив в метод <xref:System.Configuration.ApplicationSettingsBase.Save%2A> код выхода. Код выхода, который можно при этом использовать, описывается в следующем разделе.  
   
      [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]  [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
   
@@ -479,7 +479,7 @@ ms.lasthandoff: 06/02/2017
   
 4.  Замените созданный метод `logoutButton_Click` приведенным ниже кодом.  
   
-     Этот обработчик событий сначала вызывает метод `SaveSettings`, добавление которого описывается в прошлом разделе. Затем обработчик событий вызывает метод <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName>. Если служба проверки подлинности недоступна, метод <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> вызывает исключение <xref:System.Net.WebException>. В этом случае метод `logoutButton_Click` отображает предупреждающее сообщение и временно переводит приложение в автономный режим, чтобы пользователь вышел из системы. Автономный режим описывается в следующем разделе.  
+     Этот обработчик событий сначала вызывает метод `SaveSettings` , добавление которого описывается в прошлом разделе. Затем обработчик событий вызывает метод <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName> . Если служба проверки подлинности недоступна, метод <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> вызывает исключение <xref:System.Net.WebException>. В этом случае метод `logoutButton_Click` отображает предупреждающее сообщение и временно переводит приложение в автономный режим, чтобы пользователь вышел из системы. Автономный режим описывается в следующем разделе.  
   
      При выходе удаляется локальный файл cookie проверки подлинности, поэтому при перезапуске приложения потребуется выполнить повторный вход в систему. После выхода обработчик события перезапускает приложение. При перезапуске программы отображается приветственное сообщение, а затем — диалоговое окно входа. Приветственное сообщение позволяет понять, что приложение было перезапущено. Это позволяет избежать путаницы в случаях, когда пользователю требуется войти в систему для сохранения параметров, а затем снова выполнить вход из-за перезапуска приложения.  
   
@@ -511,7 +511,7 @@ ms.lasthandoff: 06/02/2017
     > [!NOTE]
     >  Метод <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> предназначен исключительно для удобства. Поскольку у него отсутствуют возвращаемые значения, с его помощью нельзя выявлять ошибки при повторных проверках подлинности. Ошибка проверки подлинности может возникнуть, например, при изменении учетных данных пользователя на сервере. В этом случае вы можете использовать код, с помощью которого после ошибок вызова служб будет выполняться явная проверка подлинности пользователей. Дополнительные сведения см. в разделе "Доступ к веб-параметрам" в данном руководстве.  
   
-     После повторной проверки подлинности этот код вызывает метод `SaveSettings`, добавление которого рассматривается выше, чтобы сохранить все изменения локальных веб-параметров. Затем с помощью этого кода на сервере извлекаются все новые значения путем вызова метода <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> класса проекта `Settings` (`Properties.Settings.Default` в C# и `My.Settings` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     После повторной проверки подлинности этот код вызывает метод `SaveSettings` , добавление которого рассматривается выше, чтобы сохранить все изменения локальных веб-параметров. Затем с помощью этого кода на сервере извлекаются все новые значения путем вызова метода <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> класса проекта `Settings` (`Properties.Settings.Default` в C# и `My.Settings` в [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]  [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  
   

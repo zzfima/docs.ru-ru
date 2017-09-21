@@ -1,5 +1,5 @@
 ---
-title: "Универсальные шаблоны в .NET Framework | Документация Майкрософт"
+title: "Универсальные шаблоны в .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -32,14 +32,15 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 83ab82e7ef31b26321f513da668de25ed9690e04
-ms.lasthandoff: 04/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ef0b251add573c7aaed75b866523b5fdcd3d8e5a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="generics-in-the-net-framework"></a>Универсальные шаблоны в .NET Framework
-<a name="top"></a> Универсальные шаблоны позволяют точно настроить метод, класс или структуру в соответствии с типом обрабатываемых данных. Например, вместо использования класса <xref:System.Collections.Hashtable>, который позволяет ключам и значениям быть любого типа, можно использовать универсальный класс <xref:System.Collections.Generic.Dictionary%602> и указать допустимый тип ключа и тип значения. Помимо прочего, преимуществами универсальных шаблонов являются улучшенная возможность многократного использования кода и сохранения типов.  
+<a name="top"></a> Универсальные шаблоны позволяют точно настроить метод, класс или структуру в соответствии с типом обрабатываемых данных. Например, вместо использования класса <xref:System.Collections.Hashtable> , который позволяет ключам и значениям быть любого типа, можно использовать универсальный класс <xref:System.Collections.Generic.Dictionary%602> и указать допустимый тип ключа и тип значения. Помимо прочего, преимуществами универсальных шаблонов являются улучшенная возможность многократного использования кода и сохранения типов.  
   
  В этом разделе содержатся общие сведения об универсальных шаблонах платформы .NET Framework и сводка по универсальным типам или методам. Он содержит следующие подразделы:  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/08/2017
   
 -   [Вложенные типы и универсальные шаблоны](#nested_types_and_generics)  
   
--   [См. также](#related_topics)  
+-   [Связанные разделы](#related_topics)  
   
 -   [Ссылки](#reference)  
   
@@ -59,25 +60,21 @@ ms.lasthandoff: 04/08/2017
 ## <a name="defining-and-using-generics"></a>Определение и использование универсальных шаблонов  
  Универсальными шаблонами являются классы, структуры, интерфейсы и методы, которые имеют прототипы (параметры типов) для одного или нескольких типов, которые они хранят или используют. Класс универсальной коллекции может использовать параметр типа в качестве заполнителя для типа объектов, которые в нем хранятся. Параметры типа отображаются как типы его полей и типы параметров его методов. Универсальный метод может использовать параметр типа в качестве типа возвращаемого значения или как тип одного из своих формальных параметров. Следующий код иллюстрирует определение простого универсального класса.  
   
- [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
- [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)]
- [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
+ [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)] [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)] [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
   
  При создании экземпляра универсального класса необходимо указать фактические типы для замены параметров типа. При этом создается новый универсальный класс, называемый сконструированным универсальным классом, с выбранными типами, заменяющими все параметры типа. Результатом является типобезопасный класс, соответствующий вашему выбору типов, как показано в следующем коде.  
   
- [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
- [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
- [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
+ [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)] [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)] [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Терминология универсальных шаблонов  
  В обсуждении универсальных шаблонов на платформе .NET Framework используются следующие термины.  
   
--   *Определение универсального типа* — это объявление класса, структуры или интерфейса, которое работает в качестве шаблона с прототипами для типов, которые он может содержать или использовать. Например, класс <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> может содержать два типа: ключи и значения. Поскольку определение универсального типа — это только шаблон, создавать экземпляры класса, структуры или интерфейса, являющиеся определением универсального типа, нельзя.  
+-   *Определение универсального типа* — это объявление класса, структуры или интерфейса, которое работает в качестве шаблона с прототипами для типов, которые он может содержать или использовать. Например, класс <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> может содержать два типа: ключи и значения. Поскольку определение универсального типа — это только шаблон, создавать экземпляры класса, структуры или интерфейса, являющиеся определением универсального типа, нельзя.  
   
--   *Параметры универсального типа* или *параметры типа* являются прототипами в определении универсального типа или метода. У универсального типа <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> есть два параметра типа, `TKey` и `TValue`, представляющие типы его ключей и значений.  
+-   *Параметры универсального типа*или *параметры типа*являются прототипами в определении универсального типа или метода. Универсальный тип <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> имеет два параметра типа `TKey` и `TValue`, которые представляют типы его ключей и значений.  
   
--   *Сконструированный универсальный тип* или *сконструированный тип* является результатом указания типов для параметров универсального типа в определении универсального типа.  
+-   *Сконструированный универсальный тип*или *сконструированный тип*является результатом указания типов для параметров универсального типа в определении универсального типа.  
   
 -   *Аргумент универсального типа* является любым типом, заменяемым на параметр универсального типа.  
   
@@ -85,19 +82,15 @@ ms.lasthandoff: 04/08/2017
   
 -   *Ковариация* и *контравариация* параметров универсального типа позволяют использовать сконструированные универсальные типы, аргументы типов которых находятся на более высоком (в случае ковариации) или низком (в случае контравариации) уровне иерархии наследования, чем у целевого сконструированного типа. Вместе ковариантность и контравариантность называются *вариацией*. Дополнительные сведения см. в разделе [Ковариация и контравариантность](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   *Ограничения* — это пределы, наложенные на параметры универсального типа. Например, можно ограничить параметр типа типами, реализующими универсальный интерфейс <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName>, чтобы обеспечить упорядочивание экземпляров типа. Можно также ограничить параметры типа типами, имеющими определенный базовый класс, который имеет конструктор по умолчанию, или типами, являющимися ссылочными типами или типами значений. Пользователи универсального типа не могут подставить аргументы типа, которые не удовлетворяют ограничениям.  
+-   *Ограничения* — это пределы, наложенные на параметры универсального типа. Например, можно ограничить параметр типа типами, реализующими универсальный интерфейс <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> , чтобы обеспечить упорядочивание экземпляров типа. Можно также ограничить параметры типа типами, имеющими определенный базовый класс, который имеет конструктор по умолчанию, или типами, являющимися ссылочными типами или типами значений. Пользователи универсального типа не могут подставить аргументы типа, которые не удовлетворяют ограничениям.  
   
--   *Определение универсального метода* — это метод с двумя списками параметров: списком параметров универсальных типов и списком формальных параметров. Параметры типа могут отображаться в качестве возвращаемого типа или в качестве типов формальных параметров, как показано в следующем коде.  
+-   *Определение универсального метода* — это метод с двумя списками параметров: списком параметров универсальных типов и списком формальных параметров. Параметры типа могут отображаться в качестве возвращаемого типа или в качестве типов формальных параметров, как показано в следующем коде.  
   
- [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
- [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
- [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
+ [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)] [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)] [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
   
  Универсальные методы могут присутствовать в универсальных и неуниверсальных типах. Важно отметить, что метод не является универсальным только потому, что он принадлежит универсальному типу или даже в том случае, если он имеет формальные параметры, типы которых являются универсальными параметрами для включающего их типа. Метод является универсальным только в том случае, если он имеет свой собственный список параметров типа. В следующем коде только метод `G` является универсальным.  
   
- [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)]
- [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
- [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
+ [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)] [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)] [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
  [К началу](#top)  
   
@@ -107,32 +100,30 @@ ms.lasthandoff: 04/08/2017
   
 -   Типобезопасность. Универсальные шаблоны позволяют передать компилятору обязанности обеспечения типовой безопасности. Нет необходимости написания кода для проверки правильности типа данных, так как проверка происходит во время компиляции. Уменьшается потребность приведения типов и вероятность ошибок во время выполнения.  
   
--   Объем кода уменьшен и поддерживает многократную реализацию. Нет необходимости наследования базового типа и преобладающих членов. Например, <xref:System.Collections.Generic.LinkedList%601> можно использовать сразу. Например, можно создать связанный список строк со следующим объявлением переменной:  
+-   Объем кода уменьшен и поддерживает многократную реализацию. Нет необходимости наследования базового типа и преобладающих членов. Например, <xref:System.Collections.Generic.LinkedList%601> готов к немедленному использованию. Например, можно создать связанный список строк со следующим объявлением переменной:  
   
-     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
-     [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
-     [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
+     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]  [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]  [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
 -   Повышенная производительность. Универсальные типы коллекций имеют более высокую производительность при хранении и управлении типами значений, поскольку отсутствует необходимость их упаковки.  
   
--   Универсальные делегаты поддерживают типобезопасные обратные вызовы без необходимости создания нескольких классов делегатов. Например, универсальный метод-делегат <xref:System.Predicate%601> позволяет создать метод, который реализует ваши собственные условия поиска для определенного типа, и использовать ваш метод с методами типа <xref:System.Array>, например с <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A> и <xref:System.Array.FindAll%2A>.  
+-   Универсальные делегаты поддерживают типобезопасные обратные вызовы без необходимости создания нескольких классов делегатов. Например, универсальный делегат <xref:System.Predicate%601> позволяет создать метод, который реализует собственные условия поиска для определенного типа, и использовать ваш метод с методами типа <xref:System.Array> , такими как <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>и <xref:System.Array.FindAll%2A>.  
   
 -   Универсальные шаблоны упрощают динамически создаваемый код. Универсальные делегаты можно также использовать в динамически создаваемом коде без необходимости создания типа делегата. Это увеличивает количество ситуаций, в которых можно использовать облегченные динамические методы вместо создания целых сборок. Подробнее см. в разделе "Практическое руководство. Определение и выполнение динамических методов" и в описании метода DynamicMethod.  
   
  Ниже перечислены некоторые ограничения универсальных шаблонов.  
   
--   Универсальные типы могут быть наследованы от большинства базовых классов, таких как <xref:System.MarshalByRefObject> (а ограничения могут использоваться для обеспечения того, чтобы параметры универсальных типов наследовались от базовых классов, таких как <xref:System.MarshalByRefObject>). Тем не менее, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] не поддерживает контекстно-связанные универсальные типы. Универсальный тип может быть наследован от <xref:System.ContextBoundObject>, но при попытке создать экземпляр этого типа возникает <xref:System.TypeLoadException>.  
+-   Универсальные типы могут быть наследованы от большинства базовых классов, таких как <xref:System.MarshalByRefObject> (а ограничения могут использоваться для обеспечения того, чтобы параметры универсальных типов наследовались от базовых классов, таких как <xref:System.MarshalByRefObject>). Тем не менее, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] не поддерживает контекстно-связанные универсальные типы. Универсальный тип может быть производным от <xref:System.ContextBoundObject>, но при попытке создать экземпляр этого типа будет создано исключение <xref:System.TypeLoadException>.  
   
--   Перечисления не могут иметь параметров универсального типа. Перечисление может быть универсальным только случайно (например, если оно является вложенным в универсальный тип, который определен с помощью Visual Basic, C# или C++). Дополнительные сведения см. в статье [Система общих типов CTS](../../../docs/standard/base-types/common-type-system.md) в разделе "Перечисления".  
+-   Перечисления не могут иметь параметров универсального типа. Перечисление может быть универсальным только случайно (например, если оно является вложенным в универсальный тип, который определен с помощью Visual Basic, C# или C++). Дополнительные сведения см. в подразделе "Перечисления" раздела [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
 -   Облегченные динамические методы не могут быть универсальными.  
   
--   В Visual Basic, C# и C++ вложенный тип, заключенный в универсальном типе, не может быть использован для создания объекта, кроме тех случаев, когда типы были назначены параметрам типа всех заключенных типов. Другими словами, вложенный тип, который определен с помощью этих языков, включает параметры типов всех его заключенных типов. Это позволяет использовать параметры типа заключающих типов в определениях членов вложенного типа. Дополнительные сведения см. в статье о методе <xref:System.Type.MakeGenericType%2A> в разделе "Вложенные типы".  
+-   В Visual Basic, C# и C++ вложенный тип, заключенный в универсальном типе, не может быть использован для создания объекта, кроме тех случаев, когда типы были назначены параметрам типа всех заключенных типов. Другими словами, вложенный тип, который определен с помощью этих языков, включает параметры типов всех его заключенных типов. Это позволяет использовать параметры типа заключающих типов в определениях членов вложенного типа. Дополнительные сведения см. в подразделе "Вложенные типы" раздела <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
     >  Вложенный тип, который определяется путем создания кода в динамической сборке или с помощью [ассемблера IL (Ilasm.exe)](../../../docs/framework/tools/ilasm-exe-il-assembler.md), не обязательно должен включать параметры его заключающих типов. Тем не менее, если он их не включает, параметры типов находятся вне области вложенного класса.  
   
-     Дополнительные сведения см. в статье о методе <xref:System.Type.MakeGenericType%2A> в разделе "Вложенные типы".  
+     Дополнительные сведения см. в подразделе "Вложенные типы" раздела <xref:System.Type.MakeGenericType%2A>.  
   
  [К началу](#top)  
   
@@ -140,17 +131,17 @@ ms.lasthandoff: 04/08/2017
 ## <a name="class-library-and-language-support"></a>Библиотека классов и языковая поддержка  
  Платформа .NET Framework предоставляет ряд универсальных классов коллекций в следующих пространствах имен.  
   
--   Пространство имен <xref:System.Collections.Generic> каталогизирует большинство типов универсальных коллекций, предоставляемых платформой .NET Framework, например универсальные классы <xref:System.Collections.Generic.List%601> и <xref:System.Collections.Generic.Dictionary%602>.  
+-   В пространстве имен <xref:System.Collections.Generic> содержится большинство типов универсальных коллекций, предоставляемых в составе платформа .NET Framework, например универсальные классы <xref:System.Collections.Generic.List%601> и <xref:System.Collections.Generic.Dictionary%602> .  
   
--   Пространство имен <xref:System.Collections.ObjectModel> каталогизирует дополнительные типы универсальных коллекций (например, универсальный класс <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>), которые можно использовать для предоставления моделей объектов пользователям классов.  
+-   В пространстве имен <xref:System.Collections.ObjectModel> содержатся дополнительные типы универсальных коллекций, например универсальный класс <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> , которые удобно использовать для предоставления объектных моделей пользователям классов.  
   
- Универсальные интерфейсы для реализации сортировки и сравнений на равенство предоставляются в пространстве имен <xref:System> вместе с универсальными типами методов-делегатов для обработчиков событий, преобразований и предикатов поиска.  
+ Универсальные интерфейсы для реализации сортировки и сравнений на равенство предоставляются в пространстве имен <xref:System> вместе с универсальными типами делегатов для обработчиков событий, преобразований и предикатов поиска.  
   
  В пространство имен <xref:System.Reflection> добавлена поддержка универсальных шаблонов для обеспечения возможности проверки универсальных типов и универсальных методов, в пространство имен <xref:System.Reflection.Emit> добавлена поддержка шаблонов для создания динамических сборок, содержащих универсальные типы и методы, в пространство имен <xref:System.CodeDom> добавлена поддержка шаблонов для создания графов исходного кода, включающих универсальные шаблоны.  
   
- Среда CLR предоставляет новые коды операций и префиксы для поддержки универсальных типов в промежуточном языке Майкрософт (MSIL), в частности <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained> и <xref:System.Reflection.Emit.OpCodes.Readonly>.  
+ Среда CLR предоставляет новые коды операций и префиксы для поддержки универсальных типов в языке MSIL, включая <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>и <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/introduction-to-generics.md) и [Обзор универсальных типов в Visual C++](http://msdn.microsoft.com/library/21f10637-0fce-4916-b925-6c86a126d3aa).  
+ В языках Visual C++, C# и Visual Basic обеспечивается полноценная поддержка определения и использования универсальных шаблонов. Дополнительные сведения о поддержке языков см. в статьях [Универсальные типы в Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/introduction-to-generics.md) и [Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [К началу](#top)  
   
@@ -172,12 +163,12 @@ ms.lasthandoff: 04/08/2017
 |[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Предоставление сводных данных о характеристиках и сценариях использования типов коллекций в составе платформы .NET Framework, включая универсальные типы.|  
 |[Когда следует использовать универсальные коллекции](../../../docs/standard/collections/when-to-use-generic-collections.md)|Описание общих правил для определения ситуаций, когда следует использовать универсальные типы коллекций.|  
 |[Практическое руководство. Определение универсального типа с порождаемым отражением](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Описание способов создания динамических сборок, содержащих универсальные типы и методы.|  
-|[Универсальные типы в Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Описание универсальных шаблонов для пользователей Visual Basic, включая практические руководства об использовании и определении универсальных типов.|  
+|[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Описание универсальных шаблонов для пользователей Visual Basic, включая практические руководства об использовании и определении универсальных типов.|  
 |[Введение в универсальные шаблоны](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Общие сведения об определении и использовании универсальных типов для пользователей C#.|  
-|[Обзор универсальных типов в Visual C++](http://msdn.microsoft.com/library/21f10637-0fce-4916-b925-6c86a126d3aa)|Описание универсальных шаблонов для пользователей C++, включая описание различий между шаблонами и универсальными шаблонами.|  
+|[Обзор универсальных типов в Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Описание универсальных шаблонов для пользователей C++, включая описание различий между шаблонами и универсальными шаблонами.|  
   
 <a name="reference"></a>   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Ссылки  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  
@@ -185,3 +176,4 @@ ms.lasthandoff: 04/08/2017
  <xref:System.Reflection.Emit.OpCodes?displayProperty=fullName>  
   
  [К началу](#top)
+

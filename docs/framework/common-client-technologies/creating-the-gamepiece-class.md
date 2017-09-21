@@ -1,5 +1,5 @@
 ---
-title: "Создание класса GamePiece | Документы Майкрософт"
+title: "Создание класса GamePiece"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 9
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 318a2d3407d36b16137517a9735299027bceddea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ac9884766812cd635b5a70c028cf15c19838511
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-the-gamepiece-class"></a>Создание класса GamePiece
@@ -114,3 +114,4 @@ ms.lasthandoff: 06/02/2017
  [Использование манипуляций и инерции в приложении XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
  [Создание класса GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
  [Создание класса Game1](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+

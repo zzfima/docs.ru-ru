@@ -1,5 +1,5 @@
 ---
-title: "/doc (параметры компилятора C#) | Документы Майкрософт"
+title: "-doc (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8addbbfe1e854feee560192292b713da4fc67e6c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58608c1301b2df3286c1f8a1de189f6256b19052
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="doc-c-compiler-options"></a>/doc (параметры компилятора C#)
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/13/2017
   
  Файл исходного кода, содержащий метод "Main", первым выводится в XML-файл.  
   
- Чтобы использовать созданный XML-файл с помощью функции [IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense), имя XML-файла должно совпадать с именем сборки, а сам XML-файл должен находиться в одном каталоге со сборкой. Таким образом, если в проект Visual Studio добавляется ссылка на сборку, то XML-файл также будет найден. Дополнительные сведения см. в разделе [Создание XML-примечаний к коду](https://docs.microsoft.com/visualstudio/ide/supplying-xml-code-comments).  
+ Чтобы использовать созданный XML-файл с помощью функции [IntelliSense](/visualstudio/ide/using-intellisense), имя XML-файла должно совпадать с именем сборки, а сам XML-файл должен находиться в одном каталоге со сборкой. Таким образом, если в проект Visual Studio добавляется ссылка на сборку, то XML-файл также будет найден. Дополнительные сведения см. в разделе [Создание XML-примечаний к коду](/visualstudio/ide/supplying-xml-code-comments).  
   
  Если при компиляции не используется параметр [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), `file` будет содержать теги \<assembly>\</assembly>, которые указывают имя файла, содержащего манифест сборки для выходного файла компиляции.  
   
@@ -81,8 +81,9 @@ ms.lasthandoff: 03/13/2017
   
 3.  Измените свойство **XML-файл документации**.  
   
- Сведения об установке этого параметра компилятора программным способом см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
+ Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

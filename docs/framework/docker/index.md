@@ -1,6 +1,6 @@
 ---
-title: "Docker в .NET Framework | Документы Майкрософт"
-description: "Docker в .NET Framework"
+title: "Docker в .NET Framework"
+description: "Сведения о развертывании приложений .NET Framework с Docker при помощи контейнеров Windows."
 keywords: ".NET, .NET Server, Docker, контейнеры Windows"
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-framework
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 600faa333273452716ee85187c5384d54a6fa5fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f271ed03527e425baab4313d03526c0c41e10237
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -23,5 +23,5 @@ ms.lasthandoff: 05/23/2017
 Вы можете развернуть приложение .NET Framework с помощью Docker, используя контейнеры Windows. Возможно, вам потребуется ознакомиться с требованиями к использованию [контейнеров Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview) и процедурой [начала работы с Docker для Windows](https://docs.docker.com/docker-for-windows/). 
 
 Вы можете начать с [запуска консольного приложения в Docker](console.md).
-Сведения о запуске веб-приложений в Docker см. в статье [Приложения ASP.NET MVC в Docker](https://docs.microsoft.com/aspnet/mvc/overview/deployment/docker-aspnetmvc).
+Сведения о запуске веб-приложений в Docker см. в статье [Приложения ASP.NET MVC в Docker](/aspnet/mvc/overview/deployment/docker-aspnetmvc).
 

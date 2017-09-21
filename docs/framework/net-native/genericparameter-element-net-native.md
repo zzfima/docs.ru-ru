@@ -1,28 +1,32 @@
 ---
-title: "Элемент &lt;GenericParameter&gt; (машинный код .NET) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Элемент &lt;GenericParameter&gt; (машинный код .NET)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05463ad3ba42315c607cd30dedcd6d855dc8298d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Элемент &lt;GenericParameter&gt; (машинный код .NET)
+# <a name="ltgenericparametergt-element-net-native"></a>Элемент &lt;GenericParameter&gt; (машинный код .NET)
 Применяет политику к параметру типа универсального типа или метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-  
 <GenericParameter Name="generic_parameter_name"  
                   Activate="policy_type"  
                   Browse="policy_type"  
@@ -34,7 +38,6 @@ caps.handback.revision: 11
                   MarshalObject="policy_type"  
                   MarshalDelegate="policy_type"  
                   MarshalStructure="policy_type"  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -44,14 +47,14 @@ caps.handback.revision: 11
   
 |Атрибут|Тип атрибута|Описание|  
 |---------------|--------------------|-----------------|  
-|`Name`|Общие правила|Обязательный атрибут. Имя универсального параметра. Например, для универсального делегата <xref:System.Func%603>, значение `Name` атрибута равно «TResult» для применения политики среды выполнения к возвращаемому значению делегата.\</T1, T2, TResult>|  
+|`Name`|Общие правила|Обязательный атрибут. Имя универсального параметра. Например, для универсального делегата <xref:System.Func%603>, значение атрибута `Name` равно «TResult» для применения политики среды выполнения к возвращаемому значению делегата.|  
 |`Activate`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам для включения активации экземпляров.|  
 |`Browse`|Отражение|Необязательный атрибут. Управляет запросами для получения сведений об элементах программы, но не включает доступ среды выполнения.|  
 |`Dynamic`|Отражение|Необязательный атрибут. Управляет доступом среды выполнения ко всем членам типа, включая конструкторы, методы, поля, свойства и события, чтобы включить динамическое программирование.|  
 |`Serialize`|Сериализация|Необязательный атрибут. Управляет доступом среды выполнения к конструкторам, полям и свойствам, позволяющим сериализовать и десериализовать экземпляры типа с помощью таких библиотек, как, например, сериализатор Newtonsoft JSON.|  
-|`DataContractSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации, который использует <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> класса.|  
-|`DataContractJsonSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации JSON, который использует <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> класса.|  
-|`XmlSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации XML, который использует <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> класса.|  
+|`DataContractSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации, в которой используется класс <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
+|`DataContractJsonSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации JSON, в которой используется класс <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
+|`XmlSerializer`|Сериализация|Необязательный атрибут. Определяет политику для сериализации XML, в которой используется класс <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
 |`MarshalObject`|Interop|Необязательный атрибут. Определяет политику для маршалинга ссылочных типов в среды выполнения Windows и COM.|  
 |`MarshalDelegate`|Interop|Необязательный атрибут. Определяет политики для маршалинга типов делегатов как указателей функции на машинный код.|  
 |`MarshalStructure`|Interop|Необязательный атрибут. Определяет политики для маршалинга типов значений в машинный код.|  
@@ -60,13 +63,13 @@ caps.handback.revision: 11
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*generic_parameter_name*|Обязательный атрибут. Имя универсального параметра типа. Например, для универсального делегата <xref:System.Func%603>, *generic_parameter_name* значение «TResult» применяет политику среды выполнения к возвращаемому значению делегата.\</T1, T2, TResult>|  
+|*generic_parameter_name*|Обязательный атрибут. Имя универсального параметра типа. Например, для универсального делегата <xref:System.Func%603> значение *generic_parameter_name*, равное "TResult", применяет политику среды выполнения к возвращаемому значению делегата.|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр, применяемый для этого типа политики. Допустимые значения: `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` и `Required All`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -75,16 +78,15 @@ caps.handback.revision: 11
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения среды выполнения для конкретного типа, например, класса или структуры.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Применяет политику отражения среды выполнения к конструктору или методу.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения среды выполнения для конкретного типа, например, класса или структуры.|  
   
 ## <a name="remarks"></a>Примечания  
- `<GenericParameter>` Элемент является дочерним для элемента [ <> \> ](../../../docs/framework/net-native/method-element-net-native.md) или [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) элемента и используется для применения политики к определенному параметру универсального типа, который задается его именем в сигнатуре универсального типа или метода.  
+ Элемент `<GenericParameter>` является дочерним для элемента [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) или [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) и используется для применения политики к определенному параметру универсального типа, который задается его именем в сигнатуре универсального типа или метода.  
   
- Элемент `<GenericParameter>` особенно полезен при использовании сериализаторов. В следующем примере используется `<GenericParameter>` элемент, чтобы применить политику к типу `T` в вызовах сериализатора NewtonSoft JSON [JsonConvert.DeserializeObject<>\>(String)](http://james.newtonking.com/json/help/index.html?topic=html/T_Newtonsoft_Json_JsonConvert.htm) перегрузки метода.  
+ Элемент `<GenericParameter>` особенно полезен при использовании сериализаторов. В следующем примере используется элемент `<GenericParameter>`, который позволяет применить политику к типу `T` в вызовах к перегрузкам метода [JsonConvert.DeserializeObject\<T>(String)](http://james.newtonking.com/json/help/index.html?topic=html/T_Newtonsoft_Json_JsonConvert.htm) сериализатора NewtonSoft JSON.  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <Type Name="Newtonsoft.Json.JsonConvert" >  
       <Method Name="DeserializeObject{T}">  
@@ -92,12 +94,12 @@ caps.handback.revision: 11
       </Method>  
    </Type>  
 </Directives>  
-  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [<>\>Элемент](../../../docs/framework/net-native/method-element-net-native.md)   
- [<>\>Элемент](../../../docs/framework/net-native/type-element-net-native.md)   
- [Ссылка на файл конфигурации директив (rd.xml) среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Элемент \<Method>](../../../docs/framework/net-native/method-element-net-native.md)   
+ [Элемент \<Type>](../../../docs/framework/net-native/type-element-net-native.md)   
+ [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
  [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)
+

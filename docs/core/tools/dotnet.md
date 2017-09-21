@@ -1,24 +1,22 @@
 ---
-title: "Команда dotnet — CLI .NET Core | Документы Майкрософт"
+title: "Команда dotnet — CLI .NET Core"
 description: "Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании."
-keywords: "dotnet, CLI, команды CLI, .NET Core"
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 02779e1ac5db1a7a68ddede6d30063366270dc50
+ms.translationtype: HT
+ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
+ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-
 # <a name="dotnet-command"></a>Команда dotnet
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Имя
 
@@ -26,7 +24,15 @@ ms.lasthandoff: 04/10/2017
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet [command] [arguments] [--version] [--info] [-d|--diagnostics] [-v|--verbose] [--fx-version] [--additionalprobingpath] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
+```
+---
 
 ## <a name="description"></a>Описание
 
@@ -38,9 +44,15 @@ ms.lasthandoff: 04/10/2017
 
 ## <a name="options"></a>Параметры
 
-`-v|--verbose`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Включает подробные выходные данные.
+`--additionaldeps <PATH>`
+
+Путь к дополнительному файлу *deps.json*.
+
+`--additionalprobingpath <PATH>`
+
+Путь, содержащий политику проверки и проверяемые сборки.
 
 `-d|--diagnostics`
 
@@ -48,64 +60,122 @@ ms.lasthandoff: 04/10/2017
 
 `--fx-version <VERSION>`
 
-Версия установленной общей платформы, используемая для запуска приложения.
-
-`--additionalprobingpath <PATH>`
-
-Путь, содержащий политику проверки и проверяемые сборки.
-
-`--version`
-
-Выводит версию средств CLI.
-
-`--info`
-
-Выводит подробные сведения о средствах CLI и окружении, например текущую операционную систему, фиксацию SHA для версии и т. д.
+Версия установленной среды выполнения .NET Core, используемой для запуска приложения.
 
 `-h|--help`
 
 Выводит краткую справку по команде. При использовании с `dotnet` также выводится список доступных команд.
 
+`--info`
+
+Выводит подробные сведения о средствах CLI и окружении, например текущую операционную систему, фиксацию SHA для версии и т. д.
+
+`--roll-forward-on-no-candidate-fx`
+
+ Выполняет накат при отсутствии подходящей общей платформы.
+
+`-v|--verbose`
+
+Включает подробные выходные данные.
+
+`--version`
+
+Выводит версию используемого пакета SDK для .NET Core.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--additionalprobingpath <PATH>`
+
+Путь, содержащий политику проверки и проверяемые сборки.
+
+`-d|--diagnostics`
+
+Включает вывод диагностических данных.
+
+`--fx-version <VERSION>`
+
+Версия установленной среды выполнения .NET Core, используемой для запуска приложения.
+
+`-h|--help`
+
+Выводит краткую справку по команде. При использовании с `dotnet` также выводится список доступных команд.
+
+`--info`
+
+Выводит подробные сведения о средствах CLI и окружении, например текущую операционную систему, фиксацию SHA для версии и т. д.
+
+`-v|--verbose`
+
+Включает подробные выходные данные.
+
+`--version`
+
+Выводит версию используемого пакета SDK для .NET Core.
+
+---
+
 ## <a name="dotnet-commands"></a>Команды dotnet
 
 ### <a name="general"></a>Общие
 
-Команда | Функция
---- | ---
-[dotnet-build](dotnet-build.md) | Выполняет сборку приложения .NET Core.
-[dotnet-clean](dotnet-clean.md) | Очистка выходных данных сборки.
-[dotnet-migrate](dotnet-migrate.md) | Переносит допустимый проект предварительной версии 2 в проект пакета SDK .NET Core 1.0.
-[dotnet-msbuild](dotnet-msbuild.md) | Обеспечивает доступ к командной строке MSBuild.
-[dotnet-new](dotnet-new.md) | Инициализирует проект C# или F# для заданного шаблона.
-[dotnet-pack](dotnet-pack.md) | Создает пакет NuGet с кодом.
-[dotnet-publish](dotnet-publish.md) | Публикует платформозависимое или автономное приложение .NET.
-[dotnet-restore](dotnet-restore.md) | Восстанавливает зависимости для данного приложения.
-[dotnet-run](dotnet-run.md) | Запускает приложение из источника.
-[dotnet-sln](dotnet-sln.md) | Параметры для добавления, удаления и перечисления проектов в файле решения.
-[dotnet-test](dotnet-test.md) | Выполняет тесты с помощью средства запуска тестов.
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+| Команда                             | Функция                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | Выполняет сборку приложения .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Очищает выходные данные сборки.                                              |
+| [dotnet help](dotnet-help.md)       | Выводит более подробную документацию из Интернета для команды.           |
+| [dotnet migrate](dotnet-migrate.md) | Переносит допустимый проект предварительной версии 2 в проект пакета SDK .NET Core 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md) | Обеспечивает доступ к командной строке MSBuild.                        |
+| [dotnet new](dotnet-new.md)         | Инициализирует проект C# или F# для заданного шаблона.                |
+| [dotnet pack](dotnet-pack.md)       | Создает пакет NuGet с кодом.                               |
+| [dotnet publish](dotnet-publish.md) | Публикует платформозависимое или автономное приложение .NET. |
+| [dotnet restore](dotnet-restore.md) | Восстанавливает зависимости для данного приложения.                  |
+| [dotnet run](dotnet-run.md)         | Запускает приложение из источника.                                   |
+| [dotnet sln](dotnet-sln.md)         | Параметры для добавления, удаления и перечисления проектов в файле решения.       |
+| [dotnet store](dotnet-store.md)     | Сохраняет сборки в хранилище пакетов среды выполнения.                     |
+| [dotnet test](dotnet-test.md)       | Выполняет тесты с помощью средства запуска тестов.                                     |
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+| Команда                             | Функция                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | Выполняет сборку приложения .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Очищает выходные данные сборки.                                              |
+| [dotnet migrate](dotnet-migrate.md) | Переносит допустимый проект предварительной версии 2 в проект пакета SDK .NET Core 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md) | Обеспечивает доступ к командной строке MSBuild.                        |
+| [dotnet new](dotnet-new.md)         | Инициализирует проект C# или F# для заданного шаблона.                |
+| [dotnet pack](dotnet-pack.md)       | Создает пакет NuGet с кодом.                               |
+| [dotnet publish](dotnet-publish.md) | Публикует платформозависимое или автономное приложение .NET. |
+| [dotnet restore](dotnet-restore.md) | Восстанавливает зависимости для данного приложения.                  |
+| [dotnet run](dotnet-run.md)         | Запускает приложение из источника.                                   |
+| [dotnet sln](dotnet-sln.md)         | Параметры для добавления, удаления и перечисления проектов в файле решения.       |
+| [dotnet test](dotnet-test.md)       | Выполняет тесты с помощью средства запуска тестов.                                     |
+
+---
 
 ### <a name="project-references"></a>Ссылки на проекты
 
 Команда | Функция
 --- | ---
-[dotnet-add reference](dotnet-add-reference.md) | Добавление ссылки на проект.
-[dotnet-list reference](dotnet-list-reference.md) | Перечисление ссылок на проект.
-[dotnet-remove reference](dotnet-remove-reference.md) | Удаление ссылки на проект.
+[dotnet add reference](dotnet-add-reference.md) | Добавление ссылки на проект.
+[dotnet list reference](dotnet-list-reference.md) | Перечисление ссылок на проект.
+[dotnet remove reference](dotnet-remove-reference.md) | Удаление ссылки на проект.
 
 ### <a name="nuget-packages"></a>Пакеты NuGet
 
 Команда | Функция
 --- | ---
-[dotnet-add package](dotnet-add-package.md) | Добавление пакета NuGet.
-[dotnet-remove package](dotnet-remove-package.md) | Удаление пакета NuGet.
+[dotnet add package](dotnet-add-package.md) | Добавление пакета NuGet.
+[dotnet remove package](dotnet-remove-package.md) | Удаление пакета NuGet.
 
 ### <a name="nuget-commands"></a>Команды NuGet
 
 Команда | Функция
 --- | ---
-[dotnet-nuget delete](dotnet-nuget-delete.md) | Удаляет пакет с сервера или из списка.
-[dotnet-nuget locals](dotnet-nuget-locals.md) | Очищает или перечисляет локальные ресурсы NuGet в кэше HTTP-запросов, временном кэше или папке пакетов, используемой на уровне компьютера.
-[dotnet-nuget push](dotnet-nuget-push.md) | Отправляет пакет на сервер и публикует его.
+[dotnet nuget delete](dotnet-nuget-delete.md) | Удаляет пакет с сервера или из списка.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Очищает или перечисляет локальные ресурсы NuGet в кэше HTTP-запросов, временном кэше или папке пакетов, используемой на уровне компьютера.
+[dotnet nuget push](dotnet-nuget-push.md) | Отправляет пакет на сервер и публикует его.
 
 ## <a name="examples"></a>Примеры
 

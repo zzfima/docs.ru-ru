@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Подписка и отмена подписки на события (руководство по программированию на C#) | Документы Майкрософт"
+title: "Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 583168bc8cce2f4bee9a2dd35d1e59c7a0f380a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
   
 3.  Дважды щелкните событие, которое требуется создать, например событие `Load`.  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] создаст пустой метод обработчика событий и добавит его в код. Код можно также добавить вручную в представлении **Код**. Например, приведенные ниже строки кода объявляют метод обработчика событий, который будет выполнен при вызове классом `Form` события `Load`.  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] создаст пустой метод обработчика событий и добавит его в код. Код можно также добавить вручную в представлении **Код**. Например, приведенные ниже строки кода объявляют метод обработчика событий, который будет выполнен при вызове классом `Form` события `Load`.  
   
      [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

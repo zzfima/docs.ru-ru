@@ -1,5 +1,5 @@
 ---
-title: "Создание деревьев XML в C# (LINQ to XML) | Документы Майкрософт"
+title: "Создание деревьев XML в C# (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92ba0d345183ec503d61254355f948f82a18f053
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ac95fcf49736b554c8a3d4d0061f63b3ac4d3f65
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Создание деревьев XML в C# (LINQ to XML)
@@ -31,11 +32,11 @@ ms.lasthandoff: 03/13/2017
  Дополнительные сведения об использовании результатов запросов LINQ как содержимого для <xref:System.Xml.Linq.XElement> см. в разделе [Функциональное построение (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
 ## <a name="constructing-elements"></a>Построение элементов  
- Сигнатуры конструкторов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute> позволяют передавать конструктору содержимое элемента или атрибута в качестве аргументов. Поскольку один из конструкторов принимает переменное количество аргументов, можно пропустить любое количество дочерних элементов. Естественно, каждый из этих дочерних элементов может содержать собственные дочерние элементы. Для любого элемента можно добавить любое количество атрибутов.  
+ Сигнатуры конструкторов <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XAttribute> позволяют передать конструктору содержимое элемента или атрибута в качестве аргументов. Поскольку один из конструкторов принимает переменное количество аргументов, можно пропустить любое количество дочерних элементов. Естественно, каждый из этих дочерних элементов может содержать собственные дочерние элементы. Для любого элемента можно добавить любое количество атрибутов.  
   
- При добавлении объектов <xref:System.Xml.Linq.XNode> (включая <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не имеет родителя, объекты просто присоединяются к XML-дереву. Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву. Это демонстрирует последний пример из данного раздела.  
+ При добавлении объектов <xref:System.Xml.Linq.XNode> (в т. ч. <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не обладает родительской структурой, объекты просто прикрепляются к XML-дереву. Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву. Это демонстрирует последний пример из данного раздела.  
   
- Для создания <xref:System.Xml.Linq.XElement> `contacts` можно использовать следующий код:  
+ Чтобы создать `contacts`<xref:System.Xml.Linq.XElement>, можно использовать следующий код:  
   
 ```csharp  
 XElement contacts =  
@@ -53,7 +54,7 @@ XElement contacts =
     );  
 ```  
   
- Если отступы соблюдены верно, то код для создания объектов <xref:System.Xml.Linq.XElement> становится похож на структуру соответствующего XML.  
+ Если цель определена верно, то код для создания объектов <xref:System.Xml.Linq.XElement> становится похож на структуру соответствующего XML.  
   
 ## <a name="xelement-constructors"></a>Конструкторы XElement  
  В классе <xref:System.Xml.Linq.XElement> используются следующие конструкторы для функционального построения. Обратите внимание, что существуют другие конструкторы для <xref:System.Xml.Linq.XElement>, однако, поскольку они не используются для функциональных построений, они здесь не приводятся.  
@@ -61,14 +62,14 @@ XElement contacts =
 |Конструктор|Описание|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Создает <xref:System.Xml.Linq.XElement>. Параметр `name` задает имя элемента; `content` задает содержание элемента.|  
-|`XElement(XName name)`|Создает класс <xref:System.Xml.Linq.XElement> с <xref:System.Xml.Linq.XName>, инициализированным для заданного имени.|  
-|`XElement(XName name, params object[] content)`|Создает класс <xref:System.Xml.Linq.XElement> с <xref:System.Xml.Linq.XName>, инициализированным для заданного имени. Атрибуты и/или дочерние элементы создаются из содержимого списка параметров.|  
+|`XElement(XName name)`|Создает <xref:System.Xml.Linq.XElement> с инициализацией <xref:System.Xml.Linq.XName> в соответствии с указанным именем.|  
+|`XElement(XName name, params object[] content)`|Создает <xref:System.Xml.Linq.XElement> с инициализацией <xref:System.Xml.Linq.XName> в соответствии с указанным именем. Атрибуты и/или дочерние элементы создаются из содержимого списка параметров.|  
   
  Параметр `content` чрезвычайно гибок. Он поддерживает любой тип объекта, который является действительным дочерним объектом <xref:System.Xml.Linq.XElement>. К различным типам объектов, передающимся в этом параметре, применимы следующие правила.  
   
 -   Строка добавляется как текстовое содержимое.  
   
--   <xref:System.Xml.Linq.XElement> добавляется как дочерний элемент.  
+-   <xref:System.Xml.Linq.XElement> добавляется к дочернему элементу.  
   
 -   <xref:System.Xml.Linq.XAttribute> добавляется как атрибут.  
   
@@ -79,7 +80,7 @@ XElement contacts =
 -   Для любого другого типа вызывается метод `ToString`, при этом результат добавляется как текстовое содержимое.  
   
 ### <a name="creating-an-xelement-with-content"></a>Создание элемента XElement с содержимым (Content)  
- Можно создать <xref:System.Xml.Linq.XElement> с простым содержимым с помощью одного вызова метода. Чтобы это сделать, укажите содержимое в качестве второго параметра следующим образом:  
+ Можно создать <xref:System.Xml.Linq.XElement> с простым содержимым при помощи одного вызова метода. Чтобы это сделать, укажите содержимое в качестве второго параметра следующим образом:  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
@@ -126,7 +127,7 @@ Console.WriteLine(shippingUnit);
 ```  
   
 ### <a name="creating-an-xelement-with-multiple-child-elements"></a>Создание элемента XElement с несколькими дочерними элементами  
- Вы можете передать ряд объектов <xref:System.Xml.Linq.XElement> для содержимого. Каждый объект <xref:System.Xml.Linq.XElement> включается в качестве дочернего элемента.  
+ Можно передать некоторое количество объектов <xref:System.Xml.Linq.XElement> в качестве содержимого. Каждый из объектов <xref:System.Xml.Linq.XElement> включается в качестве дочернего элемента.  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -186,7 +187,7 @@ Console.WriteLine(contacts);
 ```  
   
 ### <a name="creating-an-empty-element"></a>Создание пустого элемента  
- Чтобы создать пустой элемент <xref:System.Xml.Linq.XElement>, нужно просто не передавать никакое содержимое в конструктор. На следующем примере показано создание пустого элемента:  
+ Чтобы создать пустой элемент <xref:System.Xml.Linq.XElement>, нужно просто не передавать никакого содержимого в конструктор. На следующем примере показано создание пустого элемента:  
   
 ```csharp  
 XElement n = new XElement("Customer");  
@@ -200,7 +201,7 @@ Console.WriteLine(n);
 ```  
   
 ### <a name="attaching-vs-cloning"></a>Сравнение присоединения и клонирования  
- Как упоминалось ранее, при добавлении объектов <xref:System.Xml.Linq.XNode> (включая <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не имеет родителя, объекты просто присоединяются к XML-дереву. Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву.  
+ Как упоминалось ранее, при добавлении объектов <xref:System.Xml.Linq.XNode> (в т. ч. <xref:System.Xml.Linq.XElement>) или <xref:System.Xml.Linq.XAttribute>, если новое содержимое не обладает родительской структурой, объекты просто прикрепляются к XML-дереву. Если у нового содержимого уже есть родитель и оно является частью другого XML-дерева, то новое содержимое клонируется и присоединяется к XML-дереву.  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -237,3 +238,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>См. также  
  [Создание деревьев XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

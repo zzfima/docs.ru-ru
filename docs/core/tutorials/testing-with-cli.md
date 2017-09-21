@@ -1,7 +1,7 @@
 ---
-title: "Организация и тестирование проектов с использованием командной строки .NET Core | Документы Майкрософт"
+title: "Организация и тестирование проектов с использованием командной строки .NET Core"
 description: "В этом учебнике объясняется, как упорядочить и протестировать проекты .NET Core из командной строки."
-keywords: ".NET, .NET Core, модульное тестирование, интерфейс командной строки .NET, xUnit"
+keywords: ".NET, .NET Core, модульное тестирование, интерфейс командной строки .NET Core, xUnit"
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 
@@ -73,15 +73,15 @@ ms.lasthandoff: 05/16/2017
 
 *IPet.cs*:
 
-[!code-csharp[Интерфейс IPet](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+[!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
 
 *Dog.cs*:
 
-[!code-csharp[Класс Dog](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+[!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
 
 *Cat.cs*:
 
-[!code-csharp[Класс Cat](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+[!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
 
 *Program.cs*:
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 05/16/2017
 
 *NewTypes.csproj*:
 
-[!code-xml[Файл csproj NewTypes](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
 
 Выполните следующие команды:
 
@@ -129,7 +129,7 @@ dotnet add reference ../../src/NewTypes/NewTypes.csproj
 
 *NewTypesTests.csproj*:
 
-[!code-xml[Файл csproj NewTypesTests](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
 
 Файл *NewTypesTests.csproj* содержит следующие элементы:
 
@@ -238,7 +238,7 @@ Test execution time: 2.1371 Seconds
 
 Измените проверочные утверждения в тестах с `Assert.NotEqual` на `Assert.Equal`:
 
-[!code-csharp[Класс PetTests](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+[!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
 Повторно запустите тесты, выполнив `dotnet test` команду, и получите следующие выходные данные:
 
@@ -260,3 +260,4 @@ Test execution time: 1.6634 Seconds
 Тесты завершены успешно. Методы типов животных возвращают правильные значения при взаимодействии с владельцем.
 
 Вы познакомились с тем, как упорядочить и тестировать проекты с помощью xUnit. Теперь вы можете приметь эти методы в собственных проектах. *Удачного программирования!*
+

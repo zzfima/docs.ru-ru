@@ -1,5 +1,5 @@
 ---
-title: "Коллекции и структуры данных | Документация Майкрософт"
+title: "Коллекции и структуры данных"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,28 +20,28 @@ caps.latest.revision: 36
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 27c475b8d29eb295bb3d6be24aa9ee9188f5c114
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2538f300ef2af6051c2750e749674c8ea7145530
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="collections-and-data-structures"></a>Коллекции и структуры данных
-Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Для добавления, удаления и изменения отдельных элементов или диапазона элементов коллекции можно использовать класс <xref:System.Array?displayProperty=fullName> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable.  
+Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию. Вы можете использовать класс <xref:System.Array?displayProperty=fullName> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.  
   
- Существует два основных типа коллекций — универсальные и неуниверсальные коллекции. Универсальные коллекции были добавлены в платформе .NET Framework 2.0 и являются строготипизированными во время компиляции. Таким образом, универсальные коллекции обычно обеспечивают более высокую производительность. Универсальные коллекции принимают параметр типа во время создания и не требуют приведение в тип <xref:System.Object> и из него при добавлении или удалении элементов.  Кроме того, большая часть универсальных коллекций поддерживается в приложениях [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Неуниверсальные коллекции хранят элементы как <xref:System.Object>, требуя приведения. Большая их часть не подходит для разработки приложений [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Однако неуниверсальные коллекции можно наблюдать в старом коде.  
+ Существует два основных типа коллекций — универсальные и неуниверсальные коллекции. Универсальные коллекции были добавлены в платформе .NET Framework 2.0 и являются строготипизированными во время компиляции. Таким образом, универсальные коллекции обычно обеспечивают более высокую производительность. Универсальные коллекции принимают параметр типа во время создания и не требуют приведение в тип <xref:System.Object> и из него при добавлении или удалении элементов.  Кроме того, большая часть универсальных коллекций поддерживается в приложениях [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Неуниверсальные коллекции хранят такие элементы, как <xref:System.Object>, требуют приведения. Большая их часть не поддерживается для разработки приложений [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Однако неуниверсальные коллекции можно наблюдать в старом коде.  
   
  Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] коллекции в пространстве имен <xref:System.Collections.Concurrent> предоставляют эффективные потокобезопасные операции для доступа к элементам коллекций из нескольких потоков. Неизменяемые классы коллекций в пространстве имен System.Collections.Immutable ([пакет NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) являются по своей природе потокобезопасными, поскольку операции выполняются с копией исходной коллекции, а исходная коллекция неизменяема.  
   
   
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Общие возможности коллекций  
- Все коллекции предоставляют методы для добавления, удаления или поиска элементов в коллекции. Кроме того, всем коллекциям, которые прямо или косвенно реализуют интерфейс <xref:System.Collections.ICollection> или <xref:System.Collections.Generic.ICollection%601>, присущи следующие возможности:  
+ Все коллекции предоставляют методы для добавления, удаления или поиска элементов в коллекции. Кроме того, все коллекции прямо или косвенно реализуют интерфейс <xref:System.Collections.ICollection> или интерфейс <xref:System.Collections.Generic.ICollection%601> с совместным использованием следующих функций.  
   
 -   **Возможность перечисления коллекции**  
   
-     Чтобы обеспечить итерацию по коллекции, коллекции .NET Framework реализуют либо <xref:System.Collections.IEnumerable?displayProperty=fullName>, либо <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Перечислитель может рассматриваться как перемещаемый указатель на любой элемент в коллекции. Операторы [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) и [For Each...Next Statement](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) используют перечислитель, предоставляемый методом <xref:System.Collections.IEnumerable.GetEnumerator%2A>, и существенно упрощают работу с перечислителем. Кроме того, любая коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>, относится к *запрашиваемому типу*, и ее можно запросить с помощью LINQ. Запросы LINQ предоставляют общий шаблон для доступа к данным. Обычно они являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, и предлагают возможности фильтрации, упорядочения и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в статьях [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) и [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Чтобы обеспечить итерацию по коллекции, коллекции .NET Framework реализуют либо <xref:System.Collections.IEnumerable?displayProperty=fullName>, либо <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Перечислитель может рассматриваться как перемещаемый указатель на любой элемент в коллекции. Оператор [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) и [For Each...Next Statement](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) использует итератор, предоставляемый методом <xref:System.Collections.IEnumerable.GetEnumerator%2A>, и скрывает сложность работы с итератором. Кроме того, любая коллекция, реализующая <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>, считается *запрашиваемым типом*, и к ней можно создавать запросы LINQ. Запросы LINQ предоставляют общий шаблон для доступа к данным. Обычно они являются более четкими и удобочитаемыми, чем стандартные циклы `foreach`, и предлагают возможности фильтрации, упорядочения и группировки. LINQ запросы также могут повысить производительность. Дополнительные сведения см. в статьях [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) и [Введение в запросы LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
 -   **Возможность копирования содержимого коллекции в массив**  
   
@@ -53,17 +53,17 @@ ms.lasthandoff: 04/08/2017
   
      Емкость коллекции — это число элементов, которое она может содержать. Количество элементов коллекции — это число элементов, которое она реально содержит. В некоторых коллекциях емкость или количество элементов скрыты.  
   
-     Большинство коллекции автоматически увеличивают емкость, если количество элементов достигает предела. Происходит перераспределение памяти, и элементы копируются из старой коллекции в новую. Это уменьшает объем кода, необходимого для использования коллекции. Однако производительность при работе с такой коллекцией может ухудшиться. Например, в случае с <xref:System.Collections.Generic.List%601>, если значение <xref:System.Collections.Generic.List%601.Count%2A> меньше значения <xref:System.Collections.Generic.List%601.Capacity%2A>, добавление объекта считается операцией O(1). Если емкость требуется увеличить для размещения нового элемента, добавление элемента становится операцией O(n), где n — это <xref:System.Collections.Generic.List%601.Count%2A>. Наилучший способ избежать потерь производительности, вызванных множественными перераспределениями, — это установить начальную вместимость, равную предполагаемому размеру коллекции.  
+     Большинство коллекции автоматически увеличивают емкость, если количество элементов достигает предела. Происходит перераспределение памяти, и элементы копируются из старой коллекции в новую. Это уменьшает объем кода, необходимого для использования коллекции. Однако производительность при работе с такой коллекцией может ухудшиться. Например, для <xref:System.Collections.Generic.List%601>, если <xref:System.Collections.Generic.List%601.Count%2A> меньше <xref:System.Collections.Generic.List%601.Capacity%2A>, добавление элемента является операцией O(1). Если емкость требуется увеличить для размещения нового элемента, добавление элемента становится операцией O(n), где n — <xref:System.Collections.Generic.List%601.Count%2A>. Наилучший способ избежать потерь производительности, вызванных множественными перераспределениями, — это установить начальную вместимость, равную предполагаемому размеру коллекции.  
   
-     <xref:System.Collections.BitArray> — особый случай. Его емкость совпадает с его длиной, которая, в свою очередь, совпадает с количеством элементов.  
+     <xref:System.Collections.BitArray> является особым случаем; его емкость совпадает с его длиной, которая совпадает с количеством элементов.  
   
 -   **Согласованная нижняя граница**  
   
-     Нижняя граница коллекции — это индекс ее первого элемента. Все индексированные коллекции в пространствах имен <xref:System.Collections> имеют нижнюю границу, равную нулю. <xref:System.Array> имеет нижнюю границу, равную нулю, по умолчанию, но при создании экземпляра класса **Array** с помощью <xref:System.Array.CreateInstance%2A?displayProperty=fullName> может быть определена другая нижняя граница.  
+     Нижняя граница коллекции — это индекс ее первого элемента. Все индексированные коллекции в пространствах имен <xref:System.Collections> имеют нижнюю границу, равную нулю. Класс <xref:System.Array> по умолчанию имеет нижнюю границу, равную нулю, но при создании экземпляра класса **Array** с помощью <xref:System.Array.CreateInstance%2A?displayProperty=fullName> может быть задана другая нижняя граница.  
   
 -   **Синхронизация для доступа из нескольких потоков** (только классы <xref:System.Collections>).  
   
-     Типы неуниверсальных коллекций в пространстве имен <xref:System.Collections> обеспечивают некоторую потокобезопасность с помощью синхронизации. Обычно они предоставляются через члены <xref:System.Collections.ICollection.SyncRoot%2A> и <xref:System.Collections.ICollection.IsSynchronized%2A>. Эти коллекции не являются потокобезопасными по умолчанию. Если вам нужен масштабируемый и эффективный многопотоковый доступ к коллекции, используйте один из классов в пространстве имен <xref:System.Collections.Concurrent> или рассмотрите возможность применения неизменяемой коллекции. Дополнительные сведения см. в разделе [Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md).  
+     Для типов неуниверсальных коллекций в пространстве имен <xref:System.Collections> синхронизация обеспечивает определенную степень потокобезопасности. Обычно для выполнения синхронизации используются члены <xref:System.Collections.ICollection.SyncRoot%2A> и <xref:System.Collections.ICollection.IsSynchronized%2A>. Эти коллекции не являются потокобезопасными по умолчанию. Если требуется масштабируемый и эффективный многопотоковый доступ к коллекции, используйте один из классов в пространстве имен <xref:System.Collections.Concurrent> или рассмотрите возможность использования неизменяемой коллекции. Дополнительные сведения см. в разделе [Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md).  
   
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>Выбор коллекции  
@@ -86,12 +86,12 @@ ms.lasthandoff: 04/08/2017
 |Заголовок|Описание|  
 |-----------|-----------------|  
 |[Выбор класса коллекции](../../../docs/standard/collections/selecting-a-collection-class.md)|Описывает различные коллекций и содержит сведения по выбору коллекции, соответствующей сценарию пользователя.|  
-|[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Описывает распространенные типы универсальных и неуниверсальных коллекций, например <xref:System.Array?displayProperty=fullName>, <xref:System.Collections.Generic.List%601?displayProperty=fullName> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>.|  
+|[Часто используемые типы коллекций](../../../docs/standard/collections/commonly-used-collection-types.md)|Описывает часто используемые типы универсальных и неуниверсальных коллекций, таких как <xref:System.Array?displayProperty=fullName>, <xref:System.Collections.Generic.List%601?displayProperty=fullName> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>.|  
 |[Когда следует использовать универсальные коллекции](../../../docs/standard/collections/when-to-use-generic-collections.md)|Рассматривает использование типов универсальных коллекций.|  
 |[Сравнение и сортировка в коллекциях](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Описывает использование проверок равенства и сортировки в коллекциях.|  
 |[Отсортированные типы коллекций](../../../docs/standard/collections/sorted-collection-types.md)|Описывает производительность и характеристики отсортированных коллекций.|  
 |[Типы коллекций Hashtable и Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Описывает возможности универсальных и неуниверсальных типов словарей на основе хэша.|  
-|[Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md)|Описывает такие типы коллекций, как <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> и <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>, которые поддерживают безопасный и эффективный одновременный доступ из нескольких потоков.|  
+|[Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md)|Описывает типы коллекций, такие как <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> и <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>, поддерживающие безопасный и эффективный одновременный доступ из нескольких потоков.|  
 |System.Collections.Immutable|Приводятся вводные сведения о неизменяемых коллекциях и ссылки на типы коллекций.|  
   
 <a name="BKMK_Reference"></a>   
@@ -109,3 +109,4 @@ ms.lasthandoff: 04/08/2017
  <xref:System.Linq?displayProperty=fullName>  
   
  System.Collections.Immutable
+

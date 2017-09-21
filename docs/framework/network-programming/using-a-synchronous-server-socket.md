@@ -1,42 +1,47 @@
 ---
-title: "Использование синхронного сокета сервера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "протоколы приложений, сокеты"
-  - "синхронные сокеты сервера"
-  - "отправка данных, сокеты"
-  - "запросы данных, сокеты"
-  - "запрос данных из Интернета, сокеты"
-  - "сокеты сервера"
-  - "получение данных, сокеты"
-  - "класс Socket, синхронные сокеты сервера"
-  - "протоколы, сокеты"
-  - "сокеты, синхронные сокеты сервера"
-  - "Интернет, сокеты"
+title: "Использование синхронного сокета сервера"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- synchronous server sockets
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- server sockets
+- receiving data, sockets
+- Socket class, synchronous server sockets
+- protocols, sockets
+- sockets, synchronous server sockets
+- Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4ecba2d6c5026a3b2f7d65540fcf40dd71ba3d7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Использование синхронного сокета сервера
-Синхронные сокета сервера приостановят выполнение приложения до тех пор, пока не получен запрос на соединение для сокета.  Синхронные сокета сервера не эквивалентны для приложений, выполняющих heavy использование сети в связанных с ними операций, однако они могут быть подходящими для приложений простой сети.  
+# <a name="using-a-synchronous-server-socket"></a>Использование синхронного сокета сервера
+Синхронные сокеты сервера приостанавливают выполнение приложения до тех пор, пока сокет не получит запрос на соединение. Синхронные сокеты сервера не подходят для приложений, которые сильно загружают сеть своими операциями, но они могут подходить для простых сетевых приложений.  
   
- После установления <xref:System.Net.Sockets.Socket> для прослушивания конечной точке с использованием методов <xref:System.Net.Sockets.Socket.Bind%2A> и <xref:System.Net.Sockets.Socket.Listen%2A>, она готова принимать запросы входящего подключения с помощью метода <xref:System.Net.Sockets.Socket.Accept%2A>.  Приложение приостановитьо до тех пор, пока запрос на соединение не получен при **Принять** вызвать метод.  
+ После настройки объекта <xref:System.Net.Sockets.Socket> для прослушивания в конечной точке с помощью методов <xref:System.Net.Sockets.Socket.Bind%2A> и <xref:System.Net.Sockets.Socket.Listen%2A> он готов принимать входящие запросы на соединение с помощью метода <xref:System.Net.Sockets.Socket.Accept%2A>. Работа приложения приостанавливается до тех пор, пока не будет получен запрос на соединение при вызове метода **Accept**.  
   
- Если запрос подключения получен **Принять** возвращает новый экземпляр **Сокет**, который связан с клиентом при подключении.  В следующем примере считывает данные от клиента, выводит его на консоль и вторит данным обратно клиенту.  **Сокет** Не указала никакого протокол обмена сообщениями, поэтому метки "\<EOF\>" строки конец данных сообщения.  Это предполагает, что **Сокет** с именем `listener`  было инициализируется и было привязано к конечной точке.  
+ При получении запроса на соединение метод **Accept** возвращает новый экземпляр **Socket**, связанный с подключающимся клиентом. В приведенном ниже примере данные считываются из клиента, выводятся в консоли и отправляются обратно клиенту. Объект **Socket** не определяет протокол обмена данными, поэтому конец сообщения помечается строкой "\<EOF>". Предполагается, что объект **Socket** с именем `listener` инициализирован и привязан к конечной точке.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -58,7 +63,6 @@ Dim msg As Byte() = Encoding.ASCII.GetBytes(data)
 handler.Send(msg)  
 handler.Shutdown(SocketShutdown.Both)  
 handler.Close()  
-  
 ```  
   
 ```csharp  
@@ -83,7 +87,8 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Пример синхронного сокета сервера](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
  [Прослушивание с помощью сокетов](../../../docs/framework/network-programming/listening-with-sockets.md)
+

@@ -1,54 +1,60 @@
 ---
-title: "Советы по производительности .NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "C# - язык, производительность"
-  - "производительность [C#]"
-  - "производительность [Visual Basic]"
-  - "Visual Basic, производительность"
+title: "Советы по производительности .NET"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- C# language, performance
+- performance [C#]
+- Visual Basic, performance
+- performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 caps.latest.revision: 36
-author: "BillWagner"
-ms.author: "wiwagn"
-manager: "wpickett"
-caps.handback.revision: 36
+author: BillWagner
+ms.author: wiwagn
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 625e772ff603f6454012606902f2fde53c8be327
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Советы по производительности .NET
-Термин *производительность* обычно относится к скорости выполнения программы.  Иногда можно увеличить скорость выполнения, следуя определенным основным правилам в исходном коде.  В некоторых программах важно внимательно изучить код и использовать профилировщики, чтобы гарантировать, что он выполняется максимально быстро.  В других программах нет необходимости выполнять такую оптимизацию, поскольку код выполняется приемлемо быстро при его написании.  В этой статье список общих областей, в которых может пострадать производительность, а также советы по совершенствованию, ссылки на дополнительные разделы о производительности.  Дополнительные сведения о планировании и измерении производительности см. в разделе [Performance](../../../docs/framework/performance/index.md).  
+# <a name="net-performance-tips"></a>Советы по производительности .NET
+Под *производительностью* обычно понимается скорость выполнения программы. В некоторых случаях ее можно увеличить, следуя определенным основным правилам написания исходного кода. В некоторых программах важно тщательно проверить код и с помощью профилировщиков убедиться, что он выполняется максимально быстро. В других случаях такая оптимизация не требуется, поскольку код выполняется достаточно быстро в своем первоначальном виде. В этой статье описываются основные причины снижения производительности и приводятся рекомендации по ее повышению, а также ссылки на разделы с дополнительной информацией. Дополнительные сведения о планировании и измерении производительности см. в разделе [Производительность](../../../docs/framework/performance/index.md)  
   
-## Упаковка–преобразование и распаковка–преобразование  
- Лучше всего избегать использования типов значений в случаях, когда они должны быть упакованы много раз, например в не универсальных классах коллекций, например, <xref:System.Collections.ArrayList?displayProperty=fullName>.  Упаковки\-преобразования типов значений можно избежать с помощью универсальных коллекций, например, <xref:System.Collections.Generic.List%601?displayProperty=fullName>.  Упаковка и распаковка являются процессами, требующими с точки зрения вычислений больших затрат.  При упаковке типа значения должен быть создан совершенно новый объект.  Это действие занимает на 20 минут больше времени, чем назначение простой ссылки.  При распаковке процесс приведения может длиться в четыре раза дольше назначения.  Дополнительные сведения см. в разделе [Упаковка–преобразование и распаковка–преобразование](../Topic/Boxing%20and%20Unboxing%20\(C%23%20Programming%20Guide\).md).  
+## <a name="boxing-and-unboxing"></a>Упаковка–преобразование и распаковка–преобразование  
+ Не рекомендуется использовать типы значений в тех случаях, где они многократно упаковываются, например в классах неуниверсальных коллекций, таких как <xref:System.Collections.ArrayList?displayProperty=fullName>. Чтобы избежать упаковки типов значений, используйте универсальные коллекции, такие как <xref:System.Collections.Generic.List%601?displayProperty=fullName>. Операции упаковки и распаковки являются весьма затратными процессами с точки зрения вычислений. При упаковке типа значений создается полностью новый объект. Это может занимать почти в 20 раз больше времени, чем простое присваивание ссылки. Процесс приведения при распаковке также занимает в 4 раза больше времени, чем присваивание. Дополнительные сведения см. в статье [Boxing and Unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md) (Упаковка–преобразование и распаковка–преобразование).  
   
-## Строки  
- При объединении большого количества строковых переменных, например в непрерывном цикле, используйте <xref:System.Text.StringBuilder?displayProperty=fullName> вместо [оператора \+](../Topic/+%20Operator%20\(C%23%20Reference\).md) в C\# или [операторов объединения](../Topic/Concatenation%20Operators%20\(Visual%20Basic\).md) в Visual Basic.  Дополнительные сведения см. в разделах [Практическое руководство. Сцепка нескольких строк](../Topic/How%20to:%20Concatenate%20Multiple%20Strings%20\(C%23%20Programming%20Guide\).md) и [Операторы объединения в Visual Basic](../Topic/Concatenation%20Operators%20in%20Visual%20Basic.md).  
+## <a name="strings"></a>Строки  
+ При сцеплении большого числа строковых переменных, например в непрерывном цикле, используйте <xref:System.Text.StringBuilder?displayProperty=fullName> вместо [оператора + (C#)](~/docs/csharp/language-reference/operators/addition-operator.md) или [операторов сцепления (Visual Basic)](~/docs/visual-basic/language-reference/operators/concatenation-operators.md). Дополнительные сведения см. в разделах [Практическое руководство. Сцепка нескольких строк](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) и [Операторы объединения в Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
-## Деструкторы  
- Пустые деструкторы использовать не следует.  Если класс содержит деструктор, в очереди финализации будет создана запись.  При вызове деструктора вызывается сборщик мусора, выполняющий обработку очереди.  Если деструктор пустой, происходит снижение производительности.  Дополнительные сведения см. в разделах [Деструкторы](../Topic/Destructors%20\(C%23%20Programming%20Guide\).md) и [Время существования: создание и уничтожение объектов](../Topic/Object%20Lifetime:%20How%20Objects%20Are%20Created%20and%20Destroyed%20\(Visual%20Basic\).md).  
+## <a name="destructors"></a>Деструкторы  
+ Пустые деструкторы использовать не следует. Если класс содержит деструктор, то в очереди метода Finalize создается запись. При вызове деструктора вызывается сборщик мусора, выполняющий обработку очереди. Если деструктор пустой, это приводит только к ненужному снижению производительности. Дополнительные сведения см. в разделах [Деструкторы](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) и [Время существования: создание и уничтожение объектов](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
-## Другие ресурсы  
+## <a name="other-resources"></a>Другие ресурсы  
   
--   [Writing Faster Managed Code: Know What Things Cost](http://go.microsoft.com/fwlink/?LinkId=99294)  
+-   [Повышение производительности управляемого кода](http://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Writing High\-Performance Managed Applications: A Primer](http://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [Повышение производительности управляемых приложений: учебник для начинающих](http://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [Общие сведения о сборке мусора и советы по повышению производительности](http://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Советы и подсказки производительности в приложениях .NET](http://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Советы и рекомендации по повышению производительности в приложениях .NET](http://go.microsoft.com/fwlink/?LinkId=99297)  
   
--   [Inside Diagnostic Tools for .NET](http://go.microsoft.com/fwlink/?LinkId=112407)  
+-   [Внутреннее устройство средств диагностики для .NET](http://go.microsoft.com/fwlink/?LinkId=112407)  
   
--   [Советы по повышению производительности Rico Mariani](http://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Советы по повышению производительности от Рико Мариани](http://go.microsoft.com/fwlink/?LinkId=115679)  
   
-## См. также  
- [Performance](../../../docs/framework/performance/index.md)   
- [Основные понятия программирования](../Topic/Programming%20Concepts.md)   
- [Руководство по программированию на Visual Basic](../Topic/Visual%20Basic%20Programming%20Guide.md)   
- [Руководство по программированию на C\#](../Topic/C%23%20Programming%20Guide.md)
+## <a name="see-also"></a>См. также  
+ [Производительность](../../../docs/framework/performance/index.md)   
+ [Основные понятия программирования](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)   
+ [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)   
+ [Руководство по программированию на C#](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
+

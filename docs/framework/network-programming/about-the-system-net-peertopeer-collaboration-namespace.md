@@ -1,53 +1,59 @@
 ---
-title: "О пространстве имен System.Net.PeerToPeer.Collaboration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "О пространстве имен System.Net.PeerToPeer.Collaboration"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f446e20f37a83e9effd2a378ce576640bca99763
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# О пространстве имен System.Net.PeerToPeer.Collaboration
-Пространство имен <xref:System.Net.PeerToPeer.Collaboration> предоставляет классы и api\-интерфейсы, используемые для реализации действия совместной работы в одноранговой сети с использованием одноранговой инфраструктуре совместной работы.  
+# <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>О пространстве имен System.Net.PeerToPeer.Collaboration
+Пространство имен <xref:System.Net.PeerToPeer.Collaboration> предоставляет классы и API, которые применяются для реализации функций однорангового взаимодействия с использованием инфраструктуры одноранговой совместной работы.  
   
-## Классы  
- Основные классы, используемые в реализации одноранговой действии взаимодействия:  
+## <a name="classes"></a>Классы  
+ Ниже перечислены основные классы, используемые для реализации возможностей одноранговой совместной работы:  
   
--   <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, который можно использовать для хранения контактов одноранговых узлов.  
+-   Класс <xref:System.Net.PeerToPeer.Collaboration.ContactManager> используется для хранения одноранговых контактов.  
   
--   <xref:System.Net.PeerToPeer.Collaboration.PeerApplication>, в котором для совместной работы, например игры, клиент диалога или решения запускать конференций.  
+-   Класс <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> реализует возможности совместной работы, например игры, клиенты чата или решение для проведения конференций.  
   
--   Одноранговые, которые будут работать совместно в действии.  Эти узлы могут быть представлены как <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> или объекты <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.  
+-   Одноранговые узлы, которые будут участвовать в совместной работе.  Такие одноранговые узлы могут быть представлены как объекты <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> или <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.  
   
--   Статический класс является <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>, который определяет, доступны и приложения, одноранговые узлы участвуют в них.  
+-   Статический класс <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> определяет доступные приложения и одноранговые узлы, которые участвуют в них.  
   
- Методы <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> используются для пригласить одноранговые к сеансу совместной работы.  Вызывающий одноранговый узел, может подписываться на другом узле для событий, сигнал обновляет к приложению объект или сведения о присутствии приниманным с сеансом взаимодействия.  Классы присутствия определяют, является ли <xref:System.Net.PeerToPeer.Collaboration.Peer> доступно для взаимодействия и класс <xref:System.Net.PeerToPeer.Collaboration.PeerScope> используется для определения количества разрешено для участия в одноранговой сети. <xref:System.Net.PeerToPeer.Collaboration.PeerScope> \(global\), <xref:System.Net.PeerToPeer.Collaboration.PeerScope>\(подсеть\) или <xref:System.Net.PeerToPeer.Collaboration.PeerScope>.  
+ Методы <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> используются для приглашения одноранговых узлов в сеанс совместной работы.  Вызывающий одноранговый узел может подписаться на события другого однорангового узла, сигнализирующие об обновлениях приложения, объекта или сведений о присутствии в рамках сеанса совместной работы. Классы сведения о присутствии указывают, доступен ли объект <xref:System.Net.PeerToPeer.Collaboration.Peer> для совместной работы. Класс <xref:System.Net.PeerToPeer.Collaboration.PeerScope> указывает уровень разрешений на участие для однорангового узла: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (глобальная сеть), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe> (подсеть) или <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.  
   
- Сеанс взаимодействия состоит из 4 шагов:  
+ Сеанс совместной работы состоит из четырех шагов:  
   
--   Представление.  Откройте или публиковать приложение одноранговых и сведения о присутствии.  Например, найти другие лица в локальной подсети, имеющие одинаковые игры быть задано.  
+-   Обнаружение. Обнаружение или публикация приложений, одноранговых узлов и сведений о присутствии.  Например, поиск других пользователей локальной подсети, у которых установлены те же игры.  
   
--   Приглашение.  Отправляйте и принимайте безопасные запросы для удаленных одноранговых запускать сеансы и соединения <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>.  
+-   Приглашение. Отправка и принятие защищенных приглашений, посредством которых удаленные одноранговые узлы могут начинать сеансы <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration> или присоединяться к ним.  
   
--   Управление контактами.  Добавление открыло одноранговые как контакт в <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
+-   Управление контактами. Добавление обнаруженных одноранговых узлов в качестве контактов в <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
   
--   Сообщение.  При установке сообщение, использовать API <xref:System.Net> API <xref:System.Net.PeerToPeer> или одноранговый канал Windows Communication Foundation классифицирует для многопользовательские сообщений.  
+-   Взаимодействие. Организация многостороннего взаимодействия с использованием API <xref:System.Net>, API <xref:System.Net.PeerToPeer> или классов одноранговых каналов платформы Windows Communication Foundation.  
   
- Например, одноранговый узел узла запускает сеанс взаимодействия и используется метод <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> для добавления удаленный одноранговый узел и одного из своих локальных узлов к диспетчеру контактов одноранговых узла.  3 Пользователей, после чего будут участвовать в своем собственном частном сеансе совместной работы.  
+ Например, ведущий одноранговый узел запускает сеанс совместной работы и использует метод <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A>, чтобы добавить удаленный узел и один из своих локальных одноранговых узлов в собственный диспетчер контактов.  Эти три пользователя будут участвовать в собственном закрытом сеансе совместной работы.  
   
- Типичные приложения P2P: конференц\-связи для сотруднические заметка\- создания или whiteboarding без сервера приложения диалога, интерактивные объявления и подключенные сеансы разыгрыша.  
+ Распространенные одноранговые приложения: конференции, совместная работа с заметками или досками, приложения чата без сервера, интерактивная реклама и интернет-игры.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Net.PeerToPeer.Collaboration>
+

@@ -1,78 +1,83 @@
 ---
-title: "Specifying a Character Set | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "platform invoke, attribute fields"
-  - "attribute fields in platform invoke, CharSet"
-  - "CharSet field"
+title: "Определение кодировки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, attribute fields
+- attribute fields in platform invoke, CharSet
+- CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Specifying a Character Set
-Поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> управляет маршалингом строк и определяет, как вызов неуправляемого кода находит имена функций в библиотеке DLL.  В этом разделе описываются оба назначения поля.  
+# <a name="specifying-a-character-set"></a>Определение кодировки
+Поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> управляет маршалингом строк и определяет, каким образом при вызове неуправляемого кода будут обнаруживаться имена функций в библиотеке DLL. В этом разделе описываются оба механизма.  
   
- Некоторые интерфейсы API экспортируют две версии функций, которые принимают строковые аргументы: узкую \(ANSI\) и широкую \(Юникод\).  Например, интерфейс Win32 API для функции **MessageBox** содержит следующие имена точек входа:  
+ Некоторые API экспортируют две версии функций, которые принимают строковые аргументы: обычные (ANSI) и двухбайтовые (Юникод). Например, API Win32 включает следующие имена точек входа для функции **MessageBox**:  
   
 -   **MessageBoxA**  
   
-     Обеспечивает форматирование с использованием 1\-байтовых символов ANSI, на что указывает буква "A", добавляемая в конец имени точки входа.  При вызовах **MessageBoxA** маршалинг строк всегда выполняется в формате ANSI, который обычно применяется в платформах Windows 98 и Windows 95.  
+     Обеспечивает форматирование однобайтовых символов ANSI и имеет суффикс "A" в имени точки входа. При вызове **MessageBoxA** строки всегда маршалируются в формате ANSI, что характерно для платформ Windows 95 и Windows 98.  
   
 -   **MessageBoxW**  
   
-     Обеспечивает форматирование с использованием 2\-байтовых символов Юникода, на что указывает буква "W", добавляемая в конец имени точки входа.  При вызовах **MessageBoxW** маршалинг строк всегда выполняется в формате Юникода, который обычно применяется в платформах Windows NT, Windows 2000 и Windows XP.  
+     Обеспечивает форматирование двухбайтовых символов Юникода и имеет суффикс "W" в имени точки входа. При вызове **MessageBoxW** строки всегда маршалируются в формате Юникода, что характерно для платформ Windows NT, Windows 2000 и Windows XP.  
   
-## Маршалинг строк и совпадение имен  
- Поле **CharSet** может принимать следующие значения:  
+## <a name="string-marshaling-and-name-matching"></a>Маршалинг строк и сопоставление имен  
+ Поле **CharSet** принимает следующие значения:  
   
- **CharSet.Ansi** \(значение по умолчанию\)  
+ **CharSet.Ansi** (значение по умолчанию)  
   
 -   Маршалинг строк  
   
-     Вызов неуправляемого кода выполняет маршалинг строк из соответствующего управляемого формата \(Юникод\) в формат ANSI.  
+     При вызове неуправляемого кода выполняется маршалинг строк из соответствующего управляемого формата (Юникод) в формат ANSI.  
   
--   Совпадение имен  
+-   Сопоставление имен  
   
-     Когда значение поля <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> равно **true**, как установлено по умолчанию в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], вызов неуправляемого кода выполняет поиск только заданного разработчиком имени.  Например, если указано имя **MessageBox**, вызов неуправляемого кода ищет именно **MessageBox**. Если найти точное посимвольное совпадение не удается, возникает сбой.  
+     Если поле <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> имеет значение **true** (по умолчанию для [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]), при вызове неуправляемого кода осуществляется поиск только указанного имени. Например, если указать **MessageBox**, при вызове неуправляемого кода будет выполнен поиск **MessageBox**, который может завершиться сбоем из-за невозможности найти точное совпадение.  
   
-     Когда значение поля **ExactSpelling** равно **false**, являющееся значением по умолчанию в C\+\+ и C\#, вызов неуправляемого кода сначала ищет точный псевдоним \(**MessageBox**\), а затем неточное имя \(**MessageBoxA**\), если найти точный псевдоним не удалось.  Следует учитывать, что критерии совпадения имен в формате ANSI отличается от критериев совпадения имен в формате Юникода.  
+     Если поле **ExactSpelling** имеет значение **false** (по умолчанию для C++ и C#), при вызове неуправляемого кода выполняется поиск сначала неуправляемого псевдонима (**MessageBox**), а затем, если неуправляемый псевдоним не найден, управляемого имени (**MessageBoxA**). Обратите внимание, что принципы сопоставления имен ANSI и Юникода различаются.  
   
  **CharSet.Unicode**  
   
 -   Маршалинг строк  
   
-     Вызов неуправляемого кода копирует строки из соответствующего управляемого формата \(Юникод\) в формат Юникода.  
+     При вызове неуправляемого кода строки копируются из соответствующего управляемого формата (Юникод) в формат Юникода.  
   
--   Совпадение имен  
+-   Сопоставление имен  
   
-     Когда значение поля **ExactSpelling** равно **true**, являющееся значением по умолчанию в [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], вызов неуправляемого кода выполняет поиск только заданного разработчиком имени.  Например, если указано **MessageBox**, вызов неуправляемого кода ищет именно **MessageBox**. Если найти точное посимвольное совпадение не удается, возникает сбой.  
+     Если поле **ExactSpelling** имеет значение **true** (по умолчанию для [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]), при вызове неуправляемого кода осуществляется поиск только указанного имени. Например, если указать **MessageBox**, при вызове неуправляемого кода будет выполнен поиск **MessageBox**, который может завершиться сбоем из-за невозможности найти точное совпадение.  
   
-     Когда значение поля **ExactSpelling** равно **false**, являющееся значением по умолчанию в C\+\+ и C\#, вызов неуправляемого кода сначала выполняет поиск искаженного имени \(**MessageBoxW**\), а затем поиск точного имени \(**MessageBox**\), если искаженное имя не найдено.  Следует учитывать, что критерии совпадения имен в формате Юникода отличается от критериев совпадения имен в формате ANSI.  
+     Если поле **ExactSpelling** имеет значение **false** (по умолчанию для C++ и C#), при вызове неуправляемого кода выполняется поиск сначала управляемого имени (**MessageBoxW**), а затем, если управляемое имя не найдено, неуправляемого псевдонима (**MessageBox**). Обратите внимание, что принципы сопоставления имен Юникода и ANSI различаются.  
   
  **CharSet.Auto**  
   
--   Вызов неуправляемого кода выбирает между форматами ANSI и Юникод во время выполнения в соответствии с целевой платформой.  
+-   При вызове неуправляемого кода во время выполнения осуществляется выбор между форматами ANSI и Юникода в соответствии с целевой платформой.  
   
-## Задание кодировки в Visual Basic  
- В следующем примере функция **MessageBox** объявляется три раза с разными режимами работы с кодировками.  В Visual Basic режим работы с кодировками можно задать, добавляя к инструкции объявления ключевое слово **Ansi**, **Unicode** или **Auto**.  
+## <a name="specifying-a-character-set-in-visual-basic"></a>Определение кодировки в Visual Basic  
+ В следующем примере функция **MessageBox** объявляется три раза с разными кодировками. В Visual Basic можно указать поведение кодировки, добавив ключевое слово **Ansi**, **Unicode** или **Auto** в оператор объявления.  
   
- Если ключевое слово кодировки опущено, как в случае первой инструкции объявления, поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> по умолчанию определять кодировку ANSI.  Во второй и третьей инструкциях примера кодировка явно указана с помощью ключевого слова.  
+ Если опустить ключевое слово кодировки, как показано в первом операторе объявления, в поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> по умолчанию будет задана кодировка ANSI. Во втором и третьем операторе в этом примере кодировка задается явно с использованием ключевого слова.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -92,14 +97,13 @@ Public Class Win32
 End Class  
 ```  
   
-## Задание кодировки в C\# и C\+\+  
- Поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> определяет базовую кодировку как ANSI или Юникод.  Кодировка определяет способ выполнения маршалинга строковых аргументов.  Для указания кодировки используется один из следующих вариантов инструкции:  
+## <a name="specifying-a-character-set-in-c-and-c"></a>Определение кодировки в C# и C++  
+ Поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> определяет базовую кодировку как ANSI или Юникод. Кодировка определяет порядок маршалинга строковых аргументов в метод. Чтобы указать кодировку, используйте одну из следующих форм:  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
 [DllImport("dllname", CharSet=CharSet.Unicode)]  
 [DllImport("dllname", CharSet=CharSet.Auto)]  
-  
 ```  
   
 ```cpp  
@@ -108,7 +112,7 @@ End Class
 [DllImport("dllname", CharSet=CharSet::Auto)]  
 ```  
   
- В следующем примере показаны три управляемых определения функции **MessageBox** с атрибутами, задающими кодировку.  В первом определении, в котором значение поля **CharSet** опущено, по умолчанию используется кодировка ANSI.  
+ В следующем примере показаны три управляемых определения функции **MessageBox** с атрибутами, задающими кодировку. В первом определении соответствующее ключевое слово опущено, в результате чего в поле **CharSet** по умолчанию устанавливается кодировка ANSI.  
   
 ```csharp  
 [DllImport("user32.dll")]  
@@ -120,7 +124,6 @@ End Class
 [DllImport("user32.dll", CharSet=CharSet.Auto)]  
     public static extern int MessageBox(int hWnd, String text,   
         String caption, uint type);  
-  
 ```  
   
 ```cpp  
@@ -148,8 +151,9 @@ extern "C" int MessageBox(HWND hWnd,
                           unsigned int uType);  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Platform Invoke Examples](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+ [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)   
+ [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+

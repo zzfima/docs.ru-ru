@@ -1,64 +1,84 @@
 ---
-title: "Пространства имен (Руководство по программированию в C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# - язык, пространства имен"
-  - "пространства имен [C#]"
+title: "Пространства имен (Руководство по программированию в C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, namespaces
+- namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 caps.latest.revision: 27
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 27
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a45339a4c3320a92c0339b1cad6345a2555ed920
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Пространства имен (Руководство по программированию в C#)
-В программировании на C\# пространства имен используются с полной нагрузкой по двум направлениям.  Во\-первых, платформа .NET Framework использует пространства имен для организации большинства классов. Это выполняется следующим образом.  
+# <a name="namespaces-c-programming-guide"></a>Пространства имен (Руководство по программированию в C#)
+Пространства имен часто используются в программировании на C# двумя способами. Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов следующим образом:  
   
  [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
- `System` — это пространство имен, а `Console` — класс в нем.  Использование ключевого слова `using` может отменить необходимость полного имени, как показано в следующем примере.  
+ `System` является пространством имен, а `Console` — это класс в нем. Можно использовать ключевое слово `using`, и тогда полное имя не потребуется. См. следующий пример:  
   
  [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
  [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
- Дополнительные сведения см. в разделе [Директива using](../../../csharp/language-reference/keywords/using-directive.md).  
+ Подробнее см. разделе [Директива using](../../../csharp/language-reference/keywords/using-directive.md).  
   
- Во\-вторых, объявление собственного пространства имен поможет в управлении областью действия имен классов и методов в крупных программных проектах.  Для объявления пространства имен воспользуйтесь ключевым словом [namespace](../../../csharp/language-reference/keywords/namespace.md), как показано в следующем примере.  
+ Второй способ — объявление собственных пространств имен поможет вам контролировать область имен классов и методов в более крупных проектах. Используйте ключевое слово [namespace](../../../csharp/language-reference/keywords/namespace.md), чтобы объявить пространство имен, как показано в следующем примере:  
   
  [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
-## Общие сведения о пространствах имен  
- Пространства имен имеют следующие свойства.  
+## <a name="namespaces-overview"></a>Обзор пространств имен  
+ Пространства имен имеют следующие свойства:  
   
--   Организация крупных проектов по созданию кода.  
+-   Они помогают упорядочивать проекты с большим объемом кода.  
   
--   Для их разделения используются оператор `.`.  
+-   Они разделяются оператором `.`.  
   
--   `using directive` исключает требование на указание имени пространства имен для каждого класса.  
+-   `using directive` позволяет не указывать название пространства имен для каждого класса.  
   
--   Пространство имен `global` является корневым пространством имен: `global::System` всегда будет ссылаться на пространство имен платформы .NET Framework `System`.  
+-   Пространство имен `global` является "корневым": `global::System` всегда будет ссылаться на пространство имен `System` в .NET Framework.  
   
-## Связанные разделы  
+## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения о пространствах имен см. в следующих разделах:  
   
 -   [Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
   
 -   [Практическое руководство. Использование псевдонима глобального пространства имен](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   
--   [Практическое руководство. Использование пространства имен "My"](../../../csharp/programming-guide/namespaces/how-to-use-the-my-namespace.md)  
+-   [Практическое руководство. Использование пространства имен My](../../../csharp/programming-guide/namespaces/how-to-use-the-my-namespace.md)  
   
-## Спецификация языка C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Спецификация языка C#  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)   
  [Директива using](../../../csharp/language-reference/keywords/using-directive.md)   
  [Оператор ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
- [Оператор .](../../../csharp/language-reference/operators/member-access-operator.md)
+ [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)
+

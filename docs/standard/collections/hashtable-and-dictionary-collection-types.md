@@ -21,10 +21,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1c77754efcfa626c2907fd57740133a0db4737d4
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Типы коллекций Hashtable и Dictionary
@@ -42,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
  Например, хэш-функция для строки может принимать коды ASCII каждого символа в строке и объединять их для создания хэш-кода. Строка "пикник" будет иметь хэш-код, отличный от хэш-кода строки "корзина", поэтому строки "пикник" и "корзина" будут находиться в разных контейнерах. В то же время строки "приказ" и "каприз" будут иметь одинаковый хэш-код и будут находиться в одном контейнере.  
   
- Классы <xref:System.Collections.Generic.Dictionary%602> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602> имеют ту же функциональность, что и класс <xref:System.Collections.Hashtable>. Объект <xref:System.Collections.Generic.Dictionary%602> конкретного типа (отличного от <xref:System.Object>) обеспечивает лучшую производительность, чем <xref:System.Collections.Hashtable> для типов значений. Это происходит потому, что элементы <xref:System.Collections.Hashtable> относятся к типу <xref:System.Object>, поэтому при сохранении или извлечении типа значения происходит упаковка или распаковка. Класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602> следует использовать в том случае, когда к коллекции могут обращаться несколько потоков одновременно.  
+ Классы <xref:System.Collections.Generic.Dictionary%602> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602> имеют ту же функциональность, что и класс <xref:System.Collections.Hashtable>. Объект <xref:System.Collections.Generic.Dictionary%602> конкретного типа (отличного от <xref:System.Object>) обеспечивает лучшую производительность, чем <xref:System.Collections.Hashtable> для типов значений. Это происходит потому, что элементы <xref:System.Collections.Hashtable> относятся к типу <xref:System.Object>, поэтому при сохранении или извлечении типа значения происходит упаковка или распаковка. Класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602> следует использовать в случае, когда к коллекции могут обращаться несколько потоков одновременно.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Collections.Hashtable>   

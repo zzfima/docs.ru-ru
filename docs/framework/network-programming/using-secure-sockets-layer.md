@@ -1,46 +1,51 @@
 ---
-title: "Использование протокола SSL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Сетевое взаимодействие"
-  - "SSL"
-  - "протокол SSL"
-  - "запрос данных из Интернета, протокол SSL"
-  - "отправка данных, протокол SSL"
-  - "Сетевые ресурсы"
-  - "запросы данных, протокол SSL"
-  - "получение данных, протокол SSL"
-  - "Интернет, протокол SSL"
+title: "Использование протокола SSL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- SSL
+- Secure Sockets Layer
+- requesting data from Internet, Secure Sockets Layer
+- sending data, Secure Sockets Layer
+- Network Resources
+- data requests, Secure Sockets Layer
+- receiving data, Secure Sockets Layer
+- Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb625971f0c0b52bcdcfc9b41d4c0f88814aef08
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Использование протокола SSL
-Классы <xref:System.Net> используют протокол SSL для шифрования соединения для нескольких сетевых протоколов.  
+# <a name="using-secure-sockets-layer"></a>Использование протокола SSL
+Классы <xref:System.Net> используют протокол SSL для шифрования подключений по нескольким сетевым протоколам.  
   
- Для HTTP\-соединений, классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> используют протокол SSL для обмена данными с узлами в интернете, которые поддерживают протокол SSL.  Решение использовать протокол SSL является классом <xref:System.Net.WebRequest>, на основе uri оно задано.  Если универсальный код ресурса \(uri\) начинается с "HTTPs: " SSL используется; если универсальный код ресурса \(uri\) начинается с "http: незашифрованный", используется соединение.  
+ Для подключений по протоколу HTTP классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> используют протокол SSL для взаимодействия с веб-узлами, поддерживающими SSL. Решение об использовании SSL принимается классом <xref:System.Net.WebRequest> в соответствии с предоставленным универсальным кодом ресурса (URI). Если код URI начинается с префикса "https:", SSL используется. Если код URI начинается с "http:", подключение не шифруется.  
   
- Для использования SSL с использованием протокола FTP, задайте свойство <xref:System.Net.FtpWebRequest.EnableSsl> true перед вызовом <xref:System.Net.FtpWebRequest.GetResponse>.  Аналогично, значение SSL использования с простым транспортным протоколом Почты \(SMTP\), установите свойство <xref:System.Net.Mail.SmtpClient.EnableSsl> true до отправки электронной почты.  
+ Чтобы использовать SSL с протоколом FTP, присвойте свойству <xref:System.Net.FtpWebRequest.EnableSsl> значение true перед вызовом <xref:System.Net.FtpWebRequest.GetResponse>. Аналогичным образом, чтобы использовать SSL с протоколом SMTP, присвойте свойству <xref:System.Net.Mail.SmtpClient.EnableSsl> значение true перед отправкой электронного сообщения.  
   
- Класс <xref:System.Net.Security.SslStream> предоставляет поток\- based абстракцию для SSL и предлагает множество способов настройки подтверждения SSL.  
+ Класс <xref:System.Net.Security.SslStream> обеспечивает абстрагирование протокола SSL на основе потоков и позволяет настраивать подтверждение SSL множеством способов.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -64,12 +69,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
 -   Ссылки на пространство имен **System.Net**.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)   
  [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)   
  [Выбор и проверка сертификата](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+

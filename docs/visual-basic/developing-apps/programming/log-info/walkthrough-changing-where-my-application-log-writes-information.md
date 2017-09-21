@@ -1,5 +1,5 @@
 ---
-title: "Изменение места записи информации для My.Application.Log (Visual Basic) | Документы Майкрософт"
+title: "Изменение места записи информации для My.Application.Log (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Пошаговое руководство. Изменение места записи информации для My.Application.Log (Visual Basic)
@@ -176,17 +176,17 @@ ms.lasthandoff: 03/13/2017
   
 1.  Найдите элемент `<add>` прослушивателя из раздела `<sharedListeners>` .  
   
-2.  Атрибут `type` содержит имя типа прослушивателя. Тип должен наследоваться от класса <xref:System.Diagnostics.TraceListener>. Используйте строгое имя типа, чтобы гарантировать, что используется верный тип. Дополнительные сведения см. в разделе "Создание ссылки на строго именованный тип" ниже.  
+2.  Атрибут `type` содержит имя типа прослушивателя. Этот тип должен наследоваться от класса <xref:System.Diagnostics.TraceListener> . Используйте строгое имя типа, чтобы гарантировать, что используется верный тип. Дополнительные сведения см. в разделе "Создание ссылки на строго именованный тип" ниже.  
   
      Вот некоторые типы, которые можно использовать:  
   
-    -   Прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, который добавляет запись в журнал файлов.  
+    -   прослушиватель <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> , ведущий запись в журнал файлов;  
   
-    -   Прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>, который добавляет информацию в журнал событий компьютера, определяемый параметром `initializeData`.  
+    -   прослушиватель <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> , записывающий информацию в журнал событий компьютера, заданный параметром `initializeData` ;  
   
-    -   Прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>, которые добавляют запись в файл, определяемый параметром `initializeData`.  
+    -   прослушиватели <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> и <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> , ведущие запись в файл, указанный в параметре `initializeData` ;  
   
-    -   Прослушиватель <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>, который добавляет запись в консоль командной строки.  
+    -   прослушиватель <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> , ведущий запись в консоль командной строки.  
   
      Сведения о том, куда записывают информацию другие типы прослушивателей журналов, приведены в документации по этим типам.  
   
@@ -213,5 +213,6 @@ ms.lasthandoff: 03/13/2017
  <xref:System.Diagnostics.TraceListener>   
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [Практическое руководство. Запись сведений о событиях в текстовый файл](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
  [Практическое руководство. Запись в журнал событий приложения](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+

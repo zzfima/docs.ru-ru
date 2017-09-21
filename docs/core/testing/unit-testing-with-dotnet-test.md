@@ -1,26 +1,23 @@
 ---
 title: "Тестирование модулей в .NET Core с помощью команды dotnet-test и xUnit"
-description: "Тестирование модулей в .NET Core с помощью команды dotnet-test"
-keywords: .NET, .NET Core
+description: "Сведения о концепциях модульного тестирования в .NET Core в рамках пошаговой процедуры по созданию примера решения с помощью команды dotnet-test и xUnit."
 author: ardalis
 ms.author: wiwagn
 ms.date: 03/21/2017
 ms.topic: article
 ms.prod: .net-core
-ms.devlang: dotnet
-ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6bb539231e7c0101755193d612e15893f9637fe1
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: d989ee731d7ffd0439bac69afe1458e2aa10733a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="unit-testing-in-net-core-using-dotnet-test-and-xunit"></a>Тестирование модулей в .NET Core с помощью команды dotnet-test и xUnit
 
 Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования. Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) перед началом работы. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="creating-the-source-project"></a>Создание исходного проекта
+## <a name="creating-the-source-project"></a>Создание исходного проекта
 
 Откройте окно оболочки. Создайте каталог с именем *unit-testing-using-dotnet-test* для хранения решения. Внутри него создайте каталог *PrimeService*. Актуальная структура каталогов приведена ниже:
 
@@ -46,7 +43,7 @@ namespace Prime.Services
 }
 ```
 
-### <a name="creating-the-test-project"></a>Создание тестового проекта
+## <a name="creating-the-test-project"></a>Создание тестового проекта
 
 Вернитесь в каталог *unit-testing-using-dotnet-test* и создайте каталог *PrimeService.Tests*. Соответствующая структура каталогов приведена ниже:
 
@@ -145,7 +142,7 @@ public bool IsPrime(int candidate)
 
 В каталоге *PrimeService.Tests* выполните `dotnet test` еще раз. Команда `dotnet test` запускает сборку для проекта `PrimeService` и затем для проекта `PrimeService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
 
-### <a name="adding-more-features"></a>Добавление дополнительных возможностей
+## <a name="adding-more-features"></a>Добавление дополнительных возможностей
 
 Теперь, когда тест проходит успешно, пора создать дополнительные тесты. Есть еще ряд элементарных случаев с простыми числами: 0, -1. Можно добавить их в качестве тестов с помощью атрибута `[Fact]`, но это скоро станет утомительным. Есть другие атрибуты xUnit, которые позволяют создавать наборы похожих тестов.  Атрибут `[Theory]` представляет набор тестов, которые выполняют один и тот же код, но имеют разные входные аргументы. С помощью атрибута `[InlineData]` можно указать значения для этих входных аргументов. 
  

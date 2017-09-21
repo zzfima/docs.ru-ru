@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Проецирование графа объекта (C#) | Документы Майкрософт"
+title: "Практическое руководство. Проецирование графа объекта (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: abf16b36fa8b384c2685a29a1697cc7c3e53a7ec
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3f09d1ab23d027829a8b3ea94fa62455ddb95499
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Практическое руководство. Проецирование графа объекта (C#)
@@ -227,7 +227,7 @@ class Program {
 }  
 ```  
   
- В этом примере результат запроса [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] возвращается в виде <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`. Элементы в классе `PurchaseOrder` имеют тип <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`. Код использует метод расширения <xref:System.Linq.Enumerable.ToList%2A> для создания коллекции <xref:System.Collections.Generic.List%601> из результатов запроса.  
+ В данном примере результат запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] возвращается в виде <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`. Элементы в классе `PurchaseOrder` относятся к типу <xref:System.Collections.Generic.IEnumerable%601> класса `PurchaseOrderItem`. В коде используется метод расширения <xref:System.Linq.Enumerable.ToList%2A> для создания коллекции <xref:System.Collections.Generic.List%601> исходя из результатов запроса.  
   
  Пример выводит следующие результаты:  
   
@@ -272,3 +272,4 @@ ShipDate: 5/21/1999
  <xref:System.Linq.Enumerable.Select%2A>   
  <xref:System.Linq.Enumerable.ToList%2A>   
  [Проекции и преобразования (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

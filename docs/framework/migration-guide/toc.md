@@ -8,3 +8,4 @@
 ### [Практическое руководство. Определение установленных обновлений платформы .NET Framework](how-to-determine-which-net-framework-updates-are-installed.md)
 ## [Практическое руководство. Настройка приложения для поддержки платформы .NET Framework 4 или 4.5](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 ## [Миграция из .NET Framework 1.1](migrating-from-the-net-framework-1-1.md)
+## [Проблемы при миграции на .NET Framework 4](net-framework-4-migration-issues.md)

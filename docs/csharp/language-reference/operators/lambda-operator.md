@@ -1,5 +1,5 @@
 ---
-title: "Оператор =&gt; (справочник по C#) | Документы Майкрософт"
+title: "Оператор =&gt; (справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 287cf223b1e2fc62cdf8a73db95000337cedebef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 45d4753724ed094408e8cbc5353998a67071b0e4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="gt-operator-c-reference"></a>Оператор =&gt; (справочник по C#)
@@ -75,7 +75,7 @@ int shortestWordLength = words.Min((string w) => w.Length);
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как создать лямбда-выражение для перегрузки стандартного оператора запросов <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>, который принимает два аргумента. Поскольку лямбда-выражение имеет несколько параметров, параметры должны заключаться в круглые скобки. Второй параметр `index` представляет собой индекс текущего элемента в коллекции. Выражение `Where` возвращает все строки, длина которых меньше индекса их позиции в массиве.  
+ В следующем примере показано, как создать лямбда-выражение для перегрузки стандартного оператора запроса <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>, который принимает два аргумента. Поскольку лямбда-выражение имеет несколько параметров, параметры должны заключаться в круглые скобки. Второй параметр `index` представляет собой индекс текущего элемента в коллекции. Выражение `Where` возвращает все строки, длина которых меньше индекса их позиции в массиве.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -104,3 +104,4 @@ static void Main(string[] args)
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+

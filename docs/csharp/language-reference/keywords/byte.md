@@ -1,5 +1,5 @@
 ---
-title: "byte (справочник по C#) | Документы Майкрософт"
+title: "byte (справочник по C#)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 57c4b1c7ead9386ff4067da5915a55a79f5e562e
-ms.openlocfilehash: fce94687cbf055219913758d49642c8e4a999db3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ef7494e2a8a1463d37cff77d1dacebec8182b66
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="byte-c-reference"></a>byte (справочник по C#)
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="literals"></a>Литералы  
 
- Переменную `byte` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `byte` (то есть, если он меньше <xref:System.Byte.MinValue?displayProperty=fullName> или больше <xref:System.Byte.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
+ Переменную `byte` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `byte` (то есть если он меньше <xref:System.Byte.MinValue?displayProperty=fullName> или больше <xref:System.Byte.MaxValue?displayProperty=fullName>), возникает ошибка компиляции.
 
 В следующем примере целые числа, равные 201 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из типа [int](../../../csharp/language-reference/keywords/int.md) в значения `byte`.    
   
@@ -121,7 +121,7 @@ SampleMethod((byte)5);
  Дополнительные сведения о правилах выполнения неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Byte>   

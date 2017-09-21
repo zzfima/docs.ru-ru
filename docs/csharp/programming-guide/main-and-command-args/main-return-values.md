@@ -1,6 +1,6 @@
 ---
 title: "Значения, возвращаемые методом Main() (Руководство по программированию на C#)"
-ms.date: 2015-07-20
+ms.date: 2017-08-02
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -28,65 +28,98 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a24a0db126945d122db7a0c8d373d0c91e5da8a2
+ms.sourcegitcommit: d019d1c5757a961c03439d756e808ae13fd8a67b
+ms.openlocfilehash: 50943bdd0b7726145797faf82719537a388dad89
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
+
 # <a name="main-return-values-c-programming-guide"></a>Значения, возвращаемые методом Main() (Руководство по программированию на C#)
-Метод `Main` может возвращать значение `void`:  
-  
- [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]  
-  
- Он также может возвращать значение типа `int`:  
-  
- [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]  
-  
- Если значение, возвращаемое методом `Main`, не используется, то указание в качестве возвращаемого типа `void` несколько упрощает код. Однако возврат целого значения позволяет программе передавать информацию о своем состоянии другим программам и скриптам, которые вызывают исполняемый файл. В приведенном ниже примере показано, как получить доступ к значению, возвращаемому методом `Main`.  
-  
-## <a name="example"></a>Пример  
- В этом примере с помощью пакетного файла запускается программа, после чего проверяется значение, возвращаемое функцией `Main`. При запуске программы в Windows значение, возвращаемое функцией `Main`, сохраняется в переменной среды, которая называется `ERRORLEVEL`. Пакетный файл может определить результат выполнения посредством проверки значения переменной `ERRORLEVEL`. В большинстве случаев на успешное выполнение указывает нулевое значение. В приведенном ниже примере показана простая программа, в которой функция `Main` возвращает ноль. Нулевое значение указывает на успешное выполнение программы. Сохраните программу в файле MainReturnValTest.cs.  
-  
- [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]  
-  
-## <a name="example"></a>Пример  
- Так как в этом примере используется пакетный файл, рекомендуется выполнять компиляцию кода из командной строки. Выполните инструкции из раздела [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) для включения сборки из командной строки или воспользуйтесь командной строкой Visual Studio, которую можно открыть с помощью пункта **Инструменты Visual Studio** в меню **Пуск**. В командной строке перейдите в папку, в которой сохранена программа. С помощью показанной ниже команды выполняется компиляция файла MainReturnValTest.cs и создается исполняемый файл MainReturnValTest.exe.  
-  
- `csc MainReturnValTest.cs`  
-  
- Далее создайте пакетный файл для запуска файла MainReturnValTest.exe и вывода результата. Вставьте приведенный ниже код в текстовый файл и сохраните его под именем `test.bat` в папке, содержащей файлы MainReturnValTest.cs и MainReturnValTest.exe. Введите в командной строке команду `test`, чтобы запустить пакетный файл.  
-  
- Так как код возвращает нулевое значение, пакетный файл сообщает об успехе. Однако если изменить файл MainReturnValTest.cs, чтобы он возвращал ненулевое значение, и затем перекомпилировать программу, при последующем выполнении пакетного файла будет выведено сообщение о неудаче.  
-  
-```  
-rem test.bat  
-@echo off  
-MainReturnValTest  
-@if "%ERRORLEVEL%" == "0" goto good  
-  
-:fail  
-    echo Execution Failed  
-    echo return value = %ERRORLEVEL%  
-    goto end  
-  
-:good  
-    echo Execution succeeded  
-    echo Return value = %ERRORLEVEL%  
-    goto end  
-  
-:end  
-```  
-  
-## <a name="sample-output"></a>Пример результатов выполнения  
- `Execution succeeded`  
-  
- `Return value = 0`  
-  
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
- [Справочник по C#](../../../csharp/language-reference/index.md)   
- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+
+Метод `Main` может возвращать значение `void`:
+
+[!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
+
+Он также может возвращать значение типа `int`:
+
+[!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
+
+Если значение, возвращаемое методом `Main`, не используется, то указание в качестве возвращаемого типа `void` несколько упрощает код. Однако возврат целого значения позволяет программе передавать информацию о своем состоянии другим программам и скриптам, которые вызывают исполняемый файл. Возвращаемое значение `Main` рассматривается как код выхода процесса. В приведенном ниже примере показано, как получить доступ к значению, возвращаемому методом `Main`.
+
+## <a name="example"></a>Пример
+
+В этом примере используются средства командной строки [.NET Core](../../../core/index.md). Если вы не знакомы со средствами командной строки .NET Core, можете обратиться к [этому руководству по началу работы](../../../core/tutorials/using-with-xplat-cli.md).
+
+Измените метод `Main` в файле *program.cs* следующим образом:
+
+[!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
+
+При запуске программы в Windows значение, возвращаемое функцией `Main`, сохраняется в переменной среды. Эту переменную можно получить из пакетного файла с помощью команды `ERRORLEVEL` или в PowerShell с помощью команды `$LastExitCode`.
+
+Для сборки приложения можно выполнить команду `dotnet build` [интерфейса командной строки .NET](../../../core/tools/dotnet.md).
+
+Затем создайте сценарий PowerShell для запуска приложения и отображения результата. Вставьте следующий код в текстовый файл и сохраните его под именем `test.ps1` в папке проекта. Запустите сценарий PowerShell, набрав команду `test.ps1` в командной строке PowerShell.
+
+Так как код возвращает нулевое значение, пакетный файл сообщает об успехе. Но если изменить файл MainReturnValTest.cs, чтобы он возвращал ненулевое значение, и затем повторно скомпилировать программу, то при последующем выполнении сценария PowerShell будет выдано сообщение об ошибке.
+
+```powershell
+dotnet run
+if ($LastExitCode -eq 0) {
+    Write-Host "Execution succeeded"
+} else
+{
+    Write-Host "Execution Failed"
+}
+Write-Host "Return value = " $LastExitCode
+```
+
+## <a name="sample-output"></a>Пример полученных результатов
+
+```txt
+Execution succeeded
+Return value = 0
+```
+
+## <a name="async-main-return-values"></a>Значения, возвращаемые асинхронным методом main
+
+Возвращаемые значения асинхронного метода main перемещают стандартный код, необходимый для вызова асинхронных методов в `Main`, в код, созданный компилятором. Ранее для вызова асинхронного кода и для запуска программы до завершения асинхронной операции приходилось использовать следующую конструкцию:
+
+```csharp
+public static void Main()
+{
+    AsyncConsoleWork().GetAwaiter().GetResult();
+}
+
+private static async Task<int> AsyncConsoleWork()
+{
+    // Main body here
+    return 0;
+}
+```
+
+Теперь ее можно заменить на:
+
+[!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]
+
+Преимущество нового синтаксиса состоит в том, что компилятор всегда формирует правильный код.
+
+## <a name="compiler-generated-code"></a>Код, созданный компилятором
+
+Если точка входа приложения возвращает `Task` или `Task<int>`, то компилятор создает новую точку входа, которая вызывает метод точки входа, объявленный в коде приложения. Предположим, что эта точка входа называется `$GeneratedMain`. В этом случае компилятор создает следующий код для этих точек входа:
+
+- `static Task Main()` приводит к тому, что компилятор формирует эквивалент `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task Main(string[])` приводит к тому, что компилятор формирует эквивалент `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task<int> Main()` приводит к тому, что компилятор формирует эквивалент `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task<int> Main(string[])` приводит к тому, что компилятор формирует эквивалент `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+
+> [!NOTE]
+>Если бы в примерах использовался модификатор `async` метода `Main`, компилятор сформировал бы точно такой же код.
+
+## <a name="see-also"></a>См. также
+[Руководство по программированию на C#](../../programming-guide/index.md)
+[Справочник по C#](../index.md)
+[Main() и аргументы командной строки](index.md)
+[Руководство: отображение аргументов командной строки](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+[Руководство: доступ к аргументам командной строки с помощью foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 

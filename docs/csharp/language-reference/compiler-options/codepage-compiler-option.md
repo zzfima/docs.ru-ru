@@ -1,46 +1,66 @@
 ---
-title: "/codepage (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/codepage"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/codepage compiler option [C#]"
-  - "codepage compiler option [C#]"
-  - "-codepage compiler option [C#]"
+title: "-codepage (параметры компилятора C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /codepage
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /codepage compiler option [C#]
+- codepage compiler option [C#]
+- -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b80f6fcf8891d2f0b921af01cc094f624d807aa1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# /codepage (C# Compiler Options)
-Этот параметр определяет, какая кодовая страница должна использоваться при компиляции, если требуемая страница не является системной кодовой страницей.  
+# <a name="codepage-c-compiler-options"></a>/codepage (параметры компилятора C#)
+Этот параметр задает кодовую страницу, используемую во время компиляции, если требуемая страница не является текущей кодовой страницей системы по умолчанию.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /codepage:id  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `id`  
  Идентификатор кодовой страницы, используемой для всех файлов исходного кода при компиляции.  
   
-## Заметки  
- При компиляции одного или нескольких файлов исходного кода, которые не предназначены для использования системной кодовой страницы компьютера, можно воспользоваться параметром **\/codepage**, чтобы указать необходимую кодовую страницу.  Параметр **\/codepage** применяется ко всем файлам при компиляции исходного кода.  
+## <a name="remarks"></a>Примечания  
+ При компиляции одного или нескольких файлов исходного кода, не использующих кодовую страницу по умолчанию, с помощью параметра **/codepage** можно указать нужную кодовую страницу. Параметр **/codepage** применяется ко всем файлам исходного кода, включенным в компиляцию.  
   
- Если файлы исходного кода были созданы с помощью одной кодовой страницы, которая установлена на компьютере, или файлы исходного кода были созданы с помощью кодовых страниц ЮНИКОД или UTF\-8, использовать параметр **\/codepage** не требуется.  
+ Если файлы исходного кода были созданы с помощью кодовой страницы, включенной на компьютере, либо с помощью кодовой страницы UNICODE или UTF-8, использовать параметр **/codepage** не требуется.  
   
- См. в разделе [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) сведения о том, как найти кодовые страницы, которые поддерживаются в системе.  
+ Сведения о том, как найти кодовые страницы, которые поддерживаются в системе, см. на странице, посвященной функции [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371).  
   
- Этот параметр компилятора недоступен в среде разработки Visual Studio и не может быть изменен программным способом.  
+ Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.  
   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>См. также  
+ [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

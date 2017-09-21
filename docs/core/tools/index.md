@@ -1,23 +1,19 @@
 ---
 title: "Средства интерфейса командной строки (CLI) .NET Core"
-description: "Обзор средств и возможностей интерфейса командной строки (CLI)."
-keywords: "CLI, средства CLI, .NET, .NET Core"
-author: blackdwarf
+description: "Обзор средств и возможностей интерфейса командной строки (CLI)NET Core."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8c91621095ea187dd4236db7533520556840c59
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="net-core-command-line-interface-cli-tools"></a>Средства интерфейса командной строки (CLI) .NET Core
 
 Интерфейс командной строки (CLI) .NET Core — это новая кроссплатформенная цепочка инструментов для разработки приложений .NET. Он является той основой, на которую могут опираться инструменты более высоких уровней, такие как интегрированные среды разработки (IDE), редакторы и оркестраторы сборки.
@@ -35,7 +31,43 @@ ms.lasthandoff: 07/28/2017
 
 По умолчанию устанавливаются следующие команды:
 
-### <a name="basic-commands"></a>Основные команды
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+**Основные команды**
+
+* [new](dotnet-new.md)
+* [restore](dotnet-restore.md)
+* [build](dotnet-build.md)
+* [publish](dotnet-publish.md)
+* [run](dotnet-run.md)
+* [test](dotnet-test.md)
+* [vstest](dotnet-vstest.md)
+* [pack](dotnet-pack.md)
+* [migrate](dotnet-migrate.md)
+* [clean](dotnet-clean.md)
+* [sln](dotnet-sln.md)
+* [help](dotnet-help.md)
+* [store](dotnet-store.md)
+
+**Команды для изменения проекта**
+
+* [add package](dotnet-add-package.md)
+* [add reference](dotnet-add-reference.md)
+* [remove package](dotnet-remove-package.md)
+* [remove reference](dotnet-remove-reference.md)
+* [list reference](dotnet-list-reference.md)
+
+**Расширенные команды**
+
+* [nuget delete](dotnet-nuget-delete.md)
+* [nuget locals](dotnet-nuget-locals.md)
+* [nuget push](dotnet-nuget-push.md)
+* [msbuild](dotnet-msbuild.md)
+* [dotnet install script](dotnet-install-script.md)
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+**Основные команды**
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
@@ -49,7 +81,7 @@ ms.lasthandoff: 07/28/2017
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 
-### <a name="project-modification-commands"></a>Команды для изменения проекта
+**Команды для изменения проекта**
 
 * [add package](dotnet-add-package.md)
 * [add reference](dotnet-add-reference.md)
@@ -57,7 +89,7 @@ ms.lasthandoff: 07/28/2017
 * [remove reference](dotnet-remove-reference.md)
 * [list reference](dotnet-list-reference.md)
 
-### <a name="advanced-commands"></a>Расширенные команды
+**Расширенные команды**
 
 * [nuget delete](dotnet-nuget-delete.md)
 * [nuget locals](dotnet-nuget-locals.md)
@@ -65,11 +97,23 @@ ms.lasthandoff: 07/28/2017
 * [msbuild](dotnet-msbuild.md)
 * [dotnet install script](dotnet-install-script.md)
 
+---
+
 Интерфейс CLI использует модель расширяемости, которая позволяет указывать дополнительные средства для проектов. Дополнительные сведения см. в разделе [Модель расширяемости CLI .NET Core](extensibility.md).
 
 ## <a name="command-structure"></a>Структура команд
 
 Структура команд CLI состоит из [драйвера ("dotnet")](#driver), [самой команды](#command-verb) и возможных [аргументов](#arguments) и [параметров](#options). Этот шаблон используется в большинстве операций интерфейса командной строки, таких как создание консольного приложения и его запуск из командной строки, как показывают следующие команды при выполнении из каталога *my_app*:
+
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```console
+dotnet new console
+dotnet build --output /build_output
+dotnet /build_output/my_app.dll
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -78,17 +122,19 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+---
+
 ### <a name="driver"></a>Драйвер
 
 Драйвер называется [dotnet](dotnet.md) и имеет два вида ответственности — выполнение [платформозависимого приложения](../deploying/index.md) или выполнение команды. Без команды `dotnet` используется только при запуске приложения.
 
 Для запуска платформозависимого приложения укажите его драйвера, например `dotnet /path/to/my_app.dll`. При выполнении команды из папки, где находится библиотека DLL приложения, просто выполните `dotnet my_app.dll`.
 
-При указании команды для драйвера `dotnet.exe` запускает процесс выполнения команды CLI. Сначала драйвер определяет нужную версию средств. Если в параметрах команды эта версия не указана, драйвер использует последнюю доступную версию. Чтобы указать версию, отличную от самой последней установленной, используйте параметр `--fx-version <VERSION>` (см. описание [команды dotnet](dotnet.md)). После определения версии пакета SDK драйвер выполняет команду.
+При указании команды для драйвера `dotnet.exe` запускает процесс выполнения команды CLI. Сначала драйвер определяет нужную версию пакета SDK. Если в параметрах команды эта версия не указана, драйвер использует последнюю доступную версию. Чтобы указать версию, отличную от самой последней установленной, используйте параметр `--fx-version <VERSION>` (см. описание [команды dotnet](dotnet.md)). После определения версии пакета SDK драйвер выполняет команду.
 
 ### <a name="command-verb"></a>Команда
 
-Команда служит для выполнения действия. Например, `dotnet build` проводит сборку кода. `dotnet publish` публикует код. Команды реализуются как консольное приложение с использованием соглашения `dotnet-{verb}`. 
+Команда служит для выполнения действия. Например, `dotnet build` проводит сборку кода. `dotnet publish` публикует код. Команды реализуются как консольное приложение с использованием соглашения `dotnet {verb}`.
 
 ### <a name="arguments"></a>Аргументы
 
@@ -102,8 +148,7 @@ dotnet /build_output/my_app.dll
 
 Если вы использовали средства предварительной версии 2 для создания проектов на основе *project.json*, обратитесь к разделу о [dotnet migrate](dotnet-migrate.md) за информацией о переносе проекта в MSBuild/*.csproj*, чтобы его можно было использовать со средствами версии выпуска. Для проектов .NET Core, созданных до выхода средств предварительной версии 2, обновите проект вручную, выполнив указания из раздела [Переход с DNX на интерфейс CLI .NET Core (project.json)](../migration/from-dnx.md) и воспользовавшись `dotnet migrate`, либо напрямую обновите свои проекты.
 
-## <a name="additional-resources"></a>Дополнительные ресурсы
+## <a name="see-also"></a>См. также
 
-* [Репозиторий dotnet/CLI на сайте GitHub](https://github.com/dotnet/cli/)
-* [Руководство по установке .NET Core](https://aka.ms/dotnetcoregs)
-
+ [Репозиторий dotnet/CLI на сайте GitHub](https://github.com/dotnet/cli/)   
+ [Руководство по установке .NET Core](https://aka.ms/dotnetcoregs)   

@@ -1,5 +1,5 @@
 ---
-title: "Операции проекции (C#) | Документы Майкрософт"
+title: "Операции проекции (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 232afc23e180ab868bfa825d680b7fe4371b3805
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b95072bf6e53ef090a7a7b398fa873bb0bf5b46
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="projection-operations-c"></a>Операции проекции (C#)
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/13/2017
   
 |Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Select|Проецирует значения, основанные на функции преобразования.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
+|Выбрать|Проецирует значения, основанные на функции преобразования.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
 |SelectMany|Проецирует последовательности значений, основанных на функции преобразования, а затем выравнивает их в одну последовательность.|Использование нескольких предложений `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName>|  
   
 ## <a name="query-expression-syntax-examples"></a>Примеры синтаксиса выражений запросов  
@@ -100,7 +101,7 @@ foreach (string s in query)
  ![Схема работы SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
   
 ### <a name="code-example"></a>Пример кода  
- В приведенном ниже примере сравнивается действие `Select()` и `SelectMany()`. Код создает "букет" из цветов путем получения первых двух элементов из каждого списка названий цветов в исходной коллекции. В этом примере "одно значение", которое использует функция преобразования <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>, само является коллекцией значений. Этот требует дополнительного цикла `foreach` для перечисления каждой строки в каждой подпоследовательности.  
+ В приведенном ниже примере сравнивается действие `Select()` и `SelectMany()`. Код создает "букет" из цветов путем получения первых двух элементов из каждого списка названий цветов в исходной коллекции. В этом примере отдельное значение, используемое функцией преобразования <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>, представляет собой коллекцию значений. Этот требует дополнительного цикла `foreach` для перечисления каждой строки в каждой подпоследовательности.  
   
 ```csharp  
 class Bouquet  
@@ -181,3 +182,4 @@ static void SelectVsSelectMany()
  [Предложение select](../../../../csharp/language-reference/keywords/select-clause.md)   
  [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
  [Практическое руководство. Разделение файла на несколько файлов с помощью групп (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+

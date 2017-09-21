@@ -1,40 +1,45 @@
 ---
-title: "проверка подлинности NTLM и Kerberos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "проверка подлинности [платформа .NET Framework], NTLM"
-  - "проверка подлинности [платформа .NET Framework], Kerberos"
-  - "проверка подлинности пользователя, Kerberos"
-  - "проверка подлинности пользователя, NTLM"
-  - "проверка подлинности Kerberos"
-  - "получение данных, проверка подлинности"
-  - "проверка подлинности NTLM"
-  - "Интернет, проверка подлинности"
-  - "проверка подлинности клиента, Kerberos"
-  - "отправка данных, проверка подлинности"
-  - "сетевые ресурсы, проверка подлинности"
-  - "классы [платформа .NET Framework], проверка подлинности"
-  - "проверка подлинности клиента, NTLM"
+title: "проверка подлинности NTLM и Kerberos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- authentication [.NET Framework], NTLM
+- authentication [.NET Framework], Kerberos
+- user authentication, Kerberos
+- user authentication, NTLM
+- Kerberos authentication
+- receiving data, authentication
+- NTLM authentication
+- Internet, authentication
+- client authentication, Kerberos
+- sending data, authentication
+- network resources, authentication
+- classes [.NET Framework], authentication
+- client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb52a70aa34e1011f12a77ea32ec5077f92c127
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# проверка подлинности NTLM и Kerberos
-По умолчанию проверка подлинности NTLM и проверка подлинности Kerberos использует учетные данные пользователя Microsoft Windows NT, связанные с вызывающим приложением выполнить проверку подлинности на сервере.  При использовании проверки подлинности NTLM не значения по умолчанию, приложение задает тип проверки подлинности NTLM и использует объект <xref:System.Net.NetworkCredential>, чтобы передать имя пользователя, пароль и домен к узлу, как показано в следующем примере.  
+# <a name="ntlm-and-kerberos-authentication"></a>проверка подлинности NTLM и Kerberos
+При проверке подлинности NTLM и Kerberos по умолчанию используются учетные данные пользователя Microsoft Windows NT, связанные с вызывающим приложением, для проверки подлинности на сервере. Если используется отличная от установленной по умолчанию проверка подлинности NTLM, приложение устанавливает тип проверки подлинности NTLM и использует объект <xref:System.Net.NetworkCredential> для передачи имени пользователя, пароля и домена узлу, как показано в следующем примере.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -50,7 +55,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- Приложения, которым требуется подключение к службам интернета, используя учетные данные пользователя приложения могут сделать с учетными данными пользователя по умолчанию, как показано в следующем примере.  
+ Приложения, которым требуется подключение к службам Интернета с использованием учетных данных пользователя приложения, могут использовать для этого учетные данные пользователя по умолчанию, как показано в следующем примере.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -64,11 +69,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- Модуль проверки подлинности negotiate указывает, использует ли удаленный сервер проверку подлинности NTLM или Kerberos и отправляет соответствующий ответ.  
+ Модуль проверки подлинности с согласованием определяет, использует ли удаленный сервер проверку подлинности NTLM или Kerberos, после чего отправляет соответствующий ответ.  
   
 > [!NOTE]
->  Проверка подлинности NTLM не работает через прокси\-сервер.  
+>  Проверка подлинности NTLM не работает через прокси-сервер.  
   
-## См. также  
- [Обычная и дайджест\-аутентификация](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
- [Аутентификация в Интернете](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a>См. также  
+ [Обычная и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
+ [Проверка подлинности в Интернете](../../../docs/framework/network-programming/internet-authentication.md)
+

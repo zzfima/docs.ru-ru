@@ -1,6 +1,6 @@
 ---
-title: "Стандартный шаблон событий .NET"
-description: "Стандартный шаблон событий .NET"
+title: "Стандартные шаблоны событий .NET"
+description: "Сведения о шаблонах событий .NET, а также о создании источников стандартных событий, подписке на такие события и их обработке в коде."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8a72fd817270412da38ce89b456f263f931c400c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 703b7b13a2175fb9c40ff707f333a1bf1530df8c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="the-standard-net-event-pattern"></a>Стандартный шаблон событий .NET
+# <a name="standard-net-event-patterns"></a>Стандартные шаблоны событий .NET
 
 [Назад](events-overview.md)
 

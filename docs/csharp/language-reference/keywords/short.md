@@ -1,5 +1,5 @@
 ---
-title: "short (справочник по C#) | Документ Майкрософт"
+title: "short (справочник по C#)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 14f9c66bb620e2ad35513abeeba77372904cc1f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab3ccfdeb8d8a67b5fcd60b1ad6eee4dcafc9691
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="short-c-reference"></a>short (справочник по C#)
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>Литералы  
 
-Переменную `short` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал.  Если целочисленный литерал не соответствует диапазону `short` (т. е. его значение меньше <xref:System.Int16.MinValue?displayProperty=fullName> или больше <xref:System.Int16.MaxValue?displayProperty=fullName>), возникает ошибка компиляции. 
+Переменную `short` можно объявить и инициализировать, назначив ей десятичный, шестнадцатеричный или (начиная с C# 7) двоичный литерал.  Если целочисленный литерал выходит за пределы диапазона `short` (то есть если он меньше <xref:System.Int16.MinValue?displayProperty=fullName> или больше <xref:System.Int16.MaxValue?displayProperty=fullName>), возникает ошибка компиляции. 
 
 В следующем примере целые числа, равные 1034 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из типа [int](../../../csharp/language-reference/keywords/int.md) в значения `short`.  
   
@@ -117,7 +117,7 @@ short y = (short)3.0;   // OK: explicit conversion
  Дополнительные сведения о правилах выполнения неявных числовых преобразований см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Int16>   
@@ -128,3 +128,4 @@ short y = (short)3.0;   // OK: explicit conversion
  [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

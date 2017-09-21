@@ -1,6 +1,6 @@
 ---
-title: "Начало работы с ASP.NET Core | Документация Майкрософт"
-description: "Начало работы с ASP.NET Core"
+title: "Начало работы с ASP.NET Core"
+description: "Подробные сведения об ASP.NET Core с руководствами, содержащимися в документации по ASP.NET Core."
 keywords: .NET, .NET Core
 author: tdykstra
 ms.author: tdykstra
@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: aspnet-core
 ms.devlang: dotnet
 ms.assetid: 4172512e-b93d-4169-abdb-bd0b0b2d657e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1cfd309ebf4431ac96dd6a8fa65e42f0f8b6ca96
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 450b6e99a2c79c8ce5b23e9bc08b6bb426e0ac21
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Начало работы с ASP.NET Core
-<a id="getting-started-with-aspnet-core" class="xliff"></a>    
+# <a name="getting-started-with-aspnet-core"></a>Начало работы с ASP.NET Core    
     
-Чтобы получить доступ к учебникам по разработке веб-приложений ASP.NET Core, рекомендуем обратиться к [документации по ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
+Чтобы получить доступ к учебникам по разработке веб-приложений ASP.NET Core, рекомендуем обратиться к [документации по ASP.NET Core](/aspnet/core/).
 

@@ -1,45 +1,50 @@
 ---
-title: "How to: Map HRESULTs and Exceptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, HRESULTs"
-  - "exceptions, HRESULTs"
-  - "interoperation with unmanaged code, exceptions"
-  - "HRESULTs"
-  - "COM interop, HRESULTs"
-  - "COM interop, exceptions"
+title: "Практическое руководство. Сопоставление значений HRESULT и исключений"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, HRESULTs
+- exceptions, HRESULTs
+- interoperation with unmanaged code, exceptions
+- HRESULTs
+- COM interop, HRESULTs
+- COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 842c223d63aafe38e2506d1430ac17ea2051884d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Map HRESULTs and Exceptions
-COM\-методы сообщают об ошибках, возвращая значения HRESULT. Методы .NET сообщают об ошибках путем создания исключений.  Среда выполнения осуществляет перевод значений HRESULT в исключения и наоборот.  Каждому классу исключений в .NET Framework соответствует значение HRESULT.  
+# <a name="how-to-map-hresults-and-exceptions"></a>Практическое руководство. Сопоставление значений HRESULT и исключений
+Методы COM сообщают об ошибках, возвращая значения HRESULT. Методы .NET в этом случае вызывают исключения. Среда выполнения обеспечивает сопоставление этих двух элементов. Каждый класс платформы .NET Framework сопоставляется со значением HRESULT.  
   
- В определенных пользователем классах исключений могут указываться любые подходящие значения HRESULT.  Эти классы исключений могут динамически изменять значения HRESULT и возвращать их при генерации исключения. Для этого нужно заполнить поле **HResult** в объекте исключения.  Дополнительные сведения об исключении предоставляются клиенту через интерфейс **IErrorInfo**, реализованный в объекте .NET в неуправляемом процессе.  
+ Соответствующие значения HRESULT задаются определяемыми пользователем классами исключений. Эти классы исключений могут динамически изменять значение HRESULT, возвращаемое при возникновении исключения, устанавливая поле **HResult** соответствующего объекта исключения. Дополнительные сведения об исключении предоставляются клиенту посредством интерфейса **IErrorInfo**, который реализуется для объекта .NET в неуправляемом процессе.  
   
- Если создается класс, расширяющий **System.Exception**, во время создания необходимо задать поле HRESULT.  В противном случае значение HRESULT будет присвоено базовым классом.  Новые классы исключения можно сопоставить с существующим значением HRESULT, передав значение в конструктор исключения.  
+ При создании класса, который расширяет **System.Exception**, необходимо устанавливать значение поля HRESULT во время построения. В противном случае значение HRESULT будет присваиваться базовым классом. Чтобы сопоставить новые классы исключений с существующим значением HRESULT, укажите значение в конструкторе исключения.  
   
- Обратите внимание, что среда выполнения иногда будет игнорировать `HRESULT`, если в потоке присутствует интерфейс `IErrorInfo`.  Такое поведение может возникать, когда `HRESULT` и `IErrorInfo` представляют разные ошибки.   ``  
+ Обратите внимание, что среда выполнения в некоторых случаях будет игнорировать значение `HRESULT`, если в потоке присутствует `IErrorInfo`.  Это возможно в тех случаях, когда `HRESULT` и `IErrorInfo` представляют разные ошибки.  
   
-### Создание нового исключения и сопоставление его с HRESULT  
+### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Создание нового класса исключения и его сопоставление со значением HRESULT  
   
-1.  Для создания нового класса исключения с именем `NoAccessException` и сопоставления его значению HRESULT `E_ACCESSDENIED` можно использовать следующий код.  
+1.  В следующем коде создается новый класс исключения `NoAccessException`, который сопоставляется со значением HRESULT `E_ACCESSDENIED`.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -54,7 +59,7 @@ COM\-методы сообщают об ошибках, возвращая зн�
     }  
     ```  
   
- Существуют программы \(на любом языке программирования\), в которых одновременно используются как управляемый, так и неуправляемый код.  Например, в следующем примере кода настраиваемый упаковщик с помощью метода **Marshal.ThrowExceptionForHR\(int HResult\)** создает исключение с конкретным результатом HRESULT.  Метод просматривает HRESULT и создает соответствующий тип исключения.  Например, значение HRESULT в следующем фрагменте кода создает исключение **ArgumentException**.  
+ На любом языке программирования могут встречаться программы, в которых одновременно используется управляемый и неуправляемый код. Например, в настраиваемом маршалере в следующем коде используется метод **Marshal.ThrowExceptionForHR(int HResult)**, который вызывает исключение с заданным значением HRESULT. Этот метод выполняет поиск значения HRESULT и создает исключение соответствующего типа. Например, в следующем коде для заданного значения HRESULT создается **ArgumentException**.  
   
 ```cpp  
 CMyClass::MethodThatThrows  
@@ -63,93 +68,94 @@ CMyClass::MethodThatThrows
 }  
 ```  
   
- В следующей таблице приведен полный перечень значений HRESULT, связанных с классами исключений в .NET Framework.  
+ В следующей таблице приводится полный перечень сопоставлений значений HRESULT с соответствующими классами исключений платформы .NET Framework.  
   
 |HRESULT|Исключение .NET|  
-|-------------|---------------------|  
-|**MSEE\_E\_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
-|**COR\_E\_APPLICATION**|**ApplicationException**|  
-|**COR\_E\_ARGUMENT или E\_INVALIDARG**|**ArgumentException**|  
-|**COR\_E\_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
-|**COR\_E\_ARITHMETIC или ERROR\_ARITHMETIC\_OVERFLOW**|**ArithmeticException**|  
-|**COR\_E\_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
-|**COR\_E\_BADIMAGEFORMAT или ERROR\_BAD\_FORMAT**|**BadImageFormatException**|  
-|**COR\_E\_COMEMULATE\_ERROR**|**COMEmulateException**|  
-|**COR\_E\_CONTEXTMARSHAL**|**ContextMarshalException**|  
-|**COR\_E\_CORE**|**CoreException**|  
-|**NTE\_FAIL**|**CryptographicException**|  
-|**COR\_E\_DIRECTORYNOTFOUND или ERROR\_PATH\_NOT\_FOUND**|**DirectoryNotFoundException**|  
-|**COR\_E\_DIVIDEBYZERO**|**DivideByZeroException**|  
-|**COR\_E\_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
-|**COR\_E\_ENDOFSTREAM**|**EndOfStreamException**|  
-|**COR\_E\_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR\_E\_EXCEPTION**|**Исключение**|  
-|**COR\_E\_EXECUTIONENGINE**|**ExecutionEngineException**|  
-|**COR\_E\_FIELDACCESS**|**FieldAccessException**|  
-|**COR\_E\_FILENOTFOUND или ERROR\_FILE\_NOT\_FOUND**|**FileNotFoundException**|  
-|**COR\_E\_FORMAT**|**FormatException**|  
-|**COR\_E\_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
-|**COR\_E\_INVALIDCAST или E\_NOINTERFACE**|**InvalidCastException**|  
-|**COR\_E\_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
-|**COR\_E\_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
-|**COR\_E\_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
-|**COR\_E\_INVALIDOPERATION**|**InvalidOperationException**|  
-|**COR\_E\_IO**|**IOException**|  
-|**COR\_E\_MEMBERACCESS**|**AccessException**|  
-|**COR\_E\_METHODACCESS**|**MethodAccessException**|  
-|**COR\_E\_MISSINGFIELD**|**MissingFieldException**|  
-|**COR\_E\_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
-|**COR\_E\_MISSINGMEMBER**|**MissingMemberException**|  
-|**COR\_E\_MISSINGMETHOD**|**MissingMethodException**|  
-|**COR\_E\_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
-|**COR\_E\_NOTFINITENUMBER**|**NotFiniteNumberException**|  
-|**E\_NOTIMPL**|**NotImplementedException**|  
-|**COR\_E\_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR\_E\_NULLREFERENCE или E\_POINTER**|**NullReferenceException**|  
-|**COR\_E\_OUTOFMEMORY или**<br /><br /> **E\_OUTOFMEMORY**|**OutOfMemoryException**|  
-|**COR\_E\_OVERFLOW**|**OverflowException**|  
-|**COR\_E\_PATHTOOLONG или ERROR\_FILENAME\_EXCED\_RANGE**|**PathTooLongException**|  
-|**COR\_E\_RANK**|**RankException**|  
-|**COR\_E\_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
-|**COR\_E\_REMOTING**|**RemotingException**|  
-|**COR\_E\_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException**|  
-|**COR\_E\_SECURITY**|**SecurityException**|  
-|**COR\_E\_SERIALIZATION**|**SerializationException**|  
-|**COR\_E\_STACKOVERFLOW или ERROR\_STACK\_OVERFLOW**|**StackOverflowException**|  
-|**COR\_E\_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR\_E\_SYSTEM**|**SystemException**|  
-|**COR\_E\_TARGET**|**TargetException**|  
-|**COR\_E\_TARGETINVOCATION**|**TargetInvocationException**|  
-|**COR\_E\_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
-|**COR\_E\_THREADABORTED**|**ThreadAbortException**|  
-|**COR\_E\_THREADINTERRUPTED**|**ThreadInterruptedException**|  
-|**COR\_E\_THREADSTATE**|**ThreadStateException**|  
-|**COR\_E\_THREADSTOP**|**ThreadStopException**|  
-|**COR\_E\_TYPELOAD**|**TypeLoadException**|  
-|**COR\_E\_TYPEINITIALIZATION**|**TypeInitializationException**|  
-|**COR\_E\_VERIFICATION**|**VerificationException**|  
-|**COR\_E\_WEAKREFERENCE**|**WeakReferenceException**|  
-|**COR\_E\_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
-|**Все остальные значения HRESULT**|**COMException**|  
+|-------------|--------------------|  
+|**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
+|**COR_E_APPLICATION**|**ApplicationException**|  
+|**COR_E_ARGUMENT или E_INVALIDARG**|**ArgumentException**|  
+|**COR_E_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
+|**COR_E_ARITHMETIC или ERROR_ARITHMETIC_OVERFLOW**|**ArithmeticException**|  
+|**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
+|**COR_E_BADIMAGEFORMAT или ERROR_BAD_FORMAT**|**BadImageFormatException**|  
+|**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
+|**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
+|**COR_E_CORE**|**CoreException**|  
+|**NTE_FAIL**|**CryptographicException**|  
+|**COR_E_DIRECTORYNOTFOUND или ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
+|**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
+|**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
+|**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
+|**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
+|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
+|**COR_E_FIELDACCESS**|**FieldAccessException**|  
+|**COR_E_FILENOTFOUND или ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
+|**COR_E_FORMAT**|**FormatException**|  
+|**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
+|**COR_E_INVALIDCAST или E_NOINTERFACE**|**InvalidCastException**|  
+|**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
+|**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
+|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
+|**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
+|**COR_E_IO**|**IOException**|  
+|**COR_E_MEMBERACCESS**|**AccessException**|  
+|**COR_E_METHODACCESS**|**MethodAccessException**|  
+|**COR_E_MISSINGFIELD**|**MissingFieldException**|  
+|**COR_E_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
+|**COR_E_MISSINGMEMBER**|**MissingMemberException**|  
+|**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
+|**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
+|**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
+|**E_NOTIMPL**|**NotImplementedException**|  
+|**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
+|**COR_E_NULLREFERENCE или E_POINTER**|**NullReferenceException**|  
+|**COR_E_OUTOFMEMORY или**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
+|**COR_E_OVERFLOW**|**OverflowException**|  
+|**COR_E_PATHTOOLONG или ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
+|**COR_E_RANK**|**RankException**|  
+|**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
+|**COR_E_REMOTING**|**RemotingException**|  
+|**COR_E_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException**|  
+|**COR_E_SECURITY**|**SecurityException**|  
+|**COR_E_SERIALIZATION**|**SerializationException**|  
+|**COR_E_STACKOVERFLOW или ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
+|**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
+|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_TARGET**|**TargetException**|  
+|**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
+|**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
+|**COR_E_THREADABORTED**|**ThreadAbortException**|  
+|**COR_E_THREADINTERRUPTED**|**ThreadInterruptedException**|  
+|**COR_E_THREADSTATE**|**ThreadStateException**|  
+|**COR_E_THREADSTOP**|**ThreadStopException**|  
+|**COR_E_TYPELOAD**|**TypeLoadException**|  
+|**COR_E_TYPEINITIALIZATION**|**TypeInitializationException**|  
+|**COR_E_VERIFICATION**|**VerificationException**|  
+|**COR_E_WEAKREFERENCE**|**WeakReferenceException**|  
+|**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
+|**Все другие значения HRESULT**|**COMException**|  
   
- Чтобы извлечь расширенные сведения об ошибке, управляемый клиент должен проверить поля созданного объекта исключения.  Чтобы объект исключения предоставил нужные сведения об ошибке, COM\-объект должен реализовать интерфейс **IErrorInfo**.  Среда выполнения использует сведения, предоставленные объектом **IErrorInfo**, для инициализации объекта исключения.  
+ Чтобы получить дополнительные сведения об ошибке, управляемый клиент должен проверить поля созданного объекта исключения. Чтобы объект исключения содержал полезные сведения об ошибке, COM-объект должен реализовывать интерфейс **IErrorInfo**. Среда выполнения использует сведения, предоставляемые интерфейсом **IErrorInfo**, для инициализации объекта исключения.  
   
- Если COM\-объект не поддерживает интерфейс **IErrorInfo**, среда выполнения инициализирует объект исключения со значениями, использующимися по умолчанию.  В следующей таблице перечислены все поля, связанные с объектом исключения, и указан источник сведений по умолчанию, если COM\-объект поддерживает **IErrorInfo**.  
+ Если COM-объект не поддерживает интерфейс **IErrorInfo**, среда выполнения инициализирует объект исключения с использованием значений по умолчанию. В следующей таблице перечислены все поля, связанные с объектом исключения, и указан источник сведений по умолчанию для случаев, когда COM-объект поддерживает **IErrorInfo**.  
   
- Обратите внимание, что среда выполнения иногда будет игнорировать `HRESULT`, если в потоке присутствует интерфейс `IErrorInfo`.  Такое поведение может возникать, когда `HRESULT` и `IErrorInfo` представляют разные ошибки.   ``  
+ Обратите внимание, что среда выполнения в некоторых случаях будет игнорировать значение `HRESULT`, если в потоке присутствует `IErrorInfo`.  Это возможно в тех случаях, когда `HRESULT` и `IErrorInfo` представляют разные ошибки.  
   
-|Поле исключения|Источник сведений из COM|  
-|---------------------|------------------------------|  
-|**ErrorCode**|Значение HRESULT, возвращаемое из вызова.|  
-|**HelpLink**|Если значение **IErrorInfo\-\>HelpContext** не равно нулю, строка формируется путем объединения **IErrorInfo\-\>GetHelpFile**, "\#" and **IErrorInfo\-\>GetHelpContext**.  В противном случае строка возвращается из **IErrorInfo\-\>GetHelpFile**.|  
-|**InnerException**|Всегда пустая ссылка \(**Nothing** в Visual Basic\).|  
-|**Сообщение**|Строка, возвращаемая из **IErrorInfo\-\>GetDescription**.|  
-|**Исходный код**|Строка возвращается из **IErrorInfo\-\>GetSource**.|  
+|Поле Exception|Источник сведений из модели COM|  
+|---------------------|------------------------------------|  
+|**ErrorCode**|Значение HRESULT, возвращенное из вызова.|  
+|**HelpLink**|Если **IErrorInfo->HelpContext** не равно нулю, строка формируется путем сцепления строк **IErrorInfo->GetHelpFile**, "#" и **IErrorInfo->GetHelpContext**. В противном случае возвращается строка из **IErrorInfo->GetHelpFile**.|  
+|**InnerException**|Всегда ссылка NULL (**Nothing** в Visual Basic).|  
+|**Сообщение**|Строка, возвращаемая из **IErrorInfo->GetDescription**.|  
+|**Источник**|Строка, возвращаемая из **IErrorInfo->GetSource**.|  
 |**StackTrace**|Трассировка стека.|  
-|**TargetSite**|Имя метода, который вернул сбойное значение HRESULT.|  
+|**TargetSite**|Имя метода, который вернул значение HRESULT со сбоем.|  
   
- Поля исключения, такие как **Message**, **Source** и **StackTrace** недоступны для **StackOverflowException**.  
+ Поля исключения **Message**, **Source** и **StackTrace** недоступны для **StackOverflowException**.  
   
-## См. также  
- [Advanced COM Interoperability](http://msdn.microsoft.com/ru-ru/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
+## <a name="see-also"></a>См. также  
+ [Расширенное COM-взаимодействие](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
  [Исключения](../../../docs/standard/exceptions/index.md)
+

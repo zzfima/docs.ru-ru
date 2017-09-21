@@ -1,5 +1,5 @@
 ---
-title: "bool (справочник по C#) | Документы Майкрософт"
+title: "bool (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ef8cc9a0584829eeed06e7fc3c2227f0683ef413
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f3b7455ab6b0ec780afe7d81b2ff990d47a31d20
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="bool-c-reference"></a>bool (Справочник по C#)
-Ключевое слово `bool` является псевдонимом <xref:System.Boolean?displayProperty=fullName>. Оно используется для объявления переменных для хранения логических значений, [true](../../../csharp/language-reference/keywords/true.md) и [false](../../../csharp/language-reference/keywords/false.md).  
+Ключевое слово `bool` является псевдонимом для <xref:System.Boolean?displayProperty=fullName>. Оно используется для объявления переменных для хранения логических значений, [true](../../../csharp/language-reference/keywords/true.md) и [false](../../../csharp/language-reference/keywords/false.md).  
   
 > [!NOTE]
 >  Если вам требуется логическая переменная, которая также может принимать значение `null`, используйте `bool?`. Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](../../../csharp/programming-guide/nullable-types/index.md).  
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_3.cs)]  
   
 ## <a name="example"></a>Пример  
- В этом примере символ вводится с клавиатуры, и программа проверяет, является ли введенный символ буквой. Если это буква, проверяется ее регистр. Эти проверки выполняются с помощью <xref:System.Char.IsLetter%2A> и <xref:System.Char.IsLower%2A>, которые возвращают тип `bool`:  
+ В этом примере символ вводится с клавиатуры, и программа проверяет, является ли введенный символ буквой. Если это буква, проверяется ее регистр. Эти проверки выполняются с использованием <xref:System.Char.IsLetter%2A> и <xref:System.Char.IsLower%2A>, которые возвращают значение типа `bool`:  
   
  [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_4.cs)]  
   
@@ -75,3 +75,4 @@ ms.lasthandoff: 03/13/2017
  [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

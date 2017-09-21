@@ -1,52 +1,57 @@
 ---
-title: "dllMainReturnsFalse MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed debugging assistants (MDAs), DllMain returns false"
-  - "DllMainReturnsFalse MDA"
-  - "DllMain function"
-  - "MDAs (managed debugging assistants), DllMain returns false"
+title: "Помощник по отладке управляемого кода dllMainReturnsFalse"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- managed debugging assistants (MDAs), DllMain returns false
+- DllMainReturnsFalse MDA
+- DllMain function
+- MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be2fcbd608e15ecc9b0b17529558999d0dfa85c9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# dllMainReturnsFalse MDA
-Помощник по отладке управляемого кода \(MDA\) `dllMainReturnsFalse` активируется в случае, если управляемая функция `DllMain` пользовательской сборки, вызванная с помощью DLL\_PROCESS\_ATTACH, возвращает значение FALSE.  
+# <a name="dllmainreturnsfalse-mda"></a>Помощник по отладке управляемого кода dllMainReturnsFalse
+Помощник по отладке управляемого кода `dllMainReturnsFalse` (MDA) активируется в том случае, если управляемая функция `DllMain` в пользовательской сборке вызывается с причиной DLL_PROCESS_ATTACH и возвращает значение FALSE.  
   
-## Признаки  
- Функция `DllMain` возвратила значение FALSE, указывающее на то, что функция не была выполнена корректно.  Это может вызвать неопределенные проблемы, поскольку функции `DllMain`, как правило, содержат важный код инициализации.  
+## <a name="symptoms"></a>Признаки  
+ Функция `DllMain` возвращает значение FALSE, свидетельствующее о сбое при ее выполнении. Это может привести к возникновению неопределенных проблем, поскольку функции `DllMain` обычно содержат важный код инициализации.  
   
-## Причина  
- Функция `DllMain` вызывается с помощью DLL\_PROCESS\_ATTACH для инициализации DLL при загрузке.  Если функция возвращает значение FALSE, это означает, что не удалось инициализировать библиотеку DLL.  
+## <a name="cause"></a>Причина  
+ Функция `DllMain` вызывается с причиной DLL_PROCESS_ATTACH для инициализации библиотеки DLL при загрузке. Если она возвращает значение FALSE, значит инициализация библиотеки DLL завершилась сбоем.  
   
-## Решение  
- Следует проанализировать код функции `DllMain` проблемной библиотеки DLL и выявить причину сбоя инициализации.  
+## <a name="resolution"></a>Решение  
+ Проанализируйте код функции `DllMain` для указанной библиотеки DLL и определите причину сбоя при инициализации.  
   
-## Влияние на среду выполнения  
- Данный помощник по отладке управляемого кода не оказывает влияния на среду CLR.  Он только выводит сведения о возвращаемых значениях для функции `DllMain`.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR. Он только выводит данные о возвращаемом значении для `DllMain`.  
   
-## Output  
- Сообщение о том, что функция `DllMain`, вызываемая с помощью DLL\_PROCESS\_ATTACH, вернула значение FALSE.  Обратите внимание, что данный помощник по отладке управляемого кода активируется только в случае, если `DllMain` реализуется в управляемом коде.  
+## <a name="output"></a>Вывод  
+ Сообщение, указывающее, что функция `DllMain` была вызвана с причиной DLL_PROCESS_ATTACH и вернула значение FALSE. Обратите внимание, что этот помощник по отладке кода вызывается только в том случае, если в управляемом коде реализована функция `DllMain`.  
   
-## Configuration  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <dllMainReturnsFalse />  
@@ -54,5 +59,6 @@ caps.handback.revision: 12
 </mdaConfig>  
 ```  
   
-## См. также  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>См. также  
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

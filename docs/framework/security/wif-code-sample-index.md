@@ -1,38 +1,45 @@
 ---
-title: "Индекс образцов кода WIF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Индекс образцов кода WIF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5ec81864fca8ec9c83fd294f722e890f002e510
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/18/2017
+
 ---
-# Индекс образцов кода WIF
-Ниже приведены примеры кода для 4.5 Foundation удостоверение Windows.  
+# <a name="wif-code-sample-index"></a>Индекс образцов кода WIF
+Ниже приведены образцы кода для Windows Identity Foundation 4.5.  
   
--   [ClaimsAwareWebApp](см.?LinkID%20=%20248405) \-в этом примере демонстрируется использование проверки подлинности externalization \(для локальных тестовых службы маркеров безопасности из идентификаторов и средства доступа для Visual Studio 11\) на классический ASP.NET \(в отличие от на веб\-узел\).  
+-   [ClaimsAwareWebApp](http://go.microsoft.com/fwlink/?LinkID=248405) — этот образец демонстрирует основные принципы экспорта проверки подлинности (в локальную тестовую службу маркеров безопасности из средства Identity and Access Tool для Visual Studio 11) в классическом приложении ASP.NET (а не на веб-сайте).  
   
--   [ClaimsAwareWebService](см.?LinkID%20=%20248406) \-в этом примере демонстрируется использование проверки подлинности externalization на классический службы WCF.  
+-   [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) — этот образец демонстрирует основные принципы экспорта проверки подлинности в классической службе WCF.  
   
--   [ClaimsAwareMvcApplication](см.?LinkID%20=%20248407) \- в этом примере показано, как интегрировать WIF MVC, включая защиту без контракта и перенаправляет код, который использует проверку подлинности форм из контроллера входа в систему.  
+-   [ClaimsAwareMvcApplication](http://go.microsoft.com/fwlink/?LinkID=248407) — в этом примере демонстрируется интеграция WIF с MVC, включая направленную защиту и код, в котором учитываются перенаправления проверки подлинности на основе форм из контроллера LogOn.  
   
--   [ClaimsAwareWebFarm](см.?LinkID%20=%20248408) \-в этом примере демонстрируется кэш фермы готов сеанса \(в противоположность режиму tokenreplycache\), можно использовать сеансы по ссылке, а не обмена больших файлов "cookie".  Также демонстрируется простой способ защиты файлов "cookie" в ферме.  
+-   [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) — в этом примере демонстрируется готовый к применению в ферме кэш сеанса (вместо tokenreplycache), который позволяет использовать сеансы по ссылке, а не обмениваться большими файлами cookie. Также показан более простой способ защиты файлов cookie в ферме.  
   
--   [ClaimsAwareFormsAuthentication](см.?LinkID%20=%20248409) \-это очень простой пример демонстрирует, что в.NET 4.5 получения заявки в ваших участников, независимо от способа проверки подлинности пользователей.  
+-   [ClaimsAwareFormsAuthentication](http://go.microsoft.com/fwlink/?LinkID=248409) — в этом очень простом примере показано, что в .NET 4.5 вы получаете утверждения в субъектах вне зависимости от способа проверки подлинности пользователей.  
   
--   [ClaimsBasedAuthorization](см.?LinkID%20=%20248410)\- это примеров показано, как использовать класс CLaimsAuthorizationManager и ClaimsAuthorizationModule для применения политик авторизации.  
+-   [ClaimsBasedAuthorization](http://go.microsoft.com/fwlink/?LinkID=248410) — в этих примерах показано, как использовать класс CLaimsAuthorizationManager и модуль ClaimsAuthorizationModule для применения собственных политик авторизации.  
   
--   [FederationMetadata](см.?LinkID%20=%20248411) – в этом примере демонстрируется динамическое создание \(в собственной STS\) и динамического потребления \(на доверяющей стороной приложения\) документов метаданных.  
+-   [FederationMetadata](http://go.microsoft.com/fwlink/?LinkID=248411) — в этом примере демонстрируются как динамическое создание (в пользовательской службе STS), так и динамическое потребление (в приложении проверяющей стороны) документов метаданных.  
   
--   [CustomToken](см.?LinkID%20=%20248412) – в этом примере демонстрируется, как создать пользовательский тип маркера Token простой Web \(SWT\).  
+-   [CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) — этот образец демонстрирует создание пользовательского типа токена Simple Web Token (SWT).  
   
-## См. также  
- [Windows Identity Foundation](../../../docs/framework/security/windows-identity-foundation.md)
+## <a name="see-also"></a>См. также  
+ [Windows Identity Foundation](../../../docs/framework/security/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "float (справочник по C#) | Документы Майкрософт"
+title: "float (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1c3a66e4f9c690effb35e280e00e29930ec64d75
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1fb02f84de504112eee826dbee1275fa3ccb7a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="float-c-reference"></a>float (Справочник по C#)
@@ -73,12 +74,12 @@ float x = 3.5F;
  Дополнительные сведения об этих значениях см. в документе "Стандарт IEEE для двоичной арифметики с плавающей запятой" на веб-сайте [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269).  
   
 ## <a name="example"></a>Пример  
- В следующем примере [int](int.md), [short](short.md) и `float` включены в математическое выражение и дают результат `float`. (Помните, что `float` является псевдонимом для типа <xref:System.Single?displayProperty=fullName>.) Обратите внимание, что в выражении нет типа [double](double.md).  
+ В следующем примере [int](int.md), [short](short.md) и `float` включены в математическое выражение и дают результат `float`. (Помните, что `float` — это псевдоним для типа <xref:System.Single?displayProperty=fullName>.) Обратите внимание, что в выражении нет типа [double](double.md).  
   
  [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Single>   
@@ -90,3 +91,4 @@ float x = 3.5F;
  [Таблица встроенных типов](built-in-types-table.md)   
  [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)   
  [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)
+

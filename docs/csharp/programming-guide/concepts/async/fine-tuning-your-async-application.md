@@ -1,5 +1,5 @@
 ---
-title: "Настройка асинхронного приложения (C#) | Документы Майкрософт"
+title: "Настройка асинхронного приложения (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74cab732debe2381cbd3b9106b2431e2490ef57e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7afcdb28fbe10d5aa33dd2704d264ffd716af5d6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Настройка асинхронного приложения (C#)
-Методы и свойства, доступные при использовании типа <xref:System.Threading.Tasks.Task>, позволяют сделать приложение более точным и гибким. В подразделах в этом разделе демонстрируются примеры, использующие <xref:System.Threading.CancellationToken> и важные методы `Task`, такие как <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>.  
+Методы и свойства, доступные при использовании типа <xref:System.Threading.Tasks.Task>, позволяют сделать приложение более точным и гибким. В подразделах этого раздела приводятся примеры, в которых используются <xref:System.Threading.CancellationToken> и важные методы `Task`, такие как <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> и <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>.  
   
  С помощью `WhenAny` и `WhenAll` можно легко запускать несколько задач и ожидать их завершения путем наблюдения за одной из них.  
   
@@ -59,3 +60,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>См. также  
  [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+

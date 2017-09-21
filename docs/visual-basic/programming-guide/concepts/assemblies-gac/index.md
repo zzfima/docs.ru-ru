@@ -1,5 +1,5 @@
 ---
-title: "Сборки и глобальный кэш сборок (Visual Basic) | Документация Майкрософт"
+title: "Сборки и глобальный кэш сборок (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b712132becfe47d50d1c06c0e8fd9940b8035e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Сборки и глобальный кэш сборок (Visual Basic)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
   
 -   Сведения о сборке можно получить программным путем с помощью отражения. Дополнительные сведения см. в статье [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
--   Если вы хотите загрузить сборку только для проверки, используйте метод <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   Если вы хотите загрузить сборку только для ее проверки, используйте метод, такой как <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Манифест сборки  
  Каждая сборка содержит *манифест сборки*. Манифест сборки выполняет роль оглавления и содержит следующую информацию.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
   
 -   Таблицу всех файлов, входящих в сборку. Сюда будут включаться другие ваши сборки, от которых зависит файл .exe или .dll, а также растровые изображения или файлы Readme.  
   
--   *Список ссылок сборки*, то есть список всех внешних зависимостей — библиотек или других файлов, созданных другими разработчиками, которые требуются для работы вашего приложения. Ссылки на сборки содержат ссылки на глобальные и частные объекты. Глобальные объекты находятся в глобальном кэше сборок. Эта область, как системный каталог System32, доступна для всех других приложений. Пространство имен <xref:Microsoft.VisualBasic?displayProperty=fullName> можно привести в качестве примера сборки, размещенной в глобальном кэше сборок. Закрытые объекты должны находиться в каталоге установки приложения или в одном из его подкаталогов.  
+-   *Список ссылок сборки*, то есть список всех внешних зависимостей — библиотек или других файлов, созданных другими разработчиками, которые требуются для работы вашего приложения. Ссылки на сборки содержат ссылки на глобальные и частные объекты. Глобальные объекты находятся в глобальном кэше сборок. Эта область, как системный каталог System32, доступна для всех других приложений. Пространство имен <xref:Microsoft.VisualBasic?displayProperty=fullName> служит примером сборки в глобальном кэше сборок. Закрытые объекты должны находиться в каталоге установки приложения или в одном из его подкаталогов.  
   
  Поскольку сборки содержат сведения о содержимом, управлении версиями и зависимостях, правильность работы созданных вами приложений на Visual Basic не зависит от значений в реестре Windows. Сборки снижают риск конфликта библиотек DLL, а также повышают надежность и простоту развертывания приложений. Во многих случаях для установки приложения на базе .NET достаточно просто скопировать его файлы на целевой компьютер.  
   
@@ -74,3 +75,4 @@ ms.lasthandoff: 03/13/2017
  [How to: Create and Use Assemblies Using the Command Line (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  (Практическое руководство. Создание и использование сборок с помощью командной строки (Visual Basic))  
  [Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  (Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (Visual Basic))  
  [Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md) (Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (Visual Basic))
+

@@ -1,5 +1,5 @@
 ---
-title: "Доступ к пользовательским атрибутам | Документы Майкрософт"
+title: "Доступ к пользовательским атрибутам"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: fbbc83b6aafdd5f2cbf554de66bc19f49d635aff
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 393fb3516756438325c9f3fd00941b963b3f2a2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-custom-attributes"></a>Доступ к пользовательским атрибутам
@@ -81,3 +81,4 @@ public class LocalizationExtenderProvider
  <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=fullName>   
  [Просмотр сведений о типах](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
  [Соображения о безопасности для отражения](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+

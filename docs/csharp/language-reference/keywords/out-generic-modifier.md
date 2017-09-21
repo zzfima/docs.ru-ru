@@ -1,5 +1,5 @@
 ---
-title: "out (универсальный модификатор) (справочник по C#) | Документы Майкрософт"
+title: "out (универсальный модификатор) (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5b488eab5966a556b3e3c91ae8c748d11e61367
+ms.translationtype: HT
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: a560a0307723d32750a7e26ad4ee1afec360a849
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (универсальный модификатор) (Справочник по C#)
@@ -40,11 +40,11 @@ ms.lasthandoff: 03/13/2017
   
  Ковариация позволяет использовать производные типы со степенью наследования больше, нежели у типа, заданного универсальным параметром. Благодаря этому можно осуществлять неявное преобразование классов, реализующих вариантные интерфейсы, и неявное преобразование типов делегатов. Ковариация и контравариантность поддерживаются для ссылочных типов, но не для типов значений.  
   
- Интерфейс с параметром ковариантного типа позволяет своим методам возвращать аргументы производных типов, степень наследования у которых больше, чем у параметра типа. Например, поскольку в .NET Framework 4 в <xref:System.Collections.Generic.IEnumerable%601> тип T является ковариантным, можно назначить объект типа `IEnumerabe(Of String)` объекту типа `IEnumerable(Of Object)` без применения каких-либо специальных методов преобразования.  
+ Интерфейс с параметром ковариантного типа позволяет своим методам возвращать аргументы производных типов, степень наследования у которых больше, чем у параметра типа. Например, так как в .NET Framework 4 в <xref:System.Collections.Generic.IEnumerable%601> тип T является ковариантным, можно назначить объект типа `IEnumerabe(Of String)` объекту типа `IEnumerable(Of Object)` без применения каких-либо специальных методов преобразования.  
   
  Ковариантный делегат может быть назначен другому делегату того же типа, но с производным параметром универсального типа большей степени.  
   
- Дополнительные сведения см. в разделе [Ковариация и контравариантность](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8).  
+ Дополнительные сведения см. в разделе [Ковариация и контравариантность](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как объявить, расширить и реализовать ковариантный универсальный интерфейс. В нем также показано, как использовать неявное преобразование для классов, реализующих ковариантный интерфейс.  
@@ -71,6 +71,7 @@ ms.lasthandoff: 03/13/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Вариативность в универсальных интерфейсах](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)   
+ [Вариативность в универсальных интерфейсах](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [in](../../../csharp/language-reference/keywords/in-generic-modifier.md)   
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
+

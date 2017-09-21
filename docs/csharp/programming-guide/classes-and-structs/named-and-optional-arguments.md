@@ -1,5 +1,5 @@
 ---
-title: "Именованные и необязательные аргументы (руководство по программированию на C#) | Документы Майкрософт"
+title: "Именованные и необязательные аргументы (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,14 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9827553c1362d92bdf68a50e840b33474a22dcaa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Именованные и необязательные аргументы (Руководство по программированию на C#)
-[!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] вводит именованные и необязательные аргументы. *Именованные аргументы* позволяют указать аргумент для определенного параметра, связав этот аргумент с именем параметра, а не с его позицией в списке параметров. *Необязательные аргументы* позволяют опускать аргументы для некоторых параметров. Оба варианта можно использовать с методами, индексаторами, конструкторами и делегатами.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] вводит именованные и необязательные аргументы. *Именованные аргументы* позволяют указать аргумент для определенного параметра, связав этот аргумент с именем параметра, а не с его позицией в списке параметров. *Необязательные аргументы* позволяют опускать аргументы для некоторых параметров. Оба варианта можно использовать с методами, индексаторами, конструкторами и делегатами.  
   
  При использовании именованных и необязательных аргументов аргументы оцениваются в том порядке, в котором они отображаются в списке аргументов, а не в списке параметров.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
 -   выражение в форме `new ValType()`, где `ValType` — это тип значения, например, [enum](../../../csharp/language-reference/keywords/enum.md) или [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);  
   
--   выражение в форме [default(ValType)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md), где `ValType` — это тип значения.  
+-   выражение в форме [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), где `ValType` — это тип значения.  
   
  Необязательные параметры определяются в конце списка параметров после всех обязательных параметров. Если вызывающий объект предоставляет аргумент для любого из последующих необязательных параметров, он должен содержать аргументы для всех предыдущих необязательных параметров. Пробелы, разделенные запятыми, в списке аргументов не поддерживаются. Например, в следующем коде метод экземпляра `ExampleMethod` определяется одним обязательным и двумя необязательными параметрами.  
   
@@ -104,7 +105,7 @@ ms.lasthandoff: 03/13/2017
 Необязательные параметры в ExampleMethod  
   
 > [!NOTE]
->  Необязательные параметры можно объявлять с помощью класса .NET <xref:System.Runtime.InteropServices.OptionalAttribute>. Для параметров `OptionalAttribute` значение по умолчанию не требуется.  
+>  Необязательные параметры также можно объявлять с помощью класса .NET <xref:System.Runtime.InteropServices.OptionalAttribute>. Для параметров `OptionalAttribute` значение по умолчанию не требуется.  
   
 ## <a name="example"></a>Пример  
  В следующем примере конструктор `ExampleClass` имеет один параметр, который является необязательным. У метода экземпляра `ExampleMethod` есть один обязательный параметр, `required`, и два необязательных параметра, `optionalstr` и `optionalint`. Код в `Main` демонстрирует различные способы, которые можно использовать для вызова конструктора и метода.  
@@ -139,10 +140,11 @@ ms.lasthandoff: 03/13/2017
 -   Если два кандидата определяются как равно подходящие, предпочтение отдается кандидату без необязательных параметров, аргументы которых в вызове были опущены. Это — последовательность определения приоритетов в разрешении перегрузки для кандидатов с меньшим числом параметров.  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
  [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
  [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
  [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)
+

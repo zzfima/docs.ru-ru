@@ -1,5 +1,5 @@
 ---
-title: "-target:appcontainerexe (параметры компилятора C#) | Документы Майкрософт"
+title: "-target:appcontainerexe (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 168771506692308bc9b031df5c059e58e8d190b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77016d094ec7e82729a46208c17e2a77fe733103
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe (параметры компилятора C#)
-Если используется параметр компилятора **/target:appcontainerexe**, компилятор создает исполняемый файл Windows (EXE-файл), который должен запускаться в контейнере приложения. Этот параметр аналогичен [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), но предназначен для приложений [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+Если используется параметр компилятора **/target:appcontainerexe**, компилятор создает исполняемый файл Windows (EXE-файл), который должен запускаться в контейнере приложения. Этот параметр аналогичен [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), но предназначен для приложений [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /target:appcontainerexe  
 ```  
   
@@ -54,14 +55,14 @@ ms.lasthandoff: 03/13/2017
   
 2.  На вкладке **Приложение** в списке **Тип выходных данных** выберите **Приложение для Магазина Windows**.  
   
-     Этот параметр доступен только для шаблонов приложений под [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+     Этот параметр доступен только для шаблонов приложений под [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
- Сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Пример  
  Следующая команда компилирует `filename.cs` в исполняемый файл Windows, который может быть запущен только в контейнере приложения.  
   
-```  
+```console  
 csc /target:appcontainerexe filename.cs  
 ```  
   
@@ -69,3 +70,4 @@ csc /target:appcontainerexe filename.cs
  [/target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [/target:winexe (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)   
  [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+

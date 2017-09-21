@@ -1,5 +1,5 @@
 ---
-title: "Руководство по развертыванию .NET Framework для разработчиков | Документы Майкрософт"
+title: "Руководство по развертыванию .NET Framework для разработчиков"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 5ceb8014ce3b6cea08e8e6c8c347ccb1658ee0ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Руководство по развертыванию .NET Framework для разработчиков
@@ -76,9 +76,9 @@ ms.lasthandoff: 06/02/2017
 
 |Стратегия развертывания приложения|Доступные методы развертывания|Используемый распространяемый пакет .NET Framework|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Установка из Интернета|- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[веб-установщик](#redistributable-packages);|
-|Установка с диска|- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[автономный установщик](#redistributable-packages).|
-|Установка из локальной сети (для корпоративных приложений)|- [ClickOnce](#clickonce-deployment)|[Веб-установщик](#redistributable-packages) (см. ограничения в [ClickOnce](#clickonce-deployment)) или [автономный установщик](#redistributable-packages)|
+|Установка из Интернета|- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[Web installer](#redistributable-packages)|
+|Установка с диска|- [InstallShield](#installshield-deployment)<br />- [Набор инструментов WiX](#wix)<br />- [Установка вручную](#installing_manually)|[Offline installer](#redistributable-packages)|
+|Установка из локальной сети (для корпоративных приложений)|- [ClickOnce](#clickonce-deployment)|[Веб-установщик](#redistributable-packages) (см. ограничения в [ClickOnce](#clickonce-deployment) ) или [автономный установщик](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Распространяемые пакеты
  Платформа .NET Framework доступна в виде двух распространяемых пакетов: веб-установщик (загрузчик) и автономный установщик (автономный распространяемый пакет). В следующей таблице приводится сравнение этих двух пакетов.
@@ -90,7 +90,7 @@ ms.lasthandoff: 06/02/2017
 |Размер загрузки|Меньший (включает только установщик для целевой платформы) *|Больший*|
 |Языковые пакеты|Включены**|[Устанавливаются отдельно](#chain_langpack), если только не используется пакет, предназначенный для всех ОС|
 |Метод развертывания|Поддерживает все методы:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|Поддерживает все методы:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|
-|Расположение загрузки для развертывания ClickOnce|Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Собственный сервер или Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Расположение загрузки для развертывания ClickOnce|Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4,5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Собственный сервер или Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* Автономный установщик больше, так как он содержит компоненты для всех целевых платформ. По завершении работы программы установки операционная система Windows кэширует только использовавшийся установщик. Если удалить автономный установщик после установки, используемое место на диске будет таким же, как при использовании веб-установщика. Если средство, используемое для создания программы установки приложения (например, [InstallShield](#installshield-deployment)), предусматривает папку для файлов установки, которая удаляется после установки, автономный установщик может быть удален автоматически путем помещения его в папку установки.
 
@@ -217,9 +217,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!NOTE]
     > Даты выпусков языковых пакетов могут быть разными. Если требуемый языковой пакет отсутствует в центре загрузки, программа установки установит .NET Framework без языкового пакета. Если .NET Framework уже установлена на компьютере пользователя, программа установки установит только языковой пакет.
 
- Полный список параметров см. в подразделе [Параметры командной строки](#command-line-options).
+ Полный список параметров см. в подразделе [Параметры командной строки](#command-line-options) .
 
- Стандартные коды возврата см. в подразделе [Коды возврата](#return-codes).
+ Стандартные коды возврата см. в подразделе [Коды возврата](#return-codes) .
 
 <a name="chaining_custom"></a>
 ### <a name="chaining-by-using-a-custom-ui"></a>Привязка с использованием настраиваемого пользовательского интерфейса
@@ -298,7 +298,7 @@ Type: DWORD
 > [!IMPORTANT]
 > Языковые пакеты не содержат компоненты платформы .NET Framework, необходимые для запуска приложения, поэтому перед установкой языкового пакета необходимо установить .NET Framework с помощью веб-установщика или автономного установщика.
 
- Начиная с [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], имена пакетов имеют вид NDP <`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe, где `version` — номер версии платформы .NET Framework, `number` — номер статьи базы знаний Майкрософт, а `culture` означает [страну или регион](#supported-languages). Пример одного из этих пакетов — `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. Имена пакетов, перечислены в разделе [Распространяемые пакеты](#redistributable-packages).
+ Начиная с [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], имена пакетов имеют вид NDP <`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe, где `version` — номер версии платформы .NET Framework, `number` — номер статьи базы знаний Майкрософт, а `culture` означает [страну или регион](#supported-languages). Пример одного из этих пакетов — `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. Имена пакетов, перечислены в разделе [Redistributable Packages](#redistributable-packages) ранее в этой статье.
 
  Чтобы установить языковой пакет с помощью автономного установщика .NET Framework , необходимо привязать его к установке приложения. Например, для развертывания автономного установщика [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] с японским языковым пакетом используйте следующую команду:
 
@@ -308,7 +308,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
  Привязывать языковые пакеты при использовании веб-установщика не обязательно: программа установки установит языковой пакет, соответствующий параметру MUI пользователя. Если требуется установить другой язык, можно использовать параметр `/LCID` для задания языкового пакета.
 
- Полный список параметров командной строки см. в подразделе [Параметры командной строки](#command-line-options).
+ Полный список параметров командной строки см. в подразделе [Параметры командной строки](#command-line-options) .
 
 ### <a name="troubleshooting"></a>Устранение неполадок
 
@@ -333,7 +333,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
 - [Коды ошибок WinHttp](http://go.microsoft.com/fwlink/?LinkId=180948)
 
-#### <a name="other-error-codes"></a>Прочие коды ошибок
+#### <a name="other-error-codes"></a>Другие коды ошибок
  См. следующие разделы в библиотеке MSDN:
 
 - [Коды ошибок установщика Windows](http://go.microsoft.com/fwlink/?LinkId=180949)
@@ -405,3 +405,4 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
  [Устранение неполадок заблокированных установок и удалений .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
  [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)   
  [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

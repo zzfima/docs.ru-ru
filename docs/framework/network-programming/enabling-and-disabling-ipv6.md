@@ -1,44 +1,49 @@
 ---
-title: "Включение и отключение IPv6 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Включение и отключение IPv6"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dee5dd53a88bdd108b84d05cfb75799630836033
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Включение и отключение IPv6
-Для использования протокола IP версии 6, убедитесь, что используется версия операционной системы, которая поддерживает IP версии 6 и убедиться, что операционная система и классы сети настроитьы правильно.  
+# <a name="enabling-and-disabling-ipv6"></a>Включение и отключение IPv6
+Чтобы использовать протокол IPv6, убедитесь, что он поддерживается вашей версией операционной системы, а также что операционная система и сетевые классы настроены должным образом.  
   
-## Этапы конфигурации  
+## <a name="configuration-steps"></a>Шаги настройки  
  В следующей таблице перечислены различные конфигурации  
   
-|Операционная система IPv6\-enabled?|Сеть classify IPv6\-enabled?|Описание|  
-|-----------------------------------------|----------------------------------|--------------|  
-|Нет|Нет|Удалось выполнить синтаксический анализ адреса IP версии 6.|  
-|Нет|Да|Удалось выполнить синтаксический анализ адреса IP версии 6.|  
-|Да|Нет|Удалось выполнить синтаксический анализ адреса IP версии 6 и разрешения адреса IP версии 6 с помощью методов разрешения имен помечен как устаревший.|  
-|Да|Да|Удалось выполнить синтаксический анализ и разрешения адреса IP версии 6 с помощью все методы в том числе пометил устаревшими.|  
+|Операционная система поддерживает протокол IPv6?|Сетевые классы поддерживают протокол IPv6?|Описание|  
+|-------------------------------------|---------------------------------------|-----------------|  
+|Нет|Нет|Можно анализировать IPv6-адреса.|  
+|Нет|Да|Можно анализировать IPv6-адреса.|  
+|Да|Нет|Можно анализировать IPv6-адреса и разрешать их, используя методы разрешения имен, не помеченные как устаревшие.|  
+|Да|Да|Можно анализировать и разрешать IPv6-адреса, используя все методы, в том числе и помеченные как устаревшие.|  
   
- Помните, что, чтобы включить поддержку IP версии 6 для всех классов в пространстве имен System.Net, необходимо изменить файл конфигурации компьютера или в файле конфигурации приложения.  Файл конфигурации приложения имеет приоритет над файлом конфигурации компьютера.  
+ Обратите внимание, что если требуется включить поддержку IPv6 для всех классов в пространстве имен System.Net, необходимо изменить файл конфигурации компьютера или приложения. Файл конфигурации приложения имеет более высокий приоритет, чем файл конфигурации компьютера.  
   
- Пример, как изменить файл конфигурации компьютера *machine.config*, чтобы включить поддержку протоколы Ipv6 см. в разделе [Практическое руководство. Измените файл конфигурации компьютера, чтобы включить поддержку протоколы Ipv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  Также убедитесь, что включена поддержка IP версии 6 для операционной системы.  
+ Пример изменения файла конфигурации компьютера (*machine.config*) для включения поддержки IPv6 см. в разделе [Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Также убедитесь, что в операционной системе включена поддержка протокола IPv6.  
   
- Платформы .NET Framework имеет параметр конфигурации задан в файле конфигурации следующим образом  
+ В файле конфигурации для платформы .NET Framework параметры установлены следующим образом  
   
-```  
+```xml  
 <system.net>…  
     <settings>…  
         <ipv6 enabled="true"/>…  
@@ -46,12 +51,13 @@ caps.handback.revision: 9
 </system.net>  
 ```  
   
- Для платформы .NET Framework версии 1.1 и более ранних версий значение параметра конфигурации **ipv6 enabled** определяет, могут ли члены адреса IP версии 6, возвращают класса <xref:System.Net.Dns?displayProperty=fullName>.  
+ Для .NET Framework версии 1.1 и более ранних версий параметр конфигурации **ipv6 enabled** указывает, возвращают ли члены класса <xref:System.Net.Dns?displayProperty=fullName> IPv6-адреса.  
   
- Для платформы .NET Framework версии 2.0 и более поздних, если Windows поддерживает IP версии 6, то члены класса <xref:System.Net.Dns?displayProperty=fullName> \(например, метод <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName> \) вернет адреса IP версии 6 с одним ограничением.  Устаревшие члены DNS <xref:System.Net.Dns?displayProperty=fullName> \(например, метод <xref:System.Net.Dns.Resolve%2A?displayProperty=fullName> \) прочитают и распознают значения в файле конфигурации для параметра, включенного протоколы ipv6.  
+ Для .NET Framework версии 2.0 и более поздней версии, если Windows поддерживает IPv6, то члены класса <xref:System.Net.Dns?displayProperty=fullName> (например, метод <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName>) будут возвращать IPv6-адреса с одним ограничением. Устаревшие члены службы доменных имен <xref:System.Net.Dns?displayProperty=fullName> (например, метод <xref:System.Net.Dns.Resolve%2A?displayProperty=fullName>) считывают и распознают значение из файла конфигурации для параметра ipv6 enabled.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Протокол IP версии 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [Сокеты](../../../docs/framework/network-programming/sockets.md)   
  [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)   
- [Элемент \<ipv6\> \(параметры сети\)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+ [Элемент \<ipv6> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
+

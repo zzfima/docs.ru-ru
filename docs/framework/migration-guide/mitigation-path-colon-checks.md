@@ -1,5 +1,5 @@
 ---
-title: "Устранение рисков. Проверки двоеточий в путях | Документация Майкрософт"
+title: "Устранение рисков. Проверки двоеточий в путях"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5e2426fc81c8fd38994a4124cf71af8ec445bfb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8eb6864213aa4420f7a4373b9abbf173880f035f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-path-colon-checks"></a>Устранение рисков. Проверки двоеточий в путях
@@ -29,13 +29,13 @@ ms.lasthandoff: 04/18/2017
  Эти изменения блокируют некоторые пути URI, которые ранее поддерживались методами <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>.  
   
 ## <a name="mitigation"></a>Уменьшение  
- Чтобы обойти проблему ранее приемлемого пути, который больше не поддерживается методами <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>, можно сделать следующее:  
+ Чтобы обойти проблему с ранее допустимым путем, который больше не поддерживается методами <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> и <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>, можно сделать следующее:  
   
 -   Вручную удалить схему из URL-адреса. Например, удалить `file://` из URL-адреса.  
   
--   Перейти в URI <xref:System.Uri> и извлечь значение свойства <xref:System.Uri.LocalPath%2A?displayProperty=fullName>.  
+-   передать код URI в конструктор <xref:System.Uri> и получить значение свойства <xref:System.Uri.LocalPath%2A?displayProperty=fullName>;  
   
--   Отказаться от новой нормализации путей, установив для переключателя `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> значение `true`.  
+-   отказаться от новой нормализации путей, установив для параметра `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> значение `true`.  
   
     ```xml  
     <runtime>  

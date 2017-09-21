@@ -1,30 +1,35 @@
 ---
-title: "Пример синхронного сокета сервера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "синхронные сокеты сервера"
-  - "сокеты, примеры кода"
-  - "сокеты, синхронные сокеты сервера"
+title: "Пример синхронного сокета сервера"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- synchronous server sockets
+- sockets, code examples
+- sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6918042ac04a24f646ce8fd10a86d64c2aa4fd39
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Пример синхронного сокета сервера
-Следующий пример создает программу сервер, который получает запросы соединений от клиентов.  Сервер был построен с синхронным гнездом, поэтому выполнение серверного приложения приостановитьо, когда он дожидается подключения клиента.  Приложение получает строку из клиента, указывающее строку на консоль и затем вторит строку обратно клиенту.  Строка от клиента, должна содержать строку "\<EOF\>" для обозначения конца сообщения.  
+# <a name="synchronous-server-socket-example"></a>Пример синхронного сокета сервера
+Приведенная ниже программа создает сервер, который принимает запросы на соединение от клиентов. Сервер создается с использованием синхронного сокета, поэтому выполнение серверного приложения приостанавливается, пока оно ожидает подключения от клиента. Приложение получает строку от клиента, выводит ее в консоли, а затем отправляет строку обратно клиенту. В строке, полученной от клиента, конец сообщения должен быть помечен строкой "\<EOF>".  
   
 ```vb  
 Imports System  
@@ -86,7 +91,6 @@ Public Class SynchronousSocketListener
     End Sub  
   
 End Class 'SynchronousSocketListener  
-  
 ```  
   
 ```csharp  
@@ -165,7 +169,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пример синхронного сокета клиента](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
  [Использование синхронного сокета сервера](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)
+

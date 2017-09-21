@@ -1,5 +1,5 @@
 ---
-title: "SignTool.exe (программа подписывания) | Документы Майкрософт"
+title: "SignTool.exe (программа подписывания)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 4cdbfda05fe9acafc6d717f3e0d3b1a57026df9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (программа подписывания)
@@ -164,7 +164,7 @@ signtool [command] [options] [file_name | ...]
 |2|Выполнение завершено с предупреждениями.|  
   
 ## <a name="examples"></a>Примеры  
- Следующая команда добавляет файл каталога "MyCatalogFileName.cat" в базу данных системных компонентов и драйверов. Параметр `/v` создает уникальное имя, если это необходимо для предотвращения замены существующего файла каталога с именем `MyCatalogFileName.cat`.  
+ Следующая команда добавляет файл каталога "MyCatalogFileName.cat" в базу данных системных компонентов и драйверов. Параметр `/u` создает уникальное имя, если это необходимо для предотвращения замены существующего файла каталога с именем `MyCatalogFileName.cat`.  
   
 ```  
 signtool catdb /v /u MyCatalogFileName.cat  

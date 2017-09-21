@@ -1,5 +1,5 @@
 ---
-title: "Устаревшие типы в платформе .NET Framework | Документы Майкрософт"
+title: "Устаревшие типы в платформе .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,15 +18,14 @@ caps.latest.revision: 41
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
-ms.openlocfilehash: b7040d4c82c9434b2d24a579a93602660479ec59
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ab48dedaef24ea209c38939ee87a0321da55cf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Устаревшие типы в платформе .NET Framework
-<a id="obsolete-types-in-the-net-framework" class="xliff"></a>
+# <a name="obsolete-types-in-the-net-framework"></a>Устаревшие типы в платформе .NET Framework
 <a name="introduction"></a>В таблицах этой статьи перечислены типы, которые являются устаревшими в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Они сгруппированы по сборкам. Используйте следующие ссылки для просмотра списка устаревших типов и рекомендованных альтернатив в каждой сборке. Поскольку эти типы считаются устаревшими, все их члены также являются устаревшими. Список дополнительных устаревших членов в библиотеке классов платформы .NET Framework см. в разделе [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md).  
   
 -   [Устаревшие типы в системных сборках](#obsolete_types_in_system_assemblies)  
@@ -82,13 +81,11 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualC.dll](#visualc)  
   
 <a name="obsolete_types_in_system_assemblies"></a>   
-## Устаревшие типы в системных сборках
-<a id="obsolete-types-in-system-assemblies" class="xliff"></a>  
+## <a name="obsolete-types-in-system-assemblies"></a>Устаревшие типы в системных сборках  
  В следующих разделах перечислены типы, объявленные устаревшими в системных сборках. Такие сборки используются при разработке неспециализированных\- приложений, основанных на платформе .NET Framework.  
   
 <a name="mscorlib"></a>   
-### Сборка: mscorlib.dll
-<a id="assembly-mscorlibdll" class="xliff"></a>  
+### <a name="assembly-mscorlibdll"></a>Сборка: mscorlib.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -153,8 +150,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="Core"></a>   
-### Сборка: System.Core.dll
-<a id="assembly-systemcoredll" class="xliff"></a>  
+### <a name="assembly-systemcoredll"></a>Сборка: System.Core.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -163,8 +159,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="data"></a>   
-### Сборка: System.Data.dll
-<a id="assembly-systemdatadll" class="xliff"></a>  
+### <a name="assembly-systemdatadll"></a>Сборка: System.Data.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -176,8 +171,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="oracleclient"></a>   
-### Сборка: System.Data.OracleClient.dll
-<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
+### <a name="assembly-systemdataoracleclientdll"></a>Сборка: System.Data.OracleClient.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -193,8 +187,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="design"></a>   
-### Сборка: System.Design.dll
-<a id="assembly-systemdesigndll" class="xliff"></a>  
+### <a name="assembly-systemdesigndll"></a>Сборка: System.Design.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -216,8 +209,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="system"></a>   
-### Сборка: System.dll
-<a id="assembly-systemdll" class="xliff"></a>  
+### <a name="assembly-systemdll"></a>Сборка: System.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -232,8 +224,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### Сборка: System.EnterpriseServices.dll
-<a id="assembly-systementerpriseservicesdll" class="xliff"></a>  
+### <a name="assembly-systementerpriseservicesdll"></a>Сборка: System.EnterpriseServices.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -242,8 +233,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="net"></a>   
-### Сборка: System.Net.dll
-<a id="assembly-systemnetdll" class="xliff"></a>  
+### <a name="assembly-systemnetdll"></a>Сборка: System.Net.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -260,8 +250,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="servicemodel"></a>   
-### Сборка: System.ServiceModel.dll
-<a id="assembly-systemservicemodeldll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldll"></a>Сборка: System.ServiceModel.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -277,8 +266,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="web"></a>   
-### Сборка: System.Web.dll
-<a id="assembly-systemwebdll" class="xliff"></a>  
+### <a name="assembly-systemwebdll"></a>Сборка: System.Web.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -299,8 +287,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="mobile"></a>   
-### Сборка: System.Web.Mobile.dll
-<a id="assembly-systemwebmobiledll" class="xliff"></a>  
+### <a name="assembly-systemwebmobiledll"></a>Сборка: System.Web.Mobile.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -500,57 +487,53 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="workflow_activities"></a>   
-### Сборка: System.Workflow.Activities.dll
-<a id="assembly-systemworkflowactivitiesdll" class="xliff"></a>  
+### <a name="assembly-systemworkflowactivitiesdll"></a>Сборка: System.Workflow.Activities.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
-|Все типы в пространстве имен <xref:System.Workflow.Activities?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Activities?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
   
  [К началу](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### Сборка: System.Workflow.ComponentModel.dll
-<a id="assembly-systemworkflowcomponentmodeldll" class="xliff"></a>  
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>Сборка: System.Workflow.ComponentModel.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
-|Все типы в пространстве имен <xref:System.Workflow.ComponentModel>, кроме <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> и <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Compiler>, кроме <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> и <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Design>, кроме <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.ComponentModel>, кроме <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> и <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Compiler>, кроме <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> и <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.ComponentModel.Design>, кроме <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
   
  [К началу](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### Сборка: System.Workflow.Runtime.dll
-<a id="assembly-systemworkflowruntimedll" class="xliff"></a>  
+### <a name="assembly-systemworkflowruntimedll"></a>Сборка: System.Workflow.Runtime.dll  
   
 |Тип|Сообщение|  
 |----------|-------------| 
 |<xref:System.Activities.Statements.Interop>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>.\*.|  
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br />Типы Workflow Foundation 3.0 являются устаревшими. Вместо них используйте типы Workflow 4.0 из <xref:System.Activities>.\*.|   
-|Все типы в пространстве имен <xref:System.Workflow.Runtime>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.Configuration>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.DebugEngine>, кроме <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.Hosting>, кроме <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
-|Все типы в пространстве имен <xref:System.Workflow.Runtime.Tracking>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* являются устаревшими. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.Configuration>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.DebugEngine>, кроме <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.Hosting>, кроме <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
+|Все типы в пространстве имен <xref:System.Workflow.Runtime.Tracking>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Типы System.Workflow.\* не рекомендуются. Вместо этого используйте новые типы из <xref:System.Activities>.\*.|  
   
  [К началу](#introduction)  
   
 <a name="workflowservices"></a>   
-### Сборка: System.WorkflowServices.dll
-<a id="assembly-systemworkflowservicesdll" class="xliff"></a>  
+### <a name="assembly-systemworkflowservicesdll"></a>Сборка: System.WorkflowServices.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -579,8 +562,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="xaml"></a>   
-### Сборка: System.Xaml.dll
-<a id="assembly-systemxamldll" class="xliff"></a>  
+### <a name="assembly-systemxamldll"></a>Сборка: System.Xaml.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -589,8 +571,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="xml"></a>   
-### Сборка: System.Xml.dll
-<a id="assembly-systemxmldll" class="xliff"></a>  
+### <a name="assembly-systemxmldll"></a>Сборка: System.Xml.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -603,8 +584,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="WindowsBase"></a>   
-### Сборка: WindowsBase.dll
-<a id="assembly-windowsbasedll" class="xliff"></a>  
+### <a name="assembly-windowsbasedll"></a>Сборка: WindowsBase.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -613,20 +593,17 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
-## Устаревшие типы в сборках Microsoft
-<a id="obsolete-types-in-microsoft-assemblies" class="xliff"></a>  
+## <a name="obsolete-types-in-microsoft-assemblies"></a>Устаревшие типы в сборках Microsoft  
  В следующих разделах перечислены устаревшие типы в системных сборках корпорации Microsoft. Это сборки специального назначения, например, сборки для конкретного языка (как Microsoft.JScript.dll или Microsoft.VisualC.dll).  
   
 <a name="IEHost"></a>   
-### Сборка: IEHost.dll и IEExec.exe
-<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Сборка: IEHost.dll и IEExec.exe  
  Сборки IEHost.dll и IEExec.exe удалены из платформы .NET Framework. Все их типы и члены устарели и не поддерживаются, начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Эти сборки использовались для размещения элементов управления Windows Forms и для запуска исполняемых файлов в Internet Explorer. Взамен рекомендуется использовать ClickOnce, XAML-приложения браузера (XBAP) и Microsoft Silverlight.  
   
  [К началу](#introduction)  
   
 <a name="Engine"></a>   
-### Сборка: Microsoft.Build.Engine.dll
-<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildenginedll"></a>Сборка: Microsoft.Build.Engine.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -636,8 +613,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="jscript"></a>   
-### Сборка: Microsoft.JScript.dll
-<a id="assembly-microsoftjscriptdll" class="xliff"></a>  
+### <a name="assembly-microsoftjscriptdll"></a>Сборка: Microsoft.JScript.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -663,8 +639,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="VBCompat"></a>   
-### Сборка: Microsoft.VisualBasic.Compatibility.dll
-<a id="assembly-microsoftvisualbasiccompatibilitydll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Сборка: Microsoft.VisualBasic.Compatibility.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -739,8 +714,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="VBCompatData"></a>   
-### Сборка: Microsoft.VisualBasic.Compatibility.Data.dll
-<a id="assembly-microsoftvisualbasiccompatibilitydatadll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Сборка: Microsoft.VisualBasic.Compatibility.Data.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -797,8 +771,7 @@ ms.lasthandoff: 05/22/2017
  [К началу](#introduction)  
   
 <a name="visualc"></a>   
-### Сборка: Microsoft.VisualC.dll
-<a id="assembly-microsoftvisualcdll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualcdll"></a>Сборка: Microsoft.VisualC.dll  
   
 |Тип|Сообщение|  
 |----------|-------------|  
@@ -813,8 +786,7 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=fullName>|Сборка Microsoft.VisualC.dll устарела и существует только из соображений обратной совместимости.|  
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=fullName>|Сборка Microsoft.VisualC.dll устарела и существует только из соображений обратной совместимости.|  
   
-## См. также
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>См. также  
  [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)
 

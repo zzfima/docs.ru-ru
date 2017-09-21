@@ -44,7 +44,7 @@ ms.lasthandoff: 07/28/2017
   
 -   Некоторых операции запросов, например <xref:System.Linq.Enumerable.Count%2A> или <xref:System.Linq.Enumerable.Max%2A>, не имеют эквивалентных предложений выражения для запросов и должны выражаться как вызовы методов. Синтаксис запросов и синтаксис методов можно сочетать друг с другом различными способами. Дополнительные сведения см. в статье [Query syntax and method syntax in LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Синтаксис запросов и синтаксис методов в LINQ).  
   
--   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражения. Дополнительные сведения см. в статье [Expression trees](../expression-trees.md) (Деревья выражений).  
+-   Выражения запросов могут компилироваться в деревья выражений или в делегаты, в зависимости от типа, к которому применяется конкретный запрос. Запросы <xref:System.Collections.Generic.IEnumerable%601> компилируются в делегаты. Запросы <xref:System.Linq.IQueryable> и <xref:System.Linq.IQueryable%601> компилируются в деревья выражений. Дополнительные сведения см. в статье [Expression trees](../expression-trees.md) (Деревья выражений).  
 
 ## <a name="next-steps"></a>Следующие шаги
 

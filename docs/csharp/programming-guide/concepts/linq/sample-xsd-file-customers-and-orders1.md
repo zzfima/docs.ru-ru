@@ -1,5 +1,5 @@
 ---
-title: "Пример XSD-файла. Клиенты и заказы в пространстве имен | Документы Майкрософт"
+title: "Пример XSD-файла. Клиенты и заказы1"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3153fd207fb8718ad5847b8b5b516482464564e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7334431fecc06fa680b7a2f81c5ff34084a0c870
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Пример XSD-файла. Клиенты и заказы в пространстве имен
-Следующий файл XSD используется в различных примерах в документации [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Он содержит определение схемы XML (XSD) для раздела [Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). В схеме используются функции XSD `xs:key` и `xs:keyref` для определения того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связей между элементом `CustomerID` в каждом элементе `Order` и атрибутом `CustomerID` в каждом элементе `Customer`.  
+Следующий файл XSD используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Он содержит определение схемы XML (XSD) для раздела [Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). В схеме используются функции XSD `xs:key` и `xs:keyref` для определения того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связей между элементом `CustomerID` в каждом элементе `Order` и атрибутом `CustomerID` в каждом элементе `Customer`.  
   
  Пример написания запросов LINQ с использованием преимущества такой связи в предложении `Join` см. в разделе [Практическое руководство. Объединение двух коллекций (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
@@ -111,3 +112,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>См. также  
  [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

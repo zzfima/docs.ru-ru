@@ -1,32 +1,35 @@
 ---
-title: "Элемент &lt;Event&gt; (машинный код .NET) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Элемент &lt;Event&gt; (машинный код .NET)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3ea3a4233ca0b01cd4b6ebd328387fea1dd189de
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Элемент &lt;Event&gt; (машинный код .NET)
+# <a name="lteventgt-element-net-native"></a>Элемент &lt;Event&gt; (машинный код .NET)
 Применяет политику отражения среды выполнения к событию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-  
 <Event Name="event_name"   
        Browse="policy_type"   
        Dynamic="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -44,13 +47,13 @@ caps.handback.revision: 11
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*имя_метода*|Имя события. Тип события определяется родительским [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) или [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) элемента.|  
+|*method_name*|Имя события. Тип события определяется родительским элементом [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) или [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Все остальные атрибуты  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|*policy_setting*|Параметр, применяемый к этому типу политики для события. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|Параметр, применяемый к этому типу политики для события. Допустимые значения: `Auto`, `Excluded`, `Included` и `Required`. Дополнительные сведения см. в разделе [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -59,13 +62,14 @@ caps.handback.revision: 11
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Применяет политику отражения к типу и всем его членам.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Применяет политику отражения к сконструированному универсальному типу и всем его членам.|  
   
 ## <a name="remarks"></a>Примечания  
  Если политика события не определена явно, оно наследует политику среды выполнения своего родительского элемента.  
   
 ## <a name="see-also"></a>См. также  
- [Ссылка на файл конфигурации директив (rd.xml) среды выполнения](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)   
  [Параметры политики директив среды выполнения](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+

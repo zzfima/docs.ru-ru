@@ -1,6 +1,6 @@
 ---
 title: "Асинхронное программирование"
-description: "Асинхронное программирование"
+description: "Сведения о модели асинхронного программирования на уровне языка C#, которая реализуется в .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.translationtype: HT
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/14/2017
 
 Для кода, ограниченного ресурсами процессора, с помощью `await` выполняется операция, которая запускается в фоновом потоке методом `Task.Run`.
 
-Весь секрет именно в ключевом слове `await`, так как оно передает управление вызывающему объекту метода, выполнившего операцию `await`.  В конечном итоге это позволяет обеспечить высокую скорость реагирования пользовательского интерфейса или гибкость службы.
+Именно с помощью ключевого слова `await` творится вся магия. Оно передает управление вызывающему объекту метода, который выполнил `await`, позволяя, таким образом, пользовательскому интерфейсу или службе отвечать на запросы.
 
 Есть и другие подходы к написанию асинхронного кода без использования ключевых слов `async` и `await`. Их описание можно найти в приведенной выше статье, посвященной TAP. Однако далее в этом документе будут рассматриваться конструкции на уровне языка.
 
@@ -74,7 +74,7 @@ private DamageResult CalculateDamageDone()
 
 calculateButton.Clicked += async (o, e) =>
 {
-    // This line will yield control to the UI CalculateDamageDone()
+    // This line will yield control to the UI while CalculateDamageDone()
     // performs its work.  The UI thread is free to perform other work.
     var damageResult = await Task.Run(() => CalculateDamageDone());
     DisplayDamage(damageResult);
@@ -128,7 +128,7 @@ calculateButton.Clicked += async (o, e) =>
 Этот фрагмент кода скачивает код HTML с сайта www.dotnetfoundation.org и подсчитывает число вхождений в него строки ".NET".  С помощью ASP.NET MVC определяется метод веб-контроллера, который выполняет эту задачу, и возвращается число.
 
 > [!NOTE]
-> Если вы планируете выполнять анализ HTML, никогда не следует использовать регулярные выражения.  Если такая задача стоит перед рабочим кодом, используйте библиотеку анализа.
+> Если вы планируете проанализировать HTML в рабочем коде, не используйте регулярные выражения. Используйте библиотеку анализа.
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
@@ -180,7 +180,6 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 В этом примере показано, как можно получить данные `User` для набора `userId`.
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:
@@ -205,7 +204,6 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 Вот более лаконичный вариант этого кода, написанный с использованием LINQ:
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:

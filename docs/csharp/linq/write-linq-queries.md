@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e08c8e3594bedeab763895c8b6f7d78a2bbf56d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
   
- Обратите внимание на то, что запросы имеют тип <xref:System.Collections.Generic.IEnumerable%601>. Все эти запросы можно написать с помощью `var`, как показано в следующем примере:  
+ Обратите внимание, что запросы имеют тип <xref:System.Collections.Generic.IEnumerable%601>. Все эти запросы можно написать с помощью `var`, как показано в следующем примере:  
   
  `var query = from num in numbers...`  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
   
 ## <a name="method-syntax"></a>Синтаксис метода  
- Некоторые операции запросов должны быть выражены как вызов метода. Чаще всего применяются методы, которые возвращают одноэлементные числовые значения, такие как <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> и т. д. Эти методы необходимо вызывать в запросе последними, поскольку представляют только одно значение и не могут служить источником для дополнительной операции запроса. В следующем примере показан вызов метода в выражении запроса:  
+ Некоторые операции запросов должны быть выражены как вызов метода. Как правило, такие методы возвращают одноэлементные числовые значения, например <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> и другие. Эти методы необходимо вызывать в запросе последними, поскольку представляют только одно значение и не могут служить источником для дополнительной операции запроса. В следующем примере показан вызов метода в выражении запроса:  
   
  [!code-cs[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
- Из числа предыдущих запросов незамедлительно выполняется только запрос 4. Это связано с тем, что он возвращает одно значение, а не универсальную коллекцию <xref:System.Collections.Generic.IEnumerable%601>. Сам метод для вычисления значения должен использовать `foreach`.  
+ Из числа предыдущих запросов незамедлительно выполняется только запрос 4. Это связано с тем, что возвращается одно значение, а не универсальная коллекция <xref:System.Collections.Generic.IEnumerable%601>. Сам метод для вычисления значения должен использовать `foreach`.  
   
  Каждый из предыдущих запросов может быть написан с использованием неявной типизации по переменной [var](../language-reference/keywords/var.md), как показано в следующем примере:  
   
@@ -95,3 +96,4 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   [Пошаговое руководство. Написание запросов на C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [Выражения запросов LINQ](index.md)   
  [предложение where](../language-reference/keywords/where-clause.md)
+

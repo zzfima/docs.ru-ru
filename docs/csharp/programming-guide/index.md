@@ -1,5 +1,5 @@
 ---
-title: "Руководство по программированию на C# | Документация Майкрософт"
+title: "Руководство по программированию на C#"
 ms.date: 2017-05-02
 ms.prod: .net
 ms.technology:
@@ -32,33 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: a7c73e7b17275de0c9f305653005b84d2d1e8030
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 0c95459f21aebf1d5efe1482e74ca2724d283821
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 09/02/2017
 
 ---
-<a id="c-programming-guide" class="xliff"></a>
-
-# Руководство по программированию на C#
+# <a name="c-programming-guide"></a>Руководство по программированию на C#
 Этот раздел содержит подробные сведения о ключевых функциях языка C# и возможностях, которые платформа .NET Framework предоставляет для C#.  
   
- В текстах этого раздела обычно предполагается, что вы уже знакомы с языком C# и общими концепциями программирования. Если вы пока совсем новичок в программировании или в языке C#, рекомендуем вам посетить [центр для разработчиков на C#](http://go.microsoft.com/fwlink/?linkid=95125), где можно найти много руководств, примеров и видео для подготовки к началу работы.  
+ В текстах этого раздела обычно предполагается, что вы уже знакомы с языком C# и общими концепциями программирования. Если вы не знакомы с программированием или с языком C#, возможно, вам поможет интерактивное руководство [Начало работы с C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), которое не требует каких-либо знаний программирования.  
   
- Сведения о ключевых словах, операторах и директивах препроцессора см. в [справочнике по C#](../../csharp/language-reference/index.md). Сведения о спецификации языка C# размещены в статье [Спецификации языка C#](../../csharp/language-reference/language-specification.md).  
+ Сведения о ключевых словах, операторах и директивах препроцессора см. в [справочнике по C#](../../csharp/language-reference/index.md). Сведения о спецификации языка C# размещены в статье [Спецификации языка C#](../../csharp/language-reference/language-specification/index.md).  
   
-<a id="program-sections" class="xliff"></a>
-
-## Разделы о программе
+## <a name="program-sections"></a>Разделы о программе
 
 [Структура программы C#](../../csharp/programming-guide/inside-a-program/index.md)  
   
 [Main() и аргументы командной строки](../../csharp/programming-guide/main-and-command-args/index.md)  
  
-<a id="language-sections" class="xliff"></a>
-
-## Разделы о языке  
+## <a name="language-sections"></a>Разделы о языке  
 [Инструкции, выражения и операторы](../../csharp/programming-guide/statements-expressions-operators/index.md)  
 
  [Типы](../../csharp/programming-guide/types/index.md)  
@@ -97,9 +91,7 @@ ms.lasthandoff: 06/13/2017
   
  [Комментарии XML-документации](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-<a id="platform-sections" class="xliff"></a>
-
-## Разделы о платформе  
+## <a name="platform-sections"></a>Разделы о платформе  
  [Домены приложений (C# и Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Сборки и глобальный кэш сборок](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
@@ -116,8 +108,7 @@ ms.lasthandoff: 06/13/2017
   
  [Отражение](../../csharp/programming-guide/concepts/reflection.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по C#](../../csharp/language-reference/index.md)   
- [C#](../../csharp/csharp.md)
+ [C#](../../csharp/index.md)
+

@@ -1,20 +1,20 @@
 ---
-title: "Учебники по C# | Документы Майкрософт"
-description: "Учебники по C#"
+title: "Учебники по C#"
+description: "Эти руководства расскажут о возможностях языка C# и научат вас создавать на нем программы."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: bda4350a2a39676f39b5d5660fcde7ab3bee9377
+ms.translationtype: HT
+ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
+ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 
@@ -30,8 +30,6 @@ ms.lasthandoff: 05/23/2017
 * [Working with LINQ](working-with-linq.md) (Работа с LINQ). Демонстрирует множество функций LINQ и элементы языка, которые их поддерживают.
 
 * [Microservices hosted in Docker](microservices.md) (Микрослужбы, размещенные в Docker). Демонстрирует создание микрослужбы ASP.NET Core и ее размещение в Docker.
-
-* [Inheritance](inheritance.md) (Наследование). Демонстрирует, как наследование класса и интерфейса позволяют повторно использовать код в языке C#.
 
 * [String Interpolation](string-interpolation.md) (Интерполяция строк). Демонстрирует много вариантов применения интерполяции строк `$` в C#.
 

@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения о среде DLR | Документация Майкрософт"
+title: "Общие сведения о среде DLR"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/02/2017
   
  Примеры языков, разработанных с помощью среды DLR, включают перечисленные ниже.  
   
--   IronPython. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040).  
+-   IronPython. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [GitHub](https://github.com/IronLanguages/ironpython2).  
   
 -   IronRuby. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044).  
   
@@ -107,3 +107,4 @@ ms.lasthandoff: 06/02/2017
  [Среда CLR](../../../docs/standard/clr.md)   
  [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [Пошаговое руководство. Создание и использование динамических объектов](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

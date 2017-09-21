@@ -1,5 +1,5 @@
 ---
-title: "Конструкторы (руководство по программированию на C#) | Документы Майкрософт"
+title: "Конструкторы (Руководство по программированию на C#)"
 ms.date: 2017-05-05
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 064d8f8b3068596cd1d4fc2dd073f165f0ebadcb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 400afcda2fe30bf0e3621ee4c4247486e01d3ee4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="constructors-c-programming-guide"></a>Конструкторы (Руководство по программированию на C#)
@@ -50,13 +50,13 @@ ms.lasthandoff: 05/15/2017
 
 [!code-cs[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-Если конструктор поддерживает реализацию в виде оператора, можно использовать [определение тела выражения](../statements-expressions-operators/expression-bodied-members.md). В следующем примере определяется класс `Location`, конструктор которого имеет один строковый параметр *name*. Определение тела выражения присваивает аргумент свойству `Name`.
+Если конструктор поддерживает реализацию в виде оператора, можно использовать [определение тела выражения](../statements-expressions-operators/expression-bodied-members.md). В следующем примере определяется класс `Location`, конструктор которого имеет один строковый параметр *name*. Определение тела выражения присваивает аргумент полю `locationName`.
 
 [!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
 ## <a name="static-constructors"></a>Статические конструкторы
 
-В приведенных выше примерах показаны конструкторы экземпляров, которые создают новый объект. В классе или структуре также может быть статический конструктор, который инициализирует статические члены типа.  Статические конструкторы не имеют параметров. Если не предоставить статический конструктор для инициализации статических полей, компилятор C# будет использовать статический конструктор по умолчанию, который инициализирует поля значениями по умолчанию, как указано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md). 
+В приведенных выше примерах показаны конструкторы экземпляров, которые создают новый объект. В классе или структуре также может быть статический конструктор, который инициализирует статические члены типа.  Статические конструкторы не имеют параметров. Если не предоставить статический конструктор для инициализации статических полей, компилятор C# будет использовать статический конструктор по умолчанию, который инициализирует статические поля значениями по умолчанию, как указано в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md). 
 
 В следующем примере статический конструктор используется для инициализации статического поля.
 
@@ -85,3 +85,4 @@ ms.lasthandoff: 05/15/2017
  [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [static](../../../csharp/language-reference/keywords/static.md)   
  [Why Do Initializers Run In The Opposite Order As Constructors? Part One](http://go.microsoft.com/fwlink/?LinkId=112374) (Почему инициализаторы выполняются в порядке, обратном действию конструкторов? Часть 1)
+

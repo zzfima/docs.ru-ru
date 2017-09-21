@@ -1,5 +1,5 @@
 ---
-title: "foreach, in (справочник по C#) | Документы Майкрософт"
+title: "foreach, in (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,15 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa5408dbe214af2c21edd394f74fb8b675f2a099
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aed1d4f086f0b1334df750fd912d20d66326a043
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Справочник по C#)
-Оператор `foreach` повторяет группу внедренных операторов для каждого элемента в массиве или коллекции объектов, которые реализуют интерфейс <xref:System.Collections.IEnumerable?displayProperty=fullName> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Оператор `foreach` используется для итерации по коллекции для получения необходимых сведений, однако его нельзя использовать для добавления или удаления элементов из исходной коллекции во избежание непредвиденных побочных эффектов. Если требуется добавить или удалить элементы из исходной коллекции, используйте цикл [for](../../../csharp/language-reference/keywords/for.md).  
+Оператор `foreach` повторяет группу встроенных операторов для каждого элемента в массиве или коллекции объектов, которые реализуют интерфейс <xref:System.Collections.IEnumerable?displayProperty=fullName> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Оператор `foreach` используется для итерации по коллекции для получения необходимых сведений, однако его нельзя использовать для добавления или удаления элементов из исходной коллекции во избежание непредвиденных побочных эффектов. Если требуется добавить или удалить элементы из исходной коллекции, используйте цикл [for](../../../csharp/language-reference/keywords/for.md).  
   
  Внедренные операторы продолжают выполняться для каждого элемента массива или коллекции. После завершения итерации для всех элементов коллекции управление передается следующему оператору после блока `foreach`.  
   
@@ -74,3 +74,4 @@ ms.lasthandoff: 03/13/2017
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
  [Операторы итерации](../../../csharp/language-reference/keywords/iteration-statements.md)   
  [for](../../../csharp/language-reference/keywords/for.md)
+

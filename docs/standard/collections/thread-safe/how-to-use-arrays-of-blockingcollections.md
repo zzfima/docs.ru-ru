@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Использование массивов для блокировки коллекций в конвейере | Документация Майкрософт"
+title: "Практическое руководство. Использование массивов для блокировки коллекций в конвейере"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 234dfa6a3a905b9db53ae8699bbe1c62f3411184
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8dda929df8e3de907c228bbef85749cba5cabc25
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Практическое руководство. Использование массивов для блокировки коллекций в конвейере
-В следующем примере показано, как использовать массивы объектов <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> со статическими методами, например <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>, для реализации быстрой и гибкой передачи данных между компонентами.  
+В приведенном ниже примере показано, как использовать массивы объектов <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> со статическими методами, например методами <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A>, для реализации быстрой и гибкой передачи данных между компонентами.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показана основная реализация конвейера, в котором каждый объект выполняет параллельную операцию получения данных из входной коллекции, выполняет их преобразование и передает их в выходную коллекцию.  
@@ -33,3 +34,4 @@ ms.lasthandoff: 04/18/2017
 ## <a name="see-also"></a>См. также  
  <xref:System.Collections.Concurrent?displayProperty=fullName>   
  [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)
+

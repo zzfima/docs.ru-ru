@@ -1,59 +1,64 @@
 ---
-title: "dangerousThreadingAPI MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "suspending threads"
-  - "DangerousThreadingAPI MDA"
-  - "managed debugging assistants (MDAs), dangerous threading operations"
-  - "threading [.NET Framework], suspending"
-  - "MDAs (managed debugging assistants), dangerous threading operations"
-  - "Suspend method"
-  - "threading [.NET Framework], managed debugging assistants"
+title: dangerousThreadingAPI MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- suspending threads
+- DangerousThreadingAPI MDA
+- managed debugging assistants (MDAs), dangerous threading operations
+- threading [.NET Framework], suspending
+- MDAs (managed debugging assistants), dangerous threading operations
+- Suspend method
+- threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd0d8b8a4a96e1e92aa8cf58ee49adf7b51857ab
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# dangerousThreadingAPI MDA
-Управляемый помощник по отладке \(MDA\) `dangerousThreadingAPI` активируется, если метод <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName> вызывается для потока, отличного от текущего.  
+# <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
+Помощник по отладке управляемого кода `dangerousThreadingAPI` (MDA) активируется, если метод <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName> вызывается не для текущего потока.  
   
-## Признаки  
- Приложение не отвечает или зависает на неопределенный срок.   Системные данные или данные приложения могут оставаться в непредсказуемом состоянии временно или постоянно после того, как приложение закроется.  Некоторые операции не завершаются должным образом.  
+## <a name="symptoms"></a>Признаки  
+ Приложение не отвечает или зависает на неопределенное время. Данные системы или приложения могут остаться в непредсказуемом состоянии на какое-то время или даже после завершения работы приложения. Некоторые операции не завершаются должным образом.  
   
- Вследствие того, что данная проблема носит случайный характер, признаки могут быть разнообразными.  
+ Из-за случайного характера возникновения этой проблемы ее симптомы могут быть самыми разными.  
   
-## Причина  
- Поток асинхронно остановлен другим потоком с помощью метода <xref:System.Threading.Thread.Suspend%2A>.  Невозможно определить, когда остановка другого потока будет действительно безопасной, при том что поток может находиться в процессе выполнения операции.   Остановка потока может привести к повреждению данных, или нарушению инвариантов.   Если приостановить поток и не возобновлять его работу с помощью метода <xref:System.Threading.Thread.Resume%2A>, приложение может зависнуть на неопределенный срок, и есть вероятность повреждения данных приложения.  Данные методы помечены как устаревшие.  
+## <a name="cause"></a>Причина  
+ Поток асинхронно приостанавливается другим потоком, использующим метод <xref:System.Threading.Thread.Suspend%2A>. Определить, безопасно ли приостанавливать другой поток, который в текущий момент времени может выполнять другие операции, невозможно. Приостановка потока может привести к повреждению данных или нарушению инвариантов. Если поток приостанавливается и впоследствии не возобновляется с помощью метода <xref:System.Threading.Thread.Resume%2A>, приложение может зависнуть на неопределенное время, что может привести к повреждению его данных. Эти методы помечены как устаревшие.  
   
- Если примитивы синхронизации удерживаются в целевом потоке, они остаются там во время остановки потока.  Это может привести к взаимоблокировке в том случае, если другой поток, например, поток, выполняющий метод <xref:System.Threading.Thread.Suspend%2A>, попытается получить блокировку примитива.  В данной ситуации проблема проявляется как взаимоблокировка.  
+ Если целевой поток удерживает примитивы синхронизации, они остаются в этом состоянии на протяжении всего времени приостановки. Это может привести к взаимоблокировкам в тех случаях, когда другой поток, например поток, выполняющий <xref:System.Threading.Thread.Suspend%2A>, пытается получить блокировку примитива. В этой ситуации проблема проявляется в виде взаимоблокировки.  
   
-## Решение  
- Следует избегать разработок, для которых требуется использование <xref:System.Threading.Thread.Suspend%2A> и <xref:System.Threading.Thread.Resume%2A>.  Для совместной работы потоков следует использовать примитивы синхронизации, такие как <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> или оператор C\# `lock`.  Если необходимо использовать данные методы, следует сократить интервал времени и свести к минимуму объем кода, который выполняется, пока поток остановлен.  
+## <a name="resolution"></a>Решение  
+ По возможности не используйте в коде методы <xref:System.Threading.Thread.Suspend%2A> и <xref:System.Threading.Thread.Resume%2A>. Чтобы обеспечить взаимодействие между потоками, используйте примитивы синхронизации, например <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> или оператор `lock` C#. Если эти методы все же необходимо использовать, постарайтесь свести к минимуму продолжительность приостановки потока и объем кода, выполняемого в это время.  
   
-## Влияние на среду выполнения  
- Данный помощник по отладке управляемого кода не оказывает влияния на среду CLR.  Он только сообщает сведения о небезопасных операциях с потоками.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR. Он только сообщает сведения о небезопасных потоковых операциях.  
   
-## Output  
- MDA идентифицирует небезопасный поточный метод, который стал причиной его активации.  
+## <a name="output"></a>Вывод  
+ Этот помощник идентифицирует небезопасный потоковый метод, который стал причиной его активации.  
   
-## Configuration  
+## <a name="configuration"></a>Конфигурация  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <dangerousThreadingAPI />  
@@ -61,14 +66,14 @@ caps.handback.revision: 10
 </mdaConfig>  
 ```  
   
-## Пример  
- В следующем примере кода демонстрируется вызов метода <xref:System.Threading.Thread.Suspend%2A>, который стал причиной активации `dangerousThreadingAPI`:  
+## <a name="example"></a>Пример  
+ В следующем примере кода демонстрируется вызов метода <xref:System.Threading.Thread.Suspend%2A>, в результате которого активируется помощник `dangerousThreadingAPI`.  
   
 ```  
 using System.Threading;  
 void FireMda()  
 {  
-    Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
+Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
     t.Start();  
     // The following line activates the MDA.  
     t.Suspend();   
@@ -77,7 +82,8 @@ void FireMda()
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Threading.Thread>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Оператор lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Оператор lock](~/docs/csharp/language-reference/keywords/lock-statement.md)
+

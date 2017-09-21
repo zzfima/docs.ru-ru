@@ -1,5 +1,5 @@
 ---
-title: "Новые возможности C# — руководство по языку C# | Документы Майкрософт"
+title: "Новые возможности C# — руководство по C#"
 description: "Как развивается язык C#"
 keywords: "C#, последние функции, новые возможности, Roslyn"
 author: BillWagner
@@ -10,20 +10,27 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f337a916f0a15c6e81b228ec378a34e97055f68e
+ms.translationtype: HT
+ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
+ms.openlocfilehash: 0a328f62a02aea223340fcc00e839e841041a7d6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
 # <a name="whats-new-in-c"></a>Новые возможности C# #
 
+Эта страница содержит план новых возможностей в каждой основной версии языка C#. Перейдя по ссылкам ниже, вы сможете получить подробные сведения по основным возможностям, добавленным в каждом выпуске.
+
+> [!IMPORTANT]
+> В некоторых возможностях используются типы и методы в *стандартной библиотеке* языка C#, например, обработка исключений. Каждая инструкция и выражение `throw` проверяется, чтобы убедиться, что вызываемый объект является производным от @System.Exception. Аналогичным образом каждая инструкция `catch` проверяется, чтобы убедиться, что перехваченный тип является производным от @System.Exception. В каждой версии могут добавляться новые требования. Чтобы использовать новейшие возможности языка в старой среде, может потребоваться установить определенные библиотеки. Все они описаны на странице для каждой конкретной версии. Дополнительные сведения о связи между языком и библиотекой, а также общие сведения о такой зависимости см. [здесь](relationships-between-language-and-library.md). 
+
+* [C# 7.1](csharp-7-1.md).
+    - На этой странице описываются новейшие функции в языке C#. Здесь речь идет о C# 7.1, который сейчас доступен в [Visual Studio 2017 версии 15.3](https://www.visualstudio.com/vs/whatsnew/) и в [пакете SDK для .NET Core 2.0](../../core/whats-new/index.md).
 
 * [C# 7](csharp-7.md)
-    - На этой странице описываются новейшие функции в языке C#. Здесь речь идет о C# 7, который сейчас доступен в [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/).
-
+    - На этой странице описываются функции, добавленные в C# 7. Они были добавлены в [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/), [.NET Core 1.0](../../core/whats-new/index.md) и более поздние версии.
+     
 * [C# 6](csharp-6.md)
     - На этой странице описываются функции, добавленные в C# 6. Эти функции доступны в Visual Studio 2015 для разработчиков Windows и в .NET Core 1.0 для разработчиков, исследующих C# на macOS и Linux.
 
@@ -31,7 +38,7 @@ ms.lasthandoff: 05/23/2017
     - This page describes C# Interactive, an interactive Read Eval Print Loop (REPL) that you can use to explore the C# language. You can use it to write code interactively and see it execute immediately, without any compile or build step.
 -->
 * [Кроссплатформенная поддержка](../../core/index.md)
-    - Благодаря поддержке .NET Core язык C# работает на многих платформах. Если вы хотите попробовать C# на macOS или на одном из многих поддерживаемых дистрибутивов Linux, получите дополнительные сведения о .NET Core.
+    - Благодаря поддержке .NET Core язык C# работает на многих платформах. Если вы хотите попробовать C# на macOS или на одном из множества поддерживаемых дистрибутивов Linux, узнайте больше о .NET Core.
 
 <!--
 - [.NET Compiler Platform SDK](../roslyn/index.md):

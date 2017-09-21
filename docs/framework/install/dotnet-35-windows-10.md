@@ -1,29 +1,30 @@
 ---
 title: "Установка платформы .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8"
-description: "Узнайте, как можно установить платформу .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8"
+description: "Сведения об установке платформы .NET Framework 3.5 в Windows 10, Windows 8.1 и Windows 8."
 author: rlander
+ms.author: mairaw
 keywords: ".NET Framework, установка"
-ms.date: 04/20/2017
+ms.date: 05/26/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64ba9cb408e565b20a001382c3b39a41602b6e55
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Установка платформы .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8
 
-Платформа .NET Framework 3.5 может вам потребоваться для запуска приложения на Windows 10, Windows 8.1 и Windows 8. Эти инструкции можно использовать и для более ранних версий Windows.
+Платформа .NET Framework 3.5 может потребоваться для запуска приложений в Windows 10, Windows 8.1 и Windows 8. Эти инструкции можно использовать и для более ранних версий Windows.
 
 ## <a name="install-the-net-framework-35-on-demand"></a>Установка платформы .NET Framework 3.5 по запросу
 
-Следующее диалоговое окно настройки может появиться, если вы попробуете запустить приложение, которому требуется .NET Framework 3.5. Выберите вариант **Установить этот компонент**, чтобы включить .NET Framework 3.5. Для использования этого варианта требуется подключение к Интернету.
+Если вы попробуете запустить приложение, которому требуется платформа .NET Framework 3.5, может появиться следующее окно настройки. Выберите вариант **Установить этот компонент**, чтобы включить .NET Framework 3.5. Для использования этого варианта требуется подключение к Интернету.
 
 ![Диалоговое окно установки .NET Framework](./media/dotnet-framework-installation-dialog.jpg)
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 07/28/2017
 
 1. Нажмите клавишу Windows ![с логотипом Windows](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) на клавиатуре, введите "Компоненты Windows" и нажмите клавишу ВВОД. Откроется диалоговое окно **Включение и отключение компонентов Windows**.
 
-2. Установите флажок **.NET Framework 3.5 (включает .NET 2.0 и 3.0)** , нажмите кнопку "OK" и перезагрузите компьютер при появлении соответствующего запроса.
+2. Установите флажок **.NET Framework 3.5 (включает .NET 2.0 и 3.0)**, нажмите кнопку **OK** и перезагрузите компьютер при появлении соответствующего запроса.
 
    ![Установка .NET с помощью панели управления](./media/dotnet-control-panel.png)
 

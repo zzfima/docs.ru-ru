@@ -1,53 +1,59 @@
 ---
-title: "Runtime Information ETW Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "runtime information events [.NET Framework]"
-  - "ETW, runtime information events"
+title: "События сведений времени выполнения (трассировка событий Windows)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- runtime information events [.NET Framework]
+- ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 caps.latest.revision: 6
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 6
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Runtime Information ETW Events
-Эти события ETW регистрируют сведения о среде выполнения, включая SKU, номер версии, способ активации среды выполнения, параметры командной строки, с которыми она запущена, GUID \(при наличии\) и другие соответствующие данные.  Если в процессе одновременно выполняется несколько сред выполнения, данные, предоставленные этими событиями \(ClrInstanceID\) помогают разрешить неоднозначность, связанную со средами выполнения.  
+# <a name="runtime-information-etw-events"></a>События сведений времени выполнения (трассировка событий Windows)
+Эти события трассировки событий Windows регистрируют информацию о среде выполнения, включая SKU, номер версии, способ активизации среды выполнения, параметры командной строки при ее запуске, GUID (если применимо) и другие релевантные данные. Если в процессе выполняется одновременно несколько сред выполнения, в этих событиях предоставляются сведения (ClrInstanceID), которые позволяют однозначно определить нужную среду.  
   
- В следующей таблице приведены два события сведений о среде выполнения.  Эти события можно вызвать любым ключевым словом или маской. \(Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).\)  
+ В таблице ниже представлены два события со сведениями о среде выполнения. Эти события могут вызываться с любым ключевым словом или маской. (Дополнительные сведения см. в разделе [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)  
   
 |Событие|Идентификатор события|Поставщик|Описание|  
-|-------------|---------------------------|---------------|--------------|  
-|`RuntimeInformationEvent`|187|CLRRuntime|Создается при загрузке среды выполнения.|  
+|-----------|--------------|--------------|-----------------|  
+|`RuntimeInformationEvent`|187|CLRRuntime|Вызывается при загрузке среды выполнения.|  
 |`RuntimeInformationDCStart`|187|CLRRundown|Перечисляет загруженные среды выполнения.|  
   
- В следующей таблице приведены сведения о событии.  
+ В таблице ниже представлены данные события.  
   
 |Имя поля|Тип данных|Описание|  
-|--------------|----------------|--------------|  
-|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра среды CLR или CoreCLR.|  
-|Sku|win:UInt16|1 – среда CLR настольного компьютера.<br /><br /> 2 – CoreCLR.|  
-|BclVersion – основной номер версии|win:UInt16|Основной номер версии mscorlib.dll.|  
-|BclVersion – дополнительный номер версии|win:UInt16|Дополнительный номер версии mscorlib.dll.|  
-|BclVersion – номер построения|win:UInt16|Номер построения mscorlib.dll.|  
-|BclVersion – QFE|win:UInt16|Исправленный номер версии mscorlib.dll.|  
-|VMVersion – основной номер версии|win:UInt16|Версия clr.dll или coreclr.dll, в зависимости от SKU.|  
-|VMVersion – дополнительный номер версии|win:UInt16|Дополнительный номер версии clr.dll или coreclr.dll, в зависимости от SKU.|  
-|VMVersion – номер построения|win:UInt16|Номер построения clr.dll или coreclr.dll.|  
-|VMVersion – QFE|win:UInt16|Исправленный номер версии clr.dll или coreclr.dll.|  
-|StartupFlags|win:UInt32|Флаги запуска определены в mscoree.h.|  
-|StartupMode|win:UInt8|0x01 — управляемый выполняемый.<br /><br /> 0x02 — размещаемая среда CLR.<br /><br /> 0x04 — Управляемый метод взаимодействия C\+\+.<br /><br /> 0x08 — COM\-активируемый.<br /><br /> 0x10 — Другое.|  
-|CommandLine|win:UnicodeString|Значение отличается от null, только если StartupMode\=0x01.|  
-|ComObjectGUID|win:GUID|Значение отличается от null, только если StartupMode\=0x08.|  
-|RuntimeDLLPath|win:UnicodeString|Путь к DLL\-файлу среды CLR, загруженному в процесс.|  
+|----------------|---------------|-----------------|  
+|ClrInstanceID|win:UInt16|Уникальный идентификатор экземпляра CLR или CoreCLR.|  
+|Sku|win:UInt16|1 — Desktop CLR.<br /><br /> 2 — CoreCLR.|  
+|BclVersion — основной номер версии|win:UInt16|Основной номер версии библиотеки mscorlib.dll.|  
+|BclVersion — дополнительный номер версии|win:UInt16|Дополнительный номер версии библиотеки mscorlib.dll.|  
+|BclVersion — номер сборки|win:UInt16|Номер сборки библиотеки mscorlib.dll.|  
+|BclVersion — QFE|win:UInt16|Номер версии исправления библиотеки mscorlib.dll.|  
+|VMVersion — основной номер версии|win:UInt16|Версия clr.dll или coreclr.dll в зависимости от номера SKU.|  
+|VMVersion — дополнительный номер версии|win:UInt16|Дополнительный номер версии clr.dll или coreclr.dll в зависимости от номера SKU.|  
+|VMVersion — номер сборки|win:UInt16|Номер сборки библиотеки clr.dll или coreclr.dll.|  
+|VMVersion — QFE|win:UInt16|Номер исправления библиотеки clr.dll или coreclr.dll.|  
+|StartupFlags|win:UInt32|Флаги загрузки, определенные в mscoree.h.|  
+|StartupMode|win:UInt8|0x01 — управляемый исполняемый файл.<br /><br /> 0x02 — размещенная среда CLR.<br /><br /> 0x04 — управляемая модель взаимодействия C++.<br /><br /> 0x08 — активация COM.<br /><br /> 0x10 — другое.|  
+|CommandLine|win:UnicodeString|Отличное от NULL значение только для StartupMode=0x01.|  
+|ComObjectGUID|win:GUID|Отличное от NULL значение только для StartupMode=0x08.|  
+|RuntimeDLLPath|win:UnicodeString|Путь к DLL-файлу среды CLR, который был загружен в процесс.|  
   
-## См. также  
- [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>См. также  
+ [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+

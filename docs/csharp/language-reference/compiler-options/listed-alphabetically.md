@@ -1,5 +1,5 @@
 ---
-title: "Параметры компилятора C# в алфавитном порядке (C#) | Документы Майкрософт"
+title: "Параметры компилятора C# в алфавитном порядке"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 91582d214c2f8a72d383a0ac17e409167fda5065
+ms.translationtype: HT
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
@@ -44,14 +44,14 @@ ms.lasthandoff: 05/10/2017
 |------------|-------------|  
 |[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|Считывает файл ответов с дополнительными параметрами.|  
 |[/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Отображает сообщение об использовании в stdout.|  
-|`/additionalfile`|Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.|  
+|/additionalfile|Имена дополнительных файлов, которые непосредственно не влияют на создание кода, но могут использоваться анализаторами для выдачи ошибок или предупреждений.|  
 |[/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Включает указанные модули в эту сборку.|  
-|`/analyzer`|Запускает анализаторы из этой сборки (краткая форма: /a)|  
+|/analyzer|Запускает анализаторы из этой сборки (краткая форма: /a)|  
 |[/appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|Указывает расположение файла app.config во время привязки сборки.|  
 |[/baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Задает базовый адрес библиотеки для сборки.|  
-|[/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Создает файл отчета об ошибках. Этот файл будет отправляться вместе со сведениями о сбое, если параметр используется с **/errorreport:prompt** или **/errorreport:send**.|  
+|[/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Создает файл отчета об ошибках. Этот файл будет отправляться вместе со сведениями о сбое, если параметр используется с /errorreport:prompt или /errorreport:send.|  
 |[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Указывает компилятору создавать проверки переполнения.|  
-|`/checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|  
+|/checksumalgorithm:\<алгоритм>|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|  
 |[/codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Указывает кодовую страницу, используемую при открытии исходных файлов.|  
 |[/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|Выдает сведения об отладке.|  
 |[/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|Определяет символы условной компиляции|  
@@ -62,16 +62,16 @@ ms.lasthandoff: 05/10/2017
 |[/fullpaths](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|Указывает компилятору создавать полные пути.|  
 |[/help](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Отображает сообщение об использовании в stdout.|  
 |[/highentropyva](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|Указывает, что поддерживается технология ASLR с высокой энтропией.|  
-|**/incremental**|Включает инкрементную компиляцию [устарело].|  
+|/incremental|Включает инкрементную компиляцию [устарело].|  
 |[/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|Задает контейнер ключа для строгого имени.|  
 |[/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|Задает файл ключа для строгого имени.|  
-|[/langversion:\<string>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|Укажите режим языковой версии: ISO-1, ISO-2, 3, 4, 5, 6 или Default|  
+|[/langversion:\<string>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|Укажите режим языковой версии: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 или Latest |  
 |[/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|Задает дополнительные каталоги для поиска ссылок.|  
 |[/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|Делает сведения о типах COM в указанных сборках доступными для проекта.|  
 |[/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|Включает указанные файлы ресурсов в эту сборку.|  
 |[/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|Задает тип, содержащий точку входа (все другие возможные точки входа игнорируются).|  
 |[/moduleassemblyname](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)|Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.|  
-|`/modulename:<string>`|Укажите имя исходного модуля.|  
+|/modulename:\<строка>|Укажите имя исходного модуля.|  
 |[/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|Указывает, что компилятор не должен автоматически включать файл CSC.RSP.|  
 |[/nologo](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|Запрещает отображение сообщения компилятора об авторских правах.|  
 |[/nostdlib](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|Указывает компилятору не ссылаться на стандартную библиотеку (mscorlib.dll).|  
@@ -79,14 +79,16 @@ ms.lasthandoff: 05/10/2017
 |[/nowin32manifest](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)|Указывает компилятору не внедрять манифест приложения в исполняемый файл.|  
 |[/optimize](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|Включает или отключает оптимизацию.|  
 |[/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|Задает имя выходного файла (по умолчанию это базовое имя файла с классом main или имя первого файла).|  
-|`/parallel[+&#124;-]`|Указывает, следует ли использовать параллельную сборку (+).|  
+|/parallel[+&#124;-]|Указывает, следует ли использовать параллельную сборку (+).|  
 |[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|Указывает имя и расположение PDB-файла.|  
 |[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|Ограничивает платформу выполнения кода: x86, Itanium, x64, anycpu или anycpu32bitpreferred. Значение по умолчанию — anycpu.|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Задает язык, используемый для вывода компилятора.|  
 |[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|Включает все файлы в текущем каталоге и подкаталогах в соответствии с заданным шаблоном.|  
 |[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|Ссылается на метаданные из указанных файлов сборки.|  
+|[/refout](refout-compiler-option.md)|Создание ссылочной сборки в дополнение к основной.|  
+|[/refonly](refonly-compiler-option.md)|Создание ссылочной сборки вместо основной.|  
 |[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|Внедряет указанный ресурс.|  
-|`/ruleset:<file>`|Укажите файл набора правил, который отключает определенные диагностики.|  
+|/ruleset:\<файл>|Укажите файл набора правил, который отключает определенные диагностики.|  
 |[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|Задает минимальную версию подсистемы, которую может использовать исполняемый файл.|  
 |[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Задает формат выходного файла, используя один из четырех вариантов: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
 |[/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|Разрешает небезопасный ([unsafe](../../../csharp/language-reference/keywords/unsafe.md)) код.|  
@@ -102,3 +104,4 @@ ms.lasthandoff: 05/10/2017
  [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
  [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
  [Элемент \<compiler>](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+

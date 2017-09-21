@@ -1,6 +1,6 @@
 ---
-title: "async (справочник по C#) | Документы Майкрософт"
-ms.date: 2015-07-20
+title: "async (справочник по C#)"
+ms.date: 2017-05-22
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -31,107 +31,83 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: e7f4cfa81de3c4db41d9303abf65cfd0edc926a4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="async-c-reference"></a>async (справочник по C#)
-Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) является асинхронным. Если этот модификатор используется в методе или выражении, они называются асинхронными методами.  
+Модификатор `async` позволяет указать, что метод, [лямбда-выражение](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) или [анонимный метод](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) является асинхронным. Если этот модификатор используется в методе или выражении, они называются *асинхронными методами*. Ниже приводится пример асинхронного метода с именем `ExampleMethodAsync`: 
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
 {  
     // . . . .  
 }  
+```  
+ 
+Если вы только начали заниматься асинхронным программированием или не понимаете, как в асинхронном методе используется ключевое слово `await` для выполнения потенциально долгой работы без блокировки потока вызывающего объекта, ознакомьтесь с общими сведениями в статье [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Следующий код размещается внутри асинхронного метода и вызывает метод <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName>: 
   
+```csharp  
+string contents = await httpClient.GetStringAsync(requestUrl);  
 ```  
   
- Если вы только начали заниматься асинхронным программированием или не понимаете, как в асинхронном методе используется ключевое слово `await` для выполнения потенциально долгой работы без блокировки потока вызывающего объекта, ознакомьтесь с общими сведениями в статье [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md).  
+Асинхронный метод выполняется синхронным образом до тех пор, пока не будет достигнуто первое выражение `await`, после чего метод приостанавливается, пока не будет завершена ожидаемая задача. В то же время управление возвращается в вызывающий объект метода, как показано в примере в следующем разделе.  
   
-```  
-string contents = await contentsTask;  
-```  
-  
- Метод выполняется синхронным образом до тех пор, пока не будет достигнуто первое выражение `await`, после чего метод приостанавливается, пока не будет завершена ожидаемая задача. В то же время управление возвращается в вызывающий объект метода, как показано в примере в следующем разделе.  
-  
- Если метод, который изменяется ключевым словом `async`, не содержит выражения или оператора `await`, метод выполняется синхронно. Компилятор выводит предупреждения обо всех асинхронных методах, не содержащих ключевого слова `await`, поскольку такая ситуация может указывать на ошибку. См. раздел [Предупреждение компилятора (уровень 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).  
+Если метод, который изменяется ключевым словом `async`, не содержит выражения или оператора `await`, метод выполняется синхронно. Компилятор выводит предупреждения обо всех асинхронных методах, не содержащих операторы `await`, поскольку такая ситуация может указывать на ошибку. См. раздел [Предупреждение компилятора (уровень 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).  
   
  Ключевое слово `async` — это контекстно-зависимо ключевое слово, которое является ключевым словом, когда оно изменяет метод, лямбда-выражение или анонимный метод. Во всех других контекстах он интерпретируется как идентификатор.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показана структура и поток управления между обработчиком асинхронных событий `StartButton_Click` и асинхронным методом `ExampleMethodAsync`. Результатом выполнения асинхронного метода является длина загруженного веб-сайта. Код подходит для приложения Windows Presentation Foundation (WPF) или приложения для Магазина Windows Presentation Foundation (WPF), которые создаются в Visual Studio; см. комментарии к коду для настройки приложения.  
+В следующем примере показана структура и поток управления между обработчиком асинхронных событий `StartButton_Click` и асинхронным методом `ExampleMethodAsync`. В результате выполнения этого асинхронного метода возвращается число символов на веб-странице. Код подходит для приложения Windows Presentation Foundation (WPF) или приложения для Магазина Windows Presentation Foundation (WPF), которые создаются в Visual Studio; см. комментарии к коду для настройки приложения.  
+
+Этот код можно выполнить в Visual Studio как приложение Windows Presentation Foundation (WPF) или приложение Магазина Windows. Вам понадобятся элементы управления типа "Кнопка" (`StartButton`) и "Текстовое поле" (`ResultsTextBox`). Не забудьте задать имена и обработчик, чтобы получить код следующего вида:  
+
+```xaml
+<Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
+        Click="StartButton_Click" Name="StartButton"/>  
+<TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"   
+         Text="&lt;Enter a URL&gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
+```
   
-```csharp  
-// You can run this code in Visual Studio as a WPF app or a Windows Store app.  
-// You need a button (StartButton) and a textbox (ResultsTextBox).  
-// Remember to set the names and handler so that you have something like this:  
-// <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
-//         Click="StartButton_Click" Name="StartButton"/>  
-// <TextBox HorizontalAlignment="Left" Height="137" Margin="88,140,0,0" TextWrapping="Wrap"   
-//          Text="TextBox" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
+Выполнение кода в виде приложения WPF:  
+
+- Вставьте этот код в класс `MainWindow` в MainWindow.xaml.cs.  
+- Добавьте ссылку на System.Net.Http.  
+- Добавьте директиву `using` для System.Net.Http.  
   
-// To run the code as a WPF app:  
-//    paste this code into the MainWindow class in MainWindow.xaml.cs,  
-//    add a reference to System.Net.Http, and  
-//    add a using directive for System.Net.Http.  
+Выполнение кода в виде приложения Магазина Windows:  
+- Вставьте этот код в класс `MainPage` в MainPage.xaml.cs.  
+- Добавьте директивы using для System.Net.Http и System.Threading.Tasks.  
   
-// To run the code as a Windows Store app:  
-//    paste this code into the MainPage class in MainPage.xaml.cs, and  
-//    add using directives for System.Net.Http and System.Threading.Tasks.  
-  
-private async void StartButton_Click(object sender, RoutedEventArgs e)  
-{  
-    // ExampleMethodAsync returns a Task<int>, which means that the method  
-    // eventually produces an int result. However, ExampleMethodAsync returns  
-    // the Task<int> value as soon as it reaches an await.  
-    ResultsTextBox.Text += "\n";  
-    try  
-    {  
-        int length = await ExampleMethodAsync();  
-        // Note that you could put "await ExampleMethodAsync()" in the next line where  
-        // "length" is, but due to when '+=' fetches the value of ResultsTextBox, you  
-        // would not see the global side effect of ExampleMethodAsync setting the text.  
-        ResultsTextBox.Text += String.Format("Length: {0}\n", length);  
-    }  
-    catch (Exception)  
-    {  
-        // Process the exception if one occurs.  
-    }  
-}  
-  
-public async Task<int> ExampleMethodAsync()  
-{  
-    var httpClient = new HttpClient();  
-    int exampleInt = (await httpClient.GetStringAsync("http://msdn.microsoft.com")).Length;  
-    ResultsTextBox.Text += "Preparing to finish ExampleMethodAsync.\n";  
-    // After the following return statement, any method that's awaiting  
-    // ExampleMethodAsync (in this case, StartButton_Click) can get the   
-    // integer result.  
-    return exampleInt;  
-}  
-// Output:  
-// Preparing to finish ExampleMethodAsync.  
-// Length: 53292  
-  
-```  
+[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  Дополнительные сведения о задачах и коде, который выполняется во время ожидания задачи, см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Полный пример приложения WPF, в котором используются аналогичные элементы, см. в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Код пошагового руководства можно скачать в разделе [Примеры кода от разработчиков](http://go.microsoft.com/fwlink/?LinkId=255191).  
+>  Дополнительные сведения о задачах и коде, который выполняется во время ожидания задачи, см. в разделе [Асинхронное программирование с использованием ключевых слов Async и Await](../../../csharp/programming-guide/concepts/async/index.md). Полный пример приложения WPF, в котором используются аналогичные элементы, см. в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- Асинхронный метод может иметь тип возвращаемого значения <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> или [void](../../../csharp/language-reference/keywords/void.md). Метод не может объявлять параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md), но может вызывать методы, которые имеют такие параметры.  
+Асинхронные методы могут иметь следующие типы возвращаемых значений:
+
+- <xref:System.Threading.Tasks.Task>
+- <xref:System.Threading.Tasks.Task%601>
+- [void](../../../csharp/language-reference/keywords/void.md): следует использовать только для обработчиков событий.
+- Начиная с версии 7, в языке C# поддерживаются любые типы с доступным методом `GetAwaiter`. Одной из таких реализаций является тип `System.Threading.Tasks.ValueTask<TResult>`. Доступ к нему осуществляется посредством пакета NuGet `System.Threading.Tasks.Extensions`. 
+
+Асинхронный метод не может объявлять параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md), а также иметь <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->ссылочное возвращаемое значение, однако он может вызывать методы с такими параметрами.  
   
- `Task<TResult>` указывается в качестве возвращаемого типа асинхронного метода, если оператор [return](../../../csharp/language-reference/keywords/return.md) метода задает операнд типа `TResult`. Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении. То есть вызов метода возвращает `Task`, однако когда `Task` завершен, любое выражение `await`, которое ожидает `Task`, возвращает значение `void`.  
+`Task<TResult>` указывается в качестве возвращаемого типа асинхронного метода, если оператор [return](../../../csharp/language-reference/keywords/return.md) метода задает операнд типа `TResult`. Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении. То есть вызов метода возвращает `Task`, однако когда `Task` завершен, любое выражение `await`, которое ожидает `Task`, возвращает значение `void`.  
   
- Возвращаемый тип `void` используется в основном для определения обработчиков событий, которые требуют этого возвращаемого типа. Вызывающий объект асинхронного метода, возвращающего `void`, не может ожидать его и перехватывать создаваемые методом исключения.  
-  
- Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+Возвращаемый тип `void` используется в основном для определения обработчиков событий, которые требуют этого возвращаемого типа. Вызывающий объект асинхронного метода, возвращающего `void`, не может ожидать его и перехватывать создаваемые методом исключения.  
+
+Начиная с версии C# 7 возвращается другой тип, как правило, тип значений, с методом `GetAwaiter`, что позволяет свести к минимуму объем выделяемой памяти в разделах кода с критическими требованиями к производительности. 
+
+Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
  [await](../../../csharp/language-reference/keywords/await.md)   
  [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md)
+

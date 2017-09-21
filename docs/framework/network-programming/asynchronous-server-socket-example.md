@@ -1,30 +1,35 @@
 ---
-title: "Пример асинхронного сокета сервера | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "сокеты, асинхронные сокеты сервера"
-  - "сокеты, примеры кода"
-  - "асинхронные сокеты сервера"
+title: "Пример асинхронного сокета сервера"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Пример асинхронного сокета сервера
-Следующий пример создает программу сервер, который получает запросы соединений от клиентов.  Сервер построен с помощью асинхронного гнездом, поэтому не приостановитьо выполнение серверного приложения, когда он дожидается подключения клиента.  Приложение получает строку из клиента, указывающее строку на консоль и затем вторит строку обратно клиенту.  Строка от клиента, должна содержать строку "\<EOF\>" для обозначения конца сообщения.  
+# <a name="asynchronous-server-socket-example"></a>Пример асинхронного сокета сервера
+Приведенная ниже программа создает сервер, который принимает запросы на соединение от клиентов. Сервер создается с использованием асинхронного сокета, поэтому выполнение серверного приложения не приостанавливается, пока оно ожидает подключения от клиента. Приложение получает строку от клиента, выводит ее в консоли, а затем отправляет строку обратно клиенту. В строке, полученной от клиента, конец сообщения должен быть помечен строкой "\<EOF>".  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Примеры асинхронных сокетов клиента](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
  [Использование асинхронных сокетов сервера](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Примеры кода сокетов](../../../docs/framework/network-programming/socket-code-examples.md)
+

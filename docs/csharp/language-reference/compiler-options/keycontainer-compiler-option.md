@@ -1,5 +1,5 @@
 ---
-title: "/keycontainer (параметры компилятора C#) | Документы Майкрософт"
+title: "-keycontainer (параметры компилятора C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 30b851a3e44c90582227beda7245a7c4b0d57b47
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d27fa0b80ca6df15394ad1fda149377cac41a8b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="keycontainer-c-compiler-options"></a>/keycontainer (параметры компилятора C#)
@@ -70,4 +70,5 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB. Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+
