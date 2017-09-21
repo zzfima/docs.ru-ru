@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 335902f26148d8201b7311b57370fd37280c68dd
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="dotnet-new"></a>dotnet new
@@ -60,7 +60,7 @@ dotnet new [-h|--help]
 
 |Описание шаблона                          | Имя шаблона  | Языки     |
 |----------------------------------------------|----------------|---------------|
-| Консольное приложение                          | console        | [C#], F#, VB  |
+| Консольное приложение                          | консоль        | [C#], F#, VB  |
 | Библиотека классов                                | classlib       | [C#], F#, VB  |
 | Проект модульного теста                            | mstest         | [C#], F#, VB  |
 | Проект теста xUnit                           | xunit          | [C#], F#, VB  |
@@ -85,7 +85,7 @@ dotnet new [-h|--help]
 
 |Описание шаблона  | Имя шаблона  | Языки |
 |----------------------|----------------|-----------|
-| Консольное приложение  | console        | [C#], F#  |
+| Консольное приложение  | консоль        | [C#], F#  |
 | Библиотека классов        | classlib       | [C#], F#  |
 | Проект модульного теста    | mstest         | [C#], F#  |
 | Проект теста xUnit   | xunit          | [C#], F#  |
@@ -137,6 +137,10 @@ dotnet new [-h|--help]
 `-u|--uninstall <PATH|NUGET_ID>`
 
 Удаляет исходный пакет или пакет шаблона по указанному пути `PATH` или идентификатору `NUGET_ID`.
+
+> [!NOTE]
+> Чтобы удалить шаблон с помощью `PATH`, вам необходимо указать полный путь. Например, *C:/Users/\<ПОЛЬЗОВАТЕЛЬ>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* будет работать, а *./GarciaSoftware.ConsoleTemplate.CSharp* — нет.
+> Кроме того, путь к шаблону не должен содержать конечную косую черту закрытия каталога.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -324,5 +328,4 @@ dotnet new [-h|--help]
 [Создание пользовательского шаблона для dotnet](~/docs/core/tutorials/create-custom-template.md)  
 [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)  
 [Доступные шаблоны для команды dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
-
 

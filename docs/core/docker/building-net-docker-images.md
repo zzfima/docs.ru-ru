@@ -4,15 +4,15 @@ description: "Общие сведения об образах Docker и .NET Cor
 keywords: .NET, .NET Core, Docker
 author: spboyer
 ms.author: shboyer
-ms.date: 08/29/2016
+ms.date: 09/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 9dc52f3a8c74c1aa575a83cb3bbd579b93fae9ae
-ms.openlocfilehash: 0e679ffc22f52de5e2ce8194942efbb2f5299ee4
+ms.sourcegitcommit: a0b6edbc13fddd8558f6677d25ce279147d761c3
+ms.openlocfilehash: efec7e390f029d2f0ab952e316976ad1c6408b0f
 ms.contentlocale: ru-ru
 ms.lasthandoff: 09/06/2017
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 09/06/2017
 
  
 > [!IMPORTANT]
-> Сейчас мы обновляем .NET Core до версии 2.0. Поэтому приведенные ниже инструкции устарели. Приносим свои искренние извинения за неудобства.
+> Мы работаем над обновлением этой статьи в связи с выходом .NET Core 2.0. Приведенные ниже инструкции являются устаревшими. Приносим свои искренние извинения за неудобства.
 
 Чтобы понять, как можно использовать .NET Core и Docker вместе, сначала нужно ознакомиться с различными образами Docker и подходящими ситуациями для их применения. В этой статье мы по порядку разберем предлагаемые варианты, создадим веб-интерфейс API ASP.NET Core, используем средства Yeoman Docker для создания отлаживаемого контейнера, а также посмотрим, как Visual Studio Code может помочь нам в решении этих задач. 
 
