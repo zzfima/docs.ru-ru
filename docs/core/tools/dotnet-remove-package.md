@@ -1,27 +1,26 @@
 ---
-title: "Команда dotnet-remove package — CLI .NET Core | Документы Майкрософт"
-description: "Команду dotnet-remove package удобно использовать для удаления ссылки на пакет NuGet в проекте."
-keywords: "dotnet-remove, CLI, команда CLI, .NET Core"
-author: spboyer
+title: "Команда dotnet remove package — CLI .NET Core"
+description: "Команду dotnet remove package удобно использовать для удаления ссылки на пакет NuGet в проекте."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 2fcc8d37-16b3-4581-8038-832160e72d36
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: a321610540534a63bd12a8f878950b75e882c3d4
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 4167f5465571259975572669e27f20c586b910da
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-remove-package"></a>dotnet remove package
 
-# <a name="dotnet-remove-package"></a>dotnet-remove package
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Имя
 
-`dotnet-remove package` — удаляет ссылку на пакет из файла проекта.
+`dotnet remove package` — удаляет ссылку на пакет из файла проекта.
 
 ## <a name="synopsis"></a>Краткий обзор
 
@@ -52,3 +51,4 @@ ms.lasthandoff: 03/22/2017
 Удаляет пакет NuGet `Newtonsoft.Json` из проекта в текущем каталоге:
 
 `dotnet remove package Newtonsoft.Json`
+

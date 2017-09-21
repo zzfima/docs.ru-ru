@@ -1,26 +1,43 @@
 ---
-title: "Модификаторы (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: "Модификаторы (Visual Basic)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Модификаторы (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 99618381c1267647e07d9acc64693dcc5def6f3a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
-В подразделах этого раздела описываются модификаторы среды выполнения Visual Basic.  
+---
+# <a name="modifiers-visual-basic"></a>Модификаторы (Visual Basic)
+В статьях этого раздела описываются модификаторы времени выполнения Visual Basic.  
   
-## В этом подразделе  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
+## <a name="in-this-section"></a>Содержание  
+ [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
@@ -38,11 +55,11 @@ caps.handback.revision: 12
   
  [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
   
- [Итератор](../../../visual-basic/language-reference/modifiers/iterator.md)  
+ [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)  
   
  [Key](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [Module \<ключевое\_слово\>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [Module \<ключевое_слово>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
@@ -54,21 +71,21 @@ caps.handback.revision: 12
   
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Необязательный](../../../visual-basic/language-reference/modifiers/optional.md)  
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Перегрузки](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Переопределения](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
  [ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)  
   
  [Partial](../../../visual-basic/language-reference/modifiers/partial.md)  
   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
   
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
@@ -78,19 +95,20 @@ caps.handback.revision: 12
   
  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Общие](../../../visual-basic/language-reference/modifiers/shared.md)  
   
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
+ [Статические](../../../visual-basic/language-reference/modifiers/static.md)  
   
  [Юникод](../../../visual-basic/language-reference/modifiers/unicode.md)  
   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [Расширение](../../../visual-basic/language-reference/modifiers/widening.md)  
   
  [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
+

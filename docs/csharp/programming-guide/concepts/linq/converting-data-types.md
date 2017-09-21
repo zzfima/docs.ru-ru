@@ -1,5 +1,5 @@
 ---
-title: "Преобразование типов данных (C#) | Документы Майкрософт"
+title: "Преобразование типов данных (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 922e2f26c5f8ded260644e8effa043b03b721020
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 454fb0ce937d7d20dfce26d92dbf49de24f062f0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="converting-data-types-c"></a>Преобразование типов данных (C#)
@@ -30,11 +31,11 @@ ms.lasthandoff: 03/13/2017
   
  Операции преобразования в запросах LINQ удобны в различных ситуациях. Ниже приводятся некоторые примеры.  
   
--   Метод <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName> можно использовать для скрытия пользовательской реализации типа стандартного оператора запроса.  
+-   Метод <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName> можно использовать, чтобы скрыть настраиваемую реализацию типа стандартного оператора запроса.  
   
--   Метод <xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName> можно использовать для включения непараметризованных коллекций для запросов LINQ.  
+-   Метод <xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName> позволяет использовать непараметризованные коллекции для запросов LINQ.  
   
--   Методы <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> и <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName> можно использовать для принудительного немедленного выполнения запроса, не откладывая его до перечисления запроса.  
+-   Методы <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> и <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName> можно использовать для принудительного немедленного выполнения запроса, не дожидаясь, пока этот запрос будет перечислен.  
   
 ## <a name="methods"></a>Методы  
  В следующей таблице перечислены методы стандартных операторов запросов, выполняющие преобразование типов данных.  
@@ -43,9 +44,9 @@ ms.lasthandoff: 03/13/2017
   
 |Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|AsEnumerable|Возвращает входные данные, типизированные как <xref:System.Collections.Generic.IEnumerable%601>.|Неприменимо.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>|  
-|AsQueryable|Преобразует (универсальный) тип <xref:System.Collections.IEnumerable> в (универсальный) тип <xref:System.Linq.IQueryable>.|Неприменимо.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName>|  
-|Cast|Приводит элементы коллекции к указанному типу.|Используйте явно типизированную переменную диапазона. Например:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName>|  
+|AsEnumerable|Возвращает входное значение, типизированное как <xref:System.Collections.Generic.IEnumerable%601>.|Неприменимо.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=fullName>|  
+|AsQueryable|Преобразует <xref:System.Collections.IEnumerable> (универсальный шаблон) в <xref:System.Linq.IQueryable> (универсальный шаблон).|Неприменимо.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=fullName>|  
+|Cast|Приводит элементы коллекции к указанному типу.|Используйте явно типизированную переменную диапазона. Пример:<br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=fullName>|  
 |OfType|Фильтрует значения в зависимости от возможности их приведения к указанному типу.|Неприменимо.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
 |ToArray|Преобразует коллекцию в массив. Этот метод принудительно выполняет запрос.|Неприменимо.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=fullName>|  
 |ToDictionary|Помещает элементы в <xref:System.Collections.Generic.Dictionary%602> в зависимости от функции выбора ключа. Этот метод принудительно выполняет запрос.|Неприменимо.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=fullName>|  
@@ -96,3 +97,4 @@ static void Cast()
  [Предложение From](../../../../csharp/language-reference/keywords/from-clause.md)   
  [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+

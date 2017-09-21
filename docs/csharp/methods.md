@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
-ms.openlocfilehash: 42ded63bacfb6ff2ceadde6fa37c7bddb413a933
+ms.translationtype: HT
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="methods"></a>Методы #
@@ -22,7 +22,7 @@ ms.lasthandoff: 04/11/2017
 Метод — это блок кода, содержащий ряд инструкций. Программа инициирует выполнение инструкций, вызывая метод и указывая все аргументы, необходимые для этого метода. В C# все инструкции выполняются в контексте метода. Метод `Main` является точкой входа для каждого приложения C#, и вызывается общеязыковой средой выполнения (CLR) при запуске программы.
 
 > [!NOTE]
-> В этом разделе рассматриваются названные методы. Сведения об анонимных функциях см. в разделе [Анонимные функции](https://msdn.microsoft.com/library/bb882516.aspx).
+> В этом разделе рассматриваются названные методы. Сведения об анонимных функциях см. в разделе [Анонимные функции](programming-guide/statements-expressions-operators/anonymous-functions.md).
 
 В этом разделе содержатся следующие подразделы.
 
@@ -252,14 +252,14 @@ if (person != null)
 
 Методы расширения позволяют "добавить" метод в существующий тип, не меняя сам тип и не реализуя новый метод в наследуемом типе. Кроме того, метод расширения может не входить в ту же сборку, в которую входит расширяемый им тип. Вызовите метод расширения, как будто он является определенным членом типа.
 
-Дополнительные сведения см. в разделе [Методы расширения](https://msdn.microsoft.com/library/bb383977.aspx).
+Дополнительные сведения см. в разделе [Методы расширения](programming-guide/classes-and-structs/extension-methods.md).
 
 <a name="async"></a>
 ## <a name="async-methods"></a>Асинхронные методы ##
 
 С помощью функции async можно вызывать асинхронные методы, не прибегая к использованию явных обратных вызовов или ручному разделению кода между несколькими методами или лямбда-выражениями.
 
-Если пометить метод с помощью модификатора [async](https://msdn.microsoft.com/library/hh156513.aspx), можно использовать в этом методе оператор [await](https://msdn.microsoft.com/library/hh156528.aspx). Если ожидаемая задача не завершена, то достигнув выражения `await` в асинхронном методе, управление возвращается вызывающему объекту, а выполнение метода с ключевым словом `await` приостанавливается до завершения выполнения ожидаемой задачи. После завершения задачи можно возобновить выполнение в методе.
+Если пометить метод с помощью модификатора [async](language-reference/keywords/async.md), можно использовать в этом методе оператор [await](language-reference/keywords/await.md). Если ожидаемая задача не завершена, то достигнув выражения `await` в асинхронном методе, управление возвращается вызывающему объекту, а выполнение метода с ключевым словом `await` приостанавливается до завершения выполнения ожидаемой задачи. После завершения задачи можно возобновить выполнение в методе.
 
 > [!NOTE]
 > Асинхронный метод возвращается в вызывающий объект, когда он встречает первый ожидаемый объект, выполнение которого еще не завершено, или когда выполнение асинхронного метода доходит до конца — в зависимости от того, что происходит раньше.
@@ -270,9 +270,9 @@ if (person != null)
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-Асинхронный метод не может объявить все параметры [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) или [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx), но может вызвать методы, которые имеют такие параметры.
+Асинхронный метод не может объявить все параметры [ref](language-reference/keywords/ref.md) или [out](language-reference/keywords/out.md), но может вызвать методы, которые имеют такие параметры.
 
- Дополнительные сведения об асинхронных методах см. в разделах [Асинхронное программирование с использованием ключевых слов async и await](https://msdn.microsoft.com/library/mt674882.aspx), [Поток управления в асинхронных программах](https://msdn.microsoft.com/library/mt674892.aspx) и [Асинхронные типы возврата](https://msdn.microsoft.com/library/mt674893.aspx).
+ Дополнительные сведения об асинхронных методах см. в разделах [Асинхронное программирование с использованием ключевых слов async и await](async.md), [Поток управления в асинхронных программах](programming-guide/concepts/async/control-flow-in-async-programs.md) и [Асинхронные типы возврата](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
 ## <a name="expression-bodied-members"></a>Элементы, воплощающие выражение ##
@@ -280,14 +280,12 @@ if (person != null)
 Часто используются определения методов, которые просто немедленно возвращаются с результатом выражения или которые имеют единственную инструкцию в тексте метода.  Для определения таких методов существует сокращенный синтаксис с использованием `=>`:
 
 ```csharp
-
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
 public void Print() => Console.WriteLine(First + " " + Last);
 // Works with operators, properties, and indexers too.
 public static Complex operator +(Complex a, Complex b) => a.Add(b);
 public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
-
 ```
 
 Если метод возвращает `void` или является асинхронным, текст этого метода должен быть выражением оператора (как и при использовании лямбда-выражений).  Свойства и индексаторы должны быть доступны только для чтения, и использовать ключевое слово метода доступа `get` не следует.
@@ -295,20 +293,20 @@ public Customer this[long id] => store.LookupCustomer(id);
 <a name="iterators"></a>
 ## <a name="iterators"></a>Итераторы ##
 
-Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует оператор [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) для возврата всех элементов по одному. По достижении оператора `yield return` текущее расположение запоминается, чтобы вызывающий объект мог запросить следующий элемент в последовательности.
+Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует оператор [yield return](language-reference/keywords/yield.md) для возврата всех элементов по одному. По достижении оператора `yield return` текущее расположение запоминается, чтобы вызывающий объект мог запросить следующий элемент в последовательности.
 
 Типом возвращаемого значения итератора может быть @System.Collections.IEnumerable, @System.Collections.Generic.IEnumerable%601, @System.Collections.IEnumerator или @System.Collections.Generic.IEnumerator%601.
 
-Дополнительные сведения см. в разделе [Итераторы](https://msdn.microsoft.com/library/mt639331.aspx).
+Дополнительные сведения см. в разделе [Итераторы](programming-guide/concepts/iterators.md).
 
 ## <a name="see-also"></a>См. также ##
 
-[Модификаторы доступа](https://msdn.microsoft.com/library/wxh6fsc7.aspx)
-[Статические классы и члены статических классов](https://msdn.microsoft.com/library/79b3xss3.aspx)
-[Наследование](https://msdn.microsoft.com/library/ms173149.aspx)
-[Абстрактные и запечатанные классы и члены классов](https://msdn.microsoft.com/library/ms173150.aspx)
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)
-[Передача параметров](https://msdn.microsoft.com/library/0f66670z.aspx)
+[Модификаторы доступа](language-reference/keywords/access-modifiers.md)   
+[Статические классы и члены статических классов](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+[Наследование](programming-guide/classes-and-structs/inheritance.md)   
+[Абстрактные и запечатанные классы и члены классов](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+[params](language-reference/keywords/params.md)   
+[out](language-reference/keywords/out.md)   
+[ref](language-reference/keywords/ref.md)   
+[Передача параметров](programming-guide/classes-and-structs/passing-parameters.md)
 

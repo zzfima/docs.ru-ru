@@ -1,36 +1,56 @@
 ---
-title: "Таблица типов с плавающей запятой (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "числа с плавающей запятой [C#]"
-  - "диапазоны типов чисел с плавающей запятой [C#]"
-  - "типы [C#], типы чисел с плавающей запятой"
+title: "Таблица типов с плавающей запятой (Справочник по C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- floating-point numbers [C#]
+- ranges of floating-point types [C#]
+- types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a5947e0570c5204e79495603c9a95c062155b9c2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Таблица типов с плавающей запятой (Справочник по C#)
-В следующей таблице представлены приблизительные диапазоны типов с плавающей запятой.  
+# <a name="floating-point-types-table-c-reference"></a>Таблица типов с плавающей запятой (Справочник по C#)
+В приведенной ниже таблице представлен точный и приблизительный диапазон значений для типов с плавающей запятой.  
   
-|Тип|Приблизительный диапазон|Точность|  
-|---------|------------------------------|--------------|  
-|[float](../../../csharp/language-reference/keywords/float.md)|От ±1,5e−45 до ±3,4e38|7 знаков|  
-|[double](../../../csharp/language-reference/keywords/double.md)|От ±5,0e−324 до ±1,7e308|15\-16 знаков|  
+|Тип|Приблизительный диапазон значений|Точность|  
+|----------|-----------------------|---------------|  
+|[float](float.md)|От ±1,5e−45 до ±3,4e38|7 знака|  
+|[double](double.md)|От ±5,0e−324 до ±1,7e308|15–16 знаков|  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
- [decimal](../../../csharp/language-reference/keywords/decimal.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Таблица значений по умолчанию](default-values-table.md)   
+ [Таблица встроенных типов](built-in-types-table.md)   
+ [Таблица целых типов](integral-types-table.md)   
+ [Таблица форматирования числовых результатов](formatting-numeric-results-table.md)   
+ [Справочные таблицы по типам](reference-tables-for-types.md)   
+ [decimal](decimal.md)
+

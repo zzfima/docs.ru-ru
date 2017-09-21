@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fd0ef3c71d66ceca28d3ae7025058df469655c2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-basics"></a>Основы выражения запроса
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
   
  Обычно исходные данные логически организованы как последовательность элементов одного вида. Например, таблица базы данных SQL содержит последовательность строк. В файле XML содержится "последовательность" элементов XML (они организованы иерархически в древовидную структуру). Коллекция в памяти содержит последовательность объектов. 
   
- С точки зрения приложения определенные тип и структура оригинальных исходных данных не важны. Исходные данные всегда представляются приложению как коллекция <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>. Например, в LINQ to XML исходные данные становятся видимыми как `IEnumerable`\< <xref:System.Xml.Linq.XElement>.  
+ С точки зрения приложения определенные тип и структура оригинальных исходных данных не важны. Приложение всегда видит исходные данные в виде коллекции <xref:System.Collections.Generic.IEnumerable%601> или <xref:System.Linq.IQueryable%601>. Например, в LINQ to XML исходные данные становятся видимыми как `IEnumerable`\<<xref:System.Xml.Linq.XElement>>.  
   
  При такой исходной последовательности, запрос может выполнять одно из трех возможных действий.  
   

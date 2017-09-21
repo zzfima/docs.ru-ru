@@ -1,5 +1,5 @@
 ---
-title: "Шаблоны асинхронного программирования | Документы Майкрософт"
+title: "Шаблоны асинхронного программирования"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,24 +16,27 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a8a89b8987eaff4d94f5e620c45b551b7be682d8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
+
 # <a name="asynchronous-programming-patterns"></a>Шаблоны асинхронного программирования
+
 Платформа .NET Framework предоставляет три шаблона для выполнения асинхронных операций:  
   
--   шаблон асинхронной модели программирования (АРМ) (также называемый шаблон <xref:System.IAsyncResult>), где асинхронные операции требуют методов `Begin` и `End` (например, асинхронные операции записи `BeginWrite` и `EndWrite`). Этот шаблон не рекомендуется использовать для разработки новых приложений. Дополнительные сведения см. в статье [Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
+- шаблон асинхронной модели программирования (АРМ) (также называемый шаблон <xref:System.IAsyncResult>), где асинхронные операции требуют методов `Begin` и `End` (например, асинхронные операции записи `BeginWrite` и `EndWrite`). Этот шаблон не рекомендуется использовать для разработки новых приложений. Дополнительные сведения см. в статье [Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
--   На основе событий асинхронного шаблона (EAP), который требует метод с суффиксом `Async`, а также требует одного или нескольких событий, типов делегата обработчика событий и производных типов `EventArg`. Протокол EAP был введен в платформа.NET Framework 2.0. Не рекомендуется для новых разработок. Дополнительные сведения см. в разделе [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+- На основе событий асинхронного шаблона (EAP), который требует метод с суффиксом `Async`, а также требует одного или нескольких событий, типов делегата обработчика событий и производных типов `EventArg`. Протокол EAP был введен в платформа.NET Framework 2.0. Не рекомендуется для новых разработок. Дополнительные сведения см. в разделе [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
--   Асинхронный шаблон на основе задач (TAP), который использует один метод для запуска и завершения асинхронной операции. Шаблон ТАР был введен в платформа.NET Framework 4 и рекомендуется для асинхронного программирования в платформа.NET Framework. Ключевые слова [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) в C#, а также операторы [Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в языке Visual Basic добавляют поддержку языка для ТАР. Дополнительные сведения см. в разделе [Асинхронный шаблон, основанный на задачах (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
+- Асинхронный шаблон на основе задач (TAP), который использует один метод для запуска и завершения асинхронной операции. Шаблон ТАР был введен в платформа.NET Framework 4 и рекомендуется для асинхронного программирования в платформа.NET Framework. Ключевые слова [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) в C#, а также операторы [Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в языке Visual Basic добавляют поддержку языка для ТАР. Дополнительные сведения см. в разделе [Асинхронный шаблон, основанный на задачах (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
   
 ## <a name="comparing-patterns"></a>Сравнение шаблонов  
- Для быстрого сравнения, как с помощью трех шаблонов моделировать асинхронные операции, рассмотрим метод `Read`, который считывает указанный объем данных в предоставленный буфер, начиная с заданного смещения:  
+
+Для быстрого сравнения, как с помощью трех шаблонов моделировать асинхронные операции, рассмотрим метод `Read`, который считывает указанный объем данных в предоставленный буфер, начиная с заданного смещения:  
   
 ```csharp  
 public class MyClass  
@@ -42,7 +45,7 @@ public class MyClass
 }  
 ```  
   
- Аналог APM этого метода приведет к методам `BeginRead` и `EndRead`:  
+Аналог APM этого метода приведет к методам `BeginRead` и `EndRead`:  
   
 ```csharp  
 public class MyClass  
@@ -54,7 +57,7 @@ public class MyClass
 }  
 ```  
   
- Аналог EAP будут предоставлять следующий набор типов и членов:  
+Аналог EAP будут предоставлять следующий набор типов и членов:  
   
 ```csharp  
 public class MyClass  
@@ -64,7 +67,7 @@ public class MyClass
 }  
 ```  
   
- Аналог TAP приведет к следующему одному методу `ReadAsync`:  
+Аналог TAP приведет к следующему одному методу `ReadAsync`:  
   
 ```csharp  
 public class MyClass  
@@ -73,12 +76,19 @@ public class MyClass
 }  
 ```  
   
- Для подробного обсуждения TAP, APM и EAP перейдите по ссылкам в следующем разделе.  
+Для подробного обсуждения TAP, APM и EAP перейдите по ссылкам в следующем разделе.  
   
-## <a name="related-topics"></a>Связанные разделы  
-  
-|Заголовок|Описание|  
-|-----------|-----------------|  
-|[Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)|Описание устаревшей модели, использующей интерфейс <xref:System.IAsyncResult> для предоставления асинхронного поведения. Этот шаблон не рекомендуется использовать для новых разработок.|  
-|[Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)|Описание события устаревшие модели для предоставления асинхронного поведения. Этот шаблон не рекомендуется использовать для новых разработок.|  
-|[Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))|Описание новой асинхронной модели на основе пространства имен <xref:System.Threading.Tasks>. Эта модель является рекомендуемым подходом для асинхронного программирования в NET Framework 4 и более поздних версиях.|
+## <a name="related-topics"></a>См. также
+
+| Заголовок | Описание |
+| ----- | ----------- |
+| [Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | Описание устаревшей модели, использующей интерфейс <xref:System.IAsyncResult> для предоставления асинхронного поведения. Этот шаблон не рекомендуется использовать для новых разработок. |
+| [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | Описание события устаревшие модели для предоставления асинхронного поведения. Этот шаблон не рекомендуется использовать для новых разработок. |
+| [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP)) | Описание новой асинхронной модели на основе пространства имен <xref:System.Threading.Tasks>. Эта модель является рекомендуемым подходом для асинхронного программирования в NET Framework 4 и более поздних версиях. |
+
+## <a name="see-also"></a>См. также
+
+[Асинхронное программирование на C#](~/docs/csharp/async.md)   
+[Асинхронное программирование на F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+[Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

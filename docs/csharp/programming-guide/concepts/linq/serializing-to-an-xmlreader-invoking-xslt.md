@@ -1,5 +1,5 @@
 ---
-title: "Сериализация в XmlReader (вызов XSLT) (C#) | Документы Майкрософт"
+title: "Сериализация в XmlReader (вызов XSLT) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96fed09349264710dc8f0591a0022939e9a4181a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 62127847c6eeefdc60bf8c4cb4cb8fac2fb2b8bb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Сериализация в XmlReader (вызов XSLT) (C#)
-При использовании возможностей взаимодействия <xref:System.Xml?displayProperty=fullName> [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], можно использовать <xref:System.Xml.Linq.XNode.CreateReader%2A> для создания <xref:System.Xml.XmlReader>. Модуль, считывающий из этого <xref:System.Xml.XmlReader>, считывает узлы XML-дерева и обрабатывает их соответствующим образом.  
+При использовании средств взаимодействия <xref:System.Xml?displayProperty=fullName>, реализованных в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], можно применять <xref:System.Xml.Linq.XNode.CreateReader%2A> для создания <xref:System.Xml.XmlReader>. Модуль, считывающий из этого <xref:System.Xml.XmlReader>, считывает узлы XML-дерева и обрабатывает их соответствующим образом.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Запуск преобразования XSLT  
- Кроме того, этот метод можно использовать для запуска преобразования XSLT. Можно создать XML-дерево, создать объект <xref:System.Xml.XmlReader> на основе XML-дерева, создать документ и создать объект <xref:System.Xml.XmlWriter> для записи в новый документ. Затем вызывается преобразование XSLT, и ему передаются объекты <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>. После успешного завершения преобразования новое XML-дерево заполняется ее результатами.  
+ Кроме того, этот метод можно использовать для запуска преобразования XSLT. Можно сформировать XML-дерево, создать из этого дерева <xref:System.Xml.XmlReader>, создать новый документ и затем создать <xref:System.Xml.XmlWriter> для записи в новый документ. Далее можно запустить преобразование XSLT, передавая <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter>. После успешного завершения преобразования новое XML-дерево заполняется ее результатами.  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -77,3 +78,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>См. также  
  [Сериализация XML-деревьев (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Группировка потоков в пул (C#) | Документы Майкрософт"
+title: "Группировка потоков в пул (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da18d75f5d80cd7ad8a9a974bf0ffda196e7ea86
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-pooling-c"></a>Группировка потоков в пул (C#)
@@ -68,7 +69,7 @@ private void AnotherLongTask(Object state)
 ## <a name="thread-pool-parameters-and-return-values"></a>Параметры и возвращаемые значения пула потоков  
  Получение возвращаемого значения из пула потоков является не такой простой задачей. Стандартный способ получения возвращаемого значения при вызове функции использовать нельзя, поскольку помещать в очередь на выполнение в пуле потоков можно только процедуры `Sub`. Один из способов обеспечить передачу параметров и возвращения значений — это заключение параметров, возвращаемых значений и методов в класс-оболочку, как описано в разделе [Параметры и возвращаемые значения для многопоточных процедур (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
   
- Более простым способом передачи параметров и возвращаемых значений является использование необязательной переменной состояния объекта типа `ByVal` метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Если эта переменная используется для передачи ссылки на экземпляр класса, члены экземпляра могут быть изменены потоком, входящим в пул потоков, и использоваться в качестве возвращаемых значений.  
+ Параметры и возвращаемые значения проще предоставить с помощью необязательной переменной объекта состояния `ByVal` метода <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Если эта переменная используется для передачи ссылки на экземпляр класса, члены экземпляра могут быть изменены потоком, входящим в пул потоков, и использоваться в качестве возвращаемых значений.  
   
  На первый взгляд, возможность изменения объекта, на который ссылается переданная по значению переменная, не является очевидной. На самом деле это возможно, потому что по значению передается только ссылка на объект. При изменении членов объекта, указанного в ссылке, изменения применяются к реальному экземпляру класса.  
   
@@ -82,3 +83,4 @@ private void AnotherLongTask(Object state)
  [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Синхронизация потоков (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
+

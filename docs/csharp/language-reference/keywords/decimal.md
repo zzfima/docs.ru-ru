@@ -1,5 +1,5 @@
 ---
-title: "decimal (справочник по C#) | Документы Майкрософт"
+title: "decimal (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,24 +30,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 336a4a7bb485a48282dd740bafb81421e0cba693
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c06d14f01302a21427845d0269fc8181a380914
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="decimal-c-reference"></a>decimal (Справочник по C#)
-Ключевое слово `decimal` обозначает 128-разрядный тип данных. По сравнению с типами данных с плавающей запятой, диапазон значений типа `decimal` меньше, а точность выше, благодаря чему этот тип подходит для финансовых расчетов. В следующей таблице представлен приблизительный диапазон значений и точность для типа `decimal`.  
+Ключевое слово `decimal` обозначает 128-разрядный тип данных. По сравнению с другими типами данных с плавающей запятой, диапазон значений `decimal` меньше, а точность выше, благодаря чему этот тип подходит для финансовых расчетов. В следующей таблице представлен приблизительный диапазон значений и точность для типа `decimal`.  
   
 |Тип|Приблизительный диапазон значений|Точность|Тип платформы .NET Framework|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(От -7,9 x 10<sup>28</sup> до 7,9 x 10<sup>28</sup>) / (10<sup>0–28</sup>)|28–29 значащих цифр|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|(От -7,9 x 10<sup>28</sup> до 7,9 x 10<sup>28</sup>) / (от 10<sup>0</sup> до 10<sup>28</sup>)|28–29 значащих цифр|<xref:System.Decimal?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Литералы  
  Если требуется, чтобы числовой действительный литерал рассматривался как `decimal`, следует использовать суффикс m или M, например:  
   
-```  
+```csharp
 decimal myMoney = 300.5m;  
 ```  
   
@@ -56,19 +56,19 @@ decimal myMoney = 300.5m;
 ## <a name="conversions"></a>Преобразования  
  Целочисленные типы неявно преобразуются в тип `decimal` и результатом является тип `decimal`. Поэтому инициализацию десятичной переменной можно выполнить с помощью целочисленного литерала без суффикса следующим образом:  
   
-```  
+```csharp
 decimal myMoney = 300;  
 ```  
   
- Неявное преобразование между типами с плавающей запятой и типом `decimal` отсутствует, поэтому для преобразования между этими двумя типами следует использовать приведение. Например:  
+ Неявное преобразование между другими типами с плавающей запятой и типом `decimal` отсутствует, поэтому для преобразования между этими двумя типами следует использовать приведение. Пример:  
   
-```  
-      decimal myMoney = 99.9m;  
+```csharp
+decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
 ```  
   
- Тип `decimal` можно использовать в одном выражении вместе с целочисленными типами числовых данных. Однако использование типа `decimal` вместе с типами с плавающей запятой без приведения вызовет ошибку компиляции.  
+ Тип `decimal` можно использовать в одном выражении вместе с целочисленными типами числовых данных. Однако использование типа `decimal` вместе с другими типами с плавающей запятой без приведения вызовет ошибку компиляции.  
   
  Дополнительные сведения о неявных числовых преобразованиях см. в разделе [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -105,7 +105,7 @@ Console.WriteLine((double)dec + dub);
  [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Decimal>   

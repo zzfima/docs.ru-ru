@@ -1,6 +1,6 @@
 ---
 title: "Типы платформ, поддерживающие деревья выражений"
-description: "Типы платформ, поддерживающие деревья выражений"
+description: "Сведения о типах платформ, поддерживающих деревья выражений, создании деревьев выражений и способах работы с API деревьев выражений."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64b3b7999b6ff01bdf28cb7902ba50087d191cb4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 03/13/2017
 [Предыдущий раздел: "Описание деревьев выражений"](expression-trees-explained.md)
 
 Платформа .NET Core содержит множество классов для работы с деревьями выражений.
-Полный список можно просмотреть в [этом разделе](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions).
+Полный список можно просмотреть в [этом разделе](/dotnet/core/api/System.Linq.Expressions).
 Вместо того чтобы знакомиться с этим списком, давайте разберемся, как строятся классы платформы.
 
 Согласно принципам языка выражение — это блок кода, который выполняет вычисления и возвращает значение. Выражения могут быть очень простыми: константное выражение `1` всегда возвращает значение 1. Они могут быть более сложными: выражение `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` возвращает один корень квадратного уравнения (если у уравнения есть решение).  

@@ -1,28 +1,33 @@
 ---
-title: "Практическое руководство. Список содержимого каталога с помощью FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Практическое руководство. Список содержимого каталога с помощью FTP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 08edb5be23d55a9a825ca80a8e575cb02b5f07a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Практическое руководство. Список содержимого каталога с помощью FTP
-В этом образце показано, как вывести содержимое каталога ftp.  
+# <a name="how-to-list-directory-contents-with-ftp"></a>Практическое руководство. Список содержимого каталога с помощью FTP
+В этом примере показано, как вывести содержимое каталога на FTP-сервере.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```csharp  
 using System;  
@@ -58,11 +63,12 @@ namespace Examples.System.Net
 }  
 ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
 -   Ссылки на пространство имен **System.Net**.  
   
-## Отказоустойчивость  
+## <a name="robust-programming"></a>Отказоустойчивость  
   
-## Безопасность платформы .NET Framework
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework
+

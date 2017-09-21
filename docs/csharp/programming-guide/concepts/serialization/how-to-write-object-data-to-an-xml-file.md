@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Запись данных объекта в XML-файл (C#) | Документы Майкрософт"
+title: "Практическое руководство. Запись данных объекта в XML-файл (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 197e91be6d3785e437cb33541b2b4c9b4a2cbb84
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4b2fde8f823e6b945d074327559013f4e748909
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Практическое руководство. Запись данных объекта в XML-файл (C#)
-В этом примере записывается объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
+Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Пример  
   
@@ -70,9 +71,9 @@ public class XMLWrite
   
 -   Файл существует и является файлом только для чтения (<xref:System.IO.IOException>).  
   
--   Путь слишком длинный (<xref:System.IO.PathTooLongException>).  
+-   Слишком длинный путь (<xref:System.IO.PathTooLongException>).  
   
--   Диск переполнен (<xref:System.IO.IOException>).  
+-   Диск заполнен (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  В этом примере создается файл (если файл отсутствует). Если приложению требуется создать файл, оно должно иметь доступ к каталогу для создания файлов (`Create`). Если файл уже существует, то приложению достаточно иметь лишь доступ для записи файлов (`Write`), т. е. меньшие привилегии. Безопаснее создавать файл во время развертывания, если это возможно, а также предоставлять доступ `Read` к отдельному файлу вместо доступа `Create` к папке.  
@@ -81,3 +82,4 @@ public class XMLWrite
  <xref:System.IO.StreamWriter>   
  [Практическое руководство. Чтение данных объекта из XML-файла (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
  [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+

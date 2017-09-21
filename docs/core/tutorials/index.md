@@ -1,6 +1,6 @@
 ---
-title: "Учебники по .NET Core | Документы Майкрософт"
-description: "Учебники по .NET Core"
+title: "Учебники по .NET Core"
+description: "Руководства по .NET Core научат вас создавать приложения и библиотеки на Mac, Linux и в Windows."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -23,18 +23,19 @@ ms.lasthandoff: 05/23/2017
 
 ## <a name="building-applications-with-visual-studio-2017"></a>Разработка приложений с помощью Visual Studio 2017
 
-- [Создание приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/with-visual-studio.md)
-- [Отладка приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/debugging-with-visual-studio.md)
-- [Публикация приложения "Здравствуй, мир!" на C#](../../csharp/getting-started/publishing-with-visual-studio.md)
-- [Создание библиотеки классов C#](../../csharp/getting-started/library-with-visual-studio.md)
-- [Тестирование библиотеки классов C#](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [Использование библиотеки классов C# в .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
+- [Создание приложения "Здравствуй, мир!" на C#](with-visual-studio.md)
+- [Отладка приложения "Здравствуй, мир!" на C#](debugging-with-visual-studio.md)
+- [Публикация приложения "Здравствуй, мир!" на C#](publishing-with-visual-studio.md)
+- [Создание библиотеки классов C#](library-with-visual-studio.md)
+- [Создание библиотеки классов с помощью Visual Basic](vb-library-with-visual-studio.md)
+- [Тестирование библиотеки классов ](testing-library-with-visual-studio.md)
+- [Использование библиотеки классов ](consuming-library-with-visual-studio.md)
 - [Создание полного решения C# .NET Core в Windows](using-on-windows-full-solution.md)
-- [Учебник по NoSQL: сборка консольного приложения C# DocumentDB в .NET Core](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Учебник по NoSQL: сборка консольного приложения C# DocumentDB в .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Разработка приложений с помощью Visual Studio Code
 
-- [Приступая к работе с C# в Visual Studio Code](../../csharp/getting-started/with-visual-studio-code.md)
+- [Начало работы с C# и Visual Studio Code](with-visual-studio-code.md)
 - [Начало работы с .NET Core в Mac OS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Создание приложений с помощью Visual Studio для Mac
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/23/2017
 
 - [Приступая к работе с .NET Core в Windows, Linux и Mac OS с помощью инструментов командной строки .NET Core](using-with-xplat-cli.md)
 - [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
-- [Приступая к работе с F#](../../fsharp/tutorials/getting-started/getting-started-command-line.md)
+- [Начало работы с F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Другой
 - [Модульное тестирование в .NET Core с помощью команды dotnet test](../testing/unit-testing-with-dotnet-test.md)
@@ -54,6 +55,7 @@ ms.lasthandoff: 05/23/2017
 - [Разработка библиотек с помощью кроссплатформенных средств](libraries.md)
 - [Управление версиями зависимостей пакетов для .NET Core 1.0](managing-package-dependency-versions.md)
 - [Размещение .NET Core из машинного кода](netcore-hosting.md)
+- [Создание пользовательского шаблона для dotnet](create-custom-template.md)
 
-Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
+Руководства по разработке веб-приложений на ASP.NET Core см. в [документации по ASP.NET Core](/aspnet/core/).
 

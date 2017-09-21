@@ -1,32 +1,52 @@
 ---
-title: "Практическое руководство. Перегрузка операторов для реализации класса комплексных чисел (Руководство по программированию в C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "классы [C#], перегрузка операторов"
-  - "комплексные числа [C#]"
-  - "перегрузка операторов [C#], комплексные числа"
-  - "перегрузка операторов [C#], использование для создания классов"
-  - "операторы [C#], использование перегрузки для создания класса комплексных чисел"
+title: "Практическое руководство. Перегрузка операторов для реализации класса комплексных чисел (Руководство по программированию в C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- complex numbers [C#]
+- classes [C#], operator overloading
+- operator overloading [C#], complex numbers
+- operator overloading [C#], using to create classes
+- operators [C#], overloading to create a complex number class
 ms.assetid: c9b8d982-5112-413f-bae3-b42ae3248ddf
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ce629320744d46787aaabba48740f05c917fdcb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Практическое руководство. Перегрузка операторов для реализации класса комплексных чисел (Руководство по программированию в C#)
-В следующем примере показано, как использовать перегрузку операторов при определении класса комплексных чисел `Complex`, в котором реализовано комплексное сложение.  Для отображения действительной и мнимой частей чисел и результатов сложения в программе используется переопределенная версия метода `ToString`.  
+# <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Практическое руководство. Перегрузка операторов для реализации класса комплексных чисел (Руководство по программированию в C#)
+В этом примере показывается, как использовать перегрузку оператора для создания класса комплексных чисел `Complex`, определяющего сложение комплексных чисел. Программа выводит мнимую и реальную части чисел, а также результат сложения, используя переопределение метода `ToString`.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-operator-overloading-to-create-a-complex-number-class_1.cs)]  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Операторы C\#](../../../csharp/language-reference/operators/index.md)   
- [оператор](../../../csharp/language-reference/keywords/operator.md)   
- [Why are overloaded operators always static in C\#?](http://go.microsoft.com/fwlink/?LinkId=112383)
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Операторы в C#](../../../csharp/language-reference/operators/index.md)   
+ [Оператор (справочник по C#)](../../../csharp/language-reference/keywords/operator.md)   
+ [Почему перегруженные операторы всегда являются статическими в C#?](http://go.microsoft.com/fwlink/?LinkId=112383)
+

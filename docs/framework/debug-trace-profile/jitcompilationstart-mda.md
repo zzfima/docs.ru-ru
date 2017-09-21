@@ -1,57 +1,62 @@
 ---
-title: "jitCompilationStart MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "JIT compilation"
-  - "MDAs (managed debugging assistants), JIT compilation"
-  - "JitCompilationStart MDA"
-  - "managed debugging assistants (MDAs), JIT compilation"
+title: jitCompilationStart MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- JIT compilation
+- MDAs (managed debugging assistants), JIT compilation
+- JitCompilationStart MDA
+- managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb6a36b9427c7d55aceba226a865cd51d076f448
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# jitCompilationStart MDA
-Управляемый помощник по отладке \(MDA\) `jitCompilationStart` активируется, чтобы сообщить о том, что JIT\-компилятор начал компиляцию функции.  
+# <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
+Помощник по отладке управляемого кода (MDA) `jitCompilationStart` активируется, чтобы сообщить о том, что JIT-компилятор начал компиляцию функции.  
   
-## Признаки  
- Размер рабочего множества для программы увеличивается, даже если она уже в формате исходного образа, поскольку в процесс загружается mscorjit.dll.  
+## <a name="symptoms"></a>Признаки  
+ Размер рабочего набора для программы, уже находящейся в формате образа в машинном коде, увеличивается, так как в процесс загружается библиотека mscorjit.dll.  
   
-## Причина  
- Не все сборки, от которых зависит программа, были сгенерированы в исходный формат, или те сборки, которые были сгенерированы в исходный формат, не были правильно зарегистрированы.  
+## <a name="cause"></a>Причина  
+ Не все сборки, от которых зависит программа, были сгенерированы в собственном формате, либо те сборки, которые были сгенерированы в этом формате, не были правильно зарегистрированы.  
   
-## Решение  
- Включение данного MDA позволяет определить, какие функции были скомпилированы посредством JIT\-компилятора.  Следует определить, была ли сборка, содержащая функцию, сгенерирована в исходном формате и правильно зарегистрирована.  
+## <a name="resolution"></a>Решение  
+ Включение этого помощника по отладке управляемого кода позволяет определить, какие функции были скомпилированы посредством JIT-компилятора. Следует определить, была ли сборка, содержащая функцию, сгенерирована в собственном формате и правильно зарегистрирована.  
   
-## Влияние на среду выполнения  
- Данный MDA записывает сообщение непосредственно перед компиляцией метода с помощью JIT\-компилятора, поэтому включение данного MDA оказывает значительное влияние на производительность.   Обратите внимание, что если метод является встроенным, данный MDA не будет генерировать отдельное сообщение.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ Этот помощник по отладке управляемого кода записывает сообщение непосредственно перед компиляцией метода с помощью JIT-компилятора, поэтому включение этого помощника оказывает значительное влияние на производительность. Обратите внимание, что если метод является встроенным, этот помощник по отладке управляемого кода не будет создавать отдельное сообщение.  
   
-## Output  
- В следующем образце кода приведен пример вывода.   В данном случае результат показывает, что в сборке "Тест" метод "m" класса "ns2.CO" был скомпилирован посредством JIT\-компилятора.  
+## <a name="output"></a>Вывод  
+ Ниже приведен пример выходных данных. В этом случае видно, что в сборке Test метод m класса ns2.CO был скомпилирован посредством JIT-компилятора.  
   
 ```  
 method name="Test!ns2.C0::m"  
 ```  
   
-## Configuration  
- Следующий файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT\-компиляции.   Можно определить, что необходимо сообщать обо всех методах, если установить значение атрибута имени равным \*.  
+## <a name="configuration"></a>Конфигурация  
+ Приведенный ниже файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT-компиляции. Можно указать, что необходимо сообщать о всех методах, установив значение атрибута имени равным *.  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <jitCompilationStart>  
@@ -69,8 +74,8 @@ method name="Test!ns2.C0::m"
 </mdaConfig>  
 ```  
   
-## Пример  
- Следующий пример кода необходимо использовать с предыдущим файлом конфигурации:  
+## <a name="example"></a>Пример  
+ Приведенный ниже пример кода предназначен для использования с предыдущим файлом конфигурации.  
   
 ```  
 using System;  
@@ -167,7 +172,8 @@ namespace ns2
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+

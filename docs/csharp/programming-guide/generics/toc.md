@@ -8,7 +8,6 @@
 ## [Универсальные методы](generic-methods.md)
 ## [Универсальные методы и массивы](generics-and-arrays.md)
 ## [Универсальные делегаты](generic-delegates.md)
-## [Ключевое слово default в универсальном коде (C#)](default-keyword-in-generic-code.md)
 ## [Различия между шаблонами языка C++ и универсальными шаблонами языка C#](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Универсальные типы во время выполнения](generics-in-the-run-time.md)
 ## [Универсальные шаблоны в библиотеке классов платформы .NET Framework](generics-in-the-net-framework-class-library.md)

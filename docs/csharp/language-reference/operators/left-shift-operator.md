@@ -1,42 +1,62 @@
 ---
-title: "Оператор &lt;&lt; (Справочник по C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "<<_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<< - оператор [C#]"
-  - "оператор сдвига влево (<<) [C#]"
+title: "Оператор &lt;&lt; (справочник по C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- <<_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- left shift operator (<<) [C#]
+- << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
 caps.latest.revision: 18
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4e6ad17232ec4eb087ca300342331af6a30789b1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Оператор &lt;&lt; (Справочник по C#)
-Оператор сдвига влево \(`<<`\) сдвигает первый операнд влево в соответствии с количеством бит, заданным вторым операндом.  Тип второго операнда должен быть [int](../../../csharp/language-reference/keywords/int.md) или тип, имеющий предопределенное неявное числовое преобразование в `int`.  
+# <a name="ltlt-operator-c-reference"></a>Оператор &lt;&lt; (справочник по C#)
+Оператор сдвига влево (`<<`) сдвигает первый операнд влево на число битов, задаваемое вторым операндом. Второй операнд должен иметь тип [int](../../../csharp/language-reference/keywords/int.md) или тип, для которого существует предварительно определенное неявное числовое преобразование в `int`.  
   
-## Заметки  
- Если тип первого операнда — [int](../../../csharp/language-reference/keywords/int.md) или [uint](../../../csharp/language-reference/keywords/uint.md) \(32\-разрядное число\), начало сдвига задается пятью младшими разрядами второго операнда.  Фактический сдвиг от 0 до 31 бит.  
+## <a name="remarks"></a>Примечания  
+ Если первый операнд имеет тип [int](../../../csharp/language-reference/keywords/int.md) или [uint](../../../csharp/language-reference/keywords/uint.md) (32-разрядное число), величина сдвига определяется пятью младшими разрядами второго операнда. Фактическая величина сдвига составляет от 0 до 31 бита.  
   
- Если тип первого операнда — [long](../../../csharp/language-reference/keywords/long.md) или [ulong](../../../csharp/language-reference/keywords/ulong.md) \(64\-разрядное число\), начало сдвига задается шестью младшими разрядами второго операнда.  Фактический сдвиг от 0 до 63 бит.  
+ Если первый операнд имеет тип [long](../../../csharp/language-reference/keywords/long.md) или [ulong](../../../csharp/language-reference/keywords/ulong.md) (64-разрядное число), величина сдвига определяется шестью младшими разрядами второго операнда. Фактическая величина сдвига составляет от 0 до 63 битов.  
   
- Старшие разряды, которые находятся не в диапазоне тип первого операнда после смены отбрасываются, а пустые младшие разряды заполняются нулями.  Операторы сдвига никогда не вызывают переполнений.  
+ Любые старшие разряды, не попадающие в диапазон значений типа первого операнда после сдвига, отбрасываются, а пустые младшие разряды заполняются нулями. Операции сдвига никогда не вызывают переполнение.  
   
- Определенные пользователем типы могут вызвать перегрузку оператора `<<` \(см.[оператор](../../../csharp/language-reference/keywords/operator.md)\); тип первого операнда должен быть определен пользователем, а тип второго должен быть `int`.  Если бинарный оператор перегружен, соответствующий оператор присваивания \(если таковой имеется\), также будет явно перегружен.  
+ Определяемые пользователем типы могут перегружать оператор `<<` (см. [operator](../../../csharp/language-reference/keywords/operator.md)). В этом случае первый операнд должен иметь определяемый пользователем тип, а второй операнд — тип `int`. При перегрузке бинарного оператора соответствующий оператор присвоения (если таковой имеется) также неявно перегружается.  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
   
-## Комментарии  
- Обратите внимание, что `i<<1` и `i<<33`  дают одинаковый результат, поскольку 1 и 33 имеют те же пять младших разрядов.  
+## <a name="comments"></a>Комментарии  
+ Обратите внимание, что `i<<1` и `i<<33` дают один и тот же результат, поскольку 1 и 33 имеют одинаковые младшие пять разрядов.  
   
-## См. также  
- [Справочник по C\#](../../../csharp/language-reference/index.md)   
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
- [Операторы C\#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по C#](../../../csharp/language-reference/index.md)   
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
+ [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+

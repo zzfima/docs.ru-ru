@@ -1,6 +1,6 @@
 ---
-title: "Перенос кода в .NET Core из .NET Framework | Документы Майкрософт"
-description: "Перенос кода в .NET Core из .NET Framework"
+title: "Перенос кода в .NET Core из .NET Framework"
+description: "Общие сведения о процессе переноса и инструментах, которые могут оказаться полезными при переносе проектов .NET Framework в .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f922fd75bf22d3cfb0c54276443820bae175bc79
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/23/2017
 
 Ниже приведен краткий список средств, которые могут вам помочь.
 
-* NuGet — [клиент Nuget](https://dist.nuget.org/index.html) или [обозреватель пакетов NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) — диспетчер пакетов Майкрософт для платформы .NET.
+* NuGet — [клиент Nuget](https://dist.nuget.org/index.html) или [обозреватель пакетов NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) — диспетчер пакетов Майкрософт для реализаций .NET.
 * Анализатор переносимости API — [программа командной строки](https://github.com/Microsoft/dotnet-apiport/releases) или [расширение для Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b) — цепочка инструментов, позволяющая создавать отчеты о переносимости кода между .NET Framework и .NET Core с разбивкой проблем по сборкам.  Дополнительные сведения см. в разделе [Полезные инструменты](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
 * Reverse Package Search — [полезная веб-служба](https://packagesearch.azurewebsites.net), которая позволяет выполнять поиск типа и находить пакеты, содержащие его.
 

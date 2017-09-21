@@ -1,5 +1,5 @@
 ---
-title: "Уровни доступности (справочник по C#) | Документы Майкрософт"
+title: "Уровни доступности (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30220e92e55ac6101cf8fedd8920755cd25978bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 796802a407c486c1df5332d5b4920467f3a1171b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessibility-levels-c-reference"></a>Уровни доступности (Справочник по C#)
@@ -43,10 +43,10 @@ ms.lasthandoff: 03/13/2017
 |`public`|Неограниченный доступ.|  
 |`protected`|Доступ ограничен содержащим классом или типами, которые являются производными от содержащего класса.|  
 |`internal`|Доступ ограничен текущей сборкой.|  
-|`protected` `internal`|Доступ ограничен текущей сборкой или типами, которые являются производными от содержащего класса.|  
+|`protected internal`|Доступ ограничен текущей сборкой или типами, которые являются производными от содержащего класса.|  
 |`private`|Доступ ограничен содержащим типом.|  
   
- Только один модификатор доступа может быть указан для члена или типа, за исключением случая, когда используется сочетание `protected` `internal`.  
+ Только один модификатор доступа может быть указан для члена или типа, за исключением случая, когда используется сочетание `protected internal`.  
   
  Модификаторы доступа не могут быть указаны для пространств имен. Пространства имен не имеют ограничений доступа.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/13/2017
 |Члены типа|Уровень доступности членов по умолчанию|Допустимые объявленные уровни доступности члена|  
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|Нет|  
-|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected` `internal`|  
+|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal`|  
 |`interface`|`public`|Нет|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
@@ -80,3 +80,4 @@ ms.lasthandoff: 03/13/2017
  [private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Вариативность в делегатах (C#) | Документы Майкрософт"
+title: "Вариативность в делегатах (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79de8218f3fcdf52dad84bb0bacffde01a222066
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>Вариативность в делегатах (C#)
@@ -157,7 +157,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
-> Параметры  `ref` и `out` в C# нельзя пометить как вариативные.  
+>  Параметры `ref` и `out` в C# нельзя пометить как вариативные.  
   
  В одном делегате можно реализовать поддержку вариативности и ковариации, но для разных параметров типа. Эти действия показаны в следующем примере.  
   
@@ -214,6 +214,7 @@ public static void Test()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Универсальные шаблоны](https://msdn.microsoft.com/library/ms172192)   
+ [Универсальные шаблоны](~/docs/standard/generics/index.md)   
  [Использование вариативности в универсальных методах-делегатах Func и Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)   
  [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+

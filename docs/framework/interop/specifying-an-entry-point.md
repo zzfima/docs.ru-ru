@@ -1,47 +1,52 @@
 ---
-title: "Specifying an Entry Point | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "EntryPoint field"
-  - "platform invoke, attribute fields"
-  - "attribute fields in platform invoke, EntryPoint"
+title: "Задание точки входа"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- EntryPoint field
+- platform invoke, attribute fields
+- attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f8d8f4a561248b7022b08ee15c9a726a58b80318
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Specifying an Entry Point
-Точка входа определяет расположение функции в DLL.  В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия.  Также разработчик может сопоставить точку входа с другим именем, фактически переименовывая функцию.  
+# <a name="specifying-an-entry-point"></a>Задание точки входа
+Точка входа определяет расположение функции в библиотеке DLL. В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия. Вы можете сопоставить точку входа с другим именем, чтобы фактически переименовать функцию.  
   
- Ниже приведен перечень возможных причин переименования функции DLL:  
+ Ниже перечислено, зачем может потребоваться переименовывать функции DLL:  
   
--   избежать использования имен API\-функций, чувствительных к регистру знаков;  
+-   чтобы избежать использования имен функций API, в которых учитывается регистр символов;  
   
--   привести имена в соответствие с существующими стандартами именования;  
+-   чтобы привести имена в соответствие с существующими стандартами именования;  
   
--   сделать возможным вызов функций, принимающих данные разных типов \(объявляя несколько версий одной и той же функции DLL\);  
+-   чтобы сделать возможным вызов функций, принимающих данные разных типов (путем объявления нескольких версий одной и той же функции DLL);  
   
--   упростить применение API\-интерфейсов, которые содержат функции версий для ANSI и Юникода.  
+-   чтобы упростить применение интерфейсов API, которые содержат версии функции для ANSI и Юникода.  
   
- В этом разделе показан способ переименования функции DLL в управляемом коде.  
+ В этом разделе показано, как переименовать функцию DLL в управляемом коде.  
   
-## Переименование функции в Visual Basic  
- В Visual Basic для установки поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName> используется ключевое слово **Function** в инструкции **Declare**.  В следующем примере показан базовый вариант объявления.  
+## <a name="renaming-a-function-in-visual-basic"></a>Переименование функции в Visual Basic  
+ В Visual Basic для установки поля <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName> используется ключевое слово **Function** в операторе **Declare**. В приведенном ниже примере показан базовый вариант объявления.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -53,7 +58,7 @@ Public Class Win32
 End Class  
 ```  
   
- Как показано в следующем примере, можно заменить точку входа **MessageBox** на **MsgBox**, включив в определение ключевое слово **Alias**.  В обоих примерах ключевое слово **Auto** позволяет не указывать версию кодировки для точки входа.  Дополнительные сведения о выборе кодировки см. в разделе [Задание кодировки](../../../docs/framework/interop/specifying-a-character-set.md).  
+ Как показано в следующем примере, можно заменить точку входа **MessageBox** на **MsgBox**, включив в определение ключевое слово **Alias**. В обоих примерах ключевое слово **Auto** позволяет не указывать версию кодировки для точки входа. Дополнительные сведения о выборе кодировки см. в разделе [Определение кодировки](../../../docs/framework/interop/specifying-a-character-set.md).  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -65,17 +70,17 @@ Public Class Win32
 End Class  
 ```  
   
-## Переименование функции в C\# и C\+\+  
- Для задания функции по имени или порядковому номеру можно использовать поле <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName>.  Если имя функции в определении метода совпадает с именем точки входа в DLL, явно задавать функцию с помощью поля **EntryPoint** не требуется.  В противном случае, чтобы указать имя или порядковый номер, следует использовать одну из следующих форм атрибута:  
+## <a name="renaming-a-function-in-c-and-c"></a>Переименование функции в C# и C++  
+ Для задания функции DLL по имени или порядковому номеру можно использовать поле <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName>. Если имя функции в определении метода совпадает с именем точки входа в библиотеке DLL, явно задавать функцию с помощью поля **EntryPoint** не требуется. В противном случае, чтобы указать имя или порядковый номер, следует использовать одну из следующих форм атрибута:  
   
 ```  
 [DllImport("dllname", EntryPoint="Functionname")]  
 [DllImport("dllname", EntryPoint="#123")]  
 ```  
   
- Обратите внимание, что порядковому номеру должен предшествовать знак \#.  
+ Обратите внимание, что порядковому номеру должен предшествовать знак #.  
   
- В следующем примере показан способ замены в программном коде **MessageBoxA** на **MsgBox** с помощью поля **EntryPoint**  
+ В приведенном ниже примере показан способ замены в коде **MessageBoxA** на **MsgBox** с помощью поля **EntryPoint**.  
   
 ```csharp  
 using System.Runtime.InteropServices;  
@@ -85,7 +90,6 @@ public class Win32 {
     public static extern int MsgBox(int hWnd, String text, String caption,  
                                     uint type);  
 }  
-  
 ```  
   
 ```cpp  
@@ -99,8 +103,9 @@ extern "C" int MsgBox(HWND hWnd,
                       unsigned int uType);  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Platform Invoke Examples](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+ [Создание прототипов в управляемом коде](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Примеры вызовов неуправляемого кода](../../../docs/framework/interop/platform-invoke-examples.md)   
+ [Маршалинг данных при вызове неуправляемого кода](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+

@@ -1,42 +1,47 @@
 ---
-title: "Практическое руководство. Установка политики кэша для приложения на основе расположения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "явное определение поведения кэша"
-  - "политики кэша на основе расположения"
-  - "локальный кэш"
-  - "политики кэширования запроса"
-  - "кэш [платформа .NET Framework], политики на основе расположения"
+title: "Практическое руководство. Установка политики кэша для приложения на основе расположения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- expliciting defining cache behavior
+- location-based cache policies
+- local cache
+- request cache policies
+- cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bcfd166b108dc0cf99381869e39952b09fcfca6b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Практическое руководство. Установка политики кэша для приложения на основе расположения
-Место хранения\- на основе политики кэша позволяют приложению явно задать расширения функциональности кэширования, основанную на месте запрошенного ресурса.  В этом разделе демонстрируется устанавливать политику кэша программно.  Дополнительные сведения о настройке политики для приложения с помощью файлов конфигурации см. в разделе [Элемент \<requestCaching\> \(параметры сети\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Практическое руководство. Установка политики кэша для приложения на основе расположения
+Политики кэша на основе расположения позволяют приложению явным образом определить поведение кэша на основе расположения запрошенного ресурса. В этом разделе описана установка политики кэша программным способом. Сведения об установке политики для приложения с помощью файлов конфигурации см. в разделе [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
-### Задать расположение хранения\- на политику кэша для приложения  
+### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Установка политики кэша для приложения на основе расположения  
   
 1.  Создайте объект <xref:System.Net.Cache.RequestCachePolicy> или <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
-2.  Присвойте объект политики по умолчанию для домена приложения.  
+2.  Установите этот объект политики как объект по умолчанию для домена приложения.  
   
-### Задать политику, которая принимает запрошенные ресурсы из кэша  
+### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Установка политики, которая принимает запрошенные ресурсы из кэша  
   
--   Создайте политику, которая принимает запрошенные ресурсы из кэша, если он доступен, в противном случае отправляет передаваемые запросы, установив кэш уровня в <xref:System.Net.Cache.HttpRequestCacheLevel>.  Запрос может выполняться любым кэшем между клиентом и сервером, включая удаленные кэши.  
+-   Создайте политику, которая принимает запрошенные ресурсы из кэша, если они есть в кэше. В противном случае запросы отправляются на сервер с помощью установки уровня кэширования <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Для выполнения запроса может использоваться любой кэш между клиентом и сервером, включая удаленный кэш.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -45,7 +50,6 @@ caps.handback.revision: 10
             (HttpRequestCacheLevel.CacheIfAvailable);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
-  
     ```  
   
     ```vb  
@@ -56,9 +60,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### Задать политику, которая предотвращает какой\-либо из кэша, предоставляющего ресурсов  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Установка политики, которая полностью запрещает получение ресурсов из кэша  
   
--   Создание политики кэша, которая предотвращает какой\-либо из запрошенных предоставляющего ресурсов с помощью установки уровня <xref:System.Net.Cache.HttpRequestCacheLevel> в кэш.  Этот уровень политики удаляет ресурс из локального кэша, если присутствует и указывает на то, что удаленный кэши, они должны также удалить ресурс.  
+-   Создайте политику, которая полностью запрещает получение запрошенных ресурсов из кэша, установив уровень кэширования <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. С этой политикой ресурс удаляется из локального кэша (если он присутствует в локальном кэше), а также из удаленных кэшей.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -77,9 +81,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### Задать политику, которая возвращает запрошенные ресурсы, только если их в локальном кэше  
+### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>Установка политики, которая возвращает запрошенные ресурсы, только если они присутствуют в локальном кэше  
   
--   Создайте политику, которая возвращает запрошенные ресурсы, только если их в локальном кэше, установив кэш к <xref:System.Net.Cache.HttpRequestCacheLevel>.  Если запрошенный ресурс не находится в кэше, то возникает исключение <xref:System.Net.WebException>.  
+-   Создайте политику, которая возвращает запрошенные ресурсы только в том случае, если они присутствуют в локальном кэше, установив уровень кэширования <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. Если запрошенный ресурс отсутствует в кэше, выдается исключение <xref:System.Net.WebException>.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -98,9 +102,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### Задать политику, которая предотвращает локальный кэш из указав ресурсов  
+### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Установка политики, которая запрещает получение ресурсов из локального кэша  
   
--   Создайте политику, которая предотвращает локальный кэш из запрошенных предоставляющего ресурсов с помощью установки уровня <xref:System.Net.Cache.HttpRequestCacheLevel> в кэш.  Если запрошенный ресурс в промежуточном кэше и успешно revalidated, промежуточный кэш может предоставить запрошенный ресурс.  
+-   Создайте политику, которая запрещает получение запрошенных ресурсов из локального кэша, установив уровень кэширования <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. Если запрошенный ресурс находится в промежуточном кэше и успешно проверен, ресурс может быть возвращен из промежуточного кэша.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -119,9 +123,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### Задать политику, которая предотвращает какой\-либо из кэша, предоставляющего запрошенных ресурсов  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Установка политики, которая полностью запрещает получение запрошенных ресурсов из кэша  
   
--   Создание политики кэша, которая предотвращает какой\-либо из запрошенных предоставляющего ресурсов с помощью установки уровня <xref:System.Net.Cache.HttpRequestCacheLevel> в кэш.  Ресурс, возвращенный сервером могут храниться в кэше.  
+-   Создайте политику, которая полностью запрещает получение запрошенных ресурсов из кэша, установив уровень кэширования <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. Ресурс, возвращенный сервером, может быть сохранен в кэше.  
   
     ```csharp  
     public static void SendToServer()  
@@ -140,9 +144,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### Задать политику, которая позволяет любой кэш к ресурсам обрабатывается, если запрошенный ресурс на сервере не новее, чем кэшированная копия  
+### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Установка политики, которая разрешает получение запрошенных ресурсов из любого кэша, если кэшированная копия не старше ресурса на сервере  
   
--   Создайте политику, которая позволяет любой кэш к ресурсам обрабатывается, если запрошенный ресурс на сервере не новее, чем кэшированную копию, установив кэш уровня в <xref:System.Net.Cache.HttpRequestCacheLevel>.  
+-   Создайте политику, которая разрешает получение запрошенных ресурсов из любого кэша, если кэшированная копия не старше ресурса на сервере, установив уровень кэширования <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
   
     ```csharp  
     public static void CheckServer()  
@@ -161,9 +165,10 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Управление кэшем для сетевых приложений](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Политика кэша](../../../docs/framework/network-programming/cache-policy.md)   
  [Политики кэша на основе расположения](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [Политики кэша на основе времени](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Элемент \<requestCaching\> \(параметры сети\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Элемент \<requestCaching> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

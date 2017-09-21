@@ -1,58 +1,77 @@
 ---
-title: "/moduleassemblyname (C# Compiler Option) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/moduleassemblyname"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "moduleassemblyname compiler option [C#]"
-  - "/moduleassemblyname compiler option [C#]"
-  - ".moduleassemblyname compiler option [C#]"
+title: "-moduleassemblyname (параметры компилятора C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /moduleassemblyname
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- moduleassemblyname compiler option [C#]
+- /moduleassemblyname compiler option [C#]
+- .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# /moduleassemblyname (C# Compiler Option)
-Задает сборку, к неоткрытым типам которой может получить доступ netmodule.  
+# <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (параметры компилятора C#)
+Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```console  
 /moduleassemblyname:assembly_name  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `assembly_name`  
- Имя сборки, к чьим неоткрытым типам может обращаться файл с расширением .netmodule.  
+ Имя сборки, к неоткрытым типам которой может обращаться .netmodule.  
   
-## Заметки  
- **\/moduleassemblyname** должен использоваться при построении файла .netmodule и, когда выполняются следующие условия:  
+## <a name="remarks"></a>Примечания  
+ Параметр **/moduleassemblyname** должен использоваться при построении .netmodule и выполнении следующий условий:  
   
--   Для файла .netmodule требуется доступ к неоткрытым типам в существующей сборке.  
+-   .netmodule требуется доступ к неоткрытым типам в существующей сборке.  
   
 -   Известно имя сборки, в которой будет создан .netmodule.  
   
 -   Существующая сборка предоставила дружественной сборке доступ к сборке, в которую будет встроен .netmodule.  
   
- Дополнительные сведения о построении .netmodule содержатся в [\/target:module \(Create Module to Add to Assembly\)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Дополнительные сведения о построении файлов .netmodule см. в разделе [/target:module (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Дополнительные сведения о дружественных сборках см. в разделе [Дружественные сборки](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md).  
+ Дополнительные сведения см. в разделе [Дружественные сборки](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
- Этот параметр недоступен из среды разработки; он доступен только при компиляции из командной строки.  
+ Этот параметр недоступен в среде разработки и может использоваться только при компиляции из командной строки.  
   
- Этот параметр компилятора недоступен в среде разработки Visual Studio и не может быть изменен программным способом.  
+ Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.  
   
-## Пример  
- Следующий пример выполняет построение сборки с закрытым типом и предоставляем дружественной сборке доступ к сборке с именем csman\_an\_assembly.  
+## <a name="example"></a>Пример  
+ В этом примере выполняется построение сборки частного типа, которой предоставляется дружественный доступ к сборке csman_an_assembly.  
   
-```  
+```csharp  
 // moduleassemblyname_1.cs  
 // compile with: /target:library  
 using System;  
@@ -69,10 +88,10 @@ class An_Internal_Class
 }  
 ```  
   
-## Пример  
- Этот пример строит .netmodule, который обращается к неоткрытому типу в сборке moduleassemblyname\_1.dll.  Узнав, что этот .netmodule будет встроен в сборку под названием csman\_an\_assembly, можно указать **\/moduleassemblyname**, позволяя .netmodule обращаться к неоткрытым типам в сборке, которой предоставлен доступ к дружественной сборке csman\_an\_assembly.  
+## <a name="example"></a>Пример  
+ Этот пример строит .netmodule, который обращается к неоткрытому типу в сборке moduleassemblyname_1.dll. Мы знаем, что .netmodule будет встроен в сборку csman_an_assembly, поэтому можем задать **/moduleassemblyname**, чтобы позволить .netmodule обращаться к неоткрытым типам в сборке, которой предоставлен доступ к дружественной сборке csman_an_assembly.  
   
-```  
+```csharp  
 // moduleassemblyname_2.cs  
 // compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
 class B {  
@@ -83,10 +102,10 @@ class B {
 }  
 ```  
   
-## Пример  
- Следующий код выполняет построение сборки csman\_an\_assembly, ссылаясь на ранее построенную сборку и .netmodule.  
+## <a name="example"></a>Пример  
+ В следующем примере кода выполнено построение сборки csman_an_assembly со ссылками на ранее построенную сборку и .netmodule.  
   
-```  
+```csharp  
 // csman_an_assembly.cs  
 // compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
 class A {  
@@ -97,7 +116,8 @@ class A {
 }  
 ```  
   
-  **An\_Internal\_Class.Test под названием**   
-## См. также  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Практическое руководство. Изменение свойств проекта и параметров конфигурации](http://msdn.microsoft.com/ru-ru/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ **Вызывается An_Internal_Class.Test**   
+## <a name="see-also"></a>См. также  
+ [Параметры компилятора C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+

@@ -10,6 +10,7 @@
 ### [Анонимные методы](anonymous-methods.md)
 ## [Перегружаемые операторы](overloadable-operators.md)
 ## [Операторы преобразования](conversion-operators.md)
+## [значение выражения по умолчанию](default-value-expressions.md)
 ### [Использование операторов преобразования](using-conversion-operators.md)
 ### [Практическое руководство. Реализация определенных пользователем преобразований между структурами](how-to-implement-user-defined-conversions-between-structs.md)
 ## [Практическое руководство. Перегрузка операторов для реализации класса комплексных чисел](how-to-use-operator-overloading-to-create-a-complex-number-class.md)

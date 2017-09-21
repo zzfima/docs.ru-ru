@@ -1,28 +1,33 @@
 ---
-title: "How to: Perform Lazy Initialization of Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "lazy initialization in .NET, how to perform"
+title: "Практическое руководство. Неактивная инициализация объектов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab1ae0eae8d78d4b7f14444e78ff5a741fe02d95
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Perform Lazy Initialization of Objects
-Класс <xref:System.Lazy%601?displayProperty=fullName> упрощает выполнение неактивной инициализации и создание объектов.  При неактивной инициализации, если объекты не требуются в процессе работы приложения, их можно не создавать или отложить их инициализацию до первого обращения к ним.  Для получения дополнительной информации см. [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Практическое руководство. Неактивная инициализация объектов
+Класс <xref:System.Lazy%601?displayProperty=fullName> упрощает выполнение отложенной инициализации и создание экземпляров объектов. Если объекты не требуются, то при отложенной инициализации их можно не создавать или отложить их инициализацию до первого обращения к ним. Дополнительные сведения см. в статье [Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md).  
   
-## Пример  
- В следующем примере показано, как инициализировать значение с <xref:System.Lazy%601>.  Предположим, что неактивная переменная может не потребоваться, в зависимости от какого\-либо другого кода, задающего переменной `someCondition` значение true или false.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как инициализировать значение с <xref:System.Lazy%601>. Предположим, что отложенная переменная может не потребоваться, в зависимости от какого-либо другого кода, задающего переменной `someCondition` значение true или false.  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -72,12 +77,12 @@ End Sub
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как использовать класс <xref:System.Threading.ThreadLocal%601?displayProperty=fullName> для инициализации типа, видимого только текущему экземпляру объекта в текущем потоке.  
   
- [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
- [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
+ [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)] [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Threading.LazyInitializer?displayProperty=fullName>   
- [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md)
+ [Отложенная инициализация](../../../docs/framework/performance/lazy-initialization.md)
+

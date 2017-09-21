@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (C#) | Документы Майкрософт"
+title: "Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,18 +19,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a27591c62e55295b3cf2b9716776b25d984865a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (C#)
 В этом пошаговом руководстве описывается создание многопоточного приложения Windows Forms, которое выполняет поиск заданного слова в текстовом файле. В нем демонстрируются:  
   
--   Определение класса с помощью метода, который может быть вызван компонентом <xref:System.ComponentModel.BackgroundWorker>.  
+-   Определение класса с методом, который может вызываться компонентом <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Обработка событий, создаваемых компонентом <xref:System.ComponentModel.BackgroundWorker>.  
+-   Обработка событий, вызываемых компонентом <xref:System.ComponentModel.BackgroundWorker>.  
   
 -   Запуск компонента <xref:System.ComponentModel.BackgroundWorker> для выполнения метода.  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Создание компонента BackgroundWorker и подписка на его события  
   
-1.  Добавьте в форму компонент <xref:System.ComponentModel.BackgroundWorker> из раздела **Компоненты** на **панели элементов**. Он будет отображаться в области компонентов формы.  
+1.  Добавьте в форму компонент <xref:System.ComponentModel.BackgroundWorker> из раздела **Компоненты** в **панели элементов**. Он будет отображаться в области компонентов формы.  
   
 2.  Задайте для объекта backgroundWorker1 следующие свойства.  
   
@@ -293,3 +294,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>См. также  
  [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Практическое руководство. Подписка и отмена подписки на события](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+

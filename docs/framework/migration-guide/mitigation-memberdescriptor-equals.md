@@ -1,5 +1,5 @@
 ---
-title: "Устранение рисков. MemberDescriptor.Equals | Документация Майкрософт"
+title: "Устранение рисков. MemberDescriptor.Equals"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 409f06f4dfbe7be50dd2c487e49d3d4d8a477539
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4989d3c2611b500063158955f102931902e1ab32
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-memberdescriptorequals"></a>Устранение рисков. MemberDescriptor.Equals
-Начиная с приложений, предназначенных для [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], реализация метода <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> изменилась. Поскольку методы `System.ComponentModel.EventDescriptor.Equals` и `System.ComponentModel.PropertyDescriptor.Equals` наследуют реализацию базового класса, изменение на них также влияет.  
+Начиная с приложений, предназначенных для [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], изменилась реализация метода <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>. Поскольку методы `System.ComponentModel.EventDescriptor.Equals` и `System.ComponentModel.PropertyDescriptor.Equals` наследуют реализацию базового класса, изменение на них также влияет.  
   
  В приложениях, предназначенных для версий платформы .NET Framework до [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], часть теста на равенство в методе <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> неверно сравнивала свойство <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> одного объекта со свойством <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> другого. Начиная с приложений, предназначенных для [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], метод <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> сравнивает свойство <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> двух объектов.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/18/2017
      </runtime>  
     ```  
   
--   Можно изменить исходный код для восстановления предыдущего поведения, сравнивая вручную свойства <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> и <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> после вызова метода <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>, как делает следующий фрагмент кода.  
+-   Можно изменить исходный код для восстановления предыдущего поведения, сравнивая вручную свойства <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> и <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> после вызова метода <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>, как делает приведенный ниже фрагмент кода.  
   
     ```csharp  
     if (memberDescriptor1.Equals(memberDescriptor2) &   

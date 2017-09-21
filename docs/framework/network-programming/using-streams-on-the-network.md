@@ -1,48 +1,53 @@
 ---
-title: "Использование потоков в сети | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "запрос данных из Интернета, потоки"
-  - "Сеть"
-  - "ответ на интернет-запрос, потоки"
-  - "сетевые ресурсы, возможности потоков"
-  - "получение данных, возможности потоков"
-  - "Сетевые ресурсы"
-  - "отправка данных, возможности потоков"
-  - "скачивание интернет-ресурсов, потоки"
-  - "потоки, возможности"
-  - "Интернет, потоки"
-  - "потоки"
+title: "Использование потоков в сети"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, streams
+- Networking
+- response to Internet request, streams
+- network resources, stream capabilities
+- receiving data, stream capabilities
+- Network Resources
+- sending data, stream capabilities
+- downloading Internet resources, streams
+- streams, capabilities
+- Internet, streams
+- streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Использование потоков в сети
-Сетевые ресурсы представлены в платформе .NET Framework, как потоки.  Путем обработки потоков родово платформа .NET Framework предлагает следующие возможности:  
+# <a name="using-streams-on-the-network"></a>Использование потоков в сети
+Сетевые ресурсы представлены в .NET Framework как потоки. Если рассматривать потоки в целом, платформа .NET Framework предоставляет указанные ниже возможности.  
   
--   Распространенным способом отправлять и получать данные в интернете.  Все действия фактическое содержимое файла — HTML, XML или что\-нибудь еще — приложение будет использовать <xref:System.IO.Stream.Write%2A?displayProperty=fullName> и <xref:System.IO.Stream.Read%2A?displayProperty=fullName> отправлять и получать данные.  
+-   Единый способ отправки и получения данных через Интернет. Каким бы ни было содержимое файла — HTML, XML или что-то иное — приложение будет использовать для отправки и получения данных методы <xref:System.IO.Stream.Write%2A?displayProperty=fullName> и <xref:System.IO.Stream.Read%2A?displayProperty=fullName>.  
   
--   Совместимость с потоками с помощью платформы .NET Framework.  Потоки используются во всем платформы .NET Framework, которая имеет богатую инфраструктуру для обработки их.  Например, можно изменить приложение, которое считывает XML\-данные из <xref:System.IO.FileStream> для чтения данных из <xref:System.Net.Sockets.NetworkStream> а не изменять только несколько строк кода, которые инициализируют поток.  Основные различия между классом **NetworkStream** и другими потоками, что **NetworkStream** не seekable, свойство <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> всегда возвращают **false** и методы <xref:System.Net.Sockets.NetworkStream.Seek%2A> и <xref:System.Net.Sockets.NetworkStream.Position%2A> вызывают <xref:System.NotSupportedException>.  
+-   Совместимость с другими потоками в платформе .NET Framework. Потоки используются в .NET Framework в самых разных целях, и для их обработки имеется развитая инфраструктура. Например, вы можете изменить приложение, считывающее данные XML из потока <xref:System.IO.FileStream>, так, чтобы оно считывало данные из <xref:System.Net.Sockets.NetworkStream>, изменив всего лишь несколько строк кода, которые инициализируют поток. Основные отличия класса **NetworkStream** от других потоков заключаются в том, что **NetworkStream** не поддерживает поиск, свойство <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> всегда возвращает значение **false**, а методы <xref:System.Net.Sockets.NetworkStream.Seek%2A> и <xref:System.Net.Sockets.NetworkStream.Position%2A> создают исключение <xref:System.NotSupportedException>.  
   
--   Обработка данных при поступлении.  Потоки обеспечивает доступ к данным по мере того, как они поступают от сети, а не применение приложение ожидает полный набор данных, который требуется загрузить.  
+-   Обработка данных по мере поступления. Потоки обеспечивают доступ к данным в процессе их поступления из сети, так что приложению не нужно ждать, когда скачается весь набор данных.  
   
- Пространство имен <xref:System.Net.Sockets> содержит класс **NetworkStream**, реализующий класс <xref:System.IO.Stream> специально для использования с сетевыми ресурсами.  Классы в пространстве имен <xref:System.Net.Sockets> используют класс **NetworkStream** для представления потоки.  
+ Пространство имен <xref:System.Net.Sockets> содержит класс **NetworkStream**, который реализует класс <xref:System.IO.Stream> специально для использования с сетевыми ресурсами. Классы из пространства имен <xref:System.Net.Sockets> используют класс **NetworkStream** для представления потоков.  
   
- Отправлять данные в поток, возвращенный сети с помощью вызова <xref:System.Net.WebRequest.GetRequestStream%2A> на локальном <xref:System.Net.WebRequest>.  **WebRequest** отправляет заголовки запроса к серверу; затем можно отправлять данные к сетевому ресурсу, вызвав <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> или метод <xref:System.IO.Stream.Write%2A> в возвращаемом потоке.  Для некоторых протоколов, таких как HTTP, могут потребовать устанавливающих свойства протокол\- определенной, прежде чем отправлять данные.  В следующем примере кода показано, как задать свойства Http\- определенной для отправки данных.  Он предполагает, что переменная `sendData` содержащий данные отправлять и что переменная `sendLength` число байтов данных, чтобы отправить.  
+ Для отправки данных в сеть с помощью полученного потока вызовите метод <xref:System.Net.WebRequest.GetRequestStream%2A> класса <xref:System.Net.WebRequest>. **WebRequest** отправит заголовки запроса на сервер, после чего можно отправлять данные в сетевой ресурс, вызывая метод <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> или <xref:System.IO.Stream.Write%2A> возвращенного потока. Некоторые протоколы, такие как HTTP, могут требовать задания определенных свойств протокола перед отправкой данных. В приведенном ниже примере кода показано, как задать свойства протокола HTTP для отправки данных. Предполагается, что переменная `sendData` содержит отправляемые данные, а в переменной `sendLength` указывается число передаваемых байтов.  
   
 ```csharp  
 HttpWebRequest request =   
@@ -59,7 +64,6 @@ catch
 {  
    // Handle errors . . .  
 }  
-  
 ```  
   
 ```vb  
@@ -76,19 +80,19 @@ Catch
 End Try  
 ```  
   
- Получить данные из сети, то вызов <xref:System.Net.WebResponse.GetResponseStream%2A> на локальном <xref:System.Net.WebResponse>.  После этого можно прочитать данные из сетевого ресурса путем вызова <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A> или метод <xref:System.IO.Stream.Read%2A> в возвращаемом потоке.  
+ Для получения данных из сети вызовите метод <xref:System.Net.WebResponse.GetResponseStream%2A> класса <xref:System.Net.WebResponse>. После этого можно считывать данные из сетевого ресурса, вызывая метод <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A> или <xref:System.IO.Stream.Read%2A> возвращенного потока.  
   
- При использовании потоков из сетевых ресурсов, имейте в виду следующее:  
+ При использовании потоков из сетевых ресурсов следует учитывать указанные ниже моменты.  
   
--   Свойство **CanSeek** всегда возвращает **false** поскольку класс не может **NetworkStream** смена позицию в потоке.  Методы **Искать** и **Положение** вызывают **NotSupportedException**.  
+-   Свойство **CanSeek** всегда возвращает значение **false**, так как класс **NetworkStream** не может изменять позицию в потоке. Методы **Seek** и **Position** создают исключение **NotSupportedException**.  
   
--   При использовании **WebRequest** и **WebResponse**, экземпляры потока, созданные путем вызова **GetResponseStream** только для чтения и экземпляры потока, созданные путем вызова **GetRequestStream** доступный только на запись.  
+-   При использовании классов **WebRequest** и **WebResponse** экземпляры потока, создаваемые путем вызова метода **GetResponseStream**, доступны только для чтения, а экземпляры, создаваемые путем вызова метода **GetRequestStream**, доступны только для записи.  
   
--   Используйте класс <xref:System.IO.StreamReader> для кодирования.  В следующем примере кода используется **StreamReader** для чтения ASCII\- закодированный поток из **WebResponse** \(пример не отображает создать запрос\).  
+-   Чтобы упростить кодирование, используйте класс <xref:System.IO.StreamReader>. В приведенном ниже примере кода **StreamReader** используется для чтения потока в кодировке ASCII из объекта **WebResponse** (создание запроса в примере не показано).  
   
--   Вызов **GetResponse** может отключить, если сетевые ресурсы недоступны.  Следует рассмотреть использование асинхронного запроса с методами <xref:System.Net.WebRequest.BeginGetResponse%2A> и <xref:System.Net.WebRequest.EndGetResponse%2A>.  
+-   Вызов метода **GetResponse** может быть блокирован, если сетевые ресурсы недоступны. Вместо этого можно использовать асинхронный запрос с помощью методов <xref:System.Net.WebRequest.BeginGetResponse%2A> и <xref:System.Net.WebRequest.EndGetResponse%2A>.  
   
--   Вызов **GetRequestStream** может блокировать при создано подключение к серверу.  Следует рассмотреть использование асинхронного запроса для потока с методами <xref:System.Net.WebRequest.BeginGetRequestStream%2A> и <xref:System.Net.WebRequest.EndGetRequestStream%2A>.  
+-   Вызов метода **GetRequestStream** может быть заблокирован во время установления соединения с сервером. Вместо этого можно использовать асинхронный запрос потока с помощью методов <xref:System.Net.WebRequest.BeginGetRequestStream%2A> и <xref:System.Net.WebRequest.EndGetRequestStream%2A>.  
   
 ```csharp  
 // Create a response object.  
@@ -110,6 +114,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Практическое руководство. Запрос данных с помощью класса WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
  [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)
+

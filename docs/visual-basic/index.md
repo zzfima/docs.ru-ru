@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic | Документация Майкрософт"
+title: Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,14 +29,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.translationtype: HT
+ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
+ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-basic"></a>Visual Basic
+# <a name="visual-basic-guide"></a>Руководство по Visual Basic
+
 Visual Basic предназначен для эффективного создания типобезопасных и объектно-ориентированных приложений. Visual Basic позволяет разработчикам создавать приложения Windows, веб-приложения и приложения для мобильных устройств. Программы, написанные на языке Visual Basic, как и на других языках, предназначенных для платформы Microsoft .NET Framework, отличаются безопасностью и поддержкой взаимодействия.  
   
  Современное поколение Visual Basic поддерживает традиции, предоставляя возможность легко и быстро создавать приложения на основе платформы .NET Framework.  
@@ -47,8 +48,7 @@ Visual Basic предназначен для эффективного созда
  [Начало работы](../visual-basic/getting-started/index.md)   
  Помогает приступить к работе и содержит список новых возможностей и возможностей, доступных в различных выпусках продукта.  
    
- [Programming Concepts](../visual-basic/programming-guide/concepts/index.md) (Основные понятия программирования). 
- Описывает основные понятия языка Visual Basic, которые наиболее важны для программистов.
+ [Основные понятия программирования](../visual-basic/programming-guide/concepts/index.md) Основные понятия языка Visual Basic, которые наиболее важны для программистов.
 
  [Соглашения о структуре программы и коде](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Содержит документацию по базовой структуре и соглашениям кода Visual Basic, таким как соглашения об именовании, комментарии в коде и действующие в Visual Basic ограничения.  
@@ -72,8 +72,9 @@ Visual Basic предназначен для эффективного созда
  Ссылки на пошаговые инструкции для стандартных сценариев.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Начало разработки в Visual Studio](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Начало разработки в Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Ссылки на разделы об основах Visual Studio.  
   
  [Библиотека классов .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  Содержит вводные данные о библиотеке классов, интерфейсах и типах значений, включенных в Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
+

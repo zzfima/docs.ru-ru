@@ -1,48 +1,68 @@
 ---
-title: "Практическое руководство. Использование пространства имен &quot;My&quot; (Руководство по программированию на C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# - язык, доступ к пространству имен My"
+title: "Практическое руководство. Использование пространства имен \"My\" (Руководство по программированию на C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 56577ff61c3f637c8e5a0969ae75d65d24ddaef7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
+
 ---
-# Практическое руководство. Использование пространства имен &quot;My&quot; (Руководство по программированию на C#)
-Пространство имен <xref:Microsoft.VisualBasic.MyServices> \(`My` в Visual Basic\) обеспечивает простой и понятный доступ к ряду классов .NET Framework, позволяя пользователю создавать код, взаимодействующий с компьютером, приложением, параметрами, ресурсами и т. д.  Хотя изначально пространство имен `MyServices` предназначалось для использования в Visual Basic, оно может использоваться в приложениях C\#.  
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Практическое руководство. Использование пространства имен "My" (Руководство по программированию на C#)
+Пространство имен <xref:Microsoft.VisualBasic.MyServices> (`My` в Visual Basic) обеспечивает простой и интуитивно понятный доступ к ряду классов .NET Framework, позволяя создавать код, взаимодействующий с компьютером, приложением, параметрами, ресурсами и т. д. Пространство имен `MyServices` изначально разработано для Visual Basic, однако может применяться и в приложениях C#.  
   
- Дополнительные сведения об использовании пространства имен `MyServices` из Visual Basic см. в разделе [Разработка с использованием My](../../../visual-basic/developing-apps/development-with-my/index.md).  
+ Дополнительные сведения об использовании пространства имен `MyServices` из Visual Basic см. в разделе [Разработка с использованием пространства имен My](../../../visual-basic/developing-apps/development-with-my/index.md).  
   
-## Добавление ссылки  
- Перед использованием классов `MyServices` в своем решении, вы должны добавить ссылку на библиотеку Visual Basic.  
+## <a name="adding-a-reference"></a>Добавление ссылки  
+ Прежде чем использовать классы `MyServices` в решении, необходимо добавить ссылку на библиотеку Visual Basic.  
   
-#### Чтобы добавить ссылку на библиотеку Visual Basic  
+#### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Добавление ссылки на библиотеку Visual Basic  
   
-1.  В окне **Обозреватель решений** щелкните правой кнопкой мыши узел **Ссылки** и выберите команду **Добавить ссылку**.  
+1.  В **обозревателе решений** щелкните правой кнопкой мыши узел **Ссылки** и выберите команду **Добавить ссылку**.  
   
-2.  При отображении диалогового окна **Ссылки** выполните в списке прокрутку вниз и выберите Microsoft.VisualBasic.dll.  
+2.  В диалоговом окне **Ссылки** прокрутите список вниз и выберите библиотеку Microsoft.VisualBasic.dll.  
   
-     Возможно, вы также захотите включить в раздел `using` в начале программы следующую строку.  
+     Также можно включить следующую строку в раздел `using` в начале программы.  
   
      [!code-cs[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
   
-## Пример  
- В этом примере вызываются различные статические методы, содержащиеся в пространстве имен `MyServices`.  Чтобы компиляция этого кода была возможной, в проект необходимо добавить ссылку на Microsoft.VisualBasic.DLL.  
+## <a name="example"></a>Пример  
+ В этом примере вызываются различные статические методы, содержащиеся в пространстве имен `MyServices`. Чтобы скомпилировать этот код, необходимо добавить в проект ссылку на библиотеку Microsoft.VisualBasic.DLL.  
   
  [!code-cs[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_2.cs)]  
   
- Из приложения C\# можно вызывать не все классы в пространстве имен `MyServices`: например, класс <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> является несовместимым.  В таком случае вместо этого можно использовать статические методы, являющиеся частью <xref:Microsoft.VisualBasic.FileIO.FileSystem>, которые также содержатся в VisualBasic.dll.  Например, далее описано использование одного из таких методов для дублирования каталога:  
+ Некоторые классы из пространства имен `MyServices` нельзя вызывать из приложения C#, как, например, несовместимый класс <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>. Конкретно в этом случае вместо него можно использовать статические методы из состава <xref:Microsoft.VisualBasic.FileIO.FileSystem> (также входит в библиотеку VisualBasic.dll). Например, ниже показано, как дублировать каталог с помощью одного из таких методов:  
   
  [!code-cs[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
   
-## См. также  
- [Руководство по программированию на C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>См. также  
+ [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)   
  [Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+

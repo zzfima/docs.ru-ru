@@ -1,33 +1,38 @@
 ---
-title: "Default Marshaling for Strings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "strings, interop marshaling"
-  - "interop marshaling, strings"
+title: "Маршалинг по умолчанию для строк"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- strings, interop marshaling
+- interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5e78bebf15630589a90a684f2299565728728c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Default Marshaling for Strings
+# <a name="default-marshaling-for-strings"></a>Маршалинг по умолчанию для строк
 Классы <xref:System.String?displayProperty=fullName> и <xref:System.Text.StringBuilder?displayProperty=fullName> ведут себя при маршалинге одинаково.  
   
- Строки маршалируются как тип `BSTR` стиля COM или как строка \(массив символов\), заканчивающаяся символом null.  Символы в строке могут маршалироваться как символы Юникода \(по умолчанию в системах Windows\) или символы в кодировке ANSI.  
+ Строки маршалируются как тип `BSTR` стиля COM или как строка (массив символов), заканчивающаяся символом null. Символы в строке могут маршалироваться как символы Юникода (по умолчанию в системах Windows) или символы в кодировке ANSI.  
   
  В этом разделе представлена следующая информация о маршалинге строковых типов:  
   
@@ -40,16 +45,16 @@ caps.handback.revision: 15
 -   [Буферы строк фиксированной длины](#cpcondefaultmarshalingforstringsanchor3)  
   
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>   
-## Строки, используемые в интерфейсах  
- В таблице ниже показаны варианты маршалинга данных строкового типа в неуправляемый код в качестве аргумента метода.  Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга строк в COM\-интерфейсы.  
+## <a name="strings-used-in-interfaces"></a>Строки, используемые в интерфейсах  
+ В таблице ниже показаны варианты маршалинга данных строкового типа в неуправляемый код в качестве аргумента метода. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга строк в COM-интерфейсы.  
   
 |Тип перечисления|Описание неуправляемого формата|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` \(по умолчанию\)|Тип `BSTR` стиля COM с фиксированной длиной и символами Юникода.|  
+|`UnmanagedType.BStr` (по умолчанию)|Тип `BSTR` стиля COM с фиксированной длиной и символами Юникода.|  
 |`UnmanagedType.LPStr`|Указатель на массив символов в кодировке ANSI, завершающийся значением null.|  
 |`UnmanagedType.LPWStr`|Указатель на строку знаков в кодировке Юникод, завершающуюся нулевым значением.|  
   
- Эта таблица применяется к строкам.  Однако для <xref:System.Text.StringBuilder> единственными допустимыми вариантами являются `UnmanagedType.LPStr` и `UnmanagedType.LPWStr`.  
+ Эта таблица применяется к строкам. Однако для <xref:System.Text.StringBuilder> единственными допустимыми вариантами являются `UnmanagedType.LPStr` и `UnmanagedType.LPWStr`.  
   
  В примере ниже показаны строки, объявленные в интерфейсе `IStringWorker`.  
   
@@ -83,22 +88,22 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor5"></a>   
-## Строки, используемые в вызовах неуправляемого кода  
- Вызов неуправляемого кода копирует строковые аргументы, выполняя преобразование из формата .NET Framework \(Юникод\) в неуправляемый формат платформы.  При возврате из вызова строки не изменяются и не копируются обратно из неуправляемой памяти в управляемую.  
+## <a name="strings-used-in-platform-invoke"></a>Строки, используемые в вызовах неуправляемого кода  
+ Вызов неуправляемого кода копирует строковые аргументы, выполняя преобразование из формата .NET Framework (Юникод) в неуправляемый формат платформы. При возврате из вызова строки не изменяются и не копируются обратно из неуправляемой памяти в управляемую.  
   
- В таблице ниже перечислены варианты маршалинга для строк, маршалируемых в качестве аргумента метода при вызове неуправляемого кода.  Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга строк.  
+ В таблице ниже перечислены варианты маршалинга для строк, маршалируемых в качестве аргумента метода при вызове неуправляемого кода. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга строк.  
   
 |Тип перечисления|Описание неуправляемого формата|  
 |----------------------|-------------------------------------|  
 |`UnmanagedType.AnsiBStr`|Тип `BSTR` стиля COM с фиксированной длиной и символами в кодировке ANSI.|  
 |`UnmanagedType.BStr`|Тип `BSTR` стиля COM с фиксированной длиной и символами Юникода.|  
 |`UnmanagedType.LPStr`|Указатель на массив символов в кодировке ANSI, завершающийся значением null.|  
-|`UnmanagedType.LPTStr` \(по умолчанию\)|Указатель на массив символов, завершающийся значением null, в зависящей от платформы кодировке.|  
+|`UnmanagedType.LPTStr`|Указатель на массив символов, завершающийся значением null, в зависящей от платформы кодировке.|  
 |`UnmanagedType.LPWStr`|Указатель на строку знаков в кодировке Юникод, завершающуюся нулевым значением.|  
 |`UnmanagedType.TBStr`|Тип `BSTR` стиля COM с фиксированной длиной и символами в кодировке, зависящей от платформы.|  
-|`VBByRefStr`|Значение, позволяющее Visual Basic .NET изменять строку в неуправляемом коде и получать результаты, отраженные в управляемом коде.  Это значение поддерживается только для вызова неуправляемого кода.|  
+|`VBByRefStr`|Значение, позволяющее Visual Basic .NET изменять строку в неуправляемом коде и получать результаты, отраженные в управляемом коде. Это значение поддерживается только для вызова неуправляемого кода. Это значение по умолчанию для строк `ByVal` в Visual Basic.|  
   
- Эта таблица применяется к строкам.  Однако для <xref:System.Text.StringBuilder> единственными допустимыми вариантами являются `LPStr`, `LPTStr` и `LPWStr`.  
+ Эта таблица применяется к строкам. Однако для <xref:System.Text.StringBuilder> единственными допустимыми вариантами являются `LPStr`, `LPTStr` и `LPWStr`.  
   
  В определении типа ниже показано правильное использование атрибута `MarshalAsAttribute` для вызовов неуправляемого кода.  
   
@@ -117,7 +122,6 @@ Public Declare Auto Sub PassAnsiBStr Lib "StringLib.Dll" _
 Public Declare Auto Sub PassTBStr Lib "StringLib.Dll" _  
 (<MarshalAs(UnmanagedType.TBStr)> s As String)  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -144,8 +148,8 @@ String s);
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
-## Строки, используемые в структурах  
- Строки являются допустимыми элементами структур, но буферы <xref:System.Text.StringBuilder> недопустимы в структурах.  В таблице ниже показаны варианты маршалинга для строкового типа данных при маршалинге типа как поля.  Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга строк в поле.  
+## <a name="strings-used-in-structures"></a>Строки, используемые в структурах  
+ Строки являются допустимыми элементами структур, но буферы <xref:System.Text.StringBuilder> недопустимы в структурах. В таблице ниже показаны варианты маршалинга для строкового типа данных при маршалинге типа как поля. Атрибут <xref:System.Runtime.InteropServices.MarshalAsAttribute> предоставляет несколько значений перечисления <xref:System.Runtime.InteropServices.UnmanagedType> для маршалинга строк в поле.  
   
 |Тип перечисления|Описание неуправляемого формата|  
 |----------------------|-------------------------------------|  
@@ -155,11 +159,11 @@ String s);
 |`UnmanagedType.LPWStr`|Указатель на строку знаков в кодировке Юникод, завершающуюся нулевым значением.|  
 |`UnmanagedType.ByValTStr`|Массив символов фиксированной длины; тип массива определяется кодировкой содержащей его структуры.|  
   
- Тип `ByValTStr` используется для встроенных массивов символов фиксированной длины, расположенных в структуре.  Другие типы применяются к ссылкам на строки, включенным в структуры, содержащие указатели на строки.  
+ Тип `ByValTStr` используется для встроенных массивов символов фиксированной длины, расположенных в структуре. Другие типы применяются к ссылкам на строки, включенным в структуры, содержащие указатели на строки.  
   
- Аргумент `CharSet` атрибута <xref:System.Runtime.InteropServices.StructLayoutAttribute>, применяемого к содержащей указатели структуре, определяет формат символов строк в структурах.  Ниже приведены примеры структур, содержащих ссылки на строки и встроенные строки, а также символы в кодировках ANSI, Юникод и кодировке, зависящей от платформы.  
+ Аргумент `CharSet` атрибута <xref:System.Runtime.InteropServices.StructLayoutAttribute>, применяемого к содержащей указатели структуре, определяет формат символов строк в структурах. Ниже приведены примеры структур, содержащих ссылки на строки и встроенные строки, а также символы в кодировках ANSI, Юникод и кодировке, зависящей от платформы.  
   
-### Представление библиотеки типов  
+### <a name="type-library-representation"></a>Представление библиотеки типов  
   
 ```  
 struct StringInfoA {  
@@ -199,7 +203,6 @@ Structure StringInfoT
 <MarshalAs(UnmanagedType.ByValTStr, SizeConst := 256)> _  
 Public f2 As String  
 End Structure  
-  
 ```  
   
 ```csharp  
@@ -222,12 +225,12 @@ struct StringInfoT {
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor3"></a>   
-## Буферы строк фиксированной длины  
- При некоторых обстоятельствах необходимо передавать в неуправляемый код для обработки символьные буферы фиксированной длины.  Простая передача строки в этом случае не работает, так как вызываемый объект не может изменять содержимое переданного буфера.  Даже если строка передается по ссылке, не существует способа инициализации буфера заданного размера.  
+## <a name="fixed-length-string-buffers"></a>Буферы строк фиксированной длины  
+ При некоторых обстоятельствах необходимо передавать в неуправляемый код для обработки символьные буферы фиксированной длины. Простая передача строки в этом случае не работает, так как вызываемый объект не может изменять содержимое переданного буфера. Даже если строка передается по ссылке, не существует способа инициализации буфера заданного размера.  
   
- Решением является передача в качестве аргумента буфера <xref:System.Text.StringBuilder> вместо строки.  Буфер `StringBuilder` может быть разыменован и изменен вызываемым объектом при условии, что он не превышает емкость `StringBuilder`.  Его также можно инициализировать с фиксированной длиной.  Например, если вы инициализируете буфер `StringBuilder` емкостью `N`, упаковщик предоставляет буфер размером \(`N`\+1\) символов.  Дополнительный символ объясняется тем, что неуправляемая строка заканчивается символом null, а буфер `StringBuilder` нет.  
+ Решением является передача в качестве аргумента буфера <xref:System.Text.StringBuilder> вместо строки. Буфер `StringBuilder` может быть разыменован и изменен вызываемым объектом при условии, что он не превышает емкость `StringBuilder`. Его также можно инициализировать с фиксированной длиной. Например, если вы инициализируете буфер `StringBuilder` емкостью `N`, упаковщик предоставляет буфер размером (`N`+1) символов. Дополнительный символ объясняется тем, что неуправляемая строка заканчивается символом null, а буфер `StringBuilder` нет.  
   
- Например, функция `GetWindowText` интерфейса Microsoft Win32 API \(определенная в Windows.h\) является буфером символов фиксированной длины, который должен быть передан в неуправляемый код для обработки.  `LpString` указывает на выделенный вызывающим объектом буфер размером `nMaxCount`.  Предполагается, что вызывающий объект выделяет буфер и задает аргумент `nMaxCount` равным размеру выделяемого буфера.  В приведенном ниже коде показано объявление функции `GetWindowText`, определенное в файле Windows.h.  
+ Например, функция `GetWindowText` интерфейса Microsoft Win32 API (определенная в Windows.h) является буфером символов фиксированной длины, который должен быть передан в неуправляемый код для обработки. `LpString` указывает на выделенный вызывающим объектом буфер размером `nMaxCount`. Предполагается, что вызывающий объект выделяет буфер и задает аргумент `nMaxCount` равным размеру выделяемого буфера. В приведенном ниже коде показано объявление функции `GetWindowText`, определенное в файле Windows.h.  
   
 ```  
 int GetWindowText(  
@@ -237,7 +240,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
- Буфер `StringBuilder` может быть разыменован и изменен вызываемым объектом при условии, что он не превышает емкость `StringBuilder`.  В примере кода ниже показана инициализация буфера `StringBuilder` с фиксированной длиной.  
+ Буфер `StringBuilder` может быть разыменован и изменен вызываемым объектом при условии, что он не превышает емкость `StringBuilder`. В примере кода ниже показана инициализация буфера `StringBuilder` с фиксированной длиной.  
   
 ```vb  
 Public Class Win32API  
@@ -252,7 +255,6 @@ Public Class Window
    Return sb.ToString()  
    End Function  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -271,8 +273,9 @@ public class Window {
 }  
 ```  
   
-## См. также  
- [Default Marshaling Behavior](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable and Non\-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Directional Attributes](http://msdn.microsoft.com/ru-ru/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Copying and Pinning](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a>См. также  
+ [Характеристики маршалинга по умолчанию](../../../docs/framework/interop/default-marshaling-behavior.md)   
+ [Преобразуемые и непреобразуемые типы](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
+ [Атрибуты направления](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Копирование и закрепление](../../../docs/framework/interop/copying-and-pinning.md)
+

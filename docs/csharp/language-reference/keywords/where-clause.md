@@ -1,5 +1,5 @@
 ---
-title: "Предложение where (справочник по C#) | Документы Майкрософт"
+title: "Предложение where (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 97d7c16d6bf8048e621141fff52a47907881fd2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-clause-c-reference"></a>Предложение where (Справочник по C#)
@@ -57,7 +58,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="remarks"></a>Примечания  
  Предложение `where` представляет собой механизм фильтрации. Он может располагаться практически в любом месте выражения запроса, но не может быть первым или последним предложением. Предложение `where` может отображаться до или после предложения [group](../../../csharp/language-reference/keywords/group-clause.md) в зависимости от того, необходимо ли отфильтровать исходные элементы до или после их объединения в группы.  
   
- Если указанный предикат недопустим для элементов в источнике данных, это вызовет ошибку компиляции. Это одно из преимуществ надежной проверки типов, предоставляемой [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)].  
+ Если указанный предикат недопустим для элементов в источнике данных, это вызовет ошибку компиляции. Это одно из преимуществ надежной проверки типов, предоставляемой [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
  Во время компиляции ключевое слово `where` преобразуется в вызов метода стандартного оператора запроса <xref:System.Linq.Enumerable.Where%2A>.  
   
@@ -68,3 +69,4 @@ ms.lasthandoff: 03/13/2017
  [Фильтрация данных](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

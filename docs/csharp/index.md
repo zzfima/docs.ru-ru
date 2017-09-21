@@ -1,19 +1,25 @@
 ---
-title: "Руководство по языку C# | Документы Майкрософт"
-description: "Руководство по языку C#"
+title: "Руководство по языку C#"
+description: "Руководство по C# поможет и новым разработчикам, и опытным специалистам получить обширные знания о языке C#."
 keywords: .NET, .NET Core
 author: BillWagner
-ms.date: 08/03/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: b87601e339a73b7d9f3132d80496742317439ffa
+helpviewer_keywords:
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.author: wiwagn
+ms.translationtype: HT
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 
@@ -52,6 +58,25 @@ ms.lasthandoff: 05/23/2017
 <!--* [.NET Compiler Platform SDK](roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
 -->
+* [Использование среды разработки Visual Studio для C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+    - В этом разделе представлена среда разработки [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+
+* [Руководство по программированию на C#](../csharp/programming-guide/index.md)  
+    - Сведения и практические примеры способов использования конструкций языка C#.  
+
+* [Примеры C#](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+    - Коллекция кода MSDN, отфильтрованная для C#.  
+  
+* [Пошаговые руководства](../csharp/walkthroughs.md)  
+    - Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.  
+
 * [Справочник по языку](language-reference/index.md).
-    - Этот раздел содержит справочные материалы по языку C#. Этот материал поможет вам разобраться в синтаксисе и семантике C#. 
+    - Этот раздел содержит справочные материалы по языку C#. Этот материал поможет вам разобраться в синтаксисе и семантике C#. Здесь также приведены справочные сведения о типах, операторах, атрибутах, директивах препроцессора, а также о параметрах, ошибках и предупреждениях компилятора.
+  
+* [Спецификация языка C#](../csharp/language-reference/language-specification/index.md)  
+    - Ссылки на последнюю версию спецификации C# в формате Microsoft Word.  
+  
+## <a name="see-also"></a>См. также  
+ [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Разработка .NET](https://msdn.microsoft.com/library/ff361664)
 

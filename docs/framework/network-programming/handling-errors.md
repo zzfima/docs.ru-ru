@@ -1,81 +1,86 @@
 ---
-title: "Обработка ошибок | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Интернет, классы исключений WebRequest и WebResponse"
-  - "Свойство Status"
-  - "класс WebExceptions, о классе WebExceptions"
-  - "элемент перечисления Timeout"
-  - "элемент перечисления ConnectFailure"
-  - "элемент перечисления TrustFailure"
-  - "класс WebRequest, исключения"
-  - "запрос данных из Интернета, обработка ошибок"
-  - "элемент перечисления Success"
-  - "получение данных, ошибки"
-  - "элемент перечисления ProtocolError"
-  - "загрузка интернет-ресурсов, обработка ошибок"
-  - "класс WebResponse, исключения"
-  - "элемент перечисления SendFailure"
-  - "ошибки [платформа .NET Framework], классы исключений WebRequest и WebResponse"
-  - "отправка данных, ошибки"
-  - "ответ на интернет-запрос, обработка ошибок"
-  - "элемент перечисления NameResolutionFailure"
-  - "элемент перечисления KeepAliveFailure"
-  - "сетевые ресурсы, классы исключений WebRequest и WebResponse"
-  - "элемент перечисления RequestCanceled"
-  - "элемент перечисления ReceiveFailure"
-  - "элемент перечисления ServerProtocolViolation"
-  - "элемент перечисления ConnectionClosed"
-  - "элемент перечисления SecureChannelFailure"
+title: "Обработка ошибок"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, WebRequest and WebResponse classes exceptions
+- Status property
+- WebExceptions class, about WebExceptions class
+- Timeout enumeration member
+- ConnectFailure enumeration member
+- TrustFailure enumeration member
+- WebRequest class, exceptions
+- requesting data from Internet, error handling
+- Success enumeration member
+- receiving data, errors
+- ProtocolError enumeration member
+- downloading Internet resources, error handling
+- WebResponse class, exceptions
+- SendFailure enumeration member
+- errors [.NET Framework], WebRequest and WebResponse classes exceptions
+- sending data, errors
+- response to Internet request, error handling
+- NameResolutionFailure enumeration member
+- KeepAliveFailure enumeration member
+- network resources, WebRequest and WebResponse classes exceptions
+- RequestCanceled enumeration member
+- ReceiveFailure enumeration member
+- ServerProtocolViolation enumeration member
+- ConnectionClosed enumeration member
+- SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ca755d123589f4ee07ea9caadf8bd420c94adae4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Обработка ошибок
-Классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> создают и исключения системы \(например, <xref:System.ArgumentException>\) и исключения Интернет\- \( [WebExceptions](frlrfsystemnetwebexceptionclasstopic), вызванное методом, <xref:System.Net.WebRequest.GetResponse%2A> \).  
+# <a name="handling-errors"></a>Обработка ошибок
+Классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> вызывают одновременно системные исключения (например, <xref:System.ArgumentException>) и веб-исключения (исключения <xref:System.Net.WebException>, вызываемые методом <xref:System.Net.WebRequest.GetResponse%2A>).  
   
- Каждое **WebException** включает свойство <xref:System.Net.WebException.Status%2A>, содержащее значение из перечисления <xref:System.Net.WebExceptionStatus>.  Можно изучить свойство **Состояние**, чтобы определить, произошедшую ошибку и предпринять необходимые для разрешения ошибки.  
+ Каждый класс **WebException** включает свойство <xref:System.Net.WebException.Status%2A>, которое содержит значение перечисления <xref:System.Net.WebExceptionStatus>. Значение свойства **Status** позволяет определить произошедшую ошибку и действия, которые следует предпринять для ее устранения.  
   
- В следующей таблице описаны возможные значения для свойства **Состояние**.  
+ В следующей таблице описаны возможные значения свойства **Status**.  
   
-|Состояние|Описание|  
-|---------------|--------------|  
-|ConnectFailure|Удаленная служба не может быть связана на уровне транспорта.|  
-|ConnectionClosed|Соединение было закрыто преждевременно.|  
-|KeepAliveFailure|Сервер закрыл установлено соединение с Держать\- значением заголовка в активном состоянии.|  
-|NameResolutionFailure|Служба имен не может разрешить данное имя узла.|  
-|ProtocolError|Ответ, полученный от сервера был завершен, но показывал ошибку на уровне протокола.|  
-|ReceiveFailure|От удаленного сервера не был получен полный ответ.|  
-|RequestCanceled|Запрос был отменить.|  
-|SecureChannelFailure|Произошла ошибка в связи безопасного канала.|  
-|SendFailure|Полный запрос не был передан на удаленный сервер.|  
-|ServerProtocolViolation|Ответ сервера не являлся допустимым ответом HTTP.|  
-|Успешное выполнение|Ошибок не было.|  
-|Время ожидания|Ответ не был получен в наборе времени ожидания для запроса.|  
-|TrustFailure|Сертификат сервера не может быть проверен.|  
-|MessageLengthLimitExceeded|Принято сообщение о превышении заданного ограничения при передаче запроса или приеме ответа сервера.|  
-|Отложенный|Внутренний асинхронный запрос находится в очереди.|  
-|PipelineFailure|Это значение поддерживает инфраструктуру платформы .NET Framework и не предназначено для использования непосредственно в коде.|  
-|ProxyNameResolutionFailure|Служба разрешения имен не может распознать имя узла прокси\-сервера.|  
+|Status|Описание|  
+|------------|-----------------|  
+|ConnectFailure|Не удалось связаться с удаленной службой на транспортном уровне.|  
+|ConnectionClosed|Соединение было преждевременно закрыто.|  
+|KeepAliveFailure|Сервер закрыл подключение, установленное с заданным заголовком проверки активности.|  
+|NameResolutionFailure|Службе имен не удалось разрешить имя узла.|  
+|ProtocolError|От сервера получен полный ответ, указывающий на ошибку на уровне протокола.|  
+|ReceiveFailure|От удаленного сервера не получен полный ответ.|  
+|RequestCanceled|Запрос отменен.|  
+|SecureChannelFailure|Произошла ошибка в защищенном канале связи.|  
+|SendFailure|Не удалось отправить полный запрос на удаленный сервер.|  
+|ServerProtocolViolation|Ответ от сервера не является допустимым ответом HTTP.|  
+|Success|Ошибки не обнаружены.|  
+|Время ожидания|В течение заданного для запроса времени ожидания не был получен ответ.|  
+|TrustFailure|Не удалось проверить сертификат сервера.|  
+|MessageLengthLimitExceeded|Получено сообщение, которое превышает ограничение, заданное при отправке запроса или получении ответа от сервера.|  
+|Ожидание|Ожидается выполнение внутреннего асинхронного запроса.|  
+|PipelineFailure|Это значение поддерживает платформу .NET Framework и не должно использоваться непосредственно из вашего кода.|  
+|ProxyNameResolutionFailure|Службе разрешения имен не удалось разрешить имя узла прокси-сервера.|  
 |UnknownError|Возникло исключение неизвестного типа.|  
   
- Если свойство **Состояние** **WebExceptionStatus.ProtocolError**, **WebResponse**, содержащий ответ от сервера доступно.  Можно изучить этот ответ, чтобы определить фактический источник ошибки протокола.  
+ Если свойство **Status** имеет значение **WebExceptionStatus.ProtocolError**, доступен **WebResponse**, содержащий ответ сервера. Содержимое этого ответа позволяет определить фактический источник ошибки протокола.  
   
- В следующем примере показано, как перехватывать **WebException**.  
+ В следующем примере демонстрируется перехват исключения **WebException**.  
   
 ```csharp  
 try   
@@ -170,10 +175,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Приложения, использующие throw [SocketExceptions](frlrfsystemnetsocketssocketexceptionclasstopic) класса <xref:System.Net.Sockets.Socket> при возникновении ошибки на сокете Windows.  Классы [TCPClient](frlrfsystemnetsocketstcpclientclasstopic), [TCPListener](frlrfsystemnetsocketstcplistenerclasstopic) и [UDPClient](frlrfsystemnetsocketsudpclientclasstopic) строятся поверх класса **Сокет** и вызывают **SocketExceptions**.  
+ Приложения, использующие класс <xref:System.Net.Sockets.Socket>, вызывают исключение <xref:System.Net.Sockets.SocketException> при возникновении ошибки в сокете Windows. Классы <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> и <xref:System.Net.Sockets.UdpClient> построены на основе класса **Socket** и также вызывают исключения **SocketException**.  
   
- При **SocketException** создается класс **SocketException** задает свойство <xref:System.Net.Sockets.SocketException.ErrorCode%2A> к последней ошибки сокета операционной системы, которая возникла.  Дополнительные сведения о кодах ошибок сокета см. в документации по API код ошибки Winsock 2.0 в MSDN.  
+ Если возникает исключение **SocketException**, класс **SocketException** присваивает свойству <xref:System.Net.Sockets.SocketException.ErrorCode%2A> значение, отражающее последнюю ошибку сокета операционной системы. Дополнительные сведения о кодах ошибок сокета см. в документации по кодам ошибок API Winsock 2.0 на веб-сайте MSDN.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Основы обработки исключений](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
  [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)
+

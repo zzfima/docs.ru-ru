@@ -1,5 +1,5 @@
 ---
-title: "Winres.exe (редактор ресурсов Windows Forms) | Документация Microsoft"
+title: "Winres.exe (редактор ресурсов Windows Forms)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2149e21f82b224e40cc4b2dd80a7decd9988385d
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (редактор ресурсов Windows Forms)
@@ -146,7 +146,7 @@ winres /?
   
 4.  Чтобы сохранить локализованную версию файла RESX или RESOURCES, щелкните значок **Сохранить** или выберите команду с тем же именем в меню **Файл**. Откроется окно **Выбор языка и региональных параметров**.  
   
-5.  Выберите нужный язык и файловый режим и нажмите кнопку **ОК**. Программа сохранит файл, используя правила присвоения имен, которые среда выполнения требует применять к локализованным файлам ресурсов. Например, при локализации файла `TestApp.resources` на немецкий язык (Германия) этот файл будет сохранен как `TestApp.de-DE.resources`. При локализации файла `TestApp.resx` на немецкий язык (Германия) файл сохраняется как `TestApp.de-DE.resx`. Подробнее о соглашениях об именовании ресурсов см. в разделе [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Список предварительно определенных названий языков, используемых средой выполнения, см. в разделе [Класс CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
+5.  Выберите нужный язык и файловый режим и нажмите кнопку **ОК**. Программа сохранит файл, используя правила присвоения имен, которые среда выполнения требует применять к локализованным файлам ресурсов. Например, при локализации файла `TestApp.resources` на немецкий язык (Германия) этот файл будет сохранен как `TestApp.de-DE.resources`. При локализации файла `TestApp.resx` на немецкий язык (Германия) файл сохраняется как `TestApp.de-DE.resx`. Подробнее о соглашениях об именовании ресурсов см. в разделе [Упаковка и развертывание ресурсов](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Список предварительно определенных названий языков, используемых средой выполнения, см. в разделе о классе <xref:System.Globalization.CultureInfo>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ComponentModel.LocalizableAttribute>   
@@ -157,3 +157,4 @@ winres /?
  [Инструменты](../../../docs/framework/tools/index.md)   
  [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)   
  [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
+

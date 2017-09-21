@@ -1,5 +1,5 @@
 ---
-title: "Устранение рисков. Конструктор ClaimsIdentity | Документация Майкрософт"
+title: "Устранение рисков. Конструктор ClaimsIdentity"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 84016664708b9b7fc61a9535e5f7910417caa6f1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a50cbd69aa1f2c72adc9fc4d10a070f5faa0cf54
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-claimsidentity-constructor"></a>Устранение рисков. Конструктор ClaimsIdentity

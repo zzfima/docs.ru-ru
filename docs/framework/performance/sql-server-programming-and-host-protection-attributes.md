@@ -1,50 +1,55 @@
 ---
-title: "SQL Server Programming and Host Protection Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server [.NET Framework]"
-  - "permission sets, SQL Server"
-  - "SQL Server Programming and Host Protection Attributes"
-  - "managed code, SQL Server"
-  - "reliability [.NET Framework]"
-  - "writing reliable code"
-  - "hosts, reliability"
-  - "host protection attributes"
-  - "HostProtectionAttribute class, reliability"
+title: "программирование SQL Server и атрибуты защиты ведущего приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server [.NET Framework]
+- permission sets, SQL Server
+- SQL Server Programming and Host Protection Attributes
+- managed code, SQL Server
+- reliability [.NET Framework]
+- writing reliable code
+- hosts, reliability
+- host protection attributes
+- HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3181237540bd7379fd25c8b58c0f2c6f188148ea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# SQL Server Programming and Host Protection Attributes
-Возможность загрузки и выполнения управляемого кода в основном приложении SQL Server нуждается в выполнении требований, предъявляемых основным приложением, как к управлению доступом для кода, так и к защите ресурсов основного приложения.  Требования к управлению доступом для кода указаны в одном из трех наборов разрешений SQL: SAFE, EXTERNAL\-ACCESS или UNSAFE.  Код, выполняемый в наборе разрешений SAFE или EXTERNAL\-ACCESS, должен избегать использования определенных типов или элементов, в которых применяется атрибут <xref:System.Security.Permissions.HostProtectionAttribute>.  Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> не является разрешением безопасности, насколько это может быть гарантировано надежностью, так как он определяет некоторые конструкции кода \(типы или методы\), которые могут быть неразрешены в основном приложении.  Использование атрибута <xref:System.Security.Permissions.HostProtectionAttribute> принудительно включает модель программирования, которая способствует обеспечению стабильности основного приложения.  
+# <a name="sql-server-programming-and-host-protection-attributes"></a>программирование SQL Server и атрибуты защиты ведущего приложения
+Чтобы загружать и выполнять управляемый код, ведущее приложение SQL Server должно соответствовать требованиям ведущего приложения к управлению доступом для кода и защите ресурсов ведущего приложения.  Управление доступом для кода реализуется с применением одного из трех наборов разрешений SQL Server: SAFE, EXTERNAL-ACCESS или UNSAFE. В коде, выполняемом с набором разрешений SAFE или EXTERNAL-ACCESS, не рекомендуется использовать определенные типы и члены, к которым применен атрибут <xref:System.Security.Permissions.HostProtectionAttribute>. Атрибут <xref:System.Security.Permissions.HostProtectionAttribute> не является разрешением безопасности в той же степени, что и гарантия надежности, поскольку в нем определяются конкретные конструкции кода (типы или методы), которые ведущее приложение может запрещать.  С помощью атрибута <xref:System.Security.Permissions.HostProtectionAttribute> можно реализовать модель программирования, которая позволяет гарантировать стабильность работы ведущего приложения.  
   
-## Атрибуты защиты основного приложения  
- Атрибуты защиты основного приложения идентифицируют типы или элементы, которые не вписываются в модель программирования основного приложения и представляют следующие угрозы безопасности, увеличенные по сравнению со стандартной моделью:  
+## <a name="host-protection-attributes"></a>Атрибуты защиты ведущего приложения  
+ Атрибуты защиты ведущего приложения определяют типы и члены, которые не соответствуют модели программирования ведущего приложения, и представляют следующие уровни угроз надежности (по возрастанию):  
   
--   В других условиях являются малоэффективными.  
+-   Во всех остальных случаях является безопасным.  
   
--   Могут привести к дестабилизации пользовательского кода, управляемого сервером.  
+-   Может привести к дестабилизации пользовательского кода, находящегося под управлением сервера.  
   
--   Могут привести к дестабилизации самого процесса сервера.  
+-   Может привести к дестабилизации самого процесса сервера.  
   
- В SQL Server не разрешено использовать тип или элемент, который имеет атрибут <xref:System.Security.Permissions.HostProtectionAttribute>, указывающий значение <xref:System.Security.Permissions.HostProtectionResource> объектов <xref:System.Security.Permissions.HostProtectionResource>, <xref:System.Security.Permissions.HostProtectionResource>, <xref:System.Security.Permissions.HostProtectionResource> или <xref:System.Security.Permissions.HostProtectionResource>.  Это не дает сборкам вызывать элементы, которые разрешают общее состояние, выполняют синхронизацию, могут привести к утечке ресурсов при завершении или влияют на целостность процесса SQL Server.  
+ SQL Server не поддерживает использование типов или членов с атрибутом <xref:System.Security.Permissions.HostProtectionAttribute>, которые задают значения <xref:System.Security.Permissions.HostProtectionResource>, равные <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> или <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>. Таким образом, сборки не могут вызывать члены, которые активируют общее состояние, выполняют синхронизацию, могут привести к утечке ресурсов при завершении или влияют на целостность процесса SQL Server.  
   
-### Запрещенные типы и элементы  
- В следующей таблице приведены типы и элементы, значения <xref:System.Security.Permissions.HostProtectionResource> которых запрещены в SQL Server.  
+### <a name="disallowed-types-and-members"></a>Запрещенные типы и члены  
+ В следующей таблице указаны типы и члены, значения <xref:System.Security.Permissions.HostProtectionResource> которых запрещены в SQL Server.  
   
-|Пространство имен|Тип или элемент|  
-|-----------------------|---------------------|  
+|Пространство имен|Тип или член|  
+|---------------|--------------------|  
 |`Microsoft.Win32`|Класс <xref:Microsoft.Win32.PowerModeChangedEventArgs><br /><br /> Делегат <xref:Microsoft.Win32.PowerModeChangedEventHandler><br /><br /> Класс <xref:Microsoft.Win32.SessionEndedEventArgs><br /><br /> Делегат <xref:Microsoft.Win32.SessionEndedEventHandler><br /><br /> Класс <xref:Microsoft.Win32.SessionEndingEventArgs><br /><br /> Делегат <xref:Microsoft.Win32.SessionEndingEventHandler><br /><br /> Класс <xref:Microsoft.Win32.SessionSwitchEventArgs><br /><br /> Делегат <xref:Microsoft.Win32.SessionSwitchEventHandler><br /><br /> Класс <xref:Microsoft.Win32.SystemEvents><br /><br /> Класс <xref:Microsoft.Win32.TimerElapsedEventArgs><br /><br /> Делегат <xref:Microsoft.Win32.TimerElapsedEventHandler><br /><br /> Класс <xref:Microsoft.Win32.UserPreferenceChangedEventArgs><br /><br /> Класс <xref:Microsoft.Win32.UserPreferenceChangingEventArgs>|  
 |`System.Collections`|Метод <xref:System.Collections.ArrayList.Synchronized%2A?displayProperty=fullName><br /><br /> Метод <xref:System.Collections.Hashtable.Synchronized%2A?displayProperty=fullName><br /><br /> Метод <xref:System.Collections.Queue.Synchronized%2A?displayProperty=fullName><br /><br /> Метод <xref:System.Collections.SortedList.Synchronized%2A?displayProperty=fullName><br /><br /> Метод <xref:System.Collections.Stack.Synchronized%2A?displayProperty=fullName>|  
 |`System.ComponentModel`|Класс <xref:System.ComponentModel.AddingNewEventArgs><br /><br /> Делегат <xref:System.ComponentModel.AddingNewEventHandler><br /><br /> Класс <xref:System.ComponentModel.ArrayConverter><br /><br /> Класс <xref:System.ComponentModel.AsyncCompletedEventArgs><br /><br /> Делегат <xref:System.ComponentModel.AsyncCompletedEventHandler><br /><br /> Класс <xref:System.ComponentModel.AsyncOperation><br /><br /> Класс <xref:System.ComponentModel.AsyncOperationManager><br /><br /> Класс <xref:System.ComponentModel.AttributeCollection><br /><br /> Класс <xref:System.ComponentModel.BackgroundWorker><br /><br /> Класс <xref:System.ComponentModel.BaseNumberConverter><br /><br /> Класс <xref:System.ComponentModel.BindingList%601><br /><br /> Класс <xref:System.ComponentModel.BooleanConverter><br /><br /> Класс <xref:System.ComponentModel.ByteConverter><br /><br /> Класс <xref:System.ComponentModel.CancelEventArgs><br /><br /> Делегат <xref:System.ComponentModel.CancelEventHandler><br /><br /> Класс <xref:System.ComponentModel.CharConverter><br /><br /> Класс <xref:System.ComponentModel.CollectionChangeEventArgs><br /><br /> Делегат <xref:System.ComponentModel.CollectionChangeEventHandler><br /><br /> Класс <xref:System.ComponentModel.CollectionConverter><br /><br /> Класс <xref:System.ComponentModel.ComponentCollection><br /><br /> Класс <xref:System.ComponentModel.ComponentConverter><br /><br /> Класс <xref:System.ComponentModel.ComponentEditor><br /><br /> Класс <xref:System.ComponentModel.ComponentResourceManager><br /><br /> Класс <xref:System.ComponentModel.Container><br /><br /> Класс <xref:System.ComponentModel.ContainerFilterService><br /><br /> Класс <xref:System.ComponentModel.CultureInfoConverter><br /><br /> Класс <xref:System.ComponentModel.CustomTypeDescriptor><br /><br /> Класс <xref:System.ComponentModel.DateTimeConverter><br /><br /> Класс <xref:System.ComponentModel.DecimalConverter><br /><br /> Класс <xref:System.ComponentModel.Design.ActiveDesignerEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.ActiveDesignerEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.CheckoutException><br /><br /> Класс <xref:System.ComponentModel.Design.CommandID><br /><br /> Класс <xref:System.ComponentModel.Design.ComponentChangedEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.ComponentChangedEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.ComponentChangingEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.ComponentChangingEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.ComponentEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.ComponentEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.ComponentRenameEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.ComponentRenameEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.DesignerCollection><br /><br /> Класс <xref:System.ComponentModel.Design.DesignerEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.DesignerEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.DesignerOptionService><br /><br /> Класс <xref:System.ComponentModel.Design.DesignerTransaction><br /><br /> Класс <xref:System.ComponentModel.Design.DesignerTransactionCloseEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.DesignerTransactionCloseEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.DesignerVerb><br /><br /> Класс <xref:System.ComponentModel.Design.DesignerVerbCollection><br /><br /> Класс <xref:System.ComponentModel.Design.DesigntimeLicenseContext><br /><br /> Класс <xref:System.ComponentModel.Design.DesigntimeLicenseContextSerializer><br /><br /> Класс <xref:System.ComponentModel.Design.MenuCommand><br /><br /> Класс <xref:System.ComponentModel.Design.Serialization.ComponentSerializationService><br /><br /> Класс <xref:System.ComponentModel.Design.Serialization.ContextStack><br /><br /> Класс <xref:System.ComponentModel.Design.Serialization.DesignerLoader><br /><br /> Класс <xref:System.ComponentModel.Design.Serialization.InstanceDescriptor><br /><br /> Класс <xref:System.ComponentModel.Design.Serialization.MemberRelationshipService><br /><br /> Класс <xref:System.ComponentModel.Design.Serialization.ResolveNameEventArgs><br /><br /> Делегат <xref:System.ComponentModel.Design.Serialization.ResolveNameEventHandler><br /><br /> Класс <xref:System.ComponentModel.Design.Serialization.SerializationStore><br /><br /> Класс <xref:System.ComponentModel.Design.ServiceContainer><br /><br /> Делегат <xref:System.ComponentModel.Design.ServiceCreatorCallback><br /><br /> Класс <xref:System.ComponentModel.Design.StandardCommands><br /><br /> Класс <xref:System.ComponentModel.Design.StandardToolWindows><br /><br /> Класс <xref:System.ComponentModel.DoubleConverter><br /><br /> Класс <xref:System.ComponentModel.DoWorkEventArgs><br /><br /> Делегат <xref:System.ComponentModel.DoWorkEventHandler><br /><br /> Класс <xref:System.ComponentModel.EnumConverter><br /><br /> Класс <xref:System.ComponentModel.EventDescriptor><br /><br /> Класс <xref:System.ComponentModel.EventDescriptorCollection><br /><br /> Класс <xref:System.ComponentModel.EventHandlerList><br /><br /> Класс <xref:System.ComponentModel.ExpandableObjectConverter><br /><br /> Класс <xref:System.ComponentModel.HandledEventArgs><br /><br /> Делегат <xref:System.ComponentModel.HandledEventHandler><br /><br /> Класс <xref:System.ComponentModel.InstanceCreationEditor><br /><br /> Класс <xref:System.ComponentModel.Int16Converter><br /><br /> Класс <xref:System.ComponentModel.Int32Converter><br /><br /> Класс <xref:System.ComponentModel.Int64Converter><br /><br /> Класс <xref:System.ComponentModel.InvalidAsynchronousStateException><br /><br /> Класс <xref:System.ComponentModel.InvalidEnumArgumentException><br /><br /> Метод <xref:System.ComponentModel.ISynchronizeInvoke.BeginInvoke%2A><br /><br /> Класс <xref:System.ComponentModel.License><br /><br /> Класс <xref:System.ComponentModel.LicenseContext><br /><br /> Класс <xref:System.ComponentModel.LicenseException><br /><br /> Класс <xref:System.ComponentModel.LicenseManager><br /><br /> Класс <xref:System.ComponentModel.LicenseProvider><br /><br /> Класс <xref:System.ComponentModel.LicFileLicenseProvider><br /><br /> Класс <xref:System.ComponentModel.ListChangedEventArgs><br /><br /> Делегат <xref:System.ComponentModel.ListChangedEventHandler><br /><br /> Класс <xref:System.ComponentModel.ListSortDescription><br /><br /> Класс <xref:System.ComponentModel.ListSortDescriptionCollection><br /><br /> Класс <xref:System.ComponentModel.MaskedTextProvider><br /><br /> Класс <xref:System.ComponentModel.MemberDescriptor><br /><br /> Класс <xref:System.ComponentModel.MultilineStringConverter><br /><br /> Класс <xref:System.ComponentModel.NestedContainer><br /><br /> Класс <xref:System.ComponentModel.NullableConverter><br /><br /> Класс <xref:System.ComponentModel.ProgressChangedEventArgs><br /><br /> Делегат <xref:System.ComponentModel.ProgressChangedEventHandler><br /><br /> Класс <xref:System.ComponentModel.PropertyChangedEventArgs><br /><br /> Делегат <xref:System.ComponentModel.PropertyChangedEventHandler><br /><br /> Класс <xref:System.ComponentModel.PropertyDescriptor><br /><br /> Класс <xref:System.ComponentModel.PropertyDescriptorCollection><br /><br /> Класс <xref:System.ComponentModel.ReferenceConverter><br /><br /> Класс <xref:System.ComponentModel.RefreshEventArgs><br /><br /> Делегат <xref:System.ComponentModel.RefreshEventHandler><br /><br /> Класс <xref:System.ComponentModel.RunWorkerCompletedEventArgs><br /><br /> Делегат <xref:System.ComponentModel.RunWorkerCompletedEventHandler><br /><br /> Класс <xref:System.ComponentModel.SByteConverter><br /><br /> Класс <xref:System.ComponentModel.SingleConverter><br /><br /> Класс <xref:System.ComponentModel.StringConverter><br /><br /> Класс <xref:System.ComponentModel.SyntaxCheck><br /><br /> Класс <xref:System.ComponentModel.TimeSpanConverter><br /><br /> Класс <xref:System.ComponentModel.TypeConverter><br /><br /> Класс <xref:System.ComponentModel.TypeDescriptionProvider><br /><br /> Класс <xref:System.ComponentModel.TypeDescriptor><br /><br /> Класс <xref:System.ComponentModel.TypeListConverter><br /><br /> Класс <xref:System.ComponentModel.UInt16Converter><br /><br /> Класс <xref:System.ComponentModel.UInt32Converter><br /><br /> Класс <xref:System.ComponentModel.UInt64Converter><br /><br /> Класс <xref:System.ComponentModel.WarningException><br /><br /> Класс <xref:System.ComponentModel.Win32Exception>|  
@@ -57,29 +62,30 @@ caps.handback.revision: 13
 |`System.Web.Configuration`|Класс <xref:System.Web.Configuration.MachineKeyValidationConverter>|  
 |`System.Windows.Forms`|Свойство <xref:System.Windows.Forms.AutoCompleteStringCollection.SyncRoot%2A?displayProperty=fullName>|  
   
-## Наборы разрешений SQL Server  
- SQL Server позволяет пользователям указывать требования к надежности кода, развернутого в базе данных.  Если сборки выгружены в базу данных, автор сборки может указать один из трех наборов разрешений для этой сборки: SAFE, EXTERNAL\-ACCESS или UNSAFE.  
+## <a name="sql-server-permission-sets"></a>Наборы разрешений SQL Server  
+ SQL Server позволяет пользователям задавать требования к надежности кода, развернутого в базе данных. При загрузке сборок в базу данных разработчик сборки может задать для нее один из трех наборов разрешений: SAFE, EXTERNAL-ACCESS или UNSAFE.  
   
-|Набор разрешений|SAFE|EXTERNAL\-ACCESS|UNSAFE|  
-|----------------------|----------|----------------------|------------|  
-|Управление доступом для кода|Только выполнение|Выполнение и доступ к внешним ресурсам|Unrestricted|  
+|Набор разрешений|SAFE|EXTERNAL-ACCESS|UNSAFE|  
+|--------------------|----------|----------------------|------------|  
+|Управление доступом для кода|Только выполнение|Выполнение и доступ к внешним ресурсам|Без ограничений|  
 |Ограничения модели программирования|Да|Да|Без ограничений|  
-|Требование проверяемости|Да|Да|Нет|  
+|Требование к проверяемости|Да|Да|Нет|  
 |Возможность вызова машинного кода|Нет|Нет|Да|  
   
- SAFE — это наиболее надежный и безопасный режим с соответствующими ограничениями в терминологии разрешенной модели программирования.  Код SAFE имеет функциональные возможности высокой надежности и безопасности.  Сборки SAFE имеют достаточно разрешений для выполнения, вычислений и имеют доступ к локальной базе данных.  Сборки SAFE должны после проверки соответствовать безопасному типу и не могут вызывать неуправляемый код.  
+ Режим SAFE является наиболее надежным и безопасным с соответствующими ограничениями в отношении разрешенной модели программирования. Код с разрешениями SAFE имеет самый высокий уровень надежности и безопасности. Сборки с разрешениями SAFE получают разрешение на выполнение, проведение вычислений и доступ к локальной базе данных. Сборки с разрешениями SAFE должны иметь возможность проверки типобезопасности и не могут вызывать неуправляемый код.  
   
- Режим EXTERNAL\-ACCESS предоставляет промежуточный вариант безопасности. При его использовании код может получать доступ к внешним по отношению к базе данных ресурсам, однако имеет надежность и безопасность режима SAFE.  
+ Набор разрешений EXTERNAL-ACCESS представляет собой промежуточный вариант в контексте безопасности. Он разрешает коду доступ к внешним по отношению к базе данных ресурсам, но при этом по-прежнему обеспечивает уровень надежности и безопасности, соответствующий разрешениям SAFE.  
   
- UNSAFE — это режим для кода с очень высоким уровнем доверия, который может быть создан только администраторами баз данных.  Этот доверенный код не содержит ограничений на доступ кода и может вызывать неуправляемый \(машинный\) код.  
+ Режим UNSAFE предназначен для кода с высоким уровнем доверия, который может создаваться только администраторами базы данных. Этот доверенный код не имеет ограничений на управление доступом к коду и может вызывать неуправляемый (машинный) код.  
   
- В SQL Server используется уровень политики управления доступом для кода на уровне основного приложения для настройки политики основного приложения, предоставляющей один из трех наборов разрешений в зависимости от набора разрешений, хранящегося в каталогах SQL Server.  Управляемый код, работающий внутри базы данных, всегда получает один из этих наборов разрешений доступа кода.  
+ SQL Server использует уровень политики управления доступом к коду на уровне ведущего приложения для настройки политики ведущего приложения, которая предоставляет один из трех наборов разрешений на основе наборов, которые хранятся в каталогах SQL Server. Управляемый код, выполняемый в базе данных, всегда получает один из этих наборов разрешений на управление доступом к коду.  
   
-## Ограничения модели программирования  
- Модель программирования для управляемого кода в SQL Server нуждается в функциях, процедурах и типах, которые не требует использования состояния различных вызовов или использования общего состояния различных пользовательских сеансов.  Более того, как было описано ранее, присутствие общего состояния может привести к возникновению критических исключений, которые повлияют на масштабируемость и надежность приложения.  
+## <a name="programming-model-restrictions"></a>Ограничения модели программирования  
+ В модели программирования SQL Server должны применяться функции, процедуры и типы, которые не требуют удержания состояния для нескольких вызовов или использования общего состояния для нескольких пользовательских сеансов. Кроме того, как было описано ранее, наличие общего состояние может привести к возникновению критических исключений, которые повлияют на масштабируемость и надежность приложения.  
   
- Учитывая эти условия, в SQL Server не разрешено использовать статические переменные и статические элементы данных.  Для сборок SAFE и EXTERNAL\-ACCESS SQL Server проверяет метаданные сборки во время CREATE ASSEMBLY и завершает создание таких сборок с ошибкой, если обнаружит использование статических элементов данных и статических переменных.  
+ Исходя из этого, SQL Server не поддерживает использование статических переменных и статических членов данных. Для сборок с разрешениями SAFE и EXTERNAL-ACCESS SQL Server проверяет метаданные сборки во время СОЗДАНИЯ СБОРКИ и возвращает состояние сбоя, если в ней используются статические переменные и члены данных.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Security.Permissions.HostProtectionAttribute>   
  <xref:System.Security.Permissions.HostProtectionResource>
+

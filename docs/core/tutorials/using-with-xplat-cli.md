@@ -1,20 +1,20 @@
 ---
-title: "Начало работы с .NET Core с помощью интерфейса командной строки | Документы Майкрософт"
+title: "Начало работы с .NET Core с помощью интерфейса командной строки"
 description: "Пошаговое руководство, описывающее начало работы с .NET Core в Windows, Linux или macOS с помощью интерфейса командной строки (CLI) .NET Core."
 keywords: ".NET Core, интерфейс командной строки"
 author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: b1ff9218932d5ef49941ca427d9ee38503a9c103
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/30/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -54,7 +54,7 @@ $ dotnet run
    В файле проекта указываются все данные, необходимые для восстановления зависимостей и создания программы.
 
    * Тег `OutputType` указывает, что мы создаем исполняемый файл — другими словами, консольное приложение.
-   * Тег `TargetFramework` указывает, какая среда выполнения .NET является нашей целью. В расширенном сценарии обработки можно указать несколько целевых платформ и выполнить сборку во всех средах за одну операцию. В этом руководстве рассматривается сборка только для платформы .NET Core 1.0.
+   * Тег `TargetFramework` указывает, какая реализация.NET является целевой. В расширенном сценарии обработки можно указать несколько целевых платформ и выполнить сборку во всех средах за одну операцию. В этом руководстве рассматривается сборка только для платформы .NET Core 1.0.
 
    `Program.cs`:
 
@@ -164,5 +164,4 @@ $ dotnet run
 ## <a name="see-also"></a>См. также
 
 [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
-
 

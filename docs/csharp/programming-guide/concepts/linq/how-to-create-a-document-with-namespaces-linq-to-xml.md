@@ -1,5 +1,5 @@
 ---
-title: "Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML) | Документы Майкрософт"
+title: "Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23cc762b1dcd5e39b923c1a57b6f171c7885f0ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cecd2012012ba789ad2c2935b6b69c282718a066
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Практическое руководство. Создание документа с пространствами имен (C#) (LINQ to XML)
@@ -31,7 +32,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>Пример  
  Чтобы создать элемент или атрибут, находящийся в пространстве имен, необходимо сначала объявить и инициализировать объект <xref:System.Xml.Linq.XNamespace>. Затем следует использовать перегруженный оператор сложения для объединения пространства имен с локальным именем, выраженным строкой.  
   
- В следующем примере создается документ с одним пространством имен. По умолчанию [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] сериализует документ с использованием пространства имен по умолчанию.  
+ В следующем примере создается документ с одним пространством имен. По умолчанию [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] сериализует документ с использованием пространства имен по умолчанию.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -137,7 +138,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Пример  
  Другой метод получения того же результата состоит в использовании развернутых имен вместо объявления и создания объекта <xref:System.Xml.Linq.XNamespace>.  
   
- Этот подход влияет на производительность. Всякий раз при передаче [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] строки, содержащей развернутое имя, система [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] должна проанализировать это имя, обнаружить атомизированное пространство имен и атомарное имя. Этот процесс требует затрат процессорного времени. Если производительность является важным фактором, целесообразнее объявить и использовать объект <xref:System.Xml.Linq.XNamespace> явным образом.  
+ Этот подход влияет на производительность. Всякий раз при передаче [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] строки, содержащей развернутое имя, система [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] должна проанализировать это имя, обнаружить атомизированное пространство имен и атомарное имя. Этот процесс требует затрат процессорного времени. Если производительность является важным фактором, целесообразнее объявить и использовать объект <xref:System.Xml.Linq.XNamespace> явным образом.  
   
  Если производительность важна, дополнительные сведения см. в разделе [Предварительная атомизация объектов XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md).  
   
@@ -160,3 +161,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>См. также  
  [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

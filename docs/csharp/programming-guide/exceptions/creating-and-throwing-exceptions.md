@@ -1,5 +1,5 @@
 ---
-title: "Создание и вызов исключений (руководство по программированию C#) | Документы Майкрософт"
+title: "Создание и генерация исключений (Руководство по программированию C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3eab50a6a785676dd397498fbe95348187e2b7e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f49b0911aa94480988987f209bc73d187451620
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Создание и генерация исключений (Руководство по программированию C#)
@@ -50,19 +50,19 @@ ms.lasthandoff: 03/13/2017
   
 -   На основе состояния объекта выполнен неправильный вызов объекта.  
   
-     В качестве примера можно привести попытку записи в файл, доступный только для чтения. В случаях, когда состояние объекта не допускает выполнения операции, вызывается экземпляр <xref:System.InvalidOperationException> или объекта на основе наследования этого класса. Ниже приведен пример метода, вызывающего объект <xref:System.InvalidOperationException>.  
+     В качестве примера можно привести попытку записи в файл, доступный только для чтения. В случаях, когда состояние объекта не допускает выполнения операции, вызывается экземпляр <xref:System.InvalidOperationException> или объекта на основе наследования этого класса. Ниже приведен пример метода, который вызывает объект <xref:System.InvalidOperationException>:  
   
      [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
 -   Когда аргумент метода вызывает исключение.  
   
-     В этом случае должно быть перехвачено исходное исключение и создан экземпляр <xref:System.ArgumentException>. Исходное исключение должно быть передано конструктору <xref:System.ArgumentException> в качестве параметра <xref:System.Exception.InnerException%2A>.  
+     В этом случае должно быть перехвачено исходное исключение и создан экземпляр <xref:System.ArgumentException>. Исходное исключение должно передаваться конструктору <xref:System.ArgumentException> в качестве параметра <xref:System.Exception.InnerException%2A>:  
   
      [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
  Исключения содержат свойство с именем <xref:System.Exception.StackTrace%2A>. Строка содержит имена методов в текущем стеке вызовов вместе с именем файла и номером строки, в которой было вызвано исключение для каждого метода. Объект <xref:System.Exception.StackTrace%2A> создается автоматически средой CLR из точки оператора `throw`, так что исключения должны вызываться из той точки, где должна начинаться трассировка стека.  
   
- Все исключения содержат свойство с именем <xref:System.Exception.Message%2A>. Эта строка должна содержать сообщение с объяснением причины исключения. Обратите внимание, что важные с точки зрения безопасности сведения не следует помещать в текст сообщения. Кроме <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> содержит свойство с именем <xref:System.ArgumentException.ParamName%2A>, которому необходимо присвоить имя аргумента, вызвавшего исключение. В случае с методом задания свойств свойству <xref:System.ArgumentException.ParamName%2A> должно быть присвоено значение `value`.  
+ Все исключения содержат свойство с именем <xref:System.Exception.Message%2A>. Эта строка должна содержать сообщение с объяснением причины исключения. Обратите внимание, что важные с точки зрения безопасности сведения не следует помещать в текст сообщения. Помимо <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> содержит свойство с именем <xref:System.ArgumentException.ParamName%2A>, которому должно присваиваться имя аргумента, ставшего причиной возникновения исключения. Для метода задания свойства <xref:System.ArgumentException.ParamName%2A> должно получать значение `value`.  
   
  Члены открытых и защищенных методов должны вызывать исключения каждый раз, когда не удается выполнить назначенные им функции. Вызываемый класс исключения должен быть самым конкретным доступным исключением, удовлетворяющим условиям ошибки. Эти исключения должны документироваться в составе функций класса, а производные классы или обновления исходного класса должны сохранять то же поведение для обеспечения обратной совместимости.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 03/13/2017
   
 -   Исключения должны генерироваться, а не возвращаться в качестве возвращаемого значения или параметра.  
   
--   Не рекомендуется намеренно вызывать <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> или <xref:System.IndexOutOfRangeException?displayProperty=fullName> из собственного исходного кода.  
+-   Не следует вызывать <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> или <xref:System.IndexOutOfRangeException?displayProperty=fullName> из собственного исходного кода намеренно.  
   
 -   Не рекомендуется создавать исключения, которые могут вызываться в режиме отладки, а не в режиме выпуска. Чтобы определить ошибки времени выполнения на этапе разработки, используйте Debug Assert.  
   
@@ -92,3 +92,4 @@ ms.lasthandoff: 03/13/2017
  [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)   
  [Иерархия исключений](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

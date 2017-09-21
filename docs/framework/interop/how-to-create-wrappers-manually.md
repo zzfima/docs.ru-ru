@@ -1,51 +1,56 @@
 ---
-title: "How to: Create Wrappers Manually | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "wrappers, creating manually"
+title: "Практическое руководство. Создание оболочек вручную"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 218e92b379d562be66c72cb731654907766f2ec4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Create Wrappers Manually
-Если вы решили объявлять типы COM в управляемом исходном коде вручную, лучше всего начать с существующего файла языка IDL или библиотеки типов.  Если у вас нет файла IDL или вы не можете создать файл библиотеки типов, можно имитировать типы COM, создав управляемые объявления и экспортировав получившуюся сборку в библиотеку типов.  
+# <a name="how-to-create-wrappers-manually"></a>Практическое руководство. Создание оболочек вручную
+Если вы решили объявлять типы COM в управляемом исходном коде вручную, лучше всего начать с существующего файла языка IDL или библиотеки типов. Если у вас нет файла IDL или вы не можете создать файл библиотеки типов, можно имитировать типы COM, создав управляемые объявления и экспортировав получившуюся сборку в библиотеку типов.  
   
-### Имитация типов COM из управляемого источника  
+### <a name="to-simulate-com-types-from-managed-source"></a>Имитация типов COM из управляемого источника  
   
 1.  Объявите типы на языке, совместимом со спецификацией CLS, и скомпилируйте файл.  
   
-2.  Экспортируйте сборку, содержащую типы, с помощью [программы экспорта библиотек типов \(Tlbexp.exe\)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).  
+2.  Экспортируйте сборку, содержащую типы, с помощью [программы экспорта библиотек типов (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md).  
   
 3.  Экспортированная библиотека типов COM используется в качестве основы для объявления управляемых типов, ориентированных на COM.  
   
-### Создание вызываемой оболочки времени выполнения  
+### <a name="to-create-a-runtime-callable-wrapper-rcw"></a>Создание вызываемой оболочки времени выполнения  
   
-1.  Если у вас есть IDL\-файл или файл библиотеки типов, решите, какие классы и интерфейсы нужно включить в пользовательскую вызываемую оболочку времени выполнения.  Вы можете исключить любые типы, которые не будут использоваться в приложении прямо или косвенно.  
+1.  Если у вас есть IDL-файл или файл библиотеки типов, решите, какие классы и интерфейсы нужно включить в пользовательскую вызываемую оболочку времени выполнения. Вы можете исключить любые типы, которые не будут использоваться в приложении прямо или косвенно.  
   
-2.  Создайте файл исходного кода на языке, совместимом с CLS, и объявите типы.  Полное описание процедуры преобразования при импорте см. в разделе [Обзор преобразования библиотеки типов в сборку](http://msdn.microsoft.com/ru-ru/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  Фактически, при создании пользовательской вызываемой оболочки времени выполнения вы вручную выполняете все операции по преобразованию типов, предоставляемые [программой импорта библиотек типов \(Tlbimp.exe\)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  В примере в следующем разделе показаны типы в файле IDL или файле библиотеки типов и соответствующие типы в коде C\#.  
+2.  Создайте файл исходного кода на языке, совместимом с CLS, и объявите типы. Полное описание процедуры преобразования при импорте см. в разделе [Обзор преобразования библиотеки типов в сборку](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958). Фактически при создании пользовательской вызываемой оболочки времени выполнения вы вручную выполняете все операции по преобразованию типов, предоставляемые [программой импорта библиотек типов (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). В примере в следующем разделе показаны типы в файле IDL или файле библиотеки типов и соответствующие типы в коде C#.  
   
 3.  После завершения объявлений следует выполнить компиляцию этого файла так же, как и компиляцию любого другого управляемого исходного кода.  
   
-4.  Как и в случае с типами, импортированными с помощью программы Tlbimp.exe, для некоторых типов требуются дополнительные сведения, которые можно добавить непосредственно в код.  Подробнее см. в разделе [Практическое руководство. Редактирование сборок взаимодействия](http://msdn.microsoft.com/ru-ru/16aacb20-2269-42bf-a812-b6a7df17e277).  
+4.  Как и в случае с типами, импортированными с помощью программы Tlbimp.exe, для некоторых типов требуются дополнительные сведения, которые можно добавить непосредственно в код. Подробнее об этом см. в разделе [Практическое руководство. Редактирование сборок взаимодействия](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277).  
   
-## Пример  
- Ниже приведен пример кода интерфейса `ISATest` и класса `SATest` в IDL вместе с соответствующими типами в исходном коде C\#.  
+## <a name="example"></a>Пример  
+ Ниже приведен пример кода интерфейса `ISATest` и класса `SATest` в IDL вместе с соответствующими типами в исходном коде C#.  
   
  **Файл IDL или файл библиотеки типов**  
   
@@ -109,10 +114,11 @@ namespace SAServer
 }  
 ```  
   
-## См. также  
- [Customizing Runtime Callable Wrappers](http://msdn.microsoft.com/ru-ru/4652beaf-77d0-4f37-9687-ca193288c0be)   
- [COM Data Types](http://msdn.microsoft.com/ru-ru/f93ae35d-a416-4218-8700-c8218cc90061)   
- [How to: Edit Interop Assemblies](http://msdn.microsoft.com/ru-ru/16aacb20-2269-42bf-a812-b6a7df17e277)   
- [Type Library to Assembly Conversion Summary](http://msdn.microsoft.com/ru-ru/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe \(Type Library Importer\)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Tlbexp.exe \(Type Library Exporter\)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
+## <a name="see-also"></a>См. также  
+ [Настройка вызываемых оболочек времени выполнения](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)   
+ [Типы данных COM](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)   
+ [Практическое руководство. Редактирование сборок взаимодействия](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)   
+ [Обзор преобразования библиотеки типов в сборку](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
+ [Tlbimp.exe (программа импорта библиотек типов)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
+ [Tlbexp.exe (программа экспорта библиотек типов)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
+

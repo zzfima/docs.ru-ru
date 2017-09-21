@@ -1,28 +1,33 @@
 ---
-title: "Практическое руководство. Получение информации об интерфейсах и протоколах | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Сеть"
+title: "Практическое руководство. Получение информации об интерфейсах и протоколах"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41d7e88de47067da4c96723ca3465f16595f4291
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
 # Практическое руководство. Получение информации об интерфейсах и протоколах
-В этом образце показано, как выполнить чтение статистика протокола TCP сетевого интерфейса.  
+В этом примере показано, как считать статистику TCP сетевого интерфейса.  
   
 ## Пример  
   
@@ -80,6 +85,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ```  
   
 ## Компиляция кода  
- Для этого примера необходимо следующее.  
+ Для этого примера требуются:  
   
 -   Ссылки на пространство имен **System.Net**.
+

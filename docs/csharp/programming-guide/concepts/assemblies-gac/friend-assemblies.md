@@ -1,5 +1,5 @@
 ---
-title: "Дружественные сборки (C#) | Документы Майкрософт"
+title: "Дружественные сборки (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ca01b9e91de08f3bdf53cd0572a3e1d1af0cf0af
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e2680b5799c552a063ff7c539a31a5dd00b90a75
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="friend-assemblies-c"></a>Дружественные сборки (C#)
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/13/2017
 -   При разработке библиотек классов, если дополнения к этой библиотеке содержатся в отдельных сборках, но требуют доступа к членам в существующих сборках, помеченным как `internal`.  
   
 ## <a name="remarks"></a>Примечания  
- Для обозначения одной или нескольких сборок как дружественных для заданной сборки можно использовать атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. В следующем примере атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в сборке А и обозначает сборку `AssemblyB` как дружественную. В результате сборка `AssemblyB` получает доступ ко всем типам и членам в сборке А, помеченным как `internal`.  
+ С помощью атрибута <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> можно определить одну или несколько дружественных сборок для указанной сборки. В следующем примере используется атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> в сборке A, а сборка `AssemblyB` указывается в качестве дружественной. В результате сборка `AssemblyB` получает доступ ко всем типам и членам в сборке А, помеченным как `internal`.  
   
 > [!NOTE]
 >  При компиляции сборки (сборки `AssemblyB`), которая будет обращаться ко внутренним типам или членам другой сборки (сборки *А*), необходимо прямо указать имя выходного файла (EXE или DLL), используя параметр компилятора **/out**. Это необходимо потому, что компилятор еще не создал имя сборки, формируемой во время привязки к внешним ссылкам. Дополнительные сведения см. в разделе [/out (C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
@@ -66,7 +67,7 @@ public class ClassWithFriendMethod
   
  Доступ к типам и членам `internal` могут получить только те сборки, которые будут прямо обозначены как дружественные. Например, если сборка B является дружественной для сборки A, а сборка C ссылается на сборку B, сборка C не получает доступ к типам `internal` в A.  
   
- Компилятор выполняет определенную базовую проверку имени дружественной сборки, которое передается в атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Если сборка *A* объявляет *B* как дружественную сборку, действуют следующие правила проверки:  
+ Компилятор выполняет некоторые основные проверки имени дружественной сборки, передаваемого в атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Если сборка *A* объявляет *B* как дружественную сборку, действуют следующие правила проверки:  
   
 -   Если сборка *A* имеет строгое имя, сборка *B* должна также иметь строгое имя. Имя дружественной сборки, передаваемое в атрибут, должно состоять из имени сборки и открытого ключа из ключа строгого имени, который используется для подписи сборки *B*.  
   
@@ -76,13 +77,13 @@ public class ClassWithFriendMethod
   
 -   Если сборка *B* имеет строгое имя, необходимо указать ключ строгого имени для сборки *B*, используя параметр проекта или параметр компилятора командной строки `/keyfile`. Дополнительные сведения см. в разделе [Практическое руководство. Создание подписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md).  
   
- Класс <xref:System.Security.Permissions.StrongNameIdentityPermission> позволяет также совместно использовать типы, но со следующими отличиями:  
+ Класс <xref:System.Security.Permissions.StrongNameIdentityPermission> также позволяет обеспечить общий доступ к типам, но имеет следующие отличия:  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission> применяется к отдельному типу, в то время как дружественная сборка применяется ко всей сборке.  
+-   Класс <xref:System.Security.Permissions.StrongNameIdentityPermission> применяется к отдельному типу, тогда как дружественная сборка относится ко всей сборке.  
   
 -   Если в сборке *A* существуют сотни типов, которые должны использоваться совместно со сборкой *B*, к каждому из них необходимо добавить <xref:System.Security.Permissions.StrongNameIdentityPermission>. Если используется дружественная сборка, достаточно объявить дружественные отношения всего один раз.  
   
--   При использовании <xref:System.Security.Permissions.StrongNameIdentityPermission> типы, к которым планируется предоставить общий доступ, должны быть объявлены открытыми. При использовании дружественной сборки общие типы объявляются как `internal`.  
+-   Если вы используете <xref:System.Security.Permissions.StrongNameIdentityPermission>, типы для общего доступа необходимо объявить как открытые. При использовании дружественной сборки общие типы объявляются как `internal`.  
   
  Сведения о том, как получить доступ к типам и методам сборки `internal` из файла модуля (файла с расширением NETMODULE), см. в разделе [/moduleassemblyname (C#)](../../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md).  
   
@@ -93,3 +94,4 @@ public class ClassWithFriendMethod
  [Практическое руководство. Создание подписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
  [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
  [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+

@@ -21,10 +21,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 26467141e5f7537efddd79e0b04af6203e4a6994
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 01abb535567429780a8a0776aebecaf64307950d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="selecting-a-collection-class"></a>Выбор класса коллекции
@@ -68,7 +68,7 @@ ms.lasthandoff: 07/28/2017
   
     -   Класс <xref:System.Collections.Hashtable> сортирует элементы по хэш-коду.  
   
-    -   Класс <xref:System.Collections.SortedList> и универсальные классы <xref:System.Collections.Generic.SortedDictionary%602> и <xref:System.Collections.Generic.SortedList%602> сортируют элементы по ключу, основываясь на реализациях интерфейса <xref:System.Collections.IComparer> и универсального интерфейса <xref:System.Collections.Generic.IComparer%601>.  
+    -   Класс <xref:System.Collections.SortedList> и универсальные классы <xref:System.Collections.Generic.SortedDictionary%602> и <xref:System.Collections.Generic.SortedList%602> сортируют элементы по ключу на основе реализаций интерфейса <xref:System.Collections.IComparer> и универсального интерфейса <xref:System.Collections.Generic.IComparer%601>.  
   
     -   Класс <xref:System.Collections.ArrayList> предоставляет метод <xref:System.Collections.ArrayList.Sort%2A>, который принимает реализацию <xref:System.Collections.IComparer> в качестве параметра. Его универсальный аналог, универсальный класс <xref:System.Collections.Generic.List%601>, предоставляет метод <xref:System.Collections.Generic.List%601.Sort%2A>, который принимает реализацию универсального интерфейса <xref:System.Collections.Generic.IComparer%601> в качестве параметра.  
   

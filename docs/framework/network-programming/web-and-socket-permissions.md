@@ -1,48 +1,54 @@
 ---
-title: "Веб-разрешения и разрешения сокетов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Сеть"
-  - "позиции [платформа .NET Framework], принятие"
-  - "сокеты, разрешения"
-  - "сеть, разрешения"
-  - "Интернет, разрешения"
-  - "Сетевые ресурсы"
-  - "класс SocketPermission, сведения о классе SocketPermission"
-  - "позиции [платформа .NET Framework], подключение"
-  - "класс WebPermission, сведения о классе WebPermission"
-  - "разрешения [.NET Framework], сокеты"
-  - "безопасность [платформа .NET Framework], Интернет"
-  - "позиции [платформа .NET Framework], предоставление"
+title: "Веб-разрешения и разрешения сокетов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- positions [.NET Framework], accepting
+- sockets, permissions
+- network, permissions
+- Internet, permissions
+- Network Resources
+- SocketPermission class, about SocketPermission class
+- positions [.NET Framework], connecting
+- WebPermission class, about WebPermission class
+- permissions [.NET Framework], sockets
+- security [.NET Framework], Internet
+- positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6071c69799cf289ad0ecf163dc2de038efefecc1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Веб-разрешения и разрешения сокетов
-Безопасность в интернете для приложений, использующих пространство имен <xref:System.Net> предоставляются классами <xref:System.Net.WebPermission> и <xref:System.Net.SocketPermission>.  Класс **WebPermission** управляет право приложения запросить данные из универсального кода ресурса \(uri\) или послужить универсальный код ресурса \(uri\) для использования в интернете.  Класс **SocketPermission** управляет право приложениям использовать <xref:System.Net.Sockets.Socket>, чтобы принять данные на локальном или удаленном порте связаться с устройства с помощью транспортный протокол на другом адресу, основываясь на узле, номера порта и транспортном протоколе сокета.  
+# <a name="web-and-socket-permissions"></a>Веб-разрешения и разрешения сокетов
+Безопасность приложений, использующих пространство имен <xref:System.Net>, в Интернете обеспечивается классами <xref:System.Net.WebPermission> и <xref:System.Net.SocketPermission>. Класс **WebPermission** определяет право приложения на запрос данных из универсального кода ресурса (URI) или предоставления кода URI в Интернете. Класс **SocketPermission** определяет право приложения на использование <xref:System.Net.Sockets.Socket> для приема данных через локальный порт или на связь с удаленными устройствами с помощью транспортного протокола по другому адресу в соответствии с узлом, номером порта и транспортным протоколом сокета.  
   
- Используется, какому классу разрешения зависят от типа приложения.  Приложения, использующие <xref:System.Net.WebRequest> и его потомков, должны использовать класс **WebPermission** для управления разрешениями.  Приложения, использующие к гнездо\- уровня должны использовать класс **SocketPermission** для управления разрешениями.  
+ Выбор используемого класса разрешений зависит от типа приложения. Приложения, применяющие класс <xref:System.Net.WebRequest> и его потомки, должны использовать класс **WebPermission** для управления разрешениями. Приложения, применяющие доступ на уровне сокета, должны использовать класс **SocketPermission** для управления разрешениями.  
   
- **WebPermission** и **SocketPermission** определяют разрешения: 2 принять вариант и подключение.  Примите приложение предоставляет право ответить на входящее соединение с другой стороны.  Соединение предоставляет приложению право инициировать соединение с другой стороны.  
+ Классы **WebPermission** и **SocketPermission** определяют два разрешения: на прием и подключение. Разрешение на прием позволяет приложению отвечать на входящие запросы подключения от другой стороны. Разрешение на подключение позволяет приложению инициировать соединение с другой стороной.  
   
- Для экземпляров **SocketPermission**, принять вариант означает, что приложение может принять входящие подключения локального адреса транспорта. подключите означает, что приложение может подключиться к некоторому удаленный \(local\) адресом транспорта.  
+ Для экземпляров **SocketPermission** разрешение на прием означает, что приложение может принимать входящие подключения по локальному адресу транспорта. Разрешение на подключение означает, что приложение может подключаться к определенному удаленному (или локальному) адресу транспорта.  
   
- Для экземпляров **WebPermission**, принять вариант означает, что приложение может экспортировать универсальный код ресурса \(uri\) управляемое **WebPermission** с миром. подключите означает, что приложение может получить доступ, универсальный код ресурса \(uri\) \(ли оно является удаленным или локальный\).  
+ Для экземпляров **WebPermission** разрешение на прием означает, что приложение может экспортировать код URI, контролируемый экземпляром **WebPermission**, во внешнюю сеть. Разрешение на подключение означает, что приложение может получать доступ к этому коду URI (удаленному или локальному).  
   
-## См. также  
- [Security](../../../docs/standard/security/index.md)   
+## <a name="see-also"></a>См. также  
+ [Безопасность](../../../docs/standard/security/index.md)   
  [Безопасность в сетевом программировании](../../../docs/framework/network-programming/security-in-network-programming.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Ошибки смешанного декларативного и императивного кода (LINQ to XML) (C#) | Документы Майкрософт"
+title: "Ошибки смешанного декларативного и императивного кода (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 747b3462dd6e463a565b27553f241b1ee5171de7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2fb679ee2593520e633daba969ccaa4db4d30509
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Ошибки смешанного декларативного и императивного кода (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Интерфейс программирования описывается в разделе [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение дерева XML, можно в итоге обнаружить некоторые неожиданные ошибки.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] содержит различные методы, которые позволяют прямо модифицировать XML-дерево. Можно добавить элементы, удалить элементы, изменить содержимое элемента, добавить атрибуты и т. п. Интерфейс программирования описывается в разделе [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Если выполняется переход в пределах одной оси, например <xref:System.Xml.Linq.XContainer.Elements%2A>, и при этом выполняется изменение XML-дерева, можно в итоге обнаружить некоторые неожиданные ошибки.  
   
  Этот вид ошибки иногда называется Halloween Problem.  
   
@@ -62,7 +63,7 @@ foreach (XElement e in root.Elements())
   
  Этот код представляет собой бесконечный цикл. Инструкция `foreach` последовательно применяется ко всей оси `Elements()`, при этом добавляются новые элементы к элементу `doc`. После этого она переходит на только что добавленные элементы. И поскольку она выделяет память для новых объектов на каждом шаге, она захватит всю доступную память.  
   
- Эту неполадку можно устранить за счет переноса коллекции в память, используя стандартный оператор запросов <xref:System.Linq.Enumerable.ToList%2A> указанным ниже образом.  
+ Эту неполадку можно устранить за счет переноса массива в память, используя стандартный оператор запросов <xref:System.Linq.Enumerable.ToList%2A> следующим образом.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -113,7 +114,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- Решение снова заключается в вызове <xref:System.Linq.Enumerable.ToList%2A> для материализации коллекции следующим образом:  
+ Решение снова заключается в вызове <xref:System.Linq.Enumerable.ToList%2A>, чтобы материализовать коллекцию следующим образом.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -132,7 +133,7 @@ Console.WriteLine(root);
 <Root />  
 ```  
   
- Кроме того, можно совсем исключить итерацию за счет вызова <xref:System.Xml.Linq.XElement.RemoveAll%2A> для родительского элемента.  
+ Кроме того, можно совсем исключить итерацию за счет вызова <xref:System.Xml.Linq.XElement.RemoveAll%2A> на родительском элементе.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -186,3 +187,4 @@ Console.WriteLine(newRoot);
   
 ## <a name="see-also"></a>См. также  
  [Расширенные методы программирования LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

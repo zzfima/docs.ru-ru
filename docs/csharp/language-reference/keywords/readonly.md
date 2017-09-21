@@ -85,4 +85,3 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
  [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)   
  [const](../../../csharp/language-reference/keywords/const.md)   
  [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)
-

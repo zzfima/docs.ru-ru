@@ -1,5 +1,5 @@
 ---
-title: "Отмена асинхронной задачи или списка задач (C#) | Документы Майкрософт"
+title: "Отмена асинхронной задачи или списка задач (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9fbfa3602766b51c4be5078b793139501802a90c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Отмена асинхронной задачи или списка задач (C#)
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/24/2017
         CancellationTokenSource cts;  
     ```  
   
-2.  Добавьте следующий обработчик событий для кнопки **Отмена**. С помощью метода <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> обработчик событий уведомляет `cts`, когда пользователь запрашивает отмену.  
+2.  Добавьте следующий обработчик событий для кнопки **Отмена**. Этот обработчик событий использует метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> для отправки уведомления в `cts` при запросе отмены пользователем.  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 03/24/2017
         cts = new CancellationTokenSource();  
         ```  
   
-    -   В вызове метода `AccessTheWebAsync`, который загружает содержимое определенного веб-сайта, отправьте свойство <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> `cts` как аргумент. Если запрашивается отмена, свойство `Token` распространяет сообщение. Добавьте блок catch, который отображает сообщение в случае, если пользователь решает отменить операцию загрузки. Эти изменения показаны в следующем примере кода.  
+    -   В вызове `AccessTheWebAsync`, который скачивает содержимое заданного веб-сайта, отправьте свойство <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> объекта `cts` в качестве аргумента. Если запрашивается отмена, свойство `Token` распространяет сообщение. Добавьте блок catch, который отображает сообщение в случае, если пользователь решает отменить операцию загрузки. Эти изменения показаны в следующем примере кода.  
   
         ```csharp  
         try  
@@ -113,7 +113,7 @@ ms.lasthandoff: 03/24/2017
         }  
         ```  
   
-4.  В `AccessTheWebAsync` используйте для загрузки содержимого веб-сайта перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient>. Передайте `ct`, параметр <xref:System.Threading.CancellationToken> `AccessTheWebAsync`, как второй аргумент. Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.  
+4.  В `AccessTheWebAsync` используйте перегрузку <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> метода `GetAsync` в типе <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта. Передайте `ct` параметр <xref:System.Threading.CancellationToken> метода `AccessTheWebAsync` в качестве второго аргумента. Благодаря токену, если пользователь нажмет кнопку **Отмена**, будет выведено соответствующее сообщение.  
   
      Эти изменения в `AccessTheWebAsync` показаны в следующем примере кода.  
   
@@ -224,7 +224,7 @@ ms.lasthandoff: 03/24/2017
     }  
     ```  
   
-4.  Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать. Удалите оператор return и измените тип возвращаемого методом значения на <xref:System.Threading.Tasks.Task>, а не <xref:System.Threading.Tasks.Task%601>.  
+4.  Поскольку `AccessTheWebAsync` отображает длину, метод не должен ничего возвращать. Удалите инструкцию return и измените тип возвращаемого значения на <xref:System.Threading.Tasks.Task> вместо <xref:System.Threading.Tasks.Task%601>.  
   
     ```csharp  
     async Task AccessTheWebAsync(CancellationToken ct)  
@@ -239,7 +239,6 @@ ms.lasthandoff: 03/24/2017
 5.  Если программа не отменяется, она выдает представленный ниже результат.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -255,7 +254,6 @@ ms.lasthandoff: 03/24/2017
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
      При нажатии кнопки **Отмена** до завершения загрузки выходные данные будут включать объем данных, загруженных до отмены.  
@@ -268,7 +266,6 @@ ms.lasthandoff: 03/24/2017
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
 ##  <a name="BKMK_CompleteExamples"></a> Полные примеры  
@@ -538,3 +535,4 @@ namespace CancelAListOfTasks
  [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Пример асинхронности. Тонкая настройка приложения](http://go.microsoft.com/fwlink/?LinkId=255046)
+

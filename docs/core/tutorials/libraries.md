@@ -1,6 +1,6 @@
 ---
-title: "Разработка библиотек с помощью кроссплатформенных средств| Microsoft Docs"
-description: "Разработка библиотек с помощью кроссплатформенных средств"
+title: "Разработка библиотек с помощью кроссплатформенных средств"
+description: "Узнайте, как создавать библиотеки для .NET с помощью программ командной строки .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -10,39 +10,39 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 
 # <a name="developing-libraries-with-cross-platform-tools"></a>Разработка библиотек с помощью кроссплатформенных средств
 
-В этой статье рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки (CLI).  CLI предоставляет эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах.  Вы по-прежнему можете создавать библиотеки с помощью Visual Studio. Если вы предпочитаете такой способ, обратитесь к [руководству по Visual Studio](libraries-with-vs.md).
+В этой статье рассматривается создание библиотек для .NET с помощью кроссплатформенных средств интерфейса командной строки (CLI). CLI предоставляет эффективный и низкоуровневый интерфейс, работающий в любых поддерживаемых операционных системах. Вы по-прежнему можете создавать библиотеки с помощью Visual Studio. Если вы предпочитаете такой способ, обратитесь к [руководству по Visual Studio](libraries-with-vs.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 На компьютере должны быть установлены [пакет SDK и интерфейс CLI для .NET Core ](https://www.microsoft.com/net/core).
 
-При работе с разделами, в которых используются различные версии .NET Framework, на компьютере с ОС Windows должна быть установлена платформа [.NET Framework](http://getdotnet.azurewebsites.net/).  
+При работе с разделами, в которых используются различные версии .NET Framework, на компьютере с ОС Windows должна быть установлена платформа [.NET Framework](http://getdotnet.azurewebsites.net/).
 
-Кроме того, если необходимо поддерживать целевые платформы .NET Framework предыдущих версий, требуется установить пакеты нацеливания и пакеты для разработчиков, предназначенные для предыдущих версий платформы, со [страницы целевых платформ .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html).  См. таблицу ниже.
+Кроме того, если необходимо поддерживать целевые платформы .NET Framework предыдущих версий, требуется установить пакеты нацеливания и пакеты для разработчиков, предназначенные для предыдущих версий платформы, со [страницы целевых платформ .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html). См. таблицу ниже.
 
-| Версия платформы .NET Framework | Скачиваемые компоненты |
-| ---------------------- | ----------------- |
-| 4.6.1 | .NET Framework 4.6.1 Targeting Pack |
-| 4.6 | .NET Framework 4.6 Targeting Pack |
-| 4.5.2 | .NET Framework 4.5.2 Developer Pack |
-| 4.5.1 | .NET Framework 4.5.1 Developer Pack |
-| 4.5 | Пакет средств разработки программного обеспечения Windows для Windows 8 |
-| 4.0 | Пакет SDK для Windows 7 и .NET Framework 4 |
-| 2.0, 3.0 и 3.5 | Среда выполнения .NET Framework 3.5 с пакетом обновления 1 (SP1) (либо версия для Windows 8 или более поздняя) |
+| Версия платформы .NET Framework | Скачиваемые компоненты                                       |
+| ---------------------- | ------------------------------------------------------ |
+| 4.6.1                  | .NET Framework 4.6.1 Targeting Pack                    |
+| 4.6                    | .NET Framework 4.6 Targeting Pack                      |
+| 4.5.2                  | .NET Framework 4.5.2 Developer Pack                    |
+| 4.5.1                  | .NET Framework 4.5.1 Developer Pack                    |
+| 4.5                    | Пакет средств разработки программного обеспечения Windows для Windows 8         |
+| 4.0                    | Пакет SDK для Windows 7 и .NET Framework 4         |
+| 2.0, 3.0 и 3.5      | Среда выполнения .NET Framework 3.5 с пакетом обновления 1 (SP1) (либо версия для Windows 8 или более поздняя) |
 
 ## <a name="how-to-target-the-net-standard"></a>Нацеливание на .NET Standard
 
-Если вы плохо знакомы с платформой .NET Standard, дополнительные сведения можно получить в разделе [Библиотека .NET Standard](../../standard/net-standard.md).
+Если вы недостаточно хорошо знакомы с платформой .NET Standard, дополнительные сведения см. в [этом разделе](../../standard/net-standard.md).
 
 В этом разделе есть таблица, в которой версии .NET Standard сопоставляются с различными реализациями:
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 07/03/2017
 
 Вот что значит эта таблица в контексте создания библиотеки:
 
-При выборе версии платформы .NET Standard необходимо найти компромисс между доступом к новейшим интерфейсам API и возможностью нацеливания на большее количество платформ и версий .NET.  Диапазон целевых платформ и версий определяется выбранной версией `netstandardX.X` (где `X.X` — это номер версии), которая добавляется в файл проекта (`.csproj` или `.fsproj`).
+Версия .NET Standard, которую вы выберете, будет компромиссом между наличием новейших API-интерфейсов и возможностью нацеливать приложение на большее количество реализаций .NET и версий .NET Standard. Диапазон целевых платформ и версий определяется выбранной версией `netstandardX.X` (где `X.X` — это номер версии), которая добавляется в файл проекта (`.csproj` или `.fsproj`).
 
 При нацеливании на платформу .NET Standard есть три основных варианта, выбор которых зависит от ваших потребностей.
 
@@ -58,24 +58,24 @@ ms.lasthandoff: 07/03/2017
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
-        <PropertyGroup>
-            <TargetFramework>netstandard1.4</TargetFramework>
-        </PropertyGroup>
+      <PropertyGroup>
+        <TargetFramework>netstandard1.4</TargetFramework>
+      </PropertyGroup>
     </Project>
     ```
 
 2. Можно использовать более раннюю или более позднюю версию .NET Standard, изменив значение в узле `TargetFramework` файла проекта.
     
-    Версии .NET Standard обладают обратной совместимостью. Это означает, что библиотеки `netstandard1.0` выполняются на платформах `netstandard1.1` и более поздних версий.  Однако прямой совместимости нет: более ранние платформы .NET Standard не могут ссылаться на более поздние.  Это значит, что библиотеки `netstandard1.0` не могут ссылаться на библиотеки, предназначенные для `netstandard1.1` или более поздних версий.  Выберите версию Standard, которая предоставляет подходящее сочетание интерфейсов API и поддерживаемых платформ для ваших потребностей.  Сейчас рекомендуем использовать версию `netstandard1.4`.
+    Версии .NET Standard обладают обратной совместимостью. Это означает, что библиотеки `netstandard1.0` выполняются на платформах `netstandard1.1` и более поздних версий. Однако прямой совместимости нет: более ранние платформы .NET Standard не могут ссылаться на более поздние. Это значит, что библиотеки `netstandard1.0` не могут ссылаться на библиотеки, предназначенные для `netstandard1.1` или более поздних версий. Выберите версию Standard, которая предоставляет подходящее сочетание интерфейсов API и поддерживаемых платформ для ваших потребностей. Сейчас рекомендуем использовать версию `netstandard1.4`.
     
 3. Если требуется нацеливание на .NET Framework версии 4.0 или более ранней или использование интерфейса API, доступного в .NET Framework, но не в .NET Standard (например, `System.Drawing`), прочитайте следующие подразделы, чтобы узнать, как осуществляется настройка для разных версий.
 
 ## <a name="how-to-target-the-net-framework"></a>Нацеливание на .NET Framework
 
 > [!NOTE]
-> В этих инструкциях предполагается, что на компьютере установлена платформа .NET Framework.  Чтобы установить зависимости, обратитесь к разделу [Предварительные требования](#prerequisites).
+> В этих инструкциях предполагается, что на компьютере установлена платформа .NET Framework. Чтобы установить зависимости, обратитесь к разделу [Предварительные требования](#prerequisites).
 
-Имейте в виду, что некоторые используемые здесь версии .NET Framework больше не поддерживаются.  Сведения о неподдерживаемых версиях см. в статье [Вопросы и ответы о политике по срокам поддержки Microsoft .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us).
+Имейте в виду, что некоторые используемые здесь версии .NET Framework больше не поддерживаются. Сведения о неподдерживаемых версиях см. в статье [Вопросы и ответы о политике по срокам поддержки Microsoft .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us).
 
 Чтобы охватить максимальное количество разработчиков и проектов, используйте .NET Framework 4.0 в качестве базовой целевой платформы. Для нацеливания на .NET Framework сначала необходимо использовать моникер целевой платформы (TFM), соответствующий версии .NET Framework, которая должна поддерживаться.
 
@@ -90,25 +90,25 @@ ms.lasthandoff: 07/03/2017
 .NET Framework 4.6   --> net46
 .NET Framework 4.6.1 --> net461
 .NET Framework 4.6.2 --> net462
-.NET Framework 4.7 --> net47
+.NET Framework 4.7   --> net47
 ```
 
-Вставьте этот моникер целевой платформы в раздел `TargetFramework` файла проекта.  Например, вот как создать библиотеку, предназначенную для .NET Framework 4.0:
+Вставьте этот моникер целевой платформы в раздел `TargetFramework` файла проекта. Например, вот как создать библиотеку, предназначенную для .NET Framework 4.0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net40</TargetFramework>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
 </Project>
 ```
 
-Вот и все!  Хотя эта библиотека компилируется только для .NET Framework 4, ее можно использовать в более поздних версиях .NET Framework.
+Вот и все! Хотя эта библиотека компилируется только для .NET Framework 4, ее можно использовать в более поздних версиях .NET Framework.
 
 ## <a name="how-to-multitarget"></a>Настройка для различных версий
 
 > [!NOTE]
-> В приведенных ниже инструкциях предполагается, что на компьютере установлена платформа .NET Framework.  Сведения о зависимостях, которые необходимо установить, и о том, где их можно скачать, см. в разделе [Предварительные требования](#prerequisites).
+> В приведенных ниже инструкциях предполагается, что на компьютере установлена платформа .NET Framework. Сведения о зависимостях, которые необходимо установить, и о том, где их можно скачать, см. в разделе [Предварительные требования](#prerequisites).
 
 Если проект поддерживает как .NET Framework, так и .NET Core, может потребоваться нацеливание на более старые версии .NET Framework. В такой ситуации, если вам нужно применять более новые интерфейсы API и языковые конструкции для новых целевых платформ, используйте директивы `#if` в коде. Кроме того, может потребоваться добавить разные пакеты и зависимости для каждой целевой платформы, чтобы включить различные интерфейсы API, необходимые в каждом случае.
 
@@ -138,29 +138,12 @@ ms.lasthandoff: 07/03/2017
 Вы заметите три основных изменения:
 
 1. Узел `TargetFramework` был заменен на `TargetFrameworks`, внутри которого содержатся три моникера целевой платформы.
-2. Добавлен узел `<ItemGroup>` для целевой платформы `net40 `, который извлекает одну ссылку на .NET Framework.
-3. Добавлен узел `<ItemGroup>` для целевой платформы `net45`, который извлекает две ссылки на .NET Framework.
+1. Добавлен узел `<ItemGroup>` для целевой платформы `net40 `, который извлекает одну ссылку на .NET Framework.
+1. Добавлен узел `<ItemGroup>` для целевой платформы `net45`, который извлекает две ссылки на .NET Framework.
 
 Система сборки распознает следующие символы препроцессора, используемые в директивах `#if`:
 
-```
-.NET Framework 2.0   --> NET20
-.NET Framework 3.5   --> NET35
-.NET Framework 4.0   --> NET40
-.NET Framework 4.5   --> NET45
-.NET Framework 4.5.1 --> NET451
-.NET Framework 4.5.2 --> NET452
-.NET Framework 4.6   --> NET46
-.NET Framework 4.6.1 --> NET461
-.NET Framework 4.6.2 --> NET462
-.NET Standard 1.0    --> NETSTANDARD1_0
-.NET Standard 1.1    --> NETSTANDARD1_1
-.NET Standard 1.2    --> NETSTANDARD1_2
-.NET Standard 1.3    --> NETSTANDARD1_3
-.NET Standard 1.4    --> NETSTANDARD1_4
-.NET Standard 1.5    --> NETSTANDARD1_5
-.NET Standard 1.6    --> NETSTANDARD1_6
-```
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 Ниже приведен пример использования условной компиляции для каждого целевого объекта:
 
@@ -181,8 +164,8 @@ namespace MultitargetLib
     public class Library
     {
 #if NET40
-         private readonly WebClient _client = new WebClient();
-         private readonly object _locker = new object();
+        private readonly WebClient _client = new WebClient();
+        private readonly object _locker = new object();
 #else
         private readonly HttpClient _client = new HttpClient();
 #endif
@@ -208,19 +191,19 @@ namespace MultitargetLib
             return $"Dotnet Foundation mentions .NET {dotNetCount} times!";
         }
 #else
-         // .NET 4.5+ can use async/await!
-         public async Task<string> GetDotNetCountAsync()
-         {
-             string url = "http://www.dotnetfoundation.org/";
+        // .NET 4.5+ can use async/await!
+        public async Task<string> GetDotNetCountAsync()
+        {
+            string url = "http://www.dotnetfoundation.org/";
 
-             // HttpClient is thread-safe, so no need to explicitly lock here
-             var result = await _client.GetStringAsync(url);
+            // HttpClient is thread-safe, so no need to explicitly lock here
+            var result = await _client.GetStringAsync(url);
 
-             int dotNetCount = Regex.Matches(result, ".NET").Count;
+            int dotNetCount = Regex.Matches(result, ".NET").Count;
 
-             return $"dotnetfoundation.org mentions .NET {dotNetCount} times in its HTML!";
-         }
- #endif
+            return $"dotnetfoundation.org mentions .NET {dotNetCount} times in its HTML!";
+        }
+#endif
     }
 }
 ```
@@ -237,51 +220,52 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Тестирование библиотек в .NET Core
 
-Необходимо иметь возможность тестирования проектов на различных платформах.  Вы можете использовать [xUnit](http://xunit.github.io/) или MSTest без дополнительной настройки.  Обе платформы тестирования идеально подходят для модульного тестирования библиотеки в .NET Core.  Настройка тестовых проектов для решения зависит от [его структуры](#structuring-a-solution).  В следующем примере предполагается, что каталог с тестами и каталог с исходным кодом находятся в одном и том же каталоге верхнего уровня.
+Необходимо иметь возможность тестирования проектов на различных платформах. Вы можете использовать [xUnit](http://xunit.github.io/) или MSTest без дополнительной настройки. Обе платформы тестирования идеально подходят для модульного тестирования библиотеки в .NET Core. Настройка тестовых проектов для решения зависит от [его структуры](#structuring-a-solution). В следующем примере предполагается, что каталог с тестами и каталог с исходным кодом находятся в одном и том же каталоге верхнего уровня.
 
-> [! СВЕДЕНИЯ] В этом примере используются некоторые [команды интерфейса командной строки .NET](../tools/index.md).  Дополнительные сведения см. в разделах [dotnet new](../tools/dotnet-new.md) и [dotnet sln](../tools/dotnet-sln.md).
+> [!NOTE]
+> В этом примере используются некоторые [команды интерфейса командной строки .NET Core](../tools/index.md). Дополнительные сведения см. в разделах [dotnet new](../tools/dotnet-new.md) и [dotnet sln](../tools/dotnet-sln.md).
 
-1. Настройте решение.  Это можно сделать с помощью следующих команд:
+1. Настройте решение. Это можно сделать с помощью следующих команд:
 
-```bash
-mkdir SolutionWithSrcAndTest
-cd SolutionWithSrcAndTest
-dotnet new sln
-dotnet new classlib -o MyProject
-dotnet new xunit -o MyProject.Test
-dotnet sln add MyProject/MyProject.csproj
-dotnet sln add MyProject.Test/MyProject.Test.csproj
-```
+   ```bash
+   mkdir SolutionWithSrcAndTest
+   cd SolutionWithSrcAndTest
+   dotnet new sln
+   dotnet new classlib -o MyProject
+   dotnet new xunit -o MyProject.Test
+   dotnet sln add MyProject/MyProject.csproj
+   dotnet sln add MyProject.Test/MyProject.Test.csproj
+   ```
 
-Эти команды создадут проекты и объединят их в решение.  Ваш каталог для `SolutionWithSrcAndTest` должен выглядеть следующим образом:
+   Эти команды создадут проекты и объединят их в решение. Ваш каталог для `SolutionWithSrcAndTest` должен выглядеть следующим образом:
 
-```    
-/SolutionWithSrcAndTest
-|__SolutionWithSrcAndTest.sln
-|__MyProject/
-|__MyProject.Test/
-```
+   ```
+   /SolutionWithSrcAndTest
+   |__SolutionWithSrcAndTest.sln
+   |__MyProject/
+   |__MyProject.Test/
+   ```
 
-2. Перейдите в каталог тестового проекта и добавьте ссылку на `MyProject.Test` из `MyProject`.
+1. Перейдите в каталог тестового проекта и добавьте ссылку на `MyProject.Test` из `MyProject`.
 
-```bash
-cd MyProject.Test
-dotnet add reference ../MyProject/MyProject.csproj
-```
+   ```bash
+   cd MyProject.Test
+   dotnet add reference ../MyProject/MyProject.csproj
+   ```
 
-3. Восстановите пакеты и соберите проекты:
+1. Восстановите пакеты и соберите проекты:
 
-```bash
-dotnet restore
-dotnet build
-```
+   ```bash
+   dotnet restore
+   dotnet build
+   ```
 
-4. Убедитесь, что xUnit запущен, выполнив команду `dotnet test`.  Если вы решили использовать MSTest, запустите средство запуска консоли MSTest вместо xUnit.
+1. Убедитесь, что xUnit запущен, выполнив команду `dotnet test`. Если вы решили использовать MSTest, запустите средство запуска консоли MSTest вместо xUnit.
     
-Вот и все!  Теперь вы можете протестировать библиотеку для всех платформ с помощью средств командной строки.  Теперь, когда все настроено, протестировать библиотеку очень легко:
+Вот и все! Теперь вы можете протестировать библиотеку для всех платформ с помощью средств командной строки. Теперь, когда все настроено, протестировать библиотеку очень легко:
 
 1. Внесите изменения в библиотеку.
-2. Выполните тесты в тестовом каталоге из командной строки с помощью команды `dotnet test`.
+1. Выполните тесты в тестовом каталоге из командной строки с помощью команды `dotnet test`.
 
 При вызове команды `dotnet test` будет автоматически выполнена повторная сборка кода.
 
@@ -289,26 +273,23 @@ dotnet build
 
 В случае с более крупными библиотеками, как правило, требуется реализовывать функциональность в разных проектах.
 
-Представим, что необходимо создать библиотеку, которую можно использовать в идиоматичном коде на языках C# и F#.  Это означает, что библиотека будет использоваться способами, естественными для языков C# и F#.  Например, в C# можно использовать библиотеку следующим образом:
+Представим, что необходимо создать библиотеку, которую можно использовать в идиоматичном коде на языках C# и F#. Это означает, что библиотека будет использоваться способами, естественными для языков C# и F#. Например, в C# можно использовать библиотеку следующим образом:
 
 ```csharp
 using AwesomeLibrary.CSharp;
 
-...
 public Task DoThings(Data data)
 {
     var convertResult = await AwesomeLibrary.ConvertAsync(data);
     var result = AwesomeLibrary.Process(convertResult);
     // do something with result
 }
-```  
+```
 
 В F# это может выглядеть так.
 
 ```fsharp
 open AwesomeLibrary.FSharp
-
-...
 
 let doWork data = async {
     let! result = AwesomeLibrary.AsyncConvert data // Uses an F# async function rather than C# async method
@@ -338,11 +319,11 @@ dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
 dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
-Эти команды добавят три указанные выше проекта и файл решения, который связывает их вместе.  Создание файла решения и связывание проектов позволит вам собирать и восстанавливать проекты из верхнего уровня.
+Эти команды добавят три указанные выше проекта и файл решения, который связывает их вместе. Создание файла решения и связывание проектов позволит вам собирать и восстанавливать проекты из верхнего уровня.
 
 ### <a name="project-to-project-referencing"></a>Ссылки проектов на проекты
 
-Ссылку на проект лучше всего добавить с помощью интерфейса командной строки .NET.  Из каталогов проекта **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** выполните следующую команду:
+Ссылку на проект лучше всего добавить с помощью интерфейса командной строки .NET Core. Из каталогов проекта **AwesomeLibrary.CSharp** и **AwesomeLibrary.FSharp** выполните следующую команду:
 
 ```console
 $ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
@@ -352,11 +333,11 @@ $ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 
 ```xml
 <ItemGroup>
-    <ProjectReference Include="..\AwesomeLibrary.Core\AwesomeLibrary.Core.csproj" />
+  <ProjectReference Include="..\AwesomeLibrary.Core\AwesomeLibrary.Core.csproj" />
 </ItemGroup>
 ```
 
-Если вы не хотите использовать интерфейс командной строки .NET, можете добавить этот код в каждый файл проекта вручную.
+Если вы не хотите использовать интерфейс командной строки .NET Core, можете добавить этот раздел в каждый файл проекта вручную.
 
 ### <a name="structuring-a-solution"></a>Структурирование решения
 

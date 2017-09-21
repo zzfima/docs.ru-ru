@@ -1,5 +1,5 @@
 ---
-title: "Синхронизация потоков (C#) | Документы Майкрософт"
+title: "Синхронизация потоков (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: f8d51aa1c50c097577a575be9b5da4b9e0effc55
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df4093d4bf777f904aa8ce376cd164ed822350a0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-synchronization-c"></a>Синхронизация потоков (C#)
@@ -183,3 +183,4 @@ class ThreadingExample
  [Блокируемые операции](../../../../standard/threading/interlocked-operations.md)   
  [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
  [Синхронизация данных для многопоточности](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+

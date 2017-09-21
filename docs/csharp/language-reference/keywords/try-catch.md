@@ -1,5 +1,5 @@
 ---
-title: "try-catch (справочник по C#) | Документы Майкрософт"
+title: "try-catch (Справочник по C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Справочник по C#)
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- Хотя предложение `catch` может использоваться без аргументов для перехвата любого типа исключения, такое использование не рекомендуется. В целом вы должны перехватывать только те исключения, после которых вы знаете, как выполнить восстановление. В связи с этим необходимо всегда задавать аргумент объекта, производный от <xref:System.Exception?displayProperty=fullName>. Например:  
+ Хотя предложение `catch` может использоваться без аргументов для перехвата любого типа исключения, такое использование не рекомендуется. В целом вы должны перехватывать только те исключения, после которых вы знаете, как выполнить восстановление. Поэтому всегда следует указывать аргумент объекта, производный от <xref:System.Exception?displayProperty=fullName>, например:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -142,7 +142,7 @@ static void Main()
  Дополнительные сведения о перехвате исключений см. в разделе [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
 ## <a name="exceptions-in-async-methods"></a>Исключения в асинхронных методах  
- Асинхронный метод помечается модификатором [async](../../../csharp/language-reference/keywords/async.md) и обычно содержит одно или несколько выражений или инструкций await. Выражение await применяет оператор [await](../../../csharp/language-reference/keywords/await.md) к объекту <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>.  
+ Асинхронный метод помечается модификатором [async](../../../csharp/language-reference/keywords/async.md) и обычно содержит одно или несколько выражений или инструкций await. Выражение await применяет оператор [await](../../../csharp/language-reference/keywords/await.md) к <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>.  
   
  Когда управление достигает `await` в асинхронном методе, выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи выполнение в методе может быть возобновлено. Дополнительные сведения см. в разделах [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md) и [Поток управления в асинхронных программах](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере демонстрируется обработка исключений, когда несколько задач могут привести к нескольким исключениям. Блок `try` ожидает задачу, возвращаемую при вызове метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Эта задача завершается после завершения трех задач, к которым применяется WhenAll.  
+ В следующем примере демонстрируется обработка исключений, когда несколько задач могут привести к нескольким исключениям. Блок `try` ожидает задачу, которая возвращается вызовом метода <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Эта задача завершается после завершения трех задач, к которым применяется WhenAll.  
   
- Каждая из трех задач вызывает исключение. Блок `catch` выполняет итерацию по исключениям, обнаруженным в свойстве `Exception.InnerExceptions` задачи, которую возвращает метод <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
+ Каждая из трех задач вызывает исключение. Блок `catch` выполняет итерацию по исключениям, которые обнаруживаются в свойстве `Exception.InnerExceptions` задачи, возвращенной методом <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
@@ -189,7 +189,7 @@ static void Main()
  [Справочник по C#](../../../csharp/language-reference/index.md)   
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
  [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)   
- [Операторы try, throw и catch (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [Операторы try, throw и catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Операторы обработки исключений](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   

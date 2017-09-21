@@ -1,5 +1,5 @@
 ---
-title: "Аргументы командной строки (руководство по программированию на C#) | Документы Майкрософт"
+title: "Аргументы командной строки (Руководство по программированию на C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4034f1575321c94f003a12a83df617d4a0d50702
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Аргументы командной строки (Руководство по программированию на C#)
@@ -41,9 +42,9 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  Чтобы включить аргументы командной строки в методе `Main` в приложении Windows Forms, необходимо вручную изменить сигнатуру `Main` в файле program.cs. Код, созданный с помощью конструктора Windows Forms, создает `Main` без входного параметра. Для доступа к аргументам командной строки из любой точки в консоли или приложении Windows можно также использовать <xref:System.Environment.CommandLine%2A?displayProperty=fullName> или <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName>.  
+>  Чтобы включить аргументы командной строки в методе `Main` в приложении Windows Forms, необходимо вручную изменить сигнатуру `Main` в файле program.cs. Код, созданный с помощью конструктора Windows Forms, создает `Main` без входного параметра. Также можно использовать <xref:System.Environment.CommandLine%2A?displayProperty=fullName> или <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> для доступа к аргументам командной строки из любой точки в консоли или приложении Windows.  
   
- Параметр метода `Main` — это массив <xref:System.String>, представляющий аргументы командной строки. Как правило, определить, существуют ли аргументы, можно, проверив свойство `Length`, например:  
+ Параметр метода `Main` — это массив <xref:System.String>, представляющий аргументы командной строки. Как правило, определить, существуют ли аргументы, можно, проверив свойство `Length`, например:  
   
  [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
@@ -65,7 +66,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);  
 ```  
   
- Дополнительные сведения см. в разделе <xref:System.Int64.Parse%2A> и <xref:System.Convert>.  
+ Дополнительные сведения см. в разделах <xref:System.Int64.Parse%2A> и <xref:System.Convert>.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано использование аргументов командной строки в консольном приложении. Приложение принимает один аргумент времени выполнения, преобразует аргумент в целое число и вычисляет факториал числа. Если не указано никаких аргументов, приложение выдает сообщение, поясняющее правильное использование программы.  
@@ -91,7 +92,7 @@ long num = Convert.ToInt64(s);
 5.  Код создает следующие выходные данные: `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](/visualstudio/ide/reference/debug-page-project-designer).  
   
  Дополнительные примеры об использовании командной строки см. в разделе [Практическое руководство. Создание и использование сборок с помощью командной строки](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
@@ -103,3 +104,4 @@ long num = Convert.ToInt64(s);
  [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
  [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
+

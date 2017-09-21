@@ -1,38 +1,43 @@
 ---
-title: "marshaling MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "marshaling, run-time errors"
-  - "marshaling MDA"
-  - "managed debugging assistants (MDAs), marshaling"
-  - "MDAs (managed debugging assistants), marshaling"
+title: "MDA маршалинг"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- marshaling, run-time errors
+- marshaling MDA
+- managed debugging assistants (MDAs), marshaling
+- MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5e24411b14588f1cc2d147cb54d9463639637fd2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# marshaling MDA
-Помощник по отладке управляемого кода \(MDA\) `marshaling`активируется, когда среда CLR задает сведения о маршалинге для параметра метода или поля структуры.  Данный MDA не работает для сборок JIT\-компиляции.  
+# <a name="marshaling-mda"></a>MDA маршалинг
+Помощник по отладке управляемого кода (MDA) `marshaling`активируется, когда среда CLR задает сведения о маршалинге для параметра метода или поля структуры. Данный MDA не работает для сборок JIT-компиляции.  
   
-## Влияние на среду выполнения  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
  Этот помощник отладки управляемого кода не оказывает никакого влияния на среду CLR.  
   
-## Вывод  
+## <a name="output"></a>Вывод  
  MDA отображает тип параметра или поля в управляемом и неуправляемом контекстах, а также структуру или метод, содержащий этот тип.  Ниже представлен пример выходных данных для поля.  
   
 ```  
@@ -40,10 +45,10 @@ Marshaling from 'Char' to 'ANSI char'
 name="assembly!Namespace.Class::myChar  
 ```  
   
-## Конфигурация  
- Конфигурация MDA позволяет фильтровать сообщенные сведения о маршалинге на основе связанных полей или имен методов.  В следующем примере показано использование элементов `methodFilter`, `fieldFilter` и `match` для определения фильтров.  Установка звездочки \(\*\) в атрибуте `name` означает, что будут соответствовать все элементы.  
+## <a name="configuration"></a>Конфигурация  
+ Конфигурация MDA позволяет фильтровать сообщенные сведения о маршалинге на основе связанных полей или имен методов.  В следующем примере показано использование элементов `methodFilter`, `fieldFilter` и `match` для определения фильтров.  Установка звездочки (*) в атрибуте `name` означает, что будут соответствовать все элементы.  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <marshaling>  
@@ -60,7 +65,8 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Маршалинг взаимодействия](../../../docs/framework/interop/interop-marshaling.md)
+

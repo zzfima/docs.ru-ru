@@ -1,5 +1,5 @@
 ---
-title: "Сборки и параллельное выполнение | Документы Майкрософт"
+title: "сборки и параллельное выполнение"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3b78c82937c78286302adef532c451c24987da39
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e39e30a75f4d75542c3fc034f3eb1acf1e5547d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>сборки и параллельное выполнение
@@ -34,3 +34,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>См. также  
  [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+

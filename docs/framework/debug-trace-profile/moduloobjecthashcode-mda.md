@@ -1,68 +1,73 @@
 ---
-title: "moduloObjectHashcode MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed debugging assistants (MDAs), hashcode modulus"
-  - "Modulo object hash code"
-  - "moduloObjectHashcode MDA"
-  - "hashcode modulus"
-  - "MDAs (managed debugging assistants), hashcode modulus"
-  - "GetHashCode method"
-  - "modulus of hashcodes"
+title: moduloObjectHashcode MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- managed debugging assistants (MDAs), hashcode modulus
+- Modulo object hash code
+- moduloObjectHashcode MDA
+- hashcode modulus
+- MDAs (managed debugging assistants), hashcode modulus
+- GetHashCode method
+- modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b9732af6c84a2f7af70512ea9ce73a8afc74bbbc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# moduloObjectHashcode MDA
-Помощник по отладке управляемого кода \(MDA\) `moduloObjectHashcode` изменяет поведение класса <xref:System.Object> для выполнения операции по модулю в хэш\-коде, возвращаемом методом <xref:System.Object.GetHashCode%2A>.  Остаток целочисленного деления по умолчанию для данного помощника по отладке управляемого кода равен 1, вследствие чего <xref:System.Object.GetHashCode%2A> возвращает значение 0 для всех объектов.  
+# <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
+Помощник по отладке управляемого кода (MDA) `moduloObjectHashcode` изменяет поведение класса <xref:System.Object> для выполнения операции деления по модулю с хэш-кодом, возвращаемым методом <xref:System.Object.GetHashCode%2A>. Модуль по умолчанию для этого помощника по отладке управляемого кода равен 1, поэтому <xref:System.Object.GetHashCode%2A> возвращает 0 для всех объектов.  
   
-## Признаки  
- После перехода к новой версии среды CLR программа работает некорректно.  
+## <a name="symptoms"></a>Признаки  
+ После перехода на новую версию общеязыковой среды выполнения (CLR) программа больше не работает должным образом:  
   
--   Программа получает от коллекции <xref:System.Collections.Hashtable> неправильный объект.  
+-   Программа получает неправильный объект из <xref:System.Collections.Hashtable>.  
   
--   Сбой в программе произошел в результате изменения порядка перечисления в коллекции <xref:System.Collections.Hashtable>.  
+-   Изменение порядка перечисления в <xref:System.Collections.Hashtable> приводит к нарушению работы программы.  
   
--   Два объекта, которые ранее были равнозначными, стали неравнозначны.  
+-   Два объекта, которые ранее были равны, больше не равны.  
   
--   Два объекта, которые раньше были неравнозначны, стали равнозначными.  
+-   Два объекта, которые ранее были не равны, теперь равны.  
   
-## Причина  
- Возможно, программа получает из коллекции <xref:System.Collections.Hashtable> неправильный объект, поскольку реализация метода <xref:System.Object.Equals%2A> в классе, применяемого к ключам коллекции <xref:System.Collections.Hashtable>, проверяет объекты на предмет равенства путем сравнения результатов вызова метода <xref:System.Object.GetHashCode%2A>.  Для проверки объектов на равенство не следует использовать хэш\-коды, поскольку два объекта могут иметь одинаковый хэш\-код даже в том случае, если соответствующие поля объектов содержат различные значения.  Возможны конфликты хэш\-кода, хотя на практике такое случается редко.  В результате это влияет на таблицу подстановки <xref:System.Collections.Hashtable> следующим образом: два ключа, которые не являются равнозначными, становятся равнозначными, и из коллекции <xref:System.Collections.Hashtable> возвращается неправильный объект.  В целях обеспечения производительности реализация метода <xref:System.Object.GetHashCode%2A> может изменяться в зависимости от версии среды выполнения, поэтому конфликты, которые не происходят в одной версии, вполне могут случиться в последующих версиях.  Данный помощник по отладке управляемого кода следует активировать, чтобы проверить код на предмет наличия ошибок при возникновении конфликта хэш\-кодов.  При активации данного помощника по отладке управляемого кода метод <xref:System.Object.GetHashCode%2A> возвращает значение 0, в результате чего возникает конфликт всех хэш\-кодов.  Единственным эффектом включения данного помощника по отладке управляемого кода должно быть некоторое замедление работы программы.  
+## <a name="cause"></a>Причина  
+ Программа может получать неверный объект из <xref:System.Collections.Hashtable> из-за реализации метода <xref:System.Object.Equals%2A> в классе для ключа в проверках на равенство для объектов <xref:System.Collections.Hashtable> путем сравнения результатов вызова со значениями, полученными в результате метода <xref:System.Object.GetHashCode%2A>. Хэш-коды не должны использоваться для проверки равенства объектов, так как два объекта могут иметь одинаковые хэш-коды, даже если соответствующие им поля имеют разные значения. Такие конфликты хэш-кодов иногда происходят, хотя и нечасто. Из-за таких конфликтов два ключа в запросе <xref:System.Collections.Hashtable>, которые не равны, кажутся равными, и <xref:System.Collections.Hashtable> возвращает неправильный объект. По соображениям производительности реализация <xref:System.Object.GetHashCode%2A> может изменяться в различных версиях среды выполнения. Поэтому конфликты, отсутствующие в одной версии, могут произойти в последующих версиях. Включите этот помощник по отладке управляемого кода, чтобы проверить, содержит ли ваш код ошибки из-за конфликтов хэш-кодов. После включения помощника метод <xref:System.Object.GetHashCode%2A> возвращает 0, что приводит к конфликту всех хэш-кодов. Единственным побочным эффектом отключения этого помощника должно быть замедление работы программы.  
   
- Порядок перечисления в коллекции <xref:System.Collections.Hashtable> может изменяться в зависимости от версии среды выполнения, если меняется алгоритм, используемый для вычисления хэш\-кодов ключа.  Чтобы проверить, удалось ли программе устранить из хэш\-таблицы зависимость от порядка перечисления ключей или значений, следует включить данный помощник по отладке управляемого кода.  
+ Порядок перечисления из <xref:System.Collections.Hashtable> может измениться между различными версиями среды выполнения, если изменяется алгоритм вычисления кэш-кодов. Чтобы проверить, зависит ли ваша программа от порядка перечисления ключей или значений в хэш-таблице, включите этот помощник по отладке управляемого кода.  
   
-## Решение  
- Нельзя использовать хэш\-коды как альтернативу идентификации объекта.  Следует реализовать переопределение метода <xref:System.Object.Equals%2A?displayProperty=fullName>, чтобы избежать сравнения хэш\-кодов.  
+## <a name="resolution"></a>Решение  
+ Никогда не используйте хэш-коды вместо идентификаторов объектов. Чтобы не сравнивать хэш-коды, переопределите метод <xref:System.Object.Equals%2A?displayProperty=fullName>.  
   
- Не следует создавать в хэш\-таблицах зависимости от порядка перечисления ключей или значений.  
+ Не следует создавать зависимости от порядка перечисления ключей или значений в хэш-таблицах.  
   
-## Влияние на среду выполнения  
- Если данный помощник по отладке управляемого кода включен, работа приложения может замедлиться.  Данный помощник по отладке управляемого кода вместо ожидаемого хэш\-кода возвращает остаток при делении на абсолютное значение.  
+## <a name="effect-on-the-runtime"></a>Влияние на среду выполнения  
+ При включении этого помощника по отладке управляемого кода программа может работать медленнее. Этот помощник просто принимает хэш-код, который был бы возвращен, и вместо него возвращает остаток от деления по модулю.  
   
-## Output  
- Данный помощник по отладке управляемого кода не дает результата.  
+## <a name="output"></a>Вывод  
+ Этот помощник по отладке управляемого кода не выводит никаких данных.  
   
-## Configuration  
- Атрибут `modulus` определяет остаток целочисленного значения, используемый в хэш\-коде.  Значение по умолчанию — 1.  
+## <a name="configuration"></a>Конфигурация  
+ Атрибут `modulus` задает модуль, используемый в хэш-коде. Значение по умолчанию — 1.  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <moduloObjectHashcode modulus="1" />  
@@ -70,7 +75,8 @@ caps.handback.revision: 10
 </mdaConfig>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Object.GetHashCode%2A?displayProperty=fullName>   
  <xref:System.Object.Equals%2A?displayProperty=fullName>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Диагностика ошибок посредством помощников по отладке управляемого кода](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

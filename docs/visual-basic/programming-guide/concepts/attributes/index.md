@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения об атрибутах (Visual Basic) | Документация Майкрософт"
+title: "Общие сведения об атрибутах (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81f6275334a0ba1507dcff2bcd85e0b1aa276067
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributes-overview-visual-basic"></a>Общие сведения об атрибутах (Visual Basic)
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="using-attributes"></a>Использование атрибутов  
  Атрибуты можно использовать почти в любых объявлениях, но для каждого атрибута можно ограничить типы объявлений, в которых он является допустимым. В Visual Basic атрибуты заключаются в угловые скобки (\< >). Они должны располагаться непосредственно перед тем элементом, к которому они применяются, и обязательно в той же строке.  
   
- В этом примере атрибут <xref:System.SerializableAttribute> используется для применения определенных характеристик к классу:  
+ В этом примере атрибут <xref:System.SerializableAttribute> используется для применения определенной характеристики к классу:  
   
 ```vb  
 <System.Serializable()> Public Class SampleClass  
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
 End Class  
 ```  
   
- Метод с атрибутом <xref:System.Runtime.InteropServices.DllImportAttribute> объявляется так:  
+ Метод с атрибутом <xref:System.Runtime.InteropServices.DllImportAttribute> объявляется следующим образом:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -75,7 +76,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub  
 ```  
   
- Некоторые атрибуты можно указать для одной сущности более одного раза. В качестве примера атрибута с многократным использованием можно привести <xref:System.Diagnostics.ConditionalAttribute>:  
+ Некоторые атрибуты можно указать для одной сущности более одного раза. Пример такого многократно используемого атрибута — <xref:System.Diagnostics.ConditionalAttribute>:  
   
 ```vb  
 <Conditional("DEBUG"), Conditional("TEST1")>   
@@ -124,9 +125,9 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Популярные методы применения атрибутов  
  В следующем списке перечислены несколько распространенных применений для атрибутов.  
   
--   Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Дополнительные сведения см. в описании атрибута <xref:System.Web.Services.WebMethodAttribute>.  
+-   Указание для методов в веб-службах атрибута `WebMethod`, который обозначает, что метод должен вызываться по протоколу SOAP. Для получения дополнительной информации см. <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Дополнительные сведения см. в описании атрибута <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+-   Описание способов упаковки параметров методов при взаимодействии с машинным кодом. Для получения дополнительной информации см. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
 -   Описание свойств COM для классов, методов и интерфейсов.  
   
@@ -163,3 +164,4 @@ Module: CLSCompliant(True)>
  [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)   
  [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  (Отражение (Visual Basic))  
  [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)
+

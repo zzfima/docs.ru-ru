@@ -1,6 +1,6 @@
 ---
-title: "Обзор пакета SDK для .NET Core | Документация Майкрософт"
-description: "Обзор пакета SDK для .NET Core"
+title: "Обзор пакета SDK для .NET Core"
+description: "Сведения о пакете SDK для .NET Core, который является набором библиотек и средств, используемых для создания проектов .NET Core."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,19 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1b05b7e1a2d274f02cd1222c0a90a59583d37e92
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Обзор пакета SDK для .NET Core
-<a id="net-core-sdk-overview" class="xliff"></a> 
+# <a name="net-core-sdk-overview"></a>Обзор пакета SDK для .NET Core 
 
-## Вступление
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>Вступление
 Пакет средств разработки (SDK) для .NET Core — это набор библиотек и средств, которые позволяют разработчикам создавать приложения и библиотеки .NET Core. Он почти наверняка потребуется каждому разработчику. 
 
 Пакет содержит следующие компоненты:
@@ -32,8 +30,7 @@ ms.lasthandoff: 05/23/2017
 3. драйвер `dotnet` для выполнения [команд интерфейса командной строки (CLI)](tools/index.md), а также приложений.
 
 
-## Получение пакета SDK для .NET Core
-<a id="acquiring-the-net-core-sdk" class="xliff"></a>
+## <a name="acquiring-the-net-core-sdk"></a>Получение пакета SDK для .NET Core
 Так же как и в случае с любыми другими средствами, этот пакет нужно установить на компьютере. В зависимости от сценария можно использовать либо собственные установщики пакета SDK, либо скрипт оболочки для установки.
 
 Собственные установщики предназначены в первую очередь для компьютеров разработчиков. Пакет SDK распространяется посредством собственных механизмов установки каждой поддерживаемой платформы, например пакетов DEB в Ubuntu или пакетов MSI в Windows. Эти установщики установят и настроят среду необходимым образом, чтобы пользователь мог сразу приступить к работе с пакетом SDK. Однако они требуют прав администратора на компьютере. Инструкции по установке см. в [руководстве по установке .NET Core](https://aka.ms/dotnetcoregs).

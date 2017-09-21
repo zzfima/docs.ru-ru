@@ -1,5 +1,5 @@
 ---
-title: "Сравнительные характеристики XPath и LINQ to XML | Документы Майкрософт"
+title: "Сравнительные характеристики XPath и LINQ to XML2"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,29 +14,29 @@ ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60000605a42faa22841cc7b76b878a77bc53b7f
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a0b24eeeb79651f69178fa4e9c2e4a3359434556
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Сравнительные характеристики XPath и LINQ to XML
-XPath и [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] имеют некоторые сходные функциональные возможности. И то и другое можно использовать, чтобы запрашивать XML-дерево для возвращения таких результатов, как коллекция элементов, коллекция атрибутов, коллекция узлов или значение элемента или атрибута. Однако между ними также есть некоторые различия.  
+XPath и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] имеют некоторые сходные функциональные возможности. И то и другое можно использовать, чтобы запрашивать XML-дерево для возвращения таких результатов, как коллекция элементов, коллекция атрибутов, коллекция узлов или значение элемента или атрибута. Однако между ними также есть некоторые различия.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>Различия между XPath и LINQ to XML  
- XPath не поддерживает проекции новых типов. Может возвращать только коллекции узлов из дерева, тогда как [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] может выполнить запрос, проецировав граф объектов или XML-дерево в новой форме. Запросы [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] гораздо более эффективны и обладают большими возможностями, чем выражения XPath.  
+ XPath не поддерживает проекции новых типов. Может возвращать только коллекции узлов из дерева, тогда как [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] может выполнить запрос, проецировав граф объектов или XML-дерево в новой форме. Запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] гораздо более эффективны и обладают большими возможностями, чем выражения XPath.  
   
- Выражение XPath представлено в изолированном виде, внутри строки. Компилятор C# не может выполнить синтаксический анализ выражения XPath во время компиляции. Напротив, компилятор C# проводит синтаксический анализ и компилирует запросы [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Компилятор способен обнаруживать многие ошибки запроса.  
+ Выражение XPath представлено в изолированном виде, внутри строки. Компилятор C# не может выполнить синтаксический анализ выражения XPath во время компиляции. Напротив, компилятор C# проводит синтаксический анализ и компилирует запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Компилятор способен обнаруживать многие ошибки запроса.  
   
- Результаты XPath не являются строго типизированными. В некоторых ситуациях результатом вычисления выражения XPath является объект, а задача определения соответствующего типа и приведения результата в соответствии с необходимостью возлагается на разработчика. В отличие от этого, проекции на основе запроса [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] являются строго типизированными.  
+ Результаты XPath не являются строго типизированными. В некоторых ситуациях результатом вычисления выражения XPath является объект, а задача определения соответствующего типа и приведения результата в соответствии с необходимостью возлагается на разработчика. В отличие от этого, проекции на основе запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] являются строго типизированными.  
   
 ## <a name="result-ordering"></a>Упорядочение результатов  
  В документе XPath 1.0 Recommendation указано, что коллекция, которая является результатом вычисления выражения XPath, не упорядочена.  
   
- Однако при просмотре коллекции, возвращенной методом оси [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] XPath, можно отметить, что узлы в коллекции возвращены в том же порядке, что и в документе. И они располагаются так даже при доступе к осям XPath, где предикаты выражены в обратном порядке по отношению к документу, например `preceding` и `preceding-sibling`.  
+ Однако при просмотре коллекции, возвращенной методом оси [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XPath, можно отметить, что узлы в коллекции возвращены в том же порядке, что и в документе. И они располагаются так даже при доступе к осям XPath, где предикаты выражены в обратном порядке по отношению к документу, например `preceding` и `preceding-sibling`.  
   
- Напротив, большинство осей [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] возвращает коллекции в порядке документа, однако две из них, <xref:System.Xml.Linq.XNode.Ancestors%2A> и <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, возвращают коллекции в порядке, обратном порядку документа. В следующей таблице перечисляются эти оси и указывается порядок коллекций для каждой из них.  
+ В отличие от этого, большинство осей [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] возвращают коллекции в порядке, соответствующем документу, однако две из них, <xref:System.Xml.Linq.XNode.Ancestors%2A> и <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, возвращают коллекции в порядке, обратном по отношению к документу. В следующей таблице перечисляются эти оси и указывается порядок коллекций для каждой из них.  
   
 |Ось LINQ to XML|Упорядочение|  
 |----------------------|--------------|  
@@ -63,15 +63,15 @@ XPath и [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/li
   
  Отметим, что при описанном выше подходе материализуется вся коллекция. Это не самый эффективный способ написания такого запроса. Запрос был написан так в целях демонстрации поведения позиционных предикатов. Более подходящим способом написания этого же запроса является использование метода <xref:System.Linq.Enumerable.First%2A> следующим образом: `anElement.ElementsBeforeSelf().First()`.  
   
- Если бы потребовалось найти ближайший предшествующий элемент в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], то было бы написано следующее выражение:  
+ Если бы потребовалось найти ближайший предшествующий элемент в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], то было бы написано следующее выражение:  
   
  `ElementsBeforeSelf().Last()`  
   
 ## <a name="performance-differences"></a>Различия в производительности  
- Запросы XPath, которые используют функциональность XPath в [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], менее производительны, чем запросы [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+ Запросы XPath, которые используют функциональность XPath в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], менее производительны, чем запросы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="comparison-of-composition"></a>Сравнение композиций  
- Композиция запроса [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] немного напоминает композицию выражения XPath, хотя по синтаксису они совершенно различны.  
+ Композиция запроса [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] немного напоминает композицию выражения XPath, хотя по синтаксису они совершенно различны.  
   
  Например, если в переменной с именем `customers` имеется элемент и требуется найти внучатый элемент с именем `CompanyName` во всех дочерних элементах с именем `Customer`, то нужно написать следующее выражение XPath:  
   
@@ -79,7 +79,7 @@ XPath и [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/li
 customers.XPathSelectElements("./Customer/CompanyName");  
 ```  
   
- Эквивалентное выражение [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] таково:  
+ Эквивалентное выражение [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] таково:  
   
 ```csharp  
 customers.Element("Customer").Elements("CompanyName");  
@@ -103,3 +103,4 @@ customers.Element("Customer").Elements("CompanyName");
   
 ## <a name="see-also"></a>См. также  
  [LINQ to XML для пользователей XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

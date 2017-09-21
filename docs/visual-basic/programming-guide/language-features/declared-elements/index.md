@@ -1,27 +1,44 @@
 ---
-title: "Объявленные элементы в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: "Объявленные элементы в Visual Basic"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# Объявленные элементы в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
-*Объявленный элемент* — это элемент программирования, который определяется в выражении объявления.  Объявленные элементы включают переменные, константы, перечисления, классы, структуры, модули, интерфейсы, процедуры, параметры процедур, возвращаемые функциями значения, ссылки на внешние процедуры, операторы, свойства, события и делегаты.  
+---
+# <a name="declared-elements-in-visual-basic"></a>Объявленные элементы в Visual Basic
+*Объявленный элемент* — это элемент в программировании, который задается в операторе объявления. Объявленные элементы включают переменные, константы, перечисления, классы, структуры, модули, интерфейсы, процедуры, параметры процедур, возвращаемые значения функций, ссылки на внешние процедуры, операторы, свойства, события и делегаты.  
   
- К операторам объявления относятся следующие:  
+ К операторам объявления принадлежат:  
   
 -   [Оператор Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -43,7 +60,7 @@ caps.handback.revision: 15
   
 -   [Оператор Declare](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Оператор Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Оператор Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 -   [Оператор Property](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
@@ -51,22 +68,23 @@ caps.handback.revision: 15
   
 -   [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Имена объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- Описание способов именования элементов и использования буквенных символов.  
+ Именование элементов и использование строчных и прописных букв.  
   
  [Характеристики объявленных элементов](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- Обзор характеристик объявленных элементов, таких как область действия.  
+ Описание характеристик, таких как область, которыми обладают объявленные элементы.  
   
  [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- Сопоставление компилятором ссылок для объявления и уточнение имени.  
+ Сопоставление компилятором ссылок и объявлений; уточнение имен.  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Соглашения о структуре программы и коде](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Рекомендации на тему о том, как сделать код более удобным для чтения, понимания и сопровождения.  
+ Рекомендации, как сделать код более читаемым, понятным и простым в поддержке.  
   
  [Операторы](../../../../visual-basic/language-reference/statements/index.md)  
- Описание операторов языка, именующих и определяющих процедуры, переменные, массивы и константы.  
+ Описание операторов для именования и назначения процедур, переменных, массивов и констант.  
   
  [Контексты объявления и уровни доступа по умолчанию](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
- Описание типов объявленных элементов с указанием того, какой оператор объявления использовать для каждого из них, в каком контексте его объявить и каков его уровень доступа по умолчанию.
+ В этом разделе перечислены типы объявленных элементов и для каждого из них приведены операторы объявления, контекст, где возможно объявление, и уровень доступа по умолчанию.
+

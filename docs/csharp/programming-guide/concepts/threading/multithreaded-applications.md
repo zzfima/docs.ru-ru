@@ -1,5 +1,5 @@
 ---
-title: "Многопоточные приложения (C#) | Документы Майкрософт"
+title: "Многопоточные приложения(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a36fd71ff41eb219f4c4de36d4fa8da9b8ee179a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multithreaded-applications-c"></a>Многопоточные приложения(C#)
@@ -53,7 +54,7 @@ newThread.Start();
 newThread.Abort();  
 ```  
   
- Помимо запуска и остановки потоки можно приостанавливать, вызывая метод <xref:System.Threading.Thread.Sleep%2A> или <xref:System.Threading.Thread.Suspend%2A>, возобновлять приостановленный поток с помощью метода <xref:System.Threading.Thread.Resume%2A> и уничтожать поток с помощью метода <xref:System.Threading.Thread.Abort%2A>.  
+ Помимо запуска и остановки, вы также можете приостанавливать потоки с помощью метода <xref:System.Threading.Thread.Sleep%2A> или <xref:System.Threading.Thread.Suspend%2A>, возобновлять приостановленный поток с помощью метода <xref:System.Threading.Thread.Resume%2A>, а также уничтожать поток, используя метод <xref:System.Threading.Thread.Abort%2A>.  
   
 ### <a name="thread-methods"></a>Методы управления потоками  
  В следующей таблице приводятся методы, с помощью которых можно управлять отдельными потоками.  
@@ -82,9 +83,9 @@ newThread.Abort();
 |<xref:System.Threading.Thread.ThreadState%2A>|Содержит значение, описывающее состояние или состояния потока.|  
   
 ## <a name="thread-priorities"></a>Приоритеты потоков  
- Каждый поток имеет приоритетное свойство, которое определяет, какую часть процессорного времени он должен занять при выполнении. Операционная система выделяет более длинные отрезки времени на потоки с высоким приоритетом и более короткие отрезки времени потоки с низким приоритетом. Новые потоки создаются со значением `Normal`, но можно изменить свойство <xref:System.Threading.Thread.Priority%2A> на любое значение в перечислении <xref:System.Threading.ThreadPriority>.  
+ Каждый поток имеет приоритетное свойство, которое определяет, какую часть процессорного времени он должен занять при выполнении. Операционная система выделяет более длинные отрезки времени на потоки с высоким приоритетом и более короткие отрезки времени потоки с низким приоритетом. Новые потоки создаются со значением `Normal`, однако вы можете присвоить свойству <xref:System.Threading.Thread.Priority%2A> любое значение из перечисления <xref:System.Threading.ThreadPriority>.  
   
- Описание различных приоритетов потоков см. в разделе <xref:System.Threading.ThreadPriority>.  
+ Подробное описание приоритетов потоков см. в разделе <xref:System.Threading.ThreadPriority>.  
   
 ## <a name="foreground-and-background-threads"></a>Основные и фоновые потоки  
  *Основной поток* выполняется бесконечно, тогда как *фоновый поток* останавливается сразу после остановки последнего основного потока. Для определения или изменения фонового статуса потока можно использовать свойство <xref:System.Threading.Thread.IsBackground%2A>.  
@@ -94,3 +95,4 @@ newThread.Abort();
  [Синхронизация потоков (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
  [Параметры и возвращаемые значения для многопоточных процедур (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
  [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)
+

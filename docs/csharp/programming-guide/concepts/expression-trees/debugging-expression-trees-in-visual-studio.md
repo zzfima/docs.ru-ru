@@ -1,5 +1,5 @@
 ---
-title: "Отладка деревьев выражений в Visual Studio (C#) | Документы Майкрософт"
+title: "Отладка деревьев выражений в Visual Studio (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 14ab67e78a3b4c4819ddca36a406526e78f5485e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Отладка деревьев выражений в Visual Studio (C#)
-При отладке приложений можно анализировать структуру и содержимое деревьев выражений. Чтобы получить краткий обзор структуры дерева выражения, можно использовать свойство `DebugView`, которое доступно только в режиме отладки. Дополнительные сведения об отладке см. в разделе [Отладка в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio).  
+При отладке приложений можно анализировать структуру и содержимое деревьев выражений. Чтобы получить краткий обзор структуры дерева выражения, можно использовать свойство `DebugView`, которое доступно только в режиме отладки. Дополнительные сведения об отладке см. в разделе [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
- Для оптимизации представления содержимого деревьев выражений свойство `DebugView` использует визуализаторы Visual Studio. Дополнительные сведения см. в статье, посвященной [созданию пользовательских визуализаторов](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Для оптимизации представления содержимого деревьев выражений свойство `DebugView` использует визуализаторы Visual Studio. Дополнительные сведения см. в статье, посвященной [созданию пользовательских визуализаторов](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Открытие визуализатора дерева выражения  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
  Каждый тип выражения отображается в визуализаторе, как описано в следующих разделах.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- Имена переменных <xref:System.Linq.Expressions.ParameterExpression> отображаются с символом $ в начале.  
+ В начале имен переменных <xref:System.Linq.Expressions.ParameterExpression> отображается символ "$".  
   
  Если параметр не имеет имени, оно назначается автоматически, например `$var1` или `$var2`.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 03/13/2017
 |<xref:System.Int64>|L|  
 |<xref:System.UInt64>|UL|  
 |<xref:System.Double>|D|  
-|<xref:System.Single>|F|  
+|<xref:System.Single>|C|  
 |<xref:System.Decimal>|M|  
   
 ### <a name="examples"></a>Примеры  
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- Объекты <xref:System.Linq.Expressions.LambdaExpression> отображаются вместе с их типами делегатов.  
+ Объекты <xref:System.Linq.Expressions.LambdaExpression> отображаются вместе со своими типами делегатов.  
   
  Если лямбда-выражение не имеет имени, оно назначается автоматически, например `#Lambda1` или `#Lambda2`.  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 03/13/2017
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
   
 ## <a name="labelexpression"></a>LabelExpression  
- Если вы указываете значение по умолчанию для объекта <xref:System.Linq.Expressions.LabelExpression>, оно будет отображаться перед объектом <xref:System.Linq.Expressions.LabelTarget>.  
+ Если указать значение по умолчанию для объекта <xref:System.Linq.Expressions.LabelExpression>, оно будет отображаться перед объектом <xref:System.Linq.Expressions.LabelTarget>.  
   
  Маркер `.Label` указывает начало метки. Маркер `.LabelTarget` задает конечную цель перехода для целевого объекта.  
   
@@ -121,5 +122,6 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>См. также  
  [Деревья выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Отладка в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Создание настраиваемых визуализаторов](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+ [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
+ [Создание настраиваемых визуализаторов](/visualstudio/debugger/create-custom-visualizers-of-data)
+

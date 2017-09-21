@@ -1,156 +1,146 @@
 ---
-title: "Целевые платформы | Документация Майкрософт"
-description: "Сведения о целевых платформах для приложений и библиотек .NET Core."
+title: "Требуемые версии .NET Framework"
+description: "Сведения о целевых версиях платформы для приложений и библиотек .NET Core."
 keywords: .NET, .NET Core, framework, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 04/27/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 45835eb80642253f80ea630ae9db1ac766b72b9c
-ms.openlocfilehash: 11c1f11e4f8354b7573d03e680cf4a8a16fa26d9
+ms.translationtype: HT
+ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
+ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
 # <a name="target-frameworks"></a>Требуемые версии .NET Framework
 
-*Платформы* определяют объекты, методы и средства, которые можно использовать для создания приложений и библиотек. Платформа .NET Framework используется для создания приложений и библиотек, в первую очередь для выполнения на компьютерах с операционной системой Windows. .NET Core включает платформу, которая позволяет создавать приложения и библиотеки, которые выполняются на разных операционных системах.
+При выборе целевой платформы для приложения или библиотеки вы указываете набор API-интерфейсов, которые вы хотите сделать доступными для приложения или библиотеки. Целевая платформа указывается в файле проекта с помощью моникеров целевой платформы (TFM).
 
-Термин *платформа* может имеет разные значения в зависимости от контекста. Например, .NET Core может упоминаться как "платформа .NET Core" в контексте создания приложений и библиотек или в контексте среды, в которой выполняется код приложения и библиотеки. Термин *вычислительная платформа* описывает *где и как* выполняется приложение. Поскольку .NET Core выполняет код в среде [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr), то также может именоваться платформой. Это же справедливо и для .NET Framework, которая имеет среду CLR ([Common Language Runtime](clr.md)) для выполнения кода приложений и библиотек, разработанных с использованием объектов, методов и средств платформы .NET Framework. В документации вы будете часто встречать термин "кросс-платформенный", который следует трактовать как "предназначенный для разных операционных систем и архитектур (x86, x64, arm)". Обычно автор использует его именно в этом значении.
+Приложение или библиотека могут быть предназначены для версии [.NET Standard](~/docs/standard/net-standard.md). Версии .NET Standard представляют стандартные наборы API-интерфейсов во всех реализациях .NET. Например, библиотека может быть предназначена для .NET Standard 1.6 и получить доступ к API-интерфейсам, которые работают в .NET Core и .NET Framework с одной и той же базой кода.
 
-Объекты и методы платформ именуются прикладными программными интерфейсами (API). Интерфейсы API используются в [Visual Studio](https://www.visualstudio.com/), [Visual Studio для Mac](https://www.visualstudio.com/vs/visual-studio-mac/), [Visual Studio Code](https://code.visualstudio.com/) и других интегрированных средах разработки (IDE) и редакторах, предоставляя вам правильные наборы объектов и методы для разработки. Также платформы используются [NuGet](https://www.nuget.org/) для создания и применения пакетов NuGet. Это позволяет создавать и использовать подходящие пакеты для целевой платформы вашего приложения или библиотеки.
+Приложение или библиотека могут также работать в конкретной реализации .NET. В этом случае они получают доступ к API-интерфейсам конкретной реализации. Например, приложение, предназначенное для Xamarin.iOS (например, `Xamarin.iOS10`), получает доступ к предоставленным Xamarin iOS программам-оболочкам API для iOS 10 или приложение, ориентированное на универсальную платформу Windows (UWP, `uap10.0`) имеет доступ к API-интерфейсам, которые компилируется для устройств под управлением Windows 10.
 
-*Нацеливание на платформу* или на несколько платформ обозначает выбор интерфейсов API и конкретных версий, которые вы будете использовать. Существует несколько способов указывать платформы: по имени продукта, по короткому или длинному имени платформы или по имени семейства.
+Для некоторых целевых платформ (например, .NET Framework) API-интерфейсы определяются сборками, устанавливаемыми платформой в системе, в число которых могут входить API-интерфейсы платформы приложений (например, ASP.NET).
 
-## <a name="referring-to-frameworks"></a>Ссылки на платформы
+Для целевых платформ на основе пакетов (например, .NET Standard и .NET Core) API-интерфейсы определяются пакетами в составе приложения или библиотеки. *Метапакет* — это пакет NuGet, не имеющий собственного содержимого, но имеющий список зависимостей (другие пакеты). В этом случае целевая платформа на основе пакетов NuGet неявно задает метапакет, который ссылается на все пакеты, составляющие платформу.
 
-Есть несколько способов указывать ссылки на платформы, и большинство из них используются в документации по .NET Core. Например, платформу .NET Framework 4.6.2 можно указывать в следующих форматах:
+## <a name="latest-target-framework-versions"></a>Последние версии целевой платформы
 
-**Ссылка на продукт**
+В приведенной ниже таблице определены наиболее распространенные целевые платформы, способы их указания и реализованные в них версии [.NET Standard](~/docs/standard/net-standard.md). Эти версии целевой платформ являются последними стабильными версиями. Предварительные версии здесь не упоминаются. Моникер целевой платформы (TFM) является стандартизированный форматом маркера для указания целевой платформы приложения или библиотеки .NET. 
 
-Можно ссылаться на среду выполнения или платформу .NET. Оба являются одинаково допустимыми.
+| Требуемая версия .NET Framework      | Последняя версия | Моникер целевой платформы (TFM) | Версия .NET Standard | Метапакет |
+| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
+| .NET Standard         | 2.0.0          | netstandard2.0                 | Н/Д                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
+| Приложение .NET Core | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
+| .NET Framework        | 4.7            | net47                          | 1.5                   | Н/Д |
 
-* .NET Framework 4.6.2
-* .NET 4.6.2
+## <a name="supported-target-framework-versions"></a>Поддерживаемые версии целевой платформы
 
-**Ссылка на платформу**
+Целевая платформа обычно называется по TFM. В следующей таблице показаны целевые платформы, поддерживаемые пакетом SDK для .NET Core и клиентом NuGet. Эквивалентные обозначения отображаются в скобках. Например, `win81` является эквивалентом TFM для `netcore451`.
 
-Можно ссылаться на платформу или ориентацию на нее с помощью длинных или коротких форм моникера целевой платформы. Оба являются одинаково допустимыми.
+| Требуемая версия .NET Framework           | TFM |
+| -------------------------- | --- |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| Магазин Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
+| .NET Micro Framework       | netmf |
+| Silverlight                | sl4<br>sl5 |
+| Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
+| Универсальная платформа Windows  | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-* `.NETFramework,Version=4.6.2`
-* `net462`
+## <a name="how-to-specify-target-frameworks"></a>Как указать целевые платформы
 
-**Ссылка на семейство платформ**
+Целевые платформы указываются в файле проекта. Если указана одна целевая платформа, используйте элемент **TargetFramework**. В следующем файле проекта консольного приложения показано, как указать целевую платформу .NET Core 2.0.
 
-Можно ссылаться на семейство платформ с помощью длинных или коротких форм идентификатора платформы. Оба являются одинаково допустимыми.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-* `.NETFramework`
-* `net`
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
 
-## <a name="latest-framework-versions"></a>Последние версии платформ
+</Project>
+```
 
-Приведенная ниже таблица описывает набор платформ, которые можно использовать, способы их указания и реализованные в них версии [библиотеки .NET Standard](library.md). Эти версии платформ являются последними стабильными версиями. Предварительные версии здесь не упоминаются.
+При указании нескольких целевых платформ можно условно ссылаться на сборки для каждой целевой платформы. В коде можно условно компилировать эти сборки с использованием символов препроцессора с логикой *if-then-else*.
 
-| Платформа             | Последняя версия | Моникер целевой платформы (TFM) | Компактный моникер целевой платформы (TFM) | Версия .NET Standard | Метапакет |
-| :-------------------: | :------------: | :----------------------------: | :------------------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 1.6.1          | .NETStandard,Version=1.6       | netstandard1.6                         | Н/Д                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| Приложение .NET Core | 1.1.1          | .NETCoreApp,Version=1.1        | netcoreapp1.1                          | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.6.2          | .NETFramework,Version=4.6.2    | net462                                 | 1.5                   | Н/Д |
+Следующий файл проекта библиотеки предназначен для API-интерфейсов .NET Standard (`netstandard1.4`) и API-интерфейсов .NET Framework (`net40` и `net45`). Используйте множественный элемент **TargetFrameworks** с несколькими целевыми платформами. Обратите внимание, каким образом атрибуты `Condition` включают пакеты, связанные с конкретной реализацией, при компиляции библиотеки для двух TFM .NET Framework.
 
-## <a name="supported-frameworks"></a>Поддерживаемые платформы
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-Платформа обычно указывается коротким моникером целевой платформы (*TFM*). В .NET Standard этот метод можно обобщить как *TxM*, чтобы одной ссылкой описать сразу несколько платформ. Клиенты NuGet поддерживают следующие платформы. Эквивалентные обозначения отображаются в скобках (`[]`).
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+  </PropertyGroup>
 
-| Имя                       | Сокращение | TFM/TxM                                    |
-| -------------------------- | ------------ | -------------------------------------------- |
-| .NET Standard              | netstandard  | netstandard1.0                               |
-|                            |              | netstandard1.1                               |
-|                            |              | netstandard1.2                               |
-|                            |              | netstandard1.3                               |
-|                            |              | netstandard1.4                               |
-|                            |              | netstandard1.5                               |
-|                            |              | netstandard1.6                               |
-| .NET Core                  | netcoreapp   | netcoreapp1.0                                |
-|                            |              | netcoreapp1.1                                |
-| .NET Framework             | net          | net11                                        |
-|                            |              | net20                                        |
-|                            |              | net35                                        |
-|                            |              | net40                                        |
-|                            |              | net403                                       |
-|                            |              | net45                                        |
-|                            |              | net451                                       |
-|                            |              | net452                                       |
-|                            |              | net46                                        |
-|                            |              | net461                                       |
-|                            |              | net462                                       |
-| Магазин Windows              | netcore      | netcore [netcore45]                          |
-|                            |              | netcore45 [win, win8]                        |
-|                            |              | netcore451 [win81]                           |
-| .NET Micro Framework       | netmf        | netmf                                        |
-| Silverlight                | sl           | sl4                                          |
-|                            |              | sl5                                          |
-| Windows Phone              | wp           | wp [wp7]                                     |
-|                            |              | wp7                                          |
-|                            |              | wp75                                         |
-|                            |              | wp8                                          |
-|                            |              | wp81                                         |
-|                            |              | wpa81                                        |
-| Универсальная платформа Windows  | uap          | uap [uap10.0]                                |
-|                            |              | uap10.0 [win10] [netcore50]                  |
+  <!-- Conditionally obtain references for the .NET Framework 4.0 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System.Net" />
+  </ItemGroup>
 
-## <a name="deprecated-frameworks"></a>Устаревшие платформы
+  <!-- Conditionally obtain references for the .NET Framework 4.5 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
 
-Следующие среды являются устаревшими. Пакеты, предназначенные для этих платформ, следует перевести на предлагаемые для замены.
+</Project>
+```
 
-| Устаревшая платформа | Замена |
-| -------------------- | ----------- |
-| aspnet50             | netcoreapp  |
-| aspnetcore50         |             |
-| dnxcore50            |             |
-| dnx                  |             |
-| dnx45                |             |
-| dnx451               |             |
-| dnx452               |             |
-| dotnet               | netstandard |
-| dotnet50             |             |
-| dotnet51             |             |
-| dotnet52             |             |
-| dotnet53             |             |
-| dotnet54             |             |
-| dotnet55             |             |
-| dotnet56             |             |
-| netcore50            | uap10.0     |
-| win                  | netcore45   |
-| win8                 | netcore45   |
-| win81                | netcore451  |
-| win10                | uap10.0     |
-| winrt                | netcore45   |
+В библиотеке или приложении следует написать условный код компиляции для каждой целевой платформы.
 
-## <a name="precedence"></a>Приоритет
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        Console.WriteLine("Target framework: .NET Framework 4.0");
+#elif NET45  
+        Console.WriteLine("Target framework: .NET Framework 4.5");
+#else
+        Console.WriteLine("Target framework: .NET Standard 1.4");
+#endif
+    }
+}
+```
 
-Некоторые платформы являются родственными и совместимыми друг с другом, хотя и не полностью идентичными.
+Система сборки учитывает символы препроцессора, представляющие целевые платформы, приведенные в таблице [Поддерживаемые версии целевой платформы](#supported-target-framework-versions). При использовании символа, представляющего TFM .NET Standard или .NET Core, замените точку символом подчеркивания и измените строчные буквы на прописные (например, символ для `netstandard1.4` — `NETSTANDARD1_4`).
 
-| Платформа                        | Можно использовать   |
-| -------------------------------- | --------- |
-| Универсальная платформа Windows (uap) | win81     |
-|                                  | wpa81     |
-|                                  | netcore50 |
-| Магазин Windows (win)              | winrt     |
-|                                  | winrt45   |
+Полный список символов препроцессора для целевой платформы .NET Core.
 
-## <a name="net-standard"></a>.NET Standard
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-[.NET Standard](https://github.com/dotnet/standard) упрощает перекрестные ссылки между платформами, совместимыми на уровне двоичных файлов, позволяя в одной целевой платформе ссылаться на несколько других. Дополнительные сведения см. в статье [о библиотеках .NET Standard](library.md).
+## <a name="deprecated-target-frameworks"></a>Неподдерживаемые целевые платформы
 
-[Средство получения ближайшей платформы из набора средств NuGet](http://nugettoolsdev.azurewebsites.net/) имитирует логику NuGet, которая используется для выбора конкретной платформы из нескольких доступных в пакете вариантов в зависимости от платформы проекта. Чтобы использовать это средство, укажите одну платформу для проекта, а также одну или несколько платформ для пакета. Выберите кнопку **Отправить**. Средство сообщит, совместимы ли указанные в списке платформы для пакета с платформой, указанной для проекта.
+Следующие целевые платформы являются устаревшими. Пакеты, предназначенные для этих целевых платформ, следует перевести на предлагаемые для замены.
 
-## <a name="portable-class-libraries"></a>Переносимые библиотеки классов
+| Нерекомендуемый TFM                                                                             | Замена |
+| ------------------------------------------------------------------------------------------ | ----------- |
+| aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
+| dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
+| netcore50                                                                                  | uap10.0     |
+| win                                                                                        | netcore45   |
+| win8                                                                                       | netcore45   |
+| win81                                                                                      | netcore451  |
+| win10                                                                                      | uap10.0     |
+| winrt                                                                                      | netcore45   |
 
-Сведения о переносимых библиотеках классов см. в разделе [Переносимые библиотеки классов](https://docs.microsoft.com/nuget/schema/target-frameworks#portable-class-libraries) статьи *о требуемой версии .NET Framework* в документации по NuGet. Стивен Клиэри создал средство, которое перечисляет все поддерживаемые PCL. Дополнительные сведения см. в статье [о профилях платформ в среде .NET Framework](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html).
+## <a name="see-also"></a>См. также
+
+[Пакеты, метапакеты и платформы](~/docs/core/packages.md)  
+[Разработка библиотек с помощью кроссплатформенных средств](~/docs/core/tutorials/libraries.md)  
+[.NET Standard](~/docs/standard/net-standard.md)  
+[Управление версиями .NET Core](~/docs/core/versions/index.md)  
+[Репозиторий GitHub dotnet/standard](https://github.com/dotnet/standard)  
+[Инструменты NuGet в репозитории GitHub](https://github.com/joelverhagen/NuGetTools)  
+[Профили платформы в .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
 

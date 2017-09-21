@@ -1,5 +1,5 @@
 ---
-title: "Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic) | Документы Майкрософт"
+title: "Фильтрация вывода My.Application.Log (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Пошаговое руководство. Фильтрация вывода My.Application.Log (Visual Basic)
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/22/2017
   
 #### <a name="to-build-the-sample-application"></a>Создание примера приложения  
   
-1.  Откройте новый проект приложения Windows [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+1.  Откройте новый проект приложения Windows [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 2.  Добавьте кнопку с именем Button1 в форму Form1.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2017
   
 6.  Закройте приложение.  
   
-     Сведения о просмотре окна вывода отладочных данных приложения см. в разделе [Окно вывода](https://docs.microsoft.com/visualstudio/ide/reference/output-window). Сведения о расположении файла журнала приложения см. в разделе [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Сведения о просмотре окна вывода отладочных данных приложения см. в разделе [Окно вывода](/visualstudio/ide/reference/output-window). Сведения о расположении файла журнала приложения см. в разделе [Пошаговое руководство. Определение места записи информации для My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
     >  По умолчанию приложение записывает выходные данные в файл журнала при закрытии приложения.  
@@ -162,7 +162,7 @@ ms.lasthandoff: 05/22/2017
 9. Измените значение атрибута `value` снова на "Информация".  
   
     > [!NOTE]
-    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. На поведение классов [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> и <xref:System.Diagnostics.Debug?displayProperty=fullName> он не влияет.  
+    >  Параметр переключателя `DefaultSwitch` контролирует только `My.Application.Log`. На поведение классов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> и <xref:System.Diagnostics.Debug?displayProperty=fullName> он не влияет.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Отдельная фильтрация прослушивателей My.Application.Log  
  В предыдущем примере показано, как изменить фильтрацию для всех выходных данных `My.Application.Log`. В этом примере демонстрируется способ фильтрации отдельных прослушивателей журнала. По умолчанию приложение имеет два прослушивателя, которые выполняют запись в файл выходных данных отладки и файл журнала приложения.  
@@ -281,3 +281,4 @@ ms.lasthandoff: 05/22/2017
  [Практическое руководство. Запись сообщений в журнал](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Переключатели трассировки](../../../../framework/debug-trace-profile/trace-switches.md)   
  [Запись сведений в журнал из приложения](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

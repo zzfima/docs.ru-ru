@@ -1,56 +1,62 @@
 ---
-title: "Exposing COM Components to the .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "exposing COM components to .NET Framework"
-  - "interoperation with unmanaged code, exposing COM components"
-  - "COM interop, exposing COM components"
+title: "Предоставление клиентам .NET Framework доступа к COM-компонентам"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- exposing COM components to .NET Framework
+- interoperation with unmanaged code, exposing COM components
+- COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c0fcf7bec289d64b1faceef00b01278fa45caab0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/21/2017
+
 ---
-# Exposing COM Components to the .NET Framework
-В этом разделе обобщается процесс предоставления управляемому коду доступа к существующему COM\-компоненту.  Дополнительные сведения о написании COM\-серверов, тесно связанных с .NET Framework, см. в разделе [Вопросы проектирования взаимодействия](http://msdn.microsoft.com/ru-ru/b59637f6-fe35-40d6-ae72-901e7a707689).  
+# <a name="exposing-com-components-to-the-net-framework"></a>Предоставление клиентам .NET Framework доступа к COM-компонентам
+В этом разделе описывается процесс, в рамках которого существующий COM-компонент предоставляется управляемому коду. Сведения о разработке COM-серверов, которые тесно интегрируются с платформой .NET Framework, см. в разделе [Вопросы разработки для взаимодействия](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689).  
   
- Существующие COM\-компоненты могут представлять собой ценные ресурсы для управляемого кода в качестве бизнес\-приложений промежуточного уровня или изолированных функциональных возможностей.  В идеале компонент должен содержать основную сборку взаимодействия и строго соответствовать стандартам программирования COM.  
+ Существующие COM-компоненты являются ценными ресурсами для управляемого кода, выступая в качестве бизнес-приложений среднего уровня или изолированных функций. В идеале компонент содержит основную сборку взаимодействия и строго соответствует стандартам программирования модели COM.  
   
-#### Предоставление .NET Framework доступа к COM\-компонентам  
+#### <a name="to-expose-com-components-to-the-net-framework"></a>Предоставление клиентам .NET Framework доступа к COM-компонентам  
   
-1.  [Импорт библиотеки типов в качестве сборки](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md).  
+1.  [Импорт библиотеки типов в виде сборки](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md).  
   
-     Среда CLR требует наличия метаданных для всех типов, включая COM\-типы.  Существует несколько путей получения сборки, содержащей COM\-типы, импортируемые как метаданные.  
+     Общеязыковая среда выполнения требует наличия метаданных для всех типов, включая COM-типы. Получить сборку, содержащую импортированные COM-типы, в виде метаданных можно несколькими способами.  
   
-2.  [Создание COM\-типов в управляемом коде](http://msdn.microsoft.com/ru-ru/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66).  
+2.  [Создание COM-типов в управляемом коде](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66).  
   
-     Разработчик может проверять COM\-типы, активировать экземпляры и вызывать методы для COM\-объекта точно так же, как и для любого управляемого типа.  
+     Вы можете проверять COM-типы, активировать экземпляры и вызывать методы COM-объекта так же, как и для любого другого управляемого типа.  
   
-3.  [Компиляция проекта взаимодействия](../../../docs/framework/interop/compiling-an-interop-project.md).  
+3.  [Компиляция проекта, использующего взаимодействие](../../../docs/framework/interop/compiling-an-interop-project.md).  
   
-     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] предоставляет компиляторы для нескольких языков, совместимых со спецификацией CLS, включая [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C\# и C\+\+.  
+     [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] предоставляет компиляторы для нескольких языков, соответствующих требованиям спецификации общеязыковой среды выполнения (CLS), включая [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# и C++.  
   
 4.  [Развертывание приложения взаимодействия](../../../docs/framework/interop/deploying-an-interop-application.md).  
   
-     Приложения взаимодействия лучше всего распространять как подписанные сборки со [строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md), в глобальном кэше сборок.  
+     Приложения взаимодействия рекомендуется развертывать в виде подписанных сборок со [строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md) в глобальном кэше сборок.  
   
-## См. также  
- [Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md)   
- [Design Considerations for Interoperation](http://msdn.microsoft.com/ru-ru/b59637f6-fe35-40d6-ae72-901e7a707689)   
- [COM Interop Sample: .NET Client and COM Server](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)   
+## <a name="see-also"></a>См. также  
+ [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)   
+ [Вопросы разработки для взаимодействия](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)   
+ [Пример COM-взаимодействия. Клиент .NET и COM-сервер](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)   
  [Независимость от языка и независимые от языка компоненты](../../../docs/standard/language-independence-and-language-independent-components.md)   
- [Gacutil.exe \(Global Assembly Cache Tool\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+ [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+

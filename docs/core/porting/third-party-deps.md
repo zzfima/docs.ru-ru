@@ -1,5 +1,5 @@
 ---
-title: "Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков | Документация Майкрософт"
+title: "Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков"
 description: "Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,26 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков
-<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков
 
 Первый этап процесса переноса — анализ зависимостей сторонних разработчиков.  Необходимо выяснить, есть ли среди них такие, которые не выполняются в .NET Core, и разработать для них план на непредвиденные случаи.
 
-## Предварительные требования
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Предварительные требования
 
 В этой статье предполагается, что вы используете Windows и Visual Studio и что у вас есть код, который в настоящее время выполняется в .NET Framework.
 
-## Анализ пакетов NuGet
-<a id="analyzing-nuget-packages" class="xliff"></a>
+## <a name="analyzing-nuget-packages"></a>Анализ пакетов NuGet
 
 Проанализировать переносимость пакетов NuGet легко.  Так как пакет NuGet представляет собой набор папок, которые содержат сборки для конкретных платформ, вам нужно всего лишь проверить, есть ли папка, содержащая сборку .NET Core.
 
@@ -58,7 +55,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-Это моникеры целевых платформ (TFM), которые соответствуют версиям [библиотеки .NET Standard](../../standard/net-standard.md) и традиционным профилям переносимой библиотеки классов (PCL), совместимым с .NET Core.  Имейте в виду, что, хотя платформа `netcoreapp1.0` совместима, она предназначена для приложений, а не библиотек.  Хотя вы вполне можете использовать библиотеку на основе `netcoreapp1.0`, она будет предназначена *только* для использования другими приложениями `netcoreapp1.0`.
+Это моникеры целевых платформ (TFM), которые соответствуют версиям [.NET Standard](../../standard/net-standard.md) и традиционным профилям переносимой библиотеки классов (PCL), совместимым с .NET Core.  Имейте в виду, что, хотя платформа `netcoreapp1.0` совместима, она предназначена для приложений, а не библиотек.  Хотя вы вполне можете использовать библиотеку на основе `netcoreapp1.0`, она будет предназначена *только* для использования другими приложениями `netcoreapp1.0`.
 
 Есть также ряд устаревших моникеров TFM из предварительных версий .NET Core, которые также могут быть совместимыми:
 
@@ -77,8 +74,7 @@ dotnet5.5
 > [!NOTE]
 > Чтобы использовать пакет, предназначенный для традиционной библиотеки PCL или предварительной версии .NET Core, необходимо использовать директиву `imports` в файле `project.json`.
 
-### Что делать, если зависимость пакета NuGet не работает в .NET Core
-<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
+### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Что делать, если зависимость пакета NuGet не работает в .NET Core
 
 Если пакет NuGet, от которого зависит ваш проект, не работает в .NET Core, можно предпринять ряд мер.
 
@@ -94,13 +90,11 @@ dotnet5.5
 
 Команда разработчиков .NET хотела бы узнать, поддержку каких библиотек в .NET Core следует реализовать в первую очередь. Вы можете написать нам на адрес dotnet@microsoft.com, чтобы сообщить о библиотеках, которые хотели бы использовать.
 
-## Анализ зависимостей, которые не являются пакетами NuGet
-<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
+## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>Анализ зависимостей, которые не являются пакетами NuGet
 
 У вас может быть зависимость, которая не является пакетом NuGet, например библиотека DLL в файловой системе.  Единственный способ определить переносимость такой зависимости — запустить [средство ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
 
-## Следующие шаги
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Следующие шаги
 
 Если вы переносите библиотеку, обратитесь к разделу о [переносе библиотек](libraries.md).
 

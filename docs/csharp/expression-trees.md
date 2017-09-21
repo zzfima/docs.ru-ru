@@ -1,6 +1,6 @@
 ---
 title: Expression Trees
-description: Expression Trees
+description: "Сведения о деревьях выражений в .NET Core, а также о том, как использовать их для представления кода в виде структур, которые можно проверять, изменять и выполнять."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ ms.lasthandoff: 05/22/2017
 Это позволяет платформе [Entity Framework](http://docs.efproject.net/en/latest/) преобразовывать запросы, написанные на C#, в код SQL, который выполняется в ядре СУБД. Другим примером является [Moq](https://github.com/Moq/moq) — популярная платформа прототипирования для .NET.
 
 В дальнейших разделах этого учебника описывается, что представляют собой деревья выражений, рассматриваются поддерживающие их классы платформы и демонстрируются способы работы с деревьями выражений. Вы узнаете, как считывать деревья выражений, как создавать их, а также как создавать модифицированные деревья выражений и выполнять код, представленный деревьями выражений. После ознакомления с учебником вы будете готовы к использованию этих структур для создания эффективных адаптивных алгоритмов.
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
+
 1. [Описание деревьев выражений](expression-trees-explained.md)
 
-    Understand the structure and concepts behind *Expression Trees*.
+    Описание структуры и принципов использования *деревьев выражений*.
     
 2. [Типы платформ, поддерживающие деревья выражений](expression-classes.md)
     
