@@ -37,7 +37,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="endif-c-reference"></a>#endif (Справочник по C#)
-`#endif` указывает на конец условной директивы, начало которой было задано с помощью директивы [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Например:  
+`#endif` определяет конец условной директивы, которая началась с директивы [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Например:  
   
 ```csharp
 #define DEBUG  

@@ -37,7 +37,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="warning-c-reference"></a>#warning (справочник по C#)
-`#warning` позволяет создать предупреждение первого уровня из определенного места в коде. Пример:  
+`#warning` позволяет создать предупреждение первого уровня из определенного места в коде. Например:  
   
 ```csharp
 #warning Deprecated code in this method.  
