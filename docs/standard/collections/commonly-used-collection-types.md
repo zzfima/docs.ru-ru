@@ -50,19 +50,19 @@ ms.lasthandoff: 09/06/2017
 |[Универсальные шаблоны](../../../docs/standard/generics/index.md)|Описание универсальных функций, в том числе универсальных коллекций, делегатов и интерфейсов, предоставляемых платформой [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Ссылки на документацию по C#, Visual Basic и Visual C++, а также на вспомогательные технологии, такие как Reflection.|  
   
 ## <a name="reference"></a>Ссылки  
- <xref:System.Collections?displayProperty=fullName>  
+ <xref:System.Collections?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic?displayProperty=fullName>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
   
- <xref:System.Collections.ICollection?displayProperty=fullName>  
+ <xref:System.Collections.ICollection?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.ICollection%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IList?displayProperty=fullName>  
+ <xref:System.Collections.IList?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.IList%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IDictionary?displayProperty=fullName>  
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 

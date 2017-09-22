@@ -35,8 +35,8 @@ ms.lasthandoff: 07/28/2017
   
 |Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Выбрать|Проецирует значения, основанные на функции преобразования.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
-|SelectMany|Проецирует последовательности значений, основанных на функции преобразования, а затем выравнивает их в одну последовательность.|Использование нескольких предложений `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName>|  
+|Выбрать|Проецирует значения, основанные на функции преобразования.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|SelectMany|Проецирует последовательности значений, основанных на функции преобразования, а затем выравнивает их в одну последовательность.|Использование нескольких предложений `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Примеры синтаксиса выражений запросов  
   

@@ -76,10 +76,10 @@ ms.lasthandoff: 08/21/2017
   
 |Класс|Описание|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>|Представляет компонент счетчика производительности Windows NT. Этот класс используется для чтения существующих предварительно определенных или пользовательских счетчиков и публикации (записи) данных производительности в пользовательские счетчики.|  
-|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=fullName>|Предоставляет ряд методов для взаимодействия со счетчиками и категориями счетчиков на компьютере.|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=fullName>|Задает установщик для компонента `PerformanceCounter` .|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=fullName>|Задает формулу для вычисления метода `NextValue` для `PerformanceCounter`.|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Представляет компонент счетчика производительности Windows NT. Этот класс используется для чтения существующих предварительно определенных или пользовательских счетчиков и публикации (записи) данных производительности в пользовательские счетчики.|  
+|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Предоставляет ряд методов для взаимодействия со счетчиками и категориями счетчиков на компьютере.|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Задает установщик для компонента `PerformanceCounter` .|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Задает формулу для вычисления метода `NextValue` для `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>См. также  
  [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)

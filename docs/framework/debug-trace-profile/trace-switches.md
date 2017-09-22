@@ -45,13 +45,13 @@ ms.lasthandoff: 08/21/2017
 ## <a name="trace-levels"></a>Уровни трассировки  
  При использовании **TraceSwitch**существуют дополнительные рекомендации. Объект **TraceSwitch** имеет четыре свойства, которые возвращают **логические** значения, указывающие, установлен ли переключатель хотя бы для отдельного уровня:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Уровни позволяют ограничить количество получаемых сведений трассировки только теми, которые необходимы для решения проблемы. Вы указываете нужный уровень детализации в выходных данных трассировки путем установки и настройки переключателей трассировки для соответствующего уровня трассировки. Можно получать сообщения об ошибках, предупреждения, информационные сообщения, подробные сообщения трассировки или совсем не получать сообщения.  
   

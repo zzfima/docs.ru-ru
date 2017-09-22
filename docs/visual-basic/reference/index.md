@@ -52,10 +52,10 @@ ms.lasthandoff: 07/28/2017
  Ссылки на полную спецификацию языка [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] с подробной информацией о всех аспектах этого языка.  
   
 ## <a name="reference"></a>Ссылка  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  Это пространство имен содержит классы элементов управления Visual Basic Power Packs. Элементы управления Visual Basic Power Packs представляют собой дополнительные элементы управления Windows Forms.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  Это пространство имен предоставляет компонент, позволяющий напечатать факсимильное изображение формы в том виде, в каком она отображается на экране.  
   
 ## <a name="related-sections"></a>Связанные разделы  

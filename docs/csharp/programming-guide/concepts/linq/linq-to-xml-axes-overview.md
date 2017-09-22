@@ -37,34 +37,34 @@ ms.lasthandoff: 07/28/2017
   
 |Метод|Описание|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> предков экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> предков экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> потомков экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> потомков экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> дочерних элементов экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> дочерних элементов экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих после экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих после экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих перед экземпляром <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих перед экземпляром <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601>, состоящую из самого экземпляра <xref:System.Xml.Linq.XElement> и его предков. Перегрузка возвращает <xref:System.Collections.Generic.IEnumerable%601> из <xref:System.Xml.Linq.XElement> для элементов с указанным <xref:System.Xml.Linq.XName>.|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601>, состоящую из самого экземпляра <xref:System.Xml.Linq.XElement> и его потомков. Перегрузка возвращает <xref:System.Collections.Generic.IEnumerable%601> из <xref:System.Xml.Linq.XElement> для элементов с указанным <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> предков экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> предков экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> потомков экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> потомков экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> дочерних элементов экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> дочерних элементов экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих после экземпляра <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих после экземпляра <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих перед экземпляром <xref:System.Xml.Linq.XElement>. Перегрузка возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов, идущих перед экземпляром <xref:System.Xml.Linq.XElement>, имеющих указанный атрибут <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601>, состоящую из самого экземпляра <xref:System.Xml.Linq.XElement> и его предков. Перегрузка возвращает <xref:System.Collections.Generic.IEnumerable%601> из <xref:System.Xml.Linq.XElement> для элементов с указанным <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601>, состоящую из самого экземпляра <xref:System.Xml.Linq.XElement> и его потомков. Перегрузка возвращает <xref:System.Collections.Generic.IEnumerable%601> из <xref:System.Xml.Linq.XElement> для элементов с указанным <xref:System.Xml.Linq.XName>.|  
   
 ## <a name="method-for-retrieving-a-single-element"></a>Метод получения одного элемента  
  Следующий метод позволяет получить один дочерний элемент из объекта <xref:System.Xml.Linq.XElement>.  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>|Возвращает первый дочерний элемент объекта <xref:System.Xml.Linq.XElement>, имеющий указанный атрибут <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Возвращает первый дочерний элемент объекта <xref:System.Xml.Linq.XElement>, имеющий указанный атрибут <xref:System.Xml.Linq.XName>.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>Метод получения коллекции атрибутов  
  Следующий метод позволяет получить атрибуты из объекта <xref:System.Xml.Linq.XElement>.  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> всех атрибутов <xref:System.Xml.Linq.XAttribute>.|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Возвращает коллекцию <xref:System.Collections.Generic.IEnumerable%601> всех атрибутов <xref:System.Xml.Linq.XAttribute>.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>Метод получения одного атрибута  
  Следующий метод позволяет получить один атрибут из объекта <xref:System.Xml.Linq.XElement>.  
   
 |Метод|Описание|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>|Возвращает атрибут <xref:System.Xml.Linq.XAttribute>, имеющий указанный атрибут <xref:System.Xml.Linq.XName>.|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Возвращает атрибут <xref:System.Xml.Linq.XAttribute>, имеющий указанный атрибут <xref:System.Xml.Linq.XName>.|  
   
 ## <a name="see-also"></a>См. также  
  [Оси LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
