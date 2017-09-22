@@ -35,10 +35,10 @@ ms.lasthandoff: 07/28/2017
   
 |Имя метода|Описание|Синтаксис выражения запроса C#|Дополнительные сведения|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|DefaultIfEmpty|Заменяет пустую коллекцию на одноэлементную коллекцию со значениями по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
-|Empty|Возвращает пустую коллекцию.|Неприменимо.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
-|Диапазон|Создает коллекцию, содержащую последовательность чисел.|Неприменимо.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
-|Повторить|Создает коллекцию, содержащую одно повторяющееся значение.|Неприменимо.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
+|DefaultIfEmpty|Заменяет пустую коллекцию на одноэлементную коллекцию со значениями по умолчанию.|Неприменимо.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
+|Empty|Возвращает пустую коллекцию.|Неприменимо.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Диапазон|Создает коллекцию, содержащую последовательность чисел.|Неприменимо.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Повторить|Создает коллекцию, содержащую одно повторяющееся значение.|Неприменимо.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Linq>   
