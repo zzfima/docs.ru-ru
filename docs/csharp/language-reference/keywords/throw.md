@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 77f44a43b80c4cf1f12baadaaf6861b3b53244d9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="throw-c-reference"></a>throw (Справочник по C#)
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/28/2017
 ```csharp
 throw [e]
 ```
-где `e` — это экземпляр класса, производного от <xref:System.Exception?displayProperty=fullName>. В следующем примере используется оператор `throw` для создания @System.IndexOutOfRangeException, если аргумент, переданный в метод с именем `GetNumber`, не соответствует допустимому индексу внутреннего массива.
+где `e` — это экземпляр класса, производного от <xref:System.Exception?displayProperty=nameWithType>. В следующем примере используется оператор `throw` для создания @System.IndexOutOfRangeException, если аргумент, переданный в метод с именем `GetNumber`, не соответствует допустимому индексу внутреннего массива.
 
 [!code-cs[csrefKeyword#1](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 
