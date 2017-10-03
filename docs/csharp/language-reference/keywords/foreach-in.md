@@ -33,14 +33,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aed1d4f086f0b1334df750fd912d20d66326a043
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 1c873dfdf001f7efc3340637d210e5fdf42a2852
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Справочник по C#)
-Оператор `foreach` повторяет группу встроенных операторов для каждого элемента в массиве или коллекции объектов, которые реализуют интерфейс <xref:System.Collections.IEnumerable?displayProperty=fullName> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Оператор `foreach` используется для итерации по коллекции для получения необходимых сведений, однако его нельзя использовать для добавления или удаления элементов из исходной коллекции во избежание непредвиденных побочных эффектов. Если требуется добавить или удалить элементы из исходной коллекции, используйте цикл [for](../../../csharp/language-reference/keywords/for.md).  
+Оператор `foreach` повторяет группу встроенных операторов для каждого элемента в массиве или коллекции объектов, которые реализуют интерфейс <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Оператор `foreach` используется для итерации по коллекции для получения необходимых сведений, однако его нельзя использовать для добавления или удаления элементов из исходной коллекции во избежание непредвиденных побочных эффектов. Если требуется добавить или удалить элементы из исходной коллекции, используйте цикл [for](../../../csharp/language-reference/keywords/for.md).  
   
  Внедренные операторы продолжают выполняться для каждого элемента массива или коллекции. После завершения итерации для всех элементов коллекции управление передается следующему оператору после блока `foreach`.  
   

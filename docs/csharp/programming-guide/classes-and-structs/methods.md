@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Методы (Руководство по программированию на C#)
@@ -58,7 +58,7 @@ ms.lasthandoff: 07/28/2017
  [!code-cs[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
 ## <a name="method-parameters-vs-arguments"></a>Параметры методов и Аргументы  
- Определение метода задает имена и типы всех необходимых параметров. Когда вызывающий код вызывает метод, он предоставляет конкретные значения, называемые аргументами, для каждого параметра. Аргументы должны быть совместимы с типом параметра, но имя аргумента (если есть), используемое в вызывающем коде, не обязательно должно совпадать с именем параметра, указанным в методе. Например:  
+ Определение метода задает имена и типы всех необходимых параметров. Когда вызывающий код вызывает метод, он предоставляет конкретные значения, называемые аргументами, для каждого параметра. Аргументы должны быть совместимы с типом параметра, но имя аргумента (если есть), используемое в вызывающем коде, не обязательно должно совпадать с именем параметра, указанным в методе. Пример:  
   
  [!code-cs[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
@@ -149,7 +149,7 @@ static void Main(string[] args)
   
  [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- Асинхронный метод не может объявить все параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md), но может вызвать методы, которые имеют такие параметры.  
+ Асинхронный метод не может объявить все параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out.md) , но может вызывать методы, которые имеют такие параметры.  
   
  Дополнительные сведения об асинхронных методах см. в разделах [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md), [Поток управления в асинхронных программах](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) и [Асинхронные типы возврата](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

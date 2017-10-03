@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf12724ec9e450a2bc237db614f235d7f03a4a7e
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="enum-c-reference"></a>enum (Справочник по C#)
@@ -77,7 +77,7 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 int x = (int)Days.Sun;  
 ```  
   
- При применении <xref:System.FlagsAttribute?displayProperty=fullName> к перечислению, содержащему элементы, которые могут быть объединены с помощью побитовой операции `OR` , атрибут влияет на поведение `enum` при использовании с некоторыми средствами. Эти изменения можно заметить при использовании таких средств, как методы класса <xref:System.Console> и вычислитель выражений. (См. третий пример.)  
+ При применении <xref:System.FlagsAttribute?displayProperty=nameWithType> к перечислению, содержащему элементы, которые могут быть объединены с помощью побитовой операции `OR` , атрибут влияет на поведение `enum` при использовании с некоторыми средствами. Эти изменения можно заметить при использовании таких средств, как методы класса <xref:System.Console> и вычислитель выражений. (См. третий пример.)  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Как и в случае с любой другой константой, все ссылки на отдельные значения перечисления преобразуются в числовые литералы во время компиляции. Это может создать потенциальные проблемы с управлением версиями, как описано в разделе [Константы](../../../csharp/programming-guide/classes-and-structs/constants.md).  
@@ -97,7 +97,7 @@ int x = (int)Days.Sun;
  [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано использование и влияние атрибута <xref:System.FlagsAttribute?displayProperty=fullName> на объявление `enum` .  
+ В следующем примере кода показано использование и влияние атрибута <xref:System.FlagsAttribute?displayProperty=nameWithType> на объявление `enum` .  
   
  [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   

@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 784308f3073114cd0c07cf15edae527a2654edec
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="indexers-c-programming-guide"></a>Индексаторы (Руководство по программированию в C#)
@@ -56,7 +56,7 @@ ms.lasthandoff: 07/28/2017
 
 Обратите внимание, что `=>` представляет тело выражения, а ключевое слово `get` не используется. 
 
-Начиная с версии C# 7, акцессоры get и set можно реализовывать в виде членов, воплощающих выражение. В этом случае необходимо указывать оба ключевых слова (`get` и `set`). Например:
+Начиная с версии C# 7, акцессоры get и set можно реализовывать в виде членов, воплощающих выражение. В этом случае необходимо указывать оба ключевых слова (`get` и `set`). Пример:
 
 [!code-cs[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   

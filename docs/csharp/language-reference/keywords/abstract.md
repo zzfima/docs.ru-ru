@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a109a8e37f84a2e91229bfce789a69cdc26adba9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="abstract-c-reference"></a>abstract (Справочник по C#)
@@ -83,7 +83,7 @@ ms.lasthandoff: 07/28/2017
   
  Абстрактный класс должен предоставлять реализацию для всех членов интерфейса.  
   
- Абстрактный класс, реализующий интерфейс, может сопоставлять методы интерфейса с абстрактными методами. Например:  
+ Абстрактный класс, реализующий интерфейс, может сопоставлять методы интерфейса с абстрактными методами. Пример:  
   
  [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   

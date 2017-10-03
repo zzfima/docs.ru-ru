@@ -17,10 +17,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d087951ce3e3f05c7f1e8f9c99529eab2f76b8d5
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 2f26f83bea90d13a91a747e531ad29db788e2101
 ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Асинхронное программирование с использованием ключевых слов Async и Await (C#)
@@ -159,9 +159,9 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_Threads"></a> Потоки  
 Асинхронные методы используются для неблокирующих операций. Выражение `await` в асинхронном методе не блокирует текущий поток на время выполнения ожидаемой задачи. Вместо этого выражение регистрирует остальную часть метода как продолжение и возвращает управление вызывающему объекту асинхронного метода.  
   
-Ключевые слова `async` и `await` не вызывают создания дополнительных потоков. Асинхронные методы не требуют многопоточности, поскольку асинхронный метод не выполняется в собственном потоке. Метод выполняется в текущем контексте синхронизации и использует время в потоке, только когда метод активен. Метод <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName> можно применять для перемещения операций, использующих ресурсы ЦП, в фоновый поток, однако фоновый поток не имеет смысла применять для процесса, который просто ждет результата.  
+Ключевые слова `async` и `await` не вызывают создания дополнительных потоков. Асинхронные методы не требуют многопоточности, поскольку асинхронный метод не выполняется в собственном потоке. Метод выполняется в текущем контексте синхронизации и использует время в потоке, только когда метод активен. Метод <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> можно применять для перемещения операций, использующих ресурсы ЦП, в фоновый поток, однако фоновый поток не имеет смысла применять для процесса, который просто ждет результата.  
   
-Асинхронный подход к асинхронному программированию практически по всем параметрам имеет преимущество перед другими подходами. В частности, он эффективнее, чем использование класса <xref:System.ComponentModel.BackgroundWorker> для привязанных к вводу-выводу операций, так как он имеет более простой код и вам не требуется специально предотвращать состояние гонки. В сочетании с методом <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName> асинхронное программирование лучше <xref:System.ComponentModel.BackgroundWorker> для операций, использующих ресурсы процессора, так как оно отделяет координацию выполнения кода от действий, которые `Task.Run` перемещает в пул потоков.  
+Асинхронный подход к асинхронному программированию практически по всем параметрам имеет преимущество перед другими подходами. В частности, он эффективнее, чем использование класса <xref:System.ComponentModel.BackgroundWorker> для привязанных к вводу-выводу операций, так как он имеет более простой код и вам не требуется специально предотвращать состояние гонки. В сочетании с методом <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> асинхронное программирование лучше <xref:System.ComponentModel.BackgroundWorker> для операций, использующих ресурсы процессора, так как оно отделяет координацию выполнения кода от действий, которые `Task.Run` перемещает в пул потоков.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async и Await  
  Если с помощью модификатора [async](../../../../csharp/language-reference/keywords/async.md) указать, что метод является асинхронным, у вас появятся следующие две возможности.  
@@ -253,7 +253,7 @@ await Task_MethodAsync();
 |Заголовок|Описание|Пример|  
 |-----------|-----------------|------------|  
 |[Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Обращение к веб-сайтам с помощью async и await в C#)|Иллюстрирует преобразование синхронного решения WPF в асинхронное. Приложение загружает ряд веб-сайтов.|[Async Sample: Accessing the Web Walkthrough](http://go.microsoft.com/fwlink/p/?LinkID=255191&clcid=0x409) (Пример использования async. Пошаговое руководство по обращению к веб-сайтам).|  
-|[How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll в C#)|Добавляет <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> к предыдущему пошаговому руководству. Использование `WhenAll` запускает все загрузки одновременно.||  
+|[How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll в C#)|Добавляет <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> к предыдущему пошаговому руководству. Использование `WhenAll` запускает все загрузки одновременно.||  
 |[How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Практическое руководство. Параллельное выполнение нескольких веб-запросов в C# с использованием async и await)|Иллюстрирует, как запустить несколько задач одновременно.|[Async Sample: Make Multiple Web Requests in Parallel](http://go.microsoft.com/fwlink/p/?LinkID=254906&clcid=0x409) (Пример использования async. Параллельное выполнение нескольких веб-запросов).|  
 |[Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)|Иллюстрирует типы, которые могут возвращать асинхронные методы, и поясняет, когда следует использовать каждый из этих типов.||  
 |[Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах C#)|Выполняет подробную трассировку потока управления через последовательность выражений ожидания в асинхронной программе.|[Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/p/?LinkID=255285&clcid=0x409) (Пример использования async. Поток управления в асинхронных программах)|  
