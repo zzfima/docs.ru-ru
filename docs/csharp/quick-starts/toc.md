@@ -1,0 +1,6 @@
+# [Краткие руководства](index.md)
+## [Hello world](hello-world.yml)
+## [Числа в C#](numbers-in-csharp.yml)
+## [Ветви и циклы](branches-and-loops.yml)
+## [Коллекция списков](list-collection.yml)
+## [Общие сведения о классах](introduction-to-classes.md)
