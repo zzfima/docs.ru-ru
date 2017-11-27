@@ -1,34 +1,37 @@
 ---
-title: "Как настроить каналы с помощью поставщика Entity Framework (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Службы WCF Data Services, настройка"
-  - "Службы WCF Data Services, настройка каналов"
+title: "Практическое руководство. Настройка каналов с использованием поставщика Entity Framework (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, customizing
+- WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 44dfa0a8371ff8184462e15da71f8a9f0f9767d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как настроить каналы с помощью поставщика Entity Framework (службы WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub.  Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенных в файле EDMX, с помощью поставщика Entity Framework.  Для получения дополнительной информации см. [Настройка канала](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Практическое руководство. Настройка каналов с использованием поставщика Entity Framework (службы данных WCF)
+Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют настроить сериализацию Atom в ответе службы данных так, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами, определенными в протоколе AtomPub. Этот раздел показывает, как настроить атрибуты сопоставления типов сущностей в модели данных, определенных в файле EDMX, с помощью поставщика Entity Framework. Дополнительные сведения см. в разделе [настройки веб-канал](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
   
- В этом разделе мы вручную изменим сформированный программой файл EDMX, содержащий модель данных.  Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать этот файл.  Дополнительные сведения о файле EDMX, порождаемом инструментальными средствами модели EDM, см. в разделе [.edmx File Overview](http://msdn.microsoft.com/ru-ru/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных.  Эта служба и клиентские классы данных создаются после выполнения действий, описанных в разделе [Краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ В этом разделе мы вручную изменим сформированный программой файл EDMX, содержащий модель данных. Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать этот файл. Дополнительные сведения о EDMX-файл, создаваемый средства модели EDM см. в разделе [.edmx Обзор файла](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4). Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных. Эта служба и клиентские классы данных создаются после выполнения [краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
-### Изменение файла Northwind.edmx вручную для добавления атрибутов настройки каналов  
+### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Изменение файла Northwind.edmx вручную для добавления атрибутов настройки каналов  
   
-1.  В окне **Обозреватель решений** щелкните правой кнопкой мыши файл `Northwind.edmx` и выберите команду **Открыть с помощью**.  
+1.  В **обозревателе решений**, щелкните правой кнопкой мыши `Northwind.edmx` файла и нажмите кнопку **открыть с помощью**.  
   
-2.  В диалоговом окне **Открыть с помощью — Northwind.edmx** выберите **Редактор XML** и нажмите кнопку **ОК**.  
+2.  В **открыть с помощью — Northwind.edmx** выберите **редактора XML**, а затем нажмите кнопку **ОК**.  
   
 3.  Найдите элемент `ConceptualModels` и замените имеющийся тип сущности `Customers` на элемент, содержащий атрибуты сопоставления для настройки канала.  
   
@@ -36,16 +39,16 @@ caps.handback.revision: 3
   
 4.  Сохраните изменения и закройте файл Northwind.edmx.  
   
-5.  Щелкните файл Northwind.edmx правой кнопкой мыши и выберите команду **Пользовательское средство**. \(Необязательно.\)  
+5.  (Необязательно) Щелкните правой кнопкой мыши файл Northwind.edmx и нажмите кнопку **запустить пользовательский инструмент**.  
   
      При этом будет повторно сформирован файл уровня объектов, который может потребоваться.  
   
 6.  Перекомпилируйте проект.  
   
-## Пример  
- Предыдущий пример возвращает следующий результат для URI `http://myservice/` `Northwind.svc/Customers('ALFKI')`.  
+## <a name="example"></a>Пример  
+ Предыдущий пример возвращает следующий результат для URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поставщик Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

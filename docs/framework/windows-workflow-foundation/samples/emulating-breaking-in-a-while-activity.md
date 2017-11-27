@@ -1,34 +1,38 @@
 ---
-title: "Эмуляция прерывания в действии While | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Эмуляция прерывания в действии While"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4417f4225200f01f23d753f6b7aa52ebc69cab4a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Эмуляция прерывания в действии While
+# <a name="emulating-breaking-in-a-while-activity"></a>Эмуляция прерывания в действии While
 Этот образец показывает, как прервать циклический механизм следующих действий: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> и <xref:System.Activities.Statements.ParallelForEach%601>.  
   
  Это может быть полезно, поскольку в [!INCLUDE[wf](../../../../includes/wf-md.md)] не включены действия для прерывания выполнения этих циклов.  
   
-## Сценарий  
- Образец находит первого надежного поставщика из списка поставщиков \(экземпляры класса `Vendor`\).Каждый поставщик имеет `ID`, `Name` и числовое значение надежности, определяющее, насколько на его продукцию можно положиться.Образец создает пользовательское действие с именем `FindReliableVendor`, получающее два входных параметра \(список поставщиков и минимальное значение надежности\) и возвращает первого поставщика из списка, соответствующего предоставленным критериям.  
+## <a name="scenario"></a>Сценарий  
+ Образец находит первого надежного поставщика из списка поставщиков (экземпляры класса `Vendor`). Каждый поставщик имеет `ID`, `Name` и числовое значение надежности, определяющее, насколько на его продукцию можно положиться. Образец создает пользовательское действие с именем `FindReliableVendor`, получающее два входных параметра (список поставщиков и минимальное значение надежности) и возвращает первого поставщика из списка, соответствующего предоставленным критериям.  
   
-## Прерывание цикла  
- В [!INCLUDE[wf](../../../../includes/wf-md.md)] не включены действия для прерывания цикла.Образец кода выполняет прерывание цикла с помощью действия <xref:System.Activities.Statements.If> и нескольких переменных.В этом образце действие <xref:System.Activities.Statements.While> прерывается, если переменной `reliableVendor` присваивается значение, отличное от `null`.  
+## <a name="breaking-a-loop"></a>Прерывание цикла  
+ В [!INCLUDE[wf](../../../../includes/wf-md.md)] не включены действия для прерывания цикла. Образец кода выполняет прерывание цикла с помощью действия <xref:System.Activities.Statements.If> и нескольких переменных. В этом образце действие <xref:System.Activities.Statements.While> прерывается, если переменной `reliableVendor` присваивается значение, отличное от `null`.  
   
  Следующий пример кода демонстрирует, как этот образец прерывает цикл while.  
   
 ```csharp  
-// Iterates while the “i” variable is lower than the size of the list   
+// Iterates while the "i" variable is lower than the size of the list   
 // and any reliable Vendor is found.        
 new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(env) == null)  
 {  
@@ -67,24 +71,23 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
         }  
     }  
 }  
-  
 ```  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a>Использование этого образца  
   
 1.  Откройте файл решения EmulatingBreakInWhile.sln с помощью [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  Для построения решения нажмите CTRL+SHIFT+B.  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  Чтобы запустить решение, нажмите клавиши CTRL+F5.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`  
   
-## См. также
+## <a name="see-also"></a>См. также

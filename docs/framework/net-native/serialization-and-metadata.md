@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8da57c130f8b22a1e2de57678e86f84d00d11aaf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e7216f14fb0b8da27b870fc8e66b24f6d87fcaad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="serialization-and-metadata"></a>Сериализация и метаданные
 Если ваше приложение сериализует и десериализует объекты, может потребоваться добавить записи в файл директив среды выполнения (. rd.xml) файл, чтобы гарантировать наличие необходимых метаданных во время выполнения. Существует две категории сериализаторов, и каждый требует различной обработки в файла директив среды выполнения:  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/21/2017
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Аналогичным образом, если вызвать конструктор <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=fullName> и предоставить массив дополнительных объектов <xref:System.Type> для сериализации, как показано в следующем коде, компилятору [!INCLUDE[net_native](../../../includes/net-native-md.md)] не удается разрешить эти типы.  
+ Аналогичным образом, если вызвать конструктор <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> и предоставить массив дополнительных объектов <xref:System.Type> для сериализации, как показано в следующем коде, компилятору [!INCLUDE[net_native](../../../includes/net-native-md.md)] не удается разрешить эти типы.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -75,8 +73,7 @@ ms.lasthandoff: 08/21/2017
  Информацию о синтаксисе, используемом в примере, см. в разделе [Элемент \<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Элемент \<Type>](../../../docs/framework/net-native/type-element-net-native.md)   
+ [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Элементы директив среды выполнения](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [\<Тип > элемент](../../../docs/framework/net-native/type-element-net-native.md)  
  [Элемент \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)
-

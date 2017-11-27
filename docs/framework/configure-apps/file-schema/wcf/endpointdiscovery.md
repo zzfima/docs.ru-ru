@@ -1,78 +1,83 @@
 ---
-title: "&lt;endpointDiscovery&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;endpointDiscovery&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1716955748c481236a5d23c0592702855356e9e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;endpointDiscovery&gt;
+# <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Указывает различные параметры обнаружения для конечной точки, такие как возможность обнаружения, области и любые пользовательские модули для ее метаданных.  
   
-## Синтаксис  
+\<система. ServiceModel >  
+\<поведения >  
+\<endpointBehaviors >  
+\<поведение >  
+\<endpointDiscovery >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-<behaviors>  
-  <endpointBehaviors>  
-    <behavior name="String">  
-      <endpointDiscovery enabled="Boolean">  
-        <scopes>  
-          <add scope="URI"/>  
-        </scopes>  
-        <extensions>  
-        </extensions>  
-      </endpointDiscovery>  
-    </behavior>  
-  </endpointBehaviors>  
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="String">
+      <endpointDiscovery enabled="Boolean">
+        <scopes>
+          <add scope="URI"/>
+        </scopes>
+        <extensions />
+      </endpointDiscovery>
+    </behavior>
+  </endpointBehaviors>
 </behaviors>  
-  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|enabled|Логическое значение, указывающее, включена ли для этой конечной точки возможность обнаружения.  Значение по умолчанию — `false`.|  
+|---------------|-----------------|  
+|enabled|Логическое значение, указывающее, включена ли для этой конечной точки возможность обнаружения. Значение по умолчанию — `false`.|  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<scopes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Коллекция URI областей для этой конечной точки.  С одной конечной точкой можно связать несколько URI областей.|  
-|[\<расширения\>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) \[из \<обнаружение\_конечной\_точки\>\]|Коллекция элементов XML, позволяющая указывать пользовательские метаданные, публикуемые для конечной точки.|  
-|\<типы\>|Коллекция интерфейсов, которые нужно найти.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<поведение\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
+|-------------|-----------------|  
+|[\<области >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Коллекция URI областей для этой конечной точки. С одной конечной точкой можно связать несколько URI областей.|  
+|[\<расширения >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [из \<endpointDiscovery >]|Коллекция элементов XML, позволяющая указывать пользовательские метаданные, публикуемые для конечной точки.|  
+|\<типы >|Коллекция интерфейсов, которые нужно найти.|  
+  
+### <a name="parent-elements"></a>Родительские элементы  
+  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
 |||  
   
-## Заметки  
- Если добавить этот элемент конфигурации в конфигурацию поведения конечной точки и присвоить атрибуту `enabled` значение `true`, то будет включена возможность обнаружения.  Кроме того, можно использовать дочерний элемент [\<scopes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)[\<расширения\>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) для указания пользовательских метаданных, которые требуется опубликовать вместе со стандартными обнаруживаемыми метаданными \(EPR, ContractTypeName, BindingName, Scope и ListenURI\).  
+## <a name="remarks"></a>Примечания  
+ Если добавить этот элемент конфигурации в конфигурацию поведения конечной точки и присвоить атрибуту `enabled` значение `true`, то будет включена возможность обнаружения. Кроме того, можно использовать [ \<области >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)дочернего элемента к указанию пользовательских областей URI, которые можно использовать для фильтрации конечных точек службы во время выполнения запроса, а также [ \<расширения >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) дочерний элемент, чтобы указать пользовательские метаданные, которые должны быть опубликованы вместе со стандартными обнаруживаемыми метаданными (EPR, ContractTypeName, BindingName, области и ListenURI).  
   
- Этот элемент конфигурации зависит от элемента [\<serviceDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md), который обеспечивает управление возможностью обнаружения на уровне службы.  Это значит, что параметры этого элемента пропускаются, если в конфигурации не указан [\<serviceDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md).  
+ Этот элемент конфигурации зависит от [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) элемент, который управляет уровнем обслуживания для обнаружения. Это означает, что параметры этого элемента учитываются, если [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) не присутствует в конфигурации.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере конфигурации определены области фильтрации и метаданные расширения, которые будут опубликованы для конечной точки.  
   
-```  
-  
+```xml  
 <services>  
   <service name="CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -107,8 +112,7 @@ caps.handback.revision: 6
     </behavior>  
   </endpointBehaviors>  
 </behaviors>  
-  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

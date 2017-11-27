@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
 - strong-named assemblies, interop applications
@@ -27,16 +21,15 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e969535342c9952630947dfff8e0d3104e3a5f80
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f804843c248e0051582aca6d1dd6328871e1cc06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deploying-an-interop-application"></a>Развертывание приложения взаимодействия
 Приложения взаимодействия обычно включают клиентскую сборку .NET, одну или несколько сборок взаимодействия (представляющих различные библиотеки типов COM) и один или несколько зарегистрированных COM-компонентов. В Visual Studio и [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] представлены средства для импорта и преобразования библиотеки типов в сборку взаимодействия, которые описываются в разделе [Импорт библиотеки типов в виде сборки](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md). Приложение взаимодействия можно развернуть двумя способами:  
@@ -62,8 +55,7 @@ ms.lasthandoff: 08/21/2017
  Сборки, которые являются общими для нескольких приложений, необходимо устанавливать в централизованный репозиторий, который называется глобальным кэшем сборок. Клиенты .NET могут обращаться к одной копии сборки взаимодействия, которая подписана и установлена в глобальный кэш сборок. Дополнительные сведения о создании и использовании основных сборок взаимодействия см. в разделе [Основные сборки взаимодействия](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).  
   
 ## <a name="see-also"></a>См. также  
- [Предоставление клиентам .NET Framework доступа к COM-компонентам](../../../docs/framework/interop/exposing-com-components.md)   
- [Импорт библиотеки типов в виде сборки](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [Использование COM-типов в управляемом коде](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
+ [Предоставление COM-компонентов платформе .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
+ [Импорт библиотеки типов в виде сборки](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+ [Использование типов COM в управляемом коде](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [Компиляция проекта, использующего взаимодействие](../../../docs/framework/interop/compiling-an-interop-project.md)
-

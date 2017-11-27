@@ -1,69 +1,71 @@
 ---
-title: "&lt;Thread_UseAllCpuGroups&gt; - элемент | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Thread_UseAllCpuGroups&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Thread_UseAllCpuGroups&gt; - элемент
-Определяет, распределяет ли среда выполнения управляемые потоки по всем группам ЦП.  
+# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; элемент
+Указывает, распределяет ли среда выполнения управляемые потоки во всех группах ЦП.  
   
-## Синтаксис  
+ \<configuration>  
+\<Среда выполнения >  
+<Thread_UseAllCpuGroups>  
   
-```vb  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml
 <Thread_UseAllCpuGroups    
    enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Определяет, распределяет ли среда выполнения управляемые потоки по всем группам ЦП.|  
+|---------------|-----------------|  
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, распределяет ли среда выполнения управляемые потоки во всех группах ЦП.|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|`false`|Среда выполнения не распространяет управляемые потоки по нескольким группам ЦП.  Это значение по умолчанию.|  
-|`true`|Среда выполнения распределяет управляемые потоки по нескольким группам ЦП, если компьютер имеет несколько групп ЦП и включен элемент [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md).|  
+|-----------|-----------------|  
+|`false`|Среда выполнения не распределяют управляемые потоки несколько групп ЦП. Это значение по умолчанию.|  
+|`true`|Среда выполнения распределяет управляемые потоки несколько групп ЦП, если компьютер имеет несколько групп ЦП и [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) включен элемент.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## Заметки  
- Если компьютер имеет несколько групп ЦП, позволяя причины этого элемента выполнение распределенного управляемые потоки среди всех групп ЦП.  Для использования этой функции необходимо также включить элемент [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md), который распространяет сборку мусора на все группы ЦП и принимает во внимание при создании и балансировке куч все ядра.  Включение элемента [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) требует включения элемента [\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md).  Если эти элементы не включены, включение элемент `<Thread_UseAllCpuGroups>` не оказывает никакого действия.  
+## <a name="remarks"></a>Примечания  
+ Если компьютер имеет несколько групп ЦП, включение этого элемента заставляет среду выполнения для распространения управляемые потоки во всех группах ЦП. Чтобы использовать эту функцию, необходимо также включить [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) элемент, который расширяет сбора мусора для всех групп, ЦП и учитывает все ядра при создании и балансировки кучи. Включение [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) элемента необходимо включить [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) элемента. Если эти элементы не включены, включение `<Thread_UseAllCpuGroups>` элемент не оказывает влияния.  
   
-## Пример  
- В следующем примере кода демонстрируется способ включения поддержки нескольких групп ЦП.  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как включить поддержку несколько групп ЦП.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <Thread_UseAllCpuGroups enabled="true"/>  
@@ -73,7 +75,7 @@ caps.handback.revision: 6
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Элемент \<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<GCCpuGroup > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

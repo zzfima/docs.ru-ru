@@ -1,78 +1,80 @@
 ---
-title: "Как создавать дуплексную федеративную привязку | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Создание дуплексной федеративной привязки"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4331d2bc-5455-492a-9189-634a82597726
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0a682b84a90e64e0242a3490986cb526c7f028b8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как создавать дуплексную федеративную привязку
-Привязка <xref:System.ServiceModel.WSFederationHttpBinding> поддерживает только датаграмму и контракты обмена сообщениями «запрос\-ответ».Чтобы использовать контакт дуплексного обмена сообщениями, необходимо создать пользовательскую привязку.В процедурах ниже показана методика выполнения этой операции в конфигурации с использованием режима безопасности сообщений для транспортов HTTP и TCP и с использованием смешанного режима безопасности для транспорта TCP.Образец кода, в котором показаны все 3 привязки, представлен в конце этого раздела.  
+# <a name="how-to-create-a-duplex-federated-binding"></a>Практическое руководство. Создание дуплексной федеративной привязки
+Привязка <xref:System.ServiceModel.WSFederationHttpBinding> поддерживает только датаграмму и контракты обмена сообщениями «запрос-ответ». Чтобы использовать контакт дуплексного обмена сообщениями, необходимо создать пользовательскую привязку. В процедурах ниже показана методика выполнения этой операции в конфигурации с использованием режима безопасности сообщений для транспортов HTTP и TCP и с использованием смешанного режима безопасности для транспорта TCP. Образец кода, в котором показаны все 3 привязки, представлен в конце этого раздела.  
   
- Также можно создать привязку в коде.Описание процедуры создания стека элементов привязки см. в разделе [Как создавать пользовательскую привязку с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Также можно создать привязку в коде. Описание стек элементов привязки, чтобы создать см. [как: Создание привязки настраиваемый с использованием элемента SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
-### Создание дуплексной федеративной пользовательской привязки с использованием HTTP  
+### <a name="to-create-a-duplex-federated-custom-binding-with-http"></a>Создание дуплексной федеративной пользовательской привязки с использованием HTTP  
   
-1.  В узле [\<привязки\>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)[\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1.  В [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) узел файла конфигурации, создавать [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) элемента.  
   
-2.  Внутри элемента [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)[\<привязка\>](../../../../docs/framework/misc/binding.md)`name` `и присвойте атрибуту FederationDuplexHttpMessageSecurityBinding` значение .  
+2.  Внутри [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) элемент, создайте [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент с `name` атрибуту присвоено значение `FederationDuplexHttpMessageSecurityBinding`.  
   
-3.  Внутри элемента [\<привязка\>](../../../../docs/framework/misc/binding.md)[\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)`authenticationMode` `и присвойте атрибуту SecureConversation` значение .  
+3.  Внутри [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент, создайте [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент с `authenticationMode` атрибуту присвоено значение `SecureConversation`.  
   
-4.  Внутри элемента [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)`authenticationMode` `и присвойте атрибуту IssuedTokenForCertificate` `значение IssuedTokenForSslNegotiated` или .  
+4.  Внутри [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент, создайте [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) элемент с `authenticationMode` атрибут `IssuedTokenForCertificate` или `IssuedTokenForSslNegotiated`.  
   
-5.  После элемента [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<compositeDuplex\>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md).  
+5.  Следующая [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент, создать пустой [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) элемента.  
   
-6.  После элемента [\<compositeDuplex\>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md).  
+6.  Следующая [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) элемент, создать пустой [ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) элемента.  
   
-7.  После элемента [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<httpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+7.  Следующая [ \<oneWay >](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md) элемент, создать пустой [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md) элемента.  
   
-### Создание дуплексной федеративной пользовательской привязки с использованием режима безопасности сообщения TCP  
+### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-message-security-mode"></a>Создание дуплексной федеративной пользовательской привязки с использованием режима безопасности сообщения TCP  
   
-1.  В узле [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md).  
+1.  В [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) узел файла конфигурации, создавать [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) элемента.   
   
-2.  Внутри элемента [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)`name` `и присвойте атрибуту FederationDuplexTcpMessageSecurityBinding` значение .  
+2.  Внутри [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) элемент, создайте [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент с `name` атрибуту присвоено значение `FederationDuplexTcpMessageSecurityBinding`.  
   
-3.  Внутри элемента [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)`authenticationMode` `и присвойте атрибуту SecureConversation` значение .  
+3.  Внутри [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент, создайте [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент с `authenticationMode` атрибуту присвоено значение `SecureConversation`.  
   
-4.  Внутри элемента [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)`authenticationMode` `и присвойте атрибуту IssuedTokenForCertificate` `значение IssuedTokenForSslNegotiated` или .  
+4.  Внутри [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент, создайте [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) элемент с `authenticationMode` атрибут `IssuedTokenForCertificate` или `IssuedTokenForSslNegotiated`.  
   
-5.  После элемента [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<tcpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md).  
+5.  Следующая [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент, создать пустой [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) элемента.  
   
-### Создание дуплексной федеративной пользовательской привязки с использованием смешанного режима безопасности TCP  
+### <a name="to-create-a-duplex-federated-custom-binding-with-tcp-mixed-security-mode"></a>Создание дуплексной федеративной пользовательской привязки с использованием смешанного режима безопасности TCP  
   
-1.  В узле [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md).  
+1.  В [ \<привязки >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) узел файла конфигурации, создавать [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) элемента.   
   
-2.  Внутри элемента [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)`name` `и присвойте атрибуту FederationDuplexTcpTransportSecurityWithMessageCredentialBinding` значение .  
+2.  Внутри [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) элемент, создайте [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент с `name` атрибуту присвоено значение `FederationDuplexTcpTransportSecurityWithMessageCredentialBinding`.  
   
-3.  Внутри элемента [\<oneWay\>](../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)[\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)`authenticationMode` `и присвойте атрибуту SecureConversation` значение .  
+3.  Внутри [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент, создайте [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент с `authenticationMode` атрибуту присвоено значение `SecureConversation`.  
   
-4.  Внутри элемента [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<secureConversationBootstrap\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)`authenticationMode` `и присвойте атрибуту IssuedTokenForCertificate` `значение IssuedTokenForSslNegotiated` или .  
+4.  Внутри [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент, создайте [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) элемент с `authenticationMode` атрибут `IssuedTokenForCertificate` или `IssuedTokenForSslNegotiated`.  
   
-5.  После элемента [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)[\<sslStreamSecurity\>](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md).  
+5.  После [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент, создать пустой [ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) элемента.  
   
-6.  После элемента [\<sslStreamSecurity\>](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)[\<tcpTransport\>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md).  
+6.  Следующая [ \<sslStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md) элемент, создать пустой [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) элемента.  
   
-## Образец кода  
+## <a name="code-sample"></a>Образец кода  
   
-#### Образец с 3 привязками  
+#### <a name="sample-with-3-bindings"></a>Образец с 3 привязками  
   
 1.  Вставьте следующий код в свой файл конфигурации.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
-  
+```xml  
 <bindings>  
    <customBinding>  
       <binding name="FederationDuplexHttpMessageSecurityBinding">  
@@ -103,5 +105,4 @@ caps.handback.revision: 7
        </binding>              
     </customBinding>  
 </bindings>  
-  
 ```

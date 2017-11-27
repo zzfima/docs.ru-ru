@@ -1,25 +1,28 @@
 ---
-title: "ClientCredentials | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ClientCredentials
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 68a2fa36c8a4fa1fde3ca8d8aaf1898060ea972f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# ClientCredentials
+# <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class ClientCredentials : Behavior  
@@ -35,73 +38,73 @@ class ClientCredentials : Behavior
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс ClientCredentials не определяет никакие методы.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс ClientCredentials имеет следующие свойства.  
   
-### ClientCertificate  
+### <a name="clientcertificate"></a>ClientCertificate  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Сертификат X.509, используемый клиентом для проверки подлинности службы.  
   
-### HttpDigest  
+### <a name="httpdigest"></a>HttpDigest  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Текущие учетные данные дайджеста HTTP.  
   
-### IssuedToken  
+### <a name="issuedtoken"></a>IssuedToken  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Адрес конечной точки и привязка, используемые для связи с локальной службой маркеров безопасности.  
   
-### Peer  
+### <a name="peer"></a>Одноранговый узел  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Учетные данные, используемые одноранговым узлом для подтверждения своей подлинности при подключении к другим узлам в сетке.  
   
-### ServiceCertificate  
+### <a name="servicecertificate"></a>ServiceCertificate  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Сертификат X.509 службы.  
   
-### SupportInteractive  
+### <a name="supportinteractive"></a>SupportInteractive  
  Тип данных: boolean  
   
  Тип доступа: только для чтения  
   
  Логическое значение, определяющее, поддерживают ли учетные данные интерактивное согласование.  
   
-### UserName  
+### <a name="username"></a>UserName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя пользователя и пароль, используемые клиентом для подтверждения своей подлинности при подключении к службе.  
   
-### Windows  
+### <a name="windows"></a>Windows  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Учетные данные Windows, используемые клиентом для подтверждения своей подлинности при подключении к службе.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Description.ClientCredentials>

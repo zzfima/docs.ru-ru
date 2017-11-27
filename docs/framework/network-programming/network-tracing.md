@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - debugging [.NET Framework], network tracing
 - methods, network tracing
@@ -29,16 +24,15 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c8c915edee4fe23b1718f4820eff9998fa9e5836
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: faeb028733ef008f3862e95fde0412f51bf7d1c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Трассировка сети в .NET Framework
 Трассировка сети в .NET Framework предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Эта возможность полезна для отладки приложений на стадии разработки, а также для анализа развернутых приложений. Выходные данные трассировки сети можно настраивать с целью поддержки различных сценариев использования во время разработки и в производственной среде.  
@@ -51,8 +45,7 @@ ms.lasthandoff: 08/21/2017
 >  Данный член генерирует сведения трассировки, если в приложении включена трассировка сети. Дополнительные сведения о трассировке см. в разделе "Трассировка сети".  
   
 ## <a name="see-also"></a>См. также  
- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [Практическое руководство. Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
+ [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)  
+ [Практическое руководство. Настройка трассировки сети](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+ [Интерпретация сетевой трассировки](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Введение. Подготовка к инструментированию и трассировка](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
-

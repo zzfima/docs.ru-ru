@@ -1,38 +1,38 @@
 ---
-title: "Display of Asian Characters with the ImeMode Property | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Asian languages, displaying with ImeMode"
-  - "Chinese characters, displaying with ImeMode"
-  - "IME mode"
-  - "Japanese characters, displaying with ImeMode"
-  - "international applications [Windows Forms], character display"
-  - "international characters"
-  - "Korean characters"
-  - "Asian languages"
-  - "Input Method Editor (IME), mode"
-  - "localization [Windows Forms], character sets"
-  - "IMEMode property"
-  - "globalization [Windows Forms], character sets"
+title: "Отображение азиатских символов с помощью свойства ImeMode"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Asian languages [Windows Forms], displaying with ImeMode
+- Chinese characters [Windows Forms], displaying with ImeMode
+- IME mode
+- Japanese characters [Windows Forms], displaying with ImeMode
+- international applications [Windows Forms], character display
+- international characters
+- Korean characters
+- Asian languages
+- Input Method Editor (IME), mode
+- localization [Windows Forms], character sets
+- globalization [Windows Forms], character sets
 ms.assetid: c60ae399-0dab-4f07-9dea-6dbfb15ec0ae
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ba86b0c1343d84e65f0e3f9ff48a09b3a80a27a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Display of Asian Characters with the ImeMode Property
-Свойство <xref:System.Windows.Forms.Control.ImeMode%2A> используется формами и элементами управления для принудительного перехода к определенному режиму редактора метода ввода \(IME\).  Редактор метода ввода — это необходимый компонент для ввода текста на китайском, японском и корейском языках, так как количество знаков в этих системах письма превышает возможности кодирования обычной клавиатуры.  Например, может потребоваться разрешить для определенного текстового поля только знаки ASCII.  В таком случае можно установить для свойства <xref:System.Windows.Forms.Control.ImeMode%2A> значение <xref:System.Windows.Forms.ImeMode>, после чего пользователи смогут вводить в данное текстовое поле только знаки ASCII.  По умолчанию значение свойства <xref:System.Windows.Forms.Control.ImeMode%2A> равно <xref:System.Windows.Forms.ImeMode>, поэтому, если установить это свойство для формы, все элементы управления в форме унаследуют это значение.  Дополнительные сведения см. в разделах [Свойство Control.ImeMode](frlrfSystemWindowsFormsControlClassImeModeTopic) и [Перечисление ImeMode](frlrfSystemWindowsFormsImeModeClassTopic).  
+# <a name="display-of-asian-characters-with-the-imemode-property"></a>Отображение азиатских символов с помощью свойства ImeMode
+<xref:System.Windows.Forms.Control.ImeMode%2A> Свойство используется форм и элементов управления для принудительного определенный режим редактора метода ввода (IME). Редактор метода ввода — это необходимый компонент для написания сценариев на китайском, японском и корейском языках, так как количество символов в этих системах письменности превышает возможности кодирования обычной клавиатуры. Например, в определенном текстовом поле можно разрешить только символы ASCII. В этом случае можно задать <xref:System.Windows.Forms.Control.ImeMode%2A> свойства <xref:System.Windows.Forms.ImeMode> и пользователи только смогут ввести знаки ASCII данное текстовое поле. Значение по умолчанию <xref:System.Windows.Forms.Control.ImeMode%2A> свойство <xref:System.Windows.Forms.ImeMode>, поэтому если задать свойство для формы, все элементы управления в форме будут наследовать эту настройку. Дополнительные сведения см. в разделе <xref:System.Windows.Forms.Control.ImeMode%2A> ) и <xref:System.Windows.Forms.ImeMode>.  
   
-## См. также  
- [Globalizing Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ [Глобализация Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

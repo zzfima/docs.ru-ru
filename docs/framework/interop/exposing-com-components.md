@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c0fcf7bec289d64b1faceef00b01278fa45caab0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 26efd43a05252e657626063d7dd04b1020dace18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Предоставление клиентам .NET Framework доступа к COM-компонентам
 В этом разделе описывается процесс, в рамках которого существующий COM-компонент предоставляется управляемому коду. Сведения о разработке COM-серверов, которые тесно интегрируются с платформой .NET Framework, см. в разделе [Вопросы разработки для взаимодействия](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689).  
@@ -54,9 +47,8 @@ ms.lasthandoff: 08/21/2017
      Приложения взаимодействия рекомендуется развертывать в виде подписанных сборок со [строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md) в глобальном кэше сборок.  
   
 ## <a name="see-also"></a>См. также  
- [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)   
- [Вопросы разработки для взаимодействия](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)   
- [Пример COM-взаимодействия. Клиент .NET и COM-сервер](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)   
- [Независимость от языка и независимые от языка компоненты](../../../docs/standard/language-independence-and-language-independent-components.md)   
+ [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)  
+ [Вопросы разработки для взаимодействия](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)  
+ [Пример COM-взаимодействия. Клиент .NET и COM-сервер](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
+ [Независимость от языка и независимые от языка компоненты](../../../docs/standard/language-independence-and-language-independent-components.md)  
  [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-

@@ -1,40 +1,41 @@
 ---
-title: "LOB-объекты в Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Большие двоичные объекты (LOB) Oracle"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e04c8fcb56b497ab183e05a0d6f40cb3facfed73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# LOB-объекты в Oracle
-Поставщик данных .NET Framework для Oracle содержит класс <xref:System.Data.OracleClient.OracleLob>, который используется для работы с типами данных Oracle **LOB**.  
+# <a name="oracle-lobs"></a>Большие двоичные объекты (LOB) Oracle
+Поставщик данных .NET Framework для Oracle содержит <xref:System.Data.OracleClient.OracleLob> класс, который используется для работы с Oracle **LOB** типов данных.  
   
- Класс **OracleLob** может представлять один из следующих типов данных <xref:System.Data.OracleClient.OracleType>.  
+ **OracleLob** может принимать одно из следующих <xref:System.Data.OracleClient.OracleType> типы данных:  
   
 |Тип данных|Описание|  
-|----------------|--------------|  
-|**Blob**|Тип данных **BLOB**, содержащий двоичные данные размером до 4 гигабайт.  Сопоставляется с **массивом** данных, имеющих тип **Byte**.|  
-|**Clob**|Тип данных Oracle **CLOB**, содержащий символьные данные на основе кодировки сервера по умолчанию размером до 4 гигабайт.  Сопоставляется со **String**.|  
-|**NClob**|Тип данных Oracle **NCLOB**, содержащий символьные данные на основе национальной кодировки сервера размером до 4 гигабайт.  Сопоставляется со **String**.|  
+|---------------|-----------------|  
+|**BLOB-объект**|Oracle **большого двоичного ОБЪЕКТА** тип данных, который содержит двоичные данные с максимальным размером 4 гигабайта. Он сопоставляется с **массива** типа **байтов**.|  
+|**CLOB**|Oracle **CLOB** тип данных, содержащий символьные данные, в зависимости от символа по умолчанию, установленной на сервере, с максимальным размером 4 гигабайта. Он сопоставляется с **строка**.|  
+|**NClob**|Oracle **NCLOB** тип данных, содержащий символьные данные на основании национальной кодировки сервера размером до 4 гигабайт. Он сопоставляется с **строка**.|  
   
- Класс **OracleLob** отличается от <xref:System.Data.OracleClient.OracleBFile> в том, что данные хранятся на сервере, а не в физическом файле в операционной системе.  Кроме того, такой объект может быть предназначен для чтения и записи в отличие от объекта **OracleBFile**, который доступен только для чтения.  
+ **OracleLob** отличается от <xref:System.Data.OracleClient.OracleBFile> в том, что данные хранятся на сервере, а не в физическом файле в операционной системе. Это также может быть объект чтения и записи, в отличие от **OracleBFile**, который всегда доступен только для чтения.  
   
-## Создание, получение и запись LOB  
- Следующий пример на языке C\# демонстрирует создание объектов LOB в таблице Oracle, а также последующее получение и запись данных с использованием объектов **OracleLob**.  В примере показано использование объекта <xref:System.Data.OracleClient.OracleDataReader> и методов **OracleLob**: **Read** и **Write**.  В примере используются типы данных Oracle **BLOB**, **CLOB** и **NCLOB**.  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a>Создание, получение и запись LOB  
+ В следующем примере C# показано, как можно создание объектов LOB в таблице Oracle и получить и записать их в виде **OracleLob** объектов. В примере показано использование <xref:System.Data.OracleClient.OracleDataReader> объекта и **OracleLob** **чтения** и **записи** методы. В этом примере Oracle **большого двоичного ОБЪЕКТА**, **CLOB**, и **NCLOB** типов данных.  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.IO;              
 using System.Text;             
@@ -224,12 +225,10 @@ public class LobExample
 }  
 ```  
   
-## Создание временного объекта LOB  
- В следующем примере на языке C\# демонстрируется создание временного объекта LOB.  
+## <a name="creating-a-temporary-lob"></a>Создание временного объекта LOB  
+ В следующем примере на языке C# демонстрируется создание временного объекта LOB.  
   
- \[C\#\]  
-  
-```  
+```csharp  
 OracleConnection conn = new OracleConnection(  
   "server=test8172; integrated security=yes;");  
 conn.Open();  
@@ -258,6 +257,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## См. также  
- [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c9618213569766a6ae355a936a4b1f71a5046ef6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: eeda0c58e9b5e9f8b48e335849ce12f7e8d94a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="getting-started-with-net-native"></a>Начало работы с машинным кодом .NET
 При разработке нового приложения для Windows 10 или при миграции существующего приложения Магазина Windows можно использовать один и тот же набор процедур. Чтобы создать приложение [!INCLUDE[net_native](../../../includes/net-native-md.md)] , выполните следующие действия:  
@@ -69,11 +67,11 @@ ms.lasthandoff: 08/21/2017
  **Методы, основанные на отражении**  
  В некоторых случаях использование отражения в коде не очевидно. Некоторые общие интерфейсы API или шаблоны программирования не считаются частью API-интерфейса отражения, но используют отражение для успешного выполнения. К ним относятся следующие методы создания экземпляров типов и методы создания методов:  
   
--   метод <xref:System.Type.MakeGenericType%2A?displayProperty=fullName> ;  
+-   метод <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>;  
   
--   методы <xref:System.Array.CreateInstance%2A?displayProperty=fullName> и <xref:System.Type.MakeArrayType%2A?displayProperty=fullName>   
+-   методы <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> и <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>  
   
--   метод <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=fullName> ;  
+-   метод <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>;  
   
  Дополнительные сведения см. в разделе [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).  
   
@@ -123,11 +121,10 @@ ms.lasthandoff: 08/21/2017
 -   [Исключения среды выполнения в собственных приложениях .NET](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [NIB. Установка и конфигурация машинного кода .NET](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)   
- [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)   
- [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)   
- [API-интерфейсы, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)   
- [Сериализация и метаданные](../../../docs/framework/net-native/serialization-and-metadata.md)   
+ [Справочник по конфигурационному файлу директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [NIB. .NET Native и настройка](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md)  
+ [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
+ [API-интерфейсы, основанные на отражении](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+ [Сериализация и метаданные](../../../docs/framework/net-native/serialization-and-metadata.md)  
  [Миграция приложения для Магазина Windows в .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
-

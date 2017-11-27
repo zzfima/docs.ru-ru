@@ -1,27 +1,30 @@
 ---
-title: "Ограничения на вывод | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ограничения определения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 98ea3d5fa4427b391ef06b3fc6ace9a05dfb819a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Ограничения на вывод
-Процесс вывода схемы <xref:System.Data.DataSet> из XML\-кода может приводиться в различных схемах в зависимости от XML\-элементов в каждом документе.  Например, рассмотрим следующие XML\-документы.  
+# <a name="inference-limitations"></a>Ограничения определения
+Процесс вывода схемы <xref:System.Data.DataSet> из XML-кода может приводиться в различных схемах в зависимости от XML-элементов в каждом документе. Например, рассмотрим следующие XML-документы.  
   
  Document1:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element1>Text2</Element1>  
@@ -30,41 +33,41 @@ caps.handback.revision: 4
   
  Document2:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
 </DocumentElement>  
 ```  
   
- Из\-за того, что Element1 является повторяющимся элементом, для Document1 процесс вывода производит **DataSet** с именем DocumentElement и таблицу с именем Element1.  
+ Для «Document1», в процессе вывода создается **набора данных** с именем «DocumentElement» и таблица с именем «Элемент1», так как «Элемент1» является повторяющимся элементом.  
   
- **DataSet:** DocumentElement  
+ **Набор данных:** DocumentElement  
   
- **Table:** Element1  
+ **Таблица:** Element1  
   
-|Element1\_Text|  
+|Element1_Text|  
 |--------------------|  
 |Text1|  
 |Text2|  
   
- Однако для Document2 процесс вывода производит **DataSet** с именем NewDataSet и таблицу с именем DocumentElement. Element1 выводится в виде столбца, потому что не имеет атрибутов и дочерних элементов.  
+ Однако для «Document2», в процессе вывода создается **набора данных** с именем «NewDataSet» и таблица с именем «DocumentElement.» Element1 выводится в виде столбца, потому что не имеет атрибутов и дочерних элементов.  
   
- **DataSet:** NewDataSet  
+ **Набор данных:** NewDataSet  
   
- **Table:** DocumentElement  
+ **Таблица:** DocumentElement  
   
 |Element1|  
 |--------------|  
 |Text1|  
   
- Эти два XML\-документа, возможно, должны были выдавать одну и ту же схему, но процесс вывода дает значительно различающиеся результаты в зависимости от элементов, содержащихся в каждом документе.  
+ Эти два XML-документа, возможно, должны были выдавать одну и ту же схему, но процесс вывода дает значительно различающиеся результаты в зависимости от элементов, содержащихся в каждом документе.  
   
- Во избежание несоответствий, которые могут произойти при создании схемы из XML\-документа, при загрузке **набора данных** из XML\-кода рекомендуется явно задавать схему с помощью языка XSD или языка XDR.  Дополнительные сведения о явном задании схемы **DataSet** с помощью схемы XML см. в разделе [Выведение реляционной структуры DataSet из схемы XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ Чтобы избежать несоответствий, которые могут произойти при создании схемы из XML-документа, рекомендуется явно задавать схему с помощью языка определения схем XML (XSD) или XML-Data Reduced (XDR), при загрузке **DataSet** из XML-ФАЙЛ. Дополнительные сведения о явном определении **DataSet** схемы с XML-схемы, см. [наследование реляционной структуры набора данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
-## См. также  
- [Вывод реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Использование XML в DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Определение реляционной структуры набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Загрузка набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Загрузка сведений о схеме набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,40 +1,43 @@
 ---
-title: "Представление данных в виде службы (службы WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "начало работы, Службы WCF Data Services"
-  - "Службы WCF Data Services, настройка"
-  - "Службы WCF Data Services, начало работы"
+title: "Предоставление данных как службы (службы данных WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, configuring
+- getting started, WCF Data Services
+- WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 122d05d5e4bd7690f32b22453dccbfaab2fb7f13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Представление данных в виде службы (службы WCF Data Services)
-Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] интегрируются со средой Visual Studio, что упрощает определение служб для предоставления данных в качестве каналов [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].  Создание службы данных, предоставляющей канал [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], включает следующие основные шаги:  
+# <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Предоставление данных как службы (службы данных WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]интегрируется с Visual Studio, чтобы можно было упрощает определение служб для предоставления данных в качестве [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. Создание службы данных, который предоставляет [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала состоит из следующих основных этапов:  
   
-1.  **Определите** **модель данных**.  Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] стандартно поддерживают модели данных на основе [Платформа ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  Для получения дополнительной информации см. [Как создать службу данных с использованием источника данных ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
+1.  **Определение** **модели данных**. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]поддерживаемые модели данных, которые основаны на [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md). Дополнительные сведения см. в разделе [как: создание службы данных с помощью источника данных Entity Framework ADO.NET](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   
-     Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают также модели данных на основе объектов CLR, возвращающих экземпляр интерфейса <xref:System.Linq.IQueryable%601>.  Это позволяет развертывать службы данных, основанные на списках, массивах и коллекциях платформы .NET Framework. Чтобы создавать, обновлять и удалять операции в этих структурах данных, необходимо также реализовать интерфейс <xref:System.Data.Services.IUpdatable>.  Для получения дополнительной информации см. [Как создать службу данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+     Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают также модели данных на основе объектов CLR, возвращающих экземпляр интерфейса <xref:System.Linq.IQueryable%601>. Это позволяет развертывать службы данных на основе списков, массивов и коллекций .NET Framework. Для поддержки создания, обновления и удаления элементов этих структур данных необходимо также реализовать интерфейс <xref:System.Data.Services.IUpdatable>. Дополнительные сведения см. в разделе [как: создание службы данных с помощью поставщика отражения](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
-     Для более сложных сценариев службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включают набор поставщиков, позволяющий определить модель данных на основе типов данных с поздним связыванием.  Для получения дополнительной информации см. [Специализированные поставщики служб данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
+     Для более сложных сценариев [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включает в себя набор поставщиков, которые позволяют определить модель данных на основе типов данных с поздним связыванием. Дополнительные сведения см. в разделе [настраиваемых поставщиков данных](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
   
-2.  **Создание службы данных.** Самая базовая служба данных предоставляет класс, производный от класса <xref:System.Data.Services.DataService%601>, с типом `T`, представляющим имя контейнера сущностей, квалифицированное пространством имен.  Для получения дополнительной информации см. [Определение службы WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).  
+2.  **Создание службы данных.** Самая базовая служба данных предоставляет класс, производный от класса <xref:System.Data.Services.DataService%601> , с типом `T` , представляющим имя контейнера сущностей, квалифицированное пространством имен. Дополнительные сведения см. в разделе [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).  
   
-3.  **Настройте службу данных.** По умолчанию [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] отключает доступ к ресурсам, предоставляемым контейнером сущностей. Интерфейс <xref:System.Data.Services.DataServiceConfiguration> позволяет настроить доступ к ресурсам и операциям службы, задать поддерживаемую версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] и определить другие разновидности поведения в рамках всей службы, такие как пакетная обработка или максимальное количество сущностей, которые могут быть возвращены в одном ответе. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
+3.  **Настройка службы данных.** По умолчанию службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] запрещают доступ к ресурсам, предоставляемым контейнером сущностей. Интерфейс <xref:System.Data.Services.DataServiceConfiguration> позволяет настроить доступ к ресурсам и операциям службы, задать поддерживаемую версию [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], а также определить другие особенности поведения службы, такие как использование пакетирования или максимальное количество сущностей, которые могут быть возвращены в одном ответе. Дополнительные сведения см. в разделе [Настройка службы данных](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
- Пример создания простой службы данных на основе образца базы данных Northwind см. в разделе [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Пример создания простой службы данных, основанный на образце базы данных "Борей" см. в разделе [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
-## См. также  
- [Приступая к работе](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)   
- [Общие сведения](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+## <a name="see-also"></a>См. также  
+ [Начало работы](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
+ [Обзор набора средств Visual Studio для Unity](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)

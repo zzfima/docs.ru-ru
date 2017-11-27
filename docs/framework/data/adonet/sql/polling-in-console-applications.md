@@ -1,32 +1,36 @@
 ---
-title: "Опрос в приложениях командной строки | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Выполнение опросов в консольных приложениях"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Опрос в приложениях командной строки
-Асинхронные операции в ADO.NET позволяют запускать трудоемкие операции базы данных в одном потоке, а остальные задачи выполнять в другом потоке.  Однако в большинстве сценариев в конечном итоге достигается положение, в котором не следует продолжать работу приложения, пока не завершится операция базы данных.  В таких случаях полезно опросить асинхронную операцию, чтобы определить, завершена ли эта операция.  
+# <a name="polling-in-console-applications"></a>Выполнение опросов в консольных приложениях
+Асинхронные операции в ADO.NET позволяют запускать трудоемкие операции базы данных в одном потоке, а остальные задачи выполнять в другом потоке. Однако в большинстве сценариев в конечном итоге достигается положение, в котором не следует продолжать работу приложения, пока не завершится операция базы данных. В таких случаях полезно опросить асинхронную операцию, чтобы определить, завершена ли эта операция.  
   
  Для выяснения того, завершена ли операция, можно использовать свойство <xref:System.IAsyncResult.IsCompleted%2A>.  
   
-## Пример  
- В следующем приложении командной строки происходит асинхронное обновление данных в образце базы данных **AdventureWorks**.  Для моделирования длительного процесса в данном примере в текст команды вставлена инструкция WAITFOR.  Обычно замедление выполнения команд не производится, однако в данном случае это упрощает демонстрацию асинхронного поведения.  
+## <a name="example"></a>Пример  
+ Следующее консольное приложение обновляет данные в **AdventureWorks** образца базы данных, выполняет асинхронное. Для моделирования длительного процесса в данном примере в текст команды вставлена инструкция WAITFOR. Обычно замедление выполнения команд не производится, однако в данном случае это упрощает демонстрацию асинхронного поведения.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
   
@@ -102,9 +106,7 @@ Module Module1
 End Module   
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -198,6 +200,6 @@ class Class1
 }  
 ```  
   
-## См. также  
- [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,31 +1,32 @@
 ---
-title: "Элемент управления ContextMenuStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "контекстные меню"
-  - "ContextMenuStrip - элемент управления [Windows Forms]"
-  - "контекстные меню"
+title: "Элемент управления ContextMenuStrip"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- context menus
+- ContextMenuStrip control [Windows Forms]
+- shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a6c9ced35b68cf1c3bbb216f0b34b6eabe9dba1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент управления ContextMenuStrip
-Элемент управления <xref:System.Windows.Forms.ContextMenuStrip> предоставляет контекстное меню, связываемое с каким\-либо элементом управления.  
+# <a name="contextmenustrip-control"></a>Элемент управления ContextMenuStrip
+Элемент управления <xref:System.Windows.Forms.ContextMenuStrip> предоставляет контекстное меню, связываемое с каким-либо элементом управления.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об элементе управления ContextMenuStrip](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
@@ -36,7 +37,7 @@ caps.handback.revision: 9
  Описание добавления доступных для выбора пунктов в <xref:System.Windows.Forms.ContextMenuStrip>.  
   
  [Практическое руководство. Настройка полей флажков и значков для объекта ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
- Описание настройки <xref:System.Windows.Forms.ContextMenuStrip> путем задания свойств полей флажков и значков различными способами.  
+ Описывается настройка <xref:System.Windows.Forms.ContextMenuStrip> путем задания свойств полей флажков и значков различными способами.  
   
  [Практическое руководство. Включение полей флажков и значков для элементов управления ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
  Описание порядка включения и выключения полей флажков <xref:System.Windows.Forms.ContextMenuStrip>.  
@@ -44,9 +45,9 @@ caps.handback.revision: 9
  [Практическое руководство. Обработка события Opening компонента ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  Описание настройки поведения элемента управления <xref:System.Windows.Forms.ContextMenuStrip> путем обработки события <xref:System.Windows.Forms.ToolStripDropDown.Opening>.  
   
- См. также [Диалоговое окно задач ContextMenuStrip](http://msdn.microsoft.com/library/ms233646%20\(v=vs.110\)) или [Редактор коллекции элементов ContextMenuStrip](http://msdn.microsoft.com/library/ms233641%20\(v=vs.110\)).  
+ См. также [диалоговое окно задач ContextMenuStrip](http://msdn.microsoft.com/library/ms233646\(v=vs.110\)) или [редактор коллекции элементов ContextMenuStrip](http://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.MenuStrip>  
  Описание возможностей класса <xref:System.Windows.Forms.MenuStrip>, который предоставляет систему меню для формы.  
   
@@ -56,6 +57,6 @@ caps.handback.revision: 9
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  Описание возможностей класса <xref:System.Windows.Forms.ToolStripMenuItem>, который представляет отдельные пункты, отображаемые в <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+## <a name="related-sections"></a>Связанные разделы  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

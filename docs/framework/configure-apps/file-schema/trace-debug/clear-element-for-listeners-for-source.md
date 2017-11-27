@@ -1,69 +1,73 @@
 ---
-title: "Элемент &lt;clear&gt; для &lt;listeners&gt; для &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> - элемент для <listeners> для <source>"
-  - "элемент clear для элемента <listeners> для элемента <source>"
+title: "&lt;Очистить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
+helpviewer_keywords:
+- <clear> element for <listeners> for <source>
+- clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d5e8518f2ca8a04d91f5bfdd9f6389c741d0278e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;clear&gt; для &lt;listeners&gt; для &lt;source&gt;
-Очистка коллекции `Listeners` для источника трассировки.  
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Очистить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;
+Очищает коллекцию `Listeners` для источника трассировки.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.Diagnostics >  
+\<источники >  
+\<Источник >  
+\<прослушиватели >  
+\<Очистить >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <clear/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
-|`sources`|Элемент, содержащий источники трассировки, инициирующие трассировочные сообщения.|  
-|`source`|Источник трассировки, инициирующий сообщения трассировки.|  
-|`listeners`|Задает прослушиватели, предназначенные для сбора, хранения и маршрутизации сообщений.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
+|`sources`|Содержит источники трассировки, которые инициируют сообщения трассировки.|  
+|`source`|Содержит источник трассировки, который инициирует сообщения трассировки.|  
+|`listeners`|Задает прослушиватели для сбора, хранения и маршрутизации сообщений.|  
   
-## Заметки  
- Элемент `<clear>` удаляет всех прослушивателей из коллекции `Listeners` источника трассировки, включая <xref:System.Diagnostics.DefaultTraceListener>.  Элемент `<clear>` можно использовать перед элементом `<add>`, чтобы убедиться в том, что в коллекции отсутствуют другие активные прослушиватели.  
+## <a name="remarks"></a>Примечания  
+ `<clear>` Элемент удаляет все прослушиватели `Listeners` сбор данных для источника трассировки, включая <xref:System.Diagnostics.DefaultTraceListener>. Можно использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы быть уверенным, отсутствуют другие активные прослушиватели в коллекции.  
   
-## Файл конфигурации  
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+## <a name="configuration-file"></a>Файл конфигурации  
+ Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
   
-## Пример  
- В следующем примере показано, как использовать элемент `<clear>` перед элементами `<add>`, чтобы добавить прослушиватели `console` и `textListener` к коллекции `Listeners` источника трассировки `TraceSourceApp`.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать `<clear>` элемент перед использованием `<add>` элементы для добавления прослушивателей `console` и `textListener` для `Listeners` коллекции для источника трассировки `TraceSourceApp`.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -89,8 +93,8 @@ caps.handback.revision: 7
 </configuration>   
 ```  
   
-## См. также  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

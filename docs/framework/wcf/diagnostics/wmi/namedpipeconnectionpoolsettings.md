@@ -1,25 +1,28 @@
 ---
-title: "NamedPipeConnectionPoolSettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: NamedPipeConnectionPoolSettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cf9c39334289cb30d1a01917c0be37da02fcdc5b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# NamedPipeConnectionPoolSettings
+# <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class NamedPipeConnectionPoolSettings  
@@ -30,38 +33,38 @@ class NamedPipeConnectionPoolSettings
 };  
 ```  
   
-## Методы  
+## <a name="methods"></a>Методы  
  Класс NamedPipeConnectionPoolSettings не определяет никаких методов.  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
  Класс NamedPipeConnectionPoolSettings имеет следующие свойства.  
   
-### GroupName  
+### <a name="groupname"></a>GroupName  
  Тип данных: string  
   
  Тип доступа: только для чтения  
   
  Имя группы пула подключений, используемого элементом привязки.  
   
-### IdleTimeout  
+### <a name="idletimeout"></a>IdleTimeout  
  Тип данных: datetime  
   
  Тип доступа: только для чтения  
   
  Максимальное время, в течение которого подключение может простаивать перед отключением.  
   
-### MaxOutboundConnectionsPerEndpoint  
+### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  Тип данных: sint32  
   
  Тип доступа: только для чтения  
   
  Максимальное число исходящих соединений для каждой конечной точки на клиенте.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |MOF|Объявлено в файле Servicemodel.mof.|  
-|---------|-----------------------------------------|  
-|Пространство имен|Определено в root\\ServiceModel.|  
+|---------|-----------------------------------|  
+|Пространство имен|Определено в root\ServiceModel.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

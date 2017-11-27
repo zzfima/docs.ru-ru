@@ -1,28 +1,38 @@
 ---
-title: "&lt;authentication&gt; элемента &lt;clientCertificate&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;authentication&gt; элемента &lt;clientCertificate&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4eb125727d68d1618b32d21612ecfac28eaa5b6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;authentication&gt; элемента &lt;clientCertificate&gt;
+# <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;authentication&gt; элемента &lt;clientCertificate&gt;
 Указывает расширения функциональности аутентификации для сертификатов клиентов, используемых службой.  
   
-## Синтаксис  
+ \<система. ServiceModel >  
+\<поведения >  
+\<serviceBehaviors >  
+\<поведение >  
+\<serviceCredentials >  
+\<clientCertificate >  
+\<Проверка подлинности >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <authentication  
 customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
 certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
@@ -33,62 +43,62 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описываются атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|customCertificateValidatorType|Необязательная строка.  Тип и сборка, используемые для проверки пользовательского типа.  Этот атрибут должен быть задан, когда `certificateValidationMode` имеет значение `Custom`.|  
-|certificateValidationMode|Необязательное перечисление.  Задает один из режимов для проверки учетных данных.  Это атрибут типа [System.Servicemodel.Security.X509CertificateValidationMode](assetId:///System.Servicemodel.Security.X509CertificateValidationMode?qualifyHint=False&amp;autoUpgrade=True).  Если свойству присвоено значение `Custom`, также необходимо указать свойство `customCertificateValidator`.  Значение по умолчанию — `ChainTrust`.|  
-|includeWindowsGroups|Необязательный логический атрибут.  Указывает, включены ли группы Windows в контекст безопасности.  Установка для этого атрибута значения `true` снижает производительность, поскольку приводит к расширению всей группы.  Если нет необходимости устанавливать список групп, к которым принадлежит пользователь, установите для этого атрибута значение `false`.|  
-|mapClientCertificateToWindowsAcccount|Логическое.  Указывает, может ли клиент сопоставляться с удостоверением Windows с помощью сертификата.  Для этого необходимо включить службу Active Directory.|  
-|revocationMode|Необязательное перечисление.  Один из режимов, используемых для проверки списков отозванных сертификатов \(RCL\).  Значение по умолчанию — `Online`.  Это значение не учитывается при использовании безопасности транспорта HTTP.|  
-|trustedStoreLocation|Необязательное перечисление.  Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`.  Данное значение используется при согласовании сертификата службы для клиента.  Проверка выполняется для хранилища **Доверенные лица** в указанном местоположении хранилища.  Значение по умолчанию — `CurrentUser`.|  
+|---------------|-----------------|  
+|customCertificateValidatorType|Необязательная строка. Тип и сборка, используемые для проверки пользовательского типа. Этот атрибут должен быть задан, когда `certificateValidationMode` имеет значение `Custom`.|  
+|certificateValidationMode|Необязательное перечисление. Задает один из режимов для проверки учетных данных. Это атрибут типа <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Если свойству присвоено значение <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom?displayProperty=nameWithType>, также необходимо указать свойство `customCertificateValidator`. Значение по умолчанию — <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust?displayProperty=nameWithType>.|  
+|includeWindowsGroups|Необязательный логический атрибут. Указывает, включены ли группы Windows в контекст безопасности. Установка для этого атрибута значения `true` снижает производительность, поскольку приводит к расширению всей группы. Если нет необходимости устанавливать список групп, к которым принадлежит пользователь, установите для этого атрибута значение `false`.|  
+|mapClientCertificateToWindowsAcccount|Логическое. Указывает, может ли клиент сопоставляться с удостоверением Windows с помощью сертификата. Для этого необходимо включить службу Active Directory.|  
+|revocationMode|Необязательное перечисление. Один из режимов, используемых для проверки списков отозванных сертификатов (RCL). Значение по умолчанию — `Online`. Это значение не учитывается при использовании безопасности транспорта HTTP.|  
+|trustedStoreLocation|Необязательное перечисление. Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Проверка выполняется для **доверенные лица** хранения в указанном местоположении хранилища. Значение по умолчанию — `CurrentUser`.|  
   
-## Атрибут customCertificateValidatorType  
+## <a name="customcertificatevalidatortype-attribute"></a>Атрибут customCertificateValidatorType  
   
 |Значение|Описание|  
-|--------------|--------------|  
+|-----------|-----------------|  
 |Строковое|Задает имя типа и сборку, а также другие данные, используемые для поиска типа.|  
   
-## Атрибут certificateValidationMode  
+## <a name="certificatevalidationmode-attribute"></a>Атрибут certificateValidationMode  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|Перечисление|Одно из следующих значений: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Дополнительные сведения см. в разделе [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|-----------|-----------------|  
+|Перечисление|Одно из следующих значений: None, PeerTrust, ChainTrust, PeerOrChainTrust, Custom.<br /><br /> Дополнительные сведения см. в разделе [работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
-## Атрибут revocationMode  
-  
-|Значение|Описание|  
-|--------------|--------------|  
-|Перечисление|Одно из следующих значений: NoCheck, Online, Offline.  Дополнительные сведения см. в разделе [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
-  
-## Атрибут trustedStoreLocation  
+## <a name="revocationmode-attribute"></a>Атрибут revocationMode  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|Перечисление|Одно из следующих значений: `LocalMachine` или `CurrentUser`.  Значение по умолчанию — `CurrentUser`.  Если клиентское приложение выполняется под учетной записью системы, сертификат обычно находится в расположении `LocalMachine`.  Если клиентское приложение выполняется под учетной записью пользователя, то сертификат обычно находится в расположении `CurrentUser`.|  
+|-----------|-----------------|  
+|Перечисление|Одно из следующих значений: NoCheck, Online, Offline. Дополнительные сведения см. в разделе [работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
   
-### Дочерние элементы  
+## <a name="trustedstorelocation-attribute"></a>Атрибут trustedStoreLocation  
+  
+|Значение|Описание|  
+|-----------|-----------------|  
+|Перечисление|Одно из следующих значений: `LocalMachine` или `CurrentUser`. Значение по умолчанию — `CurrentUser`. Если клиентское приложение выполняется под учетной записью системы, сертификат обычно находится в расположении `LocalMachine`. Если клиентское приложение выполняется под учетной записью пользователя, то сертификат обычно находится в расположении `CurrentUser`.|  
+  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<clientCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.|  
+|-------------|-----------------|  
+|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Определяет сертификат X.509, используемый для проверки подлинности клиента по отношению к службе.|  
   
-## Заметки  
- Элемент `<authentication>` соответствует классу <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>.  Это дает возможность настраивать способ проверки подлинности клиентов.  Для атрибута `certificateValidationMode` можно задать значение `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` или `Custom`.  По умолчанию установлен уровень `ChainTrust`, который определяет, что каждый сертификат должен находиться в иерархии сертификатов, заканчивающейся *корневым центром* на вершине цепи.  Это наиболее безопасный режим.  Также можно установить значение `PeerOrChainTrust`, в этом случае будут приниматься как самостоятельно выдаваемые сертификаты \(доверие одноранговой группы\), так и сертификаты, которые находятся в цепи доверия.  Данное значение используется при разработке и отладке клиентов и служб, так как самостоятельно выданные сертификаты не нужно приобретать у доверенного центра сертификации.  При развертывании клиента вместо этого значения следует использовать значение `ChainTrust`.  
+## <a name="remarks"></a>Примечания  
+ Элемент `<authentication>` соответствует классу <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>. Это дает возможность настраивать способ проверки подлинности клиентов. Для атрибута `certificateValidationMode` можно задать значение `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust` или `Custom`. По умолчанию имеет значение уровень `ChainTrust`, которое указывает, что каждый сертификат должен находиться в иерархии сертификатов, заканчивающейся *корневой центр* в верхней части цепочки. Это наиболее безопасный режим. Также можно установить значение `PeerOrChainTrust`, в этом случае будут приниматься как самостоятельно выдаваемые сертификаты (доверие одноранговой группы), так и сертификаты, которые находятся в цепи доверия. Данное значение используется при разработке и отладке клиентов и служб, так как самостоятельно выданные сертификаты не нужно приобретать у доверенного центра сертификации. При развертывании клиента вместо этого значения следует использовать значение `ChainTrust`.  
   
- Также можно установить значение `Custom`.  При установке значения `Custom` необходимо также задать атрибут `customCertificateValidatorType` для сборки и тип, который используется при проверке сертификата.  Для создания собственного пользовательского модуля проверки необходимо наследование от абстрактного класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  Дополнительные сведения см. в разделе [Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ Также можно установить значение `Custom`. При установке значения `Custom` необходимо также задать атрибут `customCertificateValidatorType` для сборки и тип, который используется при проверке сертификата. Для создания собственного пользовательского модуля проверки необходимо наследование от абстрактного класса <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Дополнительные сведения см. в разделе [как: создание службы, использующей пользовательское средство проверки сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере кода задается сертификат X.509 и пользовательский тип проверки в элементе `<authentication>`.  
   
-```  
+```xml  
 <serviceBehaviors>  
  <behavior name="myServiceBehavior">  
   <clientCertificate>  
@@ -107,12 +117,12 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 </serviceBehaviors>  
 ```  
   
-## См. также  
- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>   
- <xref:System.ServiceModel.Security.X509CertificateValidationMode>   
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>   
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>   
- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>   
- [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>  
+ <xref:System.ServiceModel.Security.X509CertificateValidationMode>  
+ <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>  
+ <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>  
+ <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>  
+ [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [Как: создание службы, использующей пользовательский сертификат проверяющий элемент управления](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

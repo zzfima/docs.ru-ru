@@ -1,37 +1,40 @@
 ---
-title: "Элемент &lt;listeners&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<listeners> - элемент для <source>"
-  - "элемент listeners для элемента <source>"
+title: "&lt;прослушиватели&gt; элемент для &lt;источника&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
+helpviewer_keywords:
+- listeners element for <source>
+- <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 71b11cbc34bdbb5d414aa250ea2c2fce85cfac0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;listeners&gt;
-Добавление или удаление прослушивателей в коллекции <xref:System.Diagnostics.TraceSource.Listeners%2A> для свойства <xref:System.Diagnostics.TraceSource>.  Прослушиватель направляет данные трассировки соответствующему целевому объекту, например в журнал событий, окно или текстовый файл.  
+# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;прослушиватели&gt; элемент для &lt;источника&gt;
+Добавляет или удаляет прослушиватели <xref:System.Diagnostics.TraceSource.Listeners%2A> коллекции для <xref:System.Diagnostics.TraceSource>. Прослушиватель направляет данные трассировки соответствующему целевому объекту, например журнал, окно или текстовый файл.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.Diagnostics >  
+\<источники >  
+\<Источник >  
+\<прослушиватели > элемент  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <listeners>   
   <add>...</add>  
   <remove ... />  
@@ -39,38 +42,38 @@ caps.handback.revision: 10
 </listeners>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
-|[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Удаляет прослушиватель из коллекции `Listeners`.|  
-|[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Очистка коллекции `Listeners` для источника трассировки.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором устанавливается переключатель трассировки.|  
-|`sources`|Элемент, содержащий источники трассировки, инициирующие трассировочные сообщения.|  
-|`source`|Источник трассировки, инициирующий сообщения трассировки.|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
+|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Удаление прослушивателя из `Listeners` коллекции.|  
+|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Очищает коллекцию `Listeners` для источника трассировки.|  
   
-## Заметки  
+### <a name="parent-elements"></a>Родительские элементы  
   
-## Файл конфигурации  
- Этот элемент может быть использован в файле конфигурации компьютера \(Machine.config\) и в файле конфигурации приложения.  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
+|`sources`|Содержит источники трассировки, которые инициируют сообщения трассировки.|  
+|`source`|Содержит источник трассировки, который инициирует сообщения трассировки.|  
   
-## Пример  
- В следующем примере кода показано, как с помощью элемента `<listeners>`  добавить прослушиватель трассировки консоли в источник `mySource` и удалить прослушиватель трассировки по умолчанию.  
+## <a name="remarks"></a>Примечания  
   
-```  
+## <a name="configuration-file"></a>Файл конфигурации  
+ Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
+  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как использовать `<listeners>` элемента, который требуется добавить прослушиватель трассировки консоли для `mySource` источника и удалить прослушиватель трассировки по умолчанию.  
+  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -93,7 +96,7 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Diagnostics.TraceListener>   
- [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Diagnostics.TraceListener>  
+ [Схема параметров трассировки и отладки](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Прослушиватели трассировки](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

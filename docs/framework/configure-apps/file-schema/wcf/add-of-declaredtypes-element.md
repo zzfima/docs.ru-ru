@@ -1,33 +1,40 @@
 ---
-title: "&lt; add&gt; элемента &lt;declaredTypes&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "контракты данных"
-  - "DataContractAttribute"
-  - "DataContractSerializer"
-  - "dataContractSerializer, элемент"
+title: "&lt; add&gt; элемента &lt;declaredTypes&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data contracts
+- dataContractSerializer element
+- DataContractSerializer
+- DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 699d18b4c49d2915724309d96d4ad501b98601eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt; add&gt; элемента &lt;declaredTypes&gt;
-Добавляет тип, используемый <xref:System.Runtime.Serialization.DataContractSerializer> во время десериализации.  В каждый объявленный тип включены известные типы, которые будут возвращены как поле или свойство объявленного типа.  
+# <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a>&lt; add&gt; элемента &lt;declaredTypes&gt;
+Добавляет тип, используемый <xref:System.Runtime.Serialization.DataContractSerializer> во время десериализации. В каждый объявленный тип включены известные типы, которые будут возвращены как поле или свойство объявленного типа.  
   
-## Синтаксис  
+ system.runtime.serialization  
+\<dataContractSerializer >  
+\<declaredTypes >  
+\<Добавить > из \<declaredTypes >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <add type="String">  
    <knownType type="String">  
        <parameter index="Integer"  
@@ -36,38 +43,38 @@ caps.handback.revision: 12
 </add>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|тип|Обязательный строковый атрибут.<br /><br /> Задает имя типа \(в том числе пространство имен\), имя сборки, номер версии, язык и региональные параметры и маркер открытого ключа.|  
+|---------------|-----------------|  
+|тип|Обязательный строковый атрибут.<br /><br /> Задает имя типа (в том числе пространство имен), имя сборки, номер версии, язык и региональные параметры и маркер открытого ключа.|  
   
-### Дочерние элементы  
-  
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<knownType\>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Задает известный тип для добавляемого объявленного типа.  Если объявленный тип является универсальным типом, необходимо также добавить элемент параметра к элементу `<knownType>`, чтобы указать, какой универсальный параметр будет использоваться для возвращения известного типа.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<declaredTypes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|Содержит типы, для которых необходимы известные типы во время десериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|-------------|-----------------|  
+|[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Задает известный тип для добавляемого объявленного типа. Если объявленный тип является универсальным типом, необходимо также добавить элемент параметра к элементу `<knownType>`, чтобы указать, какой универсальный параметр будет использоваться для возвращения известного типа.|  
   
-## Заметки  
- Дополнительные сведения об известных типах см. в разделах [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
+### <a name="parent-elements"></a>Родительские элементы  
   
- Пример использования этого элемента см. в разделе [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md).  
+|Элемент|Описание|  
+|-------------|-----------------|  
+|[\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|Содержит типы, для которых необходимы известные типы во время десериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.  
+  
+ В разделе [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) пример использования этого элемента.  
   
 > [!NOTE]
->  При добавлении типа <xref:System.Object> как `<declaredType>` возникает <xref:System.Configuration.ConfigurationErrorsException>.  Это обусловлено тем, что тип <xref:System.Object> нельзя использовать как объявленный тип в конфигурации.  
+>  При добавлении типа <xref:System.Object> как `<declaredType>` возникает <xref:System.Configuration.ConfigurationErrorsException>. Это обусловлено тем, что тип <xref:System.Object> нельзя использовать как объявленный тип в конфигурации.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```xml  
 <add type="MyCompany.Library.Shape,   
            MyAssembly, Version=2.0.0.0, Culture=neutral,  
            PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
@@ -78,8 +85,8 @@ caps.handback.revision: 12
 </add>  
 ```  
   
-## См. также  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)   
- [\<add\> of \<declaredTypes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ [Известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<Добавить > из \<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

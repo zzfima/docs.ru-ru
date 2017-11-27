@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Изменения пространства имен System.Uri в версии 2.0
-В класс <xref:System.Uri?displayProperty=fullName> были внесены некоторые изменения. Эти изменения были направлены на исправление некорректного поведения, повышение удобства использования и улучшение безопасности.  
+В класс <xref:System.Uri?displayProperty=nameWithType> были внесены некоторые изменения. Эти изменения были направлены на исправление некорректного поведения, повышение удобства использования и улучшение безопасности.  
   
 ## <a name="obsolete-and-deprecated-members"></a>Устаревшие и нерекомендуемые члены  
  Конструкторы:  
@@ -85,5 +79,4 @@ ms.lasthandoff: 08/21/2017
 -   Сжатие пути URI фиксировано таким образом, чтобы неработающий URI не мог выполнять обход файловой системы на уровне выше корневого.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Uri?displayProperty=fullName>
-
+ <xref:System.Uri?displayProperty=nameWithType>

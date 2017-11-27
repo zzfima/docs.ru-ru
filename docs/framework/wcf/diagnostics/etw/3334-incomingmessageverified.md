@@ -1,35 +1,38 @@
 ---
-title: "3334 - IncomingMessageVerified | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3334 - IncomingMessageVerified
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9fed3d02-72d7-4581-9abb-aede74331e22
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cc386787e65d3775ea37466555a7866c285e0455
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 3334 - IncomingMessageVerified
-## Свойства  
+# <a name="3334---incomingmessageverified"></a>3334 - IncomingMessageVerified
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
 |Идентификатор|3334|  
 |Ключевые слова|Безопасность ServiceModel|  
 |Уровень|Verbose|  
-|Канал|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Канал|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Описание  
+## <a name="description"></a>Описание  
  Это событие создается, когда входящее сообщение проверено.  
   
-## Сообщение  
+## <a name="message"></a>Сообщение  
  Входящее сообщение проверено.  
   
-## Подробные сведения
+## <a name="details"></a>Подробные сведения

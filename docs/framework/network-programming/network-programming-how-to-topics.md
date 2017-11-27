@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - network resources
 - networks [.NET Framework], programming how-tos
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6e63c65f0ebef37e854bd3cfd62a33e396470a57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b6e63c0db9815c7bcfc32ec962e3f85362cce4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-programming-how-to-topics"></a>Практические руководства по сетевому программированию
 Ниже приведены ссылки на разделы руководства по сетевому программированию, находящиеся в основной документации.  
@@ -93,7 +87,6 @@ ms.lasthandoff: 08/21/2017
 -   [Практическое руководство. Проверка связи с узлом](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>См. также  
- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)   
+ [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)  
+ [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Примеры сетевых приложений для .NET в галерее кода MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-

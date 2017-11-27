@@ -1,65 +1,73 @@
 ---
-title: "&lt;claimsAuthorizationManager&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;claimsAuthorizationManager&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4b4d86204d5f7225f167be125ce017488c851e98
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;claimsAuthorizationManager&gt;
-Регистрирует диспетчер авторизации заявок для входящих утверждений.  
+# <a name="ltclaimsauthorizationmanagergt"></a>&lt;claimsAuthorizationManager&gt;
+Регистрирует диспетчера авторизации утверждений для входящих утверждений.  
   
-## Синтаксис  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<claimsAuthorizationManager >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <claimsAuthorizationManager type = xs:string>  
-      <optionalConfigurationElements />  
-    </claimsAuthorizationManager>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <claimsAuthorizationManager type = xs:string>  
+      <optionalConfigurationElements />  
+    </claimsAuthorizationManager>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние элементы и родительские элементы.  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
+ В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|type|Пользовательский тип, производный от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса.  Дополнительные сведения об указании `type` атрибута см [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).|  
+|---------------|-----------------|  
+|type|Пользовательский тип, который является производным от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса. Дополнительные сведения о способах указания `type` см. в разделе [ссылок на пользовательские типы](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
   
-### Дочерние элементы  
- Если не `type` атрибут, или, если `type` атрибут ссылки на <xref:System.Security.Claims.ClaimsAuthenticationManager> класс, `<claimsAuthorizationManager>` элемент не принимает дочерние элементы; Тем не менее, классы, производные от <xref:System.Security.Claims.ClaimsAuthorizationManager> можно определить дочерние элементы конфигурации.  
+### <a name="child-elements"></a>Дочерние элементы  
+ При наличии не `type` атрибут, или если `type` ссылки на атрибуты <xref:System.Security.Claims.ClaimsAuthenticationManager> класса `<claimsAuthorizationManager>` элемент не принимает дочерних элементов; Однако классы, производные от <xref:System.Security.Claims.ClaimsAuthorizationManager> можно определить дочерние элементы конфигурации.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Задает параметры уровня службы удостоверений.|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы удостоверений.|  
   
-## Заметки  
- Поведение по умолчанию, предоставляемые через <xref:System.Security.Claims.ClaimsAuthorizationManager> класса всегда выполняет авторизацию входящих утверждений.  Если не `type` указанный атрибут или, если `type` атрибут указывает, <xref:System.Security.Claims.ClaimsAuthorizationManager> класс, `<claimsAuthorizationManager>` дочерние элементы элемента не принимает.  Можно указать `type` атрибут, чтобы зарегистрировать тип производным от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса, чтобы реализовать пользовательское поведение.  Производные классы поддерживают настройку с помощью дочерних элементов `<claimsAuthorizationManager>` элемент, переопределяя <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> метод для обработки этих элементов.  Схемы, определенные для дочерних элементов — конструктор класса.  
+## <a name="remarks"></a>Примечания  
+ Поведение по умолчанию, предоставленные с помощью <xref:System.Security.Claims.ClaimsAuthorizationManager> класса всегда разрешает входящие утверждения. Если не `type` указан атрибут или если `type` атрибут задает <xref:System.Security.Claims.ClaimsAuthorizationManager> класса, `<claimsAuthorizationManager>` элемент не принимает дочерних элементов. Можно указать `type` атрибут, чтобы зарегистрировать тип производным от <xref:System.Security.Claims.ClaimsAuthorizationManager> класса, чтобы реализовать пользовательское поведение. Производные классы могут поддерживать конфигурацию с помощью дочерних элементов `<claimsAuthorizationManager>` элемент путем переопределения <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> метод для обработки этих элементов. Схемы, определенных для дочерних элементов зависит от конструктора класса.  
   
 > [!IMPORTANT]
->  При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе заявок в коде конфигурации identity, на который ссылается `<federationConfiguration>` элемент настраивает диспетчер авторизации заявок и политики, который используется для принятия решения об авторизации.  Это верно даже в ситуациях, которые не являются пассивный веб\-сценариев, например приложения Windows Communication Foundation \(WCF\) или приложение, которое не является веб.  Если приложение не является пассивным веб\-приложения `<claimsAuthorizationManager>` элемент \(и политики его дочерних элементов, если они есть\) являются только параметры, применяемые конфигурации указанного удостоверения.  Другие параметры не обрабатываются.  Дополнительные сведения см. в описании элемента [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md).  
+>  При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе утверждений в коде, на который ссылается конфигурация удостоверений `<federationConfiguration>` элемент настраивает диспетчера авторизации утверждений и политики, которая используется, чтобы сделать решения об авторизации. Это верно даже в случаях, не пассивный сценариях веб-, например приложений Windows Communication Foundation (WCF) или приложение, которое не является веб сервера. Если приложение не пассивное веб-приложение `<claimsAuthorizationManager>` элемент (и политики его дочерние элементы, если он имеется) указанное удостоверение конфигурации являются только параметры, применяемые. Все остальные параметры игнорируются. Дополнительные сведения см. в разделе [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) элемента.  
   
- Этот элемент задает <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=fullName> свойства.  
+ Этот элемент задает <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> свойства.  
   
-## Пример  
- Следующий код XML показывает конфигурацию для утверждения авторизации диспетчер, который реализует политику состоят из пар ресурса действие каждый из которых задает логические сочетания утверждений, запрашивающая сторона должен обладать действие на ресурс.  Код, реализующий диспетчер авторизации заявок, может использовать эту политику можно найти в `ClaimsBasedAuthorization` образца.  
+## <a name="example"></a>Пример  
+ Следующий код XML показывает конфигурацию для авторизации утверждений диспетчер, который реализует политики состоит из пары действие ресурса, каждый из которых определяет логическое сочетания утверждения, запрашивающая сторона должна иметь для выполнения действия с ресурсом. Код, который реализует диспетчера авторизации утверждений, может использовать эту политику можно найти в `ClaimsBasedAuthorization` образца.  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration>  
       <claimsAuthorizationManager type="ClaimsAuthorizationLibrary.MyClaimsAuthorizationManager, ClaimsAuthorizationLibrary">  

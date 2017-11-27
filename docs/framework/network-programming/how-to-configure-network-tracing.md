@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -22,21 +17,20 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a713b9b2d76d6198d035226aaa55be7345b87f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>Практическое руководство. Настройка трассировки сети
 Файл конфигурации приложения или компьютера содержит параметры, которые определяют формат и содержимое данных трассировки сети. Перед выполнением этой процедуры убедитесь, что трассировка включена. Сведения о том, как включить трассировку сети, см. в разделе [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
- Файл конфигурации компьютера (machine.config) хранится в папке %Windir%\Microsoft.NET\Framework в каталоге, в который установлена ОС Windows. Отдельный файл machine.config содержится в папках %Windir%\Microsoft.NET\Framework для каждой версии .NET Framework, установленной на компьютере (например, C: \WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config).  
+ Файл конфигурации компьютера (machine.config) хранится в папке %Windir%\Microsoft.NET\Framework в каталоге, в который установлена ОС Windows. В папках %Windir%\Microsoft.NET\Framework для каждой версии платформы .NET Framework, установленной на компьютере (например, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config или C:\Windows\ имеется отдельный файл machine.config Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
   
  Эти параметры могут также задаваться в файле конфигурации приложения, который имеет более высокий приоритет, чем в файл конфигурации компьютера.  
   
@@ -112,8 +106,7 @@ ms.lasthandoff: 08/21/2017
 |`Tracemode`|Необязательный атрибут элемента <xref:System.String>. Задается `includehex`, чтобы трассировка протоколов отображалась в шестнадцатеричном или текстовом формате. Установите значение `protocolonly`, чтобы отображался только текст. Значение по умолчанию — `includehex`.<br /><br /> Этот атрибут следует задавать в элементе \<switches>, как показано в примере. Исключение возникает, если этот атрибут задан для элемента в элементе \<source>.|  
   
 ## <a name="see-also"></a>См. также  
- [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)   
- [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [Интерпретация сетевой трассировки](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
+ [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Введение. Подготовка к инструментированию и трассировка](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
-

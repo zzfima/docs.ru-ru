@@ -1,77 +1,79 @@
 ---
-title: "Элемент &lt;PreferComInsteadOfManagedRemoting&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<PreferComInsteadOfManagedRemoting> - элемент"
-  - "PreferComInsteadOfManagedRemoting - элемент"
+title: "&lt;PreferComInsteadOfManagedRemoting&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <PreferComInsteadOfManagedRemoting> element
+- PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7aed6baa227b2bdf90c26f02d38ee67c1ffbbda1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;PreferComInsteadOfManagedRemoting&gt;
-Задает, будет ли среда выполнения использовать COM\-взаимодействие вместо удаленного взаимодействия для всех вызовов за пределами границ домена приложения.  
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; элемент
+Указывает, использует ли среда выполнения COM-взаимодействие вместо удаленного взаимодействия для всех вызовов через границы домена приложения.  
   
-## Синтаксис  
+ \<configuration>  
+\<Среда выполнения >  
+\<PreferComInsteadOfManagedRemoting >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, будет ли среда выполнения использовать COM\-взаимодействие вместо удаленного взаимодействия за пределами границ домена приложения.|  
+|---------------|-----------------|  
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, использует ли среда выполнения COM-взаимодействия вместо удаленное взаимодействие через границы домена приложения.|  
   
-## Атрибут enabled  
+## <a name="enabled-attribute"></a>Атрибут enabled  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|`false`|За пределами границ домена приложения среда выполнения будет использовать удаленное взаимодействие.  Это значение по умолчанию.|  
-|`true`|За пределами границ домена приложения среда выполнения будет использовать COM\-взаимодействие.|  
+|-----------|-----------------|  
+|`false`|Среда выполнения будет использовать удаленное взаимодействие через границы домена приложения. Это значение по умолчанию.|  
+|`true`|Среда выполнения будет использовать COM-взаимодействие через границы домена приложения.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`runtime`|Элемент, содержащий сведения о привязке сборок и сборке мусора.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
-## Заметки  
- Если для атрибута `enabled` задано значение `true`, среда выполнения ведет себя следующим образом:  
+## <a name="remarks"></a>Примечания  
+ При задании `enabled` атрибут `true`, среда выполнения ведет себя следующим образом:  
   
--   Среда выполнения не вызывает [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) для интерфейса [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md), если интерфейс [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) входит в домен через интерфейс модели COM.  Вместо этого она создает вокруг объекта оболочку [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) \(вызываемая оболочка времени выполнения\).  
+-   Среда выполнения не вызывает [IUnknown::QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) для [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) интерфейс при [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) интерфейс входит в домен через COM-интерфейса. Вместо этого она создает [вызываемой оболочки времени выполнения](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (времени выполнения RCW) для объекта.  
   
--   Среда выполнения возвращает E\_NOINTERFACE, когда она получает вызов `QueryInterface` для интерфейса [IManagedObject](../../../../../ocs/framework/unmanaged-api/hosting/imanagedobject-interface.md) для любой оболочки [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) \(вызываемая оболочка COM\), которая была создана в этом домене.  
+-   Среда выполнения возвращает E_NOINTERFACE при получении `QueryInterface` вызова для [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) интерфейс для любого [вызываемая оболочка COM](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW), будет создана в этом домене.  
   
- Эти два поведения гарантируют, что все вызовы через COM\-интерфейсы между управляемыми объектами через границы домена приложения используют модель COM и COM\-взаимодействие, а не удаленное взаимодействие.  
+ Эти два поведения гарантируют, что все вызовы через COM-интерфейсы между управляемыми объектами через границы домена приложения используют COM и COM-взаимодействие вместо удаленного взаимодействия.  
   
-## Пример  
- В следующем примере показано, как указать, что среда выполнения должна использовать COM\-взаимодействие вместо изоляции.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как указать, что среда выполнения должна использовать COM взаимодействия через границы изоляции:  
   
-```  
+```xml  
 <configuration>  
   <runtime>  
     <PreferComInsteadOfManagedRemoting enabled="true"/>  
@@ -79,6 +81,6 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>См. также  
+ [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

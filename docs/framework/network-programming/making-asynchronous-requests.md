@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, asynchronous access
 - Networking
@@ -19,22 +17,21 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d0ed1eea11049a1e6f026c71a2eb41134f87fd8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="making-asynchronous-requests"></a>Выполнение асинхронных запросов
 В классах <xref:System.Net> используется стандартная асинхронная модель программирования .NET Framework для асинхронного доступа к ресурсам в Интернете. Методы <xref:System.Net.WebRequest.BeginGetResponse%2A> и <xref:System.Net.WebRequest.EndGetResponse%2A> класса <xref:System.Net.WebRequest> запускают и завершают асинхронные запросы к интернет-ресурсу.  
   
 > [!NOTE]
->  Использование синхронных вызовов в асинхронных методах обратного вызова может привести к существенному снижению производительности. В запросах к интернет-ресурсам, которые выполняются с помощью класса **WebRequest** и его потомков, необходимо использовать <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> для считывания потока, возвращенного методом <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>.  
+>  Использование синхронных вызовов в асинхронных методах обратного вызова может привести к существенному снижению производительности. В запросах к интернет-ресурсам, которые выполняются с помощью класса **WebRequest** и его потомков, необходимо использовать <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> для считывания потока, возвращенного методом <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>.  
   
  В следующем примере кода показано использование асинхронных вызовов с классом **WebRequest**. В примере показана консольная программа, которая принимает URI из командной строки, запрашивает ресурс по указанному URI и выводит полученные из Интернета данные в консоль.  
   
@@ -348,4 +345,3 @@ End Class
   
 ## <a name="see-also"></a>См. также  
  [Запрос данных](../../../docs/framework/network-programming/requesting-data.md)
-

@@ -1,27 +1,33 @@
 ---
-title: "Определение первичных ключей | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Определение первичных ключей"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a2ba353353b52e5a866887e7f0dc4b743e336bd0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Определение первичных ключей
-База данных обычно содержит столбец или группу столбцов, уникально определяющих каждую строку в таблице.  Такие столбцы или группы столбцов называются первичными ключами.  
+# <a name="defining-primary-keys"></a>Определение первичных ключей
+База данных обычно содержит столбец или группу столбцов, уникально определяющих каждую строку в таблице. Такие столбцы или группы столбцов называются первичными ключами.  
   
- При определении одного столбца <xref:System.Data.DataColumn> как <xref:System.Data.DataTable.PrimaryKey%2A> для <xref:System.Data.DataTable> в таблице автоматически присваивается свойству <xref:System.Data.DataColumn.AllowDBNull%2A> значение **false**, а свойству <xref:System.Data.DataColumn.Unique%2A> \- значение **true**.  Для первичных ключей, содержащих несколько столбцов, значение **false** автоматически присваивается только свойству **AllowDBNull**.  
+ При определении одного <xref:System.Data.DataColumn> как <xref:System.Data.DataTable.PrimaryKey%2A> для <xref:System.Data.DataTable>, в таблице автоматически присваивается <xref:System.Data.DataColumn.AllowDBNull%2A> свойство столбца **false** и <xref:System.Data.DataColumn.Unique%2A> свойства  **значение true,**. Для нескольких столбцов первичных ключей, только **AllowDBNull** автоматически присваивается свойству **false**.  
   
- Свойство **PrimaryKey** таблицы <xref:System.Data.DataTable> получает в качестве значения массив из одного или нескольких объектов **DataColumn**, как показано в следующих примерах.  В первом примере в качестве первичного ключа определяется один столбец.  
+ **PrimaryKey** свойство <xref:System.Data.DataTable> получает в качестве значения массив из одного или нескольких **DataColumn** объекты, как показано в следующих примерах. В первом примере в качестве первичного ключа определяется один столбец.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
@@ -31,7 +37,6 @@ workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}
 Dim columns(1) As DataColumn  
 columns(0) = workTable.Columns("CustID")  
 workTable.PrimaryKey = columns  
-  
 ```  
   
 ```csharp  
@@ -56,7 +61,6 @@ Dim keyColumn(2) As DataColumn
 keyColumn(0) = workTable.Columns("CustLName")  
 keyColumn(1) = workTable.Columns("CustFName")  
 workTable.PrimaryKey = keyColumn  
-  
 ```  
   
 ```csharp  
@@ -71,8 +75,8 @@ keyColumn[1] = workTable.Columns["CustFName"];
 workTable.PrimaryKey = keyColumn;  
 ```  
   
-## См. также  
- <xref:System.Data.DataTable>   
- [Определение схемы DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ <xref:System.Data.DataTable>  
+ [Определение схемы таблицы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

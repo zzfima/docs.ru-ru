@@ -1,25 +1,28 @@
 ---
-title: "131 - BufferPoolAllocation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 131 - BufferPoolAllocation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1ddaf86a-a453-4862-9269-8fa38a47c8b9
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f47eaccd7ff5e4f86462cb17120558c8c04412ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# 131 - BufferPoolAllocation
+# <a name="131---bufferpoolallocation"></a>131 - BufferPoolAllocation
 BufferPoolAllocation  
   
-## Свойства  
+## <a name="properties"></a>Свойства  
   
 |||  
 |-|-|  
@@ -28,10 +31,10 @@ BufferPoolAllocation
 |Уровень|Verbose|  
 |Канал|ОТЛАДКА|  
   
-## Описание  
- Это событие создается в том случае, когда BufferPool выделяет память для буферов  
+## <a name="description"></a>Описание  
+ Это событие создается, когда BufferPool выделяет память для буферов  
   
-## Сообщение  
- Пул выделяет %1 байт.  
+## <a name="message"></a>Сообщение  
+ Выделение %1 байт пулом.  
   
-## Подробности
+## <a name="details"></a>Подробные сведения

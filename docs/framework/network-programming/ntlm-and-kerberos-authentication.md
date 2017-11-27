@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - authentication [.NET Framework], NTLM
 - authentication [.NET Framework], Kerberos
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8cb52a70aa34e1011f12a77ea32ec5077f92c127
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 36e88b163ab857180a02278828dba7dcec457736
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>проверка подлинности NTLM и Kerberos
 При проверке подлинности NTLM и Kerberos по умолчанию используются учетные данные пользователя Microsoft Windows NT, связанные с вызывающим приложением, для проверки подлинности на сервере. Если используется отличная от установленной по умолчанию проверка подлинности NTLM, приложение устанавливает тип проверки подлинности NTLM и использует объект <xref:System.Net.NetworkCredential> для передачи имени пользователя, пароля и домена узлу, как показано в следующем примере.  
@@ -75,6 +72,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  Проверка подлинности NTLM не работает через прокси-сервер.  
   
 ## <a name="see-also"></a>См. также  
- [Обычная и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
+ [Основные и дайджест-проверка подлинности](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [Проверка подлинности в Интернете](../../../docs/framework/network-programming/internet-authentication.md)
-

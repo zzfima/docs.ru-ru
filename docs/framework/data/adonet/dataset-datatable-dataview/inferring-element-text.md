@@ -1,45 +1,48 @@
 ---
-title: "Выведение текста элементов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Определение текста элемента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66dcc6a98d365f20da6c7f4c075c2fdd8ab936e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Выведение текста элементов
-Если элемент, содержащий текст и не имеющий дочерних элементов, выводится в виде таблиц \(например, в виде элементов с атрибутами или повторяющимися элементами\), то к таблице, выводящейся для элемента, будет добавлен новый столбец с именем **TableName\_Text**.  Текст, содержащийся в элементе, будет добавлен в строку таблицы и сохранен в новом столбце.  Свойству **ColumnMapping** нового столбца будет установлено значение **MappingType.SimpleContent**.  
+# <a name="inferring-element-text"></a>Определение текста элемента
+Если элемент содержит текст и не имеет дочерних элементов был определен как таблицы, например (элементы с атрибутами) или повторяющимися элементами, новый столбец с именем **TableName_Text** будет добавлен к таблице, выводящейся для элемента. Текст, содержащийся в элементе, будет добавлен в строку таблицы и сохранен в новом столбце. **ColumnMapping** свойства нового столбца будет присвоено **MappingType.SimpleContent**.  
   
- Например, рассмотрим следующий XML\-код:  
+ Например, рассмотрим следующий XML-код:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1">Text1</Element1>  
 </DocumentElement>  
 ```  
   
- Процесс вывода сформирует таблицу с именем **Element1** с двумя столбцами: **attr1** и **Element1\_Text**.  Свойству **ColumnMapping** столбца **attr1** будет установлено значение **MappingType.Attribute**.  Свойству **ColumnMapping** столбца **Element1\_Text** будет установлено значение **MappingType.SimpleContent**.  
+ Процесс вывода сформирует таблицу с именем **Element1** с двумя столбцами: **attr1** и **Element1_Text**. **ColumnMapping** свойство **attr1** столбца будет присвоено **MappingType.Attribute**. **ColumnMapping** свойство **Element1_Text** столбца будет присвоено **MappingType.SimpleContent**.  
   
- **DataSet:** DocumentElement  
+ **Набор данных:** DocumentElement  
   
- **Table:** Element1  
+ **Таблица:** Element1  
   
-|attr1|Element1\_Text|  
+|attr1|Element1_Text|  
 |-----------|--------------------|  
 |value1|Text1|  
   
- Если элемент содержит текст, а также имеет дочерние элементы, содержащие текст, столбец не будет добавлен в таблицу для хранения текста, содержащегося в элементе.  Текст, содержащийся в элементе, пропускается, а текст в дочерних элементах включается в строку таблицы.  Например, рассмотрим следующий XML\-код:  
+ Если элемент содержит текст, а также имеет дочерние элементы, содержащие текст, столбец не будет добавлен в таблицу для хранения текста, содержащегося в элементе. Текст, содержащийся в элементе, пропускается, а текст в дочерних элементах включается в строку таблицы. Например, рассмотрим следующий XML-код:  
   
-```  
+```xml  
 <Element1>  
   Text1  
   <ChildElement1>Text2</ChildElement1>  
@@ -47,20 +50,20 @@ caps.handback.revision: 4
 </Element1>  
 ```  
   
- Процесс вывода сформирует таблицу с именем **Element1** и одним столбцом с именем **ChildElement1**.  Текст для элемента **ChildElement1** будет включен в строку таблицы.  Весь прочий текст будет пропущен.  Свойству **ColumnMapping** столбца **ChildElement1** будет установлено значение **MappingType.Element**.  
+ Процесс вывода сформирует таблицу с именем **Element1** с одним столбцом с именем **ChildElement1**. Текст для **ChildElement1** элемент будет включен в строку в таблице. Весь прочий текст будет пропущен. **ColumnMapping** свойство **ChildElement1** столбца будет присвоено **MappingType.Element**.  
   
- **DataSet:** DocumentElement  
+ **Набор данных:** DocumentElement  
   
- **Table:** Element1  
+ **Таблица:** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text2|  
   
-## См. также  
- [Вывод реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Загрузка DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Использование XML в DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Объекты DataSet, DataTable и DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [Определение реляционной структуры набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Загрузка набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Загрузка сведений о схеме набора данных из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

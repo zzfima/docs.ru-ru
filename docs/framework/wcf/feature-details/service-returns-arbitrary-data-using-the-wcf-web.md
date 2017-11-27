@@ -1,27 +1,30 @@
 ---
-title: "Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 64179a559986f11fa263fac7fe680ddd9bea809c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP
-Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы.Это необходимо тогда, когда операция службы должна возвращать данные в формате, не поддерживаемом системой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].В этом разделе рассматривается использование модели программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP для создания такой службы.В этой службе имеется одна операция, которая возвращает поток.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Как создать службу, возвращающую произвольные данные, с использованием модели программирования WCF Web HTTP
+Иногда разработчики должны полностью управлять тем, как данные возвращаются из операции службы. Это случается, когда операция службы должна возвращать данные в формате, не поддерживаемом [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. В этом разделе рассматривается использование модели программирования [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP для создания такой службы. В этой службе имеется одна операция, которая возвращает поток.  
   
-### Реализация контракта службы  
+### <a name="to-implement-the-service-contract"></a>Реализация контракта службы  
   
-1.  Определите контракт службы.Контракт называется `IImageServer` и в нем имеется один метод под названием `GetImage`, который возвращает поток <xref:System.IO.Stream>.  
+1.  Определите контракт службы. Контракт называется `IImageServer` и в нем имеется один метод под названием `GetImage`, который возвращает поток <xref:System.IO.Stream>.  
   
     ```  
     [ServiceContract]  
@@ -34,7 +37,7 @@ caps.handback.revision: 11
   
      Поскольку этот метод возвращает поток <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] предполагает, что операция полностью управляет байтами, возвращаемыми из операции службы, и никак не форматирует возвращаемые данные.  
   
-2.  Реализуйте контракт службы.В контракте есть только одна операция \(`GetImage`\).Этот метод создает растровое изображение и сохраняет его в потоке <xref:System.IO.MemoryStream> в формате JPG.Операция затем возвращает этот поток вызывающему объекту.  
+2.  Реализуйте контракт службы. В контракте есть только одна операция (`GetImage`). Этот метод создает растровое изображение и сохраняет его в потоке <xref:System.IO.MemoryStream> в формате JPG. Операция затем возвращает этот поток вызывающему объекту.  
   
     ```  
     public class Service : IImageServer  
@@ -60,9 +63,9 @@ caps.handback.revision: 11
   
      Взгляните на последнюю строку кода: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     В этой строке заголовку типа контента присваивается значение `“image/jpeg”`.Хотя в этом образце показано, как вернуть JPG\-файл, данный образец можно изменить для возврата любого типа необходимых данных в любом формате.Операция должна получить или создать данные и затем записать их в поток.  
+     Это задает заголовок content-type `"image/jpeg"`. Хотя в этом образце показано, как вернуть JPG-файл, данный образец можно изменить для возврата любого типа необходимых данных в любом формате. Операция должна получить или создать данные и затем записать их в поток.  
   
-### Размещение службы  
+### <a name="to-host-the-service"></a>Размещение службы  
   
 1.  Создайте консольное приложение для размещения службы.  
   
@@ -85,14 +88,12 @@ caps.handback.revision: 11
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
-  
     ```  
   
 4.  Добавьте конечную точку, используя <xref:System.ServiceModel.WebHttpBinding> и <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
-  
     ```  
   
 5.  Откройте узел службы.  
@@ -108,16 +109,15 @@ caps.handback.revision: 11
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
     host.Close();  
-  
     ```  
   
-### Вызов необработанной службы с помощью Internet Explorer  
+### <a name="to-call-the-raw-service-using-internet-explorer"></a>Вызов необработанной службы с помощью Internet Explorer  
   
-1.  Запустите службу. От службы должно появиться следующее сообщение:`Service is running Press ENTER to close the host`  
+1.  Запустите службу. От службы должно появиться следующее сообщение: `Service is running Press ENTER to close the host`  
   
 2.  Откройте Internet Explorer и введите `http://localhost:8000/Service/GetImage?width=50&height=40`. Должен появиться желтый прямоугольник с синей диагональной линией, проходящей через центр.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Ниже приведен полный листинг кода для данного раздела.  
   
 ```  
@@ -179,12 +179,11 @@ namespace RawImageService
         }  
     }  
 }  
-  
 ```  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a>Компиляция кода  
   
 -   При компиляции образец кода обращается к файлам System.ServiceModel.dll и System.ServiceModel.Web.dll.  
   
-## См. также  
- [Модель веб\-программирования HTTP WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>См. также  
+ [Модель программирования WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

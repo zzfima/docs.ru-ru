@@ -1,80 +1,82 @@
 ---
-title: "Элемент &lt;remove&gt; для webRequestModules (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<remove> - элемент, webRequestModules"
-  - "<webRequestModules>, remove - элемент"
-  - "remove - элемент, webRequestModules"
-  - "webRequestModules, remove - элемент"
+title: "&lt;Удалить&gt; элемент для webRequestModules (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- remove element, webRequestModules
+- webRequestModules, remove element
+- <remove> element, webRequestModules
+- <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 43f0d30f8c18c4755f31d0c851c773207bc15b78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;remove&gt; для webRequestModules (параметры сети)
-Удаляет из приложения пользовательский модуль веб\-запросов.  
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Удалить&gt; элемент для webRequestModules (параметры сети)
+Удаляет пользовательский модуль веб-запросов из приложения.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
+\<webRequestModules >  
+\<Удалите >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <remove   
-  name = "URI prefix"   
+```xml  
+<remove   
+  prefix="URI prefix"   
 />  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
-|**Атрибут**|**Описание**|  
-|-----------------|------------------|  
-|`name`|Префикс URI для запросов, обрабатываемых данным модулем веб\-запросов.|  
+|**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
+|-------------------|---------------------|  
+|`prefix`|Префикс URI для запросов, обрабатываемых этот модуль веб-запросов.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
+|-----------------|---------------------|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
   
-## Заметки  
- Элемент `remove` удаляет зарегистрированный модуль веб\-запросов для заданного префикса URI.  
+## <a name="remarks"></a>Примечания  
+ `remove` Элемент удаляет зарегистрированный модуль веб-запросов для заданного префикса URI.  
   
- Значением атрибута `prefix` должны быть первые символы действительного URI, например "http" или "http:\/\/www.contoso.com".  
+ Значение для `prefix` атрибут должен иметь первые символы допустимый URI — например, «http» или «http://www.contoso.com».  
   
-## Файлы конфигурации  
- Этот элемент может быть использован в файле конфигурации приложения или в файле конфигурации компьютера \(Machine.config\).  
+## <a name="configuration-files"></a>Файлы конфигурации  
+ Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
-## Пример  
- В следующем примере кода удаляется имеющийся модуль веб\-запросов для протокола HTTP и затем регистрируется новый пользовательский модуль веб\-запросов для HTTP\-запросов к веб\-узлу www.contoso.com.  
+## <a name="example"></a>Пример  
+ Следующий пример удаляет существующий модуль веб-запросов для HTTP, а затем выполняется регистрация нового пользовательского модуля для HTTP-запросов к www.contoso.com.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <webRequestModules>  
-      <remove prefix = "http">  
+      <remove prefix="http">  
       <add prefix="http"  
            type="System.Net.HttpRequestCreator, System, Version=2.0.3600.0,  
            Culture=neutral, PublicKeyToken=b77a5c561934e089"  
@@ -84,6 +86,6 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## См. также  
- <xref:System.Net.WebRequest>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Net.WebRequest>  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

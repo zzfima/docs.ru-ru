@@ -1,72 +1,66 @@
 ---
-title: "&lt;protocolMapping&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;protocolMapping&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 769ca7b96c3671fdd1b154c99516778f7cbd542e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;protocolMapping&gt;
-Представляет раздел конфигурации, в котором определяется набор сопоставления протоколов по умолчанию между схемами транспортных протоколов \(например, http, net.tcp, net.pipe и т. д.\) и привязками WCF.  При создании конечных точек по умолчанию во время выполнения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] просматривает заданные сопоставления и решает, какую привязку необходимо использовать для определенного базового адреса.  
+# <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
+Представляет раздел конфигурации определяется набор сопоставления протоколов по умолчанию между схемами транспортных протоколов (например, http, net.tcp, net.pipe, т. д.) и привязками WCF. При создании конечных точек по умолчанию во время выполнения [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] просматривает заданные сопоставления и решает, какую привязку необходимо использовать для определенного базового адреса.  
   
-## Синтаксис  
+ \<system.serviceModel >  
+\<protocolMapping >  
   
-```vb  
+## <a name="syntax"></a>Синтаксис  
   
-<protocolMapping>  
-    <add binding="String”  
-         bindingConfiguration="String”  
-         scheme="http/net.msmq/net.pipe/net.tcp"/>  
-</protocolMapping>  
-  
-```  
-  
-```csharp  
-  
-```  
-  
-## Атрибуты и элементы  
+```xml
+   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
+```
+
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
  Отсутствует.  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<фильтры\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Содержит сопоставление протокола по умолчанию между схемой транспортного протокола \(например http, net.tcp, net.pipe и т. д.\) и привязкой WCF.|  
+|-------------|-----------------|  
+|[\<Фильтры >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Содержит сопоставление протокола по умолчанию между схемой транспортного протокола (например, http, net.tcp, net.pipe, т. д.) и привязкой WCF.|  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
+|-------------|-----------------|  
 |system.ServiceModel|Корневой элемент всех элементов конфигурации WCF.|  
   
-## Пример  
- В следующем примере конфигурации показано сопоставление протокола по умолчанию в файле machine.config.  Это сопоставление по умолчанию можно переопределить на уровне компьютера путем изменения файла machine.config.  Или же, если необходимо переопределить это сопоставление только в области приложения, можно отменить этот раздел в файле конфигурации приложения и изменить сопоставление для отдельных схем протокола.  
+## <a name="example"></a>Пример  
+ В следующем примере конфигурации показано сопоставление протокола по умолчанию в файле machine.config. Это сопоставление по умолчанию можно переопределить на уровне компьютера путем изменения файла machine.config. Или же, если необходимо переопределить это сопоставление только в области приложения, можно отменить этот раздел в файле конфигурации приложения и изменить сопоставление для отдельных схем протокола.  
   
-```  
-  
+```xml  
 <protocolMapping>  
-        <add scheme="http" binding="basicHttpBinding"/>  
-        <add scheme="net.tcp" binding="netTcpBinding"/>  
-        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
-        <add scheme="net.msmq" binding="netMsmqBinding"/>  
+        <add scheme="http" binding="basicHttpBinding"/>  
+        <add scheme="net.tcp" binding="netTcpBinding"/>  
+        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
+        <add scheme="net.msmq" binding="netMsmqBinding"/>  
 </protocolMapping>  
-  
 ```  
   
-## См. также  
- [System.ServiceModel.Configuration.ProtocolMappingSection](assetId:///System.ServiceModel.Configuration.ProtocolMappingSection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.ServiceModel.Configuration.ProtocolMappingElement](assetId:///System.ServiceModel.Configuration.ProtocolMappingElement?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
+ <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

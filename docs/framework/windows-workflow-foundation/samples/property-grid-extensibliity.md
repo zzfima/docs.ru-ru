@@ -1,45 +1,49 @@
 ---
-title: "Расширяемость сетки свойств | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Расширяемость сетки свойств"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e0df8ed572a0a02147e3bdf45dd880305363e8bd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Расширяемость сетки свойств
-Разработчик может настроить сетку свойств, которая будет отображаться при выборе в редакторе определенного действия.Таким образом можно реализовать расширенные возможности редактирования.Они показываются в данном образце.  
+# <a name="property-grid-extensibliity"></a>Расширяемость сетки свойств
+Разработчик может настроить сетку свойств, которая будет отображаться при выборе в редакторе определенного действия. Таким образом можно реализовать расширенные возможности редактирования. Они показываются в данном образце.  
   
-## Демонстрации  
+## <a name="demonstrates"></a>Демонстрации  
  Расширяемость сетки свойств конструктора рабочих процессов.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
-## Обсуждение  
- Чтобы расширить сетку свойств, разработчик может настроить встроенное представление редактора сетки свойств или реализовать диалоговое окно, которое будет отображать усовершенствованную область расширенного редактирования.В этом образце демонстрируется работа двух разных редакторов: встроенного редактора и диалогового редактора.  
+## <a name="discussion"></a>Обсуждение  
+ Чтобы расширить сетку свойств, разработчик может настроить встроенное представление редактора сетки свойств или реализовать диалоговое окно, которое будет отображать усовершенствованную область расширенного редактирования. В этом образце демонстрируется работа двух разных редакторов: встроенного редактора и диалогового редактора.  
   
-## Встроенный редактор  
+## <a name="inline-editor"></a>Встроенный редактор  
  В образце встроенного редактора показаны следующие действия.  
   
 -   Создает тип, производный от <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.  
   
--   В конструкторе значение <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> задается шаблоном данных [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].Значение может быть привязано к XAML\-шаблону, однако в этом образце для инициализации привязки данных используется код.  
+-   В конструкторе значение <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> задается шаблоном данных [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]. Значение может быть привязано к XAML-шаблону, однако в этом образце для инициализации привязки данных используется код.  
   
--   Шаблон данных имеет контекст данных значения <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> для элемента, отображаемого в сетке свойств.Обратите внимание, что в приведенном ниже коде \(файл CustomInlineEditor.cs\) этот контекст привязывается к свойству `Value`.  
+-   Шаблон данных имеет контекст данных значения <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> для элемента, отображаемого в сетке свойств. Обратите внимание, что в приведенном ниже коде (файл CustomInlineEditor.cs) этот контекст привязывается к свойству `Value`.  
   
     ```csharp  
     FrameworkElementFactory stack = new FrameworkElementFactory(typeof(StackPanel));  
@@ -50,7 +54,6 @@ caps.handback.revision: 7
     slider.SetValue(Slider.MaximumProperty, 100.0);  
     slider.SetValue(Slider.ValueProperty, sliderBinding);  
     stack.AppendChild(slider);  
-  
     ```  
   
 -   Поскольку действие и конструктор находятся в одной сборке, регистрация атрибутов конструктора действий выполняется в статическом конструкторе самого действия, как показано в следующем примере из файла SimpleCodeActivity.cs.  
@@ -63,17 +66,16 @@ caps.handback.revision: 7
         builder.AddCustomAttributes(typeof(SimpleCodeActivity), "FileName", new EditorAttribute(typeof(FilePickerEditor), typeof(DialogPropertyValueEditor)));  
         MetadataStore.AddAttributeTable(builder.CreateTable());  
     }  
-  
     ```  
   
-## Диалоговый редактор  
- В образце диалогового окна редактора показаны следующие действия.  
+## <a name="dialog-editor"></a>Редактор диалоговых окон  
+ В образце диалогового редактора показаны следующие действия.  
   
 1.  Создает тип, производный от <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.  
   
-2.  В конструкторе значение <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> задается при помощи шаблона данных [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].Значение может быть создано в XAML, однако в этом образце оно создается с помощью кода.  
+2.  В конструкторе значение <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> задается при помощи шаблона данных [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]. Значение может быть создано в XAML, однако в этом образце оно создается с помощью кода.  
   
-3.  Шаблон данных имеет контекст данных значения <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> для элемента, отображаемого в сетке свойств.В следующем коде значение привязывается к свойству `Value`.Важно также добавить кнопку <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> для обеспечения возможности вызова диалогового окна в файле FilePickerEditor.cs.  
+3.  Шаблон данных имеет контекст данных значения <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> для элемента, отображаемого в сетке свойств. В следующем коде значение привязывается к свойству `Value`. Важно также добавить кнопку <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> для обеспечения возможности вызова диалогового окна в файле FilePickerEditor.cs.  
   
     ```  
     this.InlineEditorTemplate = new DataTemplate();  
@@ -96,7 +98,7 @@ caps.handback.revision: 7
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  Переопределяет метод <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A> в типе конструктора для управления отображением диалогового окна.В этом образце показано базовое диалоговое окно <xref:System.Windows.Forms.FileDialog>.  
+4.  Переопределяет <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` метода в типе конструктора для управления отображением диалогового окна. В этом образце показано базовое диалоговое окно <xref:System.Windows.Forms.FileDialog>.  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -107,7 +109,6 @@ caps.handback.revision: 7
             propertyValue.Value = ofd.FileName;  
         }  
     }  
-  
     ```  
   
 5.  Поскольку действие и конструктор находятся в одной сборке, регистрация атрибутов конструктора действий выполняется в статическом конструкторе самого действия, как показано в следующем примере из файла SimpleCodeActivity.cs.  
@@ -120,22 +121,21 @@ caps.handback.revision: 7
         builder.AddCustomAttributes(typeof(SimpleCodeActivity), "FileName", new EditorAttribute(typeof(FilePickerEditor), typeof(DialogPropertyValueEditor)));  
         MetadataStore.AddAttributeTable(builder.CreateTable());  
     }  
-  
     ```  
   
-## Настройка, построение и выполнение образца  
+## <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
 1.  Постройте решение и откройте файл Workflow1.xaml.  
   
-2.  Перетащите действие **SimpleCodeActivity** c панели инструментов в область элементов.  
+2.  Перетащите **SimpleCodeActivity** из панели элементов на полотно конструктора.  
   
-3.  Нажмите кнопку **SimpleCodeActivity** и откройте сетку свойств, на которой имеются ползунок и элемент выбора файла.  
+3.  Нажмите кнопку **SimpleCodeActivity** и откройте сетку свойств, когда имеются ползунок и элемент выбора файла.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

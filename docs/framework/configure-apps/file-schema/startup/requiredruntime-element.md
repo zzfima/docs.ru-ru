@@ -1,87 +1,88 @@
 ---
-title: "Элемент &lt;requiredRuntime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/requiredRuntime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<requiredRuntime> - элемент"
-  - "теги контейнеров, <requiredRuntime> - элемент"
-  - "requiredRuntime - элемент"
+title: "&lt;requiredRuntime&gt; элемент"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/requiredRuntime
+helpviewer_keywords:
+- requiredRuntime element
+- <requiredRuntime> element
+- container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 633769573253d7516bc50f0210c30376e6aa230a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;requiredRuntime&gt;
-Указывает, что приложение поддерживает только версию 1.0 среды CLR.  
+# <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; элемент
+Указывает, что приложение поддерживает только версию 1.0 среды CLR. Этот элемент устарел и больше не может использоваться. [ `supportedRuntime` ](supportedruntime-element.md) Следует использовать элемент.
   
-## Синтаксис  
+ \<configuration>  
+\<При запуске >  
+\<requiredRuntime >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-   <requiredRuntime    
+```xml  
+   <requiredRuntime    
 version="runtime version"  
 safemode="true|false"/>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`version`|Необязательный атрибут.<br /><br /> Строковое значение, указывающее поддерживаемую этим приложением версию платформы .NET Framework.  Строковый параметр должен точно соответствовать имени вложенной папки корневой папки установки платформы .NET Framework.  Содержимое строки не анализируется.|  
-|`safemode`|Необязательный атрибут.<br /><br /> Указание того, должен ли код запуска среды выполнения производить поиск в системном реестре для определения версии среды выполнения.|  
+|---------------|-----------------|  
+|`version`|Необязательный атрибут.<br /><br /> Строковое значение, указывающее версию платформы .NET Framework, поддерживаемую этим приложением. Строковое значение должно соответствовать имени каталога, находятся в папке установки .NET Framework. Содержимое строкового значения не анализируется.|  
+|`safemode`|Необязательный атрибут.<br /><br /> Указывает, является ли код запуска среды выполнения ищет в реестре для определения версии среды выполнения.|  
   
-## Атрибут safemode  
+## <a name="safemode-attribute"></a>безопасный режим атрибута  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|`false`|Код запуска среды выполнения проверяет реестр.  Это значение по умолчанию.|  
+|-----------|-----------------|  
+|`false`|Код запуска среды выполнения ищет в реестре. Это значение по умолчанию.|  
 |`true`|Код запуска среды выполнения не проверяет реестр.|  
   
-### Дочерние элементы  
- Нет.  
+### <a name="child-elements"></a>Дочерние элементы  
+ Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями платформы .NET Framework.|  
-|`startup`|Содержит элемент `<requiredRuntime>`.|  
+|-------------|-----------------|  
+|`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
+|`startup`|Содержит `<requiredRuntime>` элемента.|  
   
-## Заметки  
- Приложения, собранные для поддержки только версии 1.0 среды выполнения, должны использовать элемент `<requiredRuntime>`.  Приложения, построенные с помощью версии 1.1 или более поздней версии среды выполнения, должны использовать элемент `<supportedRuntime>`.  
-  
-> [!NOTE]
->  При использовании функции [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) для указания файла конфигурации необходимо использовать элемент `<requiredRuntime>` для всех версий среды выполнения.  Элемент `<supportedRuntime>` игнорируется при использовании [CorBindToRuntimeByCfg](../../../../../ocs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
-  
- Строка атрибута `version` должна совпадать с именем папки установки заданной версии платформы .NET Framework.  Эта строка не интерпретируется.  Если код запуска среды выполнения не находит соответствующей папки, среда выполнения не загружается; при этом код запуска выводит сообщение об ошибке и прекращает работу.  
+## <a name="remarks"></a>Примечания  
+ Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать `<requiredRuntime>` элемент. Приложения, построенные с помощью версии 1.1 или более поздней версии среды выполнения должны использовать `<supportedRuntime>` элемент.  
   
 > [!NOTE]
->  Код запуска для приложения, выполняемого в Microsoft Internet Explorer, не обрабатывает элемент `<requiredRuntime>`.  
+>  Если вы используете [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) для указания файла конфигурации, необходимо использовать `<requiredRuntime>` элемент для всех версий среды выполнения. `<supportedRuntime>` Элемент игнорируется при использовании [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
-## Пример  
- В следующем примере показан способ указания в файле конфигурации версии среды выполнения.  
+ `version` Строки атрибута должно соответствовать имени папки установки для данной версии платформы .NET Framework. Эта строка не интерпретируется. Если код запуска среды выполнения не находит соответствующей папки, среда выполнения не загружается; код запуска отобразится сообщение об ошибке и завершает работу.  
   
-```  
+> [!NOTE]
+>  Код запуска для приложения, размещенного в Internet Explorer не учитывает `<requiredRuntime>` элемента.  
+  
+## <a name="example"></a>Пример  
+ Приведенный ниже показано, как указать версию среды выполнения в файле конфигурации.  
+  
+```xml  
 <configuration>  
    <startup>  
       <requiredRuntime version="v1.0.3705" safemode="true"/>  
@@ -89,7 +90,7 @@ safemode="true|false"/>
 </configuration>  
 ```  
   
-## См. также  
- [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)   
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<PaveOver\> Specifying Which Runtime Version to Use](http://msdn.microsoft.com/ru-ru/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+## <a name="see-also"></a>См. также  
+ [Схема параметров запуска](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
+ [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<PaveOver> Указание используемой версии среды выполнения](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)

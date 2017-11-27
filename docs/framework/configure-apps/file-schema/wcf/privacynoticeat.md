@@ -1,59 +1,67 @@
 ---
-title: "&lt;privacyNoticeAt&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;privacyNoticeAt&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 46a27dcc35c01d25391c9224d4967937b0a02d52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;privacyNoticeAt&gt;
+# <a name="ltprivacynoticeatgt"></a>&lt;privacyNoticeAt&gt;
 Представляет элемент конфигурации, который задает уведомление о конфиденциальности, используемое в привязке `wsFederationHttp`.  
   
-## Синтаксис  
+ \<system.serviceModel >  
+\<привязки >  
+\<customBinding >  
+\<Привязка >  
+\<privacyNotice >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
+```xml  
 <privacyNotice url="String"  
         version="Integer" />  
 ```  
   
-## Тип  
+## <a name="type"></a>Тип  
  `Type`  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
+### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|`url`|Строка, задающая универсальный код ресурса \(URI\), определяющий расположение примечания о конфиденциальности.|  
+|---------------|-----------------|  
+|`url`|Строка, задающая универсальный код ресурса (URI), определяющий расположение примечания о конфиденциальности.|  
 |`version`|Целое число, определяющее версию этого уведомления о конфиденциальности.|  
   
-### Дочерние элементы  
+### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
-### Родительские элементы  
+### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
-|-------------|--------------|  
-|[\<привязка\>](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
+|-------------|-----------------|  
+|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>   
- <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>  
+ <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [Привязки](../../../../../docs/framework/wcf/bindings.md)  
+ [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

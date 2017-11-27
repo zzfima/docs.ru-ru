@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - downloading Internet resources, default proxy
 - sending data, default proxy
@@ -32,16 +27,15 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a4a013b8a4ff60222bb88c6e9c4f14badd689b5d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 05f849810d28ebe69a773bd4bd9d536146df6357
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="configuring-internet-applications"></a>Настройка веб-приложений
 [Элемент \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) содержит сведения о конфигурации сети для приложений. С помощью [элемента \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) можно задавать прокси-серверы, устанавливать параметры управления подключениями и включать в приложение пользовательские модули проверки подлинности и запросов.  
@@ -113,7 +107,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)   
+ [Сетевое программирование в .NET Framework](../../../docs/framework/network-programming/index.md)  
+ [Схема параметров сети](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [Элемент \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
-

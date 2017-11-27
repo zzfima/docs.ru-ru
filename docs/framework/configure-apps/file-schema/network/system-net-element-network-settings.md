@@ -1,106 +1,106 @@
 ---
-title: "Элемент &lt;system.Net&gt; (параметры сети) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.Net> - элемент"
-  - "system.Net - элемент"
+title: "&lt;system.Net&gt; элемент (параметры сети)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net
+helpviewer_keywords:
+- system.Net element
+- <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d2eb903b8a84410aa08504c12e78a016d2368923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Элемент &lt;system.Net&gt; (параметры сети)
-Содержит параметры, определяющие способ подключения платформы .NET Framework к сети.  
+# <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; элемент (параметры сети)
+Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.  
   
-## Синтаксис  
+ \<configuration>  
+\<System.NET >  
   
-```  
+## <a name="syntax"></a>Синтаксис  
   
-      <system.net>   
+```xml  
+<system.net>   
 </system.net>  
 ```  
   
-## Атрибуты и элементы  
+## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### Атрибуты  
- Нет.  
+### <a name="attributes"></a>Атрибуты  
+ Отсутствует.  
   
-### Дочерние элементы  
-  
-|**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Описывает модули, используемые для проверки подлинности интернет\-запросов.|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Задает максимальное число подключений к интернет\-узлу.|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает протокол HTTP прокси\-сервера.|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Настраивает параметры отправки электронной почты по протоколу SMTP.|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Управляет механизмом кэширования сетевых запросов.|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные сетевые параметров для классов в <xref:System.Net> и связанных дочерних пространствах имен.|  
-|[Элемент \<webRequestModules\> \(параметры сети\)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Описывает модули, используемые для запроса данных от интернет\-узлов.|  
-  
-### Родительские элементы  
+### <a name="child-elements"></a>Дочерние элементы  
   
 |**Элемент**|**Описание**|  
-|-----------------|------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Содержит настройки всех пространств имен.|  
+|-----------------|---------------------|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности Интернет-запросов.|  
+|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Указывает максимальное число подключений к Интернет-узла.|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
+|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Настраивает параметры отправки сообщений транспортного протокола SMTP (Simple Mail).|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Определяет механизм кэширования для сетевых запросов.|  
+|[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные сетевые параметры для классов в <xref:System.Net> и связанные с ним дочерние пространства имен.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от Интернет-узлов.|  
   
-## Заметки  
- Элемент [\<system.net\>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) содержит параметры для классов в <xref:System.Net> и связанных дочерних пространствах имен.  Эти параметры используются для настройки модулей проверки подлинности, управления подключением, настройки параметров почты, настройки прокси\-сервера и модулей интернет\-запросов при получении данных от интернет\-узлов.  
+### <a name="parent-elements"></a>Родительские элементы  
   
-## Пример  
- Следующий пример кода показывает типичную конфигурацию, используемую классом <xref:System.Net>.  
+|**Элемент**|**Описание**|  
+|-----------------|---------------------|  
+|[конфигурации](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Содержит параметры для всех пространств имен.|  
   
-```  
+## <a name="remarks"></a>Примечания  
+ [ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) элемент содержит параметры для классов в <xref:System.Net> и связанные с ним дочерние пространства имен. Параметры настройки модулей проверки подлинности, управление соединениями, параметры электронной почты, прокси-сервера и модулей Интернет-запросов при получении данных от Интернет-узлов.  
+  
+## <a name="example"></a>Пример  
+ В следующем примере показано стандартной конфигурации, используемые <xref:System.Net> классы.  
+  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
-      <add type = "System.Net.DigestClient" />  
-      <add type = "System.Net.NegotiateClient" />  
-      <add type = "System.Net.KerberosClient" />  
-      <add type = "System.Net.NtlmClient" />  
-      <add type = "System.Net.BasicClient" />  
+      <add type="System.Net.DigestClient" />  
+      <add type="System.Net.NegotiateClient" />  
+      <add type="System.Net.KerberosClient" />  
+      <add type="System.Net.NtlmClient" />  
+      <add type="System.Net.BasicClient" />  
     </authenticationModules>  
     <connectionManagement>  
-      <add address = "*" maxconnection = "2" />  
+      <add address="*" maxconnection="2" />  
     </connectionManagement>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault = "true"  
-        bypassonlocal = "true"  
+        usesystemdefault="true"  
+        bypassonlocal="true"  
       />  
     </defaultProxy>  
     <webRequestModules>  
-      <add prefix = "http"  
-        type = "System.Net.HttpRequestCreator"  
+      <add prefix="http"  
+           type="System.Net.HttpRequestCreator"  
       />  
-      <add prefix = "https"  
-        type = "System.Net.HttpRequestCreator"  
+      <add prefix="https"  
+           type="System.Net.HttpRequestCreator"  
       />  
-      <add prefix = "file"  
-        type = "System.Net.FileWebRequestCreator"  
+      <add prefix="file"  
+           type="System.Net.FileWebRequestCreator"  
       />  
     </webRequestModules>  
   </system.net>  
 </configuration>  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,27 +1,29 @@
 ---
-title: "Группирование сообщений в очереди в рамках сеанса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "очереди [WCF]. Группирование сообщений"
+title: "Группирование сообщений в очереди в рамках сеанса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-caps.latest.revision: 30
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0dbd9d28d56d8d473b9e92d977da409b74290224
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Группирование сообщений в очереди в рамках сеанса
+# <a name="grouping-queued-messages-in-a-session"></a>Группирование сообщений в очереди в рамках сеанса
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает сеанс, позволяющий сгруппировать набор связанных сообщений для обработки одним принимающим приложением. Сообщения, являющиеся частью сеанса, должны быть часть одной транзакции. Так как все сообщения являются частью одной транзакции, в случае сбоя обработки одного сообщения производится откат всего сеанса. Сеансы имеют аналогичные поведения в отношении очередей недоставленных сообщений и очередей подозрительных сообщений. Свойство "срок жизни" (TTL), заданное в настроенной для сеансов привязке, поддерживающей очередь, применяется ко всему сеансу. Если до истечения срока TTL отправлена только часть сообщений из сеанса, весь сеанс помещается в очередь недоставленных сообщений. Аналогично, если сообщения из сеанса не отправлены приложению из очереди приложения, весь сеанс помещается в очередь подозрительных сообщений (при наличии).  
   
 ## <a name="message-grouping-example"></a>Пример группирования сообщений  
@@ -31,13 +33,13 @@ caps.handback.revision: 30
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Настройка контракта службы для использования сеансов  
   
-1.  Определите контракт службы, для которого требуются сеансы. Это сделать с помощью <xref:System.ServiceModel.OperationContractAttribute> атрибут и укажите:  
+1.  Определите контракт службы, для которого требуются сеансы. Для этого используйте атрибут <xref:System.ServiceModel.OperationContractAttribute> и укажите:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Пометьте операции в контракте как односторонние, так как эти методы ничего не возвращают. Это делается с помощью <xref:System.ServiceModel.OperationContractAttribute> атрибут и укажите:  
+2.  Пометьте операции в контракте как односторонние, так как эти методы ничего не возвращают. Для этого используйте атрибут <xref:System.ServiceModel.OperationContractAttribute> и укажите:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
@@ -49,17 +51,17 @@ caps.handback.revision: 30
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Для каждой операции службы требуется транзакция. Это задается с помощью <xref:System.ServiceModel.OperationBehaviorAttribute> атрибута. Для операции, завершающей транзакцию, параметр `TransactionAutoComplete` должен иметь значение `true`.  
+4.  Для каждой операции службы требуется транзакция. Это задается с помощью атрибута <xref:System.ServiceModel.OperationBehaviorAttribute>. Для операции, завершающей транзакцию, параметр `TransactionAutoComplete` должен иметь значение `true`.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Настройте конечную точку, использующую предоставляемую системой привязку `NetProfileMsmqBinding`.  
+5.  Настройте конечную точку, использующую предоставляемую системой привязку `NetMsmqBinding`.  
   
-6.  Создание транзакционной очереди с помощью <xref:System.Messaging>. Можно также создать очередь с помощью MSMQ или MMC. В таком случае создайте транзакционную очередь.  
+6.  Создайте очередь транзакций с использованием <xref:System.Messaging>. Можно также создать очередь с помощью MSMQ или MMC. В таком случае создайте транзакционную очередь.  
   
-7.  Создайте узел службы для службы с помощью <xref:System.ServiceModel.ServiceHost>.  
+7.  Создайте узел для данной службы с помощью <xref:System.ServiceModel.ServiceHost>.  
   
 8.  Откройте узел службы для обеспечения доступности службы.  
   
@@ -69,7 +71,7 @@ caps.handback.revision: 30
   
 1.  Создайте область транзакции для записи в транзакционную очередь.  
   
-2.  Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство.  
+2.  Создание [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] клиента с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средства.  
   
 3.  Сделайте заказ.  
   
@@ -93,5 +95,5 @@ caps.handback.revision: 30
   
   
 ## <a name="see-also"></a>См. также  
- [Сеансы и очереди](../../../../docs/framework/wcf/samples/sessions-and-queues.md)   
+ [Сеансы и очереди](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
  [Общие сведения об очередях](../../../../docs/framework/wcf/feature-details/queues-overview.md)
