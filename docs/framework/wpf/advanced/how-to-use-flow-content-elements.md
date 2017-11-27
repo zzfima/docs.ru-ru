@@ -1,52 +1,55 @@
 ---
-title: "Практическое руководство. Использование содержимого нефиксированного формата | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "документы, элементы растягиваемого содержимого"
-  - "элементы растягиваемого содержимого"
+title: "Практическое руководство. Использование содержимого нефиксированного формата"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flow content elements [WPF]
+- documents [WPF], flow content elements
 ms.assetid: 70fa11cd-5fa7-4872-a1cc-04d80f1132be
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1350a380e97631ac290e57de64fec696535fecc
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Использование содержимого нефиксированного формата
-В следующем примере показано декларативное использование различных элементов содержимого нефиксированного формата и связанных атрибутов.  Демонстрируемые элементы и атрибуты включают:  
+# <a name="how-to-use-flow-content-elements"></a>Практическое руководство. Использование содержимого нефиксированного формата
+В приведенном ниже примере показано декларативное использование различных элементов с содержимым нефиксированного формата и связанных атрибутов.  Демонстрируемые элементы и атрибуты включают в себя:  
   
--   элемент <xref:System.Windows.Documents.Bold>;  
+-   <xref:System.Windows.Documents.Bold> - элемент  
   
--   атрибут <xref:System.Windows.Documents.Block.BreakPageBefore%2A>;  
+-   Атрибут <xref:System.Windows.Documents.Block.BreakPageBefore%2A>  
   
--   атрибут <xref:System.Windows.Documents.TextElement.FontSize%2A>;  
+-   Атрибут <xref:System.Windows.Documents.TextElement.FontSize%2A>  
   
--   элемент <xref:System.Windows.Documents.Italic>;  
+-   <xref:System.Windows.Documents.Italic> - элемент  
   
--   элемент <xref:System.Windows.Documents.LineBreak>;  
+-   <xref:System.Windows.Documents.LineBreak> - элемент  
   
--   элемент <xref:System.Windows.Documents.List>;  
+-   <xref:System.Windows.Documents.List> - элемент  
   
--   элемент <xref:System.Windows.Documents.ListItem>;  
+-   <xref:System.Windows.Documents.ListItem> - элемент  
   
--   элемент <xref:System.Windows.Documents.Paragraph>;  
+-   <xref:System.Windows.Documents.Paragraph> - элемент  
   
--   элемент <xref:System.Windows.Documents.Run>;  
+-   <xref:System.Windows.Documents.Run> - элемент  
   
--   элемент <xref:System.Windows.Documents.Section>;  
+-   <xref:System.Windows.Documents.Section> - элемент  
   
--   элемент <xref:System.Windows.Documents.Span>;  
+-   <xref:System.Windows.Documents.Span> - элемент  
   
--   Атрибут <xref:System.Windows.Documents.Typography.Variants%2A> \(надстрочный и подстрочный\)  
+-   <xref:System.Windows.Documents.Typography.Variants%2A>атрибут (верхний и нижний индекс)  
   
--   элемент <xref:System.Windows.Documents.Underline>.  
+-   <xref:System.Windows.Documents.Underline> - элемент  
   
-## Пример  
- [!code-xml[FlowDocInlineSnippets#_InlineElementsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]
+## <a name="example"></a>Пример  
+ [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]

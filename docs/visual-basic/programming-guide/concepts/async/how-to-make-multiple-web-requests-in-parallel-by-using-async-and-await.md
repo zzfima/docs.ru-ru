@@ -1,40 +1,31 @@
 ---
-title: "Практическое руководство: параллельное выполнение нескольких веб-запросов с помощью модификатора Async и Await (Visual Basic) | Документы Microsoft"
+title: "Как: параллельное выполнение нескольких веб-запросов с помощью модификатора Async и Await (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e4c41cc3813a9f96d944d115c6aaa5c5842a629b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Практическое руководство: параллельное выполнение нескольких веб-запросов с помощью модификатора Async и Await (Visual Basic)
-В асинхронном методе задачи, запускаются, когда они создаются. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор применяется к задаче в точке в методе, где обработка не может продолжаться до завершения задачи. Часто задачи ожидают, как только будет создан, как показано в следующем примере.  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Как: параллельное выполнение нескольких веб-запросов с помощью модификатора Async и Await (Visual Basic)
+В асинхронном методе задачи запускаются в момент создания. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор применяется к задаче на этапе метод, когда обработка не может продолжаться до завершения задачи. Часто задачи ожидаются в момент создания, как показано в следующем примере.  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
 ```  
   
- Тем не менее можно разделить, создание из ожидает задачу, если программа содержит другую работу для выполнения задачи, не зависят от завершения задачи.  
+ Тем не менее можно отделить создание задачи от ее ожидания, если программа содержит другую работу, выполнение которой не зависит от завершения задачи.  
   
 ```vb  
 ' The following line creates and starts the task.  
@@ -49,32 +40,32 @@ Dim myTask = someWebAccessMethodAsync(url)
 Dim result = Await myTask  
 ```  
   
- Между датами начала задачи и ожидает его, можно запустить другие задачи. Дополнительные задачи неявно параллельного выполнения, но создаются дополнительные потоки.  
+ Между моментом запуска задачи и ее ожиданием можно запустить другие задачи. Дополнительные задачи неявно выполняются параллельно, однако дополнительные потоки не создаются.  
   
- Следующая программа запускает три асинхронные веб-загрузки и затем ждет их в порядке, в котором они называются. Обратите внимание, при запуске программы, задачи не всегда окончания в том порядке, в котором они созданы и ожидать. Они начнут выполняются, когда они создаются и один или несколько задач может завершиться до метода выражений await.  
+ Следующая программа запускает три асинхронные веб-загрузки, а затем ожидает их в том порядке, в котором они вызываются. Обратите внимание, что при запуске программы задачи не всегда завершаются в том порядке, в котором они созданы и ожидаются. Они начинают выполняться в момент создания, и одна или несколько задач могут завершиться прежде, чем метод достигает выражения await.  
   
 > [!NOTE]
->  Для завершения этого проекта, необходимо установить Visual Studio 2012 или более поздней версии и платформы .NET Framework 4.5 или более поздней версии, установленной на компьютере.  
+>  Для выполнения этого проекта необходимо, чтобы на компьютере были установлены Visual Studio 2012 или более поздняя версия и .NET Framework 4.5 или более поздняя версия.  
   
- Другой пример, в котором запускается несколько задач одновременно, в разделе [как: расширение Async пошагового руководства, с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Другой пример, в котором запускает несколько задач, в то же время, в разделе [как: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Можно загрузить код для этого примера из [образцы кода разработчика](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ Код для этого примера можно скачать на странице [Примеры кода от разработчиков](http://go.microsoft.com/fwlink/?LinkId=254906).  
   
 ### <a name="to-set-up-the-project"></a>Настройка проекта  
   
-1.  Чтобы настроить приложение WPF, выполните следующие действия. Можно найти подробные инструкции для выполнения этих действий в [Пошаговое руководство: доступ к Интернету с помощью Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1.  Чтобы настроить приложение WPF, выполните следующие действия. Можно найти подробные инструкции для выполнения этих действий в [Пошаговое руководство: доступ к веб-сайте, с помощью Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Создание приложения WPF, содержит текстовое поле и кнопку. Имя создаваемой кнопки `startButton`и имя текстового поля `resultsTextBox`.  
+    -   Создайте приложение WPF, которое содержит текстовое поле и кнопку. Назовите кнопку `startButton`, а текстовое поле — `resultsTextBox`.  
   
-    -   Добавить ссылку <xref:System.Net.Http>.</xref:System.Net.Http>  
+    -   Добавьте ссылку для <xref:System.Net.Http>.  
   
     -   Добавьте в файл MainWindow.xaml.vb `Imports` инструкции для `System.Net.Http`.  
   
 ### <a name="to-add-the-code"></a>Добавление кода  
   
-1.  В окне конструктора файл MainWindow.xaml, дважды щелкните кнопку, чтобы создать `startButton_Click` обработчика событий в файл MainWindow.xaml.vb.  
+1.  В окне конструктора MainWindow.xaml дважды щелкните кнопку, чтобы создать `startButton_Click` обработчика событий в файле.  
   
-2.  Скопируйте следующий код и вставьте его в тексте `startButton_Click` в MainWindow.xaml.vb.  
+2.  Скопируйте следующий код и вставьте его в теле `startButton_Click` в файле.  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -82,15 +73,15 @@ Dim result = Await myTask
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."  
     ```  
   
-     Код вызывает асинхронный метод `CreateMultipleTasksAsync`, который управляет приложения.  
+     Код вызывает асинхронный метод `CreateMultipleTasksAsync`, который управляет приложением.  
   
-3.  Добавьте следующие методы поддержки в проект:  
+3.  Добавьте следующие вспомогательные методы в проект:  
   
-    -   `ProcessURLAsync`использует <xref:System.Net.Http.HttpClient>метод для загрузки содержимого веб-сайта в виде массива байтов.</xref:System.Net.Http.HttpClient> Метод поддержки `ProcessURLAsync` затем отображает и возвращает длину массива.  
+    -   `ProcessURLAsync` использует метод <xref:System.Net.Http.HttpClient> для скачивания содержимого веб-сайта в виде массива байтов. Вспомогательный метод `ProcessURLAsync` затем отображает и возвращает длину массива.  
   
-    -   `DisplayResults`Отображение числа байтов в массиве байтов для каждого URL-адреса. Это отображения показывает, когда каждая задача завершена загрузка.  
+    -   `DisplayResults` показывает число байтов в массиве байтов для каждого URL-адреса. Эти выходные данные показывают, когда именно каждая задача завершает загрузку.  
   
-     Скопируйте следующие методы и вставьте их после `startButton_Click` обработчика событий в файл MainWindow.xaml.vb.  
+     Скопируйте следующие методы и вставьте их после `startButton_Click` обработчика событий в файле.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -114,13 +105,13 @@ Dim result = Await myTask
   
 4.  Наконец, определите метод `CreateMultipleTasksAsync`, который выполняет следующие действия.  
   
-    -   Объявляет метод `HttpClient` объекта, который требуется для доступа к методу <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>в `ProcessURLAsync`.</xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>  
+    -   Этот метод объявляет объект `HttpClient`, который используется методом доступа <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> в `ProcessURLAsync`.  
   
-    -   Метод создает и запускает три задачи типа <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом.</xref:System.Threading.Tasks.Task%601> При завершении каждой задачи, `DisplayResults` отображает задачи URL-адрес и длина загруженного содержимого. Поскольку задачи выполняются асинхронно, порядок, в котором отображаются результаты могут отличаться от порядка, в котором они были объявлены.  
+    -   Метод создает и запускает три задачи типа <xref:System.Threading.Tasks.Task%601>, где `TResult` является целым числом. При завершении каждой задачи `DisplayResults` отображает URL-адрес и длину загруженного содержимого задачи. Поскольку задачи выполняются асинхронно, порядок, в котором отображаются результаты, может отличаться от порядка, в котором они были объявлены.  
   
-    -   Метод ждет завершения каждой задачи. Каждый `Await` оператор приостанавливает выполнение `CreateMultipleTasksAsync` до завершения выполнения ожидаемой задачи. Оператор также получает возвращаемое значение вызова `ProcessURLAsync` от каждой завершенной задачи.  
+    -   Метод ожидает завершения каждой задачи. Каждый оператор `Await` приостанавливает выполнение `CreateMultipleTasksAsync` до завершения выполнения ожидаемой задачи. Оператор также получает возвращаемое значение вызова `ProcessURLAsync` от каждой завершенной задачи.  
   
-    -   После завершения задач и получения целые значения, метод суммирует длину веб-сайты и отображает результат.  
+    -   После завершения задач и получения целочисленных значений метод суммирует длину веб-сайтов и отображает результат.  
   
      Скопируйте следующий метод и вставьте его в решение.  
   
@@ -156,7 +147,7 @@ Dim result = Await myTask
   
 5.  Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
   
-     Запустите программу несколько раз, чтобы убедиться, что три задачи не всегда завершается, в том же порядке и порядок их завершения обязательно не порядок, в котором они созданы и ожидать.  
+     Запустите программу несколько раз, чтобы убедиться, что три задачи не всегда завершаются в том же порядке, а порядок их завершения не обязательно совпадает с порядком, в котором они создаются и ожидаются.  
   
 ## <a name="example"></a>Пример  
  Следующий код содержит полный пример.  
@@ -222,7 +213,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Практическое руководство: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-
+ [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))  
+ [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (Visual Basic))

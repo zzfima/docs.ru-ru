@@ -1,59 +1,64 @@
 ---
-title: "Практическое руководство. Размещение элементов управления в формах Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Location"
-  - "Location.Y"
-  - "Location.X"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "элементы управления [Windows Forms]"
-  - "элементы управления [Windows Forms], перемещение"
-  - "элементы управления [Windows Forms], размещение"
-  - "линии привязки"
+title: "Практическое руководство. Размещение элементов управления в формах Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords:
+- Location
+- Location.Y
+- Location.X
+helpviewer_keywords:
+- controls [Windows Forms]
+- controls [Windows Forms], moving
+- snaplines
+- controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ff1096e6397f4422e0fbf6400a87041cfac6470
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Размещение элементов управления в формах Windows Forms
-Чтобы расположить элементы управления, можно использовать конструктор Windows Forms или указать свойство <xref:System.Windows.Forms.Control.Location%2A>.  
+# <a name="how-to-position-controls-on-windows-forms"></a>Практическое руководство. Размещение элементов управления в формах Windows Forms
+Размещение элементов управления, использовать конструктор Windows Forms или задайте <xref:System.Windows.Forms.Control.Location%2A> свойство.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы разместить элемент управления в рабочем поле конструктора Windows Forms  
+### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Чтобы разместить элемент управления в рабочей области конструирования в конструкторе Windows Forms  
   
--   Перетащите элемент управления на соответствующее место с помощью мыши.  
-  
-    > [!NOTE]
-    >  Выберите элемент управления и перемещайте его с помощью клавиш со стрелками для более точного расположения.  Для точного размещения можно использовать *линии привязки*.  Дополнительные сведения см. в разделе [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
-  
-### Чтобы разместить элемент управления с помощью окна "Свойства"  
-  
-1.  Щелкните требуемый элемент управления.  
-  
-2.  В окне **Свойства** введите значения свойства <xref:System.Windows.Forms.Control.Location%2A>, разделенные запятыми, чтобы разместить элемент управления внутри контейнера.  
-  
-     Первое число \(X\) определяет расстояние от левой границы контейнера; второе число \(Y\) определяет расстояние от верхней границы контейнера. Расстояние измеряется в пикселях.  
+-   Перетащите элемент управления в нужное место с помощью мыши.  
   
     > [!NOTE]
-    >  Можно развернуть свойство <xref:System.Windows.Forms.Control.Location%2A>, чтобы ввести значения **X** и **Y** отдельно.\<\+\]  
+    >  Выберите элемент управления и переместите его со стрелкой клавиш со стрелками для более точного. Кроме того *линии привязки* поможет для точного размещения. Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-### Чтобы разместить элемент управления программными средствами  
+### <a name="to-position-a-control-using-the-properties-window"></a>Чтобы разместить элемент управления с помощью окна свойств  
   
-1.  Установите свойству <xref:System.Windows.Forms.Control.Location%2A> элемента управления значение <xref:System.Drawing.Point>.  
+1.  Щелкните элемент управления, который можно разместить.  
+  
+2.  В **свойства** окна, тип значения для <xref:System.Windows.Forms.Control.Location%2A> свойств, разделенных запятыми, чтобы разместить элемент управления внутри контейнера.  
+  
+     Первое число (X) представляет собой расстояние от левой границы контейнера; второе число (Y) представляет собой расстояние от верхней границы области контейнера, измеряется в пикселях.  
+  
+    > [!NOTE]
+    >  Вы можете развернуть <xref:System.Windows.Forms.Control.Location%2A> свойство в тип **X** и **Y** отдельно.  
+  
+### <a name="to-position-a-control-programmatically"></a>Чтобы разместить элемент управления программными средствами  
+  
+1.  Задать <xref:System.Windows.Forms.Control.Location%2A> свойства элемента управления для <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -67,7 +72,7 @@ caps.handback.revision: 18
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Измените значение координаты X элемента управления с помощью подчиненного свойства <xref:System.Windows.Forms.Control.Left%2A>.  
+2.  Измените значение координаты X местоположения элемента управления с помощью <xref:System.Windows.Forms.Control.Left%2A> вложенное свойство.  
   
     ```vb  
     Button1.Left = 300  
@@ -81,9 +86,9 @@ caps.handback.revision: 18
     button1->Left = 300;  
     ```  
   
-### Чтобы изменить расположение элемента управления программными средствами  
+### <a name="to-increment-a-controls-location-programmatically"></a>Чтобы увеличить расположение элемента управления программными средствами  
   
-1.  Чтобы изменять координату X элемента управления, задайте подчиненное свойство <xref:System.Windows.Forms.Control.Left%2A>.  
+1.  Задать <xref:System.Windows.Forms.Control.Left%2A> подчиненное координату X элемента управления.  
   
     ```vb  
     Button1.Left += 200  
@@ -98,15 +103,15 @@ caps.handback.revision: 18
     ```  
   
     > [!NOTE]
-    >  Для одновременного задания значений координат X и Y формы Windows Forms используйте свойство <xref:System.Windows.Forms.Control.Location%2A>.  Чтобы задать положение по каждой координате отдельно, используйте подчиненные свойства <xref:System.Windows.Forms.Control.Left%2A> \(**X**\) и <xref:System.Windows.Forms.Control.Top%2A> \(**Y**\).  Не пытайтесь неявно задать координаты X и Y структуры <xref:System.Drawing.Point>, которая определяет расположение кнопки, потому что эта структура содержит копию координат кнопки.  
+    >  Используйте <xref:System.Windows.Forms.Control.Location%2A> одновременно помещает свойства X и Y элемента управления. Чтобы задать положение по отдельности, используйте элемент управления <xref:System.Windows.Forms.Control.Left%2A> (**X**) или <xref:System.Windows.Forms.Control.Top%2A> (**Y**) вложенное свойство. Не пытайтесь неявно задать координаты X и Y <xref:System.Drawing.Point> структуру, которая представляет расположение кнопки, потому что эта структура содержит копию координат кнопки.  
   
-## См. также  
- [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Пример. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Расположение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)   
- [How to: Set the Screen Location of Windows Forms](http://msdn.microsoft.com/ru-ru/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)
+## <a name="see-also"></a>См. также  
+ [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Пошаговое руководство. Упорядочение элементов управления в формах Windows Forms с помощью элемента FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Функциональная классификация элементов управления Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [Как: задать расположение экрана формы Windows Forms](http://msdn.microsoft.com/en-us/cb023ab7-dea7-4284-9aa6-8c03c59b60c6)

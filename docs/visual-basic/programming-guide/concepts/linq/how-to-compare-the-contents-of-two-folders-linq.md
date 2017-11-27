@@ -1,44 +1,36 @@
 ---
-title: "Практическое руководство: сравнение содержимого двух папок (LINQ) (Visual Basic) | Документы Microsoft"
+title: "Как: сравнение содержимого двух папок (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce4f89c88fd856d3471e4f32c4f69d15e8ccb4c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a65b5f74e872cb4d2e459bc7ff866ca332706ef9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Практическое руководство: сравнение содержимого двух папок (LINQ) (Visual Basic)
-В этом примере показаны три способа сравнения двух списков файлов:  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Как: сравнение содержимого двух папок (LINQ) (Visual Basic)
+В этом примере демонстрируются три способа сравнения двух списков файлов:  
   
--   Выполнив запрос на логическое значение, указывающее, является ли два списка файлов идентичны.  
+-   путем запроса логического значения, указывающего, являются ли два списка файлов идентичными;  
   
--   Путем запроса пересечения для извлечения файлов, находящихся в обеих папках.  
+-   путем запроса пересечения для извлечения файлов, находящихся в обеих папках;  
   
--   Путем запроса разности наборов для извлечения файлов, которые находятся в одной папке, но отсутствующих в другой.  
+-   путем запроса разности множеств для извлечения файлов, находящихся в одной папке, но отсутствующих в другой.  
   
     > [!NOTE]
-    >  Методы, представленные здесь могут быть адаптированы для сравнения последовательностей объектов любого типа.  
+    >  Методы, представленные в этом примере, можно адаптировать для сравнения последовательностей объектов любого типа.  
   
- `FileComparer` Класс, показанный здесь показано, как использовать пользовательский класс сравнения вместе со стандартными операторами запросов. Класс не предназначен для использования в реальных сценариях. Она использует только имя и длину каждого файла в байтах для определения идентичности содержимого каждой папки или нет. В реальном сценарии следует изменить этой функции сравнения для выполнения более строгой проверки равенства.  
+ Класс `FileComparer`, показанный здесь, демонстрирует применение пользовательского класса сравнения вместе со стандартными операторами запросов. Класс не предназначен для использования в реальных сценариях. Он использует только имя и длину каждого файла в байтах для определения идентичности содержимого папок. В реальном сценарии для выполнения более строгой проверки равенства этот класс следует изменить.  
   
 ## <a name="example"></a>Пример  
   
@@ -131,8 +123,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, в платформе .NET Framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll и `Imports` оператор для пространства имен System.Linq.  
+ Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивой `Imports` для пространства имен System.Linq.  
   
 ## <a name="see-also"></a>См. также  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

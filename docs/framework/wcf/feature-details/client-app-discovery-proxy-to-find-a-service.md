@@ -1,25 +1,28 @@
 ---
-title: "Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
-Это последний из трех разделов, в которых рассматривается реализация прокси\-сервера обнаружения.В предыдущем разделе [Как реализовать обнаружимую службу, которая регистрируется в прокси\-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md) была выполнена реализация службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], которая регистрировала себя на прокси\-сервере обнаружения.В этом разделе будет создан клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который использует прокси\-сервер обнаружения для поиска службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Как реализовать клиентское приложение, которое для поиска служб использует прокси-сервер обнаружения
+Это последний из трех разделов, в которых рассматривается реализация прокси-сервера обнаружения. В предыдущем разделе [как: реализовать Обнаружимую службу, которая регистрирует прокси-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), можно реализовать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] службу, которая регистрирует себя с прокси-сервера обнаружения. В этом разделе будет создан клиент [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], который использует прокси-сервер обнаружения для поиска службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
-### Реализация клиента  
+### <a name="implement-the-client"></a>Реализация клиента  
   
 1.  Добавьте новый проект консольного приложения с именем `DiscoveryProxyExample` в решение `Client`.  
   
@@ -32,9 +35,9 @@ caps.handback.revision: 12
 3.  Добавьте в проект файл GeneratedClient.cs, приведенный в конце этого раздела.  
   
     > [!NOTE]
-    >  Этот файл обычно создается с помощью программы Svcutil.exe.В этом разделе он приведен для того, чтобы упростить задачу.  
+    >  Этот файл обычно создается с помощью программы Svcutil.exe. В этом разделе он приведен для того, чтобы упростить задачу.  
   
-4.  Откройте файл Program.cs и добавьте следующий метод:Этот метод принимает адрес конечной точки и использует его для инициализации клиента службы \(прокси\-сервера\).  
+4.  Откройте файл Program.cs и добавьте следующий метод: Этот метод принимает адрес конечной точки и использует его для инициализации клиента службы (прокси-сервера).  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -67,7 +70,6 @@ caps.handback.revision: 12
                 // Closing the client gracefully closes the connection and cleans up resources  
                 client.Close();  
             }  
-  
     ```  
   
 5.  Добавьте следующий код в метод `Main`.  
@@ -107,12 +109,11 @@ caps.handback.revision: 12
                 Console.WriteLine("Press <ENTER> to exit.");  
                 Console.ReadLine();  
             }  
-  
     ```  
   
- Реализация клиентского приложения завершена.Продолжение см. в разделе [Как проверить прокси\-сервер обнаружения](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ Реализация клиентского приложения завершена. Перейдите к [как: прокси-сервер обнаружения тестов](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  Ниже приведен полный листинг кода для этого раздела.  
   
 ```  
@@ -205,7 +206,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -291,7 +291,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## См. также  
- [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Как реализовать прокси\-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [Как реализовать обнаружимую службу, которая регистрируется в прокси\-сервере обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения об обнаружении WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Как: реализация прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Как: реализовать Обнаружимую службу, которая регистрирует с прокси-сервера обнаружения](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -1,49 +1,41 @@
 ---
-title: "Сериализация в файлы и объекты TextWriters и XmlWriters3 | Документы Microsoft"
+title: "Сериализация в файлы, объекты TextWriters и XmlWriters3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 98662b8d84459ed051d048084c2755fa7aaf8247
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f4c5578bc20f91eb35f78355dff0fc4c44e878e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Сериализация в файлы и объекты TextWriters и XmlWriters
-Можно сериализовать XML-деревья в <xref:System.IO.File>, <xref:System.IO.TextWriter>, или <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.IO.TextWriter> </xref:System.IO.File>  
+XML-деревья можно сериализовать для <xref:System.IO.File>, <xref:System.IO.TextWriter> или для <xref:System.Xml.XmlWriter>.  
   
- Можно сериализовать любой компонент XML, включая <xref:System.Xml.Linq.XDocument>и <xref:System.Xml.Linq.XElement>, в строку с помощью `ToString` метод.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument>  
+ Любой компонент XML, включая <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement>, можно сериализовать для строки с помощью метода `ToString`.  
   
- Если необходимо отключить форматирование при сериализации в строку, можно использовать <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=fullName>метода.</xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=fullName>  
+ Если в процессе сериализации в строку необходимо подавить форматирование, эту задачу можно решить с помощью метода <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType>.  
   
- Установка9600 поведение при сериализации для файла состоит в форматировании (посредством создания отступов) результирующего XML-документа. При создании отступов не имеющие значения пробелы в XML-дереве не сохраняются. Для выполнения сериализации с форматированием, используйте одну из перегрузок следующих методов, которые не принимают <xref:System.Xml.Linq.SaveOptions>в качестве аргумента:</xref:System.Xml.Linq.SaveOptions>  
+ При выполнении сериализации для файла характер действий по умолчанию состоит в форматировании результирующего XML-документа посредством создания отступов. При создании отступов не имеющие значения пробелы в XML-дереве не сохраняются. Для выполнения сериализации с форматированием нужно использовать одну из перегрузок следующих методов, не принимающих <xref:System.Xml.Linq.SaveOptions> в качестве аргумента:  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName></xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
- Если необходимо воздержаться от создания отступов и сохранять незначащие пробелы в XML-дерево, используйте одну из перегрузок следующих методов, принимающих <xref:System.Xml.Linq.SaveOptions>в качестве аргумента:</xref:System.Xml.Linq.SaveOptions>  
+ Если необходимо воздержаться от создания отступов и сохранить не имеющие значения пробелы в XML-дереве, нужно использовать одну из перегрузок следующих методов, принимающих <xref:System.Xml.Linq.SaveOptions> в качестве аргумента:  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName></xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName></xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
  Примеры см. в следующем разделе справки.  
   

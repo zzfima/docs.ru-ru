@@ -1,37 +1,41 @@
 ---
-title: "Практическое руководство. Определение узла TreeView, выбранного щелчком мыши (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TreeNode"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], TreeView - элемент управления"
-  - "узлы дерева в элементе управления TreeView, определение выбранного узла"
-  - "TreeView - элемент управления [Windows Forms], определение выбранного узла"
+title: "Практическое руководство. Определение узла TreeView, выбранного щелчком мыши (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: TreeNode
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- tree nodes in TreeView control [Windows Forms], determining node clicked
+- TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c59b09f6df7fdc6a7bb237ff6eafcad99329256
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Практическое руководство. Определение узла TreeView, выбранного щелчком мыши (Windows Forms)
-Одной из типичных задач, выполняемых при работе с элементом управления Windows Forms <xref:System.Windows.Forms.TreeView>, является определение узла, выбранного щелчком мыши, и выбор соответствующего ответного действия.  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Практическое руководство. Определение узла TreeView, выбранного щелчком мыши (Windows Forms)
+При работе с Windows Forms <xref:System.Windows.Forms.TreeView> является управление, общие задачи для определения узла, выбранного щелчком мыши и реагировать соответствующим образом.  
   
-### Чтобы определить, какой узел элемента управления TreeView был выбран щелчком мыши  
+### <a name="to-determine-which-treeview-node-was-clicked"></a>Чтобы определить, какой узел элемента управления TreeView, выбранного щелчком мыши  
   
-1.  Используйте объект <xref:System.EventArgs> для получения ссылки для объекта узла, выбранного щелчком мыши.  
+1.  Используйте <xref:System.EventArgs> объект для получения ссылки для объекта выделенного узла.  
   
-2.  Определите, какой узел был выбран щелчком мыши, путем проверки класса <xref:System.Windows.Forms.TreeViewEventArgs>, в котором содержатся данные, связанные с этим событием.  
+2.  Определить, какой из узлов была нажата, установив <xref:System.Windows.Forms.TreeViewEventArgs> класс, который содержит данные, связанные с событием.  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -39,7 +43,6 @@ caps.handback.revision: 12
        ' Determine by checking the Node property of the TreeViewEventArgs.  
        MessageBox.Show(e.Node.Text)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -49,7 +52,6 @@ caps.handback.revision: 12
        // Determine by checking the Text property.  
        MessageBox.Show(e.Node.Text);  
     }  
-  
     ```  
   
     ```cpp  
@@ -63,7 +65,7 @@ caps.handback.revision: 12
     ```  
   
     > [!NOTE]
-    >  Можно также использовать объект <xref:System.Windows.Forms.MouseEventArgs> события <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.MouseUp> для получения значений координат <xref:System.Drawing.Point.X%2A> и <xref:System.Drawing.Point.Y%2A> объекта <xref:System.Drawing.Point> — точки, в которой пользователь щелкнул мышью.  Затем используйте метод <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> элемента управления <xref:System.Windows.Forms.TreeView>, чтобы определить, какой узел был выбран щелчком мыши.  
+    >  В качестве альтернативы можно использовать <xref:System.Windows.Forms.MouseEventArgs> из <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.MouseUp> событий для получения <xref:System.Drawing.Point.X%2A> и <xref:System.Drawing.Point.Y%2A> координировать значения <xref:System.Drawing.Point> места щелчка. Затем с помощью <xref:System.Windows.Forms.TreeView> элемента управления <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> метод, чтобы определить, какой из узлов выполнен щелчок.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)

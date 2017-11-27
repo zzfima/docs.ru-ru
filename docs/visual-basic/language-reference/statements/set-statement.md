@@ -1,102 +1,100 @@
 ---
-title: "Инструкция Set (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Set"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "свойства [Visual Basic], только запись"
-  - "процедуры свойств, Set - операторы"
-  - "Set - оператор"
-  - "Set - оператор, синтаксис"
-  - "свойства только для записи"
+title: "Инструкция Set (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Set
+helpviewer_keywords:
+- property procedures [Visual Basic], Set statements
+- Set statement [Visual Basic]
+- Set statement [Visual Basic], syntax
+- write-only properties
+- properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Инструкция Set (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Объявляет свойство `Set`, которое используется для присваивания свойству значения.  
+# <a name="set-statement-visual-basic"></a>Инструкция Set (Visual Basic)
+Объявляет `Set` процедуру, которая используется для присвоения значения свойству.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
-    [ statements ]  
+[ <attributelist> ] [ accessmodifier ] Set (ByVal value [ As datatype ])  
+    [ statements ]  
 End Set  
 ```  
   
-## Части  
+## <a name="parts"></a>Части  
  `attributelist`  
- Необязательный.  См. [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Необязательно. В разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Необязателен максимум для одного из операторов `Get` и `Set` в этом свойстве.  Может принимать следующие значения:  
+ Необязательный на более одного `Get` и `Set` инструкции в этом свойстве. Ниже указаны доступные значения.  
   
--   [Защищенный](../../../visual-basic/language-reference/modifiers/protected.md)  
+-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
 -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)  
+-   [Закрытые](../../../visual-basic/language-reference/modifiers/private.md)  
   
 -   `Protected Friend`  
   
- Дополнительные сведения см. в разделе [Уровни доступа в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ В разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Обязательный.  Параметр, содержащий новое значение свойства.  
+ Обязательный. Параметр, содержащий новое значение для свойства.  
   
  `datatype`  
- Требуется, если для `Option Strict` установлено значение `On`.  Тип данных параметра `value`.  Указанный тип данных должен совпадать с типом данных свойства, для которого объявляется данный оператор `Set`.  
+ Обязателен, если `Option Strict` — `On`. Тип данных `value` параметра. Указанный тип данных должен быть таким же, как тип данных свойства, где это `Set` оператор объявлен.  
   
  `statements`  
- Необязательный.  Один или несколько операторов, которые выполняются при вызове процедуры свойства `Set`.  
+ Необязательно. Один или несколько операторов, выполняемых при `Set` вызывается процедура свойства.  
   
  `End Set`  
- Обязательный.  Завершает определение процедуры свойства `Set`.  
+ Обязательный. Завершает определение `Set` процедуры свойства.  
   
-## Заметки  
- Каждое свойство должно иметь процедуру свойства `Set`, если только свойство не помечено как `ReadOnly`.  Процедура `Set` используется для присвоения значения свойства.  
+## <a name="remarks"></a>Примечания  
+ Каждое свойство должно иметь `Set` процедуры свойства, если свойство помечено как `ReadOnly`. `Set` Процедура используется для задания значения свойства.  
   
- Visual Basic автоматически вызывает процедуру свойства `Set`, когда оператор присваивания предоставляет значение, хранимое в свойстве.  
+ Visual Basic автоматически вызывает свойство `Set` процедуру, когда оператор присваивания предоставляет значение хранится в свойстве.  
   
- Visual Basic передает параметр в процедуру `Set` во время назначения свойств.  Если параметры для блока `Set` не предоставляются пользователем, интегрированная среда разработки \(IDE\) использует неявный параметр с именем `value`.  Параметр содержит значение, присваиваемое свойству.  Обычно это значение хранится в закрытой локальной переменной и возвращается при каждом вызове процедуры `Get`.  
+ Visual Basic передает параметр `Set` процедуры во время назначения свойств. Если не указать параметр для `Set`, интегрированной среды разработки (IDE) использует неявный параметр с именем `value`. Параметр содержит значение, присваиваемое свойству. Обычно сохраните значение в частной локальной переменной и возвращается при каждом `Get` при вызове процедуры.  
   
- Основная часть объявления свойства может содержать только процедуры `Get` и `Set` свойства между оператором [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md) и `End Property`.  Оно не может хранить что\-либо кроме этих процедур.  В частности, оно не может хранить текущее значение свойства.  Это значение следует хранить за пределами свойства, так как если хранить его внутри любой из процедур свойства, другая процедура свойства не сможет получить к нему доступ.  Обычным подходом является хранение значения в переменной [Private](../../../visual-basic/language-reference/modifiers/private.md), объявленной на том же уровне, что и свойство.  Процедуру `Set` необходимо определить внутри свойства, к которому оно применимо.  
+ Тело объявления свойства может содержать только свойства `Get` и `Set` процедур между [оператор Property](../../../visual-basic/language-reference/statements/property-statement.md) и `End Property` инструкции. Оно не может хранить ничего, кроме этих процедур. В частности он не может хранить текущее значение свойства. Это значение за пределами свойства, необходимо сохранить, поскольку при сохранении внутри любой из процедур свойства, процедуры свойства не может получить доступ к его. Обычный способ — хранить значение в [закрытый](../../../visual-basic/language-reference/modifiers/private.md) переменной, объявленной в том же уровне, что и свойство. Необходимо определить `Set` процедуры внутри свойства, к которому он применяется.  
   
- Процедура `Set` имеет уровень доступа к свойству, в котором содержится, по умолчанию, если не используется инструкция `accessmodifier` в операторе `Set`.  
+ `Set` Процедуры по умолчанию устанавливается уровень доступа свойства, содержащего Если вы используете `accessmodifier` в `Set` инструкции.  
   
-## Правила  
+## <a name="rules"></a>Правила  
   
--   **Смешанные уровни доступа.** При определении свойства для чтения и записи можно указать другой уровень доступа для процедур `Get` или `Set`, но не для обеих.  При этом уровень доступа процедуры должен быть более строгими, чем уровень доступа свойства.  Например, если свойство объявлено `Friend`, можно объявить процедуру `Set` как `Private`, но не `Public`.  
+-   **Смешанные уровни доступа.** При определении свойства чтения и записи, при необходимости можно указать другой уровень доступа для любого `Get` или `Set` процедуры, но не оба. После этого уровень доступа процедуры должен быть более ограничивающим, чем уровень доступа свойства. Например, если свойство объявлено `Friend`, можно объявить `Set` процедура `Private`, но не `Public`.  
   
-     При определении свойства `WriteOnly`, процедура `Set` представляет все свойство.  Нельзя объявлять другой уровень доступа для `Set`, поскольку таким образом устанавливается два уровня доступа для свойства.  
+     При определении `WriteOnly` свойства `Set` процедура представляет все свойство. Нельзя объявлять разные права доступа уровня для `Set`, так как это установит два уровня доступа для свойства.  
   
-## Поведение  
+## <a name="behavior"></a>Поведение  
   
--   **Возвращение из процедуры свойства.** Когда процедура`Set` возвращается к коду вызова, выполнение продолжается после инструкции, которая предоставляет значение для хранения.  
+-   **Возвращение из процедуры свойства.** Когда `Set` процедура возвращает в вызывающий код, выполнение продолжается после инструкции, которая предоставляет значение для сохранения.  
   
-     Процедуры свойства `Set` могут возвращаться с помощью либо [Оператор Return](../../../visual-basic/language-reference/statements/return-statement.md), либо [Оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set`процедуры свойств можно вернуть с помощью [оператор Return](../../../visual-basic/language-reference/statements/return-statement.md) или [оператор Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
-     Операторы `Exit Property` и `Return` вызывают немедленный выход из процедуры свойства.  Любое количество операторов `Exit Property` и `Return` может использоваться в любом месте процедуры, и их также можно использовать вместе с операторами `Exit Property` и `Return`.  
+     `Exit Property` И `Return` инструкции вызывают Немедленный выход из процедуры свойства. Любое количество `Exit Property` и `Return` операторы могут использоваться в любом месте в процедуре, и могут быть использованы смешанные `Exit Property` и `Return` инструкции.  
   
-## Пример  
- В следующем примере используется инструкция `Set` для задания значения свойства.  
+## <a name="example"></a>Пример  
+ В следующем примере используется `Set` инструкции, чтобы задать значение свойства.  
   
  [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
-## См. также  
- [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)   
- [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
+## <a name="see-also"></a>См. также  
+ [Оператор Get](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Оператор Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
  [Процедуры свойств](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)

@@ -1,37 +1,42 @@
 ---
-title: "Практическое руководство. Определение изображения, отображаемого элементом управления Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button - элемент управления [Windows Forms], изображения"
-  - "элементы управления [Windows Forms], изображения"
-  - "примеры [Windows Forms], элементы управления"
-  - "изображения [Windows Forms], элементы управления Windows Forms"
-  - "элементы управления Windows Forms, изображения"
+title: "Практическое руководство. Определение изображения, отображаемого элементом управления Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Button control [Windows Forms], images
+- Windows Forms controls, images
+- controls [Windows Forms], images
+- images [Windows Forms], Windows Forms controls
+- examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d9f4d806b39e6e1272ddbb60befdaf8c76e46b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Определение изображения, отображаемого элементом управления Windows Forms
-На многих элементах управления Windows Forms могут отображаться рисунки.  В качестве этих рисунков могут использоваться значки, поясняющие назначение элемента управления, например, значок дискеты на кнопке, соответствующей команде **Сохранить**.  В качестве значков можно также использовать фоновые изображения, чтобы придать значку требуемый внешний вид и поведение.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Практическое руководство. Определение изображения, отображаемого элементом управления Windows Forms
+Несколько элементов управления Windows Forms можно отображать изображения. Эти образы могут использоваться значки, поясняющие назначение элемента управления, например, значок дискеты на кнопке, отвечающий за **Сохранить** команды. Кроме того значок может быть фоновые изображения, чтобы предоставить элемент управления, внешний вид и поведение.  
   
-### Чтобы задать рисунок, отображаемый на элементе управления  
+### <a name="to-set-the-image-displayed-by-a-control"></a>Чтобы задать изображение, отображаемое на элементе управления  
   
-1.  Присвойте свойству `Image` или `BackgroundImage` элемента управления объект типа <xref:System.Drawing.Image>.  Как правило, изображение будет загружаться из файла при помощи метода <xref:System.Drawing.Image.FromFile%2A>.  
+1.  Задайте в качестве `Image` или `BackgroundImage` свойство для объекта типа <xref:System.Drawing.Image>. Как правило, будет загружаться изображение из файла с помощью <xref:System.Drawing.Image.FromFile%2A> метод.  
   
-     В следующем примере кода в качестве местоположения изображения выбрана папка **Мои рисунки**.  Эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  Для следующего примера кода требуется форма с заранее добавленным элементом управления <xref:System.Windows.Forms.PictureBox>.  
+     В следующем примере кода путь задан при размещении изображения является **Мои рисунки** папки. Большинство компьютеров под управлением операционной системы Windows, содержат эту папку. Это также позволяет пользователям с уровнями доступа минимальные системные для безопасной работы приложения. В следующем примере кода требуется наличие формы с <xref:System.Windows.Forms.PictureBox> управления добавлен.  
   
     ```vb  
     ' Replace the image named below  
@@ -40,7 +45,6 @@ caps.handback.revision: 11
        (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.MyPictures) _  
        & "\Image.gif")  
-  
     ```  
   
     ```csharp  
@@ -51,7 +55,6 @@ caps.handback.revision: 11
        (System.Environment.GetFolderPath  
        (System.Environment.SpecialFolder.MyPictures)  
        + @"\Image.gif");  
-  
     ```  
   
     ```cpp  
@@ -63,7 +66,7 @@ caps.handback.revision: 11
        "\\Image.gif"));  
     ```  
   
-## См. также  
- <xref:System.Drawing.Image.FromFile%2A>   
- <xref:System.Drawing.Image>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Drawing.Image.FromFile%2A>  
+ <xref:System.Drawing.Image>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>

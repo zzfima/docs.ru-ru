@@ -1,36 +1,32 @@
 ---
-title: "Практическое руководство: изменение документа Office Open XML (Visual Basic) | Документы Microsoft"
+title: "Как: изменение документа Office Open XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 04de8ce23af62d7abb6bc5274e96868f830c4320
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0d2f6b9bc7acf7c9108112b61fe8edf70c549cac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Практическое руководство: изменение документа Office Open XML (Visual Basic)
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Как: изменение документа Office Open XML (Visual Basic)
 В этом разделе представлен пример, в котором открывается документ Office Open XML, затем он изменяется и сохраняется.  
   
- Дополнительные сведения об Office Open XML см. в разделе [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
   
 ## <a name="example"></a>Пример  
  В этом примере осуществляется поиск первого абзаца документа. В примере происходит получение текста из этого абзаца, а затем все текстовые прогоны в абзаце удаляются. Создается новый текстовый прогон, состоящий из текста первого абзаца, преобразованного в верхний регистр. Затем измененный XML сериализуется в пакет Open XML и закрывается.  
   
- В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName>  
+ В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -150,7 +146,7 @@ End Module
   
  Если открыть файл `SampleDoc.docx` после выполнения этой программы, можно будет увидеть, что программа преобразовала первый абзац в документе в верхний регистр.  
   
- При запуске с образцом документа Open XML, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), в этом примере выводятся следующие данные:  
+ При запуске с образец откройте XML-документа, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), в этом примере выводятся следующие данные:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  

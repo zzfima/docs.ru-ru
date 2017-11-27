@@ -1,45 +1,49 @@
 ---
-title: "Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "коллекции, добавление элементов"
-  - "элементы управления [Windows Forms], добавление пользовательских коллекций"
-  - "элементы управления [Windows Forms], удаление пользовательских коллекций"
-  - "коллекции элементов управления"
-  - "время выполнения, добавление элементов управления"
-  - "время выполнения, удаление элементов управления"
+title: "Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- run time [Windows Forms], removing controls
+- controls [Windows Forms], adding using collections
+- controls collections
+- collections [Windows Forms], adding items
+- run time [Windows Forms], adding controls
+- controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b359679df68bf3caa9bab1bdbadedadcde45ac5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
-Стандартными задачами при разработке приложения является задача добавления элементов управления в любой элемент управления контейнерами в формах и их удаление оттуда \(например, в элемент управления <xref:System.Windows.Forms.Panel> или <xref:System.Windows.Forms.GroupBox>, либо в саму форму\).  В процессе разработки можно перетащить элементы управления непосредственно в панель или в группу.  Во время выполнения эти элементы управления образуют коллекцию `Controls`, которая следит за размещаемыми элементами управления.  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Практическое руководство. Добавление или удаление элемента в коллекции элементов управления во время выполнения
+Общие задачи при разработке приложения Добавление элементов управления в и удаление элементов управления из любого контейнерного элемента управления в формах (например, <xref:System.Windows.Forms.Panel> или <xref:System.Windows.Forms.GroupBox> управления или в саму форму). Во время разработки элементы управления можно перетаскивать непосредственно на панель или в группу. Во время выполнения эти элементы управления поддерживают коллекцию `Controls`, которая отслеживает размещенные в них элементы управления.  
   
 > [!NOTE]
->  Приведенный ниже пример кода относится к любому элементу управления, который поддерживает коллекцию элементов управления.  
+>  Следующий пример кода применяется к любому элементу управления, который поддерживает внутри себя коллекцию элементов управления.  
   
-### Чтобы добавить элемент управления в коллекцию программными средствами, выполните следующие действия:  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a>Программное добавление элемента управления в коллекцию  
   
-1.  Создайте экземпляр элемента управления, который требуется добавить.  
+1.  Создайте экземпляр элемента управления, подлежащий добавлению.  
   
 2.  Задайте свойства нового элемента управления.  
   
-3.  Добавьте элемент управления к коллекции `Controls` родительского элемента управления.  
+3.  Добавьте этот элемент управления в коллекцию `Controls` родительского элемента управления.  
   
-     В приведенном ниже примере кода показано, как создать экземпляр элемента управления <xref:System.Windows.Forms.Button>.  Для этого необходима форма с элементом управления <xref:System.Windows.Forms.Panel> и уже существующий метод обработки события `NewPanelButton_Click` для создаваемой кнопки.  
+     В следующем примере кода показано, как создать экземпляр <xref:System.Windows.Forms.Button> элемента управления. Требуется форма с <xref:System.Windows.Forms.Panel> и метод обработки событий для кнопки в процессе создания, `NewPanelButton_Click`, уже существует.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -53,7 +57,6 @@ caps.handback.revision: 10
        ' handler for your application.  
        AddHandler NewPanelButton.Click, AddressOf NewPanelButton_Click  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -65,19 +68,19 @@ caps.handback.revision: 10
        // from the Control class. In this case, it is a Button control.  
        panel1.Controls.Add(newPanelButton);  
        // The event handler indicated for the Click event in the code   
-       // below is used as an example. Substite the appropriate event  
+       // below is used as an example. Substitute the appropriate event  
        // handler for your application.  
        this.newPanelButton.Click += new System.EventHandler(this. NewPanelButton_Click);  
     }  
     ```  
   
-### Чтобы удалить элементы управления из коллекции программными средствами, выполните следующие действия:  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a>Программное удаление элементов управления из коллекции  
   
-1.  Из события удалите его обработчик.  В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] используйте ключевое слово [Оператор RemoveHandler](../../../../ocs/visual-basic/language-reference/statements/removehandler-statement.md); в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] используйте [Оператор \-\=](../Topic/-=%20Operator%20\(C%23%20Reference\)2.md).  
+1.  Удалите обработчик событий из события. В [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] используйте ключевое слово [оператор RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md), в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] используйте [Оператор -= (Справочник по C#)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
   
-2.  Для удаления требуемого элемента управления из коллекции `Controls` панели используйте метод `Remove`.  
+2.  Используйте метод `Remove` для удаления требуемого элемента управления из коллекции `Controls` панели.  
   
-3.  Вызовите метод <xref:System.Windows.Forms.Control.Dispose%2A> для освобождения всех ресурсов, используемых элементом управления.  
+3.  Вызовите <xref:System.Windows.Forms.Control.Dispose%2A> метод, чтобы освободить все ресурсы, используемые элементом управления.  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -90,7 +93,6 @@ caps.handback.revision: 10
           NewPanelButton.Dispose()  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -108,6 +110,6 @@ caps.handback.revision: 10
     }  
     ```  
   
-## См. также  
- <xref:System.Windows.Forms.Panel>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.Panel>  
  [Элемент управления Panel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

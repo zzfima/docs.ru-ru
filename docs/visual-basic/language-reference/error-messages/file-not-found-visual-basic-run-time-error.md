@@ -1,36 +1,34 @@
 ---
-title: "Файл не найден (Ошибка времени выполнения Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID53"
-dev_langs: 
-  - "VB"
+title: "Файл не найден (Ошибка времени выполнения Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 410c19d740275917225108d9173d9635fd211040
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Файл не найден (Ошибка времени выполнения Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Файл не найден в указанном каталоге.  Данная ошибка могла возникнуть по следующим причинам.  
+# <a name="file-not-found-visual-basic-run-time-error"></a>Файл не найден (Ошибка времени выполнения Visual Basic)
+Если не указано, файл не найден. Ошибка имеет следующие возможные причины:  
   
--   Оператор ссылается на несуществующий файл.  
+-   Инструкция ссылается на файл, который не существует.  
   
--   Предпринята попытка вызова процедуры в динамически подключаемой библиотеке \(DLL\), но библиотека, которая указана в предложении `Lib` оператора `Declare`, не может быть найдена.  
+-   Была предпринята попытка вызова процедуры в библиотеке динамической компоновки (DLL), но библиотека, которая указана в `Lib` предложения `Declare` инструкции не найден.  
   
--   Предпринята попытка открыть несуществующий проект или загрузить несуществующий текстовый файл.  
+-   Предпринята попытка открыть проект или загрузить файл, не существует.  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 1.  Проверьте правильность написания имени файла и спецификацию пути.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Оператор Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

@@ -1,68 +1,74 @@
 ---
-title: "Оптимизация производительности: разметка и разработка | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "вопросы разработки"
-  - "проход разметки"
-  - "макет, оптимизация производительности"
+title: "Оптимизация производительности: разметка и разработка"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- layout [WPF], optimizing performance
+- design considerations [WPF]
+- layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 13763e0487314fdbe7ab6fcb8b7b8711715e7a6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оптимизация производительности: разметка и разработка
-Разработка приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может повлиять на его производительность в результате создания ненужных служебных данных при вычислении макета и проверки ссылок на объекты.  Конструирование объектов, особенно во время выполнения, может повлиять на характеристики производительности приложения.  
+# <a name="optimizing-performance-layout-and-design"></a>Оптимизация производительности: разметка и разработка
+Разработка приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может повлиять на его производительность в результате создания ненужных служебных данных при вычислении макета и проверки ссылок на объекты. Конструирование объектов, особенно во время выполнения, может повлиять на характеристики производительности приложения.  
   
- В этом разделе содержатся рекомендации по производительности в этих областях.  
+ В этом разделе даются рекомендации по производительности в этих областях.  
   
-## Макет  
- Термин "проход разметки" описывает процесс измерения и упорядочения объекта <xref:System.Windows.Controls.Panel> — коллекции дочерних объектов производного объекта, и затем рисование их на экране.  Проход разметки представляет собой процесс интенсивной математической нагрузки — чем больше число дочерних объектов в коллекции, тем больше требуется вычислений.  Например, при каждом изменении положения дочернего объекта <xref:System.Windows.UIElement> в коллекции, он имеет возможность инициировать новую передачу системой разметки.  Из\-за разрыва отношения между характеристиками объекта и поведением разметки важно понимать тип событий, которые могут запустить систему разметки.  Приложение будет выполняться лучше, если уменьшить, насколько возможно, ненужные вызовы прохода разметки.  
+## <a name="layout"></a>Макет  
+ Термин «проход разметки» описывает процесс измерения и упорядочения объекта <xref:System.Windows.Controls.Panel>-коллекции производного объекта дочерних элементов, и затем рисование их на экране. Проход разметки представляет собой процесс интенсивной математической нагрузки: чем больше число дочерних объектов в коллекции, тем больше требуется вычислений. Например, при каждом запуске дочернего <xref:System.Windows.UIElement> объекта в коллекции изменяет свое положение, он имеет возможность запустить новый проход системы макета. Из-за разрыва отношения между характеристиками объекта и поведением разметки важно понимать тип событий, которые могут запустить систему разметки. Приложение будет выполняться лучше, если уменьшить, насколько возможно, ненужные вызовы прохода разметки.  
   
- Система разметки выполняет два прохода для каждого дочернего члена в коллекции: проход измерений и проход компоновки.  Каждый дочерний объект предоставляет свою собственную переопределенную реализацию методов <xref:System.Windows.UIElement.Measure%2A> и <xref:System.Windows.UIElement.Arrange%2A>, чтобы обеспечить собственное поведение отдельной разметки.  В самом простом случае макет является рекурсивной системой, в процессе которой программа изменяет размер и расположение элемента и отображает его на экране.  
+ Система разметки выполняет два прохода для каждого дочернего члена в коллекции: проход измерений и проход компоновки. Каждый дочерний объект предоставляет собственную реализацию переопределенный <xref:System.Windows.UIElement.Measure%2A> и <xref:System.Windows.UIElement.Arrange%2A> методов, чтобы предоставить свои собственные определенного поведения макета. В самом простом случае макет является рекурсивной системой, в процессе которой программа изменяет размер и расположение элемента и отображает его на экране.  
   
--   Дочерний объект <xref:System.Windows.UIElement> начинает процесс разметки первым, задав его основные измеряемые свойства.  
+-   Дочерний элемент <xref:System.Windows.UIElement> объект начинает процесс разметки первым, задав его основные измеряемые свойства.  
   
--   Вычисляются свойства объекта <xref:System.Windows.FrameworkElement>, относящиеся к размеру, например <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.Margin%2A>.  
+-   Объект <xref:System.Windows.FrameworkElement> свойства, связанные с размером, таких как <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, и <xref:System.Windows.FrameworkElement.Margin%2A>, вычисляются.  
   
--   Применяется логика отдельного объекта <xref:System.Windows.Controls.Panel>, например свойство <xref:System.Windows.Controls.DockPanel.Dock%2A> объекта <xref:System.Windows.Controls.DockPanel> или свойство <xref:System.Windows.Controls.StackPanel.Orientation%2A> объекта <xref:System.Windows.Controls.StackPanel>.  
+-   <xref:System.Windows.Controls.Panel>-применяется логика, таких как <xref:System.Windows.Controls.DockPanel.Dock%2A> свойство <xref:System.Windows.Controls.DockPanel>, или <xref:System.Windows.Controls.StackPanel.Orientation%2A> свойство <xref:System.Windows.Controls.StackPanel>.  
   
 -   Содержимое компонуется или размещается после всех дочерних объектов, которые были измерены.  
   
 -   На экране отображается коллекция дочерних объектов.  
   
- Процесс прохода разметки вызывается снова при возникновении любого из следующих событий:  
+ Процесс прохода разметки вызывается снова при возникновении любого из следующих событий.  
   
--   Дочерний объект добавляется к коллекции.  
+-   Дочерний объект добавляется в коллекцию.  
   
--   Свойство <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяется к дочернему объекту.  
+-   Объект <xref:System.Windows.FrameworkElement.LayoutTransform%2A> применяется к дочернему объекту.  
   
--   Метод <xref:System.Windows.UIElement.UpdateLayout%2A> вызывается для дочернего объекта.  
+-   <xref:System.Windows.UIElement.UpdateLayout%2A> Метод вызывается для дочернего объекта.  
   
--   При изменении значения [свойства зависимости](GTMT), которое помечено метаданными, влияющими на проход измерения и компоновки.  
+-   При изменении значения свойства зависимости, которое помечено метаданными, влияющими на проход измерения и компоновки.  
   
-### Используйте наиболее эффективную панель там, где возможно  
- Сложность прохода разметки непосредственно основана на поведении разметки используемых элементов, производных объекта <xref:System.Windows.Controls.Panel>.  Например, объект <xref:System.Windows.Controls.Grid> или элемент управления <xref:System.Windows.Controls.StackPanel> предоставляет гораздо больше функциональных возможностей, чем элемент управления <xref:System.Windows.Controls.Canvas>.  Ценой этого значительного увеличения функциональности является увеличение затрат производительности.  Однако если не требуются функциональные возможности, предоставляемые элементом управления <xref:System.Windows.Controls.Grid>, следует использовать менее затратные варианты, например <xref:System.Windows.Controls.Canvas> или настраиваемую панель.  
+### <a name="use-the-most-efficient-panel-where-possible"></a>Используйте наиболее эффективную панель там, где возможно  
+ Сложность процесса макета напрямую зависит от поведения <xref:System.Windows.Controls.Panel>-используемых элементов, производных. Например <xref:System.Windows.Controls.Grid> или <xref:System.Windows.Controls.StackPanel> управления предоставляет гораздо более эффективны, чем <xref:System.Windows.Controls.Canvas> элемента управления. Ценой этого значительного увеличения функциональности является увеличение затрат производительности. Тем не менее если не требуется функциональность, <xref:System.Windows.Controls.Grid> предоставляет элемент управления, следует использовать менее затратные варианты, такие как <xref:System.Windows.Controls.Canvas> или настраиваемую панель.  
   
  Дополнительные сведения см. в разделе [Общие сведения о панелях](../../../../docs/framework/wpf/controls/panels-overview.md).  
   
-### Обновление вместо замены RenderTransform  
- Можно обновить объект <xref:System.Windows.Media.Transform> вместо замены его в качестве значения свойства <xref:System.Windows.UIElement.RenderTransform%2A>.  Это особенно верно в скриптах, включающих анимацию.  Обновление существующего объекта <xref:System.Windows.Media.Transform> позволяет избежать инициирования ненужных вычислений разметки.  
+### <a name="update-rather-than-replace-a-rendertransform"></a>Обновление вместо замены RenderTransform  
+ Вы сможете обновить <xref:System.Windows.Media.Transform> вместо его замены как значение <xref:System.Windows.UIElement.RenderTransform%2A> свойства. Это особенно актуально в скриптах, включающих анимацию. Обновление существующего <xref:System.Windows.Media.Transform>, позволяет избежать инициирования ненужных вычислений разметки.  
   
-### Построение дерева сверху вниз  
- При добавлении или удалении узла из [логического дерева](GTMT) свойство аннулирования вызывается на родительском узле и всех дочерних узлах.  В результате, всегда требуется следовать шаблону структуры сверху вниз, во избежание ненужных аннулирований на узлах, которые уже были проверены.  В следующей таблице показана разница в скорости выполнения между построением дерева сверху вниз или снизу вверх с глубиной 150 уровней с одним объектом <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.DockPanel> на каждом уровне.  
+### <a name="build-your-tree-top-down"></a>Построение дерева сверху вниз  
+ При добавлении или удалении узла из логического дерева свойство аннулирования вызывается на родительском узле и всех дочерних узлах. В результате всегда требуется следовать шаблону структуры сверху вниз, во избежание ненужных аннулирований на узлах, которые уже были проверены. В следующей таблице показаны различия в скорости выполнения между построением дерева сверху вниз или снизу вверх, где в дереве 150 уровней с одним <xref:System.Windows.Controls.TextBlock> и <xref:System.Windows.Controls.DockPanel> на каждом уровне.  
   
-|**Действие**|**Построение дерева \(мс\)**|**Отображение — включает построение дерева \(мс\)**|  
-|------------------|----------------------------------|---------------------------------------------------------|  
+|**Действие**|**Построение дерева (мс)**|**Отображение — включает построение дерева (мс)**|  
+|----------------|---------------------------------|-------------------------------------------------|  
 |Снизу вверх|366|454|  
 |Сверху вниз|11|96|  
   
@@ -73,14 +79,14 @@ caps.handback.revision: 7
   
  Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
   
-## См. также  
- [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Ресурсы приложения](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)   
+## <a name="see-also"></a>См. также  
+ [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [Планирование производительности приложения](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [Использование преимуществ оборудования](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Поведение объекта](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [Ресурсы приложений](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [Текст](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Привязка данных](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Дополнительные рекомендации по повышению производительности](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
  [Макет](../../../../docs/framework/wpf/advanced/layout.md)

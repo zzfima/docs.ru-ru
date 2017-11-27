@@ -1,41 +1,33 @@
 ---
-title: "Сериализация с использованием декларации XML (Visual Basic) | Документы Microsoft"
+title: "Сериализация с использованием декларации XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 373df9b28ae7434d33ae81eba701d289cf1aa4f7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e8544157104b202a36f2ef75b069bcdd297b9158
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>Сериализация с использованием декларации XML (Visual Basic)
 В этом разделе описывается, как указывать, должна ли при сериализации формироваться XML-декларация.  
   
 ## <a name="xml-declaration-generation"></a>Формирование XML-декларации  
- Сериализация в <xref:System.IO.File>или <xref:System.IO.TextWriter>с помощью <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>метода или <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>метод создает XML-декларация.</xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> </xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> </xref:System.IO.TextWriter> </xref:System.IO.File> При сериализации <xref:System.Xml.XmlWriter>, параметры модуля записи (указанного в <xref:System.Xml.XmlWriterSettings>объекта) определить, создаются ли XML-декларация.</xref:System.Xml.XmlWriterSettings> </xref:System.Xml.XmlWriter>  
+ При сериализации в <xref:System.IO.File> или <xref:System.IO.TextWriter> с помощью метода <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> или метода <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> формируется XML-декларация. При сериализации в <xref:System.Xml.XmlWriter> параметры модуля записи (заданные в объекте <xref:System.Xml.XmlWriterSettings>) определяют, будет ли сформирована XML-декларация.  
   
  При сериализации в строку при помощи метода `ToString` итоговый XML-документ не будет содержать XML-декларацию.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>Сериализация с использованием декларации XML  
- В следующем примере создается <xref:System.Xml.Linq.XElement>, сохраняет документ в файл, а затем выводит файл на консоль:</xref:System.Xml.Linq.XElement>  
+ Следующий пример создает <xref:System.Xml.Linq.XElement>, сохраняет документ в файл, а затем выводит файл на консоль.  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -56,7 +48,7 @@ Console.WriteLine(str)
 ```  
   
 ### <a name="serializing-without-an-xml-declaration"></a>Сериализация без XML-декларации  
- Следующий пример демонстрирует способы сохранения <xref:System.Xml.Linq.XElement>на <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XElement>  
+ В следующем примере демонстрируется, как сохранять <xref:System.Xml.Linq.XElement> в <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  

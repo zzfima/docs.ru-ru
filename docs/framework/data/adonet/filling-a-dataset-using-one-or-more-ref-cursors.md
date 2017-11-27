@@ -1,23 +1,27 @@
 ---
-title: "Заполнение DataSet с помощью одного или нескольких курсоров REF CURSOR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Заполнение набора данных с помощью одного или нескольких параметров REF CURSOR"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1ef5633c53f537f34a3c72ede89f55b1beac09a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Заполнение DataSet с помощью одного или нескольких курсоров REF CURSOR
-В этом примере Microsoft Visual Basic выполняется хранимая процедура PL\/SQL, которая возвращает два параметра REF CURSOR и заполняет объект <xref:System.Data.DataSet> возвращенными строками.  
+# <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Заполнение набора данных с помощью одного или нескольких параметров REF CURSOR
+В этом примере Microsoft Visual Basic выполняется хранимая процедура PL/SQL, которая возвращает два параметра REF CURSOR и заполняет объект <xref:System.Data.DataSet> возвращенными строками.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -51,6 +55,6 @@ Private Sub Button1_Click(ByVal sender As Object, _
   End Using  
 ```  
   
-## См. также  
- [Курсоры REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>См. также  
+ [REF CURSOR в Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)

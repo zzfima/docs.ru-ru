@@ -1,74 +1,78 @@
 ---
-title: "Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "таблицы данных, изменение стиля границы"
-  - "таблицы данных, изменение стиля сетки"
-  - "DataGridView - элемент управления [Windows Forms], стили границ"
-  - "DataGridView - элемент управления [Windows Forms], стили сетки"
-  - "линии сетки, изменение стилей"
+title: "Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- gridlines [Windows Forms], changing styles
+- data grids [Windows Forms], changing gridline styles
+- DataGridView control [Windows Forms], border styles
+- data grids [Windows Forms], changing border styles
+- DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ebe73e0c29a211e3319998ef7acd14e78e4eb14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms
-Элемент управления <xref:System.Windows.Forms.DataGridView> позволяет изменять внешний вид границы и линий сетки элемента управления для более удобной работы пользователя.  Помимо стилей границ ячеек, в элементе управления можно также изменить цвет границ и определить их стиль.  Кроме того, к обычным ячейкам, ячейкам заголовка строки и ячейкам заголовка столбца можно применить различные стили границ.  
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms
+С <xref:System.Windows.Forms.DataGridView> элемента управления, можно настроить внешний вид границы и линии сетки, чтобы улучшить взаимодействие с пользователем элемента управления. Можно изменить цвет линий сетки и стиль границы элемента управления в дополнение к стили границ для ячеек в элементе управления. Также можно применить различные стили границ для обычных ячеек, ячеек заголовков строк и ячеек заголовков столбцов.  
   
 > [!NOTE]
->  Цвета линий сетки используются только с <xref:System.Windows.Forms.DataGridViewCellBorderStyle>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle> и значениями <xref:System.Windows.Forms.DataGridViewCellBorderStyle> перечисления <xref:System.Windows.Forms.DataGridViewCellBorderStyle>, а также значением <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> перечисления <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>.  Другие значения этих перечислений используют цвета, задаваемые операционной системой.  Кроме того, при включении визуальных стилей операционных систем Windows XP и Windows Server 2003 при помощи метода <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName>, значение свойства <xref:System.Windows.Forms.DataGridView.GridColor%2A> не используется.  
+>  Цвет линий сетки используется только с <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, и <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> значения <xref:System.Windows.Forms.DataGridViewCellBorderStyle> перечисления и <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> значение <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> перечисления. Значения этих перечислений использовать цвета, указанные в операционной системе. Кроме того, если визуальные стили включены в Windows XP и Windows Server 2003 через <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> метод, <xref:System.Windows.Forms.DataGridView.GridColor%2A> значение свойства не используется.  
   
-### Изменение цвета линий сетки программным образом  
+### <a name="to-change-the-gridline-color-programmatically"></a>Чтобы изменить цвет линий сетки программными средствами  
   
 -   Задайте свойство <xref:System.Windows.Forms.DataGridView.GridColor%2A>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### Изменение стиля границ всего элемента управления DataGridView программным способом  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Чтобы изменить стиль границы для всего элемента управления DataGridView программным способом  
   
 -   Присвойте свойству <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> одно из значений перечисления <xref:System.Windows.Forms.BorderStyle>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### Изменение стилей границ для ячеек DataGridView программным способом  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Чтобы изменить стили границ для ячеек элемента управления DataGridView программным способом  
   
--   Установите свойства <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A> и <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>.  
+-   Задать <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, и <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> свойства.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  
   
-## Пример  
+## <a name="example"></a>Пример  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#030](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#030)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#030](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#030)]  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`.  
+-   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
   
--   Ссылки на сборки <xref:System?displayProperty=fullName>, <xref:System.Windows.Forms?displayProperty=fullName> и <xref:System.Drawing?displayProperty=fullName>.  
+-   ссылки на сборки <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> и <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## См. также  
- <xref:System.Windows.Forms.BorderStyle>   
- <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCellBorderStyle>   
- <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.BorderStyle>  
+ <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.GridColor%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCellBorderStyle>  
+ <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>  
  [Базовое форматирование и оформление элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

@@ -1,25 +1,28 @@
 ---
-title: "DataContractResolver | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataContractResolver
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9346524ea1608d1f3337a5bd37bfac205f777221
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# DataContractResolver
-В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>.Этот образец демонстрирует применение класса DataContractResolver для сопоставления типов CLR с представлением xsi:type во время сериализации и десериализации.  
+# <a name="datacontractresolver"></a>DataContractResolver
+В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>. Этот образец демонстрирует применение класса DataContractResolver для сопоставления типов CLR с представлением xsi:type во время сериализации и десериализации.  
   
-## Подробные сведения об образце  
+## <a name="sample-details"></a>Подробные сведения об образце  
  В образце определяются следующие типы CLR.  
   
 ```csharp  
@@ -52,14 +55,12 @@ namespace Types
     {  
     }  
 }  
-  
 ```  
   
- Образец загружает сборку, извлекает каждый из следующих типов, а затем сериализует и десериализует их.Как показано в следующем примере, класс <xref:System.Runtime.Serialization.DataContractResolver> участвует в процессе сериализации, передавая экземпляр производного класса <xref:System.Runtime.Serialization.DataContractResolver> в конструктор <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Образец загружает сборку, извлекает каждый из следующих типов, а затем сериализует и десериализует их. Как показано в следующем примере, класс <xref:System.Runtime.Serialization.DataContractResolver> участвует в процессе сериализации, передавая экземпляр производного класса <xref:System.Runtime.Serialization.DataContractResolver> в конструктор <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ```csharp  
 this.serializer = new DataContractSerializer(typeof(Object), null, int.MaxValue, false, true, null, new MyDataContractResolver(assembly));  
-  
 ```  
   
  Затем образец сериализует типы CLR, как показано в следующем примере программного кода.  
@@ -89,7 +90,6 @@ public void serialize(Type type)
     }  
     Console.WriteLine(this.buffer.ToString());  
 }  
-  
 ```  
   
  Затем образец десериализует типы xsi:type, как показано в следующем примере программного кода.  
@@ -105,10 +105,9 @@ public void deserialize(Type type)
         Object obj = this.serializer.ReadObject(xmlReader);  
     }  
 }  
-  
 ```  
   
- Поскольку пользовательский класс <xref:System.Runtime.Serialization.DataContractResolver> передается в конструктор <xref:System.Runtime.Serialization.DataContractSerializer>, во время сериализации вызывается метод <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>, чтобы сопоставить тип CLR с эквивалентным элементом `xsi:type`.Аналогично во время десериализации вызывается метод <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>, чтобы сопоставить элемент `xsi:type` с эквивалентным типом CLR.В этом образце <xref:System.Runtime.Serialization.DataContractResolver> определен, как показано в следующем примере.  
+ Поскольку пользовательский класс <xref:System.Runtime.Serialization.DataContractResolver> передается в конструктор <xref:System.Runtime.Serialization.DataContractSerializer>, во время сериализации вызывается метод <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A>, чтобы сопоставить тип CLR с эквивалентным элементом `xsi:type`. Аналогично во время десериализации вызывается метод <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>, чтобы сопоставить элемент `xsi:type` с эквивалентным типом CLR. В этом образце <xref:System.Runtime.Serialization.DataContractResolver> определен, как показано в следующем примере.  
   
  В следующем примере кода представлен класс, являющийся производным от <xref:System.Runtime.Serialization.DataContractResolver>.  
   
@@ -157,25 +156,24 @@ class MyDataContractResolver : DataContractResolver
         }  
     }  
 }  
-  
 ```  
   
- Будучи частью образца, проект «Type» создает сборку со всеми типами, которые используются в этом образце.Используйте этот проект для добавления, удаления или изменения типов, которые будут сериализованы.  
+ Будучи частью образца, проект «Type» создает сборку со всеми типами, которые используются в этом образце. Используйте этот проект для добавления, удаления или изменения типов, которые будут сериализованы.  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a>Использование этого образца  
   
 1.  Откройте файл решения DCRSample.sln в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
 2.  Чтобы запустить решение, нажмите клавишу F5.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование арбитра контрактов данных](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)

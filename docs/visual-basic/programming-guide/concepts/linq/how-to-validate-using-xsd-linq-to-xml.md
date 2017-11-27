@@ -1,36 +1,28 @@
 ---
-title: "Практическое руководство: проверка с использованием XSD (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: проверка с использованием XSD (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c6df61013b0007e5943060f8926b21d189a01519
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 53b4f96e4fe31588c948d8e860be2c3bd3fa372a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Практическое руководство: проверка с использованием XSD (LINQ to XML) (Visual Basic)
-<xref:System.Xml.Schema>Пространство имен содержит методы расширения, которые позволяют легко проверить дерево XML-файла языка определения схемы XML (XSD).</xref:System.Xml.Schema> Дополнительные сведения см. в разделе <xref:System.Xml.Schema.Extensions.Validate%2A>документации по методу.</xref:System.Xml.Schema.Extensions.Validate%2A>  
+# <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Как: проверка с использованием XSD (LINQ to XML) (Visual Basic)
+Пространство имен <xref:System.Xml.Schema> содержит методы расширения, облегчающие проверку правильности XML-дерева по XSD-файлу. Дополнительные сведения см. в документации метода <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Пример  
- В следующем примере создается <xref:System.Xml.Schema.XmlSchemaSet>, проверка правильности двух <xref:System.Xml.Linq.XDocument>объектов для набор схем.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Schema.XmlSchemaSet> Правильность одного документа подтверждается, а второго - нет.  
+ В следующем примере создается набор схем <xref:System.Xml.Schema.XmlSchemaSet>, затем с его помощью проводится проверка правильности двух объектов <xref:System.Xml.Linq.XDocument>. Правильность одного документа подтверждается, а второго - нет.  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -94,11 +86,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере проверяется, что XML-документ из [пример XML-файла: Customers и Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) является допустимым согласно схеме из [образец XSD-файла: Customers и Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Затем в исходный XML-документ вносятся изменения. Изменяется атрибут `CustomerID` первого клиента. После этого изменения заказы ссылаются на несуществующего клиента, поэтому XML-документ больше не должен пройти проверку правильности.  
+ Код в приведенном ниже примере проверяет действительность XML-документа из раздела [Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) по схеме из раздела [Пример XSD-файла. Клиенты и заказы](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Затем в исходный XML-документ вносятся изменения. Изменяется атрибут `CustomerID` первого клиента. После этого изменения заказы ссылаются на несуществующего клиента, поэтому XML-документ больше не должен пройти проверку правильности.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: Customers и Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- В этом примере используется следующая схема XSD: [образец XSD-файла: Customers и Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ В этом примере используется следующая XSD-схема: [Пример XSD-файла. Клиенты и заказы](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -140,5 +132,5 @@ custOrdDoc did not validate
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Xml.Schema.Extensions.Validate%2A></xref:System.Xml.Schema.Extensions.Validate%2A>   
+ <xref:System.Xml.Schema.Extensions.Validate%2A>  
  [Создание деревьев XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

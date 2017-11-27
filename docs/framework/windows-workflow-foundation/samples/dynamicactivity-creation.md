@@ -1,25 +1,29 @@
 ---
-title: "Создание действия DynamicActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание действия DynamicActivity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4a579606bd3ee9d3f11669d59c6e7c9767b6eaf4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание действия DynamicActivity
+# <a name="dynamicactivity-creation"></a>Создание действия DynamicActivity
 В этом образце показываются два разных способа создания действия во время выполнения с помощью действия <xref:System.Activities.DynamicActivity>.  
   
- В этом образце во время выполнения создается действие с текстом, содержащим действие <xref:System.Activities.Statements.Sequence>, которое содержит действия <xref:System.Activities.Statements.ForEach%601> и <xref:System.Activities.Statements.Assign%601>.Входной список целых чисел передается действию и задается в виде свойства.Затем действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его.Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке, после чего оно задается как среднее.  
+ В этом образце во время выполнения создается действие с текстом, содержащим действие <xref:System.Activities.Statements.Sequence>, которое содержит действия <xref:System.Activities.Statements.ForEach%601> и <xref:System.Activities.Statements.Assign%601>. Входной список целых чисел передается действию и задается в виде свойства. Затем действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его. Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке, после чего оно задается как среднее.  
   
- Образец демонстрирует использование действия <xref:System.Activities.DynamicActivity>, которое передает переменные в качестве входящих аргументов и возвращает значения в качестве выходных аргументов.Действие имеет один входной аргумент с именем `Numbers`, являющийся списком целых чисел.Действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его.Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке и задания полученного значения в качестве среднего.Среднее значение возвращается в виде выходного аргумент с именем `Average`.  
+ Образец демонстрирует использование действия <xref:System.Activities.DynamicActivity>, которое передает переменные в качестве входящих аргументов и возвращает значения в качестве выходных аргументов. Действие имеет один входной аргумент с именем `Numbers`, являющийся списком целых чисел. Действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его. Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке и задания полученного значения в качестве среднего. Среднее значение возвращается в виде выходного аргумент с именем `Average`.  
   
  Если динамическое действие создается программным образом, входные и выходные значения объявляются так, как это показано в следующем примере кода.  
   
@@ -45,7 +49,6 @@ DynamicActivity act = new DynamicActivity()
         }  
     },  
 };  
-  
 ```  
   
  В следующем примере кода показано полное определение `DynamicActivity`, вычисляющего среднее значение из значений в списке.  
@@ -104,7 +107,7 @@ DynamicActivity act = new DynamicActivity()
   
  Созданные на языке XAML входное и выходное значения объявляются так, как это показано в следующем примере.  
   
-```  
+```xml  
 <Activity x:Class="Microsoft.Samples.DynamicActivityCreation.FindAverage"  
           xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
           xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -118,41 +121,39 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- XAML можно создать визуально с помощью [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].Если он включается в проект Visual Studio, то его параметру «Действие сборки» следует задать значение «Нет», чтобы не допустить его компиляции.Затем XAML можно загружать динамически с помощью следующего вызова.  
+ XAML можно создать визуально с помощью [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Если он включен в проект Visual Studio, не забудьте задать его «действие сборки» на «Нет» для предотвращения компилируемого. Затем XAML можно загружать динамически с помощью следующего вызова.  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
-  
 ```  
   
- Экземпляр <xref:System.Activities.DynamicActivity>, созданный программным образом или методом загрузки рабочего процесса XAML, можно использовать так, как это показано в следующем примере кода.Следует заметить, что команда «act», передаваемая `WorkflowInvoker.Invoke`, — это команда «act» объекта <xref:System.Activities.Activity>, определенная в первом примере кода.  
+ Экземпляр <xref:System.Activities.DynamicActivity>, созданный программным образом или методом загрузки рабочего процесса XAML, можно использовать так, как это показано в следующем примере кода. Обратите внимание, что «act», передаваемая `WorkflowInvoker.Invoke` это команда «act» <xref:System.Activities.Activity> определено в первом примере кода.  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
   
 Console.WriteLine("The average calculated using the code activity is = " + results["Average"]);  
-  
 ```  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a>Использование этого образца  
   
 1.  Откройте файл решения DynamicActivityCreation.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  Для построения решения нажмите CTRL+SHIFT+B.  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  Чтобы запустить решение, нажмите клавиши CTRL+F5.  
   
-## Аргументы командной строки  
- Этот образец принимает аргументы командной строки.Пользователи могут предоставить действию список чисел для вычисления их среднего значения.Используемый список чисел передается как список чисел, разделенных пробелами.Например, чтобы вычислить среднее значение чисел 5, 10 и 32, образец следует вызвать с использованием следующей командной строки.  
+## <a name="command-line-arguments"></a>Аргументы командной строки  
+ Этот образец принимает аргументы командной строки. Пользователи могут предоставить действию список чисел для вычисления их среднего значения. Используемый список чисел передается как список чисел, разделенных пробелами. Например, чтобы вычислить среднее значение чисел 5, 10 и 32, образец следует вызвать с использованием следующей командной строки.  
   
- **DynamicActivityCreation 5 10 32**   
+ **DynamicActivityCreation 5 10 32**  
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
   
-## См. также
+## <a name="see-also"></a>См. также

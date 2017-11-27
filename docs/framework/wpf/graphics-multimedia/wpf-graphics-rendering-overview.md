@@ -1,48 +1,53 @@
 ---
-title: "Общие сведения об отрисовке графики в WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "графика, отрисовка"
-  - "отрисовка графики"
+title: "Общие сведения об отрисовке графики в WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], rendering
+- rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-caps.latest.revision: 51
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 48
+caps.latest.revision: "51"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: def1f6273809ad3d759f53ab225607c71d04ba4a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об отрисовке графики в WPF
-В этом разделе дан обзор визуального уровня [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Он посвящен роли класса <xref:System.Windows.Media.Visual> для поддержки отрисовки в модели [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="wpf-graphics-rendering-overview"></a>Общие сведения об отрисовке графики в WPF
+В этом разделе приведены общие сведения о визуальном слое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот раздел посвящен роль <xref:System.Windows.Media.Visual> класса для подготовки к просмотру поддержку в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] модели.  
   
-   
   
 <a name="role_of_visual_object"></a>   
-## Роль визуального объекта  
- Класс <xref:System.Windows.Media.Visual> — это базовая абстракция, от которой наследуется каждый объект <xref:System.Windows.FrameworkElement>.  Он также служит точкой входа для написания новых элементов управления в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] и во многих случая может рассматриваться как дескриптор окна \(HWND\) в модели приложения Win32.  
+## <a name="role-of-the-visual-object"></a>Роль визуального объекта  
+ <xref:System.Windows.Media.Visual> Класс — это базовая абстракция, из которого каждые <xref:System.Windows.FrameworkElement> объекта является производным. Эта абстракция также служит точкой входа для написания новых элементов управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], и во многих случаях ее можно рассматривать в качестве дескриптора окна (HWND) в модели приложения Win32.  
   
- Объект <xref:System.Windows.Media.Visual> является основным объектом [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], основная цель которого — обеспечение поддержки отрисовки.  Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от класса <xref:System.Windows.Media.Visual> и используют его для сохранения своих визуализируемых данных.  Объект <xref:System.Windows.Media.Visual> обеспечивает поддержку следующих возможностей.  
+ <xref:System.Windows.Media.Visual> Объект — это основное [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] объекта, основная цель которого — обеспечение поддержки отрисовки. Элементы управления пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> и <xref:System.Windows.Controls.TextBox>, являются производными от <xref:System.Windows.Media.Visual> класса и использовать его для сохранения своих визуализируемых данных. <xref:System.Windows.Media.Visual> Объект предоставляет поддержку для:  
   
--   Отображение выходных данных: отрисовка сохраненного, сериализованного содержимого изображения визуального объекта.  
+-   Отображение выходных данных: визуализация сохраненного, сериализованного содержимого визуального элемента.  
   
--   Преобразование: выполнение преобразований визуального объекта.  
+-   Преобразование: поддерживает преобразование визуального элемента.  
   
--   Отсечение: обеспечение поддержки отсечения области визуального объекта.  
+-   Отсечение: позволяет указать область отсечения для визуального элемента.  
   
--   Проверка нажатия: определение, содержатся ли координаты или контур в границах визуального объекта.  
+-   Проверка нажатия: определяет, содержится ли координата или геометрическая фигура в границах визуального объекта.  
   
--   Вычисления ограничивающего прямоугольника: определение ограничивающего прямоугольника визуального объекта.  
+-   Вычисление ограничивающего прямоугольника: определение ограничивающего прямоугольника визуального объекта.  
   
- Однако объект <xref:System.Windows.Media.Visual> не включает поддержку не визуализируемых возможностей, перечисленных ниже.  
+ Тем не менее <xref:System.Windows.Media.Visual> объект, не включает поддержку не визуализируемых возможностей, таких как:  
   
--   обработка событий,  
+-   Обработка событий  
   
 -   Макет  
   
@@ -52,222 +57,222 @@ caps.handback.revision: 48
   
 -   Глобализация  
   
- Объект <xref:System.Windows.Media.Visual> предоставляется как открытый абстрактный класс, от которого должны наследовать дочерние классы.  На следующем рисунке показана иерархия визуальных объектов, которые представлены в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ <xref:System.Windows.Media.Visual>предоставляется как открытый абстрактный класс, от которого должны наследоваться дочерними классами. На следующем рисунке показана иерархия визуальных объектов, которые предоставляются в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- ![Схема классов, производных от Visual&#45;объекта](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
-Иерархия визуальных классов  
+ ![Схема классов, производных от объекта Visual](../../../../docs/framework/wpf/graphics-multimedia/media/visualclass01.png "VisualClass01")  
+Иерархия класса Visual  
   
-### Класс DrawingVisual  
- Объект <xref:System.Windows.Media.DrawingVisual> представляет собой облегченный класс рисования, который используется для отображения фигур, рисунков или текста.  Этот класс считается облегченным, поскольку он не предоставляет возможности разметки или обработки событий, что повышает его производительность во время выполнения.  По этой причине эти объекты идеально подходят для фоновых рисунков и коллекций картинок.  Объект <xref:System.Windows.Media.DrawingVisual> можно использовать для создания пользовательского визуального объекта.  Дополнительные сведения см. в разделе [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md).  
+### <a name="drawingvisual-class"></a>Класс DrawingVisual  
+ <xref:System.Windows.Media.DrawingVisual> Является упрощенным класс рисования, который используется для отрисовки фигур, изображений или текста. Этот класс считается упрощенным, так как не предоставляет средств для работы с разметкой и обработку событий, что повышает его производительность. Поэтому этот класс идеально подходит для фоновых рисунков или клипов. <xref:System.Windows.Media.DrawingVisual> Может использоваться для создания пользовательского визуального объекта. Дополнительные сведения см. в разделе [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md).  
   
-### Класс Viewport3DVisual  
- Объект <xref:System.Windows.Media.Media3D.Viewport3DVisual> обеспечивает связь между двухмерными объектами <xref:System.Windows.Media.Visual> и объектами <xref:System.Windows.Media.Media3D.Visual3D>.  Класс <xref:System.Windows.Media.Media3D.Visual3D> является базовым для всех трехмерных визуальных элементов.  Для объекта <xref:System.Windows.Media.Media3D.Viewport3DVisual> требуется определение значений <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> и <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>.  Камера позволяет просмотреть сцену.  Окно просмотра устанавливает место отображения проекции на двумерной поверхности.  Дополнительные сведения о трехмерных объектах в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] см. в разделе [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md).  
+### <a name="viewport3dvisual-class"></a>Класс Viewport3DVisual  
+ <xref:System.Windows.Media.Media3D.Viewport3DVisual> Обеспечивает связь между 2D <xref:System.Windows.Media.Visual> и <xref:System.Windows.Media.Media3D.Visual3D> объектов. <xref:System.Windows.Media.Media3D.Visual3D> Класс является базовым классом для всех трехмерных визуальных элементов. <xref:System.Windows.Media.Media3D.Viewport3DVisual> Требует определения <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> значение и <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> значение. Камера позволяет просмотреть сцену. Окно просмотра определяет, где проекция преобразуется в двумерную поверхность. Дополнительные сведения о трехмерной графике в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] см. в разделе [Общие сведения о трехмерной графике](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md).  
   
-### Класс ContainerVisual  
- Класс <xref:System.Windows.Media.ContainerVisual> используется в качестве контейнера для коллекции объектов <xref:System.Windows.Media.Visual>.  Класс <xref:System.Windows.Media.DrawingVisual> наследует от класса <xref:System.Windows.Media.ContainerVisual>, что позволяет ему содержать коллекцию визуальных объектов.  
+### <a name="containervisual-class"></a>Класс ContainerVisual  
+ <xref:System.Windows.Media.ContainerVisual> Класс используется как контейнер для коллекции <xref:System.Windows.Media.Visual> объектов. <xref:System.Windows.Media.DrawingVisual> Класс является производным от <xref:System.Windows.Media.ContainerVisual> класса, что позволяет ему содержать коллекцию визуальных объектов.  
   
-### Рисование содержимого в визуальных объектах  
- Объект <xref:System.Windows.Media.Visual> хранит данные визуализации в виде **списка инструкций векторной графики**.  Каждый элемент в списке инструкций представляет набор графических данных нижнего уровня и связанных ресурсов в сериализованном формате.  Существуют четыре различных типа данных визуализации, которые могут содержать графическое содержимое.  
+### <a name="drawing-content-in-visual-objects"></a>Рисование содержимого в объектах Visual  
+ Объект <xref:System.Windows.Media.Visual> объект хранит данные отрисовки как **списка инструкций векторной графики**. Каждый элемент в списке инструкций представляет низкоуровневый набор графических данных и связанных ресурсов в сериализованном формате. Существует четыре различных типа данных отрисовки, которые могут включать графическое содержимое.  
   
-|Тип графического содержимого|Описание|  
-|----------------------------------|--------------|  
-|Векторная графика|Представляет данные векторной графики и любую информацию, связанную с объектами <xref:System.Windows.Media.Brush> и <xref:System.Windows.Media.Pen>.|  
-|Изображение|Представляет изображение в пределах области, определенной объектом <xref:System.Windows.Rect>.|  
-|Глиф|Представляет рисунок, отображающий объект <xref:System.Windows.Media.GlyphRun>, который представляет собой последовательность глифов из указанного ресурса шрифтов.  Это способ представления текста.|  
-|Видео|Представляет рисунок, который отображает видео.|  
+|Тип содержимого для отрисовки|Описание|  
+|--------------------------|-----------------|  
+|Векторная графика|Представляет векторные графические данные и все связанные <xref:System.Windows.Media.Brush> и <xref:System.Windows.Media.Pen> сведения.|  
+|Изображение|Представляет изображение в пределах области, определяемой <xref:System.Windows.Rect>.|  
+|Глиф|Представляет рисунок, отображающий <xref:System.Windows.Media.GlyphRun>, который представляет собой последовательность глифов из указанного ресурса шрифтов. Таким образом представляется текст.|  
+|Видео|Представляет рисунок, отображающий видео.|  
   
- Объект <xref:System.Windows.Media.DrawingContext> позволяет заполнить объект <xref:System.Windows.Media.Visual> визуальным содержимым.  При использовании команд рисования объекта <xref:System.Windows.Media.DrawingContext> фактически происходит сохранение набора данных визуализации, которые позднее будут использоваться графической системой; рисование не выполняется на экране в режиме реального времени.  
+ <xref:System.Windows.Media.DrawingContext> Позволяет заполнять <xref:System.Windows.Media.Visual> визуальное содержимое. При использовании <xref:System.Windows.Media.DrawingContext> команд рисования объекта, фактически происходит сохранение набора данных визуализации, которые позднее будут использоваться графической системой; рисование на экране в режиме реального времени не выполняется.  
   
- При создании элемента управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], такого как <xref:System.Windows.Controls.Button>, этот элемент управления неявно создает данные визуализации для рисования самого себя.  Например, при установке свойства <xref:System.Windows.Controls.ContentControl.Content%2A> объекта <xref:System.Windows.Controls.Button> элемент управления сохраняет визуальное представление глифа.  
+ При создании [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элемента управления, такого как <xref:System.Windows.Controls.Button>, элемент управления неявно создает данные визуализации для рисования самого себя. Например, установка <xref:System.Windows.Controls.ContentControl.Content%2A> свойство <xref:System.Windows.Controls.Button> элемент управления сохраняет визуальное представление глифа.  
   
- Объект <xref:System.Windows.Media.Visual> описывает свое содержимое в виде одного или нескольких объектов <xref:System.Windows.Media.Drawing>, содержащихся в группе <xref:System.Windows.Media.DrawingGroup>.  Объект <xref:System.Windows.Media.DrawingGroup> также описывает маски прозрачности, преобразования, эффекты растрового изображения и другие операции, которые применяются к его содержимому.  При отображении содержимого операции <xref:System.Windows.Media.DrawingGroup> применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A> и <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ Объект <xref:System.Windows.Media.Visual> описывает свое содержимое в виде одной или нескольких <xref:System.Windows.Media.Drawing> объектов, содержащихся в <xref:System.Windows.Media.DrawingGroup>. Объект <xref:System.Windows.Media.DrawingGroup> также описывает маски непрозрачности, преобразования, эффекты растрового изображения и другие операции, которые применяются к его содержимому. <xref:System.Windows.Media.DrawingGroup>При отображении содержимого операции, применяются в следующем порядке: <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, а затем <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
- Ниже показан порядок, в котором операции <xref:System.Windows.Media.DrawingGroup> применяются во время отрисовки последовательности.  
+ Ниже показан порядок, в котором <xref:System.Windows.Media.DrawingGroup> операции, применяемые во время отрисовки последовательности.  
   
- ![Порядок DrawingGroup для операций](../../../../docs/framework/wpf/graphics-multimedia/media/graphcismm-drawinggroup-order.png "graphcismm\_drawinggroup\_order")  
-Порядок операций DrawingGroup  
+ ![Порядок DrawingGroup для операций](../../../../docs/framework/wpf/graphics-multimedia/media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+Порядок операций для DrawingGroup  
   
  Дополнительные сведения см. в разделе [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
-#### Отображение содержимого на уровне визуализации  
- Нельзя непосредственно создать экземпляр <xref:System.Windows.Media.DrawingContext>; однако можно получить контекст рисования из определенных методов, таких как <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=fullName> и <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=fullName>.  В следующем примере извлекается <xref:System.Windows.Media.DrawingContext> из класса <xref:System.Windows.Media.DrawingVisual> и использует его, чтобы нарисовать прямоугольник.  
+#### <a name="drawing-content-at-the-visual-layer"></a>Отображение содержимого на визуальном уровне  
+ Вы нельзя непосредственно создать экземпляр <xref:System.Windows.Media.DrawingContext>; тем не менее, можно получить контекст рисования из определенных методов, таких как <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> и <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>. В следующем примере извлекается <xref:System.Windows.Media.DrawingContext> из <xref:System.Windows.Media.DrawingVisual> и использует его, чтобы нарисовать прямоугольник.  
   
  [!code-csharp[drawingvisualsample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#101)]
  [!code-vb[drawingvisualsample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#101)]  
   
-#### Перечисление содержимого рисования на уровне визуализации  
- В дополнение к другим применениям, объекты <xref:System.Windows.Media.Drawing> также предоставляют объектную модель для перечисления содержимого объекта <xref:System.Windows.Media.Visual>.  
+#### <a name="enumerating-drawing-content-at-the-visual-layer"></a>Перечисление содержимого рисования на визуальном уровне  
+ В дополнение к другим применениям <xref:System.Windows.Media.Drawing> объектов также предоставляют объектную модель для перечисления содержимого <xref:System.Windows.Media.Visual>.  
   
 > [!NOTE]
->  При перечислении содержимого визуального объекта извлекаются объекты <xref:System.Windows.Media.Drawing>, а не базовое представление данных визуализации в виде списка инструкций векторной графики.  
+>  При перечислении содержимого визуального элемента, необходимо извлечь <xref:System.Windows.Media.Drawing> объектов, а не базовое представление данных визуализации в виде списка инструкций векторной графики.  
   
- В следующем примере метод <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> используется для извлечения значения <xref:System.Windows.Media.DrawingGroup> объекта <xref:System.Windows.Media.Visual> и его перечисления.  
+ В следующем примере используется <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> метод для извлечения <xref:System.Windows.Media.DrawingGroup> значение <xref:System.Windows.Media.Visual> и его перечисления.  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 <a name="how_visual_objects_are_used_to_build_controls"></a>   
-## Использование визуальных объектов для построения элементов управления  
- Многие объекты в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] состоят из других визуальных объектов, то есть они могут содержать различные иерархии объектов\-потомков.  Многие элементы пользовательского интерфейса в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], такие как элементы управления, состоят из нескольких визуальных объектов, представляющих различные типы отрисовываемых элементов.  Например, элемент управления <xref:System.Windows.Controls.Button> может содержать другие объекты, включая <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> <xref:System.Windows.Controls.ContentPresenter> и <xref:System.Windows.Controls.TextBlock>.  
+## <a name="how-visual-objects-are-used-to-build-controls"></a>Использование визуальных объектов для создания элементов управления  
+ Многие из объектов в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] состоят из других визуальных объектов, то есть они могут содержать различные иерархии объектов-потомков. Многие элементы пользовательского интерфейса в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], например элементы управления, состоят из нескольких визуальных объектов, которые представляют различные типы прорисовываемых элементов. Например <xref:System.Windows.Controls.Button> элемент управления может содержать несколько других объектов, включая <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, <xref:System.Windows.Controls.ContentPresenter>, и <xref:System.Windows.Controls.TextBlock>.  
   
- В следующем коде показан элемент управления <xref:System.Windows.Controls.Button>, определенный в разметке.  
+ В следующем коде показано <xref:System.Windows.Controls.Button> элемента управления, определенного в разметке.  
   
- [!code-xml[VisualsOverview#VisualsOverviewSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet1)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet1)]  
   
- Если нужно перечислить визуальные объекты, составляющие элемент управления <xref:System.Windows.Controls.Button> по умолчанию, необходимо найти иерархию визуальных объектов, как показано ниже.  
+ Бы перечислить визуальные объекты, составляющие значение по умолчанию <xref:System.Windows.Controls.Button> элемента управления, необходимо найти иерархию визуальных объектов, показано ниже:  
   
- ![Схема иерархии визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview03.png "VisualLayerOverview03")  
+ ![Схема иерархии визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview03.gif "VisualLayerOverview03")  
 Схема иерархии визуального дерева  
   
- Элемент управления <xref:System.Windows.Controls.Button> содержит элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, который, в свою очередь, содержит элемент <xref:System.Windows.Controls.ContentPresenter>.  Элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> отвечает за рисование границ и фона объекта <xref:System.Windows.Controls.Button>.  Элемент <xref:System.Windows.Controls.ContentPresenter> отвечает за отображение содержимого <xref:System.Windows.Controls.Button>.  В данном случае, поскольку отображается текст, элемент <xref:System.Windows.Controls.ContentPresenter> содержит элемент <xref:System.Windows.Controls.TextBlock>.  Тот факт, что элемент управления <xref:System.Windows.Controls.Button> использует элемент <xref:System.Windows.Controls.ContentPresenter>, означает, что содержимое может быть представлено другими элементами, такими как <xref:System.Windows.Controls.Image>, или геометрическим объектом, таким как <xref:System.Windows.Media.EllipseGeometry>.  
+ <xref:System.Windows.Controls.Button> Управления содержит <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> элемент, который в свою очередь, содержит <xref:System.Windows.Controls.ContentPresenter> элемента. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Элемент отвечает за рисование границ и фона для <xref:System.Windows.Controls.Button>. <xref:System.Windows.Controls.ContentPresenter> Элемент отвечает за отображение содержимого <xref:System.Windows.Controls.Button>. В этом случае, поскольку отображается текст, <xref:System.Windows.Controls.ContentPresenter> элемент содержит <xref:System.Windows.Controls.TextBlock> элемента. Тот факт, <xref:System.Windows.Controls.Button> управления использует <xref:System.Windows.Controls.ContentPresenter> означает, что содержимое может быть представлен другие элементы, такие как <xref:System.Windows.Controls.Image> или геометрический объект, такой как <xref:System.Windows.Media.EllipseGeometry>.  
   
-### Шаблоны элементов управления  
- Основным компонентом для включения элемента управления в иерархию элементов управления является класс <xref:System.Windows.Controls.ControlTemplate>.  Шаблон элемента управления определяет для элемента управления визуальную иерархию по умолчанию.  При явной ссылке на элемент управления происходит неявное обращение к его визуальной иерархии.  Можно переопределить значения по умолчанию для шаблона элемента управления, чтобы создать пользовательский внешний вид элемента управления.  Например, можно изменить значение цвета фона элемента управления <xref:System.Windows.Controls.Button> таким образом, чтобы он использовал значение цвета линейного градиента вместо значения сплошного цвета.  Дополнительные сведения см. в разделе [Стили и шаблоны элемента Button](../../../../docs/framework/wpf/controls/button-styles-and-templates.md).  
+### <a name="control-templates"></a>Шаблоны элементов управления  
+ Развертывание элемента управления в иерархии элементов управления лежат <xref:System.Windows.Controls.ControlTemplate>. Шаблон элемента управления определяет визуальную иерархию по умолчанию для элемента управления. При явной ссылке на элемент управления вы неявно ссылаетесь на его визуальную иерархию. Для изменения внешнего вида элемента управления вы можете переопределить значения по умолчанию для шаблона элемента управления. Например, можно изменить значение цвета фона <xref:System.Windows.Controls.Button> управления, чтобы он использовал значение цвета линейного градиента вместо значения сплошного цвета. Дополнительные сведения см. в разделе [Стили и шаблоны кнопок](../../../../docs/framework/wpf/controls/button-styles-and-templates.md).  
   
- Элемент пользовательского интерфейса, такой как элемент управления <xref:System.Windows.Controls.Button>, содержит несколько списков инструкций векторной графики, описывающих полное определение отрисовки элемента управления.  В следующем коде показан элемент управления <xref:System.Windows.Controls.Button>, определенный в разметке.  
+ Элемент пользовательского интерфейса, такие как <xref:System.Windows.Controls.Button> контроля, содержит несколько списков инструкций векторной графики, описывающих полное определение отрисовки элемента управления. В следующем коде показано <xref:System.Windows.Controls.Button> элемента управления, определенного в разметке.  
   
- [!code-xml[VisualsOverview#VisualsOverviewSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet2)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet2)]  
   
- Если нужно перечислить визуальные объекты и списки инструкций векторной графики, составляющих элемент управления <xref:System.Windows.Controls.Button>, необходимо найти иерархию объектов, как показано ниже.  
+ Если нужно перечислить визуальные объекты и списки инструкций векторной графики, составляющих <xref:System.Windows.Controls.Button> элемента управления, необходимо найти иерархию объектов, как показано ниже:  
   
  ![Схема визуального дерева и отрисовки данных](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview04.png "VisualLayerOverview04")  
 Схема визуального дерева и отрисовки данных  
   
- Элемент управления <xref:System.Windows.Controls.Button> содержит элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>, который, в свою очередь, содержит элемент <xref:System.Windows.Controls.ContentPresenter>.  Элемент <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> отвечает за рисование всех отдельных графических элементов, составляющих границу и фон кнопки.  Элемент <xref:System.Windows.Controls.ContentPresenter> отвечает за отображение содержимого <xref:System.Windows.Controls.Button>.  В данном случае, поскольку выполняется отображение изображения, элемент <xref:System.Windows.Controls.ContentPresenter> содержит элемент <xref:System.Windows.Controls.Image>.  
+ <xref:System.Windows.Controls.Button> Управления содержит <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> элемент, который в свою очередь, содержит <xref:System.Windows.Controls.ContentPresenter> элемента. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Элемент отвечает за рисование всех отдельных графических элементов, составляющих границ и фона кнопки. <xref:System.Windows.Controls.ContentPresenter> Элемент отвечает за отображение содержимого <xref:System.Windows.Controls.Button>. Таким образом, поскольку выполняется отображение изображения, <xref:System.Windows.Controls.ContentPresenter> элемент содержит <xref:System.Windows.Controls.Image> элемента.  
   
- Существует несколько моментов, на которые следует обратить внимание при рассмотрении иерархии визуальных объектов и списков инструкций векторной графики.  
+ При работе с иерархией визуальных объектов и списками инструкций векторной графики следует учитывать несколько моментов.  
   
--   Порядок в иерархии представляет порядок отрисовки графической информации.  От корневого визуального элемента дочерние элементы следуют слева направо, сверху вниз.  Если элемент имеет визуальные дочерние элементы, то они следуют до элементов того же уровня.  
+-   Порядок иерархии представляет порядок отрисовки графической информации. От корневого визуального элемента дочерние элементы распространяются слева направо и сверху вниз. Если у элемента есть дочерние визуальные элементы, они распространяются до элементов того же уровня.  
   
--   Неконечные элементы узла в иерархии, например <xref:System.Windows.Controls.ContentPresenter>, используются для содержания дочерних элементов — они не содержат списки инструкций.  
+-   Узел неконечных элементов в иерархии, такие как <xref:System.Windows.Controls.ContentPresenter>, используются для хранения дочерних элементов — они не содержат списки инструкций.  
   
--   Если визуальный элемент содержит список инструкций векторной графики и визуальные дочерние объекты, то список инструкций в родительском визуальном элементе отображается перед изображениями в любом из визуальных дочерних объектов.  
+-   Если визуальный элемент содержит как список инструкций векторной графики, так и визуальные дочерние объекты, то список инструкций в родительском визуальном элементе выполняется перед тем, как будут прорисованы любые визуальные дочерние объекты.  
   
--   Элементы в списке инструкций векторной графики отображаются слева направо.  
+-   Элементы в списке инструкций векторной графики обрабатываются слева направо.  
   
 <a name="visual_tree"></a>   
-## Визуальное дерево  
- Визуальное дерево содержит все визуальные элементы, которые используются в пользовательском интерфейсе приложения.  Поскольку визуальный элемент содержит сохраненную графическую информацию, можно представить визуальное дерево как граф сцены, содержащий все сведения отрисовки, необходимые для формирования выходных данных для отрисовки на дисплее.  Это дерево является набором всех визуальных элементов, созданных непосредственно приложением либо в коде, либо в разметке.  Визуальное дерево также содержит все визуальные элементы, созданные расширением шаблона элементов, таких как элементы управления и объекты данных.  
+## <a name="visual-tree"></a>Видимое дерево  
+ Визуальное дерево содержит все визуальные элементы, которые используются в пользовательском интерфейсе приложения. Поскольку визуальный элемент содержит постоянную графическую информацию, визуальное дерево можно представить как граф сцены, содержащий все необходимые сведения об отрисовке, необходимые для формирования выходных данных для устройства отображения. Это дерево представляет собой совокупность всех визуальных элементов, созданных непосредственно в приложении (в коде или в разметке). Визуальное дерево также содержит все визуальные элементы, созданные путем расширения шаблона элементов, таких как элементы управления и объекты данных.  
   
- В следующем коде показан элемент <xref:System.Windows.Controls.StackPanel>, определенный в разметке.  
+ В следующем коде показано <xref:System.Windows.Controls.StackPanel> элемента, определенного в разметке.  
   
- [!code-xml[VisualsOverview#VisualsOverviewSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet3)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet3)]  
   
- Если нужно перечислить визуальные объекты, которые входят в состав элемента <xref:System.Windows.Controls.StackPanel> в примере разметки, необходимо найти иерархию визуальных объектов, как показано ниже.  
+ Бы перечислить визуальные объекты, составляющие <xref:System.Windows.Controls.StackPanel> элемент в примере разметки, необходимо найти иерархию visual объектов, как показано ниже:  
   
- ![Схема иерархии визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview05.png "VisualLayerOverview05")  
+ ![Схема иерархии визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview05.gif "VisualLayerOverview05")  
 Схема иерархии визуального дерева  
   
-### Порядок отрисовки  
- Визуальное дерево определяет порядок отрисовки визуальных и графические объектов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Порядок обхода начинается с корневого визуального элемента, который является самым верхним узлом визуального дерева.  Потомки корневого визуального элемента следуют слева направо.  Если визуальный элемент имеет дочерние элементы, они следуют до визуальных элементов одного уровня.  Это означает, что содержимое дочерних визуальных элементов отображается перед собственным содержимым визуального элемента.  
+### <a name="rendering-order"></a>Порядок отрисовки  
+ Визуальное дерево определяет порядок отрисовки визуальных элементов и графических объектов [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Обработка начинается с корневого визуального элемента, самого верхнего узла в визуальном дереве. Затем обрабатываются дочерние элементы корневого визуального элемента слева направо. Если у визуального элемента есть дочерние элементы, они обрабатываются перед элементами, находящимися на одном уровне с визуальным элементом. Это означает, что содержимое дочерних визуальных элементов отображается перед содержимым самого визуального элемента.  
   
- ![Схема порядка отрисовки визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview06.png "VisualLayerOverview06")  
+ ![Схема порядка отрисовки визуального дерева](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview06.gif "VisualLayerOverview06")  
 Схема порядка отрисовки визуального дерева  
   
-### Корневой визуальный элемент  
- **Корневой визуальный элемент** является элементом иерархии визуального дерева верхнего уровня.  В большинстве приложений базовым классом корневого визуального элемента является <xref:System.Windows.Window> либо <xref:System.Windows.Navigation.NavigationWindow>.  Однако если визуальные объекты размещены в приложения Win32, то корневой визуальный элемент является визуальным узлом верхнего уровня окна Win32.  Дополнительные сведения см. в разделе [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
+### <a name="root-visual"></a>Корневой визуальный элемент  
+ **Корневой визуальный элемент** — это самый верхний элемент в иерархии визуального дерева. В большинстве приложений базовый класс корневой визуальный является <xref:System.Windows.Window> или <xref:System.Windows.Navigation.NavigationWindow>. Однако при размещении визуальных объектов в приложении Win32 в качестве корневого визуального элемента использовался бы самый верхний визуальный элемент в окне Win32. Дополнительные сведения см. в разделе [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md).  
   
-### Связь с логическим деревом  
- Логическое дерево в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] представляет элементы приложения во время выполнения.  Хотя напрямую этим деревом нельзя управлять, это представление приложения полезно для понимания наследования свойств и перенаправления событий.  В отличие от визуального дерева, логическое дерево может представлять невизуальные объекты данных, такие как <xref:System.Windows.Documents.ListItem>.  В большинстве случаев логическое дерево очень близко сопоставлено определениям разметки приложения.  В следующем коде показан элемент <xref:System.Windows.Controls.DockPanel>, определенный в разметке.  
+### <a name="relationship-to-the-logical-tree"></a>Связь с логическом деревом  
+ Логическое дерево в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] представляет элементы приложения во время выполнения. Хотя этим деревом нельзя управлять напрямую, с помощью этой схемы удобно представить наследование свойств и маршрутизацию событий. В отличие от визуального дерева, логическое дерево может представлять невизуальных данных объектов, таких как <xref:System.Windows.Documents.ListItem>. Во многих случаях логическое дерево приближается к определению разметки приложения. В следующем коде показано <xref:System.Windows.Controls.DockPanel> элемента, определенного в разметке.  
   
- [!code-xml[VisualsOverview#VisualsOverviewSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
+ [!code-xaml[VisualsOverview#VisualsOverviewSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml#visualsoverviewsnippet5)]  
   
- Если нужно перечислить логические объекты, которые входят в состав элемента <xref:System.Windows.Controls.DockPanel> в примере разметки, необходимо найти иерархию логических объектов, как показано ниже.  
+ Если бы перечислить логические объекты, которые составляют <xref:System.Windows.Controls.DockPanel> элемент в примере разметки, необходимо найти иерархию логических объектов, как показано ниже:  
   
- ![Схема дерева](../../../../docs/framework/wpf/graphics-multimedia/media/tree1-wcp.png "Tree1\_wcp")  
+ ![Диаграмма дерева](../../../../docs/framework/wpf/graphics-multimedia/media/tree1-wcp.gif "Tree1_wcp")  
 Схема логического дерева  
   
- И визуальное, и логическое дерево синхронизируются с текущим набором элементов приложения, отражая любое добавление, удаление или изменение элементов.  Однако эти деревья представляют различные представления приложения.  В отличие от визуального дерева, логическое дерево не расширяет элемент <xref:System.Windows.Controls.ContentPresenter> элемента управления.  Это означает, что не существует прямого однозначного соответствия между логическим деревом и визуальным деревом для одного набора объектов.  Фактически вызов метода <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> объекта **LogicalTreeHelper** и метода <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> объекта **VisualTreeHelper** с помощью одного и того же элемента в качестве параметра дает разные результаты.  
+ Визуальное дерево и логическое дерево синхронизируются с текущим набором элементов приложения, отражая добавление, удаление или изменение элементов. Однако эти деревья отражают различные представления приложения. В отличие от визуального дерева, логическое дерево не расширяет элемент управления <xref:System.Windows.Controls.ContentPresenter> элемента. Это означает, что между логическим деревом и визуальным деревом для одного и того же набора объектов нет прямого однозначного соответствия. Фактически, вызов **LogicalTreeHelper** объекта <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> метод и **VisualTreeHelper** объекта <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> с помощью того же элемента как параметр дает разные результаты, метод .  
   
  Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
   
-### Просмотр визуального дерева с помощью средства XamlPad  
- Средство XamlPad приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет возможность для просмотра и анализа визуального дерева, соответствующего текущему определенному содержимому [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  Нажмите кнопку **Показать визуальное дерево** в строке меню для отображения визуального дерева.  Ниже показано развертывание содержимого [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] в узлы визуального дерева в панели **Обозреватель визуального дерева** средства XamlPad:  
+### <a name="viewing-the-visual-tree-with-xamlpad"></a>Просмотр визуального дерева с помощью XamlPad  
+ Средство [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], XamlPad, позволяет просматривать и изучать визуальное дерево, соответствующее текущему содержимому [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Для отображения визуального дерева нажмите кнопку **Показать визуальное дерево**. Ниже показано расширение содержимого [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] в узлы визуального дерева на панели **обозревателя визуального дерева** XamlPad.  
   
  ![Панель обозревателя визуального дерева в XamlPad](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview08.png "VisualLayerOverview08")  
 Панель обозревателя визуального дерева в XamlPad  
   
- Обратите внимание, как элементы управления <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox> и <xref:System.Windows.Controls.Button> отображают отдельные иерархии визуальных объектов в панели **Обозреватель визуального дерева** XamlPad.  Это происходит потому, что элементы управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют объект <xref:System.Windows.Controls.ControlTemplate>, содержащий визуальное дерево этого элемента управления.  При явной ссылке на элемент управления происходит неявное обращение к его визуальной иерархии.  
+ Обратите внимание как <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, и <xref:System.Windows.Controls.Button> каждого отображают отдельные иерархии визуальных объектов в **обозревателя визуального дерева** панель XamlPad. Это вызвано [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементы управления обладают <xref:System.Windows.Controls.ControlTemplate> , содержащий визуальное дерево этого элемента управления. При явной ссылке на элемент управления вы неявно ссылаетесь на его визуальную иерархию.  
   
-### Анализ производительности визуальными средствами  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляет набор средств профилирования производительности, позволяющие анализировать поведение приложения во время выполнения и определять типы оптимизации производительности, которые можно применить.  Средство Visual Profiler обеспечивает широкие возможности графического представления данных о производительности путем их сопоставления непосредственно с визуальным деревом приложения.  На этом снимке показан раздел **Использование ЦП** средства Visual Profiler, дающий точную декомпозицию использования объектом служб [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], таких как отрисовка и макет.  
+### <a name="profiling-visual-performance"></a>Профилирование производительности для объекта Visual  
+ В состав [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] входит пакет инструментов для профилирования производительности, с помощью которых можно проанализировать поведение приложения во время выполнения и определить, каким образом можно повысить производительность. Средство Visual Profiler предоставляет подробные данные о производительности в удобном графическом формате, сопоставляя их напрямую с визуальным деревом приложения. На этом снимке экрана показан раздел **Использование ЦП** средства Visual Profiler. В этом разделе вы можете получить точное представление об использовании объектом служб [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], таких как отрисовка и разметка.  
   
- ![Отображение данных Visual Profiler](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf\_VisualProfiler\_04")  
-Вывод на экран данных Visual Profiler  
+ ![Visual Profiler отображения вывода](../../../../docs/framework/wpf/graphics-multimedia/media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
+Отображение данных Visual Profiler  
   
 <a name="visual_rendering_behavior"></a>   
-## Поведение при визуальной отрисовке  
- Приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает несколько возможностей, влияющих на отрисовку визуальных объектов: графика, отображаемая после группирования объектов, векторная графика и аппаратно\-независимая графика.  
+## <a name="visual-rendering-behavior"></a>Поведение отрисовки для объекта Visual  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает несколько возможностей, влияющих на отрисовку визуальных объектов: графика, векторная графика и аппаратно независимая графика.  
   
-### Сохраненные графические режимы  
- Одной из основ для понимания роли объекта Visual является понимание различия между графическими системами **режима интерпретации** и **сохраненного режима**.  В стандартном приложении Win32 на основе GDI или GDI\+ используется графическая система режима интерпретации.  Это означает, что за обновление части клиентской области, ставшей недопустимой в результате какого\-либо действия, такого как изменения размера окна или изменения внешнего вида объекта, отвечает приложение.  
+### <a name="retained-mode-graphics"></a>Абстрактный графический режим  
+ Для понимания роли объекта Visual необходимо хорошо представлять различие между системами с **непосредственным** и **абстрактным** графическими режимами. В стандартном приложении Win32 на основе GDI или GDI+ используется непосредственный графический режим. Это означает, что приложение отвечает за перерисовку той части клиентской области, которая стала недействительной из-за таких действий, как изменение размера окна или изменение внешнего вида объекта.  
   
  ![Схема последовательности отрисовки Win32](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview01.png "VisualLayerOverview01")  
 Схема последовательности отрисовки Win32  
   
- В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], напротив, используется система сохраненного режима.  Это означает, что объекты приложения, имеющие визуальное представление, определяют набор сериализованных графических данных.  После определения графических данных за все запросы на перерисовку для отрисовываемых объектов приложения отвечает система.  Даже во время выполнения можно изменить или создать объекты приложения и по\-прежнему полагаться на систему, отвечающую на запросы перерисовки.  Преимущество сохраненного режима графической системы заключается в том, что графические данные всегда сохраняются приложением в сериализованном состоянии, но за отрисовку по\-прежнему отвечает система.  На следующей схеме показано, как приложение использует [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для ответа на запросы рисования.  
+ В [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], напротив, используется абстрактный графический режим. Это означает, что в объектах приложения, у которых есть внешний облик, определяется набор сериализованных графических данных. После определения графических данных система отвечает на все запросы перерисовки для отрисовки объектов приложения. Даже во время выполнения можно изменять или создавать объекты приложения, при этом система будет обрабатывать запросы на перерисовку. Преимущество абстрактного режима состоит в том, что данные отрисовки всегда сохраняются приложением в сериализованном виде, при этом за отрисовку отвечает система. На следующей схеме показано, как приложение полагается на [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] для обработки запросов на отрисовку.  
   
  ![Схема последовательности отрисовки WPF](../../../../docs/framework/wpf/graphics-multimedia/media/visuallayeroverview02.png "VisualLayerOverview02")  
 Схема последовательности отрисовки WPF  
   
-#### Интеллектуальная перерисовка  
- Одним из преимуществ использования сохраненного режима для отображения графики является то, что [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может эффективно оптимизировать необходимую перерисовку в приложении.  Даже при наличии сложной сцены с различными уровнями прозрачности, как правило, необязательно писать специальный код для оптимизации перерисовки.  Сравните с программированием Win32, в котором можно потратить значительные усилия при оптимизации приложения путем уменьшения объема перерисовки в области обновления.  Пример сложной оптимизации перерисовки в приложениях Win32 см. в разделе [Перерисовка в области обновления](_win32_Redrawing_in_the_Update_Region).  
+#### <a name="intelligent-redrawing"></a>Интеллектуальная перерисовка  
+ Одним из основных преимуществ использования абстрактного графического режима является то, что [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] может эффективно оптимизировать элементы приложения, которые требуют перерисовки. Даже при наличии сложной сцены с различными уровнями прозрачности разработчикам обычно не нужно писать специальный код для оптимизации перерисовки. Сравните это с программированием для Win32, в котором можно потратить значительные усилия на оптимизацию приложения, уменьшая объем перерисовки в области обновления. Пример сложного случая оптимизации перерисовки для приложений Win32 см. в разделе [Перерисовка в области обновления](https://msdn.microsoft.com/library/dd162909.aspx).  
   
-### Векторная графика  
- Приложение [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует **векторную графику** в качестве формата данных отрисовки.  Векторная графика — включающая SVG \(Scalable Vector Graphics\), метафайлы Windows \(wmf\) и шрифты TrueType — хранит данные отрисовки и передает их в виде списка инструкций, описывающих, как воссоздать изображение, используя графические примитивы.  Например, шрифты TrueType являются контурными шрифтами, которые описывают набор линий, кривых и команд, а не массив пикселей.  Одним из ключевых преимуществ векторной графики является возможность масштабирования до любого размера и разрешения.  
+### <a name="vector-graphics"></a>Векторная графика  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] использует **векторную графику** качестве формата данных отрисовки. Векторная графика, к которой относятся масштабируемые векторные рисунки (SVG), метафайлы Windows (WMF) и шрифты TrueType, хранит данные отрисовки и передает их в виде списка инструкций, которые описывают, как воссоздать изображение с помощью графических примитивов. Например, шрифты TrueType — это контурные шрифты, которые описывают набор линий, кривых и команд, а не массив точек. Одним из основных преимуществ векторной графики является возможность масштабирования до любого размера и разрешения.  
   
- В отличие от векторной графики, растровая графика хранит данные отрисовки как попиксельное представление изображения, что в совокупности дает изображение, подготовленное для определенного разрешения.  Одним из основных различий между растровым и векторным графическими форматами является соответствие с исходным изображением.  Например, при изменении размера исходного изображения растровые графические системы растягивают изображение, тогда как векторные графические системы масштабируют изображения, сохраняя его качество.  
+ В отличие от векторной графики в растровой графике данные отрисовки представлены в попиксельном виде для определенного разрешения. Одним из ключевых различий между растровой и векторной графикой является соответствие исходному изображению. Например, при изменении размера исходного изображения в растровой графике изображение растягивается, тогда как в векторной — масштабируется с сохранением качества.  
   
- На следующем рисунке показано исходное изображение, размер которого изменен на 300%.  Обратите внимание, что в результате растягивания исходного растрового изображения возникают искажения в отличие от растягивания векторного графического изображения.  
+ На следующем рисунке показано исходное изображение, которое было увеличено в 3 раза (масштаб 300 %). Обратите внимание на искажения, которые появляются при растяжении исходного изображения в растровом формате по сравнению с векторным.  
   
  ![Различия между растровой и векторной графикой](../../../../docs/framework/wpf/graphics-multimedia/media/vectorgraphics01.png "VectorGraphics01")  
 Различия между растровой и векторной графикой  
   
- В следующей разметке показаны два определенных элемента <xref:System.Windows.Shapes.Path>.  Второй элемент использует <xref:System.Windows.Media.ScaleTransform>, чтобы изменить размер инструкций рисования первого элемента на 300%.  Обратите внимание, что инструкции рисования в элементах <xref:System.Windows.Shapes.Path> остаются неизменными.  
+ В следующем примере показано два <xref:System.Windows.Shapes.Path> определенные элементы. Второй элемент использует <xref:System.Windows.Media.ScaleTransform> для изменения размера инструкции по рисованию первого элемента на 300%. Обратите внимание, что инструкции рисования в <xref:System.Windows.Shapes.Path> элементы остаются без изменений.  
   
- [!code-xml[VectorGraphicsSnippets#VectorGraphicsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
+ [!code-xaml[VectorGraphicsSnippets#VectorGraphicsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VectorGraphicsSnippets/CS/PageOne.xaml#vectorgraphicssnippet1)]  
   
-### Разрешение и аппаратно\-независимая графика  
- Существуют два фактора системы, определяющих размер текста и графики на экране: разрешение и число точек на дюйм \(DPI\).  Разрешение описывает число пикселей, отображаемых на экране.  Чем выше разрешение, тем меньше пиксели, в результате чего уменьшается размер отображаемой графики и текста.  Размер рисунка на мониторе с разрешением 1024 x 768 станет намного меньше, если изменить разрешение на 1600 x 1200.  
+### <a name="about-resolution-and-device-independent-graphics"></a>О разрешении и аппаратно независимой графике  
+ Существуют два фактора, которые определяют размер текста и графики на экране: разрешение и количество точек на дюйм. Разрешение определяет число пикселей, отображаемых на экране. Чем выше разрешение, тем меньше размер пикселей и тем меньше отображаемые объекты и текст. Изображение на мониторе с разрешением 1024 x 768 значительно уменьшится, если изменить разрешение на 1600 x 1200.  
   
- Другой системный параметр, число точек на дюйм, описывает размер дюйма экрана в пикселях.  Большинство систем [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] имеют значение точек на дюйм, равное 96; это означает, что дюйм экрана содержит 96 пикселей.  При увеличении количества точек на дюйм увеличивается дюйм экрана; при уменьшение количества точек на дюйм экрана уменьшается.  Это означает, что дюйм экрана не соответствует размеру реального дюйма; в большинстве систем это, скорее всего, не так.  При увеличении количества точек на дюйм изображения и текст, в которых учитывается этот параметр, становятся большего размера, так как был увеличен размер экранного дюйма.  Увеличение количества точек на дюйм позволяет облегчить чтение текста, особенно при высоких разрешениях.  
+ Другой системный параметр, количество точек на дюйм, описывает размер дюйма экрана в пикселях. Для большинства систем [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] количество точек на дюйм составляет 96, т. е. на одном дюйме экрана находится 96 пикселей. При повышении количества точек на дюйм экранный дюйм увеличивается, при понижении — уменьшается. Это означает, что дюйм экрана не совпадает с размером настоящего дюйма, по крайней мере в большинстве систем. При увеличении количества точек на дюйм изображения и текст становятся больше, так как увеличивается размер экранного дюйма. Увеличение количества точек на дюйм может сделать текст более удобным для чтения, особенно при высоких разрешениях.  
   
- Не все приложения учитывают количество точек на дюйм: в некоторых приложениях в качестве единицы измерения используются аппаратно\-зависимые пиксели; изменение количества точек на дюйм системы не влияет на эти приложения.  Многие приложения используют единицы измерения, зависящие от количества точек на дюйм, для описания размеров шрифта, но для описания остальных элементов используют пиксели.  Установка слишком маленького или слишком большого количества точек на дюйм может вызвать проблемы разметки для этих приложений, так как текст приложения масштабируется, используя количества точек на дюйм системы, а пользовательский интерфейс приложений — не использует.  Данная проблема отсутствует для приложений, разработанных с использованием [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Не все приложения поддерживают количество точек на дюйм: в некоторых приложениях в качестве основной единицы измерения используются аппаратно зависимые пиксели, и изменение количества точек на дюйм не влияет на такие приложения. Во многих других приложениях количество точек на дюйм используется при описании размеров шрифта, но для остальных элементов используются пиксели. Слишком маленькое или слишком большое количество точек на дюйм может вызвать проблемы с разметкой для этих приложений, так как размер текста приложения будет изменяться с изменением системного количества точек на дюйм, тогда как интерфейс приложения изменяться не будет. Для приложений, разработанных с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], эта проблема устранена.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает автоматическое масштабирование с помощью аппаратно\-независимого пикселя в качестве основной единицы измерения вместо аппаратно\-зависимых пикселей; изображения и текст масштабируются правильно без какого\-либо дополнительного участия со стороны разработчика приложения.  На следующем рисунке показан пример того, как текст и изображения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] отображаются с различными параметрами количества точек на дюйм.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает автоматическое масштабирование с помощью аппаратно независимых пикселей вместо аппаратно зависимых пикселей; изображения и текст масштабируются правильно без дополнительных действий со стороны разработчика приложения. На следующем рисунке показан пример отображения текста и графики [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с различными параметрами количества точек на дюйм.  
   
- ![Изображения и текст с различными параметрами количества точек на дюйм](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-dpi-setting-examples.png "graphicsmm\_dpi\_setting\_examples")  
+ ![Изображения и текст с различными параметрами DPI](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Изображения и текст с различными параметрами количества точек на дюйм  
   
 <a name="visualtreehelper_class"></a>   
-## Класс VisualTreeHelper  
- Класс <xref:System.Windows.Media.VisualTreeHelper> является статическим вспомогательным классом, предоставляющим низкоуровневые функции для программирования на уровне визуализации объекта, что полезно в определенных случаях, таких как разработка пользовательских элементов управления высокой производительности.  В большинстве случаев, объекты высокого уровня структуры [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], такие как <xref:System.Windows.Controls.Canvas> и <xref:System.Windows.Controls.TextBlock>, предоставляют большую гибкость и просты в использовании.  
+## <a name="visualtreehelper-class"></a>Класс VisualTreeHelper  
+ <xref:System.Windows.Media.VisualTreeHelper> Класс является статическим вспомогательным классом, предоставляющим низкоуровневые функции для программирования на уровне визуализации объекта, что полезно в определенных случаях, таких как разработка пользовательских элементов управления высокой производительности. В большинстве случаев более высокого уровня [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework объекты, такие как <xref:System.Windows.Controls.Canvas> и <xref:System.Windows.Controls.TextBlock>, обладают большей гибкостью и простотой использования.  
   
-### Проверка нажатия  
- Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет методы проверки нажатия визуальных объектов, если стандартная проверки нажатия не соответствует потребностям пользователя.  Можно использовать методы <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> в классе <xref:System.Windows.Media.VisualTreeHelper>, чтобы определить, находится ли геометрический объект или значение координаты точки внутри границы данного объекта, такого как элемент управления или графический элемент.  Например, можно использовать проверку нажатия, чтобы определить, попал ли щелчок ограничивающего прямоугольника объекта в границы фигуры круга. Также можно переопределить реализацию по умолчанию проверки нажатия для выполнения пользовательских вычислений проверки нажатия.  
+### <a name="hit-testing"></a>Проверка нажатия  
+ <xref:System.Windows.Media.VisualTreeHelper> Класс предоставляет методы проверки нажатия визуальных объектов, если стандартная проверки нажатия не соответствует потребностям пользователя. Можно использовать <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> методы в <xref:System.Windows.Media.VisualTreeHelper> класс, чтобы определить, является ли значение координаты геометрического или точка в пределах заданного объекта, например элемент управления или графический элемент. Например, с помощью проверки нажатия можно определить, попадает ли щелчок мыши в пределах ограничивающего прямоугольника объекта в окружность. Также можно переопределить реализацию проверки нажатия по умолчанию и выполнять собственные вычисления для проверки нажатия.  
   
- Дополнительные сведения о проверки нажатия см. в разделе [Проверка попадания на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md).  
+ Дополнительные сведения о проверке нажатия см. в разделе [Проверка нажатия на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md).  
   
-### Перечисление визуального дерева  
- Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет функциональные возможности для перечисления членов визуального дерева.  Чтобы извлечь родительский объект, вызовите метод <xref:System.Windows.Media.VisualTreeHelper.GetParent%2A>.  Чтобы извлечь дочерний элемент или прямой потомок визуального объекта, вызовите метод <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A>.  Этот метод возвращает дочерний элемент <xref:System.Windows.Media.Visual> родительского объекта по указанному индексу.  
+### <a name="enumerating-the-visual-tree"></a>Перечисление визуального дерева  
+ <xref:System.Windows.Media.VisualTreeHelper> Класс предоставляет функциональные возможности для перечисления членов визуального дерева. Чтобы извлечь родительский объект, вызовите <xref:System.Windows.Media.VisualTreeHelper.GetParent%2A> метод. Чтобы получить дочерние или прямым потомком визуального объекта, вызовите <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> метод. Этот метод возвращает дочерний элемент <xref:System.Windows.Media.Visual> родительского объекта по указанному индексу.  
   
- В следующем примере показано, как перечислить всех потомков визуального объекта. Этот метод можно использовать, если нужно сериализовать всю отрисовываемую информацию иерархии визуального объекта.  
+ В следующем примере показано, как перечислить всех потомков визуального объекта. Этот метод можно использовать для сериализации всех данных отрисовки в иерархии визуального объекта.  
   
  [!code-csharp[VisualsOverview#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[VisualsOverview#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
   
- В большинстве случаев логическое дерево является более полезным представлением элементов в приложении [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Хотя напрямую логическое дерево нельзя изменить, это представление приложения полезно для понимания наследования свойств и перенаправления событий.  В отличие от визуального дерева, логическое дерево может представлять невизуальные объекты данных, такие как <xref:System.Windows.Documents.ListItem>.  Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+ В большинстве случаев логическое дерево более удобно для представления элементов приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Хотя логическое дерево нельзя изменить напрямую, с помощью этой схемы удобно представить наследование свойств и маршрутизацию событий. В отличие от визуального дерева, логическое дерево может представлять невизуальных данных объектов, таких как <xref:System.Windows.Documents.ListItem>. Дополнительные сведения о логическом дереве см. в разделе [Деревья в WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
   
- Класс <xref:System.Windows.Media.VisualTreeHelper> предоставляет методы для возвращения ограничивающего прямоугольника визуальных объектов.  Можно вернуть ограничивающий прямоугольник визуального объекта путем вызова метода <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>.  Можно вернуть ограничивающий прямоугольник всех потомков визуального объекта, включая сам визуальный объект, вызвав метод <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>.  В следующем коде показано, как выполнить вычисление ограничивающего прямоугольника визуального объекта и всех его потомков.  
+ <xref:System.Windows.Media.VisualTreeHelper> Класс предоставляет методы для возвращения ограничивающего прямоугольника визуальных объектов. Можно вернуть ограничивающий прямоугольник визуального объекта путем вызова <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>. Можно вернуть ограничивающий прямоугольник всех потомков визуального объекта, включая сам визуальный объект, путем вызова <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>. В следующем коде показано, как вычислить ограничивающие прямоугольники для визуального объекта и всех его потомков.  
   
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## См. также  
- <xref:System.Windows.Media.Visual>   
- <xref:System.Windows.Media.VisualTreeHelper>   
- <xref:System.Windows.Media.DrawingVisual>   
- [двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Проверка попадания на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
- [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)   
- [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Media.Visual>  
+ <xref:System.Windows.Media.VisualTreeHelper>  
+ <xref:System.Windows.Media.DrawingVisual>  
+ [Двумерная графика и изображения](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Проверка нажатия на визуальном уровне](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [Использование объектов DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
+ [Руководство по размещению визуальных объектов в приложении Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
  [Улучшение производительности приложений WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

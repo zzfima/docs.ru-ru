@@ -1,50 +1,42 @@
 ---
-title: "Отладка деревьев выражений в Visual Studio (Visual Basic) | Документы Microsoft"
+title: "Отладка деревьев выражений в Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: efbd8c19947c45b3ba15ce7b574000d56526ef45
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ff1bee9c3c3fdeafab24368d2c7e8376d4ff7b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Отладка деревьев выражений в Visual Studio (Visual Basic)
-При отладке приложений можно анализировать структуру и содержимое деревьев выражений. Чтобы получить краткий обзор структуру дерева выражений, можно использовать `DebugView` свойства, которое доступно только в режиме отладки. Дополнительные сведения об отладке см. в разделе [отладки в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio).  
+При отладке приложений можно анализировать структуру и содержимое деревьев выражений. Чтобы получить краткий обзор структуры дерева выражения, можно использовать свойство `DebugView`, которое доступно только в режиме отладки. Дополнительные сведения об отладке см. в разделе [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
- Для оптимизации представления содержимого деревьев выражений `DebugView` свойство использует визуализаторы Visual Studio. Дополнительные сведения см. в разделе [создать пользовательские визуализаторы](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Для оптимизации представления содержимого деревьев выражений свойство `DebugView` использует визуализаторы Visual Studio. Дополнительные сведения см. в статье, посвященной [созданию пользовательских визуализаторов](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Открытие визуализатора дерева выражений  
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Открытие визуализатора дерева выражения  
   
-1.  Щелкните значок лупы рядом `DebugView` свойство дерева выражений в **подсказки**, **Контрольные значения** окна, **видимые** окна, или **локальные** окна.  
+1.  Щелкните значок лупы рядом с именем свойства `DebugView` дерева выражения в окне **Советы**, **Контрольные значения**, **Видимые** или **Локальные**.  
   
      Откроется список визуализаторов.  
   
 2.  Щелкните визуализатор, который необходимо использовать.  
   
- Тип каждого выражения отображается в визуализаторе, как описано в следующих разделах.  
+ Каждый тип выражения отображается в визуализаторе, как описано в следующих разделах.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression>имена переменных, отображаются с символом «$» в начале.</xref:System.Linq.Expressions.ParameterExpression>  
+ В начале имен переменных <xref:System.Linq.Expressions.ParameterExpression> отображается символ "$".  
   
- Если параметр не имеет имени, то оно назначается автоматически, например `$var1` или `$var2`.  
+ Если параметр не имеет имени, оно назначается автоматически, например `$var1` или `$var2`.  
   
 ### <a name="examples"></a>Примеры  
   
@@ -71,7 +63,7 @@ ms.lasthandoff: 03/13/2017
      `$var1`  
   
 ## <a name="constantexpressions"></a>ConstantExpressions  
- Для <xref:System.Linq.Expressions.ConstantExpression>объектов, представляющих целочисленные значения, строки, и `null`, отображается значение константы.</xref:System.Linq.Expressions.ConstantExpression>  
+ Для объектов <xref:System.Linq.Expressions.ConstantExpression>, представляющих целочисленные значения, строки и `null`, отображается значение константы.  
   
 ### <a name="examples"></a>Примеры  
   
@@ -98,7 +90,7 @@ ms.lasthandoff: 03/13/2017
      10D  
   
 ## <a name="blockexpression"></a>BlockExpression  
- Если тип <xref:System.Linq.Expressions.BlockExpression>объекта отличается от типа последнего выражения в блоке, то он отображается в `DebugInfo` свойство в угловые скобки (\< и настроек).</xref:System.Linq.Expressions.BlockExpression> В противном случае — тип <xref:System.Linq.Expressions.BlockExpression>объект не отображается.</xref:System.Linq.Expressions.BlockExpression>  
+ Если тип объекта <xref:System.Linq.Expressions.BlockExpression> отличается от типа последнего выражения в блоке, то тип отображается в свойстве `DebugInfo` в угловых скобках (\< и >). В противном случае тип объекта <xref:System.Linq.Expressions.BlockExpression> не отображается.  
   
 ### <a name="examples"></a>Примеры  
   
@@ -131,10 +123,10 @@ ms.lasthandoff: 03/13/2017
   
      `}`  
   
-## <a name="lambdaexpression"></a>Лямбда-выражение  
- <xref:System.Linq.Expressions.LambdaExpression>объекты отображаются вместе с их типами делегатов.</xref:System.Linq.Expressions.LambdaExpression>  
+## <a name="lambdaexpression"></a>LambdaExpression  
+ Объекты <xref:System.Linq.Expressions.LambdaExpression> отображаются вместе со своими типами делегатов.  
   
- Если лямбда-выражение не имеет имени, то оно назначается автоматически, например `#Lambda1` или `#Lambda2`.  
+ Если лямбда-выражение не имеет имени, оно назначается автоматически, например `#Lambda1` или `#Lambda2`.  
   
 ### <a name="examples"></a>Примеры  
   
@@ -169,11 +161,11 @@ ms.lasthandoff: 03/13/2017
      `}`  
   
 ## <a name="labelexpression"></a>LabelExpression  
- Если указать значение по умолчанию для <xref:System.Linq.Expressions.LabelExpression>объекта, то оно будет отображаться перед <xref:System.Linq.Expressions.LabelTarget>объекта.</xref:System.Linq.Expressions.LabelTarget> </xref:System.Linq.Expressions.LabelExpression>  
+ Если указать значение по умолчанию для объекта <xref:System.Linq.Expressions.LabelExpression>, оно будет отображаться перед объектом <xref:System.Linq.Expressions.LabelTarget>.  
   
- `.Label` Маркер указывает на начало метки. `.LabelTarget` Маркера задает конечную цель перехода для целевого объекта.  
+ Маркер `.Label` указывает начало метки. Маркер `.LabelTarget` задает конечную цель перехода для целевого объекта.  
   
- Если подпись не имеет имени, то оно назначается автоматически, например `#Label1` или `#Label2`.  
+ Если метка не имеет имени, оно назначается автоматически, например `#Label1` или `#Label2`.  
   
 ### <a name="examples"></a>Примеры  
   
@@ -221,7 +213,7 @@ ms.lasthandoff: 03/13/2017
      `}`  
   
 ## <a name="checked-operators"></a>Проверяемые операторы  
- Проверяемые операторы отображаются с символом «#» перед оператором. Например, проверяемый оператор сложения отображается как `#+`.  
+ Проверяемые операторы отображаются с символом # перед оператором. Например, проверяемый оператор сложения отображается как `#+`.  
   
 ### <a name="examples"></a>Примеры  
   
@@ -248,6 +240,6 @@ ms.lasthandoff: 03/13/2017
      `#(System.Int32)10D`  
   
 ## <a name="see-also"></a>См. также  
- [Деревья выражений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Отладка в Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Создание пользовательских визуализаторов](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+ [Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))  
+ [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
+ [Создание настраиваемых визуализаторов](/visualstudio/debugger/create-custom-visualizers-of-data)

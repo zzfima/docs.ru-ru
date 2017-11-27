@@ -1,48 +1,52 @@
 ---
-title: "Практическое руководство. Установка позиций табуляции для выводимого текста | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "вкладки, рисование текста"
-  - "текст, рисование с позициями табуляции"
+title: "Практическое руководство. Установка позиций табуляции для выводимого текста"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [Windows Forms], drawing with tab stops
+- tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e561e8096780301230071e869dac482a6a908a5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Установка позиций табуляции для выводимого текста
-Для текста можно устанавливать позиции табуляции. Для этого необходимо вызвать метод <xref:System.Drawing.StringFormat.SetTabStops%2A> объекта <xref:System.Drawing.StringFormat>, а затем передать этот объект <xref:System.Drawing.StringFormat> методу <xref:System.Drawing.Graphics.DrawString%2A> класса <xref:System.Drawing.Graphics>.  
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>Практическое руководство. Установка позиций табуляции для выводимого текста
+Можно установить позиции табуляции для текста путем вызова <xref:System.Drawing.StringFormat.SetTabStops%2A> метод <xref:System.Drawing.StringFormat> объекта и затем передачу, <xref:System.Drawing.StringFormat> объект <xref:System.Drawing.Graphics.DrawString%2A> метод <xref:System.Drawing.Graphics> класса.  
   
 > [!NOTE]
->  Класс <xref:System.Windows.Forms.TextRenderer?displayProperty=fullName> не поддерживает добавление позиций табуляции к выведенному тексту, хотя и возможно расширение существующих позиций табуляции с помощью флага <xref:System.Windows.Forms.TextFormatFlags?displayProperty=fullName>.  
+>  <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> Поддерживает добавление позиции табуляции для отображаемого текста, несмотря на то, что вы можете развернуть существующую вкладку прекратит использование выполняет <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> флаг.  
   
-## Пример  
- В следующем примере позиции табуляции устанавливаются на 150, 250 и 350.  Затем код выводит табулированный список имен и результатов теста.  
+## <a name="example"></a>Пример  
+ В следующем примере задается табуляции в 150, 250 и 350. Затем код отображает список имен и результатов теста с вкладками.  
   
- Табулированный текст показан на следующем рисунке.  
+ Ниже показан текст с вкладками.  
   
  ![Текст шрифтов](../../../../docs/framework/winforms/advanced/media/fontstext4.png "fontstext4")  
   
- Приведенный ниже код передает методу <xref:System.Drawing.StringFormat.SetTabStops%2A> два параметра.  Вторым параметром является массив, содержащий смещения позиций табуляции.  В качестве первого параметра методу <xref:System.Drawing.StringFormat.SetTabStops%2A> передается 0; это означает, что первое смещение в массиве отсчитывается от позиции 0, т. е. от левого края ограничивающего прямоугольника.  
+ Приведенный ниже код передает два параметра <xref:System.Drawing.StringFormat.SetTabStops%2A> метод. Второй аргумент — массив, содержащий смещения позиций табуляции. Первый аргумент, переданный <xref:System.Drawing.StringFormat.SetTabStops%2A> является 0, означающее, что первое смещение в массиве отсчитывается от позиции 0, левого края ограничивающего прямоугольника.  
   
  [!code-csharp[System.Drawing.FontsAndText#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a>Компиляция кода  
   
--   Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.PaintEventHandler>.  
+-   Предыдущий пример кода предназначен для работы с Windows Forms и требует <xref:System.Windows.Forms.PaintEventArgs> `e`, который является параметром <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## См. также  
- [Шрифты и текст](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
+## <a name="see-also"></a>См. также  
+ [Работами со шрифтами и текстом](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  [Практическое руководство. Рисование текста с использованием GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

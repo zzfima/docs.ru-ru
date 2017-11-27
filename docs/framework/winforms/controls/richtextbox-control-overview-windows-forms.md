@@ -1,39 +1,39 @@
 ---
-title: "Общие сведения об элементе управления RichTextBox (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RichTextBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "RichTextBox - элемент управления [Windows Forms], об элементе управления RichTextBox"
-  - "текстовые поля, сведения о текстовых полях"
+title: "Общие сведения об элементе управления RichTextBox (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: RichTextBox
+helpviewer_keywords:
+- RichTextBox control [Windows Forms], about RichTextBox control
+- text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4278f569a789ca6e8466e0b8e71557446b63955e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления RichTextBox (Windows Forms)
-Элемент управления Windows Forms <xref:System.Windows.Forms.RichTextBox> используется для отображения, ввода и изменения текста с форматированием.  Элемент управления <xref:System.Windows.Forms.RichTextBox> выполняет те же функции, что и элемент управления <xref:System.Windows.Forms.TextBox>, но помимо этого он позволяет отображать шрифты, цвета и ссылки, загружать текст и вложенные изображения из файлов, а также искать заданные знаки.  Элемент управления <xref:System.Windows.Forms.RichTextBox> обычно используется для предоставления возможностей изменения и отображения текста, схожих с возможностями текстовых редакторов, таких как Microsoft Word.  Элемент управления <xref:System.Windows.Forms.RichTextBox>, как и <xref:System.Windows.Forms.TextBox>, позволяет отображать полосы прокрутки, однако в отличие от <xref:System.Windows.Forms.TextBox>, он по умолчанию отображает и горизонтальную, и вертикальную полосы прокрутки в зависимости от необходимости, а также поддерживает дополнительные параметры их настройки.  
+# <a name="richtextbox-control-overview-windows-forms"></a>Общие сведения об элементе управления RichTextBox (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления используется для отображения, ввода и изменения текста с форматированием. <xref:System.Windows.Forms.RichTextBox> Элемент управления выполняет все, что <xref:System.Windows.Forms.TextBox> делает элемент управления, но можно также отображать шрифты, цвета и ссылки; загрузить текст и изображения из файла; и поиск определенных символов. <xref:System.Windows.Forms.RichTextBox> Элемент управления обычно используется для работы с текстом и отображения функций, как для текстовых редакторов, таких как Microsoft Word. Как <xref:System.Windows.Forms.TextBox> управления <xref:System.Windows.Forms.RichTextBox> элемент управления может отображать полосы прокрутки; но в отличие от <xref:System.Windows.Forms.TextBox> элемента управления, его значение по умолчанию является отображение горизонтальные и вертикальные полосы прокрутки при необходимости, и его параметры дополнительной полосы прокрутки.  
   
-## Работа с элементом управления RichTextBox  
- Как и для элемента управления <xref:System.Windows.Forms.TextBox>, отображаемый текст задается свойством <xref:System.Windows.Forms.RichTextBox.Text%2A>.  В элементе управления <xref:System.Windows.Forms.RichTextBox> содержится множество свойств для форматирования текста.  Сведения об этих свойствах см. в разделах [Практическое руководство. Задание атрибутов шрифта для элемента управления RichTextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) и [Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md).  Для управления файлами используются методы <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> и <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>, отображающие и сохраняющие множество форматов файлов, в том числе обычный текст, обычный текст Юникод и форматируемый текст \(RTF\).  Возможные форматы файлов представлены в [Перечислении RichTextBoxStreamType](frlrfSystemWindowsFormsRichTextBoxStreamTypeClassTopic).  С помощью метода <xref:System.Windows.Forms.RichTextBox.Find%2A> выполняется поиск текстовых строк или определенных символов.  
+## <a name="working-with-the-richtextbox-control"></a>Работа с элементом управления RichTextBox  
+ Как и в <xref:System.Windows.Forms.TextBox> управления, отображаемый текст задается <xref:System.Windows.Forms.RichTextBox.Text%2A> свойство. <xref:System.Windows.Forms.RichTextBox> Управления имеется множество свойств для форматирования текста. Дополнительные сведения об этих свойствах см. в разделе [Практическое руководство. Задание атрибутов шрифта для элемента управления RichTextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) и [Практическое руководство. Задание отступов, выступов и маркеров абзацев с помощью элемента управления RichTextBox в Windows Forms](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md). Для работы с файлами, <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> и <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> методы можно отображать и записи нескольких файловых форматах, включая обычный текст, текст в Юникоде и форматированный текст (RTF). Возможные форматы, перечислены в <xref:System.Windows.Forms.RichTextBoxStreamType>. Можно использовать <xref:System.Windows.Forms.RichTextBox.Find%2A> метод для поиска строк текста или определенные символы.  
   
- Элемент управления <xref:System.Windows.Forms.RichTextBox> можно также использовать для создания веб\-ссылок; для этого надо задать для свойства <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> значение `true` и создать код для обработки события <xref:System.Windows.Forms.RichTextBox.LinkClicked>.  Дополнительные сведения см. в разделе [Практическое руководство. Отображение ссылок веб\-типа с помощью элемента управления RichTextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md).  Можно запретить пользователю управлять частью текста или всем текстом в элементе управления, задав для свойства <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> значение `true`.  
+ Можно также использовать <xref:System.Windows.Forms.RichTextBox> управления версиями для веб-ссылок, задав <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> свойства `true` и написание кода для обработки <xref:System.Windows.Forms.RichTextBox.LinkClicked> событий. Дополнительные сведения см. в разделе [Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md). Можно запретить управление некоторые или все из текста в элементе управления, задав пользователя <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> свойства `true`.  
   
- Большую часть операций редактирования в элементе управления <xref:System.Windows.Forms.RichTextBox> можно отменить и восстановить с помощью вызова методов <xref:System.Windows.Forms.TextBoxBase.Undo%2A> и <xref:System.Windows.Forms.RichTextBox.Redo%2A>.  Метод <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> позволяет определить, можно ли заново применить выполненное последним и отмененное действие, к элементу управления.  
+ Можно отменять и повторять большинство операций редактирования в <xref:System.Windows.Forms.RichTextBox> управления путем вызова <xref:System.Windows.Forms.TextBoxBase.Undo%2A> и <xref:System.Windows.Forms.RichTextBox.Redo%2A> методы. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> Метод позволяет определить ли последняя операция пользователем повторно применить к элементу управления.  
   
-## См. также  
- <xref:System.Windows.Forms.RichTextBox>   
- [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [Элемент управления RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [Общие сведения об элементе управления TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

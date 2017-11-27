@@ -1,38 +1,39 @@
 ---
-title: "Элемент управления MenuStrip (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "меню"
-  - "MenuStrip - элемент управления [Windows Forms]"
+title: "Элемент управления MenuStrip (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip control [Windows Forms]
+- menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 570ddd3981593922fecd90700cdaf19bf7eff2f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Элемент управления MenuStrip (Windows Forms)
+# <a name="menustrip-control-windows-forms"></a>Элемент управления MenuStrip (Windows Forms)
 Этот элемент управления группирует команды приложения и делает их легко доступными.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
  Описание элемента управления, его основных возможностей и свойств.  
   
  [Практическое руководство. Дополнительные возможности элементов ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
  Описывается, как добавить метки, изображения, сочетания клавиш, клавиши быстрого доступа и разделители к меню и командам меню.  
   
- [Практическое руководство. Добавление элемента управления в родительское окно MDI\-приложения](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
- Описывается, как задать несколько свойств для добавления дочернего меню многодокументного интерфейса \(MDI\) к родительскому меню MDI.  
+ [Практическое руководство. Добавление элемента управления в родительское окно MDI-приложения](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
+ Описывается, как задать несколько свойств для добавления дочернего меню многодокументного интерфейса (MDI) к родительскому меню MDI.  
   
  [Практическое руководство. Создание списка в окне интерфейса MDI с помощью MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
  Показаны способы создания списка всех активных дочерних форм в меню родительского окна.  
@@ -40,13 +41,13 @@ caps.handback.revision: 21
  [Практическое руководство. Блокирование доступа к элементам меню ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
  Описание способа отключения как всего меню, так и отдельных команд меню.  
   
- [Практическое руководство. Сокрытие объектов ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ [Практическое руководство. Скрытие объектов ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
  Описание способа отключения как всего меню, так и отдельных команд меню.  
   
  [Практическое руководство. Вставка элемента MenuStrip в раскрывающееся меню интерфейса MDI](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
  Описывается, как задать несколько свойств, чтобы вставить группу пунктов меню из дочернего меню MDI в раскрывающийся список части родительского меню MDI.  
   
- [Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI\-приложения](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
+ [Практическое руководство. Удаление элемента ToolStripMenuItem из меню MDI-приложения](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
  Описывается, как задать несколько свойств, чтобы удалить группу элемент меню из раскрывающегося списка части родительского меню MDI.  
   
  [Практическое руководство. Настройка полей флажков и значков для объекта MenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
@@ -66,7 +67,7 @@ caps.handback.revision: 21
   
 -   [Редактор коллекции элементов MenuStrip](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Практическое руководство. Копирование объектов ToolStripMenuItem](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [Практическое руководство. Копирование объектов ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
   
 -   [Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
   
@@ -74,11 +75,11 @@ caps.handback.revision: 21
   
 -   [Практическое руководство. Перемещение объектов ToolStripMenuItem](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
   
--   [Пошаговое руководство. Создание стандартных пунктов меню для формы](http://msdn.microsoft.com/library/ms233662\(v=vs.110\)).  
+-   [Пошаговое руководство. Создание стандартных пунктов меню для формы](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
   
--   [Диалоговое окно задач MenuStrip](http://msdn.microsoft.com/library/ms233645\(v=vs.110\)).  
+-   [Диалоговое окно задач MenuStrip](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
-## Ссылка  
+## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.MenuStrip>  
  Описание возможностей класса <xref:System.Windows.Forms.MenuStrip>, который предоставляет систему меню для формы.  
   
@@ -88,6 +89,6 @@ caps.handback.revision: 21
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  Описание возможностей класса <xref:System.Windows.Forms.ToolStripMenuItem>, который представляет отдельные пункты, отображаемые в <xref:System.Windows.Forms.MenuStrip> или <xref:System.Windows.Forms.ContextMenuStrip>.  
   
-## Связанные подразделы  
- [Элементы управления для использования в формах Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Полный список элементов управления Windows Forms со ссылками на разделы с описанием их применения.
+## <a name="related-sections"></a>Связанные разделы  
+ [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Полный список элементов управления Windows Forms со ссылками на информацию об их применении.

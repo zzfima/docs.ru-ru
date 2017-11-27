@@ -1,33 +1,31 @@
 ---
-title: "Первый операнд в двоичном выражении If должен поддерживать значение NULL или быть ссылочного типа | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc33107"
-  - "vbc33107"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC33107"
+title: "Первый операнд в двоичном файле &#39; Если &#39; выражение должно иметь значение NULL или ссылочный тип"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc33107
+- vbc33107
+helpviewer_keywords: BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Первый операнд в двоичном выражении If должен поддерживать значение NULL или быть ссылочного типа
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Выражение `If` может принимать два или три аргумента.  При передаче двух аргументов, первый аргумент должен быть ссылочного типа или поддерживать значение NULL.  Если первый аргумент принимает значение, отличное от `Nothing`, возвращается его значение.  Если первый аргумент принимает значение `Nothing`, то вычисляется и возвращается значение второго аргумента.  
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Первый операнд в двоичном файле &#39; Если &#39; выражение должно иметь значение NULL или ссылочный тип
+`If` Выражение может принимать два или три аргумента. При передаче двух аргументов первый аргумент должен быть ссылочным типом или типом значения NULL. Если первый аргумент принимает значение, отличное от `Nothing`, возвращается его значение. Если первый аргумент принимает значение `Nothing`, второй аргумент вычисляется и возвращается.  
   
- Например, следующий код содержит два выражения `If`, одно с тремя аргументами и другое с двумя.  Выражения вычисляют и возвращают одно и то же значение.  
+ Например, следующий код содержит два `If` выражения: с тремя аргументами и с двумя аргументами. Выражения вычисления и возвращает то же значение.  
   
-```vb#  
+```vb  
 ' firstChoice is a nullable value type.  
 Dim firstChoice? As Integer = Nothing  
 Dim secondChoice As Integer = 1128  
@@ -37,9 +35,9 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- Следующие выражения вызывают эту ошибку.  
+ Следующие выражения вызывают эту ошибку:  
   
-```vb#  
+```vb  
 Dim choice1 = 4  
 Dim choice2 = 5  
 Dim booleanVar = True  
@@ -52,16 +50,16 @@ Dim booleanVar = True
   
  **Идентификатор ошибки:** BC33107  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Если не удается изменить код так, чтобы первым аргумент являлся ссылочным типом или поддерживал значение NULL, рассмотрите возможность преобразования к выражению `If` с тремя аргументами или к оператору `If...Then...Else`.  
+-   Если не удается изменить код, чтобы первым аргументом является ссылочным типом или ссылочным типом, рассмотрите возможность преобразования к тремя аргументами `If` выражения, или к `If...Then...Else` инструкции.  
   
-    ```vb#  
-    Console.WriteLine(If(choice1 < choice2, 1, 2))  
-    Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
-    ```  
+```vb  
+Console.WriteLine(If(choice1 < choice2, 1, 2))  
+Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
+```  
   
-## См. также  
- [Оператор If](../../../visual-basic/language-reference/operators/if-operator.md)   
- [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)   
- [Типы значения, допускающие Null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>См. также  
+ [Оператор If](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [Оператор If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [Типы значений, допускающие значение NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

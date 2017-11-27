@@ -1,34 +1,32 @@
 ---
-title: "Отсутствует выражение с индексами для массива | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30306"
-  - "vbc30306"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30306"
+title: "Отсутствует выражение с индексами для массива"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30306
+- vbc30306
+helpviewer_keywords: BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aac09a90abf69fe53f46910fe4b542c6cc632c3a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Отсутствует выражение с индексами для массива
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-В инициализации массива пропущен один или несколько индексов, определяющих границы массива.  Например, инструкция может содержать выражение `myArray (5,5,,10)`, в котором пропущен третий индекс.  
+# <a name="array-subscript-expression-missing"></a>Отсутствует выражение с индексами для массива
+Инициализация массива пропущен один или несколько индексов, определяющих границы массива. Например, инструкция может содержать выражение `myArray (5,5,,10)`, который пропущен третий индекс.  
   
  **Идентификатор ошибки:** BC30306  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a>Исправление ошибки  
   
 -   Укажите недостающий индекс.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Массивы](../../../visual-basic/programming-guide/language-features/arrays/index.md)

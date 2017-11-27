@@ -1,130 +1,133 @@
 ---
-title: "Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Direct3D9 [взаимодействие с WPF], создание содержимого Direct3D9"
-  - "WPF, создание содержимого Direct3D9"
+title: "Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: cpp
+helpviewer_keywords:
+- WPF [WPF], creating Direct3D9 content
+- Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 750e5c42158a87c04a7fb0f2a83f126a698bb93f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF
-В этом пошаговом руководстве показано, как создать содержимое Direct3D9, которое можно разместить в приложении Windows Presentation Foundation \(WPF\).  Дополнительные сведения о размещении содержимого Direct3D9 в приложениях WPF см. в разделе [Взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF
+В этом пошаговом руководстве показано, как создать содержимое Direct3D9, которая подходит для размещения в приложении Windows Presentation Foundation (WPF). Дополнительные сведения о размещении содержимого Direct3D9 в приложениях WPF см. в разделе [WPF и взаимодействие Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
   
- В данном пошаговом руководстве выполняются следующие задачи.  
+ В руководстве выполняются следующие задачи:  
   
--   Создание проекта Direct3D9.  
+-   Создайте проект Direct3D9.  
   
 -   Настройка проекта Direct3D9 для размещения в приложении WPF.  
   
- В итоге будет получен файл DLL с содержимым Direct3D9 для использования в приложении WPF.  
+ Когда вы закончите, будет иметь библиотеку DLL с содержимым Direct3D9 для использования в приложении WPF.  
   
-## Обязательные компоненты  
+## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
--   DirectX SDK 9 или более поздняя версия.  
+-   Позже пакет SDK DirectX 9or.  
   
-## Создание проекта Direct3D9  
- Сначала создайте и настройте проект Direct3D9.  
+## <a name="creating-the-direct3d9-project"></a>Создание проекта Direct3D9  
+ Первым шагом является создание и настройка проекта Direct3D9.  
   
-#### Создание проекта Direct3D9  
+#### <a name="to-create-the-direct3d9-project"></a>Чтобы создать проект Direct3D9  
   
-1.  Создайте новый проект Win32 в C\+\+ с именем `D3DContent`.  
+1.  Создание нового проекта Win32 в C++ с именем `D3DContent`.  
   
-     Откроется мастер приложений Win32 и окно приветствия.  
+     Мастер приложений Win32 открывает и отображает экран приветствия.  
   
 2.  Нажмите кнопку **Далее**.  
   
-     Откроется окно "Параметры приложения".  
+     Появится экран настройки приложения.  
   
-3.  В разделе **Тип приложения:** выберите параметр **DLL**.  
+3.  В **типа приложения:** выберите **DLL** параметр.  
   
 4.  Нажмите кнопку **Готово**.  
   
-     Будет создан проект D3DContent.  
+     Создается проект D3DContent.  
   
-5.  В обозревателе решений щелкните правой кнопкой проект D3DContent и выберите **Свойства**.  
+5.  В обозревателе решений щелкните правой кнопкой мыши проект D3DContent и выберите **свойства**.  
   
-     Откроется диалоговое окно **Страницы свойств D3DContent**.  
+     **Свойств D3dcontent** откроется диалоговое окно.  
   
-6.  Выберите узел **C\/C\+\+**.  
+6.  Выберите **C/C++** узла.  
   
-7.  В поле **Дополнительные каталоги включения** укажите местоположение папки с DirectX.  Папка по умолчанию %ProgramFiles%\\Microsoft DirectX SDK \(*версия*\)\\Include.  
+7.  В **Дополнительные каталоги включаемых файлов** укажите расположение с DirectX включать папку. Расположение по умолчанию эта папка находится в %ProgramFiles%\Microsoft пакет SDK DirectX (*версии*) \Include.  
   
-8.  Дважды щелкните узел **Linker** и разверните его.  
+8.  Дважды щелкните **компоновщика** узел, чтобы развернуть его.  
   
-9. В поле **Дополнительные каталоги библиотек** укажите местоположение папки с библиотеками DirectX.  Папка по умолчанию %ProgramFiles%\\Microsoft DirectX SDK \(*версия*\)\\Lib\\x86.  
+9. В **Дополнительные каталоги библиотек** укажите расположение папки с библиотеками DirectX. Расположение по умолчанию эта папка находится в %ProgramFiles%\Microsoft пакет SDK DirectX (*версии*) \Lib\x86.  
   
-10. Выберите узел **Input**.  
+10. Выберите **ввода** узла.  
   
-11. В поле **Дополнительные зависимости** добавьте файлы `d3d9.lib` и `d3dx9.lib`.  
+11. В **Дополнительные зависимости** поля, добавьте `d3d9.lib` и `d3dx9.lib` файлов.  
   
-12. В обозревателе решений добавьте в проект новый файл определения модуля \(DEF\) с именем `D3DContent.def`.  
+12. В обозревателе решений добавьте новый файл определения модуля (.def) с именем `D3DContent.def` в проект.  
   
-## Создание содержимого Direct3D9  
- Чтобы добиться лучшей производительности, содержимое Direct3D9 должно использовать определенные параметры.  В следующем коде показано, как создать поверхность Direct3D9, имеющую лучшие характеристики производительности.  Дополнительные сведения см. в разделе [Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
+## <a name="creating-the-direct3d9-content"></a>Создание содержимого Direct3D9  
+ Для обеспечения оптимальной производительности, содержимое Direct3D9 необходимо использовать отдельные параметры. Следующий код показывает создание Direct3D9 поверхности, которая имеет лучшие характеристики производительности. Дополнительные сведения см. в разделе [вопросы производительности Direct3D9 и взаимодействие с WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
-#### Создание содержимого Direct3D9  
+#### <a name="to-create-the-direct3d9-content"></a>Создание содержимого Direct3D9  
   
-1.  С помощью обозревателя решений добавьте в проект три класса C\+\+ со следующими именами.  
+1.  С помощью обозревателя решений, добавьте в проект, со следующими именами трех классов C++.  
   
-     `CRenderer` \(с виртуальным деструктором\)  
+     `CRenderer`(с виртуальным деструктором)  
   
      `CRendererManager`  
   
      `CTriangleRenderer`  
   
-2.  В редакторе кода откройте Renderer.h и замените автоматически созданный код следующим кодом.  
+2.  Откройте Renderer.h в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]  
   
-3.  В редакторе кода откройте Renderer.cpp и замените автоматически созданный код следующим кодом.  
+3.  Откройте Renderer.cpp в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]  
   
-4.  В редакторе кода откройте RendererManager.h и замените автоматически созданный код следующим кодом.  
+4.  Откройте RendererManager.h в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]  
   
-5.  В редакторе кода откройте RendererManager.cpp и замените автоматически созданный код следующим кодом.  
+5.  Откройте RendererManager.cpp в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]  
   
-6.  В редакторе кода откройте TriangleRenderer.h и замените автоматически созданный код следующим кодом.  
+6.  Откройте TriangleRenderer.h в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]  
   
-7.  В редакторе кода откройте TriangleRenderer.cpp и замените автоматически созданный код следующим кодом.  
+7.  Откройте TriangleRenderer.cpp в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]  
   
-8.  В редакторе кода откройте stdafx.h и замените автоматически созданный код следующим кодом.  
+8.  Откройте файл stdafx.h в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]  
   
-9. В редакторе кода откройте dllmain.cpp и замените автоматически созданный код следующим кодом.  
+9. Откройте dllmain.cpp в редакторе кода и замените автоматически созданный код следующим кодом.  
   
      [!code-cpp[System.Windows.Interop.D3DImage#DllMain](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/dllmain.cpp#dllmain)]  
   
-10. В редакторе кода откройте D3DContent.def.  
+10. Откройте D3DContent.def в редакторе кода.  
   
-11. Замените автоматически создаваемый код на следующий код.  
+11. Замените автоматически созданный код следующим кодом.  
   
     ```  
-  
     LIBRARY "D3DContent"  
   
     EXPORTS  
@@ -137,16 +140,15 @@ caps.handback.revision: 17
     GetBackBufferNoRef  
     Render  
     Destroy  
-  
     ```  
   
 12. Выполните построение проекта.  
   
-## Следующие действия  
+## <a name="next-steps"></a>Дальнейшие действия  
   
--   Разместите содержимое Direct3D9 в приложении WPF.  Дополнительные сведения см. в разделе [Пошаговое руководство. Размещение содержимого Direct3D9 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).  
+-   Разместить содержимое Direct3D9 в приложении WPF. Дополнительные сведения см. в разделе [Пошаговое руководство: размещение Direct3D9 содержимого в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).  
   
-## См. также  
- <xref:System.Windows.Interop.D3DImage>   
- [Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Interop.D3DImage>  
+ [Вопросы производительности, связанные с взаимодействием Direct3D9 и WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
  [Пошаговое руководство. Размещение содержимого Direct3D9 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

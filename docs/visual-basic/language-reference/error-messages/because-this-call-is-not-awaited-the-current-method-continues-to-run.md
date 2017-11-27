@@ -1,53 +1,35 @@
 ---
-title: "Поскольку этот вызов не ожидается, текущего метода продолжается до завершения вызова. | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова."
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
-helpviewer_keywords:
-- BC42358
+helpviewer_keywords: BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.
 Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен. Рассмотрите возможность применения оператора Await к результату вызова.  
   
- Текущий метод вызывает асинхронный метод, который возвращает <xref:System.Threading.Tasks.Task>или <xref:System.Threading.Tasks.Task%601>и не применяет [Await](../../../visual-basic/language-reference/operators/await-operator.md) в результат.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Вызов асинхронного метода запускает асинхронную задачу. Однако поскольку оператор `Await` не применяется, программа продолжает выполнение, не ожидая завершения задачи. В большинстве случаев такое поведение не ожидается. Обычно другие аспекты вызывающего метода зависят от результатов вызова или, как минимум, вызывающий метод должен завершиться до возврата из метода, который содержит вызов.  
+ Текущий метод вызывает асинхронный метод, который возвращает класс <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> и не применяет оператор [Await](../../../visual-basic/language-reference/operators/await-operator.md) к результату. Вызов асинхронного метода запускает асинхронную задачу. Однако поскольку оператор `Await` не применяется, программа продолжает выполнение, не ожидая завершения задачи. В большинстве случаев такое поведение не ожидается. Обычно другие аспекты вызывающего метода зависят от результатов вызова или, как минимум, вызывающий метод должен завершиться до возврата из метода, который содержит вызов.  
   
- Также важной проблемой является обработка исключений, возникающих в вызываемом асинхронном методе. Исключение, возникающее в методе, который возвращает <xref:System.Threading.Tasks.Task>или <xref:System.Threading.Tasks.Task%601>хранится в возвращенной задаче.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Если не ожидать задачу или явно не проверять исключения, исключение будет потеряно. Если ожидать задачу, ее исключение будет создано повторно.  
+ Также важной проблемой является обработка исключений, возникающих в вызываемом асинхронном методе. Исключение, возникающее в методе, который возвращает <xref:System.Threading.Tasks.Task> или  <xref:System.Threading.Tasks.Task%601> , хранится в возвращенной задаче. Если не ожидать задачу или явно не проверять исключения, исключение будет потеряно. Если ожидать задачу, ее исключение будет создано повторно.  
   
  Рекомендуется всегда ожидать вызов.  
   
- По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [Настройка предупреждений в Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Идентификатор ошибки:** BC42358  
   
@@ -141,7 +123,7 @@ ms.lasthandoff: 03/13/2017
   
      В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.  
   
-     Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Сведения о том, как построить собственный простой пользовательский Интерфейс в разделе «Создание приложения WPF» и «разработка простого MainWindow WPF» разделы [Пошаговое руководство: доступ к Интернету с помощью Async и Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Сведения о том, как построить собственный простой пользовательский интерфейс, см. в подразделах "Создание приложений WPF" и "Создание простого MainWindow WPF" в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
   
 4.  Замените код в MainWindow.xaml.vb на приведенный далее.  
   
@@ -228,6 +210,5 @@ ms.lasthandoff: 03/13/2017
      Ожидаемый результат отобразится в конце кода.  
   
 ## <a name="see-also"></a>См. также  
- [Оператор await](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Оператор Await](../../../visual-basic/language-reference/operators/await-operator.md)  
  [Асинхронное программирование с использованием ключевых слов Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md)
-

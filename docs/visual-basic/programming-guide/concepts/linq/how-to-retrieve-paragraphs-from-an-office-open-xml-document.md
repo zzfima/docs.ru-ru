@@ -1,40 +1,36 @@
 ---
-title: "Практическое руководство: извлечение абзацев из документа Office Open XML (Visual Basic) | Документы Microsoft"
+title: "Как: извлечение абзацев из документа Office Open XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 303fffb8a548805f4ae7c1e66d683b35b9faf2b0
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ecce435601092e0025a977c797100e0b5ff74b86
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Практическое руководство: извлечение абзацев из документа Office Open XML (Visual Basic)
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Как: извлечение абзацев из документа Office Open XML (Visual Basic)
 В этом разделе представлен пример, открывающий документ Office Open XML и получающий коллекцию всех абзацев документа.  
   
- Дополнительные сведения об Office Open XML см. в разделе [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Дополнительные сведения об Office Open XML см. на веб-сайте [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
   
 ## <a name="example"></a>Пример  
- В этом примере открывается пакет Office Open XML и используются связи внутри пакета Open XML для поиска документа и секций стилей. Затем он запрашивает документ, проецирование коллекции анонимного типа, содержащего абзац <xref:System.Xml.Linq.XElement>узел, имя стиля каждого абзаца и текст каждого абзаца.</xref:System.Xml.Linq.XElement>  
+ В этом примере открывается пакет Office Open XML и используются связи внутри пакета Open XML для поиска документа и секций стилей. Затем в этом примере выполняется запрос к документу и создается проекция коллекции анонимного типа, содержащая узел <xref:System.Xml.Linq.XElement> абзаца, имя стиля каждого абзаца и текст каждого абзаца.  
   
  В этом примере используется метод расширения с именем `StringConcatenate`, который также показан в примере.  
   
- Подробный учебник, в котором объясняется, как работает этот пример, в разделе [чисто функциональные преобразования XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Подробный учебник, в котором описывается, как работает этот пример, в разделе [чисто функциональные преобразования XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из <xref:System.IO.Packaging?displayProperty=fullName>имен.</xref:System.IO.Packaging?displayProperty=fullName>  
+ В этом примере используются классы, находящиеся в сборке WindowsBase. Используются типы из пространства имен <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -165,7 +161,7 @@ Module Module1
 End Module  
 ```  
   
- При запуске с образцом документа Open XML, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), в этом примере выводятся следующие данные:  
+ При запуске с образец откройте XML-документа, описанной в [создания источника Office Open XML-документа (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), в этом примере выводятся следующие данные:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

@@ -1,47 +1,50 @@
 ---
-title: "Образец совместного использования портов Net.TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пример совместного использования портов Net.TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d3ee04dfd400e09e6392e78498d80a59bb88b11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец совместного использования портов Net.TCP
-Протокол TCP\/IP использует 16\-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере.Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению.Другие приложения не могут одновременно ожидать передачи данных через тот же порт.  
+# <a name="nettcp-port-sharing-sample"></a>Пример совместного использования портов Net.TCP
+Протокол TCP/IP использует 16-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере. Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению. Другие приложения не могут одновременно ожидать передачи данных через тот же порт.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- У многих протоколов имеется номер порта по умолчанию.Например, для протокола HTTP обычно используется порт TCP 80.У служб IIS имеется прослушиватель для совместного использования одного порта несколькими приложениями HTTP.Службы IIS ожидают передачи данных непосредственно через этот порт и перенаправляют сообщения соответствующим приложениям в зависимости от информации внутри сообщения.Это позволяет нескольким приложениям HTTP использовать один и тот же номер порта, не конкурируя за порт для получения сообщений.  
+ У многих протоколов имеется номер порта по умолчанию. Например, для протокола HTTP обычно используется порт TCP 80. У служб IIS имеется прослушиватель для совместного использования одного порта несколькими приложениями HTTP. Службы IIS ожидают передачи данных непосредственно через этот порт и перенаправляют сообщения соответствующим приложениям в зависимости от информации внутри сообщения. Это позволяет нескольким приложениям HTTP использовать один и тот же номер порта, не конкурируя за порт для получения сообщений.  
   
- Общий доступ к портам NetTcp — это функция [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], которая аналогичным образом позволяет нескольким сетевым приложениям использовать один порт.Служба общего доступа к портам NetTcp принимает подключения с помощью протокола net.tcp и перенаправляет сообщения в зависимости от их адреса назначения.  
+ Совместное использование порта NetTcp [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]функция, которая аналогичным образом позволяет нескольким сетевым приложениям использовать один порт. Служба общего доступа к портам NetTcp принимает подключения с помощью протокола net.tcp и перенаправляет сообщения в зависимости от их адреса назначения.  
   
- По умолчанию служба общего доступа к портам NetTcp отключена.Перед запуском этого образца необходимо вручную включить эту службу.Дополнительные сведения см. в разделе [Практическое руководство. Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).Если служба отключена, при запуске серверного приложения создается исключение.  
+ По умолчанию служба общего доступа к портам NetTcp отключена. Перед запуском этого образца необходимо вручную включить эту службу. Дополнительные сведения см. в разделе [как: Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Если служба отключена, при запуске серверного приложения создается исключение.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Общий доступ к портам включается на сервере путем задания свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> привязки <xref:System.ServiceModel.NetTcpBinding> или элемента привязки <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.Чтобы использовать на сервере общий доступ к портам, клиенту не требуются сведения о его конфигурации.  
+ Общий доступ к портам включается на сервере путем задания свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> привязки <xref:System.ServiceModel.NetTcpBinding> или элемента привязки <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. Чтобы использовать на сервере общий доступ к портам, клиенту не требуются сведения о его конфигурации.  
   
-## Включение общего доступа к портам  
- В следующем примере кода показано, как включить на сервере общий доступ к портам.Он запускает экземпляр службы `ICalculator` на фиксированном порту со случайным путем универсального кода ресурса \(URI\).Хотя две службы могут использовать один и тот же порт, их адреса конечных точек должны быть уникальными, чтобы служба общего доступа к портам NetTcp могла перенаправлять сообщения нужным приложениям.  
+## <a name="enabling-port-sharing"></a>Включение общего доступа к портам  
+ В следующем примере кода показано, как включить на сервере общий доступ к портам. Он запускает экземпляр службы `ICalculator` на фиксированном порту со случайным путем универсального кода ресурса (URI). Хотя две службы могут использовать один и тот же порт, их адреса конечных точек должны быть уникальными, чтобы служба общего доступа к портам NetTcp могла перенаправлять сообщения нужным приложениям.  
   
 ```  
 // Configure a binding with TCP port sharing enabled  
@@ -57,13 +60,13 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```  
   
- Если общий доступ к портам включен, службу можно запускать несколько раз без конфликта по поводу номера порта.Если изменить код и отключить общий доступ к портам, то в случае запуска двух экземпляров службы при запуске второго экземпляра будет создано исключение <xref:System.ServiceModel.AddressAlreadyInUseException>.  
+ Если общий доступ к портам включен, службу можно запускать несколько раз без конфликта по поводу номера порта. Если изменить код и отключить общий доступ к портам, то в случае запуска двух экземпляров службы при запуске второго экземпляра будет создано исключение <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
 ```  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
-## Выполнение образца  
+## <a name="running-the-sample"></a>Запуск примера  
  Чтобы проверить, что сообщения правильно направляются службам, которые совместно используют порт, можно воспользоваться тестовым клиентом.  
   
 ```  
@@ -110,7 +113,7 @@ class client
 }  
 ```  
   
- Каждый экземпляр службы выводит собственный уникальный номер и адрес.Например, при запуске файла service.exe можно увидеть следующий текст.  
+ Каждый экземпляр службы выводит собственный уникальный номер и адрес. Например, при запуске файла service.exe можно увидеть следующий текст.  
   
 ```  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
@@ -129,23 +132,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Этот образец можно выполнять на нескольких компьютерах, если изменить созданный адрес, используемый клиентом.В файле Client.cs измените строку формата адреса конечной точки, чтобы она соответствовало новому адресу службы.Замените вхождения localhost на IP\-адрес серверного компьютера.После внесения этого изменения необходимо перекомпилировать образец.  
+ Этот образец можно выполнять на нескольких компьютерах, если изменить созданный адрес, используемый клиентом. В файле Client.cs измените строку формата адреса конечной точки, чтобы она соответствовало новому адресу службы. Замените вхождения localhost на IP-адрес серверного компьютера. После внесения этого изменения необходимо перекомпилировать пример.  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
 1.  Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Убедитесь, что выполнены действия, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Включите службу общего доступа к портам NetTcp, как описано в начале раздела.  
   
-4.  Чтобы выполнить построение версии решения для языка C\# или Visual Basic .NET, воспользуйтесь инструкциями в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Чтобы выполнить образец на одном или нескольких компьютерах, выполните инструкции в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).Конкретные сведения о выполнении этого образца описаны в разделе "Выполнение образца".  
+5.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Конкретные сведения о выполнении этого образца описаны в разделе "Выполнение образца".  
   
-## См. также
+## <a name="see-also"></a>См. также

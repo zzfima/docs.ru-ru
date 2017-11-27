@@ -1,43 +1,44 @@
 ---
-title: "Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пункты меню, отключение"
-  - "меню, отключение элементов"
-  - "MenuStrip - элемент управления [Windows Forms], отключение элементов меню в конструкторе"
-  - "ToolStripMenuItem - элементы, отключение в конструкторе"
+title: "Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStripMenuItems [Windows Forms], disabling in designer
+- MenuStrip control [Windows Forms], disabling menu items in designer
+- menu items [Windows Forms], disabling
+- menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4958f315ff0415c3964d22dffff2553c0901eb91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора
-Можно ограничить или расширить набор команд, которые может выполнить пользователь, путем включения и отключения пунктов меню в ответ на действия пользователя.  При создании меню пункты меню включены по умолчанию, однако это можно изменить с помощью свойства <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>.  Изменить значение этого свойства можно в процессе разработки в окне **Свойства** или программным путем, добавив в код соответствующую настройку.  Дополнительные сведения см. в разделе [Практическое руководство. Блокирование доступа к элементам меню ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md).  
+# <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора
+Можно ограничить или расширить набор команд, которые может выбрать пользователь, включение и отключение элементов меню в ответ на действия пользователя. Пункты меню включены по умолчанию, если они были созданы, но это можно изменить с помощью <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойство. Можно изменить значение этого свойства во время разработки в **свойства** окна или программным путем установки его в код. Дополнительные сведения см. в разделе [как: отключение объектов ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Чтобы отключить пункт меню в процессе разработки, выполните следующие действия:  
+### <a name="to-disable-a-menu-item-at-design-time"></a>Чтобы отключить пункт меню во время разработки  
   
-1.  Выберите в форме пункт меню и установите для свойства <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> значение `false`.  
+1.  Выберите элемент меню в форме, установите <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> свойства `false`.  
   
     > [!TIP]
-    >  Отключение первого пункта меню или элемента верхнего уровня в меню приведет к отключению всех пунктов меню.  Аналогичным образом, отключение пункта меню, который имеет вложенное меню, приведет к отключению пунктов вложенного меню.  Если пользователю становятся недоступны все команды конкретного меню, хорошим тоном считается отключать и скрывать меню целиком и предоставлять пользователю чистый интерфейс.  Обязательно нужно скрывать и отключать меню, потому что скрытие меню не запрещает доступ к командам меню с помощью сочетаний клавиш.  Чтобы скрыть меню полностью, установите для свойства <xref:System.Windows.Forms.ToolStripItem.Visible%2A> меню верхнего уровня значение `false`.  
+    >  Отключение элемента меню первой или верхнего уровня в меню отключает всех пунктов меню. Аналогичным образом отключение пункта меню, который имеет вложенное отключает элементов вложенного меню. Если все команды конкретного меню недоступны пользователю, он считается хорошим стилем программирования, как скрыть и отключить всего меню, это представляет чистой пользовательского интерфейса. Как следует скрыть и отключить меню, как скрытие не запрещает доступ к командам меню с помощью сочетаний клавиш. Задать <xref:System.Windows.Forms.ToolStripItem.Visible%2A> свойства элемента меню верхнего уровня для `false` скрыть меню целиком.  
   
-## См. также  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [Практическое руководство. Сокрытие объектов ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [Практическое руководство. Скрытие объектов ToolStripMenuItem](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
  [Общие сведения об элементе управления MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

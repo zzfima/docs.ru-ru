@@ -1,29 +1,25 @@
 ---
-title: "Практическое руководство: изменение пространства имен для всего дерева XML (Visual Basic) | Документы Microsoft"
+title: "Как: изменить пространство имен для всего дерева XML (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: af216e734c85806056e37d92733a3e4d49f8b73c
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 1c5ee83840f9d8b4105e7af53008a329dfde37d3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Практическое руководство: изменение пространства имен для всего дерева XML (Visual Basic)
-Иногда необходимо программно изменить пространство имен для элемента или атрибута. В LINQ to XML это делается легко. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>Может быть установлено.</xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName> <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>Невозможно задать свойство, но можно легко скопировать атрибуты в <xref:System.Collections.Generic.List%601?displayProperty=fullName>, удалите существующие атрибуты и затем добавить новые атрибуты нового пространства имен.</xref:System.Collections.Generic.List%601?displayProperty=fullName> </xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Как: изменить пространство имен для всего дерева XML (Visual Basic)
+Иногда необходимо программно изменить пространство имен для элемента или атрибута. В LINQ to XML это делается легко. Можно установить свойство <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. Свойство <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> не может быть установлено, но можно легко скопировать атрибуты в объект <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, заменив существующие атрибуты, а затем добавить новые атрибуты из нового пространства имен.  
   
  Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   

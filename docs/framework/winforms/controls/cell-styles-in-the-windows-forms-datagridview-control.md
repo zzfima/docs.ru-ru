@@ -1,34 +1,35 @@
 ---
-title: "Стили ячеек элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ячейки, стили"
-  - "таблицы данных, стили ячеек"
-  - "DataGridView - элемент управления [Windows Forms], стили ячеек"
+title: "Стили ячеек элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], cell styles
+- cells [Windows Forms], styles
+- data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: 33
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Стили ячеек элемента управления DataGridView в Windows Forms
-Каждая ячейка в элементе управления <xref:System.Windows.Forms.DataGridView> может иметь собственный стиль, включая формат текста, цвет фона, основной цвет и шрифт.  Впрочем, обычно несколько ячеек обладают одинаковым стилем.  
+# <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Стили ячеек элемента управления DataGridView в Windows Forms
+Каждая ячейка в <xref:System.Windows.Forms.DataGridView> элемент управления может иметь свой собственный стиль, включая формат текста, цвет фона, цвет и шрифт. Как правило, тем не менее, несколько ячеек обладают одинаковым стилем.  
   
- Группы ячеек с одинаковым стилем могут включать все ячейки в определенных строках или столбцах, все ячейки с определенными значениями или все ячейки в элементе управления.  Эти группы могут пересекаться, поэтому каждая ячейка может получать данные своего стиля из нескольких источников.  Например, может потребоваться, чтобы во всех ячейках элемента управления <xref:System.Windows.Forms.DataGridView> использовался одинаковый шрифт, но чтобы только столбцах, где содержатся денежные значения, использовался формат денежных единиц, и чтобы в ячейках денежных единиц, содержащих отрицательные значения, основной цвет был красным.  
+ Группы ячеек с одинаковым стилем могут включать все ячейки в пределах определенного строк или столбцов, все ячейки с определенными значениями или все ячейки в элементе управления. Поскольку эти группы перекрываются, каждая ячейка может получать данные своего стиля из более чем в одном месте. Например, может потребоваться каждая ячейка <xref:System.Windows.Forms.DataGridView> использовать одинаковый шрифт, но только в столбцах для использования формат денежной единицы и только валюты ячейки с отрицательные числа красным основной цвет элемента управления.  
   
-## Класс DataGridViewCellStyle  
- Класс <xref:System.Windows.Forms.DataGridViewCellStyle> содержит следующие свойства, относящиеся к стилю:  
+## <a name="the-datagridviewcellstyle-class"></a>Класс DataGridViewCellStyle  
+ <xref:System.Windows.Forms.DataGridViewCellStyle> Класс содержит следующие свойства, относящиеся к стилю:  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>.  
   
@@ -48,129 +49,129 @@ caps.handback.revision: 33
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
- Дополнительные сведения об этих свойствах и других свойствах стилей ячеек см. в справочной документации <xref:System.Windows.Forms.DataGridViewCellStyle> и в разделах, перечисленных в главе "См. также" ниже.  
+ Дополнительные сведения об этих свойствах и другие свойства стиля ячейки см. в разделе <xref:System.Windows.Forms.DataGridViewCellStyle> справочной документации и в разделах, перечисленных в подразделе ниже.  
   
-## Использование объектов DataGridViewCellStyle  
- Можно извлекать объекты <xref:System.Windows.Forms.DataGridViewCellStyle> из различных свойств классов <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow> и <xref:System.Windows.Forms.DataGridViewCell>, а также производных классов.  Если одно из этих свойств еще не указано, при получении его значения будет создан новый объект <xref:System.Windows.Forms.DataGridViewCellStyle>.  Также можно создать экземпляры собственных объектов <xref:System.Windows.Forms.DataGridViewCellStyle> и назначить их этим свойствам.  
+## <a name="using-datagridviewcellstyle-objects"></a>С помощью объектов DataGridViewCellStyle  
+ Вы можете получить <xref:System.Windows.Forms.DataGridViewCellStyle> объекты из различных свойств <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>, и <xref:System.Windows.Forms.DataGridViewCell> и их производные классы. Если одно из этих свойств еще не было задано, его значение было получено будет создана новая <xref:System.Windows.Forms.DataGridViewCellStyle> объекта. Можно также создать свои собственные <xref:System.Windows.Forms.DataGridViewCellStyle> объектов и назначьте их этих свойств.  
   
- Можно избежать ненужного дублирования данных стилей путем общего доступа к объектам <xref:System.Windows.Forms.DataGridViewCellStyle> между несколькими элементами <xref:System.Windows.Forms.DataGridView>.  Стили, указанные на уровне элемента управления, столбца и строки, применяются ко всем нижележащим уровням вплоть до уровня ячейки, можно избежать дублирования стилей, указывая на каждом уровне только те свойства стилей, которые отличаются от указанных на более высоких уровнях.  Это описано более подробно в следующем разделе "Наследование стилей".  
+ Можно избежать ненужного дублирования информации о стилях, предоставив <xref:System.Windows.Forms.DataGridViewCellStyle> объектов между несколькими <xref:System.Windows.Forms.DataGridView> элементов. Поскольку стили элемента управления, столбца и фильтра строк уровней вниз до каждого уровня на уровне ячейки, можно также избежать дублирования стилей, задав только те свойства стилей на каждом уровне, которые отличаются от более высоких уровнях. Это описывается более подробно в следующем разделе наследования стиля.  
   
- В следующей таблице перечислены основные свойства, получающие или устанавливающие объекты <xref:System.Windows.Forms.DataGridViewCellStyle>.  
+ В следующей таблице перечислены основные свойства, получить или задать <xref:System.Windows.Forms.DataGridViewCellStyle> объектов.  
   
-|Свойство.|Классы|Описание|  
-|---------------|------------|--------------|  
-|`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow> и производные классы|Получает или устанавливает стили по умолчанию, используемые всеми ячейками во всем элементе управления \(включая заголовки\), в столбце или в строке.|  
-|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Получает или устанавливает стили ячеек по умолчанию, используемые во всех строках элемента управления.  Это не относится к ячейкам заголовков.|  
-|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Получает или устанавливает стили ячеек по умолчанию, используемые во чередующихся строках элемента управления.  Это позволяет задать один стиль для четных строк, а другой — для нечетных.|  
-|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Получает или устанавливает стили ячеек по умолчанию, используемые в заголовках строк элемента управления.  Эти параметры заменяются текущей темой, если включены наглядные стили.|  
-|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Получает или устанавливает стили ячеек по умолчанию, используемые в заголовках столбцов элемента управления.  Эти параметры заменяются текущей темой, если включены наглядные стили.|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> и производные классы|Получает или устанавливает стили на уровне ячейки.  Эти стили заменяют стиль, унаследованный с более высоких уровней.|  
-|`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn> и производные классы|Получает все стили, примененные в настоящий момент к ячейке, строке или столбцу, включая унаследованные стили.|  
+|Свойство|Классы|Описание|  
+|--------------|-------------|-----------------|  
+|`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>и производные классы|Возвращает или задает стили по умолчанию, используемые во все ячейки в весь элемент управления (включая заголовки), в столбце или в строке.|  
+|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Возвращает или задает стили ячеек по умолчанию, используемые во всех строках в элементе управления. Это относится к ячейкам заголовков.|  
+|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Возвращает или задает стили ячеек по умолчанию, используемые во чередующихся строк в элементе управления. Используется для создания эффекта бухгалтерской книги.|  
+|<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Возвращает или задает стили ячеек по умолчанию, используемые в заголовках строк элемента управления. Текущую тему переопределены, если визуальные стили включены.|  
+|<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Возвращает или задает стили ячеек по умолчанию, используемые в заголовках столбцов элемента управления. Текущую тему переопределены, если визуальные стили включены.|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>и производные классы|Возвращает или задает стили, заданные на уровне ячеек. Эти стили заменяют унаследованные от более высоких уровнях.|  
+|`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell>, <xref:System.Windows.Forms.DataGridViewRow>, <xref:System.Windows.Forms.DataGridViewColumn>и производные классы|Получает все стили, примененные в ячейку, строку или столбец, включая стили, унаследованные от более высокого уровня.|  
   
- Как было сказано выше, при получении значения свойства стиля автоматически создается новый экземпляр объекта <xref:System.Windows.Forms.DataGridViewCellStyle>, если свойство не было указано ранее.  Чтобы избежать создания этих объектов без необходимости, в классах строк и столбцов есть свойство <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A>, которое можно проверить, чтобы узнать, установлено ли свойство <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A>.  Сходным образом, в классах ячеек есть свойство <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A>, указывающее, установлено ли свойство <xref:System.Windows.Forms.DataGridViewCell.Style%2A>.  
+ Как упоминалось выше, при получении значения свойства стиля автоматически создает новый <xref:System.Windows.Forms.DataGridViewCellStyle> объекта, если свойство не было задано ранее. Во избежание без необходимости создания этих объектов, строк и столбцов классы имеют <xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A> свойство, которое можно проверить, чтобы определить, является ли <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A> свойства. Аналогично, классы ячейки имеют <xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A> свойство, которое указывает ли <xref:System.Windows.Forms.DataGridViewCell.Style%2A> свойства.  
   
- Для каждого свойства стиля есть соответствующее событие *ИмяСвойства*`Changed` в элементе управления <xref:System.Windows.Forms.DataGridView>.  Для свойств строк, столбцов и ячеек имя события начинается с "`Row`", "`Column`" или "`Cell`" \(например, <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>\).  Каждое из этих событий происходит, когда соответствующее свойство стиля устанавливается для другого объекта <xref:System.Windows.Forms.DataGridViewCellStyle>.  Эти события не происходят при получении объекта <xref:System.Windows.Forms.DataGridViewCellStyle> из свойства стиля и изменении значений его свойств.  Для реагирования на изменения самих объектов стиля ячейки требуется обработка события <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged>.  
+ Каждое из свойств стиля имеет соответствующий *PropertyName* `Changed` события <xref:System.Windows.Forms.DataGridView> элемента управления. Для строк, столбцов и свойства ячейки, имя события начинается с «`Row`«,»`Column`», или «`Cell`» (например, <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>). Каждое из этих событий возникает, когда соответствующее свойство стиля с другим <xref:System.Windows.Forms.DataGridViewCellStyle> объекта. Эти события не происходят при извлечении <xref:System.Windows.Forms.DataGridViewCellStyle> объекта из свойства стиля и изменении значений его свойств. Чтобы реагировать на изменения в самих объектов стиля ячейки, обрабатывать <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged> событий.  
   
-## Наследование стиля  
- Каждая ячейка <xref:System.Windows.Forms.DataGridViewCell> получает данные о своем внешнем виде из свойства <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>.  Объект <xref:System.Windows.Forms.DataGridViewCellStyle>, возвращаемый этим свойством, наследует свои значение от иерархии свойств типа <xref:System.Windows.Forms.DataGridViewCellStyle>.  Эти свойства перечислены ниже в порядке, в котором получает свои значения <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> для ячеек, не находящихся в заголовках.  
+## <a name="style-inheritance"></a>Наследование стилей  
+ Каждый <xref:System.Windows.Forms.DataGridViewCell> получает его внешний вид из его <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> свойство. <xref:System.Windows.Forms.DataGridViewCellStyle> Объект, возвращаемый этим свойством наследует значения от иерархии свойств типа <xref:System.Windows.Forms.DataGridViewCellStyle>. Эти свойства перечислены ниже в порядке, в котором <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> для ячеек не заголовков получает свои значения.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName> \(только для ячеек в нечетных строках\)  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(только для ячеек в строках нечетных)  
   
-4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>  
+5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- Для ячеек заголовков столбцов и строк свойство <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> заполняется значениями из следующего списка исходных свойств в данном порядке.  
+ Для ячеек заголовков строк и столбцов <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> свойство заполняется значениями из следующего списка исходных свойств в определенном порядке.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=fullName> или <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> или <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Этот процесс показан на следующей схеме.  
   
- ![Свойства типа DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.png "DataGridViewCells1")  
+ ![Свойства типа DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
   
- Также можно получить доступ к стилям, унаследованным определенными строками и столбцами.  Свойство столбца <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> наследует значения от следующих свойств.  
+ Также можно получить доступ к стилям, унаследованным от определенных строк и столбцов. Столбец <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> свойство наследует значения от следующих свойств.  
   
-1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- Свойство строки <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> наследует значения от следующих свойств.  
+ Строка <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> свойство наследует значения от следующих свойств.  
   
-1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>  
+1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName> \(только для ячеек в нечетных строках\)  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>(только для ячеек в строках нечетных)  
   
-3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>  
+3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- Для каждого свойства в объекте <xref:System.Windows.Forms.DataGridViewCellStyle>, возвращенном свойством `InheritedStyle`, значение свойства берется из первого стиля ячейки в соответствующем списке, в котором значение свойства отличается от значения по умолчанию для класса <xref:System.Windows.Forms.DataGridViewCellStyle>.  
+ Для каждого свойства в <xref:System.Windows.Forms.DataGridViewCellStyle> объект, возвращаемый `InheritedStyle` свойства, значение свойства извлекается из первого стиля ячейки в соответствующем списке, соответствующий свойству присвоено значение, отличное от <xref:System.Windows.Forms.DataGridViewCellStyle> класса значения по умолчанию.  
   
- В следующей таблице показано наследование значения свойства <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> ячейки от столбца, в котором находится эта ячейка.  
+ В следующей таблице показано, как <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> наследуется от столбца, в котором значение свойства ячейка.  
   
-|Свойство типа `DataGridViewCellStyle`|Пример значения `ForeColor` для полученного объекта|  
-|-------------------------------------------|---------------------------------------------------------|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Red%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Empty?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.DarkBlue%2A?displayProperty=fullName>|  
-|<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>|<xref:System.Drawing.Color.Black%2A?displayProperty=fullName>|  
+|Свойство типа`DataGridViewCellStyle`|Пример `ForeColor` значение для полученного объекта|  
+|----------------------------------------------|----------------------------------------------------|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.DarkBlue%2A?displayProperty=nameWithType>|  
+|<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Black%2A?displayProperty=nameWithType>|  
   
- В этом случае значение <xref:System.Drawing.Color.Red%2A?displayProperty=fullName> из строки ячейки является первым действительным значением в списке.  Оно становится значением свойства <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> стиля ячейки <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>.  
+ В этом случае <xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType> значение из строки ячейки является первым действительным значением в списке. Это становится <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> значение свойства ячейки <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>.  
   
- На следующей схеме показано, как различные свойства <xref:System.Windows.Forms.DataGridViewCellStyle> могут наследовать значения из различных источников.  
+ На следующей схеме показана как разные <xref:System.Windows.Forms.DataGridViewCellStyle> свойства могут наследовать значения из разных мест.  
   
- ![Наследование значений свойств DataGridView](../../../../docs/framework/winforms/controls/media/datagridviewcells2.png "DataGridViewCells2")  
+ ![DataGridView свойство &#45; наследование значения](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
   
- Используя наследование стилей можно предоставить соответствующие стили для всего элемента управления, не указывая одинаковую информацию несколько раз.  
+ Используя преимущества наследования стиля, можно предоставить соответствующие стили для всего элемента управления без указания те же данные в нескольких местах.  
   
- Ячейки заголовка участвуют в описанном наследовании стиля, однако объекты, возвращенные свойствами <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> и <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> элемента управления <xref:System.Windows.Forms.DataGridView>, имеют начальные значения, которые заменяют значения объекта, возвращенные свойством <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>.  Если требуется, чтобы свойства объекта, возвращаемые свойством <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, применялись к заголовкам строк и столбцов, нужно установить для соответствующих поставщиков объектов, возвращаемых свойствами <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> и <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>, значения по умолчанию, указанные для класса <xref:System.Windows.Forms.DataGridViewCellStyle>.  
-  
-> [!NOTE]
->  Если включены наглядные стили, то заголовки строк и столбцов \(кроме <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>\) автоматически получают стиль текущей темы, заменяя все стили, указанные для этих свойств.  
-  
- Типы <xref:System.Windows.Forms.DataGridViewButtonColumn>, <xref:System.Windows.Forms.DataGridViewImageColumn> и <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> также инициализируют некоторые значения объекта, возвращенного свойством столбца <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>.  Дополнительные сведения см. в справочной документации для этих типов.  
-  
-## Динамическая установка стилей  
- Чтобы настроить стиль ячеек с использованием определенных значений, реализуйте обработчик для события <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>.  Обработчики этого события получают аргумент типа <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs>.  Этот объект содержит свойства, позволяющие определить значение форматируемой ячейки, а также ее расположение в элементе управления <xref:System.Windows.Forms.DataGridView>.  Этот объект также содержит свойство <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A>, которое при инициализации получает значение свойства <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> форматируемой ячейки.  Можно изменить свойства стиля ячейки и указать данные стиля в соответствии со значением ячейки и ее расположением.  
+ Несмотря на то, что ячейки заголовка участвуют в наследовании стиля, как описано, объекты, возвращенные <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> и <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> свойства <xref:System.Windows.Forms.DataGridView> управления имеют начальные значения, переопределяющие значения свойств объекта, возвращенного <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> свойство. Если необходимо, чтобы свойства, установленные для объекта, возвращаемого <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> свойства, применяемый к заголовкам строк и столбцов, необходимо задать соответствующие свойства объектов, возвращенных <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> и <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> указанного значения по умолчанию для <xref:System.Windows.Forms.DataGridViewCellStyle> класса.  
   
 > [!NOTE]
->  События <xref:System.Windows.Forms.DataGridView.RowPrePaint> и <xref:System.Windows.Forms.DataGridView.RowPostPaint> также получают объект <xref:System.Windows.Forms.DataGridViewCellStyle> в данных события, но в этом случае это копия свойства строки <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A>, доступная только для чтения; ее изменения не влияют на элемент управления.  
+>  Если включены визуальные стили, заголовки строк и столбцов (за исключением <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) автоматически определяются текущей темы, заменяя все стили, указанные для этих свойств.  
   
- Кроме того, можно динамически изменять стили определенных ячеек на основе событий, таких как <xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=fullName> и <xref:System.Windows.Forms.DataGridView.CellMouseLeave>.  Например, в обработчике события <xref:System.Windows.Forms.DataGridView.CellMouseEnter> можно хранить текущее значение фонового цвета ячейки \(это значение можно получить посредством свойства <xref:System.Windows.Forms.DataGridViewCell.Style%2A>\), затем можно установить новый цвет, которым ячейка будет выделена при наведении на нее указателя мыши.  После этого в обработчике события <xref:System.Windows.Forms.DataGridView.CellMouseLeave> можно вернуть исходный цвет фона.  
+ <xref:System.Windows.Forms.DataGridViewButtonColumn>, <xref:System.Windows.Forms.DataGridViewImageColumn>, И <xref:System.Windows.Forms.DataGridViewCheckBoxColumn> типы также инициализируют некоторые значения объекта, возвращаемого в столбце <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> свойство. Дополнительные сведения см. в справочной документации для этих типов.  
+  
+## <a name="setting-styles-dynamically"></a>Динамическая установка стилей  
+ Чтобы настроить стили ячеек с определенными значениями, Реализуйте обработчик <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> событий. Обработчики для этого события получают аргумент <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> типа. Этот объект содержит свойства, позволяющие определить значение ячейки, подлежащего форматированию вместе с ее расположение в <xref:System.Windows.Forms.DataGridView> элемента управления. Этот объект также содержит <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs.CellStyle%2A> свойство, которое инициализируется значение <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> свойства форматируемой ячейки. Можно изменить свойства стиля ячейки и указать сведения о стиле, подходящие для значения ячейки и расположение.  
   
 > [!NOTE]
->  Вне зависимости от того, указано ли то или иное значение стиля, следует обратить внимание на кэширование значений, хранящихся в свойстве <xref:System.Windows.Forms.DataGridViewCell.Style%2A>.  Если временно заменить параметр стиля, возврат его в исходное "неопределенное" состояние приведет к тому, что ячейка снова будет наследовать этот параметр стиля с более высокого уровня.  Если нужно определить текущий стиль, действующий для ячейки независимо от наследуемого стиля, используйте свойство <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>.  
+>  <xref:System.Windows.Forms.DataGridView.RowPrePaint> И <xref:System.Windows.Forms.DataGridView.RowPostPaint> событий также получать <xref:System.Windows.Forms.DataGridViewCellStyle> данных объектов событий, но в случае их это копия строки <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> свойство только для чтения в целях, и изменения не влияют на элементе управления.  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=fullName>   
- [Базовое форматирование и оформление элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)   
- [Практическое руководство. Установка стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)   
+ Можно также динамически изменять стили отдельных ячеек в ответ на события, такие как <xref:System.Windows.Forms.DataGridView.CellMouseEnter?displayProperty=nameWithType> и <xref:System.Windows.Forms.DataGridView.CellMouseLeave> события. Например, в обработчике <xref:System.Windows.Forms.DataGridView.CellMouseEnter> событий, можно сохранить текущее значение цвета фона ячеек (извлечь с помощью ячейки <xref:System.Windows.Forms.DataGridViewCell.Style%2A> свойства), установите его в новый цвет, который будет выделяться ячейки, при наведении указателя мыши. В обработчике <xref:System.Windows.Forms.DataGridView.CellMouseLeave> события, цвет фона можно будет восстановить исходное значение.  
+  
+> [!NOTE]
+>  Кэширование значений, хранящихся в ячейке <xref:System.Windows.Forms.DataGridViewCell.Style%2A> свойства важно независимо от того, установлен ли значение определенного стиля. Если временно заменить параметр стиля, восстанавливая ее из копии в исходное состояние «не установлено» обеспечивает ячейки будет снова будет наследовать этот параметр стиля с более высокого уровня. Если вам нужно определить текущий стиль, действующий для ячейки независимо от того, наследуется ли стиль, использовать эту ячейку <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> свойство.  
+  
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>  
+ [Базовое форматирование и оформление элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Практическое руководство. Установка стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
  [Форматирование данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)

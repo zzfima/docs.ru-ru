@@ -1,34 +1,30 @@
 ---
-title: "Практическое руководство: извлечение коллекции элементов (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: извлечение коллекции элементов (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfe4450d268125f021795dfb61885f4c2cb81151
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: a3d8cc558191b1ad672660e0d9ada4c4653cd1a7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Практическое руководство: извлечение коллекции элементов (LINQ to XML) (Visual Basic)
-В этом разделе демонстрируется <xref:System.Xml.Linq.XContainer.Elements%2A>метод.</xref:System.Xml.Linq.XContainer.Elements%2A> Этот метод получает коллекцию дочерних элементов того или иного элемента.  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>Как: извлечение коллекции элементов (LINQ to XML) (Visual Basic)
+В этом разделе показан метод <xref:System.Xml.Linq.XContainer.Elements%2A>. Этот метод получает коллекцию дочерних элементов того или иного элемента.  
   
 ## <a name="example"></a>Пример  
  В этом примере выполняется итерация по дочерним элементам элемента `purchaseOrder`.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  

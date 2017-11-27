@@ -1,47 +1,48 @@
 ---
-title: "Примеры кода для элемента управления DataGridView (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "таблицы данных, примеры"
-  - "DataGridView - элемент управления [Windows Forms], каталог кода"
-  - "DataGridView - элемент управления [Windows Forms], примеры"
-  - "примеры [Windows Forms], DataGridView - элемент управления"
+title: "Примеры кода для элемента управления DataGridView (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], examples
+- examples [Windows Forms], DataGridView control
+- DataGridView control [Windows Forms], examples
+- DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89de7edc167ccc21ac2a31fa0de82299c5047969
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Примеры кода для элемента управления DataGridView (Windows Forms)
-В данном разделе приводятся ссылки на примеры кода для элемента управления <xref:System.Windows.Forms.DataGridView>, имеющиеся в документации.  
+# <a name="datagridview-control-code-directory-windows-forms"></a>Примеры кода для элемента управления DataGridView (Windows Forms)
+Этот раздел содержит ссылки на <xref:System.Windows.Forms.DataGridView>-связанные с примерами кода в документации по.  
   
 > [!NOTE]
->  Все ссылки указывают на начало разделов, в которых приводятся соответствующие примеры кода.  
+>  Все ссылки указывают на верхней части раздела, в котором находится в примере кода.  
   
- Дополнительные примеры кода можно найти в справочной документации по библиотекам классов.  Перечень основных классов и интерфейсов, связанных с элементом управления <xref:System.Windows.Forms.DataGridView>, приведен в таблице в разделе [Технологическая сводка по элементам управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md).  
+ Дополнительные примеры кода доступны в справочная документация по библиотеке классов. Список основных классов и интерфейсов, связанных с <xref:System.Windows.Forms.DataGridView> управления, см. в таблице [технологии, положенные в элемент управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md).  
   
-## CodeList  
+## <a name="codelist"></a>CodeList  
   
-## Примеры работы с несвязанными данными  
+## <a name="unbound-data-examples"></a>Примеры несвязанные данные  
   
 -   [Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
   
 -   [Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
   
--   [Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+-   [Пошаговое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
   
-## Примеры привязки данных  
+## <a name="data-binding-examples"></a>Примеры привязки данных  
   
 -   [Практическое руководство. Привязка данных к элементу управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
   
@@ -53,17 +54,17 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Доступ к связанным объектам в строках DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
   
--   [Практическое руководство. Отображение главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagrids.md)  
+-   [Практическое руководство. Отображение главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
   
--   [Пример. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagrids.md)  
+-   [Пример. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
   
-## Примеры форматирования данных  
+## <a name="data-formatting-examples"></a>Примеры форматирования данных  
   
 -   [Практическое руководство. Форматирование данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
   
 -   [Практическое руководство. Настройка форматирования данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
   
-## Примеры проверки данных  
+## <a name="data-validation-examples"></a>Примеры проверки данных  
   
 -   [Практическое руководство. Проверка данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
   
@@ -71,9 +72,9 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Обработка ошибок, связанных с вводом данных в элемент управления DataGridView, в Windows Forms](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
--   [Пример. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+-   [Пошаговое руководство. Обработка ошибок, связанных с вводом данных в элемент управления DataGridView, в Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-## Примеры настройки внешнего вида  
+## <a name="appearance-customization-examples"></a>Примеры настройки внешнего вида  
   
 -   [Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
   
@@ -85,7 +86,7 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Настройка формата отображения четных строк для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
   
-## Примеры настройки поведения  
+## <a name="behavior-customization-examples"></a>Примеры настройки поведения  
   
 -   [Практическое руководство. Определение режима редактирования для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
   
@@ -103,7 +104,7 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Настройка сортировки данных элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
   
-## Примеры операций со столбцами  
+## <a name="column-manipulation-examples"></a>Примеры операций со столбцами  
   
 -   [Практическое руководство. Замораживание столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
   
@@ -111,9 +112,9 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Изменение порядка столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [Практическое руководство. Сокрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+-   [Практическое руководство. Скрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [Практическое руководство. Сокрытие заголовков столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+-   [Практическое руководство. Скрытие заголовков столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
   
 -   [Практическое руководство. Определение столбцов элемента управления DataGridView как доступных только для чтения в Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
   
@@ -123,7 +124,7 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Манипулирование столбцами элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
   
-## Примеры изменения размеров строк и столбцов  
+## <a name="row-and-column-sizing-examples"></a>Примеры изменения размеров столбцов и строк  
   
 -   [Установка режимов заполнения для столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
   
@@ -133,7 +134,7 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Автоматическое изменение размера ячеек при изменении содержимого в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
   
-## Примеры выделения  
+## <a name="selection-examples"></a>Примеры выделения  
   
 -   [Практическое руководство. Определение режима выделения для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
   
@@ -141,7 +142,7 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Считывание и установка значения текущей ячейки элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
   
-## Примеры дополнительной настройки  
+## <a name="advanced-customization-examples"></a>Примеры дополнительной настройки  
   
 -   [Практическое руководство. Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
   
@@ -149,18 +150,18 @@ caps.handback.revision: 9
   
 -   [Практическое руководство. Дополнительные возможности управления внешним видом и поведением ячеек и столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
   
--   [Практическое руководство. Отключение кнопок в кнопочном столбе элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
+-   [Практическое руководство. Отключение кнопок в кнопочном столбце элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
   
 -   [Практическое руководство. Размещение элементов управления в ячейках элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
   
-## Примеры дополнительных возможностей работы с данными  
+## <a name="advanced-data-examples"></a>Примеры расширенных данных.  
   
 -   [Практическое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
   
--   [Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+-   [Пошаговое руководство. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
   
--   [Реализация виртуального режима с JIT\-загрузкой данных для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+-   [Реализация виртуального режима с JIT-загрузкой данных для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Forms.DataGridView>  
  [Общие сведения об элементе управления DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

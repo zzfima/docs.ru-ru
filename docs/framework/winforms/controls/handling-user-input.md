@@ -1,76 +1,80 @@
 ---
-title: "Обработка введенных пользователем данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "пользовательские элементы управления [Windows Forms], события клавиатуры, использующие код"
-  - "пользовательские элементы управления [Windows Forms], события мыши, использующие код"
-  - "пользовательские элементы управления [Windows Forms], ввод данных пользователем с использованием кода"
+title: "Обработка введенных пользователем данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], user input using code
+- custom controls [Windows Forms], keyboard events using code
+- custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c3da2c4661acdb358c38fb871de70fd470f7991
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Обработка введенных пользователем данных
-В этом разделе описываются основные события клавиатуры и мыши, предоставляемые элементом управления <xref:System.Windows.Forms.Control?displayProperty=fullName>.  При обработке события необходимо переопределить защищенный метод `On`*ИмяСобытия* вместо подключения делегата к событию.  Список событий см. в разделе [Raising Events from a Component](../Topic/Raising%20Events%20from%20a%20Component.md).  
+# <a name="handling-user-input"></a>Обработка введенных пользователем данных
+В этом разделе описываются основные события клавиатуры и мыши, предоставляемые <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. При обработке события разработчики элементов управления должны переопределить защищенный `On` метод *EventName*, а не подключить делегат к событию. Сведения о событиях см. в разделе [Инициирование событий из компонента](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
   
 > [!NOTE]
->  При отсутствии данных, связанных с событием, в качестве аргумента для метода `On`*ИмяСобытия* передается экземпляр базового класса <xref:System.EventArgs>.  
+>  Если нет данных события, экземпляр базового класса <xref:System.EventArgs> передается в качестве аргумента для `On` *EventName* метод.  
   
-## События клавиатуры  
- Основными событиями клавиатуры, которые может обрабатывать элемент управления пользователя, являются <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress> и <xref:System.Windows.Forms.Control.KeyUp>.  
+## <a name="keyboard-events"></a>События клавиатуры  
+ Распространенные события клавиатуры, которые может обрабатывать элемент управления пользователя, <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, и <xref:System.Windows.Forms.Control.KeyUp>.  
   
-|Имя события|Переопределяемый метод|Описание события|  
-|-----------------|----------------------------|----------------------|  
-|`KeyDown`|`void OnKeyDown(KeyEventArgs)`|Создается только при первоначальном нажатии клавиши.|  
-|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Создается при каждом нажатии клавиши.  Если клавиша удерживается нажатой, событие <xref:System.Windows.Forms.Control.KeyPress> создается через повторяющийся интервал времени, определенный операционной системой.|  
-|`KeyUp`|`void OnKeyUp(KeyEventArgs)`|Создается, когда клавиша отпускается.|  
+|Имя события|Метод для переопределения|Описание события|  
+|----------------|------------------------|--------------------------|  
+|`KeyDown`|`void OnKeyDown(KeyEventArgs)`|Возникает только при первоначальном нажатии клавиши.|  
+|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Возникает при каждом нажатии клавиши. При удерживании клавиши, <xref:System.Windows.Forms.Control.KeyPress> события на скорость повтора, определенные операционной системой.|  
+|`KeyUp`|`void OnKeyUp(KeyEventArgs)`|Возникает при отпускании клавиши.|  
   
 > [!NOTE]
->  Обработка ввода с клавиатуры значительно сложнее, чем переопределение событий в предыдущей таблице, и ее описание выходит за границы этого раздела.  Дополнительные сведения см. в разделе [User Input in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md).  
+>  Обработка ввода с клавиатуры значительно сложнее, чем переопределение событий в предыдущей таблице и в данном разделе не рассматривается. Дополнительные сведения см. в разделе [Ввод данных пользователем в Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md).  
   
-## События мыши  
- Основные события мыши, обрабатываемые элементом управления — <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove> и <xref:System.Windows.Forms.Control.MouseUp>.  
+## <a name="mouse-events"></a>События мыши  
+ События мыши, которые элемент управления может обрабатывать, <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, и <xref:System.Windows.Forms.Control.MouseUp>.  
   
-|Имя события|Переопределяемый метод|Описание события|  
-|-----------------|----------------------------|----------------------|  
-|`MouseDown`|`void OnMouseDown(MouseEventArgs)`|Создается при нажатии кнопки мыши в тот момент, когда указатель находится над элементом управления.|  
-|`MouseEnter`|`void OnMouseEnter(EventArgs)`|Создается, когда указатель первый раз входит в область элемента управления.|  
-|`MouseHover`|`void OnMouseHover(EventArgs)`|Создается, когда указатель находится над элементом управления.|  
-|`MouseLeave`|`void OnMouseLeave(EventArgs)`|Создается, когда указатель покидает область элемента управления.|  
-|`MouseMove`|`void OnMouseMove(MouseEventArgs)`|Создается, когда указатель перемещается в области элемента управления.|  
-|`MouseUp`|`void OnMouseUp(MouseEventArgs)`|Создается при отпускании кнопки мыши, когда указатель находится над элементом управления или покидает область элемента управления.|  
+|Имя события|Метод для переопределения|Описание события|  
+|----------------|------------------------|--------------------------|  
+|`MouseDown`|`void OnMouseDown(MouseEventArgs)`|Возникает при нажатии кнопки мыши, когда указатель мыши находится на элементе управления.|  
+|`MouseEnter`|`void OnMouseEnter(EventArgs)`|Возникает, когда указатель мыши впервые входит в область элемента управления.|  
+|`MouseHover`|`void OnMouseHover(EventArgs)`|Возникает, когда указатель мыши наводится на элемент управления.|  
+|`MouseLeave`|`void OnMouseLeave(EventArgs)`|Возникает, когда указатель мыши покидает область элемента управления.|  
+|`MouseMove`|`void OnMouseMove(MouseEventArgs)`|Возникает, когда указатель мыши перемещается в область элемента управления.|  
+|`MouseUp`|`void OnMouseUp(MouseEventArgs)`|Возникает при отпускании кнопки мыши, когда указатель мыши находится на элементе управления или покидает область элемента управления.|  
   
- Следующий фрагмент кода показывает пример переопределения события <xref:System.Windows.Forms.Control.MouseDown>.  
+ В следующем фрагменте кода показан пример переопределения <xref:System.Windows.Forms.Control.MouseDown> событий.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#7)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#7)]  
   
- Следующий фрагмент кода показывает пример переопределения события <xref:System.Windows.Forms.Control.MouseMove>.  
+ В следующем фрагменте кода показан пример переопределения <xref:System.Windows.Forms.Control.MouseMove> событий.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#8](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#8)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#8](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#8)]  
   
- Следующий фрагмент кода показывает пример переопределения события <xref:System.Windows.Forms.Control.MouseUp>.  
+ В следующем фрагменте кода показан пример переопределения <xref:System.Windows.Forms.Control.MouseUp> событий.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#9)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#9)]  
   
- Полный исходный код для примера `FlashTrackBar` содержится в разделе [Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Полный исходный код для примера `FlashTrackBar` см. в разделе [Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
-## См. также  
- [События элементов управления Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)   
- [Определение событий](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)   
- [События](../../../../docs/standard/events/index.md)   
- [User Input in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)
+## <a name="see-also"></a>См. также  
+ [События элементов управления Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Определение событий](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)  
+ [События](../../../../docs/standard/events/index.md)  
+ [Ввод данных пользователем в Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)

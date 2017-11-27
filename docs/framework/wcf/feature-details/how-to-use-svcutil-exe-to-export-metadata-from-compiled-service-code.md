@@ -1,34 +1,37 @@
 ---
-title: "Как использовать программу Svcutil.exe для экспорта метаданных из скомпилированного кода службы | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 444fab903683b952d1a8c312c3f6032be880da68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как использовать программу Svcutil.exe для экспорта метаданных из скомпилированного кода службы
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Практическое руководство. Использование программы Svcutil.exe для экспорта метаданных из скомпилированного кода службы
 При помощи Svcutil.exe можно экспортировать метаданные для служб, контрактов и типов данных в скомпилированных сборках, как показано далее.  
   
--   Для экспорта метаданных всех скомпилированных контрактов службы для набора сборок при помощи Svcutil.exe необходимо указать сборки как входные параметры.Это поведение установлено по умолчанию.  
+-   Для экспорта метаданных всех скомпилированных контрактов службы для набора сборок при помощи Svcutil.exe необходимо указать сборки как входные параметры. Это поведение установлено по умолчанию.  
   
--   Для экспорта метаданных скомпилированной службы для набора сборок при помощи Svcutil.exe необходимо указать сборку службы как входные параметры.Для указания имени конфигурации экспортируемой службы необходимо использовать параметр `/serviceName`.Svcutil.exe автоматически загружает файл конфигурации для указанной сборки исполняемого файла.  
+-   Для экспорта метаданных скомпилированной службы для набора сборок при помощи Svcutil.exe необходимо указать сборку службы как входные параметры. Для указания имени конфигурации экспортируемой службы необходимо использовать параметр `/serviceName`. Svcutil.exe автоматически загружает файл конфигурации для указанной сборки исполняемого файла.  
   
 -   Для экспорта всех типов контрактов данных внутри набора сборок используется параметр `/dataContractOnly`.  
   
 > [!NOTE]
 >  Для указания пути к файлам любых зависимых сборок используется параметр `/reference`.  
   
-### Экспорт метаданных в скомпилированные контракты службы  
+### <a name="to-export-metadata-for-compiled-service-contracts"></a>Экспорт метаданных в скомпилированные контракты службы  
   
 1.  Скомпилируйте реализации контракта службы в одну или несколько библиотек классов.1  
   
@@ -41,13 +44,13 @@ caps.handback.revision: 8
     svcutil.exe Contracts.dll  
     ```  
   
-### Экспорт метаданных в скомпилированную службу  
+### <a name="to-export-metadata-for-a-compiled-service"></a>Экспорт метаданных в скомпилированную службу  
   
 1.  Скомпилируйте реализацию службы в исполняемую сборку.  
   
 2.  Создайте файл конфигурации для исполняемого файла службы и добавьте конфигурацию службы.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.serviceModel>  
@@ -69,7 +72,7 @@ caps.handback.revision: 8
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
     ```  
   
-### Экспорт метаданных в скомпилированные контракты данных  
+### <a name="to-export-metadata-for-compiled-data-contracts"></a>Экспорт метаданных в скомпилированные контракты данных  
   
 1.  Скомпилируйте реализации контракта данных в одну или несколько библиотек классов.  
   
@@ -82,7 +85,7 @@ caps.handback.revision: 8
     svcutil.exe /dataContractOnly Contracts.dll  
     ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как генерировать метаданные для реализации и конфигурации простой службы.  
   
  Экспорт метаданных в контракт службы.  
@@ -167,9 +170,8 @@ public class MyService : IPersonFinder
     </services>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## См. также  
- [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)   
+## <a name="see-also"></a>См. также  
+ [Служебная программа для метаданных ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [Экспорт и импорт метаданных](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

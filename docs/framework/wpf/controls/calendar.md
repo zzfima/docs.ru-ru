@@ -1,63 +1,66 @@
 ---
-title: "календарь | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Календарь - элемент управления [WPF]"
-  - "элементы управления [WPF], календарь"
+title: "Календарь"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], Calendar
+- Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# календарь
-Элемент управления "Календарь" позволяет выбрать дату с помощью визуального календаря.  
+# <a name="calendar"></a>Календарь
+Календарь, и позволяет пользователю выбрать дату с помощью визуального календаря.  
   
- Элемент управления <xref:System.Windows.Controls.Calendar> может использоваться самостоятельно или в качестве раскрывающейся части элемента управления <xref:System.Windows.Controls.DatePicker>.  Дополнительные сведения см. в разделе <xref:System.Windows.Controls.DatePicker>.  
+ Объект <xref:System.Windows.Controls.Calendar> элемент управления может использоваться сам по себе или в составе раскрывающемся <xref:System.Windows.Controls.DatePicker> элемента управления. Для получения дополнительной информации см. <xref:System.Windows.Controls.DatePicker>.  
   
- На следующем рисунке показаны два элемента управления <xref:System.Windows.Controls.Calendar>: один с выбранными и затемненными датами, а другой без.  
+ На следующем рисунке показано два <xref:System.Windows.Controls.Calendar> определяет одну с выбранными и затемненными датами.  
   
- ![Элементы управления календаря](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP\_CalendarControls")  
-Элементы управления "Календарь"  
+ ![Элементы управления календаря](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+Элементы управления календаря  
   
- В следующей таблице приведены сведения о задачах, которые обычно связаны с элементом управления <xref:System.Windows.Controls.Calendar>.  
+ Следующая таблица содержит сведения о задачах, которые обычно связаны с <xref:System.Windows.Controls.Calendar>.  
   
 |Задача|Реализация|  
-|------------|----------------|  
-|Указание дат, которые не могут быть выбраны.|Используйте свойство <xref:System.Windows.Controls.Calendar.BlackoutDates%2A>.|  
-|Элемент управления <xref:System.Windows.Controls.Calendar> должен отображать месяц, целый год или десятилетие.|Установите для свойства <xref:System.Windows.Controls.Calendar.DisplayMode%2A> значения для месяца, года или десятилетия.|  
-|Указание, может ли пользователь выбрать дату, диапазон дат или несколько диапазонов дат.|Используйте свойство <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.|  
-|Указание диапазона дат, которые отображаются элементом управления <xref:System.Windows.Controls.Calendar>.|Используйте свойства <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> и <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A>.|  
-|Указание, выделяется ли текущая дата.|Используйте свойство <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>.  По умолчанию параметр <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> имеет значение `true`.|  
-|Изменение размера элемента управления <xref:System.Windows.Controls.Calendar>.|Используйте элемент управления <xref:System.Windows.Controls.Viewbox> или задайте для свойства <xref:System.Windows.FrameworkElement.LayoutTransform%2A> значение <xref:System.Windows.Media.ScaleTransform>.  Обратите внимание, что при задании свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> элемента управления <xref:System.Windows.Controls.Calendar> фактический размер календаря не изменяется.|  
+|----------|--------------------|  
+|Укажите даты, не могут быть выбраны.|Используйте свойство <xref:System.Windows.Controls.Calendar.BlackoutDates%2A>.|  
+|У <xref:System.Windows.Controls.Calendar> отображать месяц, год или десяти лет.|Задать <xref:System.Windows.Controls.Calendar.DisplayMode%2A> свойства месяц, год или десятилетие.|  
+|Укажите, может ли пользователь выбрать дату, диапазон дат или несколько диапазонов дат.|Используйте <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.|  
+|Укажите диапазон дат, <xref:System.Windows.Controls.Calendar> отображает.|Используйте <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> и <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> свойства.|  
+|Укажите, выделяется ли текущая дата.|Используйте свойство <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>. По умолчанию <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> — `true`.|  
+|Изменить размер <xref:System.Windows.Controls.Calendar>.|Используйте <xref:System.Windows.Controls.Viewbox> или задать <xref:System.Windows.FrameworkElement.LayoutTransform%2A> свойства <xref:System.Windows.Media.ScaleTransform>. Обратите внимание, что если задать <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства <xref:System.Windows.Controls.Calendar>, фактического календаря не изменять свой размер.|  
   
- Элемент управления <xref:System.Windows.Controls.Calendar> обеспечивает базовые возможности навигации с помощью мыши или клавиатуры.  Сведения о навигации с помощью клавиатуры приводятся в следующей таблице.  
+ <xref:System.Windows.Controls.Calendar> Управления обеспечивает базовые возможности навигации с помощью клавиатуры или мыши. В следующей таблице перечислены с помощью клавиатуры.  
   
 |Сочетание клавиш|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|Действие|  
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|  
-|СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> если свойству<xref:System.Windows.Controls.Calendar.SelectionMode%2A> не задано значение <xref:System.Windows.Controls.CalendarSelectionMode>.|  
-|СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение месяца для свойства <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.  Обратите внимание, что значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
-|СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение года для свойства <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.  Обратите внимание, что значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
-|SHIFT \+ СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode>|Если свойству<xref:System.Windows.Controls.Calendar.SelectionMode%2A> не задано значение поля <xref:System.Windows.Controls.CalendarSelectionMode> или <xref:System.Windows.Controls.CalendarSelectionMode>, расширяет диапазон выделенных дат.|  
-|HOME|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> на первую дату текущего месяца.|  
-|HOME|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение месяца для свойства <xref:System.Windows.Controls.Calendar.DisplayDate%2A> на первый месяц года.  Значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
-|HOME|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение года для свойства <xref:System.Windows.Controls.Calendar.DisplayDate%2A> на первый год десятилетия.  Значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
-|END|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> на последнюю дату текущего месяца.|  
-|END|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение месяца для свойства <xref:System.Windows.Controls.Calendar.DisplayDate%2A> на последний месяц года.  Значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
-|END|<xref:System.Windows.Controls.CalendarMode>|Изменяет значение года для свойства <xref:System.Windows.Controls.Calendar.DisplayDate%2A> на последний год десятилетия.  Значение свойства <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
-|CTRL \+ СТРЕЛКА ВВЕРХ|Any|Переключается на следующий больший режим отображения <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.  Если значение параметра <xref:System.Windows.Controls.Calendar.DisplayMode%2A> уже равно <xref:System.Windows.Controls.CalendarMode>, действия не выполняются.|  
-|CTRL\+СТРЕЛКА ВНИЗ|Any|Переключается на следующий меньший режим отображения <xref:System.Windows.Controls.Calendar.DisplayMode%2A>.  Если значение параметра <xref:System.Windows.Controls.Calendar.DisplayMode%2A> уже равно <xref:System.Windows.Controls.CalendarMode>, действия не выполняются.|  
-|ПРОБЕЛ или ВВОД|<xref:System.Windows.Controls.CalendarMode> или <xref:System.Windows.Controls.CalendarMode>|Переключает <xref:System.Windows.Controls.Calendar.DisplayMode%2A> на <xref:System.Windows.Controls.CalendarMode> или <xref:System.Windows.Controls.CalendarMode>, представленный элементом, который имеет фокус.|  
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
+|СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode.Month>|Изменения <xref:System.Windows.Controls.Calendar.SelectedDate%2A> свойство Если <xref:System.Windows.Controls.Calendar.SelectionMode%2A> не задано значение <xref:System.Windows.Controls.CalendarSelectionMode.None>.|  
+|СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode.Year>|Изменяет значение месяца для <xref:System.Windows.Controls.Calendar.DisplayDate%2A> свойства. Обратите внимание, что <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
+|СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode.Decade>|Изменяет значение года для <xref:System.Windows.Controls.Calendar.DisplayDate%2A>. Обратите внимание, что <xref:System.Windows.Controls.Calendar.SelectedDate%2A> не изменяется.|  
+|SHIFT + СТРЕЛКА|<xref:System.Windows.Controls.CalendarMode.Month>|Если <xref:System.Windows.Controls.Calendar.SelectionMode%2A> равно <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> или <xref:System.Windows.Controls.CalendarSelectionMode.None>, расширяет диапазон выбранных дат.|  
+|ГЛАВНАЯ|<xref:System.Windows.Controls.CalendarMode.Month>|Изменения <xref:System.Windows.Controls.Calendar.SelectedDate%2A> первый день текущего месяца.|  
+|ГЛАВНАЯ|<xref:System.Windows.Controls.CalendarMode.Year>|Изменяет значение месяца для <xref:System.Windows.Controls.Calendar.DisplayDate%2A> к первому месяцу года. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Не изменяется.|  
+|ГЛАВНАЯ|<xref:System.Windows.Controls.CalendarMode.Decade>|Изменяет значение года для <xref:System.Windows.Controls.Calendar.DisplayDate%2A> на первый год десятилетия. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Не изменяется.|  
+|END|<xref:System.Windows.Controls.CalendarMode.Month>|Изменения <xref:System.Windows.Controls.Calendar.SelectedDate%2A> в последний день текущего месяца.|  
+|END|<xref:System.Windows.Controls.CalendarMode.Year>|Изменяет значение месяца для <xref:System.Windows.Controls.Calendar.DisplayDate%2A> последний месяц года. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Не изменяется.|  
+|END|<xref:System.Windows.Controls.CalendarMode.Decade>|Изменяет значение года для <xref:System.Windows.Controls.Calendar.DisplayDate%2A> за прошлый год десятилетия. <xref:System.Windows.Controls.Calendar.SelectedDate%2A> Не изменяется.|  
+|CTRL + СТРЕЛКА ВВЕРХ|Любой|Переключается на следующий больший <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Если <xref:System.Windows.Controls.Calendar.DisplayMode%2A> уже <xref:System.Windows.Controls.CalendarMode.Decade>, никаких действий.|  
+|CTRL+СТРЕЛКА ВНИЗ|Любой|Переключается на следующий более мелкие <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Если <xref:System.Windows.Controls.Calendar.DisplayMode%2A> уже <xref:System.Windows.Controls.CalendarMode.Month>, никаких действий.|  
+|ПРОБЕЛ или ввод|<xref:System.Windows.Controls.CalendarMode.Year> или <xref:System.Windows.Controls.CalendarMode.Decade>|Коммутаторы <xref:System.Windows.Controls.Calendar.DisplayMode%2A> для <xref:System.Windows.Controls.CalendarMode.Month> или <xref:System.Windows.Controls.CalendarMode.Year> представленный установлен фокус.|  
   
-## См. также  
- [Элементы управления](../../../../docs/framework/wpf/controls/index.md)   
+## <a name="see-also"></a>См. также  
+ [Элементы управления](../../../../docs/framework/wpf/controls/index.md)  
  [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)

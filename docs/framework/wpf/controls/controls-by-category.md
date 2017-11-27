@@ -1,28 +1,30 @@
 ---
-title: "Категории элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы управления, список категорий"
+title: "Категории элементов управления"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6616ba0cc6a1c584834b9bef56da05c4461876b6
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/22/2017
 ---
-# Категории элементов управления
-Элементы управления [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] могут быть логически сгруппированы в несколько категорий.  Эти категории можно использовать для выбора соответствующего элемента управления для скрипта, что поможет увидеть, какие элементы управления имеют схожие схемы использования или функциональные возможности.  
+# <a name="controls-by-category"></a>Категории элементов управления
+Элементы управления [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] могут быть логически сгруппированы в несколько категорий. Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.  
   
-## Макет  
- Элементы управления Layout используются для управления размером, размерностью, положением и расположением дочерних элементов.  
+## <a name="layout"></a>Макет  
+ Элементы управления макета используются для управления размером, измерениями, размещением и расположением дочерних элементов.  
   
 -   <xref:System.Windows.Controls.Border>  
   
@@ -62,15 +64,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.WrapPanel>  
   
-## Кнопки  
- Buttons являются одними из основных элементов интерфейса пользователя.  Приложения обычно выполняют некоторые задачи по событию <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, когда пользователь щелкает на них.  
+## <a name="buttons"></a>Кнопки  
+ Кнопки являются одним из основных элементов управления пользовательского интерфейса. Приложения обычно выполняют некоторые задачи в <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событие, когда пользователь щелкнет их.  
   
 -   <xref:System.Windows.Controls.Button>  
   
 -   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## Отображение данных  
- Элементы управления для отображения данных используются для отображения информации из источника данных.  
+## <a name="data-display"></a>Отображение данных  
+ Элементы управления отображением данных используются для отображения информации из источника данных.  
   
 -   <xref:System.Windows.Controls.DataGrid>  
   
@@ -78,15 +80,15 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TreeView>  
   
-## Отображение и выбор даты  
- Элементы управления датой используются для отображения и выбора календарных данных.  
+## <a name="date-display-and-selection"></a>Выбор и отображение дат  
+ Элементы управления даты используются для отображения и выбора данных календаря.  
   
 -   <xref:System.Windows.Controls.Calendar>  
   
 -   <xref:System.Windows.Controls.DatePicker>  
   
-## Меню  
- Menus используются для группировки связанных действий или для предоставления контекстной помощи.  
+## <a name="menus"></a>Меню  
+ Меню используются для группирования связанных действий или для предоставления контекстной помощи.  
   
 -   <xref:System.Windows.Controls.ContextMenu>  
   
@@ -94,8 +96,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolBar>  
   
-## Выбранное  
- Элементы управления Selection используются для предоставления пользователю возможности выбирать один или несколько параметров.  
+## <a name="selection"></a>Выбранное  
+ Элементы управления выбором позволяют выбрать один или несколько вариантов.  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -107,8 +109,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.Slider>  
   
-## Навигация  
- Элементы управления Navigation улучшают или расширяют переходы приложения, путем создания конечных кадров или внешнего вида приложения с вкладками.  
+## <a name="navigation"></a>Навигация  
+ Элементы управления навигацией расширяют возможности навигации приложения, создавая внешний вид конечных фреймов или вкладок приложения.  
   
 -   <xref:System.Windows.Controls.Frame>  
   
@@ -120,8 +122,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.TabControl>  
   
-## Диалоговые окна  
- Dialog Boxes обеспечивают поддержку общих взаимодействующих с пользователем скриптов, таких как печать.  
+## <a name="dialog-boxes"></a>Диалоговые окна  
+ Диалоговые окна обеспечивают поддержку распространенных сценариев взаимодействия с пользователем, например печать.  
   
 -   <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -129,8 +131,8 @@ caps.handback.revision: 17
   
 -   <xref:Microsoft.Win32.SaveFileDialog>  
   
-## Информация для пользователя  
- Элементы управления User information предоставляет контекстные отзывы или уточнения пользовательского интерфейса приложения.  Пользователь обычно не может взаимодействовать с этими элементами управления.  
+## <a name="user-information"></a>Сведения о пользователе  
+ Элементы управления информацией пользователя предоставляют контекстную обратную связь или уточняют пользовательский интерфейс приложения. Пользователь обычно не может взаимодействовать с этими элементами управления.  
   
 -   <xref:System.Windows.Controls.AccessText>  
   
@@ -146,8 +148,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.ToolTip>  
   
-## Документы  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает несколько специализированных элементов управления для просмотра документов.  Эти элементы управления оптимизируют возможность чтение, в зависимости от конечного скрипта пользователя.  
+## <a name="documents"></a>Документы  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает несколько специализированных элементов управления для просмотра документов. Эти элементы управления оптимизируют процесс чтения, основываясь на целевом пользовательском сценарии.  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -159,8 +161,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.StickyNoteControl>  
   
-## Ввод  
- Элементы управления Input позволяют пользователю вводить текст и другое содержимое.  
+## <a name="input"></a>Ввод  
+ Элементы управления вводом позволяют пользователю вводить текст и другое содержимое.  
   
 -   <xref:System.Windows.Controls.TextBox>  
   
@@ -168,8 +170,8 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.PasswordBox>  
   
-## Мультимедиа  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает интегрированную поддержку для размещения аудио\- и видеосодержимого, а также [кодеков](GTMT) для наиболее популярных форматов изображения.  
+## <a name="media"></a>Мультимедиа  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] включает интегрированную поддержку для размещения как аудио- и видеоконтента, так и [кодеков] для большинства популярных форматов изображений.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -177,12 +179,12 @@ caps.handback.revision: 17
   
 -   <xref:System.Windows.Controls.SoundPlayerAction>  
   
-## Рукописный ввод  
- Элементы управления Digital ink обеспечивают поддержку возможностей [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], такие как просмотр и ввод рукописных данных.  
+## <a name="digital-ink"></a>Рукописный ввод  
+ Элементы управления рукописным вводом обеспечивают интегрированную поддержку функций [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)], таких как просмотр и рукописный ввод.  
   
 -   <xref:System.Windows.Controls.InkCanvas>  
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Библиотека элементов управления](../../../../docs/framework/wpf/controls/control-library.md)

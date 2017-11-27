@@ -1,52 +1,55 @@
 ---
-title: "Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "столбцы [Windows Forms], добавление данных к элементу управления DataGrid"
-  - "DataGrid - элемент управления [Windows Forms], добавление таблиц и столбцов"
-  - "таблицы [Windows Forms], добавление данных к элементу управления DataGrid"
+title: "Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- columns [Windows Forms], adding to DataGrid control
+- tables [Windows Forms], adding to DataGrid control
+- DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 970c2787bda50bcf0478b64df44176525f839482
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Практическое руководство. Добавление таблиц и столбцов в элемент управления DataGrid в Windows Forms
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.  Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Данные в элементе управления Windows Forms <xref:System.Windows.Forms.DataGrid> можно отображать в таблицах и столбцах, создавая объекты **DataGridTableStyle** и добавляя их в объект **GridTableStylesCollection**, к которому можно получить доступ через свойство **TableStyles** элемента управления <xref:System.Windows.Forms.DataGrid>.  Каждый стиль таблицы позволяет отображать содержимое таблицы данных, указанной в свойстве **MappingName** объекта **DataGridTableStyle**.  При использовании стиля таблицы, в котором не определены стили столбцов, по умолчанию отображаются все столбцы таблицы данных.  Можно ограничить число отображаемых столбцов, добавив объекты **DataGridColumnStyle** в объект **GridColumnStylesCollection**, доступ к которому можно получить с помощью свойства **GridColumnStyles** любого объекта **DataGridTableStyle**.  
+ Может отображать данные в Windows Forms <xref:System.Windows.Forms.DataGrid> управления в таблицах и столбцах, создав **DataGridTableStyle** объектов и добавления их в **GridTableStylesCollection** объекта, имеющего доступ через <xref:System.Windows.Forms.DataGrid> элемента управления **TableStyles** свойство. Каждая таблица отображается содержимое таблицы данных указывается в **DataGridTableStyle** объекта **MappingName** свойство. По умолчанию стиля таблицы стили столбцов, не указано, отображаются все столбцы в этой таблице данных. Вы можете ограничить отображаются столбцы из таблицы, добавив **DataGridColumnStyle** объектов **GridColumnStylesCollection** объект, который можно получить с помощью  **GridColumnStyles** каждого экземпляра **DataGridTableStyle** объекта.  
   
-### Чтобы добавить таблицу и столбец в элемент управления DataGrid программными средствами  
+### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>Добавление таблиц и столбцов в элемент управления DataGrid программными средствами  
   
-1.  Чтобы представить данные в таблице, необходимо сначала привязать элемент управления <xref:System.Windows.Forms.DataGrid> к набору данных.  Дополнительные сведения см. в разделе [Практическое руководство. Привязка элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1.  Для отображения данных в таблице, необходимо сначала привязать <xref:System.Windows.Forms.DataGrid> элемента управления к набору данных. Дополнительные сведения см. в разделе [как: привязка элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
     > [!CAUTION]
-    >  При программном определении стилей столбцов всегда создавайте объекты **DataGridColumnStyle** и добавляйте их в объект **GridColumnStylesCollection** перед добавлением объектов **DataGridTableStyle** в объект **GridTableStylesCollection**.  При добавлении в коллекцию пустого объекта **DataGridTableStyle** автоматически создаются объекты **DataGridColumnStyle**.  Следовательно, при попытке добавления новых объектов **DataGridColumnStyle** с существующими значениями **MappingName** в объекте **GridColumnStylesCollection** возникнет исключение.  
+    >  Указывая программно стили столбцов всегда создавать **DataGridColumnStyle** объектов и добавлять их в **GridColumnStylesCollection** объекта перед добавлением  **DataGridTableStyle** объектов **GridTableStylesCollection** объекта. При добавлении пустого **DataGridTableStyle** в коллекцию **DataGridColumnStyle** объекты создаются автоматически для вас. Следовательно, будет создано исключение при попытке добавить новый **DataGridColumnStyle** объектов с повторяющимися **MappingName** значения **GridColumnStylesCollection**объекта.  
   
-2.  Объявите новый стиль таблицы и укажите для нее имя сопоставления.  
+2.  Объявите новый стиль таблицы и присвойте ему имя сопоставления.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
     ts1.MappingName = "Customers"  
-  
     ```  
   
     ```csharp  
     DataGridTableStyle ts1 = new DataGridTableStyle();  
     ts1.MappingName = "Customers";  
-  
     ```  
   
     ```cpp  
@@ -54,20 +57,18 @@ caps.handback.revision: 15
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  Объявите новый стиль столбца и задайте его имя сопоставления, а также другие свойства.  
+3.  Объявите новый стиль столбца и задайте его имя сопоставления и другие свойства.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
     myDataCol.HeaderText = "My New Column"  
     myDataCol.MappingName = "Current"  
-  
     ```  
   
     ```csharp  
     DataGridBoolColumn myDataCol = new DataGridBoolColumn();  
     myDataCol.HeaderText = "My New Column";  
     myDataCol.MappingName = "Current";  
-  
     ```  
   
     ```cpp  
@@ -76,38 +77,34 @@ caps.handback.revision: 15
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  Вызовите метод **Add** объекта **GridColumnStylesCollection** для добавления столбца в стиль таблицы.  
+4.  Вызовите **добавить** метод **GridColumnStylesCollection** объект для добавления столбца таблицы стилей  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
-  
     ```  
   
     ```csharp  
     ts1.GridColumnStyles.Add(myDataCol);  
-  
     ```  
   
     ```cpp  
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  Вызовите метод **Add** объекта **GridTableStylesCollection** для добавления стиля таблицы в сетку данных.  
+5.  Вызовите **добавить** метод **GridTableStylesCollection** объект для добавления стилей таблиц сетки данных.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
-  
     ```  
   
     ```csharp  
     dataGrid1.TableStyles.Add(ts1);  
-  
     ```  
   
     ```cpp  
     dataGrid1->TableStyles->Add(ts1);  
     ```  
   
-## См. также  
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Практическое руководство. Удаление или сокрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>См. также  
+ [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

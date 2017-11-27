@@ -1,29 +1,32 @@
 ---
-title: "Как получить метаданные через привязку, не использующую MEX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Как получить метаданные через привязку, не использующую MEX"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f214c45ea09c96d5cb77646f31b7c53338761621
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Как получить метаданные через привязку, не использующую MEX
-В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX.Код в этом образце основан на образце [Пользовательская конечная точка защищенных метаданных](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Как получить метаданные через привязку, не использующую MEX
+В этом разделе описывается получение метаданных из конечной точки MEX через привязку, не использующую MEX. Код в этом образце, основан на [конечной точки метаданных защиты пользовательских](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) образца.  
   
-### Получение метаданных через привязку, не использующую MEX  
+### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Получение метаданных через привязку, не использующую MEX  
   
-1.  Определите привязку, используемую конечной точкой MEX.Для служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] определить привязку MEX можно, обратившись к файлу конфигурации службы.В этом случае привязка MEX определяется в следующей конфигурации службы.  
+1.  Определите привязку, используемую конечной точкой MEX. Для служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] определить привязку MEX можно, обратившись к файлу конфигурации службы. В этом случае привязка MEX определяется в следующей конфигурации службы.  
   
-    ```  
+    ```xml  
     <services>  
         <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
                 behaviorConfiguration="CalculatorServiceBehavior">  
@@ -55,9 +58,9 @@ caps.handback.revision: 10
      </bindings>  
     ```  
   
-2.  В файле конфигурации клиента настройте такую же пользовательскую привязку.В данном случае для клиента также определено поведение `clientCredentials` — для предоставления сертификата, который будет использоваться для проверки его подлинности службой при запросе метаданных от конечной точки MEX.При использовании Svcutil.exe для запроса метаданных через пользовательскую привязку необходимо добавить конфигурацию конечной точки MEX в файл конфигурации для Svcutil.exe \(Svcutil.exe.config\), причем имя конфигурации конечной точки должно соответствовать схеме URI адреса конечной точки MEX, как показано в следующем коде.  
+2.  В файле конфигурации клиента настройте такую же пользовательскую привязку. В данном случае для клиента также определено поведение `clientCredentials` - для предоставления сертификата, который будет использоваться для проверки его подлинности службой при запросе метаданных от конечной точки MEX. При использовании Svcutil.exe для запроса метаданных через пользовательскую привязку необходимо добавить конфигурацию конечной точки MEX в файл конфигурации для Svcutil.exe (Svcutil.exe.config), причем имя конфигурации конечной точки должно соответствовать схеме URI адреса конечной точки MEX, как показано в следующем коде.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <client>  
         <endpoint name="http"  
@@ -90,7 +93,7 @@ caps.handback.revision: 10
     </system.serviceModel>  
     ```  
   
-3.  Создайте объект `MetadataExchangeClient` и вызовите метод `GetMetadata`.Существует два способа это сделать: указать пользовательскую привязку в конфигурации или указать пользовательскую привязку в коде, как показано в следующем примере.  
+3.  Создайте объект `MetadataExchangeClient` и вызовите метод `GetMetadata`. Существует два способа это сделать: указать пользовательскую привязку в конфигурации или указать пользовательскую привязку в коде, как показано в следующем примере.  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -128,7 +131,7 @@ caps.handback.revision: 10
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  На данном этапе имеется коллекция конечных точек службы.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] об импорте метаданных см. в разделе [Практическое руководство. Импорт метаданных в конечные точки службы](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5.  На данном этапе имеется коллекция конечных точек службы. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Импорт метаданных, в разделе [как: Импорт метаданных в конечные точки службы](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Метаданные](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -1,43 +1,47 @@
 ---
-title: "Практическое руководство. Рисование отдельного сплайна Безье | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "сплайны Безье, рисование"
-  - "рисование, сплайны Безье"
+title: "Как: Draw один B &#233; сплайн Безье"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Bezier splines [Windows Forms], drawing
+- drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0ebdba9e01824cc764a6ab759da049add180ba83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование отдельного сплайна Безье
-Сплайн Безье задается четырьмя точками: начальной, двумя контрольными и конечной.  
+# <a name="how-to-draw-a-single-b233zier-spline"></a>Как: Draw один B &#233; сплайн Безье
+Сплайн Безье, определяемый четырьмя точками: начальной точкой, две контрольные точки и конечной точки.  
   
-## Пример  
- В приведенном ниже примере демонстрируется рисование сплайна Безье из начальной точки с координатами \(10, 100\) в конечную точку с координатами \(200, 200\),  если контрольные точки имеют координаты \(100, 10\) и \(150, 150\).  
+## <a name="example"></a>Пример  
+ В следующем примере рисуется сплайн Безье с начальной точкой (10, 100) и конечной точки (200, 100). Контрольными точками являются (100, 10) и (150, 150).  
   
- На следующем рисунке показаны получившийся сплайн Безье, а также его начальная точка, конечная точка и контрольные точки.  Также показана выпуклая оболочка сплайна, которая представляет собой многоугольник, получаемый при соединении четырех указанных точек отрезками прямых.  
+ На следующем рисунке получившийся сплайн Безье, вместе с его начальную точку, контрольные точки и конечной точки. На рисунке также выпуклая оболочка сплайна, которая представляет собой многоугольник, получаемый при соединении четырех точек с прямыми линиями.  
   
  ![Сплайн Безье](../../../../docs/framework/winforms/advanced/media/bezierspline1.png "BezierSpline1")  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
-## Компиляция кода  
- Предыдущий пример предназначен для работы с Windows Forms, для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику события <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Предыдущий пример предназначен для работы с Windows Forms, и для него необходим объект <xref:System.Windows.Forms.PaintEventArgs> `e`, передаваемый в качестве параметра обработчику событий <xref:System.Windows.Forms.Control.Paint>.  
   
-## См. также  
- <xref:System.Drawing.Graphics.DrawBezier%2A>   
- [Сплайны Безье в GDI\+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Drawing.Graphics.DrawBezier%2A>  
+ [Сплайны Безье в GDI+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
  [Практическое руководство. Рисование последовательности сплайнов Безье](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)

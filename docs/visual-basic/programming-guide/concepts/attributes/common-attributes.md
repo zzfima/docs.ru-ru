@@ -1,98 +1,90 @@
 ---
-title: "Общие атрибуты (Visual Basic) | Документы Microsoft"
+title: "Общие атрибуты (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f470e6ff3e316076d71a34346f741cc4504471a3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4781e7ee60017455796d460d8d7bddb9f7c49676
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-visual-basic"></a>Общие атрибуты (Visual Basic)
-В этом разделе описываются атрибуты, которые чаще всего используются в программах Visual Basic.  
+В этом разделе описаны атрибуты, наиболее часто используемые в программах Visual Basic.  
   
 -   [Глобальные атрибуты](#Global)  
   
--   [Устаревший атрибут](#Obsolete)  
+-   [Атрибут Obsolete](#Obsolete)  
   
--   [Условный атрибут](#Conditional)  
+-   [Атрибут Conditional](#Conditional)  
   
--   [Информационные атрибуты вызывающего](#CallerInfo)  
+-   [Информационные атрибуты вызывающего объекта](#CallerInfo)  
   
 -   [Атрибуты Visual Basic](#VB)  
   
-##  <a name="Global"></a>Глобальные атрибуты  
- Большинство атрибутов применяется к определенным элементам языка, такие как классы или методы; Тем не менее, некоторые атрибуты являются глобальными — они применяются для всей сборки или модуля. Например <xref:System.Reflection.AssemblyVersionAttribute>атрибут может использоваться для встраивания сведений о версии в сборку, следующим образом:</xref:System.Reflection.AssemblyVersionAttribute>  
+##  <a name="Global"></a> Глобальные атрибуты  
+ Большинство атрибутов применяется к определенным элементам языка, таким как классы или методы. Тем не менее некоторые атрибуты являются глобальными — они применяются ко всей сборке или модулю. Например, атрибут <xref:System.Reflection.AssemblyVersionAttribute> можно использовать для встраивания сведений о версии в сборку, например следующим образом:  
   
 ```vb  
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- Глобальные атрибуты отображаются в исходном коде после любых верхнего уровня`Imports` инструкций и перед всеми объявлениями типов, модуль или пространство имен. Глобальные атрибуты могут появляться в нескольких исходных файлов, но файлы должны быть скомпилированы за один проход компиляции. Для проектов Visual Basic глобальных атрибутов обычно помещаются в файле AssemblyInfo.vb (файл создается автоматически при создании проекта в Visual Studio).  
+ Глобальные атрибуты отображаются в исходном коде после любых верхнего уровня `Imports` инструкций и перед любыми объявлениями типа, модуль или пространство имен. Глобальные атрибуты могут содержаться в нескольких исходных файлах, однако эти файлы должны быть скомпилированы за один проход компиляции. Для проектов Visual Basic глобальных атрибутов обычно помещаются в файле AssemblyInfo.vb (файл создается автоматически при создании проекта в Visual Studio).  
   
  Атрибуты сборки — это значения, которые предоставляют сведения о сборке. Они делятся на следующие категории:  
   
--   Атрибуты удостоверения сборки.  
+-   Атрибуты удостоверения сборки  
   
 -   Информационные атрибуты  
   
 -   Атрибуты манифеста сборки  
   
 ### <a name="assembly-identity-attributes"></a>Атрибуты удостоверения сборки  
- Удостоверение сборки определяют три атрибута (со строгим именем, если применимо): имя, версию и язык и региональные параметры. Эти атрибуты формируют полное имя сборки и являются обязательными при создании ссылки в коде. Можно задать язык и региональные параметры с помощью атрибутов и версии сборки. Однако значение имени задается компилятором, в СРЕДЕ Visual Studio [диалоговое окно сведений о сборке](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box), или компоновщик сборок (Al.exe) при создании сборки на основе файла, содержащего манифест сборки. <xref:System.Reflection.AssemblyFlagsAttribute>Атрибут указывает, могут ли сосуществовать несколько копий сборки.</xref:System.Reflection.AssemblyFlagsAttribute>  
+ Три атрибута (со строгим именем, если оно применимо) определяют удостоверение сборки: имя, версию, язык и региональные параметры. Эти атрибуты формируют полное имя сборки и являются обязательными при ссылке на нее в коде. Атрибуты можно использовать для задания версии сборки и языка и региональных параметров. Однако значение имени задается компилятором, в интегрированной среде разработки Visual Studio, в [диалоговом окне сведений о сборке](/visualstudio/ide/reference/assembly-information-dialog-box) или в компоновщике сборок (Al.exe) при создании сборки на основе файла, содержащего манифест сборки. Атрибут <xref:System.Reflection.AssemblyFlagsAttribute> указывает, могут ли сосуществовать несколько копий сборки.  
   
- Ниже приведены атрибуты удостоверения.  
+ В следующей таблице приведены атрибуты удостоверения.  
   
-|Атрибут|Цель|  
+|Атрибут|Назначение|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyName></xref:System.Reflection.AssemblyName>|Полностью описывает удостоверение сборки.|  
-|<xref:System.Reflection.AssemblyVersionAttribute></xref:System.Reflection.AssemblyVersionAttribute>|Указывает версию сборки.|  
-|<xref:System.Reflection.AssemblyCultureAttribute></xref:System.Reflection.AssemblyCultureAttribute>|Указывает, какой язык и региональные параметры поддерживает сборка.|  
-|<xref:System.Reflection.AssemblyFlagsAttribute></xref:System.Reflection.AssemblyFlagsAttribute>|Указывает, поддерживает ли сборка side-by-side выполнения на одном компьютере, в том же процессе или в том же домене приложения.|  
+|<xref:System.Reflection.AssemblyName>|Полностью описывает удостоверение сборки.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Задает версию сборки.|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Указывает, какой язык и региональные параметры поддерживает сборка.|  
+|<xref:System.Reflection.AssemblyFlagsAttribute>|Указывает, поддерживает ли сборка параллельное выполнение на одном компьютере, в одном процессе или в одном домене приложения.|  
   
 ### <a name="informational-attributes"></a>Информационные атрибуты  
- Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице показаны информационные атрибуты, определенные в <xref:System.Reflection?displayProperty=fullName>имен.</xref:System.Reflection?displayProperty=fullName>  
+ Информационные атрибуты можно использовать для предоставления дополнительных сведений о компании или продукте в сборке. В следующей таблице показаны информационные атрибуты, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Цель|  
+|Атрибут|Назначение|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyProductAttribute></xref:System.Reflection.AssemblyProductAttribute>|Определяет пользовательский атрибут, который указывает название продукта для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyTrademarkAttribute></xref:System.Reflection.AssemblyTrademarkAttribute>|Определяет пользовательский атрибут товарного знака для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute></xref:System.Reflection.AssemblyInformationalVersionAttribute>|Определяет пользовательский атрибут версии для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyCompanyAttribute></xref:System.Reflection.AssemblyCompanyAttribute>|Определяет пользовательский атрибут, который указывает название компании для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyCopyrightAttribute></xref:System.Reflection.AssemblyCopyrightAttribute>|Определяет пользовательский атрибут авторских прав для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyFileVersionAttribute></xref:System.Reflection.AssemblyFileVersionAttribute>|Указывает компилятору использовать определенный номер версии для ресурса версии файла Win32.|  
-|<xref:System.CLSCompliantAttribute></xref:System.CLSCompliantAttribute>|Указывает, является ли сборка совместимым с общей спецификацией (CLS).|  
+|<xref:System.Reflection.AssemblyProductAttribute>|Определяет настраиваемый атрибут, задающий имя продукта для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyTrademarkAttribute>|Определяет настраиваемый атрибут, задающий товарный знак для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Определяет настраиваемый атрибут, задающий информационную версию для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyCompanyAttribute>|Определяет настраиваемый атрибут, задающий название организации для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyCopyrightAttribute>|Определяет настраиваемый атрибут, задающий уведомление об авторских правах для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyFileVersionAttribute>|Дает компилятору указание использовать определенный номер версии для ресурса версии файла Win32.|  
+|<xref:System.CLSCompliantAttribute>|Указывает, соответствует ли сборка спецификации CLS.|  
   
 ### <a name="assembly-manifest-attributes"></a>Атрибуты манифеста сборки  
- Атрибуты манифеста сборки можно использовать для предоставления сведений в манифесте сборки. Это включает в себя заголовок, описание, псевдоним по умолчанию и конфигурации. В следующей таблице представлены атрибуты манифеста сборки определены в <xref:System.Reflection?displayProperty=fullName>имен.</xref:System.Reflection?displayProperty=fullName>  
+ Атрибуты манифеста сборки можно использовать для предоставления сведений в манифесте сборки. К ним относится заголовок, описание, псевдоним по умолчанию и конфигурация. В следующей таблице показаны атрибуты манифеста сборки, определенные в пространстве имен <xref:System.Reflection?displayProperty=nameWithType>.  
   
-|Атрибут|Цель|  
+|Атрибут|Назначение|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyTitleAttribute></xref:System.Reflection.AssemblyTitleAttribute>|Определяет пользовательский атрибут названия сборки для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyDescriptionAttribute></xref:System.Reflection.AssemblyDescriptionAttribute>|Определяет пользовательский атрибут описания сборки для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyConfigurationAttribute></xref:System.Reflection.AssemblyConfigurationAttribute>|Определяет пользовательский атрибут, который описывает конфигурацию сборки (например, распространение или отладку) для манифеста сборки.|  
-|<xref:System.Reflection.AssemblyDefaultAliasAttribute></xref:System.Reflection.AssemblyDefaultAliasAttribute>|Определяет понятный псевдоним по умолчанию для манифеста сборки|  
+|<xref:System.Reflection.AssemblyTitleAttribute>|Определяет настраиваемый атрибут, задающий название сборки для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyDescriptionAttribute>|Определяет настраиваемый атрибут, задающий описание сборки для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|Определяет настраиваемый атрибут, задающий конфигурацию сборки для манифеста сборки.|  
+|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Определяет понятный псевдоним по умолчанию для манифеста сборки.|  
   
-##  <a name="Obsolete"></a>Устаревший атрибут  
- `Obsolete` Помечает сущности программы, не рекомендуется использовать. Каждый случай использования сущности, отмеченной устаревшей постоянно генерирует предупреждение или сообщение об ошибке, в зависимости от настройки атрибута. Например:  
+##  <a name="Obsolete"></a> Атрибут Obsolete  
+ Атрибут `Obsolete` помечает сущность программы как нерекомендуемую для использования. Каждый случай использования сущности, помеченной как устаревшая, будет приводить к созданию предупреждения или сообщения об ошибке в зависимости от настройки атрибута. Пример:  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -111,9 +103,9 @@ Class B
 End Class  
 ```  
   
- В этом примере `Obsolete` атрибут применяется к классу `A` и метод `B.OldMethod`. Так как второй аргумент конструктора атрибута, применить к `B.OldMethod` задано значение `true`, этот метод будет приводить к ошибке компилятора, а с помощью класса `A` будет просто создают предупреждения. Вызов `B.NewMethod`, тем не менее, создает предупреждение или ошибка.  
+ В этом примере атрибут `Obsolete` применяется к классу `A` и к методу `B.OldMethod`. Поскольку для второго аргумента конструктора атрибутов, примененного к `B.OldMethod`, задано значение `true`, этот метод будет вызывать ошибку компилятора, тогда как при использовании класса `A` будет просто создаваться предупреждение. При этом вызов `B.NewMethod` не создает предупреждений или ошибок.  
   
- Строка, предоставленная в качестве первого аргумента конструктору атрибута будет отображаться как часть предупреждения или ошибки. Например при использовании с предыдущими определениями следующий код генерирует два предупреждения и одну ошибку:  
+ Строка, предоставленная в качестве первого аргумента конструктору атрибута, будет отображаться как часть предупреждения или ошибки. Например, при использовании с предыдущими определениями следующий код создает два предупреждения и одну ошибку:  
   
 ```vb  
 ' Generates 2 warnings:  
@@ -127,16 +119,16 @@ b.NewMethod()
 ' b.OldMethod()  
 ```  
   
- Два предупреждения для класса `A` создаются: один для объявления ссылки на класс и один для конструктора класса.  
+ Создается два предупреждения для класса `A`: одно для объявления ссылки на класс, а второе — для конструктора класса.  
   
- `Obsolete` Атрибут может использоваться без аргументов, но включать пояснение, почему соответствующий элемент является устаревшим и что следует использовать вместо него рекомендуется использовать.  
+ Атрибут `Obsolete` может использоваться без аргументов, однако рекомендуется включать пояснение о том, почему соответствующий элемент является устаревшим и что следует использовать вместо него.  
   
- `Obsolete` Атрибут является атрибутом однократного использования и может применяться к любой сущности, допускающей использование атрибутов. `Obsolete`является псевдонимом для <xref:System.ObsoleteAttribute>.</xref:System.ObsoleteAttribute>  
+ Атрибут `Obsolete` является атрибутом однократного использования и может применяться к любой сущности, допускающей использование атрибутов. `Obsolete` является псевдонимом для <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a>Условный атрибут  
- `Conditional` Атрибут делает выполнение метода зависимым от идентификатора предварительной обработки. `Conditional` Атрибута является псевдонимом для <xref:System.Diagnostics.ConditionalAttribute>и может применяться к методу или атрибут класса</xref:System.Diagnostics.ConditionalAttribute>  
+##  <a name="Conditional"></a> Атрибут Conditional  
+ Атрибут `Conditional` определяет зависимость выполнения метода от идентификатора предварительной обработки. Атрибут `Conditional` является псевдонимом для <xref:System.Diagnostics.ConditionalAttribute> и может применяться к методу или классу атрибута.  
   
- В этом примере `Conditional` применяется к методу для включения и отключения отображения диагностической информации для конкретной программы:  
+ В этом примере атрибут `Conditional` применяется к методу для включения и отключения отображения диагностической информации для конкретной программы:  
   
 ```vb  
 #Const TRACE_ON = True  
@@ -158,9 +150,9 @@ Module TestConditionalAttribute
 End Module  
 ```  
   
- Если `TRACE_ON` идентификатор не определен, отображаются выходные данные трассировки.  
+ Если идентификатор `TRACE_ON` не определен, выходные данные трассировки не отображаются.  
   
- `Conditional` Атрибут часто используется с `DEBUG` идентификатор для включения трассировки и функции ведения журнала для построения отладки, но не в построениях выпуска, следующим образом:  
+ Атрибут `Conditional` часто используется с идентификатором `DEBUG` для включения функций трассировки и ведения журнала для отладочных сборок (но не сборок выпуска) следующим образом:  
   
 ```vb  
 <Conditional("DEBUG")>   
@@ -169,7 +161,7 @@ Shared Sub DebugMethod()
 End Sub  
 ```  
   
- Когда вызывается метод, помеченный как условный, наличие или отсутствие заданного символа предварительной обработки определяет, включен ли вызов или опущен. Если этот символ определен, вызов включается; в противном случае — вызов опускается. С помощью `Conditional` представляет собой более понятную, элегантную и менее подверженную ошибкам альтернативу вложению методов в `#if…#endif` блоки, следующим образом:  
+ Когда вызывается метод, помеченный как условный, наличие или отсутствие заданного символа предварительной обработки определяет, включается ли вызов или пропускается. Если этот символ определен, вызов включается; в противном случае вызов пропускается. Использование атрибута `Conditional` — это более понятная, элегантная и менее подверженная ошибкам альтернатива вложению методов в блоки `#if…#endif`, например следующим образом:  
   
 ```vb  
 #If DEBUG Then  
@@ -178,10 +170,10 @@ End Sub
 #End If  
 ```  
   
- Условный метод должен быть методом в объявлении класса или структуры и не возвращает значение.  
+ Условный метод должен быть методом в объявлении класса или структуры и не должен возвращать значение.  
   
 ### <a name="using-multiple-identifiers"></a>Использование нескольких идентификаторов  
- Если метод имеет несколько `Conditional` атрибутов, вызов метода включается, если определен хотя бы один из условных символов (другими словами, символы логически связаны оператором OR). В этом примере на наличие `A` или `B` приведет к вызову метода:  
+ Если метод содержит несколько атрибутов `Conditional`, вызов метода включается, если определен хотя бы один из условных символов (другими словами, символы логически связаны с помощью оператора ИЛИ). В этом примере наличие `A` или `B` приведет к вызову метода:  
   
 ```vb  
 <Conditional("A"), Conditional("B")>   
@@ -190,7 +182,7 @@ Shared Sub DoIfAorB()
 End Sub  
 ```  
   
- Для получения эффекта логического связывания символов оператором AND, можно задать последовательные условные методы. Например, второй метод, приведенный ниже будет выполняться, только если оба `A` и `B` определены:  
+ Для получения эффекта логического связывания символов с помощью оператора И можно определить последовательные условные методы. Например, второй метод ниже будет выполняться, только если определены `A` и `B`:  
   
 ```vb  
 <Conditional("A")>   
@@ -204,8 +196,8 @@ Shared Sub DoIfAandB()
 End Sub  
 ```  
   
-### <a name="using-conditional-with-attribute-classes"></a>С помощью условного с классами атрибутов  
- `Conditional` Атрибут также может применяться к определению класса атрибутов. В этом примере пользовательский атрибут `Documentation` только добавляет сведения в метаданные, если задано значение DEBUG.  
+### <a name="using-conditional-with-attribute-classes"></a>Использование атрибута Conditional с классами атрибутов  
+ Атрибут `Conditional` также может применяться к определению класса атрибута. В этом примере настраиваемый атрибут `Documentation` добавит сведения в метаданные, только если задано значение DEBUG.  
   
 ```vb  
 <Conditional("DEBUG")>   
@@ -226,37 +218,37 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a>Информационные атрибуты вызывающего  
- С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя члена, вызывающего объекта.  
+##  <a name="CallerInfo"></a> Информационные атрибуты вызывающего объекта  
+ С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта.  
   
- Чтобы получить сведения о вызывающем члена, используйте атрибуты, которые применяются к необязательным параметрам. Каждый дополнительный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, определенные в <xref:System.Runtime.CompilerServices?displayProperty=fullName>пространство имен:</xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам. Каждый необязательный параметр задает значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в пространстве имен <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
 |Атрибут|Описание|Тип|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute></xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute></xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute></xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя метода или свойства вызывающего объекта. Дополнительные сведения см. в разделе [сведения о вызывающем (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Полный путь исходного файла, содержащего вызывающий объект. Это путь во время компиляции.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Номер строки в исходном файле, из которого вызывается метод.|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Имя свойства или метода вызывающего объекта. Дополнительные сведения см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
   
- Дополнительные сведения о информационные атрибуты вызывающего объекта, в разделе [сведения о вызывающем (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ Дополнительные сведения о информационные атрибуты вызывающего объекта см. в разделе [сведения о вызывающем объекте (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
 ##  <a name="VB"></a>Атрибуты Visual Basic  
  В следующей таблице перечислены атрибуты, относящиеся к Visual Basic.  
   
-|Атрибут|Цель|  
+|Атрибут|Назначение|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute></xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору на то, что класс должен быть предоставлен как COM-объект.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute></xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Позволяет членам модуля должен осуществляться с использованием только квалификации, необходимой для модуля.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute></xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Указывает размер строки фиксированной длины в структуре для использования с файлом входных и выходных данных функции.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute></xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает размер фиксированного массива в структуре для использования с файлом входных и выходных данных функции.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Указывает компилятору на то, что класс должен быть предоставлен как COM-объектом.|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Позволяет членам модуля должен осуществляться, используя только квалификацию, необходимую для модуля.|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Указывает размер строки фиксированной длины в структуре для использования с файлом входных и выходных данных функции.|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Указывает размер массив фиксированной длины в структуре для использования с файлом входных и выходных данных функции.|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- Использование `COMClassAttribute` для упрощения процесса создания COM-компонентов с помощью Visual Basic. COM-объекты существенно отличаются от сборок .NET Framework и не `COMClassAttribute`, необходимо выполнить ряд действий для создания объекта COM с помощью Visual Basic. Для классов, помеченных атрибутом `COMClassAttribute`, компилятор выполняет большинство этих шагов автоматически.  
+ Использование `COMClassAttribute` для упрощения процесса создания COM-компонентов в Visual Basic. COM-объекты существенно отличаются от сборок .NET Framework и без `COMClassAttribute`, необходимо выполнить ряд действий для создания COM-объекта из Visual Basic. Для классов, помеченных атрибутом `COMClassAttribute`, компилятор автоматически выполняет большую часть этих операций.  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- Использование `HideModuleNameAttribute` позволяет членам модуля, к которым осуществляется с использованием только квалификации, необходимой для модуля.  
+ Используйте `HideModuleNameAttribute` чтобы разрешить доступ, используя только квалификацию, необходимую для модуля к членам модуля.  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- Используйте `VBFixedStringAttribute` для принудительного Visual Basic для создания строки фиксированной длины. Строки имеют переменную длину по умолчанию, и этот атрибут полезен при хранении строк для файлов. Следующий код демонстрирует это:  
+ Используйте `VBFixedStringAttribute` для принудительного Visual Basic для создания строки фиксированной длины. Строки имеют переменный размер по умолчанию, и этот атрибут полезен при хранении строк к файлам. Это демонстрируется в следующем коде:  
   
 ```vb  
 Structure Worker  
@@ -269,12 +261,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- Используйте `VBFixedArrayAttribute` Чтобы объявить массивы фиксированного размера. Как Visual Basic строки массивы имеют переменную длину по умолчанию. Этот атрибут полезен при сериализации или записи данных в файлы.  
+ Используйте `VBFixedArrayAttribute` Чтобы объявить массивы фиксированного размера. Как и строки в Visual Basic массивы имеют переменный размер по умолчанию. Этот атрибут полезен при сериализации или записи данных в файлы.  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)   
- [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Доступ к атрибутам с помощью отражения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Атрибуты](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
+ [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Обращение к атрибутам с помощью отражения (Visual Basic))

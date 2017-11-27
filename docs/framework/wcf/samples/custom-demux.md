@@ -1,23 +1,26 @@
 ---
-title: "Пользовательское демультиплексирование | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательское демультиплексирование"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: 41
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 41
+caps.latest.revision: "41"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7c74648a249ec833f2b0fc8b8f5eea9247dc364
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пользовательское демультиплексирование
-В этом образце показано, как сопоставлять заголовки сообщений MSMQ с различными операциями служб, чтобы службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], использующие привязку <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>, не были ограничены использованием одной операции службы, как показано в примерах [Передача сообщений из службы очередей сообщений в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) и [Отправка сообщений из приложения Windows Communication Foundation в службу очередей сообщений](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md).  
+# <a name="custom-demux"></a>Пользовательское демультиплексирование
+В этом примере показано, как можно сопоставлять заголовки сообщений MSMQ с различными операциями служб, чтобы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] служб, использующих <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> не ограничены использованием одной операции службы, как показано в [служба очереди сообщений Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) и [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образцов.  
   
  В данном образце служба представляет собой резидентное консольное приложение, позволяющее наблюдать службу, получающую сообщения из очереди.  
   
@@ -37,7 +40,7 @@ public interface IOrderProcessor
 }  
 ```  
   
- У сообщения MSMQ нет заголовка Action.  Из\-за этого автоматически соотнести различные сообщения MSMQ с контрактами операций невозможно.  Поэтому может существовать только один контракт операции.  Чтобы преодолеть это ограничение, служба реализует метод <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> интерфейса <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>.  Метод <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> позволяет службе сопоставить данный заголовок сообщения определенной операции службы.  В этом образце метка заголовка сообщения сопоставляется операциям службы.  Параметр `Name` контракта операции определяет, какую операцию службы следует выполнить для данной метки сообщения.  Например, если метка заголовка сообщения содержит "SubmitPurchaseOrder", вызывается операция службы "SubmitPurchaseOrder".  
+ У сообщения MSMQ нет заголовка Action. Из-за этого автоматически соотнести различные сообщения MSMQ с контрактами операций невозможно. Поэтому может существовать только один контракт операции. Чтобы преодолеть это ограничение, служба реализует метод <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> интерфейса <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. Метод <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> позволяет службе сопоставить данный заголовок сообщения определенной операции службы. В этом образце метка заголовка сообщения сопоставляется операциям службы. Параметр `Name` контракта операции определяет, какую операцию службы следует выполнить для данной метки сообщения. Например, если метка заголовка сообщения содержит "SubmitPurchaseOrder", вызывается операция службы "SubmitPurchaseOrder".  
   
 ```  
 public class OperationSelector : IDispatchOperationSelector  
@@ -50,7 +53,7 @@ public class OperationSelector : IDispatchOperationSelector
 }  
 ```  
   
- Служба должна реализовывать метод <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> интерфейса <xref:System.ServiceModel.Description.IContractBehavior>, как показано в следующем образце кода.  Это применяет пользовательский `OperationSelector` к среде выполнения инфраструктуры службы.  
+ Служба должна реализовывать метод <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> интерфейса <xref:System.ServiceModel.Description.IContractBehavior>, как показано в следующем образце кода. Это применяет пользовательский `OperationSelector` к среде выполнения инфраструктуры службы.  
   
 ```  
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
@@ -59,7 +62,7 @@ void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, Se
 }  
 ```  
   
- Перед тем как попасть к OperationSelector, сообщение должно пройти через свойство <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> диспетчера.  По умолчанию сообщение отклоняется, если его действие не обнаружено ни в одном контракте, реализованном службой.  Чтобы избежать этого, реализуем поведение <xref:System.ServiceModel.Description.IEndpointBehavior> с именем `MatchAllFilterBehavior`, позволяющее любым сообщениям проходить через фильтр `ContractFilter`, применяя <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> следующим образом.  
+ Перед тем как попасть к OperationSelector, сообщение должно пройти через свойство <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> диспетчера. По умолчанию сообщение отклоняется, если его действие не обнаружено ни в одном контракте, реализованном службой. Чтобы избежать этого, реализуем поведение <xref:System.ServiceModel.Description.IEndpointBehavior> с именем `MatchAllFilterBehavior`, позволяющее любым сообщениям проходить через фильтр `ContractFilter`, применяя <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> следующим образом.  
   
 ```  
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
@@ -68,7 +71,7 @@ public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispa
 }  
 ```  
   
- При получении сообщения службой используются сведения, содержащиеся в метке заголовка, и выполняется соответствующая операция службы.  Тело сообщения десериализуется в объект `PurchaseOrder`, как показано в следующем образце кода.  
+ При получении сообщения службой используются сведения, содержащиеся в метке заголовка, и выполняется соответствующая операция службы. Тело сообщения десериализуется в объект `PurchaseOrder`, как показано в следующем образце кода.  
   
 ```  
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -81,7 +84,7 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
 }  
 ```  
   
- Служба является резидентной.  При работе с MSMQ используемую очередь следует создавать заранее.  Это можно сделать вручную или с помощью кода.  В данном образце служба содержит код для проверки наличия очереди и ее создания, если очереди нет.  Имя очереди считывается из файла конфигурации.  
+ Служба является резидентной. При работе с MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код для проверки наличия очереди и ее создания, если очереди нет. Имя очереди считывается из файла конфигурации.  
   
 ```  
 public static void Main()  
@@ -116,18 +119,17 @@ public static void Main()
  Имя очереди MSMQ задается в разделе appSettings файла конфигурации.  
   
 > [!NOTE]
->  В имени очереди для определения локального компьютера используется точка \(.\), а в пути в качестве разделителей используются символы обратной косой черты.  В адресе конечной точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] задается схема msmq.formatname, для обозначения локального компьютера используется имя localhost.  Схеме следует адрес очереди в правильном формате в соответствии с рекомендациям о создании адресов имен в формате MSMQ.  
+>  В имени очереди для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты. В адресе конечной точки [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] задается схема msmq.formatname, для обозначения локального компьютера используется имя localhost. Схеме следует адрес очереди в правильном формате в соответствии с рекомендациям о создании адресов имен в формате MSMQ.  
   
-```  
+```xml  
 <appSettings>  
     <!-- Use appSetting to configure the MSMQ queue name. -->  
     <add key="queueName" value=".\private$\Orders" />  
 </appSettings>  
-  
 ```  
   
 > [!NOTE]
->  Данный образец требует установки [очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=95143).  
+>  В этом примере требуется установка [очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=95143).  
   
  Запустите службу и выполните клиент.  
   
@@ -160,31 +162,31 @@ Processing Purchase Order: 28fc457a-1a56-4fe0-9dde-156965c21ed6
 Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled  
 ```  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  При первом запуске служба проверит наличие очереди.  Если очередь отсутствует, служба ее создаст.  Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ.  Чтобы создать очередь в Windows 2008, выполните следующие шаги.  
+2.  При первом запуске служба проверит наличие очереди. Если очередь отсутствует, служба ее создаст. Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ. Чтобы создать очередь в Windows 2008, выполните следующие шаги.  
   
     1.  Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Разверните вкладку **Функции**.  
+    2.  Разверните **функции** вкладки.  
   
-    3.  Щелкните правой кнопкой мыши узел **Очереди личных сообщений** и выберите пункты **Создать**, **Частная очередь**.  
+    3.  Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.  
   
-    4.  Установите флажок **Транзакционная**.  
+    4.  Проверьте **транзакций** поле.  
   
-    5.  В качестве имени новой очереди укажите `ServiceModelSamplesTransacted`.  
+    5.  Введите `ServiceModelSamplesTransacted` качестве имени новой очереди.  
   
-3.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Чтобы запустить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### Запуск образца на нескольких компьютерах  
+### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
-1.  Скопируйте на компьютер службы файлы служебной программы из папки \\service\\bin\\ в папку языка.  
+1.  Скопируйте на компьютер службы файлы служебной программы из папки \service\bin\ в папку языка.  
   
-2.  Скопируйте на клиентские компьютеры файлы из папки \\client\\bin\\ в папку языка.  
+2.  Скопируйте на клиентские компьютеры файлы из папки \client\bin\ в папку языка.  
   
 3.  В файле Client.exe.config измените orderQueueName, указав имя компьютера службы вместо «.».  
   
@@ -193,14 +195,14 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 5.  На клиентском компьютере из командной строки запустите программу Client.exe.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
-## См. также  
- [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)   
- [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143)
+## <a name="see-also"></a>См. также  
+ [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=95143)

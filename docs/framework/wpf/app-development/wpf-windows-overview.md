@@ -1,62 +1,66 @@
 ---
-title: "Общие сведения об окнах WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "приложения, размещение"
-  - "содержание, отображение"
-  - "содержание, отображение в процедурном коде"
-  - "содержание, отображение значков"
-  - "создание, окна"
-  - "диалоговые окна"
-  - "отображение содержимого"
-  - "отображение содержимого в процедурном коде"
-  - "отображение страниц XAML"
-  - "события"
-  - "размещение, приложения"
-  - "управление окнами"
-  - "модальные диалоговые окна"
-  - "модальные окна"
-  - "NavigationWindow - объекты"
-  - "Page - объект"
-  - "процедурный код, отображение содержимого"
-  - "события окон"
-  - "управление окнами"
-  - "объекты окон"
-  - "окна"
-  - "XAML-страницы, отображение"
-  - "XAML, отображение содержимого"
+title: "Общие сведения об окнах WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- XAML [WPF], displaying content via
+- XAML pages [WPF], displaying
+- content [WPF], displaying via XAML
+- window objects [WPF]
+- hosting [WPF], applications
+- managing windows [WPF]
+- dialog boxes [WPF]
+- Page object [WPF]
+- NavigationWindow objects [WPF]
+- applications [WPF], hosting
+- content [WPF], displaying
+- events [WPF]
+- content [WPF], displaying via procedural code
+- modal windows [WPF]
+- procedural code [WPF], displaying content via
+- displaying content via procedural code [WPF]
+- window management [WPF]
+- displaying content [WPF]
+- window events [WPF]
+- windows [WPF]
+- modal dialog boxes [WPF]
+- displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 65
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 60
+caps.latest.revision: "65"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3323efa3306fd55d7c1d43cbc6eeaaf846e373ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об окнах WPF
-Пользователи взаимодействуют с автономными приложениями [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] при помощи окон.  Основным предназначением окна является размещение содержимого, которое отображает данные и позволяет пользователям взаимодействовать с ними. Автономные приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляют свои собственные окна с помощью класса <xref:System.Windows.Window>.  В этом разделе перед рассмотрением основ создания и управления окнами в автономных приложениях описывается <xref:System.Windows.Window>.  
+# <a name="wpf-windows-overview"></a>Общие сведения об окнах WPF
+Пользователи взаимодействуют с автономными приложениями [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] через окна. Основная цель окна — разместить содержимое, которое визуализирует данные и позволяет пользователям взаимодействовать с ними. Автономный [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений предоставляют свои собственные окна с помощью <xref:System.Windows.Window> класса. В этом разделе описываются <xref:System.Windows.Window> перед рассмотрением основ создания и управления окнами в автономных приложений.  
   
 > [!NOTE]
->  Приложения [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], реализуемые в браузере, включая [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и свободные страницы [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], не предоставляют свои собственные окна.  Вместо этого они размещаются в окнах, предоставляемых [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)].  См. раздел [Общие сведения о приложениях браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+>  Размещенные в браузере [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложений, включая [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] и свободные [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] страницы, не предоставляют свои собственные окна. Вместо этого они размещаются в окнах [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. В разделе [Обзор приложений браузера WPF XAML](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
-   
   
 <a name="TheWindowClass"></a>   
-## Класс "Окно"  
- На следующем рисунке показаны составные части окна.  
+## <a name="the-window-class"></a>Класс окна  
+ На следующем рисунке показаны составляющие части окна.  
   
  ![Элементы окна](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
   
- Окно разделено на две области: неклиентскую и клиентскую область.  
+ Окно разделено на две области: неклиентскую и клиентскую.  
   
- *Неклиентская область* окна реализована с помощью [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и включает части окна, являющиеся общими для большинства окон, в том числе следующие:  
+ *Неклиентскую область* окна реализуется [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] и включает части окна, которые являются общими для большинства окон, включая следующие:  
   
 -   Граница.  
   
@@ -68,61 +72,62 @@ caps.handback.revision: 60
   
 -   Кнопка "Закрыть".  
   
--   Системное меню с элементами, которые позволяют пользователям сворачивать, разворачивать, восстанавливать, перемещать, изменять размер и закрывать окно.  
+-   Системное меню с элементами, которые позволяют пользователям свернуть, развернуть, восстановить, перемещать, изменять размеры и закрыть окно.  
   
- *Клиентская область* окна является областью, входящей в неклиентскую область, и используется разработчиками для добавления содержимого конкретного приложения, такого как строки меню, панели инструментов и элементы управления.  
+ *Клиентской области* окна — это область в пределах неклиентской области окна и используется разработчиками для добавления содержимого конкретного приложения, такие как строки меню, панелей инструментов и элементов управления.  
   
- В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] окно инкапсулируется классом <xref:System.Windows.Window>, предназначенным для выполнения следующих действий.  
+ В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], окно инкапсулируется <xref:System.Windows.Window> класс, который позволяет выполните следующие действия:  
   
--   Отображение окна.  
+-   Отобразить окно.  
   
--   Настройка размера, положения и внешнего вида окна.  
+-   Настроить размер, положение и внешний вид окна.  
   
--   Размещение содержимого конкретного приложения.  
+-   Разместить содержимое конкретного приложения.  
   
--   Управление временем существования окна.  
+-   Управлять временем существования окна.  
   
 <a name="DefiningAWindow"></a>   
-## Реализация окна  
- Реализация типичного окна включает как вид, так и поведение, где *вид* определяет, как окно отображается для пользователей, а *поведение* определяет способ функционирования окна при взаимодействии пользователей с ним.  В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] можно реализовать внешний вид и поведение окна либо с помощью кода, либо с помощью разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+## <a name="implementing-a-window"></a>Реализация окна  
+ Реализация типичного окна включает внешний вид и поведение, где *внешний вид* определяет, как окно отображается для пользователей и *поведение* определяет способ окна функции, как пользователи взаимодействуют с ним. В [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], можно реализовать внешний вид и поведение окна с помощью кода, либо или [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки.  
   
- Однако, как правило, внешний вид окна реализуется с помощью разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], а его поведение реализуется с помощью кода программной части, как показано в следующем примере.  
+ Как правило, тем не менее, внешний вид окна реализуется с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметка, а его поведение реализуется с помощью кода, как показано в следующем примере.  
   
- [!code-xml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
  [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
  [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
- Чтобы обеспечить взаимодействие файла разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и файла кода программной части, необходимо выполнить следующее:  
+ Чтобы включить [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] файл разметки и файл кода для совместной работы, требуются следующие сертификаты:  
   
--   В разметке элемент `Window` должен включать атрибут `x:Class`.  При построении приложения существование `x:Class` в файле разметки приводит к тому, что [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] создает класс `partial`, производный от <xref:System.Windows.Window> с именем, которое определяется атрибутом `x:Class`.  Для этого требуется добавить объявление пространства имен [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] в схему [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] \(`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`\).  Созданный класс `partial` реализует метод `InitializeComponent`, который вызывается для регистрации событий и задания свойств, реализованных в разметке.  
+-   В разметке `Window` элемент должен включать `x:Class` атрибута. При построении приложения существование `x:Class` в разметке вызывает файл [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] для создания `partial` класс, производный от <xref:System.Windows.Window> и имеет имя, которое определяется `x:Class` атрибута. Для этого необходимо добавление [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] объявление пространства имен для [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] схемы ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Созданный `partial` класс реализует `InitializeComponent` метод, который вызывается для регистрации событий и задания свойств, реализованных в разметке.  
   
--   В коде программной части класс должен быть классом `partial` с тем же именем, которое определено атрибутом `x:Class` в разметке, и он должен быть производным от <xref:System.Windows.Window>.  Это позволяет связать файл кода программной части с классом `partial`, созданным для файла разметки при построении приложения \(см. раздел [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)\).  
+-   В коде программной части, класс должен быть `partial` класс с тем же именем, который задается параметром `x:Class` атрибута в разметке и он должен быть производным от <xref:System.Windows.Window>. Это позволяет файл кода должны быть связаны с `partial` класс, который будет создан для файла разметки при построении приложения (см. [построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
   
--   В коде программной части класс <xref:System.Windows.Window> должен реализовать конструктор, вызывающий метод `InitializeComponent`.  Метод `InitializeComponent` реализуется классом `partial`, созданным файлом разметки, для регистрации событий и задания свойств, определенных в разметке.  
+-   В коде программной части <xref:System.Windows.Window> класс должен реализовывать конструктор, который вызывает `InitializeComponent` метод. `InitializeComponent`реализуется разметки созданный файл, `partial` класса для регистрации событий и задания свойств, которые определены в разметке.  
   
 > [!NOTE]
->  Когда в проект добавляется новый класс <xref:System.Windows.Window> с помощью [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Window> реализуется с помощью разметки и с помощью кода программной части и включает необходимую конфигурацию для создания связи между файлами разметки и файлами кода программной части.  
+>  При добавлении нового <xref:System.Windows.Window> в проект с помощью [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], <xref:System.Windows.Window> реализуется с помощью разметки и кода и включает необходимую конфигурацию для создания связи между файлами разметки и кода как описанные здесь.  
   
- При такой конфигурации можно сосредоточиться на определении внешнего вида окна в разметке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] и реализации его поведения в коде программной реализации.  В следующем примере показано окно с кнопкой, реализованное в разметке [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], и обработчик событий <xref:System.Windows.Controls.Primitives.ButtonBase.Click> кнопки, реализованный в коде программной части.  
+ При такой конфигурации можно сосредоточиться на определении внешнего вида окна в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки и реализации его поведения в коде. В следующем примере показано окно с кнопкой, реализованное в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки и обработчик событий для кнопки <xref:System.Windows.Controls.Primitives.ButtonBase.Click> события, реализованы в коде.  
   
- [!code-xml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
  [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
  [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
 <a name="ConfiguringWindowForMSBuild"></a>   
-## Настройка определения окна для MSBuild  
- Реализация окна определяет его конфигурацию для [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)].  Для окна, определенного как с помощью разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], так и с помощью кода программной части:  
+## <a name="configuring-a-window-definition-for-msbuild"></a>Настройка определения окна для MSBuild  
+ Реализация окна определяет, как оно настроено для [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Для окна, который определен с помощью обоих [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки и кода:  
   
--   Файлы разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] настраиваются как элементы [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page`.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]файлы разметки настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` элементов.  
   
--   Файлы кода программной части настраиваются как элементы [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile`.  
+-   Файлы кода настраиваются как [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` элементов.  
   
- Это показано в следующем файле проекта [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)].  
+ Это показано в следующем [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] файл проекта.  
   
-```  
-<Project ... xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+```xml  
+<Project ...  
+                xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     ...  
     <Page Include="MarkupAndCodeBehindWindow.xaml" />  
     <Compile Include=" MarkupAndCodeBehindWindow.xaml.cs" />  
@@ -130,379 +135,376 @@ caps.handback.revision: 60
 </Project>  
 ```  
   
- Сведения о построении приложений [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] см. в разделе [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+ Сведения о построении [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] приложения, см. [построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
-## Время существования окна  
- Как и любой класс, окно имеет время существования, которое начинается с момента создания, после которого осуществляется его открытие, активация, деактивация и, в конечном счете, закрытие.  
+## <a name="window-lifetime"></a>Время существования окна  
+ Как и любой класс, окно имеет время существования, которое начинается с момента создания его экземпляра, после чего оно открывается, активируется, деактивируется и, в конечном счете, закрывается.  
   
-   
   
 <a name="Opening_a_Window"></a>   
-### Открытие окна  
+### <a name="opening-a-window"></a>Открытие окна  
  Чтобы открыть окно, сначала создайте его экземпляр, как показано в следующем примере.  
   
- [!code-xml[WindowsOverviewStartupEventSnippets#AppMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
+ [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
   
  [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
   
- В этом примере при запуске приложения создается `MarkupAndCodeBehindWindow`, которое появляется при возникновении события <xref:System.Windows.Application.Startup>.  
+ В этом примере `MarkupAndCodeBehindWindow` создается при запуске приложения, который происходит при <xref:System.Windows.Application.Startup> события.  
   
- После создания окна ссылка на него автоматически добавляется в список окон, управление которым осуществляется объектом <xref:System.Windows.Application> \(см. <xref:System.Windows.Application.Windows%2A?displayProperty=fullName>\).  Кроме того, по умолчанию первый экземпляр окна устанавливается <xref:System.Windows.Application> как главное окно приложения \(см. <xref:System.Windows.Application.MainWindow%2A?displayProperty=fullName>\).  
+ При создании окна ссылка на него автоматически добавляется в список окон, управляемых службой <xref:System.Windows.Application> объекта (в разделе <xref:System.Windows.Application.Windows%2A?displayProperty=nameWithType>). Кроме того, первое окно для создания экземпляра по умолчанию задается <xref:System.Windows.Application> как главное окно приложения (см. <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>).  
   
- Окончательное открытие окна осуществляется вызовом метода <xref:System.Windows.Window.Show%2A>; результат показан на следующем рисунке.  
+ Наконец открывается окно путем вызова <xref:System.Windows.Window.Show%2A> метода; результат показан на следующем рисунке.  
   
- ![Окно, открытое посредством вызова Window.Show](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Окно, открытое посредством вызова метода Window.Show](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
   
- Окно, открытое с помощью вызова <xref:System.Windows.Window.Show%2A>, является безрежимным, что означает, что приложение работает в режиме, позволяющем пользователям активировать другие окна в том же приложении.  
+ Окно, которое открывается вызовом <xref:System.Windows.Window.Show%2A> немодальное окно, это означает, что приложение работает в режиме, который позволяет пользователям активировать другие окна, в том же приложении.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A> вызывается для открытия модальных окон, таких как диалоговые окна.  Дополнительные сведения см. в разделе [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+>  <xref:System.Windows.Window.ShowDialog%2A>вызывается, чтобы открыть windows, таких как диалоговые окна, как модальная. В разделе [Общие сведения о полях диалогового окна](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) для получения дополнительной информации.  
   
- При вызове <xref:System.Windows.Window.Show%2A> окно перед отображением выполняет инициализацию для установки инфраструктуры, позволяющей получать вводимые пользователем данные.  После инициализации окна возникает событие <xref:System.Windows.Window.SourceInitialized>, и окно отображается.  
+ Если <xref:System.Windows.Window.Show%2A> является вызове окна выполняет инициализацию перед его отображением для установки инфраструктуры, позволяет принимать ввод данных пользователем. При инициализации окна <xref:System.Windows.Window.SourceInitialized> событие и отображением этого окна.  
   
- Для быстрого запуска может быть установлен <xref:System.Windows.Application.StartupUri%2A>, указывающий первое окно, которое открывается автоматически при запуске приложения.  
+ Для быстрого вызова <xref:System.Windows.Application.StartupUri%2A> может быть настроен на указание первое окно, которое открывается автоматически при запуске приложения.  
   
- [!code-xml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
   
- При запуске приложения окно, заданное значением <xref:System.Windows.Application.StartupUri%2A>, открывается безрежимно, а внутри приложения окно открывается с помощью вызова метода <xref:System.Windows.Window.Show%2A>.  
+ При запуске приложения, окна, указанную значением <xref:System.Windows.Application.StartupUri%2A> открыт немодальных; внутренне, открывается окно путем вызова его <xref:System.Windows.Window.Show%2A> метод.  
   
 <a name="Ownership"></a>   
-#### Владение окном  
- Окно, открытое с помощью метода <xref:System.Windows.Window.Show%2A>, не имеет неявной связи с окном, которое его создало; пользователи могут взаимодействовать с одним окном независимо от другого, что означает, что любое из окон может выполнять следующее:  
+#### <a name="window-ownership"></a>Владение окном  
+ Окно, которое открывается с помощью <xref:System.Windows.Window.Show%2A> метод не имеет явную связь с окном, в которой он был создан, пользователи могут взаимодействовать с одним окном независимо от другого, это означает, что в любом окне можно выполнять следующие задачи:  
   
--   Перекрывать другое \(если свойство <xref:System.Windows.Window.Topmost%2A> одного из окон установлено в `true` \).  
+-   Перекрывать другое (если только не имеет одного из окон его <xref:System.Windows.Window.Topmost%2A> свойство `true`).  
   
 -   Сворачиваться, разворачиваться и восстанавливаться без влияния на другое окно.  
   
- Для некоторых окон требуется связь с окном, которое их открывает.  Например, приложение [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] может открыть окна свойств и окна инструментов, которые обычно перекрывают создавшее их окно.  Кроме того, такие окна должны всегда закрываться, сворачиваться, разворачиваться и восстанавливаться вместе с окном, в котором они созданы.  Такая связь может быть установлена путем задания одного окна как *владельца* другого, что достигается путем установки свойства <xref:System.Windows.Window.Owner%2A> *собственного окна* в значение ссылки на *окно владельца*.  Это показано в следующем примере.  
+ Для некоторых окон требуется связь с окном, которое их открывает. Например [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] приложение может открывать окна свойств и окна инструментов, поведение которой обычно является окно, который создает их. Кроме того, такие окна должны всегда закрываться, сворачиваться, разворачиваться и восстанавливаться вместе с окном, которое их создало. Такая связь может быть установлена путем задания одного окна *собственной* другой и достигается путем установки <xref:System.Windows.Window.Owner%2A> свойство *собственного окна* со ссылкой на *владельца окно*. Эти действия показаны в следующем примере.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
   
- После установки владельца:  
+ После установки владения:  
   
--   Собственное окно может ссылаться на окно владельца, путем проверки значения свойства <xref:System.Windows.Window.Owner%2A>.  
+-   Собственное окно может ссылаться на окно владельца путем проверки значения его <xref:System.Windows.Window.Owner%2A> свойство.  
   
--   Окно владельца может обнаруживать все окна, которыми оно владеет, путем проверки значения свойства <xref:System.Windows.Window.OwnedWindows%2A>.  
+-   Окно-владелец может обнаруживать все окна, он владеет, проверяя значение его <xref:System.Windows.Window.OwnedWindows%2A> свойство.  
   
 <a name="Preventing"></a>   
-#### Предотвращение активации окна  
- В некоторых случаях не следует активировать отображаемые окна; примером таких окон являются окна беседы в приложениях, предназначенных для обмена сообщениями через Интернет, и окна уведомлений в приложениях электронной почты.  
+#### <a name="preventing-window-activation"></a>Предотвращение активации окна  
+ Существуют сценарии, в которых окна не должны активироваться при отображении, например окна сеанса обмена сообщениями в интернет-приложениях или окна уведомлений приложения электронной почты.  
   
- Если в приложении имеется окно, которое не следует активировать при отображении, присвойте свойству <xref:System.Windows.Window.ShowActivated%2A> этого окна значение `false` перед первым вызовом метода <xref:System.Windows.Window.Show%2A>.  Ниже перечислены результаты выполнения этих действий.  
+ Если приложение имеет окна, который не должен быть активирован при отображении, можно задать его <xref:System.Windows.Window.ShowActivated%2A> свойства `false` перед вызовом <xref:System.Windows.Window.Show%2A> метода в первый раз. Результат:  
   
 -   Окно не активируется.  
   
--   Событие <xref:System.Windows.Window.Activated> этого окна не вызывается.  
+-   В окне <xref:System.Windows.Window.Activated> событие не происходит.  
   
--   Окно, активированное к настоящему моменту, остается активированным.  
+-   Текущее активированное окно останется активным.  
   
- Тем не менее, окно будет активировано только тогда, когда пользователь щелкнет его в клиентской или иной области.  В этом случае будут иметь место указанные ниже последствия.  
+ Однако окно активируется, если пользователь щелкнет его неклиентскую или клиентскую область. В этом случае:  
   
 -   Окно активируется.  
   
--   Вызывается событие <xref:System.Windows.Window.Activated> этого окна.  
+-   В окне <xref:System.Windows.Window.Activated> события.  
   
 -   Ранее активированное окно деактивируется.  
   
--   В ответ на действия пользователя вызываются события <xref:System.Windows.Window.Deactivated> и <xref:System.Windows.Window.Activated> этого окна.  
+-   В окне <xref:System.Windows.Window.Deactivated> и <xref:System.Windows.Window.Activated> вызываются события в ответ на действия пользователя.  
   
 <a name="Window_Activation"></a>   
-### Активация окна  
- Когда окно открывается в первый раз, оно становится активным \(за исключением случая, когда свойству <xref:System.Windows.Window.ShowActivated%2A> этого окна присвоено значение `false`\).  *Активное окно* — это окно, которое в настоящее время перехватывает пользовательский ввод, например нажатие клавиш или щелчки мыши.  Когда окно становится активным, оно вызывает событие <xref:System.Windows.Window.Activated>.  
+### <a name="window-activation"></a>Активация окна  
+ При первом открытии окна его окно становится активным (если он отображается с <xref:System.Windows.Window.ShowActivated%2A> значение `false`). *Активного окна* — это окно, в настоящее время захват пользовательского ввода, например нажатий клавиш и щелчки мышью. Если окно становится активным, происходит <xref:System.Windows.Window.Activated> событий.  
   
 > [!NOTE]
->  При первом открытии окна события <xref:System.Windows.FrameworkElement.Loaded> и <xref:System.Windows.Window.ContentRendered> вызываются после события <xref:System.Windows.Window.Activated>.  С учетом этого окно может считаться открытым при возникновении события <xref:System.Windows.Window.ContentRendered>.  
+>  При первом открытии окна <xref:System.Windows.FrameworkElement.Loaded> и <xref:System.Windows.Window.ContentRendered> события вызываются только после <xref:System.Windows.Window.Activated> события. С учетом этого окно может считаться открытым при <xref:System.Windows.Window.ContentRendered> возникает.  
   
- После того как окно становится активным, пользователь может активировать другое окно того же приложения или активировать другое приложение.  При этом текущее активное окно становится неактивным и вызывается событие <xref:System.Windows.Window.Deactivated>.  Аналогичным образом, когда пользователь выбирает неактивное в данный момент окно, оно снова становится активным и вызывается <xref:System.Windows.Window.Activated>.  
+ После активизации окна пользователь может активировать другое окно в том же приложении или активировать другое приложение. В этом случае текущее активное окно становится неактивным и вызывает <xref:System.Windows.Window.Deactivated> событий. Аналогично, когда пользователь выбирает в настоящее время отключено окна, снова становится активным и <xref:System.Windows.Window.Activated> возникает.  
   
- Одной из распространенных причин для обработки <xref:System.Windows.Window.Activated> и <xref:System.Windows.Window.Deactivated> является включение и отключение функций, которые должны выполняться только в активном окне.  Например, некоторые окна отображают интерактивное содержимое, которое требует постоянного ввода данных пользователем или внимания со стороны пользователя, например игры и видеопроигрыватели.  В следующем примере показан упрощенный видеопроигрыватель, демонстрирующий обработку <xref:System.Windows.Window.Activated> и <xref:System.Windows.Window.Deactivated> для реализации этого поведения.  
+ Одна из основных причин для обработки <xref:System.Windows.Window.Activated> и <xref:System.Windows.Window.Deactivated> должен включать и отключать функции, которые можно выполнять только при включенном окна. Например, некоторые окна отображают интерактивное содержимое, которое требует постоянного ввода данных или внимания пользователя, включая игры и видеопроигрыватели. Ниже приведен упрощенный видеопроигрыватель, показано, как обрабатывать <xref:System.Windows.Window.Activated> и <xref:System.Windows.Window.Deactivated> для реализации этого поведения.  
   
- [!code-xml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
   
  [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
  [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
   
- Другие типы приложений при деактивации окна могут по\-прежнему выполнять код в фоновом режиме.  Например, почтовый клиент может продолжить опрашивать почтовый сервер, даже когда пользователь использует другое приложение.  Такие приложения во время деактивации главного окна часто выполняют отличные или дополнительные действия.  В почтовой программе это может означать как добавление нового элемента почты в почтовый ящик, так и добавление значка уведомлений в панель задач.  Значок уведомлений требуется отображать, только если почтовое окно неактивно, что может быть определено с помощью проверки свойства <xref:System.Windows.Window.IsActive%2A>.  
+ Другие типы приложений могут выполнять код в фоновом режиме, когда окно деактивировано. Например, почтовый клиент может продолжать опрашивать почтовый сервер, пока пользователь работает с другими приложениями. Такие приложения часто обеспечивают другое или дополнительное поведение, когда главное окно не активно. В случае почтовой программы это может означать как добавление нового почтового элемента в папку "Входящие", так и добавление значка уведомления на панель задач. Значок уведомления о необходимости отображаются, только если почтовое окно неактивно, что можно определить, проверив <xref:System.Windows.Window.IsActive%2A> свойство.  
   
- Если фоновая задача завершается, то окну может потребоваться срочно сообщить об этом пользователю с помощью вызова метода <xref:System.Windows.Window.Activate%2A>.  Если пользователь взаимодействует с другим приложением, активированным после вызова метода <xref:System.Windows.Window.Activate%2A>, то кнопка панели задач окна начинает мигать.  Если пользователь взаимодействует с текущим приложением, то вызов <xref:System.Windows.Window.Activate%2A> переместит окно на передний план.  
+ Если фоновая задача завершается, окно может потребоваться срочно уведомлять пользователя путем вызова <xref:System.Windows.Window.Activate%2A> метод. Если пользователь взаимодействует с другим приложением активируется, когда <xref:System.Windows.Window.Activate%2A> вызывается, мигает кнопку панели задач. Если пользователь взаимодействует с текущим приложением, при вызове <xref:System.Windows.Window.Activate%2A> переместит окно отображается на переднем плане.  
   
 > [!NOTE]
->  Можно обработать активацию области определения приложения с помощью событий <xref:System.Windows.Application.Activated?displayProperty=fullName> и <xref:System.Windows.Application.Deactivated?displayProperty=fullName>.  
+>  Можно обработать с помощью активации области приложения <xref:System.Windows.Application.Activated?displayProperty=nameWithType> и <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> события.  
   
 <a name="Closing_a_Window"></a>   
-### Закрытие окна  
- Время существования окна подходит к концу, когда пользователь закрывает его.  Окно может быть закрыто с помощью следующих элементов неклиентской области:  
+### <a name="closing-a-window"></a>Закрытие окна  
+ Время существования окна заканчивается, когда пользователь его закрывает. Окно может быть закрыто с помощью элементов в неклиентской области, включая следующие:  
   
--   Пункт **Закрыть** меню **Система**.  
+-   **Закрыть** элемент **системы** меню.  
   
--   Нажатие комбинации клавиш ALT \+ F4.  
+-   Нажатие клавиш ALT+F4.  
   
--   Нажатие кнопки **Закрыть**.  
+-   Нажав клавишу **закрыть** кнопки.  
   
- Можно указать дополнительные способы закрытия окна для клиентской области, к наиболее общим из которых относятся:  
+ Можно указать дополнительные способы закрытия окна для клиентской области, к наиболее типичным из которых относятся следующие:  
   
--   Пункт **Выход** меню **Файл** \(обычно для главных окон приложений\).  
+-   **Выхода** элемент **файл** меню, как правило, для основного приложения windows.  
   
--   Пункт **Закрыть** меню **Файл** \(обычно для дополнительного окна приложения\).  
+-   Объект **закрыть** элемент **файл** меню, обычно для дополнительного окна приложения.  
   
--   Кнопка **Отмена** \(обычно для модального диалогового окна\).  
+-   Объект **отменить** кнопка, обычно для модального диалогового окна.  
   
--   Кнопка **Закрыть** \(обычно для немодального диалогового окна\).  
+-   Объект **закрыть** кнопка, обычно для немодального диалогового окна.  
   
- Чтобы закрыть окно одним из этих пользовательских способов, необходимо вызвать метод <xref:System.Windows.Window.Close%2A>.  В следующем примере реализуется возможность закрытия окна с помощью выбора пункта **Выход** в меню **Файл**.  
+ Чтобы закрыть окно, в результате одного из этих пользовательских механизмов, необходимо вызвать <xref:System.Windows.Window.Close%2A> метод. В следующем примере реализуется возможность закрыть окно, выбрав **выхода** на **файл** меню.  
   
- [!code-xml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   
  [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
  [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
   
- При закрытии окно вызывает два события: <xref:System.Windows.Window.Closing> и <xref:System.Windows.Window.Closed>.  
+ При закрытии окна, он вызывает два события: <xref:System.Windows.Window.Closing> и <xref:System.Windows.Window.Closed>.  
   
- <xref:System.Windows.Window.Closing> вызывается перед закрытием окна и предоставляет механизм, с помощью которого закрытие окна может быть прервано.  Одной из основных причин для предотвращения закрытия окна является изменение данных в содержимом окна.  В этом случае событие <xref:System.Windows.Window.Closing> может быть обработано, чтобы определить, являются ли данные "грязными", и, если это так, спросить у пользователя, следует ли отменить закрытие окна или закрыть его без сохранения данных.  В следующем примере показаны ключевые аспекты обработки <xref:System.Windows.Window.Closing>.  
+ <xref:System.Windows.Window.Closing>Возникает перед закрытием окна и предоставляет механизм, с помощью окно, которое может быть прервано закрытия. Одна из распространенных причин, препятствующих закрытию окна, заключается в том, что содержимое окна содержит измененные данные. В этом случае <xref:System.Windows.Window.Closing> событие может быть обработано, чтобы определить, являются ли данные "грязные" и если это так, чтобы запрашивать у пользователя, следует ли отменить закрытие окна или закрыть окно без сохранения данных. В следующем примере показано ключевые аспекты обработки <xref:System.Windows.Window.Closing>.  
   
- [!code-csharp[WindowClosingSnippets#WindowClosingCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs#windowclosingcodebehind1)]
- [!code-vb[WindowClosingSnippets#WindowClosingCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb#windowclosingcodebehind1)]  
-[!code-csharp[WindowClosingSnippets#WindowClosingCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs#windowclosingcodebehind2)]
-[!code-vb[WindowClosingSnippets#WindowClosingCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb#windowclosingcodebehind2)]  
+ [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
+ [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
+ 
   
- Обработчику событий <xref:System.Windows.Window.Closing> передается <xref:System.ComponentModel.CancelEventArgs>, который реализует свойство `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>, устанавливаемое в `true` для предотвращения закрытия окна.  
+ <xref:System.Windows.Window.Closing> Обработчик событий передается <xref:System.ComponentModel.CancelEventArgs>, который реализует `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> свойство, которое устанавливается в значение `true` для предотвращения закрытия окна.  
   
- Если <xref:System.Windows.Window.Closing> не обрабатывается или обрабатывается, но не было отменено, то окно будет закрыто.  Перед фактическим закрытием окна вызывается <xref:System.Windows.Window.Closed>.  В этом случае закрытие окна предотвратить нельзя.  
+ Если <xref:System.Windows.Window.Closing> не обрабатывается, или обрабатывается, но не отменено, оно будет закрыто. Перед фактическим закрытием окна <xref:System.Windows.Window.Closed> возникает. На этом этапе невозможно предотвратить закрытие окна.  
   
 > [!NOTE]
->  Приложение может быть настроено на завершение работы автоматически, либо когда закрывается главное окно приложения \(см. <xref:System.Windows.Application.MainWindow%2A>\), либо когда закрывается последнее окно.  Дополнительные сведения см. в разделе <xref:System.Windows.Application.ShutdownMode%2A>.  
+>  Приложение можно настроить на завершение работы автоматически при любом главное окно приложения закрывает (см. <xref:System.Windows.Application.MainWindow%2A>) или закрывается. Дополнительные сведения см. в разделе <xref:System.Windows.Application.ShutdownMode%2A>.  
   
- Хотя окно может быть закрыто явным образом с помощью механизмов, предоставленных в клиентской и неклиентской областях, окно может быть закрыто неявно в результате поведения других элементов приложения или [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], к которым относятся следующие:  
+ Хотя посредством механизмов, предоставляемых в областях, отличных от клиента и может явно закрыто окно, окно может быть закрыто неявно в результате поведение в других частях приложения или [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], включая следующие:  
   
 -   Пользователь выходит из системы или завершает работу [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
   
--   Владелец окна закрывается \(см. <xref:System.Windows.Window.Owner%2A>\).  
+-   Владелец окна закрывается (см. <xref:System.Windows.Window.Owner%2A>).  
   
--   Закрывается главное окно приложения, а <xref:System.Windows.Application.ShutdownMode%2A> устанавливается в <xref:System.Windows.ShutdownMode>.  
+-   Главное окно приложения закрывается и <xref:System.Windows.Application.ShutdownMode%2A> — <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   Вызывается метод <xref:System.Windows.Application.Shutdown%2A>.  
+-   вызывается метод <xref:System.Windows.Application.Shutdown%2A>;  
   
 > [!NOTE]
->  Окно не может быть открыто повторно после его закрытия.  
+>  После закрытия окно нельзя открыть повторно.  
   
 <a name="Window_Lifetime_Events"></a>   
-### События времени существования окна  
- На следующем рисунке показана последовательность основных событий времени существования окна.  
+### <a name="window-lifetime-events"></a>События времени существования окна  
+ На следующем рисунке показана последовательность основных событий во время существования окна.  
   
  ![Время существования окна](../../../../docs/framework/wpf/app-development/media/windowlifetimeevents.png "WindowLifetimeEvents")  
   
- На приведенном ниже рисунке показана последовательность основных событий во время существования окна, которое отображается без активации \(перед отображением окна свойству <xref:System.Windows.Window.ShowActivated%2A> присваивается значение `false`\).  
+ На следующем рисунке показана последовательность основных событий во время существования окна, которое отображается без активации (<xref:System.Windows.Window.ShowActivated%2A> равно `false` перед отображением этого окна).  
   
  ![Время существования окна &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
-## Расположение окон  
- Пока окно открыто, для него задано положение и размеры по осям X и Y относительно рабочего стола.  Это расположение можно определить путем проверки свойств <xref:System.Windows.Window.Left%2A> и <xref:System.Windows.Window.Top%2A> соответственно.  Можно задать эти свойства для изменения расположения окна.  
+## <a name="window-location"></a>Расположение окна  
+ Когда окно открыто, оно располагается в координатах x и y относительно рабочего стола. Это расположение можно определить, проверив <xref:System.Windows.Window.Left%2A> и <xref:System.Windows.Window.Top%2A> свойства, соответственно. Можно задать эти свойства, чтобы изменить расположение окна.  
   
- Также можно задать начальное расположение <xref:System.Windows.Window> при его первом появлении с помощью свойства <xref:System.Windows.Window.WindowStartupLocation%2A> и одного из следующих значений перечисления <xref:System.Windows.WindowStartupLocation>:  
+ Можно также указать исходное расположение <xref:System.Windows.Window> при его первом появлении <xref:System.Windows.Window.WindowStartupLocation%2A> с одним из следующих <xref:System.Windows.WindowStartupLocation> значения перечисления:  
   
--   <xref:System.Windows.WindowStartupLocation> \(по умолчанию\)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (по умолчанию)  
   
--   <xref:System.Windows.WindowStartupLocation>  
+-   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
--   <xref:System.Windows.WindowStartupLocation>  
+-   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Если начальное расположение указано как <xref:System.Windows.WindowStartupLocation>, а свойства <xref:System.Windows.Window.Left%2A> и <xref:System.Windows.Window.Top%2A> не были установлены, то <xref:System.Windows.Window> запросит [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] для определения места появления.  
+ Если начальное расположение указано как <xref:System.Windows.WindowStartupLocation.Manual>и <xref:System.Windows.Window.Left%2A> и <xref:System.Windows.Window.Top%2A> свойства не задано, <xref:System.Windows.Window> запросит [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] для расположения в.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
-### Окна переднего плана и Z\-порядок  
- Помимо координат X и Y окно также имеет координату по оси Z, которая определяет его вертикальную позицию относительно других окон.  Это явление называется Z\-порядком окна. Их существует два типа: обычный Z\-порядок и верхний Z\-порядок.  Расположение окна в *обычном Z\-порядке* определяется его активностью.  По умолчанию окно находится в нормальном Z\-порядке.  Расположение окна в *верхнем Z\-порядке* также определяется его активностью.  Кроме того, окна в верхнем z\-порядке всегда расположены над окнами обычного Z\-порядка.  Окно можно расположить в верхнем Z\-порядке, установив для его свойства <xref:System.Windows.Window.Topmost%2A> значение `true`.  
+### <a name="topmost-windows-and-z-order"></a>Окна верхнего уровня и Z-порядок  
+ Помимо расположения в координатах x и y, окно имеет координату по оси z, которая определяет его вертикальную позицию относительно других окон. Это называется z-порядком окна. Существует два типа: обычный z-порядок и верхний z-порядок. Расположение окна в *обычном z порядке* определяется, является ли текущий активный или не. По умолчанию окно находится в обычном z-порядке. Расположение окна в *верхнем z порядке* также определяется, является ли текущий активный или не. Кроме того, окна в самом верхнем z-порядке всегда расположены над окнами в обычном z-порядке. Окно находится в верхнем z порядке, установив его <xref:System.Windows.Window.Topmost%2A> свойства `true`.  
   
- [!code-xml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
   
- Внутри каждого z\-порядка текущее активное окно появляется поверх всех остальных окон одного Z\-порядка.  
+ В каждом z-порядке активное в данный момент окно появляется поверх всех других окон в том же z-порядке.  
   
 <a name="WindowSize"></a>   
-## Размер окна  
- Помимо расположения на рабочем столе окно имеет размер, определяемый несколькими свойствами, включая различные свойства ширины, высоты и <xref:System.Windows.Window.SizeToContent%2A>.  
+## <a name="window-size"></a>Размер окна  
+ Помимо расположения на рабочем столе, окно имеет размер, который определяется несколько свойств, включая различные свойства ширины и высоты и <xref:System.Windows.Window.SizeToContent%2A>.  
   
- <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> используются для управления диапазоном ширины, которую может иметь окно во время существования, и настроены, как показано в следующем примере.  
+ <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, и <xref:System.Windows.FrameworkElement.MaxWidth%2A> используются для управления диапазоном ширины, окно может быть во время существования и настроены, как показано в следующем примере.  
   
- [!code-xml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
   
- Высота окна управляется <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A>, которые настраиваются, как показано в следующем примере.  
+ Высота окна управляется <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, и <xref:System.Windows.FrameworkElement.MaxHeight%2A>и настроены, как показано в следующем примере.  
   
- [!code-xml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
   
- Поскольку различные значения высоты и ширины определяют диапазон, существует возможность устанавливать ширину и высоту изменяемого в размерах окна в любое значение в пределах указанного диапазона для соответствующего измерения.  Чтобы определить текущую ширину и высоту, проверьте <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A> соответственно.  
+ Так как различные значения ширины и высоты определяют диапазон, то что ширина и высота изменяемого окна могут находиться в любом месте указанного диапазона для соответствующего измерения. Чтобы определить текущую ширину и высоту, проверьте <xref:System.Windows.FrameworkElement.ActualWidth%2A> и <xref:System.Windows.FrameworkElement.ActualHeight%2A>соответственно.  
   
- Если необходимо, чтобы ширина и высота окна имели размер, соответствующий содержимому окна, то можно использовать свойство <xref:System.Windows.Window.SizeToContent%2A>, которое имеет следующие значения:  
+ Если вы хотите ширину и высоту окна будет иметь размер, который соответствует размеру окна содержимое элемента, можно использовать <xref:System.Windows.Window.SizeToContent%2A> свойства, которое имеет следующие значения:  
   
--   <xref:System.Windows.SizeToContent>.  Не оказывает влияние \(по умолчанию\).  
+-   <xref:System.Windows.SizeToContent.Manual>. Нет эффекта (по умолчанию).  
   
--   <xref:System.Windows.SizeToContent>.  Растяжение окна по ширине содержимого имеет тот же эффект, что и установка <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> по ширине содержимого.  
+-   <xref:System.Windows.SizeToContent.Width>. По ширине в содержимого, который имеет тот же эффект, что и установка <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> содержимое по ширине.  
   
--   <xref:System.Windows.SizeToContent>.  Растяжение окна по высоте содержимого имеет тот же эффект, что и установка <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> по высоте содержимого.  
+-   <xref:System.Windows.SizeToContent.Height>. По размеру содержимого высоту, которая имеет тот же эффект, что и установка <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> по высоте содержимого.  
   
--   <xref:System.Windows.SizeToContent>.  Растяжение окна по ширине и высоте содержимого имеет тот же эффект, что и установка <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> по высоте содержимого, а <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> по ширине содержимого.  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>. По ширине и высоте, который имеет тот же эффект, что и установка содержимого <xref:System.Windows.FrameworkElement.MinHeight%2A> и <xref:System.Windows.FrameworkElement.MaxHeight%2A> по высоте содержимого, а оба <xref:System.Windows.FrameworkElement.MinWidth%2A> и <xref:System.Windows.FrameworkElement.MaxWidth%2A> содержимое по ширине.  
   
- В следующем примере показано окно, автоматически изменяет размер в соответствии с размером его содержимого и по вертикали и по горизонтали, при первом отображении.  
+ В следующем примере показано окно, размеры которого автоматически устанавливаются равными его содержимому по вертикали и по горизонтали при первом отображении.  
   
- [!code-xml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
   
- В следующем примере показано, как присвоить <xref:System.Windows.Window.SizeToContent%2A> свойство в коде для указания способа изменения размеров окна с размером его содержимого.  
+ Следующий пример показывает, как задать <xref:System.Windows.Window.SizeToContent%2A> свойства в коде, чтобы указать, изменение размера окна в соответствии с содержимым.
   
  [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
  [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
   
 <a name="OrderOfPrecedence"></a>   
-## Порядок приоритета свойств изменения размера  
- По существу, различные свойства изменения размера окна объединяются для определения диапазона ширины и высоты для изменяемого в размерах окна.  Чтобы гарантировать сохранение допустимого диапазона, <xref:System.Windows.Window> вычисляет значения свойств размера, используя следующие приоритеты.  
+## <a name="order-of-precedence-for-sizing-properties"></a>Порядок приоритета для свойств размера  
+ Различные свойства размеров окна объединяются для определения диапазона ширины и высоты окна изменяемого размера. Чтобы гарантировать сохранение допустимого диапазона, <xref:System.Windows.Window> вычисляет значения свойств размера, используя следующие приоритеты.  
   
  **Для свойств высоты:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=fullName> \>  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=fullName> \>  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
   
-3.  <xref:System.Windows.SizeToContent?displayProperty=fullName>\/<xref:System.Windows.SizeToContent?displayProperty=fullName> \>  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
   
-4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Для свойств ширины:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=fullName> \>  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=fullName> \>  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
   
-3.  <xref:System.Windows.SizeToContent?displayProperty=fullName>\/<xref:System.Windows.SizeToContent?displayProperty=fullName> \>  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
   
-4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=fullName>  
+4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
- Порядок приоритета может также определять размер развернутого окна, что управляется с помощью свойства <xref:System.Windows.Window.WindowState%2A>.  
+ Очередность выполнения также можно определить размер окна, когда она развернута, управляемую с <xref:System.Windows.Window.WindowState%2A> свойство.  
   
 <a name="WindowState"></a>   
-## Состояние окна  
- Во время существования изменяемое в размерах окно может находиться в трех состояниях: обычном, свернутом и развернутом.  *Обычное* состояние является состоянием окна по умолчанию.  Если окно находится в этом состоянии, пользователь может перемещать его и изменять его размеры с помощью захвата для изменения размера или перетаскивания границы, если окно изменяется в размерах.  
+## <a name="window-state"></a>Состояние окна  
+ В течение времени существования окна изменяемого размера оно может иметь три состояния: обычное, свернутое и развернутое. Окно с *обычного* состояние находится в состоянии по умолчанию окна. Окно с этим состоянием позволяет пользователю перемещать его и изменять размер, используя захват для изменения размера или границу.  
   
- Окно в *свернутом* состоянии сворачивается в кнопку на панели задач, если <xref:System.Windows.Window.ShowInTaskbar%2A> имеет значение `true`. В противном случае оно сворачивается до наименьшего допустимого размера и размещается в левом нижнем углу рабочего стола.  Ни один тип свернутого окна не может быть изменен в размерах с помощью границ или захвата, хотя свернутое окно, которое не отображается на панели задач, можно перетаскивать по всему рабочему столу.  
+ Окно с *к минимуму* сворачивает состояние на кнопке панели задач, если <xref:System.Windows.Window.ShowInTaskbar%2A> равно `true`; в противном случае оно сворачивается до наименьшего возможного размера, он может быть и размещается в левом нижнем углу рабочего стола. Ни один из типов свернутого окна не может быть изменен с помощью границы или захвата для изменения размера, хотя свернутое окно, которое не отображается на панели задач, можно перетаскивать на рабочем столе.  
   
- Окно в *развернутом* состоянии расширяется до максимально допустимого размера, который определяется свойствами <xref:System.Windows.FrameworkElement.MaxWidth%2A>,<xref:System.Windows.FrameworkElement.MaxHeight%2A> и <xref:System.Windows.Window.SizeToContent%2A>.  Как и свернутое окно, развернутое окно не может быть изменено в размерах с помощью захвата для изменения размера или перетаскиванием границ.  
+ Окно с *развернуто* состояние при развертывании максимальный размер, который определяется размером до его <xref:System.Windows.FrameworkElement.MaxWidth%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, и <xref:System.Windows.Window.SizeToContent%2A> свойствами. Как и для свернутого окна, размер развернутого окна нельзя изменить с помощью захвата для изменения размера или перетаскивания границы.  
   
 > [!NOTE]
->  Значения свойств окна <xref:System.Windows.Window.Top%2A>, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> всегда представляют значения для нормального состояния, даже когда окно развернуто на весь экран или свернуто.  
+>  Значения <xref:System.Windows.Window.Top%2A>, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, и <xref:System.Windows.FrameworkElement.Height%2A> свойств окна всегда представляют значения для нормальное состояние, даже в том случае, если в данный момент окно свернуто или развернуто.  
   
- Состояние окна можно настроить путем установки его свойства <xref:System.Windows.Window.WindowState%2A>, которое может иметь одно из следующих значений перечисления <xref:System.Windows.WindowState>:  
+ Состояние окна можно настроить, задав его <xref:System.Windows.Window.WindowState%2A> свойство, которое может иметь одно из следующих <xref:System.Windows.WindowState> значения перечисления:  
   
--   <xref:System.Windows.WindowState> \(по умолчанию\)  
+-   <xref:System.Windows.WindowState.Normal> (по умолчанию)  
   
--   <xref:System.Windows.WindowState>  
+-   <xref:System.Windows.WindowState.Maximized>  
   
--   <xref:System.Windows.WindowState>  
+-   <xref:System.Windows.WindowState.Minimized>  
   
- В следующем примере показано создание окна, которое при открытии отображается развернутым.  
+ В следующем примере показано создание окна, которое отображается развернутым при его открытии.  
   
- [!code-xml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
   
- В общем случае следует задать <xref:System.Windows.Window.WindowState%2A> для настройки начального состояния окна.  После отображения изменяемого в размерах окна пользователи могут нажимать кнопки свертывания, развертывания и восстановления в строке заголовка для изменения состояния окна.  
+ Как правило, следует задать <xref:System.Windows.Window.WindowState%2A> для настройки начального состояния окна. После отображения окна изменяемого размера пользователи могут нажимать кнопки свертывания, развертывания и восстановления на панели заголовка окна, чтобы изменить состояние окна.  
   
 <a name="WindowAppearance"></a>   
-## Вид окна  
- Можно изменить внешний вид клиентской области окна с помощью добавления характерного для окна содержимого, такого как кнопки, метки и текстовые поля.  Для настройки неклиентской области <xref:System.Windows.Window> предоставляет несколько свойств, включающих <xref:System.Windows.Window.Icon%2A> для задания значка окна и <xref:System.Windows.Window.Title%2A> для задания его заголовка.  
+## <a name="window-appearance"></a>Внешний вид окна  
+ Можно изменить внешний вид клиентской области окна, добавляя в нее определенное содержимое, такое как кнопки, метки и текстовые поля. Для настройки неклиентской области, <xref:System.Windows.Window> предоставляет несколько свойств, которые включают <xref:System.Windows.Window.Icon%2A> для задания значка окна и <xref:System.Windows.Window.Title%2A> для задания его заголовка.  
   
- Также можно изменить вид и поведение границы неклиентской области, настраивая режим изменения размера окна, стиль окна и будет ли оно отображается в виде кнопки на панели задач рабочего стола.  
+ Можно также изменить внешний вид и поведение границы неклиентской области, настраивая режим изменения размера окна, стиль окна и отображение в виде кнопки на панели задач рабочего стола.  
   
-   
   
 <a name="Resize_Mode"></a>   
-### Режим изменения размера  
- С помощью значений свойства <xref:System.Windows.Window.WindowStyle%2A> можно управлять способами изменения размера окна пользователями \(если это разрешено\).  Выбор стиля окна влияет на то, может ли пользователь изменять размеры окна путем перетаскивания его границы с помощью мыши, отображаются ли кнопки **Свернуть**, **Развернуть** и **Изменить размер** в неклиентской области и доступны ли они, если они отображаются.  
+### <a name="resize-mode"></a>Режим изменения размера  
+ В зависимости от <xref:System.Windows.Window.WindowStyle%2A> свойства, можно управлять как (и если) пользователи могут изменять размеры окна. Выбор стиля окна влияет ли пользователь изменять размеры окна путем перетаскивания его границы с помощью мыши ли **свернуть**, **развернуть**, и **изменения размера** кнопки отображаются в неклиентской области, и, если они отображаются, доступны ли они.  
   
- Можно настроить изменение размера окна путем установки его свойства <xref:System.Windows.Window.ResizeMode%2A>, которое может принимать одно из следующих значений перечисления <xref:System.Windows.ResizeMode>:  
+ Можно настроить изменение размера окна, установив его <xref:System.Windows.Window.ResizeMode%2A> свойство, которое может принимать одно из следующих <xref:System.Windows.ResizeMode> значения перечисления:  
   
--   <xref:System.Windows.ResizeMode>  
+-   <xref:System.Windows.ResizeMode.NoResize>  
   
--   <xref:System.Windows.ResizeMode>  
+-   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode> \(по умолчанию\)  
+-   <xref:System.Windows.ResizeMode.CanResize> (по умолчанию)  
   
--   <xref:System.Windows.ResizeMode>  
+-   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
- Как и в случае с <xref:System.Windows.Window.WindowStyle%2A>, режим изменения размера окна нежелательно менять во время существования. Это означает, что лучше всего задать его из разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Как и в <xref:System.Windows.Window.WindowStyle%2A>, режим изменения размера окна не приводит к изменению во время существования, означает, что вы будете скорее его из [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки.  
   
- [!code-xml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
   
- Обратите внимание, что можно обнаружить, развернуто, свернуто или восстановлено окно, с помощью просмотра свойства <xref:System.Windows.Window.WindowState%2A>.  
+ Обратите внимание, что можно определить, является ли окно развернуто, свернуто, или база данных, проверяя <xref:System.Windows.Window.WindowState%2A> свойство.  
   
 <a name="Window_Style"></a>   
-### Стиль окна  
- Граница, предоставляемая из неклиентской области окна, может использоваться в большинстве приложений.  Однако существуют ситуации, когда в зависимости от типа окна требуются различные типы границ, или границы не требуются вовсе.  
+### <a name="window-style"></a>Стиль окна  
+ Граница, предоставляемая из неклиентской области окна, подходит для большинства приложений. Однако существуют ситуации, когда требуются различные типы границ либо границы вовсе не требуются, в зависимости от типа окна.  
   
- Для управления типом границы окна, установите его свойство <xref:System.Windows.Window.WindowStyle%2A> с помощью одного из следующих значений перечисления <xref:System.Windows.WindowStyle>:  
+ Для управления типом границы окна, установите его <xref:System.Windows.Window.WindowStyle%2A> с одним из следующих значений <xref:System.Windows.WindowStyle> перечисления:  
   
--   <xref:System.Windows.WindowStyle>  
+-   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle> \(по умолчанию\)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (по умолчанию)  
   
--   <xref:System.Windows.WindowStyle>  
+-   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
--   <xref:System.Windows.WindowStyle>  
+-   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- Воздействие этих оконных стилей показано на следующем рисунке.  
+ Эффект этих стилей окон показан на следующем рисунке.  
   
- ![Стили окна](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.png "WindowOverviewFigure6")  
+ ![Стили окна](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
   
- Можно задать <xref:System.Windows.Window.WindowStyle%2A> [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используя либо разметку, либо код. Поскольку его вряд ли можно изменить во время существования окна, то лучше всего задать его из разметки [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Можно задать <xref:System.Windows.Window.WindowStyle%2A> одним [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки или кода, поскольку это приводит к изменению во время существования окна, скорее всего настраивается с помощью [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] разметки.  
   
- [!code-xml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
-#### Непрямоугольный стиль окна  
- Существуют также ситуации, когда недостаточно стилей границ, предоставляемых <xref:System.Windows.Window.WindowStyle%2A>.  Например, возможно, потребуется создать приложение с непрямоугольной границей, подобно той, которую использует [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)].  
+#### <a name="non-rectangular-window-style"></a>Непрямоугольный стиль окна  
+ Также существуют ситуации, когда, стилей границ <xref:System.Windows.Window.WindowStyle%2A> позволяет иметь недостаточно. Например, может потребоваться создать приложение с нестандартной границей как [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] использует.  
   
- Например, рассмотрим окно типа "Облачко", показанное на следующем рисунке.  
+ Рассмотрим окно "облачко с текстом", показанное на следующем рисунке.  
   
  ![Непрямоугольное окно](../../../../docs/framework/wpf/app-development/media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
   
- Этот тип окна можно создать, задав свойству <xref:System.Windows.Window.WindowStyle%2A> значение <xref:System.Windows.WindowStyle>, и с помощью специальной поддержки прозрачности <xref:System.Windows.Window>.  
+ Этот тип окна можно создать путем установки <xref:System.Windows.Window.WindowStyle%2A> свойства <xref:System.Windows.WindowStyle.None>и с помощью специальной поддержки <xref:System.Windows.Window> прозрачности.  
   
- [!code-xml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
   
- Это сочетание значений приводит к тому, что окно отображается полностью прозрачным.  В этом состоянии нельзя использовать элементы оформления неклиентской области окна \(меню "Закрыть", кнопки "Свернуть", "Развернуть" и "Восстановить" и т. д.\).  Следовательно, необходимо предоставить свои собственные.  
+ Это сочетание значений указывает, что окно отрисовывается полностью прозрачным. В этом состоянии нельзя использовать элементы оформления неклиентской области окна (кнопки "Закрыть", "Минимизировать", "Развернуть" и "Восстановить" и т. д.). Следовательно, необходимо предоставить свои собственные элементы.  
   
 <a name="Task_Bar_Presence"></a>   
-### Наличие панели задач  
- По умолчанию вид окна включает кнопку панели задач, как показано на следующем рисунке.  
+### <a name="task-bar-presence"></a>Наличие панели задач  
+ По умолчанию внешний вид окна включает кнопку панели задач, как показано на следующем рисунке.  
   
- ![Окно с кнопкой панели задач](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.png "WindowOverviewFigure7")  
+ ![Окно с кнопкой панели задач](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
   
- Некоторые типы окон не имеют кнопки панели задач, например окна сообщений и диалоговые окна \(см. [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)\).  Можно управлять отображением кнопки панели задач окна с помощью свойства <xref:System.Windows.Window.ShowInTaskbar%2A> \(по умолчанию `true`\).  
+ Некоторые типы windows не имеют кнопки панели задач, таких как окна сообщений и диалоговые окна (в разделе [Общие сведения о полях диалогового окна](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Можно управлять, отображаются ли кнопки панели задач для окна, задав <xref:System.Windows.Window.ShowInTaskbar%2A> свойство (`true` по умолчанию).  
   
- [!code-xml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
-[!code-xml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
+ [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
+[!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
   
 <a name="SecurityConsiderations"></a>   
-## Вопросы безопасности  
- <xref:System.Windows.Window> требует создания разрешения безопасности `UnmanagedCode`.  Для приложений, установленных и запускаемых с локального компьютера, они включены в набор разрешений, которые предоставляются приложению.  
+## <a name="security-considerations"></a>Вопросы безопасности  
+ <xref:System.Windows.Window>требуется `UnmanagedCode` создания разрешения безопасности. Для приложений, установленных и запускаемых с локального компьютера, это включено в набор разрешений, предоставленных приложению.  
   
- Однако для приложений, запускаемых из Интернета или локальной интрасети с помощью [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)], они не попадут в этот набор разрешений.  Следовательно, пользователи будут получать предупреждение безопасности [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] и необходимо расширить набор разрешений приложения до полного доверия.  
+ Тем не менее, попадут в набор разрешений для приложений, запускаемых из Интернета или локальной интрасети с помощью [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. Следовательно, пользователи будут получать [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] предупреждение системы безопасности и необходимо повысить набора разрешений для приложения до полного доверия.  
   
- Кроме того, по умолчанию [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] не может отображать окна или диалоговые окна.  Вопросы безопасности в автономных приложениях рассматриваются в разделе [Стратегия безопасности WPF — безопасность платформы](../../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ Кроме того [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] не может отображать окна или диалоговые окна по умолчанию. Дополнительные сведения о вопросах безопасности автономные приложения, в разделе [стратегия безопасности WPF — безопасность платформы](../../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
-## Другие типы окон  
- <xref:System.Windows.Navigation.NavigationWindow> представляет собой окно, предназначенное для предоставления навигации по содержимому.  Дополнительные сведения см. в разделе [Общие сведения о переходах](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+## <a name="other-types-of-windows"></a>Другие типы окон  
+ <xref:System.Windows.Navigation.NavigationWindow>— Это окно, предназначенное для предоставления навигации по содержимому. Дополнительные сведения см. в разделе [Общие сведения о навигации](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
   
- Диалоговые окна являются окнами, которые часто используются для сбора сведений от пользователя, необходимых для выполнения функции.  Например, когда пользователь хочет открыть файл, то обычно приложение отображает диалоговое окно **Открытие файла** для получения имени файла от пользователя.  Дополнительные сведения см. в разделе [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+ Диалоговые окна — это окна, которые часто используются для сбора информации от пользователя для выполнения функции. Например, если пользователю для открытия файла, **открыть файл** приложением для получения имени файла от пользователя обычно отображается диалоговое окно. Дополнительные сведения см. в разделе [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   
-## См. также  
- <xref:System.Windows.Window>   
- <xref:System.Windows.MessageBox>   
- <xref:System.Windows.Navigation.NavigationWindow>   
- <xref:System.Windows.Application>   
- [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Window>  
+ <xref:System.Windows.MessageBox>  
+ <xref:System.Windows.Navigation.NavigationWindow>  
+ <xref:System.Windows.Application>  
+ [Общие сведения о диалоговых окнах](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
  [Построение приложения WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)

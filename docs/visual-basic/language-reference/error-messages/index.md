@@ -1,43 +1,25 @@
 ---
 title: "Сообщения об ошибке (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - errors [Visual Basic]
 - error messages
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbeca9d1b6971f8b3de112eb6a199b8bacbc1670
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="error-messages-visual-basic"></a>Сообщения об ошибке (Visual Basic)
 При записи, компиляции или выполнении приложения Visual Basic возможны ошибки следующих типов.  
@@ -61,4 +43,3 @@ ms.lasthandoff: 07/28/2017
  Если идентификатор подчеркивается волнистой линией, а под крайним правым символом есть короткое подчеркивание, это означает возможность создать заглушку для класса, конструктора, метода, свойства, поля или перечисления. Дополнительные сведения см. в статье [Generate From Usage](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage) (Создание из использования).
   
  Если вы будете правильно учитывать предупреждения компилятора Visual Basic, ваш код будет работать быстрее и с меньшим количеством ошибок. Эти предупреждения сообщают о том, что в коде могут возникнуть ошибки при запуске приложения. Например, компилятор предупреждает о вызове члена неопределенной объектной переменной, о возврате из функции без задания возвращаемого значения, а также о выполнении блока `Try` с ошибками в логике перехвата исключений. Дополнительные сведения о предупреждениях, в том числе о возможности включать и отключать их, см. в статье [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic) (Настройка предупреждений в Visual Basic).
-

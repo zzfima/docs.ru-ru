@@ -1,23 +1,27 @@
 ---
-title: "Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Basic1
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fb0f04b2d0ee053ee2efe7f01ef9f73ed30c6e09
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Basic
+# <a name="basic"></a>Basic
 Образцы в этом разделе показывают основные функциональные возможности [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Встроенные действия](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
  Содержит образцы, использующие встроенную библиотеку действий.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 9
  [Миграция](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
  Содержит образцы переноса рабочих процессов, созданных с предыдущей версией [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
- [Сохраняемость](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
+ [Сохранение состояния](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
  Содержит образцы, показывающие сохранение рабочих процессов на постоянном носителе.  
   
  [Образцы правил](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  
@@ -54,10 +58,10 @@ caps.handback.revision: 9
  [Отслеживание](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
  Содержит образцы, демонстрирующие отслеживание рабочих процессов.  
   
- [Транзакции](../../../../docs/framework/windows-workflow-foundation/samples/basic-transactions.md)  
+ [Транзакции](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
  Содержит образцы, демонстрирующие транзакции рабочих процессов.  
   
  [Проверка](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
  Содержит образцы, демонстрирующие проверку в [!INCLUDE[wf2](../../../../includes/wf2-md.md)].  
   
-## Ссылка
+## <a name="reference"></a>Ссылка

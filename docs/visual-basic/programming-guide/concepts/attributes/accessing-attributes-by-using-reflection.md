@@ -1,33 +1,25 @@
 ---
-title: "Доступ к атрибутам с помощью отражения (Visual Basic) | Документы Microsoft"
+title: "Доступ к атрибутам с помощью отражения (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4763eccc5d1a6bdf3e89c1c4d825d5ff5c6caa3e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a4397200b5a2aa5f337dd3479b5405c1a9f245a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Доступ к атрибутам с помощью отражения (Visual Basic)
-Тот факт, что можно определять настраиваемые атрибуты и поместить их в исходный код будет мало пользы, без какой-либо способ извлечения этих сведений и работы с ними. С помощью отражения, можно получить информацию, которая была определена с настраиваемыми атрибутами. Основной метод — `GetCustomAttributes`, который возвращает массив объектов, которые являются эквивалентами времени выполнения атрибутов исходного кода. Этот метод имеет несколько перегруженных версий. Дополнительные сведения см. в разделе <xref:System.Attribute>.</xref:System.Attribute>  
+Возможность определения настраиваемых атрибутов и их помещения в собственный исходный код не будет настолько значимой без наличия способа извлечения этих сведений и работы с ними. Отражение позволяет извлекать сведения, определенные с настраиваемыми атрибутами. Основным методом выступает `GetCustomAttributes`, который возвращает массив объектов, являющихся эквивалентами времени выполнения атрибутов исходного кода. Для этого метода существует несколько перегруженных версий. Для получения дополнительной информации см. <xref:System.Attribute>.  
   
  Спецификация атрибута, например:  
   
@@ -38,17 +30,17 @@ Class SampleClass
 End Class  
 ```  
   
- эквивалентен концептуально это:  
+ концептуально эквивалентна следующему коду:  
   
 ```vb  
 Dim anonymousAuthorObject As Author = New Author("P. Ackerman")  
 anonymousAuthorObject.version = 1.1  
 ```  
   
- Тем не менее, код не выполняется до `SampleClass` запрос по атрибутам. Вызов `GetCustomAttributes` на `SampleClass` вызывает `Author` объект создается и инициализируется как описано выше. Если класс имеет другие атрибуты, другие объекты атрибута создаются аналогично. `GetCustomAttributes`Возвращает `Author` объектом и другими объектами атрибута в массив. Затем можно перейти по этому массиву, определить, какие атрибуты были применены на основе типа элемента массива и извлечь сведения из объектов.  
+ Однако код не выполняется до тех пор, пока у `SampleClass` не будут запрошены атрибуты. Вызов `GetCustomAttributes` в `SampleClass` приведет к тому, что объект `Author` будет создан и инициализирован так, как показано выше. Если класс имеет другие атрибуты, другие объекты атрибутов создаются аналогично. `GetCustomAttributes` затем возвращает объект `Author` и все другие объекты атрибутов в массиве. Потом можно пройти по этому массиву, определить в зависимости от типа каждого элемента массива какие атрибуты были применены и извлечь сведения из объектов атрибутов.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен полный пример. Настраиваемый атрибут определен, применяется к нескольким сущностям и извлекается через отражение.  
+ Ниже приведен полный пример. Определяется настраиваемый атрибут, который применяется к нескольким сущностям и извлекается через отражение.  
   
 ```vb  
 ' Multiuse attribute  
@@ -117,10 +109,10 @@ End Class
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Извлечение информации, сохраненной в атрибуте](http://msdn.microsoft.com/library/37dfe4e3-7da0-48b6-a3d9-398981524e1c)   
- [Отражение (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [Создание настраиваемых атрибутов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Руководство по программированию на Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Извлечение информации, сохраненной в атрибуте](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+ [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md) (Отражение (Visual Basic))  
+ [Атрибуты (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Создание настраиваемых атрибутов (Visual Basic))

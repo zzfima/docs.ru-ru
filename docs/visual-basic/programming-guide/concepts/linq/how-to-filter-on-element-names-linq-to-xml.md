@@ -1,59 +1,68 @@
 ---
-title: "Практическое руководство: фильтрация по именам элементов (LINQ to XML) (Visual Basic) | Документы Microsoft"
+title: "Как: фильтрация по именам элементов (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07f7867b0fc5cf79ba5ce06f95b07b5c538e83d3
-ms.lasthandoff: 03/13/2017
-
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1dd63c2de233c2b33ce16de6649a5ffecdc7ade7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Практическое руководство: фильтрация по именам элементов (LINQ to XML) (Visual Basic)
-При вызове одного из методов, возвращающих <xref:System.Collections.Generic.IEnumerable%601>из <xref:System.Xml.Linq.XElement>, можно выполнить фильтрацию по имени элемента.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601>  
+# <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Как: фильтрация по именам элементов (LINQ to XML) (Visual Basic)
+При вызове одного из методов, возвращающих коллекцию <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, можно осуществить фильтрацию по именам элементов.  
   
 ## <a name="example"></a>Пример  
  В этом примере показано получение отфильтрованной коллекции потомков, в которой содержатся только потомки с указанным именем.  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
+Dim items As IEnumerable(Of XElement) = _  
+    From el In po...<ProductName> _  
+    Select el  
+For Each prdName As XElement In items  
+    Console.WriteLine(prdName.Name.ToString & ":" & prdName.Value)  
+Next  
+```  
+  
  Этот код выводит следующие результаты:  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
- Методы, которые возвращают <xref:System.Collections.Generic.IEnumerable%601>из <xref:System.Xml.Linq.XElement>коллекции следуют тому же шаблону.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> Их сигнатуры подобны <xref:System.Xml.Linq.XContainer.Elements%2A>и <xref:System.Xml.Linq.XContainer.Descendants%2A>.</xref:System.Xml.Linq.XContainer.Descendants%2A> </xref:System.Xml.Linq.XContainer.Elements%2A> Ниже следует полный список методов, имеющих аналогичные сигнатурам методов:  
+```  
+ProductName:Lawnmower  
+ProductName:Baby Monitor  
+```  
   
--   <xref:System.Xml.Linq.XNode.Ancestors%2A></xref:System.Xml.Linq.XNode.Ancestors%2A>  
+ В других методах, возвращающих коллекции <xref:System.Collections.Generic.IEnumerable%601> элементов <xref:System.Xml.Linq.XElement>, заложен тот же принцип. Их сигнатуры подобны <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>. Ниже следует полный список методов, имеющих аналогичные сигнатурам методов:  
   
--   <xref:System.Xml.Linq.XContainer.Descendants%2A></xref:System.Xml.Linq.XContainer.Descendants%2A>  
+-   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A></xref:System.Xml.Linq.XContainer.Elements%2A>  
+-   <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A></xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+-   <xref:System.Xml.Linq.XContainer.Elements%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A></xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
+-   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A></xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+-   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A></xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
+-   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+  
+-   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен. Дополнительные сведения см. в разделе [работа с пространствами имен XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- В этом примере используется следующий XML-документ: [пример XML-файла: типичный заказ на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ В этом примере используется следующий XML-документ: [Пример XML-файла. Стандартный заказ на покупку в пространстве имен](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

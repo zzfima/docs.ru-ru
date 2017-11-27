@@ -1,29 +1,32 @@
 ---
-title: "Базовый образец | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Базовый образец"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ba2c7c4117ca212dd5f460064d5c59f8948dcc69
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Базовый образец
-В этом образце показано, как сделать службу обнаруживаемой, а также как искать и вызывать обнаруживаемую службу.  Этот образец состоит из двух проектов: службы и клиента.  
+# <a name="basic-sample"></a>Базовый образец
+В этом образце показано, как сделать службу обнаруживаемой, а также как искать и вызывать обнаруживаемую службу. Этот образец состоит из двух проектов: службы и клиента.  
   
 > [!NOTE]
->  Этот образец реализует возможность обнаружения в коде.  Образец того, как реализовать обнаружение в конфигурации, см. в разделе [Конфигурация](../../../../docs/framework/wcf/samples/configuration-sample.md).  
+>  Этот образец реализует возможность обнаружения в коде.  Образец реализует возможность обнаружения в конфигурации см [конфигурации](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
-## Служба  
- Это простая реализация службы калькулятора.  Код обнаружения можно найти в `Main`, где к узлу службы добавляется <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> и добавляется <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, как показано в следующем примере кода.  
+## <a name="service"></a>Служба  
+ Это простая реализация службы калькулятора. Код обнаружения можно найти в `Main`, где к узлу службы добавляется <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> и добавляется <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, как показано в следующем примере кода.  
   
 ```  
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
@@ -40,8 +43,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }  
 ```  
   
-## Клиент  
- Клиент использует <xref:System.ServiceModel.Discovery.DynamicEndpoint> для определения местоположения службы.  Стандартная конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> вычисляет конечную точку службы, когда открывается клиент.  В этом случае <xref:System.ServiceModel.Discovery.DynamicEndpoint> ищет службу на основе контракта службы.  Конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> ведет поиск по <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> по умолчанию.  Когда конечная точка службы найдена, клиент подключается к этой службе по заданной привязке.  
+## <a name="client"></a>Клиент  
+ Клиент использует <xref:System.ServiceModel.Discovery.DynamicEndpoint> для определения местоположения службы. Стандартная конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> вычисляет конечную точку службы, когда открывается клиент. В этом случае <xref:System.ServiceModel.Discovery.DynamicEndpoint> ищет службу на основе контракта службы. Конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> ведет поиск по <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> по умолчанию. Когда конечная точка службы найдена, клиент подключается к этой службе по заданной привязке.  
   
 ```csharp  
 public static void Main()  
@@ -51,7 +54,7 @@ public static void Main()
 }              
 ```  
   
- Клиент определяет метод `InvokeCalculatorService`, который использует класс <xref:System.ServiceModel.Discovery.DiscoveryClient> для поиска служб.  Класс <xref:System.ServiceModel.Discovery.DynamicEndpoint> наследует от класса <xref:System.ServiceModel.Description.ServiceEndpoint>, чтобы он мог быть передан в метод `InvokeCalculatorService`.  В примере затем используется конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> для создания экземпляра `CalculatorServiceClient` и вызываются различные операции службы калькулятора.  
+ Клиент определяет метод `InvokeCalculatorService`, который использует класс <xref:System.ServiceModel.Discovery.DiscoveryClient> для поиска служб. Класс <xref:System.ServiceModel.Discovery.DynamicEndpoint> наследует от класса <xref:System.ServiceModel.Description.ServiceEndpoint>, чтобы он мог быть передан в метод `InvokeCalculatorService`. В примере затем используется конечная точка <xref:System.ServiceModel.Discovery.DynamicEndpoint> для создания экземпляра `CalculatorServiceClient` и вызываются различные операции службы калькулятора.  
   
 ```csharp  
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)  
@@ -85,12 +88,11 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
    //Closing the client gracefully closes the connection and cleans up resources  
    client.Close();  
 }  
-  
 ```  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a>Использование этого образца  
   
-1.  В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL\-адресу.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Настройка HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353).  Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями.  Если команда не работает, следует указать домен и имя пользователя в следующих аргументах.  `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL-адресу. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Настройка HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями. Если команда не работает, следует указать домен и имя пользователя в следующих аргументах. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  С помощью [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] откройте Basic.sln и соберите образец.  
   
@@ -101,12 +103,12 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 5.  Заметьте, что клиенту удалось найти службу, не зная ее адреса.  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Этот образец расположен в следующем каталоге.  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   
-## См. также
+## <a name="see-also"></a>См. также

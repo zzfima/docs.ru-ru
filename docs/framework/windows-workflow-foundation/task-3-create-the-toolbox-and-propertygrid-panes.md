@@ -1,34 +1,37 @@
 ---
-title: "Задание 3. Создание области элементов и сетки свойств | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Задача 3. Создание области элементов и сетки свойств"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6896e97a4f9b7625efcef40164c3497ef4f7c90a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Задание 3. Создание области элементов и сетки свойств
-В этой задаче создаются области элементов **Toolbox** и **PropertyGrid**, которые затем добавляются в размещаемый повторно [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Задача 3. Создание области элементов и сетки свойств
+В этой задаче вы создадите **элементов** и **PropertyGrid** областей и добавить их в размещаемый повторно [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Справочная информация о коде, который должен содержаться в файле MainWindow.xaml.cs после выполнения трех задач в серии разделов [Повторное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md), приведена в конце данного раздела.  
+ Для ссылки, код, который должен быть в файле MainWindow.xaml.cs после завершения трех задач в [повторное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) ряда разделов, приведенный в конце этого раздела.  
   
-### Создание области элементов и ее добавление к сетке.  
+### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Создание области элементов и ее добавление к сетке.  
   
-1.  Откройте проект HostingApplication, полученный после выполнения процедуры, описанной в [Задание 2. Размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md).  
+1.  Откройте проект HostingApplication, полученный с помощью процедуры, описанной в [задача 2: размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
   
-2.  В области **Обозревателя решений** щелкните правой кнопкой мыши файл MainWindow.xaml и выберите пункт **Просмотр кода**.  
+2.  В **обозревателе решений** щелкните правой кнопкой мыши файл MainWindow.xaml и выберите **Просмотр кода**.  
   
-3.  Добавьте метод `GetToolboxControl` к классу `MainWindow`, создающему <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, добавьте новую категорию **Области элементов** к **Области элементов**, и присвойте этой категории типы действий <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence>.  
+3.  Добавить `GetToolboxControl` метод `MainWindow` класс, который создает <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, добавляет новую **элементов** категории для **элементов**и назначает <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence> типы действий для этой категории.  
   
     ```csharp  
-  
     private ToolboxControl GetToolboxControl()  
     {  
         // Create the ToolBoxControl.  
@@ -53,26 +56,22 @@ caps.handback.revision: 15
         ctrl.Categories.Add(category);  
         return ctrl;  
     }  
-  
     ```  
   
-4.  Добавьте закрытый метод `AddToolbox` к классу `MainWindow`, размещающему **Область элементов** в левом столбце сетки.  
+4.  Добавьте закрытый `AddToolbox` метод `MainWindow` класс, который помещает **элементов** в левом столбце сетки.  
   
     ```csharp  
-  
     private void AddToolBox()  
     {  
         ToolboxControl tc = GetToolboxControl();  
         Grid.SetColumn(tc, 0);  
         grid1.Children.Add(tc);  
     }  
-  
     ```  
   
 5.  Добавьте вызов метода `AddToolBox` в конструктор класса `MainWindow()`, как показано в следующем коде.  
   
     ```csharp  
-  
     public MainWindow()  
     {  
         InitializeComponent();  
@@ -81,31 +80,27 @@ caps.handback.revision: 15
   
         this.AddToolBox();  
     }  
-  
     ```  
   
-6.  Нажмите клавишу F5, чтобы построить и выполнить решение.Должна отобразиться область инструментов **Toolbox**, содержащая действия <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence>.  
+6.  Нажмите клавишу F5, чтобы построить и выполнить решение. **Элементов** содержащий <xref:System.Activities.Statements.Assign> и <xref:System.Activities.Statements.Sequence> действия должны отображаться.  
   
-### Создание области PropertyGrid  
+### <a name="to-create-the-propertygrid"></a>Создание области PropertyGrid  
   
-1.  В области **Обозревателя решений** щелкните правой кнопкой мыши файл MainWindow.xaml и выберите пункт **Просмотр кода**.  
+1.  В **обозревателе решений** щелкните правой кнопкой мыши файл MainWindow.xaml и выберите **Просмотр кода**.  
   
-2.  Добавьте метод `AddPropertyInspector` к классу `MainWindow`, чтобы разместить область **PropertyGrid** в самом правом столбце сетки.  
+2.  Добавить `AddPropertyInspector` метод `MainWindow` класса, чтобы поместить **PropertyGrid** панели в правом столбце в таблице.  
   
     ```csharp  
-  
     private void AddPropertyInspector()  
     {  
         Grid.SetColumn(wd.PropertyInspectorView, 2);  
         grid1.Children.Add(wd.PropertyInspectorView);              
     }  
-  
     ```  
   
 3.  Добавьте вызов метода `AddPropertyInspector` в конструктор класса `MainWindow()`, как показано в следующем коде.  
   
     ```csharp  
-  
     public MainWindow()  
     {  
         InitializeComponent();  
@@ -115,16 +110,14 @@ caps.handback.revision: 15
   
         this.AddPropertyInspector();   
     }  
-  
     ```  
   
-4.  Нажмите клавишу F5 для построения и выполнения решения.Должны отображаться область **Toolbox**, поле визуальной разработки рабочего процесса и области **PropertyGrid**, а при перетаскивании действия <xref:System.Activities.Statements.Assign> или действия <xref:System.Activities.Statements.Sequence> на поле визуальной разработки сетка свойств должна обновиться \(в зависимости от выделенного действия\).  
+4.  Нажмите клавишу F5 для построения и выполнения решения. **Элементов**, визуальной разработки рабочего процесса, и **PropertyGrid** области должны отображаться, а при перетаскивании <xref:System.Activities.Statements.Assign> действия или <xref:System.Activities.Statements.Sequence> действия на полотно конструктора Сетка свойств должна обновиться в зависимости от выделенного действия.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Теперь файл MainWindow.xaml.cs должен содержать следующий код.  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -226,10 +219,9 @@ namespace HostingApplication
   
     }  
 }  
-  
 ```  
   
-## См. также  
- [Повторное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Задание 1. Создание нового приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation//task-1-create-a-new-wpf-app.md)   
- [Задание 2. Размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>См. также  
+ [Отдельное размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Задача 1. Создание приложения Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
+ [Задача 2. Размещение конструктора рабочих процессов](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

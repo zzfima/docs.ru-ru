@@ -1,40 +1,43 @@
 ---
-title: "Практическое руководство. Использование рисунка в качестве источника изображения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "объекты рисования, в качестве источников изображений"
-  - "графика, объекты рисования, в качестве источников изображений"
-  - "источники изображений, объекты рисования"
+title: "Практическое руководство. Использование рисунка в качестве источника изображения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], drawings [WPF], as image sources
+- image sources [WPF], drawings
+- drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e100bc29afb17a37bc0c66621261347bea6d210
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование рисунка в качестве источника изображения
-В этом примере показано использование <xref:System.Windows.Media.Drawing> в качестве источника изображения <xref:System.Windows.Controls.Image.Source%2A> для элемента управления <xref:System.Windows.Controls.Image>.  Чтобы отобразить <xref:System.Windows.Media.Drawing> в элементе управления <xref:System.Windows.Controls.Image>, используйте объект <xref:System.Windows.Media.DrawingImage> элемента управления <xref:System.Windows.Controls.Image> в качестве источника <xref:System.Windows.Controls.Image.Source%2A> и установите для объекта <xref:System.Windows.Media.DrawingImage> свойство <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=fullName> для рисунка, который нужно отобразить.  
+# <a name="how-to-use-a-drawing-as-an-image-source"></a>Практическое руководство. Использование рисунка в качестве источника изображения
+В этом примере показано, как использовать <xref:System.Windows.Media.Drawing> как <xref:System.Windows.Controls.Image.Source%2A> для <xref:System.Windows.Controls.Image> элемента управления. Для отображения <xref:System.Windows.Media.Drawing> с <xref:System.Windows.Controls.Image> управления, используйте <xref:System.Windows.Media.DrawingImage> как <xref:System.Windows.Controls.Image> элемента управления <xref:System.Windows.Controls.Image.Source%2A> и задайте <xref:System.Windows.Media.DrawingImage> объекта <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> свойство в документ, который требуется отобразить.  
   
-## Пример  
- В следующем примере используется объект <xref:System.Windows.Media.DrawingImage> и элемент управления <xref:System.Windows.Controls.Image> для отображения объекта <xref:System.Windows.Media.GeometryDrawing>.  В этом примере получается следующий результат:  
+## <a name="example"></a>Пример  
+ В следующем примере используется <xref:System.Windows.Media.DrawingImage> и <xref:System.Windows.Controls.Image> управления для отображения <xref:System.Windows.Media.GeometryDrawing>. В этом примере выводятся следующие данные:  
   
- ![GeometryDrawing двух эллипсов](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.png "graphicsmm\_geodraw")  
-DrawingImage  
+ ![GeometryDrawing двух эллипсов](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")  
+Объект DrawingImage  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingImageExample.cs#drawingimageexamplewholepage)]
- [!code-xml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
   
-## См. также  
- <xref:System.Windows.Freezable.Freeze%2A>   
- [Рисование изображения с помощью ImageDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)   
- [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [Атрибут PresentationOptions:Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+## <a name="see-also"></a>См. также  
+ <xref:System.Windows.Freezable.Freeze%2A>  
+ [Рисование изображения с помощью объекта ImageDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
+ [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Атрибут PresentationOptions: Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)

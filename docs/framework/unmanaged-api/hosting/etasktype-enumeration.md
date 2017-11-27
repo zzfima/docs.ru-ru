@@ -1,0 +1,75 @@
+---
+title: "Перечисление ETaskType"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ETaskType
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: ETaskType
+helpviewer_keywords: ETaskType enumeration [.NET Framework hosting]
+ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
+topic_type: apiref
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 52e027c5d2ead70bbd624fafe3021121557cd261
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
+---
+# <a name="etasktype-enumeration"></a>Перечисление ETaskType
+Содержит значения, указывающие тип задачи, представленного либо [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) или [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) интерфейса.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+typedef enum ETaskType {  
+    TT_DEBUGGERHELPER           = 0x1,  
+    TT_GC                       = 0x2,  
+    TT_FINALIZER                = 0x4,  
+    TT_THREADPOOL_TIMER         = 0x8,  
+    TT_THREADPOOL_GATE          = 0x10,  
+    TT_THREADPOOL_WORKER        = 0x20,  
+    TT_THREADPOOL_IOCOMPLETION  = 0x40,  
+    TT_ADUNLOAD                 = 0x80,  
+    TT_USER                     = 0x100,  
+    TT_THREADPOOL_WAIT          = 0x200,  
+    TT_UNKNOWN                  = 0x80000000  
+} ETaskType;  
+```  
+  
+## <a name="members"></a>Члены  
+  
+|Член|Описание|  
+|------------|-----------------|  
+|`TT_ADUNLOAD`|Интерфейс представляет задачу выгрузки домена приложения.|  
+|`TT_DEBUGGERHELPER`|Интерфейс представляет вспомогательную задачу отладчика.|  
+|`TT_FINALIZER`|Интерфейс представляет задачу метода завершения.|  
+|`TT_GC`|Интерфейс представляет задачу сборки мусора.|  
+|`TT_THREADPOOL_GATE`|Интерфейс представляет задачу потока логического.|  
+|`TT_THREADPOOL_IOCOMPLETION`|Интерфейс представляет задачу потока ввода-вывода или задачу потока порта завершения.|  
+|`TT_THREADPOOL_TIMER`|Интерфейс представляет задачу потока таймера.|  
+|`TT_THREADPOOL_WAIT`|Интерфейс представляет задачу потока ожидания.|  
+|`TT_THREADPOOL_WORKER`|Интерфейс представляет задачу рабочего потока.|  
+|`TT_UNKNOWN`|Задача неизвестна.|  
+|`TT_USER`|Интерфейс представляет задачу пользователя.|  
+  
+## <a name="requirements"></a>Требования  
+ **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Заголовок:** MSCorEE.h  
+  
+ **Библиотека:** MSCorEE.dll  
+  
+ **Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>См. также  
+ [Перечисления размещения](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

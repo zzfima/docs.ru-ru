@@ -1,32 +1,30 @@
 ---
-title: "Практическое руководство. Сортировка массива в Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Array.Sort"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "массивы [Visual Basic], сортировка"
-  - "примеры [Visual Basic], массивы"
+title: "Практическое руководство. Сортировка массива в Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: Array.Sort
+helpviewer_keywords:
+- arrays [Visual Basic], sorting
+- examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 310c2dacb384de49c80073840c6c58d37f3937d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Сортировка массива в Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-В этом примере объявляется и заполняется массив объектов `String` с именем `zooAnimals`, затем он сортируется по алфавиту.  
+# <a name="how-to-sort-an-array-in-visual-basic"></a>Практическое руководство. Сортировка массива в Visual Basic
+В этом примере объявляется массив `String` объектов с именем `zooAnimals`, заполняет ее и сортируется по алфавиту.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 Private Sub sortAnimals()  
@@ -38,23 +36,23 @@ Private Sub sortAnimals()
 End Sub  
 ```  
   
-## Компиляция кода  
- Для этого примера необходимо следующее.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Для этого примера требуются:  
   
--   Доступ к mscorlib.dll и пространству имен <xref:System>.  
+-   Доступ к библиотеке Mscorlib.dll и <xref:System> пространства имен.  
   
-## Отказоустойчивость  
- При следующих условиях возможно возникновение исключения.  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ При следующих условиях возможно возникновение исключения:  
   
--   Массив пуст \(класс <xref:System.ArgumentNullException>\)  
+-   Массив является пустым (<xref:System.ArgumentNullException> класс)  
   
--   Массив является многомерным \(класс <xref:System.RankException> \)  
+-   Массив является многомерным (<xref:System.RankException> класс)  
   
--   Один или более элементов массива не реализуют интерфейс <xref:System.IComparable>\(класс <xref:System.InvalidOperationException>\).  
+-   Один или несколько элементов массива не реализуют <xref:System.IComparable> интерфейса (<xref:System.InvalidOperationException> класс)  
   
-## См. также  
- <xref:System.Array.Sort%2A?displayProperty=fullName>   
- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)   
- [Коллекции](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>См. также  
+ <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
+ [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Устранение неполадок, связанных с массивами](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)  
+ [Коллекции](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  [Оператор For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

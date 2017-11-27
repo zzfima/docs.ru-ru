@@ -1,62 +1,95 @@
 ---
-title: "Вариативность в универсальных интерфейсах (Visual Basic) | Документы Microsoft"
+title: "Вариативность в универсальных интерфейсах (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c53c27bdb085213046553fc4b08f11336880a7c2
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d05ccdc97efd5dd193bbbe0d15dd227ec71910d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>Вариативность в универсальных интерфейсах (Visual Basic)
-Платформа .NET framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Поддержка вариативности позволяет выполнять неявное преобразование классов, реализующих эти интерфейсы. Вариант теперь являются следующие интерфейсы:  
+В платформе .NET Framework 4 появилась поддержка вариативности для нескольких существующих универсальных интерфейсов. Поддержка вариативности позволяет выполнять неявное преобразование классов, реализующих эти интерфейсы. Сейчас вариативными являются следующие интерфейсы.  
   
--   <xref:System.Collections.Generic.IEnumerable%601>(T является ковариантным)</xref:System.Collections.Generic.IEnumerable%601>  
+-   <xref:System.Collections.Generic.IEnumerable%601> (T является ковариантным)  
   
--   <xref:System.Collections.Generic.IEnumerator%601>(T является ковариантным)</xref:System.Collections.Generic.IEnumerator%601>  
+-   <xref:System.Collections.Generic.IEnumerator%601> (T является ковариантным)  
   
--   <xref:System.Linq.IQueryable%601>(T является ковариантным)</xref:System.Linq.IQueryable%601>  
+-   <xref:System.Linq.IQueryable%601> (T является ковариантным)  
   
--   <xref:System.Linq.IGrouping%602>(`TKey` и `TElement` ковариантных)</xref:System.Linq.IGrouping%602>  
+-   <xref:System.Linq.IGrouping%602> (`TKey` и `TElement` являются ковариантными)  
   
--   <xref:System.Collections.Generic.IComparer%601>(T является контравариантным)</xref:System.Collections.Generic.IComparer%601>  
+-   <xref:System.Collections.Generic.IComparer%601> (T является контравариантным)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>(T является контравариантным)</xref:System.Collections.Generic.IEqualityComparer%601>  
+-   <xref:System.Collections.Generic.IEqualityComparer%601> (T является контравариантным)  
   
--   <xref:System.IComparable%601>(T является контравариантным)</xref:System.IComparable%601>  
+-   <xref:System.IComparable%601> (T является контравариантным)  
   
- Ковариация позволяет методу иметь более производный тип возвращаемого значения, определенного параметром универсального типа интерфейса. Чтобы продемонстрировать функцию ковариации, рассмотрим следующие универсальные интерфейсы: `IEnumerable(Of Object)` и `IEnumerable(Of String)`. `IEnumerable(Of String)` Не наследует интерфейс `IEnumerable(Of Object)` интерфейс. Тем не менее `String` тип наследовать `Object` типа, а в некоторых случаях может потребоваться назначение объектов этих интерфейсов друг с другом. Это показано в следующем примере кода.  
+ Ковариация позволяет методу иметь тип возвращаемого значения, степень наследования которого больше, чем указано в параметре универсального типа интерфейса. Чтобы продемонстрировать функцию ковариации, рассмотрим следующие универсальные интерфейсы: `IEnumerable(Of Object)` и `IEnumerable(Of String)`. Интерфейс `IEnumerable(Of String)` не наследует интерфейс `IEnumerable(Of Object)`. При этом тип `String` наследует тип `Object`, и в некоторых случаях может потребоваться назначить объекты этих интерфейсов друг другу. Это показано в следующем примере кода.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- В более ранних версиях платформы .NET Framework, этот код вызовет ошибку компиляции в Visual Basic с `Option Strict On`. Но теперь вы можете использовать `strings` вместо `objects`, как показано в предыдущем примере, поскольку <xref:System.Collections.Generic.IEnumerable%601>интерфейс является ковариантным.</xref:System.Collections.Generic.IEnumerable%601>  
+```vb  
+Dim strings As IEnumerable(Of String) = New List(Of String)  
+Dim objects As IEnumerable(Of Object) = strings  
+```  
   
- Контрвариантность позволяет методу иметь типы аргументов, для которых меньше, чем указано параметром универсального интерфейса. Чтобы продемонстрировать функцию контравариации, предположим, что вы создали `BaseComparer` класса для сравнения экземпляров `BaseClass` класса. Класс `BaseComparer` реализует интерфейс `IEqualityComparer(Of BaseClass)`. Поскольку <xref:System.Collections.Generic.IEqualityComparer%601>интерфейса теперь является контравариантным, можно использовать `BaseComparer` для сравнения экземпляров классов, наследующих `BaseClass` класса</xref:System.Collections.Generic.IEqualityComparer%601> Это показано в следующем примере кода.  
+ В более ранних версиях платформы .NET Framework, этот код вызывает ошибку компиляции, в Visual Basic с `Option Strict On`. Но теперь можно использовать `strings` вместо `objects`, как показано в предыдущем примере, поскольку интерфейс <xref:System.Collections.Generic.IEnumerable%601> является ковариантным.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+ Контравариантность позволяет методу иметь типы аргументов, степень наследования которых меньше, чем указано в параметре универсального типа интерфейса. Чтобы продемонстрировать функцию контравариантности, предположим, что создан класса `BaseComparer` для сравнения экземпляров класса `BaseClass`. Класс `BaseComparer` реализует интерфейс `IEqualityComparer(Of BaseClass)`. Поскольку теперь интерфейс <xref:System.Collections.Generic.IEqualityComparer%601> является контравариантным, для сравнения экземпляров классов, наследующих класс `BaseClass`, можно использовать класс `BaseComparer`. Это показано в следующем примере кода.  
+  
+```vb  
+' Simple hierarchy of classes.  
+Class BaseClass  
+End Class  
+  
+Class DerivedClass  
+    Inherits BaseClass  
+End Class  
+  
+' Comparer class.  
+Class BaseComparer  
+    Implements IEqualityComparer(Of BaseClass)  
+  
+    Public Function Equals1(ByVal x As BaseClass,  
+                            ByVal y As BaseClass) As Boolean _  
+                            Implements IEqualityComparer(Of BaseClass).Equals  
+        Return (x.Equals(y))  
+    End Function  
+  
+    Public Function GetHashCode1(ByVal obj As BaseClass) As Integer _  
+        Implements IEqualityComparer(Of BaseClass).GetHashCode  
+        Return obj.GetHashCode  
+    End Function  
+End Class  
+Sub Test()  
+    Dim baseComparer As IEqualityComparer(Of BaseClass) = New BaseComparer  
+    ' Implicit conversion of IEqualityComparer(Of BaseClass) to   
+    ' IEqualityComparer(Of DerivedClass).  
+    Dim childComparer As IEqualityComparer(Of DerivedClass) = baseComparer  
+End Sub  
+```  
+  
  Дополнительные примеры см. в разделе [Использование вариативности в интерфейсах для универсальных коллекций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
   
- Вариативность в универсальных интерфейсах поддерживается только для ссылочных типов. Типы значений не поддерживают вариативность. Например `IEnumerable(Of Integer)` не может быть неявно преобразован в `IEnumerable(Of Object)`, так как целочисленные типы представлены по типу значения.  
+ Вариативность в универсальных интерфейсах поддерживается только для ссылочных типов. Типы значений не поддерживают вариативность. Например, `IEnumerable(Of Integer)` нельзя неявно преобразовать в `IEnumerable(Of Object)`, так как типом значения является integer.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- Также важно помнить, что классов, реализующих вариантные интерфейсы являются инвариантными. Например несмотря на то что <xref:System.Collections.Generic.List%601>реализует ковариантный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, нельзя неявно преобразовать `List(Of Object)` для `List(Of String)`.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.Generic.List%601> Это показано в следующем примере кода.  
+```vb  
+Dim integers As IEnumerable(Of Integer) = New List(Of Integer)  
+' The following statement generates a compiler error  
+' with Option Strict On, because Integer is a value type.  
+' Dim objects As IEnumerable(Of Object) = integers  
+```  
+  
+ Кроме того, важно помнить, что классы, которые реализуют вариативные интерфейсы, сами являются инвариантными. Например, несмотря на то, что <xref:System.Collections.Generic.List%601> реализует ковариантный интерфейс <xref:System.Collections.Generic.IEnumerable%601>, неявно преобразовать `List(Of Object)` в `List(Of String)` нельзя. Это показано в следующем примере кода.  
   
 ```vb  
 ' The following statement generates a compiler error  
@@ -68,7 +101,7 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование вариативности в интерфейсах для универсальных коллекций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)   
- [Создание вариативных универсальных интерфейсов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)   
- [Универсальные интерфейсы](http://msdn.microsoft.com/library/88bf5b04-d371-4edb-ba38-01ec7cabaacf)   
- [Вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+ [Использование вариативности в интерфейсах для универсальных коллекций (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)  
+ [Создание вариативных универсальных интерфейсов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)  
+ [Универсальные интерфейсы](../../../../standard/generics/interfaces.md)  
+ [Вариативность в делегатах (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

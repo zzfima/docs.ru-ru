@@ -1,48 +1,47 @@
 ---
-title: "&lt;значение&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<value> - XML-тег"
-  - "value - XML-тег"
+title: "&lt;значение&gt; (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- <value> XML tag
+- value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a72c6330596e59d26fbae9d13f6b9c8b1987e519
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;значение&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Указывает описание свойства.  
+# <a name="ltvaluegt-visual-basic"></a>&lt;значение&gt; (Visual Basic)
+Задает описание свойства.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```  
+```xml  
 <value>property-description</value>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `property-description`  
  Описание свойства.  
   
-## Заметки  
- Используйте тег `<value>` для описания свойства.  Обратите внимание, что при добавлении свойства с помощью мастера создания кода в среде разработки Visual Studio для нового свойства будет добавлен тег [\<summary\>](../../../visual-basic/language-reference/xmldoc/summary.md).  Следует затем вручную добавить тег `<value>` для описания значения, которое представляет свойство.  
+## <a name="remarks"></a>Примечания  
+ Используйте `<value>` тегов для описания свойства. Обратите внимание, что при добавлении свойства с помощью мастера кода в среде разработки Visual Studio добавит [ \<сводки >](../../../visual-basic/language-reference/xmldoc/summary.md) тег для нового свойства. Следует затем вручную добавить `<value>` тегов для описания значение, представляющее свойство.  
   
- Чтобы выделить документирующие комментарии в отдельный файл, необходимо использовать при компиляции параметр [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Пример  
- В данном примере используется тег `<value>` для описания того, какое значение содержится в свойстве `Counter`.  
+## <a name="example"></a>Пример  
+ В этом примере используется `<value>` тегов для описания какое значение `Counter` содержится в свойстве.  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
-## См. также  
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
