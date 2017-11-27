@@ -1,50 +1,57 @@
 ---
-title: "Пользовательские составные конструкторы — средство представления элементов рабочего процесса | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пользовательские составные конструкторы - средство представления элементов рабочего процесса"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5390aed3af9146700a4dca7c5b56ddabdca993dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пользовательские составные конструкторы — средство представления элементов рабочего процесса
-<xref:System.Activities.Design.WorkflowItemsPresenter> является типом ключа в модели программирования конструктора WF, позволяющим редактирование коллекции содержащихся элементов.В этом образце показано, как построить конструктор действий, который предоставляет доступ к такой изменяемой коллекции.  
+# <a name="custom-composite-designers---workflow-items-presenter"></a><span data-ttu-id="06497-102">Пользовательские составные конструкторы - средство представления элементов рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="06497-102">Custom Composite Designers - Workflow Items Presenter</span></span>
+<span data-ttu-id="06497-103"><xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> является типом ключа в модели программирования конструктора WF, позволяющим редактирование коллекции содержащихся элементов.</span><span class="sxs-lookup"><span data-stu-id="06497-103">The <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> is a key type in the WF designer programming model that allows for the editing of a collection of contained elements.</span></span> <span data-ttu-id="06497-104">В этом образце показано, как построить конструктор действий, который предоставляет доступ к такой изменяемой коллекции.</span><span class="sxs-lookup"><span data-stu-id="06497-104">This sample shows how to build an activity designer that surfaces such an editable collection.</span></span>  
   
- В этом образце показаны следующие действия.  
+ <span data-ttu-id="06497-105">В этом образце показаны следующие действия.</span><span class="sxs-lookup"><span data-stu-id="06497-105">This sample demonstrates:</span></span>  
   
--   Создание настраиваемого конструктора действий с <xref:System.Activities.Design.WorkflowItemsPresenter>.  
+-   <span data-ttu-id="06497-106">Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="06497-106">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span>  
   
--   Создание конструктора действий со «свернутым» и «восстановленным» представлением.  
+-   <span data-ttu-id="06497-107">Создание конструктора действий со «свернутым» и «восстановленным» представлением.</span><span class="sxs-lookup"><span data-stu-id="06497-107">Creating an activity designer with a "collapsed" and "expanded" view.</span></span>  
   
--   Переопределение конструктора по умолчанию в повторно размещенном приложении.  
+-   <span data-ttu-id="06497-108">Переопределение конструктора по умолчанию в повторно размещенном приложении.</span><span class="sxs-lookup"><span data-stu-id="06497-108">Overriding a default designer in a rehosted application.</span></span>  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="06497-109">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="06497-109">To set up, build, and run the sample</span></span>  
   
-1.  Откройте решение **UsingWorkflowItemsPresenter.sln** образца для C\# или для VB в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="06497-110">Откройте **UsingWorkflowItemsPresenter.sln** образец решения для C# или VB в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06497-110">Open the **UsingWorkflowItemsPresenter.sln** sample solution for C# or for VB in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Постройте и запустите решение.Должно открыться повторно размещенное приложение конструктора рабочих процессов, после чего действия можно перетащить на полотно.  
+2.  <span data-ttu-id="06497-111">Постройте и запустите это решение.</span><span class="sxs-lookup"><span data-stu-id="06497-111">Build and run the solution.</span></span> <span data-ttu-id="06497-112">Должно открыться повторно размещенное приложение конструктора рабочих процессов, после чего действия можно перетащить на полотно.</span><span class="sxs-lookup"><span data-stu-id="06497-112">A rehosted workflow designer application should open, and you can drag activities onto the canvas.</span></span>  
   
-## Описание образца  
- Код для этого образца показывает следующее.  
+## <a name="sample-highlights"></a><span data-ttu-id="06497-113">Описание образца</span><span class="sxs-lookup"><span data-stu-id="06497-113">Sample Highlights</span></span>  
+ <span data-ttu-id="06497-114">Код для этого образца показывает следующее.</span><span class="sxs-lookup"><span data-stu-id="06497-114">The code for this sample shows the following:</span></span>  
   
--   Действие, для которого построен конструктор: `Parallel`  
+-   <span data-ttu-id="06497-115">Действие, для которого построен конструктор: `Parallel`</span><span class="sxs-lookup"><span data-stu-id="06497-115">The activity a designer is built for:  `Parallel`</span></span>  
   
--   Создание настраиваемого конструктора действий с <xref:System.Activities.Design.WorkflowItemsPresenter>.Некоторые замечания.  
+-   <span data-ttu-id="06497-116">Создание настраиваемого конструктора действий с <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="06497-116">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.</span></span> <span data-ttu-id="06497-117">Некоторые замечания.</span><span class="sxs-lookup"><span data-stu-id="06497-117">A few things to point out:</span></span>  
   
-    -   Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Branches`.`ModelItem` — свойство <xref:System.Activities.Design.WorkflowElementDesigner>, которое относится к базовому объекту, для которого используется конструктор, в данном случае — `Parallel`.  
+    -   <span data-ttu-id="06497-118">Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Branches`.</span><span class="sxs-lookup"><span data-stu-id="06497-118">Note the use of WPF data binding to bind to `ModelItem.Branches`.</span></span> <span data-ttu-id="06497-119">`ModelItem` - свойство `WorkflowElementDesigner`, которое относится к базовому объекту, для которого используется конструктор, в данном случае - `Parallel`.</span><span class="sxs-lookup"><span data-stu-id="06497-119">`ModelItem` is the property on `WorkflowElementDesigner` that refers to the underlying object the designer is being used for, in this case, our `Parallel`.</span></span>  
   
-    -   Шаблон <xref:System.Activities.Design.WorkflowItemsPresenter.SpacerTemplate%2A> может использоваться для указания видимого изображения, отображаемого между отдельными элементами коллекции.  
+    -   <span data-ttu-id="06497-120">Шаблон <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> может использоваться для указания видимого изображения, отображаемого между отдельными элементами коллекции.</span><span class="sxs-lookup"><span data-stu-id="06497-120">The <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> can be used to put a visual to display between the individual items in the collection.</span></span>  
   
-    -   <xref:System.Activities.Design.WorkflowItemsPresenter.ItemsPanel%2A> является шаблоном, который может быть предоставлен для определения макета элементов в коллекции.В данном случае используется горизонтальный элемент StackPanel.  
+    -   <span data-ttu-id="06497-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> является шаблоном, который может быть предоставлен для определения макета элементов в коллекции.</span><span class="sxs-lookup"><span data-stu-id="06497-121"><xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> is a template that can be provided to determine the layout of the items in the collection.</span></span> <span data-ttu-id="06497-122">В данном случае используется горизонтальный элемент StackPanel.</span><span class="sxs-lookup"><span data-stu-id="06497-122">In this case, a horizontal stack panel is used.</span></span>  
   
- Это показано в следующем примере кода.  
+ <span data-ttu-id="06497-123">Это показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="06497-123">This following example code shows this.</span></span>  
   
 ```xaml  
 <sad:WorkflowItemsPresenter HintText="Drop Activities Here"  
@@ -60,20 +67,18 @@ caps.handback.revision: 12
       </ItemsPanelTemplate>  
     </sad:WorkflowItemsPresenter.ItemsPanel>  
   </sad:WorkflowItemsPresenter>  
-  
 ```  
   
--   Выполнение сопоставление объекта `DesignerAttribute` с типом `Parallel`, а затем вывод указанных атрибутов.  
+-   <span data-ttu-id="06497-124">Выполнение связи объекта `DesignerAttribute` с типом `Parallel`, а затем вывод указанных атрибутов.</span><span class="sxs-lookup"><span data-stu-id="06497-124">Perform an association of the `DesignerAttribute` to the `Parallel` type and then output the attributes reported.</span></span>  
   
-    -   Сначала зарегистрируйте все конструкторы по умолчанию.  
+    -   <span data-ttu-id="06497-125">Сначала зарегистрируйте все конструкторы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="06497-125">First, register all of the default designers.</span></span>  
   
- Ниже приведен пример кода.  
+ <span data-ttu-id="06497-126">Ниже приведен пример кода.</span><span class="sxs-lookup"><span data-stu-id="06497-126">The following is the code example.</span></span>  
   
 ```csharp  
 // register metadata  
 (new DesignerMetadata()).Register();  
 RegisterCustomMetadata();  
-  
 ```  
   
 ```vb  
@@ -82,15 +87,12 @@ Dim metadata = New DesignerMetadata()
 metadata.Register()  
 ' register custom metadata  
 RegisterCustomMetadata()  
-  
 ```  
   
--   -   Далее переопределите параллель в методе `RegisterCustomMetadata`.  
+    -   <span data-ttu-id="06497-127">Далее переопределите параллель в методе `RegisterCustomMetadata`.</span><span class="sxs-lookup"><span data-stu-id="06497-127">Then, override the parallel in `RegisterCustomMetadata` method.</span></span>  
   
- В следующем коде это показано на языках C\# и Visual Basic.  
-  
- C\#  
-  
+ <span data-ttu-id="06497-128">В следующем коде это показано на языках C# и Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="06497-128">The following code shows this in C# and Visual Basic.</span></span>  
+ 
 ```csharp  
 void RegisterCustomMetadata()  
 {  
@@ -98,7 +100,6 @@ void RegisterCustomMetadata()
       builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));  
       MetadataStore.AddAttributeTable(builder.CreateTable());  
 }  
-  
 ```  
   
 ```vb  
@@ -107,12 +108,11 @@ Sub RegisterCustomMetadata()
    builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))  
    MetadataStore.AddAttributeTable(builder.CreateTable())  
 End Sub  
-  
 ```  
   
--   Наконец, обратите внимание на использование различных шаблонов данных и триггеров для выбора соответствующего шаблона на основании свойства `IsRootDesigner`.  
+-   <span data-ttu-id="06497-129">Наконец, обратите внимание на использование различных шаблонов данных и триггеров для выбора соответствующего шаблона на основании свойства `IsRootDesigner`.</span><span class="sxs-lookup"><span data-stu-id="06497-129">Finally, note the use of differing data templates and triggers to select the appropriate template based on the `IsRootDesigner` property.</span></span>  
   
- Ниже приведен пример кода.  
+ <span data-ttu-id="06497-130">Ниже приведен пример кода.</span><span class="sxs-lookup"><span data-stu-id="06497-130">The following is the code example.</span></span>  
   
 ```xaml  
 <sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"  
@@ -155,18 +155,17 @@ End Sub
     <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
   </Grid>  
 </sad: ActivityDesigner>  
-  
 ```  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="06497-131">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="06497-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="06497-132">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="06497-132">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="06497-133">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="06497-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="06497-134">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="06497-134">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
-## См. также  
- <xref:System.Activities.Presentation.WorkflowItemsPresenter>   
- [Разработка приложений с помощью конструктора рабочего процесса](../Topic/Developing%20Applications%20with%20the%20Workflow%20Designer.md)
+## <a name="see-also"></a><span data-ttu-id="06497-135">См. также</span><span class="sxs-lookup"><span data-stu-id="06497-135">See Also</span></span>  
+ <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
+ [<span data-ttu-id="06497-136">Разработка приложений с помощью конструктора рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="06497-136">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

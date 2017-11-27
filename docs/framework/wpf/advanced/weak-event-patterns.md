@@ -1,144 +1,146 @@
 ---
-title: "Шаблоны слабых событий | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "обработчики событий, шаблон слабых событий"
-  - "IWeakEventListener - интерфейс"
-  - "реализация шаблона слабых событий"
-  - "WeakEventManager - класс"
+title: "Шаблоны слабых событий"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- weak event pattern implementation [WPF]
+- event handlers [WPF], weak event pattern
+- IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Шаблоны слабых событий
-В приложениях существует возможность того, что обработчики, присоединенные к источнику событий, не будут уничтожены в соответствии с объектом\-прослушивателем, который присоединил обработчик к источнику.  Такая ситуация может привести к утечке памяти.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] представляет шаблон, который можно использовать для решения этой проблемы путем предоставления выделенного класса диспетчера для конкретных событий и реализации интерфейса прослушивателей для данного события.  Этот шаблон разработки называется *шаблоном слабых событий*.  
+# <a name="weak-event-patterns"></a><span data-ttu-id="62a4f-102">Шаблоны слабых событий</span><span class="sxs-lookup"><span data-stu-id="62a4f-102">Weak Event Patterns</span></span>
+<span data-ttu-id="62a4f-103">В приложениях возможно, что обработчики, присоединенные к источнику событий не будут уничтожены в соответствии с объектом прослушивателя, который присоединил обработчик к источнику.</span><span class="sxs-lookup"><span data-stu-id="62a4f-103">In applications, it is possible that handlers that are attached to event sources will not be destroyed in coordination with the listener object that attached the handler to the source.</span></span> <span data-ttu-id="62a4f-104">Такая ситуация может привести к утечке памяти.</span><span class="sxs-lookup"><span data-stu-id="62a4f-104">This situation can lead to memory leaks.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="62a4f-105">представляет шаблон, который может использоваться для устранения этой проблемы путем предоставления выделенного класса диспетчера для конкретных событий и реализации интерфейса прослушивателей для данного события.</span><span class="sxs-lookup"><span data-stu-id="62a4f-105"> introduces a design pattern that can be used to address this issue, by providing a dedicated manager class for particular events and implementing an interface on listeners for that event.</span></span> <span data-ttu-id="62a4f-106">Этот шаблон разработки называется *шаблон слабых событий*.</span><span class="sxs-lookup"><span data-stu-id="62a4f-106">This design pattern is known as the *weak event pattern*.</span></span>  
   
-## Почему следует реализовать шаблон слабых событий?  
- Ожидание событий может привести к утечке памяти.  Обычным методом для прослушивания событий является использование синтаксиса конкретного языка, который присоединяет обработчик к событию на источнике.  Например, в [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] такой синтаксис имеет вид: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+## <a name="why-implement-the-weak-event-pattern"></a><span data-ttu-id="62a4f-107">Почему следует реализовать шаблон слабых событий?</span><span class="sxs-lookup"><span data-stu-id="62a4f-107">Why Implement the Weak Event Pattern?</span></span>  
+ <span data-ttu-id="62a4f-108">Прослушивание событий может привести к утечке памяти.</span><span class="sxs-lookup"><span data-stu-id="62a4f-108">Listening for events can lead to memory leaks.</span></span> <span data-ttu-id="62a4f-109">Обычным методом для прослушивания событий является использование синтаксиса конкретного языка, который присоединяет обработчик событий в источнике.</span><span class="sxs-lookup"><span data-stu-id="62a4f-109">The typical technique for listening to an event is to use the language-specific syntax that attaches a handler to an event on a source.</span></span> <span data-ttu-id="62a4f-110">Например, в [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], что синтаксис является: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.</span><span class="sxs-lookup"><span data-stu-id="62a4f-110">For example, in [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], that syntax is: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.</span></span>  
   
- Этот метод создает строгую ссылку от источника событий к слушателю событий.  Обычно присоединение обработчика событий к прослушивателю служит причиной того, что прослушиватель имеет время жизни объекта, на которое влияет время жизни объекта источника \(если обработчик событий не удаляется явным образом\).  Однако в некоторых случаях может требоваться, чтобы время жизни объекта\-прослушивателя управлялось другими факторами \(например, текущей принадлежностью к визуальному дереву приложения\), а не временем жизни источника.  Всякий раз, когда время жизни объекта\-источника превосходит время жизни объекта\-слушатель, обычный шаблон события приводит к утечке памяти: слушатель хранится дольше, чем ожидается.  
+ <span data-ttu-id="62a4f-111">Этот метод создает строгую ссылку от источника события прослушиватель событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-111">This technique creates a strong reference from the event source to the event listener.</span></span> <span data-ttu-id="62a4f-112">Обычно присоединение обработчика событий для прослушивателя вызывает прослушиватель имеет время существования объекта, которое влияет время жизни объекта источника (если не будет явно удален обработчик событий).</span><span class="sxs-lookup"><span data-stu-id="62a4f-112">Ordinarily, attaching an event handler for a listener causes the listener to have an object lifetime that is influenced by the object lifetime of the source (unless the event handler is explicitly removed).</span></span> <span data-ttu-id="62a4f-113">Однако в некоторых случаях может потребоваться время жизни объекта прослушивателя управляются другими факторами, например, принадлежит ли он в настоящее время к визуального дерева приложения, а не по времени существования источника.</span><span class="sxs-lookup"><span data-stu-id="62a4f-113">But in certain circumstances, you might want the object lifetime of the listener to be controlled by other factors, such as whether it currently belongs to the visual tree of the application, and not by the lifetime of the source.</span></span> <span data-ttu-id="62a4f-114">Каждый раз, когда время жизни объекта источника выходит за пределы времени существования объекта прослушивателя, обычный шаблон события приводит к утечке памяти: слушатель хранится дольше, чем ожидается.</span><span class="sxs-lookup"><span data-stu-id="62a4f-114">Whenever the source object lifetime extends beyond the object lifetime of the listener, the normal event pattern leads to a memory leak: the listener is kept alive longer than intended.</span></span>  
   
- Шаблон слабых событий предназначен для решения проблемы утечки памяти.  Шаблон слабых событий может использоваться, если прослушивателю необходимо зарегистрироваться для события, а момент отмены регистрации явно неизвестен.  Шаблон слабых событий может также использоваться всякий раз, когда время жизни объекта\-источника превосходит полезное время жизни объекта\-прослушивателя.  \(В этом случае *полезность* определяется автором.\) Шаблон слабых событий позволяет прослушивателю регистрировать и получать события, никак не затрагивая характеристики времени жизни объекта прослушивателя.  В результате неявная ссылка от источника не определяет, подлежит ли прослушиватель обработке при сборке мусора.  Эта ссылка является слабой, с чем и связано название шаблона слабых событий и соответствующих [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)].  Слушатель может быть собран как мусор или, в противном случае, уничтожен, а источник может продолжить свое существование без сохранения не входящих в коллекцию ссылок ресурса на только что уничтоженный объект.  
+ <span data-ttu-id="62a4f-115">Шаблон слабых событий предназначен для решения проблемы утечки памяти.</span><span class="sxs-lookup"><span data-stu-id="62a4f-115">The weak event pattern is designed to solve this memory leak problem.</span></span> <span data-ttu-id="62a4f-116">Шаблон слабых событий можно использовать всякий раз, когда прослушивателю необходимо зарегистрироваться для получения события, но прослушиватель не знает, явно отмены регистрации.</span><span class="sxs-lookup"><span data-stu-id="62a4f-116">The weak event pattern can be used whenever a listener needs to register for an event, but the listener does not explicitly know when to unregister.</span></span> <span data-ttu-id="62a4f-117">Шаблон слабых событий может также использоваться всякий раз, когда время жизни объекта источника превышает время существования полезных объект прослушивателя.</span><span class="sxs-lookup"><span data-stu-id="62a4f-117">The weak event pattern can also be used whenever the object lifetime of the source exceeds the useful object lifetime of the listener.</span></span> <span data-ttu-id="62a4f-118">(В этом случае *полезно* , определяется.) Шаблон слабых событий позволяет прослушивателю регистрировать и получать события, не затрагивая характеристики времени жизни объекта прослушивателя каким-либо образом.</span><span class="sxs-lookup"><span data-stu-id="62a4f-118">(In this case, *useful* is determined by you.) The weak event pattern allows the listener to register for and receive the event without affecting the object lifetime characteristics of the listener in any way.</span></span> <span data-ttu-id="62a4f-119">В результате неявная ссылка от источника не определить, является ли прослушиватель мусора.</span><span class="sxs-lookup"><span data-stu-id="62a4f-119">In effect, the implied reference from the source does not determine whether the listener is eligible for garbage collection.</span></span> <span data-ttu-id="62a4f-120">Ссылка является слабой ссылки, таким образом система именования шаблона слабых событий и связанных с [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)].</span><span class="sxs-lookup"><span data-stu-id="62a4f-120">The reference is a weak reference, thus the naming of the weak event pattern and the related [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)].</span></span> <span data-ttu-id="62a4f-121">Прослушиватель может быть собран как мусор или в противном случае удаляются, а источник может продолжить без сохранения только что уничтоженный обработчика ссылок на объект.</span><span class="sxs-lookup"><span data-stu-id="62a4f-121">The listener can be garbage collected or otherwise destroyed, and the source can continue without retaining noncollectible handler references to a now destroyed object.</span></span>  
   
-## Кто должен реализовывать шаблон слабых событий?  
- Реализация шаблона слабых событий будет интересна главным образом авторам элементов управления.  Как автор элемента управления, вы в значительной мере отвечаете за поведение и включения элемента управления и за то влияние, которое этот элемент оказывает на приложения, в которые он вставлен.  Сюда входит и поведение времени жизни объекта элемента управления, в частности, обработка описанной проблемы утечки памяти.  
+## <a name="who-should-implement-the-weak-event-pattern"></a><span data-ttu-id="62a4f-122">Кто должен реализовывать шаблон слабых событий?</span><span class="sxs-lookup"><span data-stu-id="62a4f-122">Who Should Implement the Weak Event Pattern?</span></span>  
+ <span data-ttu-id="62a4f-123">Реализация шаблона слабых событий представляет интерес главным образом для разработчиков элементов управления.</span><span class="sxs-lookup"><span data-stu-id="62a4f-123">Implementing the weak event pattern is interesting primarily for control authors.</span></span> <span data-ttu-id="62a4f-124">Автор элемента управления являются значительной мере отвечаете за поведение и включения элемента управления и влияние на приложения, в которых он вставлен.</span><span class="sxs-lookup"><span data-stu-id="62a4f-124">As a control author, you are largely responsible for the behavior and containment of your control and the impact it has on applications in which it is inserted.</span></span> <span data-ttu-id="62a4f-125">Это входит и поведение времени жизни объекта элемента управления, в частности, обработка описанной проблемы утечки памяти.</span><span class="sxs-lookup"><span data-stu-id="62a4f-125">This includes the control object lifetime behavior, in particular the handling of the described memory leak problem.</span></span>  
   
- Некоторые сценарии изначально подходят для применения шаблона слабых событий.  Один из таких сценариев — это привязка данных.  В привязке данных часто исходный объект полностью независим от объекта прослушивателя, являющегося целевых объектом привязки.  Многие аспекты привязки данных [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] уже имеют шаблон слабых событий, примененный в способе реализации событий.  
+ <span data-ttu-id="62a4f-126">Некоторые сценарии изначально подходят для применения шаблона слабых событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-126">Certain scenarios inherently lend themselves to the application of the weak event pattern.</span></span> <span data-ttu-id="62a4f-127">Одним из таких сценариев является привязкой данных.</span><span class="sxs-lookup"><span data-stu-id="62a4f-127">One such scenario is data binding.</span></span> <span data-ttu-id="62a4f-128">При привязке данных часто исходный объект полностью независим от объекта прослушивателя, который является целевым объектом привязки.</span><span class="sxs-lookup"><span data-stu-id="62a4f-128">In data binding, it is common for the source object to be completely independent of the listener object, which is a target of a binding.</span></span> <span data-ttu-id="62a4f-129">Многие аспекты [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] привязки данных уже имеют шаблон слабых событий, примененный в порядок реализации событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-129">Many aspects of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] data binding already have the weak event pattern applied in how the events are implemented.</span></span>  
   
-## Как реализовать шаблон слабых событий  
- 3 Способа реализовать шаблон слабых событий.  В следующей таблице перечислены 3 подхода и предоставляет некоторые рекомендации, если необходимо использовать каждый.  
+## <a name="how-to-implement-the-weak-event-pattern"></a><span data-ttu-id="62a4f-130">Как реализовать шаблон слабых событий</span><span class="sxs-lookup"><span data-stu-id="62a4f-130">How to Implement the Weak Event Pattern</span></span>  
+ <span data-ttu-id="62a4f-131">Существует три способа реализации шаблона слабых событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-131">There are three ways to implement weak event pattern.</span></span> <span data-ttu-id="62a4f-132">В следующей таблице перечислены три подхода и даются рекомендации по при их использованию.</span><span class="sxs-lookup"><span data-stu-id="62a4f-132">The following table lists the three approaches and provides some guidance for when you should use each.</span></span>  
   
-|Подход|При реализации|  
-|------------|--------------------|  
-|Использовать существующий простой класс диспетчера событий|Если событие следует подписаться имеет сопоставления <xref:System.Windows.WeakEventManager>используйте существующий простой диспетчера событий.  Список слабых событий, входящих в состав WPF диспетчеров см. в разделе в иерархии наследования <xref:System.Windows.WeakEventManager> класс.  Обратите внимание, что относительно небольшое количество слабых событий, входящих в состав WPF диспетчеров, поэтому, скорее всего, будет необходимо выбрать один из прочих подходов.|  
-|Использование класса диспетчера универсальный шаблон слабых событий|Использование универсальных <xref:System.Windows.WeakEventManager%602> если существовать  <xref:System.Windows.WeakEventManager> недоступен, необходимо простой способ реализации, а не управлять эффективности.  Универсальный шаблон <xref:System.Windows.WeakEventManager%602> менее эффективна, чем существовать или пользовательский диспетчер слабых событий.  Например, универсальный шаблон класс выполняет несколько отражения для обнаружения событие заданное имя события.  Кроме того, код, чтобы зарегистрировать событие с помощью универсального <xref:System.Windows.WeakEventManager%602> verboseее, чем использование существовать или пользовательский  <xref:System.Windows.WeakEventManager>.|  
-|Создание пользовательского класса диспетчера слабых событий|Создайте пользовательский <xref:System.Windows.WeakEventManager> если существовать  <xref:System.Windows.WeakEventManager> недоступна и нужно наилучшую производительность.  Использование пользовательский интерфейс <xref:System.Windows.WeakEventManager> подписаться на событие будет более эффективным, но создании стоимость записи дополнительных в начале кода.|  
+|<span data-ttu-id="62a4f-133">Подход</span><span class="sxs-lookup"><span data-stu-id="62a4f-133">Approach</span></span>|<span data-ttu-id="62a4f-134">Когда следует реализовать</span><span class="sxs-lookup"><span data-stu-id="62a4f-134">When to Implement</span></span>|  
+|--------------|-----------------------|  
+|<span data-ttu-id="62a4f-135">Использовать существующий класс manager слабых событий</span><span class="sxs-lookup"><span data-stu-id="62a4f-135">Use an existing weak event manager class</span></span>|<span data-ttu-id="62a4f-136">Если вы хотите подписаться на событие имеет соответствующий <xref:System.Windows.WeakEventManager>, диспетчер слабых событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-136">If the event you want to subscribe to has a corresponding <xref:System.Windows.WeakEventManager>, use the existing weak event manager.</span></span> <span data-ttu-id="62a4f-137">Список диспетчеров слабых событий, которые входят в состав WPF, см. в иерархии наследования <xref:System.Windows.WeakEventManager> класса.</span><span class="sxs-lookup"><span data-stu-id="62a4f-137">For a list of weak event managers that are included with WPF, see the inheritance hierarchy in the <xref:System.Windows.WeakEventManager> class.</span></span> <span data-ttu-id="62a4f-138">Обратите внимание, сравнительно мало диспетчеров слабых событий, включенных в WPF, поэтому, возможно, необходимо будет выбрать один из следующих подходов.</span><span class="sxs-lookup"><span data-stu-id="62a4f-138">Note, however, that there are relatively few weak event managers that are included with WPF, so you will probably need to choose one of the other approaches.</span></span>|  
+|<span data-ttu-id="62a4f-139">Используйте класс manager универсального слабых событий</span><span class="sxs-lookup"><span data-stu-id="62a4f-139">Use a generic weak event manager class</span></span>|<span data-ttu-id="62a4f-140">Использовать универсальный <xref:System.Windows.WeakEventManager%602> Если в имеющемся <xref:System.Windows.WeakEventManager> , недоступна, требуется простой способ реализации, и вы не занимается эффективность.</span><span class="sxs-lookup"><span data-stu-id="62a4f-140">Use a generic <xref:System.Windows.WeakEventManager%602> when an existing <xref:System.Windows.WeakEventManager> is not available, you want an easy way to implement, and you are not concerned about efficiency.</span></span> <span data-ttu-id="62a4f-141">Универсальный <xref:System.Windows.WeakEventManager%602> является менее эффективным, чем диспетчер существующих или пользовательских слабых событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-141">The generic <xref:System.Windows.WeakEventManager%602> is less efficient than an existing or custom weak event manager.</span></span> <span data-ttu-id="62a4f-142">Например универсальный класс выполняет дополнительные отражения для получения событий, заданному имени события.</span><span class="sxs-lookup"><span data-stu-id="62a4f-142">For example, the generic class does more reflection to discover the event given the event's name.</span></span> <span data-ttu-id="62a4f-143">Кроме того, код, чтобы зарегистрировать событие с помощью универсального <xref:System.Windows.WeakEventManager%602> является более подробным по сравнению с использованием существующих или пользовательских <xref:System.Windows.WeakEventManager>.</span><span class="sxs-lookup"><span data-stu-id="62a4f-143">Also, the code to register the event by using the generic <xref:System.Windows.WeakEventManager%602> is more verbose than using an existing or custom <xref:System.Windows.WeakEventManager>.</span></span>|  
+|<span data-ttu-id="62a4f-144">Создание класса пользовательского слабых событий диспетчера</span><span class="sxs-lookup"><span data-stu-id="62a4f-144">Create a custom weak event manager class</span></span>|<span data-ttu-id="62a4f-145">Создание пользовательского <xref:System.Windows.WeakEventManager> при вы существующего <xref:System.Windows.WeakEventManager> недоступен и нужно, повышения эффективности работы.</span><span class="sxs-lookup"><span data-stu-id="62a4f-145">Create a custom <xref:System.Windows.WeakEventManager> when you an existing <xref:System.Windows.WeakEventManager> is not available and you want the best efficiency.</span></span> <span data-ttu-id="62a4f-146">С помощью настраиваемого <xref:System.Windows.WeakEventManager> подписаться на событие будет более эффективным, но при этом затраты на написание дополнительный код в начале.</span><span class="sxs-lookup"><span data-stu-id="62a4f-146">Using a custom <xref:System.Windows.WeakEventManager> to subscribe to an event will be more efficient, but you do incur the cost of writing more code at the beginning.</span></span>|  
   
- Следующие разделы описывают, как реализовать шаблон слабых событий.  Для данного обсуждения, событие для подписки имеет следующие характеристики.  
+ <span data-ttu-id="62a4f-147">В следующих разделах описаны способы реализации шаблона слабых событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-147">The following sections describe how to implement the weak event pattern.</span></span>  <span data-ttu-id="62a4f-148">Для целей данного обсуждения подписаться на событие имеет следующие характеристики.</span><span class="sxs-lookup"><span data-stu-id="62a4f-148">For purposes of this discussion, the event to subscribe to has the following characteristics.</span></span>  
   
--   Имя события `SomeEvent`.  
+-   <span data-ttu-id="62a4f-149">Имя события `SomeEvent`.</span><span class="sxs-lookup"><span data-stu-id="62a4f-149">The event name is `SomeEvent`.</span></span>  
   
--   Вызывается событие `EventSource` класс.  
+-   <span data-ttu-id="62a4f-150">Вызывает событие `EventSource` класса.</span><span class="sxs-lookup"><span data-stu-id="62a4f-150">The event is raised by the `EventSource` class.</span></span>  
   
--   Обработчик событий имеет тип: `SomeEventEventHandler` \(или  `EventHandler<SomeEventEventArgs>`\).  
+-   <span data-ttu-id="62a4f-151">Обработчик событий имеет тип: `SomeEventEventHandler` (или `EventHandler<SomeEventEventArgs>`).</span><span class="sxs-lookup"><span data-stu-id="62a4f-151">The event handler has type: `SomeEventEventHandler` (or `EventHandler<SomeEventEventArgs>`).</span></span>  
   
--   Событие передает параметр типа `SomeEventEventArgs` к обработчикам событий.  
+-   <span data-ttu-id="62a4f-152">Событие передает параметр типа `SomeEventEventArgs` обработчикам событий.</span><span class="sxs-lookup"><span data-stu-id="62a4f-152">The event passes a parameter of type `SomeEventEventArgs` to the event handlers.</span></span>  
   
-### Простой класс с помощью существующего диспетчера событий  
+### <a name="using-an-existing-weak-event-manager-class"></a><span data-ttu-id="62a4f-153">С помощью существующего класса слабого диспетчера событий</span><span class="sxs-lookup"><span data-stu-id="62a4f-153">Using an Existing Weak Event Manager Class</span></span>  
   
-1.  Найдите существующий простой диспетчера событий.  
+1.  <span data-ttu-id="62a4f-154">Найти существующий слабых событий диспетчера.</span><span class="sxs-lookup"><span data-stu-id="62a4f-154">Find an existing weak event manager.</span></span>  
   
-     Список слабых событий, входящих в состав WPF диспетчеров см. в разделе в иерархии наследования <xref:System.Windows.WeakEventManager> класс.  
+     <span data-ttu-id="62a4f-155">Список диспетчеров слабых событий, которые входят в состав WPF, см. в иерархии наследования <xref:System.Windows.WeakEventManager> класса.</span><span class="sxs-lookup"><span data-stu-id="62a4f-155">For a list of weak event managers that are included with WPF, see the inheritance hierarchy in the <xref:System.Windows.WeakEventManager> class.</span></span>  
   
-2.  Используйте новый диспетчер событий слабых вместо обычного hookup события.  
+2.  <span data-ttu-id="62a4f-156">Используйте новый диспетчер слабых событий вместо обычной привязке события.</span><span class="sxs-lookup"><span data-stu-id="62a4f-156">Use the new weak event manager instead of the normal event hookup.</span></span>  
   
-     Например, если в коде используется следующий шаблон, чтобы подписаться на событие.  
+     <span data-ttu-id="62a4f-157">Например, если ваш код использует следующий шаблон для подписки на событие:</span><span class="sxs-lookup"><span data-stu-id="62a4f-157">For example, if your code uses the following pattern to subscribe to an event:</span></span>  
   
     ```  
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     Измените ее к следующему шаблону:  
+     <span data-ttu-id="62a4f-158">Измените его на следующий шаблон:</span><span class="sxs-lookup"><span data-stu-id="62a4f-158">Change it to the following pattern:</span></span>  
   
     ```  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     Аналогично, если в коде используется следующий шаблон для отказа от подписки на событие.  
+     <span data-ttu-id="62a4f-159">Аналогично Если ваш код использует следующий шаблон для отмены подписки на событие:</span><span class="sxs-lookup"><span data-stu-id="62a4f-159">Similarly, if your code uses the following pattern to unsubscribe to an event:</span></span>  
   
     ```  
     source.SomeEvent -= new SomeEventEventHandler(OnSome);  
     ```  
   
-     Измените ее к следующему шаблону:  
+     <span data-ttu-id="62a4f-160">Измените его на следующий шаблон:</span><span class="sxs-lookup"><span data-stu-id="62a4f-160">Change it to the following pattern:</span></span>  
   
     ```  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-### Использование класса диспетчера универсальный шаблон слабых событий  
+### <a name="using-the-generic-weak-event-manager-class"></a><span data-ttu-id="62a4f-161">С помощью универсального класса слабого диспетчера событий</span><span class="sxs-lookup"><span data-stu-id="62a4f-161">Using the Generic Weak Event Manager Class</span></span>  
   
-1.  Использование универсальных <xref:System.Windows.WeakEventManager%602> класс вместо обычного hookup события.  
+1.  <span data-ttu-id="62a4f-162">Использовать универсальный <xref:System.Windows.WeakEventManager%602> класса вместо обычной привязке события.</span><span class="sxs-lookup"><span data-stu-id="62a4f-162">Use the generic <xref:System.Windows.WeakEventManager%602> class instead of the normal event hookup.</span></span>  
   
-     При использовании <xref:System.Windows.WeakEventManager%602> для регистрации прослушивателей события, и указать источник события  <xref:System.EventArgs> введите в качестве параметров типа к классу и вызовите  <xref:System.Windows.WeakEventManager%602.AddHandler%2A> как показано в следующем коде:  
+     <span data-ttu-id="62a4f-163">При использовании <xref:System.Windows.WeakEventManager%602> Чтобы зарегистрировать прослушивателей событий, необходимо указать источник события и <xref:System.EventArgs> типа, что и параметры типа класса и вызове <xref:System.Windows.WeakEventManager%602.AddHandler%2A> как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="62a4f-163">When you use <xref:System.Windows.WeakEventManager%602> to register event listeners, you supply the event source and <xref:System.EventArgs> type as the type parameters to the class and call <xref:System.Windows.WeakEventManager%602.AddHandler%2A> as shown in the following code:</span></span>  
   
     ```  
     WeakEventManager<EventSource, SomeEventEventArgs>.AddHandler(source, "SomeEvent", source_SomeEvent);  
     ```  
   
-### Создание пользовательского класса диспетчера слабых событий  
+### <a name="creating-a-custom-weak-event-manager-class"></a><span data-ttu-id="62a4f-164">Создание пользовательского класса слабого диспетчера событий</span><span class="sxs-lookup"><span data-stu-id="62a4f-164">Creating a Custom Weak Event Manager Class</span></span>  
   
-1.  Скопируйте следующий шаблон класса в проект.  
+1.  <span data-ttu-id="62a4f-165">Скопируйте следующий шаблон класса в проект.</span><span class="sxs-lookup"><span data-stu-id="62a4f-165">Copy the following class template to your project.</span></span>  
   
-     Этот класс наследуется из класса <xref:System.Windows.WeakEventManager>.  
+     <span data-ttu-id="62a4f-166">Этот класс наследует от <xref:System.Windows.WeakEventManager> класса.</span><span class="sxs-lookup"><span data-stu-id="62a4f-166">This class inherits from the <xref:System.Windows.WeakEventManager> class.</span></span>  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Заменить `SomeEventWeakEventManager` имя с вашими имя.  
+2.  <span data-ttu-id="62a4f-167">Замените `SomeEventWeakEventManager` с собственное имя.</span><span class="sxs-lookup"><span data-stu-id="62a4f-167">Replace the `SomeEventWeakEventManager` name with your own name.</span></span>  
   
-3.  Замените 3 имени, описанного ранее с соответствующими именами для события.  \(`SomeEvent`"  `EventSource`и  `SomeEventEventArgs`\)  
+3.  <span data-ttu-id="62a4f-168">Замените имена трех, описанные выше, с соответствующими именами для события.</span><span class="sxs-lookup"><span data-stu-id="62a4f-168">Replace the three names described previously with the corresponding names for your event.</span></span> <span data-ttu-id="62a4f-169">(`SomeEvent`, `EventSource`, и `SomeEventEventArgs`)</span><span class="sxs-lookup"><span data-stu-id="62a4f-169">(`SomeEvent`, `EventSource`, and `SomeEventEventArgs`)</span></span>  
   
-4.  Задайте видимость \(открытую\/внутреннюю и закрытой\) слабого класса диспетчера событий к одной и той же видимости, какое событие он управляет.  
+4.  <span data-ttu-id="62a4f-170">Видимость (открытый, внутренний, закрытый) класса диспетчера слабых событий для той же областью видимости, как событие, которыми он управляет.</span><span class="sxs-lookup"><span data-stu-id="62a4f-170">Set the visibility (public / internal / private) of the weak event manager class to the same visibility as event it manages.</span></span>  
   
-5.  Используйте новый диспетчер событий слабых вместо обычного hookup события.  
+5.  <span data-ttu-id="62a4f-171">Используйте новый диспетчер слабых событий вместо обычной привязке события.</span><span class="sxs-lookup"><span data-stu-id="62a4f-171">Use the new weak event manager instead of the normal event hookup.</span></span>  
   
-     Например, если в коде используется следующий шаблон, чтобы подписаться на событие.  
+     <span data-ttu-id="62a4f-172">Например, если ваш код использует следующий шаблон для подписки на событие:</span><span class="sxs-lookup"><span data-stu-id="62a4f-172">For example, if your code uses the following pattern to subscribe to an event:</span></span>  
   
     ```  
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     Измените ее к следующему шаблону:  
+     <span data-ttu-id="62a4f-173">Измените его на следующий шаблон:</span><span class="sxs-lookup"><span data-stu-id="62a4f-173">Change it to the following pattern:</span></span>  
   
     ```  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     Аналогично, если в коде используется следующий шаблон для отказа от подписки на событие.  
+     <span data-ttu-id="62a4f-174">Аналогично Если ваш код использует следующий шаблон для отмены подписки на событие:</span><span class="sxs-lookup"><span data-stu-id="62a4f-174">Similarly, if your code uses the following pattern to unsubscribe to an event:</span></span>  
   
     ```  
     source.SomeEvent -= new SomeEventEventHandler(OnSome);  
     ```  
   
-     Измените ее к следующему шаблону:  
+     <span data-ttu-id="62a4f-175">Измените его на следующий шаблон:</span><span class="sxs-lookup"><span data-stu-id="62a4f-175">Change it to the following pattern:</span></span>  
   
     ```  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## См. также  
- <xref:System.Windows.WeakEventManager>   
- <xref:System.Windows.IWeakEventListener>   
- [Общие сведения о перенаправленных событиях](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)
+## <a name="see-also"></a><span data-ttu-id="62a4f-176">См. также</span><span class="sxs-lookup"><span data-stu-id="62a4f-176">See Also</span></span>  
+ <xref:System.Windows.WeakEventManager>  
+ <xref:System.Windows.IWeakEventListener>  
+ [<span data-ttu-id="62a4f-177">Общие сведения о перенаправленных событиях</span><span class="sxs-lookup"><span data-stu-id="62a4f-177">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="62a4f-178">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="62a4f-178">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)

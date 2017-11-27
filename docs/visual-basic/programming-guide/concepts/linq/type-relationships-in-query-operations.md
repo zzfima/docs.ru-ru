@@ -1,16 +1,13 @@
 ---
-title: "Связи между типами в операциях запроса (Visual Basic) | Документы Microsoft"
+title: "Отношения типов в операциях запроса (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
 - type information inferred [LINQ in Visual Basic]
@@ -21,99 +18,118 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: 34
-author: stevehoag
-ms.author: shoag
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a966b69feca7a7021cafbccb7971913ea781c479
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="type-relationships-in-query-operations-visual-basic"></a>Отношения типов в операциях запроса (Visual Basic)
-Переменные, используемые в [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] запрос операции являются строго типизированными и должны быть совместимы друг с другом. Строгая типизация используется в источнике данных, в самом запросе и при выполнении запроса. На следующем рисунке показаны термины, используемые для описания [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запроса. Дополнительные сведения о частях запроса см. в разделе [основные операции запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
+# <a name="type-relationships-in-query-operations-visual-basic"></a><span data-ttu-id="1db61-102">Отношения типов в операциях запроса (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1db61-102">Type Relationships in Query Operations (Visual Basic)</span></span>
+<span data-ttu-id="1db61-103">Переменные, используемые в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] запроса операции являются строго типизированными и должны быть совместимы друг с другом.</span><span class="sxs-lookup"><span data-stu-id="1db61-103">Variables used in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operations are strongly typed and must be compatible with each other.</span></span> <span data-ttu-id="1db61-104">Строгая типизация используется в источнике данных, в самом запросе и при выполнении запроса.</span><span class="sxs-lookup"><span data-stu-id="1db61-104">Strong typing is used in the data source, in the query itself, and in the query execution.</span></span> <span data-ttu-id="1db61-105">На следующем рисунке показаны термины, используемые для описания [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запроса.</span><span class="sxs-lookup"><span data-stu-id="1db61-105">The following illustration identifies terms used to describe a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query.</span></span> <span data-ttu-id="1db61-106">Дополнительные сведения о частях запроса см. в разделе [основные операции запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).</span><span class="sxs-lookup"><span data-stu-id="1db61-106">For more information about the parts of a query, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).</span></span>  
   
- ![Запрос символического кода с маркированными элементами.](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")  
-Части запроса LINQ  
+ <span data-ttu-id="1db61-107">![Запрос символического кода с маркированными элементами. ] (../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")</span><span class="sxs-lookup"><span data-stu-id="1db61-107">![Pseudocode query with elements highlighted.](../../../../visual-basic/programming-guide/concepts/linq/media/sjltyperels.png "SJLtypeRels")</span></span>  
+<span data-ttu-id="1db61-108">Части запроса LINQ</span><span class="sxs-lookup"><span data-stu-id="1db61-108">Parts of a LINQ query</span></span>  
   
- Тип переменной диапазона в запросе должен быть совместим с типом элементов в источнике данных. Тип переменной запроса должен быть совместим с последовательностью элемента, определенной в `Select` предложения. Наконец, тип элементов последовательности также должен быть совместим с типом переменной цикла, которая используется в `For Each` инструкцию, которая выполняет запрос. Строгая типизация упрощает идентификацию ошибок типов во время компиляции.  
+ <span data-ttu-id="1db61-109">Тип переменной диапазона в запросе должен быть совместим с типом элементов в источнике данных.</span><span class="sxs-lookup"><span data-stu-id="1db61-109">The type of the range variable in the query must be compatible with the type of the elements in the data source.</span></span> <span data-ttu-id="1db61-110">Тип переменной запроса должен быть совместим с последовательностью элемента, определенной в `Select` предложения.</span><span class="sxs-lookup"><span data-stu-id="1db61-110">The type of the query variable must be compatible with the sequence element defined in the `Select` clause.</span></span> <span data-ttu-id="1db61-111">Наконец, тип элементов последовательности также должен быть совместим с типом переменной цикла, которая используется в `For Each` инструкцию, которая выполняет запрос.</span><span class="sxs-lookup"><span data-stu-id="1db61-111">Finally, the type of the sequence elements also must be compatible with the type of the loop control variable that is used in the `For Each` statement that executes the query.</span></span> <span data-ttu-id="1db61-112">Строгая типизация упрощает идентификацию ошибок типов во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="1db61-112">This strong typing facilitates identification of type errors at compile time.</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]делает строгую типизацию удобной за счет реализации локального определения типа, также известный как *неявное типизирование*. В предыдущем примере используется функция, что вы увидите применяется [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] примеров и документации. В Visual Basic, определение локального типа осуществляется просто с помощью `Dim` оператор без `As` предложения. В следующем примере `city` строго типизирован в качестве строки.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="1db61-113">делает строгую типизацию удобной за счет реализации локального определения типа, также известный как *неявное типизирование*.</span><span class="sxs-lookup"><span data-stu-id="1db61-113"> makes strong typing convenient by implementing local type inference, also known as *implicit typing*.</span></span> <span data-ttu-id="1db61-114">Функция используется в предыдущем примере, что вы увидите применяется [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] примеров и документации.</span><span class="sxs-lookup"><span data-stu-id="1db61-114">That feature is used in the previous example, and you will see it used throughout the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and documentation.</span></span> <span data-ttu-id="1db61-115">В Visual Basic, определение локального типа осуществляется просто с помощью `Dim` оператор без `As` предложения.</span><span class="sxs-lookup"><span data-stu-id="1db61-115">In Visual Basic, local type inference is accomplished simply by using a `Dim` statement without an `As` clause.</span></span> <span data-ttu-id="1db61-116">В следующем примере `city` , строго типизируется как строка.</span><span class="sxs-lookup"><span data-stu-id="1db61-116">In the following example, `city` is strongly typed as a string.</span></span>  
   
- [!code-vb[VbLINQTypeRels&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
->  Вывод локального типа работает только тогда, когда `Option Infer` равен `On`. Дополнительные сведения см. в разделе [Option Infer оператор](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+>  <span data-ttu-id="1db61-117">Вывод локального типа работает только тогда, когда `Option Infer` равно `On`.</span><span class="sxs-lookup"><span data-stu-id="1db61-117">Local type inference works only when `Option Infer` is set to `On`.</span></span> <span data-ttu-id="1db61-118">Дополнительные сведения см. в разделе [Option Infer-оператор](../../../../visual-basic/language-reference/statements/option-infer-statement.md).</span><span class="sxs-lookup"><span data-stu-id="1db61-118">For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).</span></span>  
   
- Тем не менее даже если использование локального определения типов в запросе, отношение типов присутствуют между переменными в источнике данных, переменной запроса и цикл выполнения запроса. Полезно иметь базовое понимание этих связей типа при написании [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запросов или работе с примерами кода в документации.  
+ <span data-ttu-id="1db61-119">Тем не менее даже если локальное определение типа используется в запросе, отношение типов присутствуют между переменными в источнике данных, переменная запроса и цикла выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="1db61-119">However, even if you use local type inference in a query, the same type relationships are present among the variables in the data source, the query variable, and the query execution loop.</span></span> <span data-ttu-id="1db61-120">Полезно иметь базовое понимание отношений типов при создании [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов или работы с примерами кода в документации.</span><span class="sxs-lookup"><span data-stu-id="1db61-120">It is useful to have a basic understanding of these type relationships when you are writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, or working with the samples and code examples in the documentation.</span></span>  
   
- Возможно, потребуется указать явный тип переменной диапазона, который не соответствует типу, возвращенные из источника данных. Тип переменной диапазона можно указать с помощью `As` предложения. Однако это приведет к ошибке, если преобразование является [сужающее преобразование](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и `Option Strict` равен `On`. Таким образом рекомендуется выполнить преобразование на значения, полученные из источника данных. Можно преобразовать значения из источника данных тип переменной диапазона явные с помощью <xref:System.Linq.Enumerable.Cast%2A>метод.</xref:System.Linq.Enumerable.Cast%2A> Также можно приводить значения, выбранные в `Select` предложение явный тип, отличный от типа переменной диапазона. Эти варианты демонстрируются в следующем коде.  
+ <span data-ttu-id="1db61-121">Необходимо указать явный тип для переменной диапазона, который не соответствует типу, возвращенные из источника данных.</span><span class="sxs-lookup"><span data-stu-id="1db61-121">You may need to specify an explicit type for a range variable that does not match the type returned from the data source.</span></span> <span data-ttu-id="1db61-122">Можно указать тип переменной диапазона с помощью `As` предложения.</span><span class="sxs-lookup"><span data-stu-id="1db61-122">You can specify the type of the range variable by using an `As` clause.</span></span> <span data-ttu-id="1db61-123">Тем не менее, это приводит к ошибке, если преобразование прошло [сужающее преобразование](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) и `Option Strict` равно `On`.</span><span class="sxs-lookup"><span data-stu-id="1db61-123">However, this results in an error if the conversion is a [narrowing conversion](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and `Option Strict` is set to `On`.</span></span> <span data-ttu-id="1db61-124">Таким образом рекомендуется выполнить преобразование в значения, полученные из источника данных.</span><span class="sxs-lookup"><span data-stu-id="1db61-124">Therefore, we recommend that you perform the conversion on the values retrieved from the data source.</span></span> <span data-ttu-id="1db61-125">Можно преобразовать значения из источника данных типа переменной диапазона явной, используя <xref:System.Linq.Enumerable.Cast%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="1db61-125">You can convert the values from the data source to the explicit range variable type by using the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="1db61-126">Также можно приводить значения, выбранные в `Select` предложения явный тип, отличный от типа переменной диапазона.</span><span class="sxs-lookup"><span data-stu-id="1db61-126">You can also cast the values selected in the `Select` clause to an explicit type that is different from the type of the range variable.</span></span> <span data-ttu-id="1db61-127">В следующем коде показаны эти точки.</span><span class="sxs-lookup"><span data-stu-id="1db61-127">These points are illustrated in the following code.</span></span>  
   
- [!code-vb[VbLINQTypeRels&#4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
-## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Запросы, которые возвращают целые элементы из источника данных  
- В следующем примере показан [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] операцию, которая возвращает последовательность элементов, выбранных из источника данных запроса. Источник, `names`, содержит массив строк, а результат запроса представляет собой последовательность, содержащую строки, которые начинаются с буквы M.  
+## <a name="queries-that-return-entire-elements-of-the-source-data"></a><span data-ttu-id="1db61-128">Запросы, которые возвращают целые элементы из источника данных</span><span class="sxs-lookup"><span data-stu-id="1db61-128">Queries That Return Entire Elements of the Source Data</span></span>  
+ <span data-ttu-id="1db61-129">В следующем примере показан [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] операция, которая возвращает последовательность элементов, выбранных из источника данных запроса.</span><span class="sxs-lookup"><span data-stu-id="1db61-129">The following example shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operation that returns a sequence of elements selected from the source data.</span></span> <span data-ttu-id="1db61-130">Источник, `names`, содержит массив строк, а результат запроса представляет собой последовательность, содержащую строки, которые начинаются на букву M.</span><span class="sxs-lookup"><span data-stu-id="1db61-130">The source, `names`, contains an array of strings, and the query output is a sequence containing strings that start with the letter M.</span></span>  
   
- [!code-vb[VbLINQTypeRels&#2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
- Это эквивалентно следующему коду, но намного короче и проще написать. Зависимость от локального определения типов в запросах является предпочтительным для Visual Basic.  
+ <span data-ttu-id="1db61-131">Это эквивалентно следующему коду, но намного короче и проще написать.</span><span class="sxs-lookup"><span data-stu-id="1db61-131">This is equivalent to the following code, but is much shorter and easier to write.</span></span> <span data-ttu-id="1db61-132">Зависимость от локального определения типов в запросах является предпочтительным для Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1db61-132">Reliance on local type inference in queries is the preferred style in Visual Basic.</span></span>  
   
- [!code-vb[VbLINQTypeRels&#3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
   
- Следующие отношения существуют в обоих предыдущих примерах кода ли типы определяются явно или неявно.  
+ <span data-ttu-id="1db61-133">Следующие отношения существуют в обоих приведенных выше примерах кода ли типы определяются явно или неявно.</span><span class="sxs-lookup"><span data-stu-id="1db61-133">The following relationships exist in both of the previous code examples, whether the types are determined implicitly or explicitly.</span></span>  
   
-1.  Тип элементов в источнике данных `names`, тип переменной диапазона `name`, в запросе.  
+1.  <span data-ttu-id="1db61-134">Тип элементов в источнике данных `names`, тип переменной диапазона `name`, в запросе.</span><span class="sxs-lookup"><span data-stu-id="1db61-134">The type of the elements in the data source, `names`, is the type of the range variable, `name`, in the query.</span></span>  
   
-2.  Тип объекта, который выбран, `name`, определяет тип переменной запроса `mNames`. Здесь `name` является строкой, поэтому переменная запроса является IEnumerable (Of String) в Visual Basic.  
+2.  <span data-ttu-id="1db61-135">Тип объекта, который выбран, `name`, определяет тип переменной запроса `mNames`.</span><span class="sxs-lookup"><span data-stu-id="1db61-135">The type of the object that is selected, `name`, determines the type of the query variable, `mNames`.</span></span> <span data-ttu-id="1db61-136">Здесь `name` представляет собой строку, поэтому переменная запроса является IEnumerable (Of String) в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1db61-136">Here `name` is a string, so the query variable is IEnumerable(Of String) in Visual Basic.</span></span>  
   
-3.  Запрос, определенный в `mNames` выполняется в `For Each` цикла. Цикл выполняет итерацию результата выполнения запроса. Поскольку `mNames`, при выполнении вернет последовательность строк, переменная итерации цикла `nm`, также является строкой.  
+3.  <span data-ttu-id="1db61-137">Запрос, определенный в `mNames` выполняется в `For Each` цикла.</span><span class="sxs-lookup"><span data-stu-id="1db61-137">The query defined in `mNames` is executed in the `For Each` loop.</span></span> <span data-ttu-id="1db61-138">Цикл выполняет итерацию в результате выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="1db61-138">The loop iterates over the result of executing the query.</span></span> <span data-ttu-id="1db61-139">Поскольку `mNames`, при ее выполнении вернет последовательность строк, переменная итерации цикла `nm`, также является строкой.</span><span class="sxs-lookup"><span data-stu-id="1db61-139">Because `mNames`, when it is executed, will return a sequence of strings, the loop iteration variable, `nm`, also is a string.</span></span>  
   
-## <a name="queries-that-return-one-field-from-selected-elements"></a>Запросы, возвращающие одно поле из выбранных элементов  
- В следующем примере показан [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] операцию, которая возвращает последовательность, содержащую только одну часть каждого элемента, выбранного из источника данных запроса. Запрос получает коллекцию `Customer` объектов в качестве источника данных и только проекты `Name` свойства в результате. Поскольку имя заказчика является строкой, запрос создает последовательность строк в качестве выходных данных.  
+## <a name="queries-that-return-one-field-from-selected-elements"></a><span data-ttu-id="1db61-140">Запросы, возвращающие одно поле из выбранных элементов</span><span class="sxs-lookup"><span data-stu-id="1db61-140">Queries That Return One Field from Selected Elements</span></span>  
+ <span data-ttu-id="1db61-141">В следующем примере показан [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] операция, которая возвращает последовательность, содержащую только одну часть каждого элемента, выбранного из источника данных запроса.</span><span class="sxs-lookup"><span data-stu-id="1db61-141">The following example shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that returns a sequence containing only one part of each element selected from the data source.</span></span> <span data-ttu-id="1db61-142">Запрос принимает коллекцию `Customer` объектов в качестве источника данных и только проекты `Name` свойства в результате.</span><span class="sxs-lookup"><span data-stu-id="1db61-142">The query takes a collection of `Customer` objects as its data source and projects only the `Name` property in the result.</span></span> <span data-ttu-id="1db61-143">Поскольку имя клиента является строкой, запрос создает последовательность строк в качестве выходных данных.</span><span class="sxs-lookup"><span data-stu-id="1db61-143">Because the customer name is a string, the query produces a sequence of strings as output.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Отношения между переменными аналогичны простой пример.  
+```vb  
+' Method GetTable returns a table of Customer objects.  
+Dim customers = db.GetTable(Of Customer)()  
+Dim custNames = From cust In customers   
+                Where cust.City = "London"   
+                Select cust.Name  
   
-1.  Тип элементов в источнике данных `customers`, тип переменной диапазона `cust`, в запросе. В этом примере этот тип является `Customer`.  
+For Each custName In custNames  
+    Console.WriteLine(custName)  
+Next  
+```  
   
-2.  `Select` Инструкция возвращает `Name` каждого экземпляра `Customer` объект, а не весь объект. Поскольку `Name` является строкой, переменная запроса `custNames`, снова будет IEnumerable (Of String), не `Customer`.  
+ <span data-ttu-id="1db61-144">Связи между переменными аналогичны простой пример.</span><span class="sxs-lookup"><span data-stu-id="1db61-144">The relationships between variables are like those in the simpler example.</span></span>  
   
-3.  Поскольку `custNames` представляет собой последовательность строк, `For Each` переменная итерации цикла, `custName`, должно быть строкой.  
+1.  <span data-ttu-id="1db61-145">Тип элементов в источнике данных `customers`, тип переменной диапазона `cust`, в запросе.</span><span class="sxs-lookup"><span data-stu-id="1db61-145">The type of the elements in the data source, `customers`, is the type of the range variable, `cust`, in the query.</span></span> <span data-ttu-id="1db61-146">В этом примере этот тип является `Customer`.</span><span class="sxs-lookup"><span data-stu-id="1db61-146">In this example, that type is `Customer`.</span></span>  
   
- Без локального определения типа предыдущий пример бы более громоздким для записи и понимания, как показано в следующем примере.  
+2.  <span data-ttu-id="1db61-147">`Select` Инструкция возвращает `Name` каждого экземпляра `Customer` объект, а не весь объект.</span><span class="sxs-lookup"><span data-stu-id="1db61-147">The `Select` statement returns the `Name` property of each `Customer` object instead of the whole object.</span></span> <span data-ttu-id="1db61-148">Поскольку `Name` является строкой, переменной запроса `custNames`, снова будет IEnumerable (Of String), не `Customer`.</span><span class="sxs-lookup"><span data-stu-id="1db61-148">Because `Name` is a string, the query variable, `custNames`, will again be IEnumerable(Of String), not of `Customer`.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-## <a name="queries-that-require-anonymous-types"></a>Запросы, требующие анонимные типы  
- В следующем примере показано более сложная ситуация. В предыдущем примере был неудобен явно указать типы для всех переменных. В данном примере это невозможно. Вместо выбора всего `Customer` элементы из источника данных или одного поля из каждого элемента `Select` предложения в этом запросе возвращает два свойства из исходного `Customer` объект: `Name` и `City`. В ответ на `Select` предложение, компилятор определяет анонимный тип, содержащий эти два свойства. В результате выполнения `nameCityQuery` в `For Each` цикла — это коллекция экземпляров нового анонимного типа. Поскольку анонимный тип не имеет имени, нельзя указать тип `nameCityQuery` или `custInfo` явным образом. То есть, анонимный тип, у вас есть отсутствует имя типа для использования вместо `String` в `IEnumerable(Of String)`. Дополнительные сведения см. в разделе [анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+3.  <span data-ttu-id="1db61-149">Поскольку `custNames` представляет собой последовательность строк, `For Each` переменная итерации цикла, `custName`, должно быть строкой.</span><span class="sxs-lookup"><span data-stu-id="1db61-149">Because `custNames` represents a sequence of strings, the `For Each` loop's iteration variable, `custName`, must be a string.</span></span>  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- Несмотря на то, что не поддерживается для указания типов для всех переменных в предыдущем примере, связи не изменяются.  
+ <span data-ttu-id="1db61-150">Без локального определения типов предыдущий пример может занимать более громоздким для записи и для понимания, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="1db61-150">Without local type inference, the previous example would be more cumbersome to write and to understand, as the following example shows.</span></span>  
   
-1.  Тип элементов в источнике данных снова является типом переменной диапазона в запросе. В этом примере `cust` является экземпляром класса `Customer`.  
+```vb  
+' Method GetTable returns a table of Customer objects.  
+ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)()  
+ Dim custNames As IEnumerable(Of String) =  
+     From cust As Customer In customers   
+     Where cust.City = "London"   
+     Select cust.Name  
   
-2.  Поскольку `Select` инструкция создает анонимный тип, переменная запроса `nameCityQuery`, неявно типизируется как анонимный тип. Анонимный тип не имеет имени и поэтому не может быть указан явно.  
+ For Each custName As String In custNames  
+     Console.WriteLine(custName)  
+ Next  
+```  
   
-3.  Тип переменной итерации в `For Each` цикл имеет анонимный тип, созданный на шаге 2. Так как тип не имеет имени, тип переменной итерации цикла следует определять неявно.  
+## <a name="queries-that-require-anonymous-types"></a><span data-ttu-id="1db61-151">Запросы, требующие анонимные типы</span><span class="sxs-lookup"><span data-stu-id="1db61-151">Queries That Require Anonymous Types</span></span>  
+ <span data-ttu-id="1db61-152">В следующем примере показано более сложная ситуация.</span><span class="sxs-lookup"><span data-stu-id="1db61-152">The following example shows a more complex situation.</span></span> <span data-ttu-id="1db61-153">В предыдущем примере был неудобен для указания типов для всех переменных явным образом.</span><span class="sxs-lookup"><span data-stu-id="1db61-153">In the previous example, it was inconvenient to specify types for all the variables explicitly.</span></span> <span data-ttu-id="1db61-154">В этом примере это невозможно.</span><span class="sxs-lookup"><span data-stu-id="1db61-154">In this example, it is impossible.</span></span> <span data-ttu-id="1db61-155">Вместо выбора всей `Customer` элементы из источника данных или одного поля из каждого элемента `Select` предложение в этом запросе возвращает два свойства исходного `Customer` объект: `Name` и `City`.</span><span class="sxs-lookup"><span data-stu-id="1db61-155">Instead of selecting entire `Customer` elements from the data source, or a single field from each element, the `Select` clause in this query returns two properties of the original `Customer` object: `Name` and `City`.</span></span> <span data-ttu-id="1db61-156">В ответ на `Select` предложение, компилятор определяет анонимный тип, содержащий эти два свойства.</span><span class="sxs-lookup"><span data-stu-id="1db61-156">In response to the `Select` clause, the compiler defines an anonymous type that contains those two properties.</span></span> <span data-ttu-id="1db61-157">В результате выполнения `nameCityQuery` в `For Each` цикла — это коллекция экземпляров нового анонимного типа.</span><span class="sxs-lookup"><span data-stu-id="1db61-157">The result of executing `nameCityQuery` in the `For Each` loop is a collection of instances of the new anonymous type.</span></span> <span data-ttu-id="1db61-158">Так как анонимный тип не имеет имени, нельзя указать тип `nameCityQuery` или `custInfo` явным образом.</span><span class="sxs-lookup"><span data-stu-id="1db61-158">Because the anonymous type has no usable name, you cannot specify the type of `nameCityQuery` or `custInfo` explicitly.</span></span> <span data-ttu-id="1db61-159">То есть, анонимный тип, у вас есть отсутствует имя типа для использования вместо `String` в `IEnumerable(Of String)`.</span><span class="sxs-lookup"><span data-stu-id="1db61-159">That is, with an anonymous type, you have no type name to use in place of `String` in `IEnumerable(Of String)`.</span></span> <span data-ttu-id="1db61-160">Дополнительные сведения см. в статье [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="1db61-160">For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Введение в LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Запросы](../../../../visual-basic/language-reference/queries/queries.md)
+```vb  
+' Method GetTable returns a table of Customer objects.  
+Dim customers = db.GetTable(Of Customer)()  
+Dim nameCityQuery = From cust In customers   
+                    Where cust.City = "London"   
+                    Select cust.Name, cust.City  
+  
+For Each custInfo In nameCityQuery  
+    Console.WriteLine(custInfo.Name)  
+Next  
+```  
+  
+ <span data-ttu-id="1db61-161">Несмотря на то, что не поддерживается для указания типов для всех переменных в предыдущем примере, связи не изменяются.</span><span class="sxs-lookup"><span data-stu-id="1db61-161">Although it is not possible to specify types for all the variables in the previous example, the relationships remain the same.</span></span>  
+  
+1.  <span data-ttu-id="1db61-162">Тип элементов в источнике данных снова — тип переменной диапазона в запросе.</span><span class="sxs-lookup"><span data-stu-id="1db61-162">The type of the elements in the data source is again the type of the range variable in the query.</span></span> <span data-ttu-id="1db61-163">В этом примере `cust` является экземпляром класса `Customer`.</span><span class="sxs-lookup"><span data-stu-id="1db61-163">In this example, `cust` is an instance of `Customer`.</span></span>  
+  
+2.  <span data-ttu-id="1db61-164">Поскольку `Select` оператор создает анонимный тип, переменная запроса `nameCityQuery`, неявно типизируется как анонимный тип.</span><span class="sxs-lookup"><span data-stu-id="1db61-164">Because the `Select` statement produces an anonymous type, the query variable, `nameCityQuery`, must be implicitly typed as an anonymous type.</span></span> <span data-ttu-id="1db61-165">Анонимный тип не имеет имени и поэтому не может быть указана явно.</span><span class="sxs-lookup"><span data-stu-id="1db61-165">An anonymous type has no usable name, and therefore cannot be specified explicitly.</span></span>  
+  
+3.  <span data-ttu-id="1db61-166">Тип переменной итерации в `For Each` цикла является анонимным типом, созданным на шаге 2.</span><span class="sxs-lookup"><span data-stu-id="1db61-166">The type of the iteration variable in the `For Each` loop is the anonymous type created in step 2.</span></span> <span data-ttu-id="1db61-167">Так как тип не имеет имени, неявно необходимо определить тип переменной итерации цикла.</span><span class="sxs-lookup"><span data-stu-id="1db61-167">Because the type has no usable name, the type of the loop iteration variable must be determined implicitly.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="1db61-168">См. также</span><span class="sxs-lookup"><span data-stu-id="1db61-168">See Also</span></span>  
+ [<span data-ttu-id="1db61-169">Приступая к работе с LINQ в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1db61-169">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="1db61-170">Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="1db61-170">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="1db61-171">Вывод локального типа</span><span class="sxs-lookup"><span data-stu-id="1db61-171">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ <span data-ttu-id="1db61-172">[Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1db61-172">[Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>  
+ [<span data-ttu-id="1db61-173">LINQ</span><span class="sxs-lookup"><span data-stu-id="1db61-173">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="1db61-174">Запросы</span><span class="sxs-lookup"><span data-stu-id="1db61-174">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)

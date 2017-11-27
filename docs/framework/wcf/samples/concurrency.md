@@ -1,43 +1,46 @@
 ---
-title: "Параллельность | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "пример параллелизма [Windows Communication Foundation]"
-  - "поведения служб, пример параллелизма"
+title: "параллелизм"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service behaviors, concurency sample
+- Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-caps.latest.revision: 32
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 32
+caps.latest.revision: "32"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e0e6a0db5ee02f96582fe71414b620e1f78c40a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Параллельность
-Образец Concurrency демонстрирует использование <xref:System.ServiceModel.ServiceBehaviorAttribute> с перечислением <xref:System.ServiceModel.ConcurrencyMode>, определяющим, будет ли экземпляр службы обрабатывать сообщения последовательно или параллельно.  Данный образец основан на образце [Начало работы](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует контракт службы `ICalculator`.  Этот образец определяет новый контракт, `ICalculatorConcurrency`, унаследованный от `ICalculator`, который добавляет две операции для контроля состояния параллелизма службы.  Изменив параметр параллелизма, можно запустить клиент и посмотреть, как изменилось поведение.  
+# <a name="concurrency"></a><span data-ttu-id="5e159-102">параллелизм</span><span class="sxs-lookup"><span data-stu-id="5e159-102">Concurrency</span></span>
+<span data-ttu-id="5e159-103">Образец Concurrency демонстрирует использование <xref:System.ServiceModel.ServiceBehaviorAttribute> с перечислением <xref:System.ServiceModel.ConcurrencyMode>, определяющим, будет ли экземпляр службы обрабатывать сообщения последовательно или параллельно.</span><span class="sxs-lookup"><span data-stu-id="5e159-103">The Concurrency sample demonstrates using the <xref:System.ServiceModel.ServiceBehaviorAttribute> with the <xref:System.ServiceModel.ConcurrencyMode> enumeration, which controls whether an instance of a service processes messages sequentially or concurrently.</span></span> <span data-ttu-id="5e159-104">Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы.</span><span class="sxs-lookup"><span data-stu-id="5e159-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="5e159-105">Этот образец определяет новый контракт, `ICalculatorConcurrency`, унаследованный от `ICalculator`, который добавляет две операции для контроля состояния параллелизма службы.</span><span class="sxs-lookup"><span data-stu-id="5e159-105">This sample defines a new contract, `ICalculatorConcurrency`, which inherits from `ICalculator`, providing two additional operations for inspecting the state of the service concurrency.</span></span> <span data-ttu-id="5e159-106">Изменив параметр параллелизма, можно запустить клиент и посмотреть, как изменилось поведение.</span><span class="sxs-lookup"><span data-stu-id="5e159-106">By altering the concurrency setting, you can observe the change in behavior by running the client.</span></span>  
   
- В этом образце клиентом является консольное приложение \(EXE\), а служба размещается в службах IIS.  
+ <span data-ttu-id="5e159-107">В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="5e159-107">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="5e159-108">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="5e159-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Доступны три режима параллелизма.  
+ <span data-ttu-id="5e159-109">Доступны три режима параллелизма.</span><span class="sxs-lookup"><span data-stu-id="5e159-109">There are three concurrency modes available:</span></span>  
   
--   `Single`: все экземпляры службы обрабатывают в данный момент времени одно сообщение.  Это режим параллелизма по умолчанию.  
+-   <span data-ttu-id="5e159-110">`Single`: все экземпляры службы обрабатывают в данный момент времени одно сообщение.</span><span class="sxs-lookup"><span data-stu-id="5e159-110">`Single`: Each service instance processes one message at a time.</span></span> <span data-ttu-id="5e159-111">Это режим параллелизма по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="5e159-111">This is the default concurrency mode.</span></span>  
   
--   `Multiple`: каждый экземпляр службы обрабатывает несколько сообщений параллельно.  Чтобы использовать этот режим параллелизма, реализация службы должна быть потокобезопасной.  
+-   <span data-ttu-id="5e159-112">`Multiple`: каждый экземпляр службы обрабатывает несколько сообщений параллельно.</span><span class="sxs-lookup"><span data-stu-id="5e159-112">`Multiple`: Each service instance processes multiple messages concurrently.</span></span> <span data-ttu-id="5e159-113">Чтобы использовать этот режим параллелизма, реализация службы должна быть потокобезопасной.</span><span class="sxs-lookup"><span data-stu-id="5e159-113">The service implementation must be thread-safe to use this concurrency mode.</span></span>  
   
--   `Reentrant`: каждый экземпляр службы одновременно обрабатывает одно сообщение, но принимает вызовы с повторным входом.  Служба принимает такие вызовы только в ответ на собственные вызовы.  Повторный вход показан в разделе [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md).  
+-   <span data-ttu-id="5e159-114">`Reentrant`: каждый экземпляр службы одновременно обрабатывает одно сообщение, но принимает вызовы с повторным входом.</span><span class="sxs-lookup"><span data-stu-id="5e159-114">`Reentrant`: Each service instance processes one message at a time, but accepts reentrant calls.</span></span> <span data-ttu-id="5e159-115">Служба принимает такие вызовы только в ответ на собственные вызовы. Демонстрируется повторные входы [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) образца.</span><span class="sxs-lookup"><span data-stu-id="5e159-115">The service only accepts these calls when it is calling out. Reentrant is demonstrated in the [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) sample.</span></span>  
   
- Использование параллелизма связано с режимом создания экземпляров.  В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode> параллелизм не имеет значения, так как каждое сообщение обрабатывается новым экземпляром службы.  В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode> имеет значение параллелизм <xref:System.ServiceModel.ConcurrencyMode> или <xref:System.ServiceModel.ConcurrencyMode>, в зависимости от того, обрабатывает ли один экземпляр сообщения последовательно или параллельно.  В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode> могут иметь значение любые режимы параллелизма.  
+ <span data-ttu-id="5e159-116">Использование параллелизма связано с режимом создания экземпляров.</span><span class="sxs-lookup"><span data-stu-id="5e159-116">The use of concurrency is related to the instancing mode.</span></span> <span data-ttu-id="5e159-117">В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode.PerCall> параллелизм не имеет значения, так как каждое сообщение обрабатывается новым экземпляром службы.</span><span class="sxs-lookup"><span data-stu-id="5e159-117">In <xref:System.ServiceModel.InstanceContextMode.PerCall> instancing, concurrency is not relevant, because each message is processed by a new service instance.</span></span> <span data-ttu-id="5e159-118">В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode.Single> имеет значение параллелизм <xref:System.ServiceModel.ConcurrencyMode.Single> или <xref:System.ServiceModel.ConcurrencyMode.Multiple>, в зависимости от того, обрабатывает ли один экземпляр сообщения последовательно или параллельно.</span><span class="sxs-lookup"><span data-stu-id="5e159-118">In <xref:System.ServiceModel.InstanceContextMode.Single> instancing, either <xref:System.ServiceModel.ConcurrencyMode.Single> or <xref:System.ServiceModel.ConcurrencyMode.Multiple> concurrency is relevant, depending on whether the single instance processes messages sequentially or concurrently.</span></span> <span data-ttu-id="5e159-119">В режиме создания экземпляров <xref:System.ServiceModel.InstanceContextMode.PerSession> могут иметь значение любые режимы параллелизма.</span><span class="sxs-lookup"><span data-stu-id="5e159-119">In <xref:System.ServiceModel.InstanceContextMode.PerSession> instancing, any of the concurrency modes may be relevant.</span></span>  
   
- Класс службы задает поведение параллелизма с помощью атрибута `[ServiceBehavior(ConcurrencyMode=<setting>)]`, как показано в следующем образце кода.  Преобразуя в комментарий различные строки, можно поэкспериментировать с режимами параллелизма `Single` и `Multiple`.  Не забывайте строить службу заново после изменения режима параллелизма.  
+ <span data-ttu-id="5e159-120">Класс службы задает поведение параллелизма с помощью атрибута `[ServiceBehavior(ConcurrencyMode=<setting>)]`, как показано в следующем образце кода.</span><span class="sxs-lookup"><span data-stu-id="5e159-120">The service class specifies concurrency behavior with the `[ServiceBehavior(ConcurrencyMode=<setting>)]` attribute as shown in the code sample that follows.</span></span> <span data-ttu-id="5e159-121">Преобразуя в комментарий различные строки, можно поэкспериментировать с режимами параллелизма `Single` и `Multiple`.</span><span class="sxs-lookup"><span data-stu-id="5e159-121">By changing which lines are commented out, you can experiment with the `Single` and `Multiple` concurrency modes.</span></span> <span data-ttu-id="5e159-122">Не забывайте строить службу заново после изменения режима параллелизма.</span><span class="sxs-lookup"><span data-stu-id="5e159-122">Remember to rebuild the service after changing the concurrency mode.</span></span>  
   
 ```  
 // Single allows a single message to be processed sequentially by each service instance.  
@@ -96,27 +99,27 @@ public class CalculatorService : ICalculatorConcurrency
 }  
 ```  
   
- По умолчанию образец использует параллелизм <xref:System.ServiceModel.ConcurrencyMode> с режимом создания экземпляров <xref:System.ServiceModel.InstanceContextMode>.  Код клиента изменен для использования асинхронного прокси.  Это позволяет клиенту направлять службе сразу несколько вызовов, не дожидаясь ответа на каждый вызов.  Можно наблюдать различия в поведении режима параллелизма службы.  
+ <span data-ttu-id="5e159-123">По умолчанию образец использует параллелизм <xref:System.ServiceModel.ConcurrencyMode.Multiple> с режимом создания экземпляров <xref:System.ServiceModel.InstanceContextMode.Single>.</span><span class="sxs-lookup"><span data-stu-id="5e159-123">The sample uses <xref:System.ServiceModel.ConcurrencyMode.Multiple> concurrency with <xref:System.ServiceModel.InstanceContextMode.Single> instancing by default.</span></span> <span data-ttu-id="5e159-124">Код клиента изменен для использования асинхронного прокси.</span><span class="sxs-lookup"><span data-stu-id="5e159-124">The client code has been modified to use an asynchronous proxy.</span></span> <span data-ttu-id="5e159-125">Это позволяет клиенту направлять службе сразу несколько вызовов, не дожидаясь ответа на каждый вызов.</span><span class="sxs-lookup"><span data-stu-id="5e159-125">This allows the client to make multiple calls to the service without waiting for a response between each call.</span></span> <span data-ttu-id="5e159-126">Можно наблюдать различия в поведении режима параллелизма службы.</span><span class="sxs-lookup"><span data-stu-id="5e159-126">You can observe the difference in behavior of the service concurrency mode.</span></span>  
   
- При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.  Отображается режим параллелизма, в котором работает служба, вызываются все операции, и отображается число операций.  Обратите внимание, что в режиме параллельности `Multiple` результаты возвращаются в порядке, отличном от порядка вызовов, потому что служба обрабатывает несколько сообщений параллельно.  Если изменить режим параллельности на `Single`, результаты возвращаются в порядке вызова, потому что служба обрабатывает все сообщения последовательно.  Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="5e159-127">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="5e159-127">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="5e159-128">Отображается режим параллелизма, в котором работает служба, вызываются все операции, и отображается число операций.</span><span class="sxs-lookup"><span data-stu-id="5e159-128">The concurrency mode that the service is running under is displayed, each operation is called, and then the operation count is displayed.</span></span> <span data-ttu-id="5e159-129">Обратите внимание, что в режиме параллельности `Multiple` результаты возвращаются в порядке, отличном от порядка вызовов, потому что служба обрабатывает несколько сообщений параллельно.</span><span class="sxs-lookup"><span data-stu-id="5e159-129">Notice that when the concurrency mode is `Multiple`, the results are returned in a different order than how they were called, because the service processes multiple messages concurrently.</span></span> <span data-ttu-id="5e159-130">Если изменить режим параллельности на `Single`, результаты возвращаются в порядке вызова, потому что служба обрабатывает все сообщения последовательно.</span><span class="sxs-lookup"><span data-stu-id="5e159-130">By changing the concurrency mode to `Single`, the results are returned in the order they were called, because the service processes each message sequentially.</span></span> <span data-ttu-id="5e159-131">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="5e159-131">Press ENTER in the client window to shut down the client.</span></span>  
   
-### Настройка, сборка и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5e159-132">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="5e159-132">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="5e159-133">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5e159-133">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Если для создания прокси\-клиента используется средство Svcutil.exe, включите параметр `/async`.  
+2.  <span data-ttu-id="5e159-134">При использовании Svcutil.exe для создания клиентского прокси-сервера, убедитесь, что включает `/async` параметр.</span><span class="sxs-lookup"><span data-stu-id="5e159-134">If you use Svcutil.exe to generate the proxy client, ensure that you include the `/async` option.</span></span>  
   
-3.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="5e159-135">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5e159-135">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям раздела [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="5e159-136">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5e159-136">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.  Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="5e159-137">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="5e159-137">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5e159-138">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="5e159-138">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="5e159-139">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="5e159-139">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5e159-140">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="5e159-140">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="5e159-141">См. также</span><span class="sxs-lookup"><span data-stu-id="5e159-141">See Also</span></span>

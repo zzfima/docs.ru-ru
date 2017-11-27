@@ -1,37 +1,40 @@
 ---
-title: "Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListItem"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "примеры [Windows Forms], ListView - элемент управления"
-  - "примеры [Windows Forms], TreeView - элемент управления"
-  - "ListView - элемент управления [Windows Forms], добавление пользовательских сведений"
-  - "Tag - свойство"
-  - "TreeView - элемент управления [Windows Forms], добавление пользовательских сведений"
+title: "Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: ListItem
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- examples [Windows Forms], ListView control
+- ListView control [Windows Forms], adding custom information
+- TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)
-Разработчик формы может создать производный узел в элементе управления Windows Forms <xref:System.Windows.Forms.TreeView> или производный элемент списка в элементе управления <xref:System.Windows.Forms.ListView>.  Образование производных элементов позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки.  Эта возможность применяется, например, для добавления объекта Customer к каждому узлу дерева или элементу списка.  Примеры, приведенные в этом разделе, относятся к элементу управления <xref:System.Windows.Forms.TreeView>, но аналогичный подход может использоваться и для элемента управления <xref:System.Windows.Forms.ListView>.  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a><span data-ttu-id="6bf30-102">Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="6bf30-102">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>
+<span data-ttu-id="6bf30-103">В Windows Forms можно создать производный узел <xref:System.Windows.Forms.TreeView> управления или производный элемент списка в <xref:System.Windows.Forms.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6bf30-103">You can create a derived node in a Windows Forms <xref:System.Windows.Forms.TreeView> control or a derived item in a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="6bf30-104">Наследование позволяет добавлять любые необходимые поля, а также пользовательские методы и конструкторы для их обработки.</span><span class="sxs-lookup"><span data-stu-id="6bf30-104">Derivation allows you to add any fields you require, as well as custom methods and constructors for handling them.</span></span> <span data-ttu-id="6bf30-105">Эту возможность можно использовать для присоединения объекта Customer к каждому узлу дерева или элементу списка.</span><span class="sxs-lookup"><span data-stu-id="6bf30-105">One use of this feature is to attach a Customer object to each tree node or list item.</span></span> <span data-ttu-id="6bf30-106">Приведенные здесь примеры предназначены для <xref:System.Windows.Forms.TreeView> управления, но тот же подход можно использовать для <xref:System.Windows.Forms.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6bf30-106">The examples here are for a <xref:System.Windows.Forms.TreeView> control, but the same approach can be used for a <xref:System.Windows.Forms.ListView> control.</span></span>  
   
-### Создание производного узла дерева  
+### <a name="to-derive-a-tree-node"></a><span data-ttu-id="6bf30-107">Наследование узла дерева</span><span class="sxs-lookup"><span data-stu-id="6bf30-107">To derive a tree node</span></span>  
   
--   Создайте новый класс узла, производный от класса <xref:System.Windows.Forms.TreeNode>, в котором предусмотрено пользовательское поле для записи пути к файлу.  
+-   <span data-ttu-id="6bf30-108">Создайте новый класс узла, производный от <xref:System.Windows.Forms.TreeNode> класс, который содержит пользовательское поле для записи пути к файлу.</span><span class="sxs-lookup"><span data-stu-id="6bf30-108">Create a new node class, derived from the <xref:System.Windows.Forms.TreeNode> class, which has a custom field to record a file path.</span></span>  
   
     ```vb  
     Class myTreeNode  
@@ -45,7 +48,6 @@ caps.handback.revision: 13
           Me.Text = fp.Substring(fp.LastIndexOf("\"))  
        End Sub  
     End Class  
-  
     ```  
   
     ```csharp  
@@ -59,7 +61,6 @@ caps.handback.revision: 13
           this.Text = fp.Substring(fp.LastIndexOf("\\"));  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -76,11 +77,11 @@ caps.handback.revision: 13
     };  
     ```  
   
-### Использование производного узла дерева  
+### <a name="to-use-a-derived-tree-node"></a><span data-ttu-id="6bf30-109">Использование производного узла дерева</span><span class="sxs-lookup"><span data-stu-id="6bf30-109">To use a derived tree node</span></span>  
   
-1.  Новый производный узел дерева может быть использован как параметр при вызове функции.  
+1.  <span data-ttu-id="6bf30-110">Новый производный узел дерева можно использовать в качестве параметра для вызовов функций.</span><span class="sxs-lookup"><span data-stu-id="6bf30-110">You can use the new derived tree node as a parameter to function calls.</span></span>  
   
-     В нижеследующем примере в качестве местоположения текстового файла выбрана папка "Мои документы".  Такой выбор объясняется тем, что эта папка имеется на большинстве компьютеров, работающих под управлением операционной системы Windows.  Кроме того, если используется эта папка, то для запуска приложения достаточен минимальный уровень доступа к системе.  
+     <span data-ttu-id="6bf30-111">В следующем примере в качестве расположения текстового файла выбрана папка "Мои документы".</span><span class="sxs-lookup"><span data-stu-id="6bf30-111">In the example below, the path set for the location of the text file is the My Documents folder.</span></span> <span data-ttu-id="6bf30-112">Это сделано, поскольку предполагается, что большинство компьютеров, работающих под управлением операционной системы Windows, содержат эту папку.</span><span class="sxs-lookup"><span data-stu-id="6bf30-112">This is done because you can assume that most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="6bf30-113">Это также позволяет пользователям с минимальным уровнем доступа к системе безопасно запускать приложение.</span><span class="sxs-lookup"><span data-stu-id="6bf30-113">This also allows users with minimal system access levels to safely run the application.</span></span>  
   
     ```vb  
     ' You should replace the bold text file   
@@ -88,7 +89,6 @@ caps.handback.revision: 13
     TreeView1.Nodes.Add(New myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        & "\ TextFile.txt ") )  
-  
     ```  
   
     ```csharp  
@@ -98,7 +98,6 @@ caps.handback.revision: 13
     treeView1.Nodes.Add(new myTreeNode (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        + @"\TextFile.txt") );  
-  
     ```  
   
     ```cpp  
@@ -110,7 +109,7 @@ caps.handback.revision: 13
        "\\TextFile.txt")));  
     ```  
   
-2.  Если передается узел дерева, тип которого определен как класс <xref:System.Windows.Forms.TreeNode>, то его необходимо привести к типу производного класса.  Приведение означает явное преобразование одного типа объекта в другой.  Дополнительные сведения о приведении типов см. в разделах [Явные и неявные преобразования](../Topic/Implicit%20and%20Explicit%20Conversions%20\(Visual%20Basic\).md) \([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]\), [Оператор \(\)](../Topic/\(\)%20Operator%20\(C%23%20Reference\).md) \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\) или [Оператор Cast: \(\)](../../../../amples/snippets/visualbasic/VS_Snippets_Wpf/DocumentStructure/visualbasic/spec_withstructure-xps/_rels/.rels) \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\).  
+2.  <span data-ttu-id="6bf30-114">Если передается узел дерева и типизируется как <xref:System.Windows.Forms.TreeNode> класса, необходимо выполнить приведение производного класса.</span><span class="sxs-lookup"><span data-stu-id="6bf30-114">If you are passed the tree node and it is typed as a <xref:System.Windows.Forms.TreeNode> class, then you will need to cast to your derived class.</span></span> <span data-ttu-id="6bf30-115">Приведение представляет собой явное преобразование из одного типа объекта в другой.</span><span class="sxs-lookup"><span data-stu-id="6bf30-115">Casting is an explicit conversion from one type of object to another.</span></span> <span data-ttu-id="6bf30-116">Дополнительные сведения о приведении см. в разделах [Явные и неявные преобразования](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]), [Оператор ()](~/docs/csharp/language-reference/operators/invocation-operator.md) ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]), или [Оператор Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</span><span class="sxs-lookup"><span data-stu-id="6bf30-116">For more information on casting, see [Implicit and Explicit Conversions](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]), [() Operator](~/docs/csharp/language-reference/operators/invocation-operator.md) ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]), or [Cast Operator: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</span></span>  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -118,7 +117,6 @@ caps.handback.revision: 13
        mynode = CType(e.node, myTreeNode)  
        MessageBox.Show("Node selected is " & mynode.filepath)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -128,7 +126,6 @@ caps.handback.revision: 13
        myTreeNode myNode = (myTreeNode)e.Node;  
        MessageBox.Show("Node selected is " + myNode.FilePath);  
     }  
-  
     ```  
   
     ```cpp  
@@ -142,6 +139,6 @@ caps.handback.revision: 13
        }  
     ```  
   
-## См. также  
- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Элемент управления ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6bf30-117">См. также</span><span class="sxs-lookup"><span data-stu-id="6bf30-117">See Also</span></span>  
+ [<span data-ttu-id="6bf30-118">Элемент управления TreeView</span><span class="sxs-lookup"><span data-stu-id="6bf30-118">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="6bf30-119">Элемент управления ListView</span><span class="sxs-lookup"><span data-stu-id="6bf30-119">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

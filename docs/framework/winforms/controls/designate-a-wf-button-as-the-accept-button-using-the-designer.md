@@ -1,44 +1,45 @@
 ---
-title: "Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Accept - кнопка в формах Windows Forms"
-  - "Button - элемент управления [Windows Forms], назначение по умолчанию"
-  - "кнопки, значения по умолчанию в Windows Forms"
-  - "элементы управления Windows Forms, кнопка по умолчанию в форме"
+title: "Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- buttons [Windows Forms], default on Windows Forms
+- Accept button on Windows Forms
+- Button control [Windows Forms], designating as default
+- Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 044fa4ab2e9a37038e9db9a2784fad4190713806
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора
-В любой форме Windows Forms можно назначить элемент управления <xref:System.Windows.Forms.Button> кнопкой "Принять", называемой также кнопкой по умолчанию.  Кнопка по умолчанию нажимается при любом нажатии клавиши ВВОД независимо от того, на каком элементе управления формы в этот момент находится фокус.  Исключение составляют случаи, когда элемент управления, на котором находится фокус, является другой кнопкой \(в этом случае нажимается кнопка, на которой находится фокус\), многострочным текстовым полем или настраиваемым элементом управления, перехватывающими клавишу ВВОД.  
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a><span data-ttu-id="6dbfb-102">Практическое руководство. Создание кнопки принятия в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="6dbfb-102">How to: Designate a Windows Forms Button as the Accept Button Using the Designer</span></span>
+<span data-ttu-id="6dbfb-103">В любой форме Windows Forms можно назначить <xref:System.Windows.Forms.Button> отображения элемента управления «принять», также известные как кнопка по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="6dbfb-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="6dbfb-104">Каждый раз, когда пользователь нажимает клавишу ВВОД, нажатии кнопки по умолчанию независимо от других элементов управления в форме имеет фокус.</span><span class="sxs-lookup"><span data-stu-id="6dbfb-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span> <span data-ttu-id="6dbfb-105">Исключение составляют при другой кнопки элемента управления с фокусом — в этом случае будет нажата кнопка с фокусом, многострочное текстовое поле, или пользовательский элемент управления, который перехватывает клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="6dbfb-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих настроек или выпуска.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="6dbfb-106">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="6dbfb-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="6dbfb-107">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="6dbfb-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="6dbfb-108">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="6dbfb-108">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Чтобы назначить кнопку "Принять"  
+### <a name="to-designate-the-accept-button"></a><span data-ttu-id="6dbfb-109">Чтобы создать кнопку «принять»</span><span class="sxs-lookup"><span data-stu-id="6dbfb-109">To designate the accept button</span></span>  
   
-1.  Выберите форму, в которой находится кнопка.  
+1.  <span data-ttu-id="6dbfb-110">Выберите форму, в которой находится кнопка.</span><span class="sxs-lookup"><span data-stu-id="6dbfb-110">Select the form on which the button resides.</span></span>  
   
-2.  В окне **Свойства** задайте в качестве свойства формы <xref:System.Windows.Forms.Form.AcceptButton%2A> имя элемента управления <xref:System.Windows.Forms.Button>.  
+2.  <span data-ttu-id="6dbfb-111">В **свойства** задайте формы <xref:System.Windows.Forms.Form.AcceptButton%2A> свойства <xref:System.Windows.Forms.Button> имя элемента управления.</span><span class="sxs-lookup"><span data-stu-id="6dbfb-111">In the **Properties** window, set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the <xref:System.Windows.Forms.Button> control's name.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Form.AcceptButton%2A>   
- [Общие сведения об элементе управления Button](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Практическое руководство. Обработка события нажатия кнопки в Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)   
- [Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)   
- [Элемент управления Button](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6dbfb-112">См. также</span><span class="sxs-lookup"><span data-stu-id="6dbfb-112">See Also</span></span>  
+ <xref:System.Windows.Forms.Form.AcceptButton%2A>  
+ [<span data-ttu-id="6dbfb-113">Общие сведения об элементе управления Button</span><span class="sxs-lookup"><span data-stu-id="6dbfb-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6dbfb-114">Способы активации элемента управления Button в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6dbfb-114">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="6dbfb-115">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6dbfb-115">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [<span data-ttu-id="6dbfb-116">Практическое руководство. Создание кнопки отмены в формах Windows Forms с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="6dbfb-116">How to: Designate a Windows Forms Button as the Cancel Button Using the Designer</span></span>](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ [<span data-ttu-id="6dbfb-117">Элемент управления Button</span><span class="sxs-lookup"><span data-stu-id="6dbfb-117">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

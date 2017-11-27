@@ -1,37 +1,39 @@
 ---
-title: "Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView - элемент управления [WPF], привязка к данным неопределенной глубины"
+title: "Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b16cae3a91eae73a4480484d89bb075862256b25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины
-В некоторых случаях бывает необходимо выполнить привязку элемента управления <xref:System.Windows.Controls.TreeView> к источнику данных, глубина которого неизвестна.  Это возможно, если данные имеют рекурсивную природу. Примером таких данных является файловая система, в которой папки могут содержать другие папки, или организационная структура компании, в которой одни сотрудники непосредственно подчинены другим.  
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a><span data-ttu-id="5eb8e-102">Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины</span><span class="sxs-lookup"><span data-stu-id="5eb8e-102">How to: Bind a TreeView to Data That Has an Indeterminable Depth</span></span>
+<span data-ttu-id="5eb8e-103">Возможны ситуации, когда вы хотите привязать <xref:System.Windows.Controls.TreeView> к источнику данных, глубина которого неизвестен.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-103">There might be times when you want to bind a <xref:System.Windows.Controls.TreeView> to a data source whose depth is not known.</span></span>  <span data-ttu-id="5eb8e-104">Это может произойти, когда данные рекурсивных по своей природе, например в файловой системе, где папок может содержать папки, или организационной структуры компании, где сотрудники имеют других сотрудников в качестве подчиненных.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-104">This can occur when the data is recursive in nature, such as a file system, where folders can contain folders, or a company's organizational structure, where employees have other employees as direct reports.</span></span>  
   
- Источник данных может иметь иерархическую объектную модель.  Например, класс `Employee` может содержать коллекцию объектов Employee \(сотрудник\), которые напрямую подчиняются данному сотруднику.  Если данные представлены в неиерархическом виде, необходимо построить иерархическое представление данных.  
+ <span data-ttu-id="5eb8e-105">Источник данных должен иметь иерархическую объектную модель.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-105">The data source must have a hierarchical object model.</span></span> <span data-ttu-id="5eb8e-106">Например `Employee` класс может содержать коллекцию объектов Employee, подчиненных сотрудника.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-106">For example, an `Employee` class might contain a collection of Employee objects that are the direct reports of an employee.</span></span> <span data-ttu-id="5eb8e-107">Если данные представлены в виде, не является иерархической, необходимо построить иерархическое представление данных.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-107">If the data is represented in a way that is not hierarchical, you must build a hierarchical representation of the data.</span></span>  
   
- При присвоении значения свойству <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=fullName> и при создании элементом управления <xref:System.Windows.Controls.ItemsControl> элемента управления <xref:System.Windows.Controls.ItemsControl> для каждого дочернего элемента, дочерний элемент управления <xref:System.Windows.Controls.ItemsControl> использует тот же самый элемент управления <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> в качестве родительского элемента.  Например, при задании свойства <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> для привязанного к данным элемента управления <xref:System.Windows.Controls.TreeView> каждый созданный элемент <xref:System.Windows.Controls.TreeViewItem> использует объект <xref:System.Windows.DataTemplate>, присвоенный свойству <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> элемента управления <xref:System.Windows.Controls.TreeView>.  
+ <span data-ttu-id="5eb8e-108">При задании <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType> свойства и, если <xref:System.Windows.Controls.ItemsControl> приводит к возникновению ошибки <xref:System.Windows.Controls.ItemsControl> для каждого дочернего элемента, а затем дочерние <xref:System.Windows.Controls.ItemsControl> использует тот же самый <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> как родительский элемент.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-108">When you set the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType> property and if the <xref:System.Windows.Controls.ItemsControl> generates an <xref:System.Windows.Controls.ItemsControl> for each child item, then the child <xref:System.Windows.Controls.ItemsControl> uses the same <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> as the parent.</span></span> <span data-ttu-id="5eb8e-109">Например, если задать <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> свойство для привязки к данным <xref:System.Windows.Controls.TreeView>, каждая <xref:System.Windows.Controls.TreeViewItem> , созданный использует <xref:System.Windows.DataTemplate> , назначенный для <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> свойство <xref:System.Windows.Controls.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-109">For example, if you set the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property on a data-bound <xref:System.Windows.Controls.TreeView>, each <xref:System.Windows.Controls.TreeViewItem> that is generated uses the <xref:System.Windows.DataTemplate> that was assigned to the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> property of the <xref:System.Windows.Controls.TreeView>.</span></span>  
   
- Объект <xref:System.Windows.HierarchicalDataTemplate> позволяет указать объект <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для элемента <xref:System.Windows.Controls.TreeViewItem> или любого элемента управления <xref:System.Windows.Controls.HeaderedItemsControl> в шаблоне данных.  При задании свойства <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=fullName> его значение используется при применении шаблона данных <xref:System.Windows.HierarchicalDataTemplate>.  Используя <xref:System.Windows.HierarchicalDataTemplate> можно рекурсивно задать <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для каждого элемента <xref:System.Windows.Controls.TreeViewItem> в элементе управления <xref:System.Windows.Controls.TreeView>.  
+ <span data-ttu-id="5eb8e-110"><xref:System.Windows.HierarchicalDataTemplate> Дает возможность указать <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для <xref:System.Windows.Controls.TreeViewItem>, или любой <xref:System.Windows.Controls.HeaderedItemsControl>, шаблон данных.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-110">The <xref:System.Windows.HierarchicalDataTemplate> enables you to specify the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for a <xref:System.Windows.Controls.TreeViewItem>, or any <xref:System.Windows.Controls.HeaderedItemsControl>, on the data template.</span></span> <span data-ttu-id="5eb8e-111">При задании <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType> свойство, значение используется, когда <xref:System.Windows.HierarchicalDataTemplate> применяется.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-111">When you set the <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType> property, that value is used when the <xref:System.Windows.HierarchicalDataTemplate> is applied.</span></span> <span data-ttu-id="5eb8e-112">С помощью <xref:System.Windows.HierarchicalDataTemplate>, то можно установить рекурсивно <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для каждого <xref:System.Windows.Controls.TreeViewItem> в <xref:System.Windows.Controls.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-112">By using a <xref:System.Windows.HierarchicalDataTemplate>, you can recursively set the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for each <xref:System.Windows.Controls.TreeViewItem> in the <xref:System.Windows.Controls.TreeView>.</span></span>  
   
-## Пример  
- В приведенном ниже примере демонстрируется привязка элемента управления <xref:System.Windows.Controls.TreeView> к иерархическим данным, а шаблон <xref:System.Windows.HierarchicalDataTemplate> используется для указания <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для каждого элемента <xref:System.Windows.Controls.TreeViewItem>.  Элемент управления <xref:System.Windows.Controls.TreeView> привязывается к XML\-данным о сотрудниках компании.  Каждый элемент `Employee` может содержать другие элементы `Employee`, чтобы указать, какой сотрудник кому подчиняется.  Поскольку данные являются рекурсивными, шаблон <xref:System.Windows.HierarchicalDataTemplate> можно применить к каждому уровню.  
+## <a name="example"></a><span data-ttu-id="5eb8e-113">Пример</span><span class="sxs-lookup"><span data-stu-id="5eb8e-113">Example</span></span>  
+ <span data-ttu-id="5eb8e-114">Ниже приведен пример, как привязать <xref:System.Windows.Controls.TreeView> иерархических данных и используйте <xref:System.Windows.HierarchicalDataTemplate> для указания <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> для каждого <xref:System.Windows.Controls.TreeViewItem>.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-114">The following example demonstrates how to bind a <xref:System.Windows.Controls.TreeView> to hierarchical data and use a <xref:System.Windows.HierarchicalDataTemplate> to specify the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for each <xref:System.Windows.Controls.TreeViewItem>.</span></span>  <span data-ttu-id="5eb8e-115"><xref:System.Windows.Controls.TreeView> Привязывается к XML-данные о сотрудниках компании.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-115">The <xref:System.Windows.Controls.TreeView> binds to XML data that represents the employees in a company.</span></span>  <span data-ttu-id="5eb8e-116">Каждый `Employee` элемент может содержать другие `Employee` элементов, чтобы указать, кому подчиняется.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-116">Each `Employee` element can contain other `Employee` elements to indicate who reports to whom.</span></span> <span data-ttu-id="5eb8e-117">Поскольку данные являются рекурсивными, <xref:System.Windows.HierarchicalDataTemplate> может применяться к каждому уровню.</span><span class="sxs-lookup"><span data-stu-id="5eb8e-117">Because the data is recursive, the <xref:System.Windows.HierarchicalDataTemplate> can be applied to each level.</span></span>  
   
- [!code-xml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
-## См. также  
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md)
+## <a name="see-also"></a><span data-ttu-id="5eb8e-118">См. также</span><span class="sxs-lookup"><span data-stu-id="5eb8e-118">See Also</span></span>  
+ [<span data-ttu-id="5eb8e-119">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="5eb8e-119">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="5eb8e-120">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="5eb8e-120">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)

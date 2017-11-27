@@ -1,28 +1,37 @@
 ---
-title: "&lt;transport&gt; для &lt;netMsmqBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;transport&gt; для &lt;netMsmqBinding&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2df5bf18605fcf20b253212cb0f9a62b4719b0ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transport&gt; для &lt;netMsmqBinding&gt;
-Определяет параметры безопасности транспорта.  
+# <a name="lttransportgt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="30310-102">&lt;transport&gt; для &lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="30310-102">&lt;transport&gt; of &lt;netMsmqBinding&gt;</span></span>
+<span data-ttu-id="30310-103">Определяет параметры безопасности транспорта.</span><span class="sxs-lookup"><span data-stu-id="30310-103">Defines the transport security settings.</span></span>  
   
-## Синтаксис  
+ <span data-ttu-id="30310-104">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="30310-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="30310-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="30310-105">\<bindings></span></span>  
+<span data-ttu-id="30310-106">\<netMsmqBinding ></span><span class="sxs-lookup"><span data-stu-id="30310-106">\<netMsmqBinding></span></span>  
+<span data-ttu-id="30310-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="30310-107">\<binding></span></span>  
+<span data-ttu-id="30310-108">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="30310-108">\<security></span></span>  
+<span data-ttu-id="30310-109">\<Транспорт ></span><span class="sxs-lookup"><span data-stu-id="30310-109">\<transport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="30310-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="30310-110">Syntax</span></span>  
   
+```xml  
 <netMsmqBinding>  
     <binding>  
     <security>  
@@ -35,35 +44,35 @@ caps.handback.revision: 10
 </netMsmqBinding>  
 ```  
   
-## Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="30310-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="30310-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="30310-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="30310-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Атрибуты  
+### <a name="attributes"></a><span data-ttu-id="30310-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="30310-113">Attributes</span></span>  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|msmqAuthenticationMode|Задает способ проверки подлинности сообщения транспортом MSMQ.  Допустимы следующие значения:<br /><br /> -   None: проверка подлинности не используется.<br />-   WindowsDomain: механизм проверки подлинности использует Active Directory с целью получить сертификат X.509 для идентификатора безопасности, связанного с сообщением.  Затем он используется для проверки списка управления доступом для очереди с целью удостовериться, что пользователь имеет разрешение на запись в очередь.<br />-   Certificate: канал извлекает сертификат из хранилища сертификатов.<br /><br /> Значение по умолчанию — `WindowsDomain`.<br /><br /> Если данный атрибут имеет значение `None`, то атрибут `msmqProtectionLevel` также должен иметь значение `None`.  Это атрибут типа <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
-|msmqEncryptionAlgorithm|Задает алгоритм, который будет использоваться для шифрования сообщений при их передаче между диспетчерами очередей сообщений.  Допустимы следующие значения:<br /><br /> -   RC4Stream<br />-   AES<br />-   Значение по умолчанию — `RC4Stream`.  Это атрибут типа <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|msmqprotectionLevel|Задает способ обеспечения безопасности сообщений на уровне транспорта MSMQ.  Шифрование обеспечивает целостность сообщения, тогда как подпись и шифрование обеспечивают как целостность сообщения, так и неподдельность.  Это гарантирует, что сообщение действительно поступило от отправителя, и отправитель действительно является тем, за кого он себя выдает.  Допустимы следующие значения:<br /><br /> -   None: не защищено.<br />-   Sign: сообщения подписываются.<br />-   EncryptAndSign: сообщения шифруются и подписываются.<br />-   Значение по умолчанию — `Sign`.|  
-|msmqSecureHashAlgorithm|Указывает алгоритм хэширования, который будет использоваться при вычислении дайджеста сообщения.  Допустимы следующие значения:<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Значение по умолчанию — `SHA1`.  Это атрибут типа <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|<span data-ttu-id="30310-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="30310-114">Attribute</span></span>|<span data-ttu-id="30310-115">Описание</span><span class="sxs-lookup"><span data-stu-id="30310-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="30310-116">msmqAuthenticationMode</span><span class="sxs-lookup"><span data-stu-id="30310-116">msmqAuthenticationMode</span></span>|<span data-ttu-id="30310-117">Задает способ проверки подлинности сообщения транспортом MSMQ.</span><span class="sxs-lookup"><span data-stu-id="30310-117">Specifies how the message must be authenticated by the MSMQ transport.</span></span> <span data-ttu-id="30310-118">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="30310-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="30310-119">— None: Проверка подлинности.</span><span class="sxs-lookup"><span data-stu-id="30310-119">-   None: No authentication.</span></span><br /><span data-ttu-id="30310-120">-WindowsDomain: Механизм проверки подлинности использует Active Directory для получения сертификата X.509 для идентификатора безопасности, связанные с данным сообщением.</span><span class="sxs-lookup"><span data-stu-id="30310-120">-   WindowsDomain: The authentication mechanism uses Active Directory to retrieve the X.509 certificate for the security identifier associated with the message.</span></span> <span data-ttu-id="30310-121">Затем он используется для проверки списка управления доступом для очереди с целью удостовериться, что пользователь имеет разрешение на запись в очередь.</span><span class="sxs-lookup"><span data-stu-id="30310-121">This is then used to check the ACL of the queue to ensure the user has write permission for the queue.</span></span><br /><span data-ttu-id="30310-122">-Certificate: Канал извлекает сертификат из хранилища сертификатов.</span><span class="sxs-lookup"><span data-stu-id="30310-122">-   Certificate: The channel retrieves the certificate from the certificate store.</span></span><br /><br /> <span data-ttu-id="30310-123">Значение по умолчанию — `WindowsDomain`.</span><span class="sxs-lookup"><span data-stu-id="30310-123">The default is `WindowsDomain`.</span></span><br /><br /> <span data-ttu-id="30310-124">Если данный атрибут имеет значение `None`, то атрибут `msmqProtectionLevel` также должен иметь значение `None`.</span><span class="sxs-lookup"><span data-stu-id="30310-124">If this attribute is set to `None`, the `msmqProtectionLevel` attribute must also be set to `None`.</span></span> <span data-ttu-id="30310-125">Это атрибут типа <xref:System.ServiceModel.MsmqAuthenticationMode>.</span><span class="sxs-lookup"><span data-stu-id="30310-125">This attribute is of type <xref:System.ServiceModel.MsmqAuthenticationMode></span></span>|  
+|<span data-ttu-id="30310-126">msmqEncryptionAlgorithm</span><span class="sxs-lookup"><span data-stu-id="30310-126">msmqEncryptionAlgorithm</span></span>|<span data-ttu-id="30310-127">Задает алгоритм, который будет использоваться для шифрования сообщений при их передаче между диспетчерами очередей сообщений.</span><span class="sxs-lookup"><span data-stu-id="30310-127">Specifies the algorithm to be used for message encryption on the wire when transferring messages between message queue managers.</span></span> <span data-ttu-id="30310-128">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="30310-128">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="30310-129">-RC4Stream</span><span class="sxs-lookup"><span data-stu-id="30310-129">-   RC4Stream</span></span><br /><span data-ttu-id="30310-130">-AES</span><span class="sxs-lookup"><span data-stu-id="30310-130">-   AES</span></span><br /><span data-ttu-id="30310-131">Значение по умолчанию — `RC4Stream`.</span><span class="sxs-lookup"><span data-stu-id="30310-131">-   The default value is `RC4Stream`.</span></span> <span data-ttu-id="30310-132">Это атрибут типа <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.</span><span class="sxs-lookup"><span data-stu-id="30310-132">This attribute is of type <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.</span></span>|  
+|<span data-ttu-id="30310-133">msmqprotectionLevel</span><span class="sxs-lookup"><span data-stu-id="30310-133">msmqProtectionLevel</span></span>|<span data-ttu-id="30310-134">Задает способ обеспечения безопасности сообщений на уровне транспорта MSMQ.</span><span class="sxs-lookup"><span data-stu-id="30310-134">Specifies the way messages are secured at the level of the MSMQ transport.</span></span> <span data-ttu-id="30310-135">Шифрование обеспечивает целостность сообщения, тогда как подпись и шифрование обеспечивают как целостность сообщения, так и неподдельность.</span><span class="sxs-lookup"><span data-stu-id="30310-135">Encryption ensures message integrity, while sign and encrypt ensures both message integrity and non-repudiation.</span></span> <span data-ttu-id="30310-136">Это гарантирует, что сообщение действительно поступило от отправителя, и отправитель действительно является тем, за кого он себя выдает.</span><span class="sxs-lookup"><span data-stu-id="30310-136">That is, the message indeed came from the sender and the sender is who he says he is.</span></span> <span data-ttu-id="30310-137">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="30310-137">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="30310-138">— None: Без защиты.</span><span class="sxs-lookup"><span data-stu-id="30310-138">-   None: No protection.</span></span><br /><span data-ttu-id="30310-139">-Sign: Сообщения подписываются.</span><span class="sxs-lookup"><span data-stu-id="30310-139">-   Sign: Messages are signed.</span></span><br /><span data-ttu-id="30310-140">-EncryptAndSign: Сообщения шифруются и подписываются.</span><span class="sxs-lookup"><span data-stu-id="30310-140">-   EncryptAndSign: Messages are encrypted and signed.</span></span><br /><span data-ttu-id="30310-141">-Значение по умолчанию — `Sign`.</span><span class="sxs-lookup"><span data-stu-id="30310-141">-   The default is `Sign`.</span></span>|  
+|<span data-ttu-id="30310-142">msmqSecureHashAlgorithm</span><span class="sxs-lookup"><span data-stu-id="30310-142">msmqSecureHashAlgorithm</span></span>|<span data-ttu-id="30310-143">Указывает алгоритм хэширования, который будет использоваться при вычислении дайджеста сообщения.</span><span class="sxs-lookup"><span data-stu-id="30310-143">Specifies the hash algorithm to be used for computing the message digest.</span></span> <span data-ttu-id="30310-144">Допустимы следующие значения:</span><span class="sxs-lookup"><span data-stu-id="30310-144">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="30310-145">-MD5</span><span class="sxs-lookup"><span data-stu-id="30310-145">-   MD5</span></span><br /><span data-ttu-id="30310-146">-SHA1</span><span class="sxs-lookup"><span data-stu-id="30310-146">-   SHA1</span></span><br /><span data-ttu-id="30310-147">-SHA256</span><span class="sxs-lookup"><span data-stu-id="30310-147">-   SHA256</span></span><br /><span data-ttu-id="30310-148">-SHA512</span><span class="sxs-lookup"><span data-stu-id="30310-148">-   SHA512</span></span><br /><br /> <span data-ttu-id="30310-149">Значение по умолчанию — `SHA1`.</span><span class="sxs-lookup"><span data-stu-id="30310-149">The default is `SHA1`.</span></span> <span data-ttu-id="30310-150">Это атрибут типа <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.</span><span class="sxs-lookup"><span data-stu-id="30310-150">This attribute is of type <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.</span></span>|  
   
-### Дочерние элементы  
- Нет  
+### <a name="child-elements"></a><span data-ttu-id="30310-151">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="30310-151">Child Elements</span></span>  
+ <span data-ttu-id="30310-152">Нет</span><span class="sxs-lookup"><span data-stu-id="30310-152">None</span></span>  
   
-### Родительские элементы  
+### <a name="parent-elements"></a><span data-ttu-id="30310-153">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="30310-153">Parent Elements</span></span>  
   
-|Элемент|Описание|  
-|-------------|--------------|  
-|[\<безопасность\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Определяет параметры безопасности для поставленного в очередь транспорта.|  
+|<span data-ttu-id="30310-154">Элемент</span><span class="sxs-lookup"><span data-stu-id="30310-154">Element</span></span>|<span data-ttu-id="30310-155">Описание</span><span class="sxs-lookup"><span data-stu-id="30310-155">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="30310-156">\<Безопасность ></span><span class="sxs-lookup"><span data-stu-id="30310-156">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|<span data-ttu-id="30310-157">Определяет параметры безопасности для поставленного в очередь транспорта.</span><span class="sxs-lookup"><span data-stu-id="30310-157">Defines the transport security settings for queued transports.</span></span>|  
   
-## См. также  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>   
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>   
- <xref:System.ServiceModel.MsmqTransportSecurity>   
- [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)   
- [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Привязки](../../../../../docs/framework/wcf/bindings.md)   
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ru-ru/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<привязка\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="30310-158">См. также</span><span class="sxs-lookup"><span data-stu-id="30310-158">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
+ <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>  
+ <xref:System.ServiceModel.MsmqTransportSecurity>  
+ [<span data-ttu-id="30310-159">Очереди в WCF</span><span class="sxs-lookup"><span data-stu-id="30310-159">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [<span data-ttu-id="30310-160">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="30310-160">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="30310-161">Привязки</span><span class="sxs-lookup"><span data-stu-id="30310-161">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="30310-162">Настройка привязок, предоставляемых системой</span><span class="sxs-lookup"><span data-stu-id="30310-162">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="30310-163">Использование привязок для настройки служб Windows Communication Foundation и клиентов</span><span class="sxs-lookup"><span data-stu-id="30310-163">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="30310-164">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="30310-164">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

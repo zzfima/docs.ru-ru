@@ -1,84 +1,87 @@
 ---
-title: "How to: Create Windows Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows Service applications, creating"
-  - "templates, Windows Service"
+title: "Практическое руководство. Создание служб Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Service applications, creating
+- templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: 18
-author: "ghogen"
-ms.author: "ghogen"
-manager: "douge"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: ghogen
+ms.author: ghogen
+manager: douge
+ms.openlocfilehash: c4d7f2f19c8d156f86513ac7138bccd59ae3b7fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create Windows Services
-При создании службы можно использовать шаблон проекта Visual Studio, который называется **Служба Windows**.  Этот шаблон автоматически выполняет основную часть работы, ссылаясь на необходимые классы и пространства имен, устанавливая наследование от базового класса для служб и переопределяя некоторые методы, которые вы обычно хотите переопределять.  
+# <a name="how-to-create-windows-services"></a><span data-ttu-id="42cd8-102">Практическое руководство. Создание служб Windows</span><span class="sxs-lookup"><span data-stu-id="42cd8-102">How to: Create Windows Services</span></span>
+<span data-ttu-id="42cd8-103">При создании службы, можно использовать шаблон проекта Visual Studio называется **службы Windows**.</span><span class="sxs-lookup"><span data-stu-id="42cd8-103">When you create a service, you can use a Visual Studio project template called **Windows Service**.</span></span> <span data-ttu-id="42cd8-104">Этот шаблон автоматически выполняет основную часть работы, ссылаясь на необходимые классы и пространства имен, устанавливая наследование от базового класса для служб и переопределяя некоторые методы, которые вы обычно хотите переопределять.</span><span class="sxs-lookup"><span data-stu-id="42cd8-104">This template automatically does much of the work for you by referencing the appropriate classes and namespaces, setting up the inheritance from the base class for services, and overriding several of the methods you're likely to want to override.</span></span>  
   
 > [!WARNING]
->  Шаблон проекта "Службы Windows" в экспресс\-выпуске Visual Studio отсутствует.  
+>  <span data-ttu-id="42cd8-105">Шаблон проекта "Службы Windows" в экспресс-выпуске Visual Studio отсутствует.</span><span class="sxs-lookup"><span data-stu-id="42cd8-105">The Windows Services project template is not available in the Express edition of Visual Studio.</span></span>  
   
- Для создания функциональной службы необходимо выполнить, как минимум, следующее:  
+ <span data-ttu-id="42cd8-106">Для создания функциональной службы необходимо выполнить, как минимум, следующее:</span><span class="sxs-lookup"><span data-stu-id="42cd8-106">At a minimum, to create a functional service you must:</span></span>  
   
--   Задайте свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
+-   <span data-ttu-id="42cd8-107">Задайте свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.</span><span class="sxs-lookup"><span data-stu-id="42cd8-107">Set the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property.</span></span>  
   
--   Создайте установщики, необходимые для приложения службы.  
+-   <span data-ttu-id="42cd8-108">Создайте установщики, необходимые для приложения службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-108">Create the necessary installers for your service application.</span></span>  
   
--   Переопределите и задайте код для методов <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> для настройки режимов поведения службы.  
+-   <span data-ttu-id="42cd8-109">Переопределите и задайте код для методов <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> для настройки режимов поведения службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-109">Override and specify code for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> methods to customize the ways in which your service behaves.</span></span>  
   
-### Создание приложения службы Windows  
+### <a name="to-create-a-windows-service-application"></a><span data-ttu-id="42cd8-110">Создание приложения службы Windows</span><span class="sxs-lookup"><span data-stu-id="42cd8-110">To create a Windows Service application</span></span>  
   
-1.  Создайте проект **Служба Windows**.  
-  
-    > [!NOTE]
-    >  Инструкции по созданию службы без использования шаблона см. в разделе [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
-  
-2.  В окне **Свойства** установите свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> для своей службы.  
-  
-     ![Задайте свойство ServiceName.](../../../docs/framework/windows-services/media/windowsservice-servicename.png "WindowsService\_ServiceName")  
+1.  <span data-ttu-id="42cd8-111">Создание **службы Windows** проекта.</span><span class="sxs-lookup"><span data-stu-id="42cd8-111">Create a **Windows Service** project.</span></span>  
   
     > [!NOTE]
-    >  Значение <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> свойства всегда должно соответствовать имени, указанному в классах установщика.  При изменении этого свойства необходимо также обновить свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> классов установщика.  
+    >  <span data-ttu-id="42cd8-112">Инструкции по созданию службы без использования шаблона см. в разделе [как: запись службы программным образом](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).</span><span class="sxs-lookup"><span data-stu-id="42cd8-112">For instructions on writing a service without using the template, see [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).</span></span>  
   
-3.  Установите любые из следующих свойств для определения режима работы службы.  
+2.  <span data-ttu-id="42cd8-113">В **свойства** задайте <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> свойства для службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-113">In the **Properties** window, set the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for your service.</span></span>  
   
-    |Свойство|Параметр|  
-    |--------------|--------------|  
-    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True`, чтобы указать, что служба может принимать запросы на останов работы; `false` для предотвращения останова службы.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True`, чтобы указать, что служба хочет принимать уведомления о выключении компьютера, на котором она работает, позволяя ему вызывать процедуру <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|`True`, чтобы указать, что служба может принимать запросы на приостановку или возобновление выполнения; `false` для предотвращения приостановки и возобновления работы службы.|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` , чтобы указать, что служба может обрабатывать уведомления об изменениях состояния питания компьютера; `false` для предотвращения уведомления службы об этих изменениях.|  
-    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|`True` для внесения информационных записей в журнал событий приложения, когда служба выполняет некоторое действие; `false` для отключения этой функции.  Для получения дополнительной информации см. [How to: Log Information About Services](../../../docs/framework/windows-services/how-to-log-information-about-services.md). **Note:**  По умолчанию свойство <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> имеет значение `true`.|  
+     <span data-ttu-id="42cd8-114">![Задайте свойство ServiceName. ] (../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")</span><span class="sxs-lookup"><span data-stu-id="42cd8-114">![Set the ServiceName property.](../../../docs/framework/windows-services/media/windowsservice-servicename.PNG "WindowsService_ServiceName")</span></span>  
   
     > [!NOTE]
-    >  Когда <xref:System.ServiceProcess.ServiceBase.CanStop%2A> ``  или <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> ``  имеют значение `false`, **Диспетчер управления службами** будет отключать соответствующие пункты меню для остановки, приостановки или продолжения работы службы.  
+    >  <span data-ttu-id="42cd8-115">Значение <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> свойства всегда должно соответствовать имени, указанному в классах установщика.</span><span class="sxs-lookup"><span data-stu-id="42cd8-115">The value of the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property must always match the name recorded in the installer classes.</span></span> <span data-ttu-id="42cd8-116">При изменении этого свойства необходимо также обновить свойство <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> классов установщика.</span><span class="sxs-lookup"><span data-stu-id="42cd8-116">If you change this property, you must update the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property of installer classes as well.</span></span>  
   
-4.  Откройте редактор кода и введите данные для выполнения операций для процедур <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.  
+3.  <span data-ttu-id="42cd8-117">Установите любые из следующих свойств для определения режима работы службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-117">Set any of the following properties to determine how your service will function.</span></span>  
   
-5.  Переопределите все прочие методы, для которых необходимо определить функциональные возможности.  
-  
-6.  Добавить установщики, необходимые для приложения службы.  Для получения дополнительной информации см. [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
-  
-7.  Постройте свой проект, выбрав пункт **Построить решение** в меню **Построить**.  
+    |<span data-ttu-id="42cd8-118">Свойство</span><span class="sxs-lookup"><span data-stu-id="42cd8-118">Property</span></span>|<span data-ttu-id="42cd8-119">Параметр</span><span class="sxs-lookup"><span data-stu-id="42cd8-119">Setting</span></span>|  
+    |--------------|-------------|  
+    |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|<span data-ttu-id="42cd8-120">`True`, чтобы указать, что служба может принимать запросы на останов работы; `false` для предотвращения останова службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-120">`True` to indicate that the service will accept requests to stop running; `false` to prevent the service from being stopped.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|<span data-ttu-id="42cd8-121">`True`, чтобы указать, что служба хочет принимать уведомления о выключении компьютера, на котором она работает, позволяя ему вызывать процедуру <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.</span><span class="sxs-lookup"><span data-stu-id="42cd8-121">`True` to indicate that the service wants to receive notification when the computer on which it lives shuts down, enabling it to call the <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> procedure.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|<span data-ttu-id="42cd8-122">`True`, чтобы указать, что служба может принимать запросы на приостановку или возобновление выполнения; `false` для предотвращения приостановки и возобновления работы службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-122">`True` to indicate that the service will accept requests to pause or to resume running; `false` to prevent the service from being paused and resumed.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|<span data-ttu-id="42cd8-123">`True`Чтобы указать, что служба может обрабатывать уведомления об изменениях состояния питания компьютера; `false` для предотвращения службе оповещен этих изменений.</span><span class="sxs-lookup"><span data-stu-id="42cd8-123">`True` to indicate that the service can handle notification of changes to the computer's power status; `false` to prevent the service from being notified of these changes.</span></span>|  
+    |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|<span data-ttu-id="42cd8-124">`True` для внесения информационных записей в журнал событий приложения, когда служба выполняет некоторое действие; `false` для отключения этой функции.</span><span class="sxs-lookup"><span data-stu-id="42cd8-124">`True` to write informational entries to the Application event log when your service performs an action; `false` to disable this functionality.</span></span> <span data-ttu-id="42cd8-125">Дополнительные сведения см. в разделе [как: сведения о журналам](../../../docs/framework/windows-services/how-to-log-information-about-services.md).</span><span class="sxs-lookup"><span data-stu-id="42cd8-125">For more information, see [How to: Log Information About Services](../../../docs/framework/windows-services/how-to-log-information-about-services.md).</span></span> <span data-ttu-id="42cd8-126">**Примечание:** по умолчанию <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> равно `true`.</span><span class="sxs-lookup"><span data-stu-id="42cd8-126">**Note:**  By default, <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> is set to `true`.</span></span>|  
   
     > [!NOTE]
-    >  Не нажимайте клавишу F5 для запуска проекта — таким способом нельзя запустить проект службы.  
+    >  <span data-ttu-id="42cd8-127">Когда <xref:System.ServiceProcess.ServiceBase.CanStop%2A> или <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> присваиваются `false`, **диспетчера управления службами** отключит с соответствующими параметрами меню можно остановить, приостановить или продолжить работу службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-127">When <xref:System.ServiceProcess.ServiceBase.CanStop%2A> or <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> are set to `false`, the **Service Control Manager** will disable the corresponding menu options to stop, pause, or continue the service.</span></span>  
   
-8.  Установите службу.  Для получения дополнительной информации см. [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+4.  <span data-ttu-id="42cd8-128">Откройте редактор кода и введите данные для выполнения операций для процедур <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A>.</span><span class="sxs-lookup"><span data-stu-id="42cd8-128">Access the Code Editor and fill in the processing you want for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> procedures.</span></span>  
   
-## См. также  
- [Introduction to Windows Service Applications](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)   
- [How to: Write Services Programmatically](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)   
- [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)   
- [How to: Log Information About Services](../../../docs/framework/windows-services/how-to-log-information-about-services.md)   
- [How to: Start Services](../../../docs/framework/windows-services/how-to-start-services.md)   
- [How to: Specify the Security Context for Services](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)   
- [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)   
- [Walkthrough: Creating a Windows Service Application in the Component Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+5.  <span data-ttu-id="42cd8-129">Переопределите все прочие методы, для которых необходимо определить функциональные возможности.</span><span class="sxs-lookup"><span data-stu-id="42cd8-129">Override any other methods for which you want to define functionality.</span></span>  
+  
+6.  <span data-ttu-id="42cd8-130">Добавить установщики, необходимые для приложения службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-130">Add the necessary installers for your service application.</span></span> <span data-ttu-id="42cd8-131">Дополнительные сведения см. в разделе [как: добавление установщиков к приложению службы](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="42cd8-131">For more information, see [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>  
+  
+7.  <span data-ttu-id="42cd8-132">Постройте проект, выбрав **построить решение** из **построения** меню.</span><span class="sxs-lookup"><span data-stu-id="42cd8-132">Build your project by selecting **Build Solution** from the **Build** menu.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="42cd8-133">Не нажимайте клавишу F5 для запуска проекта — таким способом нельзя запустить проект службы.</span><span class="sxs-lookup"><span data-stu-id="42cd8-133">Do not press F5 to run your project — you cannot run a service project in this way.</span></span>  
+  
+8.  <span data-ttu-id="42cd8-134">Установите службу.</span><span class="sxs-lookup"><span data-stu-id="42cd8-134">Install the service.</span></span> <span data-ttu-id="42cd8-135">Для получения дополнительной информации см. [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="42cd8-135">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="42cd8-136">См. также</span><span class="sxs-lookup"><span data-stu-id="42cd8-136">See Also</span></span>  
+ [<span data-ttu-id="42cd8-137">Знакомство с приложениями служб Windows</span><span class="sxs-lookup"><span data-stu-id="42cd8-137">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [<span data-ttu-id="42cd8-138">Как: создание службы программным способом</span><span class="sxs-lookup"><span data-stu-id="42cd8-138">How to: Write Services Programmatically</span></span>](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
+ [<span data-ttu-id="42cd8-139">Как: добавление установщиков в приложение службы</span><span class="sxs-lookup"><span data-stu-id="42cd8-139">How to: Add Installers to Your Service Application</span></span>](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
+ [<span data-ttu-id="42cd8-140">Как: журнал информации о службах</span><span class="sxs-lookup"><span data-stu-id="42cd8-140">How to: Log Information About Services</span></span>](../../../docs/framework/windows-services/how-to-log-information-about-services.md)  
+ [<span data-ttu-id="42cd8-141">Как: запуск служб</span><span class="sxs-lookup"><span data-stu-id="42cd8-141">How to: Start Services</span></span>](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [<span data-ttu-id="42cd8-142">Как: задать контекст безопасности для служб</span><span class="sxs-lookup"><span data-stu-id="42cd8-142">How to: Specify the Security Context for Services</span></span>](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)  
+ [<span data-ttu-id="42cd8-143">Как: Установка и удаление служб</span><span class="sxs-lookup"><span data-stu-id="42cd8-143">How to: Install and Uninstall Services</span></span>](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [<span data-ttu-id="42cd8-144">Пошаговое руководство: Создание приложения службы Windows в конструкторе компонентов</span><span class="sxs-lookup"><span data-stu-id="42cd8-144">Walkthrough: Creating a Windows Service Application in the Component Designer</span></span>](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

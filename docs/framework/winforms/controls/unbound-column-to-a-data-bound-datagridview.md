@@ -1,46 +1,50 @@
 ---
-title: "Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "столбцы [Windows Forms], несвязанные данные"
-  - "таблицы данных, добавление непривязанных столбцов"
-  - "DataGridView - элемент управления [Windows Forms], несвязанные данные"
+title: "Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- columns [Windows Forms], unbound data
+- data grids [Windows Forms], adding unbound columns
+- DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cd6a1494a98d912469f7e45c7751a0a9741ff17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms
-Данные, отображаемые в элементе управления <xref:System.Windows.Forms.DataGridView>, обычно берутся из какого\-либо источника данных, однако может потребоваться отобразить столбец данных, которые получены не из источника данных.  Такой столбец называется непривязанным.  Непривязанные столбцы могут принимать различные формы.  Как правило, они используются для предоставления доступа к сведениям о строке данных.  
+# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a><span data-ttu-id="ca94c-102">Практическое руководство. Добавление столбца, не связанного с данными, в связанный с данными элемент управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ca94c-102">How to: Add an Unbound Column to a Data-Bound Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="ca94c-103">Данные, отображаемые в элементе управления <xref:System.Windows.Forms.DataGridView>, обычно берутся из какого-либо источника данных, однако может потребоваться отобразить столбец данных, которые получены не из источника данных.</span><span class="sxs-lookup"><span data-stu-id="ca94c-103">The data you display in the <xref:System.Windows.Forms.DataGridView> control will normally come from a data source of some kind, but you might want to display a column of data that does not come from the data source.</span></span> <span data-ttu-id="ca94c-104">Такой столбец называется непривязанным.</span><span class="sxs-lookup"><span data-stu-id="ca94c-104">This kind of column is called an unbound column.</span></span> <span data-ttu-id="ca94c-105">Непривязанные столбцы могут принимать различные формы.</span><span class="sxs-lookup"><span data-stu-id="ca94c-105">Unbound columns can take many forms.</span></span> <span data-ttu-id="ca94c-106">Как правило, они используются для предоставления доступа к сведениям о строке данных.</span><span class="sxs-lookup"><span data-stu-id="ca94c-106">Frequently, they are used to provide access to the details of a data row.</span></span>  
   
- В следующем примере кода показано создание непривязанного столбца кнопок **Сведения** для отображения дочерней таблицы, связанной с определенной строкой в родительской таблице при реализации сценария "главный\-подчиненный".  Для реакции на нажатия кнопок реализован обработчик событий <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=fullName>, который отображает форму, содержащую дочернюю таблицу.  
+ <span data-ttu-id="ca94c-107">В следующем примере кода показано создание непривязанного столбца **сведения** кнопки для отображения дочерней таблицы, связанной с определенной строкой в родительской таблице, при реализации сценария главного и подчиненного представлений.</span><span class="sxs-lookup"><span data-stu-id="ca94c-107">The following code example demonstrates how to create an unbound column of **Details** buttons to display a child table related to a particular row in a parent table when you implement a master/detail scenario.</span></span> <span data-ttu-id="ca94c-108">Для реакции на нажатия кнопок реализован обработчик событий <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType>, который отображает форму, содержащую дочернюю таблицу.</span><span class="sxs-lookup"><span data-stu-id="ca94c-108">To respond to button clicks, implement a <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> event handler that displays a form containing the child table.</span></span>  
   
- В Visual Studio предусмотрена поддержка этой задачи.  См. также [Практическое руководство. Добавление и удаление столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))  
+ <span data-ttu-id="ca94c-109">Эта задача поддерживается в Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ca94c-109">There is support for this task in Visual Studio.</span></span>  <span data-ttu-id="ca94c-110">См. также [как: Добавление и удаление столбцов в Windows Forms управления DataGridView с помощью конструктора](http://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))</span><span class="sxs-lookup"><span data-stu-id="ca94c-110">Also see [How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer](http://msdn.microsoft.com/library/dyyesckz\(v=vs.110\))</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="ca94c-111">Пример</span><span class="sxs-lookup"><span data-stu-id="ca94c-111">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#010)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#010](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#010)]  
   
-## Компиляция кода  
- Для этого примера требуются:  
+## <a name="compiling-the-code"></a><span data-ttu-id="ca94c-112">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="ca94c-112">Compiling the Code</span></span>  
+ <span data-ttu-id="ca94c-113">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="ca94c-113">This example requires:</span></span>  
   
--   элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;  
+-   <span data-ttu-id="ca94c-114">элемент управления <xref:System.Windows.Forms.DataGridView> с именем `dataGridView1`;</span><span class="sxs-lookup"><span data-stu-id="ca94c-114">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   ссылки на сборки <xref:System?displayProperty=fullName> и <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   <span data-ttu-id="ca94c-115">ссылки на сборки <xref:System?displayProperty=nameWithType> и <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ca94c-115">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [Режимы отображения данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="ca94c-116">См. также</span><span class="sxs-lookup"><span data-stu-id="ca94c-116">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="ca94c-117">Отображение данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ca94c-117">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="ca94c-118">Режимы отображения данных в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ca94c-118">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

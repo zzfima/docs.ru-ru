@@ -1,138 +1,143 @@
 ---
-title: "Общие сведения о TileBrush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "кисти, TileBrush"
-  - "TileBrush"
+title: "Общие сведения о TileBrush"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF]
+- brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о TileBrush
-Объекты <xref:System.Windows.Media.TileBrush> предоставляют разработчику практически полный контроль над тем, как область закрашивается изображением, <xref:System.Windows.Media.Drawing> или <xref:System.Windows.Media.Visual>.  В этом разделе описано, как использовать возможности <xref:System.Windows.Media.TileBrush> для большего контроля над тем, как методы <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush> закрашивают область.  
+# <a name="tilebrush-overview"></a><span data-ttu-id="6b459-102">Общие сведения о TileBrush</span><span class="sxs-lookup"><span data-stu-id="6b459-102">TileBrush Overview</span></span>
+<span data-ttu-id="6b459-103"><xref:System.Windows.Media.TileBrush>объекты предоставляют значительные возможности контроля над способ рисования области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>.</span><span class="sxs-lookup"><span data-stu-id="6b459-103"><xref:System.Windows.Media.TileBrush> objects provide you with a great deal of control over how an area is painted with an image, <xref:System.Windows.Media.Drawing>, or <xref:System.Windows.Media.Visual>.</span></span> <span data-ttu-id="6b459-104">В этом разделе описывается использование <xref:System.Windows.Media.TileBrush> функции для большего контроля над тем, как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> закрашивает область.</span><span class="sxs-lookup"><span data-stu-id="6b459-104">This topic describes how to use <xref:System.Windows.Media.TileBrush> features to gain more control over how an <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush> paints an area.</span></span>  
   
-   
   
 <a name="prerequisite"></a>   
-## Предварительные требования  
- Для понимания этого раздела, полезно разобраться с использованием основных возможностей класса <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> или <xref:System.Windows.Media.VisualBrush>.  Введение в эти типы см. в разделе [Рисование с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+## <a name="prerequisites"></a><span data-ttu-id="6b459-105">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="6b459-105">Prerequisites</span></span>  
+ <span data-ttu-id="6b459-106">Чтобы разобраться в этом разделе, необходимо понять, как использовать основные возможности <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> класса.</span><span class="sxs-lookup"><span data-stu-id="6b459-106">To understand this topic, it's helpful to understand how to use the basic features of the <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, or <xref:System.Windows.Media.VisualBrush> class.</span></span> <span data-ttu-id="6b459-107">Общие сведения для этих типов см. в разделе [Рисование с помощью изображения, рисунки и визуальные элементы](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span><span class="sxs-lookup"><span data-stu-id="6b459-107">For an introduction to these types, see the [Painting with Images, Drawings, and Visuals](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).</span></span>  
   
 <a name="tilebrush"></a>   
-## Закрашивание области с помощью мозаики  
- Объекты <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> и <xref:System.Windows.Media.VisualBrush> являются типами объектов <xref:System.Windows.Media.TileBrush>.  Мозаичная кисть предоставляет практически полный контроль над закрашиванием области с помощью изображения, рисунка или визуального объекта.  Например, вместо простой закраски области одним растянутым изображением, можно закрасить область с помощью множества фрагментов изображения, создающих узор.  
+## <a name="painting-an-area-with-tiles"></a><span data-ttu-id="6b459-108">Заполнение области с помощью мозаики</span><span class="sxs-lookup"><span data-stu-id="6b459-108">Painting an Area with Tiles</span></span>  
+ <span data-ttu-id="6b459-109"><xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, являются <xref:System.Windows.Media.VisualBrush> типов <xref:System.Windows.Media.TileBrush> объектов.</span><span class="sxs-lookup"><span data-stu-id="6b459-109"><xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, are <xref:System.Windows.Media.VisualBrush> are types of <xref:System.Windows.Media.TileBrush> objects.</span></span> <span data-ttu-id="6b459-110">Мозаичная кисть позволяет тщательно контролировать заполнение области для изображений, рисунков и визуальных элементов.</span><span class="sxs-lookup"><span data-stu-id="6b459-110">Tile brushes provide you with a great deal of control over how an area is painted with an image, drawing, or visual.</span></span> <span data-ttu-id="6b459-111">Например, можно заполнить область не одним растянутым изображением, а элементами мозаики, которые образуют узор.</span><span class="sxs-lookup"><span data-stu-id="6b459-111">For example, instead of just painting an area with a single stretched image, you can paint an area with a series of image tiles that create a pattern.</span></span>  
   
- Закрашивание области с помощью мозаичной кисти включает три компонента: содержимое, базовую мозаику и выходную область.  
+ <span data-ttu-id="6b459-112">Заполнение области с помощью мозаичной кисти включает три компонента: содержимое, базовый элемент мозаики и область вывода.</span><span class="sxs-lookup"><span data-stu-id="6b459-112">Painting an area with a tile brush involves three components: content, the base tile, and the output area.</span></span>  
   
- ![Компоненты TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk\_mmgraphics\_defaultcontentprojection2")  
-Компоненты TileBrush с одним фрагментом  
+ <span data-ttu-id="6b459-113">![Компоненты TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span><span class="sxs-lookup"><span data-stu-id="6b459-113">![TileBrush components](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")</span></span>  
+<span data-ttu-id="6b459-114">Компоненты TileBrush с одним элементом мозаики</span><span class="sxs-lookup"><span data-stu-id="6b459-114">Components of a TileBrush with a single tile</span></span>  
   
- ![Компоненты мозаичного TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm\_tiledprojection")  
-Компоненты TileBrush с TileMode фрагмента  
+ <span data-ttu-id="6b459-115">![Компоненты мозаичного TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span><span class="sxs-lookup"><span data-stu-id="6b459-115">![Components of a tiled TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")</span></span>  
+<span data-ttu-id="6b459-116">Компоненты TileBrush с TileMode, имеющим значение Tile</span><span class="sxs-lookup"><span data-stu-id="6b459-116">Components of a TileBrush with a TileMode of Tile</span></span>  
   
- Область вывода — это закрашиваемая область, например, <xref:System.Windows.Shapes.Shape.Fill%2A> для <xref:System.Windows.Shapes.Ellipse> или <xref:System.Windows.Controls.Control.Background%2A> для <xref:System.Windows.Controls.Button>.  В следующих разделах описаны другие два компонента <xref:System.Windows.Media.TileBrush>.  
+ <span data-ttu-id="6b459-117">В области вывода является областью, закрашиваемой, таких как <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Ellipse> или <xref:System.Windows.Controls.Control.Background%2A> из <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="6b459-117">The output area is the area being painted, such as the <xref:System.Windows.Shapes.Shape.Fill%2A> of an <xref:System.Windows.Shapes.Ellipse> or the <xref:System.Windows.Controls.Control.Background%2A> of a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="6b459-118">В следующих разделах описываются другие два компонента <xref:System.Windows.Media.TileBrush>.</span><span class="sxs-lookup"><span data-stu-id="6b459-118">The next sections describe the other two components of a <xref:System.Windows.Media.TileBrush>.</span></span>  
   
 <a name="brushcontent"></a>   
-## Содержимое кисти  
- Существуют три различных типа <xref:System.Windows.Media.TileBrush> и каждый закрашивает различным типом содержимого.  
+## <a name="brush-content"></a><span data-ttu-id="6b459-119">Содержимое кисти</span><span class="sxs-lookup"><span data-stu-id="6b459-119">Brush Content</span></span>  
+ <span data-ttu-id="6b459-120">Существует три разных типа <xref:System.Windows.Media.TileBrush> и каждый закрашивает различным типом содержимого.</span><span class="sxs-lookup"><span data-stu-id="6b459-120">There are three different types of <xref:System.Windows.Media.TileBrush> and each paints with a different type of content.</span></span>  
   
--   Если используется кисть <xref:System.Windows.Media.ImageBrush>, то содержимое — изображение. Свойство <xref:System.Windows.Media.ImageBrush.ImageSource%2A> задает содержимое <xref:System.Windows.Media.ImageBrush>.  
+-   <span data-ttu-id="6b459-121">Если используется кисть <xref:System.Windows.Media.ImageBrush>, это содержимое представляет собой образ <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство определяет содержимое <xref:System.Windows.Media.ImageBrush>.</span><span class="sxs-lookup"><span data-stu-id="6b459-121">If the brush is an <xref:System.Windows.Media.ImageBrush>, this content is an image The <xref:System.Windows.Media.ImageBrush.ImageSource%2A> property specifies the contents of the <xref:System.Windows.Media.ImageBrush>.</span></span>  
   
--   Если используется кисть <xref:System.Windows.Media.DrawingBrush>, то содержимое — рисунок.  Свойство <xref:System.Windows.Media.DrawingBrush.Drawing%2A> задает содержимое <xref:System.Windows.Media.DrawingBrush>.  
+-   <span data-ttu-id="6b459-122">Если используется кисть <xref:System.Windows.Media.DrawingBrush>, это содержимое — рисунок.</span><span class="sxs-lookup"><span data-stu-id="6b459-122">If the brush is a <xref:System.Windows.Media.DrawingBrush>, this content is a drawing.</span></span> <span data-ttu-id="6b459-123"><xref:System.Windows.Media.DrawingBrush.Drawing%2A> Свойство определяет содержимое <xref:System.Windows.Media.DrawingBrush>.</span><span class="sxs-lookup"><span data-stu-id="6b459-123">The <xref:System.Windows.Media.DrawingBrush.Drawing%2A> property specifies the contents of the <xref:System.Windows.Media.DrawingBrush>.</span></span>  
   
--   Если используется кисть <xref:System.Windows.Media.VisualBrush>, то содержимое — визуальный объект.  Свойство <xref:System.Windows.Media.VisualBrush.Visual%2A> задает содержимое <xref:System.Windows.Media.VisualBrush>.  
+-   <span data-ttu-id="6b459-124">Если используется кисть <xref:System.Windows.Media.VisualBrush>, это содержимое является визуальный элемент.</span><span class="sxs-lookup"><span data-stu-id="6b459-124">If the brush is a <xref:System.Windows.Media.VisualBrush>, this content is a visual.</span></span> <span data-ttu-id="6b459-125"><xref:System.Windows.Media.VisualBrush.Visual%2A> Свойство указывает содержимое <xref:System.Windows.Media.VisualBrush>.</span><span class="sxs-lookup"><span data-stu-id="6b459-125">The <xref:System.Windows.Media.VisualBrush.Visual%2A> property specifies the content of the <xref:System.Windows.Media.VisualBrush>.</span></span>  
   
- Можно задать положение и размеры содержимого <xref:System.Windows.Media.TileBrush> с помощью свойства <xref:System.Windows.Media.TileBrush.Viewbox%2A>, хотя обычно используется значение <xref:System.Windows.Media.TileBrush.Viewbox%2A> по умолчанию.  По умолчанию <xref:System.Windows.Media.TileBrush.Viewbox%2A> настроен на полное включение содержимого кисти.  Дополнительные сведения о конфигурации <xref:System.Windows.Controls.Viewbox> см. на странице свойства <xref:System.Windows.Controls.Viewbox>.  
+ <span data-ttu-id="6b459-126">Можно указать расположение и размеры <xref:System.Windows.Media.TileBrush> содержимого с помощью <xref:System.Windows.Media.TileBrush.Viewbox%2A> свойство, несмотря на то, что чаще всего оставить <xref:System.Windows.Media.TileBrush.Viewbox%2A> присвоено значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="6b459-126">You can specify the position and dimensions of <xref:System.Windows.Media.TileBrush> content by using the <xref:System.Windows.Media.TileBrush.Viewbox%2A> property, although it is common to leave the <xref:System.Windows.Media.TileBrush.Viewbox%2A> set to its default value.</span></span> <span data-ttu-id="6b459-127">По умолчанию <xref:System.Windows.Media.TileBrush.Viewbox%2A> полностью содержит содержимое кисти.</span><span class="sxs-lookup"><span data-stu-id="6b459-127">By default, the <xref:System.Windows.Media.TileBrush.Viewbox%2A> is configured to completely contain the brush's contents.</span></span> <span data-ttu-id="6b459-128">Дополнительные сведения о настройке <xref:System.Windows.Controls.Viewbox>, в разделе <xref:System.Windows.Controls.Viewbox> страницу свойств.</span><span class="sxs-lookup"><span data-stu-id="6b459-128">For more information about configuring the <xref:System.Windows.Controls.Viewbox>, see the <xref:System.Windows.Controls.Viewbox> property page.</span></span>  
   
 <a name="thebasetile"></a>   
-## Базовая мозаика  
- <xref:System.Windows.Media.TileBrush> проецирует свое содержимое на базовую мозаику.  Свойство <xref:System.Windows.Media.TileBrush.Stretch%2A> управляет тем, как содержимое <xref:System.Windows.Media.TileBrush> растянуто для заполнения базовой мозаики.  Свойство <xref:System.Windows.Media.TileBrush.Stretch%2A> принимает следующие значения, определенные перечислением <xref:System.Windows.Media.Stretch>:  
+## <a name="the-base-tile"></a><span data-ttu-id="6b459-129">Базовый элемент мозаики</span><span class="sxs-lookup"><span data-stu-id="6b459-129">The Base Tile</span></span>  
+ <span data-ttu-id="6b459-130">Объект <xref:System.Windows.Media.TileBrush> проецирует свое содержимое на базовой плитке.</span><span class="sxs-lookup"><span data-stu-id="6b459-130">A <xref:System.Windows.Media.TileBrush> projects its content onto a base tile.</span></span> <span data-ttu-id="6b459-131"><xref:System.Windows.Media.TileBrush.Stretch%2A> Свойства элементов управления как <xref:System.Windows.Media.TileBrush> растягивается на всю базовый мозаичный элемент содержимого.</span><span class="sxs-lookup"><span data-stu-id="6b459-131">The <xref:System.Windows.Media.TileBrush.Stretch%2A> property controls how <xref:System.Windows.Media.TileBrush> content is stretched to fill the base tile.</span></span> <span data-ttu-id="6b459-132"><xref:System.Windows.Media.TileBrush.Stretch%2A> Свойство принимает следующие значения, определенные <xref:System.Windows.Media.Stretch> перечисления:</span><span class="sxs-lookup"><span data-stu-id="6b459-132">The <xref:System.Windows.Media.TileBrush.Stretch%2A> property accepts the following values, defined by the <xref:System.Windows.Media.Stretch> enumeration:</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: содержимое кисти не растягивается, чтобы заполнить фрагмент.  
+-   <span data-ttu-id="6b459-133"><xref:System.Windows.Media.Stretch.None>: Содержимое кисти не растягивается на всю плитки.</span><span class="sxs-lookup"><span data-stu-id="6b459-133"><xref:System.Windows.Media.Stretch.None>: The brush's content is not stretched to fill the tile.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: содержимое кисти масштабируется, чтобы заполнить фрагмент.  Поскольку высота и ширина содержимого масштабируются независимо друг от друга, исходные пропорции содержимого могут не сохраняться.  Это значит, содержимое кисти может быть перекошено, чтобы полностью заполнить выводимый фрагмент.  
+-   <span data-ttu-id="6b459-134"><xref:System.Windows.Media.Stretch.Fill>: Содержимое кисти масштабируется по размерам плитки.</span><span class="sxs-lookup"><span data-stu-id="6b459-134"><xref:System.Windows.Media.Stretch.Fill>: The brush's content is scaled to fit the tile.</span></span> <span data-ttu-id="6b459-135">Поскольку высота и ширина содержимого масштабируются независимо друг от друга, исходные пропорции содержимого могут не сохраняться.</span><span class="sxs-lookup"><span data-stu-id="6b459-135">Because the content's height and width are scaled independently, the original aspect ratio of the content might not be preserved.</span></span> <span data-ttu-id="6b459-136">То есть содержимое кисти может быть деформировано для полного заполнения выводимого элемента.</span><span class="sxs-lookup"><span data-stu-id="6b459-136">That is, the brush's content might be warped in order to completely fill the output tile.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: содержимое кисти масштабируется, чтобы уместиться внутри фрагмента.  Пропорции содержимого сохраняются.  
+-   <span data-ttu-id="6b459-137"><xref:System.Windows.Media.Stretch.Uniform>: Содержимое кисти масштабируется, чтобы уместиться внутри фрагмента.</span><span class="sxs-lookup"><span data-stu-id="6b459-137"><xref:System.Windows.Media.Stretch.Uniform>: The brush's content is scaled so that it fits completely within the tile.</span></span> <span data-ttu-id="6b459-138">Пропорции содержимого сохраняются.</span><span class="sxs-lookup"><span data-stu-id="6b459-138">The content's aspect ratio is preserved.</span></span>  
   
--   <xref:System.Windows.Media.Stretch>: содержимое кисти масштабируется таким образом, чтобы полностью заполнить область вывода, сохраняя пропорции содержимого.  
+-   <span data-ttu-id="6b459-139"><xref:System.Windows.Media.Stretch.UniformToFill>: Содержимое кисти масштабируется, чтобы полностью заполнить область вывода, сохраняя пропорции исходного содержимого.</span><span class="sxs-lookup"><span data-stu-id="6b459-139"><xref:System.Windows.Media.Stretch.UniformToFill>: The brush's content is scaled so that it completely fills the output area while preserving the content's original aspect ratio.</span></span>  
   
- На следующем рисунке показаны другие параметры <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
+ <span data-ttu-id="6b459-140">На следующем рисунке показаны различные <xref:System.Windows.Media.TileBrush.Stretch%2A> параметры.</span><span class="sxs-lookup"><span data-stu-id="6b459-140">The following image illustrates the different <xref:System.Windows.Media.TileBrush.Stretch%2A> settings.</span></span>  
   
- ![Различные параметры растяжения TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.png "img\_mmgraphics\_stretchenum")  
+ <span data-ttu-id="6b459-141">![Различные параметры растяжения TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span><span class="sxs-lookup"><span data-stu-id="6b459-141">![Different TileBrush Stretch settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")</span></span>  
   
- В следующем примере содержимое <xref:System.Windows.Media.ImageBrush> задается таким образом, что оно не растягивается для заполнения области вывода.  
+ <span data-ttu-id="6b459-142">В следующем примере содержимое <xref:System.Windows.Media.ImageBrush> имеет значение, чтобы она не растягивается для заполнения области вывода.</span><span class="sxs-lookup"><span data-stu-id="6b459-142">In the following example, the content of an <xref:System.Windows.Media.ImageBrush> is set so that it does not stretch to fill the output area.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/StretchExample.xaml#graphicsmmnostretchexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/StretchExample.cs#graphicsmmnostretchexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMNoStretchExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/stretchexample.vb#graphicsmmnostretchexample)]  
   
- По умолчанию <xref:System.Windows.Media.TileBrush> создает один фрагмент \(базовую мозаику\) и растягивает его для полного заполнения области вывода.  Можно изменить размер и положение базовой мозаики, задав значения свойствам <xref:System.Windows.Media.TileBrush.Viewport%2A> и <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.  
+ <span data-ttu-id="6b459-143">По умолчанию <xref:System.Windows.Media.TileBrush> создает один фрагмент (базовую мозаику) и растягивает его для полного заполнения области вывода.</span><span class="sxs-lookup"><span data-stu-id="6b459-143">By default, a <xref:System.Windows.Media.TileBrush> generates a single tile (the base tile) and stretches that tile to completely fill the output area.</span></span> <span data-ttu-id="6b459-144">Можно изменить размер и положение базовой мозаики, задав <xref:System.Windows.Media.TileBrush.Viewport%2A> и <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="6b459-144">You can change the size and position of the base tile by setting the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> properties.</span></span>  
   
 <a name="basetilesize"></a>   
-### Размер базовой мозаики  
- Свойство <xref:System.Windows.Media.TileBrush.Viewport%2A> определяет размер и положение базовой мозаики, а свойство <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> определяет, задан ли <xref:System.Windows.Media.TileBrush.Viewport%2A> с помощью абсолютных или относительных координат.  Если координаты относительные, они указываются относительно размера области вывода.  Точка \(0,0\) представляет верхний левый угол области вывода, а \(1,1\) представляет нижний правый угол области вывода.  Чтобы указать, что свойство <xref:System.Windows.Media.TileBrush.Viewport%2A> использует абсолютные координаты, присвойте свойству <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> значение <xref:System.Windows.Media.BrushMappingMode>.  
+### <a name="base-tile-size"></a><span data-ttu-id="6b459-145">Размер базового элемента мозаики</span><span class="sxs-lookup"><span data-stu-id="6b459-145">Base Tile Size</span></span>  
+ <span data-ttu-id="6b459-146"><xref:System.Windows.Media.TileBrush.Viewport%2A> Свойство определяет размер и положение базовой плитки и <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> свойство определяет, является ли <xref:System.Windows.Media.TileBrush.Viewport%2A> задается с помощью абсолютных или относительных координат.</span><span class="sxs-lookup"><span data-stu-id="6b459-146">The <xref:System.Windows.Media.TileBrush.Viewport%2A> property determines the size and position of the base tile, and the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> property determines whether the <xref:System.Windows.Media.TileBrush.Viewport%2A> is specified using absolute or relative coordinates.</span></span> <span data-ttu-id="6b459-147">Относительные координаты задаются относительно размера области вывода.</span><span class="sxs-lookup"><span data-stu-id="6b459-147">If the coordinates are relative, they are relative to the size of the output area.</span></span> <span data-ttu-id="6b459-148">Точка (0, 0) представляет левый верхний угол области вывода, а точка (1, 1) — правый нижний угол области вывода.</span><span class="sxs-lookup"><span data-stu-id="6b459-148">The point (0,0) represents the top left corner of the output area, and (1,1) represents the bottom right corner of the output area.</span></span> <span data-ttu-id="6b459-149">Чтобы указать, что <xref:System.Windows.Media.TileBrush.Viewport%2A> свойство использует абсолютные координаты, задайте <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> свойства <xref:System.Windows.Media.BrushMappingMode.Absolute>.</span><span class="sxs-lookup"><span data-stu-id="6b459-149">To specify that the <xref:System.Windows.Media.TileBrush.Viewport%2A> property uses absolute coordinates, set the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> property to <xref:System.Windows.Media.BrushMappingMode.Absolute>.</span></span>  
   
- На следующем рисунке показана разница между выводом <xref:System.Windows.Media.TileBrush> в относительных и абсолютных координатах <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.  Обратите внимание на то, что на каждом рисунке показан шаблон заполнения; в следующем разделе описывается, как задать шаблон заполнения.  
+ <span data-ttu-id="6b459-150">На следующем рисунке показано различие между выводом <xref:System.Windows.Media.TileBrush> с относительных и абсолютных координатах <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.</span><span class="sxs-lookup"><span data-stu-id="6b459-150">The following illustration shows the difference in output between a <xref:System.Windows.Media.TileBrush> with relative versus absolute <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.</span></span> <span data-ttu-id="6b459-151">Обратите внимание, что на каждом рисунке показан шаблон мозаики. В следующем разделе описано, как задать шаблон заполнения.</span><span class="sxs-lookup"><span data-stu-id="6b459-151">Notice that the illustrations each show a tiled pattern; the next section describes how to specify tile pattern.</span></span>  
   
- ![Абсолютные и относительные единицы окна просмотра](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute\_and\_relative\_viewports")  
+ <span data-ttu-id="6b459-152">![Абсолютные и относительные единицы окна просмотра](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")</span><span class="sxs-lookup"><span data-stu-id="6b459-152">![Absolute and Relative Viewport Units](../../../../docs/framework/wpf/graphics-multimedia/media/absolute-and-relative-viewports.png "absolute_and_relative_viewports")</span></span>  
   
- В следующем примере изображение используется для создания мозаики с высотой и шириной 50%.  Базовая мозаика имеет координаты \(0,0\) на выходной области.  
+ <span data-ttu-id="6b459-153">В следующем примере с помощью изображения создается элемент с шириной и высотой 50 %.</span><span class="sxs-lookup"><span data-stu-id="6b459-153">In the following example, an image is used to create a tile that has a width and height of 50%.</span></span> <span data-ttu-id="6b459-154">Базовый элемент мозаики расположен в точке (0, 0) области вывода.</span><span class="sxs-lookup"><span data-stu-id="6b459-154">The base tile is located at (0,0) of the output area.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmrelativeviewportunitsexample1)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmrelativeviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMRelativeViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmrelativeviewportunitsexample1)]  
   
- В следующем примере размер мозаик <xref:System.Windows.Media.ImageBrush> задается равным 25 на 25 [аппаратно\-независимых пикселей](GTMT).  Поскольку <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> — абсолютные, размер мозаики <xref:System.Windows.Media.ImageBrush> всегда будет 25 на 25 пикселей, независимо от размера закрашиваемой области.  
+ <span data-ttu-id="6b459-155">В следующем примере устанавливается мозаичных элементов <xref:System.Windows.Media.ImageBrush> на 25 на 25 аппаратно-независимых пикселях.</span><span class="sxs-lookup"><span data-stu-id="6b459-155">The next example sets the tiles of an <xref:System.Windows.Media.ImageBrush> to 25 by 25 device independent pixels.</span></span> <span data-ttu-id="6b459-156">Поскольку <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> абсолютных, <xref:System.Windows.Media.ImageBrush> плитки всегда являются 25 на 25 пикселей, независимо от размера закрашиваемой области.</span><span class="sxs-lookup"><span data-stu-id="6b459-156">Because the <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> are absolute, the <xref:System.Windows.Media.ImageBrush> tiles are always 25 by 25 pixels, regardless of the size of the area being painted.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TileSizeExample.xaml#graphicsmmabsoluteviewportunitsexample1)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TileSizeExample.cs#graphicsmmabsoluteviewportunitsexample1)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMAbsoluteViewportUnitsExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilesizeexample.vb#graphicsmmabsoluteviewportunitsexample1)]  
   
 <a name="tilingbehavior"></a>   
-### Поведение заполнения  
- <xref:System.Windows.Media.TileBrush> создает шаблон заполнения, когда его базовая мозаика не полностью заполняет область вывода и задан режим заполнения, отличный от <xref:System.Windows.Media.TileMode>.  Когда фрагмент мозаичной кисти не полностью заполняет область вывода, свойство <xref:System.Windows.Media.TileBrush.TileMode%2A> указывает, должен ли базовый фрагмент дублироваться для заполнения области вывода, и если да, то как.  Свойство <xref:System.Windows.Media.TileBrush.TileMode%2A> принимает следующие значения, определенные перечислением <xref:System.Windows.Media.TileMode>:  
+### <a name="tiling-behavior"></a><span data-ttu-id="6b459-157">Поведение элементов при заполнении</span><span class="sxs-lookup"><span data-stu-id="6b459-157">Tiling Behavior</span></span>  
+ <span data-ttu-id="6b459-158">Объект <xref:System.Windows.Media.TileBrush> создает шаблон заполнения, когда его базового фрагмента не полностью заполняет область вывода и режим заполнения, отличный <xref:System.Windows.Media.TileMode.None> указано.</span><span class="sxs-lookup"><span data-stu-id="6b459-158">A <xref:System.Windows.Media.TileBrush> produces a tiled pattern when its base tile does not completely fill the output area and a tiling mode other then <xref:System.Windows.Media.TileMode.None> is specified.</span></span> <span data-ttu-id="6b459-159">Когда мозаичной кисти не полностью заполняет область вывода его <xref:System.Windows.Media.TileBrush.TileMode%2A> свойство указывает ли базовый фрагмент дублироваться для заполнения области вывода, и если да, то как.</span><span class="sxs-lookup"><span data-stu-id="6b459-159">When a tile brush's tile does not completely fill the output area, its <xref:System.Windows.Media.TileBrush.TileMode%2A> property specifies whether the base tile should be duplicated to fill the output area and, if so, how the base tile should be duplicated.</span></span> <span data-ttu-id="6b459-160"><xref:System.Windows.Media.TileBrush.TileMode%2A> Свойство принимает следующие значения, определенные <xref:System.Windows.Media.TileMode> перечисления:</span><span class="sxs-lookup"><span data-stu-id="6b459-160">The <xref:System.Windows.Media.TileBrush.TileMode%2A> property accepts the following values, defined by the <xref:System.Windows.Media.TileMode> enumeration:</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: рисуется только базовая мозаика.  
+-   <span data-ttu-id="6b459-161"><xref:System.Windows.Media.TileMode.None>: Только базовая Плитка рисуется.</span><span class="sxs-lookup"><span data-stu-id="6b459-161"><xref:System.Windows.Media.TileMode.None>: Only the base tile is drawn.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: рисуется базовая мозаика, а оставшееся пространство заполняется ее повторением так, чтобы правый край фрагмента примыкал к левому краю следующего, аналогично для нижнего и верхнего краев.  
+-   <span data-ttu-id="6b459-162"><xref:System.Windows.Media.TileMode.Tile>: Базовая Плитка рисуется, и оставшаяся область заполняется путем повторения этой базовой плитки таким образом, что правый край фрагмента Примыкает к левому краю следующего, аналогично для верхней и нижней границ.</span><span class="sxs-lookup"><span data-stu-id="6b459-162"><xref:System.Windows.Media.TileMode.Tile>: The base tile is drawn and the remaining area is filled by repeating the base tile such that the right edge of one tile is adjacent to the left edge of the next, and similarly for bottom and top.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: аналогично <xref:System.Windows.Media.TileMode>, но разные столбцы мозаики зеркально отражаются по горизонтали.  
+-   <span data-ttu-id="6b459-163"><xref:System.Windows.Media.TileMode.FlipX>: Аналогично <xref:System.Windows.Media.TileMode.Tile>, но дополнительные столбцы плиток зеркально отражаются по горизонтали.</span><span class="sxs-lookup"><span data-stu-id="6b459-163"><xref:System.Windows.Media.TileMode.FlipX>: The same as <xref:System.Windows.Media.TileMode.Tile>, but alternate columns of tiles are flipped horizontally.</span></span>  
   
--   <xref:System.Windows.Media.TileMode>: аналогично <xref:System.Windows.Media.TileMode>, но разные строки мозаики зеркально отражаются по вертикали.  
+-   <span data-ttu-id="6b459-164"><xref:System.Windows.Media.TileMode.FlipY>: Аналогично <xref:System.Windows.Media.TileMode.Tile>, но дополнительные строки плиток зеркально отражаются по вертикали.</span><span class="sxs-lookup"><span data-stu-id="6b459-164"><xref:System.Windows.Media.TileMode.FlipY>: The same as <xref:System.Windows.Media.TileMode.Tile>, but alternate rows of tiles are flipped vertically.</span></span>  
   
--   Комбинация <xref:System.Windows.Media.TileMode>: сочетание <xref:System.Windows.Media.TileMode> и <xref:System.Windows.Media.TileMode>.  
+-   <span data-ttu-id="6b459-165"><xref:System.Windows.Media.TileMode.FlipXY>: Сочетание <xref:System.Windows.Media.TileMode.FlipX> и <xref:System.Windows.Media.TileMode.FlipY>.</span><span class="sxs-lookup"><span data-stu-id="6b459-165"><xref:System.Windows.Media.TileMode.FlipXY>: A combination of <xref:System.Windows.Media.TileMode.FlipX> and <xref:System.Windows.Media.TileMode.FlipY>.</span></span>  
   
- На следующем рисунке показаны другие режимы заполнения.  
+ <span data-ttu-id="6b459-166">На следующем рисунке показаны различные режимы заполнения.</span><span class="sxs-lookup"><span data-stu-id="6b459-166">The following image illustrates the different tiling modes.</span></span>  
   
- ![Различные параметры TileMode для TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.png "img\_mmgraphics\_tilemodes")  
+ <span data-ttu-id="6b459-167">![Различные параметры TileMode для TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")</span><span class="sxs-lookup"><span data-stu-id="6b459-167">![Different TileBrush TileMode settings](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-tilemodes.gif "img_mmgraphics_tilemodes")</span></span>  
   
- В следующем примере изображение используется для закраски прямоугольника шириной в 100 пикселей и высотой в 100 пикселей.  Область <xref:System.Windows.Media.TileBrush.Viewport%2A> кисти установлена в 0,0,0.25,0.25, размер базовой мозаики кисти равен 1\/4 области вывода.  Для свойства <xref:System.Windows.Media.TileBrush.TileMode%2A> кисти задано значение <xref:System.Windows.Media.TileMode>,  поэтому прямоугольник заполняется рядами мозаики.  
+ <span data-ttu-id="6b459-168">В следующем примере изображение используется для заполнения прямоугольника размерами 100 на 100 пикселей.</span><span class="sxs-lookup"><span data-stu-id="6b459-168">In the following example, an image is used to paint a rectangle that is 100 pixels wide and 100 pixels tall.</span></span> <span data-ttu-id="6b459-169">Установив кисти <xref:System.Windows.Media.TileBrush.Viewport%2A> установил 0,0,0.25,0.25, кисти базовый мозаичный элемент становится равным 1/4 области вывода.</span><span class="sxs-lookup"><span data-stu-id="6b459-169">By setting the brush's <xref:System.Windows.Media.TileBrush.Viewport%2A> has been set to 0,0,0.25,0.25, the brush's base tile is made to be 1/4 of the output area.</span></span> <span data-ttu-id="6b459-170">Кисти <xref:System.Windows.Media.TileBrush.TileMode%2A> равно <xref:System.Windows.Media.TileMode.FlipXY>.</span><span class="sxs-lookup"><span data-stu-id="6b459-170">The brush's <xref:System.Windows.Media.TileBrush.TileMode%2A> is set to <xref:System.Windows.Media.TileMode.FlipXY>.</span></span> <span data-ttu-id="6b459-171">Таким образом прямоугольник заполняется строками из элементов мозаики.</span><span class="sxs-lookup"><span data-stu-id="6b459-171">so that it fills the rectangle with rows of tiles.</span></span>  
   
- [!code-xml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
+ [!code-xaml[BrushOverviewExamples_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/TilingExample.xaml#graphicsmmflipxyexample)]  
   
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## См. также  
- <xref:System.Windows.Media.ImageBrush>   
- <xref:System.Windows.Media.DrawingBrush>   
- <xref:System.Windows.Media.VisualBrush>   
- <xref:System.Windows.Media.TileBrush>   
- [Рисование с помощью объектов Image, Drawing и Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
- [Практические руководства](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)   
- [Общие сведения об объектах класса Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [ImageBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160005)   
- [VisualBrush Sample](http://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a><span data-ttu-id="6b459-172">См. также</span><span class="sxs-lookup"><span data-stu-id="6b459-172">See Also</span></span>  
+ <xref:System.Windows.Media.ImageBrush>  
+ <xref:System.Windows.Media.DrawingBrush>  
+ <xref:System.Windows.Media.VisualBrush>  
+ <xref:System.Windows.Media.TileBrush>  
+ [<span data-ttu-id="6b459-173">Заполнение с использованием изображений, рисунков и визуальных элементов</span><span class="sxs-lookup"><span data-stu-id="6b459-173">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [<span data-ttu-id="6b459-174">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="6b459-174">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [<span data-ttu-id="6b459-175">Общие сведения об объектах класса Freezable</span><span class="sxs-lookup"><span data-stu-id="6b459-175">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="6b459-176">Образец ImageBrush</span><span class="sxs-lookup"><span data-stu-id="6b459-176">ImageBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160005)  
+ [<span data-ttu-id="6b459-177">Пример использования VisualBrush</span><span class="sxs-lookup"><span data-stu-id="6b459-177">VisualBrush Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160049)

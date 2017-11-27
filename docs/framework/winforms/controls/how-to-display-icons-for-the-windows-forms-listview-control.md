@@ -1,51 +1,55 @@
 ---
-title: "Практическое руководство. Отображение значков в элементе управления ListView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "значки, отображение для элементов управления ListView"
-  - "ImageList - компонент [Windows Forms], с элементом управления ListView"
-  - "представления списков, отображение значков"
-  - "списки, отображение значков"
-  - "ListView - элемент управления [Windows Forms], отображение значков"
+title: "Практическое руководство. Отображение значков в элементе управления ListView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ListView control [Windows Forms], displaying icons
+- icons [Windows Forms], displaying for ListView controls
+- lists [Windows Forms], displaying icons
+- ImageList component [Windows Forms], with ListView control
+- list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d9a8bdc54f3f321b37bda897aac1f340f7a46aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Отображение значков в элементе управления ListView в Windows Forms
-В элементе управления Windows Forms <xref:System.Windows.Forms.ListView> могут отображаться значки из трех списков рисунков.  Представления List, Details и SmallIcon отображают рисунки из списка рисунков, указанного в свойстве <xref:System.Windows.Forms.ListView.SmallImageList%2A>.  Представление LargeIcon отображает рисунки из списка рисунков, указанного в свойстве <xref:System.Windows.Forms.ListView.LargeImageList%2A>.  В представлении в виде списка также имеется возможность отобразить дополнительный набор значков, заданных в свойстве <xref:System.Windows.Forms.ListView.StateImageList%2A>, рядом с крупными или мелкими значками.  Дополнительные сведения о списках рисунков см. в разделах [Компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) и [Практическое руководство. Добавление и удаление изображений, выводимых с помощью компонента ImageList, в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a><span data-ttu-id="5e8c5-102">Практическое руководство. Отображение значков в элементе управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5e8c5-102">How to: Display Icons for the Windows Forms ListView Control</span></span>
+<span data-ttu-id="5e8c5-103">Windows Forms <xref:System.Windows.Forms.ListView> элемент управления может отображать значки из трех списков изображений.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-103">The Windows Forms <xref:System.Windows.Forms.ListView> control can display icons from three image lists.</span></span> <span data-ttu-id="5e8c5-104">Представления списка, подробности и SmallIcon отображение изображений из списка изображений, указанный в <xref:System.Windows.Forms.ListView.SmallImageList%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-104">The List, Details, and SmallIcon views display images from the image list specified in the <xref:System.Windows.Forms.ListView.SmallImageList%2A> property.</span></span> <span data-ttu-id="5e8c5-105">В представлении LargeIcon отображается изображений из списка изображений, указанный в <xref:System.Windows.Forms.ListView.LargeImageList%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-105">The LargeIcon view displays images from the image list specified in the <xref:System.Windows.Forms.ListView.LargeImageList%2A> property.</span></span> <span data-ttu-id="5e8c5-106">Представление списка можно также отобразить дополнительный набор значков, заданных <xref:System.Windows.Forms.ListView.StateImageList%2A> свойства рядом с крупных или мелких значков.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-106">A list view can also display an additional set of icons, set in the <xref:System.Windows.Forms.ListView.StateImageList%2A> property, next to the large or small icons.</span></span> <span data-ttu-id="5e8c5-107">Дополнительные сведения о списках изображений см. в разделе [компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) и [как: Добавление и удаление изображений с помощью компонента ImageList в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span><span class="sxs-lookup"><span data-stu-id="5e8c5-107">For more information about image lists, see [ImageList Component](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
   
-### Чтобы отобразить рисунки в представлении в виде списка  
+### <a name="to-display-images-in-a-list-view"></a><span data-ttu-id="5e8c5-108">Для отображения изображений в представлении списка</span><span class="sxs-lookup"><span data-stu-id="5e8c5-108">To display images in a list view</span></span>  
   
-1.  Задайте соответствующее свойство: <xref:System.Windows.Forms.ListView.LargeImageList%2A>, <xref:System.Windows.Forms.ListView.StateImageList%2A> или <xref:System.Windows.Forms.ImageList> для существующего компонента <xref:System.Windows.Forms.ListView.SmallImageList%2A>, который необходимо использовать.  
+1.  <span data-ttu-id="5e8c5-109">Установите соответствующее свойство —<xref:System.Windows.Forms.ListView.SmallImageList%2A>, <xref:System.Windows.Forms.ListView.LargeImageList%2A>, или <xref:System.Windows.Forms.ListView.StateImageList%2A>— для существующего <xref:System.Windows.Forms.ImageList> компонентов, которые вы хотите использовать.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-109">Set the appropriate property—<xref:System.Windows.Forms.ListView.SmallImageList%2A>, <xref:System.Windows.Forms.ListView.LargeImageList%2A>, or <xref:System.Windows.Forms.ListView.StateImageList%2A>—to the existing <xref:System.Windows.Forms.ImageList> component you wish to use.</span></span>  
   
-     Эти свойства можно задать в окне "Свойства" конструктора или в коде.  
+     <span data-ttu-id="5e8c5-110">Эти свойства можно задать в конструкторе с помощью окна «Свойства» или в коде.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-110">These properties can be set in the designer with the Properties window, or in code.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#41)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#41)]  
   
-2.  Задайте свойство <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> или <xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A> для каждого элемента списка, имеющего связанный значок.  
+2.  <span data-ttu-id="5e8c5-111">Задать <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> или <xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A> свойство для каждого элемента списка, который содержит значок.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-111">Set the <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> or <xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A> property for each list item that has an associated icon.</span></span>  
   
-     Эти свойства можно задать в коде или в **Редакторе коллекций ListViewItem**.  Чтобы открыть **Редактор коллекций ListViewItem**, нажмите кнопку с троеточием \(![Снимок экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) рядом со свойством <xref:System.Windows.Forms.ListView.Items%2A> в окне **Свойства**.  
+     <span data-ttu-id="5e8c5-112">Эти свойства могут быть заданы в коде или в **редактор коллекции ListViewItem**.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-112">These properties can be set in code, or within the **ListViewItem Collection Editor**.</span></span> <span data-ttu-id="5e8c5-113">Чтобы открыть **редактор коллекции ListViewItem**, нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) рядом с <xref:System.Windows.Forms.ListView.Items%2A>свойство **свойства** окна.</span><span class="sxs-lookup"><span data-stu-id="5e8c5-113">To open the **ListViewItem Collection Editor**, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.ListView.Items%2A> property on the **Properties** window.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#42)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  
   
-## См. также  
- [Общие сведения об элементе управления ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)   
- [Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)   
- [Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)   
- [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView \(Windows Forms\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)   
- [Компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="5e8c5-114">См. также</span><span class="sxs-lookup"><span data-stu-id="5e8c5-114">See Also</span></span>  
+ [<span data-ttu-id="5e8c5-115">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="5e8c5-115">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="5e8c5-116">Практическое руководство. Добавление и удаление элементов с помощью элемента управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5e8c5-116">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="5e8c5-117">Практическое руководство. Добавление столбцов в элемент управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5e8c5-117">How to: Add Columns to the Windows Forms ListView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [<span data-ttu-id="5e8c5-118">Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5e8c5-118">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ [<span data-ttu-id="5e8c5-119">Компонент ImageList</span><span class="sxs-lookup"><span data-stu-id="5e8c5-119">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

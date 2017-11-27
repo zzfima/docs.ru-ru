@@ -1,36 +1,35 @@
 ---
-title: "Настройка привязок для служб Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "конфигурация привязки [WCF]"
+title: "Настройка привязок для служб Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 36
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 36
+caps.latest.revision: "36"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1ccb7dbb7beb99cbad9a0ecf9ad14dd74e37fda6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Настройка привязок для служб Windows Communication Foundation
-При создании приложения часто нужно отложить решения для администратора после развертывания приложения.Например, часто нет способа узнать заранее, какими будут адрес службы или универсальный код ресурса \(URI\).Вместо жестко запрограммированного адреса желательно разрешить администратору ввести его после создания службы.Такая гибкость достигается благодаря конфигурации.  
+# <a name="configuring-bindings-for-windows-communication-foundation-services"></a><span data-ttu-id="258b2-102">Настройка привязок для служб Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="258b2-102">Configuring Bindings for Windows Communication Foundation Services</span></span>
+<span data-ttu-id="258b2-103">При создании приложения часто нужно отложить решения для администратора после развертывания приложения.</span><span class="sxs-lookup"><span data-stu-id="258b2-103">When creating an application, you often want to defer decisions to the administrator after the deployment of the application.</span></span> <span data-ttu-id="258b2-104">Например, часто нет способа узнать заранее, какими будут адрес службы или универсальный код ресурса (URI).</span><span class="sxs-lookup"><span data-stu-id="258b2-104">For example, there is often no way of knowing in advance what a service address, or Uniform Resource Identifier (URI), will be.</span></span> <span data-ttu-id="258b2-105">Вместо жестко запрограммированного адреса желательно разрешить администратору ввести его после создания службы.</span><span class="sxs-lookup"><span data-stu-id="258b2-105">Instead of hard-coding an address, it is preferable to allow an administrator to do so after creating a service.</span></span> <span data-ttu-id="258b2-106">Такая гибкость достигается благодаря конфигурации.</span><span class="sxs-lookup"><span data-stu-id="258b2-106">This flexibility is accomplished through configuration.</span></span>  
   
 > [!NOTE]
->  [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с параметром `/config` для быстрого создания файлов конфигурации.  
+>  <span data-ttu-id="258b2-107">Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с `/config` коммутатора для быстрого создания файлов конфигурации.</span><span class="sxs-lookup"><span data-stu-id="258b2-107">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) with the `/config` switch to quickly create configuration files.</span></span>  
   
-## Основные разделы  
- Схема конфигурации [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] включает три основных раздела \(`serviceModel`, `bindings` и `services`\).  
+## <a name="major-sections"></a><span data-ttu-id="258b2-108">Основные разделы</span><span class="sxs-lookup"><span data-stu-id="258b2-108">Major Sections</span></span>  
+ <span data-ttu-id="258b2-109">Схема конфигурации [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] включает три основных раздела (`serviceModel`, `bindings` и `services`).</span><span class="sxs-lookup"><span data-stu-id="258b2-109">The [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] configuration scheme includes the following three major sections (`serviceModel`, `bindings`, and `services`):</span></span>  
   
-```  
+```xml  
 <configuration>  
     <system.serviceModel>  
         <bindings>  
@@ -43,21 +42,21 @@ caps.handback.revision: 36
 </configuration>  
 ```  
   
-### Элементы ServiceModel  
- Данный раздел, связанный элементом `system.ServiceModel` , можно использовать для конфигурации типа службы с одной или несколькими конечными точками, а также как параметры службы.После этого каждая конечная точка может быть настроена с адресом, контрактом и привязкой.[!INCLUDE[crabout](../../../includes/crabout-md.md)] конечных точках см. в разделе [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md).Если конечные точки не указаны, среда выполнения добавляет конечные точки по умолчанию.[!INCLUDE[crabout](../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и поведениях см. в разделах [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+### <a name="servicemodel-elements"></a><span data-ttu-id="258b2-110">Элементы ServiceModel</span><span class="sxs-lookup"><span data-stu-id="258b2-110">ServiceModel Elements</span></span>  
+ <span data-ttu-id="258b2-111">Можно использовать раздел, связанный с `system.ServiceModel` элемент, чтобы настроить тип службы с одной или несколькими конечными точками, а также параметры службы.</span><span class="sxs-lookup"><span data-stu-id="258b2-111">You can use the section bounded by the `system.ServiceModel` element to configure a service type with one or more endpoints, as well as settings for a service.</span></span> <span data-ttu-id="258b2-112">После этого каждая конечная точка может быть настроена с адресом, контрактом и привязкой.</span><span class="sxs-lookup"><span data-stu-id="258b2-112">Each endpoint can then be configured with an address, a contract, and a binding.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="258b2-113">конечные точки, в разделе [Общие сведения о создании конечной точки](../../../docs/framework/wcf/endpoint-creation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="258b2-113"> endpoints, see [Endpoint Creation Overview](../../../docs/framework/wcf/endpoint-creation-overview.md).</span></span> <span data-ttu-id="258b2-114">Если конечные точки не указаны, то среда выполнения добавит конечные точки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="258b2-114">If no endpoints are specified, the runtime adds default endpoints.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="258b2-115"> о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="258b2-115"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
- Привязка задает транспорт \(HTTP, TCP, каналы, очередь сообщений\) и протоколы \(безопасность, надежность, потоки транзакций\) и состоит из элементов привязки, каждый из которых задает определенный аспект способа связи конечной точки с миром.  
+ <span data-ttu-id="258b2-116">Привязка задает транспорт (HTTP, TCP, каналы, очередь сообщений) и протоколы (безопасность, надежность, потоки транзакций) и состоит из элементов привязки, каждый из которых задает определенный аспект способа связи конечной точки с миром.</span><span class="sxs-lookup"><span data-stu-id="258b2-116">A binding specifies transports (HTTP, TCP, pipes, Message Queuing) and protocols (Security, Reliability, Transaction flows) and consists of binding elements, each of which specifies an aspect of how an endpoint communicates with the world.</span></span>  
   
- Например, указание элемента [\<basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) задает использование HTTP в качестве транспорта для конечной точки.Это используется для подключения конечной точки во время выполнения, когда открыта служба, использующая данную конечную точку.  
+ <span data-ttu-id="258b2-117">Например, при указании [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) элемент указывает на использование протокола HTTP для транспорта для конечной точки.</span><span class="sxs-lookup"><span data-stu-id="258b2-117">For example, specifying the [\<basicHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element indicates to use HTTP as the transport for an endpoint.</span></span> <span data-ttu-id="258b2-118">Это используется для подключения конечной точки во время выполнения, когда открыта служба, использующая данную конечную точку.</span><span class="sxs-lookup"><span data-stu-id="258b2-118">This is used to wire up the endpoint at run time when the service using this endpoint is opened.</span></span>  
   
- Существует два вида привязок: предопределенная и пользовательская.Предопределенные привязки содержат полезные комбинации элементов, которые используются в общих сценариях.Список имеющихся в [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] типов предопределенных привязок см. в [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md).Если ни одна из заранее заданных коллекций привязок не имеет нужного для приложения\-службы сочетания функций, для соответствия требованиям приложения можно создать пользовательские привязки.[!INCLUDE[crabout](../../../includes/crabout-md.md)] пользовательских привязках см. в разделе [\<customBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ <span data-ttu-id="258b2-119">Существует два вида привязок: предопределенная и пользовательская.</span><span class="sxs-lookup"><span data-stu-id="258b2-119">There are two kinds of bindings: predefined and custom.</span></span> <span data-ttu-id="258b2-120">Предопределенные привязки содержат полезные комбинации элементов, которые используются в общих сценариях.</span><span class="sxs-lookup"><span data-stu-id="258b2-120">Predefined bindings contain useful combinations of elements that are used in common scenarios.</span></span> <span data-ttu-id="258b2-121">Список предварительно определенные привязки типы, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] предоставляет, см. [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="258b2-121">For a list of predefined binding types that [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] provides, see [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).</span></span> <span data-ttu-id="258b2-122">Если ни одна из стандартных коллекций привязок не имеет нужного для приложения службы сочетания возможностей, для соответствия требованиям приложения можно создать специальные привязки.</span><span class="sxs-lookup"><span data-stu-id="258b2-122">If no predefined binding collection has the correct combination of features that a service application needs, you can construct custom bindings to meet the application's requirements.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="258b2-123">пользовательские привязки в разделе [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span><span class="sxs-lookup"><span data-stu-id="258b2-123"> custom bindings, see [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).</span></span>  
   
- В следующих четырех примерах проиллюстрированы наиболее общие конфигурации привязок, используемые для настройки службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="258b2-124">В следующих четырех примерах проиллюстрированы наиболее общие конфигурации привязок, используемые для настройки службы [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="258b2-124">The following four examples illustrate the most common binding configurations used for setting up a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span>  
   
-#### Указание конечной точки для использования типа привязки  
- В первом примере показано, как указать конечную точку, настроенную по адресу, контракту и привязке.  
+#### <a name="specifying-an-endpoint-to-use-a-binding-type"></a><span data-ttu-id="258b2-125">Указание конечной точки для использования типа привязки</span><span class="sxs-lookup"><span data-stu-id="258b2-125">Specifying an Endpoint to Use a Binding Type</span></span>  
+ <span data-ttu-id="258b2-126">В первом примере показано, как указать конечную точку, настроенную по адресу, контракту и привязке.</span><span class="sxs-lookup"><span data-stu-id="258b2-126">The first example illustrates how to specify an endpoint configured with an address, a contract, and a binding.</span></span>  
   
-```  
+```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
   <!—- This section is optional with the default configuration introduced  
        in .NET Framework 4. -->  
@@ -69,23 +68,23 @@ caps.handback.revision: 36
 </service>  
 ```  
   
- В данном примере атрибут `name` указывает на тип службы, для которой предназначена конфигурация.При создании в коде при помощи контракта `HelloWorld` служба инициализируется со всеми конечными точками, указанными в конфигурации примера.Если сборка реализует только один контракт службы, атрибут `name` может быть опущен, поскольку служба использует единственный имеющийся тип.Атрибут принимает строку, которая должна иметь формат `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ <span data-ttu-id="258b2-127">В данном примере атрибут `name` указывает на тип службы, для которой предназначена конфигурация.</span><span class="sxs-lookup"><span data-stu-id="258b2-127">In this example, the `name` attribute indicates which service type the configuration is for.</span></span> <span data-ttu-id="258b2-128">При создании в коде при помощи контракта `HelloWorld` служба инициализируется со всеми конечными точками, указанными в конфигурации примера.</span><span class="sxs-lookup"><span data-stu-id="258b2-128">When you create a service in your code with the `HelloWorld` contract, it is initialized with all of the endpoints defined in the example configuration.</span></span> <span data-ttu-id="258b2-129">Если сборка реализует только один контракт службы, `name` атрибута может быть опущено, поскольку служба использует единственный имеющийся тип.</span><span class="sxs-lookup"><span data-stu-id="258b2-129">If the assembly implements only one service contract, the `name` attribute can be omitted because the service uses the only available type.</span></span> <span data-ttu-id="258b2-130">Атрибут принимает строку, которая должна иметь формат `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`</span><span class="sxs-lookup"><span data-stu-id="258b2-130">The attribute takes a string, which must be in the format `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`</span></span>  
   
- Атрибут `address` указывает универсальный код ресурса \(URI\), который другие конечные точки используют для связи со службой.Универсальный код ресурса \(URI\) может быть как абсолютным, так и относительным путем.Если указан относительный адрес, от узла ожидается предоставление базового адреса, подходящего для используемой в привязке схемы транспорта.Если адрес не настроен, в качестве базового адреса используется адрес соответствующей конечной точки.  
+ <span data-ttu-id="258b2-131">Атрибут `address` указывает универсальный код ресурса (URI), который другие конечные точки используют для связи со службой.</span><span class="sxs-lookup"><span data-stu-id="258b2-131">The `address` attribute specifies the URI that other endpoints use to communicate to the service.</span></span> <span data-ttu-id="258b2-132">Универсальный код ресурса (URI) может быть как абсолютным, так и относительным путем.</span><span class="sxs-lookup"><span data-stu-id="258b2-132">The URI can be either an absolute or relative path.</span></span> <span data-ttu-id="258b2-133">Если указан относительный адрес, от узла ожидается предоставление базового адреса, подходящего для используемой в привязке схемы транспорта.</span><span class="sxs-lookup"><span data-stu-id="258b2-133">If a relative address is provided, the host is expected to provide a base address that is appropriate for the transport scheme used in the binding.</span></span> <span data-ttu-id="258b2-134">Если адрес не настроен, в качестве базового адреса используется адрес соответствующей конечной точки.</span><span class="sxs-lookup"><span data-stu-id="258b2-134">If an address is not configured, the base address is assumed to be the address for that endpoint.</span></span>  
   
- Атрибут `contract` задает контракт, который предоставляет данная конечная точка.Тип реализации службы должен реализовывать тип контракта.Если реализация службы реализует один тип контракта, это свойство может быть опущено.  
+ <span data-ttu-id="258b2-135">Атрибут `contract` задает контракт, который предоставляет данная конечная точка.</span><span class="sxs-lookup"><span data-stu-id="258b2-135">The `contract` attribute specifies the contract this endpoint is exposing.</span></span> <span data-ttu-id="258b2-136">Тип реализации службы должен реализовывать тип контракта.</span><span class="sxs-lookup"><span data-stu-id="258b2-136">The service implementation type must implement the contract type.</span></span> <span data-ttu-id="258b2-137">Если реализация службы реализует один тип контракта, это свойство может быть опущено.</span><span class="sxs-lookup"><span data-stu-id="258b2-137">If a service implementation implements a single contract type, then this property can be omitted.</span></span>  
   
- Атрибут `binding` выбирает предопределенную или специальную привязку для использования в данной конкретной конечной точке.Конечная точка, которая не выбирает привязку явным образом, использует выбор привязки по умолчанию, т. е. `BasicHttpBinding`.  
+ <span data-ttu-id="258b2-138">Атрибут `binding` выбирает предопределенную или специальную привязку для использования в данной конкретной конечной точке.</span><span class="sxs-lookup"><span data-stu-id="258b2-138">The `binding` attribute selects a predefined or custom binding to use for this specific endpoint.</span></span> <span data-ttu-id="258b2-139">Конечная точка, которая не выбирает привязку явным образом, использует выбор привязки по умолчанию, т. е. `BasicHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="258b2-139">An endpoint that does not explicitly select a binding uses the default binding selection, which is `BasicHttpBinding`.</span></span>  
   
-#### Изменение предопределенной привязки  
- В следующем примере изменяется заранее заданная привязка.После этого ее можно использовать для настройки любой конечной точки в службе.Привязка изменяется настройкой значения <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> на 1 секунду.Обратите внимание, что свойство возвращает объект <xref:System.TimeSpan>.  
+#### <a name="modifying-a-predefined-binding"></a><span data-ttu-id="258b2-140">Изменение предопределенной привязки</span><span class="sxs-lookup"><span data-stu-id="258b2-140">Modifying a Predefined Binding</span></span>  
+ <span data-ttu-id="258b2-141">В следующем примере изменяется заранее заданная привязка.</span><span class="sxs-lookup"><span data-stu-id="258b2-141">In the following example, a predefined binding is modified.</span></span> <span data-ttu-id="258b2-142">После этого ее можно использовать для настройки любой конечной точки в службе.</span><span class="sxs-lookup"><span data-stu-id="258b2-142">It can then be used to configure any endpoint in the service.</span></span> <span data-ttu-id="258b2-143">Привязка изменяется настройкой значения <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> на 1 секунду.</span><span class="sxs-lookup"><span data-stu-id="258b2-143">The binding is modified by setting the <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> value to 1 second.</span></span> <span data-ttu-id="258b2-144">Обратите внимание, что свойство возвращает объект <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="258b2-144">Note that the property returns a <xref:System.TimeSpan> object.</span></span>  
   
- Эта измененная привязка находится в разделе привязок.Теперь эта измененная привязка может использоваться при создании любой конечной точки путем установки атрибута `binding` в элементе `endpoint`.  
+ <span data-ttu-id="258b2-145">Эта измененная привязка находится в разделе привязок.</span><span class="sxs-lookup"><span data-stu-id="258b2-145">That altered binding is found in the bindings section.</span></span> <span data-ttu-id="258b2-146">Теперь эта измененная привязка может использоваться при создании любой конечной точки путем установки атрибута `binding` в элементе `endpoint`.</span><span class="sxs-lookup"><span data-stu-id="258b2-146">This altered binding can now be used when creating any endpoint by setting the `binding` attribute in the `endpoint` element.</span></span>  
   
 > [!NOTE]
->  Если задать определенное имя для привязки, то значение `bindingConfiguration`, указанное в конечной точке службы, должно совпадать с этим именем.  
+>  <span data-ttu-id="258b2-147">Если задать определенное имя для привязки, то значение `bindingConfiguration`, указанное в конечной точке службы, должно совпадать с этим именем.</span><span class="sxs-lookup"><span data-stu-id="258b2-147">If you give a particular name to the binding, the `bindingConfiguration` specified in the service endpoint must match with it.</span></span>  
   
-```  
+```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
   <endpoint   
       address="/HelloWorld2/"  
@@ -100,13 +99,13 @@ caps.handback.revision: 36
 </bindings>  
 ```  
   
-## Настройка поведения для применения к службе  
- В следующем примере специальное поведение настраивается для типа службы.Элемент `ServiceMetadataBehavior` используется, чтобы разрешить [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) делать запрос в службу и создавать документы на языке WSDL из метаданных.  
+## <a name="configuring-a-behavior-to-apply-to-a-service"></a><span data-ttu-id="258b2-148">Настройка поведения для применения к службе</span><span class="sxs-lookup"><span data-stu-id="258b2-148">Configuring a Behavior to Apply to a Service</span></span>  
+ <span data-ttu-id="258b2-149">В следующем примере специальное поведение настраивается для типа службы.</span><span class="sxs-lookup"><span data-stu-id="258b2-149">In the following example, a specific behavior is configured for the service type.</span></span> <span data-ttu-id="258b2-150">`ServiceMetadataBehavior` Элемент используется для включения [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для запроса к службе и создания документов языка описания веб-служб (WSDL) из метаданных.</span><span class="sxs-lookup"><span data-stu-id="258b2-150">The `ServiceMetadataBehavior` element is used to enable the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to query the service and generate Web Services Description Language (WSDL) documents from the metadata.</span></span>  
   
 > [!NOTE]
->  Если задать определенное имя для поведения, то значение `behaviorConfiguration`, указанное в разделе службы или конечной точки, должно совпадать с этим именем.  
+>  <span data-ttu-id="258b2-151">Если задать определенное имя для поведения, то значение `behaviorConfiguration`, указанное в разделе службы или конечной точки, должно совпадать с этим именем.</span><span class="sxs-lookup"><span data-stu-id="258b2-151">If you give a particular name to the behavior, the `behaviorConfiguration` specified in the service or endpoint section must match it.</span></span>  
   
-```  
+```xml  
 <behaviors>  
     <behavior>  
         <ServiceMetadata httpGetEnabled="true" />   
@@ -124,14 +123,14 @@ caps.handback.revision: 36
 </services>  
 ```  
   
- Предыдущая конфигурация позволяет клиенту вызывать и получать метаданные типизированной службы HelloWorld.  
+ <span data-ttu-id="258b2-152">Предыдущая конфигурация позволяет клиенту вызывать и получать метаданные типизированной службы HelloWorld.</span><span class="sxs-lookup"><span data-stu-id="258b2-152">The preceding configuration enables a client to call and get the metadata of the "HelloWorld" typed service.</span></span>  
   
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
-## Указание службы с двумя конечными точками при помощи различных значений привязки  
- В последнем примере две конечные точки настраиваются для типа службы `HelloWorld`.Каждая конечная точка использует отдельный настроенный атрибут `bindingConfiguration` с тем же типом привязки \(каждая точка изменяет `basicHttpBinding`\).  
+## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a><span data-ttu-id="258b2-153">Указание службы с двумя конечными точками при помощи различных значений привязки</span><span class="sxs-lookup"><span data-stu-id="258b2-153">Specifying a Service with Two Endpoints Using Different Binding Values</span></span>  
+ <span data-ttu-id="258b2-154">В последнем примере две конечные точки настраиваются для типа службы `HelloWorld`.</span><span class="sxs-lookup"><span data-stu-id="258b2-154">In this last example, two endpoints are configured for the `HelloWorld` service type.</span></span> <span data-ttu-id="258b2-155">Каждая конечная точка использует другой настроенные `bindingConfiguration` атрибут того же типа привязки (каждый изменяет `basicHttpBinding`).</span><span class="sxs-lookup"><span data-stu-id="258b2-155">Each endpoint uses a different customized  `bindingConfiguration` attribute of the same binding type (each modifies the `basicHttpBinding`).</span></span>  
   
-```  
+```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
     <endpoint  
         address="http://computer:8080/Hello1"  
@@ -157,12 +156,12 @@ caps.handback.revision: 36
 </bindings>  
 ```  
   
- Можно добиться того же поведения с помощью конфигурации по умолчанию, добавив раздел `protocolMapping` и настроив привязки, как показано в следующем примере.  
+ <span data-ttu-id="258b2-156">Можно добиться того же поведения с помощью конфигурации по умолчанию, добавив раздел `protocolMapping` и настроив привязки, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="258b2-156">You can get the same behavior using the default configuration by adding a `protocolMapping` section and configuring the bindings as demonstrated in the following example.</span></span>  
   
 ```xml  
 <protocolMapping>  
-    <add scheme=”http” binding=”basicHttpBinding” bindingConfiguration=”shortTimeout” />  
-    <add scheme=”https” binding=”basicHttpBinding” bindingConfiguration=”Secure” />  
+    <add scheme="http" binding="basicHttpBinding" bindingConfiguration="shortTimeout" />  
+    <add scheme="https" binding="basicHttpBinding" bindingConfiguration="Secure" />  
 </protocolMapping>  
 <bindings>  
     <basicHttpBinding   
@@ -175,8 +174,8 @@ caps.handback.revision: 36
 </bindings>  
 ```  
   
-## См. также  
- [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)   
- [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md)   
- [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)   
- [Использование привязок для настройки служб и клиентов](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="258b2-157">См. также</span><span class="sxs-lookup"><span data-stu-id="258b2-157">See Also</span></span>  
+ [<span data-ttu-id="258b2-158">Упрощенная конфигурация</span><span class="sxs-lookup"><span data-stu-id="258b2-158">Simplified Configuration</span></span>](../../../docs/framework/wcf/simplified-configuration.md)  
+ [<span data-ttu-id="258b2-159">Привязки, предоставляемые системой</span><span class="sxs-lookup"><span data-stu-id="258b2-159">System-Provided Bindings</span></span>](../../../docs/framework/wcf/system-provided-bindings.md)  
+ [<span data-ttu-id="258b2-160">Общие сведения о создании конечных точек</span><span class="sxs-lookup"><span data-stu-id="258b2-160">Endpoint Creation Overview</span></span>](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [<span data-ttu-id="258b2-161">Использование привязок для настройки служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="258b2-161">Using Bindings to Configure Services and Clients</span></span>](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

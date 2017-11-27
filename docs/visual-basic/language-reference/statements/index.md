@@ -1,63 +1,43 @@
 ---
 title: "Операторы (Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- statements [Visual Basic]
+helpviewer_keywords: statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30d7fb19e5f11b538b780bf7225917ec50ed765b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5619cb48907ce3d240b10a94c534c849a82fac2a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="statements-visual-basic"></a>Операторы (Visual Basic)
-В статьях этого раздела приводятся таблицы операторов объявления и исполнения Visual Basic, а также важные списки, относящиеся ко множеству операторов.  
+# <a name="statements-visual-basic"></a><span data-ttu-id="4481d-102">Операторы (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4481d-102">Statements (Visual Basic)</span></span>
+<span data-ttu-id="4481d-103">В статьях этого раздела приводятся таблицы операторов объявления и исполнения Visual Basic, а также важные списки, относящиеся ко множеству операторов.</span><span class="sxs-lookup"><span data-stu-id="4481d-103">The topics in this section contain tables of the Visual Basic declaration and executable statements, and of important lists that apply to many statements.</span></span>  
   
-## <a name="in-this-section"></a>Содержание  
- [Операторы A–E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4481d-104">Содержание</span><span class="sxs-lookup"><span data-stu-id="4481d-104">In This Section</span></span>  
+ [<span data-ttu-id="4481d-105">Операторы A–E</span><span class="sxs-lookup"><span data-stu-id="4481d-105">A-E Statements</span></span>](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
- [Операторы F–P](../../../visual-basic/language-reference/statements/f-p-statements.md)  
+ [<span data-ttu-id="4481d-106">Операторы F–P</span><span class="sxs-lookup"><span data-stu-id="4481d-106">F-P Statements</span></span>](../../../visual-basic/language-reference/statements/f-p-statements.md)  
   
- [Операторы Q–Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
+ [<span data-ttu-id="4481d-107">Операторы Q–Z</span><span class="sxs-lookup"><span data-stu-id="4481d-107">Q-Z Statements</span></span>](../../../visual-basic/language-reference/statements/q-z-statements.md)  
   
- [Предложения](../../../visual-basic/language-reference/statements/clauses.md)  
+ [<span data-ttu-id="4481d-108">Предложения</span><span class="sxs-lookup"><span data-stu-id="4481d-108">Clauses</span></span>](../../../visual-basic/language-reference/statements/clauses.md)  
   
- [Контексты объявления и уровни доступа по умолчанию](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ [<span data-ttu-id="4481d-109">Контексты объявления и уровни доступа по умолчанию</span><span class="sxs-lookup"><span data-stu-id="4481d-109">Declaration Contexts and Default Access Levels</span></span>](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
   
- [Список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md)  
+ [<span data-ttu-id="4481d-110">Список атрибутов</span><span class="sxs-lookup"><span data-stu-id="4481d-110">Attribute List</span></span>](../../../visual-basic/language-reference/statements/attribute-list.md)  
   
- [Список параметров](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [<span data-ttu-id="4481d-111">Список параметров</span><span class="sxs-lookup"><span data-stu-id="4481d-111">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)  
   
- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)  
+ [<span data-ttu-id="4481d-112">Список типов</span><span class="sxs-lookup"><span data-stu-id="4481d-112">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="4481d-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="4481d-113">Related Sections</span></span>  
+ [<span data-ttu-id="4481d-114">Справочник по языку Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4481d-114">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)
-
+ [<span data-ttu-id="4481d-115">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4481d-115">Visual Basic</span></span>](../../../visual-basic/index.md)

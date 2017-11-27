@@ -1,56 +1,58 @@
 ---
-title: "Общие сведения о панели инструментов ToolBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы управления, ToolBar"
-  - "ToolBar - элемент управления"
+title: "Общие сведения о панели инструментов ToolBar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], ToolBar
+- ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 27
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dddf6940e180b3d997357390ead38f99f52994ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о панели инструментов ToolBar
-Элементы управления <xref:System.Windows.Controls.ToolBar> являются контейнером для группы команд или элементов управления, обычно связанных между собой по функциональности.  Панель инструментов <xref:System.Windows.Controls.ToolBar> обычно содержит кнопки, которые вызывают команды.  
+# <a name="toolbar-overview"></a><span data-ttu-id="52a59-102">Общие сведения о панели инструментов ToolBar</span><span class="sxs-lookup"><span data-stu-id="52a59-102">ToolBar Overview</span></span>
+<span data-ttu-id="52a59-103"><xref:System.Windows.Controls.ToolBar>элементы управления являются контейнерами для группы команд или элементов управления, которые обычно связаны по функциональности.</span><span class="sxs-lookup"><span data-stu-id="52a59-103"><xref:System.Windows.Controls.ToolBar> controls are containers for a group of commands or controls which are typically related in their function.</span></span> <span data-ttu-id="52a59-104">Объект <xref:System.Windows.Controls.ToolBar> обычно содержит кнопки, которые вызывают команды.</span><span class="sxs-lookup"><span data-stu-id="52a59-104">A <xref:System.Windows.Controls.ToolBar> usually contains buttons which invoke commands.</span></span>  
   
-   
   
 <a name="ToolBarControl"></a>   
-## Элемент управления ToolBar  
- Элемент управления <xref:System.Windows.Controls.ToolBar> называется так потому, что выглядит как ряд кнопок или других элементов управления, расположенных как строка или столбец \(англ. tool — инструмент, bar — планка, полоса\).  Элементы управления <xref:System.Windows.Controls.ToolBar> в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] предоставляют механизм переполнения, который помещает в специальную область переполнения все элементы, не попадающие в ограничения по размеру объекта <xref:System.Windows.Controls.ToolBar>.  Кроме того, элементы управления <xref:System.Windows.Controls.ToolBar> в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] обычно используются со связанным элементом управления <xref:System.Windows.Controls.ToolBarTray>, который предоставляет специальное поведение макета, а также поддержку инициированных пользователем изменений в размерах и размещении панелей инструментов.  
+## <a name="toolbar-control"></a><span data-ttu-id="52a59-105">Элемент управления ToolBar</span><span class="sxs-lookup"><span data-stu-id="52a59-105">ToolBar Control</span></span>  
+ <span data-ttu-id="52a59-106"><xref:System.Windows.Controls.ToolBar> Управления планка как строки в одной строке или столбце ряд кнопок и других элементов управления.</span><span class="sxs-lookup"><span data-stu-id="52a59-106">The <xref:System.Windows.Controls.ToolBar> control takes its name from the bar-like arrangement of buttons or other controls into a single row or column.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="52a59-107"><xref:System.Windows.Controls.ToolBar> элементов управления предоставляют механизм переполнения, который помещает все элементы, не попадающие в ограничения по размеру объекта <xref:System.Windows.Controls.ToolBar> в специальную область переполнения.</span><span class="sxs-lookup"><span data-stu-id="52a59-107"> <xref:System.Windows.Controls.ToolBar> controls provide an overflow mechanism which places any items that do not fit naturally within a size-constrained <xref:System.Windows.Controls.ToolBar> into a special overflow area.</span></span> <span data-ttu-id="52a59-108">Кроме того [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> обычно используются элементы управления со связанным <xref:System.Windows.Controls.ToolBarTray> элемента управления, который предоставляет специальное поведение макета, а также поддержку для пользователь запустил размеры и расположение панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="52a59-108">Also, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> controls are usually used with the related <xref:System.Windows.Controls.ToolBarTray> control, which provides special layout behavior as well as support for user-initiated sizing and arranging of toolbars.</span></span>  
   
 <a name="Creating_ToolBars"></a>   
-## Указание позиции объектов ToolBar в ToolBarTray  
- Для размещения объекта <xref:System.Windows.Controls.ToolBar> в <xref:System.Windows.Controls.ToolBarTray> используйте свойства <xref:System.Windows.Controls.ToolBar.Band%2A> и <xref:System.Windows.Controls.ToolBar.BandIndex%2A>.  Свойство <xref:System.Windows.Controls.ToolBar.Band%2A> указывает положение объекта <xref:System.Windows.Controls.ToolBar> в его родительском объекте <xref:System.Windows.Controls.ToolBarTray>.  Свойство <xref:System.Windows.Controls.ToolBar.BandIndex%2A> указывает порядок расположения элементов управления <xref:System.Windows.Controls.ToolBar>.  В следующем примере показано использование этого свойства для размещения элементов управления <xref:System.Windows.Controls.ToolBar> внутри <xref:System.Windows.Controls.ToolBarTray>.  
+## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a><span data-ttu-id="52a59-109">Задание положения элементов управления ToolBar в элементе управления ToolBarTray</span><span class="sxs-lookup"><span data-stu-id="52a59-109">Specifying the Position of ToolBars in a ToolBarTray</span></span>  
+ <span data-ttu-id="52a59-110">Используйте <xref:System.Windows.Controls.ToolBar.Band%2A> и <xref:System.Windows.Controls.ToolBar.BandIndex%2A> свойства для размещения <xref:System.Windows.Controls.ToolBar> в <xref:System.Windows.Controls.ToolBarTray>.</span><span class="sxs-lookup"><span data-stu-id="52a59-110">Use the <xref:System.Windows.Controls.ToolBar.Band%2A> and <xref:System.Windows.Controls.ToolBar.BandIndex%2A> properties to position the <xref:System.Windows.Controls.ToolBar> in the <xref:System.Windows.Controls.ToolBarTray>.</span></span> <span data-ttu-id="52a59-111"><xref:System.Windows.Controls.ToolBar.Band%2A>указывает положение, где <xref:System.Windows.Controls.ToolBar> помещается в его родительском элементе <xref:System.Windows.Controls.ToolBarTray>.</span><span class="sxs-lookup"><span data-stu-id="52a59-111"><xref:System.Windows.Controls.ToolBar.Band%2A> indicates the position in which the <xref:System.Windows.Controls.ToolBar> is placed within its parent <xref:System.Windows.Controls.ToolBarTray>.</span></span> <span data-ttu-id="52a59-112"><xref:System.Windows.Controls.ToolBar.BandIndex%2A>Указывает порядок, в котором <xref:System.Windows.Controls.ToolBar> помещается расположения элементов.</span><span class="sxs-lookup"><span data-stu-id="52a59-112"><xref:System.Windows.Controls.ToolBar.BandIndex%2A> indicates the order in which the <xref:System.Windows.Controls.ToolBar> is placed within its band.</span></span> <span data-ttu-id="52a59-113">В следующем примере показан как данное свойство используется для размещения <xref:System.Windows.Controls.ToolBar> элементы управления внутри <xref:System.Windows.Controls.ToolBarTray>.</span><span class="sxs-lookup"><span data-stu-id="52a59-113">The following example shows how use this property to place <xref:System.Windows.Controls.ToolBar> controls inside a <xref:System.Windows.Controls.ToolBarTray>.</span></span>  
   
- [!code-xml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
+ [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   
 <a name="ToolBars_with_Overflow_Items"></a>   
-## Панели инструментов с элементами в области переполнения  
- Часто элемент управления <xref:System.Windows.Controls.ToolBar> содержит больше элементов, чем можно разместить в размере панели инструментов.  В этом случае <xref:System.Windows.Controls.ToolBar> отображает кнопку переполнения.  Для просмотра элементов переполнения пользователь нажимает кнопку переполнения, и элементы отображаются во всплывающем окне ниже <xref:System.Windows.Controls.ToolBar>.  На рисунке, приведенном ниже, показана панель инструментов <xref:System.Windows.Controls.ToolBar> с элементами переполнения.  
+## <a name="toolbars-with-overflow-items"></a><span data-ttu-id="52a59-114">Элементы управления ToolBar с элементами в области переполнения</span><span class="sxs-lookup"><span data-stu-id="52a59-114">ToolBars with Overflow Items</span></span>  
+ <span data-ttu-id="52a59-115">Часто <xref:System.Windows.Controls.ToolBar> элементов управления содержит больше элементов, чем может поместиться в размер панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="52a59-115">Often <xref:System.Windows.Controls.ToolBar> controls contain more items than can fit into the toolbar's size.</span></span> <span data-ttu-id="52a59-116">В этом случае <xref:System.Windows.Controls.ToolBar> отображает кнопки переполнения.</span><span class="sxs-lookup"><span data-stu-id="52a59-116">When this happens, the <xref:System.Windows.Controls.ToolBar> displays an overflow button.</span></span> <span data-ttu-id="52a59-117">Для просмотра элементов переполнения, пользователь нажимает кнопку переполнения, и элементы отображаются во всплывающем окне ниже <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="52a59-117">To see the overflow items, a user clicks the overflow button and the items are shown in a pop-up window below the <xref:System.Windows.Controls.ToolBar>.</span></span> <span data-ttu-id="52a59-118">Показано на следующем рисунке <xref:System.Windows.Controls.ToolBar> с элементами в области переполнения.</span><span class="sxs-lookup"><span data-stu-id="52a59-118">The following graphic shows a <xref:System.Windows.Controls.ToolBar> with overflow items.</span></span>  
   
- ![Панель инструментов с перекрытием](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-Панель инструментов с элементами в области переполнения  
+ <span data-ttu-id="52a59-119">![Панель инструментов с перекрытием](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")</span><span class="sxs-lookup"><span data-stu-id="52a59-119">![ToolBar with overflow](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")</span></span>  
+<span data-ttu-id="52a59-120">Панель инструментов с элементами в области переполнения</span><span class="sxs-lookup"><span data-stu-id="52a59-120">Toolbar with Overflow Items</span></span>  
   
- Можно указать, что элемент должен размещаться в панели переполнения, присвоив вложенному свойству <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=fullName> значение <xref:System.Windows.Controls.OverflowMode?displayProperty=fullName>, <xref:System.Windows.Controls.OverflowMode?displayProperty=fullName> или <xref:System.Windows.Controls.OverflowMode?displayProperty=fullName>.  В следующем примере указывается, что последние четыре кнопки в панели инструментов всегда должны быть в панели переполнения.  
+ <span data-ttu-id="52a59-121">Можно указать при помещении элемент на панели инструментов на панели переполнения, задав <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> присоединенному свойству <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, или <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="52a59-121">You can specify when an item on a toolbar is placed on the overflow panel by setting the <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> attached property to <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, or <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>.</span></span> <span data-ttu-id="52a59-122">В следующем примере показано, что последние четыре кнопки панели инструментов всегда должны быть в области переполнения.</span><span class="sxs-lookup"><span data-stu-id="52a59-122">The following example specifies that the last four buttons on the toolbar should always be on the overflow panel.</span></span>  
   
- [!code-xml[ToolBarExample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
+ [!code-xaml[ToolBarExample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
   
- Панель инструментов <xref:System.Windows.Controls.ToolBar> использует <xref:System.Windows.Controls.Primitives.ToolBarPanel> и <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> в ее шаблоне <xref:System.Windows.Controls.ControlTemplate>.  <xref:System.Windows.Controls.Primitives.ToolBarPanel> отвечает за размещение элементов в панели инструментов.  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> отвечает за размещение элементов, которые не помещаются на <xref:System.Windows.Controls.ToolBar>.  Пример <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ToolBar> см. в  
+ <span data-ttu-id="52a59-123"><xref:System.Windows.Controls.ToolBar> Использует <xref:System.Windows.Controls.Primitives.ToolBarPanel> и <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> в его <xref:System.Windows.Controls.ControlTemplate>.</span><span class="sxs-lookup"><span data-stu-id="52a59-123">The <xref:System.Windows.Controls.ToolBar> uses a <xref:System.Windows.Controls.Primitives.ToolBarPanel> and a <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> in its <xref:System.Windows.Controls.ControlTemplate>.</span></span>  <span data-ttu-id="52a59-124"><xref:System.Windows.Controls.Primitives.ToolBarPanel> Отвечает за размещение элементов на панели инструментов.</span><span class="sxs-lookup"><span data-stu-id="52a59-124">The <xref:System.Windows.Controls.Primitives.ToolBarPanel> is responsible for the layout of the items on the toolbar.</span></span>  <span data-ttu-id="52a59-125"><xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> Отвечает за макета элементов, которые не помещаются на <xref:System.Windows.Controls.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="52a59-125">The <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> is responsible for the layout of the items that do not fit on the <xref:System.Windows.Controls.ToolBar>.</span></span> <span data-ttu-id="52a59-126">Пример <xref:System.Windows.Controls.ControlTemplate> для <xref:System.Windows.Controls.ToolBar>, см.</span><span class="sxs-lookup"><span data-stu-id="52a59-126">For an example of a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.ToolBar>, see</span></span>  
   
- [Стили и шаблоны элемента ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md).  
+ <span data-ttu-id="52a59-127">[Стили и шаблоны элемента ToolBar](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md).</span><span class="sxs-lookup"><span data-stu-id="52a59-127">[ToolBar Styles and Templates](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Controls.Primitives.ToolBarPanel>   
- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>   
- [Определение стиля элементов управления в панели инструментов](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)   
- [WPF Controls Gallery Sample](http://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a><span data-ttu-id="52a59-128">См. также</span><span class="sxs-lookup"><span data-stu-id="52a59-128">See Also</span></span>  
+ <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
+ <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
+ [<span data-ttu-id="52a59-129">Определение стиля элементов управления на панели инструментов</span><span class="sxs-lookup"><span data-stu-id="52a59-129">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [<span data-ttu-id="52a59-130">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="52a59-130">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)

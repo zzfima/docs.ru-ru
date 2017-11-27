@@ -1,36 +1,38 @@
 ---
-title: "Руководство и рекомендации по безопасности | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "защищенные приложения [WCF]"
+title: "Руководство и рекомендации по безопасности"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 6178a3487f0721b0d799e801e03bb79a024c3952
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Руководство и рекомендации по безопасности
-В этом разделе перечислены рекомендации по созданию безопасных приложений [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и факторы, которые следует при этом учитывать.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] вопросах Windows Server AppFabric и безопасности см. раздел [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)  
+# <a name="security-guidance-and-best-practices"></a><span data-ttu-id="7a995-102">Руководство и рекомендации по безопасности</span><span class="sxs-lookup"><span data-stu-id="7a995-102">Security Guidance and Best Practices</span></span>
+<span data-ttu-id="7a995-103">В этом разделе перечислены рекомендации по созданию безопасных приложений [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и факторы, которые следует при этом учитывать.</span><span class="sxs-lookup"><span data-stu-id="7a995-103">The topics in this section present guidance for and items to consider when creating secure [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] applications.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="7a995-104">Windows Server AppFabric и безопасности. в разделе, [безопасности модели для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="7a995-104"> Windows Server AppFabric and security see, [Security Model for Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)</span></span>  
   
-## Темы этого раздела  
- [Рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
- Рекомендации по обеспечению безопасности приложений.  
+## <a name="in-this-section"></a><span data-ttu-id="7a995-105">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="7a995-105">In this Section</span></span>  
+ [<span data-ttu-id="7a995-106">Рекомендации по безопасности</span><span class="sxs-lookup"><span data-stu-id="7a995-106">Best Practices for Security</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
+ <span data-ttu-id="7a995-107">Рекомендации по обеспечению безопасности приложений.</span><span class="sxs-lookup"><span data-stu-id="7a995-107">Recommendations to help you secure your applications.</span></span>  
   
- [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- Факторы, которые необходимо учитывать при создании приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="7a995-108">Вопросы безопасности</span><span class="sxs-lookup"><span data-stu-id="7a995-108">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ <span data-ttu-id="7a995-109">Факторы, которые необходимо учитывать при создании приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7a995-109">Items to consider when creating a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application.</span></span>  
   
- [Замечания о производительности](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
- Сведения, касающиеся производительности и безопасности.  
+ [<span data-ttu-id="7a995-110">Вопросы производительности</span><span class="sxs-lookup"><span data-stu-id="7a995-110">Performance Considerations</span></span>](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
+ <span data-ttu-id="7a995-111">Сведения, касающиеся производительности и безопасности.</span><span class="sxs-lookup"><span data-stu-id="7a995-111">Contains entries related to performance and security.</span></span>  
   
-## См. также  
- [Базовое программирование WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x419)
+## <a name="see-also"></a><span data-ttu-id="7a995-112">См. также</span><span class="sxs-lookup"><span data-stu-id="7a995-112">See Also</span></span>  
+ [<span data-ttu-id="7a995-113">Базовое программирование для WCF</span><span class="sxs-lookup"><span data-stu-id="7a995-113">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="7a995-114">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="7a995-114">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,43 +1,46 @@
 ---
-title: "Практическое руководство. Рисование эллипса или круга | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "круги, рисование"
-  - "рисование кругов"
-  - "рисование эллипсов"
-  - "эллипсы, рисование"
-  - "графика, рисование кругов"
-  - "графика, рисование эллипсов"
+title: "Практическое руководство. Рисование эллипса или круга"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ellipses [WPF], drawing
+- circles [WPF], drawing
+- drawing circles [WPF]
+- drawing ellipses [WPF]
+- graphics [WPF], drawing circles
+- graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4da623c34b4c3b84dee0f02d631d032eb1c061d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Рисование эллипса или круга
-В данном примере демонстрируется рисование эллипсов и кругов с помощью элемента <xref:System.Windows.Shapes.Ellipse>.  Чтобы нарисовать эллипс, необходимо создать элемент <xref:System.Windows.Shapes.Ellipse> и задать значения его свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>.  Для указания объекта <xref:System.Windows.Media.Brush>, используемого для рисования внутренней части эллипса, необходимо использовать свойство <xref:System.Windows.Shapes.Shape.Fill%2A>.  Для указания объекта <xref:System.Windows.Media.Brush>, используемого для рисования контура эллипса, необходимо использовать свойство <xref:System.Windows.Shapes.Shape.Stroke%2A>.  Свойство <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> задает толщину контура эллипса.  
+# <a name="how-to-draw-an-ellipse-or-a-circle"></a><span data-ttu-id="3d198-102">Практическое руководство. Рисование эллипса или круга</span><span class="sxs-lookup"><span data-stu-id="3d198-102">How to: Draw an Ellipse or a Circle</span></span>
+<span data-ttu-id="3d198-103">В этом примере показано, как рисование эллипсов и кругов с помощью <xref:System.Windows.Shapes.Ellipse> элемента.</span><span class="sxs-lookup"><span data-stu-id="3d198-103">This example shows how to draw ellipses and circles by using the <xref:System.Windows.Shapes.Ellipse> element.</span></span> <span data-ttu-id="3d198-104">Чтобы нарисовать эллипс, создайте <xref:System.Windows.Shapes.Ellipse> элемент и указать его <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A>.</span><span class="sxs-lookup"><span data-stu-id="3d198-104">To draw an ellipse, create an <xref:System.Windows.Shapes.Ellipse> element and specify its <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A>.</span></span> <span data-ttu-id="3d198-105">Используйте его <xref:System.Windows.Shapes.Shape.Fill%2A> свойство, чтобы указать <xref:System.Windows.Media.Brush> , используемый для рисования внутренней части эллипса.</span><span class="sxs-lookup"><span data-stu-id="3d198-105">Use its <xref:System.Windows.Shapes.Shape.Fill%2A> property to specify the <xref:System.Windows.Media.Brush> that is used to paint the interior of the ellipse.</span></span> <span data-ttu-id="3d198-106">Используйте его <xref:System.Windows.Shapes.Shape.Stroke%2A> свойство, чтобы указать <xref:System.Windows.Media.Brush> , используемый для рисования контура эллипса.</span><span class="sxs-lookup"><span data-stu-id="3d198-106">Use its <xref:System.Windows.Shapes.Shape.Stroke%2A> property to specify the <xref:System.Windows.Media.Brush> that is used to paint the outline of the ellipse.</span></span> <span data-ttu-id="3d198-107"><xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Свойство задает толщину контура эллипса.</span><span class="sxs-lookup"><span data-stu-id="3d198-107">The <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> property specifies the thickness of the ellipse outline.</span></span>  
   
- Чтобы нарисовать круг, значения свойств <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> элемента <xref:System.Windows.Shapes.Ellipse> должны быть одинаковыми.  
+ <span data-ttu-id="3d198-108">Рисование окружности, сделать <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> из <xref:System.Windows.Shapes.Ellipse> элементов, равных друг с другом.</span><span class="sxs-lookup"><span data-stu-id="3d198-108">To draw a circle, make the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> of the <xref:System.Windows.Shapes.Ellipse> element equal to each other.</span></span>  
   
- В следующем примере рисуется четыре элемента <xref:System.Windows.Shapes.Ellipse> внутри объекта <xref:System.Windows.Controls.Canvas>.  
+ <span data-ttu-id="3d198-109">В следующем примере рисуется четыре <xref:System.Windows.Shapes.Ellipse> элементы внутри <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="3d198-109">The following example draws four <xref:System.Windows.Shapes.Ellipse> elements within a <xref:System.Windows.Controls.Canvas>.</span></span>  
   
-## Пример  
- [!code-xml[drawingwithshapeelements#EllipseExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/ellipseexample.xaml#ellipseexample1)]  
+## <a name="example"></a><span data-ttu-id="3d198-110">Пример</span><span class="sxs-lookup"><span data-stu-id="3d198-110">Example</span></span>  
+ [!code-xaml[drawingwithshapeelements#EllipseExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/ellipseexample.xaml#ellipseexample1)]  
   
- Хотя данный пример для хранения эллипсов использует элемент управления <xref:System.Windows.Controls.Canvas>, можно использовать элементы эллипсов \(и все остальные элементы фигур\) с любым из элементов управления <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control>, поддерживающих нетекстовое содержимое.  
+ <span data-ttu-id="3d198-111">Несмотря на то, что в этом примере используется <xref:System.Windows.Controls.Canvas> для хранения эллипсов, можно использовать элементы эллипса (и все остальные элементы фигур) с любым <xref:System.Windows.Controls.Panel> или <xref:System.Windows.Controls.Control> , поддерживающую нетекстовых содержимое.</span><span class="sxs-lookup"><span data-stu-id="3d198-111">Although this example uses a <xref:System.Windows.Controls.Canvas> to contain the ellipses, you can use ellipse elements (and all the other shape elements) with any <xref:System.Windows.Controls.Panel> or <xref:System.Windows.Controls.Control> that supports non-text content.</span></span>  
   
- Этот пример является фрагментом большего примера; полный пример см. на веб\-странице [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ <span data-ttu-id="3d198-112">Этот пример является частью большего примера; Полный пример см. в разделе [пример элементов фигуры](http://go.microsoft.com/fwlink/?LinkID=160037).</span><span class="sxs-lookup"><span data-stu-id="3d198-112">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## См. также  
- <xref:System.Windows.Shapes.Ellipse>   
- <xref:System.Windows.Shapes.Shape>   
- [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a><span data-ttu-id="3d198-113">См. также</span><span class="sxs-lookup"><span data-stu-id="3d198-113">See Also</span></span>  
+ <xref:System.Windows.Shapes.Ellipse>  
+ <xref:System.Windows.Shapes.Shape>  
+ [<span data-ttu-id="3d198-114">Пример элементов фигуры</span><span class="sxs-lookup"><span data-stu-id="3d198-114">Shape Elements Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160037)

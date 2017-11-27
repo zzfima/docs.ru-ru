@@ -1,74 +1,73 @@
 ---
-title: "Использование привязок для настройки служб и клиентов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "привязки [WCF], использование"
+title: "Использование привязок для настройки служб и клиентов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 33
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49c5a778bf44fa4e997b3c93ced4b51452a46862
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Использование привязок для настройки служб и клиентов
-Привязки \- это объекты, которые указывают подробные сведения о связи, требуемые для подключения к конечной точке.  В частности, привязки содержат информацию о конфигурации, используемую для создания среды выполнения клиента или службы путем определения подробной информации о транспорте, форматах подключения \(кодировка сообщения\) и протоколах, используемых для соответствующей конечной точки или канала клиента.  Для создания функционирующей службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] каждая конечная точка в службе требует привязки.  В настоящем разделе описывается, что такое привязки, как они определяются и как для конечной точки указывается конкретная привязка.  
+# <a name="using-bindings-to-configure-services-and-clients"></a><span data-ttu-id="3333e-102">Использование привязок для настройки служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="3333e-102">Using Bindings to Configure Services and Clients</span></span>
+<span data-ttu-id="3333e-103">Привязки - это объекты, которые указывают подробные сведения о связи, требуемые для подключения к конечной точке.</span><span class="sxs-lookup"><span data-stu-id="3333e-103">Bindings are objects that specify the communication details required to connect to an endpoint.</span></span> <span data-ttu-id="3333e-104">В частности, привязки содержат информацию о конфигурации, используемую для создания среды выполнения клиента или службы путем определения подробной информации о транспорте, форматах подключения (кодировка сообщения) и протоколах, используемых для соответствующей конечной точки или канала клиента.</span><span class="sxs-lookup"><span data-stu-id="3333e-104">More specifically, bindings contain configuration information that is used to create the client or service runtime by defining the specifics of transports, wire-formats (message encoding), and protocols to use for the respective endpoint or client channel.</span></span> <span data-ttu-id="3333e-105">Для создания функционирующей службы [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] каждая конечная точка в службе требует привязки.</span><span class="sxs-lookup"><span data-stu-id="3333e-105">To create a functioning [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service, each endpoint in the service requires a binding.</span></span> <span data-ttu-id="3333e-106">В настоящем разделе описывается, что такое привязки, как они определяются и как для конечной точки указывается конкретная привязка.</span><span class="sxs-lookup"><span data-stu-id="3333e-106">This topic explains what bindings are, how they are defined, and how a particular binding is specified for an endpoint.</span></span>  
   
-## Что определяет привязка  
- Информация в привязке может быть очень простой или очень сложной.  Самые простые привязки указывают только транспортный протокол \(такой как HTTP\), который должен использоваться для подключения к конечной точке.  В общем случае, информация в привязке указывает на то, как подключиться к конечной точке, и попадает в одну из категорий, указанных в таблице ниже.  
+## <a name="what-a-binding-defines"></a><span data-ttu-id="3333e-107">Что определяет привязка</span><span class="sxs-lookup"><span data-stu-id="3333e-107">What a Binding Defines</span></span>  
+ <span data-ttu-id="3333e-108">Информация в привязке может быть очень простой или очень сложной.</span><span class="sxs-lookup"><span data-stu-id="3333e-108">The information in a binding can be very basic or very complex.</span></span> <span data-ttu-id="3333e-109">Самые простые привязки указывают только транспортный протокол (такой как HTTP), который должен использоваться для подключения к конечной точке.</span><span class="sxs-lookup"><span data-stu-id="3333e-109">The most basic binding specifies only the transport protocol (such as HTTP) that must be used to connect to the endpoint.</span></span> <span data-ttu-id="3333e-110">В общем случае, информация в привязке указывает на то, как подключиться к конечной точке, и попадает в одну из категорий, указанных в таблице ниже.</span><span class="sxs-lookup"><span data-stu-id="3333e-110">More generally, the information a binding contains about how to connect to an endpoint falls into one of the categories in the following table.</span></span>  
   
- Протоколы  
- Определяет используемый механизм безопасности: способность надежного обмена сообщениями или настройки потока контекста транзакции.  
+ <span data-ttu-id="3333e-111">Протоколы</span><span class="sxs-lookup"><span data-stu-id="3333e-111">Protocols</span></span>  
+ <span data-ttu-id="3333e-112">Определяет используемый механизм безопасности: способность надежного обмена сообщениями или настройки потока контекста транзакции.</span><span class="sxs-lookup"><span data-stu-id="3333e-112">Determines the security mechanism being used, either reliable messaging capability or transaction context flow settings.</span></span>  
   
- Transport  
- Определяет основной используемый транспортный протокол \(например, TCP или HTTP\).  
+ <span data-ttu-id="3333e-113">Transport</span><span class="sxs-lookup"><span data-stu-id="3333e-113">Transport</span></span>  
+ <span data-ttu-id="3333e-114">Определяет основной используемый транспортный протокол (например, TCP или HTTP).</span><span class="sxs-lookup"><span data-stu-id="3333e-114">Determines the underlying transport protocol to use (for example, TCP or HTTP).</span></span>  
   
- кодировка  
- Определяет кодирование сообщения, например кодирование text\/XML, двоичное кодирование или кодирование подсистемы оптимизации передачи сообщений \(MTOM\), которое определяет, каким образом сообщения представляются в байтовых потоках в сети.  
+ <span data-ttu-id="3333e-115">кодировка</span><span class="sxs-lookup"><span data-stu-id="3333e-115">Encoding</span></span>  
+ <span data-ttu-id="3333e-116">Определяет кодирование сообщения, например кодирование text/XML, двоичное кодирование или кодирование подсистемы оптимизации передачи сообщений (MTOM), которое определяет, каким образом сообщения представляются в байтовых потоках в сети.</span><span class="sxs-lookup"><span data-stu-id="3333e-116">Determines the message encoding, for example, text/XML, binary, or Message Transmission Optimization Mechanism (MTOM), which determines how messages are represented as byte streams on the wire.</span></span>  
   
-## Привязки, предоставляемые системой  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] включает набор привязок, предоставляемых системой, которые разработаны для удовлетворения большинства требований и сценариев приложения.  В следующих классах представлены некоторые примеры привязок, предоставляемых системой.  
+## <a name="system-provided-bindings"></a><span data-ttu-id="3333e-117">Привязки, предоставляемые системой</span><span class="sxs-lookup"><span data-stu-id="3333e-117">System-Provided Bindings</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="3333e-118"> включает набор привязок, предоставляемых системой, которые разработаны для удовлетворения большинства требований и сценариев приложения.</span><span class="sxs-lookup"><span data-stu-id="3333e-118"> includes a set of system-provided bindings that are designed to cover most application requirements and scenarios.</span></span> <span data-ttu-id="3333e-119">В следующих классах представлены некоторые примеры привязок, предоставляемых системой.</span><span class="sxs-lookup"><span data-stu-id="3333e-119">The following classes represent some examples of system-provided bindings:</span></span>  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: привязка по протоколу HTTP, которая подходит для взаимодействия с веб\-службами, совместимыми со спецификацией WS\-I Basic Profile 1.1 \(например, службами, основанными на веб\-службах ASP.NET Web \(ASMX\).  
+-   <span data-ttu-id="3333e-120"><xref:System.ServiceModel.BasicHttpBinding>: привязка по протоколу HTTP, которая подходит для взаимодействия с веб-службами, совместимыми со спецификацией WS-I Basic Profile 1.1 (например, службами, основанными на веб-службах ASP.NET Web (ASMX).</span><span class="sxs-lookup"><span data-stu-id="3333e-120"><xref:System.ServiceModel.BasicHttpBinding>: An HTTP protocol binding suitable for connecting to Web services that conforms to the WS-I Basic Profile 1.1 specification (for example, ASP.NET Web services [ASMX]-based services).</span></span>  
   
--   <xref:System.ServiceModel.WsHttpBinding>: привязка по протоколу HTTP, которая подходит для взаимодействия с конечными точками, которые соответствуют протоколам спецификаций веб\-служб.  
+-   <span data-ttu-id="3333e-121"><xref:System.ServiceModel.WSHttpBinding>: привязка по протоколу HTTP, которая подходит для взаимодействия с конечными точками, которые соответствуют протоколам спецификаций веб-служб.</span><span class="sxs-lookup"><span data-stu-id="3333e-121"><xref:System.ServiceModel.WSHttpBinding>: An HTTP protocol binding suitable for connecting to endpoints that conform to the Web services specifications protocols.</span></span>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: использует .NET двоичное кодирование и технологии формирования кадров совместно с транспортом именованных каналов Windows для подключения к другим конечным точкам [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] на том же компьютере.  
+-   <span data-ttu-id="3333e-122"><xref:System.ServiceModel.NetNamedPipeBinding>: использует .NET двоичное кодирование и технологии формирования кадров совместно с транспортом именованных каналов Windows для подключения к другим конечным точкам [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] на том же компьютере.</span><span class="sxs-lookup"><span data-stu-id="3333e-122"><xref:System.ServiceModel.NetNamedPipeBinding>: Uses the .NET binary encoding and framing technologies in conjunction with the Windows named pipe transport to connect to other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoints on the same machine.</span></span>  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: использует двоичное кодирование .NET и технологии формирования кадров совместно с очередью сообщений \(также известной как MSMQ\) для создания подключений с очередью сообщений с другими конечными точками [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <span data-ttu-id="3333e-123"><xref:System.ServiceModel.NetMsmqBinding>: использует двоичное кодирование .NET и технологии формирования кадров совместно с очередью сообщений (также известной как MSMQ) для создания подключений с очередью сообщений с другими конечными точками [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3333e-123"><xref:System.ServiceModel.NetMsmqBinding>: Uses the .NET binary encoding and framing technologies in conjunction with the Message Queuing (also known as MSMQ) to create queued message connections with other [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] endpoints.</span></span>  
   
- Полный список предоставляемых системой привязок с описаниями см. в разделе [Привязки, предоставляемые системой](../../../docs/framework/wcf/system-provided-bindings.md).  
+ <span data-ttu-id="3333e-124">Полный список системных привязок с описаниями, см. [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="3333e-124">For a complete list of system-provided bindings, with descriptions, see [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).</span></span>  
   
-## Пользовательские привязки  
- Если в коллекции привязок, поставляемой в составе системы, нет нужного для приложения службы сочетания функций, можно создать привязку <xref:System.ServiceModel.Channels.CustomBinding>.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] элементах привязки <xref:System.ServiceModel.Channels.CustomBinding> см. в разделах [\<customBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) и [Пользовательские привязки](../../../docs/framework/wcf/extending/custom-bindings.md).  
+## <a name="custom-bindings"></a><span data-ttu-id="3333e-125">Пользовательские привязки</span><span class="sxs-lookup"><span data-stu-id="3333e-125">Custom Bindings</span></span>  
+ <span data-ttu-id="3333e-126">Если в коллекции привязок, поставляемой в составе системы, нет нужного для приложения службы сочетания функций, можно создать привязку <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="3333e-126">If the system-provided binding collection does not have the correct combination of features that a service application requires, you can create a <xref:System.ServiceModel.Channels.CustomBinding> binding.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="3333e-127">элементы <xref:System.ServiceModel.Channels.CustomBinding> привязки, в разделе [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) и [пользовательские привязки](../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="3333e-127"> the elements of a <xref:System.ServiceModel.Channels.CustomBinding> binding, see [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) and [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## Использование привязок  
- Использование привязок включает два основных этапа.  
+## <a name="using-bindings"></a><span data-ttu-id="3333e-128">Использование привязок</span><span class="sxs-lookup"><span data-stu-id="3333e-128">Using Bindings</span></span>  
+ <span data-ttu-id="3333e-129">Использование привязок включает два основных этапа.</span><span class="sxs-lookup"><span data-stu-id="3333e-129">Using bindings entails two basic steps:</span></span>  
   
-1.  Выбор или определение привязки.  Самый простой способ \- выбрать одну из предоставляемых системой привязок и использовать ее настройки по умолчанию.  Также можно выбрать предоставляемую системой привязку и сбросить значения ее свойств таким образом, чтобы они соответствовали нужным требованиям.  Кроме того, можно создать пользовательскую привязку и задать как требуется каждое свойство.  
+1.  <span data-ttu-id="3333e-130">Выбор или определение привязки.</span><span class="sxs-lookup"><span data-stu-id="3333e-130">Select or define a binding.</span></span> <span data-ttu-id="3333e-131">Самый простой способ - выбрать одну из предоставляемых системой привязок и использовать ее настройки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="3333e-131">The easiest method is to choose one of the system-provided bindings and use its default settings.</span></span> <span data-ttu-id="3333e-132">Также можно выбрать предоставляемую системой привязку и сбросить значения ее свойств таким образом, чтобы они соответствовали нужным требованиям.</span><span class="sxs-lookup"><span data-stu-id="3333e-132">You can also choose a system-provided binding and reset its property values to suit your requirements.</span></span> <span data-ttu-id="3333e-133">Кроме того, можно создать пользовательскую привязку и задать как требуется каждое свойство.</span><span class="sxs-lookup"><span data-stu-id="3333e-133">Alternatively, you can create a custom binding and set every property as required.</span></span>  
   
-2.  Создать конечную точку, которая использует данную привязку.  
+2.  <span data-ttu-id="3333e-134">Создать конечную точку, которая использует данную привязку.</span><span class="sxs-lookup"><span data-stu-id="3333e-134">Create an endpoint that uses this binding.</span></span>  
   
-## Код и конфигурация  
- Определить и настроить привязки можно посредством кода или конфигурации.  Эти два подхода не зависят от типа используемой привязки, например, при использовании привязки, предоставляемой системой, или привязки <xref:System.ServiceModel.Channels.CustomBinding>.  Как правило, использование кода дает полный контроль над определением привязки при компиляции.  Использование конфигурации, в то же время, позволяет администратору или пользователю службы или клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] изменять параметры привязок.  Такая гибкость часто желательна, поскольку нет способа предугадать требования конкретного компьютера и состояние сети, на тот момент, когда будет развернуто приложение [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Отделение информации о привязке \(и адресации\) от кода позволяет администраторам изменять информацию о привязке без повторной компиляции или повторного развертывания приложения.  Обратите внимание, что, если привязка определена в коде, он заменяет любые определения, основанные на конфигурации, выполненные в файле конфигурации.  Примеры таких подходов см. в следующих разделах.  
+## <a name="code-and-configuration"></a><span data-ttu-id="3333e-135">Код и конфигурация</span><span class="sxs-lookup"><span data-stu-id="3333e-135">Code and Configuration</span></span>  
+ <span data-ttu-id="3333e-136">Определить и настроить привязки можно посредством кода или конфигурации.</span><span class="sxs-lookup"><span data-stu-id="3333e-136">You can define or configure bindings through code or configuration.</span></span> <span data-ttu-id="3333e-137">Эти два подхода не зависят от типа используемой привязки, например, при использовании привязки, предоставляемой системой, или привязки <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="3333e-137">These two approaches are independent of the type of binding used, for example, whether you are using a system-provided or a <xref:System.ServiceModel.Channels.CustomBinding> binding.</span></span> <span data-ttu-id="3333e-138">Как правило, использование кода дает полный контроль над определением привязки при компиляции.</span><span class="sxs-lookup"><span data-stu-id="3333e-138">In general, using code gives you complete control over the definition of a binding when you compile.</span></span> <span data-ttu-id="3333e-139">Использование конфигурации, в то же время, позволяет администратору или пользователю службы или клиента [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] изменять параметры привязок.</span><span class="sxs-lookup"><span data-stu-id="3333e-139">Using configuration, on the other hand, allows a system administrator or the user of a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service or client to change the parameters of bindings.</span></span> <span data-ttu-id="3333e-140">Такая гибкость часто желательна, поскольку нет способа предугадать требования конкретного компьютера и состояние сети, на тот момент, когда будет развернуто приложение [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3333e-140">This flexibility is often desirable because there is no way to predict the specific machine requirements and network conditions into which a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] application is to be deployed.</span></span> <span data-ttu-id="3333e-141">Отделение информации о привязке (и адресации) от кода позволяет администраторам изменять информацию о привязке без повторной компиляции или повторного развертывания приложения.</span><span class="sxs-lookup"><span data-stu-id="3333e-141">Separating the binding (and addressing) information from the code allows administrators to change the binding details without having to recompile or redeploy the application.</span></span> <span data-ttu-id="3333e-142">Обратите внимание, что, если привязка определена в коде, он заменяет любые определения, основанные на конфигурации, выполненные в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="3333e-142">Note that if the binding is defined in code, it overwrites any configuration-based definitions made in the configuration file.</span></span> <span data-ttu-id="3333e-143">Примеры таких подходов см. в следующих разделах.</span><span class="sxs-lookup"><span data-stu-id="3333e-143">For examples of these approaches, see the following topics:</span></span>  
   
--   [Как разместить службу WCF в управляемом приложении](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) \- приводится пример создания привязки в коде.  
+-   <span data-ttu-id="3333e-144">[Как: размещение службы WCF в приложениях, управляемых](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) примером является создание привязки в коде.</span><span class="sxs-lookup"><span data-stu-id="3333e-144">[How to: Host a WCF Service in a Managed Application](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) provides an example of creating a binding in code.</span></span>  
   
--   [Практическое руководство. Настройка клиента](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) \- приводится пример создания клиента с помощью конфигурации.  
+-   <span data-ttu-id="3333e-145">[Как: Настройка клиента](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) примером является создание клиента с помощью конфигурации.</span><span class="sxs-lookup"><span data-stu-id="3333e-145">[How to: Configure a Client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) provides an example of creating a client using configuration.</span></span>  
   
-## См. также  
- [Общие сведения о создании конечных точек](../../../docs/framework/wcf/endpoint-creation-overview.md)   
- [Как задать привязку службы в конфигурации](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)   
- [Как задать привязку службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)   
- [Как указывать привязки клиента в конфигурации](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)   
- [Как задать привязку клиента в коде](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+## <a name="see-also"></a><span data-ttu-id="3333e-146">См. также</span><span class="sxs-lookup"><span data-stu-id="3333e-146">See Also</span></span>  
+ [<span data-ttu-id="3333e-147">Общие сведения о создании конечных точек</span><span class="sxs-lookup"><span data-stu-id="3333e-147">Endpoint Creation Overview</span></span>](../../../docs/framework/wcf/endpoint-creation-overview.md)  
+ [<span data-ttu-id="3333e-148">Практическое руководство. Указание привязки службы в конфигурации</span><span class="sxs-lookup"><span data-stu-id="3333e-148">How to: Specify a Service Binding in Configuration</span></span>](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [<span data-ttu-id="3333e-149">Практическое руководство. Указание привязки службы в коде</span><span class="sxs-lookup"><span data-stu-id="3333e-149">How to: Specify a Service Binding in Code</span></span>](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  
+ [<span data-ttu-id="3333e-150">Практическое руководство. Указание привязки клиента в конфигурации</span><span class="sxs-lookup"><span data-stu-id="3333e-150">How to: Specify a Client Binding in Configuration</span></span>](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)  
+ [<span data-ttu-id="3333e-151">Практическое руководство. Указание привязки клиента в коде</span><span class="sxs-lookup"><span data-stu-id="3333e-151">How to: Specify a Client Binding in Code</span></span>](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

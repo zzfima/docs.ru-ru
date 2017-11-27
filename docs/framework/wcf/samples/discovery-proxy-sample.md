@@ -1,65 +1,68 @@
 ---
-title: "Образец прокси-сервера обнаружения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Образец прокси-сервера обнаружения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f16cf2ffc9e03308ce3b8a5e967c29e624ffd1af
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец прокси-сервера обнаружения
-Этот образец демонстрирует создание реализации прокси\-сервера обнаружения для хранения сведений о существующих службах, а также то, как клиенты могут запрашивать сведения у этого прокси\-сервера.Этот образец состоит из трех проектов.  
+# <a name="discovery-proxy-sample"></a><span data-ttu-id="e5867-102">Образец прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="e5867-102">Discovery Proxy Sample</span></span>
+<span data-ttu-id="e5867-103">Этот образец демонстрирует создание реализации прокси-сервера обнаружения для хранения сведений о существующих службах, а также то, как клиенты могут запрашивать сведения у этого прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="e5867-103">This sample shows how to create an implementation of a Discovery proxy to store information about existing services and how clients can query that proxy for information.</span></span> <span data-ttu-id="e5867-104">Этот образец состоит из трех проектов.</span><span class="sxs-lookup"><span data-stu-id="e5867-104">This sample consists of three projects:</span></span>  
   
--   **Служба**: образец службы калькулятора [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], которая самостоятельно регистрируется на прокси\-сервере обнаружения.  
+-   <span data-ttu-id="e5867-105">**Служба**: простой [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] службы калькулятора, которая регистрирует себя с прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="e5867-105">**Service**: A simple [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] calculator service that registers itself with the discovery proxy.</span></span>  
   
--   **Прокси\-сервер обнаружения**: реализация службы прокси\-сервера обнаружения.  
+-   <span data-ttu-id="e5867-106">**Прокси-сервер обнаружения**: реализация службы прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="e5867-106">**Discovery Proxy**: The implementation of a discovery proxy service.</span></span>  
   
--   **Клиент**: клиентское приложение WCF, которое вызывает прокси\-сервер обнаружения для поиска служб.  
+-   <span data-ttu-id="e5867-107">**Клиент**: клиентское приложение WCF, который вызывает прокси-сервер обнаружения для поиска служб.</span><span class="sxs-lookup"><span data-stu-id="e5867-107">**Client**: A WCF client application that calls the discovery proxy to search for services.</span></span>  
   
-## Демонстрации  
- Реализация прокси\-сервера обнаружения  
+## <a name="demonstrates"></a><span data-ttu-id="e5867-108">Демонстрации</span><span class="sxs-lookup"><span data-stu-id="e5867-108">Demonstrates</span></span>  
+ <span data-ttu-id="e5867-109">Реализация прокси-сервера обнаружения</span><span class="sxs-lookup"><span data-stu-id="e5867-109">Discovery proxy implementation</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="e5867-110">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="e5867-110">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e5867-111">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="e5867-111">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="e5867-112">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="e5867-112">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e5867-113">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="e5867-113">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   
-## DiscoveryProxy  
- С помощью метода `Main` из файла Program.cs демонстрируется размещение службы типа <xref:System.ServiceModel.Discovery.DiscoveryProxy>.Он предоставляет две конечные точки, одна из них имеет тип <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, другая — <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>.Обе конечные точки в качестве транспорта используют протокол TCP.Конечная точка <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> прослушивает URI, указанный параметром `probeEndpointAddress`, именно сюда клиенты могут отправлять сообщения зонда для запроса данных прокси\-сервера.Конечная точка <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> прослушивает URI, указанный параметром `announcementEndpointAddress`.Здесь прокси\-сервер ожидает получения объявлений.При получении объявления о входе в сеть прокси\-сервер добавляет в свой кэш службу, а при получении объявления о выходе из сети он удаляет эту службу из кэша.  
+## <a name="discoveryproxy"></a><span data-ttu-id="e5867-114">DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="e5867-114">DiscoveryProxy</span></span>  
+ <span data-ttu-id="e5867-115">С помощью метода `Main` из файла Program.cs демонстрируется размещение службы типа <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="e5867-115">In the `Main` method of the Program.cs file, the sample shows how a service of type <xref:System.ServiceModel.Discovery.DiscoveryProxy> is hosted.</span></span> <span data-ttu-id="e5867-116">Он предоставляет две конечные точки, одна из них имеет тип <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, другая - <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="e5867-116">It exposes two endpoints, one of type <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> and another of type <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>.</span></span> <span data-ttu-id="e5867-117">Обе конечные точки в качестве транспорта используют протокол TCP.</span><span class="sxs-lookup"><span data-stu-id="e5867-117">Both of the endpoints use TCP as a transport.</span></span> <span data-ttu-id="e5867-118">Конечная точка <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> прослушивает URI, указанный параметром `probeEndpointAddress`, именно сюда клиенты могут отправлять сообщения зонда для запроса данных прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="e5867-118">The <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> is listening at the URI specified by the `probeEndpointAddress` parameter, this is where clients can send probe messages to query the proxy for its data.</span></span> <span data-ttu-id="e5867-119">Конечная точка <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> прослушивает URI, указанный параметром `announcementEndpointAddress`.</span><span class="sxs-lookup"><span data-stu-id="e5867-119">The <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> is listening at the URI specified by the `announcementEndpointAddress` parameter.</span></span> <span data-ttu-id="e5867-120">Здесь прокси-сервер ожидает получения объявлений.</span><span class="sxs-lookup"><span data-stu-id="e5867-120">This is where the proxy listens to for announcements.</span></span> <span data-ttu-id="e5867-121">При получении объявления о входе в сеть прокси-сервер добавляет в свой кэш службу, а при получении объявления о выходе из сети он удаляет эту службу из кэша.</span><span class="sxs-lookup"><span data-stu-id="e5867-121">When an online announcement is received, the proxy adds the service to its cache and when an offline announcement is received it removes the service from its cache.</span></span>  
   
- В файле DiscoveryProxy.cs имеется реализация <xref:System.ServiceModel.Discovery.DiscoveryProxy>.Прокси\-сервер должен наследовать от класса <xref:System.ServiceModel.Discovery.DiscoveryProxyBase>, кроме того, ему требуется реализация <xref:System.Runtime.Remoting.Messaging.AsyncResult>.При установке прокси\-сервера создается новый словарь <xref:Systems.Collections.Generic.Dictionary%601>, в котором сервер сохраняет известные ему элементы.  
+ <span data-ttu-id="e5867-122">В файле DiscoveryProxy.cs имеется реализация <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="e5867-122">The DiscoveryProxy.cs contains the implementation of the <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="e5867-123">Прокси-сервер должен наследовать от класса <xref:System.Object>, кроме того, ему требуется реализация <xref:System.Runtime.Remoting.Messaging.AsyncResult>.</span><span class="sxs-lookup"><span data-stu-id="e5867-123">The Proxy must inherit from the <xref:System.Object> class and requires an implementation of <xref:System.Runtime.Remoting.Messaging.AsyncResult>.</span></span> <span data-ttu-id="e5867-124">При установке прокси-сервера создается новый словарь <xref:System.Collections.Generic.Dictionary%602>, в котором сервер сохраняет известные ему элементы.</span><span class="sxs-lookup"><span data-stu-id="e5867-124">At instantiation, the Proxy creates a new <xref:System.Collections.Generic.Dictionary%602>, which it uses to store elements it knows about.</span></span>  
   
- Файл подразделяется на две области: методы кэша прокси\-сервера и реализация прокси\-сервера обнаружения.Область методов кэша прокси\-сервера содержит методы, которые используются для обновления словаря <xref:Systems.Collections.Generic.Dictionary%601>, выполняет запросы к словарю <xref:Systems.Collections.Generic.Dictionary%601> и печатает данные для пользователей.Область реализации прокси\-сервера обнаружения содержит переопределенные методы, которые требуются для функциональных средств объявлений и зондов.Они определяют действия, которые прокси\-сервер выполняет после получения объявления о входе в сеть, объявления о выходе из сети или сообщения зонда.  
+ <span data-ttu-id="e5867-125">Файл подразделяется на две области: методы кэша прокси-сервера и реализация прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="e5867-125">The file is divided into two regions, Proxy Cache Methods and Discovery Proxy Implementation.</span></span> <span data-ttu-id="e5867-126">Область методов кэша прокси-сервера содержит методы, которые используются для обновления словаря <xref:System.Collections.Generic.Dictionary%602>, выполняет запросы к словарю <xref:System.Collections.Generic.Dictionary%602> и печатает данные для пользователей.</span><span class="sxs-lookup"><span data-stu-id="e5867-126">The Proxy Cache Methods region contains methods used to update the <xref:System.Collections.Generic.Dictionary%602>, perform queries against the <xref:System.Collections.Generic.Dictionary%602>, and print the data for users.</span></span> <span data-ttu-id="e5867-127">Область реализации прокси-сервера обнаружения содержит переопределенные методы, которые требуются для функциональных средств объявлений и зондов.</span><span class="sxs-lookup"><span data-stu-id="e5867-127">The Discovery Proxy Implementation region contains the overridden methods required for the Announcement and Probe functionality.</span></span> <span data-ttu-id="e5867-128">Они определяют действия, которые прокси-сервер выполняет после получения объявления о входе в сеть, объявления о выходе из сети или сообщения зонда.</span><span class="sxs-lookup"><span data-stu-id="e5867-128">They define the actions taken by a proxy after receiving an Online Announcement, an Offline Announcement, or a Probe message.</span></span>  
   
-## Служба  
- В проекте «Служба» из файла Program.cs для конечной точки объявлений используется такой же URI, как и для прокси\-сервера обнаружения.Сделано это потому, что служба использует конечную точку для отправки объявлений, а прокси\-сервер с ее помощью получает эти сообщения.Служба использует объект <xref:System.ServiceModel.Discovery.DiscoveryBehavior> и добавляет в него конечную точку объявлений.  
+## <a name="service"></a><span data-ttu-id="e5867-129">Служба</span><span class="sxs-lookup"><span data-stu-id="e5867-129">Service</span></span>  
+ <span data-ttu-id="e5867-130">В проекте «Служба» из файла Program.cs для конечной точки объявлений используется такой же URI, как и для прокси-сервера обнаружения.</span><span class="sxs-lookup"><span data-stu-id="e5867-130">In the Program.cs file in the Service project, the same URI is used for its announcement endpoint as the discovery proxy.</span></span> <span data-ttu-id="e5867-131">Сделано это потому, что служба использует конечную точку для отправки объявлений, а прокси-сервер с ее помощью получает эти сообщения.</span><span class="sxs-lookup"><span data-stu-id="e5867-131">This is because service uses the endpoint for sending the announcements, while the proxy uses it for receiving them.</span></span> <span data-ttu-id="e5867-132">Служба использует объект <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> и добавляет в него конечную точку объявлений.</span><span class="sxs-lookup"><span data-stu-id="e5867-132">The service uses the <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> and adds an announcement endpoint to it.</span></span>  
   
-## Клиент  
- В проекте «Клиент» для конечной точки зонда используется такой же URI, как и для прокси\-сервера.Сделано это потому, что в этом сценарии зонды также одноадресно доставляются именно в конечную точку, имеющуюся на прокси\-сервере.Клиент соединяется с этим хорошо известным адресом, а затем запрашивает службу.Обнаружив службу, он устанавливает соединение с ней.  
+## <a name="client"></a><span data-ttu-id="e5867-133">Клиент</span><span class="sxs-lookup"><span data-stu-id="e5867-133">Client</span></span>  
+ <span data-ttu-id="e5867-134">В проекте «Клиент» для конечной точки зонда используется такой же URI, как и для прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="e5867-134">The Client project uses the same URI for its probe endpoint as the Proxy.</span></span> <span data-ttu-id="e5867-135">Сделано это потому, что в этом сценарии зонды также одноадресно доставляются именно в конечную точку, имеющуюся на прокси-сервере.</span><span class="sxs-lookup"><span data-stu-id="e5867-135">This is because the probes in this scenario are also being unicast specifically to the endpoint available on the proxy.</span></span> <span data-ttu-id="e5867-136">Клиент соединяется с этим хорошо известным адресом, а затем запрашивает службу.</span><span class="sxs-lookup"><span data-stu-id="e5867-136">The Client connects to this well-known address and then queries it for the service.</span></span> <span data-ttu-id="e5867-137">Обнаружив службу, он устанавливает соединение с ней.</span><span class="sxs-lookup"><span data-stu-id="e5867-137">Once it has found the service it connects to it.</span></span>  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="e5867-138">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="e5867-138">To use this sample</span></span>  
   
-1.  Загрузите решение проекта в среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и постройте проект.  
+1.  <span data-ttu-id="e5867-139">Загрузите решение проекта в среду [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и постройте проект.</span><span class="sxs-lookup"><span data-stu-id="e5867-139">Load the project solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and build the project.</span></span>  
   
-2.  Сначала запустите приложение Discovery Proxy, сформированное в папке «\[основной каталог решения\]\\DiscoveryProxy\\bin\\debug».Приложение Discovery Proxy необходимо запустить первым, поскольку конечные точки объявлений TCP должны работать, чтобы служба могла отправлять свои объявления.  
+2.  <span data-ttu-id="e5867-140">Сначала запустите приложение Discovery Proxy, сформированное в папке «[основной каталог решения]\DiscoveryProxy\bin\debug».</span><span class="sxs-lookup"><span data-stu-id="e5867-140">First run the Discovery Proxy application, generated in [solution base directory]\DiscoveryProxy\bin\debug.</span></span> <span data-ttu-id="e5867-141">Приложение Discovery Proxy необходимо запустить первым, поскольку конечные точки объявлений TCP должны работать, чтобы служба могла отправлять свои объявления.</span><span class="sxs-lookup"><span data-stu-id="e5867-141">The Discovery Proxy must run first because TCP announcement endpoints must be up for the service to send its announcements.</span></span>  
   
-3.  Затем запустите приложение службы, созданное в «\[основной каталог решения\]\\Service\\bin\\debug».При запуске служба отправляет объявление в конечную точку объявлений прокси\-сервера обнаружения и создается в кэше прокси\-сервера.  
+3.  <span data-ttu-id="e5867-142">Затем запустите приложение службы, созданное в «[основной каталог решения]\Service\bin\debug».</span><span class="sxs-lookup"><span data-stu-id="e5867-142">Second, run the service application generated in [solution base directory]\Service\bin\debug.</span></span> <span data-ttu-id="e5867-143">При запуске служба отправляет объявление в конечную точку объявлений прокси-сервера обнаружения и создается в кэше прокси-сервера.</span><span class="sxs-lookup"><span data-stu-id="e5867-143">At start-up, the service sends an announcement to the announcement endpoint of the discovery proxy and is registered in the proxy’s cache.</span></span>  
   
-4.  Затем запустите клиентское приложение, созданное в папке «\[основной каталог решения\]\\Client\\bin\\debug».Клиент запрашивает прокси\-сервер, возвращает адрес службы, а затем устанавливает с ней соединение.  
+4.  <span data-ttu-id="e5867-144">Затем запустите клиентское приложение, созданное в папке «[основной каталог решения]\Client\bin\debug».</span><span class="sxs-lookup"><span data-stu-id="e5867-144">Next, run the client application, generated in [solution base directory]\Client\bin\debug.</span></span> <span data-ttu-id="e5867-145">Клиент запрашивает прокси-сервер, возвращает адрес службы, а затем устанавливает с ней соединение.</span><span class="sxs-lookup"><span data-stu-id="e5867-145">The client queries the proxy, gets the service address and then connects to the service.</span></span>  
   
-5.  Наконец, завершите клиент, службу, а затем и прокси\-сервер.Прокси\-сервер должен работать, чтобы он мог получить объявление о выходе службы из сети.  
+5.  <span data-ttu-id="e5867-146">Наконец, завершите клиент, службу, а затем и прокси-сервер.</span><span class="sxs-lookup"><span data-stu-id="e5867-146">Lastly, terminate the client, service and then the proxy.</span></span> <span data-ttu-id="e5867-147">Прокси-сервер должен работать, чтобы он мог получить объявление о выходе службы из сети.</span><span class="sxs-lookup"><span data-stu-id="e5867-147">The proxy must be running for it to receive the service's offline announcement.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="e5867-148">См. также</span><span class="sxs-lookup"><span data-stu-id="e5867-148">See Also</span></span>

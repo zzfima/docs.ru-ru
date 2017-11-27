@@ -1,105 +1,109 @@
 ---
-title: "Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "данные [Windows Forms], отображение без привязки к источнику данных"
-  - "данные [Windows Forms], несвязанный"
-  - "DataGridView - элемент управления [Windows Forms], отображение данных без привязки к источнику данных"
-  - "DataGridView - элемент управления [Windows Forms], несвязанные данные"
-  - "пошаговые руководства [Windows Forms], DataGridView - элемент управления"
+title: "Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data [Windows Forms], displaying without binding to data source
+- DataGridView control [Windows Forms], unbound data
+- DataGridView control [Windows Forms], displaying data without binding to a data source
+- data [Windows Forms], unbound
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e2c57cfbab4d3af6cebff96517383999ae5b73d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms
-Иногда требуется отображать табличные данные, полученные не из базы данных.  Например, может потребоваться отобразить содержимое двухмерного массива строк.  Класс <xref:System.Windows.Forms.DataGridView> предоставляет удобный и настраиваемый способ отображения данных без привязки к источнику данных.  Данное руководство включает сведения о том, как заполнить элемент управления <xref:System.Windows.Forms.DataGridView> и управлять добавлением и удалением строк в "непривязанном" режиме.  По умолчанию пользователь может добавлять новые строки.  Чтобы запретить добавление строк, свойству <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> следует присвоить значение `false`.  
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a><span data-ttu-id="feb69-102">Пример. Создание не связанного с данными элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="feb69-102">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="feb69-103">Часто можно отображать табличные данные, получен не из базы данных.</span><span class="sxs-lookup"><span data-stu-id="feb69-103">You may frequently want to display tabular data that does not originate from a database.</span></span> <span data-ttu-id="feb69-104">Например может потребоваться отобразить содержимое двухмерного массива строк.</span><span class="sxs-lookup"><span data-stu-id="feb69-104">For example, you may want to show the contents of a two-dimensional array of strings.</span></span> <span data-ttu-id="feb69-105"><xref:System.Windows.Forms.DataGridView> Класс предоставляет удобный и настраиваемый способ отображения данных без привязки к источнику данных.</span><span class="sxs-lookup"><span data-stu-id="feb69-105">The <xref:System.Windows.Forms.DataGridView> class provides an easy and highly customizable way to display data without binding to a data source.</span></span> <span data-ttu-id="feb69-106">В этом пошаговом руководстве показано, как для заполнения <xref:System.Windows.Forms.DataGridView> для управления добавлением и удалением строк в режиме «свободный».</span><span class="sxs-lookup"><span data-stu-id="feb69-106">This walkthrough shows how to populate a <xref:System.Windows.Forms.DataGridView> control and manage the addition and deletion of rows in "unbound" mode.</span></span> <span data-ttu-id="feb69-107">По умолчанию пользователь может добавлять новые строки.</span><span class="sxs-lookup"><span data-stu-id="feb69-107">By default, the user can add new rows.</span></span> <span data-ttu-id="feb69-108">Чтобы запретить добавление строк, задайте <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> свойство `false`.</span><span class="sxs-lookup"><span data-stu-id="feb69-108">To prevent row addition, set the <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> property is `false`.</span></span>  
   
- Чтобы скопировать весь текст кода из этой темы, см. раздел [Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="feb69-109">Скопируйте код из этой темы, в разделе [как: создание свободного элемента управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="feb69-109">To copy the code in this topic as a single listing, see [How to: Create an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
-## Создание формы  
+## <a name="creating-the-form"></a><span data-ttu-id="feb69-110">Создание формы</span><span class="sxs-lookup"><span data-stu-id="feb69-110">Creating the Form</span></span>  
   
-#### Использование элемента управления DataGridView без привязки к данным  
+#### <a name="to-use-an-unbound-datagridview-control"></a><span data-ttu-id="feb69-111">Для использования свободного элемента управления DataGridView</span><span class="sxs-lookup"><span data-stu-id="feb69-111">To use an unbound DataGridView control</span></span>  
   
-1.  Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержащий следующие объявления переменных и метод `Main`.  
+1.  <span data-ttu-id="feb69-112">Создайте класс, производный от <xref:System.Windows.Forms.Form> и содержит следующие объявления переменных и `Main` метод.</span><span class="sxs-lookup"><span data-stu-id="feb69-112">Create a class that derives from <xref:System.Windows.Forms.Form> and contains the following variable declarations and `Main` method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  Реализуйте метод `SetupLayout` в определении класса формы для настройки макета формы.  
+2.  <span data-ttu-id="feb69-113">Реализуйте `SetupLayout` метод в определении класса формы для настройки макета.</span><span class="sxs-lookup"><span data-stu-id="feb69-113">Implement a `SetupLayout` method in your form's class definition to set up the form's layout.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  Создайте метод `SetupDataGridView` для настройки столбцов и свойств <xref:System.Windows.Forms.DataGridView>.  
+3.  <span data-ttu-id="feb69-114">Создание `SetupDataGridView` метод для настройки <xref:System.Windows.Forms.DataGridView> столбцы и свойства.</span><span class="sxs-lookup"><span data-stu-id="feb69-114">Create a `SetupDataGridView` method to set up the <xref:System.Windows.Forms.DataGridView> columns and properties.</span></span>  
   
-     Этот метод сначала добавляет элемент управления <xref:System.Windows.Forms.DataGridView> в коллекцию формы <xref:System.Windows.Forms.Control.Controls%2A>.  Затем определяется число отображаемых столбцов при помощи свойства <xref:System.Windows.Forms.DataGridView.ColumnCount%2A>.  Стиль заголовков столбцов по умолчанию определяется путем задания значений свойств <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> и <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> элемента <xref:System.Windows.Forms.DataGridViewCellStyle>, возвращенного свойством <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>.  
+     <span data-ttu-id="feb69-115">Этот метод сначала добавляет <xref:System.Windows.Forms.DataGridView> на форму элемент управления <xref:System.Windows.Forms.Control.Controls%2A> коллекции.</span><span class="sxs-lookup"><span data-stu-id="feb69-115">This method first adds the <xref:System.Windows.Forms.DataGridView> control to the form's <xref:System.Windows.Forms.Control.Controls%2A> collection.</span></span> <span data-ttu-id="feb69-116">Далее число столбцов для отображения задается с помощью <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="feb69-116">Next, the number of columns to be displayed is set using the <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> property.</span></span> <span data-ttu-id="feb69-117">Стиль по умолчанию для заголовков столбцов задается <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, и <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> свойства <xref:System.Windows.Forms.DataGridViewCellStyle> возвращенных <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="feb69-117">The default style for the column headers is set by setting the <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, and <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> properties of the <xref:System.Windows.Forms.DataGridViewCellStyle> returned by the <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> property.</span></span>  
   
-     Сначала устанавливаются свойства макета и внешнего вида, затем назначаются названия столбцов.  При выходе этого метода элемент управления <xref:System.Windows.Forms.DataGridView> готов к заполнению.  
+     <span data-ttu-id="feb69-118">Задания свойства макета и внешнего вида, а затем присваиваются имена столбцов.</span><span class="sxs-lookup"><span data-stu-id="feb69-118">Layout and appearance properties are set, and then the column names are assigned.</span></span> <span data-ttu-id="feb69-119">Когда этот метод завершает работу, <xref:System.Windows.Forms.DataGridView> управления готов к заполнению.</span><span class="sxs-lookup"><span data-stu-id="feb69-119">When this method exits, the <xref:System.Windows.Forms.DataGridView> control is ready to be populated.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  Создайте метод `PopulateDataGridView` для добавления строк в элемент управления <xref:System.Windows.Forms.DataGridView>.  
+4.  <span data-ttu-id="feb69-120">Создание `PopulateDataGridView` метод для добавления строк <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="feb69-120">Create a `PopulateDataGridView` method to add rows to the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-     Каждая строка представляет песню и связанные с ней данные.  
+     <span data-ttu-id="feb69-121">Каждая строка представляет песню и связанные сведения.</span><span class="sxs-lookup"><span data-stu-id="feb69-121">Each row represents a song and its associated information.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  При наличии вспомогательных методов можно присоединить обработчики событий.  
+5.  <span data-ttu-id="feb69-122">С помощью вспомогательных методов можно присоединить обработчики событий.</span><span class="sxs-lookup"><span data-stu-id="feb69-122">With the utility methods in place, you can attach event handlers.</span></span>  
   
-     Мы будем обрабатывать события <xref:System.Windows.Forms.Control.Click> кнопок **Добавить** и **Удалить**, события формы <xref:System.Windows.Forms.Form.Load> и события <xref:System.Windows.Forms.DataGridView.CellFormatting> элемента управления <xref:System.Windows.Forms.DataGridView>.  
+     <span data-ttu-id="feb69-123">Будет обрабатывать **добавить** и **удаление** кнопок <xref:System.Windows.Forms.Control.Click> событий, формы <xref:System.Windows.Forms.Form.Load> события и <xref:System.Windows.Forms.DataGridView> элемента управления <xref:System.Windows.Forms.DataGridView.CellFormatting> событий.</span><span class="sxs-lookup"><span data-stu-id="feb69-123">You will handle the **Add** and **Delete** buttons' <xref:System.Windows.Forms.Control.Click> events, the form's <xref:System.Windows.Forms.Form.Load> event, and the <xref:System.Windows.Forms.DataGridView> control's <xref:System.Windows.Forms.DataGridView.CellFormatting> event.</span></span>  
   
-     При возникновении события <xref:System.Windows.Forms.Control.Click> кнопки **Добавить** новая пустая строка добавляется в <xref:System.Windows.Forms.DataGridView>.  
+     <span data-ttu-id="feb69-124">Когда **добавить** кнопки <xref:System.Windows.Forms.Control.Click> события новая пустая строка добавляется <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="feb69-124">When the **Add** button's <xref:System.Windows.Forms.Control.Click> event is raised, a new, empty row is added to the <xref:System.Windows.Forms.DataGridView>.</span></span>  
   
-     При возникновении события <xref:System.Windows.Forms.Control.Click> кнопки **Удалить** удаляется выбранная строка, если это не строка для ввода новых записей, которая служит для добавления новых строк.  Эта строка всегда является последней в элементе управления <xref:System.Windows.Forms.DataGridView>.  
+     <span data-ttu-id="feb69-125">Когда **удаление** кнопки <xref:System.Windows.Forms.Control.Click> события, удалить выбранную строку, если это не строка для новых записей, которая позволяет пользователю добавлять новые строки.</span><span class="sxs-lookup"><span data-stu-id="feb69-125">When the **Delete** button's <xref:System.Windows.Forms.Control.Click> event is raised, the selected row is deleted, unless it is the row for new records, which enables the user add new rows.</span></span> <span data-ttu-id="feb69-126">Эта строка всегда является последней строки в <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="feb69-126">This row is always the last row in the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-     При возникновении события формы <xref:System.Windows.Forms.Form.Load> вызываются вспомогательные методы `SetupLayout`, `SetupDataGridView` и `PopulateDataGridView`.  
+     <span data-ttu-id="feb69-127">Когда формы <xref:System.Windows.Forms.Form.Load> события `SetupLayout`, `SetupDataGridView`, и `PopulateDataGridView` вызываются вспомогательные методы.</span><span class="sxs-lookup"><span data-stu-id="feb69-127">When the form's <xref:System.Windows.Forms.Form.Load> event is raised, the `SetupLayout`, `SetupDataGridView`, and `PopulateDataGridView` utility methods are called.</span></span>  
   
-     При возникновении события <xref:System.Windows.Forms.DataGridView.CellFormatting> каждая ячейка в столбце `Date` использует длинный формат даты, за исключением случаев, когда не удается разобрать значение в ячейке.  
+     <span data-ttu-id="feb69-128">Когда <xref:System.Windows.Forms.DataGridView.CellFormatting> события, каждая ячейка в `Date` столбец представляется в формате длинной даты, если не удается выполнить синтаксический анализ значения ячейки.</span><span class="sxs-lookup"><span data-stu-id="feb69-128">When the <xref:System.Windows.Forms.DataGridView.CellFormatting> event is raised, each cell in the `Date` column is formatted as a long date, unless the cell's value cannot be parsed.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
   
-## Тестирование приложения  
- Теперь можно проверить форму, чтобы убедиться, что она работает так, как ожидалось.  
+## <a name="testing-the-application"></a><span data-ttu-id="feb69-129">Тестирование приложения</span><span class="sxs-lookup"><span data-stu-id="feb69-129">Testing the Application</span></span>  
+ <span data-ttu-id="feb69-130">Теперь можно проверить форму, чтобы убедиться в том, что оно правильно работает.</span><span class="sxs-lookup"><span data-stu-id="feb69-130">You can now test the form to make sure it behaves as expected.</span></span>  
   
-#### Чтобы проверить форму, выполните следующие действия:  
+#### <a name="to-test-the-form"></a><span data-ttu-id="feb69-131">Чтобы проверить форму</span><span class="sxs-lookup"><span data-stu-id="feb69-131">To test the form</span></span>  
   
--   Нажмите клавишу F5 для запуска приложения.  
+-   <span data-ttu-id="feb69-132">Нажмите клавишу F5 для запуска приложения.</span><span class="sxs-lookup"><span data-stu-id="feb69-132">Press F5 to run the application.</span></span>  
   
-     Появится элемент управления <xref:System.Windows.Forms.DataGridView> с песнями, перечисленными в `PopulateDataGridView`.  Можно добавлять новые строки с помощью кнопки **Добавить строку** и удалять выбранные строки с помощью кнопки **Удалить строку**.  Элемент управления <xref:System.Windows.Forms.DataGridView> служит хранилищем данных, его данные не зависят от внешних источников, таких как <xref:System.Data.DataSet> или массивы.  
+     <span data-ttu-id="feb69-133">Вы увидите <xref:System.Windows.Forms.DataGridView> управления, отображающий музыкальные файлы, перечисленные в `PopulateDataGridView`.</span><span class="sxs-lookup"><span data-stu-id="feb69-133">You will see a <xref:System.Windows.Forms.DataGridView> control that displays the songs listed in `PopulateDataGridView`.</span></span> <span data-ttu-id="feb69-134">Можно добавлять новые строки с **добавить строку** кнопки и удалять выбранные строки с **удалить строку** кнопки.</span><span class="sxs-lookup"><span data-stu-id="feb69-134">You can add new rows with the **Add Row** button, and you can delete selected rows with the **Delete Row** button.</span></span> <span data-ttu-id="feb69-135">Свободные <xref:System.Windows.Forms.DataGridView> управления хранилищем данных и его данные не зависят от внешних источников, таких как <xref:System.Data.DataSet> или массив.</span><span class="sxs-lookup"><span data-stu-id="feb69-135">The unbound <xref:System.Windows.Forms.DataGridView> control is the data store, and its data is independent of any external source, such as a <xref:System.Data.DataSet> or an array.</span></span>  
   
-## Следующие действия  
- Это приложение позволяет в общем понять возможности элемента управления <xref:System.Windows.Forms.DataGridView>.  Внешний вид и поведение элемента управления <xref:System.Windows.Forms.DataGridView> можно контролировать несколькими способами.  
+## <a name="next-steps"></a><span data-ttu-id="feb69-136">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="feb69-136">Next Steps</span></span>  
+ <span data-ttu-id="feb69-137">Это приложение позволяет основные <xref:System.Windows.Forms.DataGridView> возможности элемента управления.</span><span class="sxs-lookup"><span data-stu-id="feb69-137">This application gives you a basic understanding of the <xref:System.Windows.Forms.DataGridView> control's capabilities.</span></span> <span data-ttu-id="feb69-138">Можно настроить внешний вид и поведение <xref:System.Windows.Forms.DataGridView> управления несколькими способами:</span><span class="sxs-lookup"><span data-stu-id="feb69-138">You can customize the appearance and behavior of the <xref:System.Windows.Forms.DataGridView> control in several ways:</span></span>  
   
--   Изменение стилей границ и заголовка.  Дополнительные сведения см. в разделе [Практическое руководство. Изменение внешнего вида границ и линий сетки элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
+-   <span data-ttu-id="feb69-139">Изменение стилей границ и заголовка.</span><span class="sxs-lookup"><span data-stu-id="feb69-139">Change border and header styles.</span></span> <span data-ttu-id="feb69-140">Дополнительные сведения см. в разделе [как: изменения границ и стили линий сетки в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="feb69-140">For more information, see [How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).</span></span>  
   
--   Разрешение или ограничение пользовательского ввода в элемент управления <xref:System.Windows.Forms.DataGridView>.  Дополнительные сведения см. в разделах [Практическое руководство. Запрет добавления и удаления строк элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md) и [Практическое руководство. Определение столбцов элемента управления DataGridView как доступных только для чтения в Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+-   <span data-ttu-id="feb69-141">Включения или отключения пользовательского ввода для <xref:System.Windows.Forms.DataGridView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="feb69-141">Enable or restrict user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="feb69-142">Дополнительные сведения см. в разделе [как: запретить добавление и удаление строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), и [как: сделать столбцы только для чтения в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="feb69-142">For more information, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), and [How to: Make Columns Read-Only in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span></span>  
   
--   Проверка ввода пользователя на наличие ошибок, связанных с базой данных.  Дополнительные сведения см. в разделе [Пример. Обработка ошибок, связанных с вводом данных с помощью элемента управления DataGridView, в Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+-   <span data-ttu-id="feb69-143">Проверьте входные данные пользователя для ошибки, относящиеся к базе данных.</span><span class="sxs-lookup"><span data-stu-id="feb69-143">Check user input for database-related errors.</span></span> <span data-ttu-id="feb69-144">Дополнительные сведения см. в разделе [Пошаговое руководство: обработка ошибок, связанных с вводом данных в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="feb69-144">For more information, see [Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>  
   
--   Обработка очень больших наборов данных в виртуальном режиме.  Дополнительные сведения см. в разделе [Пример. Реализация виртуального режима для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+-   <span data-ttu-id="feb69-145">Обработка очень больших наборов данных в виртуальном режиме.</span><span class="sxs-lookup"><span data-stu-id="feb69-145">Handle very large data sets using virtual mode.</span></span> <span data-ttu-id="feb69-146">Дополнительные сведения см. в разделе [Пошаговое руководство: реализация виртуального режима в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="feb69-146">For more information, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
--   Настройка внешнего вида ячеек.  Дополнительные сведения см. в разделах [Практическое руководство. Настройка внешнего вида ячеек элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) и [Практическое руководство. Установка стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+-   <span data-ttu-id="feb69-147">Настройте внешний вид ячеек.</span><span class="sxs-lookup"><span data-stu-id="feb69-147">Customize the appearance of cells.</span></span> <span data-ttu-id="feb69-148">Дополнительные сведения см. в разделе [как: Настройка внешнего вида ячеек в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) и [как: набор стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="feb69-148">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) and [How to: Set Default Cell Styles for the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.DataGridView>   
- [Отображение данных с помощью элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)   
- [Режимы отображения данных в элементе управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="feb69-149">См. также</span><span class="sxs-lookup"><span data-stu-id="feb69-149">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="feb69-150">Отображение данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="feb69-150">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="feb69-151">Практическое руководство. Создание не связанного с данными элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="feb69-151">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="feb69-152">Режимы отображения данных в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="feb69-152">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

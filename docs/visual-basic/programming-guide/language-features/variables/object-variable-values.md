@@ -1,67 +1,50 @@
 ---
-title: "Объект значения переменной (Visual Basic) | Документы Microsoft"
+title: "Значения объектных переменных (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- object variables, values
-- values, of object variables
+- object variables [Visual Basic], values
+- values [Visual Basic], of object variables
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff219571de9c76802d3f8d3046cf6b6f9d5be9d5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ccab22920923500a2332db2372e52813c890e5e8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="object-variable-values-visual-basic"></a>Значения объектных переменных (Visual Basic)
-Переменная [тип данных объекта](../../../../visual-basic/language-reference/data-types/object-data-type.md) может ссылаться на данные любого типа. Значение, сохраненное в `Object` переменной хранится в памяти, а сама переменная содержит указатель на данные.  
+# <a name="object-variable-values-visual-basic"></a><span data-ttu-id="ca7d3-102">Значения объектных переменных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca7d3-102">Object Variable Values (Visual Basic)</span></span>
+<span data-ttu-id="ca7d3-103">Переменная [тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) может ссылаться на данные любого типа.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-103">A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type.</span></span> <span data-ttu-id="ca7d3-104">Значение, сохраненное в `Object` переменной хранится в памяти, а сама переменная содержит указатель на данные.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-104">The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.</span></span>  
   
-## <a name="object-classifier-functions"></a>Функции классификатора объектов  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]предоставляет функции, которые возвращают сведения о том, что `Object` ссылается переменная, как показано в следующей таблице.  
+## <a name="object-classifier-functions"></a><span data-ttu-id="ca7d3-105">Объект функции-классификаторы</span><span class="sxs-lookup"><span data-stu-id="ca7d3-105">Object Classifier Functions</span></span>  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="ca7d3-106">предоставляет функции, которые возвращают сведения о том, что `Object` ссылается переменная, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-106"> supplies functions that return information about what an `Object` variable refers to, as shown in the following table.</span></span>  
   
-|Функция|Возвращает значение True, если переменная объекта ссылается на|  
+|<span data-ttu-id="ca7d3-107">Функция</span><span class="sxs-lookup"><span data-stu-id="ca7d3-107">Function</span></span>|<span data-ttu-id="ca7d3-108">Возвращает значение True, если переменная объекта ссылается на</span><span class="sxs-lookup"><span data-stu-id="ca7d3-108">Returns True if the Object variable refers to</span></span>|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A></xref:Microsoft.VisualBasic.Information.IsArray%2A>|Массив значений, а не одно значение|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A></xref:Microsoft.VisualBasic.Information.IsDate%2A>|Объект [тип данных Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) значение или строку, которая может быть интерпретирована как значение даты и времени|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A></xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Объект типа <xref:System.DBNull>который представляет пропущенные или несуществующие данные</xref:System.DBNull>|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A></xref:Microsoft.VisualBasic.Information.IsError%2A>|Объект исключения, являющийся производным от<xref:System.Exception></xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A></xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Ничего не](../../../../visual-basic/language-reference/nothing.md), то есть объект не назначено в настоящий момент в переменную|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A></xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Число или строку, которое может быть интерпретировано как число|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A></xref:Microsoft.VisualBasic.Information.IsReference%2A>|Ссылочный тип (например, строка, массив, делегат или тип класса)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|<span data-ttu-id="ca7d3-109">Массив значений, а не одно значение</span><span class="sxs-lookup"><span data-stu-id="ca7d3-109">An array of values, rather than a single value</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|<span data-ttu-id="ca7d3-110">Объект [тип данных Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) значением или строкой, которая может быть интерпретирована как значение даты и времени</span><span class="sxs-lookup"><span data-stu-id="ca7d3-110">A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|<span data-ttu-id="ca7d3-111">Объект типа <xref:System.DBNull>, который представляет пропущенные или несуществующие данные</span><span class="sxs-lookup"><span data-stu-id="ca7d3-111">An object of type <xref:System.DBNull>, which represents missing or nonexistent data</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|<span data-ttu-id="ca7d3-112">Объект исключения, который является производным от<xref:System.Exception></span><span class="sxs-lookup"><span data-stu-id="ca7d3-112">An exception object, which derives from <xref:System.Exception></span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|<span data-ttu-id="ca7d3-113">[Ничего не](../../../../visual-basic/language-reference/nothing.md), то есть не в настоящее время назначен объект переменной</span><span class="sxs-lookup"><span data-stu-id="ca7d3-113">[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|<span data-ttu-id="ca7d3-114">Число или строку, которая может быть интерпретирована как число</span><span class="sxs-lookup"><span data-stu-id="ca7d3-114">A number, or a string that can be interpreted as a number</span></span>|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|<span data-ttu-id="ca7d3-115">Ссылочный тип (например, строка, массив, делегат или тип класса)</span><span class="sxs-lookup"><span data-stu-id="ca7d3-115">A reference type (such as a string, array, delegate, or class type)</span></span>|  
   
- Эти функции позволяют избежать передачи несуществующего значения оператору или процедуре.  
+ <span data-ttu-id="ca7d3-116">Чтобы избежать передачи несуществующего значения в операции и процедуры можно использовать эти функции.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-116">You can use these functions to avoid submitting an invalid value to an operation or a procedure.</span></span>  
   
-## <a name="typeof-operator"></a>Оператор TypeOf  
- Можно также использовать [оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) определить, ссылается ли в данный момент переменная объекта для определенного типа данных. The `TypeOf`... `Is` выражение `True` Если тип операнда во время выполнения является производным от указанного типа или реализует.  
+## <a name="typeof-operator"></a><span data-ttu-id="ca7d3-117">Оператор TypeOf</span><span class="sxs-lookup"><span data-stu-id="ca7d3-117">TypeOf Operator</span></span>  
+ <span data-ttu-id="ca7d3-118">Можно также использовать [оператор TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) определить, ссылается ли в данный момент переменная объекта на определенный тип данных.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-118">You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type.</span></span> <span data-ttu-id="ca7d3-119">`TypeOf`... `Is` выражение, результатом которого является `True` , если тип операнда во время выполнения является производным от указанного типа или реализует.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-119">The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.</span></span>  
   
- В следующем примере используется `TypeOf` на переменным объектов, ссылающимся на значение и ссылочный тип.  
+ <span data-ttu-id="ca7d3-120">В следующем примере используется `TypeOf` на объектные переменные, ссылающиеся на типы значений и ссылок.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-120">The following example uses `TypeOf` on object variables referring to value and reference types.</span></span>  
   
 ```  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -77,7 +60,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- Предыдущий пример записывает следующие строки в **отладки** окна:  
+ <span data-ttu-id="ca7d3-121">Предыдущий пример записывает следующие строки для **отладки** окна:</span><span class="sxs-lookup"><span data-stu-id="ca7d3-121">The preceding example writes the following lines to the **Debug** window:</span></span>  
   
  `num is Integer`  
   
@@ -87,17 +70,17 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- Объектная переменная `num` ссылается на данные типа `Integer`, и `frm` ссылается на объект класса <xref:System.Windows.Forms.Form>.</xref:System.Windows.Forms.Form>  
+ <span data-ttu-id="ca7d3-122">Переменная объекта `num` ссылается на данные типа `Integer`, и `frm` ссылается на объект класса <xref:System.Windows.Forms.Form>.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-122">The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.</span></span>  
   
-## <a name="object-arrays"></a>Массивы объектов  
- Можно объявить и использовать массив `Object` переменных. Это полезно, когда необходимо обработать различные типы данных и классы объектов. Все элементы массива должны иметь тот же объявленный тип данных. Объявление этого типа данных как `Object` позволяет хранить объекты и экземпляры класса вместе с другими типами данных в массиве.  
+## <a name="object-arrays"></a><span data-ttu-id="ca7d3-123">Массивы объектов</span><span class="sxs-lookup"><span data-stu-id="ca7d3-123">Object Arrays</span></span>  
+ <span data-ttu-id="ca7d3-124">Можно объявить и использовать массив `Object` переменных.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-124">You can declare and use an array of `Object` variables.</span></span> <span data-ttu-id="ca7d3-125">Это полезно, когда требуется обрабатывать различные типы данных и классы объектов.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-125">This is useful when you need to handle a variety of data types and object classes.</span></span> <span data-ttu-id="ca7d3-126">Все элементы массива должны иметь тот же объявленный тип данных.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-126">All the elements in an array must have the same declared data type.</span></span> <span data-ttu-id="ca7d3-127">Объявление этого типа данных как `Object` позволяет хранить объекты и экземпляры класса вместе с другими типами данных в массиве.</span><span class="sxs-lookup"><span data-stu-id="ca7d3-127">Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Объектные переменные](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Объявление переменных объектов](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [Присваивание объектных переменных](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Практическое руководство: ссылки на текущий экземпляр объекта](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
- [Практическое руководство: определение типа, который указывает объектная переменная](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)   
- [Практическое руководство: определение связи между двумя объектами](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)   
- [Практическое руководство: Определение идентичности двух объектов](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)   
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a><span data-ttu-id="ca7d3-128">См. также</span><span class="sxs-lookup"><span data-stu-id="ca7d3-128">See Also</span></span>  
+ [<span data-ttu-id="ca7d3-129">Объектные переменные</span><span class="sxs-lookup"><span data-stu-id="ca7d3-129">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="ca7d3-130">Объявление объектной переменной</span><span class="sxs-lookup"><span data-stu-id="ca7d3-130">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [<span data-ttu-id="ca7d3-131">Присваивание объектных переменных</span><span class="sxs-lookup"><span data-stu-id="ca7d3-131">Object Variable Assignment</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
+ [<span data-ttu-id="ca7d3-132">Практическое руководство. Ссылка на текущий экземпляр объекта</span><span class="sxs-lookup"><span data-stu-id="ca7d3-132">How to: Refer to the Current Instance of an Object</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
+ [<span data-ttu-id="ca7d3-133">Практическое руководство. Определение типа, на который указывает объектная переменная</span><span class="sxs-lookup"><span data-stu-id="ca7d3-133">How to: Determine What Type an Object Variable Refers To</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
+ [<span data-ttu-id="ca7d3-134">Практическое руководство. Определение наличия связи между двумя объектами</span><span class="sxs-lookup"><span data-stu-id="ca7d3-134">How to: Determine Whether Two Objects Are Related</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
+ [<span data-ttu-id="ca7d3-135">Практическое руководство. Определение идентичности двух объектов</span><span class="sxs-lookup"><span data-stu-id="ca7d3-135">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)  
+ [<span data-ttu-id="ca7d3-136">Типы данных</span><span class="sxs-lookup"><span data-stu-id="ca7d3-136">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

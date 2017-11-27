@@ -1,42 +1,46 @@
 ---
-title: "Безопасность транспорта с проверкой подлинности с использованием сертификатов | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасность транспорта с проверкой подлинности с использованием сертификатов"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-caps.latest.revision: 20
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: abff650bd7c0e613524e4903cc754b7ff4200328
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Безопасность транспорта с проверкой подлинности с использованием сертификатов
-В этом разделе рассматривается проверка подлинности сервера и клиента при использовании безопасности транспорта с помощью сертификатов X.509.Дополнительные сведения о сертификатах X.509 см. в разделе [Сертификаты открытого ключа X.509](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx).Сертификаты должны выдаваться центром сертификации, который обычно является сторонним издателем сертификатов.В домене Windows Server для выдачи сертификатов клиентским компьютерам домена можно использовать службу сертификации Active Directory.Дополнительные сведения см. в разделе [Службы сертификатов Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x419).В этом сценарии служба размещена в службах IIS, которые используют протокол SSL.В службе задано использование сертификата SSL \(X.509\), чтобы клиенты могли проверять подлинность сервера.В клиенте также задано использование сертификата X.509, что позволяет службе проверять подлинность клиента.Клиент должен доверять сертификату сервера, а сервер ― сертификату клиента.Фактический механизм проверки подлинности друг друга службой и клиентом в данном разделе не обсуждается.Дополнительные сведения см. в разделе [Цифровая подпись в Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).  
+# <a name="transport-security-with-certificate-authentication"></a><span data-ttu-id="c6611-102">Безопасность транспорта с проверкой подлинности с использованием сертификатов</span><span class="sxs-lookup"><span data-stu-id="c6611-102">Transport Security with Certificate Authentication</span></span>
+<span data-ttu-id="c6611-103">В этом разделе рассматривается проверка подлинности сервера и клиента при использовании безопасности транспорта с помощью сертификатов X.509.</span><span class="sxs-lookup"><span data-stu-id="c6611-103">This topic discusses using X.509 certificates for server and client authentication when using transport security.</span></span> <span data-ttu-id="c6611-104">Дополнительные сведения о X.509 см. [сертификаты открытого ключа X.509](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx).</span><span class="sxs-lookup"><span data-stu-id="c6611-104">For more information about X.509 certificates see [X.509 Public Key Certificates](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx).</span></span> <span data-ttu-id="c6611-105">Сертификаты должны быть выданы центром сертификации, который часто сторонним издателем сертификатов.</span><span class="sxs-lookup"><span data-stu-id="c6611-105">Certificates must be issued by a certification authority, which is often a third-party issuer of certificates.</span></span> <span data-ttu-id="c6611-106">В домене Windows Server для выдачи сертификатов клиентским компьютерам домена можно использовать службу сертификации Active Directory.</span><span class="sxs-lookup"><span data-stu-id="c6611-106">On a Windows Server domain, Active Directory Certificate Services can be used to issue certificates to client computers on the domain.</span></span> <span data-ttu-id="c6611-107">Дополнительные сведения см. [служб сертификатов Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409).</span><span class="sxs-lookup"><span data-stu-id="c6611-107">For more information see [Windows 2008 R2 Certificate Services](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409).</span></span> <span data-ttu-id="c6611-108">В этом сценарии служба размещена в службах IIS, которые используют протокол SSL.</span><span class="sxs-lookup"><span data-stu-id="c6611-108">In this scenario, the service is hosted under Internet Information Services (IIS) which is configured with Secure Sockets Layer (SSL).</span></span> <span data-ttu-id="c6611-109">В службе задано использование сертификата SSL (X.509), чтобы клиенты могли проверять подлинность сервера.</span><span class="sxs-lookup"><span data-stu-id="c6611-109">The service is configured with an SSL (X.509) certificate to allow clients to verify the identity of the server.</span></span> <span data-ttu-id="c6611-110">В клиенте также задано использование сертификата X.509, что позволяет службе проверять подлинность клиента.</span><span class="sxs-lookup"><span data-stu-id="c6611-110">The client is also configured with an X.509 certificate that allows the service to verify the identity of the client.</span></span> <span data-ttu-id="c6611-111">Клиент должен доверять сертификату сервера, а сервер ― сертификату клиента.</span><span class="sxs-lookup"><span data-stu-id="c6611-111">The server’s certificate must be trusted by the client and the client’s certificate must be trusted by the server.</span></span> <span data-ttu-id="c6611-112">Фактический механизм проверки подлинности друг друга службой и клиентом в данном разделе не обсуждается.</span><span class="sxs-lookup"><span data-stu-id="c6611-112">The actual mechanics of how the service and client verifies each other’s identity is beyond the scope of this topic.</span></span> <span data-ttu-id="c6611-113">Дополнительные сведения см. [цифровой подписи в Википедии](http://go.microsoft.com/fwlink/?LinkId=253157).</span><span class="sxs-lookup"><span data-stu-id="c6611-113">For more information see [Digital Signature on Wikipedia](http://go.microsoft.com/fwlink/?LinkId=253157).</span></span>  
   
- В этом сценарии реализуется шаблон обмена сообщениями «запрос\-ответ», показанный на следующей схеме.  
+ <span data-ttu-id="c6611-114">В этом сценарии реализуется шаблон обмена сообщениями «запрос-ответ», показанный на следующей схеме.</span><span class="sxs-lookup"><span data-stu-id="c6611-114">This scenario implements a request/reply message pattern as illustrated by the following diagram.</span></span>  
   
- ![Безопасная передача с использованием сертификатов](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968\-899f\-4538\-a9e8\-0eaa872a291c")  
+ <span data-ttu-id="c6611-115">![Безопасная передача с помощью сертификатов](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")</span><span class="sxs-lookup"><span data-stu-id="c6611-115">![Secure transfer using certificates](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] использовании сертификата со службой см. в разделах [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [Практическое руководство. Настройка порта с использованием SSL\-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).В следующей таблице описываются различные особенности этого сценария.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c6611-116">с помощью сертификата со службой, в разделе [работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) и [как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="c6611-116"> using a certificate with a service, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span> <span data-ttu-id="c6611-117">В следующей таблице описываются различные особенности этого сценария.</span><span class="sxs-lookup"><span data-stu-id="c6611-117">The following table describes the various characteristics of the scenario.</span></span>  
   
-|Характеристика|Описание|  
-|--------------------|--------------|  
-|Режим безопасности|Транспорт|  
-|Взаимодействие|С существующими службами и клиентами веб\-служб.|  
-|Проверка подлинности \(сервера\)<br /><br /> Проверка подлинности \(клиента\)|Да \(с использованием SSL\-сертификата\)<br /><br /> Да \(с использованием сертификата X.509\)|  
-|Целостность данных|Да|  
-|Конфиденциальность данных|Да|  
-|Транспорт|HTTPS|  
-|Привязка|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="c6611-118">Характеристика</span><span class="sxs-lookup"><span data-stu-id="c6611-118">Characteristic</span></span>|<span data-ttu-id="c6611-119">Описание</span><span class="sxs-lookup"><span data-stu-id="c6611-119">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="c6611-120">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="c6611-120">Security Mode</span></span>|<span data-ttu-id="c6611-121">Transport</span><span class="sxs-lookup"><span data-stu-id="c6611-121">Transport</span></span>|  
+|<span data-ttu-id="c6611-122">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="c6611-122">Interoperability</span></span>|<span data-ttu-id="c6611-123">С существующими службами и клиентами веб-служб.</span><span class="sxs-lookup"><span data-stu-id="c6611-123">With existing Web service clients and services.</span></span>|  
+|<span data-ttu-id="c6611-124">Проверка подлинности (сервера)</span><span class="sxs-lookup"><span data-stu-id="c6611-124">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="c6611-125">Проверка подлинности (клиента)</span><span class="sxs-lookup"><span data-stu-id="c6611-125">Authentication (Client)</span></span>|<span data-ttu-id="c6611-126">Да (с использованием SSL-сертификата)</span><span class="sxs-lookup"><span data-stu-id="c6611-126">Yes (using an SSL certificate)</span></span><br /><br /> <span data-ttu-id="c6611-127">Да (с использованием сертификата X.509)</span><span class="sxs-lookup"><span data-stu-id="c6611-127">Yes (using an X.509 certificate)</span></span>|  
+|<span data-ttu-id="c6611-128">Целостность данных</span><span class="sxs-lookup"><span data-stu-id="c6611-128">Data Integrity</span></span>|<span data-ttu-id="c6611-129">Да</span><span class="sxs-lookup"><span data-stu-id="c6611-129">Yes</span></span>|  
+|<span data-ttu-id="c6611-130">Конфиденциальность данных</span><span class="sxs-lookup"><span data-stu-id="c6611-130">Data Confidentiality</span></span>|<span data-ttu-id="c6611-131">Да</span><span class="sxs-lookup"><span data-stu-id="c6611-131">Yes</span></span>|  
+|<span data-ttu-id="c6611-132">Transport</span><span class="sxs-lookup"><span data-stu-id="c6611-132">Transport</span></span>|<span data-ttu-id="c6611-133">HTTPS</span><span class="sxs-lookup"><span data-stu-id="c6611-133">HTTPS</span></span>|  
+|<span data-ttu-id="c6611-134">Привязка</span><span class="sxs-lookup"><span data-stu-id="c6611-134">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Настройка службы  
- Поскольку в этом сценарии служба размещается в службах IIS, он настраивается с помощью файла web.config.В следующем примере содержимого файла web.config показано, как настроить в <xref:System.ServiceModel.WSHttpBinding> использование безопасности транспорта и учетных данных клиента X.509.  
+## <a name="configure-the-service"></a><span data-ttu-id="c6611-135">Настройка службы</span><span class="sxs-lookup"><span data-stu-id="c6611-135">Configure the Service</span></span>  
+ <span data-ttu-id="c6611-136">Поскольку в этом сценарии служба размещается в службах IIS, он настраивается с помощью файла web.config.</span><span class="sxs-lookup"><span data-stu-id="c6611-136">Since the service in this scenario is hosted under IIS, it is configured with a web.config file.</span></span> <span data-ttu-id="c6611-137">В следующем примере содержимого файла web.config показано, как настроить в <xref:System.ServiceModel.WSHttpBinding> использование безопасности транспорта и учетных данных клиента X.509.</span><span class="sxs-lookup"><span data-stu-id="c6611-137">The following web.config shows how to configure the <xref:System.ServiceModel.WSHttpBinding> to use transport security and X.509 client credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -64,11 +68,10 @@ caps.handback.revision: 20
     </behaviors>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Настройка клиента  
- Настроить клиент можно в коде или в файле app.config.В следующем примере показано, как настроить клиент в коде.  
+## <a name="configure-the-client"></a><span data-ttu-id="c6611-138">Настройка клиента</span><span class="sxs-lookup"><span data-stu-id="c6611-138">Configure the Client</span></span>  
+ <span data-ttu-id="c6611-139">Настроить клиент можно в коде или в файле app.config.</span><span class="sxs-lookup"><span data-stu-id="c6611-139">The client can be configured in code or in an app.config file.</span></span> <span data-ttu-id="c6611-140">В следующем примере показано, как настроить клиент в коде.</span><span class="sxs-lookup"><span data-stu-id="c6611-140">The following example shows how to configure the client in code.</span></span>  
   
 ```vb  
 // Create the binding.  
@@ -100,10 +103,9 @@ cc.ClientCredentials.ClientCertificate.SetCertificate(
 Console.WriteLine(cc.Add(100, 1111));  
 //...  
 cc.Close();  
-  
 ```  
   
- Также можно настроить клиент в файле App.config, как показано в следующем примере:  
+ <span data-ttu-id="c6611-141">Также можно настроить клиент в файле App.config, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="c6611-141">Alternatively you can configure the client in an App.config file as shown in the following example:</span></span>  
   
 ```xml  
 <configuration>  
@@ -142,9 +144,8 @@ cc.Close();
   </system.serviceModel>  
   
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
-  
 ```  
   
-## См. также  
- [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="c6611-142">См. также</span><span class="sxs-lookup"><span data-stu-id="c6611-142">See Also</span></span>  
+ [<span data-ttu-id="c6611-143">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="c6611-143">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="c6611-144">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="c6611-144">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

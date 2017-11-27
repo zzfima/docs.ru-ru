@@ -1,88 +1,94 @@
 ---
-title: "Основные сведения о созданном коде клиента | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Основные сведения о созданном коде клиента"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4d185371c1648241db7b01f26a49e2e1e8710b0e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Основные сведения о созданном коде клиента
-[Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает код клиента и файл конфигурации клиентского приложения для использования при сборке клиентских приложений. В этом разделе содержатся примеры созданного кода для стандартных сценариев контрактов служб.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] сборке клиентского приложения с помощью созданного кода см. в разделе [Общие сведения о клиентах WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+# <a name="understanding-generated-client-code"></a><span data-ttu-id="b2c96-102">Основные сведения о созданном коде клиента</span><span class="sxs-lookup"><span data-stu-id="b2c96-102">Understanding Generated Client Code</span></span>
+<span data-ttu-id="b2c96-103">[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) создает код клиента и файл конфигурации клиентского приложения для использования при сборке клиентских приложений.</span><span class="sxs-lookup"><span data-stu-id="b2c96-103">The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates client code and a client application configuration file for use in building client applications.</span></span> <span data-ttu-id="b2c96-104">В этом разделе содержатся примеры созданного кода для стандартных сценариев контрактов служб.</span><span class="sxs-lookup"><span data-stu-id="b2c96-104">This topic provides a tour of generated code examples for standard service contract scenarios.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b2c96-105"> сборке клиентского приложения с помощью созданного кода см. в разделе [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b2c96-105"> building a client application using the generated code, see [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).</span></span>  
   
-## Обзор  
- При использовании [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] для создания типов клиентов [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для проекта проверки созданного кода клиента обычно не требуется. Если используемая среда разработки не выполняет аналогичные службы, для создания кода клиента, а также для последующего использования этого кода для разработки клиентского приложения можно использовать такое средство, как Svcutil.exe.  
+## <a name="overview"></a><span data-ttu-id="b2c96-106">Обзор</span><span class="sxs-lookup"><span data-stu-id="b2c96-106">Overview</span></span>  
+ <span data-ttu-id="b2c96-107">При использовании [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] для создания типов клиентов [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] для проекта проверки созданного кода клиента обычно не требуется.</span><span class="sxs-lookup"><span data-stu-id="b2c96-107">If you use [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] to generate [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client types for your project, you typically do not need to examine the generated client code.</span></span> <span data-ttu-id="b2c96-108">Если используемая среда разработки не выполняет аналогичные службы, для создания кода клиента, а также для последующего использования этого кода для разработки клиентского приложения можно использовать такое средство, как Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="b2c96-108">If you are not using a development environment that performs the same services for you, you can use a tool such as Svcutil.exe to generate client code and then use that code to develop your client application.</span></span>  
   
- Поскольку Svcutil.exe имеет несколько параметров, способных изменить тип созданной информации, данный раздел не рассматривает все сценарии. Тем не менее, поиск созданного кода включен в следующие задачи:  
+ <span data-ttu-id="b2c96-109">Поскольку Svcutil.exe имеет несколько параметров, способных изменить тип созданной информации, данный раздел не рассматривает все сценарии.</span><span class="sxs-lookup"><span data-stu-id="b2c96-109">Because Svcutil.exe has a number of options that modify the generated type information, this topic does not discuss all scenarios.</span></span> <span data-ttu-id="b2c96-110">Тем не менее, поиск созданного кода включен в следующие задачи:</span><span class="sxs-lookup"><span data-stu-id="b2c96-110">However, the following standard tasks involve locating generated code:</span></span>  
   
--   Определение интерфейсов контрактов служб.  
+-   <span data-ttu-id="b2c96-111">Определение интерфейсов контрактов служб.</span><span class="sxs-lookup"><span data-stu-id="b2c96-111">Identifying service contract interfaces.</span></span>  
   
--   Определение класса клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <span data-ttu-id="b2c96-112">Определение класса клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b2c96-112">Identifying the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class.</span></span>  
   
--   Определение типа данных.  
+-   <span data-ttu-id="b2c96-113">Определение типа данных.</span><span class="sxs-lookup"><span data-stu-id="b2c96-113">Identifying data types.</span></span>  
   
--   Определение контрактов обратного вызова для дуплексных служб.  
+-   <span data-ttu-id="b2c96-114">Определение контрактов обратного вызова для дуплексных служб.</span><span class="sxs-lookup"><span data-stu-id="b2c96-114">Identifying callback contracts for duplex services.</span></span>  
   
--   Определение интерфейса канала контракта службы поддержки.  
+-   <span data-ttu-id="b2c96-115">Определение интерфейса канала контракта службы поддержки.</span><span class="sxs-lookup"><span data-stu-id="b2c96-115">Identifying the helper service contract channel interface.</span></span>  
   
-### Поиск интерфейсов контрактов служб  
- Чтобы найти интерфейсы, которые моделируют контракты служб, необходимо искать интерфейсы, отмеченные атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=fullName>. Зачастую этот атрибут сложно найти при быстром прочтении из\-за наличия других атрибутов и явных свойств, установленных на сам атрибут. Не следует забывать, что интерфейс контракта службы и интерфейс контракта клиента \- это разные типы интерфейса. В следующем примере кода показан исходный контракт службы.  
+### <a name="finding-service-contract-interfaces"></a><span data-ttu-id="b2c96-116">Поиск интерфейсов контрактов служб</span><span class="sxs-lookup"><span data-stu-id="b2c96-116">Finding Service Contract Interfaces</span></span>  
+ <span data-ttu-id="b2c96-117">Чтобы найти интерфейсы, которые моделируют контракты служб, необходимо искать интерфейсы, отмеченные атрибутом <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2c96-117">To locate the interfaces that model service contracts, search for interfaces that are marked with the <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> attribute.</span></span> <span data-ttu-id="b2c96-118">Зачастую этот атрибут сложно найти при быстром прочтении из-за наличия других атрибутов и явных свойств, установленных на сам атрибут.</span><span class="sxs-lookup"><span data-stu-id="b2c96-118">Often this attribute can be difficult to locate with a quick read due to the presence of other attributes and the explicit properties set on the attribute itself.</span></span> <span data-ttu-id="b2c96-119">Не следует забывать, что интерфейс контракта службы и интерфейс контракта клиента - это разные типы интерфейса.</span><span class="sxs-lookup"><span data-stu-id="b2c96-119">Remember that the service contract interface and the client contract interface are two different types.</span></span> <span data-ttu-id="b2c96-120">В следующем примере кода показан исходный контракт службы.</span><span class="sxs-lookup"><span data-stu-id="b2c96-120">The following code example shows the original service contract.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#22](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#22)]  
   
- В следующем примере кода показан тот же контракт службы, созданный Svcutil.exe.  
+ <span data-ttu-id="b2c96-121">В следующем примере кода показан тот же контракт службы, созданный Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="b2c96-121">The following code example shows the same service contract as generated by Svcutil.exe.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Можно использовать созданный интерфейс контракта службы наряду с классом <xref:System.ServiceModel.ChannelFactory?displayProperty=fullName> для создания объекта канала [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], с помощью которого вызываются операции службы.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Практическое руководство. Использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ <span data-ttu-id="b2c96-122">Можно использовать созданный интерфейс контракта службы наряду с классом <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> для создания объекта канала [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], с помощью которого вызываются операции службы.</span><span class="sxs-lookup"><span data-stu-id="b2c96-122">You can use the generated service contract interface along with the <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> class to create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] channel object with which to invoke service operations.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b2c96-123">[Как: использование ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).</span><span class="sxs-lookup"><span data-stu-id="b2c96-123"> [How to: Use the ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).</span></span>  
   
-### Поиск классов клиента WCF  
- Чтобы найти класс клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], реализующий необходимый контракт службы, следует искать расширение класса <xref:System.ServiceModel.ClientBase%601?displayProperty=fullName>, параметром типа в котором является интерфейс контракта службы, который был только что найден и который расширяет этот интерфейс. Следующий пример кода иллюстрирует класс <xref:System.ServiceModel.ClientBase%601> типа `ISampleService`.  
+### <a name="finding-wcf-client-classes"></a><span data-ttu-id="b2c96-124">Поиск классов клиента WCF</span><span class="sxs-lookup"><span data-stu-id="b2c96-124">Finding WCF Client Classes</span></span>  
+ <span data-ttu-id="b2c96-125">Чтобы найти класс клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], реализующий необходимый контракт службы, следует искать расширение класса <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, параметром типа в котором является интерфейс контракта службы, который был только что найден и который расширяет этот интерфейс.</span><span class="sxs-lookup"><span data-stu-id="b2c96-125">To locate the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class that implements the service contract you want to use, search for an extension of <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, where the type parameter is the service contract interface that you previously located and that extends that interface.</span></span> <span data-ttu-id="b2c96-126">Следующий пример кода иллюстрирует класс <xref:System.ServiceModel.ClientBase%601> типа `ISampleService`.</span><span class="sxs-lookup"><span data-stu-id="b2c96-126">The following code example shows the <xref:System.ServiceModel.ClientBase%601> class of type `ISampleService`.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Класс клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно использовать путем создания его нового экземпляра и вызова методов его реализации. Эти методы вызывают операцию службы, для взаимодействия с которой они разработаны и сконфигурированы.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Общие сведения о клиентах WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ <span data-ttu-id="b2c96-127">Класс клиента [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] можно использовать путем создания его нового экземпляра и вызова методов его реализации.</span><span class="sxs-lookup"><span data-stu-id="b2c96-127">You can use this [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client class by creating a new instance of it and calling the methods it implements.</span></span> <span data-ttu-id="b2c96-128">Эти методы вызывают операцию службы, для взаимодействия с которой они разработаны и сконфигурированы.</span><span class="sxs-lookup"><span data-stu-id="b2c96-128">Those methods invoke the service operation with which it is designed and configured to interact.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b2c96-129">[Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b2c96-129"> [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).</span></span>  
   
 > [!NOTE]
->  При создании средством SvcUtil.exe класса клиента WCF к классу клиента добавляется <xref:System.Diagnostics.DebuggerStepThroughAttribute> для предотвращения пошагового перебора элементов класса клиента WCF отладчиками.  
+>  <span data-ttu-id="b2c96-130">При создании средством SvcUtil.exe класса клиента WCF к классу клиента добавляется <xref:System.Diagnostics.DebuggerStepThroughAttribute> для предотвращения пошагового перебора элементов класса клиента WCF отладчиками.</span><span class="sxs-lookup"><span data-stu-id="b2c96-130">When SvcUtil.exe generates a WCF client class, it adds a <xref:System.Diagnostics.DebuggerStepThroughAttribute> to the client class that prevents debuggers from stepping through the WCF client class.</span></span>  
   
-### Поиск типа данных  
- Основным способом поиска данных в созданном коде является идентификация имени типа, заданного в контракте, и поиск в коде объявления этого типа. Например, следующий контракт задает, что метод `SampleMethod` может возвращать ошибку SOAP типа `microsoft.wcf.documentation.SampleFault`.  
+### <a name="finding-data-types"></a><span data-ttu-id="b2c96-131">Поиск типа данных</span><span class="sxs-lookup"><span data-stu-id="b2c96-131">Finding Data Types</span></span>  
+ <span data-ttu-id="b2c96-132">Основным способом поиска данных в созданном коде является идентификация имени типа, заданного в контракте, и поиск в коде объявления этого типа.</span><span class="sxs-lookup"><span data-stu-id="b2c96-132">To locate data types in the generated code, the most basic mechanism is to identify the type name specified in a contract and search the code for that type declaration.</span></span> <span data-ttu-id="b2c96-133">Например, следующий контракт задает, что метод `SampleMethod` может возвращать ошибку SOAP типа `microsoft.wcf.documentation.SampleFault`.</span><span class="sxs-lookup"><span data-stu-id="b2c96-133">For example, the following contract specifies that the `SampleMethod` can return a SOAP fault of type `microsoft.wcf.documentation.SampleFault`.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#11)]  
   
- Поиск `SampleFault` определяет местонахождение следующего объявления типа.  
+ <span data-ttu-id="b2c96-134">Поиск `SampleFault` определяет местонахождение следующего объявления типа.</span><span class="sxs-lookup"><span data-stu-id="b2c96-134">Searching for `SampleFault` locates the following type declaration.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- В этом случае тип данных представляет собой тип сведений, вызванный конкретным исключением со стороны клиента <xref:System.ServiceModel.FaultException%601>, где параметром типа сведений является `microsoft.wcf.documentation.SampleFault`.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] типах данных см. в разделе [Задание передачи данных в контрактах служб](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] обработке исключений в клиентских приложениях см. в разделе [Сбои при отправке и получении](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ <span data-ttu-id="b2c96-135">В этом случае тип данных представляет собой тип сведений, вызванный конкретным исключением со стороны клиента <xref:System.ServiceModel.FaultException%601> , где параметром типа сведений является `microsoft.wcf.documentation.SampleFault`.</span><span class="sxs-lookup"><span data-stu-id="b2c96-135">In this case the data type is the detail type thrown by a specific exception on the client, a <xref:System.ServiceModel.FaultException%601> where the detail type parameter is `microsoft.wcf.documentation.SampleFault`.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b2c96-136"> типах данных см. в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="b2c96-136"> data types, see [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b2c96-137"> обработке исключений в клиентских приложениях см. в разделе [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).</span><span class="sxs-lookup"><span data-stu-id="b2c96-137"> handling exceptions in clients, see [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).</span></span>  
   
-### Поиск контрактов обратного вызова для дуплексных служб  
- Если определяется местоположение контракта службы, для которого интерфейс контракта задает значение свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=fullName>, то этот контракт задает дуплексный контракт. Дуплексные контракты требуют, чтобы клиентское приложение создавало класс обратного вызова, реализующий контракт обратного вызова, и передавало экземпляр этого класса в <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=fullName> или <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=fullName>, которые используются для общения со службой.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] дуплексных клиентах см. в разделе [Практическое руководство. Доступ к службам с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+### <a name="finding-callback-contracts-for-duplex-services"></a><span data-ttu-id="b2c96-138">Поиск контрактов обратного вызова для дуплексных служб</span><span class="sxs-lookup"><span data-stu-id="b2c96-138">Finding Callback Contracts for Duplex Services</span></span>  
+ <span data-ttu-id="b2c96-139">Если определяется местоположение контракта службы, для которого интерфейс контракта задает значение свойства <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>, то этот контракт задает дуплексный контракт.</span><span class="sxs-lookup"><span data-stu-id="b2c96-139">If you locate a service contract for which the contract interface specifies a value for the <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> property, then that contract specifies a duplex contract.</span></span> <span data-ttu-id="b2c96-140">Дуплексные контракты требуют, чтобы клиентское приложение создавало класс обратного вызова, реализующий контракт обратного вызова, и передавало экземпляр этого класса в <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> или <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>, которые используются для общения со службой.</span><span class="sxs-lookup"><span data-stu-id="b2c96-140">Duplex contracts require the client application to create a callback class that implements the callback contract and pass an instance of that class to the <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> or <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> used to communicate with the service.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b2c96-141">дуплексных клиентах см. в разделе [как: службы доступа с дуплексным контрактом](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).</span><span class="sxs-lookup"><span data-stu-id="b2c96-141"> duplex clients, see [How to: Access Services with a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).</span></span>  
   
- Следующий контракт задает контракт обратного вызова типа `SampleDuplexHelloCallback`.  
+ <span data-ttu-id="b2c96-142">Следующий контракт задает контракт обратного вызова типа `SampleDuplexHelloCallback`.</span><span class="sxs-lookup"><span data-stu-id="b2c96-142">The following contract specifies a callback contract of type `SampleDuplexHelloCallback`.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/duplexproxycode.cs#2)]
  [!code-vb[C_GeneratedCodeFiles#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_generatedcodefiles/vb/duplexproxycode.vb#2)]  
   
- Поиск этого контракта обратного вызова определяет местоположение следующего интерфейса, который должен быть реализован в клиентском приложении.  
+ <span data-ttu-id="b2c96-143">Поиск этого контракта обратного вызова определяет местоположение следующего интерфейса, который должен быть реализован в клиентском приложении.</span><span class="sxs-lookup"><span data-stu-id="b2c96-143">Searching for that callback contract locates the following interface that the client application must implement.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/duplexproxycode.cs#4)]
  [!code-vb[C_GeneratedCodeFiles#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_generatedcodefiles/vb/duplexproxycode.vb#4)]  
   
-### Поиск интерфейсов каналов контрактов служб  
- При использовании класса <xref:System.ServiceModel.ChannelFactory> с интерфейсом контракта службы следует перейти к интерфейсу <xref:System.ServiceModel.IClientChannel?displayProperty=fullName>, чтобы явно открыть, закрыть канал или прервать его работу. Для упрощения работы средство Svcutil.exe создает также вспомогательный интерфейс, реализующий и интерфейс контракта службы, и интерфейс <xref:System.ServiceModel.IClientChannel>, чтобы можно было взаимодействовать с инфраструктурой клиентских каналов без переходов. В следующем коде показано определение вспомогательного клиентского канала, который реализует указанный выше контракт службы.  
+### <a name="finding-service-contract-channel-interfaces"></a><span data-ttu-id="b2c96-144">Поиск интерфейсов каналов контрактов служб</span><span class="sxs-lookup"><span data-stu-id="b2c96-144">Finding Service Contract Channel Interfaces</span></span>  
+ <span data-ttu-id="b2c96-145">При использовании класса <xref:System.ServiceModel.ChannelFactory> с интерфейсом контракта службы следует перейти к интерфейсу <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, чтобы явно открыть, закрыть канал или прервать его работу.</span><span class="sxs-lookup"><span data-stu-id="b2c96-145">When using the <xref:System.ServiceModel.ChannelFactory> class with a service contract interface, you must cast to the <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interface to explicitly open, close, or abort the channel.</span></span> <span data-ttu-id="b2c96-146">Для упрощения работы средство Svcutil.exe создает также вспомогательный интерфейс, реализующий и интерфейс контракта службы, и интерфейс <xref:System.ServiceModel.IClientChannel> , чтобы можно было взаимодействовать с инфраструктурой клиентских каналов без переходов.</span><span class="sxs-lookup"><span data-stu-id="b2c96-146">To make it easier to work with, the Svcutil.exe tool also generates a helper interface that implements both the service contract interface and <xref:System.ServiceModel.IClientChannel> to enable you to interact with the client channel infrastructure without having to cast.</span></span> <span data-ttu-id="b2c96-147">В следующем коде показано определение вспомогательного клиентского канала, который реализует указанный выше контракт службы.</span><span class="sxs-lookup"><span data-stu-id="b2c96-147">The following code shows the definition of a helper client channel that implements the preceding service contract.</span></span>  
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
-## См. также  
- [Общие сведения о клиентах WCF](../../../../docs/framework/wcf/wcf-client-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b2c96-148">См. также</span><span class="sxs-lookup"><span data-stu-id="b2c96-148">See Also</span></span>  
+ [<span data-ttu-id="b2c96-149">Общие сведения о клиентах WCF</span><span class="sxs-lookup"><span data-stu-id="b2c96-149">WCF Client Overview</span></span>](../../../../docs/framework/wcf/wcf-client-overview.md)

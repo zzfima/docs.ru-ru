@@ -1,38 +1,37 @@
 ---
-title: "Общие сведения об элементе управления TreeView (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TreeView"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "TreeView - элемент управления [Windows Forms], об элементе управления TreeView"
+title: "Общие сведения об элементе управления TreeView (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: TreeView
+helpviewer_keywords: TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee285a7db058cd88843eb3addf207fb5c446dfa8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления TreeView (Windows Forms)
-С помощью элемента управления <xref:System.Windows.Forms.TreeView> Windows Forms пользователям можно показывать иерархию узлов аналогично отображению файлов и папок на левой панели проводника операционной системы Windows.  Каждый узел дерева может содержать другие узлы, называемые *дочерними узлами*.  Родительские узлы \(т. е. содержащие дочерние узлы\) можно показывать как в развернутом, так и в свернутом виде.  В представлении в виде дерева рядом с узлами можно также показывать флажки, если присвоить свойству <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> этого дерева значение `true`.  Вы можете выделять узлы и отменять их выделение программными средствами, задавая для свойства <xref:System.Windows.Forms.TreeNode.Checked%2A> узла значение `true` или `false`.  
+# <a name="treeview-control-overview-windows-forms"></a><span data-ttu-id="4dfdd-102">Общие сведения об элементе управления TreeView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="4dfdd-102">TreeView Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="4dfdd-103">С помощью элемента управления <xref:System.Windows.Forms.TreeView> Windows Forms пользователям можно показывать иерархию узлов аналогично отображению файлов и папок на левой панели проводника операционной системы Windows.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-103">With the Windows Forms <xref:System.Windows.Forms.TreeView> control, you can display a hierarchy of nodes to users, like the way files and folders are displayed in the left pane of the Windows Explorer feature of the Windows operating system.</span></span> <span data-ttu-id="4dfdd-104">Каждый узел дерева может содержать другие узлы, называемые *дочерние узлы*.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-104">Each node in the tree view might contain other nodes, called *child nodes*.</span></span> <span data-ttu-id="4dfdd-105">Родительские узлы (т. е. содержащие дочерние узлы) можно показывать как в развернутом, так и в свернутом виде.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-105">You can display parent nodes, or nodes that contain child nodes, as expanded or collapsed.</span></span> <span data-ttu-id="4dfdd-106">В представлении в виде дерева рядом с узлами можно также показывать флажки, если присвоить свойству <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> этого дерева значение `true`.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-106">You can also display a tree view with check boxes next to the nodes by setting the tree view's <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> property to `true`.</span></span> <span data-ttu-id="4dfdd-107">Вы можете выделять узлы и отменять их выделение программными средствами, задавая для свойства <xref:System.Windows.Forms.TreeNode.Checked%2A> узла значение `true` или `false`.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-107">You can then programmatically select or clear nodes by setting the node's <xref:System.Windows.Forms.TreeNode.Checked%2A> property to `true` or `false`.</span></span>  
   
-## Ключевые свойства  
- Ключевые свойства элемента управления <xref:System.Windows.Forms.TreeView> — это <xref:System.Windows.Forms.TreeView.Nodes%2A> и <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.  Свойство <xref:System.Windows.Forms.TreeView.Nodes%2A> содержит список узлов верхнего уровня в представлении дерева.  Свойство <xref:System.Windows.Forms.TreeView.SelectedNode%2A> определяет выделенный в данный момент узел.  Рядом с узлами могут отображаться значки.  Элемент управления использует изображения из элемента <xref:System.Windows.Forms.ImageList>, указанного в свойстве <xref:System.Windows.Forms.TreeView.ImageList%2A> дерева.  Свойство <xref:System.Windows.Forms.TreeView.ImageIndex%2A> задает изображение по умолчанию для узлов в представлении дерева.  Подробнее о выводе изображений см. в разделе [Практическое руководство. Определение значков для элемента управления TreeView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).  При использовании [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] вы получаете доступ к большой библиотеке стандартных изображений, которые можно использовать с элементом управления <xref:System.Windows.Forms.TreeView>.  
+## <a name="key-properties"></a><span data-ttu-id="4dfdd-108">Ключевые свойства</span><span class="sxs-lookup"><span data-stu-id="4dfdd-108">Key Properties</span></span>  
+ <span data-ttu-id="4dfdd-109">Ключевые свойства элемента управления <xref:System.Windows.Forms.TreeView> — это <xref:System.Windows.Forms.TreeView.Nodes%2A> и <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-109">The key properties of the <xref:System.Windows.Forms.TreeView> control are <xref:System.Windows.Forms.TreeView.Nodes%2A> and <xref:System.Windows.Forms.TreeView.SelectedNode%2A>.</span></span> <span data-ttu-id="4dfdd-110">Свойство <xref:System.Windows.Forms.TreeView.Nodes%2A> содержит список узлов верхнего уровня в представлении дерева.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-110">The <xref:System.Windows.Forms.TreeView.Nodes%2A> property contains the list of top-level nodes in the tree view.</span></span> <span data-ttu-id="4dfdd-111">Свойство <xref:System.Windows.Forms.TreeView.SelectedNode%2A> определяет выделенный в данный момент узел.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-111">The <xref:System.Windows.Forms.TreeView.SelectedNode%2A> property sets the currently selected node.</span></span> <span data-ttu-id="4dfdd-112">Рядом с узлами могут отображаться значки.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-112">You can display icons next to the nodes.</span></span> <span data-ttu-id="4dfdd-113">Элемент управления использует изображения из элемента <xref:System.Windows.Forms.ImageList>, указанного в свойстве <xref:System.Windows.Forms.TreeView.ImageList%2A> дерева.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-113">The control uses images from the <xref:System.Windows.Forms.ImageList> named in the tree view's <xref:System.Windows.Forms.TreeView.ImageList%2A> property.</span></span> <span data-ttu-id="4dfdd-114">Свойство <xref:System.Windows.Forms.TreeView.ImageIndex%2A> задает изображение по умолчанию для узлов в представлении дерева.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-114">The <xref:System.Windows.Forms.TreeView.ImageIndex%2A> property sets the default image for nodes in the tree view.</span></span> <span data-ttu-id="4dfdd-115">Дополнительные сведения о выводе изображений см. в разделе [как: определение значков для элемента управления TreeView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).</span><span class="sxs-lookup"><span data-stu-id="4dfdd-115">For more information about displaying images, see [How to: Set Icons for the Windows Forms TreeView Control](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md).</span></span> <span data-ttu-id="4dfdd-116">При использовании [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] вы получаете доступ к большой библиотеке стандартных изображений, которые можно использовать с элементом управления <xref:System.Windows.Forms.TreeView>.</span><span class="sxs-lookup"><span data-stu-id="4dfdd-116">If you are using [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use with the <xref:System.Windows.Forms.TreeView> control.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.TreeView>   
- [Элемент управления TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Практическое руководство. Определение значков для элемента управления TreeView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)   
- [Практическое руководство. Добавление и удаление узлов элемента управления TreeView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)   
- [Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)   
- [Практическое руководство. Определение того, какой узел элемента управления TreeView был выбран щелчком мыши](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)   
- [Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView \(Windows Forms\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+## <a name="see-also"></a><span data-ttu-id="4dfdd-117">См. также</span><span class="sxs-lookup"><span data-stu-id="4dfdd-117">See Also</span></span>  
+ <xref:System.Windows.Forms.TreeView>  
+ [<span data-ttu-id="4dfdd-118">Элемент управления TreeView</span><span class="sxs-lookup"><span data-stu-id="4dfdd-118">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [<span data-ttu-id="4dfdd-119">Практическое руководство. Определение значков для элемента управления TreeView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4dfdd-119">How to: Set Icons for the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="4dfdd-120">Практическое руководство. Добавление и удаление узлов элемента управления TreeView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4dfdd-120">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="4dfdd-121">Практическое руководство. Перебор узлов элемента управления TreeView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4dfdd-121">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="4dfdd-122">Практическое руководство. Определение того, какой узел элемента управления TreeView был выбран щелчком мыши</span><span class="sxs-lookup"><span data-stu-id="4dfdd-122">How to: Determine Which TreeView Node Was Clicked</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
+ [<span data-ttu-id="4dfdd-123">Практическое руководство. Добавление пользовательских данных в элемент управления TreeView или ListView (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="4dfdd-123">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)

@@ -1,47 +1,51 @@
 ---
-title: "Пошаговое руководство. Демонстрация визуального наследования | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "наследование форм, пошаговые руководства"
-  - "наследование, пошаговые руководства"
-  - "визуальное наследование"
-  - "пошаговые руководства [Windows Forms], визуальное наследование"
-  - "Windows Forms, наследование"
+title: "Пошаговое руководство. Демонстрация визуального наследования"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- form inheritance [Windows Forms], walkthroughs
+- visual inheritance
+- inheritance [Windows Forms], walkthroughs
+- walkthroughs [Windows Forms], visual inheritance
+- Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 711f823e418a1bbea1479b9d6a8d70d4fa506365
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пошаговое руководство. Демонстрация визуального наследования
-Визуальное наследование позволяет просматривать элементы управления в базовой форме и добавлять новые элементы управления.  В этом пошаговом руководстве рассматривается создание базовой формы и ее компиляция  в библиотеку классов.  После этого данная библиотека классов импортируется в другой проект и создается новая форма, которая наследуется от базовой формы.  В этом пошаговом руководстве описаны следующие процедуры.  
+# <a name="walkthrough-demonstrating-visual-inheritance"></a><span data-ttu-id="c60a0-102">Пошаговое руководство. Демонстрация визуального наследования</span><span class="sxs-lookup"><span data-stu-id="c60a0-102">Walkthrough: Demonstrating Visual Inheritance</span></span>
+<span data-ttu-id="c60a0-103">Визуальное наследование позволяет просматривать элементы управления в базовой форме и добавлять новые элементы управления.</span><span class="sxs-lookup"><span data-stu-id="c60a0-103">Visual inheritance enables you to see the controls on the base form and to add new controls.</span></span> <span data-ttu-id="c60a0-104">В этом пошаговом руководстве рассматривается создание базовой формы и ее компиляция  в библиотеку классов.</span><span class="sxs-lookup"><span data-stu-id="c60a0-104">In this walkthrough you will create a base form and compile it into a class library.</span></span> <span data-ttu-id="c60a0-105">После этого данная библиотека классов импортируется в другой проект и создается новая форма, которая наследуется от базовой формы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-105">You will import this class library into another project and create a new form that inherits from the base form.</span></span> <span data-ttu-id="c60a0-106">В этом пошаговом руководстве описаны следующие процедуры.</span><span class="sxs-lookup"><span data-stu-id="c60a0-106">During this walkthrough, you will learn how to:</span></span>  
   
--   Создание проекта библиотеки классов, содержащей базовую форму.  
+-   <span data-ttu-id="c60a0-107">Создание проекта библиотеки классов, содержащей базовую форму.</span><span class="sxs-lookup"><span data-stu-id="c60a0-107">Create a class library project containing a base form.</span></span>  
   
--   Добавление кнопки со свойствами, которые могут изменяться производными классами базовой формы.  
+-   <span data-ttu-id="c60a0-108">Добавление кнопки со свойствами, которые могут изменяться производными классами базовой формы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-108">Add a button with properties that derived classes of the base form can modify.</span></span>  
   
--   Добавление кнопки, которая не может изменяться наследниками базовой формы.  
+-   <span data-ttu-id="c60a0-109">Добавление кнопки, которая не может изменяться наследниками базовой формы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-109">Add a button that cannot be modified by inheritors of the base form.</span></span>  
   
--   Создание проекта, содержащего форму, которая наследуется от `BaseForm`.  
+-   <span data-ttu-id="c60a0-110">Создание проекта, содержащего форму, которая наследуется от `BaseForm`.</span><span class="sxs-lookup"><span data-stu-id="c60a0-110">Create a project containing a form that inherits from `BaseForm`.</span></span>  
   
- В конечном счете в этом пошаговом руководстве показано различие между частным и защищенным элементами управления в производной форме.  
+ <span data-ttu-id="c60a0-111">В конечном счете в этом пошаговом руководстве показано различие между частным и защищенным элементами управления в производной форме.</span><span class="sxs-lookup"><span data-stu-id="c60a0-111">Ultimately, this walkthrough will demonstrate the difference between private and protected controls on an inherited form.</span></span>  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.  Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="c60a0-112">Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска.</span><span class="sxs-lookup"><span data-stu-id="c60a0-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c60a0-113">Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** .</span><span class="sxs-lookup"><span data-stu-id="c60a0-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c60a0-114">Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="c60a0-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
 > [!CAUTION]
->  Не все элементы управления поддерживают визуальное наследование от базовой формы.  Не поддерживают сценарий, описанный в этом пошаговом руководстве, следующие элементы управления:  
+>  <span data-ttu-id="c60a0-115">Не все элементы управления поддерживают визуальное наследование от базовой формы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-115">Not all controls support visual inheritance from a base form.</span></span> <span data-ttu-id="c60a0-116">Не поддерживают сценарий, описанный в этом пошаговом руководстве, следующие элементы управления:</span><span class="sxs-lookup"><span data-stu-id="c60a0-116">The following controls do not support the scenario described in this walkthrough:</span></span>  
 >   
 >  <xref:System.Windows.Forms.WebBrowser>  
 >   
@@ -55,42 +59,42 @@ caps.handback.revision: 24
 >   
 >  <xref:System.Windows.Forms.DataGridView>  
 >   
->  Эти элементы управления в производной форме всегда доступны только для чтения, независимо от используемых модификаторов \(`private`, `protected` или `public`\).  
+>  <span data-ttu-id="c60a0-117">Эти элементы управления в производной форме всегда доступны только для чтения, независимо от используемых модификаторов (`private`, `protected` или `public`).</span><span class="sxs-lookup"><span data-stu-id="c60a0-117">These controls in the inherited form are always read-only regardless of the modifiers you use (`private`, `protected`, or `public`).</span></span>  
   
-## Шаги сценария  
- Первым шагом является создание базовой формы.  
+## <a name="scenario-steps"></a><span data-ttu-id="c60a0-118">Шаги сценария</span><span class="sxs-lookup"><span data-stu-id="c60a0-118">Scenario Steps</span></span>  
+ <span data-ttu-id="c60a0-119">Первым шагом является создание базовой формы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-119">The first step is to create the base form.</span></span>  
   
-#### Создание проекта библиотеки классов, содержащей базовую форму  
+#### <a name="to-create-a-class-library-project-containing-a-base-form"></a><span data-ttu-id="c60a0-120">Создание проекта библиотеки классов, содержащей базовую форму</span><span class="sxs-lookup"><span data-stu-id="c60a0-120">To create a class library project containing a base form</span></span>  
   
-1.  В меню **Файл** выберите пункт **Создать**, затем выберите пункт **Проект**, чтобы открыть диалоговое окно **Создание проекта**.  
+1.  <span data-ttu-id="c60a0-121">Из **файл** меню, выберите **New**, а затем **проекта** Открытие **новый проект** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="c60a0-121">From the **File** menu, choose **New**, and then **Project** to open the **New Project** dialog box.</span></span>  
   
-2.  Создайте приложение Windows Forms с именем `BaseFormLibrary`.  
+2.  <span data-ttu-id="c60a0-122">Создание приложения Windows Forms с именем `BaseFormLibrary`.</span><span class="sxs-lookup"><span data-stu-id="c60a0-122">Create a Windows Forms application named `BaseFormLibrary`.</span></span>  
   
-3.  Чтобы создать библиотеку классов вместо стандартного приложения Windows Forms, в **обозревателе решений**, щелкните правой кнопкой мыши узел проекта **BaseFormLibrary** и выберите пункт **Свойства**.  
+3.  <span data-ttu-id="c60a0-123">Чтобы создать библиотеку классов вместо стандартного приложения Windows Forms, в **обозревателе решений**, щелкните правой кнопкой мыши **BaseFormLibrary** узел проекта, а затем выберите **свойства**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-123">To create a class library instead of a standard Windows Forms application, in **Solution Explorer**, right-click the **BaseFormLibrary** project node and then select **Properties**.</span></span>  
   
-4.  В свойствах проекта измените значение **Выходной тип** с **Приложение Windows** на **Библиотека классов**.  
+4.  <span data-ttu-id="c60a0-124">В свойствах проекта измените **тип вывода** из **приложение Windows** для **библиотеки классов**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-124">In the properties for the project, change the **Output type** from **Windows Application** to **Class Library**.</span></span>  
   
-5.  В меню **Файл** выберите **Сохранить все**, чтобы сохранить проект и файлы в расположении по умолчанию.  
+5.  <span data-ttu-id="c60a0-125">Из **файл** меню, выберите **сохранить все** сохранить проект и файлы в папке по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c60a0-125">From the **File** menu, choose **Save All** to save the project and files to the default location.</span></span>  
   
- Следующие две процедуры выполняют добавление кнопок на базовую форму.  Чтобы продемонстрировать визуальное наследование, кнопкам будет заданы разные уровни доступа с помощью свойств `Modifiers`.  
+ <span data-ttu-id="c60a0-126">Следующие две процедуры выполняют добавление кнопок на базовую форму.</span><span class="sxs-lookup"><span data-stu-id="c60a0-126">The next two procedures add buttons to the base form.</span></span> <span data-ttu-id="c60a0-127">Чтобы продемонстрировать визуальное наследование, кнопкам будет заданы разные уровни доступа с помощью свойств `Modifiers`.</span><span class="sxs-lookup"><span data-stu-id="c60a0-127">To demonstrate visual inheritance, you will give the buttons different access levels by setting their `Modifiers` properties.</span></span>  
   
-#### Добавление кнопки, которую могут изменить наследники базовой формы  
+#### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a><span data-ttu-id="c60a0-128">Добавление кнопки, которую могут изменить наследники базовой формы</span><span class="sxs-lookup"><span data-stu-id="c60a0-128">To add a button that inheritors of the base form can modify</span></span>  
   
-1.  Откройте **Form1** в конструкторе.  
+1.  <span data-ttu-id="c60a0-129">Откройте **Form1** в конструкторе.</span><span class="sxs-lookup"><span data-stu-id="c60a0-129">Open **Form1** in the designer.</span></span>  
   
-2.  На вкладке **Все формы Windows Forms** **панели элементов**, дважды щелкните элемент **Кнопка**, чтобы добавить кнопку на форму.  Измените положение и размер кнопки с помощью мыши.  
+2.  <span data-ttu-id="c60a0-130">На **все формы Windows Forms** вкладке **элементов**, дважды щелкните **кнопку** Чтобы добавить кнопку в форму.</span><span class="sxs-lookup"><span data-stu-id="c60a0-130">On the **All Windows Forms** tab of the **Toolbox**, double-click **Button** to add a button to the form.</span></span> <span data-ttu-id="c60a0-131">Измените положение и размер кнопки с помощью мыши.</span><span class="sxs-lookup"><span data-stu-id="c60a0-131">Use the mouse to position and resize the button.</span></span>  
   
-3.  В окне "Свойства" задайте следующие свойства кнопки.  
+3.  <span data-ttu-id="c60a0-132">В окне "Свойства" задайте следующие свойства кнопки.</span><span class="sxs-lookup"><span data-stu-id="c60a0-132">In the Properties window, set the following properties of the button:</span></span>  
   
-    -   Задайте для свойства **Text** значение **Привет**.  
+    -   <span data-ttu-id="c60a0-133">Задать **текст** свойства **Say Hello**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-133">Set the **Text** property to **Say Hello**.</span></span>  
   
-    -   Задайте для свойства **\(Name\)** значение **btnProtected**.  
+    -   <span data-ttu-id="c60a0-134">Задать **(имя)** свойства **btnProtected**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-134">Set the **(Name)** property to **btnProtected**.</span></span>  
   
-    -   Задайте для свойства**Modifiers** значение **Protected**.  Это позволяет формам, производным от **Form1**, изменять свойства **btnProtected**.  
+    -   <span data-ttu-id="c60a0-135">Задать**модификаторы** свойства **Protected**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-135">Set the**Modifiers** property to **Protected**.</span></span> <span data-ttu-id="c60a0-136">Это позволяет формам, производным от **Form1** для изменения свойств **btnProtected**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-136">This makes it possible for forms that inherit from **Form1** to modify the properties of **btnProtected**.</span></span>  
   
-4.  Дважды щелкните кнопку **Привет**, чтобы добавить обработчик событий для события **Click**.  
+4.  <span data-ttu-id="c60a0-137">Дважды щелкните **Say Hello** кнопку, чтобы добавить обработчик событий для **щелкните** событий.</span><span class="sxs-lookup"><span data-stu-id="c60a0-137">Double-click the **Say Hello** button to add an event handler for the **Click** event.</span></span>  
   
-5.  Добавьте следующий код в обработчик событий:  
+5.  <span data-ttu-id="c60a0-138">Добавьте следующий код в обработчик событий:</span><span class="sxs-lookup"><span data-stu-id="c60a0-138">Add the following line of code to the event handler:</span></span>  
   
     ```vb  
     MessageBox.Show("Hello, World!")  
@@ -100,19 +104,19 @@ caps.handback.revision: 24
     MessageBox.Show("Hello, World!");  
     ```  
   
-#### Добавление кнопки, которая не может изменяться наследующими объектами базовой формы  
+#### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a><span data-ttu-id="c60a0-139">Добавление кнопки, которая не может изменяться наследующими объектами базовой формы</span><span class="sxs-lookup"><span data-stu-id="c60a0-139">To add a button that cannot be modified by inheritors of the base form</span></span>  
   
-1.  Перейдите в представление конструктора, щелкнув вкладку **Form1.vb \[Design\], Form1.cs \[Design\] или \[Design\] Form1.jsl** в верхней части редактора кода или нажав клавишу F7.  
+1.  <span data-ttu-id="c60a0-140">Перейдите в представление конструктора, щелкнув **Form1.vb [Design], Form1.cs [Design] или [Design] Form1.jsl** вкладка редактора кода или нажав клавишу F7.</span><span class="sxs-lookup"><span data-stu-id="c60a0-140">Switch to design view by clicking the **Form1.vb [Design], Form1.cs [Design], or Form1.jsl [Design]** tab above the code editor, or by pressing F7.</span></span>  
   
-2.  Добавьте вторую кнопку и задайте ее свойства следующим образом.  
+2.  <span data-ttu-id="c60a0-141">Добавьте вторую кнопку и задайте ее свойства следующим образом.</span><span class="sxs-lookup"><span data-stu-id="c60a0-141">Add a second button and set its properties as follows:</span></span>  
   
-    -   Задайте для свойства **Text** значение **До свидания**.  
+    -   <span data-ttu-id="c60a0-142">Задать **текст** свойства **свидания**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-142">Set the **Text** property to **Say Goodbye**.</span></span>  
   
-    -   Задайте для свойства **\(Name\)** значение **btnPrivate**.  
+    -   <span data-ttu-id="c60a0-143">Задать **(имя)** свойства **btnPrivate**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-143">Set the **(Name)** property to **btnPrivate**.</span></span>  
   
-    -   Задайте для свойства **Modifiers** значение **Private**.  Это не позволяет формам, производным от **Form1**, изменять свойства **btnPrivate**.  
+    -   <span data-ttu-id="c60a0-144">Задать **модификаторы** свойства **частного**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-144">Set the **Modifiers** property to **Private**.</span></span> <span data-ttu-id="c60a0-145">Это не позволяет формам, производным от **Form1** для изменения свойств **btnPrivate**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-145">This makes it impossible for forms that inherit from **Form1** to modify the properties of **btnPrivate**.</span></span>  
   
-3.  Дважды щелкните кнопку **До свидания**, чтобы добавить обработчик событий для события **Click**.  Добавьте следующую строку кода в процедуру обработки события.  
+3.  <span data-ttu-id="c60a0-146">Дважды щелкните **свидания** кнопку, чтобы добавить обработчик событий для **щелкните** событий.</span><span class="sxs-lookup"><span data-stu-id="c60a0-146">Double-click the **Say Goodbye** button to add an event handler for the **Click** event.</span></span> <span data-ttu-id="c60a0-147">Добавьте следующую строку кода в процедуру обработки события.</span><span class="sxs-lookup"><span data-stu-id="c60a0-147">Place the following line of code in the event procedure:</span></span>  
   
     ```vb  
     MessageBox.Show("Goodbye!")  
@@ -122,54 +126,54 @@ caps.handback.revision: 24
     MessageBox.Show("Goodbye!");  
     ```  
   
-4.  В меню **Сборка** выберите пункт **Собрать библиотеку BaseForm** для создания библиотеки классов.  
+4.  <span data-ttu-id="c60a0-148">Из **построения** меню, выберите **собрать библиотеку BaseForm** в сборку библиотеки классов.</span><span class="sxs-lookup"><span data-stu-id="c60a0-148">From the **Build** menu, choose **Build BaseForm Library** to build the class library.</span></span>  
   
-     После сборки библиотеки можно создать новый проект, наследуемый от только что созданной формы.  
+     <span data-ttu-id="c60a0-149">После сборки библиотеки можно создать новый проект, наследуемый от только что созданной формы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-149">Once the library is built, you can create a new project that inherits from the form you just created.</span></span>  
   
-#### Создание проекта, содержащего форму, которая наследуется от базовой формы  
+#### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a><span data-ttu-id="c60a0-150">Создание проекта, содержащего форму, которая наследуется от базовой формы</span><span class="sxs-lookup"><span data-stu-id="c60a0-150">To create a project containing a form that inherits from the base form</span></span>  
   
-1.  В меню **Файл** выберите пункт **Создать**, затем выберите пункт **Проект**, чтобы открыть диалоговое окно **Создание проекта**.  
+1.  <span data-ttu-id="c60a0-151">Из **файл** меню, выберите **добавить** и затем **новый проект** Открытие **Добавление нового проекта** диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="c60a0-151">From the **File** menu, choose **Add** and then **New Project** to open the **Add New Project** dialog box.</span></span>  
   
-2.  Создайте приложение Windows Forms с именем `InheritanceTest`.  
+2.  <span data-ttu-id="c60a0-152">Создание приложения Windows Forms с именем `InheritanceTest`.</span><span class="sxs-lookup"><span data-stu-id="c60a0-152">Create a Windows Forms application named `InheritanceTest`.</span></span>  
   
-#### Добавление производной формы  
+#### <a name="to-add-an-inherited-form"></a><span data-ttu-id="c60a0-153">Добавление производной формы</span><span class="sxs-lookup"><span data-stu-id="c60a0-153">To add an inherited form</span></span>  
   
-1.  В **обозревателе решений** щелкните правой кнопкой мыши проект **InheritanceTest**, выберите **Добавить** и щелкните **Создать элемент**.  
+1.  <span data-ttu-id="c60a0-154">В **обозревателе решений**, щелкните правой кнопкой мыши **InheritanceTest** проекта, выберите **добавить**, а затем выберите**новый элемент**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-154">In **Solution Explorer**, right-click the **InheritanceTest** project, select **Add**, and then select**New Item**.</span></span>  
   
-2.  В диалоговом окне **Создание элемента** выберите категорию**Windows Forms** \(если имеется список категорий\) и шаблон **Производная форма**.  
+2.  <span data-ttu-id="c60a0-155">В **Добавление нового элемента** выберите **Windows Forms** категории (если имеется список категорий) и выберите **производная форма** шаблона.</span><span class="sxs-lookup"><span data-stu-id="c60a0-155">In the **Add New Item** dialog box, select the **Windows Forms** category (if you have a list of categories) and then select the **Inherited Form** template.</span></span>  
   
-3.  Оставьте имя по умолчанию `Form2` и щелкните **Добавить**.  
+3.  <span data-ttu-id="c60a0-156">Оставьте имя по умолчанию `Form2` и нажмите кнопку **добавить**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-156">Leave the default name of `Form2` and then click **Add**.</span></span>  
   
-4.  В диалоговом окне **Выбор компонентов для наследования** выберите **Form1** из проекта **BaseFormLibrary** в качестве формы для наследования и нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="c60a0-157">В **Выбор компонентов для наследования** выберите **Form1** из **BaseFormLibrary** проект как форма наследование, и нажмите кнопку **ОК** .</span><span class="sxs-lookup"><span data-stu-id="c60a0-157">In the **Inheritance Picker** dialog box, select **Form1** from the **BaseFormLibrary** project as the form to inherit from and click **OK**.</span></span>  
   
-     После этого в проекте **InheritanceTest** будет создана форма в проекте, которая является производной от формы в **BaseFormLibrary**.  
+     <span data-ttu-id="c60a0-158">Это создает форму в **InheritanceTest** проект, который является производным от формы в **BaseFormLibrary**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-158">This creates a form in the **InheritanceTest** project that derives from the form in **BaseFormLibrary**.</span></span>  
   
-5.  Откройте производную форму \(**Form2**\) в конструкторе, дважды щелкнув ее, если она еще не открыта.  
+5.  <span data-ttu-id="c60a0-159">Откройте производную форму (**Form2**) в конструкторе, дважды щелкнув ее, если он еще не открыт.</span><span class="sxs-lookup"><span data-stu-id="c60a0-159">Open the inherited form (**Form2**) in the designer by double-clicking it, if it is not already open.</span></span>  
   
-     В конструкторе производные кнопки в верхнем углу имеют символ \(![Снимок экрана VisualBasicInheritanceSymbol](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.png "vbInheritanceGlyph")\), указывающий, что они являются производными.  
+     <span data-ttu-id="c60a0-160">В конструкторе унаследованные кнопки имеют символ (![экрана VisualBasicInheritanceSymbol](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) в верхнем углу, указывающее, они унаследованы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-160">In the designer, the inherited buttons have a symbol (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) in their upper corner, indicating they are inherited.</span></span>  
   
-6.  Выберите кнопку **Привет** и убедитесь в наличии маркеров изменения размера.  Так как данная кнопка защищена, то наследники могут ее перемещать, изменять размер, название и вносить другие изменения.  
+6.  <span data-ttu-id="c60a0-161">Выберите **Say Hello** кнопку и понаблюдайте за маркеры изменения размера.</span><span class="sxs-lookup"><span data-stu-id="c60a0-161">Select the **Say Hello** button and observe the resize handles.</span></span> <span data-ttu-id="c60a0-162">Так как данная кнопка защищена, то наследники могут ее перемещать, изменять размер, название и вносить другие изменения.</span><span class="sxs-lookup"><span data-stu-id="c60a0-162">Because this button is protected, the inheritors can move it, resize it, change its caption, and make other modifications.</span></span>  
   
-7.  Выберите частную кнопку **До свидания** и обратите внимание, что она не имеет маркеров изменения размера.  Кроме того, в окне **Свойства** свойства этой кнопки отображены серым цветом, это говорит о том, что они не могут быть изменены.  
+7.  <span data-ttu-id="c60a0-163">Выберите частную **свидания** кнопки и обратите внимание, что он не имеет маркеров изменения размера.</span><span class="sxs-lookup"><span data-stu-id="c60a0-163">Select the private **Say Goodbye** button, and notice that it does not have resize handles.</span></span> <span data-ttu-id="c60a0-164">Кроме того, в **свойства** свойства этой кнопки отображены серым цветом, чтобы указать, их нельзя изменить.</span><span class="sxs-lookup"><span data-stu-id="c60a0-164">Additionally, in the **Properties** window, the properties of this button are grayed to indicate they cannot be modified.</span></span>  
   
-8.  При использовании [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
+8.  <span data-ttu-id="c60a0-165">При использовании [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c60a0-165">If you are using [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:</span></span>  
   
-    1.  В **обозревателе решений** щелкните правой кнопкой мыши **Form1** в проекте **InheritanceTest**, а затем выберите **Удалить**.  В появившемся диалоговом окне нажмите **ОК** для подтверждения удаления.  
+    1.  <span data-ttu-id="c60a0-166">В **обозревателе решений**, щелкните правой кнопкой мыши **Form1** в **InheritanceTest** проекта, а затем выберите **удалить**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-166">In **Solution Explorer**, right-click **Form1** in the **InheritanceTest** project and then choose **Delete**.</span></span> <span data-ttu-id="c60a0-167">В появившемся диалоговом окне выберите **ОК** для подтверждения удаления.</span><span class="sxs-lookup"><span data-stu-id="c60a0-167">In the message box that appears, click **OK** to confirm the deletion.</span></span>  
   
-    2.  Откройте файл Program.cs и измените строку `Application.Run(new Form1());` на `Application.Run(new Form2());`.  
+    2.  <span data-ttu-id="c60a0-168">Откройте файл Program.cs и измените строку `Application.Run(new Form1());` на `Application.Run(new Form2());`.</span><span class="sxs-lookup"><span data-stu-id="c60a0-168">Open the Program.cs file and change the line `Application.Run(new Form1());` to `Application.Run(new Form2());`.</span></span>  
   
-9. В **обозревателе решений** щелкните правой кнопкой мыши проект **InheritanceTest** и выберите **Установить как запускаемый проект**.  
+9. <span data-ttu-id="c60a0-169">В **обозревателе решений**, щелкните правой кнопкой мыши **InheritanceTest** проект и выберите **Назначить запускаемым проектом**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-169">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Set As Startup Project**.</span></span>  
   
-10. В **обозревателе решений** щелкните правой кнопкой мыши проект **InheritanceTest** и выберите **Свойства**.  
+10. <span data-ttu-id="c60a0-170">В **обозревателе решений**, щелкните правой кнопкой мыши **InheritanceTest** проект и выберите **свойства**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-170">In **Solution Explorer**, right-click the **InheritanceTest** project and select **Properties**.</span></span>  
   
-11. На страницах свойства **InheritanceTest** установите в качестве значения **Автоматически запускаемый объект** производную форму \(**Form2**\).  
+11. <span data-ttu-id="c60a0-171">В **InheritanceTest** страницы свойств, задайте **автоматически запускаемый объект** наследуемую форму (**Form2**).</span><span class="sxs-lookup"><span data-stu-id="c60a0-171">In the **InheritanceTest** property pages, set the **Startup object** to be the inherited form (**Form2**).</span></span>  
   
-12. Нажмите клавишу F5 для запуска приложения и понаблюдайте за поведением производной формы.  
+12. <span data-ttu-id="c60a0-172">Нажмите клавишу F5 для запуска приложения и понаблюдайте за поведением производной формы.</span><span class="sxs-lookup"><span data-stu-id="c60a0-172">Press F5 to run the application, and observe the behavior of the inherited form.</span></span>  
   
-## Следующие действия  
- Наследование для пользовательских элементов управления работает таким же образом.  Откройте новый проект библиотеки классов и добавьте пользовательский элемент управления.  Поместите на него составные элементы управления и скомпилируйте проект.  Откройте еще один новый проект библиотеки классов и добавьте ссылку на скомпилированную библиотеку классов.  Также попытайтесь добавить в проект производный элемент управления \(через диалоговое окно **Добавление новых элементов**\) и с помощью **Выбор компонентов для наследования**.  Добавьте пользовательский элемент управления и измените оператор `Inherits` \(`:` в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]\).  Дополнительные сведения см. в разделе [Практическое руководство. Наследование форм Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+## <a name="next-steps"></a><span data-ttu-id="c60a0-173">Дальнейшие действия</span><span class="sxs-lookup"><span data-stu-id="c60a0-173">Next Steps</span></span>  
+ <span data-ttu-id="c60a0-174">Наследование для пользовательских элементов управления работает таким же образом.</span><span class="sxs-lookup"><span data-stu-id="c60a0-174">Inheritance for user controls works in much the same way.</span></span> <span data-ttu-id="c60a0-175">Откройте новый проект библиотеки классов и добавьте пользовательский элемент управления.</span><span class="sxs-lookup"><span data-stu-id="c60a0-175">Open a new class library project and add a user control.</span></span> <span data-ttu-id="c60a0-176">Поместите на него составные элементы управления и скомпилируйте проект.</span><span class="sxs-lookup"><span data-stu-id="c60a0-176">Place constituent controls on it and compile the project.</span></span> <span data-ttu-id="c60a0-177">Откройте еще один новый проект библиотеки классов и добавьте ссылку на скомпилированную библиотеку классов.</span><span class="sxs-lookup"><span data-stu-id="c60a0-177">Open another new class library project and add a reference to the compiled class library.</span></span> <span data-ttu-id="c60a0-178">Также попытайтесь добавить наследуемый элемент управления (через **добавить новые элементы** диалоговое окно «») в проект и с помощью **Выбор компонентов для наследования**.</span><span class="sxs-lookup"><span data-stu-id="c60a0-178">Also, try adding an inherited control (through the **Add New Items** dialog box) to the project and using the **Inheritance Picker**.</span></span> <span data-ttu-id="c60a0-179">Добавьте пользовательский элемент управления и измените оператор `Inherits` (`:` в [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]).</span><span class="sxs-lookup"><span data-stu-id="c60a0-179">Add a user control, and change the `Inherits` (`:` in [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) statement.</span></span> <span data-ttu-id="c60a0-180">Дополнительные сведения см. в разделе [как: наследование форм Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="c60a0-180">For more information, see [How to: Inherit Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).</span></span>  
   
-## См. также  
- [Практическое руководство. Наследование форм Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)   
- [Визуальное наследование в Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)   
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a><span data-ttu-id="c60a0-181">См. также</span><span class="sxs-lookup"><span data-stu-id="c60a0-181">See Also</span></span>  
+ [<span data-ttu-id="c60a0-182">Практическое руководство. Наследование форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c60a0-182">How to: Inherit Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [<span data-ttu-id="c60a0-183">Визуальное наследование в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c60a0-183">Windows Forms Visual Inheritance</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [<span data-ttu-id="c60a0-184">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c60a0-184">Windows Forms</span></span>](../../../../docs/framework/winforms/index.md)

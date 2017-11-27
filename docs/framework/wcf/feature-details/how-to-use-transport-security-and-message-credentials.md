@@ -1,98 +1,103 @@
 ---
-title: "Как использовать средства обеспечения безопасности транспорта и учетные данные сообщения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TransportWithMessageCredentials"
+title: "Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 11
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e29ae3a0374f6ee027180835629eacceaa928d2f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как использовать средства обеспечения безопасности транспорта и учетные данные сообщения
-Механизм защиты службы с помощью учетных данных транспорта и учетных данных сообщения использует лучшие возможности режимов безопасности транспорта \(TLS\) и сообщений \(MLS\) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта.В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] задании режима безопасности см. в разделе [Как задать режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-use-transport-security-and-message-credentials"></a><span data-ttu-id="21cd2-102">Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения</span><span class="sxs-lookup"><span data-stu-id="21cd2-102">How to: Use Transport Security and Message Credentials</span></span>
+<span data-ttu-id="21cd2-103">Механизм защиты службы с помощью учетных данных транспорта и учетных данных сообщения использует лучшие возможности режимов безопасности транспорта (TLS) и сообщений (MLS) в [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="21cd2-103">Securing a service with both transport and message credentials uses the best of both Transport and Message security modes in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="21cd2-104">В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта.</span><span class="sxs-lookup"><span data-stu-id="21cd2-104">In sum, transport-layer security provides integrity and confidentiality, while message-layer security provides a variety of credentials that are not possible with strict transport security mechanisms.</span></span> <span data-ttu-id="21cd2-105">В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-105">This topic shows the basic steps for implementing transport with message credentials using the <xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding> bindings.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="21cd2-106">Настройка режима безопасности, в разделе [как: режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).</span><span class="sxs-lookup"><span data-stu-id="21cd2-106"> setting the security mode, see [How to: Set the Security Mode](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).</span></span>  
   
- При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне.В случае HTTP таким механизмом является SSL по HTTP \(HTTPS\); в случае TCP таким механизмом является SSL по TCP или Windows.  
+ <span data-ttu-id="21cd2-107">При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне.</span><span class="sxs-lookup"><span data-stu-id="21cd2-107">When setting the security mode to `TransportWithMessageCredential`, the transport determines the actual mechanism that provides the transport-level security.</span></span> <span data-ttu-id="21cd2-108">В случае HTTP таким механизмом является SSL по HTTP (HTTPS); в случае TCP таким механизмом является SSL по TCP или Windows.</span><span class="sxs-lookup"><span data-stu-id="21cd2-108">For HTTP, the mechanism is Secure Sockets Layer (SSL) over HTTP (HTTPS); for TCP, it is SSL over TCP or Windows.</span></span>  
   
- Если транспортом является HTTP \(используется <xref:System.ServiceModel.WSHttpBinding>\), SSL по HTTP обеспечивает безопасность на транспортном уровне.В этом случае необходимо задать для компьютера, на котором размещена служба, SSL\-сертификат, привязанный к порту, как показано далее в этом разделе.  
+ <span data-ttu-id="21cd2-109">Если транспортом является HTTP (используется <xref:System.ServiceModel.WSHttpBinding>), SSL по HTTP обеспечивает безопасность на транспортном уровне.</span><span class="sxs-lookup"><span data-stu-id="21cd2-109">If the transport is HTTP (using the <xref:System.ServiceModel.WSHttpBinding>), SSL over HTTP provides the transport-level security.</span></span> <span data-ttu-id="21cd2-110">В этом случае необходимо задать для компьютера, на котором размещена служба, SSL-сертификат, привязанный к порту, как показано далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="21cd2-110">In that case, you must configure the computer hosting the service with an SSL certificate bound to a port, as shown later in this topic.</span></span>  
   
- Если транспортом является TCP \(используется <xref:System.ServiceModel.NetTcpBinding>\), по умолчанию безопасность на транспортном уровне обеспечивается механизмом безопасности Windows или SSL по TCP.При использовании SSL по TCP необходимо указать сертификат с помощью метода <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>, как показано далее в этом разделе.  
+ <span data-ttu-id="21cd2-111">Если транспортом является TCP (используется <xref:System.ServiceModel.NetTcpBinding>), по умолчанию безопасность на транспортном уровне обеспечивается механизмом безопасности Windows или SSL по TCP.</span><span class="sxs-lookup"><span data-stu-id="21cd2-111">If the transport is TCP (using the <xref:System.ServiceModel.NetTcpBinding>), by default the transport-level security provided is Windows security, or SSL over TCP.</span></span> <span data-ttu-id="21cd2-112">При использовании SSL по TCP необходимо указать сертификат с помощью метода <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>, как показано далее в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="21cd2-112">When using SSL over TCP, you must specify the certificate using the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> method, as shown later in this topic.</span></span>  
   
-### Использование привязки WSHttpBinding с сертификатом для обеспечения безопасности транспорта \(в коде\)  
+### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a><span data-ttu-id="21cd2-113">Использование привязки WSHttpBinding с сертификатом для обеспечения безопасности транспорта (в коде)</span><span class="sxs-lookup"><span data-stu-id="21cd2-113">To use the WSHttpBinding with a certificate for transport security (in code)</span></span>  
   
-1.  Воспользуйтесь средством HttpCfg.exe для привязки SSL\-сертификата к порту на компьютере.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Практическое руководство. Настройка порта с использованием SSL\-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  <span data-ttu-id="21cd2-114">Воспользуйтесь средством HttpCfg.exe для привязки SSL-сертификата к порту на компьютере.</span><span class="sxs-lookup"><span data-stu-id="21cd2-114">Use the HttpCfg.exe tool to bind an SSL certificate to a port on the machine.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="21cd2-115">[Как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="21cd2-115"> [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
-2.  Создайте экземпляр класса <xref:System.ServiceModel.WSHttpBinding> и задайте для свойства <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode>.  
+2.  <span data-ttu-id="21cd2-116">Создайте экземпляр класса <xref:System.ServiceModel.WSHttpBinding> и задайте для свойства <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-116">Create an instance of the <xref:System.ServiceModel.WSHttpBinding> class and set the <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> property to <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.</span></span>  
   
-3.  Присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> соответствующее значение.\([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Выбор типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).\) В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType>.  
+3.  <span data-ttu-id="21cd2-117">Присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> соответствующее значение.</span><span class="sxs-lookup"><span data-stu-id="21cd2-117">Set the <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> property to an appropriate value.</span></span> <span data-ttu-id="21cd2-118">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [При выборе типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType.Certificate>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-118">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Selecting a Credential Type](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) The following code uses the <xref:System.ServiceModel.MessageCredentialType.Certificate> value.</span></span>  
   
-4.  Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом.Обратите внимание, что адрес должен использовать схему "HTTPS" и содержать фактическое имя компьютера и номер порта, к которому привязан SSL\-сертификат.\(Кроме того, базовый адрес можно задать в конфигурации.\)  
+4.  <span data-ttu-id="21cd2-119">Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом.</span><span class="sxs-lookup"><span data-stu-id="21cd2-119">Create an instance of the <xref:System.Uri> class with an appropriate base address.</span></span> <span data-ttu-id="21cd2-120">Обратите внимание, что адрес должен использовать схему "HTTPS" и содержать фактическое имя компьютера и номер порта, к которому привязан SSL-сертификат.</span><span class="sxs-lookup"><span data-stu-id="21cd2-120">Note that the address must use the "HTTPS" scheme and must contain the actual name of the machine and the port number that the SSL certificate is bound to.</span></span> <span data-ttu-id="21cd2-121">(Кроме того, базовый адрес можно задать в конфигурации.)</span><span class="sxs-lookup"><span data-stu-id="21cd2-121">(Alternatively, you can set the base address in configuration.)</span></span>  
   
-5.  Добавьте конечную точку службы с помощью метода <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+5.  <span data-ttu-id="21cd2-122">Добавьте конечную точку службы с помощью метода <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-122">Add a service endpoint using the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method.</span></span>  
   
-6.  Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost> и вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A>, как показано в следующем примере кода.  
+6.  <span data-ttu-id="21cd2-123">Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost> и вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A>, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="21cd2-123">Create the instance of the <xref:System.ServiceModel.ServiceHost> and call the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method, as shown in the following code.</span></span>  
   
      [!code-csharp[c_SettingSecurityMode#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#7)]
      [!code-vb[c_SettingSecurityMode#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#7)]  
   
-### Использование привязки NetTcpBinding с сертификатом для обеспечения безопасности транспорта \(в коде\)  
+### <a name="to-use-the-nettcpbinding-with-a-certificate-for-transport-security-in-code"></a><span data-ttu-id="21cd2-124">Использование привязки NetTcpBinding с сертификатом для обеспечения безопасности транспорта (в коде)</span><span class="sxs-lookup"><span data-stu-id="21cd2-124">To use the NetTcpBinding with a certificate for transport security (in code)</span></span>  
   
-1.  Создайте экземпляр класса <xref:System.ServiceModel.NetTcpBinding> и задайте для свойства <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode>.  
+1.  <span data-ttu-id="21cd2-125">Создайте экземпляр класса <xref:System.ServiceModel.NetTcpBinding> и задайте для свойства <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-125">Create an instance of the <xref:System.ServiceModel.NetTcpBinding> class and set the <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> property to <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.</span></span>  
   
-2.  Присвойте свойству <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> соответствующее значение.В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType>.  
+2.  <span data-ttu-id="21cd2-126">Присвойте свойству <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> соответствующее значение.</span><span class="sxs-lookup"><span data-stu-id="21cd2-126">Set the <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> to an appropriate value.</span></span> <span data-ttu-id="21cd2-127">В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType.Certificate>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-127">The following code uses the <xref:System.ServiceModel.MessageCredentialType.Certificate> value.</span></span>  
   
-3.  Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом.Обратите внимание, что адрес должен использовать схему "net.tcp".\(Кроме того, базовый адрес можно задать в конфигурации.\)  
+3.  <span data-ttu-id="21cd2-128">Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом.</span><span class="sxs-lookup"><span data-stu-id="21cd2-128">Create an instance of the <xref:System.Uri> class with an appropriate base address.</span></span> <span data-ttu-id="21cd2-129">Обратите внимание, что адрес должен использовать схему "net.tcp".</span><span class="sxs-lookup"><span data-stu-id="21cd2-129">Note that the address must use the "net.tcp" scheme.</span></span> <span data-ttu-id="21cd2-130">(Кроме того, базовый адрес можно задать в конфигурации.)</span><span class="sxs-lookup"><span data-stu-id="21cd2-130">(Alternatively, you can set the base address in configuration.)</span></span>  
   
-4.  Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.  
+4.  <span data-ttu-id="21cd2-131">Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-131">Create the instance of the <xref:System.ServiceModel.ServiceHost> class.</span></span>  
   
-5.  Воспользуйтесь методом <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> класса <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>, чтобы явно задать сертификат X.509 для службы.  
+5.  <span data-ttu-id="21cd2-132">Воспользуйтесь методом <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> класса <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>, чтобы явно задать сертификат X.509 для службы.</span><span class="sxs-lookup"><span data-stu-id="21cd2-132">Use the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> method of the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> class to explicitly set the X.509 certificate for the service.</span></span>  
   
-6.  Добавьте конечную точку службы с помощью метода <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+6.  <span data-ttu-id="21cd2-133">Добавьте конечную точку службы с помощью метода <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-133">Add a service endpoint using the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method.</span></span>  
   
-7.  Вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A>, как показано в следующем примере кода.  
+7.  <span data-ttu-id="21cd2-134">Вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A>, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="21cd2-134">Call the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method, as shown in the following code.</span></span>  
   
      [!code-csharp[c_SettingSecurityMode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#8)]
      [!code-vb[c_SettingSecurityMode#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#8)]  
   
-### Использование привязки NetTcpBinding с Windows для обеспечения безопасности транспорта \(в коде\)  
+### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security-in-code"></a><span data-ttu-id="21cd2-135">Использование привязки NetTcpBinding с Windows для обеспечения безопасности транспорта (в коде)</span><span class="sxs-lookup"><span data-stu-id="21cd2-135">To use the NetTcpBinding with Windows for transport security (in code)</span></span>  
   
-1.  Создайте экземпляр класса <xref:System.ServiceModel.NetTcpBinding> и задайте для свойства <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode>.  
+1.  <span data-ttu-id="21cd2-136">Создайте экземпляр класса <xref:System.ServiceModel.NetTcpBinding> и задайте для свойства <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-136">Create an instance of the <xref:System.ServiceModel.NetTcpBinding> class and set the <xref:System.ServiceModel.NetTcpSecurity.Mode%2A> property to <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.</span></span>  
   
-2.  Настройте безопасность транспорта на использование Windows, задав для свойства <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> значение <xref:System.ServiceModel.TcpClientCredentialType>.\(Обратите внимание, что это значение используется по умолчанию.\)  
+2.  <span data-ttu-id="21cd2-137">Настройте безопасность транспорта на использование Windows, задав для свойства <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> значение <xref:System.ServiceModel.TcpClientCredentialType.Windows>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-137">Set the transport security to use Windows by setting the <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> to <xref:System.ServiceModel.TcpClientCredentialType.Windows>.</span></span> <span data-ttu-id="21cd2-138">(Обратите внимание, что это значение используется по умолчанию.)</span><span class="sxs-lookup"><span data-stu-id="21cd2-138">(Note that this is the default.)</span></span>  
   
-3.  Присвойте свойству <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> соответствующее значение.В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType>.  
+3.  <span data-ttu-id="21cd2-139">Присвойте свойству <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> соответствующее значение.</span><span class="sxs-lookup"><span data-stu-id="21cd2-139">Set the <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A> to an appropriate value.</span></span> <span data-ttu-id="21cd2-140">В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType.Certificate>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-140">The following code uses the <xref:System.ServiceModel.MessageCredentialType.Certificate> value.</span></span>  
   
-4.  Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом.Обратите внимание, что адрес должен использовать схему "net.tcp".\(Кроме того, базовый адрес можно задать в конфигурации.\)  
+4.  <span data-ttu-id="21cd2-141">Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом.</span><span class="sxs-lookup"><span data-stu-id="21cd2-141">Create an instance of the <xref:System.Uri> class with an appropriate base address.</span></span> <span data-ttu-id="21cd2-142">Обратите внимание, что адрес должен использовать схему "net.tcp".</span><span class="sxs-lookup"><span data-stu-id="21cd2-142">Note that the address must use the "net.tcp" scheme.</span></span> <span data-ttu-id="21cd2-143">(Кроме того, базовый адрес можно задать в конфигурации.)</span><span class="sxs-lookup"><span data-stu-id="21cd2-143">(Alternatively, you can set the base address in configuration.)</span></span>  
   
-5.  Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.  
+5.  <span data-ttu-id="21cd2-144">Создайте экземпляр класса <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-144">Create the instance of the <xref:System.ServiceModel.ServiceHost> class.</span></span>  
   
-6.  Воспользуйтесь методом <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> класса <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>, чтобы явно задать сертификат X.509 для службы.  
+6.  <span data-ttu-id="21cd2-145">Воспользуйтесь методом <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> класса <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>, чтобы явно задать сертификат X.509 для службы.</span><span class="sxs-lookup"><span data-stu-id="21cd2-145">Use the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> method of the <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> class to explicitly set the X.509 certificate for the service.</span></span>  
   
-7.  Добавьте конечную точку службы с помощью метода <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+7.  <span data-ttu-id="21cd2-146">Добавьте конечную точку службы с помощью метода <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.</span><span class="sxs-lookup"><span data-stu-id="21cd2-146">Add a service endpoint using the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method.</span></span>  
   
-8.  Вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A>, как показано в следующем примере кода.  
+8.  <span data-ttu-id="21cd2-147">Вызовите метод <xref:System.ServiceModel.ICommunicationObject.Open%2A>, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="21cd2-147">Call the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method, as shown in the following code.</span></span>  
   
      [!code-csharp[c_SettingSecurityMode#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#9)]
      [!code-vb[c_SettingSecurityMode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#9)]  
   
-## Использование конфигурации  
+## <a name="using-configuration"></a><span data-ttu-id="21cd2-148">Использование конфигурации</span><span class="sxs-lookup"><span data-stu-id="21cd2-148">Using Configuration</span></span>  
   
-#### Использование привязки WSHttpBinding  
+#### <a name="to-use-the-wshttpbinding"></a><span data-ttu-id="21cd2-149">Использование привязки WSHttpBinding</span><span class="sxs-lookup"><span data-stu-id="21cd2-149">To use the WSHttpBinding</span></span>  
   
-1.  Задайте для компьютера SSL\-сертификат, привязанный к порту.\([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Практическое руководство. Настройка порта с использованием SSL\-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)\).В данной конфигурации задавать значение элемента \<`transport`\> не требуется.  
+1.  <span data-ttu-id="21cd2-150">Задайте для компьютера SSL-сертификат, привязанный к порту.</span><span class="sxs-lookup"><span data-stu-id="21cd2-150">Configure the computer with an SSL certificate bound to a port.</span></span> <span data-ttu-id="21cd2-151">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Как: Настройка порта SSL-сертификат,](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)).</span><span class="sxs-lookup"><span data-stu-id="21cd2-151">([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)).</span></span> <span data-ttu-id="21cd2-152">Не нужно задавать <`transport`> значение элемента в этой конфигурации.</span><span class="sxs-lookup"><span data-stu-id="21cd2-152">You do not need to set a <`transport`> element value with this configuration.</span></span>  
   
-2.  Задайте тип учетных данных клиента для MLS.В следующем примере для атрибута `clientCredentialType` элемента \<`message`\> задано значение `UserName`.  
+2.  <span data-ttu-id="21cd2-153">Задайте тип учетных данных клиента для MLS.</span><span class="sxs-lookup"><span data-stu-id="21cd2-153">Specify the client credential type for the message-level security.</span></span> <span data-ttu-id="21cd2-154">В следующем примере задается `clientCredentialType` атрибут <`message`> элемент `UserName`.</span><span class="sxs-lookup"><span data-stu-id="21cd2-154">The following example sets the `clientCredentialType` attribute of the <`message`> element to `UserName`.</span></span>  
   
-    ```  
+    ```xml  
     <wsHttpBinding>  
     <binding name="WsHttpBinding_ICalculator">  
             <security mode="TransportWithMessageCredential" >  
@@ -102,11 +107,11 @@ caps.handback.revision: 11
     </wsHttpBinding>  
     ```  
   
-#### Использование привязки NetTcpBinding с сертификатом для обеспечения безопасности транспорта  
+#### <a name="to-use-the-nettcpbinding-with-a-certificate-for-transport-security"></a><span data-ttu-id="21cd2-155">Использование привязки NetTcpBinding с сертификатом для обеспечения безопасности транспорта</span><span class="sxs-lookup"><span data-stu-id="21cd2-155">To use the NetTcpBinding with a certificate for transport security</span></span>  
   
-1.  В случае SSL по TCP необходимо явно задать сертификат в элементе `<behaviors>`.В следующем примере сертификат задается своим издателем в хранилище по умолчанию \(в хранилище локального компьютера и личном хранилище\).  
+1.  <span data-ttu-id="21cd2-156">В случае SSL по TCP необходимо явно задать сертификат в элементе `<behaviors>`.</span><span class="sxs-lookup"><span data-stu-id="21cd2-156">For SSL over TCP, you must explicitly specify the certificate in the `<behaviors>` element.</span></span> <span data-ttu-id="21cd2-157">В следующем примере сертификат задается своим издателем в хранилище по умолчанию (в хранилище локального компьютера и личном хранилище).</span><span class="sxs-lookup"><span data-stu-id="21cd2-157">The following example specifies a certificate by its issuer in the default store location (local machine and personal stores).</span></span>  
   
-    ```  
+    ```xml  
     <behaviors>  
      <serviceBehaviors>  
        <behavior name="mySvcBehavior">  
@@ -119,15 +124,15 @@ caps.handback.revision: 11
     </behaviors>  
     ```  
   
-2.  Добавьте элемент [\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) в раздел привязок.  
+2.  <span data-ttu-id="21cd2-158">Добавить [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) для раздела привязок</span><span class="sxs-lookup"><span data-stu-id="21cd2-158">Add a [\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) to the bindings section</span></span>  
   
-3.  Добавьте элемент привязки и присвойте атрибуту `name` соответствующее значение.  
+3.  <span data-ttu-id="21cd2-159">Добавьте элемент привязки и присвойте атрибуту `name` соответствующее значение.</span><span class="sxs-lookup"><span data-stu-id="21cd2-159">Add a binding element, and set the `name` attribute to an appropriate value.</span></span>  
   
-4.  Добавьте элемент \<`security`\> и присвойте атрибуту `mode` значение `TransportWithMessageCredential`.  
+4.  <span data-ttu-id="21cd2-160">Добавить <`security`> и присвойте `mode` атрибут `TransportWithMessageCredential`.</span><span class="sxs-lookup"><span data-stu-id="21cd2-160">Add a <`security`> element, and set the `mode` attribute to `TransportWithMessageCredential`.</span></span>  
   
-5.  Добавьте элемент \<`message>` и присвойте атрибуту `clientCredentialType` соответствующее значение.  
+5.  <span data-ttu-id="21cd2-161">Добавить <`message>` элемент, а также установите `clientCredentialType` соответствующее значение атрибута.</span><span class="sxs-lookup"><span data-stu-id="21cd2-161">Add a <`message>` element, and set the `clientCredentialType` attribute to an appropriate value.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
     <netTcpBinding>  
       <binding name="myTcpBinding">  
@@ -139,19 +144,19 @@ caps.handback.revision: 11
     </bindings>  
     ```  
   
-#### Использование привязки NetTcpBinding с Windows для обеспечения безопасности транспорта  
+#### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a><span data-ttu-id="21cd2-162">Использование привязки NetTcpBinding с Windows для обеспечения безопасности транспорта</span><span class="sxs-lookup"><span data-stu-id="21cd2-162">To use the NetTcpBinding with Windows for transport security</span></span>  
   
-1.  Добавьте элемент [\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) в раздел привязок.  
+1.  <span data-ttu-id="21cd2-163">Добавить [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) для раздела привязок</span><span class="sxs-lookup"><span data-stu-id="21cd2-163">Add a [\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) to the bindings section,</span></span>  
   
-2.  Добавьте элемент \<`binding`\> и присвойте атрибуту `name` соответствующее значение.  
+2.  <span data-ttu-id="21cd2-164">Добавить <`binding`> и присвойте `name` соответствующее значение атрибута.</span><span class="sxs-lookup"><span data-stu-id="21cd2-164">Add a <`binding`> element and set the `name` attribute to an appropriate value.</span></span>  
   
-3.  Добавьте элемент \<`security`\> и присвойте атрибуту `mode` значение `TransportWithMessageCredential`.  
+3.  <span data-ttu-id="21cd2-165">Добавить <`security`> и присвойте `mode` атрибут `TransportWithMessageCredential`.</span><span class="sxs-lookup"><span data-stu-id="21cd2-165">Add a <`security`> element, and set the `mode` attribute to `TransportWithMessageCredential`.</span></span>  
   
-4.  Добавьте элемент \<`transport`\> и присвойте атрибуту `clientCredentialType` значение `Windows`.  
+4.  <span data-ttu-id="21cd2-166">Добавить <`transport`> и присвойте `clientCredentialType` атрибут `Windows`.</span><span class="sxs-lookup"><span data-stu-id="21cd2-166">Add a <`transport`> element and set the `clientCredentialType` attribute to `Windows`.</span></span>  
   
-5.  Добавьте элемент \<`message`\> и присвойте атрибуту `clientCredentialType` соответствующее значение.В следующем коде задается значение для сертификата.  
+5.  <span data-ttu-id="21cd2-167">Добавить <`message`> и присвойте `clientCredentialType` соответствующее значение атрибута.</span><span class="sxs-lookup"><span data-stu-id="21cd2-167">Add a <`message`> element and set the `clientCredentialType` attribute to an appropriate value.</span></span> <span data-ttu-id="21cd2-168">В следующем коде задается значение для сертификата.</span><span class="sxs-lookup"><span data-stu-id="21cd2-168">The following code sets the value to a certificate.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
     <netTcpBinding>  
       <binding name="myTcpBinding">  
@@ -162,10 +167,9 @@ caps.handback.revision: 11
       </binding>  
     </netTcpBinding>  
     </bindings>  
-  
     ```  
   
-## См. также  
- [Как задать режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)   
- [Защита служб](../../../../docs/framework/wcf/securing-services.md)   
- [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a><span data-ttu-id="21cd2-169">См. также</span><span class="sxs-lookup"><span data-stu-id="21cd2-169">See Also</span></span>  
+ [<span data-ttu-id="21cd2-170">Практическое руководство. Задание режима безопасности</span><span class="sxs-lookup"><span data-stu-id="21cd2-170">How to: Set the Security Mode</span></span>](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
+ [<span data-ttu-id="21cd2-171">Защита служб</span><span class="sxs-lookup"><span data-stu-id="21cd2-171">Securing Services</span></span>](../../../../docs/framework/wcf/securing-services.md)  
+ [<span data-ttu-id="21cd2-172">Защита служб и клиентов</span><span class="sxs-lookup"><span data-stu-id="21cd2-172">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

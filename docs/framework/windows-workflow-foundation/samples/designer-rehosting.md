@@ -1,34 +1,38 @@
 ---
-title: "Повторное размещение конструктора | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Повторное размещение конструктора"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 888282d10be9840817274e0fed36b3cb1cf6da32
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Повторное размещение конструктора
-Повторное размещение конструктора представляет собой обычный сценарий, предусматривающий размещение поля визуальной разработки рабочего процесса в пользовательском приложении.Наиболее привычным приложением размещения является Visual Studio, однако в целом ряде сценариев может быть полезным отображение конструктора рабочих процессов в приложении.  
+# <a name="designer-rehosting"></a><span data-ttu-id="a369e-102">Повторное размещение конструктора</span><span class="sxs-lookup"><span data-stu-id="a369e-102">Designer ReHosting</span></span>
+<span data-ttu-id="a369e-103">Повторное размещение конструктора представляет собой обычный сценарий, предусматривающий размещение поля визуальной разработки рабочего процесса в пользовательском приложении.</span><span class="sxs-lookup"><span data-stu-id="a369e-103">Designer rehosting is a common scenario that refers to hosting the workflow design canvas inside of a custom application.</span></span> <span data-ttu-id="a369e-104">Наиболее привычным приложением размещения является Visual Studio, однако в целом ряде сценариев может быть полезным отображение конструктора рабочих процессов в приложении.</span><span class="sxs-lookup"><span data-stu-id="a369e-104">The hosting application most people are familiar with is Visual Studio, however there are a number of scenarios where showing the workflow designer in an application may be useful:</span></span>  
   
--   Наблюдение за приложениями \(позволяющее конечному пользователю визуально представить процесс, а также данные среды выполнения о процессе, такие как состояние, активное в настоящее время, агрегированные данные времени выполнения или другие сведения об экземпляре рабочего процесса\).  
+-   <span data-ttu-id="a369e-105">Наблюдение за приложениями (позволяющее конечному пользователю визуально представить процесс, а также данные среды выполнения о процессе, такие как состояние, активное в настоящее время, агрегированные данные времени выполнения или другие сведения об экземпляре рабочего процесса).</span><span class="sxs-lookup"><span data-stu-id="a369e-105">Monitoring applications (allowing an end user to visualize the process, as well as runtime data about the process such as the currently active state, aggregate execution time data, or other information about an instance of the workflow).</span></span>  
   
--   Приложения, которые позволяют пользователю настраивать процесс с ограниченным набором действий.  
+-   <span data-ttu-id="a369e-106">Приложения, которые позволяют пользователю настраивать процесс с ограниченным набором действий.</span><span class="sxs-lookup"><span data-stu-id="a369e-106">Applications that allow a user to customize the process with a limited set of activities.</span></span>  
   
- Для поддержки этих типов приложений в составе платформы .NET Framework поставляется конструктор рабочих процессов, который может быть размещен в приложении WPF или в приложении WinForms с соответствующим кодом размещения WPF.В этом образце показаны следующие действия.  
+ <span data-ttu-id="a369e-107">Для поддержки этих типов приложений в составе платформы .NET Framework поставляется конструктор рабочих процессов, который может быть размещен в приложении WPF или в приложении WinForms с соответствующим кодом размещения WPF.</span><span class="sxs-lookup"><span data-stu-id="a369e-107">To support these types of applications, the workflow designer ships inside the .NET Framework, and can be hosted inside a WPF application, or in a WinForms application with the appropriate WPF hosting code.</span></span> <span data-ttu-id="a369e-108">В этом образце показаны следующие действия.</span><span class="sxs-lookup"><span data-stu-id="a369e-108">This sample demonstrates:</span></span>  
   
--   Повторное размещение конструктора рабочих процессов.  
+-   <span data-ttu-id="a369e-109">Повторное размещение конструктора рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="a369e-109">Rehosting the WF designer.</span></span>  
   
--   Кроме того, использование повторно размещенной области элементов и таблицы свойств.  
+-   <span data-ttu-id="a369e-110">Кроме того, использование повторно размещенной области элементов и таблицы свойств.</span><span class="sxs-lookup"><span data-stu-id="a369e-110">Using the rehosted toolbox and property grid as well.</span></span>  
   
-## Повторное размещение конструктора  
- Этот образец показывает, как создать макет WPF, содержащий конструктор, который можно видеть в следующем макете таблицы \(код панели инструментов опущен в целях экономии места\).Обратите внимание на то, как именуются границы, которые содержат конструктор и таблицы свойств.  
+## <a name="rehosting-the-designer"></a><span data-ttu-id="a369e-111">Повторное размещение конструктора</span><span class="sxs-lookup"><span data-stu-id="a369e-111">Rehosting the designer</span></span>  
+ <span data-ttu-id="a369e-112">Этот образец показывает, как создать макет WPF, содержащий конструктор, который можно видеть в следующем макете таблицы (код панели инструментов опущен в целях экономии места).</span><span class="sxs-lookup"><span data-stu-id="a369e-112">This sample shows how to create the WPF layout to contain the designer, seen in the following grid layout (Toolbox code omitted for space concerns).</span></span> <span data-ttu-id="a369e-113">Обратите внимание на то, как именуются границы, которые содержат конструктор и таблицы свойств.</span><span class="sxs-lookup"><span data-stu-id="a369e-113">Note the naming of the borders which contain the designer and property grid.</span></span>  
   
 ```xaml  
 <Grid>  
@@ -43,10 +47,9 @@ caps.handback.revision: 9
     <Border Grid.Column="1" Name="DesignerBorder"/>  
     <Border Grid.Column="2" Name="PropertyBorder"/>  
 </Grid>  
-  
 ```  
   
- Затем в образце создается конструктор и связываются его первичные представления <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> с соответствующим контейнером в пользовательском интерфейсе.В следующем примере есть несколько дополнительных строк кода, которые заслуживают более подробного объяснения.Вызов <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> необходим для связи конструкторов действий по умолчанию для действий, поставляемых с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].<xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> вызывается для передачи элемента WF, подлежащего редактированию.Наконец, в область пользовательского интерфейса помещаются <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> \(первичное полотно\) и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> \(таблица свойств\).  
+ <span data-ttu-id="a369e-114">Затем в образце создается конструктор и связываются его первичные представления <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> с соответствующим контейнером в пользовательском интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="a369e-114">Next the sample creates the designer, and associates its primary <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> with the appropriate container in the user interface.</span></span> <span data-ttu-id="a369e-115">В следующем примере есть несколько дополнительных строк кода, которые заслуживают более подробного объяснения.</span><span class="sxs-lookup"><span data-stu-id="a369e-115">There are a few additional lines of code in the following example that merit some explanation.</span></span> <span data-ttu-id="a369e-116">Вызов <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> необходим для связи конструкторов действий по умолчанию для действий, поставляемых с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a369e-116">The <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> call is required to associate the default activity designers for the activities shipped with [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="a369e-117"><xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> вызывается для передачи элемента WF, подлежащего редактированию.</span><span class="sxs-lookup"><span data-stu-id="a369e-117"><xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> is called to pass in the WF item to be edited.</span></span> <span data-ttu-id="a369e-118">Наконец, в область пользовательского интерфейса помещаются <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (первичное полотно) и <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (таблица свойств).</span><span class="sxs-lookup"><span data-stu-id="a369e-118">Finally, the <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primary canvas) and <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (property grid) are placed onto the user interface surface.</span></span>  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -61,11 +64,10 @@ protected override void OnInitialized(EventArgs e)
    DesignerBorder.Child = wd.View;  
    PropertyBorder.Child = wd.PropertyInspectorView;  
 }  
-  
 ```  
   
-## Использование повторно размещенной области инструментов  
- В этом образце используется повторно размещенный элемент управления области инструментов декларативно в XAML.Обратите внимание на то, что в коде каждый может передать некоторый тип в конструктор <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>.  
+## <a name="using-the-rehosted-toolbox"></a><span data-ttu-id="a369e-119">Использование повторно размещенной области инструментов</span><span class="sxs-lookup"><span data-stu-id="a369e-119">Using the rehosted toolbox</span></span>  
+ <span data-ttu-id="a369e-120">В этом образце используется повторно размещенный элемент управления области инструментов декларативно в XAML.</span><span class="sxs-lookup"><span data-stu-id="a369e-120">This sample uses the rehosted toolbox control declaratively in XAML.</span></span> <span data-ttu-id="a369e-121">Обратите внимание на то, что в коде каждый может передать некоторый тип в конструктор <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>.</span><span class="sxs-lookup"><span data-stu-id="a369e-121">Note that in code, one can pass a type to the <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper> constructor.</span></span>  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -117,24 +119,23 @@ protected override void OnInitialized(EventArgs e)
         <Border Grid.Column="2" Name="PropertyBorder"/>  
     </Grid>  
 </Window>  
-  
 ```  
   
-#### Использование образца  
+#### <a name="using-the-sample"></a><span data-ttu-id="a369e-122">Использование образца</span><span class="sxs-lookup"><span data-stu-id="a369e-122">Using the sample</span></span>  
   
-1.  Откройте решение DesignerRehosting.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="a369e-123">Откройте решение DesignerRehosting.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a369e-123">Open the DesignerRehosting.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.  
+2.  <span data-ttu-id="a369e-124">Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.</span><span class="sxs-lookup"><span data-stu-id="a369e-124">Press F5 to compile and run the application.</span></span>  
   
-3.  Приложение WPF начинается с повторно размещенного конструктора.  
+3.  <span data-ttu-id="a369e-125">Приложение WPF начинается с повторно размещенного конструктора.</span><span class="sxs-lookup"><span data-stu-id="a369e-125">A WPF application starts with a rehosted designer.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="a369e-126">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="a369e-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a369e-127">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="a369e-127">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="a369e-128">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="a369e-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a369e-129">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="a369e-129">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="a369e-130">См. также</span><span class="sxs-lookup"><span data-stu-id="a369e-130">See Also</span></span>

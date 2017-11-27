@@ -1,53 +1,55 @@
 ---
-title: "Практическое руководство. Извлечение отпечатка сертификата | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "сертификаты [WCF], извлечение отпечатка"
+title: "Практическое руководство. Извлечение отпечатка сертификата"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4719be3d4e98407062bd246df4f14b9cbf452c74
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Извлечение отпечатка сертификата
-При написании приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], использующего для проверки подлинности сертификат X.509, часто возникает необходимость задать утверждения из сертификата Например, при использовании перечисления <xref:System.Security.Cryptography.X509Certificates.X509FindType> в методе <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> необходимо указать утверждение отпечатка. Чтобы найти значение утверждения, необходимо выполнить два действия. Сначала необходимо открыть оснастку сертификатов консоли управления \(MMC\). \(См. раздел [Как просматривать сертификаты с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)\). После этого, как описано в этом разделе, необходимо найти соответствующий сертификат и скопировать его отпечаток \(или другие значения утверждений\).  
+# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a><span data-ttu-id="0fa50-102">Практическое руководство. Извлечение отпечатка сертификата</span><span class="sxs-lookup"><span data-stu-id="0fa50-102">How to: Retrieve the Thumbprint of a Certificate</span></span>
+<span data-ttu-id="0fa50-103">При написании приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] , использующего для проверки подлинности сертификат X.509, часто возникает необходимость задать утверждения из сертификата</span><span class="sxs-lookup"><span data-stu-id="0fa50-103">When writing a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application that uses an X.509 certificate for authentication, it is often necessary to specify claims found in the certificate.</span></span> <span data-ttu-id="0fa50-104">Например, при использовании перечисления <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> в методе <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> необходимо указать утверждение отпечатка.</span><span class="sxs-lookup"><span data-stu-id="0fa50-104">For example, you must supply a thumbprint claim when using the <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> enumeration in the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method.</span></span> <span data-ttu-id="0fa50-105">Чтобы найти значение утверждения, необходимо выполнить два действия.</span><span class="sxs-lookup"><span data-stu-id="0fa50-105">Finding the claim value requires two steps.</span></span> <span data-ttu-id="0fa50-106">Сначала необходимо открыть оснастку сертификатов консоли управления (MMC).</span><span class="sxs-lookup"><span data-stu-id="0fa50-106">First, open the Microsoft Management Console (MMC) snap-in for certificates.</span></span> <span data-ttu-id="0fa50-107">(См. раздел [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)). После этого, как описано в этом разделе, необходимо найти соответствующий сертификат и скопировать его отпечаток (или другие значения утверждений).</span><span class="sxs-lookup"><span data-stu-id="0fa50-107">(See [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Second, as described here, find an appropriate certificate and copy its thumbprint (or other claim values).</span></span>  
   
- Если сертификат используется для проверки подлинности службы, важно запомнить значение столбца **Кому выдан** \(первый столбец консоли\). При использовании для защиты транспорта протокола SSL одним из первых шагов является сравнение базового адреса универсального кода ресурса \(URI\) службы со значением поля **Кому выдан**. Значения должны совпадать, в противном случае процесс проверки подлинности будет прерван.  
+ <span data-ttu-id="0fa50-108">Если сертификат используется для проверки подлинности службы, важно запомнить значение столбца **Кому выдан** (первый столбец консоли).</span><span class="sxs-lookup"><span data-stu-id="0fa50-108">If you are using a certificate for service authentication, it is important to note the value of the **Issued To** column (the first column in the console).</span></span> <span data-ttu-id="0fa50-109">При использовании для защиты транспорта протокола SSL одним из первых шагов является сравнение базового адреса универсального кода ресурса (URI) службы со значением поля **Кому выдан** .</span><span class="sxs-lookup"><span data-stu-id="0fa50-109">When using Secure Sockets Layer (SSL) as a transport security, one of the first checks done is to compare the base address Uniform Resource Identifier (URI) of a service to the **Issued To** value.</span></span> <span data-ttu-id="0fa50-110">Значения должны совпадать, в противном случае процесс проверки подлинности будет прерван.</span><span class="sxs-lookup"><span data-stu-id="0fa50-110">The values must match or the authentication process is halted.</span></span>  
   
- Кроме того, можно с помощью средства Makecert.exe из пакета SDK для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] создать временные сертификаты для использования только на этапе разработки. Однако по умолчанию такой сертификат не выдается центром сертификации и не может использоваться в рабочей среде.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Практическое руководство. Создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+ <span data-ttu-id="0fa50-111">Кроме того, можно с помощью средства Makecert.exe из пакета SDK для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] создать временные сертификаты для использования только на этапе разработки.</span><span class="sxs-lookup"><span data-stu-id="0fa50-111">You can also use the Makecert.exe tool from the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK to create temporary certificates for use only during development.</span></span> <span data-ttu-id="0fa50-112">Однако по умолчанию такой сертификат не выдается центром сертификации и не может использоваться в рабочей среде.</span><span class="sxs-lookup"><span data-stu-id="0fa50-112">By default, however, such a certificate is not issued by a certification authority, and is unusable for production purposes.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="0fa50-113">[Как: создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).</span><span class="sxs-lookup"><span data-stu-id="0fa50-113"> [How to: Create Temporary Certificates for Use During Development](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).</span></span>  
   
-### Извлечение отпечатка сертификата  
+### <a name="to-retrieve-a-certificates-thumbprint"></a><span data-ttu-id="0fa50-114">Извлечение отпечатка сертификата</span><span class="sxs-lookup"><span data-stu-id="0fa50-114">To retrieve a certificate's thumbprint</span></span>  
   
-1.  Откройте оснастку "Сертификаты" консоли управления \(MMC\). \(См. раздел [Как просматривать сертификаты с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)\).  
+1.  <span data-ttu-id="0fa50-115">Откройте оснастку "Сертификаты" консоли управления (MMC).</span><span class="sxs-lookup"><span data-stu-id="0fa50-115">Open the Microsoft Management Console (MMC) snap-in for certificates.</span></span> <span data-ttu-id="0fa50-116">(См. раздел [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)).</span><span class="sxs-lookup"><span data-stu-id="0fa50-116">(See [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).)</span></span>  
   
-2.  В левой области окна **Корень консоли** щелкните узел **Сертификаты \(локальный компьютер\)**.  
+2.  <span data-ttu-id="0fa50-117">В левой области окна **Корень консоли** щелкните узел **Сертификаты (локальный компьютер)**.</span><span class="sxs-lookup"><span data-stu-id="0fa50-117">In the **Console Root** window's left pane, click **Certificates (Local Computer)**.</span></span>  
   
-3.  Щелкните папку **Личные**, чтобы развернуть ее.  
+3.  <span data-ttu-id="0fa50-118">Щелкните папку **Личные** , чтобы развернуть ее.</span><span class="sxs-lookup"><span data-stu-id="0fa50-118">Click the **Personal** folder to expand it.</span></span>  
   
-4.  Щелкните папку **Сертификаты**, чтобы развернуть ее.  
+4.  <span data-ttu-id="0fa50-119">Щелкните папку **Сертификаты** , чтобы развернуть ее.</span><span class="sxs-lookup"><span data-stu-id="0fa50-119">Click the **Certificates** folder to expand it.</span></span>  
   
-5.  В списке сертификатов найдите заголовок **Назначения**. Найдите сертификат, назначением которого является **Проверка подлинности клиента**.  
+5.  <span data-ttu-id="0fa50-120">В списке сертификатов найдите заголовок **Назначения** .</span><span class="sxs-lookup"><span data-stu-id="0fa50-120">In the list of certificates, note the **Intended Purposes** heading.</span></span> <span data-ttu-id="0fa50-121">Найдите сертификат, назначением которого является **Проверка подлинности клиента** .</span><span class="sxs-lookup"><span data-stu-id="0fa50-121">Find a certificate that lists **Client Authentication** as an intended purpose.</span></span>  
   
-6.  Дважды щелкните сертификат.  
+6.  <span data-ttu-id="0fa50-122">Дважды щелкните сертификат.</span><span class="sxs-lookup"><span data-stu-id="0fa50-122">Double-click the certificate.</span></span>  
   
-7.  В диалоговом окне **Сертификат** перейдите на вкладку **Состав**.  
+7.  <span data-ttu-id="0fa50-123">В диалоговом окне **Сертификат** перейдите на вкладку **Состав** .</span><span class="sxs-lookup"><span data-stu-id="0fa50-123">In the **Certificate** dialog box, click the **Details** tab.</span></span>  
   
-8.  Найдите в списке поле **Отпечаток** и щелкните его.  
+8.  <span data-ttu-id="0fa50-124">Найдите в списке поле **Отпечаток**и щелкните его.</span><span class="sxs-lookup"><span data-stu-id="0fa50-124">Scroll through the list of fields and click **Thumbprint**.</span></span>  
   
-9. Скопируйте шестнадцатеричные значения из текстового поля. Если этот отпечаток используется в коде `X509FindType`, удалите пробелы между шестнадцатеричными значениями. Например, отпечаток "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" необходимо задавать в коде в виде "a909502dd82ae41433e6f83886b00d4277a32a7b".  
+9. <span data-ttu-id="0fa50-125">Скопируйте шестнадцатеричные значения из текстового поля.</span><span class="sxs-lookup"><span data-stu-id="0fa50-125">Copy the hexadecimal characters from the box.</span></span> <span data-ttu-id="0fa50-126">Если этот отпечаток используется в коде `X509FindType`, удалите пробелы между шестнадцатеричными значениями.</span><span class="sxs-lookup"><span data-stu-id="0fa50-126">If this thumbprint is used in code for the `X509FindType`, remove the spaces between the hexadecimal numbers.</span></span> <span data-ttu-id="0fa50-127">Например, отпечаток "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" необходимо задавать в коде в виде "a909502dd82ae41433e6f83886b00d4277a32a7b".</span><span class="sxs-lookup"><span data-stu-id="0fa50-127">For example, the thumbprint "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" should be specified as "a909502dd82ae41433e6f83886b00d4277a32a7b" in code.</span></span>  
   
-## См. также  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>   
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>   
- [Практическое руководство. Настройка порта с использованием SSL\-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)   
- [Как просматривать сертификаты с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)   
- [Практическое руководство. Создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+## <a name="see-also"></a><span data-ttu-id="0fa50-128">См. также</span><span class="sxs-lookup"><span data-stu-id="0fa50-128">See Also</span></span>  
+ <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>  
+ <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>  
+ [<span data-ttu-id="0fa50-129">Как: Настройка порта с SSL-сертификата</span><span class="sxs-lookup"><span data-stu-id="0fa50-129">How to: Configure a Port with an SSL Certificate</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [<span data-ttu-id="0fa50-130">Как: Просмотр сертификатов с помощью оснастки MMC</span><span class="sxs-lookup"><span data-stu-id="0fa50-130">How to: View Certificates with the MMC Snap-in</span></span>](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
+ [<span data-ttu-id="0fa50-131">Как: создание временных сертификатов для использования во время разработки</span><span class="sxs-lookup"><span data-stu-id="0fa50-131">How to: Create Temporary Certificates for Use During Development</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

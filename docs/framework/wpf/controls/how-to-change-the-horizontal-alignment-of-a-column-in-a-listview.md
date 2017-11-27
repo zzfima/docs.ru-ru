@@ -1,41 +1,43 @@
 ---
-title: "Практическое руководство. Изменение порядка выравнивания столбцов в элементе управления ListView по горизонтали | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView - элементы управления, горизонтальное выравнивание"
+title: "Практическое руководство. Изменение порядка выравнивания столбцов в элементе управления ListView по горизонтали"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ed163de9a5b01a3ddab8ef42d21f38d35f48519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Изменение порядка выравнивания столбцов в элементе управления ListView по горизонтали
-По умолчанию содержимое столбцов объекта <xref:System.Windows.Controls.ListViewItem> выравнивается по левому краю.  Чтобы изменить порядок выравнивания столбцов, определите шаблон <xref:System.Windows.DataTemplate> и установите значение свойства <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> элемента в шаблоне <xref:System.Windows.DataTemplate>.  В этом разделе описывается используемый по умолчанию порядок выравнивания содержимого объекта <xref:System.Windows.Controls.ListView>, а также порядок изменения выравнивания в отдельном столбце объекта <xref:System.Windows.Controls.ListView>.  
+# <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a><span data-ttu-id="10cbb-102">Практическое руководство. Изменение порядка выравнивания столбцов в элементе управления ListView по горизонтали</span><span class="sxs-lookup"><span data-stu-id="10cbb-102">How to: Change the Horizontal Alignment of a Column in a ListView</span></span>
+<span data-ttu-id="10cbb-103">По умолчанию содержимое каждого столбца в <xref:System.Windows.Controls.ListViewItem> по левому краю.</span><span class="sxs-lookup"><span data-stu-id="10cbb-103">By default, the content of each column in a <xref:System.Windows.Controls.ListViewItem> is left-aligned.</span></span> <span data-ttu-id="10cbb-104">Выравнивание каждого столбца можно изменить, указав <xref:System.Windows.DataTemplate> и параметр <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойства элемента в пределах <xref:System.Windows.DataTemplate>.</span><span class="sxs-lookup"><span data-stu-id="10cbb-104">You can change the alignment of each column by providing a <xref:System.Windows.DataTemplate> and setting the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property on the element within the <xref:System.Windows.DataTemplate>.</span></span> <span data-ttu-id="10cbb-105">В этом разделе показано, как <xref:System.Windows.Controls.ListView> выравнивания содержимого по умолчанию и как изменить выравнивание один столбец в <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="10cbb-105">This topic shows how a <xref:System.Windows.Controls.ListView> aligns its content by default and how to change the alignment of one column in a <xref:System.Windows.Controls.ListView>.</span></span>  
   
-## Пример  
- В следующем примере содержимое столбцов `Title` и `ISBN` выравнивается по левому краю.  
+## <a name="example"></a><span data-ttu-id="10cbb-106">Пример</span><span class="sxs-lookup"><span data-stu-id="10cbb-106">Example</span></span>  
+ <span data-ttu-id="10cbb-107">В следующем примере данные в `Title` и `ISBN` столбцы по левому краю.</span><span class="sxs-lookup"><span data-stu-id="10cbb-107">In the following example, the data in the `Title` and `ISBN` columns is left-aligned.</span></span>  
   
- [!code-xml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
-[!code-xml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
+ [!code-xaml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
+[!code-xaml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- Чтобы изменить порядок выравнивания в столбце `ISBN`, установите для свойства <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> каждого объекта <xref:System.Windows.Controls.ListViewItem> значение <xref:System.Windows.HorizontalAlignment>. Это позволяет располагать элементы объекта <xref:System.Windows.Controls.ListViewItem> по всей ширине каждого столбца.  Поскольку объект <xref:System.Windows.Controls.ListView> привязан к источнику данных, необходимо создать стиль, в котором устанавливается свойство <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>.  Затем для отображения содержимого необходимо использовать шаблон <xref:System.Windows.DataTemplate> вместо свойства <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>.  Чтобы отобразить значение `ISBN` каждого шаблона, достаточно включить в шаблон <xref:System.Windows.DataTemplate> объект <xref:System.Windows.Controls.TextBlock>, свойству <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> которого присвоено значение <xref:System.Windows.HorizontalAlignment>.  
+ <span data-ttu-id="10cbb-108">Чтобы изменить выравнивание `ISBN` столбец, необходимо указать, что <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> каждого экземпляра <xref:System.Windows.Controls.ListViewItem> — <xref:System.Windows.HorizontalAlignment.Stretch>, после чего элементов в каждом <xref:System.Windows.Controls.ListViewItem> может охватывать или размещаться на всю ширину каждого столбца.</span><span class="sxs-lookup"><span data-stu-id="10cbb-108">To change the alignment of the `ISBN` column, you need to specify that the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> property of each <xref:System.Windows.Controls.ListViewItem> is <xref:System.Windows.HorizontalAlignment.Stretch>, so that the elements in each <xref:System.Windows.Controls.ListViewItem> can span or be positioned along the entire width of each column.</span></span> <span data-ttu-id="10cbb-109">Поскольку <xref:System.Windows.Controls.ListView> привязан к источнику данных, необходимо создать стиль, который задает <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>.</span><span class="sxs-lookup"><span data-stu-id="10cbb-109">Because the <xref:System.Windows.Controls.ListView> is bound to a data source, you need to create a style that sets the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>.</span></span> <span data-ttu-id="10cbb-110">Далее необходимо использовать <xref:System.Windows.DataTemplate> для отображения содержимого вместо <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="10cbb-110">Next, you need to use a <xref:System.Windows.DataTemplate> to display the content instead of using the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property.</span></span> <span data-ttu-id="10cbb-111">Для отображения `ISBN` каждого шаблона <xref:System.Windows.DataTemplate> может содержать только <xref:System.Windows.Controls.TextBlock> с его <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> свойство <xref:System.Windows.HorizontalAlignment.Right>.</span><span class="sxs-lookup"><span data-stu-id="10cbb-111">To display the `ISBN` of each template, the <xref:System.Windows.DataTemplate> can just contain a <xref:System.Windows.Controls.TextBlock> that has its <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property set to <xref:System.Windows.HorizontalAlignment.Right>.</span></span>  
   
- В следующем примере определяются стиль и шаблон <xref:System.Windows.DataTemplate>, необходимые для выравнивания столбца `ISBN` по правому краю. Кроме того, к объекту <xref:System.Windows.Controls.GridViewColumn> добавляется ссылка на шаблон <xref:System.Windows.DataTemplate>.  
+ <span data-ttu-id="10cbb-112">В следующем примере определяется стиль и <xref:System.Windows.DataTemplate> необходимо сделать `ISBN` по правому краю столбца и изменения <xref:System.Windows.Controls.GridViewColumn> ссылка <xref:System.Windows.DataTemplate>.</span><span class="sxs-lookup"><span data-stu-id="10cbb-112">The following example defines the style and <xref:System.Windows.DataTemplate> necessary to make the `ISBN` column right-aligned, and changes the <xref:System.Windows.Controls.GridViewColumn> to reference the <xref:System.Windows.DataTemplate>.</span></span>  
   
- [!code-xml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
-[!code-xml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
+ [!code-xaml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
+[!code-xaml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
-## См. также  
- [Общие сведения о связывании данных](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Общие сведения о шаблонах данных](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [Привязка к XML\-данным с помощью XMLDataProvider и запросов XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)   
- [Общие сведения об элементе управления ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="10cbb-113">См. также</span><span class="sxs-lookup"><span data-stu-id="10cbb-113">See Also</span></span>  
+ [<span data-ttu-id="10cbb-114">Общие сведения о привязке данных</span><span class="sxs-lookup"><span data-stu-id="10cbb-114">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="10cbb-115">Общие сведения о шаблонах данных</span><span class="sxs-lookup"><span data-stu-id="10cbb-115">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="10cbb-116">Практическое руководство. Привязка к XML-данным с помощью XMLDataProvider и запросов XPath</span><span class="sxs-lookup"><span data-stu-id="10cbb-116">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="10cbb-117">Общие сведения об элементе управления ListView</span><span class="sxs-lookup"><span data-stu-id="10cbb-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

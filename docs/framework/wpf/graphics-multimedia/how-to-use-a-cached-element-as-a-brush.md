@@ -1,36 +1,39 @@
 ---
-title: "Практическое руководство. Использование кэшированного элемента в качестве кисти | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BitmapCache [WPF], использование"
-  - "BitmapCacheBrush [WPF], использование"
-  - "кэшированный элемент [WPF], использование в качестве кисти"
-  - "CacheMode [WPF], использование"
+title: "Практическое руководство. Использование кэшированного элемента в качестве кисти"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BitmapCache [WPF], using
+- cached element [WPF], use as a brush
+- BitmapCacheBrush [WPF], using
+- CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d0f0c60e9df6a1ec816b1f9cf5769c93b382ae5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Использование кэшированного элемента в качестве кисти
-Класс <xref:System.Windows.Media.BitmapCacheBrush> предназначен для эффективного многократного использования кэшированного элемента.  Для кэширования элемента создайте новый экземпляр класса <xref:System.Windows.Media.BitmapCache> и задайте его в свойстве <xref:System.Windows.UIElement.CacheMode%2A> элемента.  
+# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="4de23-102">Практическое руководство. Использование кэшированного элемента в качестве кисти</span><span class="sxs-lookup"><span data-stu-id="4de23-102">How to: Use a Cached Element as a Brush</span></span>
+<span data-ttu-id="4de23-103">Используйте <xref:System.Windows.Media.BitmapCacheBrush> класса для эффективного многократного использования кэшированного элемента.</span><span class="sxs-lookup"><span data-stu-id="4de23-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="4de23-104">Чтобы кэшировать элемент, необходимо создать новый экземпляр <xref:System.Windows.Media.BitmapCache> класса и назначьте его на элемент <xref:System.Windows.UIElement.CacheMode%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="4de23-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
   
-## Пример  
- В следующем примере кода показано многократное использование кэшированного элемента.  Кэшируемый элемент представляет собой элемент управления <xref:System.Windows.Controls.Image>, в котором выводится крупное изображение.  Элемент управления <xref:System.Windows.Controls.Image> кэшируется в виде растрового изображения с помощью класса <xref:System.Windows.Media.BitmapCache>, а многократное использование кэша реализуется путем его присваивания объекту <xref:System.Windows.Media.BitmapCacheBrush>.  Для демонстрации эффективного многократного использования кисть используется в качестве фона для двадцати пяти кнопок.  
+## <a name="example"></a><span data-ttu-id="4de23-105">Пример</span><span class="sxs-lookup"><span data-stu-id="4de23-105">Example</span></span>  
+ <span data-ttu-id="4de23-106">В следующем примере кода показано, как повторно использовать кэшированный элемент.</span><span class="sxs-lookup"><span data-stu-id="4de23-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="4de23-107">Кэшируемый элемент представляет <xref:System.Windows.Controls.Image> элемент управления, отображающий большое изображение.</span><span class="sxs-lookup"><span data-stu-id="4de23-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="4de23-108"><xref:System.Windows.Controls.Image> Управления кэшируется как растровое изображение с помощью <xref:System.Windows.Media.BitmapCache> класса и кэш используется повторно путем назначения их <xref:System.Windows.Media.BitmapCacheBrush>.</span><span class="sxs-lookup"><span data-stu-id="4de23-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="4de23-109">Кисть фона двадцать пять кнопок назначенный для демонстрации эффективного многократного использования.</span><span class="sxs-lookup"><span data-stu-id="4de23-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
   
- [!code-xml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
+ [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
-## См. также  
- <xref:System.Windows.Media.BitmapCache>   
- <xref:System.Windows.Media.BitmapCacheBrush>   
- <xref:System.Windows.UIElement.CacheMode%2A>   
- [Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+## <a name="see-also"></a><span data-ttu-id="4de23-110">См. также</span><span class="sxs-lookup"><span data-stu-id="4de23-110">See Also</span></span>  
+ <xref:System.Windows.Media.BitmapCache>  
+ <xref:System.Windows.Media.BitmapCacheBrush>  
+ <xref:System.Windows.UIElement.CacheMode%2A>  
+ [<span data-ttu-id="4de23-111">Практическое руководство. Повышение производительности отрисовки за счет кэширования элемента</span><span class="sxs-lookup"><span data-stu-id="4de23-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

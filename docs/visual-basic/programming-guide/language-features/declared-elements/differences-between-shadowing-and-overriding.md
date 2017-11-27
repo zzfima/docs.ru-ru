@@ -1,70 +1,69 @@
 ---
-title: "Различия между сокрытием и переопределением (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "переопределение, в сравнении с затенением"
-  - "затенение, в сравнении с переопределением"
+title: "Различия между сокрытием и переопределением (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- shadowing, vs. overriding
+- overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Различия между сокрытием и переопределением (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-При определении класса, который наследуется от базового класса, иногда требуется переопределить один или несколько элементов базового класса в производном классе.  Для этой цели используются переобъявление и переопределение.  
+# <a name="differences-between-shadowing-and-overriding-visual-basic"></a><span data-ttu-id="ee44e-102">Различия между сокрытием и переопределением (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee44e-102">Differences Between Shadowing and Overriding (Visual Basic)</span></span>
+<span data-ttu-id="ee44e-103">При определении класса, который наследует от базового класса, иногда требуется переопределить один или несколько элементов базового класса в производном классе.</span><span class="sxs-lookup"><span data-stu-id="ee44e-103">When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class.</span></span> <span data-ttu-id="ee44e-104">Сокрытием и переопределением будут доступны для этой цели.</span><span class="sxs-lookup"><span data-stu-id="ee44e-104">Shadowing and overriding are both available for this purpose.</span></span>  
   
-## Сравнение  
- И сокрытие, и переопределение используются при наследовании производного класса от базового. И то и другое замещает один объявленный элемент другим.  Но между этими двумя понятиями существуют значительные различия.  
+## <a name="comparison"></a><span data-ttu-id="ee44e-105">Сравнение</span><span class="sxs-lookup"><span data-stu-id="ee44e-105">Comparison</span></span>  
+ <span data-ttu-id="ee44e-106">Сокрытие и переопределение используются при производный класс наследует от базового класса, а другое замещает один объявленный элемент другим.</span><span class="sxs-lookup"><span data-stu-id="ee44e-106">Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another.</span></span> <span data-ttu-id="ee44e-107">Но существуют значительные различия между ними.</span><span class="sxs-lookup"><span data-stu-id="ee44e-107">But there are significant differences between the two.</span></span>  
   
- Следующая таблица представляет собой сравнение переобъявления и переопределения.  
+ <span data-ttu-id="ee44e-108">В следующей таблице сравниваются затенение с переопределением.</span><span class="sxs-lookup"><span data-stu-id="ee44e-108">The following table compares shadowing with overriding.</span></span>  
   
 ||||  
-|-|-|-|  
-|Точка сравнения|Затенение|Переопределение|  
-|Назначение|Защищает от последующей модификации базового класса, при которой включается уже определенный в производном классе член|Достижение полиморфизма за счет определения другой реализации процедуры или свойства с той же последовательностью вызова <sup>1</sup>|  
-|Переопределяемый элемент|Объявленный элемент любого типа|Только процедура \(`Function`, `Sub` или `Operator`\) или свойство|  
-|Переопределяющий элемент|Объявленный элемент любого типа|Только процедура или свойство с такой же последовательностью вызова <sup>1</sup>|  
-|Уровень доступа для переопределения элемента|Любой уровень доступа|Невозможно изменить уровень доступа переопределяемого элемента|  
-|Возможность чтения и записи переопределяющего элемента|В любой комбинации|Нельзя изменить возможность чтения и записи переопределяемого свойства|  
-|Управление переопределением|Базовый класс элемента не может применять или запрещать переобъявление|Элемент базового класса может указывать `MustOverride`, `NotOverridable` или `Overridable`|  
-|Использование ключевых слов|Рекомендуется использовать `Shadows` в производном классе. Если не указан ни `Shadows`, ни `Overrides`, то предполагается `Shadows`<sup>2</sup>|`Overridable` или `MustOverride` является обязательным в базовом классе. `Overrides` является обязательным в производном классе|  
-|Наследование переопределяющих элементов классами, производными от производного класса|Переобъявляющий элемент наследуется последующими производными классами. Переобъявляемый элемент остается скрытым<sup>3</sup>|Переопределяющий элемент наследуется производными классами. Переопределяемый элемент остается переопределенным|  
+|---|---|---|  
+|<span data-ttu-id="ee44e-109">Точка сравнения</span><span class="sxs-lookup"><span data-stu-id="ee44e-109">Point of comparison</span></span>|<span data-ttu-id="ee44e-110">Затенение</span><span class="sxs-lookup"><span data-stu-id="ee44e-110">Shadowing</span></span>|<span data-ttu-id="ee44e-111">Переопределение</span><span class="sxs-lookup"><span data-stu-id="ee44e-111">Overriding</span></span>|  
+|<span data-ttu-id="ee44e-112">Назначение</span><span class="sxs-lookup"><span data-stu-id="ee44e-112">Purpose</span></span>|<span data-ttu-id="ee44e-113">Защищает от последующие изменения базового класса, который вводит член, которые определены в производном классе</span><span class="sxs-lookup"><span data-stu-id="ee44e-113">Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class</span></span>|<span data-ttu-id="ee44e-114">Достижение полиморфизма за счет определения другой процедуры или свойства с той же последовательностью вызова реализации<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="ee44e-114">Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="ee44e-115">Переопределяемый элемент</span><span class="sxs-lookup"><span data-stu-id="ee44e-115">Redefined element</span></span>|<span data-ttu-id="ee44e-116">Объявленный элемент любого типа</span><span class="sxs-lookup"><span data-stu-id="ee44e-116">Any declared element type</span></span>|<span data-ttu-id="ee44e-117">Только процедура (`Function`, `Sub`, или `Operator`) или свойство</span><span class="sxs-lookup"><span data-stu-id="ee44e-117">Only a procedure (`Function`, `Sub`, or `Operator`) or property</span></span>|  
+|<span data-ttu-id="ee44e-118">Переопределенный элемент</span><span class="sxs-lookup"><span data-stu-id="ee44e-118">Redefining element</span></span>|<span data-ttu-id="ee44e-119">Объявленный элемент любого типа</span><span class="sxs-lookup"><span data-stu-id="ee44e-119">Any declared element type</span></span>|<span data-ttu-id="ee44e-120">Только процедура или свойство с такой же последовательностью вызова<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="ee44e-120">Only a procedure or property with the identical calling sequence<sup>1</sup></span></span>|  
+|<span data-ttu-id="ee44e-121">Уровень доступа для переопределения элемента</span><span class="sxs-lookup"><span data-stu-id="ee44e-121">Access level of redefining element</span></span>|<span data-ttu-id="ee44e-122">Любой уровень доступа</span><span class="sxs-lookup"><span data-stu-id="ee44e-122">Any access level</span></span>|<span data-ttu-id="ee44e-123">Невозможно изменить уровень доступа переопределяемого элемента</span><span class="sxs-lookup"><span data-stu-id="ee44e-123">Cannot change access level of overridden element</span></span>|  
+|<span data-ttu-id="ee44e-124">Удобства чтения и записи переопределяющего элемента</span><span class="sxs-lookup"><span data-stu-id="ee44e-124">Readability and writability of redefining element</span></span>|<span data-ttu-id="ee44e-125">Любые сочетания</span><span class="sxs-lookup"><span data-stu-id="ee44e-125">Any combination</span></span>|<span data-ttu-id="ee44e-126">Невозможно изменить переопределенное свойство возможность чтения и</span><span class="sxs-lookup"><span data-stu-id="ee44e-126">Cannot change readability or writability of overridden property</span></span>|  
+|<span data-ttu-id="ee44e-127">Управление переопределением</span><span class="sxs-lookup"><span data-stu-id="ee44e-127">Control over redefining</span></span>|<span data-ttu-id="ee44e-128">Элемент базового класса не может применять или запретить затенение</span><span class="sxs-lookup"><span data-stu-id="ee44e-128">Base class element cannot enforce or prohibit shadowing</span></span>|<span data-ttu-id="ee44e-129">Элемент базового класса можно указать `MustOverride`, `NotOverridable`, или`Overridable`</span><span class="sxs-lookup"><span data-stu-id="ee44e-129">Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`</span></span>|  
+|<span data-ttu-id="ee44e-130">Использование ключевых слов</span><span class="sxs-lookup"><span data-stu-id="ee44e-130">Keyword usage</span></span>|<span data-ttu-id="ee44e-131">`Shadows`Рекомендуется использовать в производном классе. `Shadows` по умолчанию, если ни один `Shadows` , ни `Overrides` указанного<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="ee44e-131">`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup></span></span>|<span data-ttu-id="ee44e-132">`Overridable`или `MustOverride` обязательным в базовом классе; `Overrides` обязательным в производном классе</span><span class="sxs-lookup"><span data-stu-id="ee44e-132">`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class</span></span>|  
+|<span data-ttu-id="ee44e-133">Наследование переопределяющих элементов классами, производными от производного класса</span><span class="sxs-lookup"><span data-stu-id="ee44e-133">Inheritance of redefining element by classes deriving from your derived class</span></span>|<span data-ttu-id="ee44e-134">Затенение элемент наследуется производными классами. переопределяемый элемент остается скрытым<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="ee44e-134">Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup></span></span>|<span data-ttu-id="ee44e-135">Переопределяющий элемент наследуется производными классами. переопределяемый элемент остается переопределенным</span><span class="sxs-lookup"><span data-stu-id="ee44e-135">Overriding element inherited by further derived classes; overridden element still overridden</span></span>|  
   
- <sup>1</sup> *Последовательность вызова* состоит из типа элемента \(`Function`, `Sub`, `Operator` или `Property`\), имени, списка параметров и типа возвращаемого значения.  Нельзя переопределить процедуру свойством и наоборот.  Нельзя переопределить процедуру одного типа \(`Function`, `Sub` или `Operator`\) процедурой другого типа.  
+ <span data-ttu-id="ee44e-136"><sup>1</sup> *последовательность вызова* состоит из типа элемента (`Function`, `Sub`, `Operator`, или `Property`), имени, списка параметров и возвращаемого типа.</span><span class="sxs-lookup"><span data-stu-id="ee44e-136"><sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type.</span></span> <span data-ttu-id="ee44e-137">Нельзя переопределить процедуру свойства или в обратном направлении.</span><span class="sxs-lookup"><span data-stu-id="ee44e-137">You cannot override a procedure with a property, or the other way around.</span></span> <span data-ttu-id="ee44e-138">Нельзя переопределить процедуру одного типа (`Function`, `Sub`, или `Operator`) с другим типом.</span><span class="sxs-lookup"><span data-stu-id="ee44e-138">You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.</span></span>  
   
- <sup>2</sup> Если не указан либо `Shadows`, либо `Overrides`, компилятор выдает предупреждающее сообщение, помогающее убедиться в том, какой типа переопределения требуется использовать.  Если проигнорировать предупреждение, используется механизм переобъявления.  
+ <span data-ttu-id="ee44e-139"><sup>2</sup> , если не указан, либо `Shadows` или `Overrides`, компилятор выдает предупреждающее сообщение, помогающие убедитесь в том, какой типа переопределения требуется использовать.</span><span class="sxs-lookup"><span data-stu-id="ee44e-139"><sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use.</span></span> <span data-ttu-id="ee44e-140">Если проигнорировать предупреждение, используется механизм затенения.</span><span class="sxs-lookup"><span data-stu-id="ee44e-140">If you ignore the warning, the shadowing mechanism is used.</span></span>  
   
- <sup>3</sup> Если переопределяющий элемент оказывается недоступным в последующем производном классе, переобъявление не наследуется.  Например, если переобъявляющий элемент объявлен как `Private`, класс, полученный из производного класса, наследует первоначальный элемент вместо переобъявляющего.  
+ <span data-ttu-id="ee44e-141"><sup>3</sup> Если переопределяющий элемент оказывается недоступным в последующем производном классе, затенение не наследуется.</span><span class="sxs-lookup"><span data-stu-id="ee44e-141"><sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited.</span></span> <span data-ttu-id="ee44e-142">Например, если объявить скрывающий элемент как `Private`, класс, производный от производного класса, наследует первоначальный элемент вместо скрывающий элемент.</span><span class="sxs-lookup"><span data-stu-id="ee44e-142">For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.</span></span>  
   
-## Рекомендации  
- Переопределение обычно используется в следующих случаях:  
+## <a name="guidelines"></a><span data-ttu-id="ee44e-143">Рекомендации</span><span class="sxs-lookup"><span data-stu-id="ee44e-143">Guidelines</span></span>  
+ <span data-ttu-id="ee44e-144">Переопределение обычно используется в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="ee44e-144">You normally use overriding in the following cases:</span></span>  
   
--   При определении полиморфизма производных классов.  
+-   <span data-ttu-id="ee44e-145">При определении полиморфизма производных классов.</span><span class="sxs-lookup"><span data-stu-id="ee44e-145">You are defining polymorphic derived classes.</span></span>  
   
--   Требуется обеспечить принудительное использование компилятором идентичных типов элементов и последовательностей вызова.  
+-   <span data-ttu-id="ee44e-146">Требуется использование компилятор внедрения идентичных типов элементов и последовательность вызова.</span><span class="sxs-lookup"><span data-stu-id="ee44e-146">You want the safety of having the compiler enforce the identical element type and calling sequence.</span></span>  
   
- Переобъявление обычно используется в следующих случаях:  
+ <span data-ttu-id="ee44e-147">Обычно используется сокрытие в следующих случаях:</span><span class="sxs-lookup"><span data-stu-id="ee44e-147">You normally use shadowing in the following cases:</span></span>  
   
--   Предполагается, что базовый класс может быть изменен, и может быть определен элемент с аналогичным вашему элементу именем.  
+-   <span data-ttu-id="ee44e-148">Предполагается, что базовый класс может быть изменена и определения элемента, используя то же имя, как ваш.</span><span class="sxs-lookup"><span data-stu-id="ee44e-148">You anticipate that your base class might be modified and define an element using the same name as yours.</span></span>  
   
--   Требуется свобода изменения типа элемента или последовательности вызова.  
+-   <span data-ttu-id="ee44e-149">Требуется свобода изменения типа элемента или последовательность вызова.</span><span class="sxs-lookup"><span data-stu-id="ee44e-149">You want the freedom of changing the element type or calling sequence.</span></span>  
   
-## См. также  
- [Ссылки на объявленные элементы](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Сокрытие в Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)   
- [Практическое руководство. Сокрытие наследуемой переменной](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Практическое руководство. Доступ к переменной, скрытой производным классом](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+## <a name="see-also"></a><span data-ttu-id="ee44e-150">См. также</span><span class="sxs-lookup"><span data-stu-id="ee44e-150">See Also</span></span>  
+ [<span data-ttu-id="ee44e-151">Ссылки на объявленные элементы</span><span class="sxs-lookup"><span data-stu-id="ee44e-151">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="ee44e-152">Сокрытие в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ee44e-152">Shadowing in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="ee44e-153">Практическое руководство. Сокрытие переменной с тем же именем, что и ваша переменная</span><span class="sxs-lookup"><span data-stu-id="ee44e-153">How to: Hide a Variable with the Same Name as Your Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)  
+ [<span data-ttu-id="ee44e-154">Практическое руководство. Сокрытие наследуемой переменной</span><span class="sxs-lookup"><span data-stu-id="ee44e-154">How to: Hide an Inherited Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [<span data-ttu-id="ee44e-155">Практическое руководство. Доступ к переменной, скрытой производным классом</span><span class="sxs-lookup"><span data-stu-id="ee44e-155">How to: Access a Variable Hidden by a Derived Class</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [<span data-ttu-id="ee44e-156">Shadows</span><span class="sxs-lookup"><span data-stu-id="ee44e-156">Shadows</span></span>](../../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="ee44e-157">Переопределения</span><span class="sxs-lookup"><span data-stu-id="ee44e-157">Overrides</span></span>](../../../../visual-basic/language-reference/modifiers/overrides.md)

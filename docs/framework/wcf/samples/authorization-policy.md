@@ -1,44 +1,47 @@
 ---
-title: "Политика авторизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Политика авторизации"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 50998acedf3b462e17c57d784dfc1ebe6fff38b9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Политика авторизации
-В этом образце показано, как реализовать пользовательскую политику авторизации утверждений и связанный с ней пользовательский диспетчер авторизации службы.Это бывает удобно, если служба осуществляет проверку прав доступа к операциям службы на основании утверждений и предоставляет вызывающей стороне определенные права, прежде чем проверить права доступа.В этом образце показан процесс добавления утверждений, а также процесс проверки прав доступа с использованием готового набора утверждений.Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются.По умолчанию при использовании привязки `wsHttpBinding` для входа от имени действующей учетной записи Windows NT используются предоставляемые клиентом имя пользователя и пароль.В этом образце показано, как проверять подлинность клиента с помощью пользовательского объекта <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>.Кроме того, в этом образце показана проверка подлинности клиента на стороне службы с использованием сертификата X.509.Этот образец показывает реализацию объектов <xref:System.IdentityModel.Policy.IAuthorizationPolicy> и <xref:System.ServiceModel.ServiceAuthorizationManager>, которые между собой предоставляют заданным пользователям доступ к определенным методам службы.Этот образец основан на примере [Безопасность сообщений с использованием имени пользователя](../../../../docs/framework/wcf/samples/message-security-user-name.md), но показывает, как выполнять преобразование утверждений до вызова <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+# <a name="authorization-policy"></a><span data-ttu-id="09714-102">Политика авторизации</span><span class="sxs-lookup"><span data-stu-id="09714-102">Authorization Policy</span></span>
+<span data-ttu-id="09714-103">В этом образце показано, как реализовать пользовательскую политику авторизации утверждений и связанный с ней пользовательский диспетчер авторизации службы.</span><span class="sxs-lookup"><span data-stu-id="09714-103">This sample demonstrates how to implement a custom claim authorization policy and an associated custom service authorization manager.</span></span> <span data-ttu-id="09714-104">Это бывает удобно, если служба осуществляет проверку прав доступа к операциям службы на основании утверждений и предоставляет вызывающей стороне определенные права, прежде чем проверить права доступа.</span><span class="sxs-lookup"><span data-stu-id="09714-104">This is useful when the service makes claim-based access checks to service operations and prior to the access checks, grants the caller certain rights.</span></span> <span data-ttu-id="09714-105">В этом образце показан процесс добавления утверждений, а также процесс проверки прав доступа с использованием готового набора утверждений.</span><span class="sxs-lookup"><span data-stu-id="09714-105">This sample shows both the process of adding claims as well as the process for doing an access check against the finalized set of claims.</span></span> <span data-ttu-id="09714-106">Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются.</span><span class="sxs-lookup"><span data-stu-id="09714-106">All application messages between the client and server are signed and encrypted.</span></span> <span data-ttu-id="09714-107">По умолчанию при использовании привязки `wsHttpBinding` для входа от имени действующей учетной записи Windows NT используются предоставляемые клиентом имя пользователя и пароль.</span><span class="sxs-lookup"><span data-stu-id="09714-107">By default with the `wsHttpBinding` binding, a username and password supplied by the client are used to logon to a valid Windows NT account.</span></span> <span data-ttu-id="09714-108">В этом примере показано, как использовать пользовательский <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` для проверки подлинности клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-108">This sample demonstrates how to utilize a custom <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` to authenticate the client.</span></span> <span data-ttu-id="09714-109">Кроме того, в этом образце показана проверка подлинности клиента на стороне службы с использованием сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="09714-109">In addition this sample shows the client authenticating to the service using an X.509 certificate.</span></span> <span data-ttu-id="09714-110">Этот образец показывает реализацию объектов <xref:System.IdentityModel.Policy.IAuthorizationPolicy> и <xref:System.ServiceModel.ServiceAuthorizationManager>, которые между собой предоставляют заданным пользователям доступ к определенным методам службы.</span><span class="sxs-lookup"><span data-stu-id="09714-110">This sample shows an implementation of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and <xref:System.ServiceModel.ServiceAuthorizationManager>, which between them grant access to specific methods of the service for specific users.</span></span> <span data-ttu-id="09714-111">Этот пример построен на [имя пользователя безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-user-name.md), но показано, как выполнить преобразование утверждений до <xref:System.ServiceModel.ServiceAuthorizationManager> вызова.</span><span class="sxs-lookup"><span data-stu-id="09714-111">This sample is based on the [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md), but demonstrates how to perform a claim transformation prior to the <xref:System.ServiceModel.ServiceAuthorizationManager> being called.</span></span>  
   
 > [!NOTE]
->  Процедура установки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="09714-112">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="09714-112">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Таким образом, в данном образце демонстрируются указанные ниже возможности.  
+ <span data-ttu-id="09714-113">Таким образом, в данном образце демонстрируются указанные ниже возможности.</span><span class="sxs-lookup"><span data-stu-id="09714-113">In summary, this sample demonstrates how:</span></span>  
   
--   Подлинность клиента может проверяться с помощью имени пользователя и пароля.  
+-   <span data-ttu-id="09714-114">Подлинность клиента может проверяться с помощью имени пользователя и пароля.</span><span class="sxs-lookup"><span data-stu-id="09714-114">The client can be authenticated using a user name-password.</span></span>  
   
--   Подлинность клиента может проверяться с помощью сертификата X.509.  
+-   <span data-ttu-id="09714-115">Подлинность клиента может проверяться с помощью сертификата X.509.</span><span class="sxs-lookup"><span data-stu-id="09714-115">The client can be authenticated using an X.509 certificate.</span></span>  
   
--   Сервер проверяет учетные данные клиента с помощью пользовательского проверяющего элемента управления `UsernamePassword`.  
+-   <span data-ttu-id="09714-116">Сервер проверяет учетные данные клиента с помощью пользовательского проверяющего элемента управления `UsernamePassword`.</span><span class="sxs-lookup"><span data-stu-id="09714-116">The server validates the client credentials against a custom `UsernamePassword` validator.</span></span>  
   
--   Сервер проходит проверку подлинности с использованием сертификата X.509 сервера.  
+-   <span data-ttu-id="09714-117">Сервер проходит проверку подлинности с использованием сертификата X.509 сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-117">The server is authenticated using the server's X.509 certificate.</span></span>  
   
--   Сервер может использовать объект <xref:System.ServiceModel.ServiceAuthorizationManager> для управления доступом к определенным методам службы.  
+-   <span data-ttu-id="09714-118">Сервер может использовать объект <xref:System.ServiceModel.ServiceAuthorizationManager> для управления доступом к определенным методам службы.</span><span class="sxs-lookup"><span data-stu-id="09714-118">The server can use <xref:System.ServiceModel.ServiceAuthorizationManager> to control access to certain methods in the service.</span></span>  
   
--   Реализация политики <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.  
+-   <span data-ttu-id="09714-119">Реализация политики <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.</span><span class="sxs-lookup"><span data-stu-id="09714-119">How to implement <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.</span></span>  
   
- Служба предоставляет две конечные точки для взаимодействия со службой, определенной в файле конфигурации App.config.Каждая конечная точка состоит из адреса, привязки и контракта.Одна привязка настраивается с помощью стандартной привязки `wsHttpBinding`, использующей протокол WS\-Security и проверку подлинности имени пользователя клиента.Вторая привязка настраивается с помощью стандартной привязки `wsHttpBinding`, использующей протокол WS\-Security и проверку подлинности сертификата клиента.Элемент [\<поведение\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) указывает, что для проверки подлинности службы следует использовать учетные данные пользователя.Свойство `SubjectName` сертификата сервера должно совпадать со значением атрибута `findValue` в элементе конфигурации [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
+ <span data-ttu-id="09714-120">Служба предоставляет две конечные точки для взаимодействия со службой, определенной в файле конфигурации App.config. Каждая конечная точка состоит из адреса, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="09714-120">The service exposes two endpoints for communicating with the service, defined using the configuration file App.config. Each endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="09714-121">Одна привязка настраивается с помощью стандартной привязки `wsHttpBinding`, использующей протокол WS-Security и проверку подлинности имени пользователя клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-121">One binding is configured with a standard `wsHttpBinding` binding that uses WS-Security and client username authentication.</span></span> <span data-ttu-id="09714-122">Вторая привязка настраивается с помощью стандартной привязки `wsHttpBinding`, использующей протокол WS-Security и проверку подлинности сертификата клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-122">The other binding is configured with a standard `wsHttpBinding` binding that uses WS-Security and client certificate authentication.</span></span> <span data-ttu-id="09714-123">[ \<Поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) указывает, что учетные данные пользователя для проверки подлинности службы.</span><span class="sxs-lookup"><span data-stu-id="09714-123">The [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) specifies that the user credentials are to be used for service authentication.</span></span> <span data-ttu-id="09714-124">Сертификат сервера должен содержать то же значение для `SubjectName` свойство как `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span><span class="sxs-lookup"><span data-stu-id="09714-124">The server certificate must contain the same value for the `SubjectName` property as the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -121,12 +124,11 @@ caps.handback.revision: 38
   </behaviors>  
   
 </system.serviceModel>  
-  
 ```  
   
- Конфигурация каждой из конечных точек клиента состоит из имени конфигурации, абсолютного адреса конечной точки службы, привязки и контракта.Для привязки клиента настраивается соответствующий режим безопасности, как указано в данном случае в [\<безопасность\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md), и `clientCredentialType`, как указано в [\<сообщение\>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).  
+ <span data-ttu-id="09714-125">Конфигурация каждой из конечных точек клиента состоит из имени конфигурации, абсолютного адреса конечной точки службы, привязки и контракта.</span><span class="sxs-lookup"><span data-stu-id="09714-125">Each client endpoint configuration consists of a configuration name, an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="09714-126">Привязка клиента настраивается с режимом безопасности, указанное в этом случае в [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) и `clientCredentialType` , как указано в [ \<сообщения >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="09714-126">The client binding is configured with the appropriate security mode as specified in this case in the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) and `clientCredentialType` as specified in the [\<message>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md).</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <client>  
@@ -190,10 +192,9 @@ caps.handback.revision: 38
     </behaviors>  
   
   </system.serviceModel>  
-  
 ```  
   
- Для конечной точки, выполняющей проверку подлинности имени пользователя, реализация клиента задает имя пользователя и пароль, которые следует использовать.  
+ <span data-ttu-id="09714-127">Для конечной точки, выполняющей проверку подлинности имени пользователя, реализация клиента задает имя пользователя и пароль, которые следует использовать.</span><span class="sxs-lookup"><span data-stu-id="09714-127">For the user name-based endpoint, the client implementation sets the user name and password to use.</span></span>  
   
 ```  
 // Create a client with Username endpoint configuration  
@@ -217,10 +218,9 @@ catch (Exception e)
 }  
   
 client1.Close();  
-  
 ```  
   
- Для конечной точки, выполняющей проверку подлинности сертификата, реализация клиента задает сертификат клиента, который следует использовать.  
+ <span data-ttu-id="09714-128">Для конечной точки, выполняющей проверку подлинности сертификата, реализация клиента задает сертификат клиента, который следует использовать.</span><span class="sxs-lookup"><span data-stu-id="09714-128">For the certificate-based endpoint, the client implementation sets the client certificate to use.</span></span>  
   
 ```  
 // Create a client with Certificate endpoint configuration  
@@ -243,10 +243,9 @@ catch (Exception e)
 }  
   
 client2.Close();  
-  
 ```  
   
- В этом образце для проверки имен пользователей и паролей применяется пользовательский объект <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>.В этом образце реализуется класс `MyCustomUserNamePasswordValidator`, наследуемый от класса <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.Дополнительные сведения см. в документации по классу <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>.В целях демонстрации интеграции с <xref:System.IdentityModel.Selectors.UsernamePasswordValidator> в этом образце пользовательского проверяющего элемента управления реализуется метод <xref:System.IdentityModel.Selectors.UsernamePasswordValidator.Validate%2A>, который принимает пары "имя пользователя\-пароль", где имя пользователя соответствует паролю, как показано в следующем примере кода.  
+ <span data-ttu-id="09714-129">В этом образце для проверки имен пользователей и паролей применяется пользовательский объект <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span><span class="sxs-lookup"><span data-stu-id="09714-129">This sample uses a custom <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> to validate user names and passwords.</span></span> <span data-ttu-id="09714-130">В этом образце реализуется класс `MyCustomUserNamePasswordValidator`, наследуемый от класса <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span><span class="sxs-lookup"><span data-stu-id="09714-130">The sample implements `MyCustomUserNamePasswordValidator`, derived from <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span></span> <span data-ttu-id="09714-131">Дополнительные сведения см. в документации по классу <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.</span><span class="sxs-lookup"><span data-stu-id="09714-131">See the documentation about <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> for more information.</span></span> <span data-ttu-id="09714-132">В целях демонстрации интеграции с <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> в этом образце пользовательского проверяющего элемента управления реализуется метод <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>, который принимает пары "имя пользователя-пароль", где имя пользователя соответствует паролю, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="09714-132">For the purposes of demonstrating the integration with the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, this custom validator sample implements the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> method to accept user name/password pairs where the user name matches the password as shown in the following code.</span></span>  
   
 ```  
 public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator  
@@ -269,19 +268,18 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
     }  
   }  
 }  
-  
 ```  
   
- После реализации в коде службы проверяющего элемента управления необходимо проинформировать узел службы о проверяющем элементе управления, который следует использовать.Для этого можно воспользоваться следующим фрагментом кода.  
+ <span data-ttu-id="09714-133">После реализации в коде службы проверяющего элемента управления необходимо проинформировать узел службы о проверяющем элементе управления, который следует использовать.</span><span class="sxs-lookup"><span data-stu-id="09714-133">Once the validator is implemented in service code, the service host must be informed about the validator instance to use.</span></span> <span data-ttu-id="09714-134">Для этого можно воспользоваться следующим фрагментом кода.</span><span class="sxs-lookup"><span data-stu-id="09714-134">This is done using the following code.</span></span>  
   
 ```  
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;  
 serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomUserNamePasswordValidatorProvider();  
 ```  
   
- Либо можно решить эту же задачу с помощью файла конфигурации.  
+ <span data-ttu-id="09714-135">Либо можно решить эту же задачу с помощью файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="09714-135">Or you can do the same thing in configuration.</span></span>  
   
-```  
+```xml  
 <behavior ...>  
     <serviceCredentials>  
       <!--   
@@ -293,9 +291,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализована функциональная модель проверки прав доступа на основе утверждений.Для контроля прав доступа и проверки, удовлетворяют ли связанные с клиентом удостоверения требованиям, необходимым для доступа к методу службы, используется объект <xref:System.ServiceModel.ServiceAuthorizationManager>.  
+ <span data-ttu-id="09714-136">В [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] реализована функциональная модель проверки прав доступа на основе утверждений.</span><span class="sxs-lookup"><span data-stu-id="09714-136">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] provides a rich claims-based model for performing access checks.</span></span> <span data-ttu-id="09714-137">Для контроля прав доступа и проверки, удовлетворяют ли связанные с клиентом удостоверения требованиям, необходимым для доступа к методу службы, используется объект <xref:System.ServiceModel.ServiceAuthorizationManager>.</span><span class="sxs-lookup"><span data-stu-id="09714-137">The <xref:System.ServiceModel.ServiceAuthorizationManager> object is used to perform the access check and determine whether the claims associated with the client satisfy the requirements necessary to access the service method.</span></span>  
   
- В демонстрационных целях в этом образце показана реализация <xref:System.ServiceModel.ServiceAuthorizationManager>, включающая метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, который дает возможность пользователю обращаться к методам на основе утверждений типа http:\/\/example.com\/claims\/allowedoperation, значения которых представляют собой коды URI действий разрешенных к вызову операций.  
+ <span data-ttu-id="09714-138">В демонстрационных целях в этом образце показана реализация <xref:System.ServiceModel.ServiceAuthorizationManager>, включающая метод <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>, который дает возможность пользователю обращаться к методам на основе утверждений типа http://example.com/claims/allowedoperation, значения которых представляют собой коды URI действий разрешенных к вызову операций.</span><span class="sxs-lookup"><span data-stu-id="09714-138">For the purposes of demonstration, this sample shows an implementation of <xref:System.ServiceModel.ServiceAuthorizationManager> that implements the <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> method to allow a user's access to methods based on claims of type http://example.com/claims/allowedoperation whose value is the Action URI of the operation that is allowed to be called.</span></span>  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  
@@ -319,22 +317,20 @@ public class MyServiceAuthorizationManager : ServiceAuthorizationManager
     return false;                   
   }  
 }  
-  
 ```  
   
- После реализации пользовательского объекта <xref:System.ServiceModel.ServiceAuthorizationManager> необходимо проинформировать узел службы об объекте <xref:System.ServiceModel.ServiceAuthorizationManager>, который следует использовать.Это можно сделать с помощью следующего фрагмента кода.  
+ <span data-ttu-id="09714-139">После реализации пользовательского объекта <xref:System.ServiceModel.ServiceAuthorizationManager> необходимо проинформировать узел службы об объекте<xref:System.ServiceModel.ServiceAuthorizationManager>, который следует использовать.</span><span class="sxs-lookup"><span data-stu-id="09714-139">Once the custom <xref:System.ServiceModel.ServiceAuthorizationManager> is implemented, the service host must be informed about the <xref:System.ServiceModel.ServiceAuthorizationManager> to use.</span></span> <span data-ttu-id="09714-140">Это можно сделать с помощью следующего фрагмента кода.</span><span class="sxs-lookup"><span data-stu-id="09714-140">This is done as shown in the following code.</span></span>  
   
-```  
+```xml  
 <behavior ...>  
     ...  
     <serviceAuthorization serviceAuthorizationManagerType="Microsoft.ServiceModel.Samples.MyServiceAuthorizationManager, service">  
         ...  
     </serviceAuthorization>  
 </behavior>  
-  
 ```  
   
- Основным реализуемым методом <xref:System.IdentityModel.Policy.IAuthorizationPolicy> является метод <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29>.  
+ <span data-ttu-id="09714-141">Основным реализуемым методом <xref:System.IdentityModel.Policy.IAuthorizationPolicy> является метод <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29>.</span><span class="sxs-lookup"><span data-stu-id="09714-141">The primary <xref:System.IdentityModel.Policy.IAuthorizationPolicy> method to implement is the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> method.</span></span>  
   
 ```  
 public class MyAuthorizationPolicy : IAuthorizationPolicy  
@@ -390,29 +386,28 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 }  
 ```  
   
- В приведенном выше примере кода показано, каким образом метод <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> проверяет, что не было добавлено новых утверждений, которые влияют на обработку, и добавляет нужные утверждения.Разрешенные утверждения получаются из метода `GetAllowedOpList`, реализация которого возвращает заданный список операций, которые разрешено выполнять пользователю.Политика авторизации добавляет утверждения для доступа к определенной операции.Впоследствии эта политика используется объектом <xref:System.ServiceModel.ServiceAuthorizationManager> для принятия решений о предоставлении доступа.  
+ <span data-ttu-id="09714-142">В приведенном выше примере кода показано, каким образом метод <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> проверяет, что не было добавлено новых утверждений, которые влияют на обработку, и добавляет нужные утверждения.</span><span class="sxs-lookup"><span data-stu-id="09714-142">The previous code shows how the <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%28System.IdentityModel.Policy.EvaluationContext%2CSystem.Object%40%29> method checks that no new claims have been added that affect the processing and adds specific claims.</span></span> <span data-ttu-id="09714-143">Разрешенные утверждения получаются из метода `GetAllowedOpList`, реализация которого возвращает заданный список операций, которые разрешено выполнять пользователю.</span><span class="sxs-lookup"><span data-stu-id="09714-143">The claims that are allowed are obtained from the `GetAllowedOpList` method, which is implemented to return a specific list of operations that the user is allowed to perform.</span></span> <span data-ttu-id="09714-144">Политика авторизации добавляет утверждения для доступа к определенной операции.</span><span class="sxs-lookup"><span data-stu-id="09714-144">The authorization policy adds claims for accessing the particular operation.</span></span> <span data-ttu-id="09714-145">Впоследствии эта политика используется объектом <xref:System.ServiceModel.ServiceAuthorizationManager> для принятия решений о предоставлении доступа.</span><span class="sxs-lookup"><span data-stu-id="09714-145">This is later used by the <xref:System.ServiceModel.ServiceAuthorizationManager> to perform access check decisions.</span></span>  
   
- После реализации интерфейса <xref:System.IdentityModel.Policy.IAuthorizationPolicy> необходимо проинформировать узел службы о политиках авторизации, которые следует использовать.  
+ <span data-ttu-id="09714-146">После реализации интерфейса <xref:System.IdentityModel.Policy.IAuthorizationPolicy> необходимо проинформировать узел службы о политиках авторизации, которые следует использовать.</span><span class="sxs-lookup"><span data-stu-id="09714-146">Once the custom <xref:System.IdentityModel.Policy.IAuthorizationPolicy> is implemented, the service host must be informed about the authorization policies to use.</span></span>  
   
-```  
+```xml  
 <serviceAuthorization ...>  
        <authorizationPolicies>   
             <add policyType='Microsoft.ServiceModel.Samples.CustomAuthorizationPolicy.MyAuthorizationPolicy, PolicyLibrary' />  
        </authorizationPolicies>   
 </serviceAuthorization>  
-  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Клиент успешно вызывает методы Add, Subtract и Multiple и получает сообщение "Access is denied" при попытке вызывать метод Divide.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="09714-147">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-147">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="09714-148">Клиент успешно вызывает методы Add, Subtract и Multiple и получает сообщение "Access is denied" при попытке вызывать метод Divide.</span><span class="sxs-lookup"><span data-stu-id="09714-148">The client successfully calls the Add, Subtract and Multiple methods and gets an "Access is denied" message when trying to call the Divide method.</span></span> <span data-ttu-id="09714-149">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-149">Press ENTER in the client window to shut down the client.</span></span>  
   
-## Пакетный файл Setup  
- Входящий в состав образца файл Setup.bat позволяет настроить для сервера соответствующие сертификаты, необходимые для выполнения резидентного приложения, которое требует обеспечения безопасности на основе сертификата сервера.  
+## <a name="setup-batch-file"></a><span data-ttu-id="09714-150">Пакетный файл Setup</span><span class="sxs-lookup"><span data-stu-id="09714-150">Setup Batch File</span></span>  
+ <span data-ttu-id="09714-151">Входящий в состав образца файл Setup.bat позволяет настроить для сервера соответствующие сертификаты, необходимые для выполнения резидентного приложения, которое требует обеспечения безопасности на основе сертификата сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-151">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run a self-hosted application that requires server certificate-based security.</span></span>  
   
- Ниже представлен краткие общие сведения различных разделов пакетных файлов, позволяющий изменять их для выполнения в соответствующей конфигурации.  
+ <span data-ttu-id="09714-152">Ниже представлен краткие общие сведения о различных разделах пакетных файлов, позволяющий изменять их для выполнения в соответствующей конфигурации.</span><span class="sxs-lookup"><span data-stu-id="09714-152">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in the appropriate configuration:</span></span>  
   
--   Создание сертификата сервера.  
+-   <span data-ttu-id="09714-153">Создание сертификата сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-153">Creating the server certificate.</span></span>  
   
-     Следующие строки из файла Setup.bat создают используемый в дальнейшем сертификат сервера.Переменная %SERVER\_NAME% задает имя сервера.Измените эту переменную, чтобы задать собственное имя сервера.Значением по умолчанию является localhost.  
+     <span data-ttu-id="09714-154">Следующие строки из файла Setup.bat создают используемый в дальнейшем сертификат сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-154">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="09714-155">Переменная %SERVER_NAME% задает имя сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-155">The %SERVER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="09714-156">Измените эту переменную, чтобы задать собственное имя сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-156">Change this variable to specify your own server name.</span></span> <span data-ttu-id="09714-157">Значением по умолчанию является localhost.</span><span class="sxs-lookup"><span data-stu-id="09714-157">The default value is localhost.</span></span>  
   
     ```  
     echo ************  
@@ -422,98 +417,96 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
--   Установка сертификата сервера в хранилище доверенных сертификатов клиента.  
+-   <span data-ttu-id="09714-158">Установка сертификата сервера в хранилище доверенных сертификатов клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-158">Installing the server certificate into client's trusted certificate store.</span></span>  
   
-     Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента.Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы.Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.  
+     <span data-ttu-id="09714-159">Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-159">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="09714-160">Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы.</span><span class="sxs-lookup"><span data-stu-id="09714-160">This step is required because certificates that are generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="09714-161">Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.</span><span class="sxs-lookup"><span data-stu-id="09714-161">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   Создание сертификата клиента.  
+-   <span data-ttu-id="09714-162">Создание сертификата клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-162">Creating the client certificate.</span></span>  
   
-     Следующие строки из файла Setup.bat создают сертификат клиента, который будет использоваться.Переменная %USER\_NAME% задает имя сервера.Эта переменная имеет значение "test1", поскольку политика `IAuthorizationPolicy` ищет именно это имя.Если изменить значение переменной %USER\_NAME%, необходимо изменить и соответствующее значение в методе `IAuthorizationPolicy.Evaluate`.  
+     <span data-ttu-id="09714-163">Следующие строки из файла Setup.bat создают сертификат клиента, который будет использоваться.</span><span class="sxs-lookup"><span data-stu-id="09714-163">The following lines from the Setup.bat batch file create the client certificate to be used.</span></span> <span data-ttu-id="09714-164">Переменная %USER_NAME% задает имя сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-164">The %USER_NAME% variable specifies the server name.</span></span> <span data-ttu-id="09714-165">Эта переменная имеет значение "test1", поскольку политика `IAuthorizationPolicy` ищет именно это имя.</span><span class="sxs-lookup"><span data-stu-id="09714-165">This value is set to "test1" because this is the name the `IAuthorizationPolicy` looks for.</span></span> <span data-ttu-id="09714-166">Если изменить значение переменной %USER_NAME%, необходимо изменить и соответствующее значение в методе `IAuthorizationPolicy.Evaluate`.</span><span class="sxs-lookup"><span data-stu-id="09714-166">If you change the value of %USER_NAME% you must change the corresponding value in the `IAuthorizationPolicy.Evaluate` method.</span></span>  
   
-     Сертификат хранится в хранилище "My store" \(Личном хранилище\) в расположении CurrentUser.  
+     <span data-ttu-id="09714-167">Сертификат хранится в хранилище "My store" (Личном хранилище) в расположении CurrentUser.</span><span class="sxs-lookup"><span data-stu-id="09714-167">The certificate is stored in My (Personal) store under the CurrentUser store location.</span></span>  
   
     ```  
     echo ************  
     echo making client cert  
     echo ************  
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
-  
     ```  
   
--   Установка сертификата клиента в хранилище доверенных сертификатов сервера.  
+-   <span data-ttu-id="09714-168">Установка сертификата клиента в хранилище доверенных сертификатов сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-168">Installing the client certificate into server's trusted certificate store.</span></span>  
   
-     Следующие строки из файла Setup.bat копируют сертификат клиента в хранилище доверенных лиц.Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны серверной системы.Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата клиента в хранилище сертификатов сервера не требуется.  
+     <span data-ttu-id="09714-169">Следующие строки из файла Setup.bat копируют сертификат клиента в хранилище доверенных лиц.</span><span class="sxs-lookup"><span data-stu-id="09714-169">The following lines in the Setup.bat batch file copy the client certificate into the trusted people store.</span></span> <span data-ttu-id="09714-170">Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны серверной системы.</span><span class="sxs-lookup"><span data-stu-id="09714-170">This step is required because certificates that are generated by Makecert.exe are not implicitly trusted by the server system.</span></span> <span data-ttu-id="09714-171">Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата клиента в хранилище сертификатов сервера не требуется.</span><span class="sxs-lookup"><span data-stu-id="09714-171">If you already have a certificate that is rooted in a trusted root certificate—for example, a Microsoft issued certificate—this step of populating the server certificate store with the client certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
-#### Настройка и построение образца  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="09714-172">Настройка и сборка образца</span><span class="sxs-lookup"><span data-stu-id="09714-172">To set up and build the sample</span></span>  
   
-1.  Чтобы построить решение, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  <span data-ttu-id="09714-173">Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="09714-173">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2.  Чтобы запустить образец на одном или нескольких компьютерах, следуйте приведенным далее инструкциям.  
+2.  <span data-ttu-id="09714-174">Чтобы запустить образец на одном или нескольких компьютерах, следуйте приведенным далее инструкциям.</span><span class="sxs-lookup"><span data-stu-id="09714-174">To run the sample in a single- or cross-computer configuration, use the following instructions.</span></span>  
   
 > [!NOTE]
->  Если для восстановления конфигурации этого образца используется программа Svcutil.exe, измените имя конечной точки в конфигурации клиента, чтобы оно соответствовало клиентскому коду.  
+>  <span data-ttu-id="09714-175">Если для восстановления конфигурации этого образца используется программа Svcutil.exe, измените имя конечной точки в конфигурации клиента, чтобы оно соответствовало клиентскому коду.</span><span class="sxs-lookup"><span data-stu-id="09714-175">If you use Svcutil.exe to regenerate the configuration for this sample, be sure to modify the endpoint name in the client configuration to match the client code.</span></span>  
   
-#### Запуск образца на одном компьютере  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="09714-176">Запуск образца на одном компьютере</span><span class="sxs-lookup"><span data-stu-id="09714-176">To run the sample on the same computer</span></span>  
   
-1.  Откройте окно командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с правами администратора и запустите файл Setup.bat из папки установки образца.При этом устанавливаются все сертификаты, необходимые для запуска образца.  
+1.  <span data-ttu-id="09714-177">Откройте окно командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с правами администратора и запустите файл Setup.bat из папки установки образца.</span><span class="sxs-lookup"><span data-stu-id="09714-177">Open a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt window with administrator privileges and run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="09714-178">При этом устанавливаются все сертификаты, необходимые для выполнения образца.</span><span class="sxs-lookup"><span data-stu-id="09714-178">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Пакетный файл Setup.bat предназначен для запуска из командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].Переменная среды PATH, заданная в командной строке [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], указывает на каталог, содержащий исполняемые файлы, необходимые для скрипта Setup.bat.  
+    >  <span data-ttu-id="09714-179">Пакетный файл Setup.bat предназначен для запуска из командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="09714-179">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="09714-180">Переменная среды PATH, заданная в командной строке [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], указывает на каталог, содержащий исполняемые файлы, необходимые для скрипта Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="09714-180">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-2.  Из командной строки Visual Studio, открытой с правами администратора, запустите файл Setup.bat из папки установки образца.При этом устанавливаются все сертификаты, необходимые для запуска образца.  
+2.  <span data-ttu-id="09714-181">Из командной строки Visual Studio, открытой с правами администратора, запустите файл Setup.bat из папки установки образца.</span><span class="sxs-lookup"><span data-stu-id="09714-181">Run Setup.bat in a Visual Studio command prompt opened with administrator privileges from the sample install folder.</span></span> <span data-ttu-id="09714-182">При этом устанавливаются все сертификаты, необходимые для выполнения образца.</span><span class="sxs-lookup"><span data-stu-id="09714-182">This installs all the certificates required for running the sample.</span></span>  
   
-3.  Запустите программу Service.exe из каталога service\\bin.  
+3.  <span data-ttu-id="09714-183">Запустите программу Service.exe из папки service\bin.</span><span class="sxs-lookup"><span data-stu-id="09714-183">Launch Service.exe from service\bin.</span></span>  
   
-4.  Запустите программу Client.exe из каталога \\client\\bin.Действия клиента отображаются в консольном приложении клиента.  
+4.  <span data-ttu-id="09714-184">Запустите программу Client.exe из каталога \client\bin.</span><span class="sxs-lookup"><span data-stu-id="09714-184">Launch Client.exe from \client\bin.</span></span> <span data-ttu-id="09714-185">Действия клиента отображаются в консольном приложении клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-185">Client activity is displayed on the client console application.</span></span>  
   
-5.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  <span data-ttu-id="09714-186">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="09714-186">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Запуск образца на нескольких компьютерах  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="09714-187">Запуск образца на нескольких компьютерах</span><span class="sxs-lookup"><span data-stu-id="09714-187">To run the sample across computers</span></span>  
   
-1.  Создайте каталог на компьютере службы.  
+1.  <span data-ttu-id="09714-188">Создайте каталог на компьютере службы.</span><span class="sxs-lookup"><span data-stu-id="09714-188">Create a directory on the service computer.</span></span>  
   
-2.  Копируйте файлы служебных программ из каталога \\service\\bin в каталог на компьютере службы.Кроме того, скопируйте на компьютер службы файлы Setup.bat, Cleanup.bat, GetComputerName.vbs и ImportClientCert.bat.  
+2.  <span data-ttu-id="09714-189">Копируйте файлы служебных программ из каталога \service\bin в каталог на компьютере службы.</span><span class="sxs-lookup"><span data-stu-id="09714-189">Copy the service program files from \service\bin to the directory on the service computer.</span></span> <span data-ttu-id="09714-190">Кроме того, скопируйте на компьютер службы файлы Setup.bat, Cleanup.bat, GetComputerName.vbs и ImportClientCert.bat.</span><span class="sxs-lookup"><span data-stu-id="09714-190">Also copy the Setup.bat, Cleanup.bat, GetComputerName.vbs and ImportClientCert.bat files to the service computer.</span></span>  
   
-3.  Создайте на клиентском компьютере каталог для двоичных файлов клиента.  
+3.  <span data-ttu-id="09714-191">Создайте на клиентском компьютере каталог для двоичных файлов клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-191">Create a directory on the client computerfor the client binaries.</span></span>  
   
-4.  Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента.Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.  
+4.  <span data-ttu-id="09714-192">Скопируйте в клиентский каталог на клиентском компьютере файлы программы клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-192">Copy the client program files to the client directory on the client computer.</span></span> <span data-ttu-id="09714-193">Кроме того, скопируйте на клиент файлы Setup.bat, Cleanup.bat и ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="09714-193">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
   
-5.  На сервере откройте командную строку Visual Studio с правами администратора и запустите `setup.bat service`.При запуске команды `setup.bat` с аргументом `service` создается сертификат службы с полным именем домена компьютера, который экспортируется в файл с именем Service.cer.  
+5.  <span data-ttu-id="09714-194">На сервере откройте командную строку Visual Studio с правами администратора и запустите `setup.bat service`.</span><span class="sxs-lookup"><span data-stu-id="09714-194">On the server, run `setup.bat service` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="09714-195">Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем экспортов команды сертификат службы в файл с именем Service.cer.</span><span class="sxs-lookup"><span data-stu-id="09714-195">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the computerand exports the service certificate to a file named Service.cer.</span></span>  
   
-6.  Внесите в файл Service.exe.config изменения в соответствии с новым именем сертификата \(в атрибуте `findValue` в [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\), которое совпадает с полным именем домена компьютера.Кроме того, измените имя компьютера в элементе \<service\>\/\<baseAddresses\> с localhost на полное доменное имя компьютера службы.  
+6.  <span data-ttu-id="09714-196">Изменить Service.exe.config в соответствии с новым именем сертификата (в `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) которого совпадает со значением полное доменное имя компьютера.</span><span class="sxs-lookup"><span data-stu-id="09714-196">Edit Service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) which is the same as the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="09714-197">Кроме того, измените имя компьютера в \<службы > /\<baseAddresses > элемент с localhost на полное доменное имя компьютера службы.</span><span class="sxs-lookup"><span data-stu-id="09714-197">Also change the computername in the \<service>/\<baseAddresses> element from localhost to the fully-qualified name of your service computer.</span></span>  
   
-7.  Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
+7.  <span data-ttu-id="09714-198">Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.</span><span class="sxs-lookup"><span data-stu-id="09714-198">Copy the Service.cer file from the service directory to the client directory on the client computer.</span></span>  
   
-8.  На клиентском компьютере запустите `setup.bat client` из командной строки Visual Studio, открытой с правами администратора.При запуске `setup.bat` с аргументом `client` будет создан сертификат клиента с именем test1, после чего сертификат клиента будет экспортирован в файл с именем Client.cer.  
+8.  <span data-ttu-id="09714-199">На клиентском компьютере запустите `setup.bat client` из командной строки Visual Studio, открытой с правами администратора.</span><span class="sxs-lookup"><span data-stu-id="09714-199">On the client, run `setup.bat client` in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="09714-200">Под управлением `setup.bat` с `client` создается сертификат клиента с именем test1, который экспортируется в файл с именем Client.cer.</span><span class="sxs-lookup"><span data-stu-id="09714-200">Running `setup.bat` with the `client` argument creates a client certificate named test1 and exports the client certificate to a file named Client.cer.</span></span>  
   
-9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.Для этого замените имя localhost полным доменным именем сервера.  
+9. <span data-ttu-id="09714-201">В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы.</span><span class="sxs-lookup"><span data-stu-id="09714-201">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="09714-202">Для этого замените имя localhost полным доменным именем сервера.</span><span class="sxs-lookup"><span data-stu-id="09714-202">Do this by replacing localhost with the fully-qualified domain name of the server.</span></span>  
   
-10. Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
+10. <span data-ttu-id="09714-203">Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.</span><span class="sxs-lookup"><span data-stu-id="09714-203">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
   
-11. На клиентском компьютере откройте командную строку Visual Studio с правами администратора и запустите файл ImportServiceCert.bat.Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser \- TrustedPeople.  
+11. <span data-ttu-id="09714-204">На клиентском компьютере откройте командную строку Visual Studio с правами администратора и запустите файл ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="09714-204">On the client, run ImportServiceCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="09714-205">Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="09714-205">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
   
-12. На сервере откройте командную строку Visual Studio с правами администратора и запустите файл ImportClientCert.bat.При этом импортируется сертификат клиента из файла Client.cer в хранилище «LocalMachine — TrustedPeople».  
+12. <span data-ttu-id="09714-206">На сервере откройте командную строку Visual Studio с правами администратора и запустите файл ImportClientCert.bat.</span><span class="sxs-lookup"><span data-stu-id="09714-206">On the server, run ImportClientCert.bat in a Visual Studio command prompt opened with administrator privileges.</span></span> <span data-ttu-id="09714-207">При этом импортируется сертификат клиента из файла Client.cer в хранилище «LocalMachine - TrustedPeople».</span><span class="sxs-lookup"><span data-stu-id="09714-207">This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
   
-13. На сервере запустите из окна командной строки программу Service.exe.  
+13. <span data-ttu-id="09714-208">На сервере запустите из окна командной строки программу Service.exe.</span><span class="sxs-lookup"><span data-stu-id="09714-208">On the server computer, launch Service.exe from the command prompt window.</span></span>  
   
-14. На клиентском компьютере из окна командной строки запустите программу Client.exe.Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/ru-ru/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. <span data-ttu-id="09714-209">На клиентском компьютере из окна командной строки запустите программу Client.exe.</span><span class="sxs-lookup"><span data-stu-id="09714-209">On the client computer, launch Client.exe from a command prompt window.</span></span> <span data-ttu-id="09714-210">Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="09714-210">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Очистка после образца  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="09714-211">Очистка после образца</span><span class="sxs-lookup"><span data-stu-id="09714-211">To clean up after the sample</span></span>  
   
-1.  После завершения работы образца запустите в папке образцов файл Cleanup.bat.Он удалит из хранилища сертификатов сертификаты сервера и клиента.  
+1.  <span data-ttu-id="09714-212">После завершения работы примера запустите в папке примеров файл Cleanup.bat.</span><span class="sxs-lookup"><span data-stu-id="09714-212">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span> <span data-ttu-id="09714-213">Он удалит из хранилища сертификатов сертификаты сервера и клиента.</span><span class="sxs-lookup"><span data-stu-id="09714-213">This removes the server and client certificates from the certificate store.</span></span>  
   
 > [!NOTE]
->  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах.Если образцы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в которых использовались сертификаты, запускались на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище «CurrentUser — TrustedPeople».Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  <span data-ttu-id="09714-214">Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах.</span><span class="sxs-lookup"><span data-stu-id="09714-214">This script does not remove service certificates on a client when running this sample across computers.</span></span> <span data-ttu-id="09714-215">Если образцы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], в которых использовались сертификаты, запускались на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище «CurrentUser - TrustedPeople».</span><span class="sxs-lookup"><span data-stu-id="09714-215">If you have run [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples that use certificates across computers, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="09714-216">Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="09714-216">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="09714-217">См. также</span><span class="sxs-lookup"><span data-stu-id="09714-217">See Also</span></span>

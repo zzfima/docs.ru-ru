@@ -1,88 +1,80 @@
 ---
-title: "Общие сведения об элементе управления ScrollViewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы управления, ScrollViewer"
-  - "ScrollViewer - элемент управления, сведения об элементе управления ScrollViewer"
+title: "Общие сведения об элементе управления ScrollViewer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [WPF], ScrollViewer
+- ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f6398e4a40a1d4a83bc0ae080321112fb6d9fcd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения об элементе управления ScrollViewer
-Часто содержимое в пользовательском интерфейсе занимает больше места, чем вмещает отображаемая область экрана компьютера.  Элемент управления <xref:System.Windows.Controls.ScrollViewer> предоставляет удобный способ включить прокрутку содержимого в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  В данном разделе представлены сведения об элементе <xref:System.Windows.Controls.ScrollViewer> и приведены примеры его использования.  
-  
- В этом разделе содержатся следующие подразделы.  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [Элемент управления ScrollViewer](#what_is_a_scrollviewer_element)  
-  
--   [Физическая илогическая прокрутка](#scrollviewer_physical_vs_logical)  
-  
--   [Определение и использование элемента ScrollViewer](#scrollviewer_markup_syntax_and_sample)  
-  
--   [Стили элемента управления ScrollViewer](#scrollviewer_styling_scrollviewer)  
-  
--   [Разбиение документов на страницы](#scrollviewer_scroll_vs_paginate)  
-  
--   [Related Topics](#seeAlsoToggle)  
+# <a name="scrollviewer-overview"></a><span data-ttu-id="14a66-102">Общие сведения об элементе управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="14a66-102">ScrollViewer Overview</span></span>
+<span data-ttu-id="14a66-103">Часто содержимое в пользовательском интерфейсе занимает больше места, чем вмещает область отображения на экране компьютера.</span><span class="sxs-lookup"><span data-stu-id="14a66-103">Content within a user interface is often larger than a computer screen's display area.</span></span> <span data-ttu-id="14a66-104"><xref:System.Windows.Controls.ScrollViewer> Управления обеспечивает удобный способ прокручивать содержимое в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений.</span><span class="sxs-lookup"><span data-stu-id="14a66-104">The <xref:System.Windows.Controls.ScrollViewer> control provides a convenient way to enable scrolling of content in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="14a66-105">В этом разделе описываются <xref:System.Windows.Controls.ScrollViewer> элемент и предоставляет примеры его использования.</span><span class="sxs-lookup"><span data-stu-id="14a66-105">This topic introduces the <xref:System.Windows.Controls.ScrollViewer> element and provides several usage examples.</span></span>  
   
 <a name="what_is_a_scrollviewer_element"></a>   
-## Элемент управления ScrollViewer  
- Существуют два предопределенных элемента управления, обеспечивающих прокрутку в приложениях [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: <xref:System.Windows.Controls.Primitives.ScrollBar> и <xref:System.Windows.Controls.ScrollViewer>.  Элемент управления <xref:System.Windows.Controls.ScrollViewer> включает в себя горизонтальный и вертикальный элементы <xref:System.Windows.Controls.Primitives.ScrollBar> и контейнер содержимого \(например, элемент <xref:System.Windows.Controls.Panel>\) для отображения других видимых элементов в прокручиваемой области.  Чтобы использовать элемент <xref:System.Windows.Controls.Primitives.ScrollBar> для прокрутки содержимого, необходимо предварительно создать пользовательский объект.  Тем не менее, можно непосредственно использовать элемент <xref:System.Windows.Controls.ScrollViewer>, так как это составной элемент управления, включающий в себя функциональные возможности <xref:System.Windows.Controls.Primitives.ScrollBar>.  
+## <a name="the-scrollviewer-control"></a><span data-ttu-id="14a66-106">Элемент управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="14a66-106">The ScrollViewer Control</span></span>  
+ <span data-ttu-id="14a66-107">Существуют два предварительно определенных элементов, обеспечивающих прокрутку в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений: <xref:System.Windows.Controls.Primitives.ScrollBar> и <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="14a66-107">There are two predefined elements that enable scrolling in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications: <xref:System.Windows.Controls.Primitives.ScrollBar> and <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="14a66-108"><xref:System.Windows.Controls.ScrollViewer> Инкапсулирует элемента управления по горизонтали и вертикали <xref:System.Windows.Controls.Primitives.ScrollBar> элементов и контейнер содержимого (например, <xref:System.Windows.Controls.Panel> элемент) для отображения других видимых элементов в прокручиваемой области.</span><span class="sxs-lookup"><span data-stu-id="14a66-108">The <xref:System.Windows.Controls.ScrollViewer> control encapsulates horizontal and vertical <xref:System.Windows.Controls.Primitives.ScrollBar> elements and a content container (such as a <xref:System.Windows.Controls.Panel> element) in order to display other visible elements in a scrollable area.</span></span> <span data-ttu-id="14a66-109">Необходимо создать пользовательский объект для использования <xref:System.Windows.Controls.Primitives.ScrollBar> элемент для прокрутки содержимого.</span><span class="sxs-lookup"><span data-stu-id="14a66-109">You must build a custom object in order to use the <xref:System.Windows.Controls.Primitives.ScrollBar> element for content scrolling.</span></span> <span data-ttu-id="14a66-110">Тем не менее, можно использовать <xref:System.Windows.Controls.ScrollViewer> элемент сам по себе, так как это составной элемент управления, который инкапсулирует <xref:System.Windows.Controls.Primitives.ScrollBar> функциональные возможности.</span><span class="sxs-lookup"><span data-stu-id="14a66-110">However, you can use the <xref:System.Windows.Controls.ScrollViewer> element by itself because it is a composite control that encapsulates <xref:System.Windows.Controls.Primitives.ScrollBar> functionality.</span></span>  
   
- Элемент управления <xref:System.Windows.Controls.ScrollViewer> реагирует на команды мыши и клавиатуры и определяет множество методов для прокрутки содержимого на предопределенные значения приращения.  Для обнаружения изменений состояния элемента <xref:System.Windows.Controls.ScrollViewer> можно использовать событие <xref:System.Windows.Controls.ScrollViewer.ScrollChanged>.  
+ <span data-ttu-id="14a66-111"><xref:System.Windows.Controls.ScrollViewer> Управления реагирует на команды мыши и клавиатуры и определяет множество методов для прокрутки содержимого на предопределенные значения приращения.</span><span class="sxs-lookup"><span data-stu-id="14a66-111">The <xref:System.Windows.Controls.ScrollViewer> control responds to both mouse and keyboard commands, and defines numerous methods with which to scroll content by predetermined increments.</span></span> <span data-ttu-id="14a66-112">Можно использовать <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> событий для обнаружения изменений в <xref:System.Windows.Controls.ScrollViewer> состояние.</span><span class="sxs-lookup"><span data-stu-id="14a66-112">You can use the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event to detect a change in a <xref:System.Windows.Controls.ScrollViewer> state.</span></span>  
   
- Объект <xref:System.Windows.Controls.ScrollViewer> может иметь только одного потомка, обычно это элемент <xref:System.Windows.Controls.Panel>, в котором может размещаться коллекция элементов <xref:System.Windows.Controls.Panel.Children%2A>.  Свойство <xref:System.Windows.Controls.ContentPresenter.Content%2A> определяет единственного потомка <xref:System.Windows.Controls.ScrollViewer>.  
+ <span data-ttu-id="14a66-113">Объект <xref:System.Windows.Controls.ScrollViewer> может иметь только один дочерний элемент, обычно <xref:System.Windows.Controls.Panel> элемент, который может содержать <xref:System.Windows.Controls.Panel.Children%2A> коллекции элементов.</span><span class="sxs-lookup"><span data-stu-id="14a66-113">A <xref:System.Windows.Controls.ScrollViewer> can only have one child, typically a <xref:System.Windows.Controls.Panel> element that can host a <xref:System.Windows.Controls.Panel.Children%2A> collection of elements.</span></span> <span data-ttu-id="14a66-114"><xref:System.Windows.Controls.ContentPresenter.Content%2A> Свойство определяет единственного потомка <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="14a66-114">The <xref:System.Windows.Controls.ContentPresenter.Content%2A> property defines the sole child of the <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
   
 <a name="scrollviewer_physical_vs_logical"></a>   
-## Физическая илогическая прокрутка  
- Физическая прокрутка используется для прокрутки на предопределенное приращение, которое обычно является значением, объявленным в пикселях.  Логическая прокрутка используется для прокрутки до следующего элемента в логическом дереве.  Физическая прокрутка является поведением прокрутки по умолчанию для большинства элементов <xref:System.Windows.Controls.Panel>.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] поддерживает оба типа прокрутки.  
+## <a name="physical-vs-logical-scrolling"></a><span data-ttu-id="14a66-115">Физическая и логическая прокрутка</span><span class="sxs-lookup"><span data-stu-id="14a66-115">Physical vs. Logical Scrolling</span></span>  
+ <span data-ttu-id="14a66-116">Физическая прокрутка используется для прокрутки на предопределенное приращение, которое обычно является значением, объявленным в пикселях.</span><span class="sxs-lookup"><span data-stu-id="14a66-116">Physical scrolling is used to scroll content by a predetermined physical increment, typically by a value that is declared in pixels.</span></span> <span data-ttu-id="14a66-117">Логическая прокрутка используется для прокрутки к следующему элементу в логическом дереве.</span><span class="sxs-lookup"><span data-stu-id="14a66-117">Logical scrolling is used to scroll to the next item in the logical tree.</span></span> <span data-ttu-id="14a66-118">Физическая прокрутка является поведением прокрутки по умолчанию для большинства <xref:System.Windows.Controls.Panel> элементов.</span><span class="sxs-lookup"><span data-stu-id="14a66-118">Physical scrolling is the default scroll behavior for most <xref:System.Windows.Controls.Panel> elements.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="14a66-119"> поддерживает оба типа прокрутки.</span><span class="sxs-lookup"><span data-stu-id="14a66-119"> supports both types of scrolling.</span></span>  
   
-#### Интерфейс IScrollInfo  
- Интерфейс <xref:System.Windows.Controls.Primitives.IScrollInfo> представляет основную область прокрутки в <xref:System.Windows.Controls.ScrollViewer> или в производном элементе управления.  Интерфейс определяет свойства и методы прокрутки, которые могут быть реализованы элементами <xref:System.Windows.Controls.Panel>, требующими прокрутки на логическую единицу, а не на физическое приращение.  Приведение экземпляра класса <xref:System.Windows.Controls.Primitives.IScrollInfo> к производному экземпляру класса <xref:System.Windows.Controls.Panel> и последующее использование его методов прокрутки, обеспечивают удобный способ перехода к следующей логической единице в коллекции потомка вместо прокрутки на пиксельное приращение.  По умолчанию элемент управления <xref:System.Windows.Controls.ScrollViewer> поддерживает прокрутку на физические единицы.  
+#### <a name="the-iscrollinfo-interface"></a><span data-ttu-id="14a66-120">Интерфейс IScrollInfo</span><span class="sxs-lookup"><span data-stu-id="14a66-120">The IScrollInfo Interface</span></span>  
+ <span data-ttu-id="14a66-121"><xref:System.Windows.Controls.Primitives.IScrollInfo> Интерфейс представляет основную область прокрутки в <xref:System.Windows.Controls.ScrollViewer> или производного элемента управления.</span><span class="sxs-lookup"><span data-stu-id="14a66-121">The <xref:System.Windows.Controls.Primitives.IScrollInfo> interface represents the main scrolling region within a <xref:System.Windows.Controls.ScrollViewer> or derived control.</span></span> <span data-ttu-id="14a66-122">Интерфейс определяет свойства и методы, которые могут быть реализованы прокрутки <xref:System.Windows.Controls.Panel> элементы, которые требуют прокрутки на логическую единицу, а не на физическое приращение.</span><span class="sxs-lookup"><span data-stu-id="14a66-122">The interface defines scrolling properties and methods that can be implemented by <xref:System.Windows.Controls.Panel> elements that require scrolling by logical unit, rather than by a physical increment.</span></span> <span data-ttu-id="14a66-123">Приведения экземпляра <xref:System.Windows.Controls.Primitives.IScrollInfo> к производному <xref:System.Windows.Controls.Panel> и затем с помощью его методов прокрутки предоставляет удобный способ перейдите к следующей логической единице в дочерней коллекции, а не на шаг пикселей.</span><span class="sxs-lookup"><span data-stu-id="14a66-123">Casting an instance of <xref:System.Windows.Controls.Primitives.IScrollInfo> to a derived <xref:System.Windows.Controls.Panel> and then using its scrolling methods provides a useful way to scroll to the next logical unit in a child collection, rather than by pixel increment.</span></span> <span data-ttu-id="14a66-124">По умолчанию <xref:System.Windows.Controls.ScrollViewer> элемент управления поддерживает прокрутку на физические единицы.</span><span class="sxs-lookup"><span data-stu-id="14a66-124">By default, the <xref:System.Windows.Controls.ScrollViewer> control supports scrolling by physical units.</span></span>  
   
- Объекты <xref:System.Windows.Controls.StackPanel> и <xref:System.Windows.Controls.VirtualizingStackPanel> реализуют интерфейс <xref:System.Windows.Controls.Primitives.IScrollInfo> и имеют встроенную поддержку логической прокрутки.  Для элементов управления разметкой, имеющих встроенную поддержку логической прокрутки, можно реализовать физическую прокрутку, поместив хост\-элемент <xref:System.Windows.Controls.Panel> в <xref:System.Windows.Controls.ScrollViewer> и задав для свойства <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> значение `false`.  
+ <span data-ttu-id="14a66-125"><xref:System.Windows.Controls.StackPanel>и <xref:System.Windows.Controls.VirtualizingStackPanel> реализованы <xref:System.Windows.Controls.Primitives.IScrollInfo> и имеют встроенную поддержку логической прокрутки.</span><span class="sxs-lookup"><span data-stu-id="14a66-125"><xref:System.Windows.Controls.StackPanel> and <xref:System.Windows.Controls.VirtualizingStackPanel> both implement <xref:System.Windows.Controls.Primitives.IScrollInfo> and natively support logical scrolling.</span></span> <span data-ttu-id="14a66-126">Для макета элементов управления, встроенную поддержку логической прокрутки, можно реализовать физическую прокрутку, поместив хост <xref:System.Windows.Controls.Panel> элемент в <xref:System.Windows.Controls.ScrollViewer> и параметр <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> свойства `false`.</span><span class="sxs-lookup"><span data-stu-id="14a66-126">For layout controls that natively support logical scrolling, you can still achieve physical scrolling by wrapping the host <xref:System.Windows.Controls.Panel> element in a <xref:System.Windows.Controls.ScrollViewer> and setting the <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> property to `false`.</span></span>  
   
- В следующем примере кода демонстрируется приведение экземпляра <xref:System.Windows.Controls.Primitives.IScrollInfo> к <xref:System.Windows.Controls.StackPanel> и использование методов прокрутки содержимого \(<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> и <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>\), определенных интерфейсом.  
+ <span data-ttu-id="14a66-127">В следующем примере кода показано, как привести экземпляр <xref:System.Windows.Controls.Primitives.IScrollInfo> для <xref:System.Windows.Controls.StackPanel> и использование методов прокрутки содержимого (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> и <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) определяется интерфейсом.</span><span class="sxs-lookup"><span data-stu-id="14a66-127">The following code example demonstrates how to cast an instance of <xref:System.Windows.Controls.Primitives.IScrollInfo> to a <xref:System.Windows.Controls.StackPanel> and use content scrolling methods (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> and <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) defined by the interface.</span></span>  
   
  [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
  [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
-## Определение и использование элемента ScrollViewer  
- В следующем примере объект <xref:System.Windows.Controls.ScrollViewer> создается в окне, содержащем текст и прямоугольник.  Элементы <xref:System.Windows.Controls.Primitives.ScrollBar> выводятся только в случае необходимости.  При изменении размера окна элементы <xref:System.Windows.Controls.Primitives.ScrollBar> отображаются и исчезают согласно изменению значений свойств <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> и <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>.  
+## <a name="defining-and-using-a-scrollviewer-element"></a><span data-ttu-id="14a66-128">Определение и использование элемента ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="14a66-128">Defining and Using a ScrollViewer Element</span></span>  
+ <span data-ttu-id="14a66-129">В следующем примере создается <xref:System.Windows.Controls.ScrollViewer> в окно, содержащее текст и прямоугольник.</span><span class="sxs-lookup"><span data-stu-id="14a66-129">The following example creates a <xref:System.Windows.Controls.ScrollViewer> in a window that contains some text and a rectangle.</span></span> <span data-ttu-id="14a66-130"><xref:System.Windows.Controls.Primitives.ScrollBar>элементы отображаются, только если они необходимы.</span><span class="sxs-lookup"><span data-stu-id="14a66-130"><xref:System.Windows.Controls.Primitives.ScrollBar> elements appear only when they are necessary.</span></span> <span data-ttu-id="14a66-131">При изменении размера окна, <xref:System.Windows.Controls.Primitives.ScrollBar> элементы появляются и исчезают из-за обновленные значения <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> и <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="14a66-131">When you resize the window, the <xref:System.Windows.Controls.Primitives.ScrollBar> elements appear and disappear, due to updated values of the <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> and <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> properties.</span></span>  
   
  [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
  [!code-vb[ScrollViewer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
- [!code-xml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
+ [!code-xaml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
 <a name="scrollviewer_styling_scrollviewer"></a>   
-## Стили элемента управления ScrollViewer  
- Как и к остальным элементам управления в Windows Presentation Foundation, к <xref:System.Windows.Controls.ScrollViewer> могут быть применены различные стили для изменения поведения элемента управления при его отрисовки.  Дополнительные сведения о стилях элементов управления см. в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+## <a name="styling-a-scrollviewer"></a><span data-ttu-id="14a66-132">Стили элемента управления ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="14a66-132">Styling a ScrollViewer</span></span>  
+ <span data-ttu-id="14a66-133">Как и все элементы в Windows Presentation Foundation <xref:System.Windows.Controls.ScrollViewer> можно стиль, чтобы изменить поведение по умолчанию отрисовки элемента управления.</span><span class="sxs-lookup"><span data-stu-id="14a66-133">Like all controls in Windows Presentation Foundation, the <xref:System.Windows.Controls.ScrollViewer> can be styled in order to change the default rendering behavior of the control.</span></span> <span data-ttu-id="14a66-134">Дополнительные сведения о стилях элементов управления см. в разделе [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="14a66-134">For additional information on control styling, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
-## Разбиение документов на страницы  
- Для содержимого документа альтернативой прокрутке является контейнер документа, поддерживающий разбиение на страницы.  Класс <xref:System.Windows.Documents.FlowDocument> предназначен для документов, которые размещаются в элементе управления просмотра, например в <xref:System.Windows.Controls.FlowDocumentPageViewer>, который поддерживает разбиение содержимого на несколько страниц, что устраняет необходимость в прокрутке.  <xref:System.Windows.Controls.DocumentViewer> предоставляет решение для просмотра содержимого <xref:System.Windows.Documents.FixedDocument>, в котором для вывода содержимого вне области отображения применяется традиционная прокрутка.  
+## <a name="paginating-documents"></a><span data-ttu-id="14a66-135">Разбивка документов на страницы</span><span class="sxs-lookup"><span data-stu-id="14a66-135">Paginating Documents</span></span>  
+ <span data-ttu-id="14a66-136">Альтернативой прокрутке содержимого документа является контейнер документа, поддерживающий разбиение на страницы.</span><span class="sxs-lookup"><span data-stu-id="14a66-136">For document content, an alternative to scrolling is to choose a document container that supports pagination.</span></span> <span data-ttu-id="14a66-137"><xref:System.Windows.Documents.FlowDocument>для документов, должен быть размещен в элементе управления просмотра, например <xref:System.Windows.Controls.FlowDocumentPageViewer>, который поддерживает разбиение содержимого на несколько страниц, что устраняет необходимость в прокрутке.</span><span class="sxs-lookup"><span data-stu-id="14a66-137"><xref:System.Windows.Documents.FlowDocument> is for documents that are designed to be hosted within a viewing control, such as <xref:System.Windows.Controls.FlowDocumentPageViewer>, that supports paginating content across multiple pages, preventing the need for scrolling.</span></span> <span data-ttu-id="14a66-138"><xref:System.Windows.Controls.DocumentViewer>предоставляет решение для просмотра <xref:System.Windows.Documents.FixedDocument> содержимое, которое использует традиционный прокрутки для отображения содержимого за пределы области отображения.</span><span class="sxs-lookup"><span data-stu-id="14a66-138"><xref:System.Windows.Controls.DocumentViewer> provides a solution for viewing <xref:System.Windows.Documents.FixedDocument> content, which uses traditional scrolling to display content outside the realm of the display area.</span></span>  
   
- Дополнительные сведения о форматах документа и параметрах представления см. в разделе [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ <span data-ttu-id="14a66-139">Дополнительные сведения о форматах документа и параметрах представления см. в разделе [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="14a66-139">For additional information about document formats and presentation options, see [Documents in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).</span></span>  
   
-## См. также  
- <xref:System.Windows.Controls.ScrollViewer>   
- <xref:System.Windows.Controls.Primitives.ScrollBar>   
- <xref:System.Windows.Controls.Primitives.IScrollInfo>   
- [Create a Scroll Viewer](http://msdn.microsoft.com/ru-ru/c8e46af7-b417-441b-aa30-791cbdbd43ef)   
- [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Стили и шаблоны элемента ScrollBar](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)   
- [Элементы управления](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a><span data-ttu-id="14a66-140">См. также</span><span class="sxs-lookup"><span data-stu-id="14a66-140">See Also</span></span>  
+ <xref:System.Windows.Controls.ScrollViewer>  
+ <xref:System.Windows.Controls.Primitives.ScrollBar>  
+ <xref:System.Windows.Controls.Primitives.IScrollInfo>  
+ [<span data-ttu-id="14a66-141">Создание приложения для просмотра прокрутки</span><span class="sxs-lookup"><span data-stu-id="14a66-141">Create a Scroll Viewer</span></span>](http://msdn.microsoft.com/en-us/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
+ [<span data-ttu-id="14a66-142">Документы в WPF</span><span class="sxs-lookup"><span data-stu-id="14a66-142">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="14a66-143">Стили и шаблоны элемента ScrollBar</span><span class="sxs-lookup"><span data-stu-id="14a66-143">ScrollBar Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
+ [<span data-ttu-id="14a66-144">Элементы управления</span><span class="sxs-lookup"><span data-stu-id="14a66-144">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

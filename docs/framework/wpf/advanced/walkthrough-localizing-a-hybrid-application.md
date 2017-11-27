@@ -1,180 +1,183 @@
 ---
-title: "Пример локализации гибридного приложения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "гибридные приложения [взаимодействие с WPF]"
-  - "локализация [взаимодействие с WPF]"
+title: "Пример локализации гибридного приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- localization [WPF interoperability]
+- hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5e1425eafd0f1663aaf82185e0f32bf2a3bea509
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Пример локализации гибридного приложения
-В данном руководстве показано, как локализовать элементы [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в гибридном приложении, основанном на [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+# <a name="walkthrough-localizing-a-hybrid-application"></a><span data-ttu-id="a83fa-102">Пример локализации гибридного приложения</span><span class="sxs-lookup"><span data-stu-id="a83fa-102">Walkthrough: Localizing a Hybrid Application</span></span>
+<span data-ttu-id="a83fa-103">В этом пошаговом руководстве показано, как для локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-на основе гибридного приложения.</span><span class="sxs-lookup"><span data-stu-id="a83fa-103">This walkthrough shows you how to localize [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements in a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-based hybrid application.</span></span>  
   
- В этом пошаговом руководстве демонстрируется выполнение следующих задач.  
+ <span data-ttu-id="a83fa-104">В данном пошаговом руководстве представлены следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="a83fa-104">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Создание ведущего проекта [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
+-   <span data-ttu-id="a83fa-105">Создание [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] узла проекта.</span><span class="sxs-lookup"><span data-stu-id="a83fa-105">Creating the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] host project.</span></span>  
   
--   Добавление локализуемого содержимого.  
+-   <span data-ttu-id="a83fa-106">Добавление локализуемого содержимого.</span><span class="sxs-lookup"><span data-stu-id="a83fa-106">Adding localizable content.</span></span>  
   
--   Включение локализации.  
+-   <span data-ttu-id="a83fa-107">Включение локализации.</span><span class="sxs-lookup"><span data-stu-id="a83fa-107">Enabling localization.</span></span>  
   
--   Назначение идентификаторов ресурса.  
+-   <span data-ttu-id="a83fa-108">Назначение идентификаторов ресурсов.</span><span class="sxs-lookup"><span data-stu-id="a83fa-108">Assigning resource identifiers.</span></span>  
   
--   Использовать средства LocBaml для создания вспомогательных сборок.  
+-   <span data-ttu-id="a83fa-109">Использование средства LocBaml для создания вспомогательной сборки.</span><span class="sxs-lookup"><span data-stu-id="a83fa-109">Using the LocBaml tool to produce a satellite assembly.</span></span>  
   
- Полный пример кода для задач, приведенных в этом руководстве, см. в разделе [Пример локализации гибридного приложения](http://go.microsoft.com/fwlink/?LinkID=160015).  
+ <span data-ttu-id="a83fa-110">Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [локализация пример гибридного приложения](http://go.microsoft.com/fwlink/?LinkID=160015).</span><span class="sxs-lookup"><span data-stu-id="a83fa-110">For a complete code listing of the tasks illustrated in this walkthrough, see [Localizing a Hybrid Application Sample](http://go.microsoft.com/fwlink/?LinkID=160015).</span></span>  
   
- Закончив, вы получите локализованное гибридное приложение.  
+ <span data-ttu-id="a83fa-111">Закончив, вы получите локализованное гибридное приложение.</span><span class="sxs-lookup"><span data-stu-id="a83fa-111">When you are finished, you will have a localized hybrid application.</span></span>  
   
-## Обязательные компоненты  
- Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
+## <a name="prerequisites"></a><span data-ttu-id="a83fa-112">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="a83fa-112">Prerequisites</span></span>  
+ <span data-ttu-id="a83fa-113">Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="a83fa-113">You need the following components to complete this walkthrough:</span></span>  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]<span data-ttu-id="a83fa-114">.</span><span class="sxs-lookup"><span data-stu-id="a83fa-114">.</span></span>  
   
-## Создание ведущего проекта Windows Forms  
- Первым шагом является создание проекта приложения [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и добавление элемента [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] с содержимым, которое будет локализовано.  
+## <a name="creating-the-windows-forms-host-project"></a><span data-ttu-id="a83fa-115">Создание ведущего проекта Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a83fa-115">Creating the Windows Forms Host Project</span></span>  
+ <span data-ttu-id="a83fa-116">Первым шагом является создание [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения проекта и добавьте [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элемент содержимого, которое будет локализовано.</span><span class="sxs-lookup"><span data-stu-id="a83fa-116">The first step is to create the [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] application project and add a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element with content that you will localize.</span></span>  
   
-#### Для создания ведущего проекта  
+#### <a name="to-create-the-host-project"></a><span data-ttu-id="a83fa-117">Создание ведущего проекта</span><span class="sxs-lookup"><span data-stu-id="a83fa-117">To create the host project</span></span>  
   
-1.  Создайте проект приложения WPF с именем `LocalizingWpfInWf`.  Дополнительные сведения см. в разделе [How to: Create a Windows Application Project](http://msdn.microsoft.com/ru-ru/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  <span data-ttu-id="a83fa-118">Создание проекта приложения WPF с именем `LocalizingWpfInWf`.</span><span class="sxs-lookup"><span data-stu-id="a83fa-118">Create a WPF Application project named `LocalizingWpfInWf`.</span></span> <span data-ttu-id="a83fa-119">Для получения дополнительной информации см. [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span><span class="sxs-lookup"><span data-stu-id="a83fa-119">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  Добавьте элемент [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>, вызванный `SimpleControl`, к проекту.  
+2.  <span data-ttu-id="a83fa-120">Добавить [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> элемент с именем `SimpleControl` в проект.</span><span class="sxs-lookup"><span data-stu-id="a83fa-120">Add a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl> element called `SimpleControl` to the project.</span></span>  
   
-3.  Используйте элемент управления <xref:System.Windows.Forms.Integration.ElementHost> для размещения элемента `SimpleControl` на форме.  Дополнительные сведения см. в разделе [Пошаговое руководство. Размещение составного трехмерного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).  
+3.  <span data-ttu-id="a83fa-121">Используйте <xref:System.Windows.Forms.Integration.ElementHost> управления, чтобы разместить `SimpleControl` элемент в форме.</span><span class="sxs-lookup"><span data-stu-id="a83fa-121">Use the <xref:System.Windows.Forms.Integration.ElementHost> control to place a `SimpleControl` element on the form.</span></span> <span data-ttu-id="a83fa-122">Дополнительные сведения см. в разделе [Пошаговое руководство: размещение трехмерных составного элемента управления WPF в Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="a83fa-122">For more information, see [Walkthrough: Hosting a 3-D WPF Composite Control in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).</span></span>  
   
-## Добавление локализуемого содержимого  
- Далее, добавьте элемент управления [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Label и установите содержимое для элемента управления [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в значение локализуемой строки.  
+## <a name="adding-localizable-content"></a><span data-ttu-id="a83fa-123">Добавление локализуемого содержимого</span><span class="sxs-lookup"><span data-stu-id="a83fa-123">Adding Localizable Content</span></span>  
+ <span data-ttu-id="a83fa-124">Далее вы добавите [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] метки элемента управления и задайте [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимое элемента в локализуемые строки.</span><span class="sxs-lookup"><span data-stu-id="a83fa-124">Next, you will add a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] label control and set the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element's content to a localizable string.</span></span>  
   
-#### Чтобы добавить локализуемое содержимое  
+#### <a name="to-add-localizable-content"></a><span data-ttu-id="a83fa-125">Добавление локализуемого содержимого</span><span class="sxs-lookup"><span data-stu-id="a83fa-125">To add localizable content</span></span>  
   
-1.  В обозревателе решений дважды щелкните **SimpleControl.XAML**, чтобы открыть его в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+1.  <span data-ttu-id="a83fa-126">В обозревателе решений дважды щелкните **на SimpleControl.xaml** откройте ее в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a83fa-126">In Solution Explorer, double-click **SimpleControl.xaml** to open it in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-2.  Установите содержимое элемента управления <xref:System.Windows.Controls.Button> с помощью следующего кода.  
+2.  <span data-ttu-id="a83fa-127">Задайте содержимое <xref:System.Windows.Controls.Button> управления, используя следующий код.</span><span class="sxs-lookup"><span data-stu-id="a83fa-127">Set the content of the <xref:System.Windows.Controls.Button> control using the following code.</span></span>  
   
-     [!code-xml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]  
+     [!code-xaml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]  
   
-3.  В обозревателе решений дважды щелкните **Form1**, чтобы открыть его в конструкторе Windows Forms.  
+3.  <span data-ttu-id="a83fa-128">В обозревателе решений дважды щелкните **Form1** чтобы открыть его в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a83fa-128">In Solution Explorer, double-click **Form1** to open it in the Windows Forms Designer.</span></span>  
   
-4.  Откройте Панель элементов и дважды щелкните значок **Label**, чтобы добавить в форму элемент управления Label.  Задайте его свойству <xref:System.Windows.Forms.Control.Text%2A> значение `"Hello"`.  
+4.  <span data-ttu-id="a83fa-129">Откройте панель элементов и дважды щелкните **метка** для добавления в форму элемент управления label.</span><span class="sxs-lookup"><span data-stu-id="a83fa-129">Open the Toolbox and double-click **Label** to add a label control to the form.</span></span> <span data-ttu-id="a83fa-130">Задайте для его свойства <xref:System.Windows.Forms.Control.Text%2A> значение `"Hello"`.</span><span class="sxs-lookup"><span data-stu-id="a83fa-130">Set the value of its <xref:System.Windows.Forms.Control.Text%2A> property to `"Hello"`.</span></span>  
   
-5.  Нажмите клавишу F5 для построения и выполнения приложения.  
+5.  <span data-ttu-id="a83fa-131">Нажмите клавишу F5, чтобы выполнить сборку приложения и запустить его.</span><span class="sxs-lookup"><span data-stu-id="a83fa-131">Press F5 to build and run the application.</span></span>  
   
-     Элемент `SimpleControl` и элемент управления Label отобразят текст **"Hello"**.  
+     <span data-ttu-id="a83fa-132">Оба `SimpleControl` элемент и элемент управления label отображать текст **«Hello»**.</span><span class="sxs-lookup"><span data-stu-id="a83fa-132">Both the `SimpleControl` element and the label control display the text **"Hello"**.</span></span>  
   
-## Включение локализации  
- Конструктор Windows Forms предоставляет параметры для включения локализации во вспомогательной сборке.  
+## <a name="enabling-localization"></a><span data-ttu-id="a83fa-133">Включение локализации</span><span class="sxs-lookup"><span data-stu-id="a83fa-133">Enabling Localization</span></span>  
+ <span data-ttu-id="a83fa-134">Конструктор Windows Forms предоставляет параметры для включения локализации во вспомогательной сборке.</span><span class="sxs-lookup"><span data-stu-id="a83fa-134">The Windows Forms Designer provides settings for enabling localization in a satellite assembly.</span></span>  
   
-#### Чтобы включить локализацию  
+#### <a name="to-enable-localization"></a><span data-ttu-id="a83fa-135">Включение локализации</span><span class="sxs-lookup"><span data-stu-id="a83fa-135">To enable localization</span></span>  
   
-1.  В Solution Explorer щелкните дважды по **Form1.cs**, чтобы открыть его в конструкторе Windows Forms.  
+1.  <span data-ttu-id="a83fa-136">В обозревателе решений дважды щелкните **Form1.cs** чтобы открыть его в конструкторе Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a83fa-136">In Solution Explorer, double-click **Form1.cs** to open it in the Windows Forms Designer.</span></span>  
   
-2.  В окне свойств задайте свойству формы **Localizable** значение `true`.  
+2.  <span data-ttu-id="a83fa-137">В окне «Свойства» задайте значение в формате **Localizable** свойства `true`.</span><span class="sxs-lookup"><span data-stu-id="a83fa-137">In the Properties window, set the value of the form's **Localizable** property to `true`.</span></span>  
   
-3.  В окне свойств задайте свойству**Language** значение **Spanish \(Spain\)**.  
+3.  <span data-ttu-id="a83fa-138">В окне свойств установите для параметра **язык** свойства **испанский (Испания)**.</span><span class="sxs-lookup"><span data-stu-id="a83fa-138">In the Properties window, set the value of the **Language** property to **Spanish (Spain)**.</span></span>  
   
-4.  В конструкторе Windows Forms выберите элемент управления label.  
+4.  <span data-ttu-id="a83fa-139">В конструкторе Windows Forms выберите элемент управления label.</span><span class="sxs-lookup"><span data-stu-id="a83fa-139">In the Windows Forms Designer, select the label control.</span></span>  
   
-5.  В окне Properties установите значение <xref:System.Windows.Forms.Control.Text%2A> характеристика `"Hola"`.  
+5.  <span data-ttu-id="a83fa-140">В окне свойств установите для параметра <xref:System.Windows.Forms.Control.Text%2A> свойства `"Hola"`.</span><span class="sxs-lookup"><span data-stu-id="a83fa-140">In the Properties window, set the value of the <xref:System.Windows.Forms.Control.Text%2A> property to `"Hola"`.</span></span>  
   
-     Новый файл ресурсов с именем Form1.es\-ES.resx добавляется в проект.  
+     <span data-ttu-id="a83fa-141">Новый файл ресурсов с именем Form1.es-ES.resx будет добавлен в проект.</span><span class="sxs-lookup"><span data-stu-id="a83fa-141">A new resource file named Form1.es-ES.resx is added to the project.</span></span>  
   
-6.  В обозревателе решений щелкните правой кнопкой мыши на **Form1.cs** и нажмите кнопку **Просмотреть код**, чтобы открыть его в редакторе кода.  
+6.  <span data-ttu-id="a83fa-142">В обозревателе решений щелкните правой кнопкой мыши **Form1.cs** и нажмите кнопку **Просмотр кода** чтобы открыть его в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="a83fa-142">In Solution Explorer, right-click **Form1.cs** and click **View Code** to open it in the Code Editor.</span></span>  
   
-7.  Скопируйте следующий код в конструктор `Form1`, предшествующий вызову `InitializeComponent`.  
+7.  <span data-ttu-id="a83fa-143">Скопируйте следующий код в `Form1` конструктор, предшествующий вызову `InitializeComponent`.</span><span class="sxs-lookup"><span data-stu-id="a83fa-143">Copy the following code into the `Form1` constructor, preceding the call to `InitializeComponent`.</span></span>  
   
      [!code-csharp[LocalizingWpfInWf#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]  
   
-8.  В обозревателе решений щелкните правой кнопкой мыши на **LocalizingWpfInWf** и нажмите кнопку **Выгрузить проект**.  
+8.  <span data-ttu-id="a83fa-144">В обозревателе решений щелкните правой кнопкой мыши **на LocalizingWpfInWf** и нажмите кнопку **выгрузить проект**.</span><span class="sxs-lookup"><span data-stu-id="a83fa-144">In Solution Explorer, right-click **LocalizingWpfInWf** and click **Unload Project**.</span></span>  
   
-     Имя проекта помечается **\(недоступно\)**.  
+     <span data-ttu-id="a83fa-145">Имя проекта помечается **(недоступно)**.</span><span class="sxs-lookup"><span data-stu-id="a83fa-145">The project name is labeled **(unavailable)**.</span></span>  
   
-9. Щелкните правой кнопкой мыши на **LocalizingWpfInWf** и выберите команду **Изменить LocalizingWpfInWf.csproj**.  
+9. <span data-ttu-id="a83fa-146">Щелкните правой кнопкой мыши **на LocalizingWpfInWf**и нажмите кнопку **изменить LocalizingWpfInWf.csproj**.</span><span class="sxs-lookup"><span data-stu-id="a83fa-146">Right-click **LocalizingWpfInWf**, and click **Edit LocalizingWpfInWf.csproj**.</span></span>  
   
-     Файл проекта открывается в редакторе кода.  
+     <span data-ttu-id="a83fa-147">Файл проекта откроется в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="a83fa-147">The project file opens in the Code Editor.</span></span>  
   
-10. Скопируйте следующую строку в первую `PropertyGroup` в файле проекта.  
+10. <span data-ttu-id="a83fa-148">Скопируйте следующую строку в первую `PropertyGroup` в файле проекта.</span><span class="sxs-lookup"><span data-stu-id="a83fa-148">Copy the following line into the first `PropertyGroup` in the project file.</span></span>  
   
-    ```  
+    ```xml  
     <UICulture>en-US</UICulture>   
     ```  
   
-11. Сохраните файл проекта и закройте его.  
+11. <span data-ttu-id="a83fa-149">Сохраните файл проекта и закройте его.</span><span class="sxs-lookup"><span data-stu-id="a83fa-149">Save the project file and close it.</span></span>  
   
-12. В Solution Explorer правой кнопкой мыши щелкните по **LocalizingWpfInWf** и щелкните по **перегрузить проект**.  
+12. <span data-ttu-id="a83fa-150">В обозревателе решений щелкните правой кнопкой мыши **на LocalizingWpfInWf** и нажмите кнопку **перезагрузить проект**.</span><span class="sxs-lookup"><span data-stu-id="a83fa-150">In Solution Explorer, right-click **LocalizingWpfInWf** and click **Reload Project**.</span></span>  
   
-## Назначение идентификаторов ресурса  
- Можно сопоставить локализуемое содержимое со сборками ресурсов с помощью идентификаторов ресурсов.  Приложение MsBuild.exe автоматически устанавливает идентификаторы ресурсов при указании параметра `updateuid`.  
+## <a name="assigning-resource-identifiers"></a><span data-ttu-id="a83fa-151">Назначение идентификаторов ресурсов</span><span class="sxs-lookup"><span data-stu-id="a83fa-151">Assigning Resource Identifiers</span></span>  
+ <span data-ttu-id="a83fa-152">Вы можете сопоставить локализуемое содержимое со сборками ресурсов с помощью идентификаторов ресурсов.</span><span class="sxs-lookup"><span data-stu-id="a83fa-152">You can map your localizable content to resource assemblies by using resource identifiers.</span></span> <span data-ttu-id="a83fa-153">Приложение MsBuild.exe автоматически устанавливает идентификаторы ресурсов при указании `updateuid` параметр.</span><span class="sxs-lookup"><span data-stu-id="a83fa-153">The MsBuild.exe application automatically assigns resource identifiers when you specify the `updateuid` option.</span></span>  
   
-#### Чтобы назначить идентификаторы ресурса  
+#### <a name="to-assign-resource-identifiers"></a><span data-ttu-id="a83fa-154">Назначение идентификаторов ресурсов</span><span class="sxs-lookup"><span data-stu-id="a83fa-154">To assign resource identifiers</span></span>  
   
-1.  Из меню Пуск откройте командную строку [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  <span data-ttu-id="a83fa-155">Из меню "Пуск", откройте [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] командной строки.</span><span class="sxs-lookup"><span data-stu-id="a83fa-155">From the Start Menu, open the [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Command Prompt.</span></span>  
   
-2.  Используйте следующую команду для назначения идентификаторов ресурсов вашему локализуемому содержимому.  
+2.  <span data-ttu-id="a83fa-156">Используйте приведенную ниже команду для назначения идентификаторов ресурсов вашему локализуемому содержимому.</span><span class="sxs-lookup"><span data-stu-id="a83fa-156">Use the following command to assign resource identifiers to your localizable content.</span></span>  
   
     ```  
     msbuild /t:updateuid LocalizingWpfInWf.csproj  
     ```  
   
-3.  В обозревателе решений дважды щелкните на **SimpleControl.XAML**, чтобы открыть его в редакторе кода.  Вы увидите, что команда `msbuild` добавила атрибут `Uid` ко всем элементам.  Это облегчает локализацию через назначения идентификаторов ресурсов.  
+3.  <span data-ttu-id="a83fa-157">В обозревателе решений дважды щелкните **на SimpleControl.xaml** чтобы открыть его в редакторе кода.</span><span class="sxs-lookup"><span data-stu-id="a83fa-157">In Solution Explorer, double-click **SimpleControl.xaml** to open it in the Code Editor.</span></span> <span data-ttu-id="a83fa-158">Вы увидите, что `msbuild` добавлена команда `Uid` для всех элементов атрибута.</span><span class="sxs-lookup"><span data-stu-id="a83fa-158">You will see that the `msbuild` command has added the `Uid` attribute to all the elements.</span></span> <span data-ttu-id="a83fa-159">Это облегчает локализацию через назначение идентификаторов ресурсов.</span><span class="sxs-lookup"><span data-stu-id="a83fa-159">This facilitates localization through the assignment of resource identifiers.</span></span>  
   
-     [!code-xml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]  
+     [!code-xaml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]  
   
-4.  Нажать клавишу F6 для построения решения.  
+4.  <span data-ttu-id="a83fa-160">Нажмите клавишу F6 для построения решения.</span><span class="sxs-lookup"><span data-stu-id="a83fa-160">Press F6 to build the solution.</span></span>  
   
-## Использование LocBaml для производства вспомогательных сборок  
- Локализованное содержимое хранится только во *вспомогательной сборке* ресурсов.  Используйте средство командной строки LocBaml.exe для производства локализованной сборки для содержимого [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+## <a name="using-locbaml-to-produce-a-satellite-assembly"></a><span data-ttu-id="a83fa-161">Использование LocBaml для создания вспомогательной сборки</span><span class="sxs-lookup"><span data-stu-id="a83fa-161">Using LocBaml to Produce a Satellite Assembly</span></span>  
+ <span data-ttu-id="a83fa-162">Локализованное содержимое хранится в доступный только для ресурсов *вспомогательная сборка*.</span><span class="sxs-lookup"><span data-stu-id="a83fa-162">Your localized content is stored in a resource-only *satellite assembly*.</span></span> <span data-ttu-id="a83fa-163">Средство командной строки LocBaml.exe для производства локализованной сборки для вашего [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] содержимого.</span><span class="sxs-lookup"><span data-stu-id="a83fa-163">Use the command-line tool LocBaml.exe to produce a localized assembly for your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content.</span></span>  
   
-#### Для создания вспомогательной сборки  
+#### <a name="to-produce-a-satellite-assembly"></a><span data-ttu-id="a83fa-164">Создание вспомогательной сборки</span><span class="sxs-lookup"><span data-stu-id="a83fa-164">To produce a satellite assembly</span></span>  
   
-1.  Скопируйте LocBaml.exe в каталог проекта obj\\Debug.  Дополнительные сведения см. в разделе [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).  
+1.  <span data-ttu-id="a83fa-165">Скопируйте файл LocBaml.exe в папку проекта obj\Debug.</span><span class="sxs-lookup"><span data-stu-id="a83fa-165">Copy LocBaml.exe to your project's obj\Debug folder.</span></span> <span data-ttu-id="a83fa-166">Дополнительные сведения см. в разделе [локализации приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).</span><span class="sxs-lookup"><span data-stu-id="a83fa-166">For more information, see [Localize an Application](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).</span></span>  
   
-2.  В окне командной строки используйте следующую команду для извлечения строк ресурса во временный файл.  
+2.  <span data-ttu-id="a83fa-167">В окне командной строки используйте приведенную ниже команду для извлечения строк ресурсов во временный файл.</span><span class="sxs-lookup"><span data-stu-id="a83fa-167">In the Command Prompt window, use the following command to extract resource strings into a temporary file.</span></span>  
   
     ```  
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  Откройте файл temp.csv с [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] или другим текстовым редактором.  Замените строку `"Hello"` на ее испанский перевод, `"Hola"`.  
+3.  <span data-ttu-id="a83fa-168">Откройте файл temp.csv с [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] или другой текстовый редактор.</span><span class="sxs-lookup"><span data-stu-id="a83fa-168">Open the temp.csv file with [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] or another text editor.</span></span> <span data-ttu-id="a83fa-169">Замените строку `"Hello"` на ее испанский перевод `"Hola"`.</span><span class="sxs-lookup"><span data-stu-id="a83fa-169">Replace the string `"Hello"` with its Spanish translation, `"Hola"`.</span></span>  
   
-4.  Сохраните файл temp.csv.  
+4.  <span data-ttu-id="a83fa-170">Сохраните файл temp.csv.</span><span class="sxs-lookup"><span data-stu-id="a83fa-170">Save the temp.csv file.</span></span>  
   
-5.  Используйте следующую команду для создания локализованного файла ресурса.  
+5.  <span data-ttu-id="a83fa-171">Используйте приведенную ниже команду для создания локализованного файла ресурса.</span><span class="sxs-lookup"><span data-stu-id="a83fa-171">Use the following command to generate the localized resource file.</span></span>  
   
     ```  
     LocBaml /generate /trans:temp.csv LocalizingWpfInWf.g.en-US.resources /out:. /cul:es-ES  
     ```  
   
-     Файл LocalizingWpfInWf.g.es ES.resources создается в папке obj\\Debug.  
+     <span data-ttu-id="a83fa-172">Файл LocalizingWpfInWf.g.es-ES.resources создается в папке obj\Debug.</span><span class="sxs-lookup"><span data-stu-id="a83fa-172">The LocalizingWpfInWf.g.es-ES.resources file is created in the obj\Debug folder.</span></span>  
   
-6.  Используйте следующую команду для построения локализованной вспомогательной сборки.  
+6.  <span data-ttu-id="a83fa-173">Используйте приведенную ниже команду для создания локализованной вспомогательной сборки.</span><span class="sxs-lookup"><span data-stu-id="a83fa-173">Use the following command to build the localized satellite assembly.</span></span>  
   
     ```  
     Al.exe /out:LocalizingWpfInWf.resources.dll /culture:es-ES /embed:LocalizingWpfInWf.Form1.es-ES.resources /embed:LocalizingWpfInWf.g.es-ES.resources  
     ```  
   
-     Файл LocalizingWpfInWf.resources.dll создается в папке obj\\Debug.  
+     <span data-ttu-id="a83fa-174">Файл LocalizingWpfInWf.resources.dll создается в папке obj\Debug.</span><span class="sxs-lookup"><span data-stu-id="a83fa-174">The LocalizingWpfInWf.resources.dll file is created in the obj\Debug folder.</span></span>  
   
-7.  Скопируйте файл LocalizingWpfInWf.resources.dll в папку проекта bin\\Debug\\es\-ES.  Замените существующий файл.  
+7.  <span data-ttu-id="a83fa-175">Скопируйте файл LocalizingWpfInWf.resources.dll в папку проекта bin\Debug\es-ES.</span><span class="sxs-lookup"><span data-stu-id="a83fa-175">Copy the LocalizingWpfInWf.resources.dll file to the project's bin\Debug\es-ES folder.</span></span> <span data-ttu-id="a83fa-176">Замените существующий файл.</span><span class="sxs-lookup"><span data-stu-id="a83fa-176">Replace the existing file.</span></span>  
   
-8.  Запустите LocalizingWpfInWf.exe, который находится в папке проекта bin\\Debug.  Не перестраивайте приложение или вспомогательную сборку во время перезаписи.  
+8.  <span data-ttu-id="a83fa-177">Запустите файл LocalizingWpfInWf.exe, который находится в папке проекта bin\Debug.</span><span class="sxs-lookup"><span data-stu-id="a83fa-177">Run LocalizingWpfInWf.exe, which is located in your project's bin\Debug folder.</span></span> <span data-ttu-id="a83fa-178">Не выполняйте повторную сборку приложения, чтобы не перезаписать вспомогательную сборку.</span><span class="sxs-lookup"><span data-stu-id="a83fa-178">Do not rebuild the application or the satellite assembly will be overwritten.</span></span>  
   
-     Приложение показывает локализованные строки вместо английских строк.  
+     <span data-ttu-id="a83fa-179">В приложении выводятся локализованные строки вместо английских строк.</span><span class="sxs-lookup"><span data-stu-id="a83fa-179">The application shows the localized strings instead of the English strings.</span></span>  
   
-## См. также  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Локализация приложения](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)   
- [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5)   
- [Конструктор WPF](http://msdn.microsoft.com/ru-ru/c6c65214-8411-4e16-b254-163ed4099c26)
+## <a name="see-also"></a><span data-ttu-id="a83fa-180">См. также</span><span class="sxs-lookup"><span data-stu-id="a83fa-180">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="a83fa-181">Локализация приложения</span><span class="sxs-lookup"><span data-stu-id="a83fa-181">Localize an Application</span></span>](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
+ [<span data-ttu-id="a83fa-182">Пошаговое руководство: Локализация форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a83fa-182">Walkthrough: Localizing Windows Forms</span></span>](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)  
+ [<span data-ttu-id="a83fa-183">Конструктор WPF</span><span class="sxs-lookup"><span data-stu-id="a83fa-183">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

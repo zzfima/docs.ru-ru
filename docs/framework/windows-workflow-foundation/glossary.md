@@ -1,42 +1,46 @@
 ---
-title: "Глоссарий Windows Workflow Foundation для .NET Framework 4.5 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WF [WF], глоссарий"
-  - "Windows Workflow Foundation [WF], глоссарий"
+title: "Глоссарий Windows Workflow Foundation для .NET Framework 4.5"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Workflow Foundation [WF], glossary
+- WF [WF], glossary
 ms.assetid: ab682b2f-3779-45ca-b831-b7c03d7dbb3a
-caps.latest.revision: 259
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 259
+caps.latest.revision: "259"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c0c1e6fa7eee64283dce20b24a1a957f1d2d8f8f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Глоссарий Windows Workflow Foundation для .NET Framework 4.5
-Следующие термины используются в документации по Windows Workflow Foundation.  
+# <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a><span data-ttu-id="26e33-102">Глоссарий Windows Workflow Foundation для .NET Framework 4.5</span><span class="sxs-lookup"><span data-stu-id="26e33-102">Windows Workflow Foundation Glossary for .NET Framework 4.5</span></span>
+<span data-ttu-id="26e33-103">Следующие термины используются в документации по Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="26e33-103">The following terms are used in the Windows Workflow Foundation documentation.</span></span>  
   
-## Термины  
+## <a name="terms"></a><span data-ttu-id="26e33-104">Термины</span><span class="sxs-lookup"><span data-stu-id="26e33-104">Terms</span></span>  
   
-|Термин|Определение|  
-|------------|-----------------|  
-|действие|Единица поведения программы в Windows Workflow Foundation.Одиночные действия можно объединять в более сложные действия.|  
-|операция действия|Структура данных, которая предоставляет доступ к методам обратного вызова для выполнения рабочего процесса и действия.|  
-|аргумент|Определяет поток данных в действие и из действия.Каждый аргумент имеет указанное направление: in, out или in\/out.Направления соответствуют входным, выходным и входным\-выходным параметрам действия.|  
-|закладка|Точка, в которой действие может быть приостановлено и ожидать возобновления.|  
-|компенсация|Группа действий, предназначенных для отмены или уменьшения эффекта ранее выполненной работы.|  
-|корреляция|Механизм для маршрутизации сообщений в экземпляр рабочего процесса или службы.|  
-|выражение|Конструкция, которая принимает один или несколько аргументов, выполняет с ними определенную операцию и возвращает единственное значение.Выражения можно использовать везде, где можно использовать действия.|  
-|блок\-схема|Широко известный принцип моделирования, в котором компоненты программы представляются в виде символов, соединенных направленными стрелками.В версии .NET Framework 4 рабочие процессы можно моделировать в виде блок\-схем с помощью действия Flowchart.|  
-|длительный процесс|Блок выполнения программы, который не возвращает результат сразу и может продолжаться после неоднократного перезапуска системы.|  
-|сохранение|Сохранение состояния рабочего процесса или службы на постоянный носитель, что позволяет выгрузить процесс или службу из памяти или провести восстановление после сбоя системы.|  
-|конечный автомат|Широко известный принцип моделирования, в котором компоненты программы представлены в виде отдельных состояний, связанных переходами, управляемыми событиями.Рабочие процессы можно моделировать в виде конечных автоматов с помощью действия StateMachine.|  
-|содержание|Представляет группу связанных закладок с общим идентификатором и позволяет среде выполнения определить, является ли допустимым или может ли стать допустимым возобновление определенной закладки.|  
-|преобразователь типов|Тип CLR можно связать с одним или несколькими типами, производными от System.ComponentModel.TypeConverter, которые позволяют преобразовывать экземпляры типа CLR в объекты других типов и обратно.Преобразователь типов связывается с типом CLR посредством атрибута System.ComponentModel.TypeConverterAttribute.Атрибут TypeConverterAttribute можно указывать непосредственно в типе CLR или в свойстве.Преобразователь типов, указанный в свойстве, всегда имеет приоритет над преобразователем типов, указанным в типе CLR этого свойства.|  
-|переменная|Представляет место хранения некоторых данных, которые нужно сохранить и использовать позже.|  
-|рабочий процесс|Отдельное действие или дерево действий, вызываемое процессом узла.|  
-|XAML|Язык XAML|
+|<span data-ttu-id="26e33-105">Термин</span><span class="sxs-lookup"><span data-stu-id="26e33-105">Term</span></span>|<span data-ttu-id="26e33-106">Определение</span><span class="sxs-lookup"><span data-stu-id="26e33-106">Definition</span></span>|  
+|----------|----------------|  
+|<span data-ttu-id="26e33-107">действие</span><span class="sxs-lookup"><span data-stu-id="26e33-107">activity</span></span>|<span data-ttu-id="26e33-108">Единица поведения программы в Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="26e33-108">A unit of program behavior in Windows Workflow Foundation.</span></span> <span data-ttu-id="26e33-109">Одиночные действия можно объединять в более сложные действия.</span><span class="sxs-lookup"><span data-stu-id="26e33-109">Single activities can be composed together into more complex activities.</span></span>|  
+|<span data-ttu-id="26e33-110">операция действия</span><span class="sxs-lookup"><span data-stu-id="26e33-110">activity action</span></span>|<span data-ttu-id="26e33-111">Структура данных, которая предоставляет доступ к методам обратного вызова для выполнения рабочего процесса и действия.</span><span class="sxs-lookup"><span data-stu-id="26e33-111">A data structure used to expose callbacks for workflow and activity execution.</span></span>|  
+|<span data-ttu-id="26e33-112">аргумент</span><span class="sxs-lookup"><span data-stu-id="26e33-112">argument</span></span>|<span data-ttu-id="26e33-113">Определяет поток данных в действие и из действия.</span><span class="sxs-lookup"><span data-stu-id="26e33-113">Defines the data flow into and out of an activity.</span></span> <span data-ttu-id="26e33-114">Каждый аргумент имеет указанное направление: in, out или in/out. Направления соответствуют входным, выходным и входным-выходным параметрам действия.</span><span class="sxs-lookup"><span data-stu-id="26e33-114">Each argument has a specified direction: in, out, or in/out. These represent the input, output, and input/output parameters of the activity.</span></span>|  
+|<span data-ttu-id="26e33-115">закладка</span><span class="sxs-lookup"><span data-stu-id="26e33-115">bookmark</span></span>|<span data-ttu-id="26e33-116">Точка, в которой действие может быть приостановлено и ожидать возобновления.</span><span class="sxs-lookup"><span data-stu-id="26e33-116">The point at which an activity can pause and wait to be resumed.</span></span>|  
+|<span data-ttu-id="26e33-117">компенсация</span><span class="sxs-lookup"><span data-stu-id="26e33-117">compensation</span></span>|<span data-ttu-id="26e33-118">Группа действий, предназначенных для отмены или уменьшения эффекта ранее выполненной работы.</span><span class="sxs-lookup"><span data-stu-id="26e33-118">A group of actions designed to undo or mitigate the effect of previously completed work.</span></span>|  
+|<span data-ttu-id="26e33-119">корреляция</span><span class="sxs-lookup"><span data-stu-id="26e33-119">correlation</span></span>|<span data-ttu-id="26e33-120">Механизм для маршрутизации сообщений в экземпляр рабочего процесса или службы.</span><span class="sxs-lookup"><span data-stu-id="26e33-120">The mechanism for routing messages to a workflow or service instance.</span></span>|  
+|<span data-ttu-id="26e33-121">выражение</span><span class="sxs-lookup"><span data-stu-id="26e33-121">expression</span></span>|<span data-ttu-id="26e33-122">Конструкция, которая принимает один или несколько аргументов, выполняет с ними определенную операцию и возвращает единственное значение.</span><span class="sxs-lookup"><span data-stu-id="26e33-122">A construct that takes in one or more arguments, performs an operation on the arguments and returns a single value.</span></span> <span data-ttu-id="26e33-123">Выражения можно использовать везде, где можно использовать действия.</span><span class="sxs-lookup"><span data-stu-id="26e33-123">Expressions can be used anywhere an activity can be used.</span></span>|  
+|<span data-ttu-id="26e33-124">блок-схема</span><span class="sxs-lookup"><span data-stu-id="26e33-124">flowchart</span></span>|<span data-ttu-id="26e33-125">Широко известный принцип моделирования, в котором компоненты программы представляются в виде символов, соединенных направленными стрелками.</span><span class="sxs-lookup"><span data-stu-id="26e33-125">A well-known modeling paradigm that represents program components as symbols linked together with directional arrows.</span></span>  <span data-ttu-id="26e33-126">В версии .NET Framework 4 рабочие процессы можно моделировать в виде блок-схем с помощью действия Flowchart.</span><span class="sxs-lookup"><span data-stu-id="26e33-126">In the .NET Framework 4, workflows can be modeled as flowcharts using the Flowchart activity.</span></span>|  
+|<span data-ttu-id="26e33-127">длительный процесс</span><span class="sxs-lookup"><span data-stu-id="26e33-127">long-running process</span></span>|<span data-ttu-id="26e33-128">Блок выполнения программы, который не возвращает результат сразу и может продолжаться после неоднократного перезапуска системы.</span><span class="sxs-lookup"><span data-stu-id="26e33-128">A unit of program execution that does not return immediately and may span system restarts.</span></span>|  
+|<span data-ttu-id="26e33-129">сохранение</span><span class="sxs-lookup"><span data-stu-id="26e33-129">persistence</span></span>|<span data-ttu-id="26e33-130">Сохранение состояния рабочего процесса или службы на постоянный носитель, что позволяет выгрузить процесс или службу из памяти или провести восстановление после сбоя системы.</span><span class="sxs-lookup"><span data-stu-id="26e33-130">Saving the state of a workflow or service to a durable medium, so that it can be unloaded from memory or recovered after a system failure.</span></span>|  
+|<span data-ttu-id="26e33-131">конечный автомат</span><span class="sxs-lookup"><span data-stu-id="26e33-131">state machine</span></span>|<span data-ttu-id="26e33-132">Широко известный принцип моделирования, в котором компоненты программы представлены в виде отдельных состояний, связанных переходами, управляемыми событиями.</span><span class="sxs-lookup"><span data-stu-id="26e33-132">A well-known modeling paradigm that represents program components as individual states linked together with event-driven state transitions.</span></span>  <span data-ttu-id="26e33-133">Рабочие процессы можно моделировать в виде конечных автоматов с помощью действия StateMachine.</span><span class="sxs-lookup"><span data-stu-id="26e33-133">Workflows can be modeled as state machines using the StateMachine activity.</span></span>|  
+|<span data-ttu-id="26e33-134">содержание</span><span class="sxs-lookup"><span data-stu-id="26e33-134">substance</span></span>|<span data-ttu-id="26e33-135">Представляет группу связанных закладок с общим идентификатором и позволяет среде выполнения определить, является ли допустимым или может ли стать допустимым возобновление определенной закладки.</span><span class="sxs-lookup"><span data-stu-id="26e33-135">Represents a group of related bookmarks under a common identifier and allows the runtime to make decisions about whether a particular bookmark resumption is valid or may become valid.</span></span>|  
+|<span data-ttu-id="26e33-136">преобразователь типов</span><span class="sxs-lookup"><span data-stu-id="26e33-136">type converter</span></span>|<span data-ttu-id="26e33-137">Тип CLR можно связать с одним или несколькими типами, производными от System.ComponentModel.TypeConverter, которые позволяют преобразовывать экземпляры типа CLR в объекты других типов и обратно.</span><span class="sxs-lookup"><span data-stu-id="26e33-137">A CLR type can be associated with one or more System.ComponentModel.TypeConverter derived types that enable converting instances of the CLR type to and from instances of other types.</span></span> <span data-ttu-id="26e33-138">Преобразователь типов связывается с типом CLR посредством атрибута System.ComponentModel.TypeConverterAttribute.</span><span class="sxs-lookup"><span data-stu-id="26e33-138">A type converterr is associated with a CLR type using the System.ComponentModel.TypeConverterAttribute attribute.</span></span>  <span data-ttu-id="26e33-139">Атрибут TypeConverterAttribute можно указывать непосредственно в типе CLR или в свойстве.</span><span class="sxs-lookup"><span data-stu-id="26e33-139">A TypeConverterAttribute can be specified directly on the CLR type or on a property.</span></span> <span data-ttu-id="26e33-140">Преобразователь типов, указанный в свойстве, всегда имеет приоритет над преобразователем типов, указанным в типе CLR этого свойства.</span><span class="sxs-lookup"><span data-stu-id="26e33-140">A type converter specified on a property always takes precedence over a type converter specified on the CLR type of the property.</span></span>|  
+|<span data-ttu-id="26e33-141">переменная</span><span class="sxs-lookup"><span data-stu-id="26e33-141">variable</span></span>|<span data-ttu-id="26e33-142">Служит местом хранения некоторых данных, которые нужно сохранить и использовать позже.</span><span class="sxs-lookup"><span data-stu-id="26e33-142">Represents the storage of some data that must be saved and accessed later.</span></span>|  
+|<span data-ttu-id="26e33-143">рабочий процесс</span><span class="sxs-lookup"><span data-stu-id="26e33-143">workflow</span></span>|<span data-ttu-id="26e33-144">Отдельное действие или дерево действий, вызываемое процессом узла.</span><span class="sxs-lookup"><span data-stu-id="26e33-144">A single activity or tree of activities invoked by a host process.</span></span>|  
+|<span data-ttu-id="26e33-145">XAML</span><span class="sxs-lookup"><span data-stu-id="26e33-145">XAML</span></span>|<span data-ttu-id="26e33-146">Язык XAML</span><span class="sxs-lookup"><span data-stu-id="26e33-146">eXtensible Application Markup Language</span></span>|

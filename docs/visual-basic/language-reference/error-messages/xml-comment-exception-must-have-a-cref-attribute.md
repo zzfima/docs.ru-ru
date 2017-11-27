@@ -1,41 +1,39 @@
 ---
-title: "Исключение комментария XML должно иметь атрибут cref | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42319"
-  - "vbc42319"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42319"
+title: "Исключение комментария XML должно содержать &#39; cref &#39; атрибут"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42319
+- vbc42319
+helpviewer_keywords: BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c0c22c9cd9415faf17d027c3751d166662a92b50
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Исключение комментария XML должно иметь атрибут cref
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Тег \<exception\> позволяет документировать исключения, которые могут быть созданы методом.  Обязательный атрибут `cref` обозначает имя элемента, которое проверяется генератором документации.  Если элемент существует, его символы переводятся в каноническое имя элемента в файле документации.  
+# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a><span data-ttu-id="0f87b-102">Исключение комментария XML должно содержать &#39; cref &#39; атрибут</span><span class="sxs-lookup"><span data-stu-id="0f87b-102">XML comment exception must have a &#39;cref&#39; attribute</span></span>
+<span data-ttu-id="0f87b-103">\<Исключение > тег предоставляет способ документирования исключений, которые могут быть созданы с помощью метода.</span><span class="sxs-lookup"><span data-stu-id="0f87b-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="0f87b-104">Необходимая `cref` атрибут назначает имя элемента, которое проверяется генератором документации.</span><span class="sxs-lookup"><span data-stu-id="0f87b-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="0f87b-105">Если элемент существует, он преобразуется в каноническое имя элемента в файле документации.</span><span class="sxs-lookup"><span data-stu-id="0f87b-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>  
   
- **Идентификатор ошибки:** BC42319  
+ <span data-ttu-id="0f87b-106">**Идентификатор ошибки:** BC42319</span><span class="sxs-lookup"><span data-stu-id="0f87b-106">**Error ID:** BC42319</span></span>  
   
-### Чтобы исправить эту ошибку  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0f87b-107">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="0f87b-107">To correct this error</span></span>  
   
--   Добавьте атрибут `cref` к исключению следующим образом:  
+-   <span data-ttu-id="0f87b-108">Добавить `cref` атрибут исключение следующим образом:</span><span class="sxs-lookup"><span data-stu-id="0f87b-108">Add the `cref` attribute to the exception as follows:</span></span>  
   
     ```  
     '''<exception cref="member">description</exception>  
     ```  
   
-## См. также  
- [\<exception\>](../../../visual-basic/language-reference/xmldoc/exception.md)   
- [Практическое руководство. Создание XML\-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)   
- [XML\-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="0f87b-109">См. также</span><span class="sxs-lookup"><span data-stu-id="0f87b-109">See Also</span></span>  
+ [<span data-ttu-id="0f87b-110">\<exception></span><span class="sxs-lookup"><span data-stu-id="0f87b-110">\<exception></span></span>](../../../visual-basic/language-reference/xmldoc/exception.md)  
+ [<span data-ttu-id="0f87b-111">Практическое руководство. Создание XML-документации</span><span class="sxs-lookup"><span data-stu-id="0f87b-111">How to: Create XML Documentation</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
+ [<span data-ttu-id="0f87b-112">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="0f87b-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -1,82 +1,88 @@
 ---
-title: "Как разместить службу WCF в управляемой службе Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Практическое руководство. Размещение службы WCF в управляемой службе Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 01f6ce27a05c11ddf4662609bf98730df5ddfda3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Как разместить службу WCF в управляемой службе Windows
-В этом разделе описаны основные шаги по созданию службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], размещенной в службе Windows.Сценарий реализуется с помощью возможности размещения в управляемой службе Windows и представляет собой работающую в течение продолжительного времени службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенную за пределами служб IIS в защищенной среде, которая не активируется сообщениями.Вместо этого время существования службы контролируется операционной системой.Данный вариант размещения доступен во всех версиях Windows.  
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a><span data-ttu-id="64ed6-102">Практическое руководство. Размещение службы WCF в управляемой службе Windows</span><span class="sxs-lookup"><span data-stu-id="64ed6-102">How to: Host a WCF Service in a Managed Windows Service</span></span>
+<span data-ttu-id="64ed6-103">В этом разделе описаны основные шаги по созданию службы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], размещенной в службе Windows.</span><span class="sxs-lookup"><span data-stu-id="64ed6-103">This topic outlines the basic steps required to create a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service that is hosted by a Windows Service.</span></span> <span data-ttu-id="64ed6-104">Сценарий реализуется с помощью возможности размещения в управляемой службе Windows и представляет собой работающую в течение продолжительного времени службу [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], размещенную за пределами служб IIS в защищенной среде, которая не активируется сообщениями.</span><span class="sxs-lookup"><span data-stu-id="64ed6-104">The scenario is enabled by the managed Windows service hosting option that is a long-running [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service hosted outside of Internet Information Services (IIS) in a secure environment that is not message activated.</span></span> <span data-ttu-id="64ed6-105">Вместо этого время существования службы контролируется операционной системой.</span><span class="sxs-lookup"><span data-stu-id="64ed6-105">The lifetime of the service is controlled instead by the operating system.</span></span> <span data-ttu-id="64ed6-106">Данный вариант размещения доступен во всех версиях Windows.</span><span class="sxs-lookup"><span data-stu-id="64ed6-106">This hosting option is available in all versions of Windows.</span></span>  
   
- Службами Windows можно управлять при помощи Microsoft.ManagementConsole.SnapIn в консоли управления \(MMC\) и можно настроить их автоматический запуск при загрузке системы.Возможность размещения состоит из регистрации домена приложения, где служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещена как управляемая служба Windows, так что время существования процесса службы контролируется диспетчером служб для служб Windows.  
+ <span data-ttu-id="64ed6-107">Службами Windows можно управлять при помощи Microsoft.ManagementConsole.SnapIn в консоли управления (MMC) и можно настроить их автоматический запуск при загрузке системы.</span><span class="sxs-lookup"><span data-stu-id="64ed6-107">Windows services can be managed with the Microsoft.ManagementConsole.SnapIn in Microsoft Management Console (MMC) and can be configured to start up automatically when the system boots up.</span></span> <span data-ttu-id="64ed6-108">Возможность размещения состоит из регистрации домена приложения, где служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] размещена как управляемая служба Windows, так что время существования процесса службы контролируется диспетчером служб для служб Windows.</span><span class="sxs-lookup"><span data-stu-id="64ed6-108">This hosting option consists of registering the application domain (AppDomain) that hosts a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service as a managed Windows service so that the process lifetime of the service is controlled by the Service Control Manager (SCM) for Windows services.</span></span>  
   
- Код службы включает в себя реализацию службы контракта службы, класс службы Windows и класс установщика.Класс реализации службы, `CalculatorService`, является службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].Класс `CalculatorWindowsService` является службой Windows.Чтобы считаться службой Windows, этот класс наследует от класса `ServiceBase` и реализует методы `OnStart` и `OnStop`.В методе `OnStart` создается объект <xref:System.ServiceModel.ServiceHost> для типа `CalculatorService` и открывается.В методе `OnStop` служба останавливается и освобождается.Основное приложение также отвечает за предоставление базового адреса для узла службы, настроенного в параметрах приложения.Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет выполнить установку программы как службы Windows с помощью Installutil.exe.  
+ <span data-ttu-id="64ed6-109">Код службы включает в себя реализацию службы контракта службы, класс службы Windows и класс установщика.</span><span class="sxs-lookup"><span data-stu-id="64ed6-109">The service code includes a service implementation of the service contract, a Windows Service class, and an installer class.</span></span> <span data-ttu-id="64ed6-110">Класс реализации службы, `CalculatorService`, является службой [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="64ed6-110">The service implementation class, `CalculatorService`, is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="64ed6-111">Класс `CalculatorWindowsService` является службой Windows.</span><span class="sxs-lookup"><span data-stu-id="64ed6-111">The `CalculatorWindowsService` is a Windows service.</span></span> <span data-ttu-id="64ed6-112">Чтобы считаться службой Windows, этот класс наследует от класса `ServiceBase` и реализует методы `OnStart` и `OnStop`.</span><span class="sxs-lookup"><span data-stu-id="64ed6-112">To qualify as a Windows service, the class inherits from `ServiceBase` and implements the `OnStart` and `OnStop` methods.</span></span> <span data-ttu-id="64ed6-113">В методе `OnStart` создается объект <xref:System.ServiceModel.ServiceHost> для типа `CalculatorService` и открывается.</span><span class="sxs-lookup"><span data-stu-id="64ed6-113">In `OnStart`, a <xref:System.ServiceModel.ServiceHost> is created for the `CalculatorService` type and opened.</span></span> <span data-ttu-id="64ed6-114">В методе `OnStop` служба останавливается и освобождается.</span><span class="sxs-lookup"><span data-stu-id="64ed6-114">In `OnStop`, the service is stopped and disposed.</span></span> <span data-ttu-id="64ed6-115">Основное приложение также отвечает за предоставление базового адреса для узла службы, настроенного в параметрах приложения.</span><span class="sxs-lookup"><span data-stu-id="64ed6-115">The host is also responsible for providing a base address to the service host, which has been configured in application settings.</span></span> <span data-ttu-id="64ed6-116">Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет выполнить установку программы как службы Windows с помощью Installutil.exe.</span><span class="sxs-lookup"><span data-stu-id="64ed6-116">The installer class, which inherits from <xref:System.Configuration.Install.Installer>, allows the program to be installed as a Windows service by the Installutil.exe tool.</span></span>  
   
-### Создание службы и предоставление кода размещения  
+### <a name="construct-the-service-and-provide-the-hosting-code"></a><span data-ttu-id="64ed6-117">Создание службы и предоставление кода размещения</span><span class="sxs-lookup"><span data-stu-id="64ed6-117">Construct the service and provide the hosting code</span></span>  
   
-1.  Создайте новый проект консольного приложения Visual Studio с именем Service.  
+1.  <span data-ttu-id="64ed6-118">Создайте новый проект консольного приложения Visual Studio с именем Service.</span><span class="sxs-lookup"><span data-stu-id="64ed6-118">Create a new Visual Studio Console Application project called "Service".</span></span>  
   
-2.  Измените имя файла Program.cs на Service.cs.  
+2.  <span data-ttu-id="64ed6-119">Измените имя файла Program.cs на Service.cs.</span><span class="sxs-lookup"><span data-stu-id="64ed6-119">Rename Program.cs to Service.cs.</span></span>  
   
-3.  Измените пространство имен на Microsoft.ServiceModel.Samples.  
+3.  <span data-ttu-id="64ed6-120">Измените пространство имен на Microsoft.ServiceModel.Samples.</span><span class="sxs-lookup"><span data-stu-id="64ed6-120">Change the namespace to Microsoft.ServiceModel.Samples.</span></span>  
   
-4.  Добавьте ссылки на следующие сборки.  
+4.  <span data-ttu-id="64ed6-121">Добавьте ссылки на следующие сборки.</span><span class="sxs-lookup"><span data-stu-id="64ed6-121">Add references to the following assemblies.</span></span>  
   
-    -   System.ServiceModel.dll  
+    -   <span data-ttu-id="64ed6-122">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="64ed6-122">System.ServiceModel.dll</span></span>  
   
-    -   System.ServiceProcess.dll  
+    -   <span data-ttu-id="64ed6-123">System.ServiceProcess.dll</span><span class="sxs-lookup"><span data-stu-id="64ed6-123">System.ServiceProcess.dll</span></span>  
   
-    -   System.Configuration.Install.dll  
+    -   <span data-ttu-id="64ed6-124">System.Configuration.Install.dll</span><span class="sxs-lookup"><span data-stu-id="64ed6-124">System.Configuration.Install.dll</span></span>  
   
-5.  Добавьте следующие операторы using в файл Service.cs.  
+5.  <span data-ttu-id="64ed6-125">Добавьте следующие операторы using в файл Service.cs.</span><span class="sxs-lookup"><span data-stu-id="64ed6-125">Add the following using statements to Service.cs.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]  
   
-6.  Определите контракт службы `ICalculator`, как показано в следующем коде.  
+6.  <span data-ttu-id="64ed6-126">Определите контракт службы `ICalculator`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="64ed6-126">Define the `ICalculator` service contract as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]  
   
-7.  Реализуйте контракт службы в классе с именем `CalculatorService`, как показано в следующем коде.  
+7.  <span data-ttu-id="64ed6-127">Реализуйте контракт службы в классе с именем `CalculatorService`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="64ed6-127">Implement the service contract in a class called `CalculatorService` as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]  
   
-8.  Создайте новый класс с именем `CalculatorWindowsService`, производный от класса <xref:System.ServiceProcess.ServiceBase>.Добавьте локальную переменную с именем `serviceHost`, чтобы создать ссылку на экземпляр <xref:System.ServiceModel.ServiceHost>.Определите метод `Main`, который вызывает `ServiceBase.Run(new CalculatorWindowsService)`.  
+8.  <span data-ttu-id="64ed6-128">Создайте новый класс с именем `CalculatorWindowsService`, производный от класса <xref:System.ServiceProcess.ServiceBase>.</span><span class="sxs-lookup"><span data-stu-id="64ed6-128">Create a new class called `CalculatorWindowsService` that inherits from the <xref:System.ServiceProcess.ServiceBase> class.</span></span> <span data-ttu-id="64ed6-129">Добавьте локальную переменную с именем `serviceHost`, чтобы создать ссылку на экземпляр <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="64ed6-129">Add a local variable called `serviceHost` to reference the <xref:System.ServiceModel.ServiceHost> instance.</span></span> <span data-ttu-id="64ed6-130">Определите метод `Main`, который вызывает `ServiceBase.Run(new CalculatorWindowsService)`.</span><span class="sxs-lookup"><span data-stu-id="64ed6-130">Define the `Main` method that calls `ServiceBase.Run(new CalculatorWindowsService)`</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]  
   
-9. Переопределите метод [OnStart\(String\<xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>, создав и открыв новый экземпляр <xref:System.ServiceModel.ServiceHost>, как показано в следующем коде.  
+9. <span data-ttu-id="64ed6-131">Переопределите метод <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>, создав и открыв новый экземпляр <xref:System.ServiceModel.ServiceHost>, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="64ed6-131">Override the <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> method by creating and opening a new <xref:System.ServiceModel.ServiceHost> instance as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#4)]
      [!code-vb[c_HowTo_HostInNTService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#4)]  
   
-10. Переопределите метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A>, закрывающий <xref:System.ServiceModel.ServiceHost>, как показано в следующем коде.  
+10. <span data-ttu-id="64ed6-132">Переопределите метод <xref:System.ServiceProcess.ServiceBase.OnStop%2A>, закрывающий <xref:System.ServiceModel.ServiceHost>, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="64ed6-132">Override the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method closing the <xref:System.ServiceModel.ServiceHost> as shown in the following code.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#5)]
      [!code-vb[c_HowTo_HostInNTService#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#5)]  
   
-11. Создайте новый класс с именем `ProjectInstaller`, производный от <xref:System.Configuration.Install.Installer> и помеченный атрибутом <xref:System.ComponentModel.RunInstallerAttribute>, установленным в значение `true`.Это позволяет устанавливать службу Windows программой Installutil.exe.  
+11. <span data-ttu-id="64ed6-133">Создайте новый класс с именем `ProjectInstaller`, производный от <xref:System.Configuration.Install.Installer> и помеченный атрибутом <xref:System.ComponentModel.RunInstallerAttribute>, установленным в значение `true`.</span><span class="sxs-lookup"><span data-stu-id="64ed6-133">Create a new class called `ProjectInstaller` that inherits from <xref:System.Configuration.Install.Installer> and that is marked with the <xref:System.ComponentModel.RunInstallerAttribute> set to `true`.</span></span> <span data-ttu-id="64ed6-134">Это позволяет устанавливать службу Windows программой Installutil.exe.</span><span class="sxs-lookup"><span data-stu-id="64ed6-134">This allows the Windows service to be installed by the Installutil.exe tool.</span></span>  
   
      [!code-csharp[c_HowTo_HostInNTService#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#6)]
      [!code-vb[c_HowTo_HostInNTService#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#6)]  
   
-12. Удалите класс `Service`, созданный при создании проекта.  
+12. <span data-ttu-id="64ed6-135">Удалите класс `Service`, созданный при создании проекта.</span><span class="sxs-lookup"><span data-stu-id="64ed6-135">Remove the `Service` class that was generated when you created the project.</span></span>  
   
-13. Добавьте в проект файл конфигурации приложения.Замените содержимое этого файла следующим XML\-кодом конфигурации.  
+13. <span data-ttu-id="64ed6-136">Добавьте в проект файл конфигурации приложения.</span><span class="sxs-lookup"><span data-stu-id="64ed6-136">Add an application configuration file to the project.</span></span> <span data-ttu-id="64ed6-137">Замените содержимое этого файла следующим XML-кодом конфигурации.</span><span class="sxs-lookup"><span data-stu-id="64ed6-137">Replace the contents of the file with the following configuration XML.</span></span>  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -113,33 +119,33 @@ caps.handback.revision: 21
     </configuration>  
     ```  
   
-     Щелкните правой кнопкой мыши файл App.config в окне **Обозреватель решений** и выберите пункт **Свойства**.В группе **Копировать в выходной каталог** выберите пункт **Копировать более новые**.  
+     <span data-ttu-id="64ed6-138">Щелкните правой кнопкой мыши файл App.config в **обозревателе решений** и выберите **свойства**.</span><span class="sxs-lookup"><span data-stu-id="64ed6-138">Right click the App.config file in the **Solution Explorer** and select **Properties**.</span></span> <span data-ttu-id="64ed6-139">В разделе **Копировать в выходной каталог** выберите **копировать, если новее**.</span><span class="sxs-lookup"><span data-stu-id="64ed6-139">Under **Copy to Output Directory** select **Copy if Newer**.</span></span>  
   
-     В этом примере конечные точки явно задаются в файле конфигурации.Если в службу не добавлена ни одна конечная точка, то среда выполнения добавляет конечные точки по умолчанию.В этом примере, поскольку в службе параметр <xref:System.ServiceModel.Description.ServiceMetadataBehavior> установлен в значение `true`, в ней также включена публикация метаданных.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о конечных точках по умолчанию, привязках и поведениях см. в разделах [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     <span data-ttu-id="64ed6-140">В этом примере конечные точки явно задаются в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="64ed6-140">This example explicitly specifies endpoints in the configuration file.</span></span> <span data-ttu-id="64ed6-141">Если в службу не добавлена ни одна конечная точка, то среда выполнения добавляет конечные точки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="64ed6-141">If you do not add any endpoints to the service, the runtime adds default endpoints for you.</span></span> <span data-ttu-id="64ed6-142">В этом примере, поскольку для службы параметр <xref:System.ServiceModel.Description.ServiceMetadataBehavior> установлен в значение `true`, в ней также будет включена публикация метаданных.</span><span class="sxs-lookup"><span data-stu-id="64ed6-142">In this example, because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> set to `true`, your service also has publishing metadata enabled.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="64ed6-143">см. по умолчанию конечные точки, привязки и поведения, [упрощенной конфигурации](../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="64ed6-143"> default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-### Установка и запуск службы  
+### <a name="install-and-run-the-service"></a><span data-ttu-id="64ed6-144">Установка и запуск службы</span><span class="sxs-lookup"><span data-stu-id="64ed6-144">Install and run the service</span></span>  
   
-1.  Постройте решение, чтобы создать исполняемый файл `Service.exe`.  
+1.  <span data-ttu-id="64ed6-145">Постройте решение, чтобы создать исполняемый файл `Service.exe`.</span><span class="sxs-lookup"><span data-stu-id="64ed6-145">Build the solution to create the `Service.exe` executable.</span></span>  
   
-2.  Откройте командную строку [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и перейдите в каталог проекта.В командной строке введите `installutil bin\service.exe`, чтобы установить службу Windows.  
+2.  <span data-ttu-id="64ed6-146">Откройте командную строку [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и перейдите в каталог проекта.</span><span class="sxs-lookup"><span data-stu-id="64ed6-146">Open the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt and navigate to the project directory.</span></span> <span data-ttu-id="64ed6-147">В командной строке введите `installutil bin\service.exe`, чтобы установить службу Windows.</span><span class="sxs-lookup"><span data-stu-id="64ed6-147">Type `installutil bin\service.exe` at the command prompt to install the Windows service.</span></span>  
   
     > [!NOTE]
-    >  Если командная строка [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] не используется, убедитесь, что каталог `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` входит в системный путь.  
+    >  <span data-ttu-id="64ed6-148">Если командная строка [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] не используется, убедитесь, что каталог `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` входит в системный путь.</span><span class="sxs-lookup"><span data-stu-id="64ed6-148">If you do not use the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt, make sure that the `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` directory is in the system path.</span></span>  
   
-     В командной строке введите `services.msc`, чтобы получить доступ к диспетчеру служб.Служба Windows должна появиться в списке служб с именем WCFWindowsServiceSample.Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может отвечать клиентам, только если запущена служба Windows.Чтобы запустить службу, щелкните ее правой кнопкой мыши в диспетчере служб и выберите «Запустить» или введите в командной строке **net start WCFWindowsServiceSample**.  
+     <span data-ttu-id="64ed6-149">В командной строке введите `services.msc`, чтобы получить доступ к диспетчеру служб.</span><span class="sxs-lookup"><span data-stu-id="64ed6-149">Type `services.msc` at the command prompt to access the Service Control Manager (SCM).</span></span> <span data-ttu-id="64ed6-150">Служба Windows должна появиться в списке служб с именем WCFWindowsServiceSample.</span><span class="sxs-lookup"><span data-stu-id="64ed6-150">The Windows service should appear in Services as "WCFWindowsServiceSample".</span></span> <span data-ttu-id="64ed6-151">Служба [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] может отвечать клиентам, только если запущена служба Windows.</span><span class="sxs-lookup"><span data-stu-id="64ed6-151">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service can only respond to clients if the Windows service is running.</span></span> <span data-ttu-id="64ed6-152">Чтобы запустить службу, щелкните его правой кнопкой в диспетчер управления Службами и выберите «Пуск» или тип **команда net start WCFWindowsServiceSample** в командной строке.</span><span class="sxs-lookup"><span data-stu-id="64ed6-152">To start the service, right-click it in the SCM and select "Start", or type **net start WCFWindowsServiceSample** at the command prompt.</span></span>  
   
-3.  Чтобы внести изменения в службу, необходимо предварительно остановить ее и удалить.Чтобы остановить службу, щелкните ее правой кнопкой мыши в диспетчере служб и выберите «Остановить» или введите в командной строке **type net stop WCFWindowsServiceSample**.Учтите, что если остановить службу Windows, а затем запустить клиент, то когда клиент попытается обратиться к службе, будет вызвано исключение <xref:System.ServiceModel.EndpointNotFoundException>.Чтобы удалить службу Windows, в командной строке введите **installutil \/u bin\\service.exe**.  
+3.  <span data-ttu-id="64ed6-153">Чтобы внести изменения в службу, необходимо предварительно остановить ее и удалить.</span><span class="sxs-lookup"><span data-stu-id="64ed6-153">If you make changes to the service, you must first stop it and uninstall it.</span></span> <span data-ttu-id="64ed6-154">Чтобы остановить службу, щелкните правой кнопкой мыши в Диспетчере служб и выберите «Остановить», или **типа net stop WCFWindowsServiceSample** в командной строке.</span><span class="sxs-lookup"><span data-stu-id="64ed6-154">To stop the service, right-click the service in the SCM and select "Stop", or **type net stop WCFWindowsServiceSample** at the command prompt.</span></span> <span data-ttu-id="64ed6-155">Учтите, что если остановить службу Windows, а затем запустить клиент, то когда клиент попытается обратиться к службе, будет вызвано исключение <xref:System.ServiceModel.EndpointNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="64ed6-155">Note that if you stop the Windows service and then run a client, an <xref:System.ServiceModel.EndpointNotFoundException> exception occurs when a client attempts to access the service.</span></span> <span data-ttu-id="64ed6-156">Удаление типа службы Windows **installutil /u bin\service.exe** в командной строке.</span><span class="sxs-lookup"><span data-stu-id="64ed6-156">To uninstall the Windows service type **installutil /u bin\service.exe** at the command prompt.</span></span>  
   
-## Пример  
- Код, используемый в этом разделе, полностью приведен ниже.  
+## <a name="example"></a><span data-ttu-id="64ed6-157">Пример</span><span class="sxs-lookup"><span data-stu-id="64ed6-157">Example</span></span>  
+ <span data-ttu-id="64ed6-158">Код, используемый в этом разделе, полностью приведен ниже.</span><span class="sxs-lookup"><span data-stu-id="64ed6-158">The following is a complete listing of the code used by this topic.</span></span>  
   
  [!code-csharp[c_HowTo_HostInNTService#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#8)]
  [!code-vb[c_HowTo_HostInNTService#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#8)]  
   
- Как и в случае резидентного размещения, среда размещения службы Windows требует, чтобы код размещения являлся частью приложения.Служба реализуется как консольное приложение и содержит собственный код размещения.В других средах размещения, таких как служба активации Windows \(WAS\), размещающих в IIS, писать код размещения необязательно.  
+ <span data-ttu-id="64ed6-159">Как и в случае резидентного размещения, среда размещения службы Windows требует, чтобы код размещения являлся частью приложения.</span><span class="sxs-lookup"><span data-stu-id="64ed6-159">Like the "Self-Hosting" option, the Windows service hosting environment requires that some hosting code be written as part of the application.</span></span> <span data-ttu-id="64ed6-160">Служба реализуется как консольное приложение и содержит собственный код размещения.</span><span class="sxs-lookup"><span data-stu-id="64ed6-160">The service is implemented as a console application and contains its own hosting code.</span></span> <span data-ttu-id="64ed6-161">В других средах размещения, таких как служба активации Windows (WAS), размещающих в IIS, писать код размещения необязательно.</span><span class="sxs-lookup"><span data-stu-id="64ed6-161">In other hosting environments, such as Windows Process Activation Service (WAS) hosting in Internet Information Services (IIS), it is not necessary for developers to write hosting code.</span></span>  
   
-## См. также  
- [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md)   
- [Размещение в управляемом приложении](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)   
- [Размещение служб](../../../../docs/framework/wcf/hosting-services.md)   
- [Функции размещения Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="64ed6-162">См. также</span><span class="sxs-lookup"><span data-stu-id="64ed6-162">See Also</span></span>  
+ [<span data-ttu-id="64ed6-163">Упрощенная конфигурация</span><span class="sxs-lookup"><span data-stu-id="64ed6-163">Simplified Configuration</span></span>](../../../../docs/framework/wcf/simplified-configuration.md)  
+ [<span data-ttu-id="64ed6-164">Размещение в управляемом приложении</span><span class="sxs-lookup"><span data-stu-id="64ed6-164">Hosting in a Managed Application</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
+ [<span data-ttu-id="64ed6-165">Размещение служб</span><span class="sxs-lookup"><span data-stu-id="64ed6-165">Hosting Services</span></span>](../../../../docs/framework/wcf/hosting-services.md)  
+ [<span data-ttu-id="64ed6-166">Функции размещения Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="64ed6-166">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

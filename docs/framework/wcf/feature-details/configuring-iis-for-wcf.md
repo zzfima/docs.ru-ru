@@ -1,66 +1,69 @@
 ---
-title: "Настройка IIS 7.0 для Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Настройка IIS 7.0 для Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 185fa5e641a1834a7c5f7906b5e5cf84dacaa9f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Настройка IIS 7.0 для Windows Communication Foundation
-Службы IIS 7.0 имеют модульную архитектуру, что позволяет выборочно устанавливать необходимые компоненты.Эта архитектура основана на построенной на базе манифестов технологии разбиения на компоненты, появившейся в [!INCLUDE[wv](../../../../includes/wv-md.md)].Имеется более 40 отдельных функциональных компонентов [!INCLUDE[iisver](../../../../includes/iisver-md.md)], которые можно устанавливать независимо друг от друга.Это позволяет ИТ\-специалистам легко настраивать службы в соответствии с конкретными требованиями.В этом разделе описано, как настроить [!INCLUDE[iisver](../../../../includes/iisver-md.md)] на использование [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и определить необходимые компоненты.  
+# <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a><span data-ttu-id="a6fc0-102">Настройка IIS 7.0 для Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="a6fc0-102">Configuring Internet Information Services 7.0 for Windows Communication Foundation</span></span>
+<span data-ttu-id="a6fc0-103">Службы IIS 7.0 имеют модульную архитектуру, что позволяет выборочно устанавливать необходимые компоненты.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-103">Internet Information Services (IIS) 7.0 has a modular design that allows you to selectively install components that are required.</span></span> <span data-ttu-id="a6fc0-104">Эта архитектура основана на построенной на базе манифестов технологии разбиения на компоненты, появившейся в [!INCLUDE[wv](../../../../includes/wv-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a6fc0-104">This design is based on the new manifest-driven componentization technology introduced in [!INCLUDE[wv](../../../../includes/wv-md.md)].</span></span> <span data-ttu-id="a6fc0-105">Имеется более 40 отдельных функциональных компонентов [!INCLUDE[iisver](../../../../includes/iisver-md.md)], которые можно устанавливать независимо друг от друга.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-105">There are more than 40 standalone feature components of [!INCLUDE[iisver](../../../../includes/iisver-md.md)] that can be installed independently.</span></span> <span data-ttu-id="a6fc0-106">Это позволяет ИТ-специалистам легко настраивать службы в соответствии с конкретными требованиями.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-106">This allows IT professionals to easily customize the installation as required.</span></span> <span data-ttu-id="a6fc0-107">В этом разделе описано, как настроить [!INCLUDE[iisver](../../../../includes/iisver-md.md)] на использование [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и определить необходимые компоненты.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-107">This topic discusses how to configure [!INCLUDE[iisver](../../../../includes/iisver-md.md)] for use with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and determine which components are required.</span></span>  
   
-## Минимальная установка: установка службы WAS  
- Минимальная установка пакета [!INCLUDE[iisver](../../../../includes/iisver-md.md)] предполагает установку службы активации Windows \(WAS\).Служба WAS — это независимый компонент и единственная функция [!INCLUDE[iisver](../../../../includes/iisver-md.md)], доступная во всех версиях операционной системы [!INCLUDE[wv](../../../../includes/wv-md.md)] \(Home Basic, Home Premium, Business, Ultimate и Enterprise\).  
+## <a name="minimal-installation-installing-was"></a><span data-ttu-id="a6fc0-108">Минимальная установка: установка службы WAS</span><span class="sxs-lookup"><span data-stu-id="a6fc0-108">Minimal Installation: Installing WAS</span></span>  
+ <span data-ttu-id="a6fc0-109">Минимальная установка пакета [!INCLUDE[iisver](../../../../includes/iisver-md.md)] предполагает установку службы активации Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="a6fc0-109">The minimal installation of the whole [!INCLUDE[iisver](../../../../includes/iisver-md.md)] package is to install the Windows Process Activation Service (WAS).</span></span> <span data-ttu-id="a6fc0-110">Служба WAS - это независимый компонент и единственная функция [!INCLUDE[iisver](../../../../includes/iisver-md.md)], доступная во всех версиях операционной системы [!INCLUDE[wv](../../../../includes/wv-md.md)] (Home Basic, Home Premium, Business, Ultimate и Enterprise).</span><span class="sxs-lookup"><span data-stu-id="a6fc0-110">WAS is a standalone feature and it is the only feature from the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] that is available for all [!INCLUDE[wv](../../../../includes/wv-md.md)] operating systems (Home Basic, Home Premium, Business, and Ultimate and Enterprise).</span></span>  
   
- В панели управления нажмите **Программы**, после чего нажмите **Включение или отключение компонентов Windows** в разделе **Программы и компоненты**; компоненты WAS появится в списке, как показано на следующем рисунке.  
+ <span data-ttu-id="a6fc0-111">С помощью панели управления щелкните **программы** и нажмите кнопку **Включение или отключение компонентов** в разделе **программы и компоненты**, компоненты WAS появится в список, как показано на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-111">From the Control Panel, click **Programs** and then click **Turn Windows features on or off** which is listed under **Programs and Features**, the WAS component is shown in the list as in the following illustration.</span></span>  
   
- ![Диалоговое окно "Включение или отключение компонентов Windows"](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc\_TurnFeaturesOnOrOffs")  
+ <span data-ttu-id="a6fc0-112">![Включить функции или Off диалогового окна](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")</span><span class="sxs-lookup"><span data-stu-id="a6fc0-112">![Turn Features On or Off Dialog](../../../../docs/framework/wcf/feature-details/media/wcfc-turnfeaturesonoroffs.gif "wcfc_TurnFeaturesOnOrOffs")</span></span>  
   
- Этот компонент включает следующие подкомпоненты:  
+ <span data-ttu-id="a6fc0-113">Этот компонент включает следующие подкомпоненты:</span><span class="sxs-lookup"><span data-stu-id="a6fc0-113">This feature has the following sub-components:</span></span>  
   
--   Среда .NET Environment  
+-   <span data-ttu-id="a6fc0-114">Среда .NET Environment</span><span class="sxs-lookup"><span data-stu-id="a6fc0-114">.NET Environment</span></span>  
   
--   Интерфейсы API настройки  
+-   <span data-ttu-id="a6fc0-115">Интерфейсы API настройки</span><span class="sxs-lookup"><span data-stu-id="a6fc0-115">Configuration APIs</span></span>  
   
--   Модель процессов  
+-   <span data-ttu-id="a6fc0-116">Модель процессов</span><span class="sxs-lookup"><span data-stu-id="a6fc0-116">Process Model</span></span>  
   
- Если выбрать корневой узел WAS, по умолчанию будет выбран только компонент **Модель процессов**.Обратите внимание, что при такой установке устанавливается только служба WAS, поскольку поддержка веб\-сервера отсутствует.  
+ <span data-ttu-id="a6fc0-117">Если вы выберите корневой узел WAS, только **модель процесса** будет выбран по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-117">If you select the root node of WAS, only the **Process Model** sub-node is checked by default.</span></span> <span data-ttu-id="a6fc0-118">Обратите внимание, что при такой установке устанавливается только служба WAS, поскольку поддержка веб-сервера отсутствует.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-118">Please note that with this installation you are only installing WAS, because there is no support for a Web server.</span></span>  
   
- Чтобы работали приложения [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] или [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], установите флажок **Среда .NET Environment**.Это означает, что для правильной работы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] требуются все компоненты WAS.Они автоматически выбираются при установке какого либо из этих компонентов.  
+ <span data-ttu-id="a6fc0-119">Чтобы сделать [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] или [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения для работы, проверьте **среды .NET** флажок.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-119">To make [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] or any [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] application to work, check the **.NET Environment** checkbox.</span></span> <span data-ttu-id="a6fc0-120">Это означает, что для правильной работы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] требуются все компоненты WAS.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-120">This means that all of WAS components are required to make [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] to work well.</span></span> <span data-ttu-id="a6fc0-121">Они автоматически выбираются при установке какого либо из этих компонентов.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-121">These are automatically checked once you install any of those components.</span></span>  
   
-## Службы IIS 7.0: установка по умолчанию  
- При выборе компонента **Службы IIS** автоматически выбираются некоторые подкомпоненты, как показано на следующем рисунке.  
+## <a name="iis-70-default-installation"></a><span data-ttu-id="a6fc0-122">Службы IIS 7.0: установка по умолчанию</span><span class="sxs-lookup"><span data-stu-id="a6fc0-122">IIS 7.0: Default Installation</span></span>  
+ <span data-ttu-id="a6fc0-123">Проверив **Internet Information Services** автоматически выбираются некоторые подкомпоненты, как показано на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-123">By checking the **Internet Information Services** feature, some of the sub-nodes are automatically checked as shown in the following illustration.</span></span>  
   
- ![Параметры по умолчанию для компонентов IIS 7.0](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc\_TurningFeaturesOnOrOff2")  
+ <span data-ttu-id="a6fc0-124">![Параметры по умолчанию для компонентов IIS 7.0](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")</span><span class="sxs-lookup"><span data-stu-id="a6fc0-124">![Default settings for IIS 7.0 features](../../../../docs/framework/wcf/feature-details/media/wcfc-turningfeaturesonoroff2.gif "wcfc_TurningFeaturesOnOrOff2")</span></span>  
   
- Это установка [!INCLUDE[iisver](../../../../includes/iisver-md.md)] по умолчанию.Такая установка позволяет использовать службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)] для работы со статическим содержимым \(например, со страницами HTML и другим содержимым\).Однако она не позволяет выполнять приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или CGI или размещать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="a6fc0-125">Это установка [!INCLUDE[iisver](../../../../includes/iisver-md.md)] по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-125">This is the default installation of [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span> <span data-ttu-id="a6fc0-126">Такая установка позволяет использовать службы [!INCLUDE[iisver](../../../../includes/iisver-md.md)] для работы со статическим содержимым (например, со страницами HTML и другим содержимым).</span><span class="sxs-lookup"><span data-stu-id="a6fc0-126">With this installation, you can use [!INCLUDE[iisver](../../../../includes/iisver-md.md)] to service static content (such as HTML pages and other content).</span></span> <span data-ttu-id="a6fc0-127">Однако она не позволяет выполнять приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] или CGI или размещать службы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a6fc0-127">However, you cannot run [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] or CGI applications or host [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
-## IIS 7.0: установка с поддержкой ASP.NET  
- Чтобы в службах IIS 7.0 работала поддержка [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], необходимо установить [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].При установке флажка **ASP.NET** экран будет выглядеть следующим образом.  
+## <a name="iis-70-installation-with-aspnet-support"></a><span data-ttu-id="a6fc0-128">IIS 7.0: установка с поддержкой ASP.NET</span><span class="sxs-lookup"><span data-stu-id="a6fc0-128">IIS 7.0: Installation with ASP.NET Support</span></span>  
+ <span data-ttu-id="a6fc0-129">Чтобы в службах IIS 7.0 работала поддержка [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], необходимо установить [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a6fc0-129">You must install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] to make [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] work on IIS 7.0.</span></span> <span data-ttu-id="a6fc0-130">После проверки **ASP.NET**, экран должен выглядеть как на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-130">After checking **ASP.NET**, your screen should look like the following illustration.</span></span>  
   
- ![Обязательные параметры ASP.NET](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc\_TrunFeaturesOnOrOFf3s")  
+ <span data-ttu-id="a6fc0-131">![Asp.NET обязательные параметры](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")</span><span class="sxs-lookup"><span data-stu-id="a6fc0-131">![Asp.NET required settings](../../../../docs/framework/wcf/feature-details/media/wcfc-trunfeaturesonoroff3s.gif "wcfc_TrunFeaturesOnOrOFf3s")</span></span>  
   
- Это минимальная среда, необходимая для работы приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] со службами [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+ <span data-ttu-id="a6fc0-132">Это минимальная среда, необходимая для работы приложений [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] и [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] со службами [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a6fc0-132">This is the minimal environment for both [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applications to work in [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span>  
   
-## IIS 7.0: установка с компонентами совместимости с IIS 6.0  
- При установке служб [!INCLUDE[iisver](../../../../includes/iisver-md.md)] в системе с Visual Studio 2005 или некоторыми другими средствами или скриптами автоматизации \(например, Adsutil.vbs\), которые настраивают виртуальные приложения, использующие API метабазы [!INCLUDE[iis601](../../../../includes/iis601-md.md)], проверьте, что установлен флажок **Инструменты для работы со скриптами**[!INCLUDE[iis601](../../../../includes/iis601-md.md)].При этом будут автоматически выбраны другие компоненты узла **Совместимость узла**[!INCLUDE[iis601](../../../../includes/iis601-md.md)].На следующем рисунке показан экран, соответствующий этой ситуации.  
+## <a name="iis-70-installation-with-iis-60-compatibility-components"></a><span data-ttu-id="a6fc0-133">IIS 7.0: установка с компонентами совместимости с IIS 6.0</span><span class="sxs-lookup"><span data-stu-id="a6fc0-133">IIS 7.0: Installation with IIS 6.0 Compatibility Components</span></span>  
+ <span data-ttu-id="a6fc0-134">При установке [!INCLUDE[iisver](../../../../includes/iisver-md.md)] в системе с Visual Studio 2005 или некоторых других сценариев автоматизации или средства (например, Adsutil.vbs), настройки виртуальных приложений, использующих [!INCLUDE[iis601](../../../../includes/iis601-md.md)] метабазы API-интерфейса, убедитесь, что установлен флажок [!INCLUDE[iis601](../../../../includes/iis601-md.md)]  **Сценариев**.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-134">When installing [!INCLUDE[iisver](../../../../includes/iisver-md.md)] on a system with Visual Studio 2005 or some other automation scripts or tools (such as Adsutil.vbs) that configure virtual applications that use [!INCLUDE[iis601](../../../../includes/iis601-md.md)] Metabase API, ensure that you check the [!INCLUDE[iis601](../../../../includes/iis601-md.md)]**Scripting Tools**.</span></span> <span data-ttu-id="a6fc0-135">Автоматически проверяет дочерние узлы из [!INCLUDE[iis601](../../../../includes/iis601-md.md)] **совместимость управления**.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-135">This automatically checks the other sub-nodes of [!INCLUDE[iis601](../../../../includes/iis601-md.md)]**Management Compatibility**.</span></span> <span data-ttu-id="a6fc0-136">На следующем рисунке показан экран, соответствующий этой ситуации.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-136">The following illustration shows the screen after this is done.</span></span>  
   
- ![Настройки совместимости управления IIS 6.0](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc\_TurnFeaturesOnOrOff5s")  
+ <span data-ttu-id="a6fc0-137">![Параметры совместимости служб IIS 6.0 управления](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")</span><span class="sxs-lookup"><span data-stu-id="a6fc0-137">![IIS 6.0 Management Compatibility Settings](../../../../docs/framework/wcf/feature-details/media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")</span></span>  
   
- При такой установке имеется все, что необходимо для использования компонентов [!INCLUDE[iisver](../../../../includes/iisver-md.md)], [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], а также доступные в Интернете образцы.  
+ <span data-ttu-id="a6fc0-138">При такой установке имеется все, что необходимо для использования компонентов [!INCLUDE[iisver](../../../../includes/iisver-md.md)], [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], а также доступные в Интернете образцы.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-138">With this installation, you have everything required to use [!INCLUDE[iisver](../../../../includes/iisver-md.md)], [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features and samples available on the Web.</span></span>  
   
-## Ограничения запросов  
- В [!INCLUDE[wv](../../../../includes/wv-md.md)] со службами IIS 7 были изменены значения по умолчанию для параметров `maxUri` и `maxQueryStringSize`.По умолчанию фильтрация запросов в IIS 7.0 допускает использование URL\-адресов длиной 4096 знаков и строк запросов длиной 2048 знаков.Чтобы изменить эти значения по умолчанию, добавьте в файл App.config следующий XML\-код.  
+## <a name="request-limits"></a><span data-ttu-id="a6fc0-139">Ограничения запросов</span><span class="sxs-lookup"><span data-stu-id="a6fc0-139">Request Limits</span></span>  
+ <span data-ttu-id="a6fc0-140">В [!INCLUDE[wv](../../../../includes/wv-md.md)] со службами IIS 7 были изменены значения по умолчанию для параметров `maxUri` и `maxQueryStringSize`.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-140">On [!INCLUDE[wv](../../../../includes/wv-md.md)] with IIS 7 the default value of the `maxUri` and `maxQueryStringSize` settings have been changed.</span></span> <span data-ttu-id="a6fc0-141">По умолчанию фильтрация запросов в IIS 7.0 допускает использование URL-адресов длиной 4096 знаков и строк запросов длиной 2048 знаков.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-141">By default, request filtering in IIS 7.0 allows a URL length of 4096 characters and a query string length of 2048 characters.</span></span> <span data-ttu-id="a6fc0-142">Чтобы изменить эти значения по умолчанию, добавьте в файл App.config следующий XML-код.</span><span class="sxs-lookup"><span data-stu-id="a6fc0-142">To change these defaults add the following XML to your App.config file.</span></span>  
   
  `<system.webServer>`  
   
@@ -68,7 +71,7 @@ caps.handback.revision: 12
   
  `<requestFiltering>`  
   
- `<requestLimits maxUrl=”8192” maxQueryString=”8192” />`  
+ `<requestLimits maxUrl="8192" maxQueryString="8192" />`  
   
  `</requestFiltering>`  
   
@@ -76,8 +79,8 @@ caps.handback.revision: 12
   
  `</system.webServer>`  
   
-## См. также  
- [Архитектура активации WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)   
- [Настройка WAS для использования с WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)   
- [Как устанавливать и настраивать компоненты активации WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)   
- [Функции размещения Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="a6fc0-143">См. также</span><span class="sxs-lookup"><span data-stu-id="a6fc0-143">See Also</span></span>  
+ [<span data-ttu-id="a6fc0-144">Архитектура активации WAS</span><span class="sxs-lookup"><span data-stu-id="a6fc0-144">WAS Activation Architecture</span></span>](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)  
+ [<span data-ttu-id="a6fc0-145">Настройка WAS для использования с WCF</span><span class="sxs-lookup"><span data-stu-id="a6fc0-145">Configuring WAS for Use with WCF</span></span>](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [<span data-ttu-id="a6fc0-146">Как: Установка и настройка компонентов активации WCF</span><span class="sxs-lookup"><span data-stu-id="a6fc0-146">How to: Install and Configure WCF Activation Components</span></span>](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)  
+ [<span data-ttu-id="a6fc0-147">Функции размещения Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="a6fc0-147">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

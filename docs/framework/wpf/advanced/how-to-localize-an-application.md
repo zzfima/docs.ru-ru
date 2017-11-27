@@ -1,64 +1,64 @@
 ---
-title: "Практическое руководство. Локализация приложения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "приложения, локализация"
-  - "локализация, приложения"
-  - "LocBaml - средство"
+title: "Практическое руководство. Локализация приложения"
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- localization [WPF], applications
+- LocBaml tool [WPF]
+- applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-caps.latest.revision: 37
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df52c44ca72108ffc984bed169daae654c01aa87
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Локализация приложения
-В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.  
+# <a name="how-to-localize-an-application"></a><span data-ttu-id="ddef4-102">Практическое руководство. Локализация приложения</span><span class="sxs-lookup"><span data-stu-id="ddef4-102">How to: Localize an Application</span></span>
+<span data-ttu-id="ddef4-103">В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.</span><span class="sxs-lookup"><span data-stu-id="ddef4-103">This tutorial explains how to create a localized application by using the LocBaml tool.</span></span>  
   
 > [!NOTE]
->  Средство LocBaml не является готовым приложением.  Оно представлено в качестве примера, в котором используются некоторые API локализации и показывается, как можно написать средство локализации.  
->   
->    
+>  <span data-ttu-id="ddef4-104">Средство LocBaml не является готовым приложением.</span><span class="sxs-lookup"><span data-stu-id="ddef4-104">The LocBaml tool is not a production-ready application.</span></span> <span data-ttu-id="ddef4-105">Оно представлено в качестве примера, в котором используются некоторые API локализации и показывается, как можно написать средство локализации.</span><span class="sxs-lookup"><span data-stu-id="ddef4-105">It is presented as a sample that uses some of the localization APIs and illustrates how you might write a localization tool.</span></span>  
   
 <a name="Introduction"></a>   
-## Обзор  
- В этом обзоре предоставляется поэтапный подход к локализации приложений.  Сначала необходимо подготовить приложение так, чтобы можно было извлечь текст, который будет переведен.  После перевода текста требуется влить переведенный текст в новую копию исходного приложения.  
+## <a name="overview"></a><span data-ttu-id="ddef4-106">Обзор</span><span class="sxs-lookup"><span data-stu-id="ddef4-106">Overview</span></span>  
+ <span data-ttu-id="ddef4-107">В этом обзоре предоставляется поэтапный подход к локализации приложений.</span><span class="sxs-lookup"><span data-stu-id="ddef4-107">This discussion gives you a step-by-step approach to localizing an application.</span></span> <span data-ttu-id="ddef4-108">Сначала необходимо подготовить приложение так, чтобы можно было извлечь текст, который будет переведен.</span><span class="sxs-lookup"><span data-stu-id="ddef4-108">First, you will prepare your application so that the text that will be translated can be extracted.</span></span> <span data-ttu-id="ddef4-109">После перевода текста требуется влить переведенный текст в новую копию исходного приложения.</span><span class="sxs-lookup"><span data-stu-id="ddef4-109">After the text is translated, you will merge the translated text into a new copy of the original application.</span></span>  
   
 <a name="Requirements"></a>   
-## Требования  
- В ходе данного обсуждения будет использоваться [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], который является компилятором, запускаемым из командной строки.  
+## <a name="requirements"></a><span data-ttu-id="ddef4-110">Требования</span><span class="sxs-lookup"><span data-stu-id="ddef4-110">Requirements</span></span>  
+ <span data-ttu-id="ddef4-111">В ходе данного обсуждения будет использоваться [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], который является компилятором, запускаемым из командной строки.</span><span class="sxs-lookup"><span data-stu-id="ddef4-111">Over the course of this discussion, you will use [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], which is a compiler that runs from the command line.</span></span>  
   
- Кроме того, будет рекомендовано использовать файл проекта.  Инструкции по использованию [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] и файлов проекта см. в разделе [Построение и Развертывание](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
+ <span data-ttu-id="ddef4-112">Кроме того, будет рекомендовано использовать файл проекта.</span><span class="sxs-lookup"><span data-stu-id="ddef4-112">Also, you will be instructed to use a project file.</span></span> <span data-ttu-id="ddef4-113">Инструкции по использованию [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] и файлов проекта см. в разделе [построения и развертывания](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).</span><span class="sxs-lookup"><span data-stu-id="ddef4-113">For instructions on how to use [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] and project files, see [Build and Deploy](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).</span></span>  
   
- Во всех примерах в этом разделе в качестве языка и региональных параметров используется en\-US \(английский \(США\)\).  Это позволяет проходить по шагам примеров без установки другого языка.  
+ <span data-ttu-id="ddef4-114">Во всех примерах в этом разделе в качестве языка и региональных параметров используется en-US (английский (США)).</span><span class="sxs-lookup"><span data-stu-id="ddef4-114">All the examples in this discussion use en-US (English-US) as the culture.</span></span> <span data-ttu-id="ddef4-115">Это позволяет проходить по шагам примеров без установки другого языка.</span><span class="sxs-lookup"><span data-stu-id="ddef4-115">This enables you to work through the steps of the examples without installing a different language.</span></span>  
   
 <a name="create_sample_app"></a>   
-## Создание примера приложения  
- На этом шаге вы будете выполнять подготовку приложения к локализации.  В примерах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляется приложение HelloApp, которое будет использоваться для примеров кода в этом разделе.  Если вы хотите использовать этот пример приложения, загрузите файлы [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] со страницы [Пример средства LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
+## <a name="create-a-sample-application"></a><span data-ttu-id="ddef4-116">Создание примера приложения</span><span class="sxs-lookup"><span data-stu-id="ddef4-116">Create a Sample Application</span></span>  
+ <span data-ttu-id="ddef4-117">На этом шаге вы будете выполнять подготовку приложения к локализации.</span><span class="sxs-lookup"><span data-stu-id="ddef4-117">In this step, you will prepare your application for localization.</span></span> <span data-ttu-id="ddef4-118">В примерах [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляется приложение HelloApp, которое будет использоваться для примеров кода в этом разделе.</span><span class="sxs-lookup"><span data-stu-id="ddef4-118">In the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] samples, a HelloApp sample is supplied that will be used for the code examples in this discussion.</span></span> <span data-ttu-id="ddef4-119">Если вы хотите использовать этот пример, загрузите [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] файлов из [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).</span><span class="sxs-lookup"><span data-stu-id="ddef4-119">If you would like to use this sample, download the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).</span></span>  
   
-1.  Разработайте свое приложение до точки, в которой хотите начать локализацию.  
+1.  <span data-ttu-id="ddef4-120">Разработайте свое приложение до точки, в которой хотите начать локализацию.</span><span class="sxs-lookup"><span data-stu-id="ddef4-120">Develop your application to the point where you want to start localization.</span></span>  
   
-2.  Укажите язык разработки в файле проекта, чтобы [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] создал основную сборку и вспомогательную сборку \(файл с расширением .resources.dll\), которая будет содержать ресурсы нейтрального языка.  Файл проекта в примере HelloApp — HelloApp.csproj.  В этом файле можно найти язык разработки, заданный следующим образом:  
+2.  <span data-ttu-id="ddef4-121">Укажите язык разработки в файле проекта, чтобы [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] создал основную сборку и вспомогательную сборку (файл с расширением .resources.dll), которая будет содержать ресурсы нейтрального языка.</span><span class="sxs-lookup"><span data-stu-id="ddef4-121">Specify the development language in the project file so that [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] generates a main assembly and a satellite assembly (a file with the .resources.dll extension) to contain the neutral language resources.</span></span> <span data-ttu-id="ddef4-122">Файл проекта в примере HelloApp — HelloApp.csproj.</span><span class="sxs-lookup"><span data-stu-id="ddef4-122">The project file in the HelloApp sample is HelloApp.csproj.</span></span> <span data-ttu-id="ddef4-123">В этом файле можно найти язык разработки, заданный следующим образом:</span><span class="sxs-lookup"><span data-stu-id="ddef4-123">In that file, you will find the development language identified as follows:</span></span>  
   
      `<UICulture>en-US</UICulture>`  
   
-3.  Добавьте ИД пользователей в свои файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  ИД пользователей используются для отслеживания изменений в файлах и для идентификации элементов, которые должны быть переведены.  Чтобы добавить ИД пользователей в файлы, запустите **updateuid** в вашем файле проекта:  
+3.  <span data-ttu-id="ddef4-124">Добавьте ИД пользователей в свои файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ddef4-124">Add Uids to your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files.</span></span> <span data-ttu-id="ddef4-125">ИД пользователей используются для отслеживания изменений в файлах и для идентификации элементов, которые должны быть переведены.</span><span class="sxs-lookup"><span data-stu-id="ddef4-125">Uids are used to keep track of changes to files and to identify items that must be translated.</span></span> <span data-ttu-id="ddef4-126">Чтобы добавить ИД пользователей в файлы, запустите **updateuid** в вашем файле проекта:</span><span class="sxs-lookup"><span data-stu-id="ddef4-126">To add Uids to your files, run **updateuid** on your project file:</span></span>  
   
-     **msbuild \/t:updateuid helloapp.csproj**  
+     <span data-ttu-id="ddef4-127">**msbuild /t:updateuid helloapp.csproj**</span><span class="sxs-lookup"><span data-stu-id="ddef4-127">**msbuild /t:updateuid helloapp.csproj**</span></span>  
   
-     Чтобы проверить, имеются ли отсутствующие или дублированные ИД пользователей, запустите **checkuid**:  
+     <span data-ttu-id="ddef4-128">Чтобы убедиться, что нет отсутствующих или дублированных ИД пользователей, запустите **checkuid**:</span><span class="sxs-lookup"><span data-stu-id="ddef4-128">To verify that you have no missing or duplicate Uids, run **checkuid**:</span></span>  
   
-     **msbuild \/t:checkuid helloapp.csproj**  
+     <span data-ttu-id="ddef4-129">**msbuild /t:checkuid helloapp.csproj**</span><span class="sxs-lookup"><span data-stu-id="ddef4-129">**msbuild /t:checkuid helloapp.csproj**</span></span>  
   
-     После выполнения **updateuid** файлы должны содержать ИД пользователей.  Например, в файле Pane1.xaml приложения HelloApp вы должны найти следующее:  
+     <span data-ttu-id="ddef4-130">После выполнения команды **updateuid**, файлы должны содержать ИД пользователей.</span><span class="sxs-lookup"><span data-stu-id="ddef4-130">After running **updateuid**, your files should contain Uids.</span></span> <span data-ttu-id="ddef4-131">Например, в файле Pane1.xaml приложения HelloApp вы должны найти следующее:</span><span class="sxs-lookup"><span data-stu-id="ddef4-131">For example, in the Pane1.xaml file of HelloApp, you should find the following:</span></span>  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -69,153 +69,152 @@ caps.handback.revision: 33
      `</StackPanel>`  
   
 <a name="create_dll"></a>   
-## Создание вспомогательной сборки ресурсов нейтрального языка  
- После настройки приложения для создания вспомогательной сборки для ресурсов нейтрального языка можно построить приложение.  При этом будет создана основная сборка приложения, а также вспомогательная сборка ресурсов нейтрального языка, которая требуется LocBaml для локализации.  Построение приложения  
+## <a name="create-the-neutral-language-resources-satellite-assembly"></a><span data-ttu-id="ddef4-132">Создание вспомогательной сборки ресурсов нейтрального языка</span><span class="sxs-lookup"><span data-stu-id="ddef4-132">Create the Neutral Language Resources Satellite Assembly</span></span>  
+ <span data-ttu-id="ddef4-133">После настройки приложения для создания вспомогательной сборки для ресурсов нейтрального языка можно построить приложение.</span><span class="sxs-lookup"><span data-stu-id="ddef4-133">After the application is configured to generate a neutral language resources satellite assembly, you build the application.</span></span> <span data-ttu-id="ddef4-134">При этом будет создана основная сборка приложения, а также вспомогательная сборка ресурсов нейтрального языка, которая требуется LocBaml для локализации.</span><span class="sxs-lookup"><span data-stu-id="ddef4-134">This generates the main application assembly, as well as the neutral language resources satellite assembly that is required by LocBaml for localization.</span></span> <span data-ttu-id="ddef4-135">Построение приложения</span><span class="sxs-lookup"><span data-stu-id="ddef4-135">To build the application:</span></span>  
   
-1.  Скомпилируйте HelloApp, чтобы создать [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1.  <span data-ttu-id="ddef4-136">Скомпилируйте HelloApp, чтобы создать [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="ddef4-136">Compile HelloApp to create a [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:</span></span>  
   
-     **msbuild helloapp.csproj**  
+     <span data-ttu-id="ddef4-137">**msbuild helloapp.csproj**</span><span class="sxs-lookup"><span data-stu-id="ddef4-137">**msbuild helloapp.csproj**</span></span>  
   
-2.  Новая основная сборка приложения, HelloApp.exe, создается в следующей папке:  
+2.  <span data-ttu-id="ddef4-138">Новая основная сборка приложения, HelloApp.exe, создается в следующей папке:</span><span class="sxs-lookup"><span data-stu-id="ddef4-138">The newly created main application assembly, HelloApp.exe, is created in the following folder:</span></span>  
   
      `C:\HelloApp\Bin\Debug\`  
   
-3.  Новая вспомогательная сборка ресурсов нейтрального языка, HelloApp.resources.dll, создается в следующей папке:  
+3.  <span data-ttu-id="ddef4-139">Новая вспомогательная сборка ресурсов нейтрального языка, HelloApp.resources.dll, создается в следующей папке:</span><span class="sxs-lookup"><span data-stu-id="ddef4-139">The newly created neutral language resources satellite assembly, HelloApp.resources.dll, is created in the following folder:</span></span>  
   
      `C:\HelloApp\Bin\Debug\en-US\`  
   
 <a name="build_locbaml"></a>   
-## Построение средства LocBaml  
+## <a name="build-the-locbaml-tool"></a><span data-ttu-id="ddef4-140">Построение средства LocBaml</span><span class="sxs-lookup"><span data-stu-id="ddef4-140">Build the LocBaml Tool</span></span>  
   
-1.  Все файлы, необходимые для построения LocBaml, находятся в примерах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Загрузите файлы [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] со страницы [Пример средства LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  <span data-ttu-id="ddef4-141">Все файлы, необходимые для построения LocBaml, находятся в примерах [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ddef4-141">All the files necessary to build LocBaml are located in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] samples.</span></span> <span data-ttu-id="ddef4-142">Загрузить [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] файлов из [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).</span><span class="sxs-lookup"><span data-stu-id="ddef4-142">Download the [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).</span></span>  
   
-2.  Из командной строки запустите файл проекта \(locbaml.csproj\), чтобы построить это средство:  
+2.  <span data-ttu-id="ddef4-143">Из командной строки запустите файл проекта (locbaml.csproj), чтобы построить это средство:</span><span class="sxs-lookup"><span data-stu-id="ddef4-143">From the command line, run the project file (locbaml.csproj) to build the tool:</span></span>  
   
-     **msbuild locbaml.csproj**  
+     <span data-ttu-id="ddef4-144">**msbuild locbaml.csproj**</span><span class="sxs-lookup"><span data-stu-id="ddef4-144">**msbuild locbaml.csproj**</span></span>  
   
-3.  Перейдите в каталог Bin\\Release, чтобы найти созданный исполняемый файл \(locbaml.exe\).  Например: C:\\LocBaml\\Bin\\Release\\locbaml.exe.  
+3.  <span data-ttu-id="ddef4-145">Перейдите в каталог Bin\Release, чтобы найти созданный исполняемый файл (locbaml.exe).</span><span class="sxs-lookup"><span data-stu-id="ddef4-145">Go to the Bin\Release directory to find the newly created executable file (locbaml.exe).</span></span> <span data-ttu-id="ddef4-146">Например: C:\LocBaml\Bin\Release\locbaml.exe.</span><span class="sxs-lookup"><span data-stu-id="ddef4-146">Example:C:\LocBaml\Bin\Release\locbaml.exe.</span></span>  
   
-4.  При запуске LocBaml вы можете указать следующие параметры.  
+4.  <span data-ttu-id="ddef4-147">При запуске LocBaml вы можете указать следующие параметры.</span><span class="sxs-lookup"><span data-stu-id="ddef4-147">The options that you can specify when you run LocBaml are as follows:</span></span>  
   
-    -   **parse** или **\-p:** анализирует Baml, ресурсы или файлы [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] для создания файла CSV или TXT.  
+    -   <span data-ttu-id="ddef4-148">**синтаксический анализ** или **-p:** анализирует Baml, ресурсы, или [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] файлы для создания файла CSV- или txt.</span><span class="sxs-lookup"><span data-stu-id="ddef4-148">**parse** or **-p:** Parses Baml, resources, or [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] files to generate a .csv or .txt file.</span></span>  
   
-    -   **generate** или **\-g:** создает локализованный двоичный файл, используя переведенный файл.  
+    -   <span data-ttu-id="ddef4-149">**Создание** или **-g:** формирует локализованный двоичный файл, используя переведенный файл.</span><span class="sxs-lookup"><span data-stu-id="ddef4-149">**generate** or **-g:** Generates a localized binary file by using a translated file.</span></span>  
   
-    -   **out** или **\-o** \[*каталог\_файла*\]**:** имя выходного файла.  
+    -   <span data-ttu-id="ddef4-150">**out** или **-o** {*каталог_файла*] **:** имя выходного файла.</span><span class="sxs-lookup"><span data-stu-id="ddef4-150">**out** or **-o** {*filedirectory*] **:** Output file name.</span></span>  
   
-    -   **culture** или **\-cul** \[*язык и региональные параметры*\]**:** языковой стандарт выходных сборок.  
+    -   <span data-ttu-id="ddef4-151">**язык и региональные параметры** или **- cul** {*языка и региональных параметров*] **:** языковой стандарт выходных сборок.</span><span class="sxs-lookup"><span data-stu-id="ddef4-151">**culture** or **-cul** {*culture*] **:** Locale of output assemblies.</span></span>  
   
-    -   **translation** или **\-trans** \[*translation.csv*\]**:** переведенный или локализованный файл.  
+    -   <span data-ttu-id="ddef4-152">**Перевод** или **- trans** {*translation.csv*] **:** переведенное или локализованную версию файла.</span><span class="sxs-lookup"><span data-stu-id="ddef4-152">**translation** or **-trans** {*translation.csv*] **:** Translated or localized file.</span></span>  
   
-    -   **asmpath** или **\-asmpath:** \[*каталог\_файла*\]**:** если ваш код [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] содержит пользовательские элементы управления, необходимо предоставить **asmpath** в сборку пользовательского элемента управления.  
+    -   <span data-ttu-id="ddef4-153">**asmpath** или **- asmpath:** {*каталог_файла*] **:** Если ваш [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] код содержит пользовательские элементы управления, необходимо предоставить  **asmpath** сборку пользовательского элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ddef4-153">**asmpath** or **-asmpath:** {*filedirectory*] **:** If your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] code contains custom controls, you must supply the **asmpath** to the custom control assembly.</span></span>  
   
-    -   **nologo:** запрещает отображение логотипа или сведений об авторских правах.  
+    -   <span data-ttu-id="ddef4-154">**nologo:** запрещает отображение логотипа или сведений об авторских правах.</span><span class="sxs-lookup"><span data-stu-id="ddef4-154">**nologo:** Displays no logo or copyright information.</span></span>  
   
-    -   **verbose:** отображает сведения режима подробного протоколирования.  
+    -   <span data-ttu-id="ddef4-155">**verbose:** отображает сведения режима подробного протоколирования.</span><span class="sxs-lookup"><span data-stu-id="ddef4-155">**verbose:** Displays verbose mode information.</span></span>  
   
     > [!NOTE]
-    >  Если при запуске этого средства вам потребуется список параметров, введите **LocBaml.exe** и нажмите клавишу ВВОД.  
+    >  <span data-ttu-id="ddef4-156">Если вам требуется список параметров при запуске средства, введите **LocBaml.exe** и нажмите клавишу ВВОД.</span><span class="sxs-lookup"><span data-stu-id="ddef4-156">If you need a list of the options when you are running the tool, type     **LocBaml.exe** and press ENTER.</span></span>  
   
 <a name="parse_dll"></a>   
-## Использование LocBaml для анализа файла  
- Теперь, после создания средства LocBaml, вы можете выполнить анализ файла HelloApp.resources.dll, чтобы извлечь текстовое содержимое, которое будет локализовано.  
+## <a name="use-locbaml-to-parse-a-file"></a><span data-ttu-id="ddef4-157">Использование LocBaml для анализа файла</span><span class="sxs-lookup"><span data-stu-id="ddef4-157">Use LocBaml to Parse a File</span></span>  
+ <span data-ttu-id="ddef4-158">Теперь, после создания средства LocBaml, вы можете выполнить анализ файла HelloApp.resources.dll, чтобы извлечь текстовое содержимое, которое будет локализовано.</span><span class="sxs-lookup"><span data-stu-id="ddef4-158">Now that you have created the LocBaml tool, you are ready to use it to parse HelloApp.resources.dll to extract the text content that will be localized.</span></span>  
   
-1.  Скопируйте LocBaml.exe в папку приложения bin\\debug, где была создана основная сборка приложения.  
+1.  <span data-ttu-id="ddef4-159">Скопируйте LocBaml.exe в папку приложения bin\debug, где была создана основная сборка приложения.</span><span class="sxs-lookup"><span data-stu-id="ddef4-159">Copy LocBaml.exe to your application's bin\debug folder, where the main application assembly was created.</span></span>  
   
-2.  Чтобы выполнить анализ файла вспомогательной сборки и сохранить результат в виде CSV\-файла, используйте следующую команду:  
+2.  <span data-ttu-id="ddef4-160">Чтобы выполнить анализ файла вспомогательной сборки и сохранить результат в виде CSV-файла, используйте следующую команду:</span><span class="sxs-lookup"><span data-stu-id="ddef4-160">To parse the satellite assembly file and store the output as a .csv file, use the following command:</span></span>  
   
-     **LocBaml.exe \/parse HelloApp.resources.dll \/out:Hello.csv**  
+     <span data-ttu-id="ddef4-161">**LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**</span><span class="sxs-lookup"><span data-stu-id="ddef4-161">**LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**</span></span>  
   
     > [!NOTE]
-    >  Если входной файл HelloApp.resources.dll не находится в том же каталоге, что и LocBaml.exe, переместите один из файлов таким образом, чтобы оба файла были в одном каталоге.  
+    >  <span data-ttu-id="ddef4-162">Если входной файл HelloApp.resources.dll не находится в том же каталоге, что и LocBaml.exe, переместите один из файлов таким образом, чтобы оба файла были в одном каталоге.</span><span class="sxs-lookup"><span data-stu-id="ddef4-162">If the input file, HelloApp.resources.dll, is not in the same directory as LocBaml.exe move one of the files so that both files are in the same directory.</span></span>  
   
-3.  При выполнении анализа файлов с помощью LocBaml выходные данные состоят из семи полей, разделенных запятыми \(CSV\-файлы\) или знаками табуляции \(TXT\-файлы\).  Ниже показан проанализированный CSV\-файл для HelloApp.resources.dll:  
+3.  <span data-ttu-id="ddef4-163">При выполнении анализа файлов с помощью LocBaml выходные данные состоят из семи полей, разделенных запятыми (CSV-файлы) или знаками табуляции (TXT-файлы).</span><span class="sxs-lookup"><span data-stu-id="ddef4-163">When you run LocBaml to parse files, the output consists of seven fields delimited by commas (.csv files) or tabs (.txt files).</span></span> <span data-ttu-id="ddef4-164">Ниже показан проанализированный CSV-файл для HelloApp.resources.dll:</span><span class="sxs-lookup"><span data-stu-id="ddef4-164">The following shows the parsed .csv file for the HelloApp.resources.dll:</span></span>
+
+   | |
+   |-|
+   |<span data-ttu-id="ddef4-165">HelloApp.g.en-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,#Text1;#Text2;</span><span class="sxs-lookup"><span data-stu-id="ddef4-165">HelloApp.g.en-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,#Text1;#Text2;</span></span>|
+   |<span data-ttu-id="ddef4-166">HelloApp.g.en-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,#Text1;#Text2;</span><span class="sxs-lookup"><span data-stu-id="ddef4-166">HelloApp.g.en-US.resources:window1.baml,Text1:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Hello World</span></span>|
+   |<span data-ttu-id="ddef4-167">HelloApp.g.en-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,#Text1;#Text2;</span><span class="sxs-lookup"><span data-stu-id="ddef4-167">HelloApp.g.en-US.resources:window1.baml,Text2:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Goodbye World</span></span>|
+
+   <span data-ttu-id="ddef4-168">Это следующие семь полей.</span><span class="sxs-lookup"><span data-stu-id="ddef4-168">The seven fields are:</span></span>  
   
-    ||  
-    |-|  
-    |HelloApp.g.en\-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,\#Text1;\#Text2;|  
-    |HelloApp.g.en\-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,\#Text1;\#Text2;|  
-    |HelloApp.g.en\-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,\#Text1;\#Text2;|  
+   1.  <span data-ttu-id="ddef4-169">**Имя BAML**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-169">**BAML Name**.</span></span> <span data-ttu-id="ddef4-170">Имя ресурса BAML по отношению к вспомогательной сборке исходного языка.</span><span class="sxs-lookup"><span data-stu-id="ddef4-170">The name of the BAML resource with respect to the source language satellite assembly.</span></span>  
   
-     Это следующие семь полей.  
+   2.  <span data-ttu-id="ddef4-171">**Ключ ресурса**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-171">**Resource Key**.</span></span> <span data-ttu-id="ddef4-172">Идентификатор локализованного ресурса.</span><span class="sxs-lookup"><span data-stu-id="ddef4-172">The localized resource identifier.</span></span>  
   
-    1.  **Имя BAML** Имя ресурса BAML по отношению к вспомогательной сборке исходного языка.  
+   3.  <span data-ttu-id="ddef4-173">**Категория**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-173">**Category**.</span></span> <span data-ttu-id="ddef4-174">Тип значения.</span><span class="sxs-lookup"><span data-stu-id="ddef4-174">The value type.</span></span> <span data-ttu-id="ddef4-175">В разделе [атрибуты локализации и примечания](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="ddef4-175">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    2.  **Ключ ресурса** Идентификатор локализованного ресурса.  
+   4.  <span data-ttu-id="ddef4-176">**Удобочитаемость**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-176">**Readability**.</span></span> <span data-ttu-id="ddef4-177">Может ли значение быть прочитано средством локализации.</span><span class="sxs-lookup"><span data-stu-id="ddef4-177">Whether the value can be read by a localizer.</span></span> <span data-ttu-id="ddef4-178">В разделе [атрибуты локализации и примечания](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="ddef4-178">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    3.  **Категория** Тип значения.  См. раздел [Атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  <span data-ttu-id="ddef4-179">**Изменяемость**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-179">**Modifiability**.</span></span> <span data-ttu-id="ddef4-180">Может ли значение изменяться средством локализации.</span><span class="sxs-lookup"><span data-stu-id="ddef4-180">Whether the value can be modified by a localizer.</span></span> <span data-ttu-id="ddef4-181">В разделе [атрибуты локализации и примечания](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="ddef4-181">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    4.  **Удобочитаемость** Может ли значение быть прочитано средством локализации.  См. раздел [Атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  <span data-ttu-id="ddef4-182">**Комментарии**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-182">**Comments**.</span></span> <span data-ttu-id="ddef4-183">Дополнительное описание значения, помогающее определить способ локализации значения.</span><span class="sxs-lookup"><span data-stu-id="ddef4-183">Additional description of the value to help determine how a value is localized.</span></span> <span data-ttu-id="ddef4-184">В разделе [атрибуты локализации и примечания](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="ddef4-184">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    5.  **Изменяемость** Может ли значение изменяться средством локализации.  См. раздел [Атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   7.  <span data-ttu-id="ddef4-185">**Значение**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-185">**Value**.</span></span> <span data-ttu-id="ddef4-186">Текстовое значение для перевода на нужный язык.</span><span class="sxs-lookup"><span data-stu-id="ddef4-186">The text value to translate to the desired culture.</span></span>  
   
-    6.  **Комментарии** Дополнительное описание значения, помогающее определить способ локализации значения.  См. раздел [Атрибуты и комментарии локализации](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   <span data-ttu-id="ddef4-187">В следующей таблице показывается, как эти поля соответствуют разделенным значениям CSV-файла.</span><span class="sxs-lookup"><span data-stu-id="ddef4-187">The following table shows how these fields map to the delimited values of the .csv file:</span></span>  
   
-    7.  **Значение** Текстовое значение для перевода на нужный язык.  
+   |<span data-ttu-id="ddef4-188">Имя BAML</span><span class="sxs-lookup"><span data-stu-id="ddef4-188">BAML name</span></span>|<span data-ttu-id="ddef4-189">Ключ ресурса</span><span class="sxs-lookup"><span data-stu-id="ddef4-189">Resource key</span></span>|<span data-ttu-id="ddef4-190">Категория</span><span class="sxs-lookup"><span data-stu-id="ddef4-190">Category</span></span>|<span data-ttu-id="ddef4-191">Удобочитаемость</span><span class="sxs-lookup"><span data-stu-id="ddef4-191">Readability</span></span>|<span data-ttu-id="ddef4-192">Изменяемость</span><span class="sxs-lookup"><span data-stu-id="ddef4-192">Modifiability</span></span>|<span data-ttu-id="ddef4-193">Комментарии</span><span class="sxs-lookup"><span data-stu-id="ddef4-193">Comments</span></span>|<span data-ttu-id="ddef4-194">Значение</span><span class="sxs-lookup"><span data-stu-id="ddef4-194">Value</span></span>|  
+   |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
+   |<span data-ttu-id="ddef4-195">HelloApp.g.en-US.resources:window1.baml</span><span class="sxs-lookup"><span data-stu-id="ddef4-195">HelloApp.g.en-US.resources:window1.baml</span></span>|<span data-ttu-id="ddef4-196">Stack1:System.Windows.Controls.StackPanel.$Content</span><span class="sxs-lookup"><span data-stu-id="ddef4-196">Stack1:System.Windows.Controls.StackPanel.$Content</span></span>|<span data-ttu-id="ddef4-197">Пропустить</span><span class="sxs-lookup"><span data-stu-id="ddef4-197">Ignore</span></span>|<span data-ttu-id="ddef4-198">FALSE</span><span class="sxs-lookup"><span data-stu-id="ddef4-198">FALSE</span></span>|<span data-ttu-id="ddef4-199">FALSE</span><span class="sxs-lookup"><span data-stu-id="ddef4-199">FALSE</span></span>||<span data-ttu-id="ddef4-200">#Text1;#Text2</span><span class="sxs-lookup"><span data-stu-id="ddef4-200">#Text1;#Text2</span></span>|
+   |<span data-ttu-id="ddef4-201">HelloApp.g.en-US.resources:window1.baml</span><span class="sxs-lookup"><span data-stu-id="ddef4-201">HelloApp.g.en-US.resources:window1.baml</span></span>|<span data-ttu-id="ddef4-202">Text1:System.Windows.Controls.TextBlock.$Content</span><span class="sxs-lookup"><span data-stu-id="ddef4-202">Text1:System.Windows.Controls.TextBlock.$Content</span></span>|<span data-ttu-id="ddef4-203">Нет</span><span class="sxs-lookup"><span data-stu-id="ddef4-203">None</span></span>|<span data-ttu-id="ddef4-204">TRUE</span><span class="sxs-lookup"><span data-stu-id="ddef4-204">TRUE</span></span>|<span data-ttu-id="ddef4-205">TRUE</span><span class="sxs-lookup"><span data-stu-id="ddef4-205">TRUE</span></span>||<span data-ttu-id="ddef4-206">Hello World</span><span class="sxs-lookup"><span data-stu-id="ddef4-206">Hello World</span></span>|
+   |<span data-ttu-id="ddef4-207">HelloApp.g.en-US.resources:window1.baml</span><span class="sxs-lookup"><span data-stu-id="ddef4-207">HelloApp.g.en-US.resources:window1.baml</span></span>|<span data-ttu-id="ddef4-208">Text1:System.Windows.Controls.TextBlock.$Content</span><span class="sxs-lookup"><span data-stu-id="ddef4-208">Text2:System.Windows.Controls.TextBlock.$Content</span></span>|<span data-ttu-id="ddef4-209">Нет</span><span class="sxs-lookup"><span data-stu-id="ddef4-209">None</span></span>|<span data-ttu-id="ddef4-210">TRUE</span><span class="sxs-lookup"><span data-stu-id="ddef4-210">TRUE</span></span>|<span data-ttu-id="ddef4-211">TRUE</span><span class="sxs-lookup"><span data-stu-id="ddef4-211">TRUE</span></span>||<span data-ttu-id="ddef4-212">Goodbye World</span><span class="sxs-lookup"><span data-stu-id="ddef4-212">Goodbye World</span></span>|
   
-     В следующей таблице показывается, как эти поля соответствуют разделенным значениям CSV\-файла.  
+   <span data-ttu-id="ddef4-213">Обратите внимание, что все значения для **комментарии** поля не содержат значений; Если поле не имеет значения, является пустым.</span><span class="sxs-lookup"><span data-stu-id="ddef4-213">Notice that all the values for the **Comments** field contain no values; if a field doesn't have a value, it is empty.</span></span> <span data-ttu-id="ddef4-214">Также Обратите внимание что элемента в первой строке не является ни для чтения, ни изменяемым и имеет «Игнорировать» в качестве его **категории** значение, каждый из которых указывает, что неизменяем.</span><span class="sxs-lookup"><span data-stu-id="ddef4-214">Also notice that the item in the first row is neither readable nor modifiable, and has "Ignore" as its **Category** value, all of which indicates that the value is not localizable.</span></span>  
   
-    |Имя BAML|Ключ ресурса|Категория|Удобочитаемость|Изменяемость|Комментарии|Значение|  
-    |--------------|------------------|---------------|---------------------|------------------|-----------------|--------------|  
-    |HelloApp.g.en\-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Пропустить|FALSE|FALSE||\#Text1;\#Text2|  
-    |HelloApp.g.en\-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Нет|TRUE|TRUE||Hello World|  
-    |HelloApp.g.en\-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Нет|TRUE|TRUE||Goodbye World|  
-  
-     Обратите внимание, что все значения для поля **Комментарии** не содержат значений; если поле не имеет значения, оно пустое.  Также обратите внимание, что элемент в первой строке не является ни читаемым, ни изменяемым, и его поле **Категория** имеет значение «Ignore»; все это указывает, что это значение не локализуемое.  
-  
-4.  Чтобы облегчить поиск локализуемых элементов в проанализированных файлах, особенно если они большие, можно сортировать или фильтровать элементы по **категории**, **удобочитаемости** и **изменяемости**.  Например можно отфильтровать нечитаемые и неизменяемые значения.  
+4.  <span data-ttu-id="ddef4-215">Чтобы облегчить поиск локализуемых элементов в анализируемых файлах, особенно в больших файлов, можно сортировать и фильтровать элементы по **категории**, **удобочитаемость**, и **Изменяемость**.</span><span class="sxs-lookup"><span data-stu-id="ddef4-215">To facilitate discovery of localizable items in parsed files, particularly in large files, you can sort or filter the items by **Category**, **Readability**, and **Modifiability**.</span></span> <span data-ttu-id="ddef4-216">Например можно отфильтровать нечитаемые и неизменяемые значения.</span><span class="sxs-lookup"><span data-stu-id="ddef4-216">For example, you can filter out unreadable and unmodifiable values.</span></span>  
   
 <a name="translate_loc_content"></a>   
-## Перевод локализуемого содержимого  
- Используйте любое доступное средство для перевода извлеченного содержимого.  Для этого рекомендуется записать ресурсы в CSV\-файл и просматривать их в [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], внося переведенный текст в последний столбец \(значение\).  
+## <a name="translate-the-localizable-content"></a><span data-ttu-id="ddef4-217">Перевод локализуемого содержимого</span><span class="sxs-lookup"><span data-stu-id="ddef4-217">Translate the Localizable Content</span></span>  
+ <span data-ttu-id="ddef4-218">Используйте любое доступное средство для перевода извлеченного содержимого.</span><span class="sxs-lookup"><span data-stu-id="ddef4-218">Use any tool that you have available to translate the extracted content.</span></span> <span data-ttu-id="ddef4-219">Для этого рекомендуется записать ресурсы в CSV-файл и просматривать их в [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], внося переведенный текст в последний столбец (значение).</span><span class="sxs-lookup"><span data-stu-id="ddef4-219">A good way to do this is to write the resources to a .csv file and view them in [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], making translation changes to the last column (value).</span></span>  
   
 <a name="merge_translations"></a>   
-## Использование LocBaml для создания нового файла .resources.dll  
- Содержимое, которое было идентифицировано при анализе файла HelloApp.resources.dll с помощью LocBaml, переведено, и его необходимо влить обратно в исходное приложение.  Используйте параметр **generate** или **\-g**, чтобы создать новый файл .resources.dll.  
+## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a><span data-ttu-id="ddef4-220">Использование LocBaml для создания нового файла .resources.dll</span><span class="sxs-lookup"><span data-stu-id="ddef4-220">Use LocBaml to Generate a New .resources.dll File</span></span>  
+ <span data-ttu-id="ddef4-221">Содержимое, которое было идентифицировано при анализе файла HelloApp.resources.dll с помощью LocBaml, переведено, и его необходимо влить обратно в исходное приложение.</span><span class="sxs-lookup"><span data-stu-id="ddef4-221">The content that was identified by parsing HelloApp.resources.dll with LocBaml has been translated and must be merged back into the original application.</span></span> <span data-ttu-id="ddef4-222">Используйте **создания** или **-g** параметр, чтобы создать новый. resources.dll файл.</span><span class="sxs-lookup"><span data-stu-id="ddef4-222">Use the **generate** or **-g** option to generate a new .resources.dll file.</span></span>  
   
-1.  Чтобы создать новый файл HelloApp.resources.dll, используйте следующий синтаксис.  Пометьте язык и региональные параметры как en\-US \(\/cul:en\-US\).  
+1.  <span data-ttu-id="ddef4-223">Чтобы создать новый файл HelloApp.resources.dll, используйте следующий синтаксис.</span><span class="sxs-lookup"><span data-stu-id="ddef4-223">Use the following syntax to generate a new HelloApp.resources.dll file.</span></span> <span data-ttu-id="ddef4-224">Пометьте язык и региональные параметры как en-US (/cul:en-US).</span><span class="sxs-lookup"><span data-stu-id="ddef4-224">Mark the culture as en-US (/cul:en-US).</span></span>  
   
-     **LocBaml.exe \/generate HelloApp.resources.dll \/trans:Hello.csv \/out:c:\\ \/cul:en\-US**  
+     <span data-ttu-id="ddef4-225">**LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**</span><span class="sxs-lookup"><span data-stu-id="ddef4-225">**LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**</span></span>  
   
     > [!NOTE]
-    >  Если входной файл Hello.csv не находится в том же каталоге, что и исполняемый файл LocBaml.exe, переместите один из файлов таким образом, чтобы оба файла были в одном каталоге.  
+    >  <span data-ttu-id="ddef4-226">Если входной файл Hello.csv не находится в том же каталоге, что и исполняемый файл LocBaml.exe, переместите один из файлов таким образом, чтобы оба файла были в одном каталоге.</span><span class="sxs-lookup"><span data-stu-id="ddef4-226">If the input file, Hello.csv, is not in the same directory as the executable, LocBaml.exe, move one of the files so that both files are in the same directory.</span></span>  
   
-2.  Замените старый файл HelloApp.resources.dll в каталоге C:\\HelloApp\\Bin\\Debug\\en\-US\\HelloApp.resources.dll на новый созданный файл HelloApp.resources.dll.  
+2.  <span data-ttu-id="ddef4-227">Замените старый файл HelloApp.resources.dll в каталоге C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll на новый созданный файл HelloApp.resources.dll.</span><span class="sxs-lookup"><span data-stu-id="ddef4-227">Replace the old HelloApp.resources.dll file in the C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll directory with your newly created HelloApp.resources.dll file.</span></span>  
   
-3.  Теперь в вашем приложении фразы Hello World и Goodbye World должны быть переведены.  
+3.  <span data-ttu-id="ddef4-228">Теперь в вашем приложении фразы Hello World и Goodbye World должны быть переведены.</span><span class="sxs-lookup"><span data-stu-id="ddef4-228">"Hello World" and "Goodbye World" should now be translated in your application.</span></span>  
   
-4.  Для перевода на другой язык используйте язык, на который вы переводите.  В следующем примере показано, как переводить на канадский французский.  
+4.  <span data-ttu-id="ddef4-229">Для перевода на другой язык используйте язык, на который вы переводите.</span><span class="sxs-lookup"><span data-stu-id="ddef4-229">To translate to a different culture, use the culture of the language that you are translating to.</span></span> <span data-ttu-id="ddef4-230">В следующем примере показано, как переводить на канадский французский.</span><span class="sxs-lookup"><span data-stu-id="ddef4-230">The following example shows how to translate to French-Canadian:</span></span>  
   
-     **LocBaml.exe \/generate HelloApp.resources.dll \/trans:Hellofr\-CA.csv \/out:c:\\ \/cul:fr\-CA**  
+     <span data-ttu-id="ddef4-231">**LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**</span><span class="sxs-lookup"><span data-stu-id="ddef4-231">**LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**</span></span>  
   
-5.  В той же основной сборке приложения создайте новую папку для выбранного языка и региональных параметров, в которой будет размещена новая вспомогательная сборка.  Для канадского французского папку можно назвать fr\-CA.  
+5.  <span data-ttu-id="ddef4-232">В той же основной сборке приложения создайте новую папку для выбранного языка и региональных параметров, в которой будет размещена новая вспомогательная сборка.</span><span class="sxs-lookup"><span data-stu-id="ddef4-232">In the same assembly as the main application assembly, create a new culture-specific folder to house the new satellite assembly.</span></span> <span data-ttu-id="ddef4-233">Для канадского французского папку можно назвать fr-CA.</span><span class="sxs-lookup"><span data-stu-id="ddef4-233">For French-Canadian, the folder would be fr-CA.</span></span>  
   
-6.  Скопируйте созданную вспомогательную сборку в новую папку.  
+6.  <span data-ttu-id="ddef4-234">Скопируйте созданную вспомогательную сборку в новую папку.</span><span class="sxs-lookup"><span data-stu-id="ddef4-234">Copy the generated satellite assembly to the new folder.</span></span>  
   
-7.  Чтобы протестировать новую вспомогательную сборку, необходимо изменить язык и региональные параметры, с которыми будет выполняться приложение.  Это можно сделать одним из двух способов.  
+7.  <span data-ttu-id="ddef4-235">Чтобы протестировать новую вспомогательную сборку, необходимо изменить язык и региональные параметры, с которыми будет выполняться приложение.</span><span class="sxs-lookup"><span data-stu-id="ddef4-235">To test the new satellite assembly, you need to change the culture under which your application will run.</span></span> <span data-ttu-id="ddef4-236">Это можно сделать одним из двух способов.</span><span class="sxs-lookup"><span data-stu-id="ddef4-236">You can do this in one of two ways:</span></span>  
   
-    -   Изменить региональные параметры операционной системы \(**Пуск** &#124; **Панель управления** &#124; **Язык и региональные стандарты**\).  
+    -   <span data-ttu-id="ddef4-237">Изменить региональные параметры операционной системы (**запустить** &#124; **Панель управления** &#124; **Язык и региональные стандарты**).</span><span class="sxs-lookup"><span data-stu-id="ddef4-237">Change your operating system's regional settings (**Start** &#124; **Control Panel** &#124; **Regional and Language Options**).</span></span>  
   
-    -   В своем приложении добавьте в файл App.xaml.cs следующий код:  
+    -   <span data-ttu-id="ddef4-238">В своем приложении добавьте в файл App.xaml.cs следующий код:</span><span class="sxs-lookup"><span data-stu-id="ddef4-238">In your application, add the following code to App.xaml.cs:</span></span>  
   
-         [!code-xml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]  
-  
-         [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-         [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
-## Советы по использованию LocBaml  
+## <a name="some-tips-for-using-locbaml"></a><span data-ttu-id="ddef4-239">Советы по использованию LocBaml</span><span class="sxs-lookup"><span data-stu-id="ddef4-239">Some Tips for Using LocBaml</span></span>  
   
--   Все зависимые сборки, которые определяют пользовательские элементы управления, должны быть скопированы в локальный каталог LocBaml или установлены в глобальном кэше сборок.  Это необходимо потому, что API локализации должен иметь доступ к зависимым сборкам при чтении [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
+-   <span data-ttu-id="ddef4-240">Все зависимые сборки, которые определяют пользовательские элементы управления, должны быть скопированы в локальный каталог LocBaml или установлены в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="ddef4-240">All dependent assemblies that define custom controls must be copied into the local directory of LocBaml or installed into the GAC.</span></span> <span data-ttu-id="ddef4-241">Это необходимо потому, что API локализации должен иметь доступ к зависимым сборкам при чтении [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ddef4-241">This is necessary because the localization API must have access to the dependent assemblies when it reads the [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].</span></span>  
   
--   Если основная сборка имеет подпись, созданная библиотека DLL ресурсов также должна быть подписана для ее загрузки.  
+-   <span data-ttu-id="ddef4-242">Если основная сборка имеет подпись, созданная библиотека DLL ресурсов также должна быть подписана для ее загрузки.</span><span class="sxs-lookup"><span data-stu-id="ddef4-242">If the main assembly is signed, the generated resource DLL must also be signed in order for it to be loaded.</span></span>  
   
--   Версия библиотеки DLL локализованных ресурсов должна быть синхронизирована с основной сборкой.  
+-   <span data-ttu-id="ddef4-243">Версия библиотеки DLL локализованных ресурсов должна быть синхронизирована с основной сборкой.</span><span class="sxs-lookup"><span data-stu-id="ddef4-243">The version of the localized resource DLL needs to be synchronized with the main assembly.</span></span>  
   
 <a name="Whats_Next"></a>   
-## Что дальше?  
- Теперь у вас есть базовое представление о том, как использовать средство LocBaml.  Вы можете создать файл, содержащий ИД пользователей.  С помощью средства LocBaml вы можете анализировать файл для извлечения локализуемого содержимого и после перевода этого содержимого можете создать файл .resources.dll, объединяющий переведенное содержимое.  В этом разделе не рассматриваются все возможные детали, но теперь у вас есть знания, необходимые для использования LocBaml для локализации приложений.  
+## <a name="whats-next"></a><span data-ttu-id="ddef4-244">Что дальше?</span><span class="sxs-lookup"><span data-stu-id="ddef4-244">What's Next</span></span>  
+ <span data-ttu-id="ddef4-245">Теперь у вас есть базовое представление о том, как использовать средство LocBaml.</span><span class="sxs-lookup"><span data-stu-id="ddef4-245">You should now have a basic understanding of how to use the LocBaml tool.</span></span>  <span data-ttu-id="ddef4-246">Вы можете создать файл, содержащий ИД пользователей.</span><span class="sxs-lookup"><span data-stu-id="ddef4-246">You should be able to make a file that contains Uids.</span></span> <span data-ttu-id="ddef4-247">С помощью средства LocBaml вы можете анализировать файл для извлечения локализуемого содержимого и после перевода этого содержимого можете создать файл .resources.dll, объединяющий переведенное содержимое.</span><span class="sxs-lookup"><span data-stu-id="ddef4-247">By using the LocBaml tool, you should be able to parse a file to extract the localizable content, and after the content is translated, you should be able to generate a .resources.dll file that merges the translated content.</span></span> <span data-ttu-id="ddef4-248">В этом разделе не рассматриваются все возможные детали, но теперь у вас есть знания, необходимые для использования LocBaml для локализации приложений.</span><span class="sxs-lookup"><span data-stu-id="ddef4-248">This topic does not include every possible detail, but you now have the knowledge necessary to use LocBaml for localizing your applications.</span></span>  
   
-## См. также  
- [Глобализация для WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)   
- [Обзор использования автоматической разметки](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a><span data-ttu-id="ddef4-249">См. также</span><span class="sxs-lookup"><span data-stu-id="ddef4-249">See Also</span></span>  
+ [<span data-ttu-id="ddef4-250">Глобализация для WPF</span><span class="sxs-lookup"><span data-stu-id="ddef4-250">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="ddef4-251">Обзор использования автоматической разметки</span><span class="sxs-lookup"><span data-stu-id="ddef4-251">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

@@ -1,80 +1,83 @@
 ---
-title: "Защищенные клиентские приложения | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Безопасные клиентские приложения"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b42c06b9507894568a4299f23b62010e44076194
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Защищенные клиентские приложения
-Обычно приложения состоят из многих частей, которые необходимо защищать от уязвимостей, которые могут привести к потере данных или иным образом нарушить безопасность системы.  Создавая защищенные пользовательские интерфейсы, можно предотвратить многие проблемы за счет блокирования организаторов атак до того, как они получат доступ к данным или системным ресурсам.  
+# <a name="secure-client-applications"></a><span data-ttu-id="830f3-102">Безопасные клиентские приложения</span><span class="sxs-lookup"><span data-stu-id="830f3-102">Secure Client Applications</span></span>
+<span data-ttu-id="830f3-103">Обычно приложения состоят из многих частей, которые необходимо защищать от уязвимостей, которые могут привести к потере данных или иным образом нарушить безопасность системы.</span><span class="sxs-lookup"><span data-stu-id="830f3-103">Applications typically consist of many parts that must all be protected from vulnerabilities that could result in data loss or otherwise compromise the system.</span></span> <span data-ttu-id="830f3-104">Создавая защищенные пользовательские интерфейсы, можно предотвратить многие проблемы за счет блокирования организаторов атак до того, как они получат доступ к данным или системным ресурсам.</span><span class="sxs-lookup"><span data-stu-id="830f3-104">Creating secure user interfaces can prevent many problems by blocking attackers before they can access data or system resources.</span></span>  
   
-## Проверка ввода пользователя  
- При построении приложения, которое работает с данными следует, пока не было доказано обратного, рассматривать все действия пользователя злонамеренными.  Несоблюдение этого правила может привести к созданию уязвимого для атак приложения.  Платформа .NET Framework содержит классы, позволяющие вводить в действие домен значений для элементов управления, например, ограничивающих число символов, которое можно ввести.  При помощи обработчиков событий \(hooks\) можно писать процедуры для проверки допустимости значений.  Данные ввода пользователей можно проверять и строго типизировать, ограничивая тем самым уязвимость приложения для эксплойтов скриптов и атак путем внедрения кода SQL.  
+## <a name="validate-user-input"></a><span data-ttu-id="830f3-105">Проверка ввода пользователя</span><span class="sxs-lookup"><span data-stu-id="830f3-105">Validate User Input</span></span>  
+ <span data-ttu-id="830f3-106">При построении приложения, которое работает с данными следует, пока не было доказано обратного, рассматривать все действия пользователя злонамеренными.</span><span class="sxs-lookup"><span data-stu-id="830f3-106">When constructing an application that accesses data, you should assume that all user input is malicious until proven otherwise.</span></span> <span data-ttu-id="830f3-107">Несоблюдение этого правила может привести к созданию уязвимого для атак приложения.</span><span class="sxs-lookup"><span data-stu-id="830f3-107">Failure to do so can leave your application vulnerable to attack.</span></span> <span data-ttu-id="830f3-108">Платформа .NET Framework содержит классы, позволяющие вводить в действие домен значений для элементов управления, например, ограничивающих число символов, которое можно ввести.</span><span class="sxs-lookup"><span data-stu-id="830f3-108">The .NET Framework contains classes to help you enforce a domain of values for input controls, such as limiting the number of characters that can be entered.</span></span> <span data-ttu-id="830f3-109">При помощи обработчиков событий (hooks) можно писать процедуры для проверки допустимости значений.</span><span class="sxs-lookup"><span data-stu-id="830f3-109">Event hooks allow you to write procedures to check the validity of values.</span></span> <span data-ttu-id="830f3-110">Данные ввода пользователей можно проверять и строго типизировать, ограничивая тем самым уязвимость приложения для эксплойтов скриптов и атак путем внедрения кода SQL.</span><span class="sxs-lookup"><span data-stu-id="830f3-110">User input data can be validated and strongly typed, limiting an application's exposure to script and SQL injection exploits.</span></span>  
   
 > [!IMPORTANT]
->  Кроме того, также следует проверять ввод пользователя в источнике данных и в клиентском приложении.  Злоумышленник может обойти приложение и атаковать источник данных напрямую.  
+>  <span data-ttu-id="830f3-111">Кроме того, также следует проверять ввод пользователя в источнике данных и в клиентском приложении.</span><span class="sxs-lookup"><span data-stu-id="830f3-111">You must also validate user input at the data source as well as in the client application.</span></span> <span data-ttu-id="830f3-112">Злоумышленник может обойти приложение и атаковать источник данных напрямую.</span><span class="sxs-lookup"><span data-stu-id="830f3-112">An attacker may choose to circumvent your application and attack the data source directly.</span></span>  
   
- [Security and User Input](../../../../docs/standard/security/security-and-user-input.md)  
- Описывает, как обрабатывать неявные и потенциально опасные ошибки, связанные с вводом пользователя.  
+ [<span data-ttu-id="830f3-113">Безопасность и ввод данных пользователем</span><span class="sxs-lookup"><span data-stu-id="830f3-113">Security and User Input</span></span>](../../../../docs/standard/security/security-and-user-input.md)  
+ <span data-ttu-id="830f3-114">Описывает, как обрабатывать неявные и потенциально опасные ошибки, связанные с вводом пользователя.</span><span class="sxs-lookup"><span data-stu-id="830f3-114">Describes how to handle subtle and potentially dangerous bugs involving user input.</span></span>  
   
- [Validating User Input in ASP.NET Web Pages](../Topic/Validating%20User%20Input%20in%20ASP.NET%20Web%20Pages.md)  
- Общие сведения о проверке ввода пользователя при помощи элементов управления проверкой ASP.NET.  
+ [<span data-ttu-id="830f3-115">Проверка пользовательского ввода в веб-страницы ASP.NET</span><span class="sxs-lookup"><span data-stu-id="830f3-115">Validating User Input in ASP.NET Web Pages</span></span>](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
+ <span data-ttu-id="830f3-116">Общие сведения о проверке ввода пользователя при помощи элементов управления проверкой ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="830f3-116">Overview of validating user input using ASP.NET validation controls.</span></span>  
   
- [User Input in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
- Приводятся ссылки и сведения о проверке действий, произведенных при помощи мыши и клавиатуры, в приложении Windows Forms.  
+ [<span data-ttu-id="830f3-117">Ввод данных пользователем в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="830f3-117">User Input in Windows Forms</span></span>](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ <span data-ttu-id="830f3-118">Приводятся ссылки и сведения о проверке действий, произведенных при помощи мыши и клавиатуры, в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="830f3-118">Provides links and information for validating mouse and keyboard input in a Windows Forms application.</span></span>  
   
- [Регулярные выражения в .NET Framework](../../../../docs/standard/base-types/regular-expressions.md)  
- Описывает, как использовать класс <xref:System.Text.RegularExpressions.Regex> для проверки допустимости ввода пользователя.  
+ [<span data-ttu-id="830f3-119">Регулярные выражения в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="830f3-119">.NET Framework Regular Expressions</span></span>](../../../../docs/standard/base-types/regular-expressions.md)  
+ <span data-ttu-id="830f3-120">Описывает, как использовать класс <xref:System.Text.RegularExpressions.Regex> для проверки допустимости ввода пользователя.</span><span class="sxs-lookup"><span data-stu-id="830f3-120">Describes how to use the <xref:System.Text.RegularExpressions.Regex> class to check the validity of user input.</span></span>  
   
-## Windows\-приложения  
- Раньше Windows\-приложения обычно выполнялись с полными разрешениями.  Платформа .NET Framework предоставляет инфраструктуру для ограничения выполнения кода в Windows\-приложении при помощи управления доступом для кода \(CAS\).  Однако только механизма CAS для защиты приложения не достаточно.  
+## <a name="windows-applications"></a><span data-ttu-id="830f3-121">Windows-приложения</span><span class="sxs-lookup"><span data-stu-id="830f3-121">Windows Applications</span></span>  
+ <span data-ttu-id="830f3-122">Раньше Windows-приложения обычно выполнялись с полными разрешениями.</span><span class="sxs-lookup"><span data-stu-id="830f3-122">In the past, Windows applications generally ran with full permissions.</span></span> <span data-ttu-id="830f3-123">Платформа .NET Framework предоставляет инфраструктуру для ограничения выполнения кода в Windows-приложении при помощи управления доступом для кода (CAS).</span><span class="sxs-lookup"><span data-stu-id="830f3-123">The .NET Framework provides the infrastructure to restrict code executing in a Windows application by using code access security (CAS).</span></span> <span data-ttu-id="830f3-124">Однако только механизма CAS для защиты приложения не достаточно.</span><span class="sxs-lookup"><span data-stu-id="830f3-124">However, CAS alone is not enough to protect your application.</span></span>  
   
- [Windows Forms Security](../../../../docs/framework/winforms/windows-forms-security.md)  
- Рассказывается, как защищать приложения Windows Forms. Здесь также приводятся ссылки на связанные разделы.  
+ [<span data-ttu-id="830f3-125">Безопасность Windows Forms</span><span class="sxs-lookup"><span data-stu-id="830f3-125">Windows Forms Security</span></span>](../../../../docs/framework/winforms/windows-forms-security.md)  
+ <span data-ttu-id="830f3-126">Рассказывается, как защищать приложения Windows Forms. Здесь также приводятся ссылки на связанные разделы.</span><span class="sxs-lookup"><span data-stu-id="830f3-126">Discusses how to secure Windows Forms applications and provides links to related topics.</span></span>  
   
- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
- Описывает, как взаимодействовать с неуправляемыми приложениями в приложении Windows Forms.  
+ [<span data-ttu-id="830f3-127">Windows Forms и неуправляемые приложения</span><span class="sxs-lookup"><span data-stu-id="830f3-127">Windows Forms and Unmanaged Applications</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ <span data-ttu-id="830f3-128">Описывает, как взаимодействовать с неуправляемыми приложениями в приложении Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="830f3-128">Describes how to interact with unmanaged applications in a Windows Forms application.</span></span>  
   
- [ClickOnce Deployment for Windows Forms Applications](http://msdn.microsoft.com/ru-ru/34d8c770-48f2-460c-8d67-4ea5684511df)  
- Описывается использование развертывания `ClickOnce` в приложении Windows Forms, а также обсуждаются вопросы безопасности.  
+ [<span data-ttu-id="830f3-129">Развертывание ClickOnce для Windows Forms приложений</span><span class="sxs-lookup"><span data-stu-id="830f3-129">ClickOnce Deployment for Windows Forms Applications</span></span>](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ <span data-ttu-id="830f3-130">Описывается использование развертывания `ClickOnce` в приложении Windows Forms, а также обсуждаются вопросы безопасности.</span><span class="sxs-lookup"><span data-stu-id="830f3-130">Describes how to use `ClickOnce` deployment in a Windows Forms application and discusses the security implications.</span></span>  
   
-## ASP.NET и веб\-службы XML  
- Доступ к некоторым разделам веб\-узла для приложений ASP.NET обычно необходимо ограничивать и обеспечивать другие механизмы защиты данных и обеспечения безопасности узлов.  Эти ссылки ведут к полезным сведениям, описывающим защиту приложений ASP.NET.  
+## <a name="aspnet-and-xml-web-services"></a><span data-ttu-id="830f3-131">ASP.NET и веб-службы XML</span><span class="sxs-lookup"><span data-stu-id="830f3-131">ASP.NET and XML Web Services</span></span>  
+ <span data-ttu-id="830f3-132">Доступ к некоторым разделам веб-узла для приложений ASP.NET обычно необходимо ограничивать и обеспечивать другие механизмы защиты данных и обеспечения безопасности узлов.</span><span class="sxs-lookup"><span data-stu-id="830f3-132">ASP.NET applications generally need to restrict access to some portions of the Web site and provide other mechanisms for data protection and site security.</span></span> <span data-ttu-id="830f3-133">Эти ссылки ведут к полезным сведениям, описывающим защиту приложений ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="830f3-133">These links provide useful information for securing your ASP.NET application.</span></span>  
   
- Веб\-служба XML предоставляет данные, которые могут потреблять приложение ASP.NET, приложение Windows Forms или другая веб\-служба.  Необходимо обеспечивать безопасность самой веб\-службы, а также клиентского приложения.  
+ <span data-ttu-id="830f3-134">Веб-служба XML предоставляет данные, которые могут потреблять приложение ASP.NET, приложение Windows Forms или другая веб-служба.</span><span class="sxs-lookup"><span data-stu-id="830f3-134">An XML Web service provides data that can be consumed by an ASP.NET application, a Windows Forms application, or another Web service.</span></span> <span data-ttu-id="830f3-135">Необходимо обеспечивать безопасность самой веб-службы, а также клиентского приложения.</span><span class="sxs-lookup"><span data-stu-id="830f3-135">You need to manage security for the Web service itself as well as security for the client application.</span></span>  
   
- Дополнительные сведения см. в следующих ресурсах.  
+ <span data-ttu-id="830f3-136">Дополнительные сведения см. в следующих ресурсах.</span><span class="sxs-lookup"><span data-stu-id="830f3-136">For more information, see the following resources.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[NIB: ASP.NET Security](http://msdn.microsoft.com/ru-ru/04b37532-18d9-40b4-8e5f-ee09a70b311d)|Обсуждается, как защищать приложения ASP.NET.|  
-|[Securing XML Web Services Created Using ASP.NET](http://msdn.microsoft.com/ru-ru/354b2ab1-2782-4542-b32a-dc560178b90c)|Обсуждается, как обеспечивать безопасность веб\-службы ASP.NET.|  
-|[Script Exploits Overview](../Topic/Script%20Exploits%20Overview.md)|Обсуждается, как защищаться от атак эксплойта скриптов, которые пытаются вставить вредоносные символы в веб\-страницу.|  
-|[NIB:Basic Security Practices for ASP.NET Web Applications](http://msdn.microsoft.com/ru-ru/94a52ab8-731d-417e-b997-721baf43df38)|Общие сведения о безопасности и ссылки на дополнительные разделы.|  
+|<span data-ttu-id="830f3-137">Ресурс</span><span class="sxs-lookup"><span data-stu-id="830f3-137">Resource</span></span>|<span data-ttu-id="830f3-138">Описание</span><span class="sxs-lookup"><span data-stu-id="830f3-138">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="830f3-139">NIB: Безопасность ASP.NET</span><span class="sxs-lookup"><span data-stu-id="830f3-139">NIB: ASP.NET Security</span></span>](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|<span data-ttu-id="830f3-140">Обсуждается, как защищать приложения ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="830f3-140">Discusses how to secure ASP.NET applications.</span></span>|  
+|[<span data-ttu-id="830f3-141">Защита веб-служб XML, созданных с помощью ASP.NET</span><span class="sxs-lookup"><span data-stu-id="830f3-141">Securing XML Web Services Created Using ASP.NET</span></span>](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)|<span data-ttu-id="830f3-142">Обсуждается, как обеспечивать безопасность веб-службы ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="830f3-142">Discusses how to implement security for an ASP.NET Web Service.</span></span>|  
+|[<span data-ttu-id="830f3-143">Общие сведения об использовании скрипта</span><span class="sxs-lookup"><span data-stu-id="830f3-143">Script Exploits Overview</span></span>](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|<span data-ttu-id="830f3-144">Обсуждается, как защищаться от атак эксплойта скриптов, которые пытаются вставить вредоносные символы в веб-страницу.</span><span class="sxs-lookup"><span data-stu-id="830f3-144">Discusses how to guard against a script exploit attack, which attempts to insert malicious characters into a Web page.</span></span>|  
+|[<span data-ttu-id="830f3-145">NIB: основные рекомендации по обеспечению безопасности для веб-приложений ASP.NET</span><span class="sxs-lookup"><span data-stu-id="830f3-145">NIB:Basic Security Practices for ASP.NET Web Applications</span></span>](http://msdn.microsoft.com/en-us/94a52ab8-731d-417e-b997-721baf43df38)|<span data-ttu-id="830f3-146">Общие сведения о безопасности и ссылки на дополнительные разделы.</span><span class="sxs-lookup"><span data-stu-id="830f3-146">General security information and links to further discussion,</span></span>|  
   
-## Удаленное взаимодействие  
- Система удаленного взаимодействия .NET позволяет создавать широко приложения с высокой степенью распределенности независимо от того, находятся компоненты приложения на одном компьютере или разбросаны по всему миру.  Она дает возможность разрабатывать клиентские приложения, которые используют объекты в других процессах на том же компьютере или на любом другом компьютере, доступном по сети.  Возможности по удаленному взаимодействию платформы .NET можно также применять для обмена данными с другими доменами приложений в рамках одного процесса.  
+## <a name="remoting"></a><span data-ttu-id="830f3-147">Удаленное взаимодействие</span><span class="sxs-lookup"><span data-stu-id="830f3-147">Remoting</span></span>  
+ <span data-ttu-id="830f3-148">Система удаленного взаимодействия .NET позволяет создавать широко приложения с высокой степенью распределенности независимо от того, находятся компоненты приложения на одном компьютере или разбросаны по всему миру.</span><span class="sxs-lookup"><span data-stu-id="830f3-148">.NET remoting enables you to build widely distributed applications easily, whether the application components are all on one computer or spread out across the entire world.</span></span> <span data-ttu-id="830f3-149">Она дает возможность разрабатывать клиентские приложения, которые используют объекты в других процессах на том же компьютере или на любом другом компьютере, доступном по сети.</span><span class="sxs-lookup"><span data-stu-id="830f3-149">You can build client applications that use objects in other processes on the same computer or on any other computer that is reachable over its network.</span></span> <span data-ttu-id="830f3-150">Возможности по удаленному взаимодействию платформы .NET можно также применять для обмена данными с другими доменами приложений в рамках одного процесса.</span><span class="sxs-lookup"><span data-stu-id="830f3-150">You can also use .NET remoting to communicate with other application domains in the same process.</span></span>  
   
-|Ресурс|Описание|  
-|------------|--------------|  
-|[Configuration of Remote Applications](http://msdn.microsoft.com/ru-ru/92c0c097-d984-4315-835b-7490ecdf1097)|Обсуждается, как настраивать удаленно взаимодействующие приложения, чтобы избежать обычных проблем.|  
-|[Security in Remoting](http://msdn.microsoft.com/ru-ru/9574262c-d4b1-41c5-8600-24ff147c0add)|Описывает проверку подлинности и шифрование, а также другие разделы безопасности, имеющие отношение к удаленному взаимодействию.|  
-|[Security and Remoting Considerations](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Описывает вопросы безопасности в отношении защищенных объектов и пересечения доменов приложений.|  
+|<span data-ttu-id="830f3-151">Ресурс</span><span class="sxs-lookup"><span data-stu-id="830f3-151">Resource</span></span>|<span data-ttu-id="830f3-152">Описание</span><span class="sxs-lookup"><span data-stu-id="830f3-152">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="830f3-153">Конфигурация удаленных приложений</span><span class="sxs-lookup"><span data-stu-id="830f3-153">Configuration of Remote Applications</span></span>](http://msdn.microsoft.com/en-us/92c0c097-d984-4315-835b-7490ecdf1097)|<span data-ttu-id="830f3-154">Обсуждается, как настраивать удаленно взаимодействующие приложения, чтобы избежать обычных проблем.</span><span class="sxs-lookup"><span data-stu-id="830f3-154">Discusses how to configure remoting applications in order to avoid common problems.</span></span>|  
+|[<span data-ttu-id="830f3-155">Безопасность в системе удаленного взаимодействия</span><span class="sxs-lookup"><span data-stu-id="830f3-155">Security in Remoting</span></span>](http://msdn.microsoft.com/en-us/9574262c-d4b1-41c5-8600-24ff147c0add)|<span data-ttu-id="830f3-156">Описывает проверку подлинности и шифрование, а также другие разделы безопасности, имеющие отношение к удаленному взаимодействию.</span><span class="sxs-lookup"><span data-stu-id="830f3-156">Describes authentication and encryption as well as additional security topics relevant to remoting.</span></span>|  
+|[<span data-ttu-id="830f3-157">Безопасность и вопросы удаленного взаимодействия</span><span class="sxs-lookup"><span data-stu-id="830f3-157">Security and Remoting Considerations</span></span>](../../../../docs/framework/misc/security-and-remoting-considerations.md)|<span data-ttu-id="830f3-158">Описывает вопросы безопасности в отношении защищенных объектов и пересечения доменов приложений.</span><span class="sxs-lookup"><span data-stu-id="830f3-158">Describes security issues with protected objects and application domain crossing.</span></span>|  
   
-## См. также  
- [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Recommendations for Data Access Strategies](http://msdn.microsoft.com/ru-ru/72411f32-d12a-4de8-b961-e54fca7faaf5)   
- [Защита приложений](../Topic/Securing%20Applications.md)   
- [Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md)   
- [Центр разработчиков, поставщики ADO.NET Managed Provider и набор данных](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="830f3-159">См. также</span><span class="sxs-lookup"><span data-stu-id="830f3-159">See Also</span></span>  
+ [<span data-ttu-id="830f3-160">Защита приложений ADO.NET</span><span class="sxs-lookup"><span data-stu-id="830f3-160">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="830f3-161">Рекомендации по стратегиям доступа к данным</span><span class="sxs-lookup"><span data-stu-id="830f3-161">Recommendations for Data Access Strategies</span></span>](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [<span data-ttu-id="830f3-162">Защита приложений</span><span class="sxs-lookup"><span data-stu-id="830f3-162">Securing Applications</span></span>](/visualstudio/ide/securing-applications)  
+ [<span data-ttu-id="830f3-163">Защита сведений о подключении</span><span class="sxs-lookup"><span data-stu-id="830f3-163">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [<span data-ttu-id="830f3-164">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="830f3-164">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

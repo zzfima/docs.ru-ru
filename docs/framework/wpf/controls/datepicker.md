@@ -1,36 +1,39 @@
 ---
-title: "DatePicker | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "элементы управления [WPF], DatePicker"
-  - "DatePicker - элемент управления [WPF]"
+title: DatePicker
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], DatePicker
+- DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd5c7c796ee9d51a216368de3f3b04c10a5a3acd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# DatePicker
-Элемент управления <xref:System.Windows.Controls.DatePicker> позволяет пользователю выбрать дату посредством ее ввода в текстовое поле или использования элемента управления раскрывающегося списка <xref:System.Windows.Controls.Calendar>.  
+# <a name="datepicker"></a><span data-ttu-id="c88ca-102">DatePicker</span><span class="sxs-lookup"><span data-stu-id="c88ca-102">DatePicker</span></span>
+<span data-ttu-id="c88ca-103"><xref:System.Windows.Controls.DatePicker> Управления позволяет пользователю выбрать дату, либо путем ввода его в текстовое поле или с помощью раскрывающегося списка <xref:System.Windows.Controls.Calendar> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="c88ca-103">The <xref:System.Windows.Controls.DatePicker> control allows the user to select a date by either typing it into a text field or by using a drop-down <xref:System.Windows.Controls.Calendar> control.</span></span>  
   
- На следующем рисунке показан элемент управления <xref:System.Windows.Controls.DatePicker>.  
+ <span data-ttu-id="c88ca-104">На следующем рисунке показана <xref:System.Windows.Controls.DatePicker>.</span><span class="sxs-lookup"><span data-stu-id="c88ca-104">The following illustration shows a <xref:System.Windows.Controls.DatePicker>.</span></span>  
   
- ![Элемент управления DatePicker](../../../../docs/framework/wpf/controls/media/ndp-datepicker.png "NDP\_DatePicker")  
-Элемент управления DatePicker  
+ <span data-ttu-id="c88ca-105">![Элемент управления DatePicker](../../../../docs/framework/wpf/controls/media/ndp-datepicker.png "NDP_DatePicker")</span><span class="sxs-lookup"><span data-stu-id="c88ca-105">![DatePicker control](../../../../docs/framework/wpf/controls/media/ndp-datepicker.png "NDP_DatePicker")</span></span>  
+<span data-ttu-id="c88ca-106">Элемент управления DatePicker</span><span class="sxs-lookup"><span data-stu-id="c88ca-106">DatePicker Control</span></span>  
   
- Многие свойства элемента управления <xref:System.Windows.Controls.DatePicker> предназначены для управления его встроенным элементом управления <xref:System.Windows.Controls.Calendar>; эти свойства функционируют аналогично эквивалентному свойству элемента управления <xref:System.Windows.Controls.Calendar>.  В частности, свойства <xref:System.Windows.Controls.DatePicker.IsTodayHighlighted%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.FirstDayOfWeek%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.BlackoutDates%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.DisplayDateStart%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.DisplayDateEnd%2A?displayProperty=fullName>, <xref:System.Windows.Controls.DatePicker.DisplayDate%2A?displayProperty=fullName>и <xref:System.Windows.Controls.DatePicker.SelectedDate%2A?displayProperty=fullName> функционируют аналогично соответствующим свойствам элемента управления <xref:System.Windows.Controls.Calendar>.  Дополнительные сведения см. в разделе <xref:System.Windows.Controls.Calendar>.  
+ <span data-ttu-id="c88ca-107">Многие <xref:System.Windows.Controls.DatePicker> свойства элемента управления, для управления его встроенным <xref:System.Windows.Controls.Calendar>и функция идентично свойству эквивалент в <xref:System.Windows.Controls.Calendar>.</span><span class="sxs-lookup"><span data-stu-id="c88ca-107">Many of a <xref:System.Windows.Controls.DatePicker> control's properties are for managing its built-in <xref:System.Windows.Controls.Calendar>, and function identically to the equivalent property in <xref:System.Windows.Controls.Calendar>.</span></span> <span data-ttu-id="c88ca-108">В частности <xref:System.Windows.Controls.DatePicker.IsTodayHighlighted%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.FirstDayOfWeek%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.BlackoutDates%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDateStart%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDateEnd%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDate%2A?displayProperty=nameWithType>, и <xref:System.Windows.Controls.DatePicker.SelectedDate%2A?displayProperty=nameWithType> свойства работать идентично их <xref:System.Windows.Controls.Calendar> аналоги.</span><span class="sxs-lookup"><span data-stu-id="c88ca-108">In particular, the <xref:System.Windows.Controls.DatePicker.IsTodayHighlighted%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.FirstDayOfWeek%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.BlackoutDates%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDateStart%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDateEnd%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.DatePicker.DisplayDate%2A?displayProperty=nameWithType>, and <xref:System.Windows.Controls.DatePicker.SelectedDate%2A?displayProperty=nameWithType> properties function identically to their <xref:System.Windows.Controls.Calendar> counterparts.</span></span> <span data-ttu-id="c88ca-109">Для получения дополнительной информации см. <xref:System.Windows.Controls.Calendar>.</span><span class="sxs-lookup"><span data-stu-id="c88ca-109">For more information, see <xref:System.Windows.Controls.Calendar>.</span></span>  
   
- Пользователи могут вводить дату непосредственно в текстовое поле, которое задает свойство <xref:System.Windows.Controls.DatePicker.Text%2A>.  Если элементу управления <xref:System.Windows.Controls.DatePicker> не удается преобразовать введенную строку в допустимую дату, возникает событие <xref:System.Windows.Controls.DatePicker.DateValidationError>.  По умолчанию это приводит к исключению, но обработчик событий <xref:System.Windows.Controls.DatePicker.DateValidationError> может задать для свойства <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> значение `false` и предотвратить возникновение исключения.  
+ <span data-ttu-id="c88ca-110">Пользователи могут ввести дату непосредственно в текстовое поле, которое задает <xref:System.Windows.Controls.DatePicker.Text%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="c88ca-110">Users can type a date directly into a text field, which sets the <xref:System.Windows.Controls.DatePicker.Text%2A> property.</span></span> <span data-ttu-id="c88ca-111">Если <xref:System.Windows.Controls.DatePicker> не удается преобразовать введенную строку в допустимую дату <xref:System.Windows.Controls.DatePicker.DateValidationError> возникает событие.</span><span class="sxs-lookup"><span data-stu-id="c88ca-111">If the <xref:System.Windows.Controls.DatePicker> cannot convert the entered string to a valid date, the <xref:System.Windows.Controls.DatePicker.DateValidationError> event will be raised.</span></span> <span data-ttu-id="c88ca-112">По умолчанию это приводит к возникновению исключения, но обработчик событий для <xref:System.Windows.Controls.DatePicker.DateValidationError> можно задать <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> свойства `false` и предотвратить возникновение исключения.</span><span class="sxs-lookup"><span data-stu-id="c88ca-112">By default, this causes an exception, but an event handler for <xref:System.Windows.Controls.DatePicker.DateValidationError> can set the <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> property to `false` and prevent an exception from being raised.</span></span>  
   
-## См. также  
- [Элементы управления](../../../../docs/framework/wpf/controls/index.md)   
- [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="c88ca-113">См. также</span><span class="sxs-lookup"><span data-stu-id="c88ca-113">See Also</span></span>  
+ [<span data-ttu-id="c88ca-114">Элементы управления</span><span class="sxs-lookup"><span data-stu-id="c88ca-114">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)  
+ [<span data-ttu-id="c88ca-115">Стилизация и использование шаблонов</span><span class="sxs-lookup"><span data-stu-id="c88ca-115">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -1,39 +1,43 @@
 ---
-title: "Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ячейки, размещение в элементе управления DataGrid"
-  - "Click - событие, наблюдение в элементах управления DataGrid"
-  - "DataGrid - элемент управления [Windows Forms], события Click"
-  - "DataGrid - элемент управления [Windows Forms], примеры"
-  - "DataGrid - элемент управления [Windows Forms], возврат значения выбранной ячейки"
-  - "примеры [Windows Forms], DataGrid - элемент управления"
+title: "Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Click event [Windows Forms], monitoring in DataGrid controls
+- DataGrid control [Windows Forms], examples
+- DataGrid control [Windows Forms], returning clicked cell value
+- cells [Windows Forms], location in DataGrid
+- examples [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ae228835fb150b1d65f7405a10813f24e707268f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a><span data-ttu-id="f6939-102">Практическое руководство. Обработка щелчка мыши элементом управления DataGrid в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f6939-102">How to: Respond to Clicks in the Windows Forms DataGrid Control</span></span>
 > [!NOTE]
->  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.  Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  <span data-ttu-id="f6939-103">Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем.</span><span class="sxs-lookup"><span data-stu-id="f6939-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="f6939-104">Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span><span class="sxs-lookup"><span data-stu-id="f6939-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- После привязки элемента управления форм Windows <xref:System.Windows.Forms.DataGrid> к базе данных можно отслеживать выбор ячеек пользователем.  
+ <span data-ttu-id="f6939-105">После Windows Forms <xref:System.Windows.Forms.DataGrid> подключен к базе данных, можно отслеживать, который ячеек пользователем.</span><span class="sxs-lookup"><span data-stu-id="f6939-105">After the Windows Forms <xref:System.Windows.Forms.DataGrid> is connected to a database, you can monitor which cell the user clicked.</span></span>  
   
-### Чтобы определить момент выбора пользователем ячейки в элементе управления DataGrid  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a><span data-ttu-id="f6939-106">Чтобы определить, когда пользователь DataGrid выбирает другую ячейку</span><span class="sxs-lookup"><span data-stu-id="f6939-106">To detect when the user of the DataGrid selects a different cell</span></span>  
   
--   Введите в обработчике событий <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> код для получения нужного результата.  
+-   <span data-ttu-id="f6939-107">В <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> обработчика событий, напишите код для получения нужного результата.</span><span class="sxs-lookup"><span data-stu-id="f6939-107">In the <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> event handler, write code to respond appropriately.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -41,7 +45,6 @@ caps.handback.revision: 11
           & ", Row is " & myDataGrid.CurrentCell.RowNumber _  
           & ", Value is " & myDataGrid.Item(myDataGrid.CurrentCell))  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,18 +57,18 @@ caps.handback.revision: 11
     }  
     ```  
   
-     \(Visual C\#\) Добавьте в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     <span data-ttu-id="f6939-108">(Visual C#) Поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="f6939-108">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### Чтобы определить область, выбранную в элементе управления DataGrid  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a><span data-ttu-id="f6939-109">Чтобы определить, какая часть элемента управления DataGrid пользователь щелкнул</span><span class="sxs-lookup"><span data-stu-id="f6939-109">To determine which part of the DataGrid the user clicked</span></span>  
   
--   Вызовите метод <xref:System.Windows.Forms.DataGrid.HitTest%2A> в соответствующем обработке событий, такой как для события <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.Click>.  
+-   <span data-ttu-id="f6939-110">Вызовите <xref:System.Windows.Forms.DataGrid.HitTest%2A> метод в соответствующем обработчике событий, таких как <xref:System.Windows.Forms.Control.MouseDown> или <xref:System.Windows.Forms.Control.Click> событий.</span><span class="sxs-lookup"><span data-stu-id="f6939-110">Call the <xref:System.Windows.Forms.DataGrid.HitTest%2A> method in an appropriate event handler, such as for the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.Click> event.</span></span>  
   
-     Метод <xref:System.Windows.Forms.DataGrid.HitTest%2A> возвращает объект <xref:System.Windows.Forms.DataGrid.HitTestInfo>, содержащий строку и столбец области, на которой выполнен щелчок.  
+     <span data-ttu-id="f6939-111"><xref:System.Windows.Forms.DataGrid.HitTest%2A> Возвращает метод <xref:System.Windows.Forms.DataGrid.HitTestInfo> , содержащий строки и столбца выбранной области.</span><span class="sxs-lookup"><span data-stu-id="f6939-111">The <xref:System.Windows.Forms.DataGrid.HitTest%2A> method returns a <xref:System.Windows.Forms.DataGrid.HitTestInfo> object that contains the row and column of a clicked area.</span></span>  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -96,7 +99,6 @@ caps.handback.revision: 11
   
        Console.WriteLine(message)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -140,7 +142,7 @@ caps.handback.revision: 11
     }  
     ```  
   
-     \(Visual C\#\) Добавьте в конструктор формы следующий код, чтобы зарегистрировать обработчик событий.  
+     <span data-ttu-id="f6939-112">(Visual C#) Поместите следующий код в конструктор формы для регистрации обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="f6939-112">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -148,6 +150,6 @@ caps.handback.revision: 11
        (this.myDataGrid_MouseDown);  
     ```  
   
-## См. также  
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+## <a name="see-also"></a><span data-ttu-id="f6939-113">См. также</span><span class="sxs-lookup"><span data-stu-id="f6939-113">See Also</span></span>  
+ [<span data-ttu-id="f6939-114">Элемент управления DataGrid</span><span class="sxs-lookup"><span data-stu-id="f6939-114">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="f6939-115">Практическое руководство. Изменение данных, отображаемых во время выполнения, в элементе управления DataGrid в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f6939-115">How to: Change Displayed Data at Run Time in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)

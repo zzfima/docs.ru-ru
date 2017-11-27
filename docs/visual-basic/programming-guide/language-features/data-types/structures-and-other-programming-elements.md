@@ -1,39 +1,38 @@
 ---
-title: "Структуры и другие элементы программирования (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "массивы [Visual Basic], элементы структуры"
-  - "вложенные структуры"
-  - "объекты [Visual Basic], элементы структуры"
-  - "процедуры, структуры в качестве аргументов"
-  - "структуры, массивы"
+title: "Структуры и другие элементы программирования (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- structures [Visual Basic], arrays
+- procedures [Visual Basic], structures as arguments to
+- objects [Visual Basic], structure elements
+- arrays [Visual Basic], structure elements
+- nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Структуры и другие элементы программирования (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/includes/vs2017banner.md)]
-
-Структуры можно использовать вместе с массивами, объектами, процедурами и другими структурами.  При взаимодействии применяется тот же синтаксис, который используется этими элементами по отдельности.  
+# <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="85ad7-102">Структуры и другие элементы программирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85ad7-102">Structures and Other Programming Elements (Visual Basic)</span></span>
+<span data-ttu-id="85ad7-103">Структуры можно использовать в сочетании с массивов, объектов и процедуры, а также друг с другом.</span><span class="sxs-lookup"><span data-stu-id="85ad7-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="85ad7-104">При взаимодействии применяется тот же синтаксис, который используется этими элементами по отдельности.</span><span class="sxs-lookup"><span data-stu-id="85ad7-104">The interactions use the same syntax as these elements use individually.</span></span>  
   
 > [!NOTE]
->  Невозможна инициализация каких\-либо элементов структуры в объявлении структуры.  Значения могут быть присвоены только тем элементам переменной, которые объявлены в качестве типа структуры.  
+>  <span data-ttu-id="85ad7-105">Не удалось инициализировать любого из элементов структуры в объявлении структуры.</span><span class="sxs-lookup"><span data-stu-id="85ad7-105">You cannot initialize any of the structure elements in the structure declaration.</span></span> <span data-ttu-id="85ad7-106">Можно назначить значения только к элементам, объявленным типом структуры переменной.</span><span class="sxs-lookup"><span data-stu-id="85ad7-106">You can assign values only to elements of a variable that has been declared to be of a structure type.</span></span>  
   
-## Структуры и массивы  
- Структура может содержать массив в качестве одного или нескольких элементов.  Это показано в приведенном ниже примере.  
+## <a name="structures-and-arrays"></a><span data-ttu-id="85ad7-107">Структуры и массивы</span><span class="sxs-lookup"><span data-stu-id="85ad7-107">Structures and Arrays</span></span>  
+ <span data-ttu-id="85ad7-108">Структура может содержать массив как один или несколько его элементов.</span><span class="sxs-lookup"><span data-stu-id="85ad7-108">A structure can contain an array as one or more of its elements.</span></span> <span data-ttu-id="85ad7-109">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-109">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Public Structure systemInfo  
     Public cPU As String  
     Public memory As Long  
@@ -42,32 +41,32 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Доступ к значениям массива внутри структуры осуществляется тем же способом, что и доступ к свойству в объекте.  Это показано в приведенном ниже примере.  
+ <span data-ttu-id="85ad7-110">Доступ к значениям массива внутри структуры так же, как вы и доступ к свойствам объекта.</span><span class="sxs-lookup"><span data-stu-id="85ad7-110">You access the values of an array within a structure the same way you access a property on an object.</span></span> <span data-ttu-id="85ad7-111">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-111">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Dim mySystem As systemInfo  
 ReDim mySystem.diskDrives(3)  
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- Можно также объявить массив структур.  Это показано в приведенном ниже примере.  
+ <span data-ttu-id="85ad7-112">Можно также объявить массив структур.</span><span class="sxs-lookup"><span data-stu-id="85ad7-112">You can also declare an array of structures.</span></span> <span data-ttu-id="85ad7-113">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-113">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Действуют те же правила для доступа к компонентам этой архитектуры данных.  Это показано в приведенном ниже примере.  
+ <span data-ttu-id="85ad7-114">Вы выполните те же правила для доступа к компонентам этой архитектуры данных.</span><span class="sxs-lookup"><span data-stu-id="85ad7-114">You follow the same rules to access the components of this data architecture.</span></span> <span data-ttu-id="85ad7-115">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-115">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 ReDim allSystems(5).diskDrives(3)  
 allSystems(5).CPU = "386SX"  
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## Структуры и объекты  
- Структура может содержать объект в качестве одного или нескольких элементов.  Это показано в приведенном ниже примере.  
+## <a name="structures-and-objects"></a><span data-ttu-id="85ad7-116">Структуры и объекты</span><span class="sxs-lookup"><span data-stu-id="85ad7-116">Structures and Objects</span></span>  
+ <span data-ttu-id="85ad7-117">Структура может содержать объект как один или несколько его элементов.</span><span class="sxs-lookup"><span data-stu-id="85ad7-117">A structure can contain an object as one or more of its elements.</span></span> <span data-ttu-id="85ad7-118">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-118">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Protected Structure userInput  
     Public userName As String  
     Public inputForm As System.Windows.Forms.Form  
@@ -75,12 +74,12 @@ Protected Structure userInput
 End Structure  
 ```  
   
- В таком объявлении следует указать определенный класс объекта, а не просто `Object`.  
+ <span data-ttu-id="85ad7-119">В таком объявлении следует использовать определенный класс объекта вместо `Object`.</span><span class="sxs-lookup"><span data-stu-id="85ad7-119">You should use a specific object class in such a declaration, rather than `Object`.</span></span>  
   
-## Структуры и процедуры  
- Структуру можно передать в качестве аргумента процедуры.  Это показано в приведенном ниже примере.  
+## <a name="structures-and-procedures"></a><span data-ttu-id="85ad7-120">Структуры и процедуры</span><span class="sxs-lookup"><span data-stu-id="85ad7-120">Structures and Procedures</span></span>  
+ <span data-ttu-id="85ad7-121">Структуру можно передать в качестве аргумента процедуры.</span><span class="sxs-lookup"><span data-stu-id="85ad7-121">You can pass a structure as a procedure argument.</span></span> <span data-ttu-id="85ad7-122">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-122">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
 Public currentMemorySize As Long = 256  
 Public Sub fillSystem(ByRef someSystem As systemInfo)  
@@ -90,11 +89,11 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- В предыдущем примере структура передается *по ссылке*, что позволяет изменять элементы процедуры, чтобы изменения применялись к вызывающему коду.  Чтобы защитить структуру от такого изменения, ее следует передавать по значению.  
+ <span data-ttu-id="85ad7-123">В предыдущем примере передается структура *по ссылке*, который позволяет процедуре изменять элементы, чтобы изменения вступили в силу в вызывающем коде.</span><span class="sxs-lookup"><span data-stu-id="85ad7-123">The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code.</span></span> <span data-ttu-id="85ad7-124">Если вы хотите защитить структуру от таких изменений, ее необходимо передавайте по значению.</span><span class="sxs-lookup"><span data-stu-id="85ad7-124">If you want to protect a structure against such modification, pass it by value.</span></span>  
   
- Можно также вернуть структуру из процедуры `Function`.  Это показано в приведенном ниже примере.  
+ <span data-ttu-id="85ad7-125">Можно также вернуть структуру из `Function` процедуры.</span><span class="sxs-lookup"><span data-stu-id="85ad7-125">You can also return a structure from a `Function` procedure.</span></span> <span data-ttu-id="85ad7-126">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-126">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 Function findByDate(ByVal searchDate As Date) As systemInfo  
     Dim i As Integer  
@@ -105,10 +104,10 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## Структуры внутри структур  
- Структуры могут содержать другие структуры.  Это показано в приведенном ниже примере.  
+## <a name="structures-within-structures"></a><span data-ttu-id="85ad7-127">Структуры внутри структур</span><span class="sxs-lookup"><span data-stu-id="85ad7-127">Structures Within Structures</span></span>  
+ <span data-ttu-id="85ad7-128">Структуры могут содержать другие структуры.</span><span class="sxs-lookup"><span data-stu-id="85ad7-128">Structures can contain other structures.</span></span> <span data-ttu-id="85ad7-129">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="85ad7-129">The following example illustrates this.</span></span>  
   
-```vb#  
+```vb  
 Public Structure driveInfo  
     Public type As String  
     Public size As Long  
@@ -121,24 +120,24 @@ Public Structure systemInfo
 End Structure  
 ```  
   
-```vb#  
+```vb  
 Dim allSystems(100) As systemInfo  
 ReDim allSystems(1).diskDrives(3)  
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Эту методику можно использовать для включения структуры, определенной в одном модуле, в структуру, определенную в другом модуле.  
+ <span data-ttu-id="85ad7-130">Эту технологию можно также использовать для включения структуры, определенной в одном модуле в структуру, определенную в другом модуле.</span><span class="sxs-lookup"><span data-stu-id="85ad7-130">You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.</span></span>  
   
- Структуры могут быть вложены друг в друга в произвольном порядке.  
+ <span data-ttu-id="85ad7-131">Структуры могут содержать другие структуры в произвольном порядке.</span><span class="sxs-lookup"><span data-stu-id="85ad7-131">Structures can contain other structures to an arbitrary depth.</span></span>  
   
-## См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Простые типы данных](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Составные типы данных](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Структуры](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Практическое руководство. Объявление структуры](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Переменные структуры](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)   
- [Структуры и классы](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Оператор Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a><span data-ttu-id="85ad7-132">См. также</span><span class="sxs-lookup"><span data-stu-id="85ad7-132">See Also</span></span>  
+ [<span data-ttu-id="85ad7-133">Типы данных</span><span class="sxs-lookup"><span data-stu-id="85ad7-133">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [<span data-ttu-id="85ad7-134">Простые типы данных</span><span class="sxs-lookup"><span data-stu-id="85ad7-134">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [<span data-ttu-id="85ad7-135">Составные типы данных</span><span class="sxs-lookup"><span data-stu-id="85ad7-135">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [<span data-ttu-id="85ad7-136">Типы значений и ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="85ad7-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="85ad7-137">Структуры</span><span class="sxs-lookup"><span data-stu-id="85ad7-137">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="85ad7-138">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="85ad7-138">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="85ad7-139">Практическое руководство. Объявление структуры</span><span class="sxs-lookup"><span data-stu-id="85ad7-139">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [<span data-ttu-id="85ad7-140">Переменные структуры</span><span class="sxs-lookup"><span data-stu-id="85ad7-140">Structure Variables</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
+ [<span data-ttu-id="85ad7-141">Структуры и классы</span><span class="sxs-lookup"><span data-stu-id="85ad7-141">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [<span data-ttu-id="85ad7-142">Оператор Structure</span><span class="sxs-lookup"><span data-stu-id="85ad7-142">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -1,40 +1,43 @@
 ---
-title: "Практическое руководство. Применение рисования к трехмерной модели | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "трехмерные модели, применение рисунков к"
-  - "объекты рисования, применение к трехмерным моделям"
+title: "Практическое руководство. Применение рисования к трехмерной модели"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawings [WPF], applying to 3-D models
+- 3-D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a44607498c6870a598122f41bf2b7ddc5968c61d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Применение рисования к трехмерной модели
-В этом примере показано использование <xref:System.Windows.Media.DrawingBrush> в качестве объекта <xref:System.Windows.Media.Media3D.Material>, применяемого к модели [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)].  
+# <a name="how-to-apply-a-drawing-to-a-3-d-model"></a><span data-ttu-id="cebfb-102">Практическое руководство. Применение рисования к трехмерной модели</span><span class="sxs-lookup"><span data-stu-id="cebfb-102">How to: Apply a Drawing to a 3-D Model</span></span>
+<span data-ttu-id="cebfb-103">В этом примере показано, как использовать <xref:System.Windows.Media.DrawingBrush> как <xref:System.Windows.Media.Media3D.Material> применены к [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] модели.</span><span class="sxs-lookup"><span data-stu-id="cebfb-103">This example shows how to use a <xref:System.Windows.Media.DrawingBrush> as the <xref:System.Windows.Media.Media3D.Material> applied to a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
   
- В следующем коде определяется <xref:System.Windows.Media.DrawingGroup> как содержимое объекта <xref:System.Windows.Media.DrawingBrush>.  <xref:System.Windows.Media.DrawingBrush> задается как свойство <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> объекта <xref:System.Windows.Media.Media3D.DiffuseMaterial>, применяемое к [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] плоскости.  
+ <span data-ttu-id="cebfb-104">В следующем коде определяется <xref:System.Windows.Media.DrawingGroup> как содержимое <xref:System.Windows.Media.DrawingBrush>.</span><span class="sxs-lookup"><span data-stu-id="cebfb-104">The following code defines a <xref:System.Windows.Media.DrawingGroup> as the content of a <xref:System.Windows.Media.DrawingBrush>.</span></span>  <span data-ttu-id="cebfb-105"><xref:System.Windows.Media.DrawingBrush> Задается как <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> свойство <xref:System.Windows.Media.Media3D.DiffuseMaterial> применены к [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] плоскость.</span><span class="sxs-lookup"><span data-stu-id="cebfb-105">The <xref:System.Windows.Media.DrawingBrush> is set as the <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> property of the <xref:System.Windows.Media.Media3D.DiffuseMaterial> applied to a [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] plane.</span></span>  
   
- **Примечание.** Часто желательно определить сложные объекты и значения, как на рисунке ниже, в качестве ресурсов, которые могут повторно использоваться и упростить код.  Дополнительные сведения см. в разделе [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ <span data-ttu-id="cebfb-106">**Примечание:** часто желательно определить сложные объекты и значения, как на рисунке ниже как ресурсы, которые можно использовать повторно и упростить код.</span><span class="sxs-lookup"><span data-stu-id="cebfb-106">**Note:** It is often desirable to define complex objects and values like the drawing below as resources which can be reused and simplify your code.</span></span> <span data-ttu-id="cebfb-107">В разделе [ресурсов XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) для получения дополнительной информации.</span><span class="sxs-lookup"><span data-stu-id="cebfb-107">See [XAML Resources](../../../../docs/framework/wpf/advanced/xaml-resources.md) for more information.</span></span>  
   
- [!code-xml[3DGallery_snip#ApplyDrawingToMaterialInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]  
+ [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]  
   
-## Пример  
- Следующий код показывает весь пример.  
+## <a name="example"></a><span data-ttu-id="cebfb-108">Пример</span><span class="sxs-lookup"><span data-stu-id="cebfb-108">Example</span></span>  
+ <span data-ttu-id="cebfb-109">Ниже приведен пример целиком.</span><span class="sxs-lookup"><span data-stu-id="cebfb-109">The following code shows the entire sample.</span></span>  
   
- [!code-xml[3DGallery_snip#ApplyDrawingToMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialexamplewholepage)]  
+ [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialexamplewholepage)]  
   
-## См. также  
- [Ресурсы XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [Создание трехмерной сцены](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)   
- [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="cebfb-110">См. также</span><span class="sxs-lookup"><span data-stu-id="cebfb-110">See Also</span></span>  
+ [<span data-ttu-id="cebfb-111">Ресурсы XAML</span><span class="sxs-lookup"><span data-stu-id="cebfb-111">XAML Resources</span></span>](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="cebfb-112">Создание трехмерной сцены</span><span class="sxs-lookup"><span data-stu-id="cebfb-112">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="cebfb-113">Обзор объектов Drawing</span><span class="sxs-lookup"><span data-stu-id="cebfb-113">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="cebfb-114">Обзор трехмерной графики</span><span class="sxs-lookup"><span data-stu-id="cebfb-114">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

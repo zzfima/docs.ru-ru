@@ -1,30 +1,33 @@
 ---
-title: "System.ServiceModel.Channels.PeerMaintainerActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PeerMaintainerActivity
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f3cde90bf5e9c57ff54378eaaf970aec219871a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PeerMaintainerActivity
-Модуль PeerMaintainer выполняет определенную операцию \(подробности содержатся в теле сообщения трассировки\).  
+# <a name="systemservicemodelchannelspeermaintaineractivity"></a><span data-ttu-id="9380e-102">System.ServiceModel.Channels.PeerMaintainerActivity</span><span class="sxs-lookup"><span data-stu-id="9380e-102">System.ServiceModel.Channels.PeerMaintainerActivity</span></span>
+<span data-ttu-id="9380e-103">Модуль PeerMaintainer выполняет определенную операцию (подробности содержатся в теле сообщения трассировки).</span><span class="sxs-lookup"><span data-stu-id="9380e-103">The PeerMaintainer module is performing a specific operation (details contained within the trace message body).</span></span>  
   
-## Описание  
- Эта трассировка возникает в ходе различных операций модуля обслуживания PeerMaintainer.  
+## <a name="description"></a><span data-ttu-id="9380e-104">Описание</span><span class="sxs-lookup"><span data-stu-id="9380e-104">Description</span></span>  
+ <span data-ttu-id="9380e-105">Эта трассировка возникает в ходе различных операций модуля обслуживания PeerMaintainer.</span><span class="sxs-lookup"><span data-stu-id="9380e-105">This trace occurs during various PeerMaintainer operations.</span></span>  
   
- PeerMaintainer \- это внутренний компонент узла PeerNode.  Каждую минуту или каждые 32 полученных сообщения он отправляет соседним узлам сообщение LinkUtility со статистическими данными о том, сколько сообщений было принято\/отправлено и сколько из них полезны \(не дубликаты, не подделаны\).  Это позволяет определить значение LinkUtility определенного соседнего узла.  Приблизительно каждые пять минут модуль обслуживания проверяет состояние соединений с соседними узлами.  Если количество соединений с соседними узлами превышает идеальное число, модуль обслуживания урезает наименее полезные соединения.  Если соединений недостаточно, модуль обслуживания приобретает новые соединения.  
+ <span data-ttu-id="9380e-106">PeerMaintainer - это внутренний компонент узла PeerNode.</span><span class="sxs-lookup"><span data-stu-id="9380e-106">PeerMaintainer is an internal component of PeerNode.</span></span> <span data-ttu-id="9380e-107">Каждую минуту или каждые 32 полученных сообщения он отправляет соседним узлам сообщение LinkUtility со статистическими данными о том, сколько сообщений было принято/отправлено и сколько из них полезны (не дубликаты, не подделаны).</span><span class="sxs-lookup"><span data-stu-id="9380e-107">Every minute, or every 32 messages received, it sends a LinkUtility message to its neighbors with statistics about how many messages are exchanged and how many are useful (non-duplicates, untampered).</span></span> <span data-ttu-id="9380e-108">Это позволяет определить значение LinkUtility определенного соседнего узла.</span><span class="sxs-lookup"><span data-stu-id="9380e-108">This helps determine a particular neighbor's Link Utility.</span></span> <span data-ttu-id="9380e-109">Приблизительно каждые пять минут модуль обслуживания проверяет состояние соединений с соседними узлами.</span><span class="sxs-lookup"><span data-stu-id="9380e-109">Approximately every five minutes, the maintainer checks the health of neighbor connections.</span></span> <span data-ttu-id="9380e-110">Если количество соединений с соседними узлами превышает идеальное число, модуль обслуживания урезает наименее полезные соединения.</span><span class="sxs-lookup"><span data-stu-id="9380e-110">If the number of neighbor connections exceeds the ideal amount, the maintainer prunes off the least useful connections.</span></span> <span data-ttu-id="9380e-111">Если соединений недостаточно, модуль обслуживания приобретает новые соединения.</span><span class="sxs-lookup"><span data-stu-id="9380e-111">If there are not enough connections, the maintainer acquires new connections.</span></span>  
   
-## См. также  
- [Трассировка](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Использование трассировки для устранения неполадок приложения](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Администрирование и диагностика](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9380e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="9380e-112">See Also</span></span>  
+ [<span data-ttu-id="9380e-113">Трассировка</span><span class="sxs-lookup"><span data-stu-id="9380e-113">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9380e-114">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="9380e-114">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9380e-115">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="9380e-115">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

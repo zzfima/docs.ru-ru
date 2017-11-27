@@ -1,55 +1,55 @@
 ---
-title: "Общие сведения о транзакциях Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "транзакции [WCF]"
-  - "WCF, транзакции"
-  - "Windows Communication Foundation, транзакции"
+title: "Общие сведения о транзакциях Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transactions [WCF]
+- WCF, transactions
+- Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2be5e7622c51da37c0f39c12258f50b74483fa53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Общие сведения о транзакциях Windows Communication Foundation
-Транзакции обеспечивают способ группировки набора действий или операций в одну неделимую единицу выполнения.  Транзакция является коллекцией операций с перечисленными ниже свойствами.  
+# <a name="windows-communication-foundation-transactions-overview"></a><span data-ttu-id="6368d-102">Общие сведения о транзакциях Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="6368d-102">Windows Communication Foundation Transactions Overview</span></span>
+<span data-ttu-id="6368d-103">Транзакции обеспечивают способ группировки набора действий или операций в одну неделимую единицу выполнения.</span><span class="sxs-lookup"><span data-stu-id="6368d-103">Transactions provide a way to group a set of actions or operations into a single indivisible unit of execution.</span></span> <span data-ttu-id="6368d-104">Транзакция является коллекцией операций с перечисленными ниже свойствами.</span><span class="sxs-lookup"><span data-stu-id="6368d-104">A transaction is a collection of operations with the following properties:</span></span>  
   
--   Атомарность.  Благодаря данному свойству все обновления, завершенные в отдельной транзакции, либо фиксируются и становятся стабильными, либо отменяются и возвращаются к предыдущему состоянию с помощью отката.  
+-   <span data-ttu-id="6368d-105">Атомарность.</span><span class="sxs-lookup"><span data-stu-id="6368d-105">Atomicity.</span></span> <span data-ttu-id="6368d-106">Благодаря данному свойству все обновления, завершенные в отдельной транзакции, либо фиксируются и становятся стабильными, либо отменяются и возвращаются к предыдущему состоянию с помощью отката.</span><span class="sxs-lookup"><span data-stu-id="6368d-106">This ensures that either all of the updates completed under a specific transaction are committed and made durable or they are all aborted and rolled back to their previous state.</span></span>  
   
--   Согласованность.  Данное свойство гарантирует, что все изменения, внесенные при транзакции, представляют собой трансформацию из одного состояния в другое.  Например, транзакция, передающая деньги с текущего счета на сберегательный счет, не изменяет общее количество денег на банковском счете.  
+-   <span data-ttu-id="6368d-107">Согласованность.</span><span class="sxs-lookup"><span data-stu-id="6368d-107">Consistency.</span></span> <span data-ttu-id="6368d-108">Данное свойство гарантирует, что все изменения, внесенные при транзакции, представляют собой трансформацию из одного состояния в другое.</span><span class="sxs-lookup"><span data-stu-id="6368d-108">This guarantees that the changes made under a transaction represent a transformation from one consistent state to another.</span></span> <span data-ttu-id="6368d-109">Например, транзакция, передающая деньги с текущего счета на сберегательный счет, не изменяет общее количество денег на банковском счете.</span><span class="sxs-lookup"><span data-stu-id="6368d-109">For example, a transaction that transfers money from a checking account to a savings account does not change the amount of money in the overall bank account.</span></span>  
   
--   Изоляция.  Данное свойство предохраняет транзакцию от просмотра несохраненных изменений, относящихся к другим параллельным транзакциям.  Изоляция обеспечивает отвлечение параллелизма, а также невозможность непредвиденного влияния одной транзакции на выполнение другой транзакции.  
+-   <span data-ttu-id="6368d-110">Изоляция.</span><span class="sxs-lookup"><span data-stu-id="6368d-110">Isolation.</span></span> <span data-ttu-id="6368d-111">Данное свойство предохраняет транзакцию от просмотра несохраненных изменений, относящихся к другим параллельным транзакциям.</span><span class="sxs-lookup"><span data-stu-id="6368d-111">This prevents a transaction from observing uncommitted changes belonging to other concurrent transactions.</span></span> <span data-ttu-id="6368d-112">Изоляция обеспечивает отвлечение параллелизма, а также невозможность непредвиденного влияния одной транзакции на выполнение другой транзакции.</span><span class="sxs-lookup"><span data-stu-id="6368d-112">Isolation provides an abstraction of concurrency while ensuring one transaction cannot have an unexpected impact on the execution of another transaction.</span></span>  
   
--   Устойчивость.  Данное свойство обозначает, что при однократной фиксации обновления в управляемых ресурсах \(такие как запись базы данных\) станут устойчивыми к сбоям.  
+-   <span data-ttu-id="6368d-113">Устойчивость.</span><span class="sxs-lookup"><span data-stu-id="6368d-113">Durability.</span></span> <span data-ttu-id="6368d-114">Данное свойство обозначает, что при однократной фиксации обновления в управляемых ресурсах (такие как запись базы данных) станут устойчивыми к сбоям.</span><span class="sxs-lookup"><span data-stu-id="6368d-114">This means that once committed, updates to managed resources (such as a database record) will be persistent in the face of failures.</span></span>  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] обеспечивает богатый набор функций, позволяющих создавать распределенные транзакции в приложении веб\-службы.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="6368d-115"> обеспечивает богатый набор функций, позволяющих создавать распределенные транзакции в приложении веб-службы.</span><span class="sxs-lookup"><span data-stu-id="6368d-115"> provides a rich set of features that enable you to create distributed transactions in your Web service application.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] реализует поддержку для протокола WS\-AtomicTransaction \(WS\-AT\), который позволяет приложениям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] передавать транзакции во взаимодействующие приложения, такие как взаимодействующие веб\-службы, созданные с использованием сторонней технологии.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] также реализует поддержку для протокола OLE transactions, который может быть использован в сценариях, в которых не требуется функциональность взаимодействия приложений для обеспечения потока транзакций.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="6368d-116"> реализует поддержку для протокола WS-AtomicTransaction (WS-AT), который позволяет приложениям [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] передавать транзакции во взаимодействующие приложения, такие как взаимодействующие веб-службы, созданные с использованием сторонней технологии.</span><span class="sxs-lookup"><span data-stu-id="6368d-116"> implements support for the WS-AtomicTransaction (WS-AT) protocol that enables [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications to flow transactions to interoperable applications, such as interoperable Web services built using third-party technology.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="6368d-117"> также реализует поддержку для протокола OLE transactions, который может быть использован в сценариях, в которых не требуется функциональность взаимодействия приложений для обеспечения потока транзакций.</span><span class="sxs-lookup"><span data-stu-id="6368d-117"> also implements support for the OLE Transactions protocol, which can be used in scenarios where you do not need interop functionality to enable transaction flow.</span></span>  
   
- Для настройки привязок можно использовать файл конфигурации приложения, позволяющий включать или отключать передачу транзакций, а также задавать необходимый протокол транзакций для привязки.  Кроме того, можно задать время ожидания транзакций на уровне службы с помощью файла конфигурации.  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ <span data-ttu-id="6368d-118">Для настройки привязок можно использовать файл конфигурации приложения, позволяющий включать или отключать передачу транзакций, а также задавать необходимый протокол транзакций для привязки.</span><span class="sxs-lookup"><span data-stu-id="6368d-118">You can use an application configuration file to configure bindings to enable or disable transaction flow, as well as set the desired transaction protocol on a binding.</span></span> <span data-ttu-id="6368d-119">Кроме того, можно задать время ожидания транзакций на уровне службы с помощью файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="6368d-119">In addition, you can set transaction time-outs at the service level using the configuration file.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="6368d-120">[Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).</span><span class="sxs-lookup"><span data-stu-id="6368d-120"> [Enabling Transaction Flow](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).</span></span>  
   
- Атрибуты транзакции в пространстве имен <xref:System.ServiceModel> позволяют выполнять перечисленные ниже действия.  
+ <span data-ttu-id="6368d-121">Атрибуты транзакции в пространстве имен <xref:System.ServiceModel> позволяют выполнять перечисленные ниже действия.</span><span class="sxs-lookup"><span data-stu-id="6368d-121">Transaction attributes in the <xref:System.ServiceModel> namespace allow you to do the following:</span></span>  
   
--   Настраивать время ожидания транзакций и фильтрацию уровня изоляции с помощью атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute>.  
+-   <span data-ttu-id="6368d-122">Настраивать время ожидания транзакций и фильтрацию уровня изоляции с помощью атрибута <xref:System.ServiceModel.ServiceBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="6368d-122">Configure transaction time-outs and isolation-level filtering using the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute.</span></span>  
   
--   Включать функциональность транзакций и настраивать поведение при завершении транзакции с помощью атрибута <xref:System.ServiceModel.OperationBehaviorAttribute>.  
+-   <span data-ttu-id="6368d-123">Включать функциональность транзакций и настраивать поведение при завершении транзакции с помощью атрибута <xref:System.ServiceModel.OperationBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="6368d-123">Enable transactions functionality and configure transaction completion behavior using the <xref:System.ServiceModel.OperationBehaviorAttribute> attribute.</span></span>  
   
--   Для требования, разрешения или запрещения потока транзакций используйте атрибуты <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute> метода контракта.  
+-   <span data-ttu-id="6368d-124">Для требования, разрешения или запрещения потока транзакций используйте атрибуты <xref:System.ServiceModel.ServiceContractAttribute> и <xref:System.ServiceModel.OperationContractAttribute> метода контракта.</span><span class="sxs-lookup"><span data-stu-id="6368d-124">Use the <xref:System.ServiceModel.ServiceContractAttribute> and <xref:System.ServiceModel.OperationContractAttribute> attributes on a contract method to require, allow or deny transaction flow.</span></span>  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="6368d-125">[Атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="6368d-125"> [ServiceModel Transaction Attributes](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).</span></span>  
   
-## См. также  
- [Атрибуты транзакции ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)   
- [Включение потока транзакций](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+## <a name="see-also"></a><span data-ttu-id="6368d-126">См. также</span><span class="sxs-lookup"><span data-stu-id="6368d-126">See Also</span></span>  
+ [<span data-ttu-id="6368d-127">Атрибуты транзакции ServiceModel</span><span class="sxs-lookup"><span data-stu-id="6368d-127">ServiceModel Transaction Attributes</span></span>](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
+ [<span data-ttu-id="6368d-128">Включение потока транзакций</span><span class="sxs-lookup"><span data-stu-id="6368d-128">Enabling Transaction Flow</span></span>](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

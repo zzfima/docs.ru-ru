@@ -1,180 +1,162 @@
 ---
-title: "Написание запросов в Visual Basic | Документы Microsoft"
+title: "Написание запросов в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs:
-- VB
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e870d5d0640c68fa57b07986f2bf8268fd5246c9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00103fe95912ba44a764cef30b337603301c8479
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
-В этом пошаговом руководстве демонстрируется использование возможностей языка Visual Basic для написания [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] выражений запросов. В примере демонстрируются способы создания запросов к списку объектов Student, как выполнение запросов и об их изменении. Запросы включают в себя несколько функций, в том числе инициализаторы объектов, вывод локального типа и анонимные типы.  
+# <a name="walkthrough-writing-queries-in-visual-basic"></a><span data-ttu-id="cffd2-102">Пошаговое руководство. Написание запросов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cffd2-102">Walkthrough: Writing Queries in Visual Basic</span></span>
+<span data-ttu-id="cffd2-103">В этом пошаговом руководстве показано, как можно использовать возможности языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-103">This walkthrough demonstrates how you can use Visual Basic language features to write [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query expressions.</span></span> <span data-ttu-id="cffd2-104">В примере демонстрируются способы создания запросов к списку объектов Student, как выполнять запросы и об их изменении.</span><span class="sxs-lookup"><span data-stu-id="cffd2-104">The walkthrough demonstrates how to create queries on a list of Student objects, how to run the queries, and how to modify them.</span></span> <span data-ttu-id="cffd2-105">Запросы включают в себя несколько функций, включая инициализаторы объектов, определение локального типа и анонимные типы.</span><span class="sxs-lookup"><span data-stu-id="cffd2-105">The queries incorporate several features including object initializers, local type inference, and anonymous types.</span></span>  
   
- После выполнения этого пошагового руководства, можно переходить к примерам и документации к конкретному [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] поставщика, которые вас интересуют. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]Поставщики включают [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)], [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)], и [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+ <span data-ttu-id="cffd2-106">После прохождения пошагового руководства, можно переходить к примерам и документации к конкретному [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] поставщика, которые вас интересуют.</span><span class="sxs-lookup"><span data-stu-id="cffd2-106">After completing this walkthrough, you will be ready to move on to the samples and documentation for the specific [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider you are interested in.</span></span> [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]<span data-ttu-id="cffd2-107">Поставщики включают [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cffd2-107"> providers include [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
-## <a name="create-a-project"></a>Создание проекта  
+## <a name="create-a-project"></a><span data-ttu-id="cffd2-108">Создание проекта</span><span class="sxs-lookup"><span data-stu-id="cffd2-108">Create a Project</span></span>  
   
-#### <a name="to-create-a-console-application-project"></a>Создание проекта консольного приложения  
+#### <a name="to-create-a-console-application-project"></a><span data-ttu-id="cffd2-109">Создание проекта консольного приложения</span><span class="sxs-lookup"><span data-stu-id="cffd2-109">To create a console application project</span></span>  
   
-1.  Запустите Visual Studio.  
+1.  <span data-ttu-id="cffd2-110">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="cffd2-110">Start Visual Studio.</span></span>  
   
-2.  В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.  
+2.  <span data-ttu-id="cffd2-111">В меню **Файл** выберите пункт **Создать**, а затем команду **Проект**.</span><span class="sxs-lookup"><span data-stu-id="cffd2-111">On the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-3.  В **установленные шаблоны** выберите **Visual Basic**.  
+3.  <span data-ttu-id="cffd2-112">В **установленные шаблоны** выберите **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="cffd2-112">In the **Installed Templates** list, click **Visual Basic**.</span></span>  
   
-4.  В списке типов проекта выберите **консольное приложение**. В **имя** введите имя для проекта и нажмите кнопку **ОК**.  
+4.  <span data-ttu-id="cffd2-113">В списке типов проектов выберите **консольное приложение**.</span><span class="sxs-lookup"><span data-stu-id="cffd2-113">In the list of project types, click **Console Application**.</span></span> <span data-ttu-id="cffd2-114">В **имя** введите имя для проекта и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="cffd2-114">In the **Name** box, type a name for the project, and then click **OK**.</span></span>  
   
-     Создать проект. По умолчанию он содержит ссылку на библиотеку System.Core.dll. Кроме того **импортированные пространства имен** списке [страница "ссылки" в конструкторе проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic) включает <xref:System.Linq?displayProperty=fullName>имен.</xref:System.Linq?displayProperty=fullName>  
+     <span data-ttu-id="cffd2-115">Будет создан проект.</span><span class="sxs-lookup"><span data-stu-id="cffd2-115">A project is created.</span></span> <span data-ttu-id="cffd2-116">По умолчанию он содержит ссылку на библиотеку System.Core.dll.</span><span class="sxs-lookup"><span data-stu-id="cffd2-116">By default, it contains a reference to System.Core.dll.</span></span> <span data-ttu-id="cffd2-117">Кроме того **импортированные пространства имен** списке [страница "ссылки" в конструкторе проектов (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) включает <xref:System.Linq?displayProperty=nameWithType> пространства имен.</span><span class="sxs-lookup"><span data-stu-id="cffd2-117">Also, the **Imported namespaces** list on the [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) includes the <xref:System.Linq?displayProperty=nameWithType> namespace.</span></span>  
   
-5.  На [компиляция, конструктор проектов (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), убедитесь, что **Option infer** равен **на**.  
+5.  <span data-ttu-id="cffd2-118">На [компиляция, конструктора проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), убедитесь, что **Option infer** равно **на**.</span><span class="sxs-lookup"><span data-stu-id="cffd2-118">On the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), ensure that **Option infer** is set to **On**.</span></span>  
   
-## <a name="add-an-in-memory-data-source"></a>Добавить источник данных в памяти  
- Источник данных для запросов в этом руководстве приведен список `Student` объектов. Каждый `Student` объект содержит имя, фамилию, год и успеваемость студентов текста.  
+## <a name="add-an-in-memory-data-source"></a><span data-ttu-id="cffd2-119">Добавьте источник данных в памяти</span><span class="sxs-lookup"><span data-stu-id="cffd2-119">Add an In-Memory Data Source</span></span>  
+ <span data-ttu-id="cffd2-120">Источник данных для запросов в этом руководстве приведен список `Student` объектов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-120">The data source for the queries in this walkthrough is a list of `Student` objects.</span></span> <span data-ttu-id="cffd2-121">Каждый `Student` объект содержит имя, фамилию, год и успеваемость студентов текста.</span><span class="sxs-lookup"><span data-stu-id="cffd2-121">Each `Student` object contains a first name, a last name, a class year, and an academic rank in the student body.</span></span>  
   
-#### <a name="to-add-the-data-source"></a>Чтобы добавить источник данных  
+#### <a name="to-add-the-data-source"></a><span data-ttu-id="cffd2-122">Добавление источника данных</span><span class="sxs-lookup"><span data-stu-id="cffd2-122">To add the data source</span></span>  
   
--   Определение `Student` класса и создайте список экземпляров класса.  
+-   <span data-ttu-id="cffd2-123">Определение `Student` класс и создайте список экземпляров класса.</span><span class="sxs-lookup"><span data-stu-id="cffd2-123">Define a `Student` class, and create a list of instances of the class.</span></span>  
   
     > [!IMPORTANT]
-    >  Код, необходимый для определения `Student` класса и создания списка, используемого в пошаговом руководстве приведены примеры [Практическое руководство: Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Можно скопировать его оттуда и вставьте его в проект. Новый код заменяет код, появившийся при создании проекта.  
+    >  <span data-ttu-id="cffd2-124">Код, необходимый для определения `Student` класса и создания списка, используемого в пошаговом руководстве примеры предоставляется в [как: создать список элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).</span><span class="sxs-lookup"><span data-stu-id="cffd2-124">The code needed to define the `Student` class and create the list used in the walkthrough examples is provided in [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).</span></span> <span data-ttu-id="cffd2-125">Можно скопировать его оттуда и вставьте его в проект.</span><span class="sxs-lookup"><span data-stu-id="cffd2-125">You can copy it from there and paste it into your project.</span></span> <span data-ttu-id="cffd2-126">Новый код заменяет код, появившийся при создании проекта.</span><span class="sxs-lookup"><span data-stu-id="cffd2-126">The new code replaces the code that appeared when you created the project.</span></span>  
   
-#### <a name="to-add-a-new-student-to-the-students-list"></a>Добавление нового учащегося в список учащихся  
+#### <a name="to-add-a-new-student-to-the-students-list"></a><span data-ttu-id="cffd2-127">Добавление нового студента в список студентов</span><span class="sxs-lookup"><span data-stu-id="cffd2-127">To add a new student to the students list</span></span>  
   
--   Следуйте шаблону в `getStudents` метод, чтобы добавить еще один экземпляр `Student` класс к списку. Добавление студентов представит инициализаторы объектов. Дополнительные сведения см. в разделе [инициализаторы объектов: именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   <span data-ttu-id="cffd2-128">Использовать этот подход в `getStudents` метод, чтобы добавить другой экземпляр `Student` класса в список.</span><span class="sxs-lookup"><span data-stu-id="cffd2-128">Follow the pattern in the `getStudents` method to add another instance of the `Student` class to the list.</span></span> <span data-ttu-id="cffd2-129">Добавление студентов представит инициализаторы объектов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-129">Adding the student will introduce you to object initializers.</span></span> <span data-ttu-id="cffd2-130">Дополнительные сведения см. в разделе [инициализаторы объектов: именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="cffd2-130">For more information, see [Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).</span></span>  
   
-## <a name="create-a-query"></a>Создание запроса  
- При выполнении запроса, добавленного в этом разделе создает список студентов, успеваемость которых попадает в десятку. Поскольку запрос выбирает полную `Student` объект каждый раз тип результата запроса является `IEnumerable(Of Student)`. Однако тип запроса обычно не определен в определениях запроса. Вместо этого компилятор использует локальное определение типа для определения типа. Дополнительные сведения см. в разделе [вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Переменная диапазона запроса, `currentStudent`, служит в качестве ссылки на каждый `Student` экземпляра в источнике, `students`, предоставляя доступ к свойствам каждого объекта в `students`.  
+## <a name="create-a-query"></a><span data-ttu-id="cffd2-131">Создание запроса</span><span class="sxs-lookup"><span data-stu-id="cffd2-131">Create a Query</span></span>  
+ <span data-ttu-id="cffd2-132">При выполнении запроса, добавленного в этом разделе создает список студентов, успеваемость помещает их в первых десяти.</span><span class="sxs-lookup"><span data-stu-id="cffd2-132">When executed, the query added in this section produces a list of the students whose academic rank puts them in the top ten.</span></span> <span data-ttu-id="cffd2-133">Так как запрос выбирает полное `Student` объект каждый раз, а тип результата запроса является `IEnumerable(Of Student)`.</span><span class="sxs-lookup"><span data-stu-id="cffd2-133">Because the query selects the complete `Student` object each time, the type of the query result is `IEnumerable(Of Student)`.</span></span> <span data-ttu-id="cffd2-134">Однако тип запроса обычно не указан в определениях запроса.</span><span class="sxs-lookup"><span data-stu-id="cffd2-134">However, the type of the query typically is not specified in query definitions.</span></span> <span data-ttu-id="cffd2-135">Вместо этого компилятор использует локальное определение типа для определения типа.</span><span class="sxs-lookup"><span data-stu-id="cffd2-135">Instead, the compiler uses local type inference to determine the type.</span></span> <span data-ttu-id="cffd2-136">Дополнительные сведения см. в разделе [вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span><span class="sxs-lookup"><span data-stu-id="cffd2-136">For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span> <span data-ttu-id="cffd2-137">Переменная диапазона запроса, `currentStudent`, служащий в качестве ссылки на каждый `Student` экземпляр в источнике, `students`, предоставляя доступ к свойствам объекта в `students`.</span><span class="sxs-lookup"><span data-stu-id="cffd2-137">The query's range variable, `currentStudent`, serves as a reference to each `Student` instance in the source, `students`, providing access to the properties of each object in `students`.</span></span>  
   
-#### <a name="to-create-a-simple-query"></a>Создание простого запроса  
+#### <a name="to-create-a-simple-query"></a><span data-ttu-id="cffd2-138">Создание простого запроса</span><span class="sxs-lookup"><span data-stu-id="cffd2-138">To create a simple query</span></span>  
   
-1.  Найдите место в `Main` метод проекта, который помечен как показано ниже:  
+1.  <span data-ttu-id="cffd2-139">Найдите место в `Main` метод проекта, который помечен как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="cffd2-139">Find the place in the `Main` method of the project that is marked as follows:</span></span>  
   
-     [!code-vb[VbLINQWalkthrough&#1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
-     Скопируйте следующий код и вставьте его в.  
+     <span data-ttu-id="cffd2-140">Скопируйте следующий код и вставьте его в.</span><span class="sxs-lookup"><span data-stu-id="cffd2-140">Copy the following code and paste it in.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough&#2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
-2.  Наведите указатель мыши на `studentQuery` в коде для проверки типа компилятора назначенных `IEnumerable(Of Student)`.  
+2.  <span data-ttu-id="cffd2-141">Наведите указатель мыши на `studentQuery` в коде для убедитесь, что тип, назначенный компилятора `IEnumerable(Of Student)`.</span><span class="sxs-lookup"><span data-stu-id="cffd2-141">Rest the mouse pointer over `studentQuery` in your code to verify that the compiler-assigned type is `IEnumerable(Of Student)`.</span></span>  
   
-## <a name="run-the-query"></a>Выполнить запрос  
- Переменная `studentQuery` содержит определение запроса, а не результаты выполнения запроса. Типичным механизмом выполнения запроса является `For Each` цикла. Каждому элементу в возвращаемой последовательности осуществляется с помощью переменной итерации цикла. Дополнительные сведения о выполнении запроса см. в разделе [Your первого запроса LINQ записи](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
+## <a name="run-the-query"></a><span data-ttu-id="cffd2-142">Выполнить запрос</span><span class="sxs-lookup"><span data-stu-id="cffd2-142">Run the Query</span></span>  
+ <span data-ttu-id="cffd2-143">Переменная `studentQuery` содержит определение запроса, а не результаты выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="cffd2-143">The variable `studentQuery` contains the definition of the query, not the results of running the query.</span></span> <span data-ttu-id="cffd2-144">Типичным механизмом выполнения запроса является `For Each` цикла.</span><span class="sxs-lookup"><span data-stu-id="cffd2-144">A typical mechanism for running a query is a `For Each` loop.</span></span> <span data-ttu-id="cffd2-145">Каждый элемент в возвращаемой последовательности осуществляется с помощью переменной итерации цикла.</span><span class="sxs-lookup"><span data-stu-id="cffd2-145">Each element in the returned sequence is accessed through the loop iteration variable.</span></span> <span data-ttu-id="cffd2-146">Дополнительные сведения о выполнении запроса см. в разделе [написание вашего первого запроса LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span><span class="sxs-lookup"><span data-stu-id="cffd2-146">For more information about query execution, see [Writing Your First LINQ Query](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).</span></span>  
   
-#### <a name="to-run-the-query"></a>Чтобы выполнить запрос  
+#### <a name="to-run-the-query"></a><span data-ttu-id="cffd2-147">Чтобы выполнить запрос</span><span class="sxs-lookup"><span data-stu-id="cffd2-147">To run the query</span></span>  
   
-1.  Добавьте следующие `For Each` цикл под запросом в проекте.  
+1.  <span data-ttu-id="cffd2-148">Добавьте следующие `For Each` цикла под запросом в проекте.</span><span class="sxs-lookup"><span data-stu-id="cffd2-148">Add the following `For Each` loop below the query in your project.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough&#3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
-2.  Наведите указатель мыши на переменную цикла `studentRecord` для просмотра ее типа данных. Тип `studentRecord` определяется как `Student`, так как `studentQuery` возвращает коллекцию `Student` экземпляров.  
+2.  <span data-ttu-id="cffd2-149">Наведите указатель мыши на управляющей переменной цикла `studentRecord` для просмотра его типа данных.</span><span class="sxs-lookup"><span data-stu-id="cffd2-149">Rest the mouse pointer over the loop control variable `studentRecord` to see its data type.</span></span> <span data-ttu-id="cffd2-150">Тип `studentRecord` определяется как `Student`, так как `studentQuery` возвращает коллекцию `Student` экземпляров.</span><span class="sxs-lookup"><span data-stu-id="cffd2-150">The type of `studentRecord` is inferred to be `Student`, because `studentQuery` returns a collection of `Student` instances.</span></span>  
   
-3.  Постройте и запустите приложение, нажав сочетание клавиш CTRL + F5. Обратите внимание на результаты в окне консоли.  
+3.  <span data-ttu-id="cffd2-151">Постройте и запустите приложение, нажав клавиши CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="cffd2-151">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="cffd2-152">Обратите внимание на результаты в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="cffd2-152">Note the results in the console window.</span></span>  
   
-## <a name="modify-the-query"></a>Изменение запроса  
- Это упрощает просмотр результатов запроса, если они находятся в указанном порядке. Можно сортировать по любому доступному полю возвращаемую последовательность.  
+## <a name="modify-the-query"></a><span data-ttu-id="cffd2-153">Изменение запроса</span><span class="sxs-lookup"><span data-stu-id="cffd2-153">Modify the Query</span></span>  
+ <span data-ttu-id="cffd2-154">Проще проверки результатов запроса, если они находятся в указанном порядке.</span><span class="sxs-lookup"><span data-stu-id="cffd2-154">It is easier to scan query results if they are in a specified order.</span></span> <span data-ttu-id="cffd2-155">Можно сортировать возвращаемую последовательность по любому доступному полю.</span><span class="sxs-lookup"><span data-stu-id="cffd2-155">You can sort the returned sequence based on any available field.</span></span>  
   
-#### <a name="to-order-the-results"></a>Для упорядочения результатов  
+#### <a name="to-order-the-results"></a><span data-ttu-id="cffd2-156">Упорядочение результатов</span><span class="sxs-lookup"><span data-stu-id="cffd2-156">To order the results</span></span>  
   
-1.  Добавьте следующие `Order By` предложение между `Where` инструкции и `Select` инструкция запроса. `Order By` Предложение будет упорядочивать результаты в алфавитном порядке от А до Z, последней в соответствии с именем каждого студента.  
+1.  <span data-ttu-id="cffd2-157">Добавьте следующие `Order By` предложение между `Where` инструкции и `Select` инструкции запроса.</span><span class="sxs-lookup"><span data-stu-id="cffd2-157">Add the following `Order By` clause between the `Where` statement and the `Select` statement of the query.</span></span> <span data-ttu-id="cffd2-158">`Order By` Предложение будет упорядочивать результаты в алфавитном порядке от A-Z, до конца в соответствии с каждой студентов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-158">The `Order By` clause will order the results alphabetically from A to Z, according to the last name of each student.</span></span>  
   
     ```  
     Order By currentStudent.Last Ascending   
     ```  
   
-2.  Чтобы заказать по фамилии, а затем по имени, добавьте в запрос оба поля:  
+2.  <span data-ttu-id="cffd2-159">Чтобы упорядочить по фамилии, а затем имя, добавьте в запрос оба поля:</span><span class="sxs-lookup"><span data-stu-id="cffd2-159">To order by last name and then first name, add both fields to the query:</span></span>  
   
     ```  
     Order By currentStudent.Last Ascending, currentStudent.First Ascending   
     ```  
   
-     Можно также указать `Descending` Чтобы упорядочить от я до а.  
+     <span data-ttu-id="cffd2-160">Можно также указать `Descending` Чтобы упорядочить от я до а.</span><span class="sxs-lookup"><span data-stu-id="cffd2-160">You can also specify `Descending` to order from Z to A.</span></span>  
   
-3.  Постройте и запустите приложение, нажав сочетание клавиш CTRL + F5. Обратите внимание на результаты в окне консоли.  
+3.  <span data-ttu-id="cffd2-161">Постройте и запустите приложение, нажав клавиши CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="cffd2-161">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="cffd2-162">Обратите внимание на результаты в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="cffd2-162">Note the results in the console window.</span></span>  
   
-#### <a name="to-introduce-a-local-identifier"></a>Чтобы ввести локальный идентификатор  
+#### <a name="to-introduce-a-local-identifier"></a><span data-ttu-id="cffd2-163">Чтобы ввести локальный идентификатор</span><span class="sxs-lookup"><span data-stu-id="cffd2-163">To introduce a local identifier</span></span>  
   
-1.  Добавьте код в этом разделе, чтобы ввести локальный идентификатор в выражение запроса. Локальный идентификатор будет содержать промежуточные результаты. В следующем примере `name` является идентификатором, который содержит объединение учащегося первого имени и фамилии. Локальный идентификатор может использоваться для удобства, или он может повысить производительность, сохраняя результаты выражения, в противном случае будет вычисляться несколько раз.  
+1.  <span data-ttu-id="cffd2-164">Добавьте код в этом разделе, чтобы ввести локальный идентификатор в выражении запроса.</span><span class="sxs-lookup"><span data-stu-id="cffd2-164">Add the code in this section to introduce a local identifier in the query expression.</span></span> <span data-ttu-id="cffd2-165">Локальный идентификатор будет содержать промежуточные результаты.</span><span class="sxs-lookup"><span data-stu-id="cffd2-165">The local identifier will hold an intermediate result.</span></span> <span data-ttu-id="cffd2-166">В следующем примере `name` является идентификатором, который содержит объединение учащегося первый имени и фамилии.</span><span class="sxs-lookup"><span data-stu-id="cffd2-166">In the following example, `name` is an identifier that holds a concatenation of the student's first and last names.</span></span> <span data-ttu-id="cffd2-167">Локальный идентификатор может использоваться для удобства, или он может повысить производительность, сохраняя результаты выражения, в противном случае значение будет вычисляться несколько раз.</span><span class="sxs-lookup"><span data-stu-id="cffd2-167">A local identifier can be used for convenience, or it can enhance performance by storing the results of an expression that would otherwise be calculated multiple times.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough&#4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
-2.  Постройте и запустите приложение, нажав сочетание клавиш CTRL + F5. Обратите внимание на результаты в окне консоли.  
+2.  <span data-ttu-id="cffd2-168">Постройте и запустите приложение, нажав клавиши CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="cffd2-168">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="cffd2-169">Обратите внимание на результаты в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="cffd2-169">Note the results in the console window.</span></span>  
   
-#### <a name="to-project-one-field-in-the-select-clause"></a>Проецирование одного поля в предложении Select  
+#### <a name="to-project-one-field-in-the-select-clause"></a><span data-ttu-id="cffd2-170">Проецирование одного поля в предложении Select</span><span class="sxs-lookup"><span data-stu-id="cffd2-170">To project one field in the Select clause</span></span>  
   
-1.  Добавьте запрос и `For Each` цикл из этого раздела, чтобы создать запрос, выводящий последовательность, элементы которой отличаются от элементов в исходной коллекции. В следующем примере источником является коллекция `Student` возвращаются объекты, но только один член каждого объекта: имена студентов, фамилия которых Орехов. Поскольку `currentStudent.First` является строкой, типом данных последовательности, возвращаемой `studentQuery3` — `IEnumerable(Of String)`, последовательность строк. Как и в предыдущих примерах, назначение данных введите `studentQuery3` остается компилятору определить с помощью локального определения типов.  
+1.  <span data-ttu-id="cffd2-171">Добавить запрос и `For Each` цикл из этого раздела, чтобы создать запрос, который создает последовательность, элементы которой отличаются от элементов в исходной коллекции.</span><span class="sxs-lookup"><span data-stu-id="cffd2-171">Add the query and `For Each` loop from this section to create a query that produces a sequence whose elements differ from the elements in the source.</span></span> <span data-ttu-id="cffd2-172">В следующем примере источник — это совокупность `Student` возвращаются объекты, но только один член каждого объекта: имена студентов, фамилия которых Орехов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-172">In the following example, the source is a collection of `Student` objects, but only one member of each object is returned: the first name of students whose last name is Garcia.</span></span> <span data-ttu-id="cffd2-173">Поскольку `currentStudent.First` представляет собой строку, тип данных последовательности, возвращаемой `studentQuery3` — `IEnumerable(Of String)`, последовательность строк.</span><span class="sxs-lookup"><span data-stu-id="cffd2-173">Because `currentStudent.First` is a string, the data type of the sequence returned by `studentQuery3` is `IEnumerable(Of String)`, a sequence of strings.</span></span> <span data-ttu-id="cffd2-174">Как в предыдущих примерах, тип данных назначения для `studentQuery3` остается компилятору определить с помощью локального определения типов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-174">As in earlier examples, the assignment of a data type for `studentQuery3` is left for the compiler to determine by using local type inference.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough&#5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
-2.  Наведите указатель мыши на `studentQuery3` в коде, чтобы убедиться, что назначенный тип `IEnumerable(Of String)`.  
+2.  <span data-ttu-id="cffd2-175">Наведите указатель мыши на `studentQuery3` в коде для убедитесь, что назначенный тип `IEnumerable(Of String)`.</span><span class="sxs-lookup"><span data-stu-id="cffd2-175">Rest the mouse pointer over `studentQuery3` in your code to verify that the assigned type is `IEnumerable(Of String)`.</span></span>  
   
-3.  Постройте и запустите приложение, нажав сочетание клавиш CTRL + F5. Обратите внимание на результаты в окне консоли.  
+3.  <span data-ttu-id="cffd2-176">Постройте и запустите приложение, нажав клавиши CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="cffd2-176">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="cffd2-177">Обратите внимание на результаты в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="cffd2-177">Note the results in the console window.</span></span>  
   
-#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Создание анонимного типа в предложении Select  
+#### <a name="to-create-an-anonymous-type-in-the-select-clause"></a><span data-ttu-id="cffd2-178">Чтобы создать анонимный тип в предложении Select</span><span class="sxs-lookup"><span data-stu-id="cffd2-178">To create an anonymous type in the Select clause</span></span>  
   
-1.  Добавьте код из этого раздела, чтобы увидеть как анонимные типы используются в запросах. Они используются в запросах при необходимости возвращать несколько полей из источника данных вместо полных записей (`currentStudent` записей в предыдущих примерах) или одного поля (`First` в предыдущем разделе). Вместо определения нового именованного типа, содержащий поля, которые нужно включить в результат, можно указать поля в `Select` предложения и компилятор создает анонимный тип с этими полями в качестве его свойства. Дополнительные сведения см. в разделе [анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+1.  <span data-ttu-id="cffd2-179">Добавьте код из этого раздела, чтобы увидеть как анонимные типы используются в запросах.</span><span class="sxs-lookup"><span data-stu-id="cffd2-179">Add the code from this section to see how anonymous types are used in queries.</span></span> <span data-ttu-id="cffd2-180">Использовать их в запросах, если нужно возвращать несколько полей из источника данных, а не полные записи (`currentStudent` записей в предыдущих примерах) или отдельные поля (`First` в предыдущем разделе).</span><span class="sxs-lookup"><span data-stu-id="cffd2-180">You use them in queries when you want to return several fields from the data source rather than complete records (`currentStudent` records in previous examples) or single fields (`First` in the preceding section).</span></span> <span data-ttu-id="cffd2-181">Вместо определения нового именованного типа, содержащий поля, необходимо включить в результат, можно указать поля в `Select` предложения и компилятор создает анонимный тип с этими полями в качестве его свойства.</span><span class="sxs-lookup"><span data-stu-id="cffd2-181">Instead of defining a new named type that contains the fields you want to include in the result, you specify the fields in the `Select` clause and the compiler creates an anonymous type with those fields as its properties.</span></span> <span data-ttu-id="cffd2-182">Дополнительные сведения см. в статье [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="cffd2-182">For more information, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).</span></span>  
   
-     В следующем примере создается запрос, возвращающий имя и успеваемость руководителями более высокого уровня, чья успеваемость находится между 1 и 10 в порядке успеваемости. В этом примере тип `studentQuery4` должен быть выведен, поскольку `Select` предложение возвращает экземпляр анонимного типа, а анонимный тип не имеет имени.  
+     <span data-ttu-id="cffd2-183">В следующем примере создается запрос, возвращающий имя и успеваемость руководителями более высокого уровня, чья успеваемость находится в диапазоне от 1 до 10 в порядке успеваемости.</span><span class="sxs-lookup"><span data-stu-id="cffd2-183">The following example creates a query that returns the name and rank of seniors whose academic rank is between 1 and 10, in order of academic rank.</span></span> <span data-ttu-id="cffd2-184">В этом примере тип `studentQuery4` должен быть выведен, поскольку `Select` предложение возвращает экземпляр анонимного типа, а анонимный тип не имеет имени.</span><span class="sxs-lookup"><span data-stu-id="cffd2-184">In this example, the type of `studentQuery4` must be inferred because the `Select` clause returns an instance of an anonymous type, and an anonymous type has no usable name.</span></span>  
   
-     [!code-vb[VbLINQWalkthrough №&6;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
-2.  Постройте и запустите приложение, нажав сочетание клавиш CTRL + F5. Обратите внимание на результаты в окне консоли.  
+2.  <span data-ttu-id="cffd2-185">Постройте и запустите приложение, нажав клавиши CTRL + F5.</span><span class="sxs-lookup"><span data-stu-id="cffd2-185">Build and run the application by pressing CTRL+F5.</span></span> <span data-ttu-id="cffd2-186">Обратите внимание на результаты в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="cffd2-186">Note the results in the console window.</span></span>  
   
-## <a name="additional-examples"></a>Дополнительные примеры  
- Теперь, когда вы знакомы с основами, ниже приведен список дополнительных примеров, который иллюстрирует гибкость и мощь [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] запросов. Каждый пример предшествует краткое описание того, что он делает. Наведите указатель мыши на переменную результата запроса для каждого запроса, чтобы просмотреть определенный тип. Используйте `For Each` цикле для получения результатов.  
+## <a name="additional-examples"></a><span data-ttu-id="cffd2-187">Дополнительные примеры</span><span class="sxs-lookup"><span data-stu-id="cffd2-187">Additional Examples</span></span>  
+ <span data-ttu-id="cffd2-188">Теперь, когда вы знакомы с основами, ниже приведен список дополнительных примеров, который иллюстрирует гибкость и мощь [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-188">Now that you understand the basics, the following is a list of additional examples to illustrate the flexibility and power of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries.</span></span> <span data-ttu-id="cffd2-189">В каждом примере предшествует краткое описание его назначение.</span><span class="sxs-lookup"><span data-stu-id="cffd2-189">Each example is preceded by a brief description of what it does.</span></span> <span data-ttu-id="cffd2-190">Наведите указатель мыши на переменную результата запроса для каждого запроса, чтобы просмотреть определенный тип.</span><span class="sxs-lookup"><span data-stu-id="cffd2-190">Rest the mouse pointer over the query result variable for each query to see the inferred type.</span></span> <span data-ttu-id="cffd2-191">Используйте `For Each` цикла для получения результатов.</span><span class="sxs-lookup"><span data-stu-id="cffd2-191">Use a `For Each` loop to produce the results.</span></span>  
   
- [!code-vb[VbLINQWalkthrough&#7;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
-## <a name="additional-information"></a>Дополнительные сведения  
- После ознакомления с основными принципами работы с запросами, можно приступить к чтению документации и примеров для конкретного типа [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] поставщика интересующий вас:  
+## <a name="additional-information"></a><span data-ttu-id="cffd2-192">Дополнительные сведения</span><span class="sxs-lookup"><span data-stu-id="cffd2-192">Additional Information</span></span>  
+ <span data-ttu-id="cffd2-193">После ознакомления с основными принципами работы с запросами, можно приступать к чтению документации и примеров для конкретного типа [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] поставщика, которые вас интересуют:</span><span class="sxs-lookup"><span data-stu-id="cffd2-193">After you are familiar with the basic concepts of working with queries, you are ready to read the documentation and samples for the specific type of [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider that you are interested in:</span></span>  
   
- [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
+ [<span data-ttu-id="cffd2-194">LINQ to Objects</span><span class="sxs-lookup"><span data-stu-id="cffd2-194">LINQ to Objects</span></span>](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [<span data-ttu-id="cffd2-195">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="cffd2-195">LINQ to SQL</span></span>](https://msdn.microsoft.com/library/bb386976)  
   
- [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
+ [<span data-ttu-id="cffd2-196">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="cffd2-196">LINQ to XML</span></span>](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
   
- [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
+ [<span data-ttu-id="cffd2-197">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="cffd2-197">LINQ to DataSet</span></span>](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-## <a name="see-also"></a>См. также  
- [Интегрированный в язык запрос (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)   
- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Инициализаторы объектов: Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Введение в LINQ в Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Запросы](../../../../visual-basic/language-reference/queries/queries.md)
+## <a name="see-also"></a><span data-ttu-id="cffd2-198">См. также</span><span class="sxs-lookup"><span data-stu-id="cffd2-198">See Also</span></span>  
+ [<span data-ttu-id="cffd2-199">Синтаксис LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cffd2-199">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [<span data-ttu-id="cffd2-200">Приступая к работе с LINQ в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cffd2-200">Getting Started with LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [<span data-ttu-id="cffd2-201">Вывод локального типа</span><span class="sxs-lookup"><span data-stu-id="cffd2-201">Local Type Inference</span></span>](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [<span data-ttu-id="cffd2-202">Инициализаторы объектов. Именованные и анонимные типы</span><span class="sxs-lookup"><span data-stu-id="cffd2-202">Object Initializers: Named and Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [<span data-ttu-id="cffd2-203">Анонимные типы</span><span class="sxs-lookup"><span data-stu-id="cffd2-203">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ <span data-ttu-id="cffd2-204">[Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cffd2-204">[Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>  
+ [<span data-ttu-id="cffd2-205">LINQ</span><span class="sxs-lookup"><span data-stu-id="cffd2-205">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="cffd2-206">Запросы</span><span class="sxs-lookup"><span data-stu-id="cffd2-206">Queries</span></span>](../../../../visual-basic/language-reference/queries/queries.md)

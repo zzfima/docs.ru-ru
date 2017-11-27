@@ -1,47 +1,50 @@
 ---
-title: "Образец совместного использования портов Net.TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Пример совместного использования портов Net.TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d3ee04dfd400e09e6392e78498d80a59bb88b11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Образец совместного использования портов Net.TCP
-Протокол TCP\/IP использует 16\-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере.Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению.Другие приложения не могут одновременно ожидать передачи данных через тот же порт.  
+# <a name="nettcp-port-sharing-sample"></a><span data-ttu-id="544c9-102">Пример совместного использования портов Net.TCP</span><span class="sxs-lookup"><span data-stu-id="544c9-102">Net.TCP Port Sharing Sample</span></span>
+<span data-ttu-id="544c9-103">Протокол TCP/IP использует 16-разрядное число, называемое номером порта, чтобы различать подключения к разным сетевым приложениям, выполняющимся на одном компьютере.</span><span class="sxs-lookup"><span data-stu-id="544c9-103">The TCP/IP protocol uses a 16-bit number, called a port, to differentiate connections to multiple network applications running on the same machine.</span></span> <span data-ttu-id="544c9-104">Если приложение ожидает передачи данных через порт, то весь трафик TCP через этот порт перенаправляется данному приложению.</span><span class="sxs-lookup"><span data-stu-id="544c9-104">If an application is listening on a port, then all TCP traffic for that port goes to that application.</span></span> <span data-ttu-id="544c9-105">Другие приложения не могут одновременно ожидать передачи данных через тот же порт.</span><span class="sxs-lookup"><span data-stu-id="544c9-105">Other applications cannot listen on that port at the same time.</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="544c9-106">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="544c9-106">The samples may already be installed on your machine.</span></span> <span data-ttu-id="544c9-107">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="544c9-107">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="544c9-108">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="544c9-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="544c9-109">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="544c9-109">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- У многих протоколов имеется номер порта по умолчанию.Например, для протокола HTTP обычно используется порт TCP 80.У служб IIS имеется прослушиватель для совместного использования одного порта несколькими приложениями HTTP.Службы IIS ожидают передачи данных непосредственно через этот порт и перенаправляют сообщения соответствующим приложениям в зависимости от информации внутри сообщения.Это позволяет нескольким приложениям HTTP использовать один и тот же номер порта, не конкурируя за порт для получения сообщений.  
+ <span data-ttu-id="544c9-110">У многих протоколов имеется номер порта по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="544c9-110">Many protocols have a standard or default port number that they use.</span></span> <span data-ttu-id="544c9-111">Например, для протокола HTTP обычно используется порт TCP 80.</span><span class="sxs-lookup"><span data-stu-id="544c9-111">For example, the HTTP protocol typically uses TCP port 80.</span></span> <span data-ttu-id="544c9-112">У служб IIS имеется прослушиватель для совместного использования одного порта несколькими приложениями HTTP.</span><span class="sxs-lookup"><span data-stu-id="544c9-112">Internet Information Services (IIS) has a listener to share a port between multiple HTTP applications.</span></span> <span data-ttu-id="544c9-113">Службы IIS ожидают передачи данных непосредственно через этот порт и перенаправляют сообщения соответствующим приложениям в зависимости от информации внутри сообщения.</span><span class="sxs-lookup"><span data-stu-id="544c9-113">IIS listens on the port directly and forwards messages to the appropriate application based on information inside the message stream.</span></span> <span data-ttu-id="544c9-114">Это позволяет нескольким приложениям HTTP использовать один и тот же номер порта, не конкурируя за порт для получения сообщений.</span><span class="sxs-lookup"><span data-stu-id="544c9-114">This allows multiple HTTP applications to use the same port number without having to compete to reserve the port for receiving messages.</span></span>  
   
- Общий доступ к портам NetTcp — это функция [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], которая аналогичным образом позволяет нескольким сетевым приложениям использовать один порт.Служба общего доступа к портам NetTcp принимает подключения с помощью протокола net.tcp и перенаправляет сообщения в зависимости от их адреса назначения.  
+ <span data-ttu-id="544c9-115">Совместное использование порта NetTcp [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]функция, которая аналогичным образом позволяет нескольким сетевым приложениям использовать один порт.</span><span class="sxs-lookup"><span data-stu-id="544c9-115">NetTcp Port Sharing is a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]feature that similarly allows multiple network applications to share a single port.</span></span> <span data-ttu-id="544c9-116">Служба общего доступа к портам NetTcp принимает подключения с помощью протокола net.tcp и перенаправляет сообщения в зависимости от их адреса назначения.</span><span class="sxs-lookup"><span data-stu-id="544c9-116">The NetTcp Port Sharing Service accepts connections using the net.tcp protocol and forwards messages based on their destination address.</span></span>  
   
- По умолчанию служба общего доступа к портам NetTcp отключена.Перед запуском этого образца необходимо вручную включить эту службу.Дополнительные сведения см. в разделе [Практическое руководство. Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).Если служба отключена, при запуске серверного приложения создается исключение.  
+ <span data-ttu-id="544c9-117">По умолчанию служба общего доступа к портам NetTcp отключена.</span><span class="sxs-lookup"><span data-stu-id="544c9-117">The NetTcp Port Sharing Service is not enabled by default.</span></span> <span data-ttu-id="544c9-118">Перед запуском этого образца необходимо вручную включить эту службу.</span><span class="sxs-lookup"><span data-stu-id="544c9-118">Before running this sample, you must manually enable the service.</span></span> <span data-ttu-id="544c9-119">Дополнительные сведения см. в разделе [как: Включение службы совместного использования портов Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).</span><span class="sxs-lookup"><span data-stu-id="544c9-119">For more information, see [How to: Enable the Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).</span></span> <span data-ttu-id="544c9-120">Если служба отключена, при запуске серверного приложения создается исключение.</span><span class="sxs-lookup"><span data-stu-id="544c9-120">If the service is disabled, an exception is thrown when the server application is started.</span></span>  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Общий доступ к портам включается на сервере путем задания свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> привязки <xref:System.ServiceModel.NetTcpBinding> или элемента привязки <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.Чтобы использовать на сервере общий доступ к портам, клиенту не требуются сведения о его конфигурации.  
+ <span data-ttu-id="544c9-121">Общий доступ к портам включается на сервере путем задания свойства <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> привязки <xref:System.ServiceModel.NetTcpBinding> или элемента привязки <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="544c9-121">Port sharing is enabled on the server by setting the <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> property of the <xref:System.ServiceModel.NetTcpBinding> binding or the <xref:System.ServiceModel.Channels.TcpTransportBindingElement> binding element.</span></span> <span data-ttu-id="544c9-122">Чтобы использовать на сервере общий доступ к портам, клиенту не требуются сведения о его конфигурации.</span><span class="sxs-lookup"><span data-stu-id="544c9-122">The client does not have to know how port sharing has been configured to use it on the server.</span></span>  
   
-## Включение общего доступа к портам  
- В следующем примере кода показано, как включить на сервере общий доступ к портам.Он запускает экземпляр службы `ICalculator` на фиксированном порту со случайным путем универсального кода ресурса \(URI\).Хотя две службы могут использовать один и тот же порт, их адреса конечных точек должны быть уникальными, чтобы служба общего доступа к портам NetTcp могла перенаправлять сообщения нужным приложениям.  
+## <a name="enabling-port-sharing"></a><span data-ttu-id="544c9-123">Включение общего доступа к портам</span><span class="sxs-lookup"><span data-stu-id="544c9-123">Enabling Port Sharing</span></span>  
+ <span data-ttu-id="544c9-124">В следующем примере кода показано, как включить на сервере общий доступ к портам.</span><span class="sxs-lookup"><span data-stu-id="544c9-124">The following code demonstrates enabling port sharing on the server.</span></span> <span data-ttu-id="544c9-125">Он запускает экземпляр службы `ICalculator` на фиксированном порту со случайным путем универсального кода ресурса (URI).</span><span class="sxs-lookup"><span data-stu-id="544c9-125">It starts an instance of the `ICalculator` service on a fixed port with a random URI path.</span></span> <span data-ttu-id="544c9-126">Хотя две службы могут использовать один и тот же порт, их адреса конечных точек должны быть уникальными, чтобы служба общего доступа к портам NetTcp могла перенаправлять сообщения нужным приложениям.</span><span class="sxs-lookup"><span data-stu-id="544c9-126">Even though two services can share the same port, their overall endpoint addresses still must be unique so that the NetTcp Port Sharing Service can route messages to the correct application.</span></span>  
   
 ```  
 // Configure a binding with TCP port sharing enabled  
@@ -57,14 +60,14 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```  
   
- Если общий доступ к портам включен, службу можно запускать несколько раз без конфликта по поводу номера порта.Если изменить код и отключить общий доступ к портам, то в случае запуска двух экземпляров службы при запуске второго экземпляра будет создано исключение <xref:System.ServiceModel.AddressAlreadyInUseException>.  
+ <span data-ttu-id="544c9-127">Если общий доступ к портам включен, службу можно запускать несколько раз без конфликта по поводу номера порта.</span><span class="sxs-lookup"><span data-stu-id="544c9-127">With port sharing enabled, you can run the service multiple times without having a conflict over the port number.</span></span> <span data-ttu-id="544c9-128">Если изменить код и отключить общий доступ к портам, то в случае запуска двух экземпляров службы при запуске второго экземпляра будет создано исключение <xref:System.ServiceModel.AddressAlreadyInUseException>.</span><span class="sxs-lookup"><span data-stu-id="544c9-128">If you change the code to disable port sharing, starting up two copies of the service results in the second failing with an <xref:System.ServiceModel.AddressAlreadyInUseException>.</span></span>  
   
 ```  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
-## Выполнение образца  
- Чтобы проверить, что сообщения правильно направляются службам, которые совместно используют порт, можно воспользоваться тестовым клиентом.  
+## <a name="running-the-sample"></a><span data-ttu-id="544c9-129">Запуск примера</span><span class="sxs-lookup"><span data-stu-id="544c9-129">Running the Sample</span></span>  
+ <span data-ttu-id="544c9-130">Чтобы проверить, что сообщения правильно направляются службам, которые совместно используют порт, можно воспользоваться тестовым клиентом.</span><span class="sxs-lookup"><span data-stu-id="544c9-130">You can use the test client to check that messages are correctly routed to services sharing the port.</span></span>  
   
 ```  
 class client  
@@ -110,14 +113,14 @@ class client
 }  
 ```  
   
- Каждый экземпляр службы выводит собственный уникальный номер и адрес.Например, при запуске файла service.exe можно увидеть следующий текст.  
+ <span data-ttu-id="544c9-131">Каждый экземпляр службы выводит собственный уникальный номер и адрес.</span><span class="sxs-lookup"><span data-stu-id="544c9-131">Each instance of the service prints out its unique number and address.</span></span> <span data-ttu-id="544c9-132">Например, при запуске файла service.exe можно увидеть следующий текст.</span><span class="sxs-lookup"><span data-stu-id="544c9-132">For instance, you may see the following text when you run service.exe.</span></span>  
   
 ```  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
- При запуске файла client.exe введите показанный номер службы.  
+ <span data-ttu-id="544c9-133">При запуске файла client.exe введите показанный номер службы.</span><span class="sxs-lookup"><span data-stu-id="544c9-133">Enter the service number you see here when you run client.exe.</span></span>  
   
 ```  
 Enter the service number to test: 4381  
@@ -129,23 +132,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Этот образец можно выполнять на нескольких компьютерах, если изменить созданный адрес, используемый клиентом.В файле Client.cs измените строку формата адреса конечной точки, чтобы она соответствовало новому адресу службы.Замените вхождения localhost на IP\-адрес серверного компьютера.После внесения этого изменения необходимо перекомпилировать образец.  
+ <span data-ttu-id="544c9-134">Этот образец можно выполнять на нескольких компьютерах, если изменить созданный адрес, используемый клиентом.</span><span class="sxs-lookup"><span data-stu-id="544c9-134">This sample can be run in a cross-machine configuration by changing the generated address that the client uses.</span></span> <span data-ttu-id="544c9-135">В файле Client.cs измените строку формата адреса конечной точки, чтобы она соответствовало новому адресу службы.</span><span class="sxs-lookup"><span data-stu-id="544c9-135">In the Client.cs, change the endpoint address format string to match the new address of your service.</span></span> <span data-ttu-id="544c9-136">Замените вхождения localhost на IP-адрес серверного компьютера.</span><span class="sxs-lookup"><span data-stu-id="544c9-136">Replace any references to "localhost" with the IP address of the server machine.</span></span> <span data-ttu-id="544c9-137">После внесения этого изменения необходимо перекомпилировать пример.</span><span class="sxs-lookup"><span data-stu-id="544c9-137">You must recompile the sample after making this change.</span></span>  
   
-#### Настройка, построение и выполнение образца  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="544c9-138">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="544c9-138">To set up, build, and run the sample</span></span>  
   
-1.  Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.  
+1.  <span data-ttu-id="544c9-139">Установите [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, выполнив следующую команду.</span><span class="sxs-lookup"><span data-stu-id="544c9-139">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
-  
     ```  
   
-2.  Убедитесь, что выполнены действия, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  <span data-ttu-id="544c9-140">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="544c9-140">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  Включите службу общего доступа к портам NetTcp, как описано в начале раздела.  
+3.  <span data-ttu-id="544c9-141">Включите службу общего доступа к портам NetTcp, как описано в начале раздела.</span><span class="sxs-lookup"><span data-stu-id="544c9-141">Enable the NetTcp Port Sharing Service as previously described in the introduction section.</span></span>  
   
-4.  Чтобы выполнить построение версии решения для языка C\# или Visual Basic .NET, воспользуйтесь инструкциями в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  <span data-ttu-id="544c9-142">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="544c9-142">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  Чтобы выполнить образец на одном или нескольких компьютерах, выполните инструкции в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).Конкретные сведения о выполнении этого образца описаны в разделе "Выполнение образца".  
+5.  <span data-ttu-id="544c9-143">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="544c9-143">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="544c9-144">Конкретные сведения о выполнении этого образца описаны в разделе "Выполнение образца".</span><span class="sxs-lookup"><span data-stu-id="544c9-144">Specific details for running this sample are included previously in the Running the Sample section.</span></span>  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="544c9-145">См. также</span><span class="sxs-lookup"><span data-stu-id="544c9-145">See Also</span></span>

@@ -1,30 +1,33 @@
 ---
-title: "Взаимодействие с веб-службами ASMX | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Взаимодействие с веб-службами ASMX"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 635502ea186e188bf9906d45e7753eba72fbd5d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Взаимодействие с веб-службами ASMX
-В этом образце показан процесс интеграции клиентского приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и существующей веб\-службы ASMX.  
+# <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="2e187-102">Взаимодействие с веб-службами ASMX</span><span class="sxs-lookup"><span data-stu-id="2e187-102">Interoperating with ASMX Web Services</span></span>
+<span data-ttu-id="2e187-103">В этом образце показан процесс интеграции клиентского приложения [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и существующей веб-службы ASMX.</span><span class="sxs-lookup"><span data-stu-id="2e187-103">This sample demonstrates how to integrate a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client application with an existing ASMX Web service.</span></span>  
   
 > [!NOTE]
->  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
+>  <span data-ttu-id="2e187-104">Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.</span><span class="sxs-lookup"><span data-stu-id="2e187-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Этот образец содержит консольную программу клиента \(EXE\) и библиотеку службы \(DLL\), размещаемую в службах IIS.Служба является веб\-службой ASMX, реализующей контракт, который определяет шаблон взаимодействия "запрос\-ответ".Службы предоставляет математические операции \(`Add`, `Subtract`, `Multiply` и `Divide`\).Клиент выполняет синхронные запросы математической операции, а служба отправляет в ответ результат.Действия клиента отображаются в окне консоли.  
+ <span data-ttu-id="2e187-105">Этот образец содержит консольную программу клиента (EXE) и библиотеку службы (DLL), размещаемую в службах IIS.</span><span class="sxs-lookup"><span data-stu-id="2e187-105">This sample consists of a client console program (.exe) and a service library (.dll) hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="2e187-106">Служба является веб-службой ASMX, реализующей контракт, который определяет шаблон взаимодействия "запрос-ответ".</span><span class="sxs-lookup"><span data-stu-id="2e187-106">The service is an ASMX Web Service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="2e187-107">Службы предоставляет математические операции (`Add`, `Subtract`, `Multiply` и `Divide`).</span><span class="sxs-lookup"><span data-stu-id="2e187-107">The service exposes math operations (`Add`, `Subtract`, `Multiply`, and `Divide`).</span></span> <span data-ttu-id="2e187-108">Клиент выполняет синхронные запросы математической операции, а служба отправляет в ответ результат.</span><span class="sxs-lookup"><span data-stu-id="2e187-108">The client makes synchronous requests to a math operation and the service replies with the result.</span></span> <span data-ttu-id="2e187-109">Действия клиента отображаются в окне консоли.</span><span class="sxs-lookup"><span data-stu-id="2e187-109">Client activity is visible in the console window.</span></span>  
   
- Реализация веб\-службы ASMX, представленная в следующем образце кода, вычисляет и возвращает соответствующий результат.  
+ <span data-ttu-id="2e187-110">Реализация веб-службы ASMX, представленная в следующем образце кода, вычисляет и возвращает соответствующий результат.</span><span class="sxs-lookup"><span data-stu-id="2e187-110">The ASMX Web service implementation shown in the following sample code calculates and returns the appropriate result.</span></span>  
   
 ```  
 [WebService(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -51,30 +54,28 @@ public class CalculatorService : System.Web.Services.WebService
             return n1 / n2;  
         }  
     }  
-  
 ```  
   
- В соответствии с настройкой служба доступна по адресу http:\/\/localhost\/servicemodelsamples\/service.asmx для клиента на этом же компьютере.Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.  
+ <span data-ttu-id="2e187-111">В соответствии с настройкой служба доступна по адресу http://localhost/servicemodelsamples/service.asmx для клиента на этом же компьютере.</span><span class="sxs-lookup"><span data-stu-id="2e187-111">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.asmx by a client on the same machine.</span></span> <span data-ttu-id="2e187-112">Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.</span><span class="sxs-lookup"><span data-stu-id="2e187-112">For clients on remote machines to access the service, a qualified domain name must be specified instead of localhost.</span></span>  
   
- Взаимодействие выполняется с использованием клиента, созданного с помощью средства [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).Клиент содержится в файле generatedClient.cs.Служба ASMX должна быть доступна для создания кода прокси, поскольку он используется для извлечения обновленных метаданных.Чтобы создать типизированный прокси, выполните следующую команду из командной строки в каталоге клиента.  
+ <span data-ttu-id="2e187-113">Обмен данными осуществляется с помощью клиента, созданного с [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="2e187-113">Communication is done through a client generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="2e187-114">Клиент содержится в файле generatedClient.cs.</span><span class="sxs-lookup"><span data-stu-id="2e187-114">The client is contained in the file generatedClient.cs.</span></span> <span data-ttu-id="2e187-115">Служба ASMX должна быть доступна для создания кода прокси, поскольку он используется для извлечения обновленных метаданных.</span><span class="sxs-lookup"><span data-stu-id="2e187-115">The ASMX service must be available to generate the proxy code, because it is used to retrieve the updated metadata.</span></span> <span data-ttu-id="2e187-116">Чтобы создать типизированную учетную запись-посредник, выполните следующую команду из командной строки в каталоге клиента.</span><span class="sxs-lookup"><span data-stu-id="2e187-116">Run the following command from a command prompt in the client directory to generate the typed proxy.</span></span>  
   
 ```  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedClient.cs  
 ```  
   
- С помощью созданного клиента можно получить доступ к конечной точке службы, настроив соответствующий адрес и привязку.Как и служба, клиент использует файл конфигурации \(App.config\), чтобы задать конечную точку для взаимодействия.Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта, как показано в следующем образце конфигурации.  
+ <span data-ttu-id="2e187-117">С помощью созданного клиента можно получить доступ к конечной точке службы, настроив соответствующий адрес и привязку.</span><span class="sxs-lookup"><span data-stu-id="2e187-117">By using the generated client, you can access a service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="2e187-118">Как и служба, клиент использует файл конфигурации (App.config), чтобы задать конечную точку для взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="2e187-118">Like the service, the client uses a configuration file (App.config) to specify the endpoint to communicate with.</span></span> <span data-ttu-id="2e187-119">Конфигурация конечной точки клиента состоит из абсолютного адреса конечной точки службы, привязки и контракта, как показано в следующем образце конфигурации.</span><span class="sxs-lookup"><span data-stu-id="2e187-119">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <client>  
    <endpoint   
       address="http://localhost/ServiceModelSamples/service.asmx"   
       binding="basicHttpBinding"   
       contract="Microsoft.ServiceModel.Samples.CalculatorServiceSoap" />  
 </client>  
-  
 ```  
   
- Реализация клиента создает экземпляр созданного клиента.После этого созданный клиент можно использовать для взаимодействия со службой.  
+ <span data-ttu-id="2e187-120">Реализация клиента создает экземпляр созданного клиента.</span><span class="sxs-lookup"><span data-stu-id="2e187-120">The client implementation constructs an instance of the generated client.</span></span> <span data-ttu-id="2e187-121">После этого созданный клиент можно использовать для взаимодействия со службой.</span><span class="sxs-lookup"><span data-stu-id="2e187-121">The generated client can then be used to communicate with the service.</span></span>  
   
 ```  
 // Create a client.  
@@ -110,10 +111,9 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-  
 ```  
   
- При выполнении образца запросы и ответы операций отображаются в окне консоли клиента.Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
+ <span data-ttu-id="2e187-122">При выполнении примера запросы и ответы операций отображаются в окне консоли клиента.</span><span class="sxs-lookup"><span data-stu-id="2e187-122">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="2e187-123">Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.</span><span class="sxs-lookup"><span data-stu-id="2e187-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -124,21 +124,21 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Настройка, построение и выполнение образца  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2e187-124">Настройка, сборка и выполнение образца</span><span class="sxs-lookup"><span data-stu-id="2e187-124">To set up, build, and run the sample</span></span>  
   
-1.  Убедитесь, что выполнены процедуры, описанные в разделе [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="2e187-125">Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2e187-125">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Чтобы создать выпуск решения на языке C\# или Visual Basic .NET, следуйте инструкциям в разделе [Построение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="2e187-126">Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2e187-126">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в разделе [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="2e187-127">Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="2e187-127">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="2e187-128">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="2e187-128">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2e187-129">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="2e187-129">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="2e187-130">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="2e187-130">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2e187-131">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="2e187-131">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="2e187-132">См. также</span><span class="sxs-lookup"><span data-stu-id="2e187-132">See Also</span></span>

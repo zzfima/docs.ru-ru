@@ -1,46 +1,52 @@
 ---
-title: "Практическое руководство. Перечисление форматов данных в объекте данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "форматы данных [WPF], список"
-  - "DataFormats - класс [WPF]"
-  - "перетаскивание [WPF], перечисление форматов данных"
+title: "Практическое руководство. Перечисление форматов данных в объекте данных"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- drag-and-drop [WPF], listing data formats
+- DataFormats class [WPF]
+- data formats [WPF], listing
 ms.assetid: 18e7ba4b-ccef-4815-ae2d-3a32891010c0
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ef5657aefdf1c229b4f1749881cce1148435a8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Практическое руководство. Перечисление форматов данных в объекте данных
-В следующем примере показано, как использовать перегрузки метода <xref:System.Windows.DataObject.GetFormats%2A> для получения массива строк, обозначающих каждый доступный в объекте данных формат данных.  
+# <a name="how-to-list-the-data-formats-in-a-data-object"></a><span data-ttu-id="2032d-102">Практическое руководство. Перечисление форматов данных в объекте данных</span><span class="sxs-lookup"><span data-stu-id="2032d-102">How to: List the Data Formats in a Data Object</span></span>
+<span data-ttu-id="2032d-103">В следующих примерах показано использование <xref:System.Windows.DataObject.GetFormats%2A> перегруженных версий метода для получения массива строк, обозначающих каждого формата данных, который доступен в объект данных.</span><span class="sxs-lookup"><span data-stu-id="2032d-103">The following examples show how to use the <xref:System.Windows.DataObject.GetFormats%2A> method overloads get an array of strings denoting each data format that is available in a data object.</span></span>  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="2032d-104">Пример</span><span class="sxs-lookup"><span data-stu-id="2032d-104">Example</span></span>  
   
-### Описание  
- В следующем примере кода перегрузка <xref:System.Windows.DataObject.GetFormats%2A> используется для получения массива строк, обозначающих все форматы данных, доступные в объекте данных \(как собственные, так и автоматически преобразуемые\).  
+### <a name="description"></a><span data-ttu-id="2032d-105">Описание</span><span class="sxs-lookup"><span data-stu-id="2032d-105">Description</span></span>  
+ <span data-ttu-id="2032d-106">В следующем примере кода используется <xref:System.Windows.DataObject.GetFormats%2A> перегрузку, чтобы получить массив строк, обозначающих все форматы данных, доступные в объекте данных (собственный и автоматически преобразуемые).</span><span class="sxs-lookup"><span data-stu-id="2032d-106">The following example code uses the <xref:System.Windows.DataObject.GetFormats%2A> overload to get an array of strings denoting all data formats available in a data object (both native and auto-convertible).</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="2032d-107">Код</span><span class="sxs-lookup"><span data-stu-id="2032d-107">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats)]  
   
-## Пример  
+## <a name="example"></a><span data-ttu-id="2032d-108">Пример</span><span class="sxs-lookup"><span data-stu-id="2032d-108">Example</span></span>  
   
-### Описание  
- В следующем примере перегрузка <xref:System.Windows.DataObject.GetFormats%2A> используется для получения массива строк, обозначающих только форматы данных, доступные в объекте данных \(фильтруются автоматически преобразуемые форматы данных\).  
+### <a name="description"></a><span data-ttu-id="2032d-109">Описание</span><span class="sxs-lookup"><span data-stu-id="2032d-109">Description</span></span>  
+ <span data-ttu-id="2032d-110">В следующем примере кода используется <xref:System.Windows.DataObject.GetFormats%2A> перегрузку, чтобы получить массив строк, обозначающих только форматы данных, доступные в объекте данных (фильтруются форматы данных автоматически преобразуемые).</span><span class="sxs-lookup"><span data-stu-id="2032d-110">The following example code uses the <xref:System.Windows.DataObject.GetFormats%2A> overload to get an array of strings denoting only data formats available in a data object (auto-convertible data formats are filtered).</span></span>  
   
-### Код  
+### <a name="code"></a><span data-ttu-id="2032d-111">Код</span><span class="sxs-lookup"><span data-stu-id="2032d-111">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats_nativeonly)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats_nativeonly)]  
   
-## См. также  
- <xref:System.Windows.IDataObject>   
- [Общие сведения о перетаскивании](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2032d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="2032d-112">See Also</span></span>  
+ <xref:System.Windows.IDataObject>  
+ [<span data-ttu-id="2032d-113">Общие сведения о перетаскивании</span><span class="sxs-lookup"><span data-stu-id="2032d-113">Drag and Drop Overview</span></span>](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

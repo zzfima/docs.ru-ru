@@ -1,93 +1,95 @@
 ---
-title: "Построение образцов Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Построение примеров Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: efb45a09fd74d397ceb95fc7e1bad7a0a5f80309
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Построение образцов Windows Communication Foundation
-Образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] можно построить в среде Visual Studio 2010 или из командной строки с помощью команды **msbuild**.В этом разделе описаны обе эти процедуры.  
+# <a name="building-the-windows-communication-foundation-samples"></a><span data-ttu-id="7d86f-102">Построение примеров Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="7d86f-102">Building the Windows Communication Foundation Samples</span></span>
+<span data-ttu-id="7d86f-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Образцы, которые могут быть построены с использованием Visual Studio 2010 или **msbuild** команду из командной строки.</span><span class="sxs-lookup"><span data-stu-id="7d86f-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples can be built using Visual Studio 2010 or using the **msbuild** command from the command line.</span></span> <span data-ttu-id="7d86f-104">В этом разделе описаны обе эти процедуры.</span><span class="sxs-lookup"><span data-stu-id="7d86f-104">Both procedures are described in this topic.</span></span>  
   
 > [!NOTE]
->  Перед построением или выполнением любого из образцов [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] убедитесь, что выполнены указания раздела [Процедура однократной настройки образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  <span data-ttu-id="7d86f-105">До построения или выполнением [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] образцы, убедитесь, что выполнена [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="7d86f-105">Before building or running any of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples, ensure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-### Построение образца с помощью командной строки  
+### <a name="to-build-the-sample-using-a-command-prompt"></a><span data-ttu-id="7d86f-106">Сборка образца с использованием командной строки</span><span class="sxs-lookup"><span data-stu-id="7d86f-106">To build the sample using a command prompt</span></span>  
   
-1.  Откройте командную строку [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с правами администратора и перейдите в подкаталог языка в каталоге установки образца.  
+1.  <span data-ttu-id="7d86f-107">Откройте командную строку [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с правами администратора и перейдите в подкаталог языка в каталоге установки образца.</span><span class="sxs-lookup"><span data-stu-id="7d86f-107">Open the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt with administrator privileges and navigate to the language-specific subdirectory under the directory location where you installed the sample.</span></span>  
   
-2.  В командной строке введите `msbuild`.Файлы построения клиентской программы сохраняются в папке client\\bin, а файлы построения служебной программы — в папке service\\bin.Если служба размещена в службах IIS, то файлы служебной программы также копируются в каталог servicemodelsamples и его подкаталог \\bin.  
-  
-> [!NOTE]
->  Необходимо задать списки управления доступом для каталога %systemdrive%\\inetpub\\wwwroot, чтобы предоставить разрешения на изменение учетной записи, от имени которой выполняются операции.В противном случае некоторые события построения могут завершиться сбоем.Либо можно оставить списки управления доступом неизменными и запускать командную строку пакета SDK от имени администратора.  
-  
-### Построение образца с помощью Visual Studio  
-  
-1.  Если используется [!INCLUDE[wv](../../../../includes/wv-md.md)] или [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7, Windows Server 2008 R2 или [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], то необходимо запускать [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] с повышенными разрешениями.Для этого щелкните правой кнопкой мыши значок в меню "Пуск" и выберите команду **Запуск от имени администратора**.  
-  
-2.  В меню **Файл** в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] выберите команду **Открыть** и выберите вариант **Проект\/Решение**.Перейдите к языковому подкаталогу каталога, в котором установлен образец, и дважды щелкните значок файла SLN, чтобы открыть решение в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
-  
-3.  В меню **Построение** выберите команду **Перестроить решение**.Файлы построения клиентской программы сохраняются в папке client\\bin, а файлы построения служебной программы — в папке service\\bin.Если служба размещена в службах IIS, файлы служебной программы также копируются в каталог servicemodelsamples и его подкаталог \\bin.  
+2.  <span data-ttu-id="7d86f-108">Тип `msbuild` из командной строки.</span><span class="sxs-lookup"><span data-stu-id="7d86f-108">Type `msbuild` at the command line.</span></span> <span data-ttu-id="7d86f-109">Файлы построения клиентской программы сохраняются в папке client\bin, а файлы построения служебной программы - в папке service\bin.</span><span class="sxs-lookup"><span data-stu-id="7d86f-109">The client program files are built to client\bin and the service program files are built to service\bin.</span></span> <span data-ttu-id="7d86f-110">Если служба размещена в службах IIS, то файлы служебной программы также копируются в каталог servicemodelsamples и его подкаталог \bin.</span><span class="sxs-lookup"><span data-stu-id="7d86f-110">If the service is hosted by Internet Information Services (IIS), the service program files are also copied to the servicemodelsamples directory and its \bin subdirectory.</span></span>  
   
 > [!NOTE]
->  Необходимо задать списки управления доступом для каталога %systemdrive%\\inetpub\\wwwroot, чтобы предоставить разрешения на изменение учетной записи, от имени которой выполняются операции.В противном случае некоторые события построения могут завершиться сбоем.Либо можно оставить списки управления доступом неизменными и запускать командную строку SDK или Visual Studio от имени администратора.Некоторые операции Visual Studio \(например, прикрепление отладчика к рабочему процессу ASP.Net\) также требуют прав администратора.  
+>  <span data-ttu-id="7d86f-111">Необходимо задать списки управления доступом для каталога %systemdrive%\inetpub\wwwroot, чтобы предоставить разрешения на изменение учетной записи, от имени которой выполняются операции.</span><span class="sxs-lookup"><span data-stu-id="7d86f-111">You must set the ACLs on %systemdrive%\inetpub\wwwroot to grant modify permissions to the account under which you are running.</span></span> <span data-ttu-id="7d86f-112">В противном случае некоторые события построения могут завершиться сбоем.</span><span class="sxs-lookup"><span data-stu-id="7d86f-112">Otherwise some post build events fail.</span></span> <span data-ttu-id="7d86f-113">Либо можно оставить списки управления доступом неизменными и запускать командную строку пакета SDK от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="7d86f-113">Alternatively, you can leave the ACLs as they are and run the SDK command prompt as administrator.</span></span>  
   
-## Пакетные файлы и скрипты установки  
- Пакетные файлы и скрипты Setup.exe и Cleanup.exe должны запускаться из командной строки Visual Studio.Некоторые файлы установки и очистки выполняют задачи, требующие прав администратора, и должны запускаться с этими правами.  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="7d86f-114">Сборка образца с использованием Visual Studio</span><span class="sxs-lookup"><span data-stu-id="7d86f-114">To build the sample using Visual Studio</span></span>  
   
-## Важные сведения по безопасности конечных точек метаданных  
- Чтобы предотвратить непреднамеренное разглашение потенциально важных метаданных службы, в конфигурации служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] публикация метаданных по умолчанию отключена.Такое поведение по умолчанию безопасно, но также оно означает, что использовать средства импорта метаданных \(например, Svcutil.exe\) для создания кода клиента, необходимого для вызова службы, невозможно, если поведение публикации не включено явно в конфигурации.Чтобы испытывать образец было проще, почти все образцы предоставляют незащищенную конечную точку публикации метаданных.Такие конечные точки являются потенциально доступными для анонимных не прошедших проверку подлинности потребителей, поэтому перед развертыванием таких конечных точек следует соблюдать осторожность и убедиться, что публичное раскрытие метаданных службы уместно.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] о публикации метаданных службы см. в образце [Поведение публикации метаданных](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md).См. образец [Пользовательская конечная точка защищенных метаданных](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) в качестве образца, который защищает конечную точку метаданных.  
+1.  <span data-ttu-id="7d86f-115">Если используется [!INCLUDE[wv](../../../../includes/wv-md.md)] или [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7, Windows Server 2008 R2 или [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], то необходимо запускать [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] с повышенными разрешениями.</span><span class="sxs-lookup"><span data-stu-id="7d86f-115">If you are using [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7, or Windows Server 2008 R2, and running [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you must run [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] with elevated permission.</span></span> <span data-ttu-id="7d86f-116">Чтобы сделать это, щелкните правой кнопкой мыши значок в меню «Пуск» и нажмите кнопку **Запуск от имени администратора**.</span><span class="sxs-lookup"><span data-stu-id="7d86f-116">To do so, right-click the icon on the Start menu and then click **Run as administrator**.</span></span>  
   
-## Обработка исключений  
- В общем случае эти образцы не включают в себя обработку исключений. Это сделано для того, чтобы сосредоточить внимание на теме образца.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] об обработке исключений см. в образце [Ожидаемые исключения](../../../../docs/framework/wcf/samples/expected-exceptions.md).  
+2.  <span data-ttu-id="7d86f-117">Из **файл** меню в [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], нажмите кнопку **откройте**, нажмите кнопку **проект или решение**.</span><span class="sxs-lookup"><span data-stu-id="7d86f-117">From the **File** menu in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], click **Open**, then click **Project/Solution**.</span></span> <span data-ttu-id="7d86f-118">Перейдите к языковому подкаталогу каталога, в котором установлен образец, и дважды щелкните значок файла SLN, чтобы открыть решение в [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7d86f-118">Navigate to the language-specific subdirectory under the directory in which you installed the sample, and double-click the .sln file icon to open the solution in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
-## Восстановление клиентов и конфигурации с помощью средства Svcutil  
- С помощью средства [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) можно восстанавливать код и конфигурацию клиента для большинства образцов.Некоторые образцах требуют редактирования конфигурации вручную.Например, если средство Svcutil.exe используется для восстановления конфигурации образца, использующего учетные данные сертификата клиента, необходимо вручную указать ранее заданные учетные данные.В некоторых образцах используются особые параметры средства Svcutil.exe, влияющие на создаваемый код; эти параметры описаны в соответствующих разделах образце.  
+3.  <span data-ttu-id="7d86f-119">В **построения** последовательно выберите пункты **Перестроить решение**.</span><span class="sxs-lookup"><span data-stu-id="7d86f-119">In the **Build** menu, select **Rebuild Solution**.</span></span> <span data-ttu-id="7d86f-120">Файлы построения клиентской программы сохраняются в папке client\bin, а файлы построения служебной программы - в папке service\bin.</span><span class="sxs-lookup"><span data-stu-id="7d86f-120">The client program files are built to client\bin and the service program files are built to service\bin.</span></span> <span data-ttu-id="7d86f-121">Если служба размещена в службах IIS, файлы служебной программы также копируются в каталог servicemodelsamples и его подкаталог \bin.</span><span class="sxs-lookup"><span data-stu-id="7d86f-121">If the service is hosted in IIS, the service program files are also copied to the servicemodelsamples directory and its \bin subdirectory.</span></span>  
   
-#### Восстановление клиента и файлов конфигурации  
+> [!NOTE]
+>  <span data-ttu-id="7d86f-122">Необходимо задать списки управления доступом для каталога %systemdrive%\inetpub\wwwroot, чтобы предоставить разрешения на изменение учетной записи, от имени которой выполняются операции.</span><span class="sxs-lookup"><span data-stu-id="7d86f-122">You must set the ACLs on %systemdrive%\inetpub\wwwroot to grant modify permissions to the account under which you are running.</span></span> <span data-ttu-id="7d86f-123">В противном случае некоторые события построения могут завершиться сбоем.</span><span class="sxs-lookup"><span data-stu-id="7d86f-123">Otherwise some post build events fail.</span></span> <span data-ttu-id="7d86f-124">Либо можно оставить списки управления доступом неизменными и запускать командную строку SDK или Visual Studio от имени администратора.</span><span class="sxs-lookup"><span data-stu-id="7d86f-124">Alternatively, you can leave the ACLs as they are and run the SDK command prompt or Visual Studio as administrator.</span></span> <span data-ttu-id="7d86f-125">Некоторые операции Visual Studio (например, прикрепление отладчика к рабочему процессу ASP.Net) также требуют прав администратора.</span><span class="sxs-lookup"><span data-stu-id="7d86f-125">Some Visual Studio actions (such as attaching a debugger to the ASP.Net worker process) also require administrative privileges.</span></span>  
   
-1.  Откройте окно командной строки SDK и перейдите к языковому подкаталогу в каталоге, где установлен образец.  
+## <a name="setup-batch-files-and-scripts"></a><span data-ttu-id="7d86f-126">Пакетные файлы и скрипты установки</span><span class="sxs-lookup"><span data-stu-id="7d86f-126">Setup Batch Files and Scripts</span></span>  
+ <span data-ttu-id="7d86f-127">Пакетные файлы и скрипты Setup.exe и Cleanup.exe должны запускаться из командной строки Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="7d86f-127">Setup.exe and Cleanup.exe batch files and scripts should be run from a Visual Studio command prompt.</span></span> <span data-ttu-id="7d86f-128">Некоторые файлы установки и очистки выполняют задачи, требующие прав администратора, и должны запускаться с этими правами.</span><span class="sxs-lookup"><span data-stu-id="7d86f-128">Several set up and clean up files perform tasks that require administrative privileges and should be launched with administrator privileges.</span></span>  
   
-2.  Если служба размещается на веб\-сервере, воспользуйтесь следующей командой.  
+## <a name="important-security-information-about-metadata-endpoints"></a><span data-ttu-id="7d86f-129">Важные сведения по безопасности конечных точек метаданных</span><span class="sxs-lookup"><span data-stu-id="7d86f-129">Important Security Information about Metadata Endpoints</span></span>  
+ <span data-ttu-id="7d86f-130">Чтобы предотвратить непреднамеренное разглашение потенциально важных метаданных службы, в конфигурации служб [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] публикация метаданных по умолчанию отключена.</span><span class="sxs-lookup"><span data-stu-id="7d86f-130">To prevent unintentional disclosure of potentially sensitive service metadata, the default configuration for [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services disables metadata publishing.</span></span> <span data-ttu-id="7d86f-131">Такое расширение функциональности по умолчанию защищено, но это также означает, что при этом невозможно использовать средство импорта метаданных (например, Svcutil.exe) для создания клиентского кода, необходимого для вызова службы, если поведение публикации не включено явно в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="7d86f-131">This behavior is secure by default, but also means that you cannot use a metadata import tool (such as Svcutil.exe) to generate the client code required to call the service unless the service’s metadata publishing behavior is explicitly enabled in configuration.</span></span> <span data-ttu-id="7d86f-132">Чтобы испытывать образец было проще, почти все образцы предоставляют незащищенную конечную точку публикации метаданных.</span><span class="sxs-lookup"><span data-stu-id="7d86f-132">To make experimenting with the samples easier, almost all samples expose an unsecured metadata publishing endpoint.</span></span> <span data-ttu-id="7d86f-133">Такие конечные точки являются потенциально доступными для анонимных не прошедших проверку подлинности потребителей, поэтому перед развертыванием таких конечных точек следует соблюдать осторожность и убедиться, что публичное раскрытие метаданных службы уместно.</span><span class="sxs-lookup"><span data-stu-id="7d86f-133">Such endpoints are potentially available to anonymous unauthenticated consumers and care must be taken before deploying such endpoints to ensure that publicly disclosing a service’s metadata is appropriate.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="7d86f-134">Публикация метаданных службы. в разделе [поведения публикации метаданных](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) образца.</span><span class="sxs-lookup"><span data-stu-id="7d86f-134"> publishing service metadata, see the [Metadata Publishing Behavior](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) sample.</span></span> <span data-ttu-id="7d86f-135">В разделе [конечной точки метаданных защиты пользовательских](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) примера образец защиты конечной точки метаданных.</span><span class="sxs-lookup"><span data-stu-id="7d86f-135">See the [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample for a sample securing a metadata endpoint.</span></span>  
+  
+## <a name="exception-handling"></a><span data-ttu-id="7d86f-136">Обработка исключений</span><span class="sxs-lookup"><span data-stu-id="7d86f-136">Exception Handling</span></span>  
+ <span data-ttu-id="7d86f-137">В целом эти образцы не включают обработку исключений для того, чтобы код был сконцентрирован на теме образца.</span><span class="sxs-lookup"><span data-stu-id="7d86f-137">Generally speaking these samples do not include exception handling to keep the code focused on the subject of the sample.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="7d86f-138">Обработка исключений, в разделе [ожидаемого исключения](../../../../docs/framework/wcf/samples/expected-exceptions.md) образца.</span><span class="sxs-lookup"><span data-stu-id="7d86f-138"> exception handling, see the [Expected Exceptions](../../../../docs/framework/wcf/samples/expected-exceptions.md) sample.</span></span>  
+  
+## <a name="regenerating-clients-and-configuration-with-svcutil"></a><span data-ttu-id="7d86f-139">Восстановление клиентов и конфигурации с помощью средства Svcutil</span><span class="sxs-lookup"><span data-stu-id="7d86f-139">Regenerating Clients and Configuration with Svcutil</span></span>  
+ <span data-ttu-id="7d86f-140">Можно использовать [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для повторного создания кода клиента и конфигурации для большинства образцов.</span><span class="sxs-lookup"><span data-stu-id="7d86f-140">You can use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to regenerate client code and configuration for most of the samples.</span></span> <span data-ttu-id="7d86f-141">Некоторые образцах требуют редактирования конфигурации вручную.</span><span class="sxs-lookup"><span data-stu-id="7d86f-141">Some samples require manually edited configuration.</span></span> <span data-ttu-id="7d86f-142">Например, если средство Svcutil.exe используется для восстановления конфигурации образца, использующего учетные данные сертификата клиента, необходимо вручную указать ранее заданные учетные данные.</span><span class="sxs-lookup"><span data-stu-id="7d86f-142">For example, if you use Svcutil.exe to regenerate the configuration for a sample that uses client certificate credentials, you must manually specify the credentials previously configured.</span></span> <span data-ttu-id="7d86f-143">В некоторых образцах используются особые параметры средства Svcutil.exe, влияющие на создаваемый код; эти параметры описаны в соответствующих разделах образце.</span><span class="sxs-lookup"><span data-stu-id="7d86f-143">Some samples use specific Svcutil.exe options to affect the generated code, these options are specified in the specific sample topics.</span></span>  
+  
+#### <a name="to-regenerate-the-client-and-configuration-files"></a><span data-ttu-id="7d86f-144">Восстановление клиента и файлов конфигурации</span><span class="sxs-lookup"><span data-stu-id="7d86f-144">To regenerate the client and configuration files</span></span>  
+  
+1.  <span data-ttu-id="7d86f-145">Откройте окно командной строки SDK и перейдите к языковому подкаталогу в каталоге, где установлен образец.</span><span class="sxs-lookup"><span data-stu-id="7d86f-145">Open an SDK command prompt and navigate to the language-specific subdirectory under the directory location where you installed the sample.</span></span>  
+  
+2.  <span data-ttu-id="7d86f-146">Если служба размещается на веб-сервере, воспользуйтесь следующей командой.</span><span class="sxs-lookup"><span data-stu-id="7d86f-146">If the service is a Web-hosted type, use the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Если служба размещается резидентно, воспользуйтесь следующей командой.  
+     <span data-ttu-id="7d86f-147">Если служба размещается резидентно, воспользуйтесь следующей командой.</span><span class="sxs-lookup"><span data-stu-id="7d86f-147">If the service is a self-hosted type the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
     ```  
   
-     Замените адрес http:\/\/localhost:8000\/ServiceModelSamples\/service.svc\/mex на адрес конечной точки mex размещенной резидентно службы.  
+     <span data-ttu-id="7d86f-148">Замените адрес http://localhost:8000/ServiceModelSamples/service.svc/mex на адрес конечной точки mex размещенной резидентно службы.</span><span class="sxs-lookup"><span data-stu-id="7d86f-148">Replace http://localhost:8000/ServiceModelSamples/service.svc/mex with the address of the self-hosted service's mex endpoint.</span></span>  
   
-     Чтобы создать клиент на языке Visual Basic, воспользуйтесь следующей командой.  
+     <span data-ttu-id="7d86f-149">Чтобы создать клиент на языке Visual Basic, воспользуйтесь следующей командой.</span><span class="sxs-lookup"><span data-stu-id="7d86f-149">To generate the client in a Visual Basic type, use the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb  
-  
     ```  
   
-     Если служба размещается резидентно, воспользуйтесь следующей командой.  
+     <span data-ttu-id="7d86f-150">Если служба размещается резидентно, воспользуйтесь следующей командой.</span><span class="sxs-lookup"><span data-stu-id="7d86f-150">If the service is a self-hosted type, use the following command.</span></span>  
   
     ```  
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost:8000/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb  
     ```  
   
     > [!NOTE]
-    >  Чтобы пропустить создание конфигурации клиента, добавьте параметр **\/noConfig**.  
+    >  <span data-ttu-id="7d86f-151">Чтобы пропустить создание конфигурации клиента добавьте **/noconfig** параметр.</span><span class="sxs-lookup"><span data-stu-id="7d86f-151">To skip the generation of client configuration add the **/noConfig** option.</span></span>  
   
-## См. также  
- [Выполнение примеров Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)   
- [Служебное средство ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a><span data-ttu-id="7d86f-152">См. также</span><span class="sxs-lookup"><span data-stu-id="7d86f-152">See Also</span></span>  
+ [<span data-ttu-id="7d86f-153">Выполнение образцов Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="7d86f-153">Running the Windows Communication Foundation Samples</span></span>](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [<span data-ttu-id="7d86f-154">Служебная программа для метаданных ServiceModel (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="7d86f-154">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -1,56 +1,54 @@
 ---
-title: "Тип данных Decimal (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Decimal"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "@ - знак типа идентификатора"
-  - "0 знаков, в конце"
-  - "знак типа литерала D"
-  - "типы данных [Visual Basic], назначение"
-  - "Decimal - тип данных"
-  - "decimal - ключевое слово"
-  - "десятичные знаки, Decimal - тип данных"
-  - "символы типа идентификатора, @"
-  - "символы типа литерала, D"
-  - "числа, действительные"
-  - "действительные числа"
-  - "знаки с 0 в конце"
-  - "нули в конце"
-  - "числа переменной точности"
-  - "нули, в конце"
+title: "Тип данных Decimal (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Decimal
+helpviewer_keywords:
+- literal type characters [Visual Basic], D
+- trailing zeros
+- real numbers
+- trailing 0 characters [Visual Basic]
+- Decimal data type
+- D literal type character [Visual Basic]
+- decimals, Decimal data type
+- 0 characters [Visual Basic], trailing
+- data types [Visual Basic], assigning
+- decimal keyword [Visual Basic]
+- numbers [Visual Basic], real
+- variable-precision numbers
+- zeros, trailing
+- '@ identifier type character'
+- identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Тип данных Decimal (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Содержит 128\-битовые \(16\-байтовые\) значения со знаком, представляющие 96\-битовые \(12\-байтовые\) целые числа, масштабируемые с переменной степенью 10.  Коэффициент масштабирования указывает число цифр справа от десятичной запятой; его диапазон составляет от 0 до 28.  При масштабе 0 \(без дробных разрядов\) самое крупное значение равно \+\/\-79,228,162,514,264,337,593,543,950,335 \(\+\/\-7.9228162514264337593543950335E\+28\).  С 28 десятичными знаками наибольшее значение равно \+\/\-7,9228162514264337593543950335, а наименьшее ненулевое значение \+\/\-0,0000000000000000000000000001 \(\+\/\-1E\-28\).  
+# <a name="decimal-data-type-visual-basic"></a><span data-ttu-id="8dab0-102">Тип данных Decimal (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8dab0-102">Decimal Data Type (Visual Basic)</span></span>
+<span data-ttu-id="8dab0-103">Содержит знаком 128-разрядное (16-байтные) значения, представляющие 96-разрядного (12-байтные) целые числа, масштабируемые с переменной степенью 10.</span><span class="sxs-lookup"><span data-stu-id="8dab0-103">Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10.</span></span> <span data-ttu-id="8dab0-104">Коэффициент масштабирования указывает число цифр справа от десятичного разделителя; она в диапазоне от 0 до 28.</span><span class="sxs-lookup"><span data-stu-id="8dab0-104">The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28.</span></span> <span data-ttu-id="8dab0-105">С масштабом 0 (без десятичных разрядов), наибольшее возможное значение — +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28).</span><span class="sxs-lookup"><span data-stu-id="8dab0-105">With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28).</span></span> <span data-ttu-id="8dab0-106">28 десятичных наибольшее значение равно +/-7,9228162514264337593543950335, а наименьшее ненулевое значение — +/-0,0000000000000000000000000001 (+/-1E-28).</span><span class="sxs-lookup"><span data-stu-id="8dab0-106">With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).</span></span>  
   
-## Заметки  
- Тип данных `Decimal` обеспечивает наибольшее количество значащих цифр числа.  Он поддерживает до 29 значащих цифр и может представлять значения, превышающие 7.9228 x 10^28.  Это особенно подходит для вычислений, например финансовых, которые требуют большое количество цифр, но не могут допускать ошибки округления.  
+## <a name="remarks"></a><span data-ttu-id="8dab0-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="8dab0-107">Remarks</span></span>  
+ <span data-ttu-id="8dab0-108">`Decimal` Тип данных обеспечивает наибольшее количество значащих цифр для ряда.</span><span class="sxs-lookup"><span data-stu-id="8dab0-108">The `Decimal` data type provides the greatest number of significant digits for a number.</span></span> <span data-ttu-id="8dab0-109">Он поддерживает до 29 значащих цифр и может представлять значения, превышающие 7,9 228 x 10 ^ 28.</span><span class="sxs-lookup"><span data-stu-id="8dab0-109">It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28.</span></span> <span data-ttu-id="8dab0-110">Он особенно удобен для вычислений, таких как финансовые, которые требуется большое количество цифр, но не допускает ошибки округления.</span><span class="sxs-lookup"><span data-stu-id="8dab0-110">It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.</span></span>  
   
- Значение по умолчанию для типа `Decimal` равно 0.  
+ <span data-ttu-id="8dab0-111">Значение по умолчанию для типа `Decimal` — 0.</span><span class="sxs-lookup"><span data-stu-id="8dab0-111">The default value of `Decimal` is 0.</span></span>  
   
-## Советы по программированию  
+## <a name="programming-tips"></a><span data-ttu-id="8dab0-112">Советы по программированию</span><span class="sxs-lookup"><span data-stu-id="8dab0-112">Programming Tips</span></span>  
   
--   **Точность**. `Decimal` не является типом с плавающей запятой.  Структура `Decimal` содержит целое двоичное значение вместе с битом знака и целочисленным коэффициентом масштабирования, который указывает, какая часть значения представляет дробную часть.  Таким образом, числа в формате `Decimal` имеют более точное представление в памяти, чем типы с плавающей запятой \(`Single` и `Double`\).  
+-   <span data-ttu-id="8dab0-113">**Точность.**</span><span class="sxs-lookup"><span data-stu-id="8dab0-113">**Precision.**</span></span> <span data-ttu-id="8dab0-114">`Decimal`не является типом данных с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="8dab0-114">`Decimal` is not a floating-point data type.</span></span> <span data-ttu-id="8dab0-115">`Decimal` Структура содержит значение двоичное целое число, а также бит знака и целое число, указывающее, какая часть значения является десятичной дробью коэффициент масштабирования.</span><span class="sxs-lookup"><span data-stu-id="8dab0-115">The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction.</span></span> <span data-ttu-id="8dab0-116">По этой причине `Decimal` номера имеют более точное представление в памяти, чем типы с плавающей запятой (`Single` и `Double`).</span><span class="sxs-lookup"><span data-stu-id="8dab0-116">Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).</span></span>  
   
--   **Производительность**. Тип данных `Decimal` является самым медленным из всех числовых типов.  Перед выбором типа данных следует сравнить важность точности с производительностью.  
+-   <span data-ttu-id="8dab0-117">**Производительность.**</span><span class="sxs-lookup"><span data-stu-id="8dab0-117">**Performance.**</span></span> <span data-ttu-id="8dab0-118">`Decimal` Тип данных является самым медленным из всех числовых типов.</span><span class="sxs-lookup"><span data-stu-id="8dab0-118">The `Decimal` data type is the slowest of all the numeric types.</span></span> <span data-ttu-id="8dab0-119">Следует сравнить важность точности с производительностью перед выбором типа данных.</span><span class="sxs-lookup"><span data-stu-id="8dab0-119">You should weigh the importance of precision against performance before choosing a data type.</span></span>  
   
--   **Расширение**. Тип данных `Decimal` можно расширить до `Single` или `Double`.  Это означает, что можно преобразовать тип `Decimal` к любому из этих типов без появления ошибки <xref:System.OverflowException?displayProperty=fullName>.  
+-   <span data-ttu-id="8dab0-120">**Расширяющие.**</span><span class="sxs-lookup"><span data-stu-id="8dab0-120">**Widening.**</span></span> <span data-ttu-id="8dab0-121">`Decimal` Тип данных может быть расширен до `Single` или `Double`.</span><span class="sxs-lookup"><span data-stu-id="8dab0-121">The `Decimal` data type widens to `Single` or `Double`.</span></span> <span data-ttu-id="8dab0-122">Это означает, что можно преобразовать `Decimal` какому-либо из этих типов без возникновения <xref:System.OverflowException?displayProperty=nameWithType> ошибки.</span><span class="sxs-lookup"><span data-stu-id="8dab0-122">This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.</span></span>  
   
--   **Нули в конце строки**. В Visual Basic конечные нули не сохраняются в литерале `Decimal`.  Однако в переменной типа `Decimal` сохраняются любые конечные нули, полученные в результате вычислений.  Это показано в приведенном ниже примере.  
+-   <span data-ttu-id="8dab0-123">**Замыкающие нули.**</span><span class="sxs-lookup"><span data-stu-id="8dab0-123">**Trailing Zeros.**</span></span> <span data-ttu-id="8dab0-124">Visual Basic не хранит конечные нули в `Decimal` литерала.</span><span class="sxs-lookup"><span data-stu-id="8dab0-124">Visual Basic does not store trailing zeros in a `Decimal` literal.</span></span> <span data-ttu-id="8dab0-125">Однако `Decimal` переменная сохраняет любые конечные нули, полученные в результате вычислений.</span><span class="sxs-lookup"><span data-stu-id="8dab0-125">However, a `Decimal` variable preserves any trailing zeros acquired computationally.</span></span> <span data-ttu-id="8dab0-126">Это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="8dab0-126">The following example illustrates this.</span></span>  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -62,16 +60,16 @@ caps.handback.revision: 20
           ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))  
     ```  
   
-     Результат, который отобразится в окне `MsgBox` в предыдущем примере, будет следующим:  
+     <span data-ttu-id="8dab0-127">Выходные данные `MsgBox` в предыдущем примере выглядит следующим образом:</span><span class="sxs-lookup"><span data-stu-id="8dab0-127">The output of `MsgBox` in the preceding example is as follows:</span></span>  
   
-     d1 \= 2.375, d2 \= 1.625, d3 \= 4.000, d4 \= 4  
+     <span data-ttu-id="8dab0-128">D1 = 2.375 d2 = 1.625 d3 = 4.000 d4 = 4</span><span class="sxs-lookup"><span data-stu-id="8dab0-128">d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4</span></span>  
   
--   **Символы типов**. При добавлении знака `D` типа литерала к литералу происходит приведение литерала к типу данных `Decimal`.  При добавлении знака `@` типа идентификатора к какому\-либо идентификатору происходит приведение идентификатора к типу `Decimal`.  
+-   <span data-ttu-id="8dab0-129">**Символы типов.**</span><span class="sxs-lookup"><span data-stu-id="8dab0-129">**Type Characters.**</span></span> <span data-ttu-id="8dab0-130">При добавлении к литералу символа типа литерала `D` производится принудительное приведение литерала к типу данных `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="8dab0-130">Appending the literal type character `D` to a literal forces it to the `Decimal` data type.</span></span> <span data-ttu-id="8dab0-131">При добавлении символа идентификатора типа `@` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="8dab0-131">Appending the identifier type character `@` to any identifier forces it to `Decimal`.</span></span>  
   
--   **Тип Framework.**. В .NET Framework данный тип соответствует структуре <xref:System.Decimal?displayProperty=fullName>.  
+-   <span data-ttu-id="8dab0-132">**Тип Framework.**</span><span class="sxs-lookup"><span data-stu-id="8dab0-132">**Framework Type.**</span></span> <span data-ttu-id="8dab0-133">В .NET Framework данный тип соответствует структуре <xref:System.Decimal?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8dab0-133">The corresponding type in the .NET Framework is the <xref:System.Decimal?displayProperty=nameWithType> structure.</span></span>  
   
-## Диапазон  
- Может потребоваться использовать символ типа \(`D`\) для присвоения большого значения переменной или константе типа `Decimal`.  Это требование поскольку компилятор интерпретирует как литерал `Long` если символ типа литерала не будет соответствовать литералом, как показано в следующем примере.  
+## <a name="range"></a><span data-ttu-id="8dab0-134">Диапазон</span><span class="sxs-lookup"><span data-stu-id="8dab0-134">Range</span></span>  
+ <span data-ttu-id="8dab0-135">Может потребоваться использовать `D` символ для назначения большого значения для типа `Decimal` переменная или константа.</span><span class="sxs-lookup"><span data-stu-id="8dab0-135">You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant.</span></span> <span data-ttu-id="8dab0-136">Это требование не так, как компилятор интерпретирует литерал как `Long` Если знак типа литерала следует литерал, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="8dab0-136">This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.</span></span>  
   
 ```  
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.  
@@ -79,19 +77,19 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.  
 ```  
   
- Объявление `bigDec1` не возникает переполнение, поскольку значение, присвоено к нему попадают в диапазон для `Long`.  Значение `Long` можно присвоить переменной `Decimal`.  
+ <span data-ttu-id="8dab0-137">Объявление для `bigDec1` не приводит к переполнению, так как значение, оно попадает в диапазон для `Long`.</span><span class="sxs-lookup"><span data-stu-id="8dab0-137">The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`.</span></span> <span data-ttu-id="8dab0-138">`Long` Значения могут быть назначены `Decimal` переменной.</span><span class="sxs-lookup"><span data-stu-id="8dab0-138">The `Long` value can be assigned to the `Decimal` variable.</span></span>  
   
- Объявление `bigDec2` формирует ошибку переполнения, поскольку значение, присвоено к ней слишком велико для `Long`.  Поскольку числовой литерал не может быть интерпретировано как `Long` сначала он не может быть присвоен переменной `Decimal`.  
+ <span data-ttu-id="8dab0-139">Объявление для `bigDec2` возникает ошибка переполнения, поскольку значение, присвоенное он слишком велик для `Long`.</span><span class="sxs-lookup"><span data-stu-id="8dab0-139">The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`.</span></span> <span data-ttu-id="8dab0-140">Поскольку сначала числовой литерал не может интерпретироваться как `Long`, он не может быть назначен `Decimal` переменной.</span><span class="sxs-lookup"><span data-stu-id="8dab0-140">Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.</span></span>  
   
- Для `bigDec3`, символ типа литерала `D` решает проблему путем реализации компилятора интерпретировать как `Decimal` литерал, а не как `Long`.  
+ <span data-ttu-id="8dab0-141">Для `bigDec3`, знак типа литерала `D` устранены заставив компилятор литерал как `Decimal` вместо как `Long`.</span><span class="sxs-lookup"><span data-stu-id="8dab0-141">For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.</span></span>  
   
-## См. также  
- <xref:System.Decimal?displayProperty=fullName>   
- <xref:System.Decimal.%23ctor%2A?displayProperty=fullName>   
- <xref:System.Math.Round%2A?displayProperty=fullName>   
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Тип данных Single](../../../visual-basic/language-reference/data-types/single-data-type.md)   
- [Тип данных Double](../../../visual-basic/language-reference/data-types/double-data-type.md)   
- [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Эффективное использование типов данных](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="8dab0-142">См. также</span><span class="sxs-lookup"><span data-stu-id="8dab0-142">See Also</span></span>  
+ <xref:System.Decimal?displayProperty=nameWithType>  
+ <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
+ <xref:System.Math.Round%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="8dab0-143">Типы данных</span><span class="sxs-lookup"><span data-stu-id="8dab0-143">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [<span data-ttu-id="8dab0-144">Тип данных Single</span><span class="sxs-lookup"><span data-stu-id="8dab0-144">Single Data Type</span></span>](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [<span data-ttu-id="8dab0-145">Тип данных Double</span><span class="sxs-lookup"><span data-stu-id="8dab0-145">Double Data Type</span></span>](../../../visual-basic/language-reference/data-types/double-data-type.md)  
+ [<span data-ttu-id="8dab0-146">Функции преобразования типов</span><span class="sxs-lookup"><span data-stu-id="8dab0-146">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="8dab0-147">Сводка по преобразованию</span><span class="sxs-lookup"><span data-stu-id="8dab0-147">Conversion Summary</span></span>](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [<span data-ttu-id="8dab0-148">Эффективное использование типов данных</span><span class="sxs-lookup"><span data-stu-id="8dab0-148">Efficient Use of Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

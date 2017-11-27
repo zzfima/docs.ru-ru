@@ -1,157 +1,163 @@
 ---
-title: "Отладка ошибок проверки подлинности Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, проверка подлинности"
-  - "WCF, проверка подлинности Windows"
+title: "Отладка ошибок проверки подлинности Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, authentication
+- WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f24dd1d597345f1aa8658073eef730832379b78c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Отладка ошибок проверки подлинности Windows
-При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI.Если на уровне SSPI происходят ошибки безопасности, они регистрируются на уровне [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.  
+# <a name="debugging-windows-authentication-errors"></a><span data-ttu-id="3d34a-102">Отладка ошибок проверки подлинности Windows</span><span class="sxs-lookup"><span data-stu-id="3d34a-102">Debugging Windows Authentication Errors</span></span>
+<span data-ttu-id="3d34a-103">При использовании в качестве механизма обеспечения безопасности проверки подлинности Windows процессы безопасности обрабатываются интерфейсом поставщика поддержки безопасности SSPI.</span><span class="sxs-lookup"><span data-stu-id="3d34a-103">When using Windows authentication as a security mechanism, the Security Support Provider Interface (SSPI) handles security processes.</span></span> <span data-ttu-id="3d34a-104">Если на уровне SSPI происходят ошибки безопасности, они регистрируются на уровне [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3d34a-104">When security errors occur at the SSPI layer, they are surfaced by [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="3d34a-105">В этом разделе описаны общие принципы и некоторые вопросы, помогающие диагностировать такие ошибки.</span><span class="sxs-lookup"><span data-stu-id="3d34a-105">This topic provides a framework and set of questions to help diagnose the errors.</span></span>  
   
- Общие сведения о протоколе Kerberos см. в статье [Kerberos Explained](http://go.microsoft.com/fwlink/?LinkID=86946) \(на английском языке\); общие сведения об интерфейсе SSPI см. в разделе [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941).  
+ <span data-ttu-id="3d34a-106">Общие сведения о протоколе Kerberos см. [пояснения для Kerberos](http://go.microsoft.com/fwlink/?LinkID=86946); Обзор SSPI, см. в разделе [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941).</span><span class="sxs-lookup"><span data-stu-id="3d34a-106">For an overview of the Kerberos protocol, see [Kerberos Explained](http://go.microsoft.com/fwlink/?LinkID=86946); for an overview of SSPI, see [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941).</span></span>  
   
- Для проверки подлинности Windows в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обычно используется поставщик SSP *Negotiate*, который выполняет взаимную проверку подлинности Kerberos между клиентом и службой.Если протокол Kerberos недоступен, по умолчанию в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется протокол NT LAN Manager \(NTLM\).Однако можно настроить среду [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] таким образом, чтобы использовался только протокол Kerberos, а если он недоступен, создавалось исключение.Кроме того, можно настроить среду [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на использование ограниченных форм протокола Kerberos.  
+ <span data-ttu-id="3d34a-107">Для проверки подлинности Windows [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] обычно использует *Negotiate* поставщика поддержки безопасности (SSP), который выполняет взаимную проверку подлинности Kerberos между клиентом и службой.</span><span class="sxs-lookup"><span data-stu-id="3d34a-107">For Windows authentication, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typically uses the *Negotiate* Security Support Provider (SSP), which performs Kerberos mutual authentication between the client and service.</span></span> <span data-ttu-id="3d34a-108">Если протокол Kerberos недоступен, по умолчанию в [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] используется протокол NT LAN Manager (NTLM).</span><span class="sxs-lookup"><span data-stu-id="3d34a-108">If the Kerberos protocol is not available, by default [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] falls back to NT LAN Manager (NTLM).</span></span> <span data-ttu-id="3d34a-109">Однако можно настроить среду [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] таким образом, чтобы использовался только протокол Kerberos, а если он недоступен, создавалось исключение.</span><span class="sxs-lookup"><span data-stu-id="3d34a-109">However, you can configure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to use only the Kerberos protocol (and to throw an exception if Kerberos is not available).</span></span> <span data-ttu-id="3d34a-110">Кроме того, можно настроить среду [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] на использование ограниченных форм протокола Kerberos.</span><span class="sxs-lookup"><span data-stu-id="3d34a-110">You can also configure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to use restricted forms of the Kerberos protocol.</span></span>  
   
-## Методология отладки  
- Базовый метод отладки состоит в следующем.  
+## <a name="debugging-methodology"></a><span data-ttu-id="3d34a-111">Методология отладки</span><span class="sxs-lookup"><span data-stu-id="3d34a-111">Debugging Methodology</span></span>  
+ <span data-ttu-id="3d34a-112">Базовый метод отладки состоит в следующем.</span><span class="sxs-lookup"><span data-stu-id="3d34a-112">The basic method is as follows:</span></span>  
   
-1.  Определите, используется ли проверка подлинности Windows.Если используется какая\-либо другая схема, этот раздел неприменим к такому сценарию.  
+1.  <span data-ttu-id="3d34a-113">Определите, используется ли проверка подлинности Windows.</span><span class="sxs-lookup"><span data-stu-id="3d34a-113">Determine whether you are using Windows authentication.</span></span> <span data-ttu-id="3d34a-114">Если используется какая-либо другая схема, этот раздел неприменим к такому сценарию.</span><span class="sxs-lookup"><span data-stu-id="3d34a-114">If you are using any other scheme, this topic does not apply.</span></span>  
   
-2.  Если используется проверка подлинности Windows, определите, используется ли в конфигурации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] протокол Kerberos в явном виде, или же используется поставщик Negotiate.  
+2.  <span data-ttu-id="3d34a-115">Если используется проверка подлинности Windows, определите, используется ли в конфигурации [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] протокол Kerberos в явном виде, или же используется поставщик Negotiate.</span><span class="sxs-lookup"><span data-stu-id="3d34a-115">If you are sure you are using Windows authentication, determine whether your [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration uses Kerberos direct or Negotiate.</span></span>  
   
-3.  После определения протокола, который используется в текущей конфигурации \(Kerberos или NTLM\), можно рассматривать сообщения об ошибках в правильном контексте.  
+3.  <span data-ttu-id="3d34a-116">После определения протокола, который используется в текущей конфигурации (Kerberos или NTLM), можно рассматривать сообщения об ошибках в правильном контексте.</span><span class="sxs-lookup"><span data-stu-id="3d34a-116">Once you have determined whether your configuration is using the Kerberos protocol or NTLM, you can understand error messages in the correct context.</span></span>  
   
-### Доступность протокола Kerberos и NTLM  
- Поставщику SSP Kerberos необходимо, чтоб контроллер домена выступал в роли центра распространения ключей Kerberos.Протокол Kerberos доступен только в том случае, если и клиент, и служба используют удостоверения домена.При других сочетаниях учетных записей используется протокол NTLM, что подтверждается следующей таблицей.  
+### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a><span data-ttu-id="3d34a-117">Доступность протокола Kerberos и NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-117">Availability of the Kerberos Protocol and NTLM</span></span>  
+ <span data-ttu-id="3d34a-118">Поставщику SSP Kerberos необходимо, чтоб контроллер домена выступал в роли центра распространения ключей Kerberos.</span><span class="sxs-lookup"><span data-stu-id="3d34a-118">The Kerberos SSP requires a domain controller to act as the Kerberos Key Distribution Center (KDC).</span></span> <span data-ttu-id="3d34a-119">Протокол Kerberos доступен только в том случае, если и клиент, и служба используют удостоверения домена.</span><span class="sxs-lookup"><span data-stu-id="3d34a-119">The Kerberos protocol is available only when both the client and service are using domain identities.</span></span> <span data-ttu-id="3d34a-120">При других сочетаниях учетных записей используется протокол NTLM, что подтверждается следующей таблицей.</span><span class="sxs-lookup"><span data-stu-id="3d34a-120">In other account combinations, NTLM is used, as summarized in the following table.</span></span>  
   
- В заголовке таблицы приведены возможные типы учетных записей, используемые сервером.В левом столбце приведены возможные типы учетных записей, используемые клиентом.  
+ <span data-ttu-id="3d34a-121">В заголовке таблицы приведены возможные типы учетных записей, используемые сервером.</span><span class="sxs-lookup"><span data-stu-id="3d34a-121">The table headers show possible account types used by the server.</span></span> <span data-ttu-id="3d34a-122">В левом столбце приведены возможные типы учетных записей, используемые клиентом.</span><span class="sxs-lookup"><span data-stu-id="3d34a-122">The left column shows possible account types used by the client.</span></span>  
   
-||Локальный пользователь|Локальная система|Пользователь домена|Компьютер домена|  
-|-|----------------------------|-----------------------|-------------------------|----------------------|  
-|Локальный пользователь|NTLM|NTLM|NTLM|NTLM|  
-|Локальная система|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|  
-|Пользователь домена|NTLM|NTLM|Kerberos|Kerberos|  
-|Компьютер домена|NTLM|NTLM|Kerberos|Kerberos|  
+||<span data-ttu-id="3d34a-123">Локальный пользователь</span><span class="sxs-lookup"><span data-stu-id="3d34a-123">Local User</span></span>|<span data-ttu-id="3d34a-124">Локальная система</span><span class="sxs-lookup"><span data-stu-id="3d34a-124">Local System</span></span>|<span data-ttu-id="3d34a-125">Пользователь домена</span><span class="sxs-lookup"><span data-stu-id="3d34a-125">Domain User</span></span>|<span data-ttu-id="3d34a-126">Компьютер домена</span><span class="sxs-lookup"><span data-stu-id="3d34a-126">Domain Machine</span></span>|  
+|-|----------------|------------------|-----------------|--------------------|  
+|<span data-ttu-id="3d34a-127">Локальный пользователь</span><span class="sxs-lookup"><span data-stu-id="3d34a-127">Local User</span></span>|<span data-ttu-id="3d34a-128">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-128">NTLM</span></span>|<span data-ttu-id="3d34a-129">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-129">NTLM</span></span>|<span data-ttu-id="3d34a-130">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-130">NTLM</span></span>|<span data-ttu-id="3d34a-131">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-131">NTLM</span></span>|  
+|<span data-ttu-id="3d34a-132">Локальная система</span><span class="sxs-lookup"><span data-stu-id="3d34a-132">Local System</span></span>|<span data-ttu-id="3d34a-133">Anonymous NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-133">Anonymous NTLM</span></span>|<span data-ttu-id="3d34a-134">Anonymous NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-134">Anonymous NTLM</span></span>|<span data-ttu-id="3d34a-135">Anonymous NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-135">Anonymous NTLM</span></span>|<span data-ttu-id="3d34a-136">Anonymous NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-136">Anonymous NTLM</span></span>|  
+|<span data-ttu-id="3d34a-137">Пользователь домена</span><span class="sxs-lookup"><span data-stu-id="3d34a-137">Domain User</span></span>|<span data-ttu-id="3d34a-138">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-138">NTLM</span></span>|<span data-ttu-id="3d34a-139">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-139">NTLM</span></span>|<span data-ttu-id="3d34a-140">Kerberos</span><span class="sxs-lookup"><span data-stu-id="3d34a-140">Kerberos</span></span>|<span data-ttu-id="3d34a-141">Kerberos</span><span class="sxs-lookup"><span data-stu-id="3d34a-141">Kerberos</span></span>|  
+|<span data-ttu-id="3d34a-142">Компьютер домена</span><span class="sxs-lookup"><span data-stu-id="3d34a-142">Domain Machine</span></span>|<span data-ttu-id="3d34a-143">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-143">NTLM</span></span>|<span data-ttu-id="3d34a-144">NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-144">NTLM</span></span>|<span data-ttu-id="3d34a-145">Kerberos</span><span class="sxs-lookup"><span data-stu-id="3d34a-145">Kerberos</span></span>|<span data-ttu-id="3d34a-146">Kerberos</span><span class="sxs-lookup"><span data-stu-id="3d34a-146">Kerberos</span></span>|  
   
- Здесь четыре типа учетных записей включают:  
+ <span data-ttu-id="3d34a-147">Здесь четыре типа учетных записей включают:</span><span class="sxs-lookup"><span data-stu-id="3d34a-147">Specifically, the four account types include:</span></span>  
   
--   локальный пользователь: профиль пользователя, относящийся только к конкретному компьютеру.Пример: `MachineName\Administrator` или `MachineName\ProfileName`;  
+-   <span data-ttu-id="3d34a-148">локальный пользователь: профиль пользователя, относящийся только к конкретному компьютеру.</span><span class="sxs-lookup"><span data-stu-id="3d34a-148">Local User: Machine-only user profile.</span></span> <span data-ttu-id="3d34a-149">Пример: `MachineName\Administrator` или `MachineName\ProfileName`.</span><span class="sxs-lookup"><span data-stu-id="3d34a-149">For example: `MachineName\Administrator` or `MachineName\ProfileName`.</span></span>  
   
--   локальная система: встроенная учетная запись SYSTEM на входящем в состав домена компьютере;  
+-   <span data-ttu-id="3d34a-150">локальная система: встроенная учетная запись SYSTEM на входящем в состав домена компьютере;</span><span class="sxs-lookup"><span data-stu-id="3d34a-150">Local System: The built-in account SYSTEM on a machine that is not joined to a domain.</span></span>  
   
--   пользователь домена: учетная запись пользователя в домене Windows.Пример: `DomainName\ProfileName`.  
+-   <span data-ttu-id="3d34a-151">пользователь домена: учетная запись пользователя в домене Windows.</span><span class="sxs-lookup"><span data-stu-id="3d34a-151">Domain User: A user account on a Windows domain.</span></span> <span data-ttu-id="3d34a-152">Например, `DomainName\ProfileName`.</span><span class="sxs-lookup"><span data-stu-id="3d34a-152">For example: `DomainName\ProfileName`.</span></span>  
   
--   компьютер домена: процесс с удостоверением компьютера, выполняющийся на компьютере, который входит в состав домена Windows.Пример: `MachineName\Network Service`.  
+-   <span data-ttu-id="3d34a-153">компьютер домена: процесс с удостоверением компьютера, выполняющийся на компьютере, который входит в состав домена Windows.</span><span class="sxs-lookup"><span data-stu-id="3d34a-153">Domain Machine: A process with machine identity running on a machine joined to a Windows domain.</span></span> <span data-ttu-id="3d34a-154">Например, `MachineName\Network Service`.</span><span class="sxs-lookup"><span data-stu-id="3d34a-154">For example: `MachineName\Network Service`.</span></span>  
   
 > [!NOTE]
->  Получение учетных данных службы происходит при вызове метода <xref:System.ServiceModel.ICommunicationObject.Open%2A> класса <xref:System.ServiceModel.ServiceHost>.Чтение учетных данных клиента происходит всякий раз, когда клиент отправляет сообщение.  
+>  <span data-ttu-id="3d34a-155">Получение учетных данных службы происходит при вызове метода <xref:System.ServiceModel.ICommunicationObject.Open%2A> класса <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="3d34a-155">The service credential is captured when the <xref:System.ServiceModel.ICommunicationObject.Open%2A> method of the <xref:System.ServiceModel.ServiceHost> class is called.</span></span> <span data-ttu-id="3d34a-156">Чтение учетных данных клиента происходит всякий раз, когда клиент отправляет сообщение.</span><span class="sxs-lookup"><span data-stu-id="3d34a-156">The client credential is read whenever the client sends a message.</span></span>  
   
-## Распространенные проблемы проверки подлинности Windows  
- В этом разделе описаны некоторые распространенные проблемы проверки подлинности Windows и возможные решения.  
+## <a name="common-windows-authentication-problems"></a><span data-ttu-id="3d34a-157">Распространенные проблемы проверки подлинности Windows</span><span class="sxs-lookup"><span data-stu-id="3d34a-157">Common Windows Authentication Problems</span></span>  
+ <span data-ttu-id="3d34a-158">В этом разделе описаны некоторые распространенные проблемы проверки подлинности Windows и возможные решения.</span><span class="sxs-lookup"><span data-stu-id="3d34a-158">This section discusses some common Windows authentication problems and possible remedies.</span></span>  
   
-### Протокол Kerberos  
+### <a name="kerberos-protocol"></a><span data-ttu-id="3d34a-159">Протокол Kerberos</span><span class="sxs-lookup"><span data-stu-id="3d34a-159">Kerberos Protocol</span></span>  
   
-#### Проблемы SPN\/UPN, возникающие при использовании протокола Kerberos  
- Если при проверке подлинности Windows используется протокол Kerberos, или он выбирается с помощью интерфейса SSPI, URL\-адрес, используемый конечной точкой клиента, должен включать полное доменное имя узла службы внутри URL\-адреса службы.При этом подразумевается, что у учетной записи, от имени которой выполняется служба, есть доступ к ключу имени участника службы \(SPN\) компьютера \(по умолчанию\), который был создан при добавлении компьютера в домен Active Directory, что чаще всего осуществляется путем запуска службы от имени учетной записи Network Service.Если у службы нет доступа к ключу SPN этого компьютера, необходимо предоставить правильный SPN или имя участника\-пользователя \(UPN\) учетной записи, под которой выполняется служба в удостоверении конечной точки клиента.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] принципах работы [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] с SPN и UPN см. в разделе [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+#### <a name="spnupn-problems-with-the-kerberos-protocol"></a><span data-ttu-id="3d34a-160">Проблемы SPN/UPN, возникающие при использовании протокола Kerberos</span><span class="sxs-lookup"><span data-stu-id="3d34a-160">SPN/UPN Problems with the Kerberos Protocol</span></span>  
+ <span data-ttu-id="3d34a-161">Если при проверке подлинности Windows используется протокол Kerberos, или он выбирается с помощью интерфейса SSPI, URL-адрес, используемый конечной точкой клиента, должен включать полное доменное имя узла службы внутри URL-адреса службы.</span><span class="sxs-lookup"><span data-stu-id="3d34a-161">When using Windows authentication, and the Kerberos protocol is used or negotiated by SSPI, the URL the client endpoint uses must include the fully qualified domain name of the service's host inside the service URL.</span></span> <span data-ttu-id="3d34a-162">Предполагается, что учетная запись, под которой выполняется служба имеет доступ к ключу службы имя участника (SPN) компьютера (по умолчанию), который создается при добавлении компьютера в домен Active Directory, что чаще всего осуществляется путем запуска службы в группе Учетная запись сетевой службы.</span><span class="sxs-lookup"><span data-stu-id="3d34a-162">This assumes that the account under which the service is running has access to the machine (default) service principal name (SPN) key that is created when the computer is added to the Active Directory domain, which is most commonly done by running the service under the Network Service account.</span></span> <span data-ttu-id="3d34a-163">Если у службы нет доступа к ключу имени участника-службы этого компьютера, необходимо предоставить правильное имя участника-службы или имя участника-пользователя (UPN) учетной записи, под которой выполняется служба в удостоверении конечной точки клиента.</span><span class="sxs-lookup"><span data-stu-id="3d34a-163">If the service does not have access to the machine SPN key, you must supply the correct SPN or user principal name (UPN) of the account under which the service is running in the client's endpoint identity.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3d34a-164">как [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] работает с имени участника-службы и имя участника-пользователя, в разделе [службы удостоверений и проверки подлинности](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span><span class="sxs-lookup"><span data-stu-id="3d34a-164"> how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] works with SPN and UPN, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).</span></span>  
   
- В сценариях с балансировкой нагрузки, например при использовании веб\-ферм или веб\-садов, распространена практика определения уникальной учетной записи для каждого из приложений, назначения этой учетной записи имени участника\-службы и контроль за тем, чтобы все службы приложения выполнялись от имени этой учетной записи.  
+ <span data-ttu-id="3d34a-165">В сценариях с балансировкой нагрузки, например при использовании веб-ферм или веб-садов, распространена практика определения уникальной учетной записи для каждого из приложений, назначения этой учетной записи имени участника-службы и контроль за тем, чтобы все службы приложения выполнялись от имени этой учетной записи.</span><span class="sxs-lookup"><span data-stu-id="3d34a-165">In load-balancing scenarios, such as Web farms or Web gardens, a common practice is to define a unique account for each application, assign an SPN to that account, and ensure that all of the application's services run in that account.</span></span>  
   
- Чтобы получить для учетной записи службы имя участника\-службы, нужны права администратора домена Active Directory.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Техническое дополнение Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkID=88330).  
+ <span data-ttu-id="3d34a-166">Чтобы получить для учетной записи службы имя участника-службы, нужны права администратора домена Active Directory.</span><span class="sxs-lookup"><span data-stu-id="3d34a-166">To obtain an SPN for your service's account, you need to be an Active Directory domain administrator.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="3d34a-167">[Дополнение технической Kerberos для Windows](http://go.microsoft.com/fwlink/?LinkID=88330).</span><span class="sxs-lookup"><span data-stu-id="3d34a-167"> [Kerberos Technical Supplement for Windows](http://go.microsoft.com/fwlink/?LinkID=88330).</span></span>  
   
-#### Для непосредственного применения протокола Kerberos необходимо, чтобы служба выполнялась от имени учетной записи компьютера домена  
- Такая ситуация возникает, когда свойство `ClientCredentialType` имеет значение `Windows`, а свойство <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> — `false`, как показано в следующем примере кода.  
+#### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a><span data-ttu-id="3d34a-168">Для непосредственного применения протокола Kerberos необходимо, чтобы служба выполнялась от имени учетной записи компьютера домена</span><span class="sxs-lookup"><span data-stu-id="3d34a-168">Kerberos Protocol Direct Requires the Service to Run Under a Domain Machine Account</span></span>  
+ <span data-ttu-id="3d34a-169">Такая ситуация возникает, когда свойство `ClientCredentialType` имеет значение `Windows`, а свойство <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> - `false`, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="3d34a-169">This occurs when the `ClientCredentialType` property is set to `Windows` and the <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> property is set to `false`, as shown in the following code.</span></span>  
   
  [!code-csharp[C_DebuggingWindowsAuth#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#1)]
  [!code-vb[C_DebuggingWindowsAuth#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#1)]  
   
- Чтобы решить эту проблему, запустите службу от имени учетной записи компьютера домена, например учетной записи Network Service, на компьютере, входящем в домен.  
+ <span data-ttu-id="3d34a-170">Чтобы решить эту проблему, запустите службу от имени учетной записи компьютера домена, например учетной записи Network Service, на компьютере, входящем в домен.</span><span class="sxs-lookup"><span data-stu-id="3d34a-170">To remedy, run the service using a Domain Machine account, such as Network Service, on a domain joined machine.</span></span>  
   
-### Для делегирования требуется согласование учетных данных  
- Для использования протокола проверки подлинности Kerberos с делегированием необходимо реализовать протокол Kerberos с согласованием учетных данных \(иногда называется многоступенчатой проверкой подлинности Kerberos\).Если проверка подлинности Kerberos реализована без согласования учетных данных \(иногда называется одноступенчатой проверкой подлинности Kerberos\), возникает исключение.  
+### <a name="delegation-requires-credential-negotiation"></a><span data-ttu-id="3d34a-171">Для делегирования требуется согласование учетных данных</span><span class="sxs-lookup"><span data-stu-id="3d34a-171">Delegation Requires Credential Negotiation</span></span>  
+ <span data-ttu-id="3d34a-172">Для использования протокола проверки подлинности Kerberos с делегированием необходимо реализовать протокол Kerberos с согласованием учетных данных (иногда называется многоступенчатой проверкой подлинности Kerberos).</span><span class="sxs-lookup"><span data-stu-id="3d34a-172">To use the Kerberos authentication protocol with delegation, you must implement the Kerberos protocol with credential negotiation (sometimes called "multi-leg" or "multi-step" Kerberos).</span></span> <span data-ttu-id="3d34a-173">Если проверка подлинности Kerberos реализована без согласования учетных данных (иногда называется одноступенчатой проверкой подлинности Kerberos), возникает исключение.</span><span class="sxs-lookup"><span data-stu-id="3d34a-173">If you implement Kerberos authentication without credential negotiation (sometimes called "one-shot" or "single-leg" Kerberos), an exception will be thrown.</span></span>  
   
- Чтобы реализовать протокол Kerberos с согласованием учетных данных, выполните следующие действия.  
+ <span data-ttu-id="3d34a-174">Чтобы реализовать протокол Kerberos с согласованием учетных данных, выполните следующие действия.</span><span class="sxs-lookup"><span data-stu-id="3d34a-174">To implement Kerberos with credential negotiation, do the following steps:</span></span>  
   
-1.  Реализуйте делегирование, присвоив свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> значение <xref:System.Security.Principal.TokenImpersonationLevel>.  
+1.  <span data-ttu-id="3d34a-175">Реализуйте делегирование, присвоив свойству <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> значение <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.</span><span class="sxs-lookup"><span data-stu-id="3d34a-175">Implement delegation by setting <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> to <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.</span></span>  
   
-2.  Потребуйте согласования SSPI:  
+2.  <span data-ttu-id="3d34a-176">Потребуйте согласования SSPI:</span><span class="sxs-lookup"><span data-stu-id="3d34a-176">Require SSPI negotiation:</span></span>  
   
-    1.  если используются стандартные привязки, установите свойство `NegotiateServiceCredential` равным `true`;  
+    1.  <span data-ttu-id="3d34a-177">если используются стандартные привязки, установите свойство `NegotiateServiceCredential` равным `true`;</span><span class="sxs-lookup"><span data-stu-id="3d34a-177">If you are using standard bindings, set the `NegotiateServiceCredential` property to `true`.</span></span>  
   
-    2.  если используются пользовательские привязки, установите атрибут `AuthenticationMode` элемента `Security` равным `SspiNegotiated`.  
+    2.  <span data-ttu-id="3d34a-178">если используются пользовательские привязки, установите атрибут `AuthenticationMode` элемента `Security` равным `SspiNegotiated`.</span><span class="sxs-lookup"><span data-stu-id="3d34a-178">If you are using custom bindings, set the `AuthenticationMode` attribute of the `Security` element to `SspiNegotiated`.</span></span>  
   
-3.  Потребуйте, чтобы при согласовании SSPI использовался протокол Kerberos, запретив использование NTLM:  
+3.  <span data-ttu-id="3d34a-179">Потребуйте, чтобы при согласовании SSPI использовался протокол Kerberos, запретив использование NTLM:</span><span class="sxs-lookup"><span data-stu-id="3d34a-179">Require the SSPI negotiation to use Kerberos by disallowing the use of NTLM:</span></span>  
   
-    1.  для этого в коде воспользуйтесь инструкцией: `ChannelFactory.Credentials.Windows.AllowNtlm = false`;  
+    1.  <span data-ttu-id="3d34a-180">для этого в коде воспользуйтесь инструкцией: `ChannelFactory.Credentials.Windows.AllowNtlm = false`;</span><span class="sxs-lookup"><span data-stu-id="3d34a-180">Do this in code, with the following statement: `ChannelFactory.Credentials.Windows.AllowNtlm = false`</span></span>  
   
-    2.  либо в файле конфигурации установите атрибут `allowNtlm` равным `false`.Этот атрибут содержится в элементе [\<окна\>](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2.  <span data-ttu-id="3d34a-181">либо в файле конфигурации установите атрибут `allowNtlm` равным `false`.</span><span class="sxs-lookup"><span data-stu-id="3d34a-181">Or you can do this in the configuration file by setting the `allowNtlm` attribute to `false`.</span></span> <span data-ttu-id="3d34a-182">Этот атрибут содержится в [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).</span><span class="sxs-lookup"><span data-stu-id="3d34a-182">This attribute is contained in the [\<windows>](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).</span></span>  
   
-### Протокол NTLM  
+### <a name="ntlm-protocol"></a><span data-ttu-id="3d34a-183">Протокол NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-183">NTLM Protocol</span></span>  
   
-#### В результате согласования SSP используется протокол NTLM, хотя протокол NTLM отключен  
- Свойство <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> имеет значение `false`, в результате чего [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создает исключение, если используется протокол NTLM.Обратите внимание, что задание для данного свойства значения `false` не предотвращает отправку учетных данных NTLM по сети.  
+#### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a><span data-ttu-id="3d34a-184">В результате согласования SSP используется протокол NTLM, хотя протокол NTLM отключен</span><span class="sxs-lookup"><span data-stu-id="3d34a-184">Negotiate SSP Falls Back to NTLM, but NTLM Is Disabled</span></span>  
+ <span data-ttu-id="3d34a-185">Свойство <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> имеет значение `false`, в результате чего [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] создает исключение, если используется протокол NTLM.</span><span class="sxs-lookup"><span data-stu-id="3d34a-185">The <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> property is set to `false`, which causes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to make a best-effort to throw an exception if NTLM is used.</span></span> <span data-ttu-id="3d34a-186">Обратите внимание, что установка для данного свойства значения `false` не предотвращает отправки учетных данных NTLM по сети.</span><span class="sxs-lookup"><span data-stu-id="3d34a-186">Note that setting this property to `false` may not prevent NTLM credentials from being sent over the wire.</span></span>  
   
- Ниже показано, как отключить переключение к протоколу NTLM.  
+ <span data-ttu-id="3d34a-187">Ниже показано, как отключить переключение к протоколу NTLM.</span><span class="sxs-lookup"><span data-stu-id="3d34a-187">The following shows how to disable fallback to NTLM.</span></span>  
   
  [!code-csharp[C_DebuggingWindowsAuth#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#4)]
  [!code-vb[C_DebuggingWindowsAuth#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#4)]  
   
-#### Сбой входа NTLM  
- Учетные данные клиента недействительны на стороне службы.Проверьте, что имя пользователя и пароль заданы правильно и соответствуют учетной записи, которая известна компьютеру, на котором выполняется служба.Протокол NTLM использует указанные учетные данные для входа на компьютер службы.Хотя эти учетные данные могут быть недействительными на компьютере клиента, сбой входа произойдет, если они будут недействительными на компьютере службы.  
+#### <a name="ntlm-logon-fails"></a><span data-ttu-id="3d34a-188">Сбой входа NTLM</span><span class="sxs-lookup"><span data-stu-id="3d34a-188">NTLM Logon Fails</span></span>  
+ <span data-ttu-id="3d34a-189">Учетные данные клиента недействительны на стороне службы.</span><span class="sxs-lookup"><span data-stu-id="3d34a-189">The client credentials are not valid on the service.</span></span> <span data-ttu-id="3d34a-190">Проверьте, что имя пользователя и пароль заданы правильно и соответствуют учетной записи, которая известна компьютеру, на котором выполняется служба.</span><span class="sxs-lookup"><span data-stu-id="3d34a-190">Check that the user name and password are correctly set and correspond to an account that is known to the computer where the service is running.</span></span> <span data-ttu-id="3d34a-191">Протокол NTLM использует указанные учетные данные для входа на компьютер службы.</span><span class="sxs-lookup"><span data-stu-id="3d34a-191">NTLM uses the specified credentials to log on to the service's computer.</span></span> <span data-ttu-id="3d34a-192">Хотя эти учетные данные могут быть недействительными на компьютере клиента, сбой входа произойдет, если они будут недействительными на компьютере службы.</span><span class="sxs-lookup"><span data-stu-id="3d34a-192">While the credentials may be valid on the computer where the client is running, this logon will fail if the credentials are not valid on the service's computer.</span></span>  
   
-#### Происходит анонимный вход NTLM, хотя по умолчанию анонимный вход отключен  
- При создании клиента свойство <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> устанавливается равным <xref:System.Security.Principal.TokenImpersonationLevel>, как показано в следующем примере кода, но по умолчанию сервер запрещает анонимный вход.Это происходит потому, что свойство <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> класса <xref:System.ServiceModel.Security.WindowsServiceCredential> по умолчанию имеет значение `false`.  
+#### <a name="anonymous-ntlm-logon-occurs-but-anonymous-logons-are-disabled-by-default"></a><span data-ttu-id="3d34a-193">Происходит анонимный вход NTLM, хотя по умолчанию анонимный вход отключен</span><span class="sxs-lookup"><span data-stu-id="3d34a-193">Anonymous NTLM Logon Occurs, but Anonymous Logons Are Disabled by Default</span></span>  
+ <span data-ttu-id="3d34a-194">При создании клиента свойство <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> устанавливается равным <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, как показано в следующем примере кода, но по умолчанию сервер запрещает анонимный вход.</span><span class="sxs-lookup"><span data-stu-id="3d34a-194">When creating a client, the <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> property is set to <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, as shown in the following example, but by default the server disallows anonymous logons.</span></span> <span data-ttu-id="3d34a-195">Это происходит потому, что свойство <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> класса <xref:System.ServiceModel.Security.WindowsServiceCredential> по умолчанию имеет значение `false`.</span><span class="sxs-lookup"><span data-stu-id="3d34a-195">This occurs because the default value of the <xref:System.ServiceModel.Security.WindowsServiceCredential.AllowAnonymousLogons%2A> property of the <xref:System.ServiceModel.Security.WindowsServiceCredential> class is `false`.</span></span>  
   
- Следующий код клиента пытается включить анонимный вход \(обратите внимание, что по умолчанию свойство имеет значение `Identification`\).  
+ <span data-ttu-id="3d34a-196">Следующий код клиента пытается включить анонимный вход (обратите внимание, что по умолчанию свойство имеет значение `Identification`).</span><span class="sxs-lookup"><span data-stu-id="3d34a-196">The following client code attempts to enable anonymous logons (note that the default property is `Identification`).</span></span>  
   
  [!code-csharp[C_DebuggingWindowsAuth#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#5)]
  [!code-vb[C_DebuggingWindowsAuth#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#5)]  
   
- Следующий код службы изменяет значение по умолчанию, чтобы разрешить анонимный вход сервера.  
+ <span data-ttu-id="3d34a-197">Следующий код службы изменяет значение по умолчанию, чтобы разрешить анонимный вход сервера.</span><span class="sxs-lookup"><span data-stu-id="3d34a-197">The following service code changes the default to enable anonymous logons by the server.</span></span>  
   
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] олицетворении см. в разделе [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3d34a-198">олицетворение, в разделе [делегирования и олицетворения](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="3d34a-198"> impersonation, see [Delegation and Impersonation](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
- Либо клиент может выполняться в качестве службы Windows от имени встроенной учетной записи SYSTEM.  
+ <span data-ttu-id="3d34a-199">Либо клиент может выполняться в качестве службы Windows от имени встроенной учетной записи SYSTEM.</span><span class="sxs-lookup"><span data-stu-id="3d34a-199">Alternatively, the client is running as a Windows service, using the built-in account SYSTEM.</span></span>  
   
-### Другие проблемы  
+### <a name="other-problems"></a><span data-ttu-id="3d34a-200">Другие проблемы</span><span class="sxs-lookup"><span data-stu-id="3d34a-200">Other Problems</span></span>  
   
-#### Учетные данные клиента заданы неверно  
- При проверке подлинности Windows используется экземпляр <xref:System.ServiceModel.Security.WindowsClientCredential>, возвращаемый свойством <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> класса <xref:System.ServiceModel.ClientBase%601>, а не экземпляр <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>.Ниже приведен пример с ошибкой.  
+#### <a name="client-credentials-are-not-set-correctly"></a><span data-ttu-id="3d34a-201">Учетные данные клиента заданы неверно</span><span class="sxs-lookup"><span data-stu-id="3d34a-201">Client Credentials Are Not Set Correctly</span></span>  
+ <span data-ttu-id="3d34a-202">При проверке подлинности Windows используется экземпляр <xref:System.ServiceModel.Security.WindowsClientCredential>, возвращаемый свойством <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> класса <xref:System.ServiceModel.ClientBase%601>, а не экземпляр <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>.</span><span class="sxs-lookup"><span data-stu-id="3d34a-202">Windows authentication uses the <xref:System.ServiceModel.Security.WindowsClientCredential> instance returned by the <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> property of the <xref:System.ServiceModel.ClientBase%601> class, not the <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>.</span></span> <span data-ttu-id="3d34a-203">Ниже приведен пример с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="3d34a-203">The following shows an incorrect example.</span></span>  
   
  [!code-csharp[C_DebuggingWindowsAuth#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#2)]
  [!code-vb[C_DebuggingWindowsAuth#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#2)]  
   
- Ниже приведен пример без ошибки.  
+ <span data-ttu-id="3d34a-204">Ниже приведен пример без ошибки.</span><span class="sxs-lookup"><span data-stu-id="3d34a-204">The following shows the correct example.</span></span>  
   
  [!code-csharp[C_DebuggingWindowsAuth#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#3)]
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
-#### Интерфейс SSPI недоступен  
- Следующие операционные системы не поддерживают проверку подлинности Windows, если они используются в качестве сервера: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition и выпуски [!INCLUDE[wv](../../../../includes/wv-md.md)] Home Еdition.  
+#### <a name="sspi-is-not-available"></a><span data-ttu-id="3d34a-205">Интерфейс SSPI недоступен</span><span class="sxs-lookup"><span data-stu-id="3d34a-205">SSPI Is Not Available</span></span>  
+ <span data-ttu-id="3d34a-206">Следующие операционные системы не поддерживают проверку подлинности Windows при использовании в качестве сервера: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition и [!INCLUDE[wv](../../../../includes/wv-md.md)]Home Еdition.</span><span class="sxs-lookup"><span data-stu-id="3d34a-206">The following operating systems do not support Windows authentication when used as a server: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, and [!INCLUDE[wv](../../../../includes/wv-md.md)]Home editions.</span></span>  
   
-#### Разработка и развертывание с использованием различных удостоверений  
- В случае разработки приложения на одном компьютере и его развертывания на другом компьютере с использованием для проверки подлинности на каждом из компьютеров учетных записей различных типов работа приложения может различаться.Предположим, приложение разрабатывается на компьютере под управлением Windows XP Professional Edition с использованием режима проверки подлинности `SSPI Negotiated`.Если для проверки подлинности используется учетная запись локального пользователя, будет использоваться протокол NTLM.После разработки приложения служба развертывается на компьютере под управлением Windows Server 2003, где она выполняется от имени учетной записи домена.В этом случае клиент не сможет пройти проверку подлинности на стороне службы, поскольку будут использоваться протокол Kerberos и контроллер домена.  
+#### <a name="developing-and-deploying-with-different-identities"></a><span data-ttu-id="3d34a-207">Разработка и развертывание с использованием различных удостоверений</span><span class="sxs-lookup"><span data-stu-id="3d34a-207">Developing and Deploying with Different Identities</span></span>  
+ <span data-ttu-id="3d34a-208">В случае разработки приложения на одном компьютере и его развертывания на другом компьютере с использованием для проверки подлинности на каждом из компьютеров учетных записей различных типов работа приложения может различаться.</span><span class="sxs-lookup"><span data-stu-id="3d34a-208">If you develop your application on one machine, and deploy on another, and use different account types to authenticate on each machine, you may experience different behavior.</span></span> <span data-ttu-id="3d34a-209">Предположим, приложение разрабатывается на компьютере под управлением Windows XP Professional Edition с использованием режима проверки подлинности `SSPI Negotiated`.</span><span class="sxs-lookup"><span data-stu-id="3d34a-209">For example, suppose you develop your application on a Windows XP Pro machine using the `SSPI Negotiated` authentication mode.</span></span> <span data-ttu-id="3d34a-210">Если для проверки подлинности используется учетная запись локального пользователя, будет использоваться протокол NTLM.</span><span class="sxs-lookup"><span data-stu-id="3d34a-210">If you use a local user account to authenticate with, then NTLM protocol will be used.</span></span> <span data-ttu-id="3d34a-211">После разработки приложения служба развертывается на компьютере под управлением Windows Server 2003, где она выполняется от имени учетной записи домена.</span><span class="sxs-lookup"><span data-stu-id="3d34a-211">Once the application is developed, you deploy the service to a Windows Server 2003 machine where it runs under a domain account.</span></span> <span data-ttu-id="3d34a-212">В этом случае клиент не сможет пройти проверку подлинности на стороне службы, поскольку будут использоваться протокол Kerberos и контроллер домена.</span><span class="sxs-lookup"><span data-stu-id="3d34a-212">At this point the client will not be able to authenticate the service because it will be using Kerberos and a domain controller.</span></span>  
   
-## См. также  
- <xref:System.ServiceModel.Security.WindowsClientCredential>   
- <xref:System.ServiceModel.Security.WindowsServiceCredential>   
- <xref:System.ServiceModel.Security.WindowsClientCredential>   
- <xref:System.ServiceModel.ClientBase%601>   
- [Делегирование и олицетворение](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)   
- [Неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a><span data-ttu-id="3d34a-213">См. также</span><span class="sxs-lookup"><span data-stu-id="3d34a-213">See Also</span></span>  
+ <xref:System.ServiceModel.Security.WindowsClientCredential>  
+ <xref:System.ServiceModel.Security.WindowsServiceCredential>  
+ <xref:System.ServiceModel.Security.WindowsClientCredential>  
+ <xref:System.ServiceModel.ClientBase%601>  
+ [<span data-ttu-id="3d34a-214">Делегирование и олицетворение</span><span class="sxs-lookup"><span data-stu-id="3d34a-214">Delegation and Impersonation</span></span>](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
+ [<span data-ttu-id="3d34a-215">Неподдерживаемые сценарии</span><span class="sxs-lookup"><span data-stu-id="3d34a-215">Unsupported Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

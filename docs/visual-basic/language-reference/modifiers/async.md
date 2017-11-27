@@ -1,52 +1,35 @@
 ---
-title: "Async (Visual Basic) | Документы Microsoft"
-ms.date: 2015-07-20
+title: Async (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Async
+f1_keywords: vb.Async
 helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa15daee8f3b6ddcc137356896a20cf82e0cc1d0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e11bb7eb29cefa627543e8ad0a9b061d5ad1e95c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="async-visual-basic"></a>Async (Visual Basic)
-`Async` Модификатор указывает, что метод или [лямбда-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) она изменяет является асинхронным. Такие методы называются *асинхронные методы*.  
+# <a name="async-visual-basic"></a><span data-ttu-id="2e87e-102">Async (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2e87e-102">Async (Visual Basic)</span></span>
+<span data-ttu-id="2e87e-103">`Async` Модификатор указывает, что метод или [лямбда-выражение](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) она изменяет является асинхронным.</span><span class="sxs-lookup"><span data-stu-id="2e87e-103">The `Async` modifier indicates that the method or [lambda expression](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) that it modifies is asynchronous.</span></span> <span data-ttu-id="2e87e-104">Такие методы называются *асинхронные методы*.</span><span class="sxs-lookup"><span data-stu-id="2e87e-104">Such methods are referred to as *async methods*.</span></span>  
   
- Асинхронный метод представляет собой удобный способ для выполнения работы, которая может занять длительное время, без блокировки потока вызывающего объекта. Вызывающий объект асинхронного метода может возобновить свою работу, не дожидаясь завершения асинхронного метода.  
+ <span data-ttu-id="2e87e-105">Асинхронный метод представляет собой удобный способ для выполнения работы, которая может занять длительное время, без блокировки потока вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="2e87e-105">An async method provides a convenient way to do potentially long-running work without blocking the caller's thread.</span></span> <span data-ttu-id="2e87e-106">Код, вызывающий асинхронный метод может возобновить работу без ожидания асинхронного метода завершения.</span><span class="sxs-lookup"><span data-stu-id="2e87e-106">The caller of an async method can resume its work without waiting for the async method to finish.</span></span>  
   
 > [!NOTE]
->  Ключевые слова `Async` и `Await` появились в Visual Studio 2012. Введение в асинхронном программировании см. в разделе [асинхронное программирование с использованием Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+>  <span data-ttu-id="2e87e-107">Ключевые слова `Async` и `Await` появились в Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="2e87e-107">The `Async` and `Await` keywords were introduced in Visual Studio 2012.</span></span> <span data-ttu-id="2e87e-108">Общие сведения об асинхронном программировании см. в разделе [асинхронное программирование с использованием ключевых слов Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="2e87e-108">For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
   
- В следующем примере показана структура асинхронного метода. По соглашению имена асинхронных методов заканчиваются «Async».  
+ <span data-ttu-id="2e87e-109">В следующем примере показана структура асинхронного метода.</span><span class="sxs-lookup"><span data-stu-id="2e87e-109">The following example shows the structure of an async method.</span></span> <span data-ttu-id="2e87e-110">По соглашению имена асинхронных методов заканчиваться «Async».</span><span class="sxs-lookup"><span data-stu-id="2e87e-110">By convention, async method names end in "Async."</span></span>  
   
 ```vb  
-  
 Public Async Function ExampleMethodAsync() As Task(Of Integer)  
     ' . . .  
   
@@ -64,24 +47,23 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Как правило, метод изменено `Async` ключевое слово содержит по крайней мере один [Await](../../../visual-basic/language-reference/modifiers/async.md) выражения или оператора. Метод выполняется синхронно, пока не будет достигнут первый `Await`, после чего он приостанавливает до завершения выполнения ожидаемой задачи. В то же время управление возвращается объекту, вызвавшему метод. Если метод не содержит `Await` выражения или оператора, метод не приостановлена и выполняется аналогично синхронный метод. Предупреждение компилятора оповещает о всех асинхронных методах, которые не содержат `Await` , поскольку такая ситуация может указывать на ошибку. Дополнительные сведения см. в разделе [ошибку компилятора](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ <span data-ttu-id="2e87e-111">Как правило, метод была изменена `Async` ключевое слово содержит по крайней мере один [Await](../../../visual-basic/language-reference/modifiers/async.md) выражения или оператора.</span><span class="sxs-lookup"><span data-stu-id="2e87e-111">Typically, a method modified by the `Async` keyword contains at least one [Await](../../../visual-basic/language-reference/modifiers/async.md) expression or statement.</span></span> <span data-ttu-id="2e87e-112">Метод выполняется синхронно, пока не будет достигнут первый `Await`, после чего она приостанавливается до завершения выполнения ожидающей задачи.</span><span class="sxs-lookup"><span data-stu-id="2e87e-112">The method runs synchronously until it reaches the first `Await`, at which point it suspends until the awaited task completes.</span></span> <span data-ttu-id="2e87e-113">В то же время управление возвращается коду, вызвавшему метод.</span><span class="sxs-lookup"><span data-stu-id="2e87e-113">In the meantime, control is returned to the caller of the method.</span></span> <span data-ttu-id="2e87e-114">Если метод не содержит `Await` выражения или оператора, метод не приостановлена и выполняется аналогично синхронному методу.</span><span class="sxs-lookup"><span data-stu-id="2e87e-114">If the method doesn’t contain an `Await` expression or statement, the method isn’t suspended and executes as a synchronous method does.</span></span> <span data-ttu-id="2e87e-115">Предупреждение компилятора оповещает о всех асинхронных методах, которые не содержат `Await` из-за этой ситуации может указывать на ошибку.</span><span class="sxs-lookup"><span data-stu-id="2e87e-115">A compiler warning alerts you to any async methods that don't contain `Await` because that situation might indicate an error.</span></span> <span data-ttu-id="2e87e-116">Дополнительные сведения см. в разделе [Ошибка компилятора](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).</span><span class="sxs-lookup"><span data-stu-id="2e87e-116">For more information, see the [compiler error](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).</span></span>  
   
- `Async` Ключевое слово — Незарезервированная ключевое слово. Это ключевое слово, когда оно изменяет метод или лямбда-выражение. В других контекстах он интерпретируется как идентификатор.  
+ <span data-ttu-id="2e87e-117">`Async` Ключевое слово — это незарезервированных ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="2e87e-117">The `Async` keyword is an unreserved keyword.</span></span> <span data-ttu-id="2e87e-118">Это ключевое слово, когда оно изменяет метод или лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="2e87e-118">It is a keyword when it modifies a method or a lambda expression.</span></span> <span data-ttu-id="2e87e-119">В других контекстах он интерпретируется как идентификатор.</span><span class="sxs-lookup"><span data-stu-id="2e87e-119">In all other contexts, it is interpreted as an identifier.</span></span>  
   
-## <a name="return-types"></a>Типы возвращаемых значений  
- Асинхронный метод является либо [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) процедура, или [функция](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) процедуру, которая имеет тип возвращаемого значения <xref:System.Threading.Tasks.Task>или <xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Метод не может объявить все [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) параметров.  
+## <a name="return-types"></a><span data-ttu-id="2e87e-120">Типы возвращаемых значений</span><span class="sxs-lookup"><span data-stu-id="2e87e-120">Return Types</span></span>  
+ <span data-ttu-id="2e87e-121">Асинхронный метод является либо [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) процедура, или [функция](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) процедуру, которая имеет тип возвращаемого значения <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="2e87e-121">An async method is either a [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedure, or a [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) procedure that has a return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="2e87e-122">Метод не может объявить все [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) параметров.</span><span class="sxs-lookup"><span data-stu-id="2e87e-122">The method cannot declare any [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parameters.</span></span>  
   
- Указать `Task(Of TResult)` для возвращаемого типа асинхронного метода при [возвращают](../../../visual-basic/language-reference/statements/return-statement.md) инструкция метода содержит операнд типа TResult. Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении. То есть вызов метода возвращает `Task`, но при `Task` завершена, любой `Await` инструкцию, которая ожидает `Task` не возвращающих результирующее значение.  
+ <span data-ttu-id="2e87e-123">Указать `Task(Of TResult)` для возвращаемого типа асинхронного метода Если [возвращают](../../../visual-basic/language-reference/statements/return-statement.md) метода имеет операндом типа TResult.</span><span class="sxs-lookup"><span data-stu-id="2e87e-123">You specify `Task(Of TResult)` for the return type of an async method if the [Return](../../../visual-basic/language-reference/statements/return-statement.md) statement of the method has an operand of type TResult.</span></span> <span data-ttu-id="2e87e-124">Класс `Task` используется при отсутствии содержательного значения, возвращаемого методом при его завершении.</span><span class="sxs-lookup"><span data-stu-id="2e87e-124">You use `Task` if no meaningful value is returned when the method is completed.</span></span> <span data-ttu-id="2e87e-125">То есть вызов метода возвращает `Task`, но при `Task` завершения любой `Await` инструкцию, которая ожидает `Task` не возвращающих результирующее значение.</span><span class="sxs-lookup"><span data-stu-id="2e87e-125">That is, a call to the method returns a `Task`, but when the `Task` is completed, any `Await` statement that's awaiting the `Task` doesn’t produce a result value.</span></span>  
   
- Подпрограммы Async используются главным образом для определения обработчика событий где `Sub` процедура является обязательным. Код, вызывающий подпрограмму async не может ожидать его и не могут перехватывать исключения, создаваемые методом исключения.  
+ <span data-ttu-id="2e87e-126">Асинхронные подпрограммы, используются в основном для определения обработчиков событий где `Sub` процедуры не требуется.</span><span class="sxs-lookup"><span data-stu-id="2e87e-126">Async subroutines are used primarily to define event handlers where a `Sub` procedure is required.</span></span> <span data-ttu-id="2e87e-127">Код, вызывающий асинхронный подпрограммы не может ожидать его и не могут перехватывать исключения, которые выдает этот метод.</span><span class="sxs-lookup"><span data-stu-id="2e87e-127">The caller of an async subroutine can't await it and can't catch exceptions that the method throws.</span></span>  
   
- Дополнительные сведения и примеры см. в разделе [Async возвращают типы](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ <span data-ttu-id="2e87e-128">Дополнительные сведения и примеры см. в разделе [Асинхронные типы возвращаемых значений](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="2e87e-128">For more information and examples, see [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
-## <a name="example"></a>Пример  
- В следующих примерах асинхронный обработчик событий, асинхронные лямбда-выражение и асинхронного метода. Полный пример, в котором используются эти элементы, в разделе [Пошаговое руководство: доступ к Интернету с помощью Async и Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Можно загрузить код пошагового руководства из [образцы кода разработчика](http://go.microsoft.com/fwlink/?LinkId=255191).  
+## <a name="example"></a><span data-ttu-id="2e87e-129">Пример</span><span class="sxs-lookup"><span data-stu-id="2e87e-129">Example</span></span>  
+ <span data-ttu-id="2e87e-130">В следующих примерах асинхронный обработчик событий, асинхронное лямбда-выражение и асинхронного метода.</span><span class="sxs-lookup"><span data-stu-id="2e87e-130">The following examples show an async event handler, an async lambda expression, and an async method.</span></span> <span data-ttu-id="2e87e-131">Полный пример, использующий этих элементов см. в разделе [Пошаговое руководство: доступ к веб-сайте, с помощью Async и Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span><span class="sxs-lookup"><span data-stu-id="2e87e-131">For a full example that uses these elements, see [Walkthrough: Accessing the Web by Using Async and Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="2e87e-132">Код пошагового руководства можно скачать в разделе [Примеры кода от разработчиков](http://go.microsoft.com/fwlink/?LinkId=255191).</span><span class="sxs-lookup"><span data-stu-id="2e87e-132">You can download the walkthrough code from [Developer Code Samples](http://go.microsoft.com/fwlink/?LinkId=255191).</span></span>  
   
 ```vb  
-  
 ' An event handler must be a Sub procedure.  
 Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.Click  
     textBox1.Clear()  
@@ -124,11 +106,10 @@ Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())
     ' Return the result as a byte array.  
     Return content.ToArray()  
 End Function  
-  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute></xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [Оператор await](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Асинхронное программирование с использованием Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a><span data-ttu-id="2e87e-133">См. также</span><span class="sxs-lookup"><span data-stu-id="2e87e-133">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [<span data-ttu-id="2e87e-134">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="2e87e-134">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [<span data-ttu-id="2e87e-135">Асинхронное программирование с использованием ключевых слов Async и Await</span><span class="sxs-lookup"><span data-stu-id="2e87e-135">Asynchronous Programming with Async and Await</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [<span data-ttu-id="2e87e-136">Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await</span><span class="sxs-lookup"><span data-stu-id="2e87e-136">Walkthrough: Accessing the Web by Using Async and Await</span></span>](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

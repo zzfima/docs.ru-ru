@@ -1,27 +1,31 @@
 ---
-title: "Создание действия DynamicActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Создание действия DynamicActivity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4a579606bd3ee9d3f11669d59c6e7c9767b6eaf4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Создание действия DynamicActivity
-В этом образце показываются два разных способа создания действия во время выполнения с помощью действия <xref:System.Activities.DynamicActivity>.  
+# <a name="dynamicactivity-creation"></a><span data-ttu-id="84377-102">Создание действия DynamicActivity</span><span class="sxs-lookup"><span data-stu-id="84377-102">DynamicActivity Creation</span></span>
+<span data-ttu-id="84377-103">В этом образце показываются два разных способа создания действия во время выполнения с помощью действия <xref:System.Activities.DynamicActivity>.</span><span class="sxs-lookup"><span data-stu-id="84377-103">This sample demonstrates two different ways to create an activity at runtime using the <xref:System.Activities.DynamicActivity> activity.</span></span>  
   
- В этом образце во время выполнения создается действие с текстом, содержащим действие <xref:System.Activities.Statements.Sequence>, которое содержит действия <xref:System.Activities.Statements.ForEach%601> и <xref:System.Activities.Statements.Assign%601>.Входной список целых чисел передается действию и задается в виде свойства.Затем действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его.Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке, после чего оно задается как среднее.  
+ <span data-ttu-id="84377-104">В этом образце во время выполнения создается действие с текстом, содержащим действие <xref:System.Activities.Statements.Sequence>, которое содержит действия <xref:System.Activities.Statements.ForEach%601> и <xref:System.Activities.Statements.Assign%601>.</span><span class="sxs-lookup"><span data-stu-id="84377-104">In this sample, an activity is created at runtime with a body that contains a <xref:System.Activities.Statements.Sequence> activity that contains <xref:System.Activities.Statements.ForEach%601> and <xref:System.Activities.Statements.Assign%601> activities.</span></span> <span data-ttu-id="84377-105">Входной список целых чисел передается действию и задается в виде свойства.</span><span class="sxs-lookup"><span data-stu-id="84377-105">An input list of integers is passed into the activity and set as a property.</span></span> <span data-ttu-id="84377-106">Затем действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его.</span><span class="sxs-lookup"><span data-stu-id="84377-106">The <xref:System.Activities.Statements.ForEach%601> activity then iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="84377-107">Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке, после чего оно задается как среднее.</span><span class="sxs-lookup"><span data-stu-id="84377-107">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assign it to the average.</span></span>  
   
- Образец демонстрирует использование действия <xref:System.Activities.DynamicActivity>, которое передает переменные в качестве входящих аргументов и возвращает значения в качестве выходных аргументов.Действие имеет один входной аргумент с именем `Numbers`, являющийся списком целых чисел.Действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его.Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке и задания полученного значения в качестве среднего.Среднее значение возвращается в виде выходного аргумент с именем `Average`.  
+ <span data-ttu-id="84377-108">Образец демонстрирует использование действия <xref:System.Activities.DynamicActivity>, которое передает переменные в качестве входящих аргументов и возвращает значения в качестве выходных аргументов.</span><span class="sxs-lookup"><span data-stu-id="84377-108">The sample demonstrates the usage of a <xref:System.Activities.DynamicActivity> activity that flows in variables as input arguments and returning values as output arguments.</span></span> <span data-ttu-id="84377-109">Действие имеет один входной аргумент с именем `Numbers`, являющийся списком целых чисел.</span><span class="sxs-lookup"><span data-stu-id="84377-109">The activity has one input argument named `Numbers` that is a list of integers.</span></span> <span data-ttu-id="84377-110">Действие <xref:System.Activities.Statements.ForEach%601> проходит по списку значений и аккумулирует его.</span><span class="sxs-lookup"><span data-stu-id="84377-110">The <xref:System.Activities.Statements.ForEach%601> activity iterates over the list of values and accumulates it.</span></span> <span data-ttu-id="84377-111">Среднее значение в действии <xref:System.Activities.Statements.Assign%601> вычисляется методом деления аккумулятора на количество элементов в списке и задания полученного значения в качестве среднего.</span><span class="sxs-lookup"><span data-stu-id="84377-111">In the <xref:System.Activities.Statements.Assign%601> activity, the average value is calculated by dividing the accumulator by the number of elements in the list and assigning it to the average.</span></span> <span data-ttu-id="84377-112">Среднее значение возвращается в виде выходного аргумент с именем `Average`.</span><span class="sxs-lookup"><span data-stu-id="84377-112">The average is returned as an output argument named `Average`.</span></span>  
   
- Если динамическое действие создается программным образом, входные и выходные значения объявляются так, как это показано в следующем примере кода.  
+ <span data-ttu-id="84377-113">Если динамическое действие создается программным образом, входные и выходные значения объявляются так, как это показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="84377-113">When the dynamic activity is created programmatically, the input and output are declared as shown in the following code example.</span></span>  
   
 ```csharp  
 DynamicActivity act = new DynamicActivity()  
@@ -45,10 +49,9 @@ DynamicActivity act = new DynamicActivity()
         }  
     },  
 };  
-  
 ```  
   
- В следующем примере кода показано полное определение `DynamicActivity`, вычисляющего среднее значение из значений в списке.  
+ <span data-ttu-id="84377-114">В следующем примере кода показано полное определение `DynamicActivity`, вычисляющего среднее значение из значений в списке.</span><span class="sxs-lookup"><span data-stu-id="84377-114">The following code example shows the complete definition of the `DynamicActivity` that computes the average of the values in a list.</span></span>  
   
 ```  
 DynamicActivity act = new DynamicActivity()  
@@ -102,9 +105,9 @@ DynamicActivity act = new DynamicActivity()
 };  
 ```  
   
- Созданные на языке XAML входное и выходное значения объявляются так, как это показано в следующем примере.  
+ <span data-ttu-id="84377-115">Созданные на языке XAML входное и выходное значения объявляются так, как это показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="84377-115">When created in XAML, the input and output are declared as shown in the following example.</span></span>  
   
-```  
+```xml  
 <Activity x:Class="Microsoft.Samples.DynamicActivityCreation.FindAverage"  
           xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
           xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -118,41 +121,39 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- XAML можно создать визуально с помощью [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].Если он включается в проект Visual Studio, то его параметру «Действие сборки» следует задать значение «Нет», чтобы не допустить его компиляции.Затем XAML можно загружать динамически с помощью следующего вызова.  
+ <span data-ttu-id="84377-116">XAML можно создать визуально с помощью [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="84377-116">The XAML can be created visually using the [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="84377-117">Если он включен в проект Visual Studio, не забудьте задать его «действие сборки» на «Нет» для предотвращения компилируемого.</span><span class="sxs-lookup"><span data-stu-id="84377-117">If it is included in a Visual Studio project, be sure to set its "Build Action" to "None" to prevent it from being compiled.</span></span> <span data-ttu-id="84377-118">Затем XAML можно загружать динамически с помощью следующего вызова.</span><span class="sxs-lookup"><span data-stu-id="84377-118">The XAML can then be loaded dynamically using the following call.</span></span>  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
-  
 ```  
   
- Экземпляр <xref:System.Activities.DynamicActivity>, созданный программным образом или методом загрузки рабочего процесса XAML, можно использовать так, как это показано в следующем примере кода.Следует заметить, что команда «act», передаваемая `WorkflowInvoker.Invoke`, — это команда «act» объекта <xref:System.Activities.Activity>, определенная в первом примере кода.  
+ <span data-ttu-id="84377-119">Экземпляр <xref:System.Activities.DynamicActivity>, созданный программным образом или методом загрузки рабочего процесса XAML, можно использовать так, как это показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="84377-119">The <xref:System.Activities.DynamicActivity> instance created programmatically or through loading a XAML workflow can be used as shown in the following code example.</span></span> <span data-ttu-id="84377-120">Обратите внимание, что «act», передаваемая `WorkflowInvoker.Invoke` это команда «act» <xref:System.Activities.Activity> определено в первом примере кода.</span><span class="sxs-lookup"><span data-stu-id="84377-120">Please note that "act" passed to the `WorkflowInvoker.Invoke` is the "act" <xref:System.Activities.Activity> defined in the first code example.</span></span>  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
   
 Console.WriteLine("The average calculated using the code activity is = " + results["Average"]);  
-  
 ```  
   
-#### Использование этого образца  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="84377-121">Использование этого образца</span><span class="sxs-lookup"><span data-stu-id="84377-121">To use this sample</span></span>  
   
-1.  Откройте файл решения DynamicActivityCreation.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="84377-122">Откройте файл решения DynamicActivityCreation.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="84377-122">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the DynamicActivityCreation.sln solution file.</span></span>  
   
-2.  Для построения решения нажмите CTRL\+SHIFT\+B.  
+2.  <span data-ttu-id="84377-123">Для построения решения нажмите CTRL+SHIFT+B.</span><span class="sxs-lookup"><span data-stu-id="84377-123">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Чтобы запустить решение, нажмите клавиши CTRL\+F5.  
+3.  <span data-ttu-id="84377-124">Чтобы запустить решение, нажмите клавиши CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="84377-124">To run the solution, press CTRL+F5.</span></span>  
   
-## Аргументы командной строки  
- Этот образец принимает аргументы командной строки.Пользователи могут предоставить действию список чисел для вычисления их среднего значения.Используемый список чисел передается как список чисел, разделенных пробелами.Например, чтобы вычислить среднее значение чисел 5, 10 и 32, образец следует вызвать с использованием следующей командной строки.  
+## <a name="command-line-arguments"></a><span data-ttu-id="84377-125">Аргументы командной строки</span><span class="sxs-lookup"><span data-stu-id="84377-125">Command line arguments</span></span>  
+ <span data-ttu-id="84377-126">Этот образец принимает аргументы командной строки.</span><span class="sxs-lookup"><span data-stu-id="84377-126">This sample accepts command line arguments.</span></span> <span data-ttu-id="84377-127">Пользователи могут предоставить действию список чисел для вычисления их среднего значения.</span><span class="sxs-lookup"><span data-stu-id="84377-127">Users can provide a list of numbers for the activity to calculate their average.</span></span> <span data-ttu-id="84377-128">Используемый список чисел передается как список чисел, разделенных пробелами.</span><span class="sxs-lookup"><span data-stu-id="84377-128">The list of numbers to be used is passed as a list of numbers separated by a space.</span></span> <span data-ttu-id="84377-129">Например, чтобы вычислить среднее значение чисел 5, 10 и 32, образец следует вызвать с использованием следующей командной строки.</span><span class="sxs-lookup"><span data-stu-id="84377-129">For example, to calculate the average of 5, 10, and 32 invoke the sample using the following command line.</span></span>  
   
- **DynamicActivityCreation 5 10 32**   
+ <span data-ttu-id="84377-130">**DynamicActivityCreation 5 10 32**</span><span class="sxs-lookup"><span data-stu-id="84377-130">**DynamicActivityCreation 5 10 32**</span></span>  
 > [!IMPORTANT]
->  Образцы уже могут быть установлены на компьютере.Перед продолжением проверьте следующий каталог \(по умолчанию\).  
+>  <span data-ttu-id="84377-131">Образцы уже могут быть установлены на компьютере.</span><span class="sxs-lookup"><span data-stu-id="84377-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="84377-132">Перед продолжением проверьте следующий каталог (по умолчанию).</span><span class="sxs-lookup"><span data-stu-id="84377-132">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на страницу [Образцы Windows Communication Foundation \(WCF\) и Windows Workflow Foundation \(WF\) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780), чтобы загрузить все образцы [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Этот образец расположен в следующем каталоге.  
+>  <span data-ttu-id="84377-133">Если этот каталог не существует, перейдите на страницу [Примеры Windows Communication Foundation (WCF) и Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) , чтобы скачать все примеры [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="84377-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="84377-134">Этот образец расположен в следующем каталоге.</span><span class="sxs-lookup"><span data-stu-id="84377-134">This sample is located in the following directory.</span></span>  
 >   
->  `<диск_установки>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
   
-## См. также
+## <a name="see-also"></a><span data-ttu-id="84377-135">См. также</span><span class="sxs-lookup"><span data-stu-id="84377-135">See Also</span></span>

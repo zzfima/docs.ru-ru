@@ -1,154 +1,154 @@
 ---
-title: "How to: Encrypt XML Elements with Asymmetric Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "cryptography [.NET Framework], asymmetric keys"
-  - "AES algorithm"
-  - "System.Security.Cryptography.RSACryptoServiceProvider class"
-  - "asymmetric keys [.NET Framework]"
-  - "System.Security.Cryptography.EncryptedXml class"
-  - "XML encryption"
-  - "key containers"
-  - "Advanced Encryption Standard algorithm"
-  - "Rijndael"
-  - "encryption [.NET Framework], asymmetric keys"
+title: "Практическое руководство. Шифрование XML-элементов с помощью асимметричного ключа"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cryptography [.NET Framework], asymmetric keys
+- AES algorithm
+- System.Security.Cryptography.RSACryptoServiceProvider class
+- asymmetric keys [.NET Framework]
+- System.Security.Cryptography.EncryptedXml class
+- XML encryption
+- key containers
+- Advanced Encryption Standard algorithm
+- Rijndael
+- encryption [.NET Framework], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: bd8b63ab02527f66d30251f21a63e19ce4da50ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Encrypt XML Elements with Asymmetric Keys
-Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML\-документа.  Шифрование XML\-данных является стандартным способом обмена зашифрованными XML\-данными и их хранения, позволяющим не беспокоиться о том, что эти данные могут быть прочитаны.  Дополнительные сведения о стандарте XML\-шифрования см. в соответствующей спецификации консорциума W3C, которая находится по адресу http:\/\/www.w3.org\/TR\/xmldsig\-core\/.  
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a><span data-ttu-id="70a93-102">Практическое руководство. Шифрование XML-элементов с помощью асимметричного ключа</span><span class="sxs-lookup"><span data-stu-id="70a93-102">How to: Encrypt XML Elements with Asymmetric Keys</span></span>
+<span data-ttu-id="70a93-103">Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.</span><span class="sxs-lookup"><span data-stu-id="70a93-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to encrypt an element within an XML document.</span></span>  <span data-ttu-id="70a93-104">Шифрование XML-данных — это стандартный способ обмена зашифрованными XML-данными и их хранения, позволяющий не беспокоиться о том, что эти данные могут быть прочитаны.</span><span class="sxs-lookup"><span data-stu-id="70a93-104">XML Encryption is a standard way to exchange or store encrypted XML data, without worrying about the data being easily read.</span></span>  <span data-ttu-id="70a93-105">Дополнительные сведения о стандарте XML-шифрования см. в соответствующей спецификации консорциума W3C, которая находится по адресу http://www.w3.org/TR/xmldsig-core/.</span><span class="sxs-lookup"><span data-stu-id="70a93-105">For more information about the XML Encryption standard, see the World Wide Web Consortium (W3C) specification for XML Encryption located at http://www.w3.org/TR/xmldsig-core/.</span></span>  
   
- При помощи шифрования XML\-данных можно заменить любой XML\-элемент или документ элементом \<`EncryptedData`\>, содержащим зашифрованные XML\-данные.  Элемент \<`EncryptedData`\> также может включать в себя вложенные элементы, содержащие сведения о ключах и процессах, использованных при шифровании.  Шифрование XML\-данных позволяет документу содержать несколько зашифрованных элементов, а также позволяет шифровать элемент несколько раз.  В примере кода в данной процедуре показано создание элемента \<`EncryptedData`\> наряду с несколькими вложенными элементами, которые можно использовать позже при расшифровке.  
+ <span data-ttu-id="70a93-106">При помощи шифрования XML-данных можно заменить любой XML-элемент или документ элементом <`EncryptedData`>, содержащим зашифрованные XML-данные.</span><span class="sxs-lookup"><span data-stu-id="70a93-106">You can use XML Encryption to replace any XML element or document with an <`EncryptedData`> element that contains the encrypted XML data.</span></span>  <span data-ttu-id="70a93-107">Элемент <`EncryptedData`> также может включать в себя вложенные элементы, содержащие сведения о ключах и процессах, использованных при шифровании.</span><span class="sxs-lookup"><span data-stu-id="70a93-107">The <`EncryptedData`> element can also contain sub elements that include information about the keys and processes used during encryption.</span></span>  <span data-ttu-id="70a93-108">Шифрование XML-данных позволяет документу содержать несколько зашифрованных элементов, а также позволяет шифровать элемент несколько раз.</span><span class="sxs-lookup"><span data-stu-id="70a93-108">XML Encryption allows a document to contain multiple encrypted elements and allows an element to be encrypted multiple times.</span></span>  <span data-ttu-id="70a93-109">В примере кода в данной процедуре показано создание элемента <`EncryptedData`> наряду с несколькими вложенными элементами, которые можно использовать позже при расшифровке.</span><span class="sxs-lookup"><span data-stu-id="70a93-109">The code example in this procedure shows how to create an <`EncryptedData`> element along with several other sub elements that you can use later during decryption.</span></span>  
   
- Этот пример выполняет шифрование XML\-элемента с использованием двух ключей.  Он создает пару из открытого и закрытого ключей RSA и сохраняет ее в безопасном контейнере ключей.  Затем пример создает отдельный сеансовый ключ при помощи алгоритма AES, также известного как алгоритм Rijndael.  Пример использует сеансовый ключ AES для шифрования XML\-документа,а затем использует открытый ключ RSA для шифрования сеансового ключа AES.  Наконец, пример сохраняет зашифрованный сеансовый ключ AES и зашифрованные XML\-данные в новом элементе \<`EncryptedData`\> XML\-документа.  
+ <span data-ttu-id="70a93-110">Этот пример выполняет шифрование XML-элемента с использованием двух ключей.</span><span class="sxs-lookup"><span data-stu-id="70a93-110">This example encrypts an XML element using two keys.</span></span>  <span data-ttu-id="70a93-111">Он создает пару из открытого и закрытого ключей RSA и сохраняет ее в безопасном контейнере ключей.</span><span class="sxs-lookup"><span data-stu-id="70a93-111">It generates an RSA public/private key pair and saves the key pair to a secure key container.</span></span>  <span data-ttu-id="70a93-112">Затем пример создает отдельный сеансовый ключ при помощи алгоритма AES, также известного как алгоритм Rijndael.</span><span class="sxs-lookup"><span data-stu-id="70a93-112">The example then creates a separate session key using the Advanced Encryption Standard (AES) algorithm, also called the Rijndael algorithm.</span></span>  <span data-ttu-id="70a93-113">Пример использует сеансовый ключ AES для шифрования XML-документа,а затем использует открытый ключ RSA для шифрования сеансового ключа AES.</span><span class="sxs-lookup"><span data-stu-id="70a93-113">The example uses the AES session key to encrypt the XML document and then uses the RSA public key to encrypt the AES session key.</span></span>  <span data-ttu-id="70a93-114">Наконец, пример сохраняет зашифрованный сеансовый ключ AES и зашифрованные XML-данные в новом элементе <`EncryptedData`> XML-документа.</span><span class="sxs-lookup"><span data-stu-id="70a93-114">Finally, the example saves the encrypted AES session key and the encrypted XML data to the XML document within a new <`EncryptedData`> element.</span></span>  
   
- Чтобы расшифровать XML\-элемент, необходимо извлечь из контейнера ключей закрытый ключ RSA, использовать его для расшифровки сеансового ключа и затем использовать сеансовый ключ для расшифровки документа.  Дополнительные сведения о способах расшифровки XML\-элемента, зашифрованного при помощи этой процедуры, см. в разделе [How to: Decrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
+ <span data-ttu-id="70a93-115">Чтобы расшифровать XML-элемент, необходимо извлечь из контейнера ключей закрытый ключ RSA, использовать его для расшифровки сеансового ключа и затем использовать сеансовый ключ для расшифровки документа.</span><span class="sxs-lookup"><span data-stu-id="70a93-115">To decrypt the XML element, you retrieve the RSA private key from the key container, use it to decrypt the session key, and then use the session key to decrypt the document.</span></span>  <span data-ttu-id="70a93-116">Дополнительные сведения о способах расшифровки XML-элемента, зашифрованного с помощью этой процедуры см. в разделе [как: расшифровка XML-элементов с помощью асимметричного ключа](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).</span><span class="sxs-lookup"><span data-stu-id="70a93-116">For more information about how to decrypt an XML element that was encrypted using this procedure, see [How to: Decrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).</span></span>  
   
- Этот пример подходит в ситуациях, когда нескольким приложениям нужен общий доступ к зашифрованным данным или когда приложению требуется сохранять зашифрованные данные между запусками.  
+ <span data-ttu-id="70a93-117">Этот пример подходит в ситуациях, когда нескольким приложениям нужен общий доступ к зашифрованным данным или когда приложению требуется сохранять зашифрованные данные между запусками.</span><span class="sxs-lookup"><span data-stu-id="70a93-117">This example is appropriate for situations where multiple applications need to share encrypted data or where an application needs to save encrypted data between the times that it runs.</span></span>  
   
-### Шифрование XML\-элемента с использованием асимметричного ключа  
+### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a><span data-ttu-id="70a93-118">Шифрование XML-элемента с использованием асимметричного ключа</span><span class="sxs-lookup"><span data-stu-id="70a93-118">To encrypt an XML element with an asymmetric key</span></span>  
   
-1.  Создайте объект <xref:System.Security.Cryptography.CspParameters> и укажите имя контейнера ключей.  
+1.  <span data-ttu-id="70a93-119">Создайте объект <xref:System.Security.Cryptography.CspParameters> и укажите имя контейнера ключей.</span><span class="sxs-lookup"><span data-stu-id="70a93-119">Create a <xref:System.Security.Cryptography.CspParameters> object and specify the name of the key container.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#2)]  
   
-2.  Создайте симметричный ключ, используя класс <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  Этот ключ автоматически сохраняется в контейнер ключей при передаче объекта <xref:System.Security.Cryptography.CspParameters> в конструктор класса <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  Этот ключ будет использоваться для шифрования сеансового ключа AES, а позднее может быть извлечен для его расшифровки.  
+2.  <span data-ttu-id="70a93-120">Создайте симметричный ключ, используя класс <xref:System.Security.Cryptography.RSACryptoServiceProvider>.</span><span class="sxs-lookup"><span data-stu-id="70a93-120">Generate a symmetric key using the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class.</span></span>  <span data-ttu-id="70a93-121">Этот ключ автоматически сохраняется в контейнер ключей при передаче объекта <xref:System.Security.Cryptography.CspParameters> в конструктор класса <xref:System.Security.Cryptography.RSACryptoServiceProvider>.</span><span class="sxs-lookup"><span data-stu-id="70a93-121">The key is automatically saved to the key container when you pass the <xref:System.Security.Cryptography.CspParameters> object to the constructor of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class.</span></span>  <span data-ttu-id="70a93-122">Этот ключ будет использоваться для шифрования сеансового ключа AES, а позднее может быть извлечен для его расшифровки.</span><span class="sxs-lookup"><span data-stu-id="70a93-122">This key will be used to encrypt the AES session key and can be retrieved later to decrypt it.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#3)]  
   
-3.  Создайте объект <xref:System.Xml.XmlDocument>, загрузив XML\-файл с диска.  Объект <xref:System.Xml.XmlDocument> содержит XML\-элемент для шифрования.  
+3.  <span data-ttu-id="70a93-123">Создайте объект <xref:System.Xml.XmlDocument>, загрузив XML-файл с диска.</span><span class="sxs-lookup"><span data-stu-id="70a93-123">Create an <xref:System.Xml.XmlDocument> object by loading an XML file from disk.</span></span>  <span data-ttu-id="70a93-124">Объект <xref:System.Xml.XmlDocument> содержит XML-элемент для шифрования.</span><span class="sxs-lookup"><span data-stu-id="70a93-124">The <xref:System.Xml.XmlDocument> object contains the XML element to encrypt.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#4)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#4)]  
   
-4.  Найдите указанный элемент в объекте <xref:System.Xml.XmlDocument> и создайте новый объект <xref:System.Xml.XmlElement> для представления того элемента, который требуется зашифровать.  В этом примере выполняется шифрование элемента `"creditcard"`.  
+4.  <span data-ttu-id="70a93-125">Найдите указанный элемент в объекте <xref:System.Xml.XmlDocument> и создайте новый объект <xref:System.Xml.XmlElement> для представления того элемента, который требуется зашифровать.</span><span class="sxs-lookup"><span data-stu-id="70a93-125">Find the specified element in the <xref:System.Xml.XmlDocument> object and create a new <xref:System.Xml.XmlElement> object to represent the element you want to encrypt.</span></span> <span data-ttu-id="70a93-126">В этом примере выполняется шифрование элемента `"creditcard"`.</span><span class="sxs-lookup"><span data-stu-id="70a93-126">In this example, the `"creditcard"` element is encrypted.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-5.  Создайте новый сеансовый ключ при помощи класса <xref:System.Security.Cryptography.RijndaelManaged>.  Этот ключ будет использоваться для шифрования XML\-элемента, а затем будет зашифрован и помещен в XML\-документ.  
+5.  <span data-ttu-id="70a93-127">Создайте новый сеансовый ключ при помощи класса <xref:System.Security.Cryptography.RijndaelManaged>.</span><span class="sxs-lookup"><span data-stu-id="70a93-127">Create a new session key using the <xref:System.Security.Cryptography.RijndaelManaged> class.</span></span>  <span data-ttu-id="70a93-128">Этот ключ будет использоваться для шифрования XML-элемента, а затем будет зашифрован и помещен в XML-документ.</span><span class="sxs-lookup"><span data-stu-id="70a93-128">This key will encrypt the XML element, and then be encrypted itself and placed in the XML document.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#6)]  
   
-6.  Создайте новый экземпляр класса <xref:System.Security.Cryptography.Xml.EncryptedXml> и используйте его для шифрования указанного элемента при помощи сеансового ключа.  Метод <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> возвращает зашифрованный элемент в виде массива зашифрованных байт.  
+6.  <span data-ttu-id="70a93-129">Создайте новый экземпляр класса <xref:System.Security.Cryptography.Xml.EncryptedXml> и используйте его для шифрования указанного элемента при помощи сеансового ключа.</span><span class="sxs-lookup"><span data-stu-id="70a93-129">Create a new instance of the <xref:System.Security.Cryptography.Xml.EncryptedXml> class and use it to encrypt the specified element using the session key.</span></span>  <span data-ttu-id="70a93-130">Метод <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> возвращает зашифрованный элемент в виде массива зашифрованных байт.</span><span class="sxs-lookup"><span data-stu-id="70a93-130">The <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> method returns the encrypted element as an array of encrypted bytes.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-7.  Создайте объект <xref:System.Security.Cryptography.Xml.EncryptedData> и заполните его идентификатором URL\-адреса зашифрованного XML\-элемента.  Этот идентификатор URL\-адреса уведомляет сторону, выполняющую расшифровку, что XML\-документ содержит зашифрованный элемент.  Для указания идентификатора URL\-адреса можно использовать поле <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl>.  XML\-элемент в формате обычного текста будет заменен на элемент \<`EncryptedData`\>, инкапсулированный этим объектом <xref:System.Security.Cryptography.Xml.EncryptedData>.  
+7.  <span data-ttu-id="70a93-131">Создайте объект <xref:System.Security.Cryptography.Xml.EncryptedData> и заполните его идентификатором URL-адреса зашифрованного XML-элемента.</span><span class="sxs-lookup"><span data-stu-id="70a93-131">Construct an <xref:System.Security.Cryptography.Xml.EncryptedData> object and populate it with the URL identifier of the encrypted XML element.</span></span>  <span data-ttu-id="70a93-132">Этот идентификатор URL-адреса уведомляет сторону, выполняющую расшифровку, что XML-документ содержит зашифрованный элемент.</span><span class="sxs-lookup"><span data-stu-id="70a93-132">This URL identifier lets a decrypting party know that the XML contains an encrypted element.</span></span>  <span data-ttu-id="70a93-133">Для указания идентификатора URL-адреса можно использовать поле <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl>.</span><span class="sxs-lookup"><span data-stu-id="70a93-133">You can use the <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> field to specify the URL identifier.</span></span>  <span data-ttu-id="70a93-134">XML-элемент в формате обычного текста будет заменен на элемент <`EncryptedData`>, инкапсулированный этим объектом <xref:System.Security.Cryptography.Xml.EncryptedData>.</span><span class="sxs-lookup"><span data-stu-id="70a93-134">The plaintext XML element will be replaced by an <`EncryptedData`> element encapsulated by this <xref:System.Security.Cryptography.Xml.EncryptedData> object.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
-8.  Создайте объект <xref:System.Security.Cryptography.Xml.EncryptionMethod>, инициализируемый идентификатором URL\-адреса криптографического алгоритма, который использовался для сеансового создания ключа.  Передайте объект <xref:System.Security.Cryptography.Xml.EncryptionMethod> в свойство <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A>.  
+8.  <span data-ttu-id="70a93-135">Создайте объект <xref:System.Security.Cryptography.Xml.EncryptionMethod>, инициализируемый идентификатором URL-адреса криптографического алгоритма, который использовался для сеансового создания ключа.</span><span class="sxs-lookup"><span data-stu-id="70a93-135">Create an <xref:System.Security.Cryptography.Xml.EncryptionMethod> object that is initialized to the URL identifier of the cryptographic algorithm used to generate the session key.</span></span>  <span data-ttu-id="70a93-136">Передайте объект <xref:System.Security.Cryptography.Xml.EncryptionMethod> в свойство <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A>.</span><span class="sxs-lookup"><span data-stu-id="70a93-136">Pass the <xref:System.Security.Cryptography.Xml.EncryptionMethod> object to the <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A> property.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#9)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#9)]  
   
-9. Создайте <xref:System.Security.Cryptography.Xml.EncryptedKey> объект, который будет содержать зашифрованный сеансовый ключ.  Расшифруйте сеансовый ключ, добавьте его в объект <xref:System.Security.Cryptography.Xml.EncryptedKey> и введите имя сеансового ключа и URL\-адрес идентификатора ключа.  
+9. <span data-ttu-id="70a93-137">Создайте <xref:System.Security.Cryptography.Xml.EncryptedKey> объект, который будет содержать зашифрованный сеансовый ключ.</span><span class="sxs-lookup"><span data-stu-id="70a93-137">Create an <xref:System.Security.Cryptography.Xml.EncryptedKey> object to contain the encrypted session key.</span></span>  <span data-ttu-id="70a93-138">Расшифруйте сеансовый ключ, добавьте его в объект <xref:System.Security.Cryptography.Xml.EncryptedKey> и введите имя сеансового ключа и URL-адрес идентификатора ключа.</span><span class="sxs-lookup"><span data-stu-id="70a93-138">Encrypt the session key, add it to the <xref:System.Security.Cryptography.Xml.EncryptedKey> object, and enter a session key name and key identifier URL.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#10)]  
   
-10. Создайте новый объект <xref:System.Security.Cryptography.Xml.DataReference>, который сопоставляет зашифрованные данные с определенным сеансовым ключом.  Этот необязательный шаг позволяет легко указать, что несколько частей XML\-документа были зашифрованы при помощи одного ключа.  
+10. <span data-ttu-id="70a93-139">Создайте новый объект <xref:System.Security.Cryptography.Xml.DataReference>, который сопоставляет зашифрованные данные с определенным сеансовым ключом.</span><span class="sxs-lookup"><span data-stu-id="70a93-139">Create a new <xref:System.Security.Cryptography.Xml.DataReference> object that maps the encrypted data to a particular session key.</span></span>  <span data-ttu-id="70a93-140">Этот необязательный шаг позволяет легко указать, что несколько частей XML-документа были зашифрованы при помощи одного ключа.</span><span class="sxs-lookup"><span data-stu-id="70a93-140">This optional step allows you to easily specify that multiple parts of an XML document were encrypted by a single key.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#11)]  
   
-11. Добавьте зашифрованный ключ в объект <xref:System.Security.Cryptography.Xml.EncryptedData>.  
+11. <span data-ttu-id="70a93-141">Добавьте зашифрованный ключ в объект <xref:System.Security.Cryptography.Xml.EncryptedData>.</span><span class="sxs-lookup"><span data-stu-id="70a93-141">Add the encrypted key to the <xref:System.Security.Cryptography.Xml.EncryptedData> object.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#12)]  
   
-12. Создайте новый объект <xref:System.Security.Cryptography.Xml.KeyInfo>, чтобы указать имя ключа RSA.  Добавьте его в объект <xref:System.Security.Cryptography.Xml.EncryptedData>.  Это позволяет стороне, осуществляющей расшифровку, правильно определить асимметричный ключ, необходимый для расшифровки сеансового ключа.  
+12. <span data-ttu-id="70a93-142">Создайте новый объект <xref:System.Security.Cryptography.Xml.KeyInfo>, чтобы указать имя ключа RSA.</span><span class="sxs-lookup"><span data-stu-id="70a93-142">Create a new <xref:System.Security.Cryptography.Xml.KeyInfo> object to specify the name of the RSA key.</span></span>  <span data-ttu-id="70a93-143">Добавьте его в объект <xref:System.Security.Cryptography.Xml.EncryptedData>.</span><span class="sxs-lookup"><span data-stu-id="70a93-143">Add it to the <xref:System.Security.Cryptography.Xml.EncryptedData> object.</span></span> <span data-ttu-id="70a93-144">Это позволяет стороне, осуществляющей расшифровку, правильно определить асимметричный ключ, необходимый для расшифровки сеансового ключа.</span><span class="sxs-lookup"><span data-stu-id="70a93-144">This helps the decrypting party identify the correct asymmetric key to use when decrypting the session key.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#13)]  
   
-13. Добавьте зашифрованные данные элемента в объект <xref:System.Security.Cryptography.Xml.EncryptedData>.  
+13. <span data-ttu-id="70a93-145">Добавьте зашифрованные данные элемента в объект <xref:System.Security.Cryptography.Xml.EncryptedData>.</span><span class="sxs-lookup"><span data-stu-id="70a93-145">Add the encrypted element data to the <xref:System.Security.Cryptography.Xml.EncryptedData> object.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#14)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#14)]  
   
-14. Замените элемент из исходного объекта <xref:System.Xml.XmlDocument> на элемент <xref:System.Security.Cryptography.Xml.EncryptedData>.  
+14. <span data-ttu-id="70a93-146">Замените элемент из исходного объекта <xref:System.Xml.XmlDocument> на элемент <xref:System.Security.Cryptography.Xml.EncryptedData>.</span><span class="sxs-lookup"><span data-stu-id="70a93-146">Replace the element from the original <xref:System.Xml.XmlDocument> object with the <xref:System.Security.Cryptography.Xml.EncryptedData> element.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#15)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#15)]  
   
-15. Сохраните объект <xref:System.Xml.XmlDocument>.  
+15. <span data-ttu-id="70a93-147">Сохраните объект <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="70a93-147">Save the <xref:System.Xml.XmlDocument> object.</span></span>  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#16)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#16)]  
   
-## Пример  
- В этом примере предполагается, что файл с именем `"test.xml"` существует в том же каталоге, что и скомпилированная программа.  Кроме того, предполагается, что `"test.xml"` содержит элемент `"creditcard"`.  Можно поместить следующий XML\-код в файл с именем `test.xml` и использовать его вместе с данным примером.  
+## <a name="example"></a><span data-ttu-id="70a93-148">Пример</span><span class="sxs-lookup"><span data-stu-id="70a93-148">Example</span></span>  
+ <span data-ttu-id="70a93-149">В этом примере предполагается, что файл с именем `"test.xml"` существует в том же каталоге, что и скомпилированная программа.</span><span class="sxs-lookup"><span data-stu-id="70a93-149">This example assumes that a file named `"test.xml"` exists in the same directory as the compiled program.</span></span>  <span data-ttu-id="70a93-150">Кроме того, предполагается, что `"test.xml"` содержит элемент `"creditcard"`.</span><span class="sxs-lookup"><span data-stu-id="70a93-150">It also assumes that `"test.xml"` contains a `"creditcard"` element.</span></span>  <span data-ttu-id="70a93-151">Можно поместить следующий XML-код в файл с именем `test.xml` и использовать его вместе с данным примером.</span><span class="sxs-lookup"><span data-stu-id="70a93-151">You can place the following XML into a file called `test.xml` and use it with this example.</span></span>  
   
-```  
+```xml  
 <root>  
     <creditcard>  
         <number>19834209</number>  
         <expiry>02/02/2002</expiry>  
     </creditcard>  
 </root>  
-  
 ```  
   
  [!code-csharp[HowToEncryptXMLElementAsymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#1)]
  [!code-vb[HowToEncryptXMLElementAsymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#1)]  
   
-## Компиляция кода  
+## <a name="compiling-the-code"></a><span data-ttu-id="70a93-152">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="70a93-152">Compiling the Code</span></span>  
   
--   Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.  
+-   <span data-ttu-id="70a93-153">Чтобы скомпилировать этот пример, необходимо включить ссылку на `System.Security.dll`.</span><span class="sxs-lookup"><span data-stu-id="70a93-153">To compile this example, you need to include a reference to `System.Security.dll`.</span></span>  
   
--   Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.  
+-   <span data-ttu-id="70a93-154">Включите следующие пространства имен: <xref:System.Xml>, <xref:System.Security.Cryptography> и <xref:System.Security.Cryptography.Xml>.</span><span class="sxs-lookup"><span data-stu-id="70a93-154">Include the following namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, and <xref:System.Security.Cryptography.Xml>.</span></span>  
   
-## Безопасность платформы .NET Framework  
- Никогда не храните симметричный криптографический ключ в формате обычного текста и не передавайте этот симметричный ключ в таком формате между компьютерами.  Кроме того, не следует хранить или передавать закрытый ключ из пары асимметричных ключей в виде обычного текста.  Дополнительные сведения о симметричных и асимметричных криптографических ключах см. в разделе [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+## <a name="net-framework-security"></a><span data-ttu-id="70a93-155">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="70a93-155">.NET Framework Security</span></span>  
+ <span data-ttu-id="70a93-156">Никогда не храните симметричный криптографический ключ в формате обычного текста и не передавайте этот симметричный ключ в таком формате между компьютерами.</span><span class="sxs-lookup"><span data-stu-id="70a93-156">Never store a symmetric cryptographic key in plaintext or transfer a symmetric key between machines in plaintext.</span></span>  <span data-ttu-id="70a93-157">Кроме того, не следует хранить или передавать закрытый ключ из пары асимметричных ключей в виде обычного текста.</span><span class="sxs-lookup"><span data-stu-id="70a93-157">Additionally, never store or transfer the private key of an asymmetric key pair in plaintext.</span></span>  <span data-ttu-id="70a93-158">Дополнительные сведения о симметричных и асимметричных криптографических ключах см. в разделе [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span><span class="sxs-lookup"><span data-stu-id="70a93-158">For more information about symmetric and asymmetric cryptographic keys, see [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span></span>  
   
- Не следует внедрять ключ непосредственно в исходный код.  Внедренные ключи могут быть легко прочитаны из сборки при помощи [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) или путем открытия сборки в текстовом редакторе, таком как Блокнот.  
+ <span data-ttu-id="70a93-159">Не следует внедрять ключ непосредственно в исходный код.</span><span class="sxs-lookup"><span data-stu-id="70a93-159">Never embed a key directly into your source code.</span></span>  <span data-ttu-id="70a93-160">Внедренные ключи могут быть легко прочитаны из сборки с помощью [Ildasm.exe (дизассемблер IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) или путем открытия сборки в текстовом редакторе, таком как Блокнот.</span><span class="sxs-lookup"><span data-stu-id="70a93-160">Embedded keys can be easily read from an assembly using the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) or by opening the assembly in a text editor such as Notepad.</span></span>  
   
- После завершения работы с криптографическим ключом очистите его из памяти, установив для каждого байта нулевое значение или вызвав метод <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> управляемого класса шифрования.  Иногда криптографические ключи можно считывать из памяти отладчиком или с жесткого диска, если область памяти выгружается на диск.  
+ <span data-ttu-id="70a93-161">После завершения работы с криптографическим ключом очистите его из памяти, установив для каждого байта нулевое значение или вызвав метод <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> управляемого класса шифрования.</span><span class="sxs-lookup"><span data-stu-id="70a93-161">When you are done using a cryptographic key, clear it from memory by setting each byte to zero or by calling the <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> method of the managed cryptography class.</span></span>  <span data-ttu-id="70a93-162">Иногда криптографические ключи можно считывать из памяти отладчиком или с жесткого диска, если область памяти выгружается на диск.</span><span class="sxs-lookup"><span data-stu-id="70a93-162">Cryptographic keys can sometimes be read from memory by a debugger or read from a hard drive if the memory location is paged to disk.</span></span>  
   
-## См. также  
- <xref:System.Security.Cryptography.Xml>   
- [How to: Decrypt XML Elements with Asymmetric Keys](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+## <a name="see-also"></a><span data-ttu-id="70a93-163">См. также</span><span class="sxs-lookup"><span data-stu-id="70a93-163">See Also</span></span>  
+ <xref:System.Security.Cryptography.Xml>  
+ [<span data-ttu-id="70a93-164">Практическое руководство. Расшифровывание XML-элементов с помощью асимметричных ключей</span><span class="sxs-lookup"><span data-stu-id="70a93-164">How to: Decrypt XML Elements with Asymmetric Keys</span></span>](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

@@ -1,98 +1,95 @@
 ---
-title: "Оператор Mod (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Mod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "остаток (оператор Mod)"
-  - "оператор деления, оператор Mod"
-  - "оператор модуля, Visual Basic"
-  - "Mod - оператор [Visual Basic]"
-  - "операторы [Visual Basic], деление"
-  - "арифметические операторы, Mod"
-  - "математические операторы"
+title: "Оператор Mod (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Mod
+helpviewer_keywords:
+- remainder (Mod operator)
+- division operator [Visual Basic], Mod operator
+- modulus operator [Visual Basic], Visual Basic
+- Mod operator [Visual Basic]
+- operators [Visual Basic], division
+- arithmetic operators [Visual Basic], Mod
+- math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5464b57c993e5703c09529b527a7bc714e045870
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# Оператор Mod (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/includes/vs2017banner.md)]
-
-Делит два числа и возвращает только остаток.  
+# <a name="mod-operator-visual-basic"></a><span data-ttu-id="fce16-102">Оператор Mod (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fce16-102">Mod Operator (Visual Basic)</span></span>
+<span data-ttu-id="fce16-103">Делит два числа и возвращает только остаток.</span><span class="sxs-lookup"><span data-stu-id="fce16-103">Divides two numbers and returns only the remainder.</span></span>  
   
-## Синтаксис  
+## <a name="syntax"></a><span data-ttu-id="fce16-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fce16-104">Syntax</span></span>  
   
 ```  
-  
 number1 Mod number2  
 ```  
   
-## Части  
+## <a name="parts"></a><span data-ttu-id="fce16-105">Части</span><span class="sxs-lookup"><span data-stu-id="fce16-105">Parts</span></span>  
  `number1`  
- Обязательное.  Произвольное числовое выражение.  
+ <span data-ttu-id="fce16-106">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="fce16-106">Required.</span></span> <span data-ttu-id="fce16-107">Произвольное числовое выражение.</span><span class="sxs-lookup"><span data-stu-id="fce16-107">Any numeric expression.</span></span>  
   
  `number2`  
- Обязательное.  Произвольное числовое выражение.  
+ <span data-ttu-id="fce16-108">Обязательный.</span><span class="sxs-lookup"><span data-stu-id="fce16-108">Required.</span></span> <span data-ttu-id="fce16-109">Произвольное числовое выражение.</span><span class="sxs-lookup"><span data-stu-id="fce16-109">Any numeric expression.</span></span>  
   
-## Поддерживаемые типы  
- Все числовые типы.  К ним относятся типы чисел с плавающей запятой и без знака и тип `Decimal`.  
+## <a name="supported-types"></a><span data-ttu-id="fce16-110">Поддерживаемые типы</span><span class="sxs-lookup"><span data-stu-id="fce16-110">Supported Types</span></span>  
+ <span data-ttu-id="fce16-111">Все числовые типы.</span><span class="sxs-lookup"><span data-stu-id="fce16-111">All numeric types.</span></span> <span data-ttu-id="fce16-112">Сюда входят типы без знака и с плавающей запятой и `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="fce16-112">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## Результат  
- В результате получается остаток после деления `number1` на `number2`.  Например выражение `14 Mod 4` равно 2.  
+## <a name="result"></a><span data-ttu-id="fce16-113">Результат</span><span class="sxs-lookup"><span data-stu-id="fce16-113">Result</span></span>  
+ <span data-ttu-id="fce16-114">Результат — остаток после `number1` делится на `number2`.</span><span class="sxs-lookup"><span data-stu-id="fce16-114">The result is the remainder after `number1` is divided by `number2`.</span></span> <span data-ttu-id="fce16-115">Например, выражение `14 Mod 4` равно 2.</span><span class="sxs-lookup"><span data-stu-id="fce16-115">For example, the expression `14 Mod 4` evaluates to 2.</span></span>  
   
-## Заметки  
- Если `number1` или `number2` является значением с плавающей запятой, то возвращается остаток от деления с плавающей запятой.  Тип данных результата является наименьшим типом данных, который может содержать все возможные значения результатов деления с участием типов данных `number1` и `number2`.  
+## <a name="remarks"></a><span data-ttu-id="fce16-116">Примечания</span><span class="sxs-lookup"><span data-stu-id="fce16-116">Remarks</span></span>  
+ <span data-ttu-id="fce16-117">Если параметр `number1` или `number2` имеет значение с плавающей запятой с плавающей запятой остаток от деления возвращается.</span><span class="sxs-lookup"><span data-stu-id="fce16-117">If either `number1` or `number2` is a floating-point value, the floating-point remainder of the division is returned.</span></span> <span data-ttu-id="fce16-118">Тип данных результата — наименьший тип данных, который может содержать все возможные значения, которые являются результатом деления с типами данных `number1` и `number2`.</span><span class="sxs-lookup"><span data-stu-id="fce16-118">The data type of the result is the smallest data type that can hold all possible values that result from division with the data types of `number1` and `number2`.</span></span>  
   
- Если `number1` или `number2` равны [Nothing](../../../visual-basic/language-reference/nothing.md), оно интерпретируется как ноль.  
+ <span data-ttu-id="fce16-119">Если `number1` или `number2` равен [ничего](../../../visual-basic/language-reference/nothing.md), интерпретируется как ноль.</span><span class="sxs-lookup"><span data-stu-id="fce16-119">If `number1` or `number2` evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), it is treated as zero.</span></span>  
   
- Связанные операторы включают:  
+ <span data-ttu-id="fce16-120">Связанные операторы включают в себя следующее:</span><span class="sxs-lookup"><span data-stu-id="fce16-120">Related operators include the following:</span></span>  
   
--   [Оператор \\](../Topic/-%20Operator%20\(Visual%20Basic\)2.md) возвращает целочисленное частное от деления.  Например выражение `14 \ 4` равно 3.  
+-   <span data-ttu-id="fce16-121">[\ Оператора (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) возвращает целочисленное частное от деления.</span><span class="sxs-lookup"><span data-stu-id="fce16-121">The [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) returns the integer quotient of a division.</span></span> <span data-ttu-id="fce16-122">Например, выражение `14 \ 4` равен 3.</span><span class="sxs-lookup"><span data-stu-id="fce16-122">For example, the expression `14 \ 4` evaluates to 3.</span></span>  
   
--   [Оператор \/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) возвращает полное частное, включая остаток, как число с плавающей запятой.  Например выражение `14 / 4` равно 3,5.  
+-   <span data-ttu-id="fce16-123">[-Оператор (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) возвращает полное частное, включая остаток, как число с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="fce16-123">The [/ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) returns the full quotient, including the remainder, as a floating-point number.</span></span> <span data-ttu-id="fce16-124">Например, выражение `14 / 4` равно 3.5.</span><span class="sxs-lookup"><span data-stu-id="fce16-124">For example, the expression `14 / 4` evaluates to 3.5.</span></span>  
   
-## Попытка деления на ноль  
- Если значением `number2` является ноль, поведение оператора `Mod` зависит от типа данных операндов.  Целочисленное деление вызывает <xref:System.DivideByZeroException> исключение.  Деление с плавающей запятой возвращает <xref:System.Double.NaN>.  
+## <a name="attempted-division-by-zero"></a><span data-ttu-id="fce16-125">Попытка деления на ноль</span><span class="sxs-lookup"><span data-stu-id="fce16-125">Attempted Division by Zero</span></span>  
+ <span data-ttu-id="fce16-126">Если `number2` оказался равным нулю, поведение `Mod` оператор зависит от типа данных операндов.</span><span class="sxs-lookup"><span data-stu-id="fce16-126">If `number2` evaluates to zero, the behavior of the `Mod` operator depends on the data type of the operands.</span></span> <span data-ttu-id="fce16-127">Вызывает целочисленного деления <xref:System.DivideByZeroException> исключение.</span><span class="sxs-lookup"><span data-stu-id="fce16-127">An integral division throws a <xref:System.DivideByZeroException> exception.</span></span> <span data-ttu-id="fce16-128">Возвращает деления с плавающей запятой <xref:System.Double.NaN>.</span><span class="sxs-lookup"><span data-stu-id="fce16-128">A floating-point division returns <xref:System.Double.NaN>.</span></span>  
   
-## Эквивалентная формула  
- Выражение `a Mod b` является эквивалентом для любой из следующих формул:  
+## <a name="equivalent-formula"></a><span data-ttu-id="fce16-129">Эквивалентная формула</span><span class="sxs-lookup"><span data-stu-id="fce16-129">Equivalent Formula</span></span>  
+ <span data-ttu-id="fce16-130">Выражение `a Mod b` является эквивалентом для любой из следующих формул:</span><span class="sxs-lookup"><span data-stu-id="fce16-130">The expression `a Mod b` is equivalent to either of the following formulas:</span></span>  
   
  `a - (b * (a \ b))`  
   
  `a - (b * Fix(a / b))`  
   
-## Погрешность чисел с плавающей запятой  
- Используя числа с плавающей запятой, следует учитывать, что они не всегда имеют точное представление в памяти.  Это может привести к непредвиденным результатам для определенных операций, таких как сравнение значений и `Mod`.  Для получения дополнительной информации см. [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+## <a name="floating-point-imprecision"></a><span data-ttu-id="fce16-131">С плавающей запятой неточности</span><span class="sxs-lookup"><span data-stu-id="fce16-131">Floating-Point Imprecision</span></span>  
+ <span data-ttu-id="fce16-132">При работе с числами с плавающей запятой, помните, что они не всегда имеют точное представление в памяти.</span><span class="sxs-lookup"><span data-stu-id="fce16-132">When you work with floating-point numbers, remember that they do not always have a precise representation in memory.</span></span> <span data-ttu-id="fce16-133">Это может привести к непредвиденным результатам определенных операций, таких как значение сравнения и `Mod` оператор.</span><span class="sxs-lookup"><span data-stu-id="fce16-133">This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator.</span></span> <span data-ttu-id="fce16-134">Дополнительные сведения см. в разделе [Устранение неполадок типы данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="fce16-134">For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).</span></span>  
   
-## Перегрузка  
- Оператор `Mod` может быть *overloaded*. Это означает, что класс или структура может переопределить его поведение.  Если код применяет `Mod` к экземпляру класса или структуры, включающей такие перегрузки, обязательно убедитесь в том, что их переопределенное поведение понятно.  Для получения дополнительной информации см. [Процедуры операторов](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="fce16-135">Перегрузка</span><span class="sxs-lookup"><span data-stu-id="fce16-135">Overloading</span></span>  
+ <span data-ttu-id="fce16-136">`Mod` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение.</span><span class="sxs-lookup"><span data-stu-id="fce16-136">The `Mod` operator can be *overloaded*, which means that a class or structure can redefine its behavior.</span></span> <span data-ttu-id="fce16-137">Если код применяет `Mod` к экземпляру класса или структуры, включающей такие перегрузки, убедитесь, что его переопределенное.</span><span class="sxs-lookup"><span data-stu-id="fce16-137">If your code applies `Mod` to an instance of a class or structure that includes such an overload, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="fce16-138">Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="fce16-138">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Пример  
- В следующем примере оператор `Mod` используется для деление одного числа на другое и возврата только остатка.  Если оба числа являются числами с плавающей запятой, результат является числом с плавающей запятой, представляющим остаток.  
+## <a name="example"></a><span data-ttu-id="fce16-139">Пример</span><span class="sxs-lookup"><span data-stu-id="fce16-139">Example</span></span>  
+ <span data-ttu-id="fce16-140">В следующем примере используется `Mod` оператор деления двух чисел и возвращает только остаток.</span><span class="sxs-lookup"><span data-stu-id="fce16-140">The following example uses the `Mod` operator to divide two numbers and return only the remainder.</span></span> <span data-ttu-id="fce16-141">Если оба числа с плавающей запятой, результатом является число с плавающей запятой, представляющее остаток.</span><span class="sxs-lookup"><span data-stu-id="fce16-141">If either number is a floating-point number, the result is a floating-point number that represents the remainder.</span></span>  
   
  [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
-## Пример  
- В следующем примере показана возможная неточность операндов с плавающей запятой.  В первом операторе операнды относятся к типу `Double`, и 0,2 является периодической бесконечной двоичной дробью, которая хранится в виде значения 0,20000000000000001.  Во втором операторе символ типа литерала `D` указывает, что оба операнда относятся к типу `Decimal`, и 0,2 имеет точное представление.  
+## <a name="example"></a><span data-ttu-id="fce16-142">Пример</span><span class="sxs-lookup"><span data-stu-id="fce16-142">Example</span></span>  
+ <span data-ttu-id="fce16-143">В следующем примере показано возможная неточность операндов с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="fce16-143">The following example demonstrates the potential imprecision of floating-point operands.</span></span> <span data-ttu-id="fce16-144">В первом операторе операнды имеют `Double`, и 0,2 является периодической бесконечной двоичной дробью, сохраненное значение 0,20000000000000001.</span><span class="sxs-lookup"><span data-stu-id="fce16-144">In the first statement, the operands are `Double`, and 0.2 is an infinitely repeating binary fraction with a stored value of 0.20000000000000001.</span></span> <span data-ttu-id="fce16-145">Во втором операторе знак типа литерала `D` приводит оба операнда для `Decimal`, и 0,2 имеет точное представление.</span><span class="sxs-lookup"><span data-stu-id="fce16-145">In the second statement, the literal type character `D` forces both operands to `Decimal`, and 0.2 has a precise representation.</span></span>  
   
  [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
-## См. также  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>   
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>   
- [Арифметические операторы](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Порядок применения операторов в Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Список операторов, сгруппированных по функциональному назначению](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Устранение неполадок, связанных с типами данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Арифметические операторы в Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Оператор \\](../Topic/-%20Operator%20\(Visual%20Basic\)2.md)
+## <a name="see-also"></a><span data-ttu-id="fce16-146">См. также</span><span class="sxs-lookup"><span data-stu-id="fce16-146">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
+ <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
+ [<span data-ttu-id="fce16-147">Арифметические операторы</span><span class="sxs-lookup"><span data-stu-id="fce16-147">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="fce16-148">Порядок применения операторов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fce16-148">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="fce16-149">Список операторов, сгруппированных по функциональному назначению</span><span class="sxs-lookup"><span data-stu-id="fce16-149">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="fce16-150">Устранение неполадок, связанных с типами данных</span><span class="sxs-lookup"><span data-stu-id="fce16-150">Troubleshooting Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="fce16-151">Арифметические операторы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fce16-151">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [<span data-ttu-id="fce16-152">\ Оператор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fce16-152">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)

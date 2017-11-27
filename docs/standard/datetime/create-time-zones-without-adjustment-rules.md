@@ -1,74 +1,86 @@
 ---
-title: "Практическое руководство. Создание часовых поясов без правил коррекции | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "правило коррекции [платформа .NET Framework]"
-  - "часовые пояса [платформа .NET Framework], правило коррекции"
-  - "часовые пояса [платформа .NET Framework], создание"
+title: "Как: создание часовых поясов без правил коррекции"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- time zones [.NET Framework], adjustment rule
+- time zones [.NET Framework], creating
+- adjustment rule [.NET Framework]
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 181d61de62ec9560b46732ad304b4934d4f55fa2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/18/2017
 ---
-# Практическое руководство. Создание часовых поясов без правил коррекции
-Точные сведения о часовом поясе, необходимые приложению, могут отсутствовать в конкретной системе по нескольким причинам:  
-  
--   Часовой пояс не был определен в реестре локальной системы.  
-  
--   Данные о часовом поясе были изменены или удалены из реестра.  
-  
--   Часовой пояс существует, но не введены точные сведения о правилах коррекции часового пояса для конкретного исторического периода.  
-  
- В этих случаях можно вызвать метод <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>, чтобы определить часовой пояс, необходимый приложению.  Можно использовать перегрузки этого метода для создания часовых поясов с использованием или без использования правил коррекции.  Если для часового пояса поддерживается переход на летнее время, можно определить фиксированные или плавающие правила перехода. \(Определения этих терминов содержатся в разделе "Терминология часовых поясов" раздела [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md).\)  
-  
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a><span data-ttu-id="58a4a-102">Как: создание часовых поясов без правил коррекции</span><span class="sxs-lookup"><span data-stu-id="58a4a-102">How to: Create time zones without adjustment rules</span></span>
+
+<span data-ttu-id="58a4a-103">Точные сведения о часовом поясе, которые требуются для приложения не могут находиться в данной системе по следующим причинам:</span><span class="sxs-lookup"><span data-stu-id="58a4a-103">The precise time zone information that is required by an application may not be present on a particular system for several reasons:</span></span>
+
+* <span data-ttu-id="58a4a-104">Часовой пояс никогда не был определен в реестре локальной системы.</span><span class="sxs-lookup"><span data-stu-id="58a4a-104">The time zone has never been defined in the local system's registry.</span></span>
+
+* <span data-ttu-id="58a4a-105">Данные о часовом поясе, изменен или удален из реестра.</span><span class="sxs-lookup"><span data-stu-id="58a4a-105">Data about the time zone has been modified or removed from the registry.</span></span>
+
+* <span data-ttu-id="58a4a-106">Часовой пояс существует, но не точные сведения о коррекции часового пояса для конкретного исторического периода.</span><span class="sxs-lookup"><span data-stu-id="58a4a-106">The time zone exists but does not have accurate information about time zone adjustments for a particular historic period.</span></span>
+
+<span data-ttu-id="58a4a-107">В этих случаях можно вызвать <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод, чтобы определить часовой пояс, необходимые для приложения.</span><span class="sxs-lookup"><span data-stu-id="58a4a-107">In these cases, you can call the <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> method to define the time zone required by your application.</span></span> <span data-ttu-id="58a4a-108">Создание с или без правил коррекции часового пояса, можно использовать перегрузки этого метода.</span><span class="sxs-lookup"><span data-stu-id="58a4a-108">You can use the overloads of this method to create a time zone with or without adjustment rules.</span></span> <span data-ttu-id="58a4a-109">Если часовой пояс поддерживает летнее время, можно определить с помощью либо правил коррекции фиксированной или плавающей.</span><span class="sxs-lookup"><span data-stu-id="58a4a-109">If the time zone supports daylight saving time, you can define adjustments with either fixed or floating adjustment rules.</span></span> <span data-ttu-id="58a4a-110">(Для определения этих терминов см. в разделе «Терминология часовых поясов» [Общие сведения о часовом поясе](../../../docs/standard/datetime/time-zone-overview.md).)</span><span class="sxs-lookup"><span data-stu-id="58a4a-110">(For definitions of these terms, see the "Time Zone Terminology" section in [Time zone overview](../../../docs/standard/datetime/time-zone-overview.md).)</span></span>
+
 > [!IMPORTANT]
->  Пользовательские часовые пояса, созданные посредством вызова метода <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>, не добавляются в реестр.  Вместо этого к ним можно получить доступ только через ссылку на объект, возвращаемую методом <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>.  
-  
- В этом разделе показано, как создать часовой пояс без правил коррекции.  Чтобы создать часовой пояс, который поддерживает правила коррекции при переходе на летнее время, см. раздел [Практическое руководство. Создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).  
-  
-### Создание часового пояса без правил коррекции  
-  
-1.  Определите отображаемое название часового пояса.  
-  
-     Отображаемое название должно соответствовать стандартному формату, в котором смещение часового пояса от универсального синхронизированного времени \(UTC\) заключается в круглые скобки, после чего следует строка, определяющая часовой пояс, один или несколько городов часового пояса, или одну или несколько стран или регионов в этом часовом поясе.  
-  
-2.  Определите название стандартного времени часового пояса.  Как правило, эта строка также используется в качестве идентификатора часового пояса.  
-  
-3.  Если необходимо использовать другой идентификатор, отличный от стандартного названия часового пояса, определите идентификатор часового пояса.  
-  
-4.  Создайте объект <xref:System.TimeSpan>, который определяет смещение часового пояса от времени UTC.  Часовые пояса со временем, которое позже времени UTC, имеют положительное смещение.  Часовые пояса со временем, опережающим время UTC, имеют отрицательное смещение.  
-  
-5.  Вызовите метод <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=fullName> для создания нового часового пояса.  
-  
-## Пример  
- В следующем примере определяется пользовательский часовой пояс для станции Моусон \(Антарктика\), в котором нет правил коррекции.  
-  
- [!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
- [!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]  
-  
- Строка, присвоенная свойству <xref:System.TimeZoneInfo.DisplayName%2A>, соответствует стандартному формату, в котором смещение часового пояса от времени UTC сопровождается понятным описанием часового пояса.  
-  
-## Компиляция кода  
- Для этого примера необходимо следующее.  
-  
--   Чтобы ссылка на System.Core.dll была добавлена в проект.  
-  
--   Чтобы был осуществлен импорт следующих пространств имен:  
-  
-     [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
-     [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]  
-  
-## См. также  
- [Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)   
- [Общие сведения о часовых поясах](../../../docs/standard/datetime/time-zone-overview.md)   
- [Практическое руководство. Создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+> <span data-ttu-id="58a4a-111">Пользовательские часовые пояса путем вызова <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> метод не добавляются в реестр.</span><span class="sxs-lookup"><span data-stu-id="58a4a-111">Custom time zones created by calling the <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> method are not added to the registry.</span></span> <span data-ttu-id="58a4a-112">Вместо этого они может осуществляться только через ссылку на объект, возвращаемый <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> вызова метода.</span><span class="sxs-lookup"><span data-stu-id="58a4a-112">Instead, they can be accessed only through the object reference returned by the <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> method call.</span></span>
+
+<span data-ttu-id="58a4a-113">В этом разделе показано, как создать часовой пояс без правил коррекции.</span><span class="sxs-lookup"><span data-stu-id="58a4a-113">This topic shows how to create a time zone without adjustment rules.</span></span> <span data-ttu-id="58a4a-114">Чтобы создать часовой пояс, который поддерживает правила коррекции для летнего времени, см. [как: создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).</span><span class="sxs-lookup"><span data-stu-id="58a4a-114">To create a time zone that supports daylight saving time adjustment rules, see [How to: Create time zones with adjustment rules](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).</span></span>
+
+### <a name="to-create-a-time-zone-without-adjustment-rules"></a><span data-ttu-id="58a4a-115">Для создания часовых поясов без правил коррекции</span><span class="sxs-lookup"><span data-stu-id="58a4a-115">To create a time zone without adjustment rules</span></span>
+
+1. <span data-ttu-id="58a4a-116">Определите отображаемое имя часового пояса.</span><span class="sxs-lookup"><span data-stu-id="58a4a-116">Define the time zone's display name.</span></span>
+
+   <span data-ttu-id="58a4a-117">Отображаемое имя соответствует стандартному формату, в котором смещение часового пояса от времени в формате UTC заключены в круглые скобки, после чего следует строка, определяющая часовой пояс, один или несколько городов, в часовой пояс или один или несколько частей в курс Книга операций или области в часовом поясе.</span><span class="sxs-lookup"><span data-stu-id="58a4a-117">The display name follows a fairly standard format in which the time zone's offset from Coordinated Universal Time (UTC) is enclosed in parentheses and is followed by a string that identifies the time zone, one or more of the cities in the time zone, or one or more of the countries or regions in the time zone.</span></span>
+
+2. <span data-ttu-id="58a4a-118">Укажите имя для зимнего времени часового пояса.</span><span class="sxs-lookup"><span data-stu-id="58a4a-118">Define the name of the time zone's standard time.</span></span> <span data-ttu-id="58a4a-119">Как правило эта строка также используется как идентификатор часового пояса.</span><span class="sxs-lookup"><span data-stu-id="58a4a-119">Typically, this string is also used as the time zone's identifier.</span></span>
+
+3. <span data-ttu-id="58a4a-120">Если вы хотите использовать другой идентификатор, чем стандартное имя часового пояса, определите идентификатор часового пояса.</span><span class="sxs-lookup"><span data-stu-id="58a4a-120">If you want to use a different identifier than the time zone's standard name, define the time zone identifier.</span></span>
+
+4. <span data-ttu-id="58a4a-121">Создать экземпляр <xref:System.TimeSpan> объект, который определяет смещение часового пояса от времени UTC.</span><span class="sxs-lookup"><span data-stu-id="58a4a-121">Instantiate a <xref:System.TimeSpan> object that defines the time zone's offset from UTC.</span></span> <span data-ttu-id="58a4a-122">Часовые пояса со временем, которые позже времени UTC, имеют положительное смещение.</span><span class="sxs-lookup"><span data-stu-id="58a4a-122">Time zones with times that are later than UTC have a positive offset.</span></span> <span data-ttu-id="58a4a-123">Часовые пояса со временем, предшествующих UTC, имеют отрицательное смещение.</span><span class="sxs-lookup"><span data-stu-id="58a4a-123">Time zones with times that are earlier than UTC have a negative offset.</span></span>
+
+5. <span data-ttu-id="58a4a-124">Вызовите <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> метод для создания нового часового пояса.</span><span class="sxs-lookup"><span data-stu-id="58a4a-124">Call the <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType> method to instantiate the new time zone.</span></span>
+
+## <a name="example"></a><span data-ttu-id="58a4a-125">Пример</span><span class="sxs-lookup"><span data-stu-id="58a4a-125">Example</span></span>
+
+<span data-ttu-id="58a4a-126">В следующем примере определяется пользовательский часовой пояс для Моусон Антарктике, который без правил коррекции.</span><span class="sxs-lookup"><span data-stu-id="58a4a-126">The following example defines a custom time zone for Mawson, Antarctica, which has no adjustment rules.</span></span>
+
+[!code-csharp[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#1)]
+[!code-vb[System.TimeZone2.CreateTimeZone#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#1)]
+
+<span data-ttu-id="58a4a-127">Строка, присвоенная <xref:System.TimeZoneInfo.DisplayName%2A> свойства соответствует стандартному формату, в котором смещение часового пояса от времени UTC сопровождается понятным описанием часового пояса.</span><span class="sxs-lookup"><span data-stu-id="58a4a-127">The string assigned to the <xref:System.TimeZoneInfo.DisplayName%2A> property follows a standard format in which the time zone's offset from UTC is followed by a friendly description of the time zone.</span></span>
+
+## <a name="compiling-the-code"></a><span data-ttu-id="58a4a-128">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="58a4a-128">Compiling the code</span></span>
+
+<span data-ttu-id="58a4a-129">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="58a4a-129">This example requires:</span></span>
+
+* <span data-ttu-id="58a4a-130">Чтобы ссылка на System.Core.dll была добавлена в проект.</span><span class="sxs-lookup"><span data-stu-id="58a4a-130">That a reference to System.Core.dll be added to the project.</span></span>
+
+* <span data-ttu-id="58a4a-131">Что импортируется следующие пространства имен:</span><span class="sxs-lookup"><span data-stu-id="58a4a-131">That the following namespaces be imported:</span></span>
+
+  [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
+  [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
+
+## <a name="see-also"></a><span data-ttu-id="58a4a-132">См. также</span><span class="sxs-lookup"><span data-stu-id="58a4a-132">See also</span></span>
+
+<span data-ttu-id="58a4a-133">[Даты, время и часовые пояса](../../../docs/standard/datetime/index.md)
+[Общие сведения о часовом поясе](../../../docs/standard/datetime/time-zone-overview.md)
+[как: создание часовых поясов с правилами коррекции](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)</span><span class="sxs-lookup"><span data-stu-id="58a4a-133">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[Time zone overview](../../../docs/standard/datetime/time-zone-overview.md)
+[How to: Create time zones with adjustment rules](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)</span></span>

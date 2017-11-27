@@ -1,88 +1,71 @@
 ---
-title: "Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic | Документы Microsoft"
+title: "Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 15d8f131aa834321fcf7e8ca633929385c666e6a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic
-В этом примере демонстрируется преобразование простых регулярных выражений для работы с <xref:System.Windows.Forms.MaskedTextBox>управления.</xref:System.Windows.Forms.MaskedTextBox>  
+# <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a><span data-ttu-id="f1413-102">Использование регулярных выражений в элементе управления MaskedTextBox в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f1413-102">Using Regular Expressions with the MaskedTextBox Control in Visual Basic</span></span>
+<span data-ttu-id="f1413-103">В этом примере показано, как преобразование простых регулярных выражений для работы с <xref:System.Windows.Forms.MaskedTextBox> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="f1413-103">This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
-## <a name="description-of-the-masking-language"></a>Описание языка масок  
- Стандартный <xref:System.Windows.Forms.MaskedTextBox>язык маски основана на используется `Masked Edit` управления [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 6.0 и должен быть знаком пользователям, переходящим с этой платформы.</xref:System.Windows.Forms.MaskedTextBox>  
+## <a name="description-of-the-masking-language"></a><span data-ttu-id="f1413-104">Описание языка масок</span><span class="sxs-lookup"><span data-stu-id="f1413-104">Description of the Masking Language</span></span>  
+ <span data-ttu-id="f1413-105">Стандартные <xref:System.Windows.Forms.MaskedTextBox> язык маски основан на, используемой `Masked Edit` управления в [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 и должны быть знакомы пользователи, переходящие с данной платформы.</span><span class="sxs-lookup"><span data-stu-id="f1413-105">The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 and should be familiar to users migrating from that platform.</span></span>  
   
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>Свойства <xref:System.Windows.Forms.MaskedTextBox>управления задает используемые маски ввода.</xref:System.Windows.Forms.MaskedTextBox> </xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Маска должна быть строкой, состоящей из одного или нескольких элементов маски из следующей таблицы.  
+ <span data-ttu-id="f1413-106"><xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Свойство <xref:System.Windows.Forms.MaskedTextBox> элемент управления задает используемые маски ввода.</span><span class="sxs-lookup"><span data-stu-id="f1413-106">The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use.</span></span> <span data-ttu-id="f1413-107">Значение маски должно быть строкой, состоящей из одного или нескольких элементов маски из следующей таблицы.</span><span class="sxs-lookup"><span data-stu-id="f1413-107">The mask must be a string composed of one or more of the masking elements from the following table.</span></span>  
   
-|Элемент маски|Описание|Элемент регулярного выражения|  
+|<span data-ttu-id="f1413-108">Элемент маски</span><span class="sxs-lookup"><span data-stu-id="f1413-108">Masking element</span></span>|<span data-ttu-id="f1413-109">Описание</span><span class="sxs-lookup"><span data-stu-id="f1413-109">Description</span></span>|<span data-ttu-id="f1413-110">Элемент регулярного выражения</span><span class="sxs-lookup"><span data-stu-id="f1413-110">Regular expression element</span></span>|  
 |---------------------|-----------------|--------------------------------|  
-|0|Любой цифре от 0 до 9. Требуется объект.|\d|  
-|9|Цифра или пробел. Необязательный элемент.|[ \d]?|  
-|#|Цифра или пробел. Необязательный элемент. Если эта позиция оставлено пустым в маске, отображается как пробел. Плюс (+) и минус (-) допускаются знаки.|[ \d+-]?|  
-|L|Буквы в коде ASCII. Требуется объект.|[a-zA-Z]|  
-|?|Буквы в коде ASCII. Необязательный элемент.|[a-zA-Z]?|  
-|&|Символ. Требуется объект.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo]}|  
-|C|Символ. Необязательный элемент.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|А|Буквенно-цифровых. Необязательный элемент.|\W|  
-|.|Язык и региональные параметры, соответствующие десятичный разделитель.|Недоступно.|  
-|,|Соответствующий язык и региональные параметры тысяч разделитель.|Недоступно.|  
-|:|Разделитель компонентов времени соответствующего языка и региональных параметров.|Недоступно.|  
-|/|Разделитель компонентов даты, соответствующего языка и региональных параметров.|Недоступно.|  
-|$|Символ валюты, соответствующий язык и региональные параметры.|Недоступно.|  
-|\<|Преобразует все последующие символы в нижний регистр.|Недоступно.|  
-|>|Преобразует все последующие символы в верхний регистр.|Недоступно.|  
-|&#124;|Отмена предыдущего изменения вверх или сместить.|Недоступно.|  
-|\|Замена символов маски, литерал. «\\\\» является escape-последовательность для обратной косой черты.|\|  
-|Все остальные символы.|Литералы. Маска-элементы отображаются внутри <xref:System.Windows.Forms.MaskedTextBox>.</xref:System.Windows.Forms.MaskedTextBox>|Все остальные символы.|  
+|<span data-ttu-id="f1413-111">0</span><span class="sxs-lookup"><span data-stu-id="f1413-111">0</span></span>|<span data-ttu-id="f1413-112">Любой отдельной цифре от 0 до 9.</span><span class="sxs-lookup"><span data-stu-id="f1413-112">Any single digit between 0 and 9.</span></span> <span data-ttu-id="f1413-113">Требуется объект.</span><span class="sxs-lookup"><span data-stu-id="f1413-113">Entry required.</span></span>|<span data-ttu-id="f1413-114">\d</span><span class="sxs-lookup"><span data-stu-id="f1413-114">\d</span></span>|  
+|<span data-ttu-id="f1413-115">9</span><span class="sxs-lookup"><span data-stu-id="f1413-115">9</span></span>|<span data-ttu-id="f1413-116">Цифра или пробел.</span><span class="sxs-lookup"><span data-stu-id="f1413-116">Digit or space.</span></span> <span data-ttu-id="f1413-117">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="f1413-117">Entry optional.</span></span>|<span data-ttu-id="f1413-118">[\d]?</span><span class="sxs-lookup"><span data-stu-id="f1413-118">[ \d]?</span></span>|  
+|#|<span data-ttu-id="f1413-119">Цифра или пробел.</span><span class="sxs-lookup"><span data-stu-id="f1413-119">Digit or space.</span></span> <span data-ttu-id="f1413-120">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="f1413-120">Entry optional.</span></span> <span data-ttu-id="f1413-121">Если эта позиция оставлено пустым, в битовой маске, отображается как пробел.</span><span class="sxs-lookup"><span data-stu-id="f1413-121">If this position is left blank in the mask, it will be rendered as a space.</span></span> <span data-ttu-id="f1413-122">Плюс (+) и минуса (-), разрешены знаки.</span><span class="sxs-lookup"><span data-stu-id="f1413-122">Plus (+) and minus (-) signs are allowed.</span></span>|<span data-ttu-id="f1413-123">[\d+-]?</span><span class="sxs-lookup"><span data-stu-id="f1413-123">[ \d+-]?</span></span>|  
+|<span data-ttu-id="f1413-124">L</span><span class="sxs-lookup"><span data-stu-id="f1413-124">L</span></span>|<span data-ttu-id="f1413-125">Буква ASCII.</span><span class="sxs-lookup"><span data-stu-id="f1413-125">ASCII letter.</span></span> <span data-ttu-id="f1413-126">Требуется объект.</span><span class="sxs-lookup"><span data-stu-id="f1413-126">Entry required.</span></span>|<span data-ttu-id="f1413-127">[a-zA-Z]</span><span class="sxs-lookup"><span data-stu-id="f1413-127">[a-zA-Z]</span></span>|  
+|<span data-ttu-id="f1413-128">?</span><span class="sxs-lookup"><span data-stu-id="f1413-128">?</span></span>|<span data-ttu-id="f1413-129">Буква ASCII.</span><span class="sxs-lookup"><span data-stu-id="f1413-129">ASCII letter.</span></span> <span data-ttu-id="f1413-130">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="f1413-130">Entry optional.</span></span>|<span data-ttu-id="f1413-131">[a-zA-Z]?</span><span class="sxs-lookup"><span data-stu-id="f1413-131">[a-zA-Z]?</span></span>|  
+|&|<span data-ttu-id="f1413-132">Символ.</span><span class="sxs-lookup"><span data-stu-id="f1413-132">Character.</span></span> <span data-ttu-id="f1413-133">Требуется объект.</span><span class="sxs-lookup"><span data-stu-id="f1413-133">Entry required.</span></span>|<span data-ttu-id="f1413-134">[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]</span><span class="sxs-lookup"><span data-stu-id="f1413-134">[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]</span></span>|  
+|<span data-ttu-id="f1413-135">C</span><span class="sxs-lookup"><span data-stu-id="f1413-135">C</span></span>|<span data-ttu-id="f1413-136">Символ.</span><span class="sxs-lookup"><span data-stu-id="f1413-136">Character.</span></span> <span data-ttu-id="f1413-137">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="f1413-137">Entry optional.</span></span>|<span data-ttu-id="f1413-138">[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?</span><span class="sxs-lookup"><span data-stu-id="f1413-138">[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?</span></span>|  
+|<span data-ttu-id="f1413-139">А</span><span class="sxs-lookup"><span data-stu-id="f1413-139">A</span></span>|<span data-ttu-id="f1413-140">Буквенно-цифровых.</span><span class="sxs-lookup"><span data-stu-id="f1413-140">Alphanumeric.</span></span> <span data-ttu-id="f1413-141">Необязательный элемент.</span><span class="sxs-lookup"><span data-stu-id="f1413-141">Entry optional.</span></span>|<span data-ttu-id="f1413-142">\W</span><span class="sxs-lookup"><span data-stu-id="f1413-142">\W</span></span>|  
+|<span data-ttu-id="f1413-143">.</span><span class="sxs-lookup"><span data-stu-id="f1413-143">.</span></span>|<span data-ttu-id="f1413-144">Десятичный разделитель, соответствующего языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="f1413-144">Culture-appropriate decimal placeholder.</span></span>|<span data-ttu-id="f1413-145">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-145">Not available.</span></span>|  
+|<span data-ttu-id="f1413-146">,</span><span class="sxs-lookup"><span data-stu-id="f1413-146">,</span></span>|<span data-ttu-id="f1413-147">Соответствующий язык и региональные параметры тысяч разделитель.</span><span class="sxs-lookup"><span data-stu-id="f1413-147">Culture-appropriate thousands placeholder.</span></span>|<span data-ttu-id="f1413-148">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-148">Not available.</span></span>|  
+|<span data-ttu-id="f1413-149">:</span><span class="sxs-lookup"><span data-stu-id="f1413-149">:</span></span>|<span data-ttu-id="f1413-150">Разделитель компонентов времени для соответствующего языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="f1413-150">Culture-appropriate time separator.</span></span>|<span data-ttu-id="f1413-151">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-151">Not available.</span></span>|  
+|/|<span data-ttu-id="f1413-152">Разделитель компонентов даты, соответствующей языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="f1413-152">Culture-appropriate date separator.</span></span>|<span data-ttu-id="f1413-153">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-153">Not available.</span></span>|  
+|$|<span data-ttu-id="f1413-154">Символ валюты, соответствующий язык и региональные параметры.</span><span class="sxs-lookup"><span data-stu-id="f1413-154">Culture-appropriate currency symbol.</span></span>|<span data-ttu-id="f1413-155">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-155">Not available.</span></span>|  
+|\<|<span data-ttu-id="f1413-156">Преобразует все последующие символы в нижний регистр.</span><span class="sxs-lookup"><span data-stu-id="f1413-156">Converts all characters that follow to lowercase.</span></span>|<span data-ttu-id="f1413-157">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-157">Not available.</span></span>|  
+|>|<span data-ttu-id="f1413-158">Преобразует все последующие символы в верхний регистр.</span><span class="sxs-lookup"><span data-stu-id="f1413-158">Converts all characters that follow to uppercase.</span></span>|<span data-ttu-id="f1413-159">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-159">Not available.</span></span>|  
+|<span data-ttu-id="f1413-160">&#124;</span><span class="sxs-lookup"><span data-stu-id="f1413-160">&#124;</span></span>|<span data-ttu-id="f1413-161">Отмена предыдущего изменения вверх или shift.</span><span class="sxs-lookup"><span data-stu-id="f1413-161">Undoes a previous shift up or shift down.</span></span>|<span data-ttu-id="f1413-162">Недоступно.</span><span class="sxs-lookup"><span data-stu-id="f1413-162">Not available.</span></span>|  
+|\|<span data-ttu-id="f1413-163">Экранирует символ маски литерал.</span><span class="sxs-lookup"><span data-stu-id="f1413-163">Escapes a mask character, turning it into a literal.</span></span> <span data-ttu-id="f1413-164">«\\\\» — escape-последовательность для обратной косой черты.</span><span class="sxs-lookup"><span data-stu-id="f1413-164">"\\\\" is the escape sequence for a backslash.</span></span>|\|  
+|<span data-ttu-id="f1413-165">Все остальные символы.</span><span class="sxs-lookup"><span data-stu-id="f1413-165">All other characters.</span></span>|<span data-ttu-id="f1413-166">Литералы.</span><span class="sxs-lookup"><span data-stu-id="f1413-166">Literals.</span></span> <span data-ttu-id="f1413-167">Все элементы, не являющиеся маской отображаются внутри <xref:System.Windows.Forms.MaskedTextBox>.</span><span class="sxs-lookup"><span data-stu-id="f1413-167">All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.</span></span>|<span data-ttu-id="f1413-168">Все остальные символы.</span><span class="sxs-lookup"><span data-stu-id="f1413-168">All other characters.</span></span>|  
   
- Десятичный разделитель (.), разделитель тысяч (,), времени (:), даты (/) и символы валют ($) по умолчанию отображаются в соответствии с языком и региональными параметрами приложения. Можно принудительно отображать символы для других стран с помощью <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>свойство.</xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>  
+ <span data-ttu-id="f1413-169">Десятичный разделитель (.), разделитель тысяч (,), времени (:), даты (/) и символы валют ($) по умолчанию отображаются в соответствии с языком и региональными параметрами приложения.</span><span class="sxs-lookup"><span data-stu-id="f1413-169">The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture.</span></span> <span data-ttu-id="f1413-170">Можно принудительно отображать символы для другого языка и региональных параметров с помощью <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="f1413-170">You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.</span></span>  
   
-## <a name="regular-expressions-and-masks"></a>Регулярные выражения и маски  
- Хотя можно использовать регулярные выражения и маски для проверки ввода данных пользователем, они не полностью эквивалентны. Регулярные выражения могут выражать более сложные шаблоны, чем маски, но маски могут выражать те же сведения более четко и в формате соответствующего языка и региональных параметров.  
+## <a name="regular-expressions-and-masks"></a><span data-ttu-id="f1413-171">Регулярные выражения и маски</span><span class="sxs-lookup"><span data-stu-id="f1413-171">Regular Expressions and Masks</span></span>  
+ <span data-ttu-id="f1413-172">Можно использовать регулярные выражения и маски для проверки пользовательского ввода, но они не полностью эквивалентны.</span><span class="sxs-lookup"><span data-stu-id="f1413-172">Although you can use regular expressions and masks to validate user input, they are not completely equivalent.</span></span> <span data-ttu-id="f1413-173">Регулярные выражения могут выражать более сложные шаблоны, чем маски, но маски могут выражать те же сведения более четко и языка и региональных параметров, соответствующих формату.</span><span class="sxs-lookup"><span data-stu-id="f1413-173">Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.</span></span>  
   
- В следующей таблице сравниваются четыре регулярных выражений и эквивалентные маску для каждого.  
+ <span data-ttu-id="f1413-174">В следующей таблице сравниваются четыре регулярных выражений и эквивалентные маску для каждого.</span><span class="sxs-lookup"><span data-stu-id="f1413-174">The following table compares four regular expressions and the equivalent mask for each.</span></span>  
   
-|Регулярное выражение|Маска|Примечания|  
+|<span data-ttu-id="f1413-175">Регулярное выражение</span><span class="sxs-lookup"><span data-stu-id="f1413-175">Regular Expression</span></span>|<span data-ttu-id="f1413-176">Маска</span><span class="sxs-lookup"><span data-stu-id="f1413-176">Mask</span></span>|<span data-ttu-id="f1413-177">Примечания</span><span class="sxs-lookup"><span data-stu-id="f1413-177">Notes</span></span>|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|`/` Символ в маске является логическим разделителем даты и отображается пользователю в качестве разделителя даты, подходящие для текущего языка и региональных параметров приложения.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Дата (день, сокращенное наименование месяца и год) в формате США, в котором отображается сокращенное обозначение месяца трехбуквенный начальные прописные буквы, за которой следуют двух букв нижнего регистра.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Номер телефона в США, необязательный код города. Если пользователь не хочет вводить дополнительные символы, она может вводить пробелы или поместите указатель мыши непосредственно в позиции в маске, представленную первым 0.|  
-|`$\d{6}.00`|`$999,999.00`|Значение валюты в диапазоне от 0 до 999999. Валюта, тысячные и десятичные знаки будут заменены во время выполнения с их эквивалентами для конкретного языка и региональных параметров.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|<span data-ttu-id="f1413-178">`/` Символ в маске является логическим разделителем даты, и он будет отображаться для пользователя как разделитель компонентов даты, подходящие для текущего языка и региональных параметров приложения.</span><span class="sxs-lookup"><span data-stu-id="f1413-178">The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.</span></span>|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|<span data-ttu-id="f1413-179">Дата (день, сокращенное обозначение месяца и год) в формате США, в котором отображается сокращенное название месяца с начальным прописными буквами следуют две буквы нижнего регистра.</span><span class="sxs-lookup"><span data-stu-id="f1413-179">A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.</span></span>|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|<span data-ttu-id="f1413-180">Номер телефона в США, дополнительный код города.</span><span class="sxs-lookup"><span data-stu-id="f1413-180">United States phone number, area code optional.</span></span> <span data-ttu-id="f1413-181">Если пользователь не хочет, чтобы ввести дополнительные символы, она можно ввести пробелы или поместите указатель мыши непосредственно на позицию в маске, представленную первым 0.</span><span class="sxs-lookup"><span data-stu-id="f1413-181">If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.</span></span>|  
+|`$\d{6}.00`|`$999,999.00`|<span data-ttu-id="f1413-182">Значение валюты в диапазоне от 0 до 999999.</span><span class="sxs-lookup"><span data-stu-id="f1413-182">A currency value in the range of 0 to 999999.</span></span> <span data-ttu-id="f1413-183">Валюта, тысячные и десятичные знаки будут заменены во время выполнения с их эквивалентами для конкретного языка и региональных параметров.</span><span class="sxs-lookup"><span data-stu-id="f1413-183">The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.</span></span>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A></xref:System.Windows.Forms.MaskedTextBox.Mask%2A>   
- <xref:System.Windows.Forms.MaskedTextBox></xref:System.Windows.Forms.MaskedTextBox>   
- [Проверка строк в Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)   
- [Элемент управления MaskedTextBox](http://msdn.microsoft.com/library/235d6121-027d-481d-8d59-4f6794d15d0c)
+## <a name="see-also"></a><span data-ttu-id="f1413-184">См. также</span><span class="sxs-lookup"><span data-stu-id="f1413-184">See Also</span></span>  
+ <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
+ <xref:System.Windows.Forms.MaskedTextBox>  
+ [<span data-ttu-id="f1413-185">Проверка строк в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f1413-185">Validating Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ [<span data-ttu-id="f1413-186">Элемент управления MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="f1413-186">MaskedTextBox Control</span></span>](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

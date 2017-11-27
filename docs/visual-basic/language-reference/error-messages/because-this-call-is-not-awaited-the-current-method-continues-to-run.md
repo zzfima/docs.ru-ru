@@ -1,61 +1,43 @@
 ---
-title: "Поскольку этот вызов не ожидается, текущего метода продолжается до завершения вызова. | Документы Microsoft"
-ms.date: 2015-07-20
+title: "Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова."
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42358
 - vbc42358
-helpviewer_keywords:
-- BC42358
+helpviewer_keywords: BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a0d0a5e7c50bacc657a3f54a7f08036ede59cbfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.
-Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен. Рассмотрите возможность применения оператора Await к результату вызова.  
+# <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a><span data-ttu-id="51dd8-102">Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.</span><span class="sxs-lookup"><span data-stu-id="51dd8-102">Because this call is not awaited, the current method continues to run before the call is completed</span></span>
+<span data-ttu-id="51dd8-103">Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен.</span><span class="sxs-lookup"><span data-stu-id="51dd8-103">Because this call is not awaited, execution of the current method continues before the call is completed.</span></span> <span data-ttu-id="51dd8-104">Рассмотрите возможность применения оператора Await к результату вызова.</span><span class="sxs-lookup"><span data-stu-id="51dd8-104">Consider applying the 'Await' operator to the result of the call.</span></span>  
   
- Текущий метод вызывает асинхронный метод, который возвращает <xref:System.Threading.Tasks.Task>или <xref:System.Threading.Tasks.Task%601>и не применяет [Await](../../../visual-basic/language-reference/operators/await-operator.md) в результат.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Вызов асинхронного метода запускает асинхронную задачу. Однако поскольку оператор `Await` не применяется, программа продолжает выполнение, не ожидая завершения задачи. В большинстве случаев такое поведение не ожидается. Обычно другие аспекты вызывающего метода зависят от результатов вызова или, как минимум, вызывающий метод должен завершиться до возврата из метода, который содержит вызов.  
+ <span data-ttu-id="51dd8-105">Текущий метод вызывает асинхронный метод, который возвращает класс <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> и не применяет оператор [Await](../../../visual-basic/language-reference/operators/await-operator.md) к результату.</span><span class="sxs-lookup"><span data-stu-id="51dd8-105">The current method calls an async method that returns a <xref:System.Threading.Tasks.Task> or a <xref:System.Threading.Tasks.Task%601> and doesn’t apply the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator to the result.</span></span> <span data-ttu-id="51dd8-106">Вызов асинхронного метода запускает асинхронную задачу.</span><span class="sxs-lookup"><span data-stu-id="51dd8-106">The call to the async method starts an asynchronous task.</span></span> <span data-ttu-id="51dd8-107">Однако поскольку оператор `Await` не применяется, программа продолжает выполнение, не ожидая завершения задачи.</span><span class="sxs-lookup"><span data-stu-id="51dd8-107">However, because no `Await` operator is applied, the program continues without waiting for the task to complete.</span></span> <span data-ttu-id="51dd8-108">В большинстве случаев такое поведение не ожидается.</span><span class="sxs-lookup"><span data-stu-id="51dd8-108">In most cases, that behavior isn't expected.</span></span> <span data-ttu-id="51dd8-109">Обычно другие аспекты вызывающего метода зависят от результатов вызова или, как минимум, вызывающий метод должен завершиться до возврата из метода, который содержит вызов.</span><span class="sxs-lookup"><span data-stu-id="51dd8-109">Usually other aspects of the calling method depend on the results of the call or, minimally, the called method is expected to complete before you return from the method that contains the call.</span></span>  
   
- Также важной проблемой является обработка исключений, возникающих в вызываемом асинхронном методе. Исключение, возникающее в методе, который возвращает <xref:System.Threading.Tasks.Task>или <xref:System.Threading.Tasks.Task%601>хранится в возвращенной задаче.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> Если не ожидать задачу или явно не проверять исключения, исключение будет потеряно. Если ожидать задачу, ее исключение будет создано повторно.  
+ <span data-ttu-id="51dd8-110">Также важной проблемой является обработка исключений, возникающих в вызываемом асинхронном методе.</span><span class="sxs-lookup"><span data-stu-id="51dd8-110">An equally important issue is what happens with exceptions that are raised in the called async method.</span></span> <span data-ttu-id="51dd8-111">Исключение, возникающее в методе, который возвращает <xref:System.Threading.Tasks.Task> или  <xref:System.Threading.Tasks.Task%601> , хранится в возвращенной задаче.</span><span class="sxs-lookup"><span data-stu-id="51dd8-111">An exception that’s raised in a method that returns a <xref:System.Threading.Tasks.Task> or  <xref:System.Threading.Tasks.Task%601> is stored in the returned task.</span></span> <span data-ttu-id="51dd8-112">Если не ожидать задачу или явно не проверять исключения, исключение будет потеряно.</span><span class="sxs-lookup"><span data-stu-id="51dd8-112">If you don't await the task or explicitly check for exceptions, the exception is lost.</span></span> <span data-ttu-id="51dd8-113">Если ожидать задачу, ее исключение будет создано повторно.</span><span class="sxs-lookup"><span data-stu-id="51dd8-113">If you await the task, its exception is rethrown.</span></span>  
   
- Рекомендуется всегда ожидать вызов.  
+ <span data-ttu-id="51dd8-114">Рекомендуется всегда ожидать вызов.</span><span class="sxs-lookup"><span data-stu-id="51dd8-114">As a best practice, you should always await the call.</span></span>  
   
- По умолчанию данное сообщение является предупреждением. Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [в Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="51dd8-115">По умолчанию данное сообщение является предупреждением.</span><span class="sxs-lookup"><span data-stu-id="51dd8-115">By default, this message is a warning.</span></span> <span data-ttu-id="51dd8-116">Дополнительные сведения о скрытии предупреждений или обработке предупреждений как ошибок см. в разделе [Настройка предупреждений в Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="51dd8-116">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **Идентификатор ошибки:** BC42358  
+ <span data-ttu-id="51dd8-117">**Идентификатор ошибки:** BC42358</span><span class="sxs-lookup"><span data-stu-id="51dd8-117">**Error ID:** BC42358</span></span>  
   
-### <a name="to-address-this-warning"></a>Устранение предупреждения  
+### <a name="to-address-this-warning"></a><span data-ttu-id="51dd8-118">Устранение предупреждения</span><span class="sxs-lookup"><span data-stu-id="51dd8-118">To address this warning</span></span>  
   
--   Рекомендуется отключать предупреждение, только если вы уверены, что не нужно ожидать завершения асинхронного вызова и что вызванный метод не создаст исключения. В этом случае можно отключить предупреждение, присвоив переменной результат вызова задачи.  
+-   <span data-ttu-id="51dd8-119">Рекомендуется отключать предупреждение, только если вы уверены, что не нужно ожидать завершения асинхронного вызова и что вызванный метод не создаст исключения.</span><span class="sxs-lookup"><span data-stu-id="51dd8-119">You should consider suppressing the warning only if you're sure that you don't want to wait for the asynchronous call to complete and that the called method won't raise any exceptions.</span></span> <span data-ttu-id="51dd8-120">В этом случае можно отключить предупреждение, присвоив переменной результат вызова задачи.</span><span class="sxs-lookup"><span data-stu-id="51dd8-120">In that case, you can suppress the warning by assigning the task result of the call to a variable.</span></span>  
   
-     В следующем примере показано, как вызвать предупреждение, как отключить его и как ожидать вызов.  
+     <span data-ttu-id="51dd8-121">В следующем примере показано, как вызвать предупреждение, как отключить его и как ожидать вызов.</span><span class="sxs-lookup"><span data-stu-id="51dd8-121">The following example shows how to cause the warning, how to suppress it, and how to await the call.</span></span>  
   
     ```vb  
     Async Function CallingMethodAsync() As Task  
@@ -105,7 +87,7 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-     В этом примере при выборе Call #1 или Call #2, неожидаемый асинхронный метод (`CalledMethodAsync`) завершается после того, как завершатся вызвавший его метод (`CallingMethodAsync`) и метод, вызвавший этот метод (`StartButton_Click`). Последняя строка в следующем выводе показывает, когда завершается вызванный метод. Вход и выход из обработчика событий, который вызывает `CallingMethodAsync` , в полном примере помечены в выводе.  
+     <span data-ttu-id="51dd8-122">В этом примере при выборе Call #1 или Call #2, неожидаемый асинхронный метод (`CalledMethodAsync`) завершается после того, как завершатся вызвавший его метод (`CallingMethodAsync`) и метод, вызвавший этот метод (`StartButton_Click`).</span><span class="sxs-lookup"><span data-stu-id="51dd8-122">In the example, if you choose Call #1 or Call #2, the unawaited async method (`CalledMethodAsync`) finishes after both its caller (`CallingMethodAsync`) and the caller's caller (`StartButton_Click`) are complete.</span></span> <span data-ttu-id="51dd8-123">Последняя строка в следующем выводе показывает, когда завершается вызванный метод.</span><span class="sxs-lookup"><span data-stu-id="51dd8-123">The last line in the following output shows you when the called method finishes.</span></span> <span data-ttu-id="51dd8-124">Вход и выход из обработчика событий, который вызывает `CallingMethodAsync` , в полном примере помечены в выводе.</span><span class="sxs-lookup"><span data-stu-id="51dd8-124">Entry to and exit from the event handler that calls `CallingMethodAsync` in the full example are marked in the output.</span></span>  
   
     ```  
     Entering the Click event handler.  
@@ -116,16 +98,16 @@ ms.lasthandoff: 03/13/2017
         Task.Delay is finished--returning from called method.  
     ```  
   
-## <a name="example"></a>Пример  
- Следующее приложение Windows Presentation Foundation (WPF) содержит методы из предыдущего примера. Ниже описана настройка приложения.  
+## <a name="example"></a><span data-ttu-id="51dd8-125">Пример</span><span class="sxs-lookup"><span data-stu-id="51dd8-125">Example</span></span>  
+ <span data-ttu-id="51dd8-126">Следующее приложение Windows Presentation Foundation (WPF) содержит методы из предыдущего примера.</span><span class="sxs-lookup"><span data-stu-id="51dd8-126">The following Windows Presentation Foundation (WPF) application contains the methods from the previous example.</span></span> <span data-ttu-id="51dd8-127">Ниже описана настройка приложения.</span><span class="sxs-lookup"><span data-stu-id="51dd8-127">The following steps set up the application.</span></span>  
   
-1.  Создайте приложение WPF с именем `AsyncWarning`.  
+1.  <span data-ttu-id="51dd8-128">Создайте приложение WPF с именем `AsyncWarning`.</span><span class="sxs-lookup"><span data-stu-id="51dd8-128">Create a WPF application, and name it `AsyncWarning`.</span></span>  
   
-2.  В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .  
+2.  <span data-ttu-id="51dd8-129">В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .</span><span class="sxs-lookup"><span data-stu-id="51dd8-129">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-     Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **Обозревателе решений**и выберите пункт **Просмотреть код**.  
+     <span data-ttu-id="51dd8-130">Если вкладка не отображается, откройте контекстное меню для MainWindow.xaml в **Обозревателе решений**и выберите пункт **Просмотреть код**.</span><span class="sxs-lookup"><span data-stu-id="51dd8-130">If the tab isn't visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-3.  Замените код в представлении **XAML** файла MainWindow.xaml на следующий.  
+3.  <span data-ttu-id="51dd8-131">Замените код в представлении **XAML** файла MainWindow.xaml на следующий.</span><span class="sxs-lookup"><span data-stu-id="51dd8-131">Replace the code in the **XAML** view of MainWindow.xaml with the following code.</span></span>  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -139,11 +121,11 @@ ms.lasthandoff: 03/13/2017
     </Window>  
     ```  
   
-     В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.  
+     <span data-ttu-id="51dd8-132">В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="51dd8-132">A simple window that contains a button and a text box appears in the **Design** view of MainWindow.xaml.</span></span>  
   
-     Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Сведения о том, как построить собственный простой пользовательский Интерфейс в разделе «Создание приложения WPF» и «разработка простого MainWindow WPF» разделы [Пошаговое руководство: доступ к Интернету с помощью Async и Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     <span data-ttu-id="51dd8-133">Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="51dd8-133">For more information about the XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span> <span data-ttu-id="51dd8-134">Сведения о том, как построить собственный простой пользовательский интерфейс, см. в подразделах "Создание приложений WPF" и "Создание простого MainWindow WPF" в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).</span><span class="sxs-lookup"><span data-stu-id="51dd8-134">For information about how to build your own simple UI, see the "To create a WPF application" and "To design a simple WPF MainWindow" sections of [Walkthrough: Accessing the Web by Using Async and Await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).</span></span>  
   
-4.  Замените код в MainWindow.xaml.vb на приведенный далее.  
+4.  <span data-ttu-id="51dd8-135">Замените код в MainWindow.xaml.vb на приведенный далее.</span><span class="sxs-lookup"><span data-stu-id="51dd8-135">Replace the code in MainWindow.xaml.vb with the following code.</span></span>  
   
     ```vb  
     Class MainWindow   
@@ -223,11 +205,10 @@ ms.lasthandoff: 03/13/2017
     ' Exiting the Click event handler.  
     ```  
   
-5.  Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .  
+5.  <span data-ttu-id="51dd8-136">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="51dd8-136">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     Ожидаемый результат отобразится в конце кода.  
+     <span data-ttu-id="51dd8-137">Ожидаемый результат отобразится в конце кода.</span><span class="sxs-lookup"><span data-stu-id="51dd8-137">The expected output appears at the end of the code.</span></span>  
   
-## <a name="see-also"></a>См. также  
- [Оператор await](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Асинхронное программирование с использованием ключевых слов Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="51dd8-138">См. также</span><span class="sxs-lookup"><span data-stu-id="51dd8-138">See Also</span></span>  
+ [<span data-ttu-id="51dd8-139">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="51dd8-139">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [<span data-ttu-id="51dd8-140">Асинхронное программирование с использованием ключевых слов Async и Await</span><span class="sxs-lookup"><span data-stu-id="51dd8-140">Asynchronous Programming with Async and Await</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
